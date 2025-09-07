@@ -1,6 +1,5 @@
-
-import { motion } from 'framer-motion';
-
+import { motion,
+  from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star;
   Rocket, Brain, Atom, Building, Briefcase, Microscope;
   Twitter, Facebook, Linkedin, Instagram, Youtube;}
@@ -31,9 +30,7 @@ services: [
 
       {
         name: 'AI-Powered IT Asset Management'}
-  href: '/ai-powered-it-asset-management'}
-      }
-    ]
+  href: '/ai-powered-it-asset-management']
   },
   {
     title: '🧠 AI & Technology',
@@ -51,10 +48,7 @@ services: [
 },
 
   { name: 'Computer Vision'}
-  href: '/computer-vision'}
-}
-
-    ]
+  href: '/computer-vision']
   },
   {
     title: '⚛️ Quantum & Emerging Tech',
@@ -72,10 +66,7 @@ services: [
 },
 
   { name: 'Space Technology'}
-  href: '/space-tech'}
-}
-
-    ]
+  href: '/space-tech']
   },
   {
     title: '🏙️ Enterprise Solutions',
@@ -93,12 +84,8 @@ services: [
 },
 
   { name: 'DevOps Automation'}
-  href: '/devops-automation'}
-}
-
-    ]
-  }
-];
+  href: '/devops-automation']
+  ];
 
 const quickLinks = [
   { name: 'Home'}
@@ -123,36 +110,32 @@ const quickLinks = [
   href: '/support', icon: MessageCircle}
 },
 { name: 'Privacy'}
-  href: '/privacy', icon: Shield}
-}
-];
+  href: '/privacy', icon: Shield];
 
 const socialLinks = [
   {
     name: 'LinkedIn',
   href: 'https://linkedin.com/company/ziontechgroup',
-    icon: Linkedin}
-    color: 'hover:text-blue-400'}
+    icon: Linkedin,
+  color: 'hover:text-blue-400'}
   },
   {
     name: 'Twitter',
   href: 'https://twitter.com/ziontechgroup',
-    icon: Twitter}
-    color: 'hover:text-sky-400'}
+    icon: Twitter,
+  color: 'hover:text-sky-400'}
   },
   {
     name: 'GitHub',
   href: 'https://github.com/Zion-Holdings',
-    icon: Github}
-    color: 'hover:text-gray-400'}
+    icon: Github,
+  color: 'hover:text-gray-400'}
   },
   {
     name: 'YouTube',
   href: 'https://youtube.com/@ziontechgroup',
-    icon: Youtube}
-    color: 'hover:text-red-500'}
-  }
-];
+    icon: Youtube,
+  color: 'hover:text-red-500'];
 
 const footerSections = [
   {
@@ -178,12 +161,8 @@ const footerSections = [
   href: '/press'}
 },
 
-
   { name: 'Partnerships'}
-  href: '/partnerships'}
-}
-
-    ]
+  href: '/partnerships']
   },
   {
     title: 'Solutions',
@@ -209,10 +188,7 @@ const footerSections = [
 },
 
   { name: 'Blockchain'}
-  href: '/blockchain-solutions'}
-}
-
-    ]
+  href: '/blockchain-solutions']
   },
   {
     title: 'Resources',
@@ -238,10 +214,7 @@ const footerSections = [
 },
 
   { name: 'Support Center'}
-  href: '/support'}
-}
-
-    ]
+  href: '/support']
   },
   {
     title: 'Legal',
@@ -267,12 +240,8 @@ const footerSections = [
 },
 
   { name: 'Compliance'}
-  href: '/compliance'}
-}
-
-    ]
-  }
-];
+  href: '/compliance']
+  ];
 
 const UltraFuturisticFooter2029 = (
  ;
@@ -324,17 +293,14 @@ innovation.
             {/* Social Links */}
 <div className='flex space-x-4' />
               {socialLinks.map(social => (}
-                <a;}
-key={social.name}
-                  href={social.href}
-                  target='_blank'
+                <a key={social.name href={social.href target='_blank'
                   rel='noopener noreferrer'
-                  className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
+                  className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color transition-all duration-200 hover:bg-slate-700/50`
                  />
                   <social.icon className='w-5 h-5' />
-                </a>
-              )
-}
+                </a>},
+   )
+
             </div>
           </div>
 
@@ -353,16 +319,11 @@ const UltraFuturisticFooter2029 = (
 
                 </a>
 
-              ))}
-
-];
+              ))];
   return (
     <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50' />      { name: 'Compliance'}
-  href: '/compliance'}
-}
-    ];
-  }
-];
+  href: '/compliance'];
+  ];
   return (
     <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50' />;
 
@@ -388,7 +349,6 @@ const UltraFuturisticFooter2029 = (
               innovation.;
             </p>;
 
-
           {/* Service Categories */}
 
 <div className='lg:col-span-1' />
@@ -396,7 +356,8 @@ const UltraFuturisticFooter2029 = (
               Our Services;
             </h4>
             <div className='space-y-4' />
-              {serviceCategories.map((category, index) => (}
+              {serviceCategories.map((category,,,
+  index) => (}
                 <div key={index} />
                   <h5 className='text-sm font-medium text-gray-300 mb-3' />
                     {category.title}
@@ -405,42 +366,45 @@ const UltraFuturisticFooter2029 = (
                     {category.services.map(service => (}
                       <li key={service.name} />
 
-                        <Link;
-href={service.href}
-                          className='text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group' />
+                        <Link href={service.href}
+            className='text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group' />
 
-                          <ArrowRight className='w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200' />;
-                          <span />{service.name}</span>;
-                        </Link>;
-                      </li>;
-                    ))}
+                          <ArrowRight className='w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200' />,
+  <span />{service.name</span>
+            </Link>,
+  </li>,,
+   ))
 
                   </ul>
                 </div>
 
-              ))}
+              ))
           {/* Service Categories */}
           <div className='lg:col-span-1' />;
             <h4 className='text-lg font-semibold text-white mb-6' />;
               Our Services;
             </h4>;
             <div className='space-y-4' />;
-              {serviceCategories && serviceCategories.map((category, index) => (<div key={index} />;
+              {serviceCategories && serviceCategories.map((category,,,
+  index) => (
+          <div key={index} />;
                   <h5 className='text-sm font-medium text-gray-300 mb-3' />;
                     {category && category.title}
                   </h5>;
                   <ul className='space-y-2' />;
-                    {category && category.services.map(service => (<li key={service && service.name} />;
-                        <Link;
-                          href={service && service.href}
-                          className='text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group' />;
-                          <ArrowRight className='w-3 h-3 opacity-0 group-hover: opacity-100 transition-opacity duration-200' />                          <span />{service && service.nam}
-}</span>              {serviceCategories && serviceCategories.map((category, index) => (<div key={index} />;
-                  <h5 className=\"text-sm font-medium text-gray-300 mb-3\" />{category && category.title}</h5>;"
+                    {category && category.services.map(service => (
+          <li key={service && service.name} />,
+  <Link href={service && service.href}
+            className='text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group' />
+            <ArrowRight className='w-3 h-3 opacity-0 group-hover: opacity-100 transition-opacity duration-200' />                          <span />{service && service.nam
+</span>              {serviceCategories && serviceCategories.map((category,,
+  index) => (
+          <div key={index />}
+            <h5 className=\"text-sm font-medium text-gray-300 mb-3\" />{category && category.title</h5>;"
                   <ul className=\"space-y-2\" />;
-                    {category && category.services.map((service) => (<li key={service && service.name} />;
-                        <Link;
-                          href={service && service.href}"
+                    {category && category.services.map((service) => (
+          <li key={service && service.name} />;
+                        <Link href={service && service.href}"
                           className=\"text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group\" />;"
                           <ArrowRight className=\"w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200\" />;
                           <span />{service && service.name}</span>;
@@ -457,39 +421,39 @@ href={service.href}
               Quick Links;
             </h4>;
             <div className='grid grid-cols-2 gap-2' />;
-              {quickLinks.map(link => (<Link;}
-                  key={link.name}
-                  href={link.href}
-
-                  className='flex items-center space-x-2 text-sm text-gray-400 hover: text-white transition-colors duration-200 p-2 rounded-lg hover:bg-slate-800/50'
+              {quickLinks.map(link => (
+          <Link key={link.name}
+            href={link.href className='flex items-center space-x-2 text-sm text-gray-400 hover: text-white transition-colors duration-200 p-2 rounded-lg hover:bg-slate-800/50'
                  />
 
                   <link.icon className='w-4 h-4' />
-                  <span />{link.name}</span>
+                  <span />{link.name</span>
 
                 </Link>
-
-              ))}
-          {/* Footer Sections *}
+}
+            ))
+          {/* Footer Sections *
 }
           <div className='lg:col-span-1' />;
             <h4 className='text-lg font-semibold text-white mb-6' />Company</h4>;
             <div className='space-y-4' />;
-              {footerSections && footerSections.map(section => (<div key={section && section.title} />;
+              {footerSections && footerSections.map(section => (
+          <div key={section && section.title} />;
                   <h5 className='text-sm font-medium text-gray-300 mb-3' />;
                     {section && section.title}
                   </h5>;
-                  <ul className='space-y-2' />;
-                    {section && section.links.map(link => (<li key={link && link.name} />;
-                        <Link;
-                          href={link && link.href}
-                          className='text-sm text-gray-400 hover: text-white transition-colors duration-200' />                <div key={section && section.titl}
-} />;"
-                  <h5 className=\"text-sm font-medium text-gray-300 mb-3\" />{section && section.title}</h5>;"
-                  <ul className=\"space-y-2\" />;
-                    {section && section.links.map((link) => (<li key={link && link.name} />;
-                        <Link;
-                          href={link && link.href}"
+                  <ul className='space-y-2' />,
+  {section && section.links.map(link => (
+          <li key={link && link.name} />,
+  <Link href={link && link.href}
+            className='text-sm text-gray-400 hover: text-white transition-colors duration-200' />                <div key={section && section.titl
+ />
+            "
+                  <h5 className=\"text-sm font-medium text-gray-300 mb-3\" />{section && section.title</h5>;"
+                  <ul className=\"space-y-2\" />;,}
+            {section && section.links.map((link) => (
+          <li key={link && link.name />}
+            <Link href={link && link.href"
                           className=\"text-sm text-gray-400 hover:text-white transition-colors duration-200\" />;
                           {link && link.name}
                         </Link>;
@@ -510,25 +474,24 @@ href={service.href}
 }
                   </h5>;
                   <ul className='space-y-2' />;
-                    {section.links.map(link => (<li key={link.name} />;
-                        <Link;
-                          href={link.href}
-
-                          className='text-sm text-gray-400 hover: text-white transition-colors duration-200'
+                    {section.links.map(link => (
+          <li key={link.name} />;
+                        <Link href={link.href}
+            className='text-sm text-gray-400 hover: text-white transition-colors duration-200'
                          />
 
-                          {link.name}
-      {/* Bottom Footer *}
-}
+                          {link.name
+      {/* Bottom Footer *
+
 <div className='border-t border-slate-700/50' />;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8' />;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0' />;
             <div className='text-sm text-gray-400' />;
               © 2025 Zion Tech Group. All rights reserved.;
-            </div>;
-            <div className='flex items-center space-x-6 text-sm text-gray-400' />;
-                        </Link>;
-                      </li>))}
+            </div>,
+  <div className='flex items-center space-x-6 text-sm text-gray-400' />,
+  </Link>;,,
+  </li>))}
                   </ul>;
                     ))}
                   </ul>;
@@ -538,19 +501,16 @@ href={service.href}
           </div>;
         </div>;
       </div>;
-              <Link;
-                href='/privacy';
+              <Link href='/privacy';
                 className='hover:text-white transition-colors' />;
                 Privacy Policy;
               </Link>;
-              <Link;
-                href='/terms';
+              <Link href='/terms';
                 className='hover:text-white transition-colors' />;
                 Terms of Service;
               </Link>;
 
-              <Link;
-href='/cookies'
+              <Link href='/cookies'
 
                 className='hover: text-white transition-colors'
                />
@@ -575,8 +535,7 @@ technology. Join our newsletter for exclusive updates and industry;
 insights.
             </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto' />
-              <input;
-type='email'
+              <input type='email'
                 placeholder='Enter your email'
                 className='flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
               />
@@ -590,8 +549,6 @@ type='email'
     </footer>
 )
 };
-
-
 export default UltraFuturisticFooter2029;
 
 "

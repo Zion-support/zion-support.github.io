@@ -43,5 +43,4 @@ const ModernLayout = (;
         {children}
       </div>;
 </>)}
-
 export default ModernLayout;"

@@ -1,21 +1,26 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-import { createServerClient } from '../../../utils/supabase/server';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
+import { createServerClient,
+  from '../../../utils/supabase/server';
+export default async function handler(req: NextApiRequest,,,
+  res: NextApiResponse) {
   try {
     const supabase = null;
   try {
     const supabase = createServerClient();
     // Replace with your actual tables/queries;
     // Fallback to mock if querying fails;
-const result = await Promise.allSettled([
-supabase.from('users').select('id, role, country'),
-      supabase.from('jobs').select('id, status, category'),
-      supabase.from('quotes').select('id, status'),
-      supabase.from('projects').select('id, status'),
-      supabase.from('referrals').select('id, converted, source'),
+const result = await Promise.allSettled([,,
+  supabase.from('users').select('id, role,,,
+  country'),
+      supabase.from('jobs').select('id, status,,,
+  category'),
+      supabase.from('quotes').select('id,,,
+  status'),
+      supabase.from('projects').select('id,,,
+  status'),
+      supabase.from('referrals').select('id, converted,,,
+  source'),
     ]);
 
 const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
@@ -57,38 +62,33 @@ const usersData = mockIfEmpty(users, [
   country: 'US',}
 }
       { id: 4, role: 'client',}
-  country: 'GB',}
-}
-    ];
-  const jobsData = mockIfEmpty(jobs, [;
-      { id: 11, status: 'posted',}
+  country: 'GB',],
+  const jobsData = mockIfEmpty(jobs, [,
+  { id: 11, status: 'posted',}
   category: 'AI/ML',}
 }
       { id: 12, status: 'filled',}
   category: 'Design',}
 }
       { id: 13, status: 'filled',}
-  category: 'AI/ML',}
-}
-    ])const quotesData = mockIfEmpty(quotes, [;
-      { id: 21, status: 'sent',}
+  category: 'AI/ML',,,
+  ])const quotesData = mockIfEmpty(quotes, [,
+  { id: 21, status: 'sent',}
 }
       { id: 22, status: 'accepted',}
 }
-      { id: 23, status: 'sent',}
-}
-    ])const projectsData = mockIfEmpty(projects, [;
-      { id: 31, status: 'active',}
+      { id: 23, status: 'sent',,,
+  ])const projectsData = mockIfEmpty(projects, [,
+  { id: 31, status: 'active',}
 }
       { id: 32, status: 'completed',}
 }
-      { id: 33, status: 'active',}
-}
-    ])const referralsData = mockIfEmpty(referrals, [;
-      { id: 41, converted: true, source: 'linkedin',}
+      { id: 33, status: 'active',,,
+  ])const referralsData = mockIfEmpty(referrals, [,
+  { id: 41, converted: true, source: 'linkedin',}
 },{ id: 42, converted: false, source: 'twitter',}
-},{ id: 43, converted: true, source: 'partner',}
-},])const totalUsers = usersData.length;
+},{ id: 43, converted: true, source: 'partner',,,
+  ])const totalUsers = usersData.length;
 
 const totalTalents = usersData.filter(u => u.role === 'talent').length;
 
@@ -100,20 +100,19 @@ const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
 
 const quotesSent = quotesData.filter(q => q.status === 'sent').length;
 
-const quotesAccepted = quotesData.filter(
-      q => q.status === 'accepted'
+const quotesAccepted = quotesData.filter(q => q.status === 'accepted'
+,,
+   ).length;
 
-    ).length;
+const activeProjects = projectsData.filter(p => p.status === 'active';,,
+   ).length;
 
-const activeProjects = projectsData.filter(p => p.status === 'active';
-    ).length;
-
-const categoryCounts: Record<string, number /> = {}
+const categoryCounts: Record<string number /> = {}
     jobsData.forEach(j => {categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1;}
     })const referralConversions  = referralsData.filter(r => r.converted).length;
 
-const geoCounts: Record<string, number /> = {}usersData.forEach(u => {geoCounts[u.country || 'Unknown'] =;
-        (geoCounts[u.country || 'Unknown'] || 0) + 1;}
+const geoCounts: Record<string number /> = {}usersData.forEach(u => {geoCounts[u.country || 'Unknown'] =;,,
+  (geoCounts[u.country || 'Unknown'] || 0) + 1;}
 }
     });
     res.status(200).json({
@@ -126,13 +125,17 @@ const geoCounts: Record<string, number /> = {}usersData.forEach(u => {geoCounts[
         quotesSent,
         quotesAccepted,}
         activeProjects,}
-      },
-      topCategories: Object.entries(categoryCounts)
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 5)
-        .map(([label, value]) => ({ label, value })),
+      },,,
+  topCategories: Object.entries(categoryCounts)
+        .sort((a,,,
+  b) => b[1] - a[1])
+        .slice(0,,,
+  5)
+        .map(([label,,,
+  value]) => ({ label, value })),
       referralConversions,
-      geo: Object.entries(geoCounts).map(([country, value]) => ({
+      geo: Object.entries(geoCounts).map(([country,,,
+  value]) => ({
         label: country,}
         value,}
       })),
@@ -163,9 +166,7 @@ const geoCounts: Record<string, number /> = {}usersData.forEach(u => {geoCounts[
   value: 2,}
 },
         { label: 'Design',}
-  value: 1,}
-},
-      ],
+  value: 1,],
       referralConversions: 2,
       geo: [
         { label: 'US',}
@@ -175,10 +176,7 @@ const geoCounts: Record<string, number /> = {}usersData.forEach(u => {geoCounts[
   value: 1,}
 },
         { label: 'GB',}
-  value: 1,}
-},
-      ],
+  value: 1,],
     });
 
   }
-

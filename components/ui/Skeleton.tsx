@@ -1,6 +1,5 @@
 export type SkeletonProps = {className?: string;}
 }
-
 export type SkeletonProps = {;
 
             transform: translateX(100%);}
@@ -11,4 +10,3 @@ export type SkeletonProps = {;
     </div>
   );
 }
-

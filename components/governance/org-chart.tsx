@@ -1,4 +1,4 @@
-  return <OrgChartPage />;
+return <OrgChartPage />;
 }
 
 const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false,}

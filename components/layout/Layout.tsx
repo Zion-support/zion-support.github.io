@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode,
+  from 'react';
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
-
 import Header from './Header';
 import Footer from './Footer';
 
@@ -12,19 +12,19 @@ interface LayoutProps  {children: React && React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
-
-export default function Layout() {return (<div className=\"min-h-screen bg-white\" />;
-
+export default function Layout() {return (
+    <div className=\"min-h-screen bg-white\" />;
 export default /**;
  * Layout - Function description;
  */;"
-function Layout() {return (<div className=\"min - h-screen bg - white\" />;}
+function Layout() {return (
+    <div className=\"min - h-screen bg - white\" />;}
       <Header />;}"
-      <main />;\"./Footer\"import Footer  from \"react./Footer,export default function Layout() {return (<div className=\"min-h-screen flex flex-col />      <Header />\"      <main className=\"flex-1 pt-16 />        {children}\"      </main><Footer />;
+      <main />;\"./Footer\"import Footer  from \"react./Footer,export default function Layout() {return (
+    <div className=\"min-h-screen flex flex-col />      <Header />\"      <main className=\"flex-1 pt-16 />        {children}\"      </main><Footer />;
     </div>;"
   )\"; type: LayoutProps = { children: React.ReactNode;}
 }
-
 export default function Layout({ children }: LayoutProps) { return <div />{children}</div>;
 
 type LayoutProps = { children: React.ReactNode;}
@@ -33,7 +33,6 @@ type LayoutProps = { children: React.ReactNode;}
 export default function Layout({ children }: LayoutProps) { return <div />{children}</div> } \" ;"
   )\"; type: LayoutProps = { children: React.ReactNode;}
 }
-
 export default function Layout({ children }: LayoutProps) { return <div />{children}</div>;
 
 type LayoutProps = { children: React.ReactNode;}
@@ -42,16 +41,15 @@ type LayoutProps = { children: React.ReactNode;}
 export default function Layout({ children }: LayoutProps) { return <div />{children}</div> } \" ;
 }}"
     <div className=\"min-h-screen bg-white\" />;
-
 export default /**;
  * Layout - Function description;
  */;"
-function Layout() {return (<div className=\"min - h-screen bg - white\" />;}
+function Layout() {return (
+    <div className=\"min - h-screen bg - white\" />;}
       <Header />;}
       <main />{children}
       </main>;
       <Footer />;
-
 export default Layout;
 import React from 'react;
 import Header from ';./Header;
@@ -66,10 +64,10 @@ React from';"
   \"./Footer\"import Footer  from \"react./Footer,export default /**;
  * Layout - Function description;
  */;"
-function Layout() {return (<div className=\"min - h-screen flex flex - col />      <Header />\"      <main className=\"flex - 1 pt - 16 />        {children}\"      </main><Footer />;"
+function Layout() {return (
+    <div className=\"min - h-screen flex flex - col />      <Header />\"      <main className=\"flex - 1 pt - 16 />        {children}\"      </main><Footer />;"
     </div>)\"; type: LayoutProps = { children: React.ReactNode;}
 }
-
 export default /**;
  * Layout - Function description;
  */;
@@ -77,11 +75,9 @@ function Layout() { return <div />{children}</div>;
 
 type LayoutProps = { children: React.ReactNode;}
 }
-
 export default /**;"
     </div>)\"; type: LayoutProps = { children: React.ReactNode;}
 }
-
 export default /**;
  * Layout - Function description;
  */;
@@ -89,7 +85,6 @@ function Layout() { return <div />{children}</div>;
 
 type LayoutProps = { children: React.ReactNode;}
 }
-
 export default /**;
  * Layout - Function description;
  */;"
@@ -101,7 +96,6 @@ interface LayoutProps {
   title?: string;}
   description?: string;}
 }
-
 export default function Layout() {return (<>;}
       <Head />;}
         <title />{title}</title>;"
@@ -117,7 +111,8 @@ export default function Layout() {return (<>;}
   keywords?: string;
 }
 "
-export default function Layout() {return (<div className=\"min-h-screen bg-gray-50\" />;}
+export default function Layout() {return (
+    <div className=\"min-h-screen bg-gray-50\" />;}
       {children}
     </div>;
   )}
@@ -131,7 +126,8 @@ const Layout: React.FC<LayoutProps /> = ({ children   }
 }) => {
 
 "
-return (<div className=\"min-h-screen flex flex-col\" />;
+return (
+    <div className=\"min-h-screen flex flex-col\" />;
       <Header />;}"
       <main className=\"flex-1\" />;}
         {children}
@@ -139,7 +135,6 @@ return (<div className=\"min-h-screen flex flex-col\" />;
       <Footer />;
     </div>;
   )}
-
 export default Layout;ursor/automate-test-improve-and-merge-code-646c;
 }}
 
@@ -150,7 +145,8 @@ interface LayoutProps {
 }
 }
 "
-export default function Layout({ children, title = \"Zion Tech Group\", description = \"Leading technology solutions provider\" }: LayoutProps) {
+export default function Layout({ children, title = \"Zion Tech Group\",,
+  description = \"Leading technology solutions provider\"  }: LayoutProps) {
  ;
   return (
     <>}
@@ -167,5 +163,4 @@ export default function Layout({ children, title = \"Zion Tech Group\", descript
     </>
   );
 };
-
 export default Layout;"

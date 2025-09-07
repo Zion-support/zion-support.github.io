@@ -1,11 +1,13 @@
-
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
+}componentDidCatch(error,,,
+  errorInfo) {console.error('Error caught by boundary:', error,,,
+  errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }return this.props.children;
   }
 }
-import React, { useState } from 'react';
+import React, { useState,
+  from 'react';
 
 const EnhancedNavigation = (
  ;
@@ -52,81 +54,68 @@ const EnhancedNavigation = (
             </Link>;
           </div>;
           {/* Mobile menu button */}
-          <button;
-className='lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100';
+          <button className='lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100';
             onClick={() = /> setIsMobileMenuOpen(!isMobileMenuOpen)}
           >;
-            <svg;
-              className='w-6 h-6';
+            <svg className='w-6 h-6';
               fill='none';
               stroke='currentColor';
               viewBox='0 0 24 24' />
 
-              <path;
-                strokeLinecap='round';
+              <path strokeLinecap='round';
                 strokeLinejoin='round';
                 strokeWidth={2}
-
-                d='M4 6h16M4 12h16M4 18h16'
-              />
+            d='M4 6h16M4 12h16M4 18h16'
+              / />
             </svg>
           </button>
         </div>
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation */
         {isMobileMenuOpen && (
 
 <div className='lg: hidden border-t border-gray-200 py-4' />
             <div className='space-y-2' />
-              <Link;
-href='/'
+              <Link href='/'
                 className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
                />
                 Home;
               </Link>
-              <Link;
-href='/services'
+              <Link href='/services'
                 className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
                />
                 Services;
               </Link>
-              <Link;
-href='/products'
+              <Link href='/products'
                 className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
                />
                 Products;
               </Link>
-              <Link;
-href='/about'
+              <Link href='/about'
                 className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
                />
                 About;
               </Link>
-              <Link;
-href='/blog'
+              <Link href='/blog'
                 className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
                />
                 Blog;
               </Link>
-              <Link;
-href='/talent'
+              <Link href='/talent'
                 className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
                />
-                Careers;
-              </Link>
-              <Link;
-href='/contact'
+                Careers
+            </Link>
+              <Link href='/contact'
                 className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
                />
-                Contact;
-              </Link>
-            </div>}
-          </div>}
+                Contact
+            </Link>
+            </div>
+          </div>
         )}
       </div>
     </nav>
 
   ),
 };
-
 export default EnhancedNavigation;
-

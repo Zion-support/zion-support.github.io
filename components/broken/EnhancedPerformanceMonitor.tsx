@@ -1,8 +1,7 @@
-
-
-
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect, useCallback,
+  from 'react';
+import { motion, AnimatePresence,
+  from 'framer-motion';
 import { Activity;
   AlertTriangle;
   CheckCircle;
@@ -88,13 +87,13 @@ if ( {) {$2;}
   rec.priority}
 }</span> </div> </div>) )
 }</div> </div>)"
-}) : (<BarChart3 className=\"w-4 h-4\" />)
+}) : (
+          <BarChart3 className=\"w-4 h-4\" />)
 }<span /> {}
   isMonitoring ? 'Measuring...': 'Measure Performance' }
 }</span> </button> </div> </div> </motion.div>) 
 }</AnimatePresence> </>) 
 };
-
 export default EnhancedPerformanceMonitor;
 
 "

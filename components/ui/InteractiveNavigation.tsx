@@ -25,5 +25,4 @@ const InteractiveNavigation = () => {
     </nav>
   );
 };
-
 export default InteractiveNavigation;

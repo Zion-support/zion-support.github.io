@@ -1,11 +1,9 @@
-
-
 import fs from 'fs';,
 import path from 'path';
-import type { GetStaticProps } from 'next';
+import type { GetStaticProps,
+  from 'next';
 
 type Item = any;
-
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className=\"space-y-6\" />"
@@ -19,16 +17,23 @@ export default function InnovationDigest({ items }: Props) {
       }
 }"
       <ul className=\"space-y-4\" />;"
-        {items.map((it, idx) => (<li key={idx} className=\"p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900\" />;"
-            <div className=\"flex items-center justify-between gap-4\" />;"
-              <div className=\"text-xs uppercase tracking-wide text-gray-500 dark: text-gray-400\" />{it.sourc}
-}</div>;"
+        {items.map((it,,,
+  idx) => (
+          <li key={idx}
+            className=\"p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900\" />
+            "
+            <div className=\"flex items-center justify-between gap-4\" />
+            "
+              <div className=\"text-xs uppercase tracking-wide text-gray-500 dark: text-gray-400\" />{it.sourc
+</div>;"
               {it.date && <div className=\"text-xs text-gray-500 dark: text-gray-400\" />{new Date(it.date).toLocaleString()}</div
 }
             </div>;"
-            <a href={it.url} target=\"_blank\" rel=\"noreferrer\" className=\"mt-1 block font-medium text-blue-600 dark: text-cyan-400\" />{it.titl}
-}</a>;"
-            {it.summary && <p className=\"mt-2 text-sm text-gray-600 dark: text-gray-300\" />{it.summary}</p
+            <a href={it.url}
+            target=\"_blank\" rel=\"noreferrer\" className=\"mt-1 block font-medium text-blue-600 dark: text-cyan-400\" />{it.titl
+</a>
+            "
+            {it.summary && <p className=\"mt-2 text-sm text-gray-600 dark: text-gray-300\" />{it.summary</p
 }
           </li>;
         ))}
@@ -36,6 +41,5 @@ export default function InnovationDigest({ items }: Props) {
       </ul>
 );
 }
-
 
 "

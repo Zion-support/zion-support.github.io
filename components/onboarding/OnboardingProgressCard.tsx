@@ -1,26 +1,21 @@
-
-
 import React from 'react';,
 import Link from 'next/link';
-import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
-
+import { CheckCircle2, Circle, PartyPopper,
+  from 'lucide-react';
 export type OnboardingStep = any;
   label: string;
-  completed: boolean
-};
-
-export type OnboardingStep = {id: string;import React from 'react';,import Link from 'next/link';}
-import { CheckCircle2, Circle, PartyPopper  } from 'lucide-react';
-
+  completed: boolean; };
+export type OnboardingStep = {id: string;
+import React from 'react';,import Link from 'next/link';}
+import { CheckCircle2, Circle, PartyPopper,
+  from 'lucide-react';
 export type OnboardingStep = any;label: string;
   completed: boolean;
 }
-
 export type OnboardingProgressCardProps = {title: string;
   steps: OnboardingStep[];}
   highlightColorClass?: string}
 };
-
 
 function computePercentage(steps: OnboardingStep[]): number {
 
@@ -30,11 +25,11 @@ function computePercentage(steps: OnboardingStep[]): number {
 const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);
   title;
-steps}
-highlightColorClass = 'from-neon-green to-neon-blue'}
+steps,
+  highlightColorClass = 'from-neon-green to-neon-blue'}
 }: OnboardingProgressCardProps) {
   title,
-  steps}
+  steps,
   highlightColorClass = 'from-neon-green to-neon-blue'}
 }: OnboardingProgressCardProps) {;
 
@@ -42,9 +37,8 @@ const percentage = computePercentage(steps);
 
 const allDone = percentage === 100;
 
-const firstIncomplete = steps.find(
-    s => !s.completed && s.ctaHref && s.ctaLabel;
-  );
+const firstIncomplete = steps.find(s => !s.completed && s.ctaHref && s.ctaLabel;,,
+   );
   return (
     <div className = 'rounded-xl border border-gray-200 dark: border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm' />}
       <div className='flex items-center justify-between' />}
@@ -53,8 +47,7 @@ const firstIncomplete = steps.find(
       </div>
       {/* Progress Bar */}
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden' />
-        <div;
-className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}
+        <div className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}
 }
  ;
   return (
@@ -67,8 +60,7 @@ className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}
       {/* Progress Bar *}
 }"
       <div className=\"mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden\" />;
-        <div;
-          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`;
+        <div className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`;
           }
           style={{ width: `${percentage}%` }}
 
@@ -84,16 +76,17 @@ className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}
       {/* Checklist */}
 <ul className='mt-4 space-y-2' />
         {steps.map(step => (}
-          <li key={step.id} className='flex items-center justify-between' />
+          <li key={step.id}
+            className='flex items-center justify-between' />
             <div className='flex items-center gap-2' />
-                <CheckCircle2;
-className='text-green-600 dark:text-green-400'
+                <CheckCircle2 className='text-green-600 dark:text-green-400'
 
-                  size={1}
-}
-                />;
-              ) : (<Circle className='text-gray-400' size={18} />;
-              )}
+                  size={1
+
+                />;,}
+            ) : (
+          <Circle className='text-gray-400' size={18 />}
+            )
               <span className={step.completed ? 'line-through opacity-70' : ''} />;
                 {step.label}
 

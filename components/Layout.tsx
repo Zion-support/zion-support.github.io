@@ -1,6 +1,8 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode,
+  from 'react';
 import Head from 'next/head';
-import { ReactNode } from 'react';
+import { ReactNode,
+  from 'react';
 
 interface LayoutProps {
   children: ReactNode;
@@ -12,8 +14,8 @@ interface LayoutProps {
   ogDescription?: string;
   ogUrl?: string;
 }
-
-export default function Layout({ children, title, description }: LayoutProps) {
+export default function Layout({ children, title,,
+  description  }: LayoutProps) {
   return (
     <>
       <Head>
@@ -28,8 +30,8 @@ const Layout = ({
   ogImage = "https://ziontechgroup.com/og-image.jpg",
   ogTitle,
   ogDescription,
-  ogUrl
-}: LayoutProps) {
+  ogUrl,,
+  }: LayoutProps) {
   return (
     <>
       <Head>
@@ -38,20 +40,20 @@ const Layout = ({
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        
+
         {/* Open Graph */}
         <meta property="og:title" content={ogTitle || title} />
         <meta property="og:description" content={ogDescription || description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={ogUrl || "https://ziontechgroup.com"} />
         <meta property="og:type" content="website" />
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={ogTitle || title} />
         <meta name="twitter:description" content={ogDescription || description} />
         <meta name="twitter:image" content={ogImage} />
-        
+
         <link rel="canonical" href={ogUrl || "https://ziontechgroup.com"} />
       </Head>
 

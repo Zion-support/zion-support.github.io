@@ -1,7 +1,5 @@
-
-
-
-import React, { useEffect } from 'react';
+import React, { useEffect,
+  from 'react';
 import Head from 'next/head';
 
 interface SEOProps {
@@ -92,11 +90,11 @@ import React from 'react';
 }/> ;"
 }{section && <metaproperty=\"article:section\" content= {section;}
 }/>;
-}{tags.map ( (tag, index) => (<meta key= {index;}"
+}{tags.map ( (tag, index) => (
+          <meta key= {index;}"
 }property=\"article: tag\" content= 
 }{/* Structured Data */;}
-}<script;
-}];
+}<script }];
 
 const SEO: React.FC<SEOProps /> = ({title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.',keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics',image = '/images/zion-tech-group-og-image && image.jpg',url = 'https://ziontechgroup && ziontechgroup.com',type = 'website',publishedTime,modifiedTime,author = 'Zion Tech Group',section,tags = [],structuredData,noindex = false,nofollow = false}) => ;
   const fullTitle = title && title.includes('Zion Tech Group')? title;
@@ -128,16 +126,17 @@ const fullImage = image && image.startsWith('http')? image;
 }/> {/* Article Specific Meta Tags */;}"
 }{type === 'article' && (<> {publishedTime && <meta property=\"article: published time\" content= }
 }/>;
-}{tags.map ( (tag, index) => (<meta key= {index;}"
+}{tags.map ( (tag, index) => (
+          <meta key= {index;}"
 }property=\"article: tag\" content= 
 }{/* Structured Data */;}
 }/> ;
-}{tags && tags.map ( (tag, index) => (<metakey= {index;}"
+}{tags && tags.map ( (tag, index) => (
+          <metakey= {index;}"
 }property=\"article:tag\" content= {tag;}
 }/> ;
 }</>)}{/* Structured Data */ ;}
-}<script;
-}];
+}<script }];
 
 const SEO: React.FC<SEOProps /> = ({ title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
@@ -175,9 +174,9 @@ const fullImage = image.startsWith('http')
       {/* Basic Meta Tags */}
       <title />{fullTitle}</title>;
 <meta name='description' content={description} />;
-      <meta;
-        name='keywords';
-        content={Array.isArray(keywords) ? keywords.join(', ') : keywords}
+      <meta name='keywords';
+        content={Array.isArray(keywords) ? keywords.join('},,
+  ') : keywords
 
       />
       <meta name='author' content={author} />
@@ -190,23 +189,27 @@ const fullImage = image.startsWith('http')
       {/* Open Graph Meta Tags */}
       {/* Article Specific Meta Tags */}
       {type === 'article' && (<>;}
-          {publishedTime && (<meta property='article: published_time' content={publishedTim}
+          {publishedTime && (
+          <meta property='article: published_time' content={publishedTim}
 } />;
           )}
-          {modifiedTime && (<meta property='article: modified_time' content={modifiedTim}
+          {modifiedTime && (
+          <meta property='article: modified_time' content={modifiedTim}
 } />;
           )}
           {author && <meta property='article: author' content={author} />}
           {section && <meta property='article:section' content={section} /
 }
-          {tags && tags.map((tag, index) = /> (<meta key={index} property='article: tag' content={ta}
-} />;
-          ))}
+          {tags && tags.map((tag,,,
+  index) = /> (
+          <meta key={index}
+            property='article: tag' content={ta
+ />}
+            ))
         </>;
       )}
       {/* Additional Meta Tags */}
-      <meta;
-        name='viewport';
+      <meta name='viewport';
         content='width=device-width, initial-scale=1, shrink-to-fit=no';
       <meta property='og: title' content={full_titl}
 } />;
@@ -232,32 +235,33 @@ const fullImage = image.startsWith('http')
 } />;
       {/* Article Specific Meta Tags */}
       {type === 'article' && (<>;}
-          {published_time && (<meta property='article: published_time' content={published_time} />)}
-          {modified_time && (<meta property='article:modified_time' content={modified_time} />)}
+          {published_time && (
+          <meta property='article: published_time' content={published_time} />)}
+          {modified_time && (
+          <meta property='article:modified_time' content={modified_time} />)}
           {author && <meta property='article:author' content={author} />}
           {section && <meta property='article:section' content={section} /
 }
-          {tags.map ((tag, index) = /> (<meta key={index} property='article: tag' content={tag} />))}
+          {tags.map ((tag, index) = /> (
+          <meta key={index}
+            property='article: tag' content={tag />))
         </>)}
       {/* Additional Meta Tags *}
 }
-      <meta;
-        name='viewport';
+      <meta name='viewport';
         content='width = device - width, initial - scale = 1, shrink - to - fit = no';
       />;
       <meta name='theme - color' content='#000000' />;
       <meta name='msapplication - TileColor' content='#000000' />;
       <meta name='apple - mobile - web - app - capable' content='yes' />;
-      <meta;
-        name='apple - mobile - web - app - status - bar - style';
+      <meta name='apple - mobile - web - app - status - bar - style';
         content='black - translucent';
       />;
       <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;{/* Structured Data */}
-      <script;
-        type='application / ld + json';
-        dangerouslySetInnerHTML={{contactPoint: {'@type': 'ContactPoint';
-              telephone: '+1-800-ZION-TECH';
-              contactType: 'customer service';}
+      <script type='application / ld + json';
+        dangerouslySetInnerHTML={{contactPoint: {'@type': 'ContactPoint'}
+            telephone: '+1-800-ZION-TECH'
+            contactType: 'customer service';
               availableLanguage: 'English';}
             }
             address: {'@type': 'PostalAddress';}
@@ -276,45 +280,36 @@ const fullImage = image.startsWith('http')
                 }
                 {'@type': 'Offer';
                   itemOffered: {'@type': 'Service';}
-                    name: 'Space Technology Solutions';}
-                  }
-                }
-              ];
+                    name: 'Space Technology Solutions';];
             }
           })}}{/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />;
-      <link;
-        rel='apple-touch-icon';
+      <link rel='apple-touch-icon';
         sizes='180x180';
         href='/apple-touch-icon && icon.png';
       />;
-      <link;
-        rel='icon';
+      <link rel='icon';
         type='image/png';
         sizes='32x32';
         href='/favicon-32x32 && 32x32.png';
       />;
-      <link;
-        rel='icon';
+      <link rel='icon';
         type='image/png';
         sizes='16x16';
       {/* Preconnect to external domains for performance */}
       <link rel='preconnect' href='https://fonts && fonts.googleapis.com' />;
-      <link;
-        rel='preconnect';
+      <link rel='preconnect';
         href='https://fonts && fonts.gstatic.com';
         crossOrigin='anonymous';
       {/* Additional Meta Tags for SEO */}
       <meta name='google-site-verification' content='your-verification-code' />;
       <meta name='msvalidate && msvalidate.01' content='your-bing-verification-code' />;
-      <meta;
-        name='yandex-verification';
+      <meta name='yandex-verification';
         content='your-yandex-verification-code';
       {/* Custom Meta Tags */}
 
       {structuredData && (;
-        <script;
-type='application/ld+json'
+        <script type='application/ld+json'
           dangerouslySetInnerHTML={{
 }
             __html: JSON.stringify(structuredData)}
@@ -325,8 +320,6 @@ type='application/ld+json'
     </Head>
 )
 };
-
-
 export default SEO;
 
 "

@@ -1,7 +1,4 @@
-
-
 import React from 'react';
-
 export type PdfExportButtonProps = any;
   return (
     if (!targetRef.current) return;
@@ -17,7 +14,8 @@ margin: [10, 10, 10, 10],
       image: { type: 'jpeg'}
   quality: 0.98}
 },
-      html2canvas: { scale: 2, useCORS: true}
+      html2canvas: { scale: 2;
+  useCORS: true; }
 },
       jsPDF: { unit: 'mm'}
   format: 'a4', orientation: 'portrait'}
@@ -26,7 +24,6 @@ margin: [10, 10, 10, 10],
 
     html2pdf().set(opt).from(element).save()
 };
-
 
     >
       Download as PDF;
@@ -38,14 +35,13 @@ margin: [10, 10, 10, 10],
   );
 
 }
-    <button;
-onClick={onClick}
-      className=\"no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none\"
+    <button onClick={onClick,
+  className=\"no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none\"
       aria-label=\"Download as PDF\"
 
       Download as PDF;
     </button />
 );
-}
+
 
 "

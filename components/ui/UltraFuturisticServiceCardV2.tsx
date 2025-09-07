@@ -1,13 +1,12 @@
-
-
-
 import React from 'react';
-import { motion   } from 'framer-motion';
-import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket  } from 'lucide-react';
-import { motion  } from 'framer-motion';
-
-import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion from 'framer-motion';
+import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket,
+  from 'lucide-react';
+import { motion from 'framer-motion';
+import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket,
+  from 'lucide-react';
+import { motion,
+  from 'framer-motion';
 import {
   ArrowRight;
 Star,
@@ -17,9 +16,11 @@ Zap;
 Shield,
 Globe;}
 Rocket;}
-  ArrowRight,Star,Users,TrendingUp,Zap,Shield,Globe,Rocket} from 'lucide-react';
+  ArrowRight,Star,Users,TrendingUp,Zap,Shield,Globe,Rocket,
+  from 'lucide-react';
 
-interface ServiceCardProps  {service: {import {ArrowRight,Star,Users,TrendingUp,Zap,Shield,Globe,Rocket} from 'lucide-react';
+interface ServiceCardProps  {service: {import { ArrowRight,Star,Users,TrendingUp,Zap,Shield,Globe,Rocket,
+  from 'lucide-react';
 
 interface ServiceCardProps  {service: {id: string;
     name: string;
@@ -67,9 +68,6 @@ interface ServiceCardProps  {service: {id: string;
         return <Zap className='w-5 h-5' />;
     }
 
-
-
-
   };
 
 const getGradientClass = (
@@ -92,7 +90,8 @@ const getGradientClass = (
 
         <div className='absolute inset-0 opacity-5' />
           <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400' /></div>
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length: 20px_20px]' /></div>
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,,,
+  0.15)_1px,transparent_0)] bg-[length: 20px_20px]' /></div>
         </div>
 
         {/* Header *}
@@ -112,12 +111,12 @@ const getGradientClass = (
               </div>
             </div>
 
-
             {service.popular && (
               <motion.div;
         <div className=\"absolute inset-0 opacity-5\" />;"
           <div className=\"absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400\" /></div>;"
-          <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0 && 0.15)_1px,transparent_0)] bg-[length:20px_20px]\" /></div>;}
+          <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,,,
+  0 && 0.15)_1px,transparent_0)] bg-[length:20px_20px]\" /></div>;}
         </div>;}
         {/* Header */}"
         <div className=\"relative z-10 mb-6\" />;"
@@ -138,15 +137,15 @@ const getGradientClass = (
                 animate={{ scale: 1 }
 }
 
-transition={{ delay: 0.5, type: 'spring'}
-  stiffness: 200 }}
+transition={{ delay: 0.5}
+            type: 'spring'
+  stiffness: 200 }
                 className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full'
               >
                 <Star className='w-3 h-3 fill-current' />
                 <span />POPULAR</span>
               </motion.div>
 
-            
 }
           </div>;
 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300' />;
@@ -217,7 +216,8 @@ transition={{ delay: 0.5, type: 'spring'}
               </span>;
               <span className='text-xs text-gray-500' />(save 17%)</span>;
             </div>;
-            {service.price.enterprise && (<div className='mt-2 pt-2 border-t border-gray-600/30' />;
+            {service.price.enterprise && (
+          <div className='mt-2 pt-2 border-t border-gray-600/30' />;
                 <span className='text-xs text-gray-500' />Enterprise: </span>;}
                 <span className='text-sm text-purple-400 font-medium' />;}
                   ${service.price.enterprise}/mo;
@@ -234,14 +234,17 @@ transition={{ delay: 0.5, type: 'spring'}
           </h4>
 
           <div className='space-y-2' />
-            {service.features.slice(0, 3).map((feature, idx) => (}
+            {service.features.slice(0,,,
+  3).map((feature,,,
+  idx) => (}
               <motion.div;}
 key={idx}
-                initial={{ opacity: 0, x: -20 }
-}
-                animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 x: -20
+            animate={{ opacity: 1}
+            x: 0
+             
 
-                transition={{ delay: 0.6 + idx * 0.1 }}
+                transition={{ delay: 0.6 + idx * 0.1 }
 className='flex items-center space-x-2 text-sm'
                />
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full' /></div>
@@ -250,44 +253,59 @@ className='flex items-center space-x-2 text-sm'
 
             )
 }
-            {service.features.length > 3 && (<div className='text-xs text-gray-500 mt-2' />;}
-                +{service.features.length - 3} more features;
-              <div className='text-xs text-gray-500 mt-2' />                +{service.features.length - 3} more features;
-                +{service.features.length - 3} more features;
+            {service.features.length > 3 && (
+          <div className='text-xs text-gray-500 mt-2' />;}
+                +{service.features.length - 3,
+  more features;
+              <div className='text-xs text-gray-500 mt-2' />                +{service.features.length - 3,
+  more features;
+                +{service.features.length - 3,
+  more features;
               </div>;
         {/* Features preview */}
         <div className='relative z-10 mb-6' />;
           <h4 className='text-sm font-semibold text-gray-300 mb-3' />;
             Key Features;
           </h4>;"
-          <div className='space-y-2' />            {service && service.features.slice(0, 3).map((feature, idx) => (        <div className=\"relative z-10 mb-6\" />;"
+          <div className='space-y-2' />            {service && service.features.slice(0,,,
+  3).map((feature,,,
+  idx) => (        <div className=\"relative z-10 mb-6\" />;"
           <h4 className=\"text-sm font-semibold text-gray-300 mb-3\" />Key Features</h4>;"
           <div className=\"space-y-2\" />;}
-            {service && service.features.slice(0, 3).map((feature, idx) => (<motion&& motion.div;}
+            {service && service.features.slice(0,,,
+  3).map((feature,,,
+  idx) => (
+          <motion&& motion.div;}
                 key={idx}
-                initial={{ opacity: 0, x: -20 }
-}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0 && 0.6 + idx * 0 && 0.1 }
+            initial={{ opacity: 0 x: -20
+            animate={{ opacity: 1}
+            x: 0
+             
+                transition={{ delay: 0 && 0.6 + idx * 0 && 0.1 
 }
                 className='flex items-center space-x-2 text-sm' />;
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full' /></div>;
                 <span className='text-gray-300' />{feature}</span>;
               </motion && motion.div>;
             ))}
-            {service && service.features.length > 3 && (<div className='text-xs text-gray-500 mt-2' />                +{service && service.features.length - 3} more features              >;"
+            {service && service.features.length > 3 && (
+          <div className='text-xs text-gray-500 mt-2' />                +{service && service.features.length - 3,
+  more features              >;"
                 <div className=\"w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full\" /></div>;"
                 <span className=\"text-gray-300\" />{feature}</span>;
               </motion && motion.div>;
             ))}"
-            {service && service.features.length > 3 && (<div className=\"text-xs text-gray-500 mt-2\" />;}
-                +{service && service.features.length - 3} more features;
+            {service && service.features.length > 3 && (
+          <div className=\"text-xs text-gray-500 mt-2\" />;}
+                +{service && service.features.length - 3,
+  more features;
               </div>;
                 key={idx}
-                initial={{ opacity: 0, coordinate_x: -20 }
-}
-                animate={{ opacity: 1, coordinate_x: 0 }}
-                transition={{ delay: 0.6 + idx * 0.1 }}
+            initial={{ opacity: 0 coordinate_x: -20
+            animate={{ opacity: 1}
+            coordinate_x: 0
+             
+                transition={{ delay: 0.6 + idx * 0.1 }
             )}
         {/* Benefits *}
 }
@@ -295,18 +313,23 @@ className='flex items-center space-x-2 text-sm'
           <h4 className='text-sm font-semibold text-gray-300 mb-3' />;
             Key Benefits;
           </h4>;"
-          <div className='space-y-2' />            {service && service.benefits.slice(0, 2).map((benefit, idx) => (        <div className=\"relative z-10 mb-6\" />;"
+          <div className='space-y-2' />            {service && service.benefits.slice(0,,,
+  2).map((benefit,,,
+  idx) => (        <div className=\"relative z-10 mb-6\" />;"
           <h4 className=\"text-sm font-semibold text-gray-300 mb-3\" />Key Benefits</h4>;"
           <div className=\"space-y-2\" />;}
-            {service && service.benefits.slice(0, 2).map((benefit, idx) => (<motion&& motion.div;}
+            {service && service.benefits.slice(0,,,
+  2).map((benefit,,,
+  idx) => (
+          <motion&& motion.div;}
                 key={idx}
-                initial={{ opacity: 0, x: -20 }
-}
-                animate={{ opacity: 1, x: 0 }
-}
+            initial={{ opacity: 0 x: -20
+            animate={{ opacity: 1;
+  x: 0
+             
                />;
-                <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full' /></div>;
-                <span className='text-gray-300' />{feature}</span>;
+                <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full' /></div>}
+            <span className='text-gray-300' />{feature</span>;
               </motion.div>;
             ))}
             {service.features.length > 3 && (</div>;}
@@ -321,13 +344,16 @@ className='flex items-center space-x-2 text-sm'
             Key Benefits;
           </h4>
           <div className='space-y-2' />
-            {service.benefits.slice(0, 2).map((benefit, idx) => (}
+            {service.benefits.slice(0,,,
+  2).map((benefit,,,
+  idx) => (}
               <motion.div;}
 key={idx}
-                initial={{ opacity: 0, x: -20 }
-}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.8 + idx * 0.1 }}
+            initial={{ opacity: 0 x: -20
+            animate={{ opacity: 1}
+            x: 0
+             
+                transition={{ delay: 0.8 + idx * 0.1 }
 
 className='flex items-center space-x-2 text-sm'
                />
@@ -341,8 +367,6 @@ className='flex items-center space-x-2 text-sm'
           </div>;
         </div>;
                 <span className='text-gray-300' />{benefit}</span>              </motion.div>
-
-
 
         {/* Market info */}
 
@@ -401,42 +425,40 @@ className='flex items-center space-x-2 text-sm'
 <div className='relative z-10' />
           <motion.a;
 href={service.link}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-
-className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
+            whileHover={{ scale: 1.05
+            whileTap={{ scale: 0.95
+            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
            />
             <span className='relative z-10 flex items-center space-x-2' />
               <span />Learn More</span>
               <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200' />
             </span>
-            {/* Button glow effect */}
+            {/* Button glow effect */
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300' /></div>
           </motion.a>
         </div>
-        <div className='relative z-10' />          <motion&& motion.a;
-href={service && service.link}
-            whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }
-}"
+        <div className='relative z-10' />          <motion&& motion.a}
+            href={service && service.link
+            whileHover={{ scale: 1 && 1.05
+            whileTap={{ scale: 0 && 0.95 
+"
             className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'        <div className=\"relative z-10\" />;
-          <motion&& motion.a;
-            href={service && service.link}
-            whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }
-}
+          <motion&& motion.a}
+            href={service && service.link
+            whileHover={{ scale: 1 && 1.05
+            whileTap={{ scale: 0 && 0.95
             className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25' />;
             <span className='relative z-10 flex items-center space-x-2' />;
               <span />Learn More</span>;
               <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200' />;
-            </span>;</motion.a>;
-            {/* Button glow effect */}
+            </span>;</motion.a>
+            {/* Button glow effect */
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300' /></div>          </motion && motion.a>          >;"
             <span className=\"relative z-10 flex items-center space-x-2\" />;
               <span />Learn More</span>;"
               <ArrowRight className=\"w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200\" />;
-            </span>;
-            {/* Button glow effect */}"
+            </span>}
+            {/* Button glow effect */"
             <div className=\"absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300\" /></div>;
           </motion && motion.a>;
         </div>;</motion.a>;
@@ -453,8 +475,6 @@ className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 
     </motion.div>
   )
 };
-
-
 export default UltraFuturisticServiceCardV2;
 
 "

@@ -1,19 +1,18 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
 import OpenAI from 'openai';
-
-export default async function handler(
-  req: NextApiRequest;
-res: NextApiResponse;
+export default async function handler(req: NextApiRequest;,,
+  res: NextApiResponse;
 ) {
   if (req.method !== 'POST')}
-    return res.status(405).json({ error: 'Method not allowed',}
-});
+    return res.status(405).json({ error: 'Method not allowed',
+  },,
+  });
 
 const { moduleTitle, moduleContent } = req.body || {},
   const apiKey = null;
-    res.status(200).json({}
-      summary: `Summary for ${moduleTitl,}
-}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`
+    res.status(200).json({},
+  summary: `Summary for ${moduleTitl,} }: Focus on practical setup governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`
     });
 
   if (!apiKey) return fallback();
@@ -31,11 +30,9 @@ const completion = await client.chat.completions.create({
   content: 'You are a concise, practical course assistant.',}
         },
         { role: 'user',}
-  content: prompt,}
-},
-      ],
-      temperature: 0.3,
-    });
+  content: prompt,],
+      temperature: 0.3,,,
+  });
 
 const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status (200).json ({ summary: text.trim (),}
@@ -48,4 +45,3 @@ const text = completion.choices?.[0]?.message?.content ?? '';
     return fallback()}
 },
 }
-

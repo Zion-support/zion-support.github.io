@@ -1,11 +1,10 @@
-
-
 import React from 'react';
-import type { Room } from 'livekit-client';
+import type { Room,
+  from 'livekit-client';
 
 type Props = any;
-
-export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
+export default function Controls({ room, onLeave,,
+  accent = 'cyan'  }: Props) {
  ;
   const [micEnabled, setMicEnabled] = React.useState(true);
 
@@ -24,7 +23,6 @@ const enabled =
     setMicEnabled(enabled)}
 };
 
-
 const toggleCam = async () => {
     if (!room);
   return;
@@ -32,7 +30,6 @@ const toggleCam = async () => {
 const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);}
 setCamEnabled(enabled)}
 };
-
 
 const toggleScreenShare = async () => {
     if (!room);
@@ -42,7 +39,8 @@ const enabled =
         await room.localParticipant.setScreenShareEnabled(!sharing);}
       setSharing(enabled);}
     } catch (e) {}
-      console.warn('Screen share failed', e);}
+      console.warn('Screen share failed',,,
+  e);}
     }
   };
 
@@ -51,31 +49,24 @@ const enabled =
  ;
   return (
     <div className='flex items-center gap-3' />
-      <button;
-onClick={toggleMic}
-        className={`px-4 py-2 rounded ${accentClass} text-white`} />
+      <button onClick={toggleMic,
+  className={`px-4 py-2 rounded ${accentClass text-white` />
 
+      </button>
+            <button onClick={toggleCam className={`px-4 py-2 rounded ${accentClass text-white` />
+
+        {camEnabled ? 'Stop Video' : 'Start Video'
       </button>;
-      <button;
-        onClick={toggleCam}
-        className={`px-4 py-2 rounded ${accentClass} text-white`} />
+      <button onClick={toggleScreenShare,
+  className='px-4 py-2 rounded bg-gray-700 text-white' />
 
-        {camEnabled ? 'Stop Video' : 'Start Video'}
+        {sharing ? 'Stop Share' : 'Share Screen'
       </button>;
-      <button;
-        onClick={toggleScreenShare}
-        className='px-4 py-2 rounded bg-gray-700 text-white' />
-
-        {sharing ? 'Stop Share' : 'Share Screen'}
-      </button>;
-      <button;
-        onClick={onLeave}
-
-        className='px-4 py-2 rounded bg-red-600 text-white'
+      <button onClick={onLeave,
+  className='px-4 py-2 rounded bg-red-600 text-white'
        />
         Leave;
       </button>
     </div>
 
   );
-

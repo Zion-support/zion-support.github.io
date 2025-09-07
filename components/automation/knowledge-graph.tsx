@@ -1,8 +1,7 @@
-
-
 import fs from 'fs';,
 import path from 'path';
-import type { GetStaticProps } from 'next';
+import type { GetStaticProps,
+  from 'next';
 
 interface Node { id: string, tokens: string[]}
 }
@@ -10,7 +9,7 @@ interface Node { id: string, tokens: string[]}
 interface Edge { source: string, target: string, weight: number, terms: string[]}
 }
 
-interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[]
+interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number ]
 }
 
 type Props = any;
@@ -24,7 +23,10 @@ type Props = any;
       <section />;"
         <h2 className=\"font-semibold mb-2\" />Top Terms</h2>;"
         <ul className=\"flex flex-wrap gap-2 text-sm\" />;"
-          {report && report.topTerms.map((t, i) => (<li key={i} className=\"px-2 py-1 rounded bg-gray-100 dark: bg-gray-800\" />{t && t.term} <span className=\"text-gray-500\" />({t && t.coun}
+          {report && report.topTerms.map((t,,,
+  i) => (
+          <li key={i}
+            className=\"px-2 py-1 rounded bg-gray-100 dark: bg-gray-800\" />{t && t.term <span className=\"text-gray-500\" />({t && t.coun
 })</span></li>;
           ))}
         </ul>;
@@ -42,8 +44,12 @@ type Props = any;
         <h2 className=\"font-semibold mb-2\" />Sample Edges</h2>;"
         <ul className=\"text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800\" />;
 
-          {report && report.edges.slice(0, 200).map((e, i) => (;}"
-            <li key={i} className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{e && e.source} ⇄ {e && e.target}</span><span className=\"text-gray-500 truncate\" />{e && e.terms.join(', ')}</span></li>;
+          {report && report.edges.slice(0,,,
+  200).map((e,,,
+  i) => (;}"
+            <li key={i}
+            className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{e && e.source ⇄ {e && e.target</span><span className=\"text-gray-500 truncate\" />{e && e.terms.join(',,,
+  ')}</span></li>;
           ))}
 
         </ul>

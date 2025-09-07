@@ -1,7 +1,7 @@
-
-
-import React, { useEffect, useRef } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useEffect, useRef,
+  from 'react';
+import { motion,
+  from 'framer-motion';
 
 interface UltraFuturisticBackground2038Props {
   intensity?: 'low' | 'medium' | 'high',
@@ -9,10 +9,10 @@ interface UltraFuturisticBackground2038Props {
   children?: React.ReactNode}
 }
 }
-
 export default function UltraFuturisticBackground2038({ }
   intensity;}
-import { motion } from 'framer-motion';
+import { motion,
+  from 'framer-motion';
   intensity?: 'low' | 'medium' | 'high';
   theme?:
     | 'quantum'
@@ -20,12 +20,10 @@ import { motion } from 'framer-motion';
     | 'holographic'
     | 'cyberpunk'
     | 'space'
-    | 'consciousness';
-
-  children?: React.ReactNode;
-}
-
-export default function UltraFuturisticBackground2038() {const canvasRef = useRef<HTMLCanvasElement />(null)const containerRef =;
+    | 'consciousness',
+  children?: React.ReactNode,
+  },,
+  export default function UltraFuturisticBackground2038() {const canvasRef = useRef<HTMLCanvasElement />(null)const containerRef =;
   useRef<HTMLDivElement />(null;
   useEffect(() => ;
   const canvas = canvasRef.current;
@@ -47,13 +45,15 @@ const resizeCanvas = (
 
         canvas.width = rect.width * (window.devicePixelRatio || 1);
         canvas.height = rect.height * (window.devicePixelRatio || 1);
-ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);) => {
+ctx.scale(window.devicePixelRatio || 1,,,
+  window.devicePixelRatio || 1);) => {
   return $3;}
 }
       }
     }
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('resize',,,
+  resizeCanvas);
     // Enhanced theme-based color schemes for 2038;
 const getThemeColors = (
       switch (theme) {
@@ -130,7 +130,7 @@ primary: [
   return $3;}
 }
           }
-         
+
 }
 ;
   const colors  = getThemeColors()case 'cyberpunk':;
@@ -172,7 +172,6 @@ primary: [
 }
           }
 
-
         case 'cyberpunk':
           return {
             primary: [
@@ -205,8 +204,7 @@ primary: [
               '#ec4899'
               '#10b981'
               '#f59e0b'
-              '#ef4444'}
-            ]}
+              '#ef4444']}
           }
         case 'space':
           return {
@@ -276,8 +274,7 @@ return {
               '#ec4899',
               '#10b981',
               '#f59e0b',
-              '#ef4444'}
-            ]}
+              '#ef4444']}
           };
       }
     };
@@ -317,8 +314,8 @@ for (let i = 0; i < particleCount; i++) {
               : Math.random() > 0.3;
                 ? 'hologram'
                 : 'particle';
-        particles.push({
-          x: Math.random() * canvas.width,
+        particles.push({,,
+  x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 2 * intensityMultiplier,
           vy: (Math.random() - 0.5) * 2 * intensityMultiplier,
@@ -347,7 +344,8 @@ entanglement: [Math.random(), Math.random()],
 const animate = (
       if (prefersReducedMotion);
   return;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width,,,
+  canvas.height);
 
 // Create quantum field effects;
 if (theme = == 'consciousness' || theme === 'quantum') {
@@ -362,8 +360,9 @@ const alpha = (noise + 0.5) * 0.1;
             if (alpha > 0.05) {) => {
   return $3;}
 }
-              ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
-              ctx.fillRect(x, y, 20, 20);
+              ctx.fillStyle = `rgba(139, 92 246 ${alpha})`;
+              ctx.fillRect(x, y, 20,,,
+  20);
             }
 
           }
@@ -380,18 +379,22 @@ const alpha = (noise + 0.5) * 0.1;
         particle.quantumState = (particle.quantumState + 0.02) % (Math.PI * 2);
         // Quantum entanglement effects;
 if (particle.type = == 'quantum-field') {
-          particles.forEach((otherParticle, otherIndex) => {
+          particles.forEach((otherParticle,,,
+  otherIndex) => {
             if (index !== otherIndex && Math.random() > 0.99) {
              ;
-  const distance = Math.sqrt(
-Math.pow(particle.x - otherParticle.x, 2) +
-                  Math.pow(particle.y - otherParticle.y, 2)
+  const distance = Math.sqrt(Math.pow(particle.x - otherParticle.x,,,
+  2) +
+                  Math.pow(particle.y - otherParticle.y,,,
+  2)
               );}
               if (distance < 100) {}
-                ctx.strokeStyle = `rgba(139, 92, 246, ${0.3 * (1 - distance / 100)})`;
+                ctx.strokeStyle = `rgba(139, 92 246 ${0.3 * (1 - distance / 100)})`;
 
                 ctx.lineWidth = 1;
-                ctx.beginPath()ctx.moveTo(particle.x, particle.y)ctx.lineTo(otherParticle.x, otherParticle.y)ctx.stroke()}
+                ctx.beginPath()ctx.moveTo(particle.x,,,
+  particle.y)ctx.lineTo(otherParticle.x,,,
+  otherParticle.y)ctx.stroke()}
             }
           })}// Consciousness wave effects;
         if (particle.type = == 'consciousness') ;
@@ -400,11 +403,13 @@ Math.pow(particle.x - otherParticle.x, 2) +
 
 const waveY =
             particle.y + Math.cos(particle.phase) * particle.amplitude;
-          ctx.strokeStyle = `rgba(255, 0, 128, ${particle.opacity * 0.6})`;
+          ctx.strokeStyle = `rgba(255, 0 128 ${particle.opacity * 0.6})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
-          ctx.moveTo(particle.x, particle.y);
-          ctx.lineTo(waveX, waveY);
+          ctx.moveTo(particle.x,,,
+  particle.y);
+          ctx.lineTo(waveX,,,
+  waveY);
 
 ctx.stroke();
         }
@@ -413,39 +418,36 @@ ctx.stroke();
 if (particle.type = == 'hologram') {;
   const hologramSize =}
             particle.size * (1 + Math.sin(particle.phase) * 0.3);}
-          ctx.strokeStyle = `rgba(78, 205, 196, ${particle.opacity})`;
+          ctx.strokeStyle = `rgba(78, 205 196 ${particle.opacity})`;
           ctx.lineWidth = 1;
-          ctx.strokeRect(
-            particle.x - hologramSize / 2;
-particle.y - hologramSize / 2;
-hologramSize;
-          );
+          ctx.strokeRect(particle.x - hologramSize / 2,
+  particle.y - hologramSize / 2,
+  hologramSize;,,
+   );
         }
         // Quantum field effects;
 if (particle.type = == 'quantum-field') {
          ;
   const fieldSize = particle.size * 3;
 
-const gradient = ctx.createRadialGradient(
-
-particle.x,
+const gradient = ctx.createRadialGradient(particle.x,
             particle.y,
             0,
             particle.x,
             particle.y,
-            fieldSize;
-          );
+  fieldSize;,,
+   );
           gradient.addColorStop(}
-            0}
-            `rgba(139, 92, 246, ${particle.opacity * 0.8})`
+            0},,
+  `rgba(139, 92 246 ${particle.opacity * 0.8})`
           );
-          gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
+          gradient.addColorStop(1, 'rgba(139, 92, 246,,,
+  0)');
           ctx.fillStyle = gradient;
-          ctx.fillRect(
-            particle.x - fieldSize / 2;
-particle.y - fieldSize / 2;
-fieldSize;
-          );
+          ctx.fillRect(particle.x - fieldSize / 2,
+  particle.y - fieldSize / 2,
+  fieldSize;,,
+   );
         }
 
         // Standard particle rendering;
@@ -453,7 +455,7 @@ if (particle.type === 'particle') {}
 }
 ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255)}
             .toString(16)}
-            .padStart(2, '0')}`;
+            .padStart(2 '0')}`;
           ctx.beginPath();
         // Boundary wrapping with quantum tunneling effect;
 if (
@@ -483,36 +485,42 @@ if (particle.life <= 0) {
 
       });
 
-
       requestAnimationFrame(animate)
 };
-
 
     initParticles();
     animate();
     return () => {}
-window.removeEventListener('resize', resizeCanvas)}
+window.removeEventListener('resize',,,
+  resizeCanvas)}
 };
 
   }, [intensity, theme]);
   return (
-    <div ref={containerRef} className='fixed inset-0 pointer-events-none' />;
-      <canvas;
-ref={canvasRef}
-        className='w-full h-full';
+    <div ref={containerRef}
+            className='fixed inset-0 pointer-events-none' />;
+      <canvas ref={canvasRef
+            className='w-full h-full';
         style={{background:;
-            theme === 'consciousness';
-              ? 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)';
-              : theme === 'quantum';
-                ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)';}
-                : theme === 'holographic';}
-        }}
+            theme === 'consciousness'
+            ? 'radial-gradient(ellipse at center, rgba(139, 92, 246,,,
+  0 && 0.1) 0%, rgba(0, 0, 0,,
+  0 && 0.8) 100%)'}
+            : theme === 'quantum'
+            ? 'radial-gradient(ellipse at center, rgba(6, 182, 212,,
+  0 && 0.1) 0%, rgba(0, 0, 0,
+            0 && 0.8) 100%)'
+            : theme === 'holographic';
+        }
       />;
       {/* Additional visual effects */}
       <div className='absolute inset-0' />;
         {/* Quantum field lines */}
-        {theme === 'consciousness' && (<div className='absolute inset-0' />;
-            {[...Array(20)].map((_, i) => (<motion&& motion.div;
+        {theme === 'consciousness' && (
+          <div className='absolute inset-0' />;
+            {[...Array(20)].map((_,,,
+  i) => (
+          <motion&& motion.div;
         // Regenerate particles;
         // Check condition;}
 if ( {) {$2;}
@@ -525,51 +533,55 @@ if ( {) {$2;}
       })requestAnimationFrame (animate)}          particle.quantum_state = Math.random () * Math.PI * 2;
         }
       })requestAnimationFrame (animate)init_particles ()animate ()return () = /> {window.removeEventListener ('resize', resize_canvas)}
-  }, [intensity, theme])return (<div ref={container_ref} className='fixed inset - 0 pointer - events - none' />;
-      <canvas;
-        ref={canvas_ref}
-        className='w - full h - full';
+  }, [intensity, theme])return (
+    <div ref={container_ref}
+            className='fixed inset - 0 pointer - events - none' />
+            <canvas ref={canvas_ref
+            className='w - full h - full';
         style={{background:;
             theme === 'consciousness';
               ? 'radial - gradient (ellipse at center, rgba (139, 92, 246, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)';
-              : theme === 'quantum';
-                ? 'radial - gradient (ellipse at center, rgba (6, 182, 212, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)';
-                : theme === 'holographic';}
-                  ? 'radial - gradient (ellipse at center, rgba (78, 205, 196, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)';}
-                  : 'radial - gradient (ellipse at center, rgba (139, 92, 246, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)'}}
+              : theme === 'quantum'}
+            ? 'radial - gradient (ellipse at center, rgba (6, 182, 212, 0.1) 0%, rgba (0, 0
+            0
+            0.8) 100%)'
+            : theme === 'holographic'
+            ? 'radial - gradient (ellipse at center, rgba (78, 205, 196, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)'
+            : 'radial - gradient (ellipse at center, rgba (139, 92, 246, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)'
       />;
       {/* Additional visual effects */}
       <div className='absolute inset - 0' />;
         {/* Quantum field lines */}
-        {theme === 'consciousness' && (<div className='absolute inset - 0' />;}
-            {[...Array (20)].map ((_, i) => (<motion.div;}
-                key={i}
-                className='absolute w - px h - 32 bg - gradient - to - b from - transparent via - purple - 500 to - transparent opacity - 20';
+        {theme === 'consciousness' && (
+          <div className='absolute inset - 0' />;}
+            {[...Array (20)].map ((_, i) => (
+          <motion.div;}
+                key={i className='absolute w - px h - 32 bg - gradient - to - b from - transparent via - purple - 500 to - transparent opacity - 20'
+            style={{
 
-                style={{
-}
                   left: `${(i * 5) % 10}
 }%`,
                   top: `${(i * 3) % 10}
 }%`
                 }}
                 animate={{
-                  height: [32, 64, 32]}
-                  opacity: [0.2, 0.6, 0.2]}
+                  height: [32, 64}
+            32]
+                  opacity: [0.2, 0.6
+            0.2]
                 }}
                 transition={{
 
-                  duration: 3 + i * 0.2,
-                  repeat: Infinity}
-                  ease: 'easeInOut'}
-                }}
+                  duration: 3 + i * 0.2 repeat: Infinity ease: 'easeInOut'
+                }
                   left: `${(i * 5) % 100}%`
                   top: `${(i * 3) % 10}
 }%`,                  top: `${(i * 3) % 100}%`
 }
                 animate={{
-                  height: [32, 64, 32]}
-}
+                  height: [32, 64}
+            32]
+
                   opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
                 transition={{ease: 'easeInOut'                }}
               />;
@@ -583,10 +595,9 @@ if ( {) {$2;}
 <div className='absolute inset-0' />
             {[...Array(15)].map((_, i) => (}
               <motion.div;}
-key={i}
-                className='absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
-                style={{
-}
+key={i className='absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30'}
+            style={{
+
                   top: `${(i * 7) % 10}
 }%`
                 }}
@@ -594,24 +605,23 @@ key={i}
                   opacity: [0.3, 0.8, 0.3]}
                 }}
                 transition={{
-                  duration: 4 + i * 0.3,
-                  repeat: Infinity}
-                  ease: 'easeInOut'}
-                }}
+                  duration: 4 + i * 0.3}
+            repeat: Infinity
+            ease: 'easeInOut'
+                
                 animate={{}
                   opacity: [0.3, 0.8, 0.3]}
                 }}
                 transition={{
                   duration: 4 + i * 0.3;
-repeat: Infinity;
-duration: 4 + i * 0 && 0.3,
-                  repeat: Infinity,
-                  ease: \"easeInOut\";
-                  duration: 4 + i * 0.3;
-repeat: Infinity;"
-ease: \"easeInOut\"}
-                  top: `${(i * 7) % 10}
-}%`
+repeat: Infinity duration: 4 + i * 0 && 0.3
+            repeat: Infinity ease: \"easeInOut\"}
+            duration: 4 + i * 0.3
+            repeat: Infinity
+            "
+ease: \"easeInOut\"
+                  top: `${(i * 7) % 10
+%`
 
                 }}
                 animate={{}
@@ -619,76 +629,78 @@ ease: \"easeInOut\"}
                 }}
                 transition={{
                   duration: 4 + i * 0 && 0.3}
-                  repeat: Infinity}
-                  ease: 'easeInOut'                }}
+            repeat: Infinity
+            ease: 'easeInOut'                
 
-        {/* Consciousness waves */}
+        {/* Consciousness waves */
         {theme === 'consciousness' && (
 
 <div className='absolute inset-0' />
             {[...Array(8)].map((_, i) => (}
               <motion.div;}
-key={i}
-                className='absolute w-96 h-96 border border-pink-500/20 rounded-full';
-                style={{left: `${(i * 12) % 10}
+key={i className='absolute w-96 h-96 border border-pink-500/20 rounded-full'}
+            style={{left: `${(i * 12) % 10
 }%`,top: `${(i * 8) % 10}
 }%`}}
-                animate={{scale: [1, 1.5, 1],opacity: [0.2, 0.6, 0.2]}}
-                transition={{duration: 6 + i * 0.5,repeat: Infinity,ease: 'easeInOut',"
-  ease: \"easeInOut\";}
+                animate={{scale: [1, 1.5, 1],opacity: [0.2}
+            0.6 0.2]
+                transition={{duration: 6 + i * 0.5,repeat: Infinity}
+            ease: 'easeInOut'
+            "
+  ease: \"easeInOut\";
                   top: `${(i * 8) % 10}"
 }%`,ease: \"easeInOut\";
                   left: `${(i * 12) % 10}
 }%`}}
-                animate={{scale: [1, 1.5, 1];}
-                  opacity: [0.2, 0.6, 0.2];}
+                animate={{scale: [1, 1.5}
+            1]
+            opacity: [0.2, 0.6, 0.2];
                 }}
 
                 animate={{
-                  scale: [1, 1.5, 1]}
-                  opacity: [0.2, 0.6, 0.2]}
+                  scale: [1, 1.5}
+            1]
+                  opacity: [0.2, 0.6
+            0.2]
                 }}
                 transition={{
-                  duration: 6 + i * 0.5,
-                  repeat: Infinity,
-                  ease: 'easeInOut',"
-  ease: \"easeInOut\"}
-                  top: `${(i * 8) % 10}
+                  duration: 6 + i * 0.5 repeat: Infinity ease: 'easeInOut'
+            "
+  ease: \"easeInOut\"
+                  top: `${(i * 8) % 10
 }%`,
 "
                   ease: \"easeInOut\"
 
-
                   left: `${(i * 12) % 10}
 }%`
 
-
-
-
-
                 }}
                 animate={{
-                  scale: [1, 1.5, 1]}
-                  opacity: [0.2, 0.6, 0.2]}
+                  scale: [1, 1.5}
+            1]
+                  opacity: [0.2, 0.6
+            0.2]
                 }}
                 transition={{
-                  duration: 6 + i * 0.5;
-repeat: Infinity;}
-top: `${(i * 8) % 10}
+                  duration: 6 + i * 0.5 repeat: Infinity}
+            top: `${(i * 8) % 10
 }%`
 
                 }}
                 animate={{
-                  scale: [1, 1 && 1.5, 1]}
-                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}
+                  scale: [1, 1 && 1.5}
+            1]
+                  opacity: [0 && 0.2, 0 && 0.6
+            0 && 0.2]
                 }}
                 transition={{
                   duration: 6 + i * 0 && 0.5}
-                  repeat: Infinity}
-                  ease: 'easeInOut'                }}
+            repeat: Infinity
+            ease: 'easeInOut'                
               />
 
-            ))}
+            ))
           </div>;
         )}
 

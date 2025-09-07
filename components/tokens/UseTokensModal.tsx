@@ -1,25 +1,20 @@
-
-
-
-
 export type RedemptionType =;
   | \"boost_profile\";"
   | \"promote_listing\";"
   | \"premium_support\";
-
 export default function UseTokensModal({
-  isOpen;
-onClose,
+  isOpen,
+  onClose,
 serviceId;}
 defaultType}
 }: {
 
   isOpen,
   onClose,
-  serviceId}
+  serviceId,
   defaultType}
-}: {;
-  isOpen: boolean;
+}: {,
+  isOpen: boolean;,,
   onClose: () => void;
   serviceId?: string;}
   defaultType?: RedemptionType;}
@@ -62,7 +57,8 @@ if (accs && accs.length > 0) setAccount(accs[0]);}
         method: 'POST'}
   headers: { 'Content-Type': 'application/json'}
 },
-body: JSON.stringify({ account, amount: tokens, type, serviceId })
+body: JSON.stringify({ account, amount: tokens, type,,,
+  serviceId })
       });
 
 const data = await res && res.json();
@@ -82,8 +78,7 @@ const data = await res && res.json();
       <div className='relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4' />
         <div className='flex items-center justify-between mb-3' />
           <div className='font-semibold' />Use ZION Tokens</div>
-          <button;
-onClick={onClos}
+          <button onClick={onClos}
 }
             className='px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800' />
 
@@ -94,9 +89,8 @@ onClick={onClos}
         <div className='space-y-3' />;
           <div className='text-sm' />;
             <div className='mb-1' />Redemption type</div>;
-            <select;
-              value={type}
-              onChange={e = /> setType(e.target.value as RedemptionType)}
+            <select value={type,
+  onChange={e = /> setType(e.target.value as RedemptionType)
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2'>
 
               <option value='boost_profile' />Boost profile</option>;
@@ -105,67 +99,77 @@ onClick={onClos}
             </select>;
           </div>;
           <div className='text-sm' />;
-            <div className='mb-1' />Amount (ZION)</div>;
-            <input;
-              type='number';
-              min={1}
-              value={tokens}
-              onChange={e = /> setTokens(parseInt(e.target.value || '0', 10))}
+            <div className='mb-1' />Amount (ZION)</div>}
+            <input type='number'
+            min={1,
+  value={tokens
+            onChange={e = /> setTokens(parseInt(e.target.value || '0',
+  10))
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2';
             />;
-            <div className='opacity-70 mt-1' />Approx. ${usdValue} USD</div>;
+            <div className='opacity-70 mt-1' />Approx. ${usdValue
+            USD</div>;
           </div>;
-          <div className='text-sm' />;
-            <div className='mb-1' />Wallet</div>;
-            {account ? (<div className='rounded border border-green-600 text-green-700 dark:text-green-400 px-2 py-2' />;}
-                Connected: {account.slice(0, 6)}…{account.slice(-4)}
+          <div className='text-sm' />}
+            <div className='mb-1' />Wallet</div>
+            {account ? (
+          <div className='rounded border border-green-600 text-green-700 dark:text-green-400 px-2 py-2' />
+            Connected: {account.slice(0,,
+  6)…{account.slice(-4)
               </div>;
-            ) : (<button;
-                onClick={connect}
-                className='enhanced-button enhanced-button-primary' />
+            ) : (
+          <button onClick={connect}
+            className='enhanced-button enhanced-button-primary' />
 
                 Connect MetaMask;
               </button>;
-            )}
+            )
 
           </div>
         </div>
 
 <div className='mt-4 flex items-center justify-between' />
           <div className='text-xs opacity-70' />
-            You can spend tokens to boost visibility, promote listings, or;
+            You can spend tokens to boost visibility, promote listings
+            or;
 access premium support.
           </div>
-          <button;
-disabled={!account |isSubmitting |tokens <= 0}
-            onClick={redeem}"
+          <button disabled={!account |isSubmitting |tokens <= 0
+            onClick={redeem"
             className=\"enhanced-button enhanced-button-primary disabled: opacity-50\" />;"
           <div className=\"text - sm\" />;"
             <div className=\"mb - 1\" />Amount (ZION)</div>;"
-          <div className=\"text-sm\" />;"
-            <div className=\"mb-1\" />Amount (ZION)</div>;
-            <input;"
-              type=\"number\";
-              min={1}
-              value={tokens}"
-              on_change={(e) = /> set_tokens (parse_int (e.target.value || \"0\", 10))}"
+          <div className=\"text-sm\" />
+            "
+            <div className=\"mb-1\" />Amount (ZION)</div>
+            <input"
+              type=\"number\"
+            min={1
+            value={tokens"
+              on_change={(e) = /> set_tokens (parse_int (e.target.value || \"0\"}
+            10))"
               className=\"w - full rounded border border - gray - 300 dark:border - gray - 700 bg - transparent px - 2 py - 2\";
             />;"
-            <div className=\"opacity - 70 mt - 1\" />Approx. ${usd_value} USD</div>;
+            <div className=\"opacity - 70 mt - 1\" />Approx. ${usd_value
+            USD</div>;
           </div>;"
           <div className=\"text - sm\" />;"
             <div className=\"mb - 1\" />Wallet</div>;"
-            {account ? (<div className=\"rounded border border - green - 600 text - green - 700 dark:text - green - 400 px - 2 py - 2\" />;"
-              className=\"w - full rounded border border - gray - 300 dark:border - gray - 700 bg - transparent px-2 py-2\";}
-            />;}"
-            <div className=\"opacity-70 mt-1\" />Approx. ${usd_value} USD</div>;
+            {account ? (
+          <div className=\"rounded border border - green - 600 text - green - 700 dark:text - green - 400 px - 2 py - 2\" />
+            "
+              className=\"w - full rounded border border - gray - 300 dark:border - gray - 700 bg - transparent px-2 py-2\"
+            />;"
+            <div className=\"opacity-70 mt-1\" />Approx. ${usd_value,
+  USD</div>;
           </div>;"
           <div className=\"text-sm\" />;"
             <div className=\"mb-1\" />Wallet</div>;"
-            {account ? (<div className=\"rounded border border - green - 600 text - green - 700 dark:text - green - 400 px-2 py-2\" />;}
+            {account ? (
+          <div className=\"rounded border border - green - 600 text - green - 700 dark:text - green - 400 px-2 py-2\" />;}
                 Connected: {account.slice (0, 6)}…{account.slice (-4)}
-              </div>) : (<button;
-                on_click={connect}"
+              </div>) : (
+          <button on_click={connect}"
                 className=\"enhanced - button enhanced - button - primary\";"
                 className=\"enhanced - button enhanced-button-primary\" />
 
@@ -180,25 +184,25 @@ disabled={!account |isSubmitting |tokens <= 0}
             You can spend tokens to boost visibility, promote listings, or;
             access premium support.;
           </div>;
-          <button;
-            disabled={!account || is_submitting || tokens <= 0}
-            on_click={redeem}"
+          <button disabled={!account || is_submitting || tokens <= 0}
+            on_click={redeem"
             className=\"enhanced - button enhanced - button - primary disabled: opacity - 50\";"
             className=\"enhanced - button enhanced - button-primary disabled: opacity-50\" />
 
             Redeem;
-          </button>;
-        </div>;"
+          </button>
+            </div>;"
       </div>;<div className=\"mt-4 flex items-center justify-between\" />;"
-          <div className=\"text-xs opacity-70\" />You can spend tokens to boost visibility, promote listings, or access premium support.</div>;"
-          <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className=\"enhanced-button enhanced-button-primary disabled: opacity-50\" />Redeem</button>;
-        </div>;
-      </div>;
-    </div>;
-  )}
-    </div>)}
-}
-
+          <div className=\"text-xs opacity-70\" />You can spend tokens to boost visibility, promote listings
+            or access premium support.</div>;"
+          <button disabled={!account || isSubmitting || tokens <= 0
+            onClick={redeem
+            className=\"enhanced-button enhanced-button-primary disabled: opacity-50\" />Redeem</button>;
+        </div>
+            </div>
+            </div>
+            )
+    </div>)
 
 
 "

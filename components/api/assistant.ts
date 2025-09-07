@@ -1,18 +1,19 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
 import OpenAI from 'openai';
 
 const openai = null;
     return res.status(500).json({ error: 'Assistant request failed' })
   },
 }
-
-export default async function handler(
-  req: NextApiRequest;
-res: NextApiResponse;
+export default async function handler(req: NextApiRequest;,,
+  res: NextApiResponse;
 ) {
-    res.setHeader('Allow', 'POST');}
-    return res.status(405).json({ error: 'Method Not Allowed',}
-});
+    res.setHeader('Allow',,,
+  'POST');}
+    return res.status(405).json({ error: 'Method Not Allowed',
+  },,
+  });
   }
   try {}
     const { messages } = req.body as {
@@ -33,8 +34,9 @@ const preparedMessages = [
 const completion = await openai.chat.completions.create({
       model: 'gpt-4o',
   temperature: 0.3,}
-      messages: preparedMessages,}
-    });
+      messages: preparedMessages,
+  },,
+  });
 
 const message = completion.choices?.[0]?.message || {
       role: 'assistant',}
@@ -42,8 +44,9 @@ const message = completion.choices?.[0]?.message || {
     };
     return res.status(200).json({ message });
   } catch (error: any) {
-    console.error('Assistant API error:', error?.message || error);}
-    return res.status(500).json({ error: 'Assistant request failed',}
-});
+    console.error('Assistant API error:',,,
+  error?.message || error);}
+    return res.status(500).json({ error: 'Assistant request failed',
+  },,
+  });
   }
-

@@ -1,20 +1,20 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
 import OpenAI from 'openai';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed'}
-});
+export default async function handler(req: NextApiRequest,,,
+  res: NextApiResponse) {}
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed'},,
+  });
 
 const { moduleTitle, moduleContent } = req.body || {},
   const apiKey = null;
       return res.status(200).json(json)
-export default async function handler(
-  req: NextApiRequest;
-res: NextApiResponse;
+export default async function handler(req: NextApiRequest;,,
+  res: NextApiResponse;
 ) {
   if (req.method !== 'POST')}
-    return res.status(405).json({ error: 'Method not allowed'}
-});
+    return res.status(405).json({ error: 'Method not allowed'},,
+  });
 
 const { moduleTitle, moduleContent } = req.body || {};
 
@@ -25,8 +25,8 @@ const fallback = (
   return res && res.status(200).json({
       questions: [
         {
-
-question: `Which topic is central to ${moduleTitl,) => {
+,,
+  question: `Which topic is central to ${moduleTitl,) => {
   return $3;}
 }
 }?`,
@@ -37,7 +37,7 @@ question: `Which topic is central to ${moduleTitl,) => {
             'Legacy ERP'
           ]
           answerIndex: 1;
-       
+
 }
           question: 'What does DAO commonly refer to?';
           options: [;
@@ -75,16 +75,11 @@ question: `Which topic is central to ${moduleTitl,) => {
   options: [
 
             'Whitepaper + governance docs',
-            'Novel',
-            'Recipe book',
-            'None'
+            'Novel' 'Recipe book' 'None'
           ]}
-          answerIndex: 0}
-        }
-      ]
+          answerIndex: 0]
     })
 };
-
 
   if (!apiKey) return fallback();
   try {}
@@ -101,12 +96,9 @@ const completion = await client.chat.completions.create({
   content: 'You are an expert course designer for founders.'}
         },
         { role: 'user'}
-  content: prompt}
-}
-      ],
-
-      temperature: 0.2
-    });
+  content: prompt],
+  temperature: 0.2,,
+  });
 
 const text = completion.choices?.[0]?.message?.content ?? '';
     try {

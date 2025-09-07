@@ -1,26 +1,22 @@
-
 ;
-import { useState } from 'react';
-
-import {useState} from 'react';
-
+import { useState from 'react';
+import {useState from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useRouter   } from 'next/router';
-import type { GrantCategory } from '../../types/grants';
+import { useRouter from 'next/router';
+import type { GrantCategory,
+  from '../../types/grants';
 
 const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'
 ];
 
-
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {import { useState   } from 'react';
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {import { useState,
+  from 'react';
   'Research Grants'
 ];
 
-
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {'Research Grants'
 ];
-
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {ursor/fix-website-loading-errors-and-merge-6662;
 
@@ -31,13 +27,10 @@ const categories: GrantCategory[] = [;
   'Research Grants'
 ];
 
-
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
-
 export default function ApplyGrantPage() {const router  = null;
-
 export default function ApplyGrantPage() {const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];
 
@@ -53,13 +46,14 @@ const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional 
   const [region, setRegion] = useState('');
   const [sector, setSector] = useState<string />('')const [loading, setLoading] = useState(false);}
   const [error, setError]  = useState<string | null />(null)import EnhancedLayout from '../../components / layout / EnhancedLayout';}
-import { use_router } from 'next / router';
-import type { GrantCategory } from '../../types / grants';
+import { use_router,
+  from 'next / router';
+import type { GrantCategory,
+  from '../../types / grants';
 
 const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'
 ];
-
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default /**;
  * ApplyGrantPage - Function description;
@@ -75,11 +69,11 @@ function ApplyGrantPage() {const router = use_router ()const [program, set_progr
       router.push (`/grants/${data.id}`)} catch (e: any) {set_error (e.message)} finally {} catch (e: any) {set_error (e.message}
 } finally {const save = async (submit: boolean) => {try {setLoading(true)setError(null);
   const resp = await fetch('/api/grants', {method: 'POST'}
-  headers: { 'Content-Type': 'application/json'}
-},body: JSON && JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,budgetAmount: Number(budgetAmount || 0),budgetCurrency,supportingLinks: supportingLinks;}
+  headers: { 'Content-Type': 'application/json'},,
+  },body: JSON && JSON.stringify({program,projectName,teamInfo,proposalSummary timeline budgetAmount: Number(budgetAmount || 0),budgetCurrency,supportingLinks: supportingLinks;}
             .split('\n').map(s = > s && s.trim()).filter(Boolean),pitchDeckUrl,region,sector: (sector as any) || undefined,submit})};
-  const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch (e: any) {setError(e && e.message)} finally {setLoading(false}
-}          budgetAmount: Number(budgetAmount || 0),program;
+  const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch (e: any) {setError(e && e.message)} finally {setLoading(false},,
+  }          budgetAmount: Number(budgetAmount || 0),program;
 
 const categories: GrantCategory[] = [
   'Ecosystem Tools',
@@ -91,8 +85,9 @@ const categories: GrantCategory[] = [
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;}
 }
-import { useState  } from 'react';
-import { useRouter  } from 'next/router';
+import { useState from 'react';
+import { useRouter,
+  from 'next/router';
 
 const categories: GrantCategory[] = [
   'Ecosystem Tools'
@@ -110,9 +105,7 @@ const categories: GrantCategory[] = [;
   'Research Grants'
 ];
 
-
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
-
 export default function ApplyGrantPage() {;
 
 const router = useRouter();
@@ -142,8 +135,10 @@ const [loading, setLoading] = useState(false);
 const [error, setError] = useState<string | null />(null);
 }
 import EnhancedLayout from '../../components / layout / EnhancedLayout';}
-import {use_router} from 'next / router';
-import type { GrantCategory } from '../../types / grants';
+import { use_router,
+  from 'next / router';
+import type { GrantCategory,
+  from '../../types / grants';
 ;
 
 const categories: GrantCategory[] = [;
@@ -213,9 +208,7 @@ const save = async (submit: boolean) => {
             .map (string => s.trim ());
             .filter (Boolean),
           pitchDeckUrl,
-          region,
-          sector: (sector as any) || undefined}
-          submit}
+          region sector: (sector as any) || undefined submit}
         })
       });
 
@@ -229,7 +222,6 @@ const data = await resp.json ();
       set_error (e.message);}
     } finally {
 
-
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -242,10 +234,9 @@ const resp = await fetch('/api/grants', {;
         body: JSON && JSON.stringify({;
           program,;
           projectName,;
-          teamInfo,;
-          proposalSummary,;
-          timeline,;
-          budgetAmount: Number(budgetAmount || 0),;
+          teamInfo,,
+  proposalSummary,,,
+  timeline ; budgetAmount: Number(budgetAmount || 0),;
           budgetCurrency,;
           supportingLinks: supportingLinks;
             .split('\n');
@@ -272,17 +263,15 @@ const data = await resp && resp.json();
           proposalSummary;
           timeline;
           budgetAmount: Number(budgetAmount || 0),budgetCurrency;
-          budgetAmount: Number(budgetAmount || 0),
-          budgetCurrency;
+          budgetAmount: Number(budgetAmount || 0) budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n').map((s) => s && s.trim()).filter(Boolean)set_loading (false)}          budget_amount: Number (budget_amount || 0),budget_currency;
           supporting_links: supporting_links;
             .split ('\n').map ((s) => s.trim ()).filter (Boolean)pitchDeckUrl;
           region;sector: (sector as any) || undefined,submit})})const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch (e: any) {setError(e && e.message)} finally {setLoading(false)}}
     }
- 
-}<textarea;
-            className='mt-1 w-full border rounded p-2';
+
+}<textarea className='mt-1 w-full border rounded p-2';
             .split ('\n');
             .map ((s) = /> s.trim ());
             .filter (Boolean);
@@ -304,90 +293,87 @@ const data = await resp && resp.json();
     }
   }
 
-          <textarea;
-className='mt-1 w-full border rounded p-2'
+          <textarea className='mt-1 w-full border rounded p-2'
             rows={3}
-            value={teamInfo}
-          <textarea;
-            className='mt-1 w-full border rounded p-2';
-            rows={6}
-            value={proposalSummary}
-            <input;
-              type='number';
-              className='mt-1 w-full border rounded p-2';
-              value={budgetAmount}
-          <textarea;
-            className='mt-1 w-full border rounded p-2';
-            rows={3}
-            value={supportingLinks}{error && <div className='text-sm text-red-600' />{error}</div>}
+            value={teamInfo
+          <textarea className='mt-1 w-full border rounded p-2'}
+            rows={6
+            value={proposalSummary
+            <input
+              type='number'
+            className='mt-1 w-full border rounded p-2'
+            value={budgetAmount
+          <textarea
+            className='mt-1 w-full border rounded p-2'
+            rows={3
+            value={supportingLinks{error && <div className='text-sm text-red-600' />{error</div>
         <div className='flex gap-3' />;
             onChange={e => setSupportingLinks(e && e.target.value)}
           />;
         </label>;
         <label className='text-sm' />;
           Pitch Deck URL;
-          <input;
-            className='mt-1 w-full border rounded p-2';
+          <input className='mt-1 w-full border rounded p-2';
             value={pitchDeckUrl}
-          <button;
-            disabled={loading}
-            onClick={() = /> save(false)}
+          <button disabled={loading}
+            onClick={() = /> save(false)
             className='px-4 py-2 border rounded disabled:opacity-50'>
 
             Save Draft;
           </button>;
-          <button;
-            disabled={loading}
-            onClick={() = /> save(true)}
+          <button disabled={loading
+            onClick={() = /> save(true)
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'>
 
             Submit for Review;
-          </button>        </div>;
-      </div>;
-    </EnhancedLayout>;
-  )<EnhancedLayout />;
-      <h1 className=\"text-2xl font-semibold mb-4\" />Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>;"
+          </button>        </div>}
+            </div>
+            </EnhancedLayout>
+            )
+      <EnhancedLayout />
+            <h1 className=\"text-2xl font-semibold mb-4\" />Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'</h1>;"
       <div className=\"grid gap-4 max-w-3xl\" />;"
         <div className=\"grid md:grid-cols-2 gap-3\" />;"
           <label className=\"text-sm\" />Program;"
-            <select className=\"mt-1 w-full border rounded p-2\" value={program} onChange={(e) = /> setProgram(e.target.value as any)}>;
-
-const _save = async (_submit: boolean) => {try {setLoading(true),setError(null);
-  const resp = await fetch('/api/grants', {method: 'POST'}
-  headers: { 'Content-Type': 'application/json'}
-},body: JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,budgetAmount: Number(budgetAmount || 0),budgetCurrency,supportingLinks: supportingLinks;}
-            .split('\n').map((s) => s.trim()).filter(Boolean),pitchDeckUrl,region,sector: (sector as any) || undefined,submit})}),const data = await resp.json()if (!resp.ok) throw new Error(data?.error || 'Failed'),const save = async (submit: boolean) => {try {setLoading(true)setError(null;
+            <select className=\"mt-1 w-full border rounded p-2\" value={program
+            onChange={(e) = /> setProgram(e.target.value as any)>
+            const _save = async (_submit: boolean) => {try {setLoading(true)
+            setError(null)
+            const resp = await fetch('/api/grants', {method: 'POST'
+  headers: { 'Content-Type': 'application/json'
+},body: JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,,,
+  budgetAmount: Number(budgetAmount || 0),budgetCurrency,supportingLinks: supportingLinks;}
+            .split('\n').map((s) => s.trim()).filter(Boolean),pitchDeckUrl,region,sector: (sector as any) || undefined,submit})}),const data = await resp.json()if (!resp.ok) throw new Error(data?.error || 'Failed'),const save = async (submit: boolean) => {try {setLoading(true)setError(null,
   const resp = await fetch('/api/grants', {method: 'POST';}
         headers: { 'Content-Type': 'application/json'}
-}
-        body: JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,budgetAmount: Number(budgetAmount || 0),budgetCurrency,supportingLinks: supportingLinks;
+},,
+  body: JSON.stringify({program,projectName,teamInfo,proposalSummary timeline budgetAmount: Number(budgetAmount || 0),budgetCurrency,supportingLinks: supportingLinks;
             .split('\n').map(s => s.trim()).filter(Boolean)pitchDeckUrl;
           region;
           sector: (sector as any) |undefined;}
           submit;}
         })})const data = await resp.json()if (!resp.ok) throw new Error(data?.error |'Failed')router.push(`/grants/${data.id}`)} catch (e: any) {setError(e.message)} finally {setLoading(false)}
- 
+
 };
-  return (<EnhancedLayout />;
+  return (
+          <EnhancedLayout />;
 <h1 className='text-2xl font-semibold mb-4' />;
         body: JSON.stringify({
-          program;
-projectName,
-teamInfo;
-proposalSummary,
-timeline;
-budgetAmount: Number(budgetAmount |0)
+          program,
+  projectName,
+teamInfo,
+  proposalSummary,,
+  timeline; budgetAmount: Number(budgetAmount |0)
           budgetCurrency;
 supportingLinks: supportingLinks;
             .split('\n')
             .map(s => s.trim())
             .filter(Boolean)
           pitchDeckUrl;
-region,
-sector: (sector as any) |undefined;}
+region sector: (sector as any) |undefined;}
 submit}
         })
-     
+
 });
 
 const data = await resp.json();
@@ -418,7 +404,6 @@ const data = await resp.json();
     }
   }
 
- 
 };
 
   return (
@@ -430,80 +415,73 @@ const data = await resp.json();
         <div className='grid md:grid-cols-2 gap-3' />;
           <label className='text-sm' />;
             Program;
-            <select;
-              className='mt-1 w-full border rounded p-2';
+            <select className='mt-1 w-full border rounded p-2';
               value={program}
-              onChange={e = /> setProgram(e.target.value as any)}
+            onChange={e = /> setProgram(e.target.value as any)
             >;
               <option value='grant' />Grant</option>;
               <option value='incubator' />Incubator</option>;
             </select>;
           </label>;
           <label className='text-sm' />;
-            Sector;
-            <select;
-              className='mt-1 w-full border rounded p-2';
-              value={sector}
-              onChange={e = /> setSector(e.target.value)}
-            >;
-              <option value='' />Select sector</option>;
-              {categories.map(c => (<option key={c} value={c} />;
-                  {c}
-                </option>;
-              ))}
+            Sector}
+            <select className='mt-1 w-full border rounded p-2'
+            value={sector
+            onChange={e = /> setSector(e.target.value)
+            >
+            <option value='' />Select sector</option>
+            {categories.map(c => (
+          <option key={c
+            value={c /> {c
+                </option>;},
+   ))
             </select>;
           </label>;
         </div>;
         <label className='text-sm' />;
           Project Name;
-          <input;
-            className='mt-1 w-full border rounded p-2';
-            value={projectName}
-            onChange={e = /> setProjectName(e.target.value)}
+          <input className='mt-1 w-full border rounded p-2';
+            value={projectName,
+  onChange={e = /> setProjectName(e.target.value)
           />;
         </label>;
         <label className='text-sm' />;
           Team Info;
-          <textarea;
-            className='mt-1 w-full border rounded p-2';
-            rows={3}
-            value={teamInfo}
-            onChange={e = /> setTeamInfo(e.target.value)}
+          <textarea className='mt-1 w-full border rounded p-2';
+            rows={3,
+  value={teamInfo,
+  onChange={e = /> setTeamInfo(e.target.value)
           />;
         </label>;
         <label className='text-sm' />;
           Proposal Summary;
-          <textarea;
-            className='mt-1 w-full border rounded p-2';
-            rows={6}
-            value={proposalSummary}
-            onChange={e = /> setProposalSummary(e.target.value)}
+          <textarea className='mt-1 w-full border rounded p-2';
+            rows={6,
+  value={proposalSummary,
+  onChange={e = /> setProposalSummary(e.target.value)
           />;
         </label>;
         <label className='text-sm' />;
           Timeline;
-          <input;
-            className='mt-1 w-full border rounded p-2';
-            value={timeline}
-            onChange={e = /> setTimeline(e.target.value)}
+          <input className='mt-1 w-full border rounded p-2';
+            value={timeline,
+  onChange={e = /> setTimeline(e.target.value)
           />;
         </label>;
         <div className='grid md:grid-cols-3 gap-3' />;
           <label className='text-sm' />;
             Budget Amount;
-            <input;
-              type='number';
+            <input type='number';
               className='mt-1 w-full border rounded p-2';
-              value={budgetAmount}
-              onChange={e = /> setBudgetAmount(Number(e.target.value))}
+              value={budgetAmount,
+  onChange={e = /> setBudgetAmount(Number(e.target.value))
             />;
           </label>;
           <label className='text-sm' />;
             Currency;
-            <select;
-              className='mt-1 w-full border rounded p-2';
-              value={budgetCurrency}
-              onChange={e = /> setBudgetCurrency(e.target.value as any)}
+            <select className='mt-1 w-full border rounded p-2';
+              value={budgetCurrency,
+  onChange={e = /> setBudgetCurrency(e.target.value as any)
             >;
               <option value='USDC' />USDC</option>;
               <option value='ZION$' />ZION$</option>;
@@ -511,58 +489,50 @@ const data = await resp.json();
           </label>;
           <label className='text-sm' />;
             Region;
-            <input;
-              className='mt-1 w-full border rounded p-2';
-              value={region}
-              onChange={e = /> setRegion(e.target.value)}
+            <input className='mt-1 w-full border rounded p-2'}
+            value={region
+            onChange={e = /> setRegion(e.target.value)
               placeholder='e.g., LATAM, EU, Global';
             />;
           </label>;
         </div>;
         <label className='text-sm' />;
-          Supporting Links (one per line)<textarea;
-            className='mt-1 w-full border rounded p-2';
-            rows={3}
-            value={supportingLinks}
-            onChange={e = /> setSupportingLinks(e.target.value)}
+          Supporting Links (one per line)
+      <textarea className='mt-1 w-full border rounded p-2'
+            rows={3
+            value={supportingLinks
+            onChange={e = /> setSupportingLinks(e.target.value)
           />;
         </label>;
         <label className='text-sm' />;
-          Pitch Deck URL;
-          <input;
-            className='mt-1 w-full border rounded p-2';
-            value={pitchDeckUrl}
-            onChange={e = /> setPitchDeckUrl(e.target.value)}
-          />;
-        </label>;
-  }
-    }}return ({error && <div className='text-sm text-red-600' />{error}</div>}
-        <div className='flex gap-3' />;
-          <button;
+          Pitch Deck URL}
+            <input className='mt-1 w-full border rounded p-2'
+            value={pitchDeckUrl
+            onChange={e = /> setPitchDeckUrl(e.target.value)
           />
+            </label>
+             
+    return ({error && <div className='text-sm text-red-600' />{error</div>}
+        <div className='flex gap-3' />;
+          <button />
         </label>
   }
     }
 
-
   };
-
 
   return (
 
-
         {error && <div className='text-sm text-red-600' />{error}</div>}
         <div className='flex gap-3' />
-          <button;
-disabled={loading}
-            onClick={() = /> save(false)}
+          <button disabled={loading,
+  onClick={() = /> save(false)
             className='px-4 py-2 border rounded disabled:opacity-50'>
 
             Save Draft;
           </button>;
-          <button;
-            disabled={loading}
-            onClick={() = /> save(true)}
+          <button disabled={loading,
+  onClick={() = /> save(true)
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'>
 
             Submit for Review;
@@ -573,7 +543,8 @@ disabled={loading}
         </div>;
       </div>;
     </EnhancedLayout>;"
-  )<option value=\"USDC\" />USDC</option>;
+  )
+      <option value=\"USDC\" />USDC</option>;
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
           >
             Submit for Review;
@@ -585,77 +556,100 @@ disabled={loading}
 "
               <option value=\"USDC\" />USDC</option>;"
               <option value=\"ZION$\" />ZION$</option>;
-            </select>;
-          </label>;"
+            </select>}
+            </label>;"
           <label className=\"text-sm\" />Region;"
-            <input className=\"mt-1 w-full border rounded p-2\" value={region} onChange={(e) = /> setRegion(e && e.target.value)} placeholder=\"e && e.g., LATAM, EU, Global\" />;
-          </label>;
-        </div>;"
-        <label className=\"text-sm\" />Supporting Links (one per line)<textarea className=\"mt-1 w-full border rounded p-2\" rows={3} value={supportingLinks} onChange={(e) = /> setSupportingLinks(e && e.target.value)} />;
+            <input className=\"mt-1 w-full border rounded p-2\" value={region
+            onChange={(e) = /> setRegion(e && e.target.value) placeholder=\"e && e.g., LATAM, EU, Global\" />;
+          </label>
+            </div>;"
+        <label className=\"text-sm\" />Supporting Links (one per line)
+      <textarea className=\"mt-1 w-full border rounded p-2\" rows={3
+            value={supportingLinks
+            onChange={(e) = /> setSupportingLinks(e && e.target.value) />;
         </label>;"
         <label className=\"text-sm\" />Pitch Deck URL;"
-          <input className=\"mt-1 w-full border rounded p-2\" value={pitchDeckUrl} onChange={(e) = /> setPitchDeckUrl(e && e.target.value)} />;
-        </label>;))ursor/fix-website-loading-errors-and-merge-6662;
-  )}            </select>;
-          </label>;"
+          <input className=\"mt-1 w-full border rounded p-2\" value={pitchDeckUrl
+            onChange={(e) = /> setPitchDeckUrl(e && e.target.value) />;
+        </label>;))ursor/fix-website-loading-errors-and-merge-6662
+            )            </select>
+            </label>;"
           <label className=\"text-sm\" />Sector;"
-            <select className=\"mt-1 w-full border rounded p-2\" value={sector} onChange={(e) = /> setSector(e.target.value)}>;"
-              <option value=\"\" />Select sector</option>;
-        </label>;
-
-
-  );
-
-  );
-}            </select>
+            <select className=\"mt-1 w-full border rounded p-2\" value={sector
+            onChange={(e) = /> setSector(e.target.value)>;"
+              <option value=\"\" />Select sector</option>}
+            </label>
+            )
+            )
+            
+            </select>
           </label>"
           <label className=\"text-sm\" />Sector;"
-            <select className=\"mt-1 w-full border rounded p-2\" value={sector} onChange={(e) = /> setSector(e.target.value)}>"
+            <select className=\"mt-1 w-full border rounded p-2\" value={sector
+            onChange={(e) = /> setSector(e.target.value)>"
               <option value=\"\" />Select sector</option>
-              {categories.map((c) => <option key={c} value={c} />{c}</option>)}
+              {categories.map((c) => <option key={c
+            value={c />{c</option>)}
             </select>;
           </label>;
         </div>;"
         <label className=\"text-sm\" />Project Name;"
-          <input className=\"mt-1 w-full border rounded p-2\" value={projectName} onChange={(e) = /> setProjectName(e.target.value)} />;
+          <input className=\"mt-1 w-full border rounded p-2\" value={projectName,
+  onChange={(e) = /> setProjectName(e.target.value) />;
         </label>;"
         <label className=\"text-sm\" />Team Info;"
-          <textarea className=\"mt-1 w-full border rounded p-2\" rows={3} value={teamInfo} onChange={(e) = /> setTeamInfo(e.target.value)} />;
+          <textarea className=\"mt-1 w-full border rounded p-2\" rows={3,
+  value={teamInfo,
+  onChange={(e) = /> setTeamInfo(e.target.value) />;
         </label>;"
         <label className=\"text-sm\" />Proposal Summary;"
-          <textarea className=\"mt-1 w-full border rounded p-2\" rows={6} value={proposalSummary} onChange={(e) = /> setProposalSummary(e.target.value)} />;
+          <textarea className=\"mt-1 w-full border rounded p-2\" rows={6,
+  value={proposalSummary,
+  onChange={(e) = /> setProposalSummary(e.target.value) />;
         </label>;"
         <label className=\"text-sm\" />Timeline;"
-          <input className=\"mt-1 w-full border rounded p-2\" value={timeline} onChange={(e) = /> setTimeline(e.target.value)} />;
+          <input className=\"mt-1 w-full border rounded p-2\" value={timeline,
+  onChange={(e) = /> setTimeline(e.target.value) />;
         </label>;"
         <div className=\"grid md:grid-cols-3 gap-3\" />;"
           <label className=\"text-sm\" />Budget Amount;"
-            <input type=\"number\" className=\"mt-1 w-full border rounded p-2\" value={budgetAmount} onChange={(e) = /> setBudgetAmount(Number(e.target.value))} />;
+            <input type=\"number\" className=\"mt-1 w-full border rounded p-2\" value={budgetAmount,
+  onChange={(e) = /> setBudgetAmount(Number(e.target.value)) />;
           </label>;"
           <label className=\"text-sm\" />Currency;"
-            <select className=\"mt-1 w-full border rounded p-2\" value={budgetCurrency} onChange={(e) = /> setBudgetCurrency(e.target.value as any)}>;"
+            <select className=\"mt-1 w-full border rounded p-2\" value={budgetCurrency,
+  onChange={(e) = /> setBudgetCurrency(e.target.value as any)>;"
               <option value=\"USDC\" />USDC</option>;"
               <option value=\"ZION$\" />ZION$</option>;
             </select>;
           </label>;"
           <label className=\"text-sm\" />Region;"
-            <input className=\"mt-1 w-full border rounded p-2\" value={region} onChange={(e) = /> setRegion(e.target.value)} placeholder=\"e.g., LATAM, EU, Global\" />;
-          </label>;
-        </div>;"
-        <label className=\"text-sm\" />Supporting Links (one per line)<textarea className=\"mt-1 w-full border rounded p-2\" rows={3} value={supportingLinks} onChange={(e) = /> setSupportingLinks(e.target.value)} />;
+            <input className=\"mt-1 w-full border rounded p-2\" value={region,
+  onChange={(e) = /> setRegion(e.target.value) placeholder=\"e.g., LATAM, EU, Global\" />}
+            </label>
+            </div>;"
+        <label className=\"text-sm\" />Supporting Links (one per line)
+      <textarea className=\"mt-1 w-full border rounded p-2\" rows={3
+            value={supportingLinks
+            onChange={(e) = /> setSupportingLinks(e.target.value) />;
         </label>;"
         <label className=\"text-sm\" />Pitch Deck URL;"
-          <input className=\"mt-1 w-full border rounded p-2\" value={pitchDeckUrl} onChange={(e) = /> setPitchDeckUrl(e.target.value)} />;
-        </label>;"
-        {error && <div className=\"text-sm text-red-600\" />{error}</div>}"
+          <input className=\"mt-1 w-full border rounded p-2\" value={pitchDeckUrl
+            onChange={(e) = /> setPitchDeckUrl(e.target.value) />
+            </label>
+            "
+        {error && <div className=\"text-sm text-red-600\" />{error</div>"
         <div className=\"flex gap-3\" />;"
-          <button disabled={loading} onClick={() = /> save(false)} className=\"px-4 py-2 border rounded disabled:opacity-50\">Save Draft</button>;"
-          <button disabled={loading} onClick={() = /> save(true)} className=\"px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50\">Submit for Review</button>;
-        </div>;
-      </div>;
-    </EnhancedLayout>;
-}))}
-  )}
+          <button disabled={loading
+            onClick={() = /> save(false) className=\"px-4 py-2 border rounded disabled:opacity-50\">Save Draft</button>;"
+          <button disabled={loading
+            onClick={() = /> save(true) className=\"px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50\">Submit for Review</button>}
+            </div>
+            </div>
+            </EnhancedLayout>
+            
+))
+  )
   )}
 }
   )}

@@ -1,7 +1,7 @@
-
-
-import React, { useEffect, useRef } from 'react';
-import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
+import React, { useEffect, useRef,
+  from 'react';
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track,
+  from 'livekit-client';
 
 type Props = any;
 import type {
@@ -9,7 +9,8 @@ import type {
 LocalParticipant,
 TrackPublication;}
 Track;}
-  RemoteParticipant,LocalParticipant,TrackPublication,Track,RemoteParticipant,LocalParticipant,TrackPublication,Track} from 'livekit-client';
+  RemoteParticipant,LocalParticipant,TrackPublication,Track,RemoteParticipant,LocalParticipant,TrackPublication,Track,
+  from 'livekit-client';
 
 type Props = {participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
@@ -22,12 +23,11 @@ type Props = {participant: RemoteParticipant | LocalParticipant;
 }
 }
 }
-
 export default function ParticipantTile({
   participant,
-  isLocal}
-  displayName}
-}: Props) {
+  isLocal,
+  displayName},,
+  }: Props) {
   const videoRef = useRef<HTMLVideoElement | null />(null);
 
 const audioRef = useRef<HTMLAudioElement | null />(null);
@@ -57,59 +57,61 @@ track.detach(videoRef.current);) => {
     };
 
     participant.tracks.forEach(pub = > {
-     ;
-  const track = pub.track;}
-if (track) handleTrackSubscribed(pub, track);}
+     ,
+  const track = pub.track;},,
+  if (track) handleTrackSubscribed(pub,,,
+  track);}
     });
-    participant.on('trackSubscribed', handleTrackSubscribed);
-    participant.on('trackUnsubscribed', handleTrackUnsubscribed);
+    participant.on('trackSubscribed',,,
+  handleTrackSubscribed);
+    participant.on('trackUnsubscribed',,,
+  handleTrackUnsubscribed);
     return () => {
-      participant.off('trackSubscribed', handleTrackSubscribed);
+      participant.off('trackSubscribed',,,
+  handleTrackSubscribed);
 }
-participant.off('trackUnsubscribed', handleTrackUnsubscribed)}
+participant.off('trackUnsubscribed',,,
+  handleTrackUnsubscribed)}
 };
 
   }, [participant]);
   return (
     <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative' />
-      <video;
-ref={videoRef}
-        autoPlay;
-        playsInline;
-        muted={Boolean(isLocal)}
+      <video ref={videoRef,
+  autoPlay;
+        playsInline
+            muted={Boolean(isLocal)
 
         className='w-full h-48 object-cover bg-black'
 
       />
-      <audio ref={audioRef} autoPlay className='hidden' />
+      <audio ref={audioRef,
+  autoPlay className='hidden' />
       <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white' />
-        {displayName |}
-          (participant as any).name |}
-          (isLocal ? 'You' : 'Participant')}
+        {displayName |
+          (participant as any).name |
+          (isLocal ? 'You' : 'Participant')
       </div>
     </div>
-  );
-  return (
+  )}
+            return (
   RemoteParticipant,
   LocalParticipant,
-  TrackPublication,
-  Track
-} from 'livekit - client';
+  TrackPublication
+            Track
+            from 'livekit - client';
 
 type Props = {
-  participant: RemoteParticipant | LocalParticipant;
-
-  is_local?: boolean;}
+  participant: RemoteParticipant | LocalParticipant
+            is_local?: boolean;
   display_name?: string;}
 }
-
 export default /**;
  * ParticipantTile - Function description;
  */;
 function ParticipantTile() {  const video_ref = useRef < HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant,is_local?: boolean;}
   display_name?: string;}
 }
-
 export default /**;
  * ParticipantTile - Function description;
  */;
@@ -157,35 +159,38 @@ if ( {) {$2;}
 }    })if (handleTrackSubscribed (pub, track)) {$2;}
 }
     })participant.on ('track_subscribed', handleTrackSubscribed)participant.on ('track_unsubscribed', handleTrackUnsubscribed)return () => {participant.off ('track_subscribed', handleTrackSubscribed)participant.off ('track_unsubscribed', handleTrackUnsubscribed)}
-  }, [participant])return (<div className='bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative' />;
-      <video;
-        ref={video_ref}
-        auto_play;
+  }, [participant])return (
+    <div className='bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative' />;
+      <video ref={video_ref}
+            auto_play;
         plays_inline;
-        muted={Boolean (is_local)}
+        muted={Boolean (is_local)
         className='w - full h - 48 object - cover bg - black';
       />;
-      <audio ref={audio_ref} auto_play className='hidden' />;
-      <div className='absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white' />;
-        {display_name ||;}
-          (participant as any).name ||;}
-          (is_local ? 'You' : 'Participant')}
+      <audio ref={audio_ref
+            auto_play className='hidden' />}
+            <div className='absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white' />
+            {display_name ||
+            (participant as any).name ||
+            (is_local ? 'You' : 'Participant')
       </div>
     </div>
   );
-}, [participant])return (<div className=\"bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative\" />;"
-      <video ref={video_ref} auto_play plays_inline muted={Boolean (is_local)} className=\"w - full h - 48 object - cover bg - black\" />;"
-      <audio ref={audio_ref} auto_play className=\"hidden\" />;"
-      <div className=\"absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white\" />;
-        {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
-      </div>;
+, [participant])return (
+    <div className=\"bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative\" />;"
+      <video ref={video_ref}
+            auto_play plays_inline muted={Boolean (is_local) className=\"w - full h - 48 object - cover bg - black\" />;"
+      <audio ref={audio_ref
+            auto_play className=\"hidden\" />;"
+      <div className=\"absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white\" />
+            {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')
+      </div>
+            </div>)
+            
 
-    </div>);
-}
       </div>
     </div>
 );
-}
 
 
 "

@@ -1,9 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-import { createServerClient } from '../../../utils/supabase/server';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
+import { createServerClient,
+  from '../../../utils/supabase/server';
+export default async function handler(req: NextApiRequest,,,
+  res: NextApiResponse) {
   try {
     const supabase = null;
   try {
@@ -12,14 +12,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 const clientId = (req.query.clientId as string) |null;
    ;
   const [jobsR, quotesR] = await Promise.allSettled([
-supabase;
-        .from('jobs')
-        .select('id, client_id, status, posted_at, hired_at')
-        .eq('client_id', clientId)
+supabase;,,
+  .from('jobs')
+        .select('id, client_id, status, posted_at,,,
+  hired_at')
+        .eq('client_id',,,
+  clientId)
       supabase;
         .from('quotes')
-        .select('id, job_id, status, created_at')
-        .eq('client_id', clientId)
+        .select('id, job_id, status,,,
+  created_at')
+        .eq('client_id',,,
+  clientId)
     ]);
 
 const jobs =
@@ -53,9 +57,7 @@ client_id: 'c1',
             client_id: 'c1';
             status: 'filled';
             posted_at: '2025-01-03';}
-            hired_at: '2025-01-06';}
-          }
-        ];
+            hired_at: '2025-01-06';];
 
 const quotesData = quotes.length;
       ? quotes;
@@ -64,9 +66,7 @@ const quotesData = quotes.length;
   created_at: '2025-01-02',}
 }
           { id: 22, job_id: 13, status: 'received',}
-  created_at: '2025-01-03',}
-}
-        ];
+  created_at: '2025-01-03',];
 
 const jobsPosted = jobsData.length;
 
@@ -75,8 +75,8 @@ const quotesReceived = quotesData.length;
 const filled = jobsData.filter(j => j.status === 'filled');
 
 const timeToHireDays = filled.length;
-? filled.reduce(
-          (acc, j) =>
+? filled.reduce((acc,,,
+  j) =>
             acc +
             (new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime()) /
               (1000 * 60 * 60 * 24)
@@ -88,9 +88,7 @@ const shortlisted = 5; // Placeholder;
 const funnel = [
       },
       { label: 'Hire',}
-  value: filled && filled.length,}
-},
-    ];
+  value: filled && filled.length,];
       timeToHireDays,
       talent_viewed,
       shortlisted,
@@ -106,8 +104,7 @@ const funnel = [
 }
 
         { label: 'Hire',}
-  value: 2 }
-      ]
+  value: 2 ]
    ,
 });
   }
@@ -115,4 +112,3 @@ const funnel = [
   value: 2 }]})
   },
 }
-

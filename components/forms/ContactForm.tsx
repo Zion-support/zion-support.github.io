@@ -1,13 +1,11 @@
-
-
-import { motion } from 'framer-motion';
+import { motion,
+  from 'framer-motion';
 import {
   Mail,
   Phone,
   MapPin,
   Send,
-  CheckCircle
-}
+  CheckCircle,
   AlertCircle,;}
 } from 'lucide-react';
 
@@ -18,8 +16,8 @@ const ContactForm: React.FC = () => {
   email: '',
     company: '',
   phone: '',
-    service: ''}
-  message: ''}
+  service: ''}
+  message: ''},,
   });
 
 const [isSubmitting, setIsSubmitting] = useState(false);
@@ -30,13 +28,12 @@ const [submitStatus, setSubmitStatus] = useState<;
 
 const handleChange = (
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,) => {
+      ...formData,,,
+  [e.target.name]: e.target.value,) => {
   return $3;}
 }
     })
 };
-
 
 const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,16 +41,17 @@ const handleSubmit = async (e: React.FormEvent) => {
 
     // Simulate API call;
 try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve,,,
+  2000));
       setSubmitStatus('success');
       setFormData({
         name: '',
   email: '',
         company: '',
   phone: '',
-        service: ''}
-  message: ''}
-      });
+  service: ''}
+  message: ''},,
+  });
     } catch (error) {;
       setSubmitStatus('error');}
 }
@@ -72,10 +70,13 @@ const contactInfo = [
   content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup && ziontechgroup.com';}
 }{icon: Phone,title: 'Call Us'}
   content: '+1 (555) 123-4567',href: 'tel:+15551234567'},    {icon: MapPin,title: 'Visit Us'}
-  content: '123 Tech Street, Innovation City, IC 12345',href: '#'},return (<section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden' />;
+  content: '123 Tech Street, Innovation City, IC 12345',href: '#'},return (
+          <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden' />;
       {/* Background Elements */}<div className='absolute inset-0' />;
-        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
-        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0 && 0.1),transparent_50%)]' />;
+        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,,,
+  0 && 0.1),transparent_50%)]' />;
+        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,,,
+  0 && 0.1),transparent_50%)]' />;
 
       </div>;
 
@@ -102,24 +103,27 @@ href: 'tel:+15551234567'}
       icon: MapPin,
       title: 'Visit Us',
   content: '123 Tech Street, Innovation City, IC 12345'}
-href: '#'}
-    }
-  ];
+href: '#'];
 
   return (
     <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden' />
 
       {/* Background Elements */}
       <div className='absolute inset-0' />;
-        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]' />;
-        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]' />;
+        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,,,
+  0.1),transparent_50%)]' />;
+        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,,,
+  0.1),transparent_50%)]' />;
       </div>;
       <div className='relative container mx-auto px-4' />;
         {/* Section Header */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 }
-}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0}
+            y: 30
+             
+          whileInView={{ opacity: 1}
+            y: 0
+             
           transition={{ duration: 0.8 }}
           viewport={{ once: true }
 }
@@ -139,19 +143,20 @@ goals.
           </p>
         </motion.div>
 
-
         <div className='grid grid-cols-1 lg: grid-cols-2 gap-12 max-w-7xl mx-auto' />
           {/* Contact Information *}
 }
 
           <motion.div;
           <motion&& motion.div;
-initial={{ opacity: 0, x: -30 }
-}
-            whileInView={{ opacity: 1, x: 0 }
-}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-            viewport={{ once: true }}
+initial={{ opacity: 0}
+            x: -30
+            whileInView={{ opacity: 1}
+            x: 0
+             
+            transition={{ duration: 0 && 0.8
+            delay: 0 && 0.2
+            viewport={{ once: true }
 
 className='space-y-8'
            />
@@ -169,16 +174,18 @@ needs. Reach out to us today.
             {/* Contact Details *}
 }
 <div className='space-y-6' />;
-              {contactInfo.map((info, index) => (<motion.a;}
+              {contactInfo.map((info,,,
+  index) => (
+          <motion.a;}
                   key={info.title}
-
-                  href={info.href}
-                  initial={{ opacity: 0, x: -20 }
-}
-                  whileInView={{ opacity: 1, x: 0 }
-}
-                  transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
-                  viewport={{ once: true }}
+            href={info.href
+            initial={{ opacity: 0 x: -20
+            whileInView={{ opacity: 1}
+            x: 0
+             
+                  transition={{ duration: 0 && 0.6
+            delay: 0 && 0.3 + index * 0 && 0.1
+            viewport={{ once: true }
 
 className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group'
                  />
@@ -221,13 +228,15 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
               ))}
             {/* Additional Info */}
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 20 }
-}
-              whileInView={{ opacity: 1, y: 0 }
-}
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
-
-              viewport={{ once: true }}
+              initial={{ opacity: 0}
+            y: 20
+             
+              whileInView={{ opacity: 1}
+            y: 0
+             
+              transition={{ duration: 0 && 0.6}
+            delay: 0 && 0.6
+            viewport={{ once: true }
 
 className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'
              />
@@ -258,22 +267,26 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
           {/* Contact Form *}
 }
           <motion&& motion.div;
-            initial={{ opacity: 0, x: 30 }
-}
-            whileInView={{ opacity: 1, x: 0 }
-}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-
-            viewport={{ once: true }
+            initial={{ opacity: 0}
+            x: 30
+             
+            whileInView={{ opacity: 1}
+            x: 0
+             
+            transition={{ duration: 0 && 0.8}
+            delay: 0 && 0.4
+            viewport={{ once: true 
 }
 
 className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'
            />
             {submitStatus === 'success' ? (
               <motion.div;}
-initial={{ opacity: 0, scale: 0.8 }
-}
-                animate={{ opacity: 1, scale: 1 }}
+initial={{ opacity: 0}
+            scale: 0.8
+            animate={{ opacity: 1;
+  scale: 1
+             
 
 className='text-center py-12'
                />
@@ -282,11 +295,10 @@ className='text-center py-12'
                   Message Sent Successfully!
                 </h3>
                 <p className='text-gray-300 mb-6' />
-                  Thank you for reaching out. Our team will get back to you;
-within 24 hours.
+                  Thank you for reaching out. Our team will get back to you}
+            within 24 hours.
                 </p>
-                <button;
-onClick={() = /> setSubmitStatus('idle')}
+                <button onClick={() = /> setSubmitStatus('idle')
                   className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300'
                 >
                   Send Another Message;
@@ -294,29 +306,25 @@ onClick={() = /> setSubmitStatus('idle')}
               </motion.div>
             ) : (
 
-<form onSubmit={handleSubmit} className='space-y-6' />
+<form onSubmit={handleSubmit,
+  className='space-y-6' />
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6' />
                   <div />
-                    <label;
-htmlFor='name'
+                    <label htmlFor='name'
                       className='block text-white font-medium mb-2'
                      />
                       Full Name *
                     </label>
-                    <input;
-type='text'
+                    <input type='text'
                       id='name'
                       name='name'
-                    <input;
-type='email'
+                    <input type='email'
                       id='email'
                       name='email'
 
-                      value={formData.email}
-
-                      onChange={handleChang}
-}
-                      required;
+                      value={formData.email,
+  onChange={handleChang,
+  required;
                       className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors';
                       placeholder='Enter your email';
                     />;
@@ -324,87 +332,74 @@ type='email'
                 </div>;
 <div className='grid grid-cols-1 md:grid-cols-2 gap-6' />;
                   <div />;
-                    <label;
-                      htmlFor='company';
+                    <label htmlFor='company';
                       className='block text-white font-medium mb-2' />
 
                       Company;
                     </label>;
-                    <input;
-                      type='text';
+                    <input type='text';
                       id='company';
-                      name='company';
-                      value={formData.company}
-                      onChange={handleChange}
-
-                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
+                      name='company'}
+            value={formData.company
+            onChange={handleChange
+            className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
                       placeholder='Enter company name'                    />
                   </div>
                   <div />
-                    <label;
-htmlFor='phone'
+                    <label htmlFor='phone'
 
                       className='block text-white font-medium mb-2' />;
                       Phone Number;
                     </label>;
-                    <input;
-                      type='tel';
-                      id='phone';
-                      name='phone';
-                      value={formData && formData.phone}
-                      onChange={handleChange}
-
-                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-500 transition-colors'
+                    <input type='tel';
+                      id='phone'}
+            name='phone'
+            value={formData && formData.phone,
+  onChange={handleChange,
+  className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-500 transition-colors'
 
                       placeholder='Enter phone number'
                     />
                   </div>
                 </div>
                 <div />
-<label;
-htmlFor='service'
+<label htmlFor='service'
                     className='block text-white font-medium mb-2'
                    />
-                    Service of Interest;
-                  </label>
-                  <select;
-id='service'
+                    Service of Interest
+            </label>
+                  <select id='service'
                     name='service'
 
-                    value={formData.service}
-                    onChange={handleChang}
-}
-                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors' />
+                    value={formData.service
+            onChange={handleChang
+            className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors' />
 
-                    <option value='' />Select a service</option>;
-                    {services.map(service => (<option;}
-                        key={service}
-                        value={service}
-                        className='bg-gray-800 text-white' />
+                    <option value='' />Select a service</option>
+            {services.map(service => (
+          <option key={service,
+  value={service className='bg-gray-800 text-white' />
 
-                        {service}
+                        {service
                       </option>;
-                    ))}
+            ))
 
                   </select>
                 </div>
                 <div />
-<label;
-htmlFor='message'
+<label htmlFor='message'
                     className='block text-white font-medium mb-2' />;
                     Message *;
-                  </label>;
-                  <textarea;
-id='message'
+                  </label>
+            <textarea id='message'
 
                     name='message'
 
-                    value={formData.message}
-                    onChange={handleChange}
-                    required;
-                    rows={5}
-
-className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
+                    value={formData.message
+            onChange={handleChange
+            required;
+                    rows={5
+            className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
                     placeholder='Tell us about your project or inquiry...'
                   />
                 </div>
@@ -412,13 +407,18 @@ className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-w
                   <motion.div;
                   />;
                 </div>;
-                {submitStatus === 'error' && (<motion.div;
-                  />;
-                </div>;{submitStatus === 'error' && (<motion&& motion.div;}
-                    initial={{ opacity: 0, y: -10 }
-}
+                {submitStatus === 'error' && (
+          <motion.div;
+                  />
+            </div>;{submitStatus === 'error' && (
+          <motion&& motion.div
+            initial={{ opacity: 0
+            y: -10 
 
-                    animate={{ opacity: 1, y: 0 }}
+
+                    animate={{ opacity: 1}
+            y: 0
+             
 
 className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4'
                    />
@@ -426,13 +426,10 @@ className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-
                     <span />Something went wrong. Please try again.</span>
                   </motion.div>
 
-                
-}
-                <button;
-type='submit';
-                  disabled={isSubmitting}
 
-                  className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2'
+                <button type='submit';
+                  disabled={isSubmitting}
+            className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2'
                  />
                   {isSubmitting ? (
                     <>
@@ -443,9 +440,9 @@ type='submit';
                     <>
 <Send className='w-5 h-5' />
                       <span />Send Message</span>
-                    </>}
-                  }
-}
+                    </>
+                  
+
                 </button>;
               </form>;
             )}
@@ -456,8 +453,6 @@ type='submit';
     </section>
 )
 };
-
-
 export default ContactForm;
 
 "

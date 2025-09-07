@@ -1,7 +1,6 @@
 import Link from 'next/link';
-
-import { motion } from 'framer-motion';
-
+import { motion,
+  from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;}
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github}
@@ -21,8 +20,7 @@ const contactInfo = null;
   href: '/ai-autonomous-marketing-orchestrator';}
 }
 {name: 'AI Autonomous Sales Intelligence'}
-  href: '/ai-autonomous-sales-intelligence';}
-}];
+  href: '/ai-autonomous-sales-intelligence';];
 }
 {title: 'Cybersecurity & Quantum',
   services: [ {name: 'Quantum Encryption Platform'}
@@ -38,8 +36,7 @@ const contactInfo = null;
   href: '/ai-autonomous-vulnerability-scanner';}
 }
 {name: 'Quantum Secure Communication'}
-  href: '/quantum-secure-communication';}
-}];
+  href: '/quantum-secure-communication';];
 }
 {title: 'Fintech & Blockchain',
   services: [ {name: 'Quantum Financial Trading Platform'}
@@ -55,8 +52,7 @@ const contactInfo = null;
   href: '/ai-autonomous-insurance-platform';}
 }
 {name: 'Quantum Payment Processing'}
-  href: '/quantum-payment-processing';}
-}];
+  href: '/quantum-payment-processing';];
 }
 {title: 'Healthcare & Biotech',
   services: [ {name: 'AI Autonomous Medical Diagnostics'}
@@ -72,8 +68,7 @@ const contactInfo = null;
   href: '/quantum-genomic-analysis';}
 }
 {name: 'AI Autonomous Clinical Trials'}
-  href: '/ai-autonomous-clinical-trials';}
-}];
+  href: '/ai-autonomous-clinical-trials';];
 }];
 {/* Background Effects */;}
 }<div className=\"absolute inset-0 overflow-hidden\"  /> <div className=\"absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]\"  /></div> <div className=\"absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]\"  /></div> </div> <motion.div initial= {{title: 'AI & Automation';
@@ -91,9 +86,7 @@ const contactInfo = null;
         href: '/ai-autonomous-marketing-orchestrator';}
       }
       {name: 'AI Autonomous Sales Intelligence';}
-        href: '/ai-autonomous-sales-intelligence';}
-      }
-    ];
+        href: '/ai-autonomous-sales-intelligence';];
   }
   {title: 'Cybersecurity & Quantum';
     services: [;
@@ -110,9 +103,7 @@ const contactInfo = null;
         href: '/ai-autonomous-vulnerability-scanner';}
       }
       {name: 'Quantum Secure Communication';}
-        href: '/quantum-secure-communication';}
-      }
-    ];
+        href: '/quantum-secure-communication';];
   }
   {title: 'Fintech & Blockchain';
     services: [;
@@ -129,9 +120,7 @@ const contactInfo = null;
         href: '/ai-autonomous-insurance-platform';}
       }
       {name: 'Quantum Payment Processing';}
-        href: '/quantum-payment-processing';}
-      }
-    ];
+        href: '/quantum-payment-processing';];
   }
   {title: 'Healthcare & Biotech';
     services: [;
@@ -151,11 +140,8 @@ const contactInfo = null;
       {
 
         name: 'AI Autonomous Clinical Trials'}
-  href: '/ai-autonomous-clinical-trials'}
-      }
-    ]
-  }
-];
+  href: '/ai-autonomous-clinical-trials']
+  ];
 
 const companyLinks = [
     { name: 'About Us'}
@@ -186,12 +172,8 @@ const companyLinks = [
   href: '/contact'}
 },
 
-
   { name: 'Locations'}
-  href: '/locations'}
-}
-
-];
+  href: '/locations'];
 
 const resourceLinks = [
     { name: 'Documentation'}
@@ -223,10 +205,7 @@ const resourceLinks = [
 },
 
   { name: 'Developer Resources'}
-  href: '/developer-resources'}
-}
-
-];
+  href: '/developer-resources'];
 
 const socialLinks = [
   { name: 'Facebook'}
@@ -245,17 +224,16 @@ const socialLinks = [
   href: '#', icon: Youtube}
 },
 { name: 'GitHub'}
-  href: '#', icon: Github}
-}
-];
-
+  href: '#', icon: Github];
 export default function UltraFuturisticFooter2026() {
   return (}
 <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800' />}
       {/* Background Effects */}
       <div className='absolute inset-0 overflow-hidden' />
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]' /></div>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]' /></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,,,
+  0.05),transparent_50%)]' /></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,,,
+  0.05),transparent_50%)]' /></div>
       </div>
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16' />
         {/* Main Footer Content *}
@@ -265,9 +243,12 @@ export default function UltraFuturisticFooter2026() {
 
           <div className='lg:col-span-2' />
             <motion.div;
-initial={{ opacity: 0, y: 20 }
-}
-              whileInView={{ opacity: 1, y: 0 }}
+initial={{ opacity: 0}
+            y: 20
+             
+              whileInView={{ opacity: 1}
+            y: 0
+             
               transition={{ duration: 0.6 }
 }
              />
@@ -333,15 +314,19 @@ solutions. Transforming businesses with cutting-edge technology.
               </div>;
             </motion && motion.div>;
           </div>;{/* Service Categories */}
-          {serviceCategories && serviceCategories.map((category, index) => (<motion&& motion.div;}
-              key={index}
-              initial={{ opacity: 0, y: 20 }
-}
+          {serviceCategories && serviceCategories.map((category,,,
+  index) => (
+          <motion&& motion.div;}
+              key={index,
+  initial={{ opacity: 0,
+  y: 20
+            
 
-              whileInView={{ opacity: 1, y: 0 }
-}
 
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileInView={{ opacity: 1
+            y: 0}
+            transition={{ duration: 0.6
+            delay: index * 0.1 
              />
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
                 {category.title === 'AI & Automation' && (
@@ -349,29 +334,32 @@ solutions. Transforming businesses with cutting-edge technology.
 }
                 }
 }
-                {category.title === 'Cybersecurity & Quantum' && (<Shield className='w-5 h-5 mr-2 text-red-400' />;}
+                {category.title === 'Cybersecurity & Quantum' && (
+          <Shield className='w-5 h-5 mr-2 text-red-400' />;}
                 )}
-                {category.title === 'Fintech & Blockchain' && (<DollarSign className='w-5 h-5 mr-2 text-green-400' />;}
+                {category.title === 'Fintech & Blockchain' && (
+          <DollarSign className='w-5 h-5 mr-2 text-green-400' />;}
                 )}
-                {category.title === 'Healthcare & Biotech' && (<Dna className='w-5 h-5 mr-2 text-blue-400' />;}
+                {category.title === 'Healthcare & Biotech' && (
+          <Dna className='w-5 h-5 mr-2 text-blue-400' />;}
                 )}
                 {category.title}
               </h4>;
               <ul className='space-y-2' />;
-                {category.services.map((service, serviceIndex) => (<li key={serviceIndex} />;
-                    <Link;
-                      href={service.href}
-
-                      className='text-gray-400 hover: text-cyan-400 transition-colors duration-300 text-sm flex items-center group'
+                {category.services.map((service,,,
+  serviceIndex) => (
+          <li key={serviceIndex} />;
+                    <Link href={service.href}
+            className='text-gray-400 hover: text-cyan-400 transition-colors duration-300 text-sm flex items-center group'
                      />
                       <ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300' />
 
-                      {service.name}
+                      {service.name
                 )
-}
+
               </ul>;
-            </motion && motion.div>;
-          ))}
+            </motion && motion.div>
+            ))
 
         {/* Additional Links */}
 
@@ -384,12 +372,15 @@ solutions. Transforming businesses with cutting-edge technology.
 }<motion.div;
           {/* Company Links */}
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 }
-}
-            whileInView={{ opacity: 1, y: 0 }
-}
-            transition={{ duration: 0.6, delay: 0.2 }
-}
+            initial={{ opacity: 0}
+            y: 20
+             
+            whileInView={{ opacity: 1}
+            y: 0
+             
+            transition={{ duration: 0.6}
+            delay: 0.2 
+
 
            />
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
@@ -397,97 +388,104 @@ solutions. Transforming businesses with cutting-edge technology.
               Company;
             </h4>
             <ul className='space-y-2' />
-              {companyLinks.map((link, index) => (}
+              {companyLinks.map((link,,,
+  index) => (}
                 <li key={index} />
-                  <Link;
-href={link.href}
-                    className='text-gray-400 hover: text-cyan-400 transition-colors duration-300 text-sm'
+                  <Link href={link.href}
+            className='text-gray-400 hover: text-cyan-400 transition-colors duration-300 text-sm'
                    />
 
-                    {link.name}
-          {/* Resources *}
-}
+                    {link.name
+          {/* Resources *
+
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 }
-}
+            initial={{ opacity: 0}
+            y: 20
+             
 
-            whileInView={{ opacity: 1, y: 0 }
-}
+            whileInView={{ opacity: 1}
+            y: 0
+             
 
-            transition={{ duration: 0.6, delay: 0.3 }
-}
+            transition={{ duration: 0.6}
+            delay: 0.3 
+
            />
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
               <Award className='w-5 h-5 mr-2 text-yellow-400' />
               Resources;
             </h4>
             <ul className='space-y-2' />
-              {resourceLinks.map((link, index) => (}
+              {resourceLinks.map((link,,,
+  index) => (}
                 <li key={index} />
-                  <Link;
-href={link.href}
-                    className='text-gray-400 hover: text-cyan-400 transition-colors duration-300 text-sm'
+                  <Link href={link.href}
+            className='text-gray-400 hover: text-cyan-400 transition-colors duration-300 text-sm'
                    />
 
-                    {link.name}
-          {/* Social Media *}
-}
+                    {link.name
+          {/* Social Media *
+
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 }
-}
+            initial={{ opacity: 0}
+            y: 20
+             
 
-            whileInView={{ opacity: 1, y: 0 }
-}
+            whileInView={{ opacity: 1}
+            y: 0
+             
 
-            transition={{ duration: 0.6, delay: 0.4 }
-}
+            transition={{ duration: 0.6}
+            delay: 0.4 
+
            />
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
               <Rocket className='w-5 h-5 mr-2 text-pink-400' />
               Follow Us;
             </h4>
             <div className='grid grid-cols-3 gap-4' />
-              {socialLinks.map((social, index) => (}
-                <Link;}
-key={index}
-                  href={social.href}
-className='w-12 h-12 bg-gray-800 hover: bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group'
+              {socialLinks.map((social,,,
+  index) => (}
+                <Link key={index}
+            href={social.href className='w-12 h-12 bg-gray-800 hover: bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group'
                  />
                   <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />
                 </Link>
 
               )
-}
+
             </div>;
           </motion.div>;
-        </div>;
-            </div>;
-          </motion && motion.div>;
-        </div>;))}
-        {/* Newsletter Signup */}
+        </div>}
+            </div>
+            </motion && motion.div>
+            </div>;))
+        {/* Newsletter Signup */
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
-}
+          initial={{ opacity: 0}
+            y: 20
+             
 
-          whileInView={{ opacity: 1, y: 0 }
-}
+          whileInView={{ opacity: 1}
+            y: 0
+             
 
-          transition={{ duration: 0.6, delay: 0.5 }
-}
-className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'
+          transition={{ duration: 0.6,
+  delay: 0.5}
+            className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'
          />
           <div className='text-center' />
             <h3 className='text-2xl font-bold text-white mb-4' />
               Stay Updated with Latest Innovations;
             </h3>
             <p className='text-gray-300 mb-6 max-w-2xl mx-auto' />
-              Get exclusive access to our latest AI, quantum computing, and;
+              Get exclusive access to our latest AI, quantum computing
+            and;
 emerging technology insights. Be the first to know about;
 breakthrough solutions and industry trends.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto' />
-              <input;
-type='email'
+              <input type='email'
                 placeholder='Enter your email'
                 className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
 
@@ -499,12 +497,11 @@ type='email'
           </div>
         </motion.div>
 
-
                 Subscribe;
               </button>;
             </div>;
-          </div>;
-        {/* Bottom Bar */}
+          </div>
+            {/* Bottom Bar */
         <motion&& motion.div;
         </motion.div />;
         {/* Bottom Bar */}
@@ -514,23 +511,21 @@ type='email'
           whileInView={{ opacity: 1 }
 }
 
-          transition={{ duration: 0.6, delay: 0.6 }
-}
-className='border-t border-gray-800 pt-8'
+          transition={{ duration: 0.6}
+            delay: 0.6
+            className='border-t border-gray-800 pt-8'
          />
           <div className='flex flex-col md:flex-row justify-between items-center' />
             <div className='text-gray-400 text-sm mb-4 md:mb-0' />
               © 2026 Zion Tech Group. All rights reserved.
-              <Link;
-href='/privacy'
+              <Link href='/privacy'
 
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2' />;
                 Privacy Policy;
               </Link>;
               <span className='mx-2' />|</span>;
 
-              <Link;
-href='/terms'
+              <Link href='/terms'
 
                 className='hover:text-cyan-400 transition-colors duration-300'
                />
@@ -551,21 +546,19 @@ href='/terms'
         </motion.div>
       </div>
 
-    </footer>;
-  )}className='border - t border - gray - 800 pt - 8'>
+    </footer>
+            )className='border - t border - gray - 800 pt - 8'>
 
           <div className='flex flex - col md:flex - row justify - between items - center' />;
             <div className='text - gray - 400 text - sm mb - 4 md:mb - 0' />;
               © 2026 Zion Tech Group. All rights reserved. |;
-              <Link;
-                href='/privacy';
+              <Link href='/privacy';
                 className='hover:text - cyan - 400 transition - colors duration - 300 ml - 2' />
 
                 Privacy Policy;
               </Link>;
               <span className='mx - 2' />|</span>;
-              <Link;
-                href='/terms';
+              <Link href='/terms';
                 className='hover:text - cyan - 400 transition - colors duration - 300' />
 
                 Terms of Service;
@@ -605,10 +598,8 @@ href='/terms'
 
   );
 
-
     </footer>
   );
 }
-
 
 "

@@ -1,8 +1,7 @@
-
-
-
-import React, { useEffect, useState } from 'react';
-import { useRouter  } from 'next/router';
+import React, { useEffect, useState,
+  from 'react';
+import { useRouter,
+  from 'next/router';
 
 const router = null;
 
@@ -16,19 +15,20 @@ const router = null;
         Guest: {episode.invitee?.name} ·{' '}
         {new Date(episode.createdAt).toLocaleString(,}
 }
-      </p>;
-      {episode.audio?.mp3Url && (<audio controls className='w-full' />;}
-          <source src={episode.audio.mp3Url} type='audio/mpeg' />;
-        </audio>;
-      )}
+      </p>,
+  {episode.audio?.mp3Url && (
+          <audio controls className='w-full' />;}
+          <source src={episode.audio.mp3Url,
+  type='audio/mpeg' />,
+  </audio>;,,
+   )
       <div />;
         <h2 className='text-xl font-semibold' />Transcript</h2>;
-        <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded' />;
-          {episode.transcript}
+        <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded' />
+            {episode.transcript
 
         </pre>
       </div>
     </div>
 
   );
-

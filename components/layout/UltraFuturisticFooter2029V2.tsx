@@ -1,7 +1,6 @@
 import Link from 'next/link';
-
-import { motion } from 'framer-motion';
-
+import { motion,
+  from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, ArrowRight;
   Brain, Rocket, Target, Shield, Cpu;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
@@ -26,8 +25,7 @@ const contactInfo = null;
   href: '/services/ai-creativity-orchestrator';}
 }
 {name: 'AI Autonomous Business Manager'}
-  href: '/services/ai-autonomous-business-manager';}
-}];
+  href: '/services/ai-autonomous-business-manager';];
 }
 {title: 'Quantum Technology',
   icon: Globe, color: 'from-indigo-600 via-blue-600 to-cyan-600',
@@ -41,8 +39,7 @@ const contactInfo = null;
   href: '/services/quantum-financial-trading-platform';}
 }
 {name: 'Quantum Creativity Studio'}
-  href: '/services/quantum-creativity-studio';}
-}];
+  href: '/services/quantum-creativity-studio';];
 
 <motion.div initial= {
   {
@@ -101,11 +98,8 @@ const contactInfo = null;
 
       {
         name: 'Smart Financial Management'}
-  href: '/services/smart-financial-management-platform'}
-      }
-    ]
-  }
-];
+  href: '/services/smart-financial-management-platform']
+  ];
 
 const mainNavigation = [
   { name: 'Home'}
@@ -136,9 +130,7 @@ const mainNavigation = [
   href: '/about', icon: Users}
 },
 { name: 'Contact'}
-  href: '/contact', icon: MessageCircle}
-}
-];
+  href: '/contact', icon: MessageCircle];
 
 const quickLinks = [
   { name: 'About Us'}
@@ -157,9 +149,7 @@ const quickLinks = [
   href: '/careers', icon: GraduationCap}
 },
 { name: 'Support'}
-  href: '/support', icon: MessageCircle}
-}
-];
+  href: '/support', icon: MessageCircle];
 
 const resources = [
   { name: 'Documentation'}
@@ -184,9 +174,7 @@ const resources = [
   href: '/events', icon: Calendar}
 },
 { name: 'Webinars'}
-  href: '/webinars', icon: Video}
-}
-];
+  href: '/webinars', icon: Video];
 ;
 
 const resources = [
@@ -236,48 +224,44 @@ const company = [
   href: '/legal', icon: Shield}
 },
 { name: 'Privacy'}
-  href: '/privacy', icon: ShieldCheck}
-}
-];
+  href: '/privacy', icon: ShieldCheck];
 
 const socialLinks = [
   {
     name: 'LinkedIn',
   href: 'https://linkedin.com/company/ziontechgroup',
-    icon: Linkedin}
-    color: 'hover:text-blue-500'}
+    icon: Linkedin,
+  color: 'hover:text-blue-500'}
   },
   {
     name: 'Twitter',
   href: 'https://twitter.com/ziontechgroup',
-    icon: Twitter}
-    color: 'hover:text-blue-400'}
+    icon: Twitter,
+  color: 'hover:text-blue-400'}
   },
   {
     name: 'Facebook',
   href: 'https://facebook.com/ziontechgroup',
-    icon: Facebook}
-    color: 'hover:text-blue-600'}
+    icon: Facebook,
+  color: 'hover:text-blue-600'}
   },
   {
     name: 'Instagram',
   href: 'https://instagram.com/ziontechgroup',
-    icon: Instagram}
-    color: 'hover:text-pink-500'}
+    icon: Instagram,
+  color: 'hover:text-pink-500'}
   },
   {
     name: 'YouTube',
   href: 'https://youtube.com/@ziontechgroup',
-    icon: Youtube}
-    color: 'hover:text-red-500'}
+    icon: Youtube,
+  color: 'hover:text-red-500'}
   },
   {
     name: 'GitHub',
   href: 'https://github.com/Zion-Holdings',
-    icon: Github}
-    color: 'hover:text-gray-400'}
-  }
-];
+    icon: Github,
+  color: 'hover:text-gray-400'];
 
 const footerSections = [
   {
@@ -305,10 +289,7 @@ const footerSections = [
 },
 
   { name: 'Cybersecurity'}
-  href: '/services/cybersecurity'}
-}
-
-    ]
+  href: '/services/cybersecurity']
   },
   {
     title: 'Solutions',
@@ -329,16 +310,12 @@ const footerSections = [
   href: '/solutions/metaverse'}
 },
 
-
 {
         name: 'Business Intelligence'}
   href: '/solutions/business-intelligence'}
       },
         { name: 'Supply Chain AI'}
-  href: '/solutions/supply-chain-ai'}
-}
-
-    ]
+  href: '/solutions/supply-chain-ai']
   },
   {
     title: 'Industries',
@@ -363,12 +340,8 @@ const footerSections = [
   href: '/industries/education'}
 },
 
-
   { name: 'Government'}
-  href: '/industries/government'}
-}
-
-    ]
+  href: '/industries/government']
   },
   {
     title: 'Resources',
@@ -394,13 +367,8 @@ const footerSections = [
 },
 
   { name: 'Research'}
-  href: '/research'}
-}
-
-    ]
-  }
-];
-
+  href: '/research']
+  ];
 export default function UltraFuturisticFooter2029V2() {
   return (
 <footer className = 'relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20' />
@@ -408,12 +376,8 @@ export default function UltraFuturisticFooter2029V2() {
  ;
   return (
     <footer className='relative bg - black / 90 backdrop - blur - xl border - t border - cyan - 500 / 20' />      { name: 'Research'}
-  href: '/research'}
-}
-    ];
-  }
-];
-
+  href: '/research'];
+  ];
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20' />}
@@ -425,10 +389,12 @@ export default function UltraFuturisticFooter2029V2() {
 }
           <div className='lg:col-span-2 xl:col-span-1' />
             <motion.div;
-initial={{ opacity: 0, y: 20 }
-}
-              whileInView={{ opacity: 1, y: 0 }}
-
+initial={{ opacity: 0}
+            y: 20
+             
+              whileInView={{ opacity: 1}
+            y: 0
+             
 
               transition={{ duration: 0.6 }}
               viewport={{ once: true }
@@ -550,17 +516,20 @@ initial={{ opacity: 0, y: 20 }
               </div>;
             </motion && motion.div>;
           </div>;{/* Service Categories */}
-          {footerSections && footerSections.map((section, index) => (<motion&& motion.div;}
-              key={section && section.title}
-              initial={{ opacity: 0, y: 20 }
-}
+          {footerSections && footerSections.map((section,,,
+  index) => (
+          <motion&& motion.div;}
+              key={section && section.title,
+  initial={{ opacity: 0,
+  y: 20
+            
 
-              whileInView={{ opacity: 1, y: 0 }
-}
 
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-
-              viewport={{ once: true }
+              whileInView={{ opacity: 1
+            y: 0,
+  transition={{ duration: 0.6}
+            delay: index * 0.1
+            viewport={{ once: true 
 }
              />;
 <h4 className='text-lg font-semibold text-white mb-6 flex items-center' />;
@@ -568,30 +537,32 @@ initial={{ opacity: 0, y: 20 }
                 {section.title}
               </h4>;
               <ul className='space-y-3' />;
-                {section.links.map(link => (<li key={link.name} />;
-                    <Link;
-                      href={link.href}
-                      className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group' />
+                {section.links.map(link => (
+          <li key={link.name} />,
+  <Link href={link.href}
+            className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group' />
 
-                      <ArrowRight className='w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />;
-                      {link.name}
+                      <ArrowRight className='w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+            {link.name
 
                     </Link>
                   </li>
-
-                ))}
+,
+   ))
               </ul>;
-            </motion && motion.div>;
-          ))}
+            </motion && motion.div>
+            ))
         {/* Service Showcase */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
-}
-          whileInView={{ opacity: 1, y: 0 }
-}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
-
-          viewport={{ once: true }
+          initial={{ opacity: 0}
+            y: 20
+             
+          whileInView={{ opacity: 1}
+            y: 0
+             
+          transition={{ duration: 0 && 0.6}
+            delay: 0 && 0.3
+            viewport={{ once: true 
 }
 
 className='mt-16 pt-12 border-t border-gray-800'
@@ -600,46 +571,48 @@ className='mt-16 pt-12 border-t border-gray-800'
             Featured 2029 Services;
           </h3>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6' />
-            {serviceCategories.map((category, index) => (}
+            {serviceCategories.map((category,,,
+  index) => (}
               <motion.div;}
 key={category.title}
-                initial={{ opacity: 0, scale: 0.9 }
-}
-                whileInView={{ opacity: 1, scale: 1 }
-}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }
+            initial={{ opacity: 0 scale: 0.9
+            whileInView={{ opacity: 1}
+            scale: 1
+             
+                transition={{ duration: 0.5
+            delay: index * 0.1
+            viewport={{ once: true 
 }
 
 className='group'
                />
 
-                whileInView={{ opacity: 1, scale: 1 }
-}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }
+                whileInView={{ opacity: 1}
+            scale: 1
+             
+                transition={{ duration: 0 && 0.5}
+            delay: index * 0 && 0.1
+            viewport={{ once: true 
 }
                 className='group'>;
-                <div;
-                  className={`p-4 rounded-xl bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-cyan-500/20 hover: border-cyan-500/40 transition-all duration-300
-} />
+                <div className={`p-4 rounded-xl bg-gradient-to-br ${category && category.color bg-opacity-10 border border-cyan-500/20 hover: border-cyan-500/40 transition-all duration-300
+ />
 
-                  <div className='flex items-center space-x-3 mb-3' />;
-                    <div;
-                      className={`p-2 rounded-lg bg-gradient-to-r ${category && category.color}`} />
+                  <div className='flex items-center space-x-3 mb-3' />}
+            <div className={`p-2 rounded-lg bg-gradient-to-r ${category && category.color`} />
 
                       <category && category.icon className='w-5 h-5 text-white' />;
 
                           href={service.href}
-
-                          className='text-gray-300 hover: text-cyan-400 transition-colors duration-300 text-xs block'
+            className='text-gray-300 hover: text-cyan-400 transition-colors duration-300 text-xs block'
                         >
 
-                          {service.nam}
-}
+                          {service.nam
+
           </div>;
         </motion && motion.div>;
-      </div>;))}
+      </div>
+            ))
                   </ul>;
                 </div>;
               </motion && motion.div>;
@@ -654,10 +627,12 @@ className='group'
             {/* Copyright *}
 }
             <motion&& motion.div;
-              initial={{ opacity: 0, x: -20 }
-}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0 && 0.6 }}
+              initial={{ opacity: 0}
+            x: -20
+            whileInView={{ opacity: 1}
+            x: 0
+             
+              transition={{ duration: 0 && 0.6 }
 
               viewport={{ once: true }
 }
@@ -665,27 +640,27 @@ className='group'
 className='text-gray-400 text-sm'
              />
               © 2025 Zion Tech Group. All rights reserved.
-              <Link;
-href='/privacy'
+              <Link href='/privacy'
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2' />;
                 Privacy Policy;
               </Link>{' '}
 
-              <Link;
-href='/terms'
+              <Link href='/terms'
                 className='hover: text-cyan-400 transition-colors duration-300 ml-2'
                />
                 Terms of Service;
               </Link>
             </motion.div>
 
-
             {/* Social Links *}
 }
             <motion&& motion.div;
-              initial={{ opacity: 0, x: 20 }
-}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0}
+            x: 20
+             
+              whileInView={{ opacity: 1}
+            x: 0
+             
               transition={{ duration: 0 && 0.6 }}
 
               viewport={{ once: true }}
@@ -693,20 +668,16 @@ href='/terms'
 className='flex items-center space-x-4'
              />
               {socialLinks.map(social => (}
-                <Link;}
-key={social && social.name}
-                  href={social && social.href}
-                  target='_blank'
+                <Link key={social && social.name href={social && social.href target='_blank'
                   rel='noopener noreferrer'
 
-                  className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110`}
+                  className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color transition-all duration-300 hover:scale-110`
                  />
                   <social.icon className='w-4 h-4' />
                 </Link>
+},
+   )
 
-
-              )
-}
             </motion.div>;
           </div>;
         </div>;
@@ -717,13 +688,15 @@ key={social && social.name}
       </div>;))}
       {/* Newsletter Signup */}
       <motion&& motion.div;
-        initial={{ opacity: 0, y: 20 }
-}
-        whileInView={{ opacity: 1, y: 0 }
-}
-        transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
-
-        viewport={{ once: true }
+        initial={{ opacity: 0}
+            y: 20
+             
+        whileInView={{ opacity: 1}
+            y: 0
+             
+        transition={{ duration: 0 && 0.6}
+            delay: 0 && 0.4
+            viewport={{ once: true 
 }
 
 className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20'
@@ -739,8 +712,7 @@ advances, space technology innovations, and cutting-edge micro;
 SAAS solutions.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto' />
-              <input;
-type='email'
+              <input type='email'
                 placeholder='Enter your email'
                 className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50'
 
@@ -776,6 +748,5 @@ type='email'
     </footer>
   );
 }
-
 
 "

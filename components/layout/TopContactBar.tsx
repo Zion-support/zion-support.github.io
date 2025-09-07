@@ -1,15 +1,13 @@
-
-
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
+import React, { useState,
+  from 'react';
+import { motion, AnimatePresence,
+  from 'framer-motion';
 import { Phone, Mail, MapPin, Globe;
   Clock, ChevronDown, ChevronUp;}
   MessageCircle, Calendar, Star;}
   } from 'lucide-react';
 
 const contactInfo = null;
-
 export default function TopContactBar() {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
@@ -25,8 +23,7 @@ export default function TopContactBar() {
               <div className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group' />;
                 <Phone className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />;
 
-                <a;
-href={`tel: ${contactInfo.mobile}`}
+                <a href={`tel: ${contactInfo.mobile}`}
                   className='hover:text-cyan-400 transition-colors duration-200' />
 
                   {contactInfo.mobil}
@@ -36,8 +33,7 @@ href={`tel: ${contactInfo.mobile}`}
               {/* Email */}
 <div className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group' />;
                 <Mail className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />;
-                <a;
-                  href={`mailto: ${contactInfo.email}`}
+                <a href={`mailto: ${contactInfo.email}`}
 
                   className='hover:text-cyan-400 transition-colors duration-200'
                  />
@@ -57,22 +53,20 @@ href={`tel: ${contactInfo.mobile}`}
               {/* Website */}
 <div className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group' />;
                 <Globe className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />;
-                <a;
-                  href={contactInfo.website}
-
-                  target='_blank'
+                <a href={contactInfo.website}
+            target='_blank'
                   rel='noopener noreferrer'
                   className='hover:text-cyan-400 transition-colors duration-200'
                  />
-                  {contactInfo.website.replace('https://', '')}
+                  {contactInfo.website.replace('https://',
+  '')
                 </a>
               </div>
             </div>
 
-
-            {/* Center - Business Hours & Rating */}
-<div className='hidden lg:flex items-center space-x-6 text-sm' />;
-              {/* Business Hours */}
+            {/* Center - Business Hours & Rating */
+<div className='hidden lg:flex items-center space-x-6 text-sm' />
+            {/* Business Hours */
               <div className='flex items-center space-x-2 text-gray-300' />;
                 <Clock className='w-4 h-4 text-cyan-400' />;
                 <span />{contactInfo.hours}</span>;
@@ -86,42 +80,33 @@ href={`tel: ${contactInfo.mobile}`}
             </div>
 
                     key={action.name}
-                    href={action.href}
-                    className=\"flex items - center space - x-2 px - 3 py - 1.5 text - xs text - gray - 300 hover: text - white bg - gray - 800 / 50 hover:bg - cyan - 500 / 20 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow-cyan-500 / 30\">
+            href={action.href className=\"flex items - center space - x-2 px - 3 py - 1.5 text - xs text - gray - 300 hover: text - white bg - gray - 800 / 50 hover:bg - cyan - 500 / 20 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow-cyan-500 / 30\">
 
-
-            {/* Right Side - Quick Actions & Expand Button */}
+            {/* Right Side - Quick Actions & Expand Button */
 
 <div className='flex items-center space-x-4' />
 
-              {/* Quick Actions *}
+              {/* Quick Actions *
 }
               <div className='hidden sm:flex items-center space-x-2' />;
-                {quickActions.map(action => (<a;}
-                    key={action.name}
-                    href={action.href}
-
-                    className='flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover: text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'
+                {quickActions.map(action => (
+          <a key={action.name href={action.href className='flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover: text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'
                    />
-
 
                     {action.icon}
                     <span />{action.nam}
-}</span>;
-                  </a>;
-                ))}
+}</span>,
+  </a>;,,
+   ))}
               </div>;
 
-
               {/* Expand/Collapse Button */}
-              <button;
-onClick={() = /> setIsExpanded(!isExpanded)}
+              <button onClick={() = /> setIsExpanded(!isExpanded)}
 
                 )}
 
               {/* Expand/Collapse Button */}
-              <button;
-onClick={() = /> setIsExpanded(!isExpanded)}
+              <button onClick={() = /> setIsExpanded(!isExpanded)}
 
 className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover: text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'
               >
@@ -138,22 +123,24 @@ className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover: 
         </div>
       </div>
 
-
                     <span />{action.nam}
 }</span>;
                   </a>))}
               </div>;
               {/* Expand / Collapse Button */}
-              <button;
-                on_click={() = /> setIsExpanded (!is_expanded)}
+              <button on_click={() = /> setIsExpanded (!is_expanded)}
                 className='flex items - center space - x-1 px - 3 py - 1.5 text - xs text - gray - 300 hover:text - white bg - gray - 800 / 50 hover:bg - cyan - 500 / 20 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow - cyan - 500 / 30'>
 
                 <span />More Info</span>;
-                {isExpanded ? (<ChevronUp className='w-4 h-4' />;}
-                ) : (<ChevronDown className='w-4 h-4' />                )}              >;
+                {isExpanded ? (
+          <ChevronUp className='w-4 h-4' />;}
+                ) : (
+          <ChevronDown className='w-4 h-4' />                )}              >;
                 <span />More Info</span>;"
-                {isExpanded ? (<ChevronUp className=\"w-4 h-4\" />;}"
-                ) : (<ChevronDown className=\"w-4 h-4\" />;}
+                {isExpanded ? (
+          <ChevronUp className=\"w-4 h-4\" />;}"
+                ) : (
+          <ChevronDown className=\"w-4 h-4\" />;}
                 )}
               </button>;
             </div>;
@@ -162,13 +149,17 @@ className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover: 
       </div>;
       {/* Expanded Information Panel */}
       <AnimatePresence />;
-        {isExpanded && (<motion&& motion.div;}
-            initial={{ opacity: 0, height: 0 }
-}
-            animate={{ opacity: 1, height: 'auto' }
+        {isExpanded && (
+          <motion&& motion.div;}
+            initial={{ opacity: 0}
+            height: 0
+             
+            animate={{ opacity: 1 height: 'auto' 
 }
 
-            exit={{ opacity: 0, height: 0 }}
+            exit={{ opacity: 0}
+            height: 0
+             
 
             transition={{ duration: 0.3 }}
 className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden'
@@ -186,8 +177,7 @@ className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-
                   <div className='space-y-3' />;
                     <div className='flex items-center space-x-3 text-gray-300' />;
                       <Phone className='w-4 h-4 text-cyan-400' />;
-                      <a;
-                        href={`tel: ${contactInfo.mobile}`}
+                      <a href={`tel: ${contactInfo.mobile}`}
                         className='hover:text-cyan-400 transition-colors duration-200' />
 
                         {contactInfo.mobile}
@@ -196,8 +186,7 @@ className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-
                     </div>
                     <div className='flex items-center space-x-3 text-gray-300' />
                       <Mail className='w-4 h-4 text-cyan-400' />
-                      <a;
-href={`mailto:${contactInfo.email}`}
+                      <a href={`mailto:${contactInfo.email}`}
                         className='hover:text-cyan-400 transition-colors duration-200' />
 
                         {contactInfo.emai}
@@ -227,41 +216,37 @@ href={`mailto:${contactInfo.email}`}
                     </div>;
                     <div className='flex items-center space-x-3 text-gray-300' />;
                       <Globe className='w-4 h-4 text-cyan-400' />;
-                      <a;
-                        href={contactInfo.website}
-
-                        target='_blank'
+                      <a href={contactInfo.website}
+            target='_blank'
                         rel='noopener noreferrer'
                         className='hover: text-cyan-400 transition-colors duration-200'
                        />
-                        Visit Website;
-                      </a>
+                        Visit Website
+            </a>
                     </div>
                   </div>
                 </div>
 
-                {/* Quick Actions */}
+                {/* Quick Actions */
 <div className='space-y-4' />
                   <h3 className='text-lg font-semibold text-white flex items-center space-x-2' />
                     <MessageCircle className='w-5 h-5 text-cyan-400' />
                     <span />Quick Actions</span>
                   </h3>
                   <div className='space-y-3' />
-                    {quickActions.map(action => (}
-                      <a;}
-key={action.name}
-                        href={action.hre}
-}"
+                    {quickActions.map(action => (
+                      <a key={action.name
+            href={action.hre
+"
                         className=\"flex items - center space - x-3 p - 3 text - gray - 300 hover:text - white bg - gray - 800 / 30 hover:bg - cyan - 500 / 20 border border - gray - 700 / 30 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow-cyan-500 / 30 group\" />
 "
-                        <div className=\"text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition-transform duration-200\" />;
-
-                          {action.icon}
+                        <div className=\"text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition-transform duration-200\" />}
+            {action.icon
 
                         </div>
                         <span className='font-medium' />{action.name}</span>
-                      </a>
-                    ))}
+                      </a>,,
+   ))}
                   </div>
                 </div>
                 {/* Company Highlights */}
@@ -315,14 +300,12 @@ cutting-edge technology solutions can drive your business;
 forward.
                   </p>
                   <div className='flex flex-col sm: flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4' />
-                    <a;
-href='/contact'
+                    <a href='/contact'
                       className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
                      />
                       Get Started Today;
                     </a>
-                    <a;
-href='/comprehensive-services-showcase-2025'
+                    <a href='/comprehensive-services-showcase-2025'
                       className='px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10'
                      />
                       View All Services;
@@ -332,7 +315,7 @@ href='/comprehensive-services-showcase-2025'
               </div>
             </div>
           </motion.div>
-        
+
 }
       </AnimatePresence>;
     </div>;
@@ -346,7 +329,8 @@ href='/comprehensive-services-showcase-2025'
 }</span> </a>) )
 }</div> {}
   /* Expand/Collapse Button */}"
-}<button) : (<ChevronDown className=\"w-4 h-4\" />)
+}<button) : (
+          <ChevronDown className=\"w-4 h-4\" />)
 }</button> </div> </div> </div> </div> {
 }
   /* Expanded Information Panel */ }

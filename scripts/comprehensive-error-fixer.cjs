@@ -79,20 +79,28 @@ class ComprehensiveErrorFixer {
     const extensions = ['.js', '.cjs', '.mjs', '.ts', '.tsx', '.jsx'];
     
     const scanDirectory = (dir) => {
-      const items = fs.readdirSync(dir);
-      
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          // Skip node_modules and other common directories
-          if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
-            scanDirectory(fullPath);
-          }
-        } else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
+      try {
+        if (!fs.existsSync(dir)) {
+          return;
         }
+        
+        const items = fs.readdirSync(dir);
+        
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory()) {
+            // Skip node_modules and other common directories
+            if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+              scanDirectory(fullPath);
+            }
+          } else if (extensions.some(ext => item.endsWith(ext))) {
+            files.push(fullPath);
+          }
+        }
+      } catch (error) {
+        this.log(`Error scanning directory ${dir}: ${error.message}`, 'warning');
       }
     };
     

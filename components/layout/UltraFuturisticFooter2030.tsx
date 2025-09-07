@@ -1,6 +1,5 @@
-
-import { motion } from 'framer-motion';
-
+import { motion,
+  from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;}
@@ -24,9 +23,7 @@ const contactInfo = null;
 
       {
         name: 'Quantum Cloud Infrastructure'}
-  href: '/quantum-cloud-infrastructure'}
-      }
-    ]
+  href: '/quantum-cloud-infrastructure']
   },
   {
     title: '🧬 Biotech & DNA Computing',
@@ -44,10 +41,7 @@ const contactInfo = null;
   href: '/ai-predictive-health-analytics'}
       },
         { name: 'Research Automation'}
-  href: '/advanced-research-automation'}
-}
-
-    ]
+  href: '/advanced-research-automation']
   },
   {
     title: '🏙️ Enterprise IT Solutions',
@@ -66,9 +60,7 @@ const contactInfo = null;
       },
       {
         name: 'Intelligent Data Governance'}
-  href: '/intelligent-data-governance'}
-      }
-    ]
+  href: '/intelligent-data-governance']
   },
   {
     title: '🌌 Space & Metaverse Tech',
@@ -86,10 +78,7 @@ const contactInfo = null;
 },
 
         { name: 'AI Research Assistant'}
-  href: '/ai-research-assistant'}
-}
-
-    ]
+  href: '/ai-research-assistant']
   },
   {
     title: '🎯 2030 Innovative Micro SAAS',
@@ -109,11 +98,8 @@ const contactInfo = null;
       },
       {
         name: 'AI HR Management Suite 2030'}
-  href: '/ai-hr-management-suite-2030'}
-      }
-    ]
-  }
-];
+  href: '/ai-hr-management-suite-2030']
+  ];
 
 const quickLinks = [
     { name: 'Home'}
@@ -136,7 +122,6 @@ const quickLinks = [
   href: '/resources'}
 },
 
-
     { name: 'Case Studies'}
   href: '/case-studies'}
 },
@@ -146,10 +131,7 @@ const quickLinks = [
 },
 
   { name: 'Contact'}
-  href: '/contact'}
-}
-
-];
+  href: '/contact'];
 
 const companyInfo = [
     { name: 'About Us'}
@@ -172,12 +154,8 @@ const companyInfo = [
   href: '/support'}
 },
 
-
   { name: 'Status'}
-  href: '/status'}
-}
-
-];
+  href: '/status'];
 
 const socialLinks = [
   {
@@ -202,9 +180,7 @@ const socialLinks = [
   href: 'https://youtube.com/ziontechgroup', icon: Youtube}
 },
   { name: 'GitHub'}
-  href: 'https://github.com/ziontechgroup', icon: Github}
-}
-];
+  href: 'https://github.com/ziontechgroup', icon: Github];
 
 const certifications = [
   'ISO 27001 Certified',
@@ -214,7 +190,6 @@ const certifications = [
   'PCI DSS Level 1',
   'FedRAMP Authorized'
 ];
-
 export default function UltraFuturisticFooter2030() {
   return (
 <footer className = 'bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden' />
@@ -261,8 +236,7 @@ export default function UltraFuturisticFooter2030() {
               <div className='space-y-3' />;
                 <div className='flex items-center space-x-3 text-sm text-gray-300' />;
                   <Phone className='w-4 h-4 text-purple-400' />;
-                  <a;
-                    href={`tel: ${contactInfo.mobile}`}
+                  <a href={`tel: ${contactInfo.mobile}`}
                     className='hover:text-purple-400 transition-colors' />
 
                     {contactInfo.mobile}
@@ -271,8 +245,7 @@ export default function UltraFuturisticFooter2030() {
                 </div>
                 <div className='flex items-center space-x-3 text-sm text-gray-300' />
                   <Mail className='w-4 h-4 text-purple-400' />
-                  <a;
-href={`mailto:${contactInfo.email}`}
+                  <a href={`mailto:${contactInfo.email}`}
                     className='hover:text-purple-400 transition-colors'
                    />
                     {contactInfo.email}
@@ -284,12 +257,12 @@ href={`mailto:${contactInfo.email}`}
                 </div>
                 <div className='flex items-center space-x-3 text-sm text-gray-300' />
                   <Globe className='w-4 h-4 text-purple-400' />
-                  <a;
-href={contactInfo.websit}
+                  <a href={contactInfo.websit}
 }
                     className='hover:text-purple-400 transition-colors'
                    />
-                    {contactInfo.website.replace('https://', '')}
+                    {contactInfo.website.replace('https://',,,
+  '')}
 
                   </a>
                 </div>
@@ -303,28 +276,30 @@ href={contactInfo.websit}
                 <span />Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4' />
-                {serviceCategories.slice(0, 3).map((category, index) => (}
-                  <div key={index} className='space-y-2' />
+                {serviceCategories.slice(0,,,
+  3).map((category,,,
+  index) => (}
+                  <div key={index}
+            className='space-y-2' />
                     <h5 className='text-sm font-medium text-purple-300' />
-                      {category.title}
+                      {category.title
                     </h5>
 
                     <div className='space-y-1' />
-                      {category.services.map((service, serviceIndex) => (}
-                        <Link;}
-key={serviceIndex}
-                          href={service.href}
-className='block text-xs text-gray-400 hover: text-purple-300 transition-colors' />
+                      {category.services.map((service,,
+  serviceIndex) => (
+                        <Link key={serviceIndex}
+            href={service.href className='block text-xs text-gray-400 hover: text-purple-300 transition-colors' />
 
-                          {service.name}
+                          {service.name
 
                         </Link>
 
                       )
-}
+
                     </div>;
-                  </div>;
-                ))}
+                  </div>}
+            ))
 
             {/* Quick Links */}
 
@@ -334,46 +309,44 @@ className='block text-xs text-gray-400 hover: text-purple-300 transition-colors'
                 <span />Quick Links</span>
               </h4>
               <div className='space-y-2' />
-                {quickLinks.map((link, index) => (}
-                  <Link;}
-key={index}
-                    href={link.href}
-className='block text-sm text-gray-400 hover: text-cyan-300 transition-colors flex items-center space-x-2 group'
+                {quickLinks.map((link,,,
+  index) => (}
+                  <Link key={index}
+            href={link.href className='block text-sm text-gray-400 hover: text-cyan-300 transition-colors flex items-center space-x-2 group'
                    />
                     <ArrowRight className='w-3 h-3 group-hover:translate-x-1 transition-transform' />
-                    <span />{link.name}</span>
+                    <span />{link.name</span>
                   </Link>
                 )
-}
+
               </div>
 
 <div className='space-y-2' />
                 <h5 className='text-sm font-medium text-cyan-300' />Company</h5>
-                {companyInfo.map((link, index) => (}
-                  <Link;}
-key={index}
-                    href={link.href}
-className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors'
+                {companyInfo.map((link,,}
+            index) => (
+                  <Link key={index}
+            href={link.href className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors'
                    />
-                    {link.name}
+                    {link.name
                   </Link>
                 )
-}
+
                 <span />Connect & Trust</span>
               </h4>
 
               </div>;
 <div className='space-y-2' />;
-                <h5 className='text-sm font-medium text-cyan-300' />Company</h5>;
-                {companyInfo.map((link, index) => (<Link;}
-                    key={index}
-                    href={link.href}
-className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors' />
+                <h5 className='text-sm font-medium text-cyan-300' />Company</h5>}
+            {companyInfo.map((link,,
+            index) => (
+          <Link key={index
+            href={link.href className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors' />
 
-                    {link.nam}
-}
-                  </Link>;
-                ))}
+                    {link.nam
+
+                  </Link>}
+            ))
                 <span />Connect & Trust</span>;
               </h4>;
               </div>;
@@ -399,20 +372,19 @@ className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors' /
                   Follow Us;
                 </h5>
                 <div className='flex flex-wrap gap-2' />
-                  {socialLinks.map((social, index) => (}
-                    <a;}
-key={index}
-                      href={social.href}
-target='_blank'
+                  {socialLinks.map((social,,,
+  index) => (}
+                    <a key={index}
+            href={social.href target='_blank'
                       rel='noopener noreferrer'
                       className='w-10 h-10 bg-gray-800/50 hover: bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'
                      />
                       <social.icon className='w-5 h-5' />
                     </a>
-                  ))}
+                  ))
                 </div>
               </div>
-              {/* Certifications *}
+              {/* Certifications *
 }
 <div className='space-y-3' />
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2' />
@@ -421,7 +393,8 @@ target='_blank'
                   <span />Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2' />
-                  {certifications.map((cert, index) => (}
+                  {certifications.map((cert,,,
+  index) => (}
 }
               {/* Certifications */}
 <div className='space-y-3' />;
@@ -430,7 +403,8 @@ target='_blank'
                   <span />Certifications</span>;
                 </h5>;
                 <div className='grid grid-cols-1 gap-2' />;
-                  {certifications.map((cert, index) => ({/* Certifications */}
+                  {certifications.map((cert,,,
+  index) => ({/* Certifications */}
               <div className='space-y-3' />;
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2' />;
                   <Award className='w-4 h-4' />;
@@ -438,17 +412,16 @@ target='_blank'
                 </h5>;
                 <div className='grid grid-cols-1 gap-2' />;
 
-                  {certifications && certifications.map((cert, index) => (;}
-                    <div;}
-key={index}
-
-                      className='flex items-center space-x-2 text-xs text-gray-400'
+                  {certifications && certifications.map((cert,,,
+  index) => (;}
+                    <div key={index}
+            className='flex items-center space-x-2 text-xs text-gray-400'
                      />
                       <CheckCircle className='w-3 h-3 text-green-400' />
-                      <span />{cert}</span>
+                      <span />{cert</span>
                     </div>
 
-                  ))}
+                  ))
                 </div>;
               </div>;
             </div>;
@@ -473,34 +446,34 @@ key={index}
                   <span  /> Certifications</span>;
                 </h5>;
                 <div className='grid grid - cols - 1 gap - 2' />;
-                  {certifications.map ((cert, index) => (<div;}
-                      key={index}
-                      className='flex items - center space - x-2 text - xs text - gray - 400' />
+                  {certifications.map ((cert, index) => (
+          <div key={index}
+            className='flex items - center space - x-2 text - xs text - gray - 400' />
 
-                      <CheckCircle className='w - 3 h - 3 text - green - 400' />                      <span />{cert}</span>                  <span  /> Certifications</span>;
+                      <CheckCircle className='w - 3 h - 3 text - green - 400' />                      <span />{cert</span>                  <span  /> Certifications</span>;
                 </h5>;"
                 <div className=\"grid grid - cols - 1 gap - 2\" />;"
-                  {certifications.map ((cert, index) => (<div key={index} className=\"flex items - center space - x-2 text - xs text - gray - 400\" />;"
-                      <CheckCircle className=\"w - 3 h - 3 text - green - 400\" />;
-                      <span />{cert}</span>;
-                    </div>))}</div>;
+                  {certifications.map ((cert, index) => (
+          <div key={index
+            className=\"flex items - center space - x-2 text - xs text - gray - 400\" />;"
+                      <CheckCircle className=\"w - 3 h - 3 text - green - 400\" />
+            <span />{cert</span>
+            </div>))</div>;
               </div>;
             </div>;
           </div>;
-        </div>;
-        {/* Bottom Bar */}
+        </div>}
+            {/* Bottom Bar */
 <div className='border-t border-purple-500/20' />;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6' />;
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0' />;
                 <span />&copy; 2024 Zion Tech Group. All rights reserved.</span>;
-                <Link;
-                  href='/privacy';
+                <Link href='/privacy';
                   className='hover:text-purple-400 transition-colors' />;
                   Privacy Policy;
                 </Link>;
 
-                <Link;
-href='/terms'
+                <Link href='/terms'
 
                   className='hover:text-purple-400 transition-colors'
                  />
@@ -533,6 +506,5 @@ href='/terms'
 
   );
 }
-
 
 "

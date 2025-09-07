@@ -1,7 +1,6 @@
 import Link from 'next/link';
-
-import { motion } from 'framer-motion';
-
+import { motion,
+  from 'framer-motion';
 import { Rocket, Brain, Atom, Zap, Sparkles, Shield;
   Phone, Mail, MapPin, Globe, ArrowRight;
 
@@ -71,11 +70,8 @@ const serviceCategories = [
       {
         name: 'Legal Document Automation',
   href: '/legal-document-automation'}
-        price: '$399/month'}
-      }
-    ]
-  }
-];
+        price: '$399/month']
+  ];
 
 const quickLinks = [
   { name: 'Home'}
@@ -100,9 +96,7 @@ const quickLinks = [
   href: '/blog', icon: MessageSquare}
 },
 { name: 'Contact'}
-  href: '/contact', icon: MessageCircle}
-}
-];
+  href: '/contact', icon: MessageCircle];
 
 const companyLinks = [
   { name: 'About Us'}
@@ -121,9 +115,7 @@ const companyLinks = [
   href: '/support', icon: LifeBuoy}
 },
 { name: 'Status'}
-  href: '/status', icon: Activity}
-}
-];
+  href: '/status', icon: Activity];
 
 const socialLinks = [
   {
@@ -145,9 +137,7 @@ const socialLinks = [
     icon: Youtube}
   },
   { name: 'Twitter'}
-  href: 'https://twitter.com/ziontechgroup', icon: Twitter}
-}
-];
+  href: 'https://twitter.com/ziontechgroup', icon: Twitter];
 
 const certifications = [
   'ISO 27001 Certified',
@@ -171,10 +161,7 @@ const stats = [
   value: '45+', icon: Globe}
 },
 { label: 'Success Rate'}
-  value: '99.9%', icon: CheckCircle}
-}
-];
-
+  value: '99.9%', icon: CheckCircle];
 export default function UltraFuturisticFooter2034() {
   return (
 <footer className = 'bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden' />
@@ -192,9 +179,12 @@ export default function UltraFuturisticFooter2034() {
 
             <div className='lg:col-span-1' />
               <motion.div;
-initial={{ opacity: 0, y: 20 }
-}
-                whileInView={{ opacity: 1, y: 0 }}
+initial={{ opacity: 0}
+            y: 20
+             
+                whileInView={{ opacity: 1}
+            y: 0
+             
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }
 }
@@ -225,15 +215,17 @@ innovative tools for the future.
                 {/* Stats */}
 
                 <div className='grid grid-cols-2 gap-4' />
-                  {stats.map((stat, index) => (}
+                  {stats.map((stat,,,
+  index) => (}
                     <motion.div;}
 key={stat.label}
-                      initial={{ opacity: 0, scale: 0.8 }
-}
-                      whileInView={{ opacity: 1, scale: 1 }
-}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }
+            initial={{ opacity: 0 scale: 0.8
+            whileInView={{ opacity: 1}
+            scale: 1
+             
+                      transition={{ duration: 0.5
+            delay: index * 0.1
+            viewport={{ once: true 
 }
 className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10' />
 
@@ -265,7 +257,6 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
               </motion.div>
             </div>
 
-
             {/* Services *}
 }
             <div className=\"lg:col-span-2\" />;
@@ -273,13 +264,15 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
             {/* Services */}
 <div className='lg:col-span-2' />;
               <motion.div;
-                initial={{ opacity: 0, y: 20 }
-}
-                whileInView={{ opacity: 1, y: 0 }
-}
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-
-                viewport={{ once: true }
+                initial={{ opacity: 0}
+            y: 20
+             
+                whileInView={{ opacity: 1}
+            y: 0
+             
+                transition={{ duration: 0 && 0.6}
+            delay: 0 && 0.2
+            viewport={{ once: true 
 }
 
 className='space-y-8'
@@ -288,15 +281,17 @@ className='space-y-8'
                   Our Services;
                 </h3>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8' />
-                  {serviceCategories.map((category, index) => (}
+                  {serviceCategories.map((category,,,
+  index) => (}
                     <motion.div;}
 key={category.title}
-                      initial={{ opacity: 0, x: -20 }
-}
-                      whileInView={{ opacity: 1, x: 0 }
-}
-                      transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                      viewport={{ once: true }}
+            initial={{ opacity: 0 x: -20
+            whileInView={{ opacity: 1}
+            x: 0
+             
+                      transition={{ duration: 0 && 0.5
+            delay: index * 0 && 0.1
+            viewport={{ once: true }
 
 className='space-y-4'
                      />
@@ -309,16 +304,15 @@ className='space-y-4'
                         </h4>;
                       </div>;
                       <div className='space-y-2' />;
-                        {category.services.map(service => (<Link;}
-                            key={service.name}
-                            href={service.href}
-                            className='flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200' />
+                        {category.services.map(service => (
+          <Link key={service.name}
+            href={service.href className='flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200' />
 
-                            <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm' />;
-                              {service.name}
-                            </span>;
-                            <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors' />;
-                              {service.price}
+                            <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm' />
+            {service.name
+                            </span>
+            <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors' />
+            {service.price
                             <span className='text-xs text-gray-500 group-hover: text-cyan-400 transition-colors' />                              {service.price}{service.pric}
 }</span>;
                           </Link>;
@@ -329,41 +323,41 @@ className='space-y-4'
                           {category && category.title}
                         </h4>;
                       </div>;
-                      <div className='space-y-2' />;
-                        {category && category.services.map(service => (<Link;}
-                            key={service && service.name}
-                            href={service && service.href}
-                            className='flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200' />;
-                            <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm' />;
-                              {service && service.name}
-                            </span>;
-                            <span className='text-xs text-gray-500 group-hover: text-cyan-400 transition-colors' />                              {service && service.pric}
+                      <div className='space-y-2' />,
+  {category && category.services.map(service => (
+          <Link key={service && service.name}
+            href={service && service.href className='flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200' />
+            <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm' />
+            {service && service.name
+                            </span>
+            <span className='text-xs text-gray-500 group-hover: text-cyan-400 transition-colors' />                              {service && service.pric
 }                    >;"
                       <div className=\"flex items-center space-x-2\" />;"
                         <category && category.icon className=\"w-5 h-5 text-cyan-400\" />;"
-                        <h4 className=\"font-semibold text-white\" />{category && category.title}</h4>;
-                      </div>;"
-                      <div className=\"space-y-2\" />;
-                        {category && category.services.map((service) => (<Link;}
-                            key={service && service.name}
-                            href={service && service.href}"
-                            className=\"flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200\" />;"
-                            <span className=\"text-gray-300 group-hover:text-cyan-400 transition-colors text-sm\" />;
-                              {service && service.name}
+                        <h4 className=\"font-semibold text-white\" />{category && category.title}</h4>,
+  </div>;"
+                      <div className=\"space-y-2\" />;,,
+  {category && category.services.map((service) => (
+          <Link key={service && service.name}
+            href={service && service.href"
+                            className=\"flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200\" />
+            "
+                            <span className=\"text-gray-300 group-hover:text-cyan-400 transition-colors text-sm\" />
+            {service && service.name
                             </span>;"
-                            <span className=\"text-xs text-gray-500 group-hover:text-cyan-400 transition-colors\" />;
-                              {service && service.price}
+                            <span className=\"text-xs text-gray-500 group-hover:text-cyan-400 transition-colors\" />}
+            {service && service.price
                             </span>;
                           </Link>;
                             key={service.name}
-                            href={service.href}"
+            href={service.href"
                             className=\"flex items - center justify - between group hover:bg - white / 5 rounded - lg p - 2 transition - all duration - 200\">
 "
-                            <span className=\"text - gray - 300 group - hover:text - cyan - 400 transition - colors text - sm\" />;
-                              {service.name}
+                            <span className=\"text - gray - 300 group - hover:text - cyan - 400 transition - colors text - sm\" />
+            {service.name
                             </span>;"
-                            <span className=\"text - xs text - gray - 500 group - hover:text - cyan - 400 transition - colors\" />;
-                              {service.price}
+                            <span className=\"text - xs text - gray - 500 group - hover:text - cyan - 400 transition - colors\" />}
+            {service.price
                         ))}
                       </div>;
                     </motion && motion.div>;
@@ -380,13 +374,15 @@ className='space-y-4'
 }"
             <div className='lg:col-span-1' />              <motion && motion.div            <div className=\"lg:col-span-1\" />;
               <motion&& motion.div;
-                initial={{ opacity: 0, y: 20 }
-}
-                whileInView={{ opacity: 1, y: 0 }
-}
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
-
-                viewport={{ once: true }}
+                initial={{ opacity: 0}
+            y: 20
+             
+                whileInView={{ opacity: 1}
+            y: 0
+             
+                transition={{ duration: 0 && 0.6}
+            delay: 0 && 0.4
+            viewport={{ once: true }
 
 className='space-y-8'
                />
@@ -398,15 +394,13 @@ className='space-y-8'
                   <div className=\"space-y-2\" />;
 
                     {quickLinks && quickLinks.map((link) => (;}
-                      <Link;}
-key={link.name}
-                        href={link.href}
-                        className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group' />
+                      <Link key={link.name}
+            href={link.href className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group' />
 
-                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />;
-                        <span className='text-sm' />{link.name}</span>;
-                      </Link>;
-                    ))}
+                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
+            <span className='text-sm' />{link.name</span>
+            </Link>
+            ))
 
                   </div>
                 </div>
@@ -417,22 +411,20 @@ key={link.name}
                     Company;
                   </h4>;
                   <div className='space-y-2' />;
-                    {companyLinks.map(link => (<Link;}
-                        key={link.name}
-                        href={link.href}
-
-                        className='flex items-center space-x-2 text-gray-300 hover: text-cyan-400 transition-colors group'
+                    {companyLinks.map(link => (
+          <Link key={link.name}
+            href={link.href className='flex items-center space-x-2 text-gray-300 hover: text-cyan-400 transition-colors group'
                        />
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
 
-                        <span className='text-sm' />{link.name}</span>
+                        <span className='text-sm' />{link.name</span>
                       </Link>
-
-                    ))}
+}
+            ))
                   </div>
                 </div>
 
-                {/* Social Links */}
+                {/* Social Links */
 
                 <div />
 <h4 className='text-lg font-semibold text-white mb-4' />
@@ -440,10 +432,8 @@ key={link.name}
                   </h4>
                   <div className='flex space-x-4' />
                     {socialLinks.map(social => (}
-                      <Link;}
-key={social.name}
-                        href={social.href}
-                        target='_blank'
+                      <Link key={social.name}
+            href={social.href target='_blank'
                         rel='noopener noreferrer'
                         className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
                        />
@@ -452,10 +442,9 @@ key={social.name}
                         <social.icon className='w-5 h-5' />                      </Link>
 
                       </Link>
-
-
-                    )
 }
+            )
+
                   </div>;
                 </div>;
               </motion.div>;
@@ -465,50 +454,49 @@ key={social.name}
                   <h4 className='text-lg font-semibold text-white mb-4' />;
                     Company;
                   </h4>;
-                  <div className='space-y-2' />;
-                    {companyLinks && companyLinks.map(link => (<Link;}
-                        key={link && link.name}
-                        href={link && link.href}
-                        className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group' />;
-                        <link && link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />;
-                        <span className='text-sm' />{link && link.name}</span>                      </Link>                      <Link;
-                        key={link && link.name}
-                        href={link && link.href}"
+                  <div className='space-y-2' />
+            {companyLinks && companyLinks.map(link => (
+          <Link key={link && link.name
+            href={link && link.href className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group' />
+            <link && link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
+            <span className='text-sm' />{link && link.name</span>                      </Link>                      <Link key={link && link.name
+            href={link && link.href"
                         className=\"flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group\" />;"
-                        <link && link.icon className=\"w-4 h-4 group-hover:scale-110 transition-transform\" />;"
-                        <span className=\"text-sm\" />{link && link.name}</span>;
-                      </Link>;
-                    ))}
+                        <link && link.icon className=\"w-4 h-4 group-hover:scale-110 transition-transform\" />}
+            "
+                        <span className=\"text-sm\" />{link && link.name</span>,
+  </Link>;,,
+   ))}
                 {/* Social Links */}
                 <div />;
                   <h4 className='text-lg font-semibold text-white mb-4' />;
                     Follow Us;
                   </h4>;
                   <div className='flex space-x-4' />;
-                    {socialLinks && socialLinks.map(social => (<Link;}
-                        key={social && social.name}
-                        href={social && social.href}
-                        target='_blank';
-                        rel='noopener noreferrer';
-                        className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110' />;
-                        <social && social.icon className='w-5 h-5' />                      </Link>                      <Link;
-                        key={social && social.name}
-                        href={social && social.href}"
+                    {socialLinks && socialLinks.map(social => (
+          <Link key={social && social.name}
+            href={social && social.href
+            target='_blank'
+            rel='noopener noreferrer'
+            className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110' />
+            <social && social.icon className='w-5 h-5' />                      </Link>                      <Link key={social && social.name href={social && social.href"
                         target=\"_blank\";"
                         rel=\"noopener noreferrer\";"
-                        className=\"w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110\" />;"
-                        <social && social.icon className=\"w-5 h-5\" />;
-                      </Link>;
-                    ))}
+                        className=\"w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110\" />}
+            "
+                        <social && social.icon className=\"w-5 h-5\" /> </Link>;,
+   ))
           {/* Certifications */}
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 }
-}
-            whileInView={{ opacity: 1, y: 0 }
-}
-            transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
-
-            viewport={{ once: true }
+            initial={{ opacity: 0}
+            y: 20
+             
+            whileInView={{ opacity: 1}
+            y: 0
+             
+            transition={{ duration: 0 && 0.6}
+            delay: 0 && 0.6
+            viewport={{ once: true 
 }
 
 className='mt-16 pt-8 border-t border-white/10'
@@ -517,16 +505,17 @@ className='mt-16 pt-8 border-t border-white/10'
               Certifications & Compliance;
             </h4>
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4' />
-              {certifications.map((cert, index) => (}
+              {certifications.map((cert,,,
+  index) => (}
                 <motion.div;}
 key={cert}
-                  initial={{ opacity: 0, scale: 0 && 0.8 }
-}
-                  whileInView={{ opacity: 1, scale: 1 }
-}
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-
-                  viewport={{ once: true }}
+            initial={{ opacity: 0 scale: 0 && 0.8
+            whileInView={{ opacity: 1}
+            scale: 1
+             
+                  transition={{ duration: 0 && 0.5
+            delay: index * 0 && 0.1
+            viewport={{ once: true }
 
 className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200'
                  />
@@ -556,14 +545,12 @@ className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-b
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0' />;
               <div className='flex items-center space-x-6 text-sm text-gray-400' />;
                 <span />&copy; 2024 Zion Tech Group. All rights reserved.</span>;
-                <Link;
-                  href='/privacy';
+                <Link href='/privacy';
                   className='hover:text-cyan-400 transition-colors' />;
                   Privacy Policy;
                 </Link>;
 
-                <Link;
-href='/terms'
+                <Link href='/terms'
 
                   className='hover:text-cyan-400 transition-colors'
                  />

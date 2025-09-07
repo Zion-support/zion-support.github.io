@@ -1,16 +1,13 @@
-
-
 import React from 'react';
-
-export default function CertificatePreview({ courseId, userId;
-
-export default function CertificatePreview({
+export default function CertificatePreview({ courseId,
+  userId,
+  export default function CertificatePreview({
   courseId;}
 userId = \"demo-user\"}
 }: {
   courseId: string;}
-  userId?: string;}
-}) {;}
+  userId?: string;},,
+  }) {;}
 }
 const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
 
@@ -23,14 +20,12 @@ const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(use
           <div className=\"text-xs opacity-80\" />Preview</div>
         </div>
       </div>
-      <a;
-href={url}"
+      <a href={url}"
         className=\"mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded\"
        />
         Download PDF;
       </a>
     </div>
   );
-
 
 "

@@ -8,9 +8,9 @@
     "build": "next build",
     "start": "next start",
     "build:netlify": "node scripts/build-with-error-handling.js",
-    "prebuild": "echo \"Starting build...\"",
+    "prebuild": "npm run optimize",
     "export": "vite build",
-    "postbuild": "echo \"Build completed\"",
+    "postbuild": "npm run analyze:bundle",
     "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
     "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
     "lint:check": "eslint . --max-warnings 0",
@@ -28,7 +28,11 @@
     "security:audit": "npm audit",
     "perf:monitor": "node scripts/performance-monitor.js",
     "automation:seo": "node scripts/seo-optimizer.js",
-    "automation:health": "node scripts/health-checker.js"
+    "automation:health": "node scripts/health-checker.js",
+    "build:optimized": "NODE_ENV=production next build && next export",
+    "build:analyze": "ANALYZE=true next build",
+    "build:production": "NODE_ENV=production next build",
+    "optimize": "node scripts/advanced-build-optimizer.js"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"

@@ -1,8 +1,9 @@
-
-
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
+import React, { useState, useEffect, useCallback, useMemo,
+  from 'react';
+import { motion, AnimatePresence,
+  from 'framer-motion';
+import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket,
+  from 'lucide-react';
 
 interface SearchResult {
   id: string;
@@ -30,8 +31,7 @@ interface SearchProps {
 
 const EnhancedSearch: React.FC<SearchProps /> = ({onSearch;
   onResultSelect;}
-  placeholder;}
-}];
+  placeholder;];
 
 setIsSearching (true);
 //Simulate API call delay setTimeout ( () => {
@@ -52,7 +52,7 @@ setIsSearching (false) }
 
   const handleClickOutside = (
   if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
-  
+
 ,) => {
   return $3;}
 }
@@ -68,7 +68,8 @@ setIsSearching (false) }
 }className=\"relative\" /> <div className=\"relative\" /> <Search className=\"absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5\" /> <input /> {}
   /* Clear Button */ }
 }{"
-  query && (<button type=\"button\" onClick= {}
+  query && (
+          <button type=\"button\" onClick= {}
   clearSearch }"
 }className=\"absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors\"  /> <X className=\"w-4 h-4\" /> </button>) 
 }{}
@@ -76,13 +77,15 @@ setIsSearching (false) }
 }<button type=\"submit\" className=\"absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50\"  /> Search </button> </div> </form> {}
   /* Search Results Dropdown */ }
 }<AnimatePresence /> {
-  showResults && (<motion.div initial= {
+  showResults && (
+          <motion.div initial= {
   {
   opacity: 0, y: -10, scale: 0.95 }
 }
 }animate= {
   {
-  opacity: 1, y: 0, scale: 1 }
+  opacity: 1, y: 0;
+  scale: 1; }
 }
 }exit= {
   {
@@ -96,8 +99,10 @@ setIsSearching (false) }
 }className=\"absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto\"  /> {}
   /* Filters */ }
 }{"
-  showFilters && (<div className=\"p-4 border-b border-gray-700\" /> <div className=\"flex items-center gap-2 mb-3\" /> <Filter className=\"w-4 h-4 text-gray-400\" /> <span className=\"text-sm font-medium text-gray-300\" />Filter by Category</span> </div> <div className=\"flex flex-wrap gap-2\" /> {
-  categories.map ( (category) => (<button key= {}
+  showFilters && (
+          <div className=\"p-4 border-b border-gray-700\" /> <div className=\"flex items-center gap-2 mb-3\" /> <Filter className=\"w-4 h-4 text-gray-400\" /> <span className=\"text-sm font-medium text-gray-300\" />Filter by Category</span> </div> <div className=\"flex flex-wrap gap-2\" /> {
+  categories.map ( (category) => (
+          <button key= {}
   category.id }
 }onClick= {}
   () = /> toggleFilter (category.id) }
@@ -119,13 +124,15 @@ setIsSearching (false) }
 }</button> </div> </div> {}
   /* Search Suggestions */ }
 }<AnimatePresence /> {
-  showSuggestions && suggestions.length > 0 && (<motion.div initial= {
+  showSuggestions && suggestions.length > 0 && (
+          <motion.div initial= {
   {
   opacity: 0, y: -10 }
 }
 }animate= {
   {
-  opacity: 1, y: 0 }
+  opacity: 1;
+  y: 0; }
 }
 }exit= {
   {
@@ -135,7 +142,8 @@ setIsSearching (false) }
 }className=\"absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10\"  /> {}
   /* Quick Actions */ }"
 }<div className=\"p-4 border-b border-gray-700\" /> <h3 className=\"text-sm font-medium text-gray-400 mb-3\" />Quick Actions</h3> <div className=\"grid grid-cols-2 gap-2\" /> {
-  quickActions.map ( (action) => (<button key= {}
+  quickActions.map ( (action) => (
+          <button key= {}
   action.name }
 }onClick= {}
   () = /> handleQuickAction (action.action) }"
@@ -147,7 +155,8 @@ setIsSearching (false) }
 }</div> </div> {}
   /* Suggestions */ }"
 }<div className=\"max-h-64 overflow-y-auto\" /> {
-  suggestions.map ( (suggestion) => (<button key= {}
+  suggestions.map ( (suggestion) => (
+          <button key= {}
   suggestion.id }
 }onClick= {}
   () = /> handleSuggestionClick (suggestion) }"
@@ -165,8 +174,11 @@ setIsSearching (false) }
 }{}
   /* Search Results */ }"
 }<div className=\"p-4\" /> {"
-  isSearching ? (<div className=\"flex items-center justify-center py-8\" /> <div className=\"animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400\" /></div> <span className=\"ml-3 text-gray-400\" />Searching...</span> </div>) : results.length > 0 ? (<div className=\"space-y-3\" /> {
-  results.map ( (result) => (<motion.div key= {}
+  isSearching ? (
+          <div className=\"flex items-center justify-center py-8\" /> <div className=\"animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400\" /></div> <span className=\"ml-3 text-gray-400\" />Searching...</span> </div>) : results.length > 0 ? (
+          <div className=\"space-y-3\" /> {
+  results.map ( (result) => (
+          <motion.div key= {}
   result.id }
 }whileHover= {
   {
@@ -181,17 +193,22 @@ setIsSearching (false) }
 }</p> <div className=\"flex items-center gap-2\" /> <span className=\"px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full\" /> {}
   result.category }
 }</span> {"
-  result.pricing?.starter && (<span className=\"px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full\" /> From {}
+  result.pricing?.starter && (
+          <span className=\"px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full\" /> From {}
   result.pricing.starter }
 }</span>) "
 }</div> </div> <div className=\"flex items-center gap-1 text-cyan-400\" /> <Star className=\"w-4 h-4 fill-current\" /> <span className=\"text-xs\" /> {}
   result.relevance }
 }</span> </div> </div> </motion.div>) ) "
-}</div>) : query.trim () .length > 0 ? (<div className=\"text-center py-8\" /> <div className=\"text-sm text-gray-500\" />Try adjusting your search terms or filters</div> </div>) : (<div className=\"space-y-4\" /> {}
+}</div>) : query.trim () .length > 0 ? (
+          <div className=\"text-center py-8\" /> <div className=\"text-sm text-gray-500\" />Try adjusting your search terms or filters</div> </div>) : (
+          <div className=\"space-y-4\" /> {}
   /* Search History */ }
 }{"
-  searchHistory.length > 0 && (<div /> <div className=\"flex items-center gap-2 mb-3\" /> <Clock className=\"w-4 h-4 text-gray-400\" /> <span className=\"text-sm font-medium text-gray-300\" />Recent Searches</span> </div> <div className=\"flex flex-wrap gap-2\" /> {
-  searchHistory.map ( (term, index) => (<button key= {}
+  searchHistory.length > 0 && (
+          <div /> <div className=\"flex items-center gap-2 mb-3\" /> <Clock className=\"w-4 h-4 text-gray-400\" /> <span className=\"text-sm font-medium text-gray-300\" />Recent Searches</span> </div> <div className=\"flex flex-wrap gap-2\" /> {
+  searchHistory.map ( (term, index) => (
+          <button key= {}
   index }
 }onClick= {}
   () = /> setQuery (term) }"
@@ -202,7 +219,8 @@ setIsSearching (false) }
 }{}
   /* Popular Searches */ }"
 }<div /> <div className=\"flex items-center gap-2 mb-3\" /> <TrendingUp className=\"w-4 h-4 text-gray-400\" /> <span className=\"text-sm font-medium text-gray-300\" />Popular Searches</span> </div> <div className=\"flex flex-wrap gap-2\" /> {
-  popularSearches.map ( (term, index) => (<button key= {}
+  popularSearches.map ( (term, index) => (
+          <button key= {}
   index }
 }onClick= {}
   () = /> setQuery (term) }"
@@ -214,9 +232,7 @@ setIsSearching (false) }
 }</AnimatePresence> </div>) 
 };
 // Debounce utility function function debounce<T extends (...args: unknown[]) = /> any> (func: T;
-wait: number 
-}
-
-export default EnhancedSearch;
+wait: number,
+  export default EnhancedSearch;
 
 "

@@ -1,8 +1,7 @@
-
-
 import fs from 'fs';,
 import path from 'path';
-import type { GetStaticProps } from 'next';
+import type { GetStaticProps,
+  from 'next';
 
 type Entry = any;
   return (
@@ -19,17 +18,19 @@ type Entry = any;
       <section />"
         <h2 className=\"font-semibold mb-2\" />Pages by Section</h2>"
         <ul className=\"text-sm space-y-1\" />
-          {sections.map(([sec, n]) => (}"
-            <li key={sec} className=\"flex justify-between\" /><span />{sec |'root'}</span><span className=\"text-gray-500\" />{n}</span></li>
+          {sections.map(([sec,,,
+  n]) => (}"
+            <li key={sec}
+            className=\"flex justify-between\" /><span />{sec |'root'</span><span className=\"text-gray-500\" />{n</span></li>
 };
 ) ) ;
 }</ul> </section> <section />) ) ;
 }</ul> </section> </div>) ;
-
 export default function ContentMap(): any ({ report }: Props) {;
   if (!report) return <div />No content map yet. Check back later.</div>;
 
-const sections = Object && Object.entries(report && report.bySection).sort((a, b) => b[1] - a[1]);
+const sections = Object && Object.entries(report && report.bySection).sort((a,,,
+  b) => b[1] - a[1]);
   return ("
     <div className=\"space-y-6\" />;
 "
@@ -46,7 +47,10 @@ const sections = Object && Object.entries(report && report.bySection).sort((a, b
       <section />;"
         <h2 className=\"font-semibold mb-2\" />Pages by Section</h2>;"
         <ul className=\"text-sm space-y-1\" />;"
-          {sections && sections.map(([sec, n]) => (<li key={sec} className=\"flex justify-between\" /><span />{sec || 'root'}</span><span className=\"text-gray-500\" />{n}</span></li>;
+          {sections && sections.map(([sec,,,
+  n]) => (
+          <li key={sec}
+            className=\"flex justify-between\" /><span />{sec || 'root'</span><span className=\"text-gray-500\" />{n</span></li>;
           ))}
 
         </ul>
@@ -54,8 +58,10 @@ const sections = Object && Object.entries(report && report.bySection).sort((a, b
       <section />"
         <h2 className=\"font-semibold mb-2\" />All Pages</h2>"
         <ul className=\"text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800\" />
-          {report.pages.map((p, i) => (}"
-            <li key={i} className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{p.route}</span><span className=\"text-gray-500 truncate\" />{p.file}</span></li>
+          {report.pages.map((p,,,
+  i) => (}"
+            <li key={i}
+            className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{p.route</span><span className=\"text-gray-500 truncate\" />{p.file</span></li>
           ))}
 
         </ul>

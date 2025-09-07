@@ -21,7 +21,7 @@ export interface EnhancedServiceItem  {id: string;
    contactInfo: {mobile: string;
    email: string;}
    address: string;}
-   website: string} badges: string[] technologyStack: string[] integrations: string[] compliance: string[] scalability: string security: string[]
+   website: string;
+  badges: string[] technologyStack: string[] integrations: string[] compliance: string[] scalability: string security: string[]
 }
-
 export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [';';;"

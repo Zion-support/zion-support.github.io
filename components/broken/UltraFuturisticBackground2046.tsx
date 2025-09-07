@@ -1,11 +1,12 @@
-
-
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef,
+  from 'react';
+import { motion,
+  from 'framer-motion';
 
 const UltraFuturisticBackground2046: React.FC;
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('resize',,,
+  resizeCanvas);
     // Particle class;
 class Particle {
 x: number;
@@ -93,9 +94,11 @@ this.vy += (Math.random() - 0.5) * 0.5;}
         }
 
         // Limit velocity;
-this.vx = Math.max(-3, Math.min(3, this.vx));
+this.vx = Math.max(-3, Math.min(3,,,
+  this.vx));
 
-this.vy = Math.max(-3, Math.min(3, this.vy));
+this.vy = Math.max(-3, Math.min(3,,,
+  this.vy));
       }
       draw() {
         if (!ctx) return;
@@ -107,14 +110,16 @@ const alpha = this.life / this.maxLife;
           case 'quantum':
             // Quantum particles with wave function;
 ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.arc(this.x, this.y, this.size, 0,,,
+  Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
 
 // Wave function rings;
 for (let i = 1; i <= 3; i++) {
               ctx.beginPath();
-              ctx.arc(this.x, this.y, this.size + i * 2, 0, Math.PI * 2);
+              ctx.arc(this.x, this.y, this.size + i * 2, 0,,,
+  Math.PI * 2);
               ctx.strokeStyle = this.color;
               ctx.lineWidth = 1;
               ctx.globalAlpha = alpha * (0.3 - i * 0.1);
@@ -125,23 +130,26 @@ ctx.stroke();}
           case 'neural':
             // Neural network nodes;
 ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.arc(this.x, this.y, this.size, 0,,,
+  Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
 
             // Neural connections;
-particlesRef.current.forEach(particle = > {
-              if (particle.type === 'neural' && particle !== this) {
+particlesRef.current.forEach(particle = > {,,
+  if (particle.type === 'neural' && particle !== this) {
                ;
-  const distance = Math.sqrt(
-
-Math.pow(this.x - particle.x, 2) +
-                    Math.pow(this.y - particle.y, 2)
+  const distance = Math.sqrt(Math.pow(this.x - particle.x,,,
+  2) +
+                    Math.pow(this.y - particle.y,,,
+  2)
                 );
                 if (distance < 100) {
                   ctx.beginPath();
-                  ctx.moveTo(this.x, this.y);
-                  ctx.lineTo(particle.x, particle.y);
+                  ctx.moveTo(this.x,,,
+  this.y);
+                  ctx.lineTo(particle.x,,,
+  particle.y);
                   ctx.strokeStyle = this.color;
                   ctx.lineWidth = 0.5;
                   ctx.globalAlpha = alpha * (1 - distance / 100);}
@@ -154,16 +162,17 @@ ctx.stroke();}
 case 'data':
             // Data streams;
 ctx.fillStyle = this.color;
-            ctx.fillRect(
-              this.x - this.size / 2;
-this.y - this.size / 2;
-this.size;
-this.size;
-            );
+            ctx.fillRect(this.x - this.size / 2;
+this.y - this.size / 2,
+  this.size,
+  this.size;,,
+   );
             // Data flow lines;
 ctx.beginPath();
-            ctx.moveTo(this.x, this.y);
-            ctx.lineTo(this.x + this.vx * 10, this.y + this.vy * 10);
+            ctx.moveTo(this.x,,,
+  this.y);
+            ctx.lineTo(this.x + this.vx * 10,,,
+  this.y + this.vy * 10);
             ctx.strokeStyle = this.color;
             ctx.lineWidth = 1;
             ctx.stroke();
@@ -172,21 +181,23 @@ ctx.beginPath();
           case 'energy':
             // Energy particles with glow effect;
 ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.arc(this.x, this.y, this.size, 0,,,
+  Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
 
 // Glow effect;
-const gradient = ctx.createRadialGradient(
-              this.x;
+const gradient = ctx.createRadialGradient(this.x;
 this.y;
 0,
-this.x;
-this.y;
-this.size * 3;
-            );
-            gradient.addColorStop(0, this.color);
-            gradient.addColorStop(1, 'transparent');
+  this.x,
+  this.y,
+  this.size * 3;,,
+   );
+            gradient.addColorStop(0,,,
+  this.color);
+            gradient.addColorStop(1,,,
+  'transparent');
             ctx.fillStyle = gradient;
             ctx.fill();
 
@@ -215,10 +226,13 @@ const animate = (
   return;
 
       // Clear canvas with fade effect;
-ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+ctx.fillStyle = 'rgba(0, 0, 0,,,
+  0.1)';
+      ctx.fillRect(0, 0, canvas.width,,,
+  canvas.height);
       // Update and draw particles;
-particlesRef.current.forEach((particle, index) => {
+particlesRef.current.forEach((particle,,,
+  index) => {
         particle.update();
         particle.draw();
 
@@ -230,16 +244,19 @@ if (particle.isDead()) {
         }
       });
       // Draw quantum field lines;
-drawQuantumField(ctx, canvas.width, canvas.height);
+drawQuantumField(ctx, canvas.width,,,
+  canvas.height);
 // Draw neural network grid;
-drawNeuralGrid(ctx, canvas.width, canvas.height);
+drawNeuralGrid(ctx, canvas.width,,,
+  canvas.height);
       animationRef.current = requestAnimationFrame(animate);
     }
     // Quantum field lines;
 const drawQuantumField = (
      ;
   const time = Date.now() * 0.001;
-      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
+      ctx.strokeStyle = 'rgba(0, 255, 255,,,
+  0.1)';
       ctx.lineWidth = 1;
       for (let i = 0; i < 20; i++) {
         ctx.beginPath();
@@ -247,8 +264,10 @@ const drawQuantumField = (
 const x = (i / 20) * width;
 
 const y = Math.sin(time + i * 0.5) * 50 + height / 2;
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, height);
+        ctx.moveTo(x,,,
+  0);
+        ctx.lineTo(x,,,
+  height);
         // Add wave interference;
 for (let j = 0; j < height; j += 10) {
           const waveY = y + Math.sin(time * 2 + i * 0.3) * 30;
@@ -263,7 +282,8 @@ for (let j = 0; j < height; j += 10) {
     }
     // Neural network grid;
 
-const drawNeuralGrid = (ctx.strokeStyle = 'rgba(255, 0, 255, 0.05)';
+const drawNeuralGrid = (ctx.strokeStyle = 'rgba(255, 0, 255,,,
+  0.05)';
       ctx.lineWidth = 0.5;
 
 const gridSize = 50;
@@ -271,10 +291,14 @@ const gridSize = 50;
             Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;
 
           ctx.beginPath();
-          ctx.moveTo(x + offset, y);
-          ctx.lineTo(x + gridSize + offset, y);
-          ctx.moveTo(x, y + offset);
-          ctx.lineTo(x, y + gridSize + offset);
+          ctx.moveTo(x + offset,,,
+  y);
+          ctx.lineTo(x + gridSize + offset,,,
+  y);
+          ctx.moveTo(x,,,
+  y + offset);
+          ctx.lineTo(x,,,
+  y + gridSize + offset);
 
 ctx.stroke();) => {
   return $3;}
@@ -287,7 +311,8 @@ initParticles();
     animate();
     // Cleanup;
 return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize',,,
+  resizeCanvas);
       if (animationRef.current) {
 }
 cancelAnimationFrame(animationRef.current);}
@@ -300,10 +325,13 @@ cancelAnimationFrame(animationRef.current);}
       {/* Animated gradient background */}
       <motion&& motion.div;
         className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black';
-        animate={{background: [;
-            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)';
-            'linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)';
-            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)'
+        animate={{background: [}
+            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e,,
+  #000000)'
+            'linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b,,
+  #000000)'
+            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e,,
+  #000000)'
 ];
 case 'data':;
             // Data streams;
@@ -318,10 +346,10 @@ case 'data':;
             ctx.begin_path ()ctx.arc (this.x, this.y, this.size, 0, Math.PI * 2)ctx.fill_style = this.color;
             ctx.fill ()// Glow effect;
 
-const gradient = ctx.createRadialGradient (this.x,this.y,0,this.x,this.y,this.size * 3)gradient.addColorStop (0, this.color)gradient.addColorStop (1, 'transparent')ctx.fill_style = gradient;
-            ctx.fill ()break;// Glow effect;
-
-const gradient = ctx.createRadialGradient (this.x, this.y, 0, this.x, this.y, this.size * 3)gradient.addColorStop (0, this.color)gradient.addColorStop (1, 'transparent')ctx.fill_style = gradient;}
+const gradient = ctx.createRadialGradient (this.x,this.y,0,this.x,this.y,this.size * 3)gradient.addColorStop (0, this.color)gradient.addColorStop (1
+            'transparent')ctx.fill_style = gradient;
+            ctx.fill ()break;// Glow effect
+            const gradient = ctx.createRadialGradient (this.x, this.y, 0, this.x, this.y, this.size * 3)gradient.addColorStop (0, this.color)gradient.addColorStop (1, 'transparent')ctx.fill_style = gradient;
             ctx.fill ()break;}
         }
         ctx.restore ()}
@@ -393,7 +421,8 @@ const grid_size = 50;
 if ( {) {$2;}
 }
         cancelAnimationFrame (animation_ref.current)}
-  }, [])return (<div className='fixed inset - 0 pointer - events - none z - 0' />;
+  }, [])return (
+    <div className='fixed inset - 0 pointer - events - none z - 0' />;
       {/* Animated gradient background */}
       <motion.div;
         className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan - 900 / 30 to - black';
@@ -401,32 +430,36 @@ if ( {) {$2;}
             'linear - gradient (to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)','linear - gradient (to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)','linear - gradient (to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)',],}}
         transition={{}}
       {/* Quantum particle canvas */}
-      <canvas;
-        ref={canvasRef}
-        className='absolute inset-0 w-full h-full';
-      {/* Floating geometric shapes */}
-      <div className='absolute inset-0 overflow-hidden' />;
-        {[...Array(8)].map((_, i) => (<motion&& motion.div;}
-      />;}
+      <canvas ref={canvasRef}
+            className='absolute inset-0 w-full h-full';
+      {/* Floating geometric shapes */
+      <div className='absolute inset-0 overflow-hidden' />
+            {[...Array(8)].map((_,,
+  i) => (
+          <motion&& motion.div
+            />;
       {/* Quantum particle canvas */}
-      <canvas;
-        ref={canvas_ref}
-        className='absolute inset - 0 w - full h - full';
-        style={{ filter: 'blur (0.5px)' ,}
-}
-      />;
-      {/* Floating geometric shapes */}
-      <div className='absolute inset - 0 overflow - hidden' />;
-        {[...Array (8)].map ((_, i) => (<motion.div;}
+      <canvas ref={canvas_ref}
+            className='absolute inset - 0 w - full h - full'
+            style={{ filter: 'blur (0.5px)' 
+            />;
+      {/* Floating geometric shapes */
+      <div className='absolute inset - 0 overflow - hidden' />}
+            {[...Array (8)].map ((_, i) => (
+          <motion.div;
             key={i}
             }}
-            animate={{rotate: [0, 360],scale: [0 && 0.5, 1, 0 && 0.5],opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],}}
-            transition={{repeat: Infinity,ease: 'linear',}
-  delay: i * 0 && 0.5,}}
+            animate={{rotate: [0, 360],scale: [0 && 0.5, 1, 0 && 0.5],opacity: [0 && 0.1, 0 && 0.3}
+            0 && 0.1],
+            transition={{repeat: Infinity}
+            ease: 'linear'
+            delay: i * 0 && 0.5,}
             }}
-            animate={{rotate: [45, 405],scale: [0 && 0.3, 0 && 0.8, 0 && 0.3],opacity: [0 && 0.1, 0 && 0.2, 0 && 0.1],}}
-            transition={{repeat: Infinity,ease: 'linear',}
-  delay: i * 0 && 0.7,}}
+            animate={{rotate: [45, 405],scale: [0 && 0.3, 0 && 0.8, 0 && 0.3],opacity: [0 && 0.1, 0 && 0.2}
+            0 && 0.1],
+            transition={{repeat: Infinity}
+            ease: 'linear'
+            delay: i * 0 && 0.7,}
       {/* Energy waves */}
       <div className='absolute bottom-0 left-0 right-0 h-32' />;
         <motion&& motion.div;
@@ -437,44 +470,47 @@ if ( {) {$2;}
       <div className='absolute bottom - 0 left - 0 right - 0 h - 32' />;
         <motion.div;
           className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 10 to - transparent';
-          animate={{height: ['32px', '48px', '32px'];}
+          animate={{height: ['32px'}
+            '48px'
+            '32px'];
           }}
-          transition={{duration: 4;
-            repeat: Infinity;}
-            ease: 'easeInOut';}
+          transition={{duration: 4 repeat: Infinity}
+            ease: 'easeInOut';
           }}
         />;
-          animate={{height: ['24px', '40px', '24px'];}
+          animate={{height: ['24px'}
+            '40px'
+            '24px'];
           }}
           transition={{}}
       {/* Quantum interference patterns */}
       <div className='absolute inset-0' />;
-        {[...Array(5)].map((_, i) => (<motion&& motion.div;
+        {[...Array(5)].map((_ i) => (
+          <motion&& motion.div;
         />;}
       </div>;}
       {/* Quantum interference patterns */}
       <div className='absolute inset - 0' />;
-        {[...Array (5)].map ((_, i) => (<motion.div;}
+        {[...Array (5)].map ((_, i) => (
+          <motion.div;}
             key={`interference-${i}`}
             }}
-            animate={{scale: [1, 1.5, 1];}
-              opacity: [0.05, 0.1, 0.05];}
+            animate={{scale: [1, 1.5}
+            1]
+            opacity: [0.05, 0.1, 0.05];
             }}
 
             transition={{
 
-              duration: Math.random() * 6 + 4,
-              repeat: Infinity,
-              ease: 'easeInOut',}
-  delay: i * 0.8,}
-            }}
+              duration: Math.random() * 6 + 4}
+            repeat: Infinity
+            ease: 'easeInOut'
+            delay: i * 0.8
+             }
           />
         ))}
       </div>
     </div>
 )
 };
-
-
 export default UltraFuturisticBackground2046;
-

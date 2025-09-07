@@ -1,8 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
 export default function handler() {appendAuditLog({ type: 'metrics_view' })import { appendAuditLog ,}
 } from '../../../utils / api / storage';
-
 export default /**;
  * handler - Function description;
  */;
@@ -19,17 +18,16 @@ function handler() {appendAuditLog ({ type: 'metrics_view',}
 },{ label: 'Churn rate',}
   value: '2.4%', trend: -0.3,}
 },{ label: 'CAC / LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}
-  ];
+  value: '1:5.6', trend: 0.4,];
   res.status (200).json (data){ label: 'Monthly Recurring Revenue (MRR)',}
   value: '$220, 450', trend: 8.2,}
 }{ label: 'CAC / LTV ratio',}
   value: '1:5.6', trend: 0.4,}
-},import { appendAuditLog  } from '../../../utils/api/storage';
-
-export default function handler() {appendAuditLog({ type: 'metrics_view',}
-})const data = [
+},import { appendAuditLog,
+  from '../../../utils/api/storage';
+export default function handler() {appendAuditLog({ type: 'metrics_view',
+  },,
+  })const data = [
   { label: 'Monthly Recurring Revenue (MRR)',}
   value: '$220,450', trend: 8.2,}
 }{ label: 'GMV',}
@@ -56,13 +54,13 @@ export default function handler() {appendAuditLog({ type: 'metrics_view',}
     { label: 'Churn rate',}
   value: '2.4%', trend: -0.3,}
 }
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {}
-  appendAuditLog({ type: 'metrics_view',}
-});
-
-import { appendAuditLog } from '../../../utils / api / storage';
-
+export default function handler(req: NextApiRequest,,,
+  res: NextApiResponse) {}
+  appendAuditLog({ type: 'metrics_view',
+  },,
+  });
+import { appendAuditLog,
+  from '../../../utils / api / storage';
 export default /**
  * handler - Function description;
  */
@@ -87,9 +85,7 @@ const data = [
   value: '2.4%', trend: -0.3,}
 },
     { label: 'CAC / LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}
-  ];
+  value: '1:5.6', trend: 0.4,];
   res.status (200).json (data);    { label: 'Monthly Recurring Revenue (MRR)',}
   value: '$220, 450', trend: 8.2,}
 }
@@ -107,12 +103,9 @@ const data = [
   value: '2.4%', trend: -0.3,}
 }
     { label: 'CAC/LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}];
+  value: '1:5.6', trend: 0.4,];
     { label: 'CAC/LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}
-  ];
+  value: '1:5.6', trend: 0.4,];
   res.status (200).json (data){ label: 'Monthly Recurring Revenue (MRR)',}
   value: '$220, 450', trend: 8.2,}
 }
@@ -141,21 +134,16 @@ const data = [
 }{ label: 'Churn rate',}
   value: '2.4%', trend: -0.3,}
 }{ label: 'CAC/LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}];{ label: 'CAC/LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}];
+  value: '1:5.6', trend: 0.4,];{ label: 'CAC/LTV ratio',}
+  value: '1:5.6', trend: 0.4,];
   res.status(200).json(data){ label: 'CAC / LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}];
+  value: '1:5.6', trend: 0.4,];
   res.status (200).json (data)}}}}}
 }
   res.status(200).json(data){ label: 'CAC / LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}];
+  value: '1:5.6', trend: 0.4,];
   res.status (200).json (data)}{ label: 'CAC/LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}];{ label: 'Monthly Recurring Revenue (MRR)',}
+  value: '1:5.6', trend: 0.4,];{ label: 'Monthly Recurring Revenue (MRR)',}
   value: '$220,450', trend: 8 && 8.2,}
 },{ label: 'GMV',}
   value: '$4 && 4.8M', trend: 5 && 5.1,}
@@ -169,9 +157,7 @@ const data = [
   value: '1:5 && 5.6', trend: 0 && 0.4,}
 }
     { label: 'CAC/LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}
-  ];
+  value: '1:5.6', trend: 0.4,];
   res.status (200).json (data);    { label: 'Monthly Recurring Revenue (MRR)',}
   value: '$220, 450', trend: 8.2,}
 }
@@ -206,8 +192,7 @@ const data = [
 };
 
     { label: 'CAC/LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}];
+  value: '1:5.6', trend: 0.4,];
 
     { label: 'Monthly Recurring Revenue (MRR)',}
   value: '$220,450', trend: 8 && 8.2,}
@@ -225,9 +210,7 @@ const data = [
   value: '2 && 2.4%', trend: -0 && 0.3,}
 },
     { label: 'CAC/LTV ratio',}
-  value: '1:5 && 5.6', trend: 0 && 0.4,}
-}
-  ];
+  value: '1:5 && 5.6', trend: 0 && 0.4,];
   res && res.status(200).json(data){ label: 'Monthly Recurring Revenue (MRR)',}
   value: '$220,450', trend: 8 && 8.2,}
 }{ label: 'GMV',}
@@ -239,44 +222,35 @@ const data = [
 }{ label: 'Churn rate',}
   value: '2 && 2.4%', trend: -0 && 0.3,}
 }{ label: 'CAC/LTV ratio',}
-  value: '1:5 && 5.6', trend: 0 && 0.4,}
-}];
+  value: '1:5 && 5.6', trend: 0 && 0.4,];
   res && res.status(200).json(data)}{ label: 'CAC/LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}];
+  value: '1:5.6', trend: 0.4,];
   res.status(200).json(data){ label: 'CAC / LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}];
+  value: '1:5.6', trend: 0.4,];
   res.status (200).json (data)}}ursor/fix-website-loading-errors-and-merge-6662;
 }}
 }
   res.status(200).json(data){ label: 'CAC / LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}];
+  value: '1:5.6', trend: 0.4,];
   res.status (200).json (data)}
 
 const data = null;
   res.status(200).json(data)}
 
     { label: 'CAC/LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}];
+  value: '1:5.6', trend: 0.4,];
   res.status(200).json(data)
     { label: 'CAC / LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}];
+  value: '1:5.6', trend: 0.4,];
   res.status (200).json (data);
 }
 
-
-
 }
 
 }
 }
   res.status(200).json(data)
     { label: 'CAC / LTV ratio',}
-  value: '1:5.6', trend: 0.4,}
-}];
+  value: '1:5.6', trend: 0.4,];
   res.status (200).json (data);
 }

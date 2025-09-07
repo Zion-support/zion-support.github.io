@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion  } from 'framer-motion';
-import { X,Home,Users,Briefcase,Phone,Mail,MapPin,Clock,Star,CheckCircle,ArrowRight,Building2,Rocket,Factory,Cpu,Network,Target,Code,Brain,Workflow,MessageCircle,ArrowUp,Sparkles,Truck,BookOpen,BarChart3,Leaf,Satellite,HelpCircle,Building,DollarSign,ShoppingCart,Heart,Eye,Database,Cloud,Server,Shield,Zap,Lock} from 'lucide-react';
+import { motion from 'framer-motion';
+import { X,Home,Users,Briefcase,Phone,Mail,MapPin,Clock,Star,CheckCircle,ArrowRight,Building2,Rocket,Factory,Cpu,Network,Target,Code,Brain,Workflow,MessageCircle,ArrowUp,Sparkles,Truck,BookOpen,BarChart3,Leaf,Satellite,HelpCircle,Building,DollarSign,ShoppingCart,Heart,Eye,Database,Cloud,Server,Shield,Zap,Lock,
+  from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -11,14 +12,12 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps /> = ({ isOpen, onClose    }) => {
 
-
 const quickLinks = [}
   { name: \"Home\", href: \"/\", icon: Home}"
 },{ name: \"Services\", href: \"/services\", icon: Briefcase}"
 },{ name: \"Solutions\", href: \"/solutions\", icon: Target}"
 },{ name: \"About\", href: \"/about\", icon: Users}"
-},{ name: \"Contact\", href: \"/contact\", icon: Phone}
-}];
+},{ name: \"Contact\", href: \"/contact\", icon: Phone];
 
 const serviceLinks = ["
   { name: \"AI Services\", href: \"/ai-services\", icon: Brain}"
@@ -26,13 +25,11 @@ const serviceLinks = ["
 },{ name: \"Micro SaaS\", href: \"/micro-saas\", icon: Zap}"
 },{ name: \"Security\", href: \"/security\", icon: Shield}"
 },{ name: \"Cloud Solutions\", href: \"/cloud-solutions\", icon: Cloud}"
-},{ name: \"Database Solutions\", href: \"/database-solutions\", icon: Database}
-}];
+},{ name: \"Database Solutions\", href: \"/database-solutions\", icon: Database];
 
 const solutionLinks = ["
   {name: \"Enterprise Solutions\",href: \"/enterprise-solutions\",icon: Building2},{ name: \"Startup Solutions\", href: \"/startup-solutions\", icon: Rocket}"
-},{name: \"Digital Transformation\",href: \"/solutions/digital-transformation\",icon: Workflow},{name: \"Cloud Migration\",href: \"/solutions/cloud-migration\",icon: Cloud},{name: \"AI Implementation\",href: \"/solutions/ai-implementation\",icon: Brain},{ name: \"Cybersecurity\", href: \"/solutions/cybersecurity\", icon: Shield}
-}];
+},{name: \"Digital Transformation\",href: \"/solutions/digital-transformation\",icon: Workflow},{name: \"Cloud Migration\",href: \"/solutions/cloud-migration\",icon: Cloud},{name: \"AI Implementation\",href: \"/solutions/ai-implementation\",icon: Brain},{ name: \"Cybersecurity\", href: \"/solutions/cybersecurity\", icon: Shield];
 
 const companyLinks = ["
   { name: \"About Us\", href: \"/about\", icon: Users}"
@@ -40,10 +37,10 @@ const companyLinks = ["
 },{ name: \"Careers\", href: \"/careers\", icon: Briefcase}"
 },{ name: \"Partners\", href: \"/partners\", icon: Handshake}"
 },{ name: \"News\", href: \"/news\", icon: Newspaper}"
-},{ name: \"Contact\", href: \"/contact\", icon: Phone}
-}];return (<>;
+},{ name: \"Contact\", href: \"/contact\", icon: Phone];return (<>;
       {/* Overlay */}
-      {isOpen && (<motion.div;}
+      {isOpen && (
+          <motion.div;}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }
@@ -56,8 +53,10 @@ const companyLinks = ["
         initial={{ x: \"-100%\" }}"
         animate={{ x: isOpen ? 0 : \"-100%\" }
 }"
-        transition={{ type: \"spring\", damping: 25, stiffness: 200 }
-}"
+        transition={{ type: \"spring\"}
+            damping: 25;
+  stiffness: 200
+             "
         className=\"fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto\" />
 "
         <div className=\"p-6\" />;
@@ -71,8 +70,7 @@ const companyLinks = ["
                 Zion Tech Group;
               </span>;
             </div>;
-            <button;
-              onClick={onClose}"
+            <button onClick={onClose}"
               className=\"p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200\" />
 "
               <X className=\"h-6 w-6 text-gray-600\" />;
@@ -84,14 +82,15 @@ const companyLinks = ["
               Quick Links;
             </h3>;"
             <div className=\"space-y-2\" />;
-              {quickLinks.map((link) => (<Link;}
-                  key={link.name}
-                  href={link.href}"
-                  className=\"flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200\";
-                  onClick={onClose}
+              {quickLinks.map((link) => (
+          <Link key={link.name}
+            href={link.href"
+                  className=\"flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200\"
+            onClick={onClose
                  />;"
-                  <link.icon className=\"h-5 w-5 mr-3 text-blue-500\" />;"
-                  <span className=\"font-medium\" />{link.name}</span>;
+                  <link.icon className=\"h-5 w-5 mr-3 text-blue-500\" />}
+            "
+                  <span className=\"font-medium\" />{link.name</span>;
                 </Link>;
               ))}
             </div>;
@@ -102,14 +101,15 @@ const companyLinks = ["
               Services;
             </h3>;"
             <div className=\"space-y-2\" />;
-              {serviceLinks.map((link) => (<Link;}
-                  key={link.name}
-                  href={link.href}"
-                  className=\"flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200\";
-                  onClick={onClose}
+              {serviceLinks.map((link) => (
+          <Link key={link.name}
+            href={link.href"
+                  className=\"flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200\"
+            onClick={onClose
                  />;"
-                  <link.icon className=\"h-5 w-5 mr-3 text-blue-500\" />;"
-                  <span className=\"font-medium\" />{link.name}</span>;
+                  <link.icon className=\"h-5 w-5 mr-3 text-blue-500\" />}
+            "
+                  <span className=\"font-medium\" />{link.name</span>;
                 </Link>;
               ))}
             </div>;
@@ -120,14 +120,15 @@ const companyLinks = ["
               Solutions;
             </h3>;"
             <div className=\"space-y-2\" />;
-              {solutionLinks.map((link) => (<Link;}
-                  key={link.name}
-                  href={link.href}"
-                  className=\"flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200\";
-                  onClick={onClose}
+              {solutionLinks.map((link) => (
+          <Link key={link.name}
+            href={link.href"
+                  className=\"flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200\"
+            onClick={onClose
                  />;"
-                  <link.icon className=\"h-5 w-5 mr-3 text-blue-500\" />;"
-                  <span className=\"font-medium\" />{link.name}</span>;
+                  <link.icon className=\"h-5 w-5 mr-3 text-blue-500\" />}
+            "
+                  <span className=\"font-medium\" />{link.name</span>;
                 </Link>;
               ))}
             </div>;
@@ -138,14 +139,15 @@ const companyLinks = ["
               Company;
             </h3>;"
             <div className=\"space-y-2\" />;
-              {companyLinks.map((link) => (<Link;}
-                  key={link.name}
-                  href={link.href}"
-                  className=\"flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200\";
-                  onClick={onClose}
+              {companyLinks.map((link) => (
+          <Link key={link.name}
+            href={link.href"
+                  className=\"flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200\"
+            onClick={onClose
                  />;"
-                  <link.icon className=\"h-5 w-5 mr-3 text-blue-500\" />;"
-                  <span className=\"font-medium\" />{link.name}</span>;
+                  <link.icon className=\"h-5 w-5 mr-3 text-blue-500\" />}
+            "
+                  <span className=\"font-medium\" />{link.name</span>;
                 </Link>;
               ))}
             </div>;
@@ -189,5 +191,4 @@ const companyLinks = ["
       </motion.div>;
     </>;
   )}
-
 export default Sidebar;"

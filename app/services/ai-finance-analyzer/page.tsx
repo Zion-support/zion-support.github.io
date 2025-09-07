@@ -1,10 +1,8 @@
-
 export const metadata = {
   title: 'Ai Finance Analyzer | Zion Tech Group',
   description: 'Professional ai finance analyzer services for your business needs.',
   keywords: 'ai-finance-analyzer, services, business, technology'
 };
-
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -17,7 +15,7 @@ export default function ServicePage() {
             Professional ai finance analyzer services for your business needs.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
@@ -25,14 +23,14 @@ export default function ServicePage() {
               Tailored ai finance analyzer solutions designed for your specific business requirements.
             </p>
           </div>
-          
+
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
             <p className="text-gray-300">
               Cutting-edge technology and best practices to deliver exceptional results.
             </p>
           </div>
-          
+
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
             <p className="text-gray-300">

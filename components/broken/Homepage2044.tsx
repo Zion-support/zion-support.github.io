@@ -1,25 +1,25 @@
-
-
-import React, { useEffect, useState, useCallback, useMemo } from 'react',
+import React, { useEffect, useState, useCallback, useMemo,
+  from 'react',
 import Layout from './layout/Layout';
-import { motion } from 'framer-motion';
-
+import { motion,
+  from 'framer-motion';
 import { ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;}
   ChevronDown, CheckCircle, Users, Award, Clock;}
   } from 'lucide-react';
-import { Service   } from '../types';
+import { Service from '../types';
 // Import our new revolutionary services;
-import { revolutionary2044AdvancedMicroSaas   } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices   } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices   } from '../data/revolutionary-2044-ai-services';
-import { innovative2025AIAutonomousEcosystemV3   } from '../data/2025-innovative-ai-autonomous-ecosystem-v3';
-import { emerging2025TechBreakthroughsV4   } from '../data/2025-emerging-tech-breakthroughs-v4';
-import { advanced2025ITInfrastructureServicesV2   } from '../data/2025-advanced-it-infrastructure-services-v2';
+import { revolutionary2044AdvancedMicroSaas from '../data/revolutionary-2044-advanced-micro-saas';
+import { revolutionary2044ITServices from '../data/revolutionary-2044-it-services';
+import { revolutionary2044AIServices from '../data/revolutionary-2044-ai-services';
+import { innovative2025AIAutonomousEcosystemV3 from '../data/2025-innovative-ai-autonomous-ecosystem-v3';
+import { emerging2025TechBreakthroughsV4 from '../data/2025-emerging-tech-breakthroughs-v4';
+import { advanced2025ITInfrastructureServicesV2 from '../data/2025-advanced-it-infrastructure-services-v2';
 // Import our new 2025 real enterprise AI services;
-import { realEnterpriseAIServices2025   } from '../data/2025-real-enterprise-ai-services';
-import { innovativeITInfrastructureServices2025   } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025  } from '../data/2025-innovative-micro-saas-solutions';
+import { realEnterpriseAIServices2025 from '../data/2025-real-enterprise-ai-services';
+import { innovativeITInfrastructureServices2025 from '../data/2025-innovative-it-infrastructure-services';
+import { innovativeMicroSaasSolutions2025,
+  from '../data/2025-innovative-micro-saas-solutions';
 // Lazy load new components for better performance;
 
 const ServiceCard = null;
@@ -33,16 +33,19 @@ const ServiceCard = null;
 }, [])const handleServiceClick = useCallback ( (service: unknown) => {//Add analytics tracking if (typeof window !== 'undefined' && (window as any) .gtag) }
 }window.location.href = service.slug;
 }, [])}, [])}
-//Loading state if (isLoading) {return (<Layout /> <div className = \"min-h-screen flex items-center justify-center\"  /> <motion.div  /> <div className=\"w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4\"  /></div> <p className=\"text-cyan-400 text-lg\"  />Loading Zion Tech Group...</p> </motion.div> </div> </Layout>);}"
-  return (<Layout /> <section className=\"min-h-screen flex items-center justify-center px-4 relative overflow-hidden\" aria-labelledby=\"hero-heading\"  /> left: `$ {Math.random () * 100;}
+//Loading state if (isLoading) {return (
+          <Layout /> <div className = \"min-h-screen flex items-center justify-center\"  /> <motion.div  /> <div className=\"w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4\"  /></div> <p className=\"text-cyan-400 text-lg\"  />Loading Zion Tech Group...</p> </motion.div> </div> </Layout>);}"
+  return (
+          <Layout /> <section className=\"min-h-screen flex items-center justify-center px-4 relative overflow-hidden\" aria-labelledby=\"hero-heading\"  /> left: `$ {Math.random () * 100;}
 }%`;
 top: `$ {Math.random () * 100;}
 }%`;
 }/>) )}</div> </div> {/* Floating geometric shapes - optimized animations */;}"
 }<motion.div /> </div> </div> </Layout>)}return (<> <Head /> <title />Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title> <meta name=\"description\" content=\"Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group.\" /> <meta name=\"keywords\" content=\"AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group\" /> <meta name=\"author\" content=\"Zion Tech Group\" /> <meta name=\"robots\" content=\"index, follow\" /> {/* Structured Data */;}
-}<script;"
+}<script"
 })}/> > <span className=\"bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0 0 30px rgba (6, 182, 212, 0.5) ]\"  /> Zion Tech Group </span> </motion.h1> <motion.p  /> Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. </motion.p> <motion.div  /> <span className=\"relative z-10 flex items-center\"  /> Experience the Future <ArrowRight className=\"w-7 h-7 ml-4 group-hover:translate-x-2 transition-transform duration-300\" /> </span> <div className=\"absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl\"  /></div> </button> <button  /> <span className=\"flex items-center\"  /> Explore Services <Play className=\"w-7 h-7 ml-4\" /> </span> </button> </motion.div> {/* Enhanced Stats Section */;}
-}<motion.div  /> {stats.map ( (stat, index) => (<motion.div key= {stat.label;}"
+}<motion.div  /> {stats.map ( (stat, index) => (
+          <motion.div key= {stat.label;}"
 } /> <div className=\"w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300\"  /> <stat.icon className=\"w-8 h-8 text-cyan-400\" /> </div> </div> </motion.div>) 
 }</motion.div> {/* Featured Service Showcase */;}"
 }<motion.div  /> <div className=\"text-center mb-12\"  /> <h2 className=\"text-4xl font-bold text-white mb-4\"  /> Featured Revolutionary Services </h2> <p className=\"text-xl text-gray-400\"  /> Experience the future of technology with our cutting-edge solutions </p> </div> key= {category.id;}
@@ -72,16 +75,19 @@ if (.gtag) {) {$2;}
 //Loading state // Check condition;
 if ( {) {$2;}
 }"
-  return (<Layout /> <div className = \"min - h-screen flex items-center justify-center\"  /> <motion.div  /> <div className=\"w - 16 h - 16 border - 4 border - cyan - 500 border - t-transparent rounded - full animate - spin mx-auto mb-4\"  /></div> <p className=\"text - cyan-400 text-lg\"  />Loading Zion Tech Group...</p> </motion.div> </div> </Layout>);"
-  return (<Layout /> <section className=\"min - h-screen flex items - center justify - center px-4 relative overflow-hidden\" aria - labelledby=\"hero - heading\"  /> left: `$ {Math.random () * 100;}
+  return (
+          <Layout /> <div className = \"min - h-screen flex items-center justify-center\"  /> <motion.div  /> <div className=\"w - 16 h - 16 border - 4 border - cyan - 500 border - t-transparent rounded - full animate - spin mx-auto mb-4\"  /></div> <p className=\"text - cyan-400 text-lg\"  />Loading Zion Tech Group...</p> </motion.div> </div> </Layout>);"
+  return (
+          <Layout /> <section className=\"min - h-screen flex items - center justify - center px-4 relative overflow-hidden\" aria - labelledby=\"hero - heading\"  /> left: `$ {Math.random () * 100;}
 }%`;
 top: `$ {Math.random () * 100;}
 }%`;
 }/>) )}</div> </div> {/* Floating geometric shapes - optimized animations */;}"
 }<motion.div /> </div> </div> </Layout>)}return (<> <Head /> <title  /> Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title> <meta name=\"description\" content=\"Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group.\" /> <meta name=\"keywords\" content=\"AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group\" /> <meta name=\"author\" content=\"Zion Tech Group\" /> <meta name=\"robots\" content=\"index, follow\" /> {/* Structured Data */;}
-}<script;"
+}<script"
 })}/> > <span className=\"bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text-transparent drop-shadow-[0 0 30px rgba (6, 182, 212, 0.5) ]\"  /> Zion Tech Group </span> </motion.h1> <motion.p  /> Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. </motion.p> <motion.div  /> <span className=\"relative z-10 flex items-center\"  /> Experience the Future <ArrowRight className=\"w - 7 h - 7 ml - 4 group - hover:translate - x-2 transition-transform duration-300\" /> </span> <div className=\"absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 opacity - 0 group - hover:opacity - 100 transition - opacity duration-300 rounded-3xl\"  /></div> </button> <button  /> <span className=\"flex items-center\"  /> Explore Services <Play className=\"w - 7 h-7 ml-4\" /> </span> </button> </motion.div> {/* Enhanced Stats Section */;}
-}<motion.div  /> {stats.map ( (stat, index) => (<motion.div key= {stat.label;}"
+}<motion.div  /> {stats.map ( (stat, index) => (
+          <motion.div key= {stat.label;}"
 } /> <div className=\"w - 16 h - 16 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover: from - cyan - 500 / 30 group - hover:to - blue - 500 / 30 transition-all duration-300\"  /> <stat.icon className=\"w - 8 h - 8 text-cyan-400\" /> </div> </div> </motion.div>) 
 }</motion.div> {/* Featured Service Showcase */;}"
 }<motion.div  /> <div className=\"text-center mb-12\"  /> <h2 className=\"text - 4xl font - bold text-white mb-4\"  /> Featured Revolutionary Services </h2> <p className=\"text - xl text-gray-400\"  /> Experience the future of technology with our cutting - edge solutions </p> </div> key= {category.id;}
@@ -123,7 +129,6 @@ top: `$ {Math.random () * 100;}
 }"
 } /> <h2 className=\"text-5xl font-bold text-white mb-6\"  /> Ready to Transform Your Business? </h2> <p className=\"text-xl text-gray-400 mb-12 max-w-3xl mx-auto\"  /> Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className=\"flex flex-col sm:flex-row gap-6 justify-center items-center\"  /> <button  /> <span className=\"flex items-center\"  /> Start Your Journey <Rocket className=\"w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300\" /> </span> </button> <button  /> <span className=\"flex items-center\"  /> Schedule Demo <Play className=\"w-7 h-7 ml-4\" /> </span> </button> </div> </div> </section> </main> </Layout> </>) 
 };
-
 export default Homepage2044;
 
 "

@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,
+  from 'react';
 
 interface PerformanceMetrics {
   fcp?: number;
@@ -17,39 +18,50 @@ const PerformanceMonitor: React.FC = () => ;
   return;
 }
 const metrics: PerformanceMetrics = ,}
-}// First Contentful Paint (FCP)const fcpObserver = new PerformanceObserver(list => {for ;}
+}// First Contentful Paint (FCP)const fcpObserver = new PerformanceObserver(list => {for ;},,
   const entry of list.getEntries()) {if (entry.name === 'first-contentful-paint') {metrics.fcp = entry.startTime;}
-          console.log('FCP: ', entry.startTime)}
+          console.log('FCP: ',,,
+  entry.startTime)}
       }
-    })fcpObserver.observe({ entryTypes: ['paint'],}
-})// Largest Contentful Paint (LCP)const lcpObserver = new PerformanceObserver(list => {const entries = list.getEntries(;
+    })fcpObserver.observe({ entryTypes: ['paint'],
+  },,
+  })// Largest Contentful Paint (LCP)const lcpObserver = new PerformanceObserver(list => {const entries = list.getEntries(,
   const lastEntry = entries[entries.length - 1];}
       metrics.lcp = lastEntry.startTime;}
-      console.log('LCP: ', lastEntry.startTime)})lcpObserver.observe({ entryTypes: ['largest-contentful-paint'],}
-})// First Input Delay (FID)const fidObserver = new PerformanceObserver(list => {for ;}
+      console.log('LCP: ',,,
+  lastEntry.startTime)})lcpObserver.observe({ entryTypes: ['largest-contentful-paint'],
+  },,
+  })// First Input Delay (FID)const fidObserver = new PerformanceObserver(list => {for ;},,
   const entry of list.getEntries()) {metrics.fid = (entry as any).processingStart - entry.startTime;}
-        console.log('FID: ', metrics.fid)}
-    })fidObserver.observe({ entryTypes: ['first-input'],}
-})// Cumulative Layout Shift (CLS)let clsValue = 0;
+        console.log('FID: ',,,
+  metrics.fid)}
+    })fidObserver.observe({ entryTypes: ['first-input'],
+  },,
+  })// Cumulative Layout Shift (CLS)let clsValue = 0;
 
-const clsObserver = new PerformanceObserver(list => {for ;}
+const clsObserver = new PerformanceObserver(list => {for ;},,
   const entry of list.getEntries()) {if (!(entry as any).hadRecentInput) {clsValue += (entry as any).value;}
         }
       }
       metrics.cls = clsValue;
-      console.log('CLS: ', clsValue)})clsObserver.observe({ entryTypes: ['layout-shift'],}
-})// Time to First Byte (TTFB)const navigationEntry = performance.getEntriesByType('navigation';
-    )[0] as PerformanceNavigationTiming;
+      console.log('CLS: ',,,
+  clsValue)})clsObserver.observe({ entryTypes: ['layout-shift'],
+  },,
+  })// Time to First Byte (TTFB)const navigationEntry = performance.getEntriesByType('navigation';,,
+   )[0] as PerformanceNavigationTiming;
     if (navigationEntry) {metrics.ttfb =;}
         navigationEntry.responseStart - navigationEntry.requestStart;}
-      console.log('TTFB: ', metrics.ttfb)}// First Meaningful Paint (FMP) - approximation;
+      console.log('TTFB: ',,,
+  metrics.ttfb)}// First Meaningful Paint (FMP) - approximation;
 
-const fmpObserver = new PerformanceObserver(list => {for ;}
+const fmpObserver = new PerformanceObserver(list => {for ;},,
   const entry of list.getEntries()) {if (entry.name === 'first-meaningful-paint') {metrics.fmp = entry.startTime;}
-          console.log('FMP: ', entry.startTime)}
+          console.log('FMP: ',,,
+  entry.startTime)}
       }
-    })fmpObserver.observe({ entryTypes: ['paint'],}
-})// Send metrics to analytics after page load;
+    })fmpObserver.observe({ entryTypes: ['paint'],
+  },,
+  })// Send metrics to analytics after page load;
 
 const sendMetrics = (if (typeof window !== 'undefined' && (window as any).gtag) {// Send to Google Analytics;) => {
   return $3;}
@@ -57,13 +69,17 @@ const sendMetrics = (if (typeof window !== 'undefined' && (window as any).gtag) 
         (window as any).gtag('event', 'web_vitals', {event_category: 'Performance',
   event_label: 'Core Web Vitals',custom_map: {metric_1: 'fcp',
   metric_2: 'lcp',metric_3: 'fid',}
-  metric_4: 'cls',metric_5: 'ttfb',},value: Math.round(metrics.fcp || 0),non_interaction: true,})}// Send to custom analytics endpoint;
+  metric_4: 'cls',metric_5: 'ttfb',},,,
+  value: Math.round(metrics.fcp || 0),non_interaction: true,})}// Send to custom analytics endpoint;
       if (process.env.NODE_ENV === 'production') {fetch('/api/analytics/performance', {method: 'POST',}
-  headers: {'Content-Type': 'application/json',},body: JSON.stringify({url: window.location.href,timestamp: Date.now(),metrics,}),}).catch(console.error)}
+  headers: {'Content-Type': 'application/json',},body: JSON.stringify({url: window.location.href,,,
+  timestamp: Date.now(),metrics,}),}).catch(console.error)}
     }// Send metrics when page is about to unload;
-    window.addEventListener('beforeunload', sendMetrics)// Also send after a delay to capture late metrics;
-    setTimeout(sendMetrics, 5000)// Cleanup;
-    return () => {fcpObserver.disconnect()lcpObserver.disconnect()fidObserver.disconnect()clsObserver.disconnect()fmpObserver.disconnect()window.removeEventListener('beforeunload', sendMetrics)}}, [])return null; // This component doesn&apos;t render anything'';
+    window.addEventListener('beforeunload',,,
+  sendMetrics)// Also send after a delay to capture late metrics;
+    setTimeout(sendMetrics,,,
+  5000)// Cleanup;
+    return () => {fcpObserver.disconnect()lcpObserver.disconnect()fidObserver.disconnect()clsObserver.disconnect()fmpObserver.disconnect()window.removeEventListener('beforeunload',,,
+  sendMetrics)}}, [])return null; // This component doesn&apos;t render anything'';
 }
-
 export default PerformanceMonitor;

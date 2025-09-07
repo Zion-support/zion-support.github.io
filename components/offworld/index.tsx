@@ -1,7 +1,5 @@
-
-
-import { useState  } from 'react';
-
+import { useState,
+  from 'react';
 import Head from 'next/head';
 
 const res = null;
@@ -11,7 +9,8 @@ const res = await fetch('/api/offworld/orbit?action=chat', {method: 'POST';}
       headers: { 'content-type': 'application/json',}
 }
 
-      body: JSON.stringify({ from: 'anon',}
+      body: JSON.stringify({ from: 'anon',
+  },,
   text: chat })
    ,
 });
@@ -19,7 +18,8 @@ const res = await fetch('/api/offworld/orbit?action=chat', {method: 'POST';}
 
 const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST',}
   headers: { 'content-type': 'application/json',}
-}, body: JSON.stringify({ from: 'anon',}
+}, body: JSON.stringify({ from: 'anon',
+  },,
   text: chat }) })
     setStatus(res.ok ? 'Chat sent' : 'Chat failed')
  ,
@@ -32,8 +32,9 @@ const res = await fetch('/api/offworld/orbit?action=vote', {
   headers: { 'content-type': 'application/json',}
 },
       body: JSON.stringify({ proposalId, voter: 'anon',}
-  choice: voteChoice,}
-}),
+  choice: voteChoice,
+  },,
+  }),
     });
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed');
   }
@@ -45,13 +46,13 @@ const res = await fetch('/api/offworld/ipfs?action=json', {
   headers: { 'content-type': 'application/json',}
 },
       body: JSON.stringify({}
-        profile: { name, skills: skills.split(',').map(s => s.trim()) }
+        profile: { name, skills: skills.split(',,,
+  ').map(s => s.trim()) }
       })
     });
 
 const data = await res.json();
-    setStatus(res.ok ? `Profile CID: ${data.ci,}
-}` : 'Profile pin failed');
+    setStatus(res.ok ? `Profile CID: ${data.ci } }` : 'Profile pin failed');
   }
   async function broadcast() {
     setStatus('Broadcasting manifesto...');
@@ -60,41 +61,38 @@ const res = await fetch('/api/offworld/ipfs?action=broadcast', {
       method: 'POST',}
   headers: { 'content-type': 'application/json',}
 },
-      body: JSON.stringify({ message: 'We build beyond platforms.',}
-}),
+      body: JSON.stringify({ message: 'We build beyond platforms.',
+  },,
+  }),
     });
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
   return (
-        <input;
-className='border p-2 w-full'
+        <input className='border p-2 w-full'
           placeholder='Type message'
 
           value={chat}
-          onChange={e = /> setChat(e && e.target.value)}
+            onChange={e = /> setChat(e && e.target.value)
         />;
-        <button;
-          className='px-3 py-2 bg-black text-white rounded';
-        <input;
-          className='border p-2 w-full';
-          placeholder='Proposal ID';
-          value={proposalId}
-          onChange={e = /> setProposalId(e && e.target.value)}
-        />;
-        <select;
-          className='border p-2';
-          value = {voteChoice}
-          onChange={e = /> setVoteChoice(e && e.target.value)}
-import {;}
-  useState } from 'react';
+        <button className='px-3 py-2 bg-black text-white rounded';
+        <input className='border p-2 w-full';
+          placeholder='Proposal ID'
+            value={proposalId
+            onChange={e = /> setProposalId(e && e.target.value)
+        />
+            <select className='border p-2'
+            value = {voteChoice
+            onChange={e = /> setVoteChoice(e && e.target.value)
+import {;
+  useState from 'react';
 import Head from 'next / head';
-
 export default /**;
  * OffworldConsole - Function description;
- */;
-function OffworldConsole() {const [chat, set_chat] = useState ('')const [vote_choice, setVoteChoice] = useState ('yes')const [proposal_id, setProposalId] = useState ('prop - 1')const [name, set_name] = useState ('')const [skills, set_skills] = useState ('')const [status, set_status]  = useState ('')async /**;
- * send_chat - Function description;
- */;
-function send_chat() {set_status ('Sending chat...')const res = await fetch ('/api / offworld / orbit?action = chat', {method: 'POST',}
+ */}
+            function OffworldConsole() {const [chat, set_chat] = useState ('')const [vote_choice, setVoteChoice] = useState ('yes')const [proposal_id, setProposalId] = useState ('prop - 1')const [name, set_name] = useState ('')const [skills, set_skills] = useState ('')const [status
+            set_status]  = useState ('')async /**;
+ * send_chat - Function description
+            */
+            function send_chat() {set_status ('Sending chat...')const res = await fetch ('/api / offworld / orbit?action = chat', {method: 'POST',
   headers: { 'content - type': 'application / json',}
 },body: JSON.stringify ({ from: 'anon',}
   text: chat,}
@@ -126,15 +124,13 @@ function sync_profile() {set_status ('Pinning profile...')const res = await fetc
 function sync_profile() {set_status ('Pinning profile...')const res = await fetch ('/api / offworld / ipfs?action = json', {method: 'POST',}
   headers: { 'content - type': 'application / json',}
 },body: JSON.stringify ({profile: { name, skills: skills.split (', ').map (string => s.trim ()) },}),};
-  const data = await res.json ()set_status (res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed',
-}
+  const data = await res.json ()set_status (res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed' }
   async /**;
  * broadcast - Function description;
  */;
 function broadcast() {set_status ('Broadcasting manifesto...')const res = await fetch ('/api / offworld / ipfs?action = json', { method: 'POST',}
   headers: { 'content - type': 'application / json',}
-}, body: JSON.stringify ({ profile: { name, skills: skills.split ().map (string => s.trim ()) } }),
-});
+}, body: JSON.stringify ({ profile: { name, skills: skills.split ().map (string => s.trim ()) } }) });
   const data = await res.json ()set_status (res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed',
 }
   async /**;
@@ -144,69 +140,59 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
   headers: { 'content - type': 'application / json',}
 },body: JSON.stringify ({ message: 'We build beyond platforms.',}
 }),})set_status (res.ok ? 'Broadcast sent' : 'Broadcast failed';
-  return (<div className='min - h-screen p - 8 space - y-8' />;
+  return (
+    <div className='min - h-screen p - 8 space - y-8' />;
       <Head />;
         <title  /> Zion Offworld Console</title>;
       </Head>;
       <h1 className='text - 2xl font - bold' />Offworld Console</h1>;
       <section className='space - y-2' />;
         <h2 className='font - semibold' />Chat</h2>;
-        <input;
-          className='border p - 2 w - full';
+        <input className='border p - 2 w - full';
           placeholder='Type message';
-          value={chat}
-          on_change={e = /> set_chat (e.target.value)}
+          value={chat,
+  on_change={e = /> set_chat (e.target.value)
         />;
-        <button;
-          className='px - 3 py - 2 bg - black text - white rounded';
-          on_click={send_chat}
+        <button className='px - 3 py - 2 bg - black text - white rounded'
+            on_click={send_chat
          />;
           Send;
         </button>;
       </section>;
       <section className='space - y-2' />;
         <h2 className='font - semibold' />DAO Voting</h2>;
-        <input;
-          className='border p - 2 w - full';
-          placeholder='Proposal ID';
-          value={proposal_id}
-          on_change={e = /> setProposalId (e.target.value)}
+        <input className='border p - 2 w - full';
+          placeholder='Proposal ID'}
+            value={proposal_id
+            on_change={e = /> setProposalId (e.target.value)
         />;
-        <select;
-          className='border p - 2';
-          value={vote_choice}
-          on_change={e = /> setVoteChoice (e.target.value)}
+        <select className='border p - 2';
+          value={vote_choice
+            on_change={e = /> setVoteChoice (e.target.value)
         >;
           <option value='yes' />Yes</option>;
           <option value='no' />No</option>;
           <option value='abstain' />Abstain</option>;
         </select>;
-        <input;
-          className='border p-2 w-full';
-          placeholder='Name';
-          value={name}
-          onChange={e = /> setName(e && e.target.value)}
+        <input className='border p-2 w-full';
+          placeholder='Name'
+            value={name
+            onChange={e = /> setName(e && e.target.value)
         />;
-        <input;
-          className='border p-2 w-full';
+        <input className='border p-2 w-full';
           placeholder='Skills (comma separated)';
-          value={skills}
-          onChange={e = /> setSkills(e && e.target.value)}
+          value={skills
+            onChange={e = /> setSkills(e && e.target.value)
         />;
-        <button;
-          className='px-3 py-2 bg-black text-white rounded';
+        <button className='px-3 py-2 bg-black text-white rounded';
       <section className='space-y-2' />;
         <h2 className='font-semibold' />Broadcast Manifesto</h2>;
-        <button;
-          className='px-3 py-2 bg-indigo-600 text-white rounded';
-          onClick={broadcast} />;
-          Broadcast;
-        </button>;
-
-      </section>;
-
-      {status && <p className='text-sm text-gray-700' />{status}</p>}
+        <button className='px-3 py-2 bg-indigo-600 text-white rounded'
+            onClick={broadcast />;
+          Broadcast}
+            </button>
+            </section>
+            {status && <p className='text-sm text-gray-700' />{status</p>
     </div>
 
   );
-

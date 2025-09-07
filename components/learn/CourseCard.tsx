@@ -1,9 +1,5 @@
-
-
 import Link from 'next/link';
-
 export type Course = any;
-
 export type Course = {
 
   id: string;
@@ -19,10 +15,10 @@ export type Course = {
 }
   description?: string;}
 }
-
-export default function CourseCard() {return (<div className='border rounded-lg p-4 hover:shadow-md transition' />;
-
-export default function CourseCard() {return (<div className='border rounded-lg p-4 hover:shadow-md transition' />;}
+export default function CourseCard() {return (
+    <div className='border rounded-lg p-4 hover:shadow-md transition' />;
+export default function CourseCard() {return (
+    <div className='border rounded-lg p-4 hover:shadow-md transition' />;}
       <div className='flex items-center justify-between' />;}
         <h3 className='font-semibold text-lg' />{course.title}</h3>;
         <span className='text-xs border px-2 py-0.5 rounded bg-green-50 text-green-700' />;
@@ -47,4 +43,3 @@ export default function CourseCard() {return (<div className='border rounded-lg 
     </div>
   );
 }
-

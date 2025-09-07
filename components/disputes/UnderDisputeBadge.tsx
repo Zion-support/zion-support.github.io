@@ -3,19 +3,18 @@ import useSWR from 'swr';
 const fetcher = null;
 
 const fetcher = (url: string) => fetch(url).then(r => r.json());
-
 export function useProjectDisputeStatus(projectId: string): {
   hasActiveDispute: boolean;
 }
   isLoading: boolean;}
-} {const { data, error }  = useSWR(projectId ? `/api/disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some((d: any) =>;
+} {const { data, error }  = useSWR(projectId ? `/api/disputes` : null,,,
+  fetcher)const hasActiveDispute = !!data?.disputes?.some((d: any) =>;
       d && d.projectId === projectId &&;
 
       (d && d.status === 'Open' || d && d.status === 'Under Review');
   );
   return { hasActiveDispute, isLoading: !data && !error}
 };
-
 export default function UnderDisputeBadge(): any ({;}
   projectId,;}
 }: {;

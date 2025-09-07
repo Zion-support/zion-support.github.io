@@ -1,8 +1,9 @@
-
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect, useCallback, useRef,
+  from 'react';
+import { motion, AnimatePresence,
+  from 'framer-motion';
 import { Activity, Zap, Clock, TrendingUp, TrendingDown;
   AlertTriangle, CheckCircle, X, Settings, RefreshCw;}
   BarChart3, Gauge, HardDrive, Wifi, Cpu;}
@@ -69,12 +70,12 @@ else if (metrics.cls < 0.25) score += 75;}
 else if (metrics.cls < 0.4) score += 50;else score += 25;}
 }else score += 25;
 }else score += 25;
-}//Don't render anything in production return (<AnimatePresence /> {isVisible && (<motion.div </div /> <div className=\"flex items-center space-x-2\"  /> <button  /> <RefreshCw className= {`w-4 h-4 $ {isLoading ? 'animate-spin': '';
+}//Don't render anything in production return (
+          <AnimatePresence /> {isVisible && (
+          <motion.div </div /> <div className=\"flex items-center space-x-2\"  /> <button  /> <RefreshCw className= {`w-4 h-4 $ {isLoading ? 'animate-spin': '';
 
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics /> => {
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics /> => {
-
-
 
  ;
   return new Promise ( (resolve) => {}
@@ -96,8 +97,6 @@ const formatTime = (ms: number) : string => {;
   return 'N/A'}
 };
 
-
-
 //Get device icon const getDeviceIcon = (
   switch (deviceType) {
   case 'mobile':;
@@ -114,28 +113,30 @@ let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
 
-
 else score += 25;
 ) => {
   return $3;}
 }
 };
 
-
-//Don't render anything in production return (<AnimatePresence /> {"
-  isVisible && (<motion.div </div /> <div className = \"flex items-center space-x-2\"  /> <button  /> <RefreshCw className= {
+//Don't render anything in production return (
+          <AnimatePresence /> {"
+  isVisible && (
+          <motion.div </div /> <div className = \"flex items-center space-x-2\"  /> <button  /> <RefreshCw className= {
   `w-4 h-4 $ {}
   isLoading ? 'animate-spin': ''}
 }`"
 }/> </button> <button  /> <BarChart3 className=\"w-4 h-4\" /> </button> <button  /> <X className=\"w-4 h-4\" /> </button> </div> </div> </div> </div> </div> </div> {}
   /* Expanded View */}
 }<AnimatePresence /> {}
-  isExpanded && (<motion.div </div />)}
+  isExpanded && (
+          <motion.div </div />)}
 }</div> </div> </div>) )
 }</div> </div>)
 }<> <div />• Optimize images and assets</div> <div />• Minimize JavaScript bundles</div> <div />• Enable compression and caching</div> </>)
 }{}
-  getPerformanceScore () >= 90 && (<div />• Excellent performance! Keep monitoring for any regressions.</div>)}
+  getPerformanceScore () >= 90 && (
+          <div />• Excellent performance! Keep monitoring for any regressions.</div>)}
 }</div> </div> </div> </motion.div>)
 }</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)
 }
@@ -151,7 +152,6 @@ if (score >= 50) return 'Needs Improvement';) => {
   return $3;}
 }
 }
-
 export default PerformanceMonitor;
 
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
@@ -272,21 +272,29 @@ if (score += 50) {}
 }
 else score += 25;
 }
-//Don't render anything in production return (<AnimatePresence /> {"
-  is_visible && (<motion.div </div /> <div className=\"flex items - center space - x-2\"  /> <button  /> <RefreshCw className= {
+//Don't render anything in production return (
+          <AnimatePresence /> {"
+  is_visible && (
+          <motion.div </div /> <div className=\"flex items - center space - x-2\"  /> <button  /> <RefreshCw className= {
   `w - 4 h - 4 $ {}
   is_loading ? 'animate - spin': '';}
 }`;"
 }/> </button> <button  /> <BarChart3 className=\"w-4 h-4\" /> </button> <button  /> <X className=\"w-4 h-4\" /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;}
-}<AnimatePresence /> {isExpanded && (<motion.div </div />)}</div> </div> </div>) )}</div> </div>)}<> <div />• Optimize images and assets</div> <div />• Minimize JavaScript bundles</div> <div />• Enable compression and caching</div> </>)}{getPerformanceScore () >= 90 && (<div />• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}
+}<AnimatePresence /> {isExpanded && (
+          <motion.div </div />)}</div> </div> </div>) )}</div> </div>)}<> <div />• Optimize images and assets</div> <div />• Minimize JavaScript bundles</div> <div />• Enable compression and caching</div> </>)}{getPerformanceScore () >= 90 && (
+          <div />• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}
 else score += 25;
 }
 else score += 25;
 }else score += 25;"
-}//Don't render anything in production return (<AnimatePresence /> {isVisible && (<motion.div </div /> <div className=\"flex items-center space-x-2\"  /> <button  /> <RefreshCw className= {`w-4 h-4 $ {isLoading ? 'animate-spin': '';}
+}//Don't render anything in production return (
+          <AnimatePresence /> {isVisible && (
+          <motion.div </div /> <div className=\"flex items-center space-x-2\"  /> <button  /> <RefreshCw className= {`w-4 h-4 $ {isLoading ? 'animate-spin': '';}
 }`;"
 }/> </button> <button  /> <BarChart3 className=\"w-4 h-4\" /> </button> <button  /> <X className=\"w-4 h-4\" /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;}
-}<AnimatePresence /> {isExpanded && (<motion.div </div />)}</div> </div> </div>) )}</div> </div>)}<> <div />• Optimize images and assets</div> <div />• Minimize JavaScript bundles</div> <div />• Enable compression and caching</div> </>)}{getPerformanceScore () >= 90 && (<div />• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}// Helper functions const getScoreLabel = (if (score >= 90);
+}<AnimatePresence /> {isExpanded && (
+          <motion.div </div />)}</div> </div> </div>) )}</div> </div>)}<> <div />• Optimize images and assets</div> <div />• Minimize JavaScript bundles</div> <div />• Enable compression and caching</div> </>)}{getPerformanceScore () >= 90 && (
+          <div />• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}// Helper functions const getScoreLabel = (if (score >= 90);
   return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
@@ -296,7 +304,6 @@ if (score >= 50) return 'Needs Improvement';) => {
   return $3;}
 }
 }
-
 export default PerformanceMonitor;
 
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => ;
@@ -317,7 +324,6 @@ if (return 'N / A') {$2;}
 // Check condition;
 if (return `$ {) {$2;
 ;
-
 export default PerformanceMonitor;
 ;
 }
@@ -388,10 +394,14 @@ if (score += 50) {$2;}
 }
 else score += 25;
 }"
-//Don't render anything in production return (<AnimatePresence /> {is_visible && (<motion.div </div /> <div className=\"flex items - center space - x-2\"  /> <button  /> <RefreshCw className= {`w - 4 h - 4 $ {is_loading ? 'animate - spin': '';}
+//Don't render anything in production return (
+          <AnimatePresence /> {is_visible && (
+          <motion.div </div /> <div className=\"flex items - center space - x-2\"  /> <button  /> <RefreshCw className= {`w - 4 h - 4 $ {is_loading ? 'animate - spin': '';}
 }`;"
 }/> </button> <button  /> <BarChart3 className=\"w - 4 h - 4\" /> </button> <button  /> <X className=\"w - 4 h - 4\" /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;}
-}<AnimatePresence /> {is_expanded && (<motion.div </div />)}</div> </div> </div>) )}</div> </div>)}<> <div />• Optimize images and assets</div> <div />• Minimize JavaScript bundles</div> <div />• Enable compression and caching</div> </>)}{getPerformanceScore () >= 90 && (<div />• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}
+}<AnimatePresence /> {is_expanded && (
+          <motion.div </div />)}</div> </div> </div>) )}</div> </div>)}<> <div />• Optimize images and assets</div> <div />• Minimize JavaScript bundles</div> <div />• Enable compression and caching</div> </>)}{getPerformanceScore () >= 90 && (
+          <div />• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}
 // Helper functions const getScoreLabel = (score: number) =>: any {// Check condition;}
 if (return 'Excellent') {$2;}
 }
@@ -402,9 +412,7 @@ if (return 'Good') {$2;}
 if (return 'Needs Improvement') {$2;}
 }
 }
-
 export default PerformanceMonitor;
-
 export default PerformanceMonitor;
 }}}
 "

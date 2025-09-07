@@ -1,7 +1,7 @@
-
-
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState,
+  from 'react';
+import { motion, AnimatePresence,
+  from 'framer-motion';
 import { ArrowRight, ExternalLink, Star, TrendingUp;
   Users, Zap, Shield, Clock, Check, Brain;}
   Rocket, Dna, DollarSign, Lock, Globe}
@@ -27,14 +27,17 @@ import {;
 
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe;
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState,
+  from 'react';
+import { motion, AnimatePresence,
+  from 'framer-motion';
 import { ArrowRight, ExternalLink, Star, TrendingUp;
   Users, Zap, Shield, Clock, Check, Brain;}
   Rocket, Dna, DollarSign, Lock, Globe;}
   } from 'lucide-react';
 
-interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,TrendingUp,Users,Zap,Shield,Clock,Check,Brain,Rocket,Dna,DollarSign,Lock,Globe} from 'lucide-react';
+interface UltraAdvancedServiceCardProps  {import { ArrowRight,ExternalLink,Star,TrendingUp,Users,Zap,Shield,Clock,Check,Brain,Rocket,Dna,DollarSign,Lock,Globe,
+  from 'lucide-react';
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe;
 
@@ -49,7 +52,6 @@ interface UltraAdvancedServiceCardProps  {service: {id: string;
     icon: string;
 
     color: string;
-
 
     textColor: string;
     link: string;
@@ -84,8 +86,6 @@ interface UltraAdvancedServiceCardProps  {service: {id: string;
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps /> = ({ service   }
 }) => {
 
-
-
   const [isExpanded, setIsExpanded] = useState(false);
 
 const [isHovered, setIsHovered] = useState(false);
@@ -101,36 +101,37 @@ const getCategoryIcon = null;
     return <Zap className='w-4 h-4' />}
 };
 
-
 const containerVariants = {}
-    hidden: { opacity: 0, y: 20}
+    hidden: { opacity: 0;
+  y: 20; }
 },
 visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6}
-ease: 'easeOut' as const}
+        duration: 0.6,
+  ease: 'easeOut' as const}
       }
     },
     hover: {
       y: -10;
 transition: {
-        duration: 0.3}
-ease: 'easeOut' as const}
+        duration: 0.3,
+  ease: 'easeOut' as const}
       }
     }
   };
 
 const contentVariants = {}
-    hidden: { opacity: 0, height: 0}
+    hidden: { opacity: 0;
+  height: 0; }
 },
 visible: {
       opacity: 1,
       height: 'auto',
   transition: {
-        duration: 0.5}
-        ease: 'easeOut' as const}
+        duration: 0.5,
+  ease: 'easeOut' as const}
       }
     }
   };
@@ -140,19 +141,17 @@ visible: {
     >
 
       {/* Glow Effect */}
-<div;
-        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${isHovered ? 'opacity-100' : 'opacity-50';}
+<div className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${isHovered ? 'opacity-100' : 'opacity-50';}
         }`}
-        style={{background: `linear-gradient(135deg, ${service.color})`;
+        style={{background: `linear-gradient(135deg ${service.color})`;
           transform: isHovered ? 'scale(1.05)' : 'scale(1)';
         }}
       />;
       {/* Main Card */}
-      <div;
-    hidden: { opacity: 0, height: 0}
-},<div;
-        className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${isHovered ? 'shadow-2xl' : 'shadow-lg';}
-        }`}
+      <div hidden: { opacity: 0;
+  height: 0; }
+},<div className={`relative bg-gradient-to-br ${service.color p-1 rounded-2xl transition-all duration-500 ${isHovered ? 'shadow-2xl' : 'shadow-lg'}
+             `}
 
        />
 
@@ -180,9 +179,11 @@ visible: {
               <motion.div;
 className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'}
 }
-                animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity }
-}
+                animate={{ scale: [1, 1.1}
+            1] 
+                transition={{ duration: 2}
+            repeat: Infinity
+             
                />;
                 POPULAR;
               </motion.div>;
@@ -220,7 +221,8 @@ className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 r
             <div className='flex items-center space-x-2 text-sm' />
               <Clock className='w-4 h-4 text-green-400' />
               <span className='text-gray-300' />
-                {service.trialDays} day trial;
+                {service.trialDays,
+  day trial;
               </span>
             </div>
           </div>
@@ -241,25 +243,22 @@ className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 r
             </div>
           </div>
 
-
-
           {/* Expandable Content *}
 }
           <AnimatePresence />;
             {isExpanded && (;}
               <motion&& motion.div;}
 variants={contentVariants}
-
-initial='hidden'
+            initial='hidden'
                 animate='visible'
                 exit='hidden'
                 className='space-y-4'
                />
-                {/* Description */}
+                {/* Description */
                 <div />
                   <h4 className='text-white font-semibold mb-2' />Description</h4>
                   <p className='text-gray-300 text-sm leading-relaxed' />
-                    {service.description}
+                    {service.description
                   </p>
                 </div>
 
@@ -268,9 +267,8 @@ initial='hidden'
                   <p className=\"text-gray-300 text-sm leading-relaxed\" />;
                   </p>;
 
-                </div>;
-
-                {/* Features */}
+                </div>
+            {/* Features */
 
                 <div />
 
@@ -278,26 +276,21 @@ initial='hidden'
                     Key Features;
                   </h4>
                   <div className='grid grid-cols-1 gap-2' />
-                    {service.features.slice(0, 6).map((feature, index) => (}
-                      <div;}
-key={index}
-                        className='flex items-center space-x-2 text-sm'
+                    {service.features.slice(0,,,
+  6).map((feature,,,
+  index) => (}
+                      <div key={index}
+            className='flex items-center space-x-2 text-sm'
                        />
                         <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
-                        <span className='text-gray-300' />{feature}</span>
+                        <span className='text-gray-300' />{feature</span>
                       </div>
-                    ))}
-
-
-
+                    ))
 
                 {/* ROI */}
 <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3' />
                   <h4 className='text-white font-semibold mb-2' />ROI Promise</h4>
                   <p className='text-gray-300 text-sm' />{service.roi}</p>
-
-
-
 
                 </div>
 
@@ -339,16 +332,16 @@ className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }
 }
-              onClick={() = /> window.open(service.link, '_blank')}
+              onClick={() = /> window.open(service.link} '_blank')
             >
               <span />Learn More</span>
 <ExternalLink className='w-4 h-4' />
             </motion.button>
             <motion.button;
 className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
-                isExpanded;
-                  ? 'border-gray-600 text-gray-400'
-                  : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'}
+                isExpanded}
+            ? 'border-gray-600 text-gray-400'
+                  : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
 }
               }`}
               whileHover={{ scale: 1 && 1.02 }}
@@ -357,9 +350,9 @@ className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items
 }
             >;
               {isExpanded ? 'Show Less' : 'Details'}{/* Expand/Collapse Indicator */}
-          <motion.div;
-className='flex justify-center mt-4';
-            animate={{ rotate: isExpanded ? 180 : 0 }}
+          <motion.div,
+  className='flex justify-center mt-4',
+  animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0.3 }}
 
            />
@@ -367,12 +360,10 @@ className='flex justify-center mt-4';
           </motion.div>
         </div>
       </div>
-    </motion.div>
-
+    </motion.div>,,
+  
 )
 };
-
-
 export default UltraAdvancedServiceCard;
 
 "

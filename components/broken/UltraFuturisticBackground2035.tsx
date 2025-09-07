@@ -1,15 +1,15 @@
-
-
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef,
+  from 'react';
+import { motion,
+  from 'framer-motion';
 
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode}
 }
 }
-
-export default function UltraFuturisticBackground2035({ children,}
-}: UltraFuturisticBackground2035Props) {
+export default function UltraFuturisticBackground2035({ children,
+  },,
+  }: UltraFuturisticBackground2035Props) {
   const canvasRef = null;
               ease: 'easeInOut'
     const ctx = canvas.getContext('2d');
@@ -18,7 +18,8 @@ export default function UltraFuturisticBackground2035({ children,}
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
     if (ctx) {
 }
-ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);}
+ctx.scale(window.devicePixelRatio || 1,,,
+  window.devicePixelRatio || 1);}
     }
 
     let animationFrameId: number;
@@ -31,18 +32,19 @@ canvas.height = window.inner_height * (window.devicePixelRatio || 1);
 if ( {) {}
   $2}
 }
-
 export default /**
  * UltraFuturisticBackground2035 - Function description;
  */
-function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null);
+import React, { useEffect, useRef,
+  from 'react';
+import { motion,
+  from 'framer-motion';
 
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;}
 }
 }
-
 export default /**
  * UltraFuturisticBackground2035 - Function description;
  */
@@ -75,42 +77,45 @@ if ( {) {}
 ;
 }
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement />(null)import React, {;}
-  useEffect, useRef } from 'react';
-import { motion  } from 'framer-motion';
+  useEffect, useRef,
+  from 'react';
+import { motion,
+  from 'framer-motion';
 
 interface UltraFuturisticBackground2035Props  {children: React && React.ReactNode;}
 }useEffect(() => {}
 const canvas = canvasRef && canvasRef.current;}
-    if (!canvas) return;import React, { useEffect, useRef } from 'react';
+    if (!canvas) return;
+import React, { useEffect, useRef,
+  from 'react';
 
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;}
 }
 }
-
 export default function UltraFuturisticBackground2035() {const canvasRef = null;
               ease: 'easeInOut';
 
 const ctx = canvas.getContext('2d')if (!ctx);}
   return;}
-    canvas.width = window.innerWidth * (window.devicePixelRatio |1)canvas.height = window.innerHeight * (window.devicePixelRatio |1)if (ctx) {ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)}let animationFrameId: number;
+    canvas.width = window.innerWidth * (window.devicePixelRatio |1)canvas.height = window.innerHeight * (window.devicePixelRatio |1)if (ctx) {ctx.scale(window.devicePixelRatio || 1,,,
+  window.devicePixelRatio || 1)}let animationFrameId: number;
     let particles: Array<{x: number;
       y: number;
 canvas.width = window.inner_width * (window.devicePixelRatio || 1)canvas.height = window.inner_height * (window.devicePixelRatio || 1)// Check condition;}
 if ( {) {$2;}
 }
-
 export default /**;
  * UltraFuturisticBackground2035 - Function description;
  */;
 function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null)import React, {;}
-  useEffect, useRef } from 'react';
+  useEffect, useRef,
+  from 'react';
 
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;}
 }
 }
-
 export default /**;
  * UltraFuturisticBackground2035 - Function description;
  */;
@@ -159,8 +164,8 @@ const particleCount = prefersReducedMotion;
 
 const maxLife = Math.random() * 200 + 100;
 
-        particles.push({
-          x: (Math.random() * canvas.width) / (window.devicePixelRatio || 1),
+        particles.push({,,
+  x: (Math.random() * canvas.width) / (window.devicePixelRatio || 1),
           y: (Math.random() * canvas.height) / (window.devicePixelRatio || 1),
           vx: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6,
           vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6,
@@ -196,7 +201,6 @@ const getColorForType = (
             Math && Math.floor(Math && Math.random() * 3)
 ];
 
-
         default:
 
           return '#8b5cf6';) => {
@@ -206,7 +210,9 @@ const getColorForType = (
     }
     // Update and draw particles with enhanced effects;
 
-const updateParticles = (ctx.clearRect(0, 0, canvas.width, canvas.height)particles.forEach((particle, index) => {// Update particle life;
+const updateParticles = (ctx.clearRect(0, 0, canvas.width,,,
+  canvas.height)particles.forEach((particle,,,
+  index) => {// Update particle life;
         particle.life--;
         if (particle.life <= 0) {particle.life = particle.maxLife;
 particle.x =;
@@ -225,14 +231,16 @@ const lifeRatio = particle.life / particle.maxLife;
 
 const currentOpacity = particle.opacity * lifeRatio;
         // Draw particle based on type;
-        drawParticle(ctx, particle, currentOpacity)// Draw connections with enhanced effects;
+        drawParticle(ctx, particle,,,
+  currentOpacity)// Draw connections with enhanced effects;
 
 const maxDistance = prefersReducedMotion;
           ? 0;
           : window.innerWidth < 768;
             ? 120;
             : 180;
-        if (maxDistance > 0) {drawConnections(ctx, particles, index, maxDistance, currentOpacity)}
+        if (maxDistance > 0) {drawConnections(ctx, particles, index, maxDistance,,,
+  currentOpacity)}
       })if (!prefersReducedMotion) {animationFrameId = requestAnimationFrame(updateParticles)}
     }
 
@@ -242,16 +250,20 @@ const maxDistance = prefersReducedMotion;
       ctx.globalAlpha = opacity;
       switch (particle.type) {
         case 'quantum':
-          drawQuantumParticle(ctx, particle);
+          drawQuantumParticle(ctx,,,
+  particle);
           break;
 
         case 'hologram':;
-          drawHologramParticle(ctx, particle)break;
+          drawHologramParticle(ctx,,,
+  particle)break;
         case 'neon':;
-          drawNeonParticle(ctx, particle)break;
+          drawNeonParticle(ctx,,,
+  particle)break;
         case 'energy':;
 
-          drawEnergyParticle(ctx, particle);
+          drawEnergyParticle(ctx,,,
+  particle);
 
 break;
 ) => {
@@ -264,12 +276,14 @@ break;
 const drawQuantumParticle = (const time = Date.now() * 0.001;
 
 const wave = Math.sin(time + particle.x * 0.01) * 0.5;
-      ctx.beginPath()ctx.arc(particle.x, particle.y + wave, particle.size, 0, Math.PI * 2)ctx.fillStyle = particle.color;
+      ctx.beginPath()ctx.arc(particle.x, particle.y + wave, particle.size, 0,,,
+  Math.PI * 2)ctx.fillStyle = particle.color;
       ctx.fill()// Add quantum glow effect;
       ctx.shadowColor = particle.color;
       ctx.shadowBlur = 10;
-      ctx.beginPath()ctx.arc(particle.x,particle.y + wave,particle.size * 0.5,0,Math.PI * 2;
-      )ctx.fill()ctx.shadowBlur = 0;) => {
+      ctx.beginPath()ctx.arc(particle.x,particle.y + wave,particle.size * 0.5,0,
+  Math.PI * 2;,,
+   )ctx.fill()ctx.shadowBlur = 0;) => {
   return $3;}
 }
     }
@@ -281,25 +295,28 @@ const distortion = Math.sin(time + particle.y * 0.02) * 2;
       ctx.globalAlpha *= 0.7;
       ctx.beginPath()ctx.arc(particle.x + distortion;
         particle.y;
-        particle.size;
-        0;
-        Math.PI * 2;
-      )ctx.fillStyle = particle.color;
+        particle.size,
+  0,
+  Math.PI * 2;,,
+   )ctx.fillStyle = particle.color;
       ctx.fill()// Add holographic effect;
       ctx.globalAlpha *= 0.5;
-      ctx.beginPath()ctx.arc(particle.x + distortion,particle.y,particle.size * 1.5,0,Math.PI * 2;
-      )ctx.strokeStyle = particle.color;
+      ctx.beginPath()ctx.arc(particle.x + distortion,particle.y,particle.size * 1.5,0,
+  Math.PI * 2;,,
+   )ctx.strokeStyle = particle.color;
       ctx.lineWidth = 1;) => {
   return $3;}
 }
       ctx.stroke()}// Neon particle with bright glow;
 
 const drawNeonParticle = (// Bright core;
-      ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fillStyle = '#ffffff';
+      ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0,,,
+  Math.PI * 2)ctx.fillStyle = '#ffffff';
       ctx.fill()// Neon glow;
       ctx.shadowColor = particle.color;
       ctx.shadowBlur = 15;
-      ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size * 0.8, 0, Math.PI * 2)ctx.fillStyle = particle.color;
+      ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size * 0.8, 0,,,
+  Math.PI * 2)ctx.fillStyle = particle.color;
       ctx.fill()ctx.shadowBlur = 0;) => {
   return $3;}
 }
@@ -310,15 +327,18 @@ const drawEnergyParticle = (const time = Date.now() * 0.003;
 const pulse = Math.sin(time) * 0.3 + 0.7;
 
 const size = particle.size * pulse;
-      ctx.beginPath()ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2)ctx.fillStyle = particle.color;
+      ctx.beginPath()ctx.arc(particle.x, particle.y, size, 0,,,
+  Math.PI * 2)ctx.fillStyle = particle.color;
       ctx.fill()// Energy field effect;
       ctx.globalAlpha *= 0.3;
-      ctx.beginPath()ctx.arc(particle.x, particle.y, size * 2, 0, Math.PI * 2)ctx.fillStyle = particle.color;) => {
+      ctx.beginPath()ctx.arc(particle.x, particle.y, size * 2, 0,,,
+  Math.PI * 2)ctx.fillStyle = particle.color;) => {
   return $3;}
 }
 ctx.fill()}// Enhanced connection drawing with different effects;
 
-const drawConnections = (particles.forEach((otherParticle, otherIndex) => {if (currentIndex !== otherIndex) {const dx = particles[currentIndex].x - otherParticle.x;
+const drawConnections = (particles.forEach((otherParticle,,,
+  otherIndex) => {if (currentIndex !== otherIndex) {const dx = particles[currentIndex].x - otherParticle.x;
 
 const dy = particles[currentIndex].y - otherParticle.y;
 
@@ -337,31 +357,34 @@ ctx.lineWidth = 2;) => {
               ctx.strokeStyle = '#ffffff';}
 ctx.lineWidth = 1;}
             }
-            ctx.beginPath()ctx.moveTo(particles[currentIndex].x, particles[currentIndex].y)ctx.lineTo(otherParticle.x, otherParticle.y)ctx.stroke()}
+            ctx.beginPath()ctx.moveTo(particles[currentIndex].x,,,
+  particles[currentIndex].y)ctx.lineTo(otherParticle.x,,,
+  otherParticle.y)ctx.stroke()}
         }
 
       })
 };
-
 
     // Handle window resize;
 const handleResize = (
       canvas.width = window.innerWidth * (window.devicePixelRatio |1);
       canvas.height = window.innerHeight * (window.devicePixelRatio |1);
       if (ctx) {
-ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);) => {
+ctx.scale(window.devicePixelRatio || 1,,,
+  window.devicePixelRatio || 1);) => {
   return $3;}
 }
       }
       initParticles()
 };
 
-
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize',,,
+  handleResize);
     initParticles();
     updateParticles();
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize',,,
+  handleResize);
       if (animationFrameId) {}
 cancelAnimationFrame(animationFrameId);}
       }
@@ -382,29 +405,34 @@ cancelAnimationFrame(animationFrameId);}
 className='absolute inset-0 opacity-30'
           animate={{
             background: [
-              'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)',}
-            ],}
+              'radial-gradient(circle at 20% 80%, rgba(139, 92, 246,,,
+  0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 80% 20%, rgba(6, 182, 212,,}
+            0.3) 0%
+            transparent 50%)'
+            'radial-gradient(circle at 40% 40%, rgba(236, 72, 153,,
+  0.3) 0%
+            transparent 50%)'
+            'radial-gradient(circle at 20% 80%, rgba(139, 92, 246,,,
+  0.3) 0%, transparent 50%)',],
           }}
           transition={{
-            duration: 8;
-repeat: Infinity;}
-ease: 'easeInOut'}
+            duration: 8}
+            repeat: Infinity
+            ease: 'easeInOut'
           }}
 
         />
 {/* Holographic grid effect *,}
 }
         <div className='absolute inset-0 opacity-20' />
-          <div;
-className='h-full w-full'
+          <div className='h-full w-full'
             style={{
               backgroundImage: `
-              linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
-            `}
-              backgroundSize: '50px 50px'}
+              linear-gradient(90deg, rgba(139, 92},
+  246 0.1) 1px transparent 1px)
+            `
+              backgroundSize: '50px 50px'
             }}
 
           />
@@ -412,43 +440,45 @@ className='h-full w-full'
 
         {/* Canvas for animated particles *,}
 }
-        <canvas;
-          ref={canvasRef}
-
-className='absolute inset-0 w-full h-full'
-          style={{ filter: 'blur(0.5px)' }}
+        <canvas ref={canvasRef}
+            className='absolute inset-0 w-full h-full'
+          style={{ filter: 'blur(0.5px)' 
 
         />
 
-        {/* Floating neon orbs *,}
+        {/* Floating neon orbs *,
 }
 
         <motion.div;
 className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20'
           animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2],}
-            rotate: [0, 180, 360],}
+            scale: [1, 1.2,
+  1]
+            opacity: [0.2, 0.4, 0.2]}
+            rotate: [0, 180
+            360],
           }}
           transition={{
-            duration: 6,
-            repeat: Infinity,}
-ease: 'easeInOut',}
-          }}
+            duration: 6}
+            repeat: Infinity
+            ease: 'easeInOut',
+          }
         />
 
         <motion.div;
 className='absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20'
           animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.5, 0.2],}
-            rotate: [360, 180, 0],}
+            scale: [1, 1.3,
+  1]
+            opacity: [0.2, 0.5, 0.2]}
+            rotate: [360, 180
+            0],
           }}
           transition={{
-            duration: 8,
-            repeat: Infinity,}
-ease: 'easeInOut',}
-          }}
+            duration: 8}
+            repeat: Infinity
+            ease: 'easeInOut',
+          }
 
         />;
 
@@ -458,26 +488,30 @@ ease: 'easeInOut',}
           <motion.div;
 className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent'
             animate={{
-              y: [-100, 100, -100],}
+              y: [-100}
+            100
+            -100],
               opacity: [0, 0.3, 0],}
             }}
             transition={{
-              duration: 4,
-              repeat: Infinity,}
-ease: 'easeInOut',}
-            }}
+              duration: 4}
+            repeat: Infinity
+            ease: 'easeInOut',
+            }
           />
           <motion.div;
 className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent'
             animate={{
-              y: [100, -100, 100],}
-              opacity: [0, 0.3, 0],}
+              y: [100, -100,
+  100]}
+            opacity: [0, 0.3
+            0],
             }}
             transition={{
-              duration: 6,
-              repeat: Infinity,}
-ease: 'easeInOut',}
-            }}
+              duration: 6}
+            repeat: Infinity
+            ease: 'easeInOut',
+            }
           />
         </div>
       </div>
@@ -486,7 +520,5 @@ ease: 'easeInOut',}
       {children}</>){/* Render children */}
       {children}
 
-
     </>
   );
-

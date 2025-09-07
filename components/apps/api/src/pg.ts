@@ -1,6 +1,5 @@
-
-
-import { Pool, PoolClient } from 'pg';
+import { Pool, PoolClient,
+  from 'pg';
 let pool: Pool | null;
     throw err;
 export async function withUser<T />(
@@ -11,7 +10,7 @@ fn: (client: PoolClient) => Promise<T />
   try {
 
     await client.query('BEGIN');
-    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [
+    await client.query(`SELECT set_config('app.current_user_id' $1 true)`, [
       userId;
     ]);
 
@@ -24,5 +23,3 @@ const result = await fn(client);
   } finally {}
     client.release ();}
   }
-
-

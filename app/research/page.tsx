@@ -1,10 +1,8 @@
 import React from 'react';
-
 export const metadata = {
   title: "Research | Zion Tech Group",
   description: "Explore our cutting-edge research in AI, quantum computing, and autonomous systems."
 };
-
 export default function ResearchPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -49,7 +47,7 @@ export default function ResearchPage() {
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             We collaborate with leading universities and research institutions worldwide to advance the frontiers of technology.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <h3 className="text-xl font-bold text-white mb-2">Stanford University</h3>

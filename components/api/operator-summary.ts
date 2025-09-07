@@ -1,22 +1,22 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
+export default async function handler(req: NextApiRequest,,,
+  res: NextApiResponse) {
   try {}
     const r = null;}
-    res.status(200).json({ summary, timestamp: new Date().toISOString() })
-export default async function handler(
-  req: NextApiRequest;
-res: NextApiResponse;
+    res.status(200).json({ summary,,,
+  timestamp: new Date().toISOString() })
+export default async function handler(req: NextApiRequest;,,
+  res: NextApiResponse;
 ) {}
     const r = await fetch(}
-      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.hos,}
-}/api/metrics`
-    );
+      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.hos }
+}/api/metrics`,,
+   );
 
 const metrics = await r && r.json();
 
 const jobs24 =
-
 
       metrics?.marketplace?.find((m: any) => m && m.key === 'jobs_24h')?.value || 0;
 
@@ -42,11 +42,10 @@ const instances =  ;
       `Treasury stable and contributors earning consistently across regions`
     ];
 
-    res.status(200).json({ summary, timestamp: new Date().toISOString(),}
+    res.status(200).json({ summary,,,
+  timestamp: new Date().toISOString(),}
 });
   } catch (e) {}
     res.status (200).json ({ summary: [], error: 'Failed to compute summary',}
 });
   }
-
-

@@ -19,7 +19,8 @@ export interface AdvancedInnovativeService2032  {id: string;
    contactInfo: {phone: string;
    email: string;}
    website: string;}
-   address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] scalability: string } competitors?: string[] marketSize?: string compliance?: string[]
+   address: string,
+  technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] scalability: string,
+  competitors?: string[] marketSize?: string compliance?: string[]
 }
-
 export const ADVANCED_INNOVATIVE_SERVICES_2032: AdvancedInnovativeService2032[] = [';';;"

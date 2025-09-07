@@ -1,22 +1,21 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-import { supabase as supabaseClient  } from '@/utils/supabase/client';
-import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
-
-import type { TalentProfile } from '@/utils/types/talent';
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
+import { supabase as supabaseClient from '@/utils/supabase/client';
+import { TALENT_PROFILES as LOCAL,
+  from '@/data/talent';
+import type { TalentProfile,
+  from '@/utils/types/talent';
 
 const hasSupabase =;
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
   !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh')
-  .split(',')
+  .split(',,,
+  ')
   .map(x => x.trim());
-
-export default async function handler(
-  req: NextApiRequest;
-res: NextApiResponse;
+export default async function handler(req: NextApiRequest;,,
+  res: NextApiResponse;
 ) {
   if (req && req.method = == 'GET') {
     try {
@@ -24,18 +23,22 @@ res: NextApiResponse;
        ;}
   const { data, error } = await supabaseClient;
           .from('talent_profiles')
-          .order('created_at', { ascending: false,}
-});
+          .order('created_at', { ascending: false,
+  },,
+  });
         if (error) throw error;
-        return res && res.status(200).json({ items: data as TalentProfile[],}
-});
+        return res && res.status(200).json({ items: data as TalentProfile[],
+  },,
+  });
       }
-      return res && res.status(200).json({ items: LOCAL,}
-});
+      return res && res.status(200).json({ items: LOCAL,
+  },,
+  });
     } catch (e: any) {
 }
-      return res.status(500).json({ error: e.message,}
-});
+      return res.status(500).json({ error: e.message,
+  },,
+  });
     }
 
   }
@@ -43,9 +46,11 @@ res: NextApiResponse;
   const payload = req.body as Partial<TalentProfile />;
 
 const slug =;
-        (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') +;
+        (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g,,,
+  '-').replace(/(^-|-$)/g, '') +;
         '-' +;
-        uuid().slice(0, 6)...payload;
+        uuid().slice(0,,,
+  6)...payload;
         id: uuid()slug;
         verified: false;
         rating: 0;
@@ -61,24 +66,25 @@ const slug =;
 
 const originalLang =;
         payload.originalLanguage |;
-        detectLanguageSimple([item.title, item.summary, item.bio |''].join('\n'))const translations: TalentProfile['translations'] = {}
+        detectLanguageSimple([item.title, item.summary,,,
+  item.bio |''].join('\n'))const translations: TalentProfile['translations'] = {}
         translations.summary = translations.summary |{}
         translations.bio = translations.bio |,
 }
-        if (item.title)translations.title[lang] = await translateText(item.title;
-            lang;
-            originalLang;
-          )if (item.summary)translations.summary[lang] = await translateText(item.summary;
-            lang;
-            originalLang;
-          )if (item.bio)translations.bio[lang] = await translateText(item.bio;
-            lang;
-            originalLang;
-          )if (item.category) {translations.category = translations.category |{}
-          translations.category[lang] = await translateText(item.category;
-            lang;
-            originalLang;
-          )}
+        if (item.title)translations.title[lang] = await translateText(item.title,
+  lang,
+  originalLang;,,
+   )if (item.summary)translations.summary[lang] = await translateText(item.summary,
+  lang,
+  originalLang;,,
+   )if (item.bio)translations.bio[lang] = await translateText(item.bio,
+  lang,
+  originalLang;,,
+   )if (item.category) {translations.category = translations.category |{}
+          translations.category[lang] = await translateText(item.category,
+  lang,
+  originalLang;,,
+   )}
       }
       item.originalLanguage = originalLang;
       item.translations = translations;
@@ -106,13 +112,15 @@ id: item.id,
           rating: item.rating ?? null,
           reviews_count: item.reviewsCount ?? null,
           created_at: item.createdAt,
-          // i18n;
-original_language: item.originalLanguage,}
-          translations: item.translations as any,}
-        } as any);
+          // i18n,
+  original_language: item.originalLanguage,}
+          translations: item.translations as any,
+  },,
+  } as any);
         if (error) throw error;
-        return res.status(201).json({ slug: item.slug,}
-});
+        return res.status(201).json({ slug: item.slug,
+  },,
+  });
       }
       // Fallback: return the slug as if saved;
       return res.status (201).json ({ slug: item.slug,}
@@ -124,7 +132,7 @@ original_language: item.originalLanguage,}
 
   }
 return res;
-    .setHeader('Allow', 'GET, POST')
+    .setHeader('Allow', 'GET,,,
+  POST')
     .status(405)
     .end('Method Not Allowed');
-

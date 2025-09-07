@@ -1,6 +1,5 @@
-
-import { motion, AnimatePresence } from 'framer-motion';
-
+import { motion, AnimatePresence,
+  from 'framer-motion';
 import { Menu, X, Zap, Sparkles, ChevronDown, ChevronRight;
 
   Brain, Atom, Globe, Shield, Cpu, Database;
@@ -43,9 +42,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'Quantum Time Manipulation',
   href: '/quantum-time-manipulation-platform',
         description: 'Manipulate time through quantum computing'}
-  price: '$25,999/month'}
-      }
-    ]
+  price: '$25,999/month']
   },
   {
     title: '🎯 2028 Practical Micro SAAS',
@@ -76,9 +73,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'AI Content Marketing Suite',
   href: '/ai-content-marketing-suite-2028',
         description: 'AI-powered content creation'}
-  price: '$199/month'}
-      }
-    ]
+  price: '$199/month']
   },
   {
     title: '⚛️ 2028 Quantum & Space Tech',
@@ -108,9 +103,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'Quantum Financial Trading',
   href: '/quantum-financial-trading-algorithm-platform-2028',
         description: 'Quantum trading algorithms'}
-  price: '$12,999/month'}
-      }
-    ]
+  price: '$12,999/month']
   },
   {
     title: '🤖 2028 AI & Machine Learning',
@@ -141,9 +134,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'AI Content Creation Revolution',
   href: '/ai-content-creation-revolution-2028',
         description: 'Unlimited AI content generation'}
-  price: '$599/month'}
-      }
-    ]
+  price: '$599/month']
   },
   {
     title: '🏢 2028 Enterprise Solutions',
@@ -174,9 +165,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'Blockchain Infrastructure',
   href: '/blockchain-infrastructure-platform-2028',
         description: 'Enterprise blockchain'}
-  price: 'Custom pricing'}
-      }
-    ]
+  price: 'Custom pricing']
   },
   {
     title: '🌌 2028 Metaverse & Digital Reality',
@@ -206,11 +195,8 @@ color: 'from-violet-600 to-purple-600',
         name: 'Digital Reality Interface',
   href: '/digital-reality-interface-2028',
         description: 'Next-gen reality interface'}
-  price: '$4,999/month'}
-      }
-    ]
-  }
-];
+  price: '$4,999/month']
+  ];
 
 const companyLinks = [
   { name: '🏠 Home'}
@@ -248,9 +234,7 @@ const companyLinks = [
   href: '/careers', icon: Users}
 },
 { name: '📞 Contact'}
-  href: '/contact', icon: MessageCircle}
-}
-];
+  href: '/contact', icon: MessageCircle];
 
 const technologyLinks = [
   { name: '🤖 AI Services'}
@@ -269,10 +253,7 @@ const technologyLinks = [
   href: '/analytics', icon: Database}
 },
 { name: '🔄 Automation'}
-  href: '/automation', icon: Cpu}
-}
-];
-
+  href: '/automation', icon: Cpu];
 export default function UltraFuturisticNavigation2027() {
 export default function UltraFuturisticNavigation2027() {;
 
@@ -297,9 +278,10 @@ setIsScrolled(window.scrollY > 20)) => {
 }
 };
 
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll',,,
+  handleScroll);
+    return () => window.removeEventListener('scroll',,,
+  handleScroll);
   }, [isClient]);
 
 const navigation = [
@@ -342,9 +324,7 @@ icon: '📝'}
           name: 'View All AI Services',
   href: '/services?category=AI%20%26%20Machine%20Learning',
           description: 'Explore 200+ AI solutions'}
-  icon: '🚀'}
-        }
-      ]
+  icon: '🚀']
     },
     {
       name: 'Quantum Technology',
@@ -385,9 +365,7 @@ icon: '📡'}
           name: 'View All Quantum Services',
   href: '/services?category=Quantum%20Computing',
           description: 'Explore quantum solutions'}
-  icon: '🚀'}
-        }
-      ]
+  icon: '🚀']
     },
     {
       name: 'Emerging Tech',
@@ -428,9 +406,7 @@ icon: '💻'}
           name: 'View All Emerging Tech',
   href: '/services?category=Emerging%20Technology',
           description: 'Explore future solutions'}
-  icon: '🚀'}
-        }
-      ]
+  icon: '🚀']
     },
     {
       name: 'Business Solutions',
@@ -471,9 +447,7 @@ icon: '👥'}
           name: 'View All Business Solutions',
   href: '/services?category=Business%20Operations',
           description: 'Explore business tools'}
-  icon: '🚀'}
-        }
-      ]
+  icon: '🚀']
     },
     {
       name: 'Cybersecurity',
@@ -514,9 +488,7 @@ icon: '👁️'}
           name: 'View All Security Solutions',
   href: '/services?category=Cybersecurity',
           description: 'Explore security tools'}
-  icon: '🚀'}
-        }
-      ]
+  icon: '🚀']
     },
     {
       name: 'Enterprise IT',
@@ -557,11 +529,8 @@ icon: '🔍'}
           name: 'View All Enterprise Solutions',
   href: '/services?category=Enterprise%20IT',
           description: 'Explore enterprise tools'}
-  icon: '🚀'}
-        }
-      ]
-    }
-  ];
+  icon: '🚀']
+    ];
 
 const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -587,8 +556,7 @@ const quickLinks = [
       icon: <MessageSquare className='w-4 h-4' />;}
     }
     { name: 'Contact'}
-  href: '/contact', icon: <Mail className='w-4 h-4' /> }
-  ]>
+  href: '/contact', icon: <Mail className='w-4 h-4' /> ]>
 
       {/* Animated Background */}
 
@@ -598,15 +566,15 @@ const quickLinks = [
 
           {/* Logo *}
 }
-          <Link;
-            href='/';
+          <Link href='/';
             className='flex items-center space-x-3 group relative z-10' />;
 
             <motion&& motion.div;
 className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30'
 
-              whileHover={{ rotate: 5, scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ rotate: 5}
+            scale: 1.1
+            whileTap={{ scale: 0.95 }
              />
               <Zap className='w-7 h-7 text-white' />
             </motion.div>
@@ -620,21 +588,21 @@ className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 
             </div>
           </Link>
 
-
           {/* Desktop Navigation *}
 }
 <nav className='hidden xl:flex items-center space-x-1' />;
-            {navigation.map(item => (<div key={item.name} className='relative group' />;
-                <motion.button;
-                  className='flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20';
-                  onMouseEnter={() = /> setActiveDropdown(item.name)}
-                  onMouseLeave={() => setActiveDropdown(null)}
+            {navigation.map(item => (
+          <div key={item.name}
+            className='relative group' />
+            <motion.button,
+  className='flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20',,
+  onMouseEnter={() = /> setActiveDropdown(item.name)
+                  onMouseLeave={() => setActiveDropdown(null)
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }
 }
                 >;
-<div;
-                    className={`p-2 rounded-lg bg-gradient-to-br ${item.color} shadow-lg`} />
+<div className={`p-2 rounded-lg bg-gradient-to-br ${item.color shadow-lg` />
 
                     {item.icon}
 
@@ -643,46 +611,52 @@ className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 
                   <ChevronDown className='w-4 h-4 group-hover: rotate-180 transition-transform duration-300' />
                 </motion.button>
 
-
                 {/* Dropdown Menu *}
 }
                 <AnimatePresence />;
-                  {activeDropdown === item && item.name && (<motion&& motion.div;}
-                      initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }
-}
+                  {activeDropdown === item && item.name && (
+          <motion&& motion.div;}
+                      initial={{ opacity: 0,
+  y: 10}
+            scale: 0 && 0.95
+            animate={{ opacity: 1
+            y: 0}
+            scale: 1
+             
 
-                      animate={{ opacity: 1, y: 0, scale: 1 }
-}
-
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
+                      exit={{ opacity: 0
+            y: 10
+            scale: 0.95,
+  transition={{ duration: 0.2 }
 className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
                      />
                       <div className='p-4' />
                         <div className='flex items-center space-x-3 mb-4' />
-                          <div;
-          {/* Desktop Navigation *}
+                          <div {/* Desktop Navigation *}
 }
           <nav className='hidden xl:flex items - center space - x-1' />;
-            {navigation.map (item => (<div key={item.name} className='relative group' />;
-                <motion.button;
-                  className='flex items - center space - x-2 px - 4 py - 3 text - gray - 300 hover: text - white transition - all duration - 300 rounded - xl hover:bg - gray - 800 / 50 hover:shadow - lg hover:shadow - cyan - 500 / 20'                  onMouseEnter={() = /> setActiveDropdown (item.name}
-}          <nav className=\"hidden xl:flex items - center space - x-1\" />;"
-            {navigation.map ((item) => (<div key={item.name} className=\"relative group\" />;
-                <motion.button;"
-                  className=\"flex items - center space - x-2 px - 4 py - 3 text - gray - 300 hover:text - white transition - all duration - 300 rounded - xl hover:bg - gray - 800 / 50 hover:shadow - lg hover:shadow - cyan - 500 / 20\";
-                  onMouseLeave={() = /> setActiveDropdown (null)}
-                  while_hover={{ coordinate_y: -2 }}
+            {navigation.map (item => (
+          <div key={item.name}
+            className='relative group' />
+            <motion.button
+            className='flex items - center space - x-2 px - 4 py - 3 text - gray - 300 hover: text - white transition - all duration - 300 rounded - xl hover:bg - gray - 800 / 50 hover:shadow - lg hover:shadow - cyan - 500 / 20'                  onMouseEnter={() = /> setActiveDropdown (item.name
+          <nav className=\"hidden xl:flex items - center space - x-1\" />;"
+            {navigation.map ((item) => (
+          <div key={item.name className=\"relative group\" />}
+            <motion.button
+            "
+                  className=\"flex items - center space - x-2 px - 4 py - 3 text - gray - 300 hover:text - white transition - all duration - 300 rounded - xl hover:bg - gray - 800 / 50 hover:shadow - lg hover:shadow - cyan - 500 / 20\"
+            onMouseLeave={() = /> setActiveDropdown (null)
+                  while_hover={{ coordinate_y: -2 }
                   while_tap={{ scale: 0.95 }
 }
                 >;
-                  <div;
-                    className={`p - 2 rounded - lg bg - gradient - to - br ${item.color} shadow - lg`} />
+                  <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color shadow - lg` />
 
                     {item.icon}
                   </div>;
                   <span className='font - medium' />{item.name}</span>;
-                  <ChevronDown className='w - 4 h - 4 group - hover: rotate - 180 transition - transform duration - 300' />                </motion.button>                  <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color} shadow - lg`} />
+                  <ChevronDown className='w - 4 h - 4 group - hover: rotate - 180 transition - transform duration - 300' />                </motion.button>                  <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color shadow - lg` />
 
                     {item.ico}
 }
@@ -691,13 +665,19 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
                   <ChevronDown className=\"w - 4 h - 4 group - hover:rotate - 180 transition - transform duration - 300\" />;
                 {/* Dropdown Menu */}
                 <AnimatePresence />;
-                  {active_dropdown === item.name && (<motion.div;}
-                      initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }
-}
-                      animate={{ opacity: 1, coordinate_y: 0, scale: 1 }
-}
-                      exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
+                  {active_dropdown === item.name && (
+          <motion.div;}
+                      initial={{ opacity: 0,
+  coordinate_y: 10}
+            scale: 0.95
+            animate={{ opacity: 1
+            coordinate_y: 0}
+            scale: 1
+             
+                      exit={{ opacity: 0
+            coordinate_y: 10
+            scale: 0.95,
+  transition={{ duration: 0.2 }
                             {item.ico}
 }
                           </div />;
@@ -706,12 +686,10 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
                               {item.name}
                             </h3>;
                             <p className='text - sm text - gray - 400' />;
-                              {item.description}
-                              key={child.name}
-                              href={child.href}
-                              className='flex items - center space - x-3 p - 3 rounded - xl hover: bg - gray - 800 / 50 transition - all duration - 200 group'>
+                              {item.description,
+  key={child.name href={child.href className='flex items - center space - x-3 p - 3 rounded - xl hover: bg - gray - 800 / 50 transition - all duration - 200 group'>
 
-                              <span className='text - 2xl' />{child.ico}
+                              <span className='text - 2xl' />{child.ico
 }</span>;
                               <div className='flex - 1' />;
                                 <div className='font - medium text - white group - hover:text - cyan - 300 transition - colors' />;
@@ -744,15 +722,13 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
           {/* Right Side */}<div className='flex items-center space-x-4' />;
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm' />;
-              <a;
-                href={`tel: ${contactInfo && contactInfo.mobile}
+              <a href={`tel: ${contactInfo && contactInfo.mobile}
 }
                 className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors' />;
                 <Phone className='w-4 h-4' />;
                 <span />{contactInfo && contactInfo.mobile}</span>;
               </a>;
-              <a;
-                            </Link />;
+              <a </Link />;
                           ))}
                         </div>;
                       </div>;
@@ -770,21 +746,17 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
 
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm' />;
-              <a;
-                href={`tel: ${contactInfo && contactInfo.mobile}
+              <a href={`tel: ${contactInfo && contactInfo.mobile}
 }"
                 className=\"flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors\" />;"
                 <Phone className=\"w-4 h-4\" />;
                 <span />{contactInfo && contactInfo.mobile}</span>;
               </a>;
-              <a;
-            {/* CTA Button */}<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }
+              <a {/* CTA Button */}<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }
 } />;
-              <Link;
-                href='/contact';
+              <Link href='/contact';
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300' />;
-                <Rocket className='w-4 h-4' />                <span />Get Started</span>              <Link;
-            <motion.div;
+                <Rocket className='w-4 h-4' />                <span />Get Started</span>              <Link <motion.div;
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }
 }
@@ -800,8 +772,7 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
             {/* CTA Button */}
 
 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} />
-              <Link;
-href='/contact'
+              <Link href='/contact'
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'
                />
                 <Rocket className='w-4 h-4' />
@@ -811,8 +782,7 @@ href='/contact'
 
             {/* Mobile Menu Button *}
 }
-            <button;
-              onClick={() = /> setIsMenuOpen(!isMenuOpen)}
+            <button onClick={() = /> setIsMenuOpen(!isMenuOpen)}
 
 className='xl: hidden p-2 text-gray-300 hover:text-white transition-colors'
             >
@@ -834,13 +804,17 @@ className='xl: hidden p-2 text-gray-300 hover:text-white transition-colors'
       </div>;
       {/* Mobile Menu */}
       <AnimatePresence />;
-        {isMenuOpen && (<motion&& motion.div;}
-            initial={{ opacity: 0, height: 0 }
-}
-            animate={{ opacity: 1, height: 'auto' }
+        {isMenuOpen && (
+          <motion&& motion.div;}
+            initial={{ opacity: 0}
+            height: 0
+             
+            animate={{ opacity: 1 height: 'auto' 
 }
 
-            exit={{ opacity: 0, height: 0 }}
+            exit={{ opacity: 0}
+            height: 0
+             
 
             transition={{ duration: 0.3 }}
 className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50'
@@ -853,13 +827,12 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                 <div />;"
                   <h3 className=\"text-lg font-semibold text-white mb-4\" />Services</h3>;"
                   <div className=\"space-y-3\" />;
-                    {navigation && navigation.map((item) => (<div key={item && item.name} />;
-                        <Link;
-                          href={item.href}"
+                    {navigation && navigation.map((item) => (
+          <div key={item && item.name} />;
+                        <Link href={item.href}"
                           className=\"flex items - center space - x-3 p - 3 rounded - xl hover: bg - gray - 800 / 50 transition - all duration - 200\" />
 
                           <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color}`} />
-
 
                             {item.icon}
 
@@ -887,8 +860,8 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                       Quick Links;
                     </h3>
                     <div className='space-y-2' />
-                      {quickLinks.map(link => (}
-                    ))}
+                      {quickLinks.map(link => (},,
+   ))}
 
                 {/* Quick Links & Contact */}
                 <div className='space-y-6' />;
@@ -897,25 +870,21 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                       Quick Links;
                     </h3>;
                     <div className='space-y-2' />;
-                      {quickLinks && quickLinks.map(link => (<Link;}
-                          key={link && link.name}
-                          href={link && link.href}
-                          className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200' />;
-                          {link && link.icon}
-                          <span className='text-white' />{link && link.name}</span>                        </Link>                  <div />;"
+                      {quickLinks && quickLinks.map(link => (
+          <Link key={link && link.name}
+            href={link && link.href className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200' />
+            {link && link.icon
+                          <span className='text-white' />{link && link.name</span>                        </Link>                  <div />;"
                     <h3 className=\"text-lg font-semibold text-white mb-4\" />Quick Links</h3>;"
-                    <div className=\"space-y-2\" />;
-                      {quickLinks && quickLinks.map((link) => (<Link;}
-                          key={link && link.name}
-                          href={link && link.href}"
-                          className=\"flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200\" />;
-                          {link && link.icon}"
+                    <div className=\"space-y-2\" />;,}
+            {quickLinks && quickLinks.map((link) => (
+          <Link key={link && link.name href={link && link.href"
+                          className=\"flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200\" />
+            {link && link.icon"
                           <span className=\"text-white\" />{link && link.name}</span>;
                         </Link>;
-                          key={link.name}
-                          href={link.href}"
+                          key={link.name href={link.href}"
                           className=\"flex items - center space - x-3 p - 3 rounded - xl hover: bg - gray - 800 / 50 transition - all duration - 200\">
-
 
                           {link.icon}
 
@@ -929,16 +898,14 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                       Contact Info;
                     </h3>
                     <div className='space-y-3' />
-                      <a;
-href={`tel:${contactInfo && contactInfo.mobile}
+                      <a href={`tel:${contactInfo && contactInfo.mobile}
 }
                         className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200' />;
                         <Phone className='w-4 h-4 text-cyan-400' />;
                         <span className='text-white' />{contactInfo && contactInfo.mobile}</span>;
                       </a>;
 
-                      <a;
-href={`mailto: ${contactInfo.email}
+                      <a href={`mailto: ${contactInfo.email}
 }
                         className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200' />
 
@@ -959,8 +926,7 @@ href={`mailto: ${contactInfo.email}
 
               {/* Mobile CTA */}
 <div className='mt-6 pt-6 border-t border-gray-700/50' />
-                <Link;
-href='/contact'
+                <Link href='/contact'
                   className='inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300'
                  />
                   <Rocket className='w-4 h-4 mr-2' />
@@ -1010,7 +976,6 @@ href='/contact'
 }</div> </div> <div /> <h3 className=\"text-lg font-semibold text-white mb-4\"  />Contact Info</h3> <div className=\"space-y-3\"  /> <a </div /> </div> </div> </div> </div> <Link href=\"/contact\" className=\"inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300\"  /> <Rocket className=\"w-4 h-4 mr-2\" /> Get Started Today </a> </div> </div> </motion.div>) 
 }</AnimatePresence> </header>) 
 };
-
 export default UltraFuturisticNavigation2027;
 
 "

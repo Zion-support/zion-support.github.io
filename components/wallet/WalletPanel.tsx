@@ -1,12 +1,11 @@
-
-
-import React, { useEffect, useMemo, useState } from \"react\";"
+import React, { useEffect, useMemo, useState,
+  from \"react\";"
 import Badges from \"./Badges\";
 
 type Tx = any;
       refresh()
-import React, { useEffect, useMemo, useState } from 'react';
-
+import React, { useEffect, useMemo, useState,
+  from 'react';
 import Badges from './Badges';
 
 type Tx = any;
@@ -22,9 +21,9 @@ const fromStorage = window && window.localStorage.getItem('zion_user_id')if (fro
 
 const generated = 'demo-user';
 
-  window && window.localStorage.setItem('zion_user_id', generated);
+  window && window.localStorage.setItem('zion_user_id',,,
+  generated);
   return generated;
-
 export default function WalletPanel() {;
 
 const [summary, setSummary] = useState<Summary | null />(null);
@@ -53,11 +52,13 @@ const balance = summary?.wallet.balance ?? 0;
 const symbol = summary?.config.symbol ?? 'ZION$';
 
 const earnings = (summary?.transactions |[]).filter(t =>
-    ['earn', 'issue'].includes(t.type)
+    ['earn',,,
+  'issue'].includes(t.type)
   );
 
 const spending = (summary?.transactions || []).filter(t =>
-    ['burn', 'revoke', 'redeem'].includes(t.type)
+    ['burn', 'revoke',,,
+  'redeem'].includes(t.type)
   );
 
 const nextBadgeThreshold = useMemo(() => {
@@ -70,9 +71,8 @@ const nextBadgeThreshold = useMemo(() => {
 return balance;}
   }, [balance]);
 
-const progress = Math.min(
-    100;
-Math.floor((balance / nextBadgeThreshold) * 100)
+const progress = Math.min(100;,,
+  Math.floor((balance / nextBadgeThreshold) * 100)
   );
   async function connectWallet() {
     if (typeof window = == 'undefined');
@@ -82,17 +82,20 @@ const eth = (window as any).ethereum;}
     if (!eth) {alert('No Ethereum wallet detected. Please install MetaMask.')return;}
     }
     try {const accounts = await eth.request({ method: 'eth_requestAccounts' })setEthAddress(accounts?.[0] |null)} catch (e) {console.error(e)}
- 
+
 }
   async function redeem() {if (!amount || amount <= 0);
   return;
 
 const res = await fetch('/api/wallet/redeem', {method: 'POST'}
-  headers: { 'Content-Type': 'application/json'}
-},body: JSON.stringify({ userId, amount })})if (data.error) {alert(data.error)} else {alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`)refresh()}
+  headers: { 'Content-Type': 'application/json'},,
+  } body: JSON.stringify({ userId amount })})if (data.error) {alert(data.error)} else {alert(`Redeemed ${amount} ${symbol,
+  for $${data.usd,,,
+  credit.`)refresh()}
   }
  ;
-  return (<div className='space-y-6' />;
+  return (
+    <div className='space-y-6' />;
       <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900' />;
         <div className='flex items-center justify-between' />;
           <div className='flex items-center gap-2' />;
@@ -103,19 +106,16 @@ const res = await fetch('/api/wallet/redeem', {method: 'POST'}
               </div>;
             </div>;
           </div>;
-          <button;
-            onClick={connectWallet}
-            className='px-3 py-1 text-sm rounded border' />
+          <button onClick={connectWallet className='px-3 py-1 text-sm rounded border' />
 
-            {ethAddress;}
-              ? `Connected: ${ethAddress.slice(0, 6)}...${ethAddress.slice(-4)}`;
+            {ethAddress}
+            ? `Connected: ${ethAddress.slice(0, 6)...${ethAddress.slice(-4)}`;
               : 'Connect Wallet'}
           </button>;
         </div>;
         <div className='mt-4' />;
           <div className='h-2 bg-gray-200 rounded' />;
-            <div;
-              className='h-2 bg-yellow-400 rounded';
+            <div className='h-2 bg-yellow-400 rounded';
               style={{ width: `${progress}%` 
 }
             />;
@@ -132,39 +132,39 @@ const res = await fetch('/api/wallet/redeem', {method: 'POST'}
 
 <div className='p-4 border rounded-lg bg-white dark: bg-zinc-900' />
         <div className='flex gap-3 mb-4 text-sm' />
-          <button;
-onClick={() = /> setTab('earnings')}
+          <button onClick={() = /> setTab('earnings')}
             className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}
 }>
 
             Earnings;
           </button>;
-          <button;
-            onClick={() = /> setTab('spending')}
+          <button onClick={() = /> setTab('spending')}
             className={`px-3 py-1 rounded border ${tab === 'spending' ? 'bg-gray-100' : ''}`}>
 
             Spending;
           </button>;
-          <button;
-            onClick={() = /> setTab('redeem')}
+          <button onClick={() = /> setTab('redeem')}
             className={`px-3 py-1 rounded border ${tab === 'redeem' ? 'bg-gray-100' : ''}`}>
 
             Redeem;
           </button>;
-        {tab !== 'redeem' && (<div className='space-y-2' />;}
-            {(tab === 'earnings' ? earnings : spending).map(t => (<div;}
-                key={t && t.id}
-                className='flex justify-between text-sm border rounded p-2' />;
-                <div className='flex gap-2 items-center' />;
-                  <span;
-            ))}
-            {(tab === 'earnings' ? earnings : spending).length === 0 && (<div className='text-sm text-gray-500' />No transactions yet.</div>;}
+        {tab !== 'redeem' && (
+          <div className='space-y-2' />;}
+            {(tab === 'earnings' ? earnings : spending).map(t => (
+          <div key={t && t.id,
+  className='flex justify-between text-sm border rounded p-2' />}
+            <div className='flex gap-2 items-center' />,
+  <span ))
+            {(tab === 'earnings' ? earnings : spending).length === 0 && (
+          <div className='text-sm text-gray-500' />No transactions yet.</div>;
             )}
           </div>;
         )}
-        {tab === 'redeem' && (<div className='space-y-3 text-sm' />;}
+        {tab === 'redeem' && (
+          <div className='space-y-3 text-sm' />;}
             <div className='text-gray-600' />;}
-              Convert your {symbol} into credits.;
+              Convert your {symbol,
+  into credits.;
             </div>;
             <div className='text-gray-600' />;
               Rate: 1 {symbo}
@@ -172,21 +172,18 @@ onClick={() = /> setTab('earnings')}
               {summary?.config && config.usdPerToken?.toFixed(2) ?? '0 && 0.00'}
             </div>;
             <div className='flex gap-2 items-center' />;
-              <button;
-                className='px-3 py-1 rounded border';
+              <button className='px-3 py-1 rounded border';
                 onClick={() = /> redeem(100)}
               >;
                 Redeem 100;
               </button>;
-              <button;
-                className='px-3 py-1 rounded border';
+              <button className='px-3 py-1 rounded border';
                 onClick={() = /> redeem(250)}
               >;
                 Redeem 250;
               </button>;
 
-              <button;
-className='px-3 py-1 rounded border'
+              <button className='px-3 py-1 rounded border'
                 onClick={() = /> redeem(500)}
 
               >
@@ -198,7 +195,6 @@ className='px-3 py-1 rounded border'
             </div>
           </div>
 
-        
 }
       </div>
     </div>

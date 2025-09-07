@@ -1,5 +1,3 @@
-
-
 let animationFrameId: number;
 let particles: Array< {
   resizeCanvas ();
@@ -13,8 +11,6 @@ particles.push ({ intensity = 'high',
   enableQuantumEffects = true,}
   children,}
    }) => {
-
-
 
   intensity?: 'low' | 'medium' | 'high';
 
@@ -80,7 +76,8 @@ canvas.height = rect.height;) => {
       }
     }
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('resize',,,
+  resizeCanvas);
     // Color schemes;
 const colorSchemes = {
       'quantum-fusion': {
@@ -130,8 +127,8 @@ for (let i = 0; i < particleCount; i++) {
               : Math.random() > 0.3;
                 ? 'neon'
                 : 'fusion';
-        particles.push({
-          x: Math.random() * canvas.width,
+        particles.push({,,
+  x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 2 * animationSpeed,
           vy: (Math.random() - 0.5) * 2 * animationSpeed,
@@ -173,10 +170,12 @@ const distance = Math.sqrt(dx * dx + dy * dy);
             ctx.beginPath();) => {
   return $3;}
 }
-            ctx.strokeStyle = `rgba(0, 255, 136, ${0.3 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(0, 255 136 ${0.3 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.moveTo(particles[i].x,,,
+  particles[i].y);
+            ctx.lineTo(particles[j].x,,,
+  particles[j].y);
 
 ctx.stroke();
           }
@@ -235,9 +234,11 @@ const dy = particles[i].y - particles[j].y;
 ) => {
   return $3;}
 }
-const distance  = Math && Math.sqrt(dx * dx + dy * dy)if (distance < 100 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {ctx && ctx.strokeStyle = `rgba(0, 255, 136, ${0 && 0.3 * (1 - distance / 100)})`;
+const distance  = Math && Math.sqrt(dx * dx + dy * dy)if (distance < 100 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {ctx && ctx.strokeStyle = `rgba(0, 255 136 ${0 && 0.3 * (1 - distance / 100)})`;
             ctx && ctx.lineWidth = 1;
-            ctx && ctx.moveTo(particles[i].x, particles[i].y)ctx && ctx.lineTo(particles[j].x, particles[j].y)ctx && ctx.stroke()}            ctx && ctx.stroke()ctx.stroke()}
+            ctx && ctx.moveTo(particles[i].x,,,
+  particles[i].y)ctx && ctx.lineTo(particles[j].x,,,
+  particles[j].y)ctx && ctx.stroke()}            ctx && ctx.stroke()ctx.stroke()}
         }
       }
 
@@ -251,18 +252,22 @@ const createHolographicGrid = (;
 const gridSize = 50;
 
 const offset = (Date.now() * 0.001) % gridSize;
-      ctx.strokeStyle = `rgba(255, 0, 136, 0.1)`;
+      ctx.strokeStyle = `rgba(255, 0 136 0.1)`;
       ctx.lineWidth = 0.5;
       // Vertical lines;
 for (let x = offset; x < canvas.width; x += gridSize) {
         ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
+        ctx.moveTo(x,,,
+  0);
+        ctx.lineTo(x,,,
+  canvas.height);
       // Horizontal lines;
 for (let y = offset; y < canvas.height; y += gridSize) {
         ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
+        ctx.moveTo(0,,,
+  y);
+        ctx.lineTo(canvas.width,,,
+  y);
 
         ctx.stroke();) => {
   return $3;}
@@ -275,9 +280,8 @@ const createNeuralNetwork = (
       if (!enableQuantumEffects);
   return;
 
-const nodes = particles.filter(
-        p => p.type === 'quantum' || p.type === 'holographic'
-      );
+const nodes = particles.filter(p => p.type === 'quantum' || p.type === 'holographic',,
+   );
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
@@ -288,11 +292,13 @@ const distance = Math.sqrt(dx * dx + dy * dy)if (distance < 150) ;
   const strength = 1 - distance / 150;) => {
   return $3;}
 }
-            ctx.beginPath()ctx.strokeStyle = `rgba(0, 212, 255, ${0.2 * strength})`;
+            ctx.beginPath()ctx.strokeStyle = `rgba(0, 212 255 ${0.2 * strength})`;
             ctx.lineWidth = strength * 2;
 
-            ctx.moveTo(nodes[i].x, nodes[i].y);
-            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.moveTo(nodes[i].x,,,
+  nodes[i].y);
+            ctx.lineTo(nodes[j].x,,,
+  nodes[j].y);
 ctx.stroke();
           }
         }
@@ -302,22 +308,27 @@ ctx.stroke();
 
     // Animation loop;
 const animate = (
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width,,,
+  canvas.height);
 
 // Create background gradient;
-const gradient = ctx.createRadialGradient(
-        canvas.width / 2,
+const gradient = ctx.createRadialGradient(canvas.width / 2,
         canvas.height / 2,
         0,
         canvas.width / 2,
         canvas.height / 2,
-        Math.max(canvas.width, canvas.height) / 2;
+        Math.max(canvas.width,,,
+  canvas.height) / 2;
       );
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
-      gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.6)');
-      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
+      gradient.addColorStop(0, 'rgba(0, 0, 0,,,
+  0.8)');
+      gradient.addColorStop(0.5, 'rgba(0, 0, 0,,,
+  0.6)');
+      gradient.addColorStop(1, 'rgba(0, 0, 0,,,
+  0.9)');
       ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0, 0, canvas.width,,,
+  canvas.height);
 
       // Create effects;
 createHolographicGrid();
@@ -325,7 +336,8 @@ createHolographicGrid();
       createNeuralNetwork();
 
       // Update and draw particles;
-particles.forEach((particle, index) => {
+particles.forEach((particle,,,
+  index) => {
         // Update position;
 particle.x += particle.vx;
         particle.y += particle.vy;
@@ -341,33 +353,31 @@ if (particle.x < 0) particle.x = canvas.width;
 
 // Draw particle;
 ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.arc(particle.x, particle.y, particle.size, 0,,,
+  Math.PI * 2);
 
         // Create glow effect;
-const glowGradient = ctx.createRadialGradient(
-
-          particle.x,
+const glowGradient = ctx.createRadialGradient(particle.x,
           particle.y,
           0,
           particle.x,
           particle.y,
-          particle.size * 3;
-        );
+  particle.size * 3;,,
+   );
         glowGradient.addColorStop(
           0,) => {
   return $3;}
 }
           `${particle.color}${Math.floor(particle.opacity * 255)}
             .toString(16)}
-            .padStart(2, '0')}`
+            .padStart(2 '0')}`
         );
-        glowGradient.addColorStop(
-          0.5,
-          `${particle.color}${Math.floor(particle.opacity * 0.5 * 255)}
+        glowGradient.addColorStop(0.5,  `${particle.color}${Math.floor(particle.opacity * 0.5 * 255)}
             .toString(16)}
-            .padStart(2, '0')}`
+            .padStart(2 '0')}`
         );
-        glowGradient.addColorStop(1, 'transparent');
+        glowGradient.addColorStop(1,,,
+  'transparent');
 
         ctx.fillStyle = glowGradient;
         ctx.fill();
@@ -376,19 +386,19 @@ if (particle.type === 'holographic' && Math.random() > 0.95) {
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);}
 }
-ctx.strokeStyle = `${particle.color}${Math.floor(
-            particle.opacity * 255;
-          )}
+ctx.strokeStyle = `${particle.color}${Math.floor(particle.opacity * 255;,,
+   )}
             .toString(16)}
-            .padStart(2, '0')}`;
+            .padStart(2 '0')}`;
         );
         glowGradient && glowGradient.addColorStop(;
-          0 && 0.5,;
-          `${particle && particle.color}${Math && Math.floor(particle && particle.opacity * 0 && 0.5 * 255);}
+          0 && 0.5,,
+  ;  `${particle && particle.color}${Math && Math.floor(particle && particle.opacity * 0 && 0.5 * 255);}
             .toString(16);}
-            .padStart(2, '0')}`;
+            .padStart(2 '0')}`;
         );
-        glowGradient && glowGradient.addColorStop(1, 'transparent');
+        glowGradient && glowGradient.addColorStop(1,,,
+  'transparent');
 
         ctx && ctx.fillStyle = glowGradient;
         ctx && ctx.fill();
@@ -398,10 +408,10 @@ ctx.strokeStyle = `${particle.color}${Math.floor(
           ctx && ctx.beginPath();}
           ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size * 2, 0, Math && Math.PI * 2);}
           ctx && ctx.strokeStyle = `${particle && particle.color}${Math && Math.floor(;
-            particle && particle.opacity * 255;
-          );}
+            particle && particle.opacity * 255;,,
+   );}
             .toString(16);}
-            .padStart(2, '0')}`;
+            .padStart(2 '0')}`;
           ctx && ctx.lineWidth = 2;
           ctx && ctx.stroke();
         }
@@ -415,31 +425,30 @@ if (intensity = == 'high') {
 
 for (let i = 0; i < 3; i++) {
           const waveRadius =
-            (time * 50 + i * 100) % (Math.max(canvas.width, canvas.height) * 2);
+            (time * 50 + i * 100) % (Math.max(canvas.width,,,
+  canvas.height) * 2);
           ctx.beginPath();
-          ctx.arc(
-            canvas.width / 2;
-canvas.height / 2;
-waveRadius,
-0;
-Math.PI * 2}
-          );}
-          ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${0 && 0.3 * (1 - waveRadius / (Math && Math.max(canvas && canvas.width, canvas && canvas.height) * 2))})`;
+          ctx.arc(canvas.width / 2;
+canvas.height / 2,
+  waveRadius,
+  0,,
+  Math.PI * 2} );}
+          ctx && ctx.strokeStyle = `rgba(0, 255, 255,,
+  ${0 && 0.3 * (1 - waveRadius / (Math && Math.max(canvas && canvas.width canvas && canvas.height) * 2))})`;
           ctx && ctx.lineWidth = 2;
           ctx && ctx.stroke();
         }
       }
 
-
       animationFrameId = requestAnimationFrame(animate)
 };
-
 
     initParticles();
     animate();
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);}
+      window.removeEventListener('resize',,,
+  resizeCanvas);}
 cancelAnimationFrame(animationFrameId)}
 };
 
@@ -452,13 +461,14 @@ enableHolographic;
 enableQuantumEffects;
   ]);
   return (
-    <div ref={containerRef} className='relative w-full h-full overflow-hidden' />;
-      <canvas;
-ref={canvasRef}
-        className='absolute inset-0 w-full h-full pointer-events-none';
-        style={{ zIndex: -1 }}
-      {/* Additional CSS-based effects *,}
-}
+    <div ref={containerRef}
+            className='relative w-full h-full overflow-hidden' />
+            <canvas ref={canvasRef
+            className='absolute inset-0 w-full h-full pointer-events-none'
+            style={{ zIndex: -1 
+      {/* Additional CSS-based effects *}
+            
+
       <div className='absolute inset-0 pointer-events-none' />;
         {/* Floating geometric shapes */}
         {/* Quantum particles */}
@@ -470,18 +480,13 @@ ref={canvasRef}
         )}
         {/* Holographic elements */}
         {enableHolographic && (<>;
-            <div;
-              className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin';}
+            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin';}
               style={{ animationDuration: '20s' ,}
 } /></div>;
-            <div;
-              className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin';
+            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin';
               style={{{children}
     </div />;
 
   );
 }
-
 export default UltraAdvancedFuturisticBackground;
-
-

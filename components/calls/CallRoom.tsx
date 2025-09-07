@@ -1,13 +1,10 @@
-
-
-
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets   } from 'livekit-client';
+import React, { useCallback, useEffect, useMemo, useState,
+  from 'react';
+import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets,
+  from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
-
 export type StartMode = any;
-
 import {
   Room;
 RoomEvent,
@@ -16,7 +13,6 @@ LocalParticipant,
 createLocalTracks;}
 VideoPresets;}
   Room,RoomEvent,RemoteParticipant,LocalParticipant,createLocalTracks,VideoPresets,} from 'livekit-client';
-
 export type StartMode = 'video' | 'audio';
   projectId: string;
   userId: string;
@@ -28,8 +24,6 @@ export type StartMode = 'video' | 'audio';
 
   onLeave?: (durationSec: number) => void,
 };
-
-
 export default function CallRoom(): any ({;
   projectId,;
   userId,;
@@ -82,28 +76,36 @@ const [connectedAt, setConnectedAt] = useState<number | null />(null);
 const connect = useCallback(async () => {
    ;
   const r = new Room();
-    r.on(RoomEvent.ParticipantConnected, () => rebuild());
-    r.on(RoomEvent.ParticipantDisconnected, () => rebuild());
-    r.on(RoomEvent.ActiveSpeakersChanged, () => rebuild());
-    r.on(RoomEvent.LocalTrackPublished, () => rebuild());
-    r.on(RoomEvent.TrackSubscribed, () => rebuild());
+    r.on(RoomEvent.ParticipantConnected,,,
+  () => rebuild());
+    r.on(RoomEvent.ParticipantDisconnected,,,
+  () => rebuild());
+    r.on(RoomEvent.ActiveSpeakersChanged,,,
+  () => rebuild());
+    r.on(RoomEvent.LocalTrackPublished,,,
+  () => rebuild());
+    r.on(RoomEvent.TrackSubscribed,,,
+  () => rebuild());
     // create local tracks per start mode;
 let localTracks: any[] = [];
     if (startMode === 'video') {
 
 localTracks = await createLocalTracks({
         audio: true,}
-        video: VideoPresets.h720,}
-      });
+        video: VideoPresets.h720,
+  },,
+  });
     } else {;}
-      localTracks = await createLocalTracks({ audio: true, video: false,}
-});
+      localTracks = await createLocalTracks({ audio: true, video: false,
+  },,
+  });
     }
 
     await r.connect(serverUrl, token, {
       autoSubscribe: true}
-   ,}
-});
+   ,
+  },,
+  });
     // publish local tracks;
 setRoom(r);
     setConnectedAt(Date.now());
@@ -124,7 +126,6 @@ const list: Array<RemoteParticipant | LocalParticipant /> = [
   return $3;}
 }
 };
-
 
   useEffect(() => {
 
@@ -158,7 +159,6 @@ const durationSec = connectedAt;
     onLeave?.(durationSec)
 };
 
-
 const gridCols = useMemo(() => {
    ;
   const count = participants.length |1;
@@ -182,19 +182,22 @@ if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
           <h2 className='text-lg font-semibold' />Project Room: {projectId}</h2>
           <p className='text-xs text-gray-400' />Room {roomName}</p>
         </div>
-        <Controls room={room} onLeave={handleLeave} accent='cyan' />
+        <Controls room={room}
+            onLeave={handleLeave
+            accent='cyan' />
       </div>
-      <div className={`flex-1 p-4 grid gap-4 ${gridCols},
-} />
-        {participants.map((p, idx) => (}
-<ParticipantTile;}
-key={String((p as any).sid || (p as any).identity) + idx}
-            participant={p}
-            is_local={p instanceof LocalParticipant}
-            display_name={
-              (p as any).name ||;}
-              (p instanceof LocalParticipant ? 'You' : undefined);}
-            }
+      <div className={`flex-1 p-4 grid gap-4 ${gridCols
+            
+ />
+        {participants.map((p
+             ,
+  idx) => (
+<ParticipantTile key={String((p as any).sid || (p as any).identity) + idx}
+            participant={p
+            is_local={p instanceof LocalParticipant display_name={
+              (p as any).name ||
+            (p instanceof LocalParticipant ? 'You' : undefined)}
+             
 
           />
         ))}
@@ -202,4 +205,3 @@ key={String((p as any).sid || (p as any).identity) + idx}
     </div>
   );
 }
-

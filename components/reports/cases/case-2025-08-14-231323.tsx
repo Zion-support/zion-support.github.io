@@ -1,31 +1,28 @@
-
-export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
-        <title />Case Study — Trigger Homepage</title>;import Head from 'next/head';
-
-export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
+export default function Page() {export default function Page() {return (
+    <div className='min-h-screen bg-slate-950 text-white' />;
       <Head />;
         <title />Case Study — Trigger Homepage</title>;
-        <meta;
-          name='description';
+import Head from 'next/head';
+export default function Page() {return (
+    <div className='min-h-screen bg-slate-950 text-white' />;
+      <Head />;
+        <title />Case Study — Trigger Homepage</title>;
+        <meta name='description';
           content='Pragmatic case scenario inspired by live site signals.';
         />;
         <meta property='og:title' content='Case Study — Trigger Homepage' />;
-        <meta;
-          property='og:description';
+        <meta property='og:description';
           content='Pragmatic case scenario inspired by live site signals.';
 
   return (
     <div className='min-h-screen bg-slate-950 text-white' />;
       <Head />;
         <title />Case Study — Trigger Homepage</title>;
-        <meta;
-name='description'
+        <meta name='description'
           content='Pragmatic case scenario inspired by live site signals.'
         />;
         <meta property='og:title' content='Case Study — Trigger Homepage' />;
-        <meta;
-property='og:description'
+        <meta property='og:description'
           content='Pragmatic case scenario inspired by live site signals.'
         />;
         <meta name='twitter:card' content='summary_large_image' />;
@@ -34,8 +31,7 @@ property='og:description'
         <h1 className='text-3xl font-extrabold' />;
           Case Study — Trigger Homepage;
         </h1>;
-        <div;
-          className='mt-4';}
+        <div className='mt-4';}
           dangerouslySetInnerHTML={{__html:;}
               '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>','<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>','<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>'}}
         />;
@@ -46,12 +42,13 @@ property='og:description'
     </div>;"
   )export default function Page() {'<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>';"
               '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>';
-        <div;
-className='mt-4'
+        <div className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
 "
-              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>',;}
+              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability}
+            and faster iteration speed.</p>'
+            ;
 }
           }}
         />;
@@ -59,18 +56,18 @@ className='mt-4'
           Auto-generated by Cloud Deep Research Factory.;
         </p>;
       </main>;"
-  )export default function Page() {return (export default function Page() {return (export default function Page() {export default function Page() {</div>;)export default function Page() {return (return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
+  )export default function Page() {return (export default function Page() {return (export default function Page() {export default function Page() {</div>;)export default function Page() {return (return (
+    <div className=\"min-h-screen bg-slate-950 text-white\" />;
       <Head />;
         <title />Case Study — Trigger Homepage</title>;
 import Head from 'next / head';
-
 export default /**;
  * Page - Function description;
  */;
-function Page() {return (<div className='min - h-screen bg - slate - 950 text - white' />;
+function Page() {return (
+    <div className='min - h-screen bg - slate - 950 text - white' />;
     </div>;
   );
-
 export default function Page() {;
 
 "
@@ -83,7 +80,6 @@ export default function Page() {;
         </p>
       </main>
   );
-
 export default function Page() {
   return (
 
@@ -94,7 +90,6 @@ export default function Page() {
     <div className=\"min-h-screen bg-slate-950 text-white\" />;
       <Head />;
         <title />Case Study — Trigger Homepage</title>;
-
 export default /**
  * Page - Function description;
  */
@@ -103,13 +98,11 @@ function Page() {
     <div className='min - h-screen bg - slate - 950 text - white' />;
       <Head />;
         <title  /> Case Study — Trigger Homepage</title>;
-        <meta;
-          name='description';
+        <meta name='description';
           content='Pragmatic case scenario inspired by live site signals.';
         />;
         <meta property='og:title' content='Case Study — Trigger Homepage' />;
-        <meta;
-          property='og:description';
+        <meta property='og:description';
           content='Pragmatic case scenario inspired by live site signals.';
         />;
         <meta name='twitter:card' content='summary_large_image' />;
@@ -118,15 +111,17 @@ function Page() {
         <h1 className='text - 3xl font - extrabold' />;
           Case Study — Trigger Homepage;
         </h1>;
-        <div;
-          className='mt - 4';
+        <div className='mt - 4';
           dangerouslySetInnerHTML={{__html:;"
               '<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / automation</a></p><h2  /> Scenario</h2><p  /> Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2  /> Approach</h2><ul /><li  /> Baseline metrics</li><li  /> Iterative improvements</li><li  /> Risk management</li></ul><h2  /> Results</h2><p  /> Lower latency, higher reliability, and faster iteration speed.</p>';"
-              '<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / automation</a></p><h2  /> Scenario</h2><p  /> Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2  /> Approach</h2><ul /><li  /> Baseline metrics</li><li  /> Iterative improvements</li><li  /> Risk management</li></ul><h2  /> Results</h2><p  /> Lower latency, higher reliability, and faster iteration speed.</p>';
-          dangerouslySetInnerHTML={{
-            __html:;}"
-              '<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / automation</a></p><h2  /> Scenario</h2><p  /> Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2  /> Approach</h2><ul /><li  /> Baseline metrics</li><li  /> Iterative improvements</li><li  /> Risk management</li></ul><h2  /> Results</h2><p  /> Lower latency, higher reliability, and faster iteration speed.</p>'}
-          }}
+              '<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / automation</a></p><h2  /> Scenario</h2><p  /> Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2  /> Approach</h2><ul /><li  /> Baseline metrics</li><li  /> Iterative improvements</li><li  /> Risk management</li></ul><h2  /> Results</h2><p  /> Lower latency, higher reliability}
+            and faster iteration speed.</p>'
+            dangerouslySetInnerHTML={{
+            __html:
+            "
+              '<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / automation</a></p><h2  /> Scenario</h2><p  /> Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2  /> Approach</h2><ul /><li  /> Baseline metrics</li><li  /> Iterative improvements</li><li  /> Risk management</li></ul><h2  /> Results</h2><p  /> Lower latency, higher reliability}
+            and faster iteration speed.</p>'
+          
         />;
         <p className='mt - 6 text - white / 60 text - sm' />;
           Auto - generated by Cloud Deep Research Factory.;
@@ -135,7 +130,8 @@ function Page() {
     </div>)export default /**;
  * Page - Function description;
  */;"
-function Page() {return (<div className=\"min - h-screen bg - slate - 950 text - white\" />;
+function Page() {return (
+    <div className=\"min - h-screen bg - slate - 950 text - white\" />;
       <Head />;"
         <title  /> Case Study — Trigger Homepage</title>;<meta name=\"description\" content=\"Pragmatic case scenario inspired by live site signals.\" />;"
         <meta property=\"og:title\" content=\"Case Study — Trigger Homepage\" />;"
@@ -144,7 +140,8 @@ function Page() {return (<div className=\"min - h-screen bg - slate - 950 text -
       </Head>;}}"
       <main className=\"container mx - auto px - 6 py - 12 prose prose - invert\" />;"
         <h1 className=\"text - 3xl font - extrabold\" />Case Study  Trigger Homepage</h1>;"
-        <div className=\"mt - 4\" dangerouslySetInnerHTML={{ __html: \"<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / automation</a></p><h2  /> Scenario</h2><p  /> Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2  /> Approach</h2><ul /><li  /> Baseline metrics</li><li  /> Iterative improvements</li><li  /> Risk management</li></ul><h2  /> Results</h2><p  /> Lower latency, higher reliability, and faster iteration speed.</p>\" }} />;"
+        <div className=\"mt - 4\" dangerouslySetInnerHTML={{ __html: \"<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / automation</a></p><h2  /> Scenario</h2><p  /> Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2  /> Approach</h2><ul /><li  /> Baseline metrics</li><li  /> Iterative improvements</li><li  /> Risk management</li></ul><h2  /> Results</h2><p  /> Lower latency, higher reliability}
+            and faster iteration speed.</p>\"  />;"
         <p className=\"mt - 6 text - white / 60 text - sm\" />Auto - generated by Cloud Deep Research Factory.</p>;
       </main>
     </div>
@@ -160,12 +157,15 @@ function Page() {return (<div className=\"min - h-screen bg - slate - 950 text -
         <h1 className='text-3xl font-extrabold' />;
           Case Study — Trigger Homepage;
         </h1>;
-        <div;
-          className='mt-4';
+        <div className='mt-4';
           dangerouslySetInnerHTML={{__html:;"
-              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>';"
-              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>';}"
-              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>';}
+              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability}
+            and faster iteration speed.</p>'
+            "
+              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability
+            and faster iteration speed.</p>'
+            "
+              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>';
           }}
         />;
         <p className='mt-6 text-white/60 text-sm' />;
@@ -174,11 +174,11 @@ function Page() {return (<div className=\"min - h-screen bg - slate - 950 text -
       </main>;
     </div>;
     </div>;"
-  )export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
+  )export default function Page() {return (export default function Page() {return (
+    <div className=\"min-h-screen bg-slate-950 text-white\" />;
       <Head />;
         <title />Case Study — Trigger Homepage</title>;
     </div>);
-
 export default /**
  * Page - Function description;
  */
@@ -195,7 +195,8 @@ function Page() {
       </Head>;"
       <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />;}"
         <h1 className=\"text-3xl font-extrabold\" />Case Study — Trigger Homepage</h1>;}"
-        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>\" }} />;"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability}
+            and faster iteration speed.</p>\"  />;"
         <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Deep Research Factory.</p>;
       </main>;
     </div>;
@@ -203,21 +204,20 @@ function Page() {
     </div>;
   )}
     </div>;"
-  )})} catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
+  )})} catch (error) {console.error(\"Error:\",,,
+  error)return res.status(500).json({ error: \"Internal server error\" })}
 })
 
 }
 "
       <main className=\"container mx - auto px - 6 py - 12 prose prose - invert\" />;"
         <h1 className=\"text - 3xl font - extrabold\" />Case Study  Trigger Homepage</h1>;"
-        <div className=\"mt - 4\" dangerouslySetInnerHTML={{ __html: \"<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / automation</a></p><h2  /> Scenario</h2><p  /> Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2  /> Approach</h2><ul /><li  /> Baseline metrics</li><li  /> Iterative improvements</li><li  /> Risk management</li></ul><h2  /> Results</h2><p  /> Lower latency, higher reliability, and faster iteration speed.</p>\" }} />;"
+        <div className=\"mt - 4\" dangerouslySetInnerHTML={{ __html: \"<p  /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / automation</a></p><h2  /> Scenario</h2><p  /> Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2  /> Approach</h2><ul /><li  /> Baseline metrics</li><li  /> Iterative improvements</li><li  /> Risk management</li></ul><h2  /> Results</h2><p  /> Lower latency, higher reliability}
+            and faster iteration speed.</p>\"  />;"
         <p className=\"mt - 6 text - white / 60 text - sm\" />Auto - generated by Cloud Deep Research Factory.</p>;
       </main>;
     </div>);
 }
-
-
-
 
       <Head />
         <title />Case Study — Trigger Homepage</title>
@@ -230,12 +230,13 @@ function Page() {
         <h1 className='text-3xl font-extrabold' />
           Case Study — Trigger Homepage;
         </h1>
-        <div;
-className='mt-4'
+        <div className='mt-4'
           dangerouslySetInnerHTML={{
             __html:"
-              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>'}"
-              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>'}
+              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability}
+            and faster iteration speed.</p>'"
+              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability
+            and faster iteration speed.</p>'
           }}
         />
         <p className='mt-6 text-white/60 text-sm' />
@@ -245,7 +246,6 @@ className='mt-4'
     </div>
     </div>;
   );
-
 export default function Page() {
   return (
 
@@ -261,7 +261,8 @@ export default function Page() {
       </Head>"
       <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />}"
         <h1 className=\"text-3xl font-extrabold\" />Case Study — Trigger Homepage</h1>}"
-        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability, and faster iteration speed.</p>\" }} />"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Scenario</h2><p />Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 />Approach</h2><ul /><li />Baseline metrics</li><li />Iterative improvements</li><li />Risk management</li></ul><h2 />Results</h2><p />Lower latency, higher reliability}
+            and faster iteration speed.</p>\"  />"
         <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Deep Research Factory.</p>
       </main>
 
@@ -274,9 +275,10 @@ export default function Page() {
 
   )
   } catch (error) {"
-    console.error(\"Error:\", error);}"
-    return res.status(500).json({ error: \"Internal server error\"}
-});
+    console.error(\"Error:\",,,
+  error);}"
+    return res.status(500).json({ error: \"Internal server error\"},,
+  });
   }
 }
 ;

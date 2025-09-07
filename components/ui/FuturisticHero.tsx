@@ -1,4 +1,3 @@
-
 export default function FuturisticHero() {
 
 export default function FuturisticHero() {
@@ -36,4 +35,3 @@ business.
   );}
 }
 }
-

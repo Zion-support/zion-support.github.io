@@ -1,14 +1,12 @@
 import Head from 'next/head';
-
-import { useRouter  } from 'next/router';
-import { getServiceById  } from '../../data/micro-saas-services';
+import { useRouter from 'next/router';
+import { getServiceById,
+  from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail';,
 import Button from '../../components/ui/Button';
-
 export default function ServiceDetailPage() {
 
 export default function ServiceDetailPage() {;
-
 export default function ServiceDetailPage() {
 
 if (!id || typeof id !== 'string') {
@@ -54,8 +52,7 @@ const service = getServiceById(id);
       <Head />
         <title />{service.name} | Zion Tech Group - Micro SaaS Services</title>
 <meta name='description' content={service.description} />
-        <meta;
-property='og: title'
+        <meta property='og: title'
 
           content={`${service.name} | Zion Tech Group
 }
@@ -70,8 +67,7 @@ property='og: title'
         <nav className='border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50' />
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />
             <div className='flex items-center justify-between h-16' />
-              <Button;
-href='/services'
+              <Button href='/services'
                 variant='ghost'
                 size='sm'
 
@@ -80,8 +76,7 @@ href='/services'
                 <ArrowLeft className='w-4 h-4 mr-2' />
                 Back to Services;
               </Button>
-              <Button;
-href={service.websit}
+              <Button href={service.websit}
 }
 variant='primary';
                 size='sm';
@@ -115,15 +110,13 @@ variant='primary';
               perfect solution for your business needs.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center' />;
-              <Button;
-                href='/services';
+              <Button href='/services';
                 variant='primary';
                 size='lg';
                 className='shadow-2xl shadow-blue-500/25' />;
                 View All Services;
               </Button>;
-              <Button;
-                href='/contact';
+              <Button href='/contact';
                 variant='outline';
                 size='lg';
         {/* Related Services CTA */}
@@ -137,16 +130,14 @@ variant='primary';
 perfect solution for your business needs.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center' />
-              <Button;
-href='/services'
+              <Button href='/services'
                 variant='primary'
                 size='lg'
                 className='shadow-2xl shadow-blue-500/25'
                />
                 View All Services;
               </Button>
-              <Button;
-href='/contact'
+              <Button href='/contact'
                 variant='outline'
                 size='lg'
 

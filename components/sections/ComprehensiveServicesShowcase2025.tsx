@@ -1,35 +1,33 @@
-
-
-
 import React from 'react';
-import { motion   } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone   } from 'lucide-react';
-import { advancedAIAutomation2025   } from '../../data/advanced-ai-automation-2025';
-import { advancedCybersecurity2025   } from '../../data/advanced-cybersecurity-2025';
-import { blockchainWeb32025   } from '../../data/blockchain-web3-2025';
-import { iotEdgeComputing2025   } from '../../data/iot-edge-computing-2025';
-import { healthcareBiotech2025   } from '../../data/healthcare-biotech-2025';
-import { fintechFinancial2025   } from '../../data/fintech-financial-2025';
-import { educationElearning2025  } from '../../data/education-elearning-2025';
+import { motion from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone,
+  from 'lucide-react';
+import { advancedAIAutomation2025 from '../../data/advanced-ai-automation-2025';
+import { advancedCybersecurity2025 from '../../data/advanced-cybersecurity-2025';
+import { blockchainWeb32025 from '../../data/blockchain-web3-2025';
+import { iotEdgeComputing2025 from '../../data/iot-edge-computing-2025';
+import { healthcareBiotech2025 from '../../data/healthcare-biotech-2025';
+import { fintechFinancial2025 from '../../data/fintech-financial-2025';
+import { educationElearning2025 from '../../data/education-elearning-2025';
 
-const ComprehensiveServicesShowcase2025  = null;import { advancedAIAutomation2025  } from '../../data/advanced-ai-automation-2025';
-import { advancedCybersecurity2025  } from '../../data/advanced-cybersecurity-2025';
-import { blockchainWeb32025  } from '../../data/blockchain-web3-2025';
-import { iotEdgeComputing2025  } from '../../data/iot-edge-computing-2025';
-import { healthcareBiotech2025  } from '../../data/healthcare-biotech-2025';
-import { fintechFinancial2025  } from '../../data/fintech-financial-2025';
-
-import { educationElearning2025 } from '../../data/education-elearning-2025';
+const ComprehensiveServicesShowcase2025  = null;
+import { advancedAIAutomation2025 from '../../data/advanced-ai-automation-2025';
+import { advancedCybersecurity2025 from '../../data/advanced-cybersecurity-2025';
+import { blockchainWeb32025 from '../../data/blockchain-web3-2025';
+import { iotEdgeComputing2025 from '../../data/iot-edge-computing-2025';
+import { healthcareBiotech2025 from '../../data/healthcare-biotech-2025';
+import { fintechFinancial2025 from '../../data/fintech-financial-2025';
+import { educationElearning2025 from '../../data/education-elearning-2025';
 
 const ComprehensiveServicesShowcase2025 = null;
-import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
-import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';
-import { blockchainWeb32025 } from '../../data/blockchain-web3-2025';
-import { iotEdgeComputing2025 } from '../../data/iot-edge-computing-2025';
-import { healthcareBiotech2025 } from '../../data/healthcare-biotech-2025';
-import { fintechFinancial2025 } from '../../data/fintech-financial-2025';
-import { educationElearning2025 } from '../../data/education-elearning-2025';
-
+import { advancedAIAutomation2025 from '../../data/advanced-ai-automation-2025';
+import { advancedCybersecurity2025 from '../../data/advanced-cybersecurity-2025';
+import { blockchainWeb32025 from '../../data/blockchain-web3-2025';
+import { iotEdgeComputing2025 from '../../data/iot-edge-computing-2025';
+import { healthcareBiotech2025 from '../../data/healthcare-biotech-2025';
+import { fintechFinancial2025 from '../../data/fintech-financial-2025';
+import { educationElearning2025,
+  from '../../data/education-elearning-2025';
 
     {
       title: 'Cybersecurity & Security',
@@ -71,9 +69,7 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
   icon: Award,
       services: educationElearning2025,
       gradient: 'from-amber-600 via-yellow-600 to-orange-600'}
-  description: 'Advanced learning and educational technology'}
-    }
-  ];
+  description: 'Advanced learning and educational technology'];
 
 const containerVariants = {}
     hidden: { opacity: 0}
@@ -87,7 +83,8 @@ staggerChildren: 0.1}
   };
 
 const itemVariants = {}
-    hidden: { y: 20, opacity: 0}
+    hidden: { y: 20;
+  opacity: 0; }
 }
     visible: {
       y: 0;
@@ -116,9 +113,12 @@ duration: 0.5}
 }
 
         <motion.div;
-initial={{ opacity: 0, y: 30 }
-}
-          whileInView={{ opacity: 1, y: 0 }}
+initial={{ opacity: 0}
+            y: 30
+             
+          whileInView={{ opacity: 1}
+            y: 0
+             
           transition={{ duration: 0.8 }
 }
 
@@ -153,23 +153,19 @@ your business and drive success in the digital age.
         </motion && motion.div>;{/* Service Categories */}
         <motion&& motion.div;
           variants={containerVariants}
-
-initial='hidden'
+            initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }
-}
-
-          className='space-y-16'
+          viewport={{ once: true
+            className='space-y-16'
          />
-          {serviceCategories.map((category, categoryIndex) => (}
-            <motion.div;}
-key={category.title}
-              variants={itemVariants}
-
-className='relative'
+          {serviceCategories.map((category,
+  categoryIndex) => (
+            <motion.div}
+            key={category.title
+            variants={itemVariants className='relative'
              />
-              {/* Category Header */}
-                    {category.title}
+              {/* Category Header */
+                    {category.title
 
                   </h3>
                   <p className='text-gray-400 text-lg' />
@@ -179,13 +175,13 @@ className='relative'
                 </div>;
               </div>;"
               <div className=\"flex items-center mb-8\" />;
-                <div className={`p-3 rounded-xl bg-gradient-to-r ${category && category.gradient} mr-4`} />
+                <div className={`p-3 rounded-xl bg-gradient-to-r ${category && category.gradient mr-4` />
 "
-                  <category && category.icon className=\"w-8 h-8 text-white\" />;
-                </div>;
-                <div />;"
-                  <h3 className=\"text-3xl font-bold text-white mb-2\" />;
-                    {category && category.title}
+                  <category && category.icon className=\"w-8 h-8 text-white\" />}
+            </div>
+            <div />;"
+                  <h3 className=\"text-3xl font-bold text-white mb-2\" />
+            {category && category.title
                   </h3>;"
                   <p className=\"text-gray-400 text-lg\" />;
                     {category && category.description}
@@ -197,19 +193,20 @@ className='relative'
               {/* Services Grid */}
 
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' />
-                {category.services.map((service, serviceIndex) => (}
+                {category.services.map((service,,,
+  serviceIndex) => (}
                   <motion.div;}
 key={service.id}
-                    initial={{ opacity: 0, scale: 0.9 }
-}
-                    whileInView={{ opacity: 1, scale: 1 }
-}
-                    transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
-
-className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30'
+            initial={{ opacity: 0 scale: 0.9
+            whileInView={{ opacity: 1}
+            scale: 1
+             
+                    transition={{ duration: 0.5
+            delay: serviceIndex * 0.1
+            className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30'
                    />
 
-                    {/* Service Header *}
+                    {/* Service Header *
 }
                     <div className='mb-4' />;
                       <h4 className='text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors' />;
@@ -233,7 +230,6 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                     </div>;{/* Features */}<p className='text-gray-400 text-sm leading-relaxed' />                        {service.description}{service.description}</p>;
                     </div>;
 
-
                     {/* Features */}
 
                       <p className='text-gray-400 text-sm leading-relaxed' />                        {service.description}
@@ -250,28 +246,26 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                       </h5>
                       <ul className='space-y-1' />
                         {service.features;
-                          ?.slice(0, 3)
-                          .map((feature, featureIndex) => (}
-                            <li;}
-key={featureIndex}
-                              className='flex items-center text-xs text-gray-400' />
+                          ?.slice(0,,,
+  3)
+                          .map((feature,,,
+  featureIndex) => (}
+                            <li key={featureIndex}
+            className='flex items-center text-xs text-gray-400' />
 
-                              <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />;
-                              {feature}
-                            </li>;
-                          ))}
+                              <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />
+            {feature
+                            </li>
+            ))
 
                         {service.features && service.features.length > 3 && (}
                           <li className='text-xs text-gray-500 italic' />}
-                            +{service.features.length - 3} more features;
+                            +{service.features.length - 3,
+  more features;
                           </li>
                         )}
                       </ul>
                     </div>
-
-
-
-
 
                     {/* Pricing */}
 
@@ -314,60 +308,62 @@ key={featureIndex}
                       </h5>;
                       <div className='flex flex-wrap gap-1' />;
                         {service.useCases;}
-                          ?.slice(0, 3).map((useCase, useCaseIndex) => (<span;}
-                              key={useCaseIndex}
-                              className='px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-full' />
+                          ?.slice(0,,,
+  3).map((useCase,,,
+  useCaseIndex) => (
+          <span key={useCaseIndex}
+            className='px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-full' />
 
-                              {useCase}
-                            </span>;
-                          ))}
+                              {useCase
+                            </span>
+            ))
                       </div>;
                     </div>;
                     {/* CTA Button */}
 <div className='mt-6' />;
-                      <a;
-                        href={service.link}
-
-                        className='inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover: from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'
+                      <a href={service.link}
+            className='inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover: from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'
                        />
-                        Learn More;
-                        <ArrowRight className='w-4 h-4 ml-2' />
+                        Learn More
+            <ArrowRight className='w-4 h-4 ml-2' />
                       </a>
                     </div>
 
-                    {/* Hover Effect Overlay *}
-}
+                    {/* Hover Effect Overlay *
+
 <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />;
                   </motion.div>;
-                        href={service && service.link}
-                        className='inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
+                        href={service && service.link
+            className='inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
                         Learn More;
                         <ArrowRight className='w-4 h-4 ml-2' />                      </a>;
-                    </div>;{/* Hover Effect Overlay */}
-                    <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  </motion && motion.div>                      <a;
-                        href={service && service.link}"
+                    </div>
+            {/* Hover Effect Overlay */
+                    <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  </motion && motion.div>                      <a href={service && service.link"
                         className=\"inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30\" />;
                         Learn More;"
-                        <ArrowRight className=\"w-4 h-4 ml-2\" />;
-                      </a>;
-                    </div>;{/* Hover Effect Overlay */}"
+                        <ArrowRight className=\"w-4 h-4 ml-2\" />
+            </a>
+            </div>;{/* Hover Effect Overlay */"
                     <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                    <div className=\"absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none\" />;
-                  </motion && motion.div>;
-                ))}
+                  </motion && motion.div>}
+            ))
               </div>;
             </motion && motion.div>;
           ))}
         {/* Call to Action */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 }
-}
+          initial={{ opacity: 0}
+            y: 30
+             
 
-          whileInView={{ opacity: 1, y: 0 }
-}
+          whileInView={{ opacity: 1}
+            y: 0
+             
 
-          transition={{ duration: 0.8, delay: 0.5 }
-}
-className='text-center mt-20'
+          transition={{ duration: 0.8,
+  delay: 0.5}
+            className='text-center mt-20'
          />
           <div className='bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30' />
             <h3 className='text-3xl font-bold text-white mb-4' />
@@ -375,24 +371,23 @@ className='text-center mt-20'
             </h3>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto' />
               Join thousands of businesses already leveraging our cutting-edge;
-solutions to drive innovation, efficiency, and growth.
+solutions to drive innovation, efficiency
+            and growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center' />
-              <a;
-href='https://ziontechgroup && ziontechgroup.com/contact'
+              <a href='https://ziontechgroup && ziontechgroup.com/contact'
 
                 className='inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30' />;
                 Get Started Today;
                 <Rocket className='w-5 h-5 ml-2' />;
               </a>;
 
-              <a;
-href='tel: +13024640950'
+              <a href='tel: +13024640950'
 
                 className='inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600'
                />
-                Call +1 302 464 0950;
-                <Phone className='w-5 h-5 ml-2' />
+                Call +1 302 464 0950
+            <Phone className='w-5 h-5 ml-2' />
               </a>
             </div>
           </div>
@@ -400,9 +395,7 @@ href='tel: +13024640950'
       </div>
     </section>
 )
-};
-
-
+;
 export default ComprehensiveServicesShowcase2025;
 
 "

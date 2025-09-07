@@ -1,11 +1,10 @@
 import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
+import { ArrowRightIcon,
+  from '@heroicons/react/24/outline';
 export const metadata = {
   title: 'AI Code Reviewer - Zion Tech Group',
   description: 'Professional AI code reviewer solutions for your business needs.'
 };
-
 export default function AiCodeReviewerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
@@ -18,7 +17,7 @@ export default function AiCodeReviewerPage() {
             Professional AI code reviewer services for your business needs.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
@@ -26,14 +25,14 @@ export default function AiCodeReviewerPage() {
               Tailored AI code reviewer solutions designed for your specific business requirements.
             </p>
           </div>
-          
+
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
             <p className="text-gray-300">
               Cutting-edge technology and best practices to deliver exceptional results.
             </p>
           </div>
-          
+
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
             <p className="text-gray-300">

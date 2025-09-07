@@ -1,8 +1,7 @@
-
-
 import fs from 'fs';,
 import path from 'path';
-import { TALENT_PROFILES } from '../../data/talent';
+import { TALENT_PROFILES,
+  from '../../data/talent';
 
 type TalentSummary = any;
   return (
@@ -12,9 +11,10 @@ type TalentSummary = any;
       <div className=\"text-xs text-gray-500\" />Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>"
       <div className=\"grid grid-cols-1 gap-4\" />
         {TALENT_PROFILES.map(t => (}"
-          <div key={t.slug} className=\"border rounded p-4 space-y-1\" />"
-            <div className=\"font-medium\" />{t.name} — {t.title}</div>"
-            <div className=\"text-sm text-gray-700\" />{map.get(t.slug) |'No AI summary yet.'}</div>
+          <div key={t.slug}
+            className=\"border rounded p-4 space-y-1\" />"
+            <div className=\"font-medium\" />{t.name — {t.title</div>",,
+  <div className=\"text-sm text-gray-700\" />{map.get(t.slug) |'No AI summary yet.'}</div>
           </div>
         )
 }

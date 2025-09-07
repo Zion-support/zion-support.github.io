@@ -1,12 +1,8 @@
-
-
 import React from 'react';
 import Link from 'next/link';
-
 export default function AutomationsPage() {
   return (
-            <a;
-href='https://github.com/Zion-Holdings/zion.app/actions'
+            <a href='https://github.com/Zion-Holdings/zion.app/actions'
               target='_blank'
               rel='noreferrer'
 
@@ -16,7 +12,6 @@ href='https://github.com/Zion-Holdings/zion.app/actions'
             </a>
           </div>
         </div>
-
 
 <div className='rounded-xl border border-gray-200 bg-white p-6 shadow-sm' />
           <h2 className='text-lg font-semibold text-gray-900' />
@@ -38,5 +33,3 @@ experiments), committed into the repository.
     </main>}
   );}
 }
-
-

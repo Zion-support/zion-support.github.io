@@ -1,6 +1,6 @@
 'use client';
-
-import React, { useState } from 'react';
+import React, { useState,
+  from 'react';
 import { 
   EnvelopeIcon,
   PhoneIcon,
@@ -9,7 +9,6 @@ import {
   CheckCircleIcon,}
   ExclamationTriangleIcon}
 } from '@heroicons/react/24/outline';
-
 export default function ContactForm() {
 
   const [formData, setFormData] = useState({
@@ -19,8 +18,8 @@ export default function ContactForm() {
   service: '',
     budget: '',
   message: ''}
-  }
-});
+  },,
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -31,19 +30,21 @@ export default function ContactForm() {
 }
 } = e.target;
     setFormData(prev => ({
-      ...prev,}
-      [name]: value}
-    }));
+      ...prev,
+  }
+      [name]: value},,
+  }));
   };
 
   const handleSubmit = async (e: React.FormEvent)  => {
 
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission;
 try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve,,,
+  2000));
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -52,8 +53,8 @@ try {
   service: '',
         budget: '',
   message: ''}
-      }
-});
+      },,
+  });
     } catch {}
       setSubmitStatus('error');}
     } finally {}
@@ -81,7 +82,7 @@ try {
             <h2 className=\"text-2xl font-semibold text-gray-900 mb-6\" />
               Contact Information;
             </h2>
-            
+
             <div className=\"space-y-4\" />
               <div className=\"flex items-center space-x-3\" />
                 <PhoneIcon className=\"w-5 h-5 text-blue-600\" />
@@ -90,7 +91,7 @@ try {
                   <p className=\"text-gray-600\" />+1 302 464 0950</p>
                 </div>
               </div>
-              
+
               <div className=\"flex items-center space-x-3\" />
                 <EnvelopeIcon className=\"w-5 h-5 text-blue-600\" />
                 <div />
@@ -98,7 +99,7 @@ try {
                   <p className=\"text-gray-600\" />kleber@ziontechgroup.com</p>
                 </div>
               </div>
-              
+
               <div className=\"flex items-center space-x-3\" />
                 <MapPinIcon className=\"w-5 h-5 text-blue-600\" />
                 <div />
@@ -106,7 +107,7 @@ try {
                   <p className=\"text-gray-600\" />364 E Main St STE 1008 < br />Middletown DE 19709</p>
                 </div>
               </div>
-              
+
               <div className=\"flex items-center space-x-3\" />
                 <ClockIcon className=\"w-5 h-5 text-blue-600\" />
                 <div />
@@ -159,35 +160,34 @@ try {
               </div>}
             )}
 
-            <form onSubmit={handleSubmit} className=\"space-y-6\" />
+            <form onSubmit={handleSubmit,
+  className=\"space-y-6\" />
               <div className=\"grid grid-cols-1 sm:grid-cols-2 gap-4\" />
                 <div />
                   <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-700 mb-2\" />
                     Full Name *
                   </label>
-                  <input;
-type=\"text\"
+                  <input type=\"text\"
                     id=\"name\"
                     name=\"name\"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required;
+                    value={formData.name,
+  onChange={handleInputChange,
+  required;
 className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
                     placeholder=\"Your full name\"
                   />
                 </div>
-                
+
                 <div />
                   <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\" />
                     Email Address *
                   </label>
-                  <input;
-type=\"email\"
+                  <input type=\"email\"
                     id=\"email\"
                     name=\"email\"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required;
+                    value={formData.email,
+  onChange={handleInputChange,
+  required;
 className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
                     placeholder=\"your.email@example.com\"
                   />
@@ -198,27 +198,25 @@ className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:o
                 <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\" />
                   Company Name;
                 </label>
-                <input;
-type=\"text\"
+                <input type=\"text\"
                   id=\"company\"
                   name=\"company\"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
+                  value={formData.company,
+  onChange={handleInputChange,
+  className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
                   placeholder=\"Your company name\"
                 />
               </div>
 
               <div />
                 <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\" />
-                  Service Interest;
-                </label>
-                <select;
-id=\"service\"
+                  Service Interest}
+            </label>
+                <select id=\"service\"
                   name=\"service\"
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
+                  value={formData.service
+            onChange={handleInputChange
+            className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
                  />
                   <option value=\"\" />Select a service</option>
                   <option value=\"ai-ml\" />AI & Machine Learning</option>
@@ -234,14 +232,13 @@ id=\"service\"
 
               <div />
                 <label htmlFor=\"budget\" className=\"block text-sm font-medium text-gray-700 mb-2\" />
-                  Project Budget;
-                </label>
-                <select;
-id=\"budget\"
+                  Project Budget
+            </label>
+                <select id=\"budget\"
                   name=\"budget\"
-                  value={formData.budget}
-                  onChange={handleInputChange}
-                  className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
+                  value={formData.budget,
+  onChange={handleInputChange,
+  className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
                  />
                   <option value=\"\" />Select budget range</option>
                   <option value=\"under-10k\" />Under $10,000</option>
@@ -257,26 +254,25 @@ id=\"budget\"
                 <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\" />
                   Project Details *
                 </label>
-                <textarea;
-id=\"message\"
+                <textarea id=\"message\"
                   name=\"message\"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required;
-rows={5}
-                  className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
-                  placeholder=\"Tell us about your project, goals, and any specific requirements...\"
+                  value={formData.message,
+  onChange={handleInputChange}
+            required
+            rows={5
+            className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500\"
+                  placeholder=\"Tell us about your project, goals
+            and any specific requirements...\"
                 />
               </div>
 
-              <button;
-type=\"submit\"
-                disabled={isSubmitting}
-                className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
-                  isSubmitting;
-                    ? 'bg-gray-400 cursor-not-allowed'}
-                    : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'}
-                } transition-colors`}
+              <button type=\"submit\"
+                disabled={isSubmitting
+            className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
+                  isSubmitting
+            ? 'bg-gray-400 cursor-not-allowed'
+                    : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
+                 transition-colors`
                />
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>

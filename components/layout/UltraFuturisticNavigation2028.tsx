@@ -1,7 +1,6 @@
 import Link from 'next/link';
-
-import { motion, AnimatePresence } from 'framer-motion';
-
+import { motion, AnimatePresence,
+  from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
@@ -45,9 +44,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'AI Healthcare Diagnosis Platform',
   href: '/ai-healthcare-diagnosis-platform',
         description: 'Revolutionary medical diagnosis'}
-  price: '$3,999/month'}
-      }
-    ]
+  price: '$3,999/month']
   },
   {
     title: '🏙️ Smart City & Infrastructure',
@@ -77,9 +74,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'Autonomous Manufacturing AI',
   href: '/autonomous-manufacturing-ai',
         description: 'Self-optimizing factories'}
-  price: '$6,999/month'}
-      }
-    ]
+  price: '$6,999/month']
   },
   {
     title: '⚛️ Quantum & Advanced Tech',
@@ -109,9 +104,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'Quantum Internet Protocol',
   href: '/quantum-internet-protocol',
         description: 'Next-generation internet'}
-  price: '$5,999/month'}
-      }
-    ]
+  price: '$5,999/month']
   },
   {
     title: '🤖 AI & Machine Learning',
@@ -141,9 +134,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'AI Legal Research Platform',
   href: '/ai-legal-research-platform',
         description: 'Intelligent legal research'}
-  price: '$2,999/month'}
-      }
-    ]
+  price: '$2,999/month']
   },
   {
     title: '⛓️ Blockchain & Web3',
@@ -174,9 +165,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'NFT Marketplace Platform',
   href: '/nft-marketplace-platform',
         description: 'Complete NFT ecosystem'}
-  price: '$2,999/month'}
-      }
-    ]
+  price: '$2,999/month']
   },
   {
     title: '🚗 Autonomous & Mobility',
@@ -206,9 +195,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'Mobility as a Service Platform',
   href: '/mobility-as-a-service',
         description: 'Integrated mobility solutions'}
-  price: '$1,999/month'}
-      }
-    ]
+  price: '$1,999/month']
   },
   {
     title: '🏥 Healthcare & Biotech',
@@ -238,9 +225,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'Medical Imaging AI',
   href: '/medical-imaging-ai',
         description: 'Advanced diagnostic imaging'}
-  price: '$3,999/month'}
-      }
-    ]
+  price: '$3,999/month']
   },
   {
     title: '🎓 Education & Training',
@@ -271,9 +256,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'Language Learning AI',
   href: '/language-learning-ai',
         description: 'AI-powered language acquisition'}
-  price: '$1,299/month'}
-      }
-    ]
+  price: '$1,299/month']
   },
   {
     title: '⚖️ Legal & Compliance',
@@ -303,9 +286,7 @@ color: 'from-violet-600 to-purple-600',
         name: 'Regulatory Change Tracker',
   href: '/regulatory-change-tracker',
         description: 'Monitor regulatory updates'}
-  price: '$1,499/month'}
-      }
-    ]
+  price: '$1,499/month']
   },
   {
     title: '🌍 Sustainability & Green Tech',
@@ -335,11 +316,8 @@ color: 'from-violet-600 to-purple-600',
         name: 'Sustainable Supply Chain',
   href: '/sustainable-supply-chain',
         description: 'Green supply chain solutions'}
-  price: '$3,999/month'}
-      }
-    ]
-  }
-];
+  price: '$3,999/month']
+  ];
 
 const companyLinks = [
   { name: '🏠 Home'}
@@ -372,9 +350,7 @@ const companyLinks = [
   href: '/contact', icon: MessageCircle}
 },
 { name: '🔒 Support'}
-  href: '/support', icon: ShieldCheck}
-}
-];
+  href: '/support', icon: ShieldCheck];
 
 const resourceLinks = [
   { name: '📖 Documentation'}
@@ -399,10 +375,7 @@ const resourceLinks = [
   href: '/security', icon: Shield}
 },
 { name: '📊 Analytics'}
-  href: '/analytics', icon: BarChart3}
-}
-];
-
+  href: '/analytics', icon: BarChart3];
 export default function UltraFuturisticNavigation2028() {
 export default function UltraFuturisticNavigation2028() {;
 
@@ -456,7 +429,6 @@ setActiveCategory(categoryTitle),) => {
 }
 };
 
-
 const handleCategoryLeave = (
     setActiveCategory(null);) => {
   return $3;}
@@ -465,8 +437,8 @@ const handleCategoryLeave = (
 
 const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(
-      service =>
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service =>,,
+  service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
@@ -492,22 +464,18 @@ const filteredServices = serviceCategories.flatMap(category =>
               </div>;
             </div>;
             <div className='flex items-center space-x-4' />;
-              <a;
-                href={contactInfo.website}
-
-                className='text-purple-300 hover: text-white transition-colors'
+              <a href={contactInfo.website}
+            className='text-purple-300 hover: text-white transition-colors'
                />
 
-                {contactInfo.websit}
-}
+                {contactInfo.websit
+
               </a>;
             </div>;
           </div>;
         </div>;
-      </div>;
-
-
-      {/* Main Navigation */}
+      </div>
+            {/* Main Navigation */
 
 <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />
         <div className='flex items-center justify-between h-20' />
@@ -548,42 +516,43 @@ const filteredServices = serviceCategories.flatMap(category =>
               <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0' />;
                 <div className='p-6' />;
                   <div className='grid grid-cols-3 gap-6' />;
-                    {serviceCategories && serviceCategories.slice(0, 6).map(category => (<div key={category && category.title} className='space-y-3' />;
+                    {serviceCategories && serviceCategories.slice(0,,,
+  6).map(category => (
+          <div key={category && category.title}
+            className='space-y-3' />;
                         <div className='flex items-center space-x-3' />;
-                          <category&& category.icon;
-                            className={`w-6 h-6 bg-gradient-to-r ${category && category.color} bg-clip-text text-transparent`}
-                          />;
-                          <h3 className='font-semibold text-white' />;
-                            {category && category.title}
+                          <category&& category.icon
+            className={`w-6 h-6 bg-gradient-to-r ${category && category.color bg-clip-text text-transparent`
+                          />
+            <h3 className='font-semibold text-white' />
+            {category && category.title
                           </h3>;
                         </div>;
-                        <p className='text-sm text-purple-300' />;
-                          {category && category.description}
-                        </p>;
-                        <div className='space-y-2' />;
-
-                          {category && category.services.slice(0, 2).map(service => (;}
-                            <Link;}
-key={service.name}
-                              href={service.href}
-                              className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors group' />
+                        <p className='text-sm text-purple-300' />}
+            {category && category.description
+                        </p>,
+  <div className='space-y-2' />,
+  {category && category.services.slice(0,,,
+  2).map(service => (;}
+                            <Link key={service.name}
+            href={service.href className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors group' />
 
                               <div className='flex items-center justify-between' />;
                                 <div />;
-                                  <h4 className='text-sm font-medium text-white group-hover:text-purple-300 transition-colors' />;
-                                    {service.name}
-                                  </h4>;
-                                  <p className='text-xs text-purple-300' />;
-                                    {service.description}
-                                  </p>;
-                                </div>;
-                                <span className='text-xs text-purple-400 font-medium' />;
-                                  {service.price}
+                                  <h4 className='text-sm font-medium text-white group-hover:text-purple-300 transition-colors' />
+            {service.name
+                                  </h4>
+            <p className='text-xs text-purple-300' />
+            {service.description
+                                  </p>}
+            </div>,
+  <span className='text-xs text-purple-400 font-medium' />
+            {service.price
 
                                 </span>
                               </div>
-                            </Link>
-                          ))}
+                            </Link>,,
+   ))}
                         </div>;
                       </div>;
                     ))}
@@ -594,8 +563,7 @@ key={service.name}
                       <p className='text-purple-300' />
                         Explore all our cutting-edge services;
                       </p>
-                      <Link;
-href='/services'
+                      <Link href='/services'
                         className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
                        />
                         View All Services;
@@ -610,60 +578,57 @@ href='/services'
             {/* Search */}
             <div className='relative' />;
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />;
-              <input;
-                type='text';
+              <input type='text';
                 placeholder='Search services...';
                 value={searchQuery}
-                onChange={e = /> setSearchQuery(e && e.target.value)}
-                className='w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />            {/* Search *}
-}
+            onChange={e = /> setSearchQuery(e && e.target.value)
+                className='w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />            {/* Search *
+
             <div className=\"relative\" />;"
-              <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400\" />;
+              <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400\" />}
+            {/* Company Links */
 
-            {/* Company Links */}
+{companyLinks.slice(1,,,
+  5).map(link => (}
+              <Link key={link.name}
+            href={link.href
+            className='text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2' />
 
-{companyLinks.slice(1, 5).map(link => (}
-              <Link;}
-key={link.name}
-                href={link.href}
-                className='text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2' />
-
-                <link.icon className='w-4 h-4' />;
-                <span />{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}
+                <link.icon className='w-4 h-4' />}
+            <span />{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g '').trim()
                 </span>;
-              </Link>;
-            ))}
+              </Link>
+            ))
           </div>;
-          {/* Search and Actions */}
+          {/* Search and Actions */
 <div className='hidden lg:flex items-center space-x-4' />;
             {/* Search */}
             <div className='relative' />;
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />;
-              <input;
-                type='text';
+              <input type='text';
                 placeholder='Search services...';
                 value={searchQuery}
-                onChange={e = /> setSearchQuery(e.target.value)}
+            onChange={e = /> setSearchQuery(e.target.value)
                 className='w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
               />;
-            </div>;
-            {/* CTA Button */}
-            <Link;
-href='/contact';
+            </div>
+            {/* CTA Button */
+            <Link href='/contact';
               className='px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25' />
 
               Get Started;
-            </Link>;
-          </div>;
-          {/* Mobile Menu Button */}
-<div className='lg:hidden' />;
-            <button;
-              onClick={toggleMenu}
-              className='text-purple-200 hover:text-white transition-colors p-2' />
+            </Link>
+            </div>
+            {/* Mobile Menu Button */
+<div className='lg:hidden' />}
+            <button onClick={toggleMenu
+            className='text-purple-200 hover:text-white transition-colors p-2' />
 
-              {isOpen ? (<X className='w-6 h-6' />;}
-              ) : (<Menu className='w-6 h-6' />;}
-              )}
+              {isOpen ? (
+          <X className='w-6 h-6' />
+            ) : (
+          <Menu className='w-6 h-6' />
+            )
 
             </button>
           </div>
@@ -672,13 +637,18 @@ href='/contact';
 
       {/* Mobile Menu */}
       <AnimatePresence />;
-        {isOpen && (<motion&& motion.div;}
-            initial={{ opacity: 0, height: 0 }
-}
-            animate={{ opacity: 1, height: 'auto' }
-}
+        {isOpen && (
+          <motion&& motion.div;}
+            initial={{ opacity: 0}
+            height: 0
+             
+            animate={{ opacity: 1}
+            height: 'auto' 
 
-            exit={{ opacity: 0, height: 0 }}
+
+            exit={{ opacity: 0}
+            height: 0
+             
 
 className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
            />
@@ -687,50 +657,46 @@ className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
 }
               <div className='relative' />;
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />;
-                <input;
-type='text'
+                <input type='text'
                   placeholder='Search services...'
                   value={searchQuery}
-
-                  onChange={e = /> setSearchQuery(e.target.value)}
+            onChange={e = /> setSearchQuery(e.target.value)
                   className='w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
                 />
               </div>
-              {/* Mobile Service Categories */}
+              {/* Mobile Service Categories */
 <div className='space-y-4' />
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2' />
-                  Services;
-                </h3>
-                {serviceCategories.map(category => (}
-                  <div key={category.title} className='space-y-2' />
+                  Services
+            </h3>
+                {serviceCategories.map(category => (
+                  <div key={category.title}
+            className='space-y-2' />
                     <div className='flex items-center space-x-3 text-purple-200' />
                       <category.icon className='w-5 h-5' />
-                      <span className='font-medium' />{category.title}</span>
+                      <span className='font-medium' />{category.title</span>
                     </div>
                     <div className='ml-8 space-y-2' />
-                      {category.services.map(service => (}
-                        <Link;}
-key={service && service.name}
-                          href={service && service.href}
-                          onClick={closeMenu}
-
-className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
+                      {category.services.map(service => (
+                        <Link key={service && service.name}
+            href={service && service.href
+            onClick={closeMenu className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
                          />
                           <h4 className='text-sm font-medium text-white' />
 
-                            {service.nam}
-}
+                            {service.nam
+
                           </h4>;
-                          <p className='text-xs text-purple-300' />;
-                            {service.description}
-                          </p>;
-                          <span className='text-xs text-purple-400 font-medium' />;
-                            {service.price}
+                          <p className='text-xs text-purple-300' />}
+            {service.description
+                          </p>,
+  <span className='text-xs text-purple-400 font-medium' />,
+  {service.price}
 
                           </span>
                         </Link>
-
-                      ))}
+,,
+   ))}
                     </div>;
                   </div>;
                 ))}
@@ -740,95 +706,96 @@ className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transiti
                   Company;
                 </h3>;
                 <div className='grid grid-cols-2 gap-4' />;
-                  {companyLinks.map(link => (<Link;}
-                      key={link.name}
-                      href={link.href}
-                      onClick={closeMenu}
-className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors' />
+                  {companyLinks.map(link => (
+          <Link key={link.name,
+  href={link.href}
+            onClick={closeMenu
+            className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors' />
 
-                      <link.icon className='w-5 h-5 text-purple-400' />;
-                      <span className='text-purple-200' />;
-                        {link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}
-                      </span>;
-                    </Link>;
-                  ))}
+                      <link.icon className='w-5 h-5 text-purple-400' />
+            <span className='text-purple-200' />,
+  {link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g '').trim()
+                      </span>}
+            </Link>
+            ))
 
                 </div>
               </div>
-              {/* Mobile CTA */}
+              {/* Mobile CTA */
 
 <div className='pt-4 border-t border-purple-500/30' />
-                <Link;
-href='/contact'
+                <Link href='/contact'
 
                   onClick={closeMenu}
-                  className='block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300' />
+            className='block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300' />
 
                   Get Started;
                 </Link>;
               </div>;
             </div>;
-          </motion.div>;
-        )}
+          </motion.div>
+            )
 
       </AnimatePresence>
 
-      {/* Search Results Dropdown */}
-      {searchQuery && filteredServices.length > 0 && (<div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50' />;
-          <div className='p-4' />;
-            <div className='space-y-2' />;}
-              {filteredServices.slice(0, 8).map(service => (<Link;}
-                  key={service.name}
-                  href={service.href}
-                  className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors' />
+      {/* Search Results Dropdown */
+      {searchQuery && filteredServices.length > 0 && (
+          <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50' />;
+          <div className='p-4' />
+            <div className='space-y-2' />;
+              {filteredServices.slice(0,,,
+  8).map(service => (
+          <Link key={service.name}
+            href={service.href className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors' />
 
                   <div className='flex items-center justify-between' />;
                     <div />;
-                      <h4 className='text-sm font-medium text-white' />;
-                        {service.name}
-                      </h4>;
-                      <p className='text-xs text-purple-300' />;
-                        {service.description}
+                      <h4 className='text-sm font-medium text-white' />
+            {service.name
+                      </h4>
+            <p className='text-xs text-purple-300' />
+            {service.description
                       </p>;
                     </div>;
-                    <span className='text-xs text-purple-400 font-medium' />;
-                      {service.price}
+                    <span className='text-xs text-purple-400 font-medium' />}
+            {service.price
                     </span>;
                   </div>;
                     </span>                  </div>;
                 </Link>;
       {/* Search Results Dropdown */}
-      {searchQuery && filteredServices && filteredServices.length > 0 && (<div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50' />;
-          <div className='p-4' />;
-            <div className='space-y-2' />;}
-              {filteredServices && filteredServices.slice(0, 8).map(service => (<Link;}
-                  key={service && service.name}
-                  href={service && service.href}
-                  className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors' />;
+      {searchQuery && filteredServices && filteredServices.length > 0 && (
+          <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50' />,
+  <div className='p-4' />,
+  <div className='space-y-2' />;}
+              {filteredServices && filteredServices.slice(0,,,
+  8).map(service => (
+          <Link key={service && service.name}
+            href={service && service.href className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors' />;
                   <div className='flex items-center justify-between' />;
                     <div />;
-                      <h4 className='text-sm font-medium text-white' />;
-                        {service && service.name}
-                      </h4>;
-                      <p className='text-xs text-purple-300' />;
-                        {service && service.description}
+                      <h4 className='text-sm font-medium text-white' />
+            {service && service.name
+                      </h4>
+            <p className='text-xs text-purple-300' />
+            {service && service.description
                       </p>;
                     </div>;
-                    <span className='text-xs text-purple-400 font-medium' />;
-                      {service && service.price}
-                    </span>                  </div>                <Link;
-                  key={service && service.name}
-                  href={service && service.href}"
-                  className=\"block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors\" />;"
-                  <div className=\"flex items-center justify-between\" />;
-                    <div />;"
-                      <h4 className=\"text-sm font-medium text-white\" />{service && service.name}</h4>;"
+                    <span className='text-xs text-purple-400 font-medium' />}
+            {service && service.price
+                    </span>                  </div>                <Link key={service && service.name}
+            href={service && service.href"
+                  className=\"block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors\" />
+            "
+                  <div className=\"flex items-center justify-between\" />
+            <div />;"
+                      <h4 className=\"text-sm font-medium text-white\" />{service && service.name</h4>;"
                       <p className=\"text-xs text-purple-300\" />{service && service.description}</p>;
                     </div>;"
-                    <span className=\"text-xs text-purple-400 font-medium\" />{service && service.price}</span>;
-                  </div>;
-                </Link>;
-              ))}
+                    <span className=\"text-xs text-purple-400 font-medium\" />{service && service.price}</span>,
+  </div>,
+  </Link>;,,
+   ))}
             </div>;
           </div>;
         </div>;

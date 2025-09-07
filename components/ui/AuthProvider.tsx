@@ -1,6 +1,5 @@
-
-
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState,
+  from 'react';
 
 type UserRole = any;
   setRole: (role: UserRole) => void;
@@ -11,9 +10,9 @@ const AuthContext = createContext<AuthContextType />({
   setRole: () => ,}
 },
 });
-
-export function AuthProvider({ children }: { children: React.ReactNode,}
-}) {
+export function AuthProvider({ children }: { children: React.ReactNode,
+  },,
+  }) {
   const [role, setRoleState] = useState<UserRole />('talent');
   useEffect(() => {
 
@@ -28,7 +27,8 @@ setRoleState(stored);}
 const setRole = (
     setRoleState(r);
 try {
-      window.localStorage.setItem('userRole', r);
+      window.localStorage.setItem('userRole',,,
+  r);
 ) => {
   return $3;}
 }
@@ -36,12 +36,13 @@ try {
 
     } catch {}
   }
-  return (<AuthContext.Provider value={{ role, setRole }} />;
+  return (
+          <AuthContext.Provider value={{ role}
+            setRole  />;
       {children}
 
     </AuthContext.Provider>
   );
-
 export function useAuth() {
   return useContext(AuthContext);
 }

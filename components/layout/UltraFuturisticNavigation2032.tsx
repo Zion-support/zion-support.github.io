@@ -1,7 +1,6 @@
 import Link from 'next/link';
-
-import { motion, AnimatePresence } from 'framer-motion';
-
+import { motion, AnimatePresence,
+  from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
@@ -140,11 +139,8 @@ color: 'from-violet-600 via-purple-600 to-indigo-600',
         name: 'Synthetic Biology Automation Platform',
   href: '/synthetic-biology-automation-platform',
         description: 'Automate biology research'}
-  price: '$3,999/month'}
-      }
-    ]
-  }
-];
+  price: '$3,999/month']
+  ];
 
 const mainNavigation = [
   { name: 'Home'}
@@ -169,9 +165,7 @@ const mainNavigation = [
   href: '/blog', icon: MessageCircle}
 },
 { name: 'Contact'}
-  href: '/contact', icon: MessageCircle}
-}
-];
+  href: '/contact', icon: MessageCircle];
 
 const companyLinks = [
     { name: 'About Us'}
@@ -194,13 +188,8 @@ const companyLinks = [
   href: '/support'}
 },
 
-
   { name: 'Status'}
-  href: '/status'}
-}
-
-];
-
+  href: '/status'];
 export default function UltraFuturisticNavigation2032() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -216,8 +205,10 @@ setIsScrolled(window.scrollY > 20)) => {
 }
 };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll',,,
+  handleScroll);
+    return () => window.removeEventListener('scroll',,,
+  handleScroll);
   }, []);
 
 const toggleMenu = () => setIsOpen(!isOpen);
@@ -233,8 +224,7 @@ const closeMenu = () => setIsOpen(false);
             <div className='flex items-center space-x-6 text-gray-300' />
               <div className='flex items-center space-x-2' />
                 <Phone className='w-4 h-4 text-cyan-400' />
-                <a;
-href={`tel:${contactInfo.mobile}`}
+                <a href={`tel:${contactInfo.mobile}`}
                   className='hover:text-cyan-400 transition-colors' />
 
                   {contactInfo.mobil}
@@ -243,8 +233,7 @@ href={`tel:${contactInfo.mobile}`}
               </div>;
               <div className='flex items-center space-x-2' />;
                 <Mail className='w-4 h-4 text-purple-400' />;
-                <a;
-                  href={`mailto: ${contactInfo.email}`}
+                <a href={`mailto: ${contactInfo.email}`}
                   className='hover:text-purple-400 transition-colors' />
 
                   {contactInfo.emai}
@@ -253,32 +242,28 @@ href={`tel:${contactInfo.mobile}`}
               </div>;
             </div>;
 <div className='flex items-center space-x-4' />;
-              <a;
-                href='https://github.com/Zion-Holdings';
+              <a href='https://github.com/Zion-Holdings';
                 target='_blank';
                 rel='noopener noreferrer';
                 className='text-gray-400 hover:text-cyan-400 transition-colors' />
 
-                <svg;
-                  className='w-5 h-5';
+                <svg className='w-5 h-5';
                   fill='currentColor';
                   viewBox='0 0 24 24' />
 
-                  <path d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z' />;
+                  <path d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z' / />;
                 </svg>;
               </a>;
-              <a;
-                href='https://linkedin.com/company/ziontechgroup';
+              <a href='https://linkedin.com/company/ziontechgroup';
                 target='_blank';
                 rel='noopener noreferrer';
                 className='text-gray-400 hover:text-cyan-400 transition-colors' />
 
-                <svg;
-                  className='w-5 h-5';
+                <svg className='w-5 h-5';
                   fill='currentColor';
                   viewBox='0 0 24 24' />
 
-                  <path d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.852-3.047-1.853 0-2.136 1.445-2.136 2.939v5.677H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z' />;
+                  <path d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.852-3.047-1.853 0-2.136 1.445-2.136 2.939v5.677H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z' / />;
                 </svg>;
               </a>;
             </div>;
@@ -286,9 +271,8 @@ href={`tel:${contactInfo.mobile}`}
         </div>;
       </div>;
       {/* Main Navigation */}
-<nav;
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled;
-            ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10';}
+<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled}
+            ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10';
             : 'bg-transparent';}
         }`} />
 
@@ -313,10 +297,9 @@ href={`tel:${contactInfo.mobile}`}
             {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8' />
               {mainNavigation.map(item => (}
-                <Link;}
-key={item.name}
-                  href={item.href}
-              {/* Services Dropdown *}
+                <Link key={item.name}
+            href={item.href
+              {/* Services Dropdown *
 }
               <div className='relative group' />;
                 <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group' />;
@@ -326,18 +309,18 @@ key={item.name}
                 </button>;
                 {/* Mega Menu */}
                 <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4' />;
-                  <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20' />;
-                    <div className='grid grid-cols-2 gap-8' />;
-                      {serviceCategories.map((category, index) => (<div key={index} className='space-y-4' />;
-                          <div className='flex items-center space-x-3' />;
-                            <div;
-                              className={`w-10 h-10 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`} />
+                  <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20' />,
+  <div className='grid grid-cols-2 gap-8' />,,
+  {serviceCategories.map((category, index) => (
+          <div key={index className='space-y-4' />}
+            <div className='flex items-center space-x-3' />
+            <div className={`w-10 h-10 bg-gradient-to-r ${category.color rounded-xl flex items-center justify-center` />
 
                               <category.icon className='w-5 h-5 text-white' />;
-                            </div>;
-                            <div />;
-                              <h3 className='text-lg font-semibold text-white' />;
-                                {category.title}
+                            </div>}
+            <div />
+            <h3 className='text-lg font-semibold text-white' />
+            {category.title
                               </h3>;
                               <p className='text-sm text-gray-400' />;
                                 {category.description}
@@ -348,11 +331,7 @@ key={item.name}
 
                           <div className='space-y-2' />
                             {category.services.map((service, serviceIndex) => (}
-                              <Link;}
-key={serviceIndex}
-                                href={service.href}
-
-className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
+                              <Link key={serviceIndex href={service.href className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
                                />
                                 <div className='flex items-center justify-between' />
                                   <div />
@@ -401,9 +380,8 @@ className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
               <Link href=\"/contact\" />;"
                 <button className=\"px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl\" />;
       {/* Main Navigation */}
-      <nav;
-        className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled;
-            ? 'bg - black / 95 backdrop - blur - xl border - b border - cyan - 500 / 20 shadow - 2xl shadow - cyan - 500 / 10';}
+      <nav className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled}
+            ? 'bg - black / 95 backdrop - blur - xl border - b border - cyan - 500 / 20 shadow - 2xl shadow - cyan - 500 / 10';
             : 'bg - transparent';}
         }`} />
 
@@ -438,14 +416,12 @@ className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
             </Link>;
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items - center space - x-8' />;
-              {main_navigation.map (item => (<Link;}
-                  key={item.name}
-                  href={item.href}
-                  className='text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 flex items - center space - x-2 group' />
+              {main_navigation.map (item => (
+          <Link key={item.name href={item.href className='text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 flex items - center space - x-2 group' />
 
-                  <item.icon className='w - 4 h - 4 group - hover:scale - 110 transition - transform' />;
-                  <span />{item.name}</span>;
-                </Link>))}
+                  <item.icon className='w - 4 h - 4 group - hover:scale - 110 transition - transform' />
+            <span />{item.name</span>}
+            </Link>))
               {/* Services Dropdown */}
               <div className='relative group' />;
                 <button className='text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 flex items - center space - x-2 group' />;
@@ -457,32 +433,29 @@ className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
                 <div className='absolute top - full left - 0 w - screen max - w-7xl transform -translate - x-1 / 2 left - 1/2 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 pt - 4' />;
                   <div className='bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl p - 8 shadow - 2xl shadow - cyan - 500 / 20' />;
                     <div className='grid grid - cols - 2 gap - 8' />;
-                      {service_categories.map ((category, index) => (<div key={index} className='space - y-4' />;
-                          <div className='flex items - center space - x-3' />;
-                            <div;
-                              className={`w - 10 h - 10 bg - gradient - to - r ${category.color} rounded - xl flex items - center justify - center`} />
+                      {service_categories.map ((category, index) => (
+          <div key={index className='space - y-4' />}
+            <div className='flex items - center space - x-3' />
+            <div className={`w - 10 h - 10 bg - gradient - to - r ${category.color rounded - xl flex items - center justify - center` />
 
                               <category.icon className='w - 5 h - 5 text - white' />;
-                            </div>;
-                            <div />;
-                              <h3 className='text - lg font - semibold text - white' />;
-                                {category.title}
+                            </div>}
+            <div />
+            <h3 className='text - lg font - semibold text - white' />
+            {category.title
                               </h3>;
                               <p className='text - sm text - gray - 400' />;
                                 {category.description}
                               </p>;
                             </div>;
                           </div>;
-                          <div className='space - y-2' />                            {category.services.map ((service, service_index) => (<Link;}
-                                key={service_index}
-                                href={service.href}
-                                className='block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - colors group'                <Link;
-                  key={item.name}
-                  href={item.href}"
+                          <div className='space - y-2' />                            {category.services.map ((service, service_index) => (
+          <Link key={service_index href={service.href
+            className='block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - colors group'                <Link key={item.name href={item.href"
                   className=\"text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 flex items - center space - x-2 group\" />
 "
-                  <item.icon className=\"w - 4 h - 4 group - hover:scale - 110 transition - transform\" />;
-                  <span />{item.name}</span>;
+                  <item.icon className=\"w - 4 h - 4 group - hover:scale - 110 transition - transform\" />}
+            <span />{item.name</span>;
                 </Link>))}
               {/* Services Dropdown */}"
               <div className=\"relative group\" />;"
@@ -495,33 +468,34 @@ className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
                 <div className=\"absolute top - full left - 0 w - screen max - w-7xl transform -translate - x-1 / 2 left - 1/2 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 pt - 4\" />;"
                   <div className=\"bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl p - 8 shadow - 2xl shadow - cyan - 500 / 20\" />;"
                     <div className=\"grid grid - cols - 2 gap - 8\" />;"
-                      {service_categories.map ((category, index) => (<div key={index} className=\"space - y-4\" />;"
-                          <div className=\"flex items - center space - x-3\" />;
-                            <div className={`w - 10 h - 10 bg - gradient - to - r ${category.color} rounded - xl flex items - center justify - center`} />
+                      {service_categories.map ((category, index) => (
+          <div key={index className=\"space - y-4\" />}
+            "
+                          <div className=\"flex items - center space - x-3\" />
+            <div className={`w - 10 h - 10 bg - gradient - to - r ${category.color rounded - xl flex items - center justify - center` />
 "
-                              <category.icon className=\"w - 5 h - 5 text - white\" />;
-                            </div>;
-                            <div />;"
-                              <h3 className=\"text - lg font - semibold text - white\" />{category.title}</h3>;"
+                              <category.icon className=\"w - 5 h - 5 text - white\" />}
+            </div>
+            <div />;"
+                              <h3 className=\"text - lg font - semibold text - white\" />{category.title</h3>;"
                               <p className=\"text - sm text - gray - 400\" />{category.description}</p>;
                             </div>;
                           </div>;"
                           <div className=\"space - y-2\" />;
-                            {category.services.map ((service, service_index) => (<Link;}
-                                key={service_index}
-                                href={service.href}
-                                className='block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - colors group' />
+                            {category.services.map ((service, service_index) => (
+          <Link key={service_index}
+            href={service.href className='block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - colors group' />
 
                                 <div className='flex items - center justify - between' />;
                                   <div />;
-                                    <div className='text - white group - hover:text - cyan - 400 transition - colors font - medium' />;
-                                      {service.name}
-                                    </div>;
-                                    <div className='text - sm text - gray - 400' />;
-                                      {service.description}                                    </div>;
+                                    <div className='text - white group - hover:text - cyan - 400 transition - colors font - medium' />
+            {service.name
+                                    </div>
+            <div className='text - sm text - gray - 400' />
+            {service.description                                    </div>;
                                   </div>;
-                                  <div className='text - cyan - 400 font - semibold text - sm' />;
-                                    {service.price}"
+                                  <div className='text - cyan - 400 font - semibold text - sm' />}
+            {service.price"
                                   </div>                                </div>                                  <div className=\"text - cyan - 400 font - semibold text - sm\" />{service.price}</div>;
                                 </div>;
                               </Link>))}
@@ -542,18 +516,16 @@ className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
                 </button>;
               </Link>;
             </div>;{/* Mobile Menu Button */}
-            <button;
-              onClick={toggleMenu}
-
-className='lg: hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'
+            <button onClick={toggleMenu}
+            className='lg: hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'
              />
               {isOpen ? (
                 <X className='w-6 h-6' />
               ) : (
                 <Menu className='w-6 h-6' />
-}
-              }
-}
+
+              
+
             </button>
           </div>
         </div>
@@ -565,19 +537,22 @@ className='lg: hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-
       </nav>;
       {/* Mobile Menu */}
       <AnimatePresence />;
-        {isOpen && (<motion&& motion.div;}
-            initial={{ opacity: 0, x: '100%' }
-}
-            animate={{ opacity: 1, x: 0 }
-}
+        {isOpen && (
+          <motion&& motion.div;}
+            initial={{ opacity: 0}
+            x: '100%' 
 
-            exit={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1}
+            x: 0
+             
+
+            exit={{ opacity: 0}
+            x: '100%' 
 
             transition={{ duration: 0.3 }}
 className='fixed inset-0 z-50 lg:hidden'
            />
-            <div;
-className='absolute inset-0 bg-black/80 backdrop-blur-xl'
+            <div className='absolute inset-0 bg-black/80 backdrop-blur-xl'
               onClick={closeMenu}
 
             />
@@ -594,8 +569,7 @@ className='absolute inset-0 bg-black/80 backdrop-blur-xl'
                       </div>
                     </div>
                   </div>
-<button;
-onClick={closeMen}
+<button onClick={closeMen}
 }
                     className='p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50' />
 
@@ -606,22 +580,16 @@ onClick={closeMen}
 
 <div className='space-y-6' />
                   {mainNavigation.map(item => (}
-                    <Link;}
-key={item && item.name}
-                      href={item && item.href}
-                      onClick={closeMenu}
-
-className='flex items-center space-x-3 text-gray-300 hover: text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50'
+                    <Link key={item && item.name href={item && item.href onClick={closeMenu className='flex items-center space-x-3 text-gray-300 hover: text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50'
                      />
                       <item.icon className='w-5 h-5' />
-                      <span />{item.name}</span>
-                    </Link>
-                  ))}
+                      <span />{item.name</span>
+                    </Link>},
+   ))
                   {/* Services Accordion *}
 }
 <div className='space-y-2' />
-                    <button;
-onClick={() = />;}
+                    <button onClick={() = />;}
                         setActiveCategory(activeCategory === 0 ? null : 0)}
                       className='w-full flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'>
 
@@ -630,33 +598,32 @@ onClick={() = />;}
                         <span />Services</span>;
                       </span>;
 
-                      <ChevronRightIcon;
-className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`}
+                      <ChevronRightIcon className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`}
 
                       />
                     </button>
                     {activeCategory === 0 && (
                       <div className='pl-8 space-y-2' />}
-                        {serviceCategories.map((category, index) => (}
-                          <div key={index} className='space-y-2' />
+                        {serviceCategories.map((category,,,
+  index) => (}
+                          <div key={index}
+            className='space-y-2' />
                             <div className='text-sm font-medium text-cyan-400 py-2' />
-                              {category.title}
+                              {category.title
                             </div>
-                            {category.services.map((service, serviceIndex) => (}
-                              <Link;}
-key={serviceIndex}
-                                href={service && service.href}
-                                onClick={closeMenu}
-
-className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors py-1'
+                            {category.services.map((service,,
+  serviceIndex) => (
+                              <Link key={serviceIndex}
+            href={service && service.href
+            onClick={closeMenu className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors py-1'
                                />
-                                {service.name}
+                                {service.name
                               </Link>
 
                             )
-}
-                          </div>;
-                        ))}
+
+                          </div>}
+            ))
                       </div>;
                     )}
 
@@ -668,20 +635,16 @@ className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors py
                     </div>
                     <div className='space-y-2' />
                       {companyLinks.map(link => (}
-                        <Link;}
-key={link.name}
-                          href={link.href}
-                          onClick={closeMenu}
-className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors py-1' />
+                        <Link key={link.name}
+            href={link.href
+            onClick={closeMenu className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors py-1' />
 
-                          {link.name}
+                          {link.name
 
-                        </Link>
-                      ))}
+                        </Link>}
+            ))
 
-
-
-                  {/* Contact Info */}
+                  {/* Contact Info */
 <div className='pt-4 border-t border-gray-700/50' />
                     <div className='text-sm font-medium text-gray-400 mb-3' />
                       Contact;
@@ -689,9 +652,6 @@ className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors py
                     <div className='space-y-2 text-sm text-gray-400' />
                       <div className='flex items-center space-x-2' />
                         <Phone className='w-4 h-4 text-cyan-400' />
-
-
-
 
                         <span />{contactInfo.mobile}</span>
                       </div>
@@ -720,7 +680,6 @@ className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors py
             </div>
           </motion.div>
 
-        
 }
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}

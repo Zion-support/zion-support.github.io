@@ -1,5 +1,3 @@
-
-
 export default function GrantsAdminPage() {
   const [token, setToken] = useState('');
 
@@ -32,15 +30,13 @@ const setStatus = async (
 status: 'Under Review' | 'Approved' | 'Rejected'
   ) => {}
     await fetch(`/api/grants/${i,}
-}/status`, {
-      method: 'POST'}
-      headers;}
-body: JSON.stringify({ status })
-   ,
-});
+}/status`,
+  {
+      method: 'POST'},
+  headers;} body: JSON.stringify({ status })
+    });
     load()
 };
-
 
 const saveMilestones = async () => {
     if (!selected);}
@@ -48,25 +44,21 @@ const saveMilestones = async () => {
 await fetch(`/api/grants/${selected.id}/milestones`, {
       method: 'POST',
       headers,}
-      body: JSON.stringify({ milestones,}
-}),
-    });
+      body: JSON.stringify({ milestones,,
+  } }) });
     alert('Milestones saved')
 };
-
 
 const markComplete = async (milestoneId: string) => {
     if (!selected);
   return;}
 await fetch(}
-      `/api/grants/${selected.id}/milestones/${milestoneId}/complete`,
-      { method: 'POST', headers }
-    );
+      `/api/grants/${selected.id}/milestones/${milestoneId}/complete`,,
+  { method: 'POST' headers } );
 
 const r = await fetch(`/api/grants/${selected.id}`).then(x => x.json());
     setSelected(r.record)
 };
-
 
   return (
     <EnhancedLayout />
@@ -86,21 +78,18 @@ const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
       <div className='grid md:grid - cols - 3 gap - 6' />;
         <div className='md:col - span - 2' />;
           <div className='mb - 3 flex items - center gap - 2' />;
-            <input;
-              className='border rounded p - 2';
+            <input className='border rounded p - 2';
               placeholder='Admin Token';
-              value={token}
-              on_change={e = /> set_token (e.target.value)}
-            />;
-          </div>;
-          <div className='grid gap - 3' />;
-            {items.map (g => (<div;}
-                key={g.id}
-                className={`border rounded p - 3 ${selected?.id === g.id ? 'ring - 2 ring - blue - 500' : ''}`} />
+              value={token on_change={e = /> set_token (e.target.value)
+            />}
+            </div>
+            <div className='grid gap - 3' />
+            {items.map (g => (
+          <div key={g.id className={`border rounded p - 3 ${selected?.id === g.id ? 'ring - 2 ring - blue - 500' : ''` />
 
-                <div className='flex items - center justify - between' />;
-                  <div />;
-                    <div className='font - medium' />{g.project_name}</div>;
+                <div className='flex items - center justify - between' />}
+            <div />
+            <div className='font - medium' />{g.project_name</div>;
                     <div className='text - xs text - gray - 600' />;
 
                       {g.sector} • {g.region} • {g.program}
@@ -108,27 +97,26 @@ const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
                     </div>
                   </div>
                   <div className='flex gap-2' />
-                    <button;
-className='px-2 py-1 border rounded'
+                    <button className='px-2 py-1 border rounded'
 
-                      onClick={() = /> setStatus(g.id, 'Under Review')}
+                      onClick={() = /> setStatus(g.id},,
+  'Under Review')
                     >;
                       Under Review;
                     </button>;
-                    <button;
-                      className='px-2 py-1 bg-emerald-600 text-white rounded';
-                      onClick={() = /> setStatus(g.id, 'Approved')}
+                    <button className='px-2 py-1 bg-emerald-600 text-white rounded';
+                      onClick={() = /> setStatus(g.id},,
+  'Approved')
                     >;
                       Approve;
                     </button>;
-                    <button;
-                      className='px-2 py-1 bg-red-600 text-white rounded';
-                      onClick={() = /> setStatus(g.id, 'Rejected')}
+                    <button className='px-2 py-1 bg-red-600 text-white rounded';
+                      onClick={() = /> setStatus(g.id},,
+  'Rejected')
                     >;
                       Reject;
                     </button>;
-                    <button;
-                      className='px-2 py-1 border rounded';
+                    <button className='px-2 py-1 border rounded';
                       onClick={() = /> setSelected(g)}
                     >;
                       Milestones;
@@ -137,7 +125,8 @@ className='px-2 py-1 border rounded'
                 </div>;
               </div>;
             ))}
-{items.length === 0 && (<div className='text-sm text-gray-600' />;
+{items.length === 0 && (
+          <div className='text-sm text-gray-600' />;
                 No submitted applications.;}
               </div>;}
             )}
@@ -152,61 +141,57 @@ className='px-2 py-1 border rounded'
 
                 {(milestones.length === 0;}
                   ? selected.milestones || [];}
-                  : milestones).map ((m, idx) => (<div key={m.id || idx} className='border rounded p - 2' />;
-                    <input;
-                      className='w - full border rounded p - 2 mb - 2';
+                  : milestones).map ((m, idx) => (
+          <div key={m.id || idx}
+            className='border rounded p - 2' />;
+                    <input className='w - full border rounded p - 2 mb - 2';
                       placeholder='Title';
-                      value={m.title}
-                      on_change={e = />;
-                        set_milestones (ms = > ;
-  const copy = ms.length;
-                            ? [...ms];
-                            : [...(selected.milestones || [])];}
-                          copy[idx] = { ...copy[idx], title: e.target.value,}
-}
+                      value={m.title on_change={e = />;
+                        set_milestones (ms = > }
+            const copy = ms.length
+            ? [...ms]
+            : [...(selected.milestones || [])]
+            copy[idx] = { ...copy[idx], title: e.target.value,
+
                           return copy;
                         })}
                     />;
-                    <textarea;
-                      className='w - full border rounded p - 2 mb - 2';
+                    <textarea className='w - full border rounded p - 2 mb - 2';
                       placeholder='Description';
                       value={m.description || ''}
-                      on_change={e = />;
-                        set_milestones (ms = > ;
-  const copy = ms.length;
-                            ? [...ms];}
+                      on_change={e = />}
+            set_milestones (ms = > 
+            const copy = ms.length
+            ? [...ms];
                             : [...(selected.milestones || [])];}
                           copy[idx] = {...copy[idx],description: e.target.value,}
                           return copy;
                         })}
                     />;
                     <div className='grid grid - cols - 2 gap - 2' />;
-                      <input;
-                        className='border rounded p - 2';
+                      <input className='border rounded p - 2';
                         placeholder='Due date (YYYY - MM - DD)';
                         value={m.due_date || ''}
-                        on_change={e = />;
-                          set_milestones (ms = > ;
-  const copy = ms.length;
-                              ? [...ms];}
+                        on_change={e = />}
+            set_milestones (ms = > 
+            const copy = ms.length
+            ? [...ms];
                               : [...(selected.milestones || [])];}
                             copy[idx] = {...copy[idx],due_date: e.target.value,}
                             return copy;
                           })}
                       />;
-                      <input;
-                        className='border rounded p - 2';
+                      <input className='border rounded p - 2';
                         placeholder='Tranche (amount)';
                         type='number';
                         value={m.tranche_amount || 0}
-                        on_change={e = />;
+            on_change={e = />;
                           set_milestones (ms = > ;
-  const copy = ms.length;
-                              ? [...ms];}
-                              : [...(selected.milestones || [])];}
-                            copy[idx] = {...copy[idx],tranche_amount: Number (e.target.value),}
-                            return copy;
-                          })}
+  const copy = ms.length
+            ? [...ms]
+            : [...(selected.milestones || [])]
+            copy[idx] = {...copy[idx],tranche_amount: Number (e.target.value) return copy}
+             )}
                       />;
                     </div>>
 
@@ -215,13 +200,10 @@ className='px-2 py-1 border rounded'
                     </div>;
                   </div>))}
                 <div className='flex gap - 2 mt - 2' />;
-                  <button;
-                    className='px - 2 py - 1 border rounded';
-                    on_click={() = />;
-                      set_milestones (ms => [;
-
-                        ...(ms.length ? ms : selected.milestones || []),}
-                        {}
+                  <button className='px - 2 py - 1 border rounded';
+                    on_click={() = />}
+            set_milestones (ms => [
+            ...(ms.length ? ms : selected.milestones || []) {}
                           id: `${Date.now ()}-${Math.random (,}
 }`,
                           title: '',
@@ -234,8 +216,7 @@ className='px-2 py-1 border rounded'
                   >
                     Add Milestone;
                   </button>
-                  <button;
-className='px-2 py-1 bg-blue-600 text-white rounded'
+                  <button className='px-2 py-1 bg-blue-600 text-white rounded'
                     onClick={saveMilestones}
                    />
                     Save Milestones;
@@ -254,4 +235,3 @@ className='px-2 py-1 bg-blue-600 text-white rounded'
 
   );
 }
-

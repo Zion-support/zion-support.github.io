@@ -1,4 +1,5 @@
-import { ReactNode } from 'react';
+import { ReactNode,
+  from 'react';
 
 interface FuturisticCardProps {
   children: ReactNode;
@@ -6,11 +7,11 @@ interface FuturisticCardProps {
 }
 
 type Props = {title: string,description: string;
-
 export default /**;
  * FuturisticCard - Function description;
  */;
-function FuturisticCard() {return (<div className=\"futuristic-card\" />;"
+function FuturisticCard() {return (
+    <div className=\"futuristic-card\" />;"
       <div className=\"futuristic-card-glow\" />;}"
       <div className=\"relative z-10\" />;}"
         <h3 className=\"font - semibold text-gray-100\" />{title}</h3>;"

@@ -1,8 +1,7 @@
-
-
 import React from 'react';
-import { motion  } from 'framer-motion';
-import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud  } from 'lucide-react';
+import { motion from 'framer-motion';
+import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud,
+  from 'lucide-react';
 import Link from 'next/link';
 
 const Enhanced2026ServicesShowcase = null;
@@ -19,8 +18,7 @@ features: [
         'Task Automation',
         'Process Optimization',
         '24/7 Operation',
-        'Scalable Architecture'}
-      ]}
+        'Scalable Architecture']}
     },
     {
       id: 'quantum-cybersecurity-suite-2026',
@@ -35,8 +33,7 @@ features: [
         'Quantum Encryption',
         'Threat Detection',
         'Zero Trust',
-        'Compliance Ready'}
-      ]}
+        'Compliance Ready']}
     },
     {
       id: 'neuromorphic-computing-platform-2026',
@@ -51,8 +48,7 @@ features: [
         'Brain-like Processing',
         'Low Power',
         'Real-time Learning',
-        'Cognitive Computing'}
-      ]}
+        'Cognitive Computing']}
     },
     {
       id: 'dna-computing-platform-2026',
@@ -67,8 +63,7 @@ features: [
         'Molecular Processing',
         'Exponential Speed',
         'Complex Algorithms',
-        'Research Ready'}
-      ]}
+        'Research Ready']}
     },
     {
       id: 'space-debris-tracking-system',
@@ -83,10 +78,7 @@ features: [
         'Real-time Tracking',
         'Collision Prediction',
         'Satellite Safety',
-        'Space Traffic Management'}
-      ]}
-    }
-  ];
+        'Space Traffic Management'];
 
 const categories = [
   {name: 'AI Services'}
@@ -94,11 +86,10 @@ const categories = [
   count: '75+',icon: Sparkles,color: 'from-blue-500 to-cyan-500'},{name: 'Emerging Tech'}
   count: '100+',icon: Rocket,color: 'from-green-500 to-emerald-500'},{name: 'IT Solutions'}
   count: '200+',icon: Cloud,color: 'from-yellow-500 to-orange-500'}];
-  return (<section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden' />;
+  return (
+          <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden' />;
       {/* Background Effects */}{ name: 'IT Solutions'}
-  count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500'}
-}
-  ];
+  count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500'];
 
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden' />;
@@ -110,9 +101,12 @@ const categories = [
 
         {/* Section Header */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
-}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0}
+            y: 20
+             
+          whileInView={{ opacity: 1}
+            y: 0
+             
           transition={{ duration: 0 && 0.6 }}
 
           viewport={{ once: true }
@@ -150,50 +144,53 @@ emerging technology services designed to transform your business;
           </p>;
         </motion && motion.div>;{/* Category Overview */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
-}
-          whileInView={{ opacity: 1, y: 0 }
-}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
-
-          viewport={{ once: true }
+          initial={{ opacity: 0}
+            y: 20
+             
+          whileInView={{ opacity: 1}
+            y: 0
+             
+          transition={{ duration: 0 && 0.6}
+            delay: 0 && 0.1
+            viewport={{ once: true 
 }
 
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
          />
-          {categories.map((category, index) => (}
+          {categories.map((category,,,
+  index) => (}
             <motion.div;}
 key={category.name}
-              initial={{ opacity: 0, scale: 0.8 }
+            initial={{ opacity: 0 scale: 0.8
+            whileInView={{ opacity: 1}
+            scale: 1
+             
+              transition={{ duration: 0.6
+            delay: 0.2 + index * 0.1
+            viewport={{ once: true 
 }
-              whileInView={{ opacity: 1, scale: 1 }
-}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              viewport={{ once: true }
-}
-              whileHover={{ scale: 1.05, y: -5 }
-}
-
-className='group text-center'
+              whileHover={{ scale: 1.05}
+            y: -5
+            className='group text-center'
              />
 
-              whileInView={{ opacity: 1, scale: 1 }
+              whileInView={{ opacity: 1}
+            scale: 1
+             
+              transition={{ duration: 0 && 0.6
+            delay: 0 && 0.2 + index * 0 && 0.1
+            viewport={{ once: true 
 }
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.2 + index * 0 && 0.1 }}
-              viewport={{ once: true }
-}
-              whileHover={{ scale: 1 && 1.05, y: -5 }
-}
-              className='group text-center'>;
-
-              <div;
-className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
+              whileHover={{ scale: 1 && 1.05}
+            y: -5
+            className='group text-center'>
+            <div className={`w-16 h-16 bg-gradient-to-br ${category.color rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`
                />
                 <category.icon className='w-8 h-8 text-white' />
               </div>
               <h3 className='text-lg font-bold text-white mb-2' />
 
-                {category.nam}
+                {category.nam
 }
               </h3>;
               <p className='text-2xl font-bold text-cyan-400' />;
@@ -205,38 +202,39 @@ className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items
         {/* Featured Services Grid */}
 
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16' />
-          {featuredServices.map((service, index) => (}
+          {featuredServices.map((service,,,
+  index) => (}
             <motion.div;}
-key={service.id}
-              initial={{ opacity: 0, scale: 0.8, y: 20 }
-}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }
-}
-transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-              viewport={{ once: true }
-}whileHover={{ scale: 1.02, y: -5 }
-}
-className='group relative' />
+key={service.id,
+  initial={{ opacity: 0
+            scale: 0.8 y: 20}
+            whileInView={{ opacity: 1
+            scale: 1}
+            y: 0
+             
+transition={{ duration: 0 && 0.6
+            delay: index * 0 && 0.1
+            viewport={{ once: true 
+}whileHover={{ scale: 1.02}
+            y: -5 className='group relative' />
 
-              <div;
-                className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500
-}
-               /></div>;
-              <div className='relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300' />;
-                {/* Service Header */}
+              <div className={`absolute inset-0 bg-gradient-to-r ${service.color opacity-10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500
+
+               /></div>
+            <div className='relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300' />
+            {/* Service Header */
 
                 <div className='flex items-center space-x-3 mb-4' />
-                  <div;
-className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center`}
+                  <div className={`w-12 h-12 bg-gradient-to-br ${service.color rounded-xl flex items-center justify-center`
                    />
                     <service.icon className='w-6 h-6 text-white' />
                   </div>
                   <div />
                     <h3 className='text-lg font-bold text-white' />
 
-                      {service.name}
-                    </h3>;
-                    <p className='text-gray-400 text-sm' />{service.category}</p>;
+                      {service.name
+                    </h3>}
+            <p className='text-gray-400 text-sm' />{service.category</p>;
                   </div>;
                 </div>;
                 {/* Description */}
@@ -245,29 +243,32 @@ className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-c
 
                   {service.description}
                 </p>;
-                    className={`w-12 h-12 bg-gradient-to-br ${service && service.color} rounded-xl flex items-center justify-center`}>
+                    className={`w-12 h-12 bg-gradient-to-br ${service && service.color rounded-xl flex items-center justify-center`>
 
-                    <service && service.icon className='w-6 h-6 text-white' />;
-                  </div>;
-                  <div />;
-                    <h3 className='text-lg font-bold text-white' />;
-                      {service && service.name}
+                    <service && service.icon className='w-6 h-6 text-white' />}
+            </div>
+            <div />
+            <h3 className='text-lg font-bold text-white' />
+            {service && service.name
                     </h3>;
                     <p className='text-gray-400 text-sm' />{service && service.category}</p>                  </div>;
                 </div>;
                 {/* Features */}            >;
-              <div className={`absolute inset-0 bg-gradient-to-r ${service && service.color} opacity-10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500
-} /></div>;"
-              <div className=\"relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300\" />;
-                {/* Service Header */}"
+              <div className={`absolute inset-0 bg-gradient-to-r ${service && service.color opacity-10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500
+ /></div>}
+            "
+              <div className=\"relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300\" />
+            {/* Service Header */"
                 <div className=\"flex items-center space-x-3 mb-4\" />;
-                  <div className={`w-12 h-12 bg-gradient-to-br ${service && service.color} rounded-xl flex items-center justify-center`} />
+                  <div className={`w-12 h-12 bg-gradient-to-br ${service && service.color rounded-xl flex items-center justify-center` />
 "
                     <service && service.icon className=\"w-6 h-6 text-white\" />;
-                  </div>;
-                  <div />;"
-                    <h3 className=\"text-lg font-bold text-white\" />{service && service.name}</h3>;"
-                    <p className=\"text-gray-400 text-sm\" />{service && service.category}</p>;
+                  </div>}
+            <div />
+            "
+                    <h3 className=\"text-lg font-bold text-white\" />{service && service.name</h3>
+            "
+                    <p className=\"text-gray-400 text-sm\" />{service && service.category</p>;
                   </div>;
                 </div>;
                 {/* Description */}"
@@ -279,10 +280,10 @@ className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-c
 
 <div className='mb-4' />
                   <ul className='space-y-1' />
-                    {service.features.slice(0, 2).map((feature, i) => (}
-                      <li;}
-key={i}
-                        className='flex items-center text-gray-400 text-xs'
+                    {service.features.slice(0,,,
+  2).map((feature,,,
+  i) => (}
+                      <li key={i className='flex items-center text-gray-400 text-xs'
                        />
                         <Star className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />
                         {feature}
@@ -312,8 +313,7 @@ key={i}
                     </span>;
                   </div>;
 
-                  <Link;
-href={`/${service.id}`}
+                  <Link href={`/${service.id}`}
                     className='inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'
                    />
                     Learn More <ArrowRight className='w-4 h-4 ml-1' />
@@ -331,8 +331,7 @@ href={`/${service.id}`}
                     <span className=\"text-2xl font-bold text-cyan-400\" />{service && service.price}</span>;"
                     <span className=\"text-gray-400 text-sm\" />{service && service.period}</span>;
                   </div>;
-                  <Link;
-                    href={`/${service && service.id}`}"
+                  <Link href={`/${service && service.id}`}"
                     className=\"inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200\" />;"
                     Learn More <ArrowRight className=\"w-4 h-4 ml-1\" />;
                   </Link>;
@@ -342,13 +341,15 @@ href={`/${service.id}`}
           ))}
         </div>;{/* Call to Action */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
-}
-          whileInView={{ opacity: 1, y: 0 }
-}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
-
-          viewport={{ once: true }}
+          initial={{ opacity: 0}
+            y: 20
+             
+          whileInView={{ opacity: 1}
+            y: 0
+             
+          transition={{ duration: 0 && 0.6}
+            delay: 0 && 0.3
+            viewport={{ once: true }
 
 className='text-center'
          />
@@ -366,8 +367,7 @@ whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
                />
-                <Link;
-href='/services'
+                <Link href='/services'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200'
                  />
                   <Rocket className='w-5 h-5 mr-2' />
@@ -378,10 +378,10 @@ href='/services'
 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }
 }
-                transition={{ duration: 0.2, delay: 0.1 }}
+                transition={{ duration: 0.2}
+            delay: 0.1 
                />
-                <Link;
-href='/contact'
+                <Link href='/contact'
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-200'
                  />
                   <Shield className='w-5 h-5 mr-2' />
@@ -395,8 +395,6 @@ href='/contact'
     </section>
 )
 };
-
-
 export default Enhanced2026ServicesShowcase;
 
 "

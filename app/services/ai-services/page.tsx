@@ -1,5 +1,4 @@
 import Link from \"next/link\";
-
 export const metadata = {
   title: \"AI Services | Zion Tech Group\",
   description: \"Comprehensive AI services including machine learning, natural language processing, computer vision, and AI consulting to transform your business.\",}
@@ -29,14 +28,12 @@ const CTA = () => (
       Let&apos;s discuss how our AI services can help you achieve your goals.
     </p>
     <div className=\"flex flex-col sm:flex-row gap-4 justify-center\" />
-      <Link;
-href=\"/contact\"
+      <Link href=\"/contact\"
         className=\"bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors\"
        />
         Get Started;
       </Link>
-      <Link;
-href=\"/services\"
+      <Link href=\"/services\"
         className=\"border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors\"
        />
         View All Services;
@@ -44,7 +41,6 @@ href=\"/services\"
     </div>
   </div>
 );
-
 export default function AIServicesPage() {
   return (
     <div className=\"min-h-screen bg-gray-50\" />
@@ -58,33 +54,27 @@ export default function AIServicesPage() {
         </div>
 
         <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16\" />
-          <FeatureItem;
-title=\"Machine Learning\"
+          <FeatureItem title=\"Machine Learning\"
             description=\"Build intelligent systems that learn and adapt to your business needs\"
             icon=\"🧠\"
           />
-          <FeatureItem;
-title=\"Natural Language Processing\"
+          <FeatureItem title=\"Natural Language Processing\"
             description=\"Process and understand human language for better customer interactions\"
             icon=\"💬\"
           />
-          <FeatureItem;
-title=\"Computer Vision\"
+          <FeatureItem title=\"Computer Vision\"
             description=\"Extract insights from images and videos to automate visual tasks\"
             icon=\"👁️\"
           />
-          <FeatureItem;
-title=\"Predictive Analytics\"
+          <FeatureItem title=\"Predictive Analytics\"
             description=\"Forecast trends and behaviors to make data-driven decisions\"
             icon=\"📊\"
           />
-          <FeatureItem;
-title=\"AI Chatbots\"
+          <FeatureItem title=\"AI Chatbots\"
             description=\"Intelligent conversational agents that provide 24/7 customer support\"
             icon=\"🤖\"
           />
-          <FeatureItem;
-title=\"Process Automation\"
+          <FeatureItem title=\"Process Automation\"
             description=\"Streamline workflows with intelligent automation solutions\"
             icon=\"⚡\"
           />
@@ -138,40 +128,34 @@ title=\"Process Automation\"
         <div className=\"mb-16\" />
           <h2 className=\"text-3xl font-bold text-gray-900 text-center mb-8\" />Pricing Plans</h2>
           <div className=\"grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto\" />
-            <Plan;
-title=\"Starter\"
+            <Plan title=\"Starter\"
               description=\"Perfect for small businesses looking to explore AI\"
               features={[
-                \"AI consultation\",
-                \"Basic chatbot setup\",
-                \"Data analysis\",}
-                \"Monthly support\"}
-              ]}
+                \"AI consultation\"}
+            \"Basic chatbot setup\"
+            \"Data analysis\",
+                \"Monthly support\"]}
               pricing=\"$2,500/month\"
             />
-            <Plan;
-title=\"Professional\"
+            <Plan title=\"Professional\"
               description=\"Comprehensive AI solutions for growing businesses\"
               features={[
-                \"Custom AI models\",
-                \"Advanced analytics\",
-                \"Process automation\",
-                \"Priority support\",}
-                \"Training sessions\"}
-              ]}
+                \"Custom AI models\"}
+            \"Advanced analytics\"
+            \"Process automation\"
+            \"Priority support\",
+                \"Training sessions\"]}
               pricing=\"$7,500/month\"
               popular;
             />
-            <Plan;
-title=\"Enterprise\"
+            <Plan title=\"Enterprise\"
               description=\"Full-scale AI transformation for large organizations\"
               features={[
-                \"End-to-end AI solutions\",
-                \"Dedicated AI team\",
-                \"24/7 support\",
-                \"Custom integrations\",}
-                \"Performance monitoring\"}
-              ]}
+                \"End-to-end AI solutions\"}
+            \"Dedicated AI team\"
+            \"24/7 support\"
+            \"Custom integrations\",
+                \"Performance monitoring\"]}
               pricing=\"Custom pricing\"
             />
           </div>
@@ -183,7 +167,8 @@ title=\"Enterprise\"
   );
 }
 
-function TechCard({ title, icon }) {
+function TechCard({ title,,,
+  icon }) {
 return (}
     <div className=\"p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow\" />}
       <div className=\"text-3xl mb-4\" />{icon}</div>
@@ -193,7 +178,8 @@ return (}
   );
 }
 
-function Plan({ title, description, features, pricing, popular = false }) {
+function Plan({ title, description, features, pricing,,,
+  popular = false }) {
   return (
     <div className={`bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow ${}
       popular ? 'border-blue-500 ring-2 ring-blue-100' : 'border-gray-200'}
@@ -206,14 +192,16 @@ function Plan({ title, description, features, pricing, popular = false }) {
       <h3 className=\"text-2xl font-bold text-gray-900 mb-2\" />{title}</h3>
       <p className=\"text-gray-600 mb-6\" />{description}</p>
       <ul className=\"space-y-3 mb-6\" />
-        {features.map((feature, index) => (}
-          <li key={index} className=\"flex items-center text-gray-600\" />
+        {features.map((feature,,,
+  index) => (}
+          <li key={index}
+            className=\"flex items-center text-gray-600\" />
             <span className=\"w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3\" />
               <span className=\"text-green-600 text-sm\" />✓</span>
             </span>
-            {feature}
+            {feature
           </li>
-        ))}
+        ))
       </ul>
       <div className=\"text-lg font-semibold text-gray-900\" />{pricing}</div>
     </div>

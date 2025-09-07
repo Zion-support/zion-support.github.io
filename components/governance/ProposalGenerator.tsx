@@ -1,30 +1,26 @@
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+}componentDidCatch(error,,,
+  errorInfo) {console.error('Error caught by boundary:', error,,,
+  errorInfo)}
   render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }
     return this.props.children;
   }
 }
-import React, { useState } from 'react';
-
-
+import React, { useState,
+  from 'react';
 import EnhancedLayout from '../layout/EnhancedLayout';
-
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
-
 export type ProposalForm = any;
-
 export type ProposalType =;
   | 'Workforce Dev';
   | 'AI Ethics';
   | 'Digital ID';
   | 'Education';
-
 export type ProposalForm = {
   targetInstitution: string;
 ;
-
 export type ProposalForm = {
   target_institution: string;
 
@@ -37,8 +33,6 @@ export type ProposalForm = {
 }
   customPrompt?: string}
 };
-
-
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm />({
     targetInstitution: 'UNDP',
@@ -68,7 +62,8 @@ const [statusMessage, setStatusMessage] = useState('');
     key: K;
 value: ProposalForm[K]
   ) {}
-    setForm(prev => ({ ...prev, [key]: value }));
+    setForm(prev => ({ ...prev,,,
+  [key]: value }));
   }
   async function handleGenerate() {
     setIsGenerating(true);
@@ -77,8 +72,8 @@ value: ProposalForm[K]
       const res = await fetch('/api/proposals/generate', {
         method: 'POST',}
   headers: { 'Content-Type': 'application/json',}
-},
-body: JSON.stringify(form),
+},,,
+  body: JSON.stringify(form),
       });
 
 const data = await res.json();
@@ -110,17 +105,19 @@ const data = await res.json();
 
           markdown: draftMarkdown,
           json: draftJson,}
-meta: form,}
-        }),
+meta: form,
+  },,
+  }),
       });
 
 const data = await res.json();
       setExportLinks({
-        pdfUrl: data.pdfUrl;
-jsonUrl: data.jsonUrl;
-mdUrl: data.mdUrl}
-     ,}
-});
+        pdfUrl: data.pdfUrl,
+  jsonUrl: data.jsonUrl,
+  mdUrl: data.mdUrl}
+     ,
+  },,
+  });
       setStatusMessage('Exported. Files saved.');
     } catch (e) {
       console.error(e);}
@@ -130,14 +127,14 @@ mdUrl: data.mdUrl}
 
     }
 
-
   }
   async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {method: 'POST',}
   headers: { 'Content-Type': 'application/json',}
-},body: JSON && JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),};
-  const data = await res && res.json()setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A,}
-}`;
-      )} catch (e) {console && console.error(e)setStatusMessage('Submission failed')}
+},body: JSON && JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,,,
+  }),};
+  const data = await res && res.json()setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A }
+}`;,,
+   )} catch (e) {console && console.error(e)setStatusMessage('Submission failed')}
   }
 
   async function handleSubmitBridge() {
@@ -151,24 +148,27 @@ mdUrl: data.mdUrl}
 body: JSON.stringify({
           markdown: draftMarkdown,
           json: draftJson,}
-          meta: form,}
-        }),
+          meta: form,
+  },,
+  }),
       });
 
 const data = await res && res.json();
-      setExportLinks({;
-        pdfUrl: data && data.pdfUrl,;
-        jsonUrl: data && data.jsonUrl,;}
-        mdUrl: data && data.mdUrl,;}
-      });
+      setExportLinks({,
+  pdfUrl: data && data.pdfUrl,,
+  jsonUrl: data && data.jsonUrl,;}
+        mdUrl: data && data.mdUrl,
+  ;},,
+  });
       setStatusMessage('Exported. Files saved.');
     } catch (e) {;}
       console && console.error(e);}
       setStatusMessage('Export failed');    }
 
 const data = await res && res.json();
-      setExportLinks({ pdfUrl: data && data.pdfUrl, jsonUrl: data && data.jsonUrl, mdUrl: data && data.mdUrl,}
-}),;
+      setExportLinks({ pdfUrl: data && data.pdfUrl, jsonUrl: data && data.jsonUrl, mdUrl: data && data.mdUrl,
+  },,
+  }),;
       setStatusMessage('Exported. Files saved.');
     } catch (e) {;
       console && console.error(e);}
@@ -183,18 +183,18 @@ const res = await fetch('/api/proposals/submit', {;
         method: 'POST',;}
         headers: { 'Content-Type': 'application/json',}
 },;
-        body: JSON && JSON.stringify({;
-          markdown: draftMarkdown,;
-          json: draftJson,;}
-          meta: form,;}
-        }),;
+        body: JSON && JSON.stringify({,
+  markdown: draftMarkdown,,
+  json: draftJson,;}
+          meta: form,,
+  ;} }),;
       });
 
 const data = await res && res.json();
       setStatusMessage(;
-        `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A,}
-}`;
-      );
+        `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A }
+}`;,,
+   );
 
     } catch (e) {
       console.error(e);
@@ -203,30 +203,30 @@ const data = await res && res.json();
     }
 
   }
-  return (<div className='space-y-6' />;
+  return (
+    <div className='space-y-6' />;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4' />;
         <div className='space-y-4' />;
           <div />;
             <label className='block text-sm font-medium' />;
               Target institution;
             </label>;
-            <input;
-              className='w-full border rounded px-3 py-2';
+            <input className='w-full border rounded px-3 py-2';
               value={form && form.targetInstitution}
-              onChange={e = /> handleChange('targetInstitution', e && e.target.value)}
+            onChange={e = /> handleChange('targetInstitution',
+  e && e.target.value)
               placeholder='UNDP / World Bank / ILO';
             />;
-          </div>;
-          <div />;
-            <label className='block text-sm font-medium' />Type</label>;
+          </div>}
+            <div />
+            <label className='block text-sm font-medium' />Type</label>
+            <select className='w-full border rounded px-3 py-2'
 
-            <select;
-className='w-full border rounded px-3 py-2'
-
-              value={form.type}
-              onChange={e = />}
-                handleChange('type', e.target.value as ProposalType)}
-              }
+              value={form.type
+            onChange={e = />
+                handleChange('type',,
+  e.target.value as ProposalType)
+              
             >
               <option />Workforce Dev</option>
               <option />AI Ethics</option>
@@ -236,11 +236,12 @@ className='w-full border rounded px-3 py-2'
           </div>
           <div />
 <label className='block text-sm font-medium' />Regional scope</label>
-            <input;
-className='w-full border rounded px-3 py-2'
+            <input className='w-full border rounded px-3 py-2'
 
-              value={form && form.regionalScope}
-              onChange={e = /> handleChange('regionalScope', e && e.target.value)}
+              value={form && form.regionalScope
+            onChange={e = /> handleChange('regionalScope'
+             ,
+  e && e.target.value)
               placeholder='Global / Africa / LATAM / APAC / EU / ...';
             />;
           </div>;
@@ -248,129 +249,121 @@ className='w-full border rounded px-3 py-2'
             <label className='block text-sm font-medium' />;
               Budget / Resolution goals;
             </label>;
-            <textarea;
-              className='w-full border rounded px-3 py-2 min-h-[80px]';
-              value={form && form.budgetOrGoals}
-              onChange={e = /> handleChange('budgetOrGoals', e && e.target.value)}
+            <textarea className='w-full border rounded px-3 py-2 min-h-[80px]'
+            value={form && form.budgetOrGoals,
+  onChange={e = /> handleChange('budgetOrGoals',,
+  e && e.target.value)
               placeholder='$5M for pilot; goals: 10k workers onboarded, 70% female youth, etc.';
             />;
           </div>;
           <div />;
             <label className='block text-sm font-medium' />;
               Supporting multiverse(s)</label>;
-            <input;
-              className='w-full border rounded px-3 py-2';
-              value={form && form.supportingMultiverses}
-              onChange={e = />;}
-                handleChange('supportingMultiverses', e && e.target.value)}
-              placeholder='Eg. Zion && Zion.ai, Zion && Zion.ID, Zion && Zion.Work';
+            <input className='w-full border rounded px-3 py-2'}
+            value={form && form.supportingMultiverses
+            onChange={e = />
+            handleChange('supportingMultiverses',,
+            e && e.target.value)
+              placeholder='Eg. Zion && Zion.ai, Zion && Zion.ID
+            Zion && Zion.Work';
             />;
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4' />;
             <div />;
               <label className='block text-sm font-medium' />Language</label>;
-              <input;
-                className='w-full border rounded px-3 py-2';
-                value={form && form.language}
-                onChange={e = /> handleChange('language', e && e.target.value)}
+              <input className='w-full border rounded px-3 py-2'
+            value={form && form.language}
+            onChange={e = /> handleChange('language',
+  e && e.target.value)
                 placeholder='English / French / Spanish / Arabic / ...';
               />;
             </div>;
             <div />;
               <label className='block text-sm font-medium' />;
                 GPT Prompt Assist;
-              </label>;
-              <textarea;
-                className='w-full border rounded px-3 py-2 min-h-[80px]';
-                value={form && form.customPrompt}
-                onChange={e = /> handleChange('customPrompt', e && e.target.value)}
+              </label>}
+            <textarea className='w-full border rounded px-3 py-2 min-h-[80px]'
+            value={form && form.customPrompt
+            onChange={e = /> handleChange('customPrompt'
+            e && e.target.value)
               />;
             </div>;
-          </div>;
-          <div className='flex gap-2' />;
+          </div>
+            <div className='flex gap-2' />
+            <button className='px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50'
 
-            <button;
-className='px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50'
-
-              onClick={handleGenerate}
-              disabled={isGeneratin,}
-} />;
-              {isGenerating ? 'Generating...' : 'Generate Draft'}
-            </button>;
-
-            <button;
-className='px-4 py-2 bg-emerald-600 text-white rounded'
-              onClick={handleExport}
-              disabled={!draftMarkdown} />;
-              Export (PDF/JSON/MD);
-            </button>;
-            <button;
-className='px-4 py-2 bg-purple-600 text-white rounded'
-              onClick={handleSubmitBridge}
-              disabled={!draftMarkdown}
+              onClick={handleGenerate
+            disabled={isGeneratin
+            />
+            {isGenerating ? 'Generating...' : 'Generate Draft'
+            </button>
+            <button className='px-4 py-2 bg-emerald-600 text-white rounded'
+              onClick={handleExport
+            disabled={!draftMarkdown />}
+            Export (PDF/JSON/MD)
+            </button>
+            <button className='px-4 py-2 bg-purple-600 text-white rounded'
+              onClick={handleSubmitBridge
+            disabled={!draftMarkdown
              />
-              Submit Bridge;
+              Submit Bridge
             </button>
           </div>
-{statusMessage && (}
-            <p className='text-sm text-gray-600' />{statusMessage}</p>
+{statusMessage && (
+            <p className='text-sm text-gray-600' />{statusMessage</p>
 
           )}
-          {exportLinks && (<div className='text-sm space-y-1' />;
-              {exportLinks && exportLinks.pdfUrl && (<div />;
-                  <a;}
-                    className='text-blue-600 underline';}
-                    href={exportLinks && exportLinks.pdfUrl}
-
-                    target='_blank'
+          {exportLinks && (
+          <div className='text-sm space-y-1' />;
+              {exportLinks && exportLinks.pdfUrl && (
+          <div />;
+                  <a className='text-blue-600 underline';}
+                    href={exportLinks && exportLinks.pdfUrl,
+  target='_blank'
 
                     rel='noreferrer'
                    />
-                    PDF;
-                  </a>
+                    PDF
+            </a>
                 </div>
-              )}
+              )
               {exportLinks.mdUrl && (
                 <div />
-<a;}
-className='text-blue-600 underline'}
-                    href={exportLinks && exportLinks.mdUrl}
-                    target='_blank'
+<a className='text-blue-600 underline'
+                    href={exportLinks && exportLinks.mdUrl,
+  target='_blank'
 
                     rel='noreferrer'
                    />
-                    Markdown;
-                  </a>
+                    Markdown
+            </a>
                 </div>
-              )}
+              )
               {exportLinks.jsonUrl && (
                 <div />
-<a;}
-className='text-blue-600 underline'}
-                    href={exportLinks && exportLinks.jsonUrl}
-                    target='_blank'
+<a className='text-blue-600 underline'
+                    href={exportLinks && exportLinks.jsonUrl,
+  target='_blank'
 
                     rel='noreferrer'
                    />
                     JSON;
                   </a>
                 </div>
-              )}
-            </div>;
-          )}
+              )
+            </div>
+            )
 
         </div>
 <div className='space-y-2' />
           <label className='block text-sm font-medium' />Draft (Markdown)</label>
-          <textarea;
-className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
-            value={draftMarkdown}
-            onChange={e = /> setDraftMarkdown(e.target.value)}
+          <textarea className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
+            value={draftMarkdown,
+  onChange={e = /> setDraftMarkdown(e.target.value)
           />
         </div>
       </div>
     </div>
-  );
-
-}
+  )
+            
 

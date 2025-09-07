@@ -3,7 +3,6 @@ export const metadata = {
   description: 'Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time business intelligence, predictive analytics, and custom reporting.',
   keywords: 'ai-analytics, business-intelligence, data-visualization, predictive-analytics, dashboard, reporting'
 };
-
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -17,21 +16,19 @@ export default function ServicePage() {
             Get real-time dashboards, predictive analytics, and automated reporting that drives decision-making.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
+            <a href="tel:+13024640950"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Call +1 302 464 0950
             </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
+            <a href="mailto:kleber@ziontechgroup.com"
               className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Request Demo
             </a>
           </div>
         </div>
-        
+
         {/* Key Features */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
@@ -45,7 +42,7 @@ export default function ServicePage() {
               <li>• Mobile-responsive design</li>
             </ul>
           </div>
-          
+
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <div className="text-4xl mb-4">🔮</div>
             <h3 className="text-2xl font-bold text-white mb-4">Predictive Analytics</h3>
@@ -57,7 +54,7 @@ export default function ServicePage() {
               <li>• What-if scenario planning</li>
             </ul>
           </div>
-          
+
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <div className="text-4xl mb-4">🤖</div>
             <h3 className="text-2xl font-bold text-white mb-4">AI Insights Engine</h3>
@@ -113,8 +110,7 @@ export default function ServicePage() {
                 <li>• Standard integrations</li>
                 <li>• 1GB data storage</li>
               </ul>
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Analytics Starter Plan"
+              <a href="mailto:kleber@ziontechgroup.com?subject=Analytics Starter Plan"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors block text-center"
               >
                 Get Started
@@ -137,8 +133,7 @@ export default function ServicePage() {
                 <li>• Predictive analytics</li>
                 <li>• API access</li>
               </ul>
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Analytics Professional Plan"
+              <a href="mailto:kleber@ziontechgroup.com?subject=Analytics Professional Plan"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors block text-center"
               >
                 Get Started
@@ -158,8 +153,7 @@ export default function ServicePage() {
                 <li>• Advanced security</li>
                 <li>• SLA guarantees</li>
               </ul>
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Analytics Enterprise Plan"
+              <a href="mailto:kleber@ziontechgroup.com?subject=Analytics Enterprise Plan"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors block text-center"
               >
                 Contact Sales
@@ -201,14 +195,12 @@ export default function ServicePage() {
             Schedule a free demo and see your data in action.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
+            <a href="tel:+13024640950"
               className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Call +1 302 464 0950
             </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
+            <a href="mailto:kleber@ziontechgroup.com"
               className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Email kleber@ziontechgroup.com

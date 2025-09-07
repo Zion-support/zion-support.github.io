@@ -1,19 +1,17 @@
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { appendLog, optimizePrompt } from '@/utils/zionBrain';
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
+import { appendLog, optimizePrompt,
+  from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {}
   const token = null;}
     return res.status(500).json({ error: 'Optimization failure' })
   }
-
-export default async function handler(
-    req: NextApiRequest;
-res: NextApiResponse;
-  ) {
+export default async function handler(req: NextApiRequest,
+  res: NextApiResponse;,,
+   ) {
     if (!isAuthorized(req))}
-      return res && res.status(401).json({ error: \"Unauthorized\"}
-});
+      return res && res.status(401).json({ error: \"Unauthorized\"},,
+  });
 
 const started = Date && Date.now();
     try {

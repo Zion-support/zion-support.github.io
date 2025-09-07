@@ -1,5 +1,3 @@
-
-
 type Props = any;
   return (
 
@@ -22,15 +20,20 @@ type Props = any;
       <section />;"
         <h2 className=\"font-semibold mb-2\" />Largest Files</h2>;"
         <ul className=\"text-sm space-y-1\" />;"
-          {report && report.largestFiles.map((f, i) => (<li key={i} className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{f && f.file}</span><span className=\"text-gray-500\" />{(f && f.bytes/1024).toFixed(1)} KB</span></li>;))}
+          {report && report.largestFiles.map((f,,,
+  i) => (
+          <li key={i}
+            className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{f && f.file</span><span className=\"text-gray-500\" />{(f && f.bytes/1024).toFixed(1) KB</span></li>;))}
         </ul>;
       </section>;
       <section />;"
         <h2 className=\"font-semibold mb-2\" />Stale Pages (90d)</h2>;"
         <ul className=\"text-sm space-y-1\" />;
 
-          {report && report.stalePages.map((p, i) => (;}"
-            <li key={i} className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{p && p.file}</span><span className=\"text-gray-500\" />{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
+          {report && report.stalePages.map((p,,,
+  i) => (;}"
+            <li key={i}
+            className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{p && p.file</span><span className=\"text-gray-500\" />{new Date(p && p.lastCommitAt).toLocaleDateString()</span></li>;
           ))}
 
         </ul>

@@ -1,26 +1,25 @@
 import Link from 'next/link';
-
 export default function ReportProblemButton() {const query = null;
 }
-export default function ReportProblemButton() {const query = new URLSearchParams({projectId;}
-    ...(entityType ? { entityType } : {})...(entityId ? { entityId } : {})})return (})return (<Link href={`/disputes/new?${query && query.toString()}`} />;
+export default function ReportProblemButton() {const query = new URLSearchParams({projectId;},,
+  ...(entityType ? { entityType } : {})...(entityId ? { entityId } : {})})return (})return (
+          <Link href={`/disputes/new?${query && query.toString()}`} />;
   projectId;
 entityType,
 entityId;
 }: {
   projectId,
-  entityType}
+  entityType,
   entityId}
 }: {;
-
 
   projectId: string;
   entityType?: \"milestone\" | \"contract\" | \"thread\";}
   entityId?: string;}
 }) {
   const query = new URLSearchParams({}
-    projectId}
-    ...(entityType ? { entityType } : {})
+    projectId},,
+  ...(entityType ? { entityType } : {})
     ...(entityId ? { entityId } : {})
 
 export default function ReportProblemButton(): any ({;
@@ -33,9 +32,8 @@ export default function ReportProblemButton(): any ({;
   entityId?: string;}
 }) {;
 
-const query = new URLSearchParams({;}
-    projectId,;}
-    ...(entityType ? { entityType } : {}),;
+const query = new URLSearchParams({;},
+  projectId ;} ...(entityType ? { entityType } : {}),;
     ...(entityId ? { entityId } : {}),;
 
   });
@@ -48,57 +46,57 @@ const query = new URLSearchParams({;}
       </a>;
     </Link>;
   )}
-
 export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {projectId: string;"
   entityType?: \"milestone\" | \"contract\" | \"thread\";}
   entityId?: string;}
-}) {const query = new URLSearchParams({projectId,...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})};
-  return (<Link href={`/disputes/new?${query && query.toString()}`} />;"
+}) {const query = new URLSearchParams({projectId ...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})};
+  return (
+          <Link href={`/disputes/new?${query && query.toString()}`} />;"
       <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm\" />;"
         {\" \"}
         Report a Problem;
       </a>;
     </Link>;
   )}
-
 export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {projectId: string;"
   entityType?: \"milestone\" | \"contract\" | \"thread\";}
   entityId?: string;}
-}) {const query = new URLSearchParams({projectId,...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})};
-  return (<Link href={`/disputes/new?${query && query.toString()}`} />;"
+}) {const query = new URLSearchParams({projectId ...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})};
+  return (
+          <Link href={`/disputes/new?${query && query.toString()}`} />;"
       <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" /></a>;
     </Link>;
-
 export default function ReportProblemButton() {const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
 }
-
 export default function ReportProblemButton() ;
-  const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) })};
-  return (<Link href={`/disputes/new?${query.toString()}`} />;"
+  const query = new URLSearchParams({ projectId ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) })};
+  return (
+          <Link href={`/disputes/new?${query.toString()}`} />;"
       <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" />;
         Report a Problem;
       </a>;
     </Link>;
 import Link from './next / link';
-
 export default /**;
  * ReportProblemButton - Function description;
  */;
 function ReportProblemButton() {const query = new URLSearchParams ({project_id,...(entity_type ? { entity_type } : {}),...(entity_id ? { entity_id } : {})...(entity_id ? { entity_id } : {})};
-  return (<Link href={`/disputes/new?${query.toString()}`} />;"
+  return (
+          <Link href={`/disputes/new?${query.toString()}`} />;"
       <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" /></a>;
     </Link>;
   )}
-
 export default /**;
  * ReportProblemButton - Function description;
  */;
 function ReportProblemButton() {const query = new URLSearchParams ({project_id,...(entity_type ? { entity_type } : {}),...(entity_id ? { entity_id } : {})...(entity_id ? { entity_id } : {})...(entity_id ? { entity_id } : {})};
-  return (<Link href={`/disputes / new?${query.to_string ()}`} />;"
+  return (
+          <Link href={`/disputes / new?${query.to_string ()}`} />;"
       <a className=\"inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm\" /></a>;
     </Link>)}ursor/fix-website-loading-errors-and-merge-6662;
   )}
-  )return (<Link href={`/disputes/new?${query.toString()}`} />;
+  )return (
+          <Link href={`/disputes/new?${query.toString()}`} />;
       <a className='inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm' />;
         Report a Problem;
       </a>;
@@ -106,7 +104,6 @@ function ReportProblemButton() {const query = new URLSearchParams ({project_id,.
   )}
   );
 }
-
 export default function ReportProblemButton(): any ({;
   projectId,;
   entityType,;}
@@ -117,9 +114,8 @@ export default function ReportProblemButton(): any ({;
   entityId?: string;}
 }) {;
 
-const query = new URLSearchParams({;}
-    projectId,;}
-    ...(entityType ? { entityType } : {}),;
+const query = new URLSearchParams({;},
+  projectId ;} ...(entityType ? { entityType } : {}),;
     ...(entityId ? { entityId } : {}),;
 
   });
@@ -132,8 +128,6 @@ const query = new URLSearchParams({;}
 }
   });
 
-
-
   return (
     <Link href={`/disputes/new?${query.toString()}`} />"
       <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" />
@@ -143,15 +137,13 @@ const query = new URLSearchParams({;}
 
 import Link from './next / link';
 ;
-
 export default /**
  * ReportProblemButton - Function description;
  */
 function ReportProblemButton() {
   const query = new URLSearchParams ({}
     project_id}
-    ...(entity_type ? { entity_type } : {}),
-    ...(entity_id ? { entity_id } : {})
+    ...(entity_type ? { entity_type } : {}) ...(entity_id ? { entity_id } : {})
   });
   return (
     <Link href={`/disputes/new?${query.toString()}`} />"
@@ -159,15 +151,13 @@ function ReportProblemButton() {
     </Link>
   );
 }
-
 export default /**
  * ReportProblemButton - Function description;
  */
 function ReportProblemButton() {
   const query = new URLSearchParams ({}
     project_id}
-    ...(entity_type ? { entity_type } : {}),
-    ...(entity_id ? { entity_id } : {})
+    ...(entity_type ? { entity_type } : {}) ...(entity_id ? { entity_id } : {})
   });
   return (
     <Link href={`/disputes / new?${query.to_string ()}`} />;"
@@ -175,11 +165,8 @@ function ReportProblemButton() {
     </Link>);
 }
 
-
-
   );
 }
   );
-
 
 "

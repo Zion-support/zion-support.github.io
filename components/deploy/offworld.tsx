@@ -1,6 +1,4 @@
-
-
-      const res = null;
+const res = null;
       setStatus('')
     }
 
@@ -35,15 +33,15 @@ setStatus('Deployed successfully');
       <p className='mb-6' />
         Export the site and pin it to IPFS for disconnected/offworld use.
       </p>
-      <button;
-className='px-4 py-2 bg-black text-white rounded'
+      <button className='px-4 py-2 bg-black text-white rounded'
 
         onClick={handleDeploy} />;
         Deploy to IPFS;
       </button>;
       {status && <p className='mt-4 text-green-600' />{status}</p>}
       {error && <p className='mt-4 text-red-600' />{error}</p>}
-      {cid && (<div className='mt-6 space-y-2' />;
+      {cid && (
+          <div className='mt-6 space-y-2' />;
           <div />;}
             CID: <code className='break-all' />{ci,}
 }</code>;
@@ -60,4 +58,3 @@ className='px-4 py-2 bg-black text-white rounded'
     </div>
   );
 }
-

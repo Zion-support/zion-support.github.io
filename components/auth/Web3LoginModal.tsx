@@ -1,23 +1,23 @@
-
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+}componentDidCatch(error,,,
+  errorInfo) {console.error('Error caught by boundary:', error,,,
+  errorInfo)}
   render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }
     return this.props.children;
   }
 }
-import React, { useCallback, useEffect, useState } from 'react';
-
-
+import React, { useCallback, useEffect, useState,
+  from 'react';
 import dynamic from 'next/dynamic';
 
 const isClient = typeof window !== 'undefined';
   }) => void;
 };
 
-
-function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
+function ModalInner({ isOpen, onClose,,
+  onLoggedIn  }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
 
 const [error, setError] = useState<string | null />(null);
@@ -42,17 +42,17 @@ const WalletConnectProvider = (
       ).default;
 
 const web3Modal = new Web3ModalCtor({
-        cacheProvider: false;
-providerOptions: {
+        cacheProvider: false,
+  providerOptions: {
           walletconnect: {
-            package: WalletConnectProvider;
-options: {}
+            package: WalletConnectProvider,
+  options: {}
 rpc: { 1: 'https://cloudflare-eth.com'}
 }
             }
           }
-        }
-      });
+        },,
+  });
 
 const provider = await web3Modal.connect();
 
@@ -78,7 +78,7 @@ const statement = 'Sign in to Zion with your wallet. No gas required.';
 
 const issuedAt = new Date().toISOString();
 
-const siweMessage = `${address} wants you to sign in with your Ethereum account: \n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedA}
+const siweMessage = `${address wants you to sign in with your Ethereum account: \n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedA}
 }`;
 
 const signature = await signer.signMessage(siweMessage);
@@ -90,9 +90,8 @@ const verifyRes = await fetch('/api/auth/verify-evm', {
 body: JSON.stringify({
           message: siweMessage,
           signature,
-          address}
-          chainId: network.chainId}
-        })
+          address,,
+  chainId: network.chainId} })
       });
       if (!verifyRes.ok) throw new Error('Failed to verify signature');
       onLoggedIn?.({ address, chain: 'evm'}
@@ -129,11 +128,12 @@ const statement =
         'Sign in to Zion with your Solana wallet. No gas required.';
 
 const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString(}
-}`;
+}`,
+  ,,
+  const encodedMessage = new TextEncoder().encode(message);
 
-const encodedMessage = new TextEncoder().encode(message);
-
-const { signature } = await provider.signMessage(encodedMessage, 'utf8');
+const { signature } = await provider.signMessage(encodedMessage,,,
+  'utf8');
 
 const bs58 = (await import('bs58')).default;
 
@@ -142,8 +142,8 @@ const verifyRes = await fetch('/api/auth/verify-sol', {
   headers: { 'Content-Type': 'application/json'}
 },
 body: JSON.stringify({
-          message,
-          signature: bs58.encode(signature)}
+          message,,,
+  signature: bs58.encode(signature)}
           publicKey}
         })
       });
@@ -174,32 +174,39 @@ body: JSON.stringify({
             {error}
           </div>
 
-        
 }
         <div className=\"space-y-3\" />;"
-          <button onClick={handleEvmConnect} disabled={loading} className=\"w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black\" />;
-            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
+          <button onClick={handleEvmConnect}
+            disabled={loading
+            className=\"w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black\" />
+            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'
           </button>;"
-          <button onClick={handlePhantomConnect} disabled={loading} className=\"w-full rounded-lg bg-purple-600 text-white py-2.5\" />;
-            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
+          <button onClick={handlePhantomConnect
+            disabled={loading
+            className=\"w-full rounded-lg bg-purple-600 text-white py-2.5\" />;
+            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'
           </button>;
         </div>;"
-        <div className=\"mt-4 flex justify-end\" />;
-        </div>;
-      </div>;
-    </div>;
-  )}
-
-export default function Web3LoginModal() {if (!isClient) return null;return <ModalInner {...props} />;        </div>;"
-        {error && (<div className=\"mb-3 rounded-md bg-red-50 dark: bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300\" />{erro}
+        <div className=\"mt-4 flex justify-end\" />}
+            </div>
+            </div>
+            </div>
+            )
+export default function Web3LoginModal() {if (!isClient) return null;return <ModalInner {...props />;        </div>;"
+        {error && (
+          <div className=\"mb-3 rounded-md bg-red-50 dark: bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300\" />{erro
 }</div>;
         )}"
         <div className=\"space-y-3\" />;"
-          <button onClick={handleEvmConnect} disabled={loading} className=\"w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black\" />;
-            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
+          <button onClick={handleEvmConnect}
+            disabled={loading
+            className=\"w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black\" />
+            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'
           </button>;"
-          <button onClick={handlePhantomConnect} disabled={loading} className=\"w-full rounded-lg bg-purple-600 text-white py-2.5\" />;
-            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
+          <button onClick={handlePhantomConnect
+            disabled={loading
+            className=\"w-full rounded-lg bg-purple-600 text-white py-2.5\" />
+            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'
 
           </button>
         </div>"
@@ -207,11 +214,11 @@ export default function Web3LoginModal() {if (!isClient) return null;return <Mod
         </div>
       </div>
     </div>
-  );
-}
+  )
+            
 
-export default function Web3LoginModal(props: Web3LoginModalProps) {;
-  if (!isClient) return null;}
+export default function Web3LoginModal(props: Web3LoginModalProps) {
+            if (!isClient) return null;
 }
   return <ModalInner {...props} />;
   return <ModalInner {...props} />

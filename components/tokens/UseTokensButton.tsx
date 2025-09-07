@@ -1,52 +1,45 @@
-
-
-
 export default function UseTokensButton({
   serviceId;}
 defaultType}
 }: {
-  serviceId?: string;
+  serviceId?: string,
   defaultType?: RedemptionType;}
-}
-}) {
+},,
+  }) {
   const [open, setOpen] = useState(false);
   return (
     <>;}
-      <button;}
-onClick={() = /> setOpen(true)}
+      <button onClick={() = /> setOpen(true)}
         className=\"enhanced-button enhanced-button-primary\">
 
         Use Tokens;
       </button>;
-      <UseTokensModal;
-        isOpen = {open}
-        onClose={() = /> setOpen(false)}
-        serviceId={serviceId}
-        defaultType={defaultType}
+      <UseTokensModal isOpen = {open,
+  onClose={() = /> setOpen(false)}
+        serviceId={serviceId,
+  defaultType={defaultType
   ;
-  const [open, setOpen] = useState(false)return (<>;
-      <button;
-        onClick={() = /> setOpen(true)}"
+  const [open
+            setOpen] = useState(false)return (<>
+            <button onClick={() = /> setOpen(true)"
         className=\"enhanced-button enhanced-button-primary\">
 
         Use Tokens;
       </button>;
-      <UseTokensModal;
-        isOpen={open}
-        onClose={() = /> setOpen(false)}
-        serviceId={serviceId}
-        defaultType={defaultType}
+      <UseTokensModal isOpen={open,
+  onClose={() = /> setOpen(false)
+        serviceId={serviceId,
+  defaultType={defaultType
       />;
     </>;
-)))const [open, setOpen] = useState(false)return (<UseTokensModal;
-        isOpen={open}
-        onClose={() = /> setOpen(false)}
-        serviceId={serviceId}
-        defaultType={defaultType}
+)))const [open, setOpen] = useState(false)return (
+          <UseTokensModal isOpen={open,
+  onClose={() = /> setOpen(false)
+        serviceId={serviceId,
+  defaultType={defaultType
 
       />
     </>
   );
-
 
 "

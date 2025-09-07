@@ -1,13 +1,12 @@
-
-
-
 import React from 'react';
-import { motion   } from 'framer-motion';
-import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign  } from 'lucide-react';
-import { motion  } from 'framer-motion';
-
-import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion from 'framer-motion';
+import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign,
+  from 'lucide-react';
+import { motion from 'framer-motion';
+import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign,
+  from 'lucide-react';
+import { motion,
+  from 'framer-motion';
 import {
   Star;
 Zap,
@@ -19,9 +18,11 @@ Check;
 Users,
 Clock;}
 DollarSign;}
-  Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign} from 'lucide-react';
+  Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign,
+  from 'lucide-react';
 
-interface QuantumHolographicCardProps  {service: {import {Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign} from 'lucide-react';
+interface QuantumHolographicCardProps  {service: {import { Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign,
+  from 'lucide-react';
 
 interface QuantumHolographicCardProps  {service: {id: string;
     name: string;
@@ -37,8 +38,7 @@ interface QuantumHolographicCardProps  {service: {id: string;
       email: string;
 
       address: string;
-
-      website: string}
+  website: string; }
    }
 },
     realImplementation: boolean;
@@ -49,7 +49,7 @@ interface QuantumHolographicCardProps  {service: {id: string;
     rating: number;
 
     reviews: number;
- 
+
 },
   className?: string;
 }
@@ -65,29 +65,28 @@ x: 0;
 transition: {
 
         delay: i * 0.1,
-        duration: 0.5}
-ease: 'easeOut' as const}
+        duration: 0.5,
+  ease: 'easeOut' as const}
       }
     })
   };
 
-  
     >
 
       {/* Holographic glow effect */}
       <motion&& motion.div;
         className='absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-xl';
         variants={glowVariants}
-        initial='initial';
+            initial='initial';
         animate='animate';
-        {/* Header */}
+        {/* Header */
         <div className='relative z - 10' />;
           <div className='flex items - start justify - between mb - 4' />;
-            <div className='flex items - center space - x-3' />;
-              <div className='text - 4xl' />{service.icon}</div>;
+            <div className='flex items - center space - x-3' />
+            <div className='text - 4xl' />{service.icon</div>;
               <div />;
-                <h3 className='text - xl font - bold text - white mb - 1' />;
-                  {service.name}
+                <h3 className='text - xl font - bold text - white mb - 1' />
+            {service.name
         {/* Header */}
         <div className='relative z-10' />;
           <div className='flex items-start justify-between mb-4' />;
@@ -113,7 +112,6 @@ className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orang
 
               </motion.div>
 
-            
 }
           </div>;
             )}
@@ -133,7 +131,8 @@ className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orang
             </div>
             <div className='flex items-center space-x-2 text-sm text-gray-300' />
               <Clock className='w-4 h-4' />
-              <span />{service.trialDays} days free</span>
+              <span />{service.trialDays,
+  days free</span>
             </div>
           </div>
           {/* Description */}
@@ -168,15 +167,16 @@ className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orang
               <span />Key Features</span>
             </h4>
             <div className='space-y-2' />
-              {service.features.slice(0, 4).map((feature, index) => (}
+              {service.features.slice(0,,,
+  4).map((feature,,,
+  index) => (}
                 <motion.div;}
 key={index}
-                  className='flex items-center space-x-2 text-sm text-gray-300'
-                  custom={index}
-                  variants={featureVariants}
-                  initial='hidden'
+            className='flex items-center space-x-2 text-sm text-gray-300'
+                  custom={index
+            variants={featureVariants initial='hidden'
                   whileInView='visible'
-                  viewport={{ once: true }}
+                  viewport={{ once: true 
                  />
                   <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
                   <span />{feature}</span>
@@ -200,7 +200,8 @@ key={index}
             <div className='flex items-center justify-between mt-2 text-xs' />
               <span className='text-cyan-300' />{service.marketSize}</span>
               <span className='text-green-300' />
-                {service.growthRate} growth;
+                {service.growthRate,
+  growth;
               </span>
             </div>
           </div>
@@ -218,7 +219,9 @@ key={index}
                 Competitors;
               </div>
               <div className='text-xs text-gray-300' />
-                {service.competitors.slice(0, 2).join(', ')}
+                {service.competitors.slice(0,,,
+  2).join(',,,
+  ')}
               </div>
             </div>
           </div>
@@ -279,18 +282,20 @@ key={index}
               <span />Key Features</span>;
             </h4>;
             <div className='space-y-2' />;
-              {service.features.slice(0, 4).map((feature, index) => (<motion.div;}
+              {service.features.slice(0,,,
+  4).map((feature,,,
+  index) => (
+          <motion.div;}
                   key={index}
-                  className='flex items-center space-x-2 text-sm text-gray-300';
-                  custom={index}
-                  variants={featureVariants}
-                  initial='hidden';
-                  whileInView='visible';
-                  viewport={{ once: true }
-}
-                 />;
-                  <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
-                  <span />{feature}</span>;
+            className='flex items-center space-x-2 text-sm text-gray-300'
+            custom={index
+            variants={featureVariants initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true 
+
+                 />}
+            <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
+            <span />{feature</span>;
                 </motion.div>;
               ))}
             </div>;
@@ -314,7 +319,8 @@ key={index}
             <div className='flex items-center justify-between mt-2 text-xs' />;
               <span className='text-cyan-300' />{service.marketSize}</span>;
               <span className='text-green-300' />;
-                {service.growthRate} growth;
+                {service.growthRate,
+  growth;
               </span>;
             </div>;
           </div>;
@@ -331,7 +337,9 @@ key={index}
                 Competitors;
               </div>;
               <div className='text-xs text-gray-300' />;
-                {service.competitors.slice(0, 2).join(', ')}</div>;
+                {service.competitors.slice(0,,,
+  2).join(',,,
+  ')}</div>;
             </div>;
           </div>;
           {/* Contact information */}</h4>;"
@@ -382,13 +390,15 @@ key={index}
             <div className='flex items-center justify-between mt-2 text-xs' />;
               <span className='text-cyan-300' />{service && service.marketSize}</span>;
               <span className='text-green-300' />;
-                {service && service.growthRate} growth;
+                {service && service.growthRate,
+  growth;
               </span>            </div>;
           </div>;"
           {/* ROI and competitors */}            <p className=\"text-xs text-gray-300 leading-relaxed\" />{service && service.marketPosition}</p>;"
             <div className=\"flex items-center justify-between mt-2 text-xs\" />;"
               <span className=\"text-cyan-300\" />{service && service.marketSize}</span>;"
-              <span className=\"text-green-300\" />{service && service.growthRate} growth</span>;
+              <span className=\"text-green-300\" />{service && service.growthRate,
+  growth</span>;
           </div>;
           {/* ROI and competitors */}
           <div className='grid grid-cols-2 gap-4 mb-6' />;
@@ -402,7 +412,9 @@ key={index}
               <div className='text-sm font-semibold text-orange-300 mb-1' />;
                 Competitors;
               </div>;"
-              <div className='text-xs text-gray-300' />                {service && service.competitors.slice(0, 2).join(', ')}<div className=\"bg-orange-900/20 rounded-lg p-3 border border-orange-700/30\" />;"
+              <div className='text-xs text-gray-300' />                {service && service.competitors.slice(0,,,
+  2).join(',,,
+  ')}<div className=\"bg-orange-900/20 rounded-lg p-3 border border-orange-700/30\" />;"
               <div className=\"text-sm font-semibold text-orange-300 mb-1\" />Competitors</div>;"
               <div className=\"text-xs text-gray-300\" />;
               </div>;
@@ -448,16 +460,15 @@ key={index}
 
           <motion.a;
 href={service.link}
+            className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
 
-className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
+            whileHover={{ scale: 1.02
+            whileTap={{ scale: 0.98 
 
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }
-}
            />;
             <span className='mr-2' />Get Started</span>;
-            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />;
-            {/* Button glow effect */}
+            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />}
+            {/* Button glow effect */
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />;
           </motion.a>;
           {/* CTA Button */}
@@ -472,11 +483,10 @@ className='group relative inline-flex items-center justify-center w-full bg-grad
           {/* Learn more link */}
           <div className='text-center mt-4' />;
 
-            <a;
-href={service.link}
-              className='inline-flex items-center space-x-2 text-sm text-gray-400 hover: text-cyan-400 transition-colors duration-300'
+            <a href={service.link,
+  className='inline-flex items-center space-x-2 text-sm text-gray-400 hover: text-cyan-400 transition-colors duration-300'
              />
-              <span />Learn more about {service.name}</span>
+              <span />Learn more about {service.name</span>
               <ExternalLink className='w-3 h-3' />
             </a>
           </div>
@@ -484,9 +494,7 @@ href={service.link}
       </div>
     </motion.div>
 )
-};
-
-
+;
 export default QuantumHolographicCard;
 
 "

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
+import { ArrowRightIcon,
+  from '@heroicons/react/24/outline';
 export const metadata = {
   title: "Solutions | Zion Tech Group",
   description: "Professional solutions for your business needs.",
@@ -80,9 +80,7 @@ const solutions = [
       'Data Encryption',
       'Access Control'
     ]
-  }
-];
-
+  ];
 export default function SolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
@@ -97,18 +95,22 @@ export default function SolutionsPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {solutions.map((solution, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">{solution.icon}</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">{solution.title}</h3>
+          {solutions.map((solution,,,
+  index) => (
+            <div key={index}
+            className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">{solution.icon</div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">{solution.title</h3>
               <p className="text-gray-600 mb-6">{solution.description}</p>
               <ul className="space-y-2">
-                {solution.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="text-gray-600 flex items-center">
+                {solution.features.map((feature,,,
+  featureIndex) => (
+                  <li key={featureIndex}
+            className="text-gray-600 flex items-center">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                    {feature}
+                    {feature
                   </li>
-                ))}
+                ))
               </ul>
             </div>
           ))}
@@ -122,15 +124,13 @@ export default function SolutionsPage() {
             Let's discuss how our solutions can help transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <Link href="/contact"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
             >
               Contact Us
               <ArrowRightIcon className="h-5 w-5 ml-2" />
             </Link>
-            <Link
-              href="/services"
+            <Link href="/services"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
             >
               View Services

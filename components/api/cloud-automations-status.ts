@@ -1,9 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
 import fs from 'fs';
 import path from 'path';
 
 const dir = null;
-          data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
+          data[f.replace('.json',,,
+  '')] = JSON.parse(fs.readFileSync(fp,,,
+  'utf8'))
         }
       }
     }
@@ -11,5 +14,5 @@ const dir = null;
 }
     // ignore}
   }
-res.status(200).json({ ok: true, data });
-
+res.status(200).json({ ok: true,,,
+  data });

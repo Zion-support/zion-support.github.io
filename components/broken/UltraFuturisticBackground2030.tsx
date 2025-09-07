@@ -1,6 +1,5 @@
-
-
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef,
+  from 'react';
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -10,7 +9,8 @@ let particles: Array< {const UltraFuturisticBackground2030: React.FC<;}
 > = ({ children    }) => {
 }
 }
-const canvasRef  = useRef<HTMLCanvasElement />(null)import { motion  } from 'framer-motion';
+const canvasRef  = useRef<HTMLCanvasElement />(null)import { motion,
+  from 'framer-motion';
 
 interface UltraFuturisticBackground2030Props {
   children: React.ReactNode;}
@@ -19,7 +19,6 @@ interface UltraFuturisticBackground2030Props {
 
 const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props /> = ({ children   }
 }) => {
-
 
 const canvasRef = null;
   useEffect(() => {
@@ -46,7 +45,8 @@ let particles: Array< {const UltraFuturisticBackground2030: React.FC<;}
 
 }
   const canvas_ref = useRef < HTMLCanvasElement>(null)import React, {;}
-  useEffect, useRef } from 'react';
+  useEffect, useRef,
+  from 'react';
 
 interface UltraFuturisticBackground2030Props {
   children: React.ReactNode;}
@@ -55,7 +55,6 @@ interface UltraFuturisticBackground2030Props {
 
 const UltraFuturisticBackground2030: React.FC < UltraFuturisticBackground2030Props> = ({ children   }
 }) => {
-
 
 useEffect (() => {const canvas = canvas_ref.current;
     // Check condition;}
@@ -82,8 +81,8 @@ if (return) {$2;}
 const initParticles = (
       particles = [];
 for (let i = 0; i < 150; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
+        particles.push({,,
+  x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 0.5,
           vy: (Math.random() - 0.5) * 0.5,
@@ -99,9 +98,12 @@ color: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'][
 
     }
 
-const animate = (ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
-      particles.forEach((particle, index) => {particle.x += particle.vx;
+const animate = (ctx.fillStyle = 'rgba(0, 0, 0,,,
+  0.05)';
+      ctx.fillRect(0, 0, canvas.width,,,
+  canvas.height)// Update and draw particles;
+      particles.forEach((particle,,,
+  index) => {particle.x += particle.vx;
         particle.y += particle.vy;
         // Wrap around edges;
         if (particle.x < 0) particle.x = canvas.width;
@@ -109,11 +111,17 @@ const animate = (ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
         // Draw particle;
-        ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fillStyle = particle.color;
+        ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0,,,
+  Math.PI * 2)ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.opacity;
         ctx.fill()// Draw connections;
-        particles.forEach((otherParticle, otherIndex) => {if (index !== otherIndex) {const distance = Math.sqrt(Math.pow(particle.x - otherParticle.x, 2) +;
-                Math.pow(particle.y - otherParticle.y, 2))if (distance < 100) {ctx.beginPath()ctx.moveTo(particle.x, particle.y)ctx.lineTo(otherParticle.x, otherParticle.y)ctx.strokeStyle = particle.color;
+        particles.forEach((otherParticle,,,
+  otherIndex) => {if (index !== otherIndex) {const distance = Math.sqrt(Math.pow(particle.x - otherParticle.x,,,
+  2) +;
+                Math.pow(particle.y - otherParticle.y,,,
+  2))if (distance < 100) {ctx.beginPath()ctx.moveTo(particle.x,,,
+  particle.y)ctx.lineTo(otherParticle.x,,,
+  otherParticle.y)ctx.strokeStyle = particle.color;
 ctx.globalAlpha = ((100 - distance) / 100) * 0.3;
               ctx.lineWidth = 0.5;
 
@@ -129,7 +137,6 @@ ctx.globalAlpha = ((100 - distance) / 100) * 0.3;
       animationId = requestAnimationFrame(animate)
 };
 
-
     initParticles();
     animate();
 
@@ -141,11 +148,12 @@ initParticles()) => {
 }
 };
 
-
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize',,,
+  handleResize);
     return () => {
       cancelAnimationFrame(animationId);}
-window.removeEventListener('resize', handleResize)}
+window.removeEventListener('resize',,,
+  handleResize)}
 };
 
   }, []);
@@ -154,57 +162,64 @@ window.removeEventListener('resize', handleResize)}
     <div className='relative min - h-screen bg - black overflow - hidden' />;
 
       {/* Animated Canvas Background */}
-      <canvas;
-        ref={canvas_ref}
-        className='fixed inset - 0 w - full h - full pointer - events - none z - 0';
-        style={{{/* Floating Geometric Shapes */}
-      <div className='fixed inset-0 pointer-events-none z-10' />;
-        {/* Hexagon Grid */}
+      <canvas ref={canvas_ref}
+            className='fixed inset - 0 w - full h - full pointer - events - none z - 0'
+            style={{{/* Floating Geometric Shapes */
+      <div className='fixed inset-0 pointer-events-none z-10' />
+            {/* Hexagon Grid */
 
-        <motion&& motion.div;
-className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
+        <motion&& motion.div}
+            className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
           style={{
             clipPath:
-}
-              'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}
-          }}
+
+              'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%,
+  0% 25%)'
+          }
           animate={{
-            rotate: 360,
-            scale: [1, 1.1, 1]}
-            opacity: [0.3, 0.6, 0.3]}
-          }}
+            rotate: 360}
+            scale: [1, 1.1, 1]
+            opacity: [0.3
+            0.6
+            0.3]
+          }
           animate={{
             rotate: 360;}
 scale: [1, 1.1, 1]}
             opacity: [0.3, 0.6, 0.3]          }}
 
           transition={{
-            duration: 20,
-            repeat: Infinity}
-ease: 'linear'}
-          }}
+            duration: 20}
+            repeat: Infinity
+            ease: 'linear'
+          
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
           style={{
             clipPath:
-              'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
+              'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%}
+            0% 75%,,
+  0% 25%)'
         />;
         <motion.div;
-          className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30';
-          style={{
-            clip_path:;}
-              'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}
+          className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30'
+            style={{
+            clip_path:}
+            'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%
+            0% 25%)'
           }}
           animate={{
 
-            rotate: -360,
-            scale: [1, 0.9, 1]}
-            opacity: [0.3, 0.6, 0.3]}
-          }}
+            rotate: -360}
+            scale: [1, 0.9, 1]
+            opacity: [0.3
+            0.6
+            0.3]
+          }
           transition={{
-            duration: 25,
-            repeat: Infinity}
-ease: 'linear'}
-          }}
+            duration: 25}
+            repeat: Infinity
+            ease: 'linear'
+          
         />
             duration: 25,
             repeat: Infinity,
@@ -214,10 +229,9 @@ ease: 'linear'}
 
           }}
           transition={{
-            duration: 25,
-            repeat: Infinity}
-}
-          }}
+            duration: 25}
+            repeat: Infinity
+             }
 
         />
 
@@ -226,31 +240,33 @@ ease: 'linear'}
         <motion.div;
 className='absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40'
           animate={{
-            y: [0, -20, 0]}
-            opacity: [0.4, 0.8, 0.4]}
+            y: [0, -20}
+            0]
+            opacity: [0.4, 0.8
+            0.4]
           }}
           transition={{
-            duration: 8,
-            repeat: Infinity}
-ease: 'easeInOut'}
-          }}
+            duration: 8}
+            repeat: Infinity
+            ease: 'easeInOut'
+          
         />
         <motion.div;
 className='absolute top-80 right-1/3 w-20 h-20 rounded-full border border-blue-400/40'
           animate={{
-            y: [0, 20, 0]}
-            opacity: [0.4, 0.8, 0.4]}
+            y: [0, 20}
+            0]
+            opacity: [0.4, 0.8
+            0.4]
           }}
           transition={{
-            duration: 10,
-            repeat: Infinity}
-ease: 'easeInOut'}
-          }}
-        />
-            duration: 10,
+            duration: 10}
             repeat: Infinity
-
-          }}
+            ease: 'easeInOut'
+          
+        />
+            duration: 10;
+  repeat: Infinity; }}
 
         />
 
@@ -264,9 +280,11 @@ ease: 'easeInOut',
         <motion.div;
 className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
           animate={{
-            height: [32, 64, 32],
-            opacity: [0.3, 0.8, 0.3]}
-}
+            height: [32, 64}
+            32]
+            opacity: [0.3, 0.8
+            0.3]
+
           }}
       {/* Gradient Overlays */}
 
@@ -283,19 +301,25 @@ className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-t
       {/* Content */}
       {/* Floating Particles */}
       <div className='fixed inset-0 pointer-events-none z-15' />;
-        {[...Array(20)].map((_, i) => (<motion&& motion.div;
+        {[...Array(20)].map((_,,,
+  i) => (
+          <motion&& motion.div;
             ease: 'easeInOut'}"
   ease: \"easeInOut\";}
           }}
         />;
         <motion.div;
           className='absolute top - 64 right - 1/4 w - 1 h - 24 bg - gradient - to - b from - purple - 400 to - transparent';"
-          animate={{height: [24, 48, 24],opacity: [0.3, 0.8, 0.3],          className=\"absolute top - 64 right - 1/4 w - 1 h - 24 bg - gradient - to - b from - purple-400 to-transparent\";
-          animate={{height: [24, 48, 24];
-            opacity: [0.3, 0.8, 0.3];
-          transition={{duration: 8,repeat: Infinity,ease: 'easeInOut'}"
-  ease: \"easeInOut\";}
-          }}
+          animate={{height: [24, 48, 24],opacity: [0.3, 0.8, 0.3]}
+            className=\"absolute top - 64 right - 1/4 w - 1 h - 24 bg - gradient - to - b from - purple-400 to-transparent\"
+            animate={{height: [24, 48, 24]
+            opacity: [0.3, 0.8
+            0.3]
+            transition={{duration: 8}
+            repeat: Infinity; 
+            ease: 'easeInOut'"
+  ease: \"easeInOut\"
+             }
         />;
       </div>;
       {/* Gradient Overlays */}
@@ -313,35 +337,37 @@ className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-t
       <div className='relative z - 30' />{children}</div>;
       {/* Floating Particles */}
       <div className='fixed inset - 0 pointer - events - none z - 15' />;
-        {[...Array (20)].map ((_, i) => (<motion.div;}
+        {[...Array (20)].map ((_, i) => (
+          <motion.div;}
             key={i}
-            className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full';
-
-            style={{}
-              left: `${Math.random() * 10}
+            className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full'
+            style={{
+              left: `${Math.random() * 10
 }%`,
               top: `${Math.random() * 10}
 }%`
             }}
             animate={{
 
-              y: [0, -100, 0],
-              opacity: [0, 1, 0]}
-              scale: [0, 1, 0]}
+              y: [0, -100}
+            0]
+            opacity: [0, 1, 0]
+              scale: [0, 1
+            0]
             }}
             transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              delay: Math.random() * 10,
-ease: 'easeInOut'}
-}
-            }}
-            transition={{duration: Math.random() * 10 + 10;
-              repeat: Infinity;}
-              delay: Math.random() * 10;}"
+              duration: Math.random() * 10 + 10}
+            repeat: Infinity
+            delay: Math.random() * 10 ease: 'easeInOut'
+
+            }
+            transition={{duration: Math.random() * 10 + 10}
+            repeat: Infinity
+            delay: Math.random() * 10;"
               duration: Math && Math.random() * 10 + 10,repeat: Infinity,delay: Math && Math.random() * 10,transition={{ease: 'easeInOut'            }}              ease: \"easeInOut\";
               y: [0, -100, 0],opacity: [0, 1, 0],scale: [0, 1, 0]}}
-            transition={{duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 10,ease: 'easeInOut'}}
+            transition={{duration: Math.random() * 10 + 10,repeat: Infinity}
+            delay: Math.random() * 10 ease: 'easeInOut'
           />;
         ))}
       {/* Neon Glow Effects */}
@@ -356,11 +382,14 @@ ease: 'easeInOut'}
 }%`,top: `${Math.random () * 10}
 }%`;
             }}
-            animate={{coordinate_y: [0, -100, 0];
-              opacity: [0, 1, 0];}
-              scale: [0, 1, 0];}
+            animate={{coordinate_y: [0, -100}
+            0]
+            opacity: [0, 1
+            0]
+            scale: [0, 1, 0];
             }}"
-            transition={{duration: Math.random () * 10 + 10,repeat: Infinity,delay: Math.random () * 10,ease: 'easeInOut'            }}              ease: \"easeInOut\";
+            transition={{duration: Math.random () * 10 + 10,repeat: Infinity,delay: Math.random () * 10}
+            ease: 'easeInOut'                          ease: \"easeInOut\";
             }}
           />))}
       </div>;
@@ -373,13 +402,12 @@ ease: 'easeInOut'}
     </div>
   );
 }
-
 export default UltraFuturisticBackground2030;      </div>
     </div>
   );
 }
-
-export default UltraFuturisticBackground2030;transition={{duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 10,ease: 'easeInOut'            }}/>;
+export default UltraFuturisticBackground2030;transition={{duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 10}
+            ease: 'easeInOut'            />;
         ))}
       </div>;
       {/* Neon Glow Effects */}
@@ -393,7 +421,6 @@ export default UltraFuturisticBackground2030;transition={{duration: Math.random(
     </div>
   )
 };
-
 export default UltraFuturisticBackground2030;
 
 "

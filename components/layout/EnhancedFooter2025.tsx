@@ -1,6 +1,5 @@
-
-import { motion } from 'framer-motion';
-
+import { motion,
+  from 'framer-motion';
 import { Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;}
@@ -32,10 +31,7 @@ services: [
 },
 
         { name: 'AI Ethics & Governance'}
-  href: '/ai-ethics-governance'}
-}
-
-    ]
+  href: '/ai-ethics-governance']
   },
   {
     title: 'Quantum & Emerging Tech',
@@ -58,10 +54,7 @@ services: [
 },
 
   { name: 'Autonomous Vehicle AI'}
-  href: '/autonomous-vehicle-ai'}
-}
-
-    ]
+  href: '/autonomous-vehicle-ai']
   },
   {
     title: 'Enterprise IT',
@@ -84,10 +77,7 @@ services: [
   href: '/blockchain-enterprise-platform'}
       },
         { name: 'AI-Powered DevOps'}
-  href: '/ai-powered-devops'}
-}
-
-    ]
+  href: '/ai-powered-devops']
   },
   {
     title: 'Micro SAAS',
@@ -110,12 +100,8 @@ services: [
 },
 
   { name: 'DevOps Automation Studio'}
-  href: '/devops-automation-studio'}
-}
-
-    ]
-  }
-];
+  href: '/devops-automation-studio']
+  ];
 
 const companyLinks = [
     { name: 'About Us'}
@@ -139,10 +125,7 @@ const companyLinks = [
 },
 
   { name: 'Resources'}
-  href: '/resources'}
-}
-
-];
+  href: '/resources'];
 
 const legalLinks = [
     { name: 'Privacy Policy'}
@@ -158,10 +141,7 @@ const legalLinks = [
 },
 
   { name: 'GDPR Compliance'}
-  href: '/gdpr'}
-}
-
-];
+  href: '/gdpr'];
 
 const socialLinks = [
   { name: 'Twitter'}
@@ -179,10 +159,8 @@ const socialLinks = [
 {
     name: 'Instagram',
   href: '#',
-    icon: Instagram}
-    color: 'hover:text-pink-400'}
-  }
-];
+    icon: Instagram,
+  color: 'hover:text-pink-400'];
 
 const EnhancedFooter2025: React.FC = () => {
  ;
@@ -222,8 +200,7 @@ worldwide.
               <div className='space-y-3' />;
                 <div className='flex items-center space-x-3 text-gray-300' />;
                   <Phone className='w-4 h-4 text-cyan-400' />;
-                  <a;
-                    href={`tel: ${contactInfo.mobile}`}
+                  <a href={`tel: ${contactInfo.mobile}`}
                     className='hover:text-cyan-400 transition-colors' />
 
                     {contactInfo.mobil}
@@ -232,8 +209,7 @@ worldwide.
                 </div>;
                 <div className='flex items-center space-x-3 text-gray-300' />;
                   <Mail className='w-4 h-4 text-purple-400' />;
-                  <a;
-                    href={`mailto: ${contactInfo.email}`}
+                  <a href={`mailto: ${contactInfo.email}`}
                     className='hover:text-purple-400 transition-colors' />
 
                     {contactInfo.email}
@@ -249,15 +225,19 @@ worldwide.
 
             {/* Service Categories *}
 }
-            {serviceCategories && serviceCategories.map((category, index) => (<motion&& motion.div;}
-                key={category && category.title}
-                initial={{ opacity: 0, y: 20 }
-}
-                whileInView={{ opacity: 1, y: 0 }
-}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+            {serviceCategories && serviceCategories.map((category,,,
+  index) => (
+          <motion&& motion.div;}
+                key={category && category.title,
+  initial={{ opacity: 0,
+  y: 20
+            
 
-                viewport={{ once: true }}
+                whileInView={{ opacity: 1
+            y: 0,
+  transition={{ duration: 0 && 0.6}
+            delay: index * 0 && 0.1
+            viewport={{ once: true }
 
 className='space-y-4'
                />
@@ -272,25 +252,19 @@ className='space-y-4'
                   </h3>;
                 </div>;
                 <div className='space-y-2' />;
-                  {category.services.map(service => (<Link;}
-                      key={service.name}
-
-                      href={service.href}
-
-                      className='block text-gray-400 hover: text-cyan-400 transition-colors duration-200 text-sm'
+                  {category.services.map(service => (
+          <Link key={service.name}
+            href={service.href className='block text-gray-400 hover: text-cyan-400 transition-colors duration-200 text-sm'
                      />
 
-                      {service.nam}
-}
-                    </Link>;
-                  ))}
+                      {service.nam
+
+                    </Link>;,}
+            ))
                 </div>;
               </motion.div>;
             ))}
           </div>;
-
-
-
 
           {/* Additional Links */}
 
@@ -303,20 +277,17 @@ className='space-y-4'
               <div className='space-y-2' />;
 
                 {companyLinks && companyLinks.map(link => (;}
-                  <Link;}
-key={link.name}
-                    href={link.href}
-                    className='block text-gray-400 hover: text-white transition-colors duration-200 text-sm'
+                  <Link key={link.name}
+            href={link.href className='block text-gray-400 hover: text-white transition-colors duration-200 text-sm'
                    />
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
 
                   >
 
+                    {link.nam
 
-                    {link.nam}
-}
-                  </Link>;
-                ))}
+                  </Link>;,}
+            ))
               </div>;
             </div>;
                     {link.name}
@@ -335,32 +306,29 @@ key={link.name}
 <h4 className='text-white font-semibold mb-4' />Legal</h4>
               <div className='space-y-2' />
                 {legalLinks.map(link => (}
-                  <Link;}
-key={link.name}
-                    href={link.href}
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm' />
+                  <Link key={link.name}
+            href={link.href className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm' />
 
-                    {link.nam}
-}
-                  </Link>;
-                ))}
+                    {link.nam
+
+                  </Link>;,}
+            ))
               </div>;
             </div>;
             {/* Social Links */}
             <div />;
 <h4 className='text-white font-semibold mb-4' />Follow Us</h4>;
               <div className='flex space-x-4' />;
-                {socialLinks.map(social => (<a;}
-            {/* Social Links */}key={social.name}
-                    href={social.href}
-                    className={`w-10 h-10 bg-gray-800/50 hover: bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
+                {socialLinks.map(social => (
+          <a}
+            {/* Social Links */}key={social.name href={social.href className={`w-10 h-10 bg-gray-800/50 hover: bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color transition-all duration-200 border border-gray-700 hover:border-gray-600`
                     aria-label={social.name}
 
                    />
 
 <social.icon className='w-5 h-5' />
-                  </a>
-                ))}
+                  </a>,,
+   ))}
               </div>
             </div>
           </div>
@@ -372,9 +340,12 @@ key={link.name}
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12' />
             <div className='text-center' />
               <motion.h3;
-initial={{ opacity: 0, y: 20 }
-}
-                whileInView={{ opacity: 1, y: 0 }}
+initial={{ opacity: 0}
+            y: 20
+             
+                whileInView={{ opacity: 1}
+            y: 0
+             
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }
 }
@@ -384,12 +355,15 @@ className='text-2xl md:text-3xl font-bold text-white mb-4'
                 Stay Ahead of the Future;
               </motion.h3>
               <motion.p;
-initial={{ opacity: 0, y: 20 }
-}
-                whileInView={{ opacity: 1, y: 0 }
-}
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
-                viewport={{ once: true }
+initial={{ opacity: 0}
+            y: 20
+             
+                whileInView={{ opacity: 1}
+            y: 0
+             
+                transition={{ duration: 0 && 0.6}
+            delay: 0 && 0.1
+            viewport={{ once: true 
 }
 
 className='text-gray-400 mb-6 max-w-2xl mx-auto'
@@ -401,7 +375,7 @@ technologies delivered to your inbox.
               >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
-              
+
               <motion.div;
 className='text-gray-400 mb-6 max-w-2xl mx-auto' />;
                 Get the latest insights on AI, quantum computing, and emerging;
@@ -409,18 +383,19 @@ className='text-gray-400 mb-6 max-w-2xl mx-auto' />;
               </motion && motion.p>              >;
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.;
               </motion && motion.p>;
-                initial={{ opacity: 0, y: 20 }
-}
-                whileInView={{ opacity: 1, y: 0 }
-}
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-
-                viewport={{ once: true }}
+                initial={{ opacity: 0}
+            y: 20
+             
+                whileInView={{ opacity: 1}
+            y: 0
+             
+                transition={{ duration: 0 && 0.6}
+            delay: 0 && 0.2
+            viewport={{ once: true }
 
 className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'
               >
-                <input;
-type='email'
+                <input type='email'
                   placeholder='Enter your email'
                   className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
 
@@ -437,7 +412,8 @@ type='email'
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6' />
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0' />
               <div className='text-gray-400 text-sm' />
-                © {currentYear} Zion Tech Group. All rights reserved.
+                © {currentYear,
+  Zion Tech Group. All rights reserved.
               </div>
 
               <div className='flex items-center space-x-6 text-sm text-gray-400' />
@@ -457,8 +433,6 @@ type='email'
     </footer>
 )
 };
-
-
 export default EnhancedFooter2025;
 
 "

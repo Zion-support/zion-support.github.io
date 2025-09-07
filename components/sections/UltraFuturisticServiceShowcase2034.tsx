@@ -1,7 +1,7 @@
-
-
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState,
+  from 'react';
+import { motion,
+  from 'framer-motion';
 import { Star, CheckCircle, ArrowRight, TrendingUp, Users;
 import {
   Star;
@@ -27,12 +27,12 @@ UserCheck,
 FileText;
 Heart,
 Eye;
-Search}
-Phone;}
+Search,
+  Phone;}
 } from 'lucide-react';
-import { realMarketServices } from '../../data/2024-real-market-services';
-
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
+import { realMarketServices from '../../data/2024-real-market-services';
+import { aiEmergingTechServices,
+  from '../../data/2024-ai-emerging-tech-services';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -44,8 +44,9 @@ const contactInfo = {
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone;
  } from 'lucide-react';
-import { realMarketServices  } from '../../data/2024-real-market-services';
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
+import { realMarketServices from '../../data/2024-real-market-services';
+import { aiEmergingTechServices,
+  from '../../data/2024-ai-emerging-tech-services';
 
 const contactInfo = null;
 visible: {
@@ -90,9 +91,8 @@ gradient: 'from-violet-500/20 to-indigo-500/20'}
     description: 'Autonomous operations and zero-trust security',
   icon: Cpu,
     color: 'from-blue-500 to-cyan-500',
-  services: realMarketServices.filter(
-      s =>
-        s.category.includes('Security') |
+  services: realMarketServices.filter(s =>,,
+  s.category.includes('Security') |
         s.category.includes('HR') |
         s.category.includes('Project')
     )}
@@ -104,9 +104,8 @@ gradient: 'from-violet-500/20 to-indigo-500/20'}
     description: 'Streamline business operations',
   icon: ShoppingCart,
     color: 'from-teal-500 to-emerald-500',
-  services: realMarketServices.filter(
-      s =>
-        s.category.includes('E-commerce') |
+  services: realMarketServices.filter(s =>,,
+  s.category.includes('E-commerce') |
         s.category.includes('Marketing') |
         s.category.includes('Finance')
     )}
@@ -132,9 +131,7 @@ gradient: 'from-violet-500/20 to-indigo-500/20'}
   services: aiEmergingTechServices.filter(
       s => s.category.includes('Drug') || s.category.includes('Climate')
     )}
-    gradient: 'from-orange-500/20 to-pink-500/20'}
-  }
-];
+    gradient: 'from-orange-500/20 to-pink-500/20'];
 
 const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -143,10 +140,10 @@ const [searchTerm, setSearchTerm] = useState('');
 const allServices = [...realMarketServices, ...aiEmergingTechServices];
 
 const filteredServices = allServices.filter(service => {
-   ;
+   ,
   const matchesCategory =
-      selectedCategory === 'all' |
-      serviceCategories.some(cat => cat.services.includes(service));
+      selectedCategory === 'all' |,,
+  serviceCategories.some(cat => cat.services.includes(service));
 
 const matchesSearch =
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
@@ -168,9 +165,11 @@ staggerChildren: 0.1}
 
 const itemVariants = {
 }
-    hidden: { opacity: 0, y: 20}
+    hidden: { opacity: 0;
+  y: 20; }
 },
-visible: { opacity: 1, y: 0}
+visible: { opacity: 1;
+  y: 0; }
 }
   };
 
@@ -188,23 +187,29 @@ visible: { opacity: 1, y: 0}
         {/* Header *}
 }
 
-    hidden: { opacity: 0, y: 20}
+    hidden: { opacity: 0;
+  y: 20; }
 },
-    visible: { opacity: 1, y: 0}
+    visible: { opacity: 1;
+  y: 0; }
 }
 
   };
 
 const itemVariants = {}
-    hidden: { opacity: 0, y: 20}
+    hidden: { opacity: 0;
+  y: 20; }
 },
 
         {/* Header */}
 
         <motion.div;
-initial={{ opacity: 0, y: 20 }
-}
-          whileInView={{ opacity: 1, y: 0 }}
+initial={{ opacity: 0}
+            y: 20
+             
+          whileInView={{ opacity: 1}
+            y: 0
+             
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }
 } />;
@@ -218,23 +223,31 @@ initial={{ opacity: 0, y: 20 }
           </p>;
         stagger_children: 0.1}}  }
 
-const item_variants = {hidden: { opacity: 0, coordinate_y: 20}
-},visible: { opacity: 1, coordinate_y: 0}
+const item_variants = {hidden: { opacity: 0;
+  coordinate_y: 20; }
+},visible: { opacity: 1;
+  coordinate_y: 0; }
 },        stagger_children: 0.1;
       }
     }
   }
 
-const item_variants = {hidden: { opacity: 0, coordinate_y: 20}
-},visible: { opacity: 1, coordinate_y: 0}
+const item_variants = {hidden: { opacity: 0;
+  coordinate_y: 20; }
+},visible: { opacity: 1;
+  coordinate_y: 0; }
 }}
   }
 ;
-  const itemVariants = {hidden: { opacity: 0, y: 20}
-},visible: { opacity: 1, y: 0}
+  const itemVariants = {hidden: { opacity: 0;
+  y: 20; }
+},visible: { opacity: 1;
+  y: 0; }
 },;
-  return (<section className='py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden' />;"
-      {/* Animated Background */}return (<section className=\"py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden\" />;
+  return (
+          <section className='py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden' />;"
+      {/* Animated Background */}return (
+          <section className=\"py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden\" />;
       {/* Animated Background */}"
       <div className=\"absolute inset - 0 overflow - hidden\" />;"
         <div className=\"absolute -top - 40 -right - 40 w - 80 h - 80 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl animate - pulse\" /></div>;"
@@ -243,15 +256,21 @@ const item_variants = {hidden: { opacity: 0, coordinate_y: 20}
       </div>;"
       <div className=\"relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8\" />;
         {/* Header */}
-    hidden: { opacity: 0, y: 20}
-},visible: { opacity: 1, y: 0}
+    hidden: { opacity: 0;
+  y: 20; }
+},visible: { opacity: 1;
+  y: 0; }
 }}
 
-const itemVariants = {hidden: { opacity: 0, y: 20}
+const itemVariants = {hidden: { opacity: 0;
+  y: 20; }
 },{/* Header */}<motion.div;
-          initial={{ opacity: 0, y: 20 }
-}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0}
+            y: 20
+             
+          whileInView={{ opacity: 1}
+            y: 0
+             
           transition={{ duration: 0.6 }}
 
           viewport={{ once: true }
@@ -286,21 +305,20 @@ designed to transform your business and propel you into the future.
   value: '45+ Countries', icon: Globe}
 },
               { label: 'Global Reach'}
-  value: '45+ Countries', icon: Globe}
-}
-
-
-            ].map((stat, index) => (
+  value: '45+ Countries', icon: Globe].map((stat,,,
+  index) => (
               <motion.div;
-            ].map((stat, index) = /> (;
+            ].map((stat,,,
+  index) = /> (;
               <motion&& motion.div;
 key={stat && stat.label}
-                initial={{ opacity: 0, scale: 0 && 0.8 }
-}
-                whileInView={{ opacity: 1, scale: 1 }
-}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }
+            initial={{ opacity: 0 scale: 0 && 0.8
+            whileInView={{ opacity: 1}
+            scale: 1
+             
+                transition={{ duration: 0 && 0.5
+            delay: index * 0 && 0.1
+            viewport={{ once: true 
 }
                 className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300' />;
                 <stat && stat.icon className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
@@ -313,13 +331,13 @@ key={stat && stat.label}
                 <div className=\"text-2xl font-bold text-white\" />{stat && stat.value}</div>;"
                 <div className=\"text-sm text-gray-400\" />{stat && stat.label}</div>;
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }
-}
-                whileInView={{ opacity: 1, scale: 1 }
-}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-
-                viewport={{ once: true }}
+            initial={{ opacity: 0 scale: 0.8
+            whileInView={{ opacity: 1}
+            scale: 1
+             
+                transition={{ duration: 0.5
+            delay: index * 0.1
+            viewport={{ once: true }
 
 className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300'
               >
@@ -335,95 +353,97 @@ className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-
           </div>;
         </motion && motion.div>;
 
-
-
-
             ))}
 
         {/* Search and Filter */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
-}
-          whileInView={{ opacity: 1, y: 0 }
-}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-
-          viewport={{ once: true }}
+          initial={{ opacity: 0}
+            y: 20
+             
+          whileInView={{ opacity: 1}
+            y: 0
+             
+          transition={{ duration: 0 && 0.6}
+            delay: 0 && 0.2
+            viewport={{ once: true }
 
 className='mb-12'
          />
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center' />
             {/* Search */}
             <div className='relative flex-1 max-w-md' />
-              <input;
-type='text'
+              <input type='text'
                 placeholder='Search services...'
                 value={searchTerm}
-
-                onChange={e = /> setSearchTerm(e.target.value)}
+            onChange={e = /> setSearchTerm(e.target.value)
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
               />
               <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />
             </div>
 
-            {/* Category Filter *}
-}
-            <select;
-              value={selectedCategory}
-onChange={e = /> setSelectedCategory(e.target.value)}
+            {/* Category Filter *
+
+            <select value={selectedCategory}
+            onChange={e = /> setSelectedCategory(e.target.value)
               className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'>
 
-              <option value='all' />All Categories</option>;
-              {serviceCategories.map(category => (<option key={category.id} value={category.id} />;
-                  {category.title.split(' ')[0]}
+              <option value='all' />All Categories</option>
+            {serviceCategories.map(category => (
+          <option key={category.id
+            value={category.id />;}
+            {category.title.split(' ')[0]
 
                 </option>
 
-              ))}
-        {/* Service Categories */}
+              ))
+        {/* Service Categories */
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
-}
-          whileInView={{ opacity: 1, y: 0 }
-}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
-
-          viewport={{ once: true }
+          initial={{ opacity: 0}
+            y: 20
+             
+          whileInView={{ opacity: 1}
+            y: 0
+             
+          transition={{ duration: 0 && 0.6}
+            delay: 0 && 0.4
+            viewport={{ once: true 
 }
 
 className='mb-16'
          />
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' />
-            {serviceCategories.map((category, index) => (}
+            {serviceCategories.map((category,,,
+  index) => (}
               <motion.div;}
-key={category.id}
-                initial={{ opacity: 0, y: 20 }
-}
-                whileInView={{ opacity: 1, y: 0 }
-}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+key={category.id,
+  initial={{ opacity: 0,
+  y: 20
+            
+
+                whileInView={{ opacity: 1
+            y: 0,
+  transition={{ duration: 0 && 0.5}
+            delay: index * 0 && 0.1
+            viewport={{ once: true }
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
 
-selectedCategory === category.id;
-                    ? 'border-cyan-500 bg-cyan-500/10'
-                    : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5'}
+selectedCategory === category.id}
+            ? 'border-cyan-500 bg-cyan-500/10'
+                    : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5'
 }
                 }
 }
                 onClick={() = />;}
-                  setSelectedCategory(category.id === selectedCategory ? 'all' : category.id;}
-                  )}
+                  setSelectedCategory(category.id === selectedCategory ? 'all' : category.id;} )}
               >;
                 <div className='flex items-center space-x-3 mb-4' />;
-                  <div;
-                    className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`} />
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color flex items-center justify-center` />
 
-                    <category.icon className='w-6 h-6 text-white' />;
-                  </div>;
-                  <div />;
-                    <h3 className='text-lg font-semibold text-white' />;
-                      {category.title}
+                    <category.icon className='w-6 h-6 text-white' />}
+            </div>
+            <div />
+            <h3 className='text-lg font-semibold text-white' />
+            {category.title
                     </h3>;
                     <p className='text-sm text-gray-400' />;
                       {category.description}
@@ -431,7 +451,8 @@ selectedCategory === category.id;
                   </div>;
                 </div>;
                 <div className='text-sm text-gray-300' />;
-                  {category.services.length} services available;
+                  {category.services.length,
+  services available;
                 </div>;
               </motion.div>;
             ))}
@@ -442,31 +463,28 @@ selectedCategory === category.id;
         {/* Services Grid */}
         <motion&& motion.div;
           variants={containerVariants}
-initial='hidden';
-          whileInView='visible';
-          viewport={{ once: true }
-}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
+            initial='hidden';
+          whileInView='visible'
+            viewport={{ once: true
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
 
-          {filteredServices.map((service, index) => (<motion.div;}
-              key={service.id}
-              variants={itemVariants}
-className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105' />
+          {filteredServices.map((service index) => (
+          <motion.div
+            key={service.id
+            variants={itemVariants className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105' />
 
-              {/* Popular Badge */}
+              {/* Popular Badge */
 
               {service.popular && (
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold' />
-                  Popular}
+                  Popular
                 </div>}
               )}
-
 
               {/* Service Icon *}
 }
 <div className='flex items-center justify-between mb-4' />;
-                <div;
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color flex items-center justify-center text-2xl`
 
                  />
                   {service.icon}
@@ -476,11 +494,9 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
           </div>;
         </motion && motion.div>;
 
-
         {/* Services Grid */}
         <motion&& motion.div;
 variants={containerVariants}
-
 
               )}
               {/* Service Icon */}
@@ -500,34 +516,41 @@ variants={containerVariants}
         </motion.div>;
         {/* Search and Filter */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }
-}
-          whileInView={{ opacity: 1, coordinate_y: 0 }
-}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0}
+            coordinate_y: 20
+             
+          whileInView={{ opacity: 1}
+            coordinate_y: 0
+             
+          transition={{ duration: 0.6}
+            delay: 0.2 
         {/* Services Grid *}
 }
         <motion&& motion.div;
           variants={containerVariants}
-          initial='hidden';
-          whileInView='visible';
-          viewport={{ once: true }
-}"
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />          initial=\"hidden\";"
-          whileInView=\"visible\";
-          viewport={{ once: true }
+            initial='hidden';
+          whileInView='visible'
+            viewport={{ once: true 
+"
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />          initial=\"hidden\"
+            "
+          whileInView=\"visible\"
+            viewport={{ once: true 
 }"
           className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\";
-          {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;}
+          {filteredServices && filteredServices.map((service,,,
+  index) => (
+          <motion&& motion.div;}
               key={service && service.id}
-              variants={itemVariants}
-              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105' />;
-              {/* Popular Badge */}"
-              {service && service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold' />                  Popular              className=\"group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105\">
-}
+            variants={itemVariants className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105' />
+            {/* Popular Badge */"
+              {service && service.popular && (
+          <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold' />                  Popular              className=\"group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105\">
+
               {/* Popular Badge *}
 }"
-              {service && service.popular && (<div className=\"absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold\" />;
+              {service && service.popular && (
+          <div className=\"absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold\" />;
                 </div>;"
           initial=\"hidden\";"
           whileInView=\"visible\";}
@@ -535,15 +558,17 @@ variants={containerVariants}
 }"
           className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
 
-          {filteredServices.map((service, index) => (<motion.div;}
+          {filteredServices.map((service,,,
+  index) => (
+          <motion.div;}
               key={service.id}
-              variants={itemVariants}
-              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105' />
+            variants={itemVariants className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105' />
 
-              {/* Popular Badge *}
-}
-              {service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold' />                  Popular;
-                  Popular;}
+              {/* Popular Badge *
+
+              {service.popular && (
+          <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold' />                  Popular}
+            Popular;
                 </div>;}
               )}{/* Service Icon */}
                   {service.icon}
@@ -567,18 +592,21 @@ variants={containerVariants}
               </p>;
               {/* Features */}
 <div className='space-y-2 mb-4' />;
-                {service.features.slice(0, 3).map((feature, idx) => (<div;}
-                    key={idx}
-
-                    className='flex items-center space-x-2 text-sm text-gray-400'
+                {service.features.slice(0,,,
+  3).map((feature,,,
+  idx) => (
+          <div key={idx}
+            className='flex items-center space-x-2 text-sm text-gray-400'
                    />
                     <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
-                    <span />{feature}</span>
+                    <span />{feature</span>
                   </div>
 
-                ))}
-                {service.features.length > 3 && (<div className='text-sm text-cyan-400' />;}
-                    +{service.features.length - 3} more features;
+                ))
+                {service.features.length > 3 && (
+          <div className='text-sm text-cyan-400' />;}
+                    +{service.features.length - 3,
+  more features;
                   </div>;
                 )}
               </div>;
@@ -595,24 +623,34 @@ variants={containerVariants}
               {/* Features */}<span />{feature}</span>;
                   </div>;
                 ))}"
-                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className=\"flex items-center space-x-2 text-sm text-gray-400\" />;"
-                    <CheckCircle className=\"w-4 h-4 text-green-400 flex-shrink-0\" />;
-                    <span />{feature}</span>;
-                  </div>;"
-                {service.features.length > 3 && (<div className='text-sm text-cyan-400' />                    +{service.features.length - 3} more features              <div className=\"space-y-2 mb-4\" />;"
-                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className=\"flex items-center space-x-2 text-sm text-gray-400\" />;"
+                {service.features.slice(0,,,
+  3).map((feature,,,
+  idx) => (
+          <div key={idx,
+  className=\"flex items-center space-x-2 text-sm text-gray-400\" />;"
+                    <CheckCircle className=\"w-4 h-4 text-green-400 flex-shrink-0\" />
+            <span />{feature</span>}
+            </div>;"
+                {service.features.length > 3 && (
+          <div className='text-sm text-cyan-400' />                    +{service.features.length - 3,
+  more features              <div className=\"space-y-2 mb-4\" />;"
+                {service.features.slice(0,,,
+  3).map((feature,,
+            idx) => (
+          <div key={idx
+            className=\"flex items-center space-x-2 text-sm text-gray-400\" />;"
                     <CheckCircle className=\"w-4 h-4 text-green-400 flex-shrink-0\" />;
                   </div>;
-                    +{service.features.length - 3} more features;
-                  </div>;
-                )}
-              </div>;
-              {/* Service Meta */}
+                    +{service.features.length - 3 more features}
+            </div>
+            )
+              </div>
+            {/* Service Meta */
 
                 </div>"
                 <div className=\"flex items-center space-x-2 text-gray-400\" />"
                   <Users className=\"w-4 h-4\" />
-                  <span />{service.customers.toLocaleString()}</span>
+                  <span />{service.customers.toLocaleString()</span>
                 </div>"
                 <div className=\"flex items-center space-x-2 text-gray-400\" />"
                   <Star className=\"w-4 h-4 text-yellow-400\" />
@@ -706,13 +744,11 @@ variants={containerVariants}
 
               </div>;
 
-
               {/* Action Buttons */}
 
 <div className='flex space-x-3' />
-                <a;
-href={service.link}
-                  className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group' />
+                <a href={service.link}
+            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group' />
 
                   Get Started;
                   <ArrowRight className='w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform' />;
@@ -721,30 +757,33 @@ href={service.link}
                   <Eye className='w-4 h-4' />;
                 </button>;
               </div>;
-              {/* Trial Info */}
+              {/* Trial Info */
 <div className='mt-4 text-center' />;
                 <div className='text-sm text-gray-400' />;
                   <span className='text-cyan-400 font-semibold' />;
-                    {service.trialDays} days;
-                  </span>{' '}
+                    {service.trialDays
+            days
+            </span>{' '
 
-                  free trial;
-                </div>
+                  free trial
+            </div>
               </div>
             </motion.div>
-          ))}
+          ))
 
         </motion && motion.div>;
 
-
         {/* Call to Action */}
         <motion&& motion.div;
-initial={{ opacity: 0, y: 20 }
-}
-          whileInView={{ opacity: 1, y: 0 }
-}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
-          viewport={{ once: true }}
+initial={{ opacity: 0}
+            y: 20
+             
+          whileInView={{ opacity: 1}
+            y: 0
+             
+          transition={{ duration: 0 && 0.6}
+            delay: 0 && 0.6
+            viewport={{ once: true }
 
 className='text-center mt-20'
          />
@@ -758,14 +797,12 @@ technology solutions. Get started today and experience the future;
 of business automation.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center' />
-              <a;
-href='/contact'
+              <a href='/contact'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg'
                />
                 Start Your Free Trial;
               </a>
-              <a;
-href='/pricing-2034'
+              <a href='/pricing-2034'
 
                 className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg'
                />

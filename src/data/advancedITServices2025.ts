@@ -1,4 +1,4 @@
- export interface AdvancedITService  {id: string;
+export interface AdvancedITService  {id: string;
    title: string;
    description: string;
    category: string;
@@ -19,7 +19,6 @@
    contactInfo: {  phone: string;
    email: string;}
    website: string;}
-   address: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors: string[] marketSize: string growthRate: string rating: number reviews: number customers: numbe
-}
-
-export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = ['';\"\";"
+   address: string,
+  technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors: string[] marketSize: string growthRate: string rating: number reviews: number customers: numbe,
+  export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = ['';\"\";"

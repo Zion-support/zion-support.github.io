@@ -3,7 +3,6 @@ export const metadata = {
   description: 'Revolutionary AI content generation platform that creates high-quality articles, marketing copy, social media posts, and more. 10x faster than traditional writing.',
   keywords: 'ai-content-generation, content-marketing, copywriting, social-media, blog-writing, marketing-automation'
 };
-
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -18,21 +17,19 @@ export default function ServicePage() {
             Create 10x more content in 1/10th the time.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
+            <a href="tel:+13024640950"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Call +1 302 464 0950
             </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
+            <a href="mailto:kleber@ziontechgroup.com"
               className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Try Free Demo
             </a>
           </div>
         </div>
-        
+
         {/* Key Features */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
@@ -48,7 +45,7 @@ export default function ServicePage() {
               <li>• Technical documentation</li>
             </ul>
           </div>
-          
+
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <div className="text-4xl mb-4">🎯</div>
             <h3 className="text-2xl font-bold text-white mb-4">Brand Voice Consistency</h3>
@@ -61,7 +58,7 @@ export default function ServicePage() {
               <li>• Style consistency checking</li>
             </ul>
           </div>
-          
+
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <div className="text-4xl mb-4">🚀</div>
             <h3 className="text-2xl font-bold text-white mb-4">SEO Optimization</h3>
@@ -122,8 +119,7 @@ export default function ServicePage() {
                 <li>• Standard templates</li>
                 <li>• 1 brand voice profile</li>
               </ul>
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Content Generation Starter Plan"
+              <a href="mailto:kleber@ziontechgroup.com?subject=Content Generation Starter Plan"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors block text-center"
               >
                 Get Started
@@ -146,8 +142,7 @@ export default function ServicePage() {
                 <li>• API access</li>
                 <li>• Team collaboration</li>
               </ul>
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Content Generation Professional Plan"
+              <a href="mailto:kleber@ziontechgroup.com?subject=Content Generation Professional Plan"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors block text-center"
               >
                 Get Started
@@ -167,8 +162,7 @@ export default function ServicePage() {
                 <li>• Advanced analytics</li>
                 <li>• SLA guarantees</li>
               </ul>
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Content Generation Enterprise Plan"
+              <a href="mailto:kleber@ziontechgroup.com?subject=Content Generation Enterprise Plan"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors block text-center"
               >
                 Contact Sales
@@ -241,14 +235,12 @@ export default function ServicePage() {
             Start your free trial today and see the difference AI can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
+            <a href="tel:+13024640950"
               className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Call +1 302 464 0950
             </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
+            <a href="mailto:kleber@ziontechgroup.com"
               className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Email kleber@ziontechgroup.com

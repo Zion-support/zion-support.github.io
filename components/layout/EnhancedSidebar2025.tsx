@@ -1,9 +1,8 @@
-
-
-import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect,
+  from 'react',
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-
+import { motion, AnimatePresence,
+  from 'framer-motion';
 import { X, ChevronRight, Home, Star, Users;
   Settings, HelpCircle, Mail, Phone, MapPin;
   Brain, Atom, Shield, Rocket, DollarSign;
@@ -62,9 +61,7 @@ interface SidebarItem {
 },{ name: 'AI Sustainability Platform'}
   href: '/ai-sustainability-platform', description: 'Environmental AI solutions'}
 },{ name: 'AI Legal Contract Analyzer'}
-  href: '/ai-legal-contract-analyzer', description: 'Legal document analysis'}
-}
-    ];
+  href: '/ai-legal-contract-analyzer', description: 'Legal document analysis'];
 }{name: 'Quantum & Emerging Tech',"
   href: '/quantum-services',icon: <Atom className=\"w-5 h-5\" />,,description: 'Quantum computing and breakthrough technologies',
   badge: 'Hot',isHot: true,children: [;
@@ -93,9 +90,7 @@ interface SidebarItem {
 },{ name: 'Quantum IoT Platform'}
   href: '/quantum-iot', description: 'Quantum-secured IoT'}
 },{ name: 'Quantum Financial Trading'}
-  href: '/quantum-financial-trading', description: 'Quantum trading algorithms'}
-}
-    ];
+  href: '/quantum-financial-trading', description: 'Quantum trading algorithms'];
 }{name: 'Enterprise IT',"
   href: '/enterprise-it',icon: <Shield className=\"w-5 h-5\" />,color: 'text-blue-400',
   items: [;
@@ -125,9 +120,7 @@ interface SidebarItem {
   href: '/quantum-cybersecurity'}
 },
 { name: 'Quantum Cloud Migration'}
-  href: '/quantum-cloud-migration'}
-}
-    ];
+  href: '/quantum-cloud-migration'];
 }{name: 'Micro SAAS',"
   href: '/micro-saas',icon: <Rocket className=\"w-5 h-5\" />,,description: 'Innovative business solutions for modern enterprises',
   badge: 'Popular',children: [;
@@ -150,9 +143,7 @@ interface SidebarItem {
 },{ name: 'AI Supply Chain'}
   href: '/ai-supply-chain-optimization', description: 'Supply chain optimization'}
 },{ name: 'AI Legal Analysis'}
-  href: '/ai-legal-document-analysis', description: 'Legal document processing'}
-}
-    ];
+  href: '/ai-legal-document-analysis', description: 'Legal document processing'];
 }{name: 'Creative & Design',"
   href: '/creative-services',icon: <Palette className=\"w-5 h-5\" />,,description: 'AI-powered creative and design solutions',
   children: [;
@@ -167,9 +158,7 @@ interface SidebarItem {
 },{ name: 'AI Video Generation'}
   href: '/ai-video-generation', description: 'Automated video content'}
 },{ name: 'AI Music Composition'}
-  href: '/ai-music-composition', description: 'AI-generated music'}
-}
-    ];
+  href: '/ai-music-composition', description: 'AI-generated music'];
 }{name: 'Research & Development',"
   href: '/research-development',icon: <BookOpen className=\"w-5 h-5\" />,,description: 'Cutting-edge research and development services',
   children: [;
@@ -184,9 +173,7 @@ interface SidebarItem {
 },{ name: 'Neuroscience Research'}
   href: '/neuroscience-research-platform', description: 'Brain research tools'}
 },{ name: 'Climate Research AI'}
-  href: '/climate-research-ai', description: 'Environmental research automation'}
-}
-    ];
+  href: '/climate-research-ai', description: 'Environmental research automation'];
 }{name: 'Industry Solutions',"
   href: '/industry-solutions',icon: <Truck className=\"w-5 h-5\" />,,description: 'Specialized solutions for specific industries',
   children: [;
@@ -201,9 +188,7 @@ interface SidebarItem {
 },{ name: 'Education AI'}
   href: '/education-ai-solutions', description: 'Educational technology'}
 },{ name: 'Transportation AI'}
-  href: '/transportation-ai-solutions', description: 'Smart transportation'}
-}
-    ];
+  href: '/transportation-ai-solutions', description: 'Smart transportation'];
 }{name: 'Pricing & Plans',"
   href: '/pricing',icon: <DollarSign className=\"w-5 h-5\" />,,description: 'Flexible pricing options for all services',
   children: [;
@@ -218,9 +203,7 @@ interface SidebarItem {
 },{ name: 'Custom Solutions'}
   href: '/custom-pricing', description: 'Tailored pricing'}
 },{ name: 'ROI Calculator'}
-  href: '/roi-calculator', description: 'Calculate your return on investment'}
-}
-    ];
+  href: '/roi-calculator', description: 'Calculate your return on investment'];
 }{name: 'Resources',"
   href: '/resources',icon: <BookOpen className=\"w-5 h-5\" />,,description: 'Educational resources and documentation',
   children: [;
@@ -235,9 +218,7 @@ interface SidebarItem {
 },{ name: 'Blog'}
   href: '/blog', description: 'Latest insights and news'}
 },{ name: 'Research Papers'}
-  href: '/research-papers', description: 'Academic publications'}
-}
-    ];
+  href: '/research-papers', description: 'Academic publications'];
 }{name: 'Support',"
   href: '/support',icon: <Settings className=\"w-5 h-5\" />,,description: 'Technical support and customer service',
   children: [;
@@ -250,20 +231,20 @@ interface SidebarItem {
 },{ name: 'Training Programs'}
   href: '/training', description: 'Skill development'}
 },{ name: 'Community Forum'}
-  href: '/community', description: 'User community'}
-}];
-}]
+  href: '/community', description: 'User community'];
 ];"
 </div> <div className=\"absolute inset - 0 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - lg blur-lg opacity-50\"  /></div> </div> <div /> <h2 className=\"text - lg font - bold bg - gradient - to - r from - cyan - 400 to - blue - 400 bg - clip-text text-transparent\"  /> Zion Tech Group </h2> <p className=\"text - xs text-gray-400\"  />Navigation</p> </div> </div> </div> </div> </div> {section.badge;}"
-}</span>)}</div>) : (<ChevronRight className=\"w - 4 h - 4 text - gray - 500 group - hover: text - cyan - 400 transition-colors duration-200\" />)}</button> <AnimatePresence /> > <CloseIcon className=\"w-5 h-5\" /> </button> </div> </div> </a>) 
+}</span>)}</div>) : (
+          <ChevronRight className=\"w - 4 h - 4 text - gray - 500 group - hover: text - cyan - 400 transition-colors duration-200\" />)}</button> <AnimatePresence /> > <CloseIcon className=\"w-5 h-5\" /> </button> </div> </div> </a>) 
 }+ {filtered_services.length - 5;}"
-}more results </div>)}</div>) : (<div className=\"text - sm text - gray - 500 text-center py-2\"  /> No services found </div>)}</div>)}</div> </div> </div> </div> </motion.div>) )}</div> </div> </span> </a>) )}</div> </div> </span> </div> <ChevronRight className= {`w - 4 h - 4 text - gray - 400 transition - transform duration - 200 $ {expanded_category === item.name ? 'rotate - 90' : '';}
+}more results </div>)}</div>) : (
+          <div className=\"text - sm text - gray - 500 text-center py-2\"  /> No services found </div>)}</div>)}</div> </div> </div> </div> </motion.div>) )}</div> </div> </span> </a>) )}</div> </div> </span> </div> <ChevronRight className= {`w - 4 h - 4 text - gray - 400 transition - transform duration - 200 $ {expanded_category === item.name ? 'rotate - 90' : '';}
 }`;
-}/> </button> <AnimatePresence /> > {item.children?.map ( (child) => (<Link key= {child.name;}
+}/> </button> <AnimatePresence /> > {item.children?.map ( (child) => (
+          <Link key= {child.name;}
 }{child.badge;}"
 }</span />)}</a>) )}</motion.div>)}</AnimatePresence> </div>) )}</div> </div> <span  /> Quick Links</span> </h3> <div className = \"space-y-2\"  /> <Link  /> <div className=\"font - medium text - gray - 300 group - hover:text - white transition-colors duration-200\"  /> Contact Us </div> <div className=\"text - xs text-gray-500\"  />Get in touch with our team</div> </a> <Link  /> <div className=\"font - medium text - gray - 300 group - hover:text - white transition-colors duration-200\"  /> View Pricing </div> <div className=\"text - xs text-gray-500\"  />Explore our pricing plans</div> </a> <Link  /> <div className=\"font - medium text - gray - 300 group - hover:text - white transition-colors duration-200\"  /> About Us </div> <div className=\"text - xs text-gray-500\"  />Learn about Zion Tech Group</div> </a> </div> </div> <div className=\"text - center p - 3 bg - gray-800 / 50 rounded-lg\"  /> <div className=\"text - lg font - bold text-blue-400\"  />1000+</div> <div className=\"text - xs text-gray-400\"  />Clients</div> </div> <div className=\"text - center p - 3 bg - gray-800 / 50 rounded-lg\"  /> <div className=\"text - lg font - bold text-purple-400\"  />24 / 7</div> <div className=\"text - xs text-gray-400\"  />Support</div> </div> <div className=\"text - center p - 3 bg - gray-800 / 50 rounded-lg\"  /> <div className=\"text - lg font - bold text-green-400\"  />99.9%</div> <div className=\"text - xs text-gray-400\"  />Uptime</div> </div> </div> </div> <Link href=\"/contact\" className=\"block w - full text - center px - 4 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white font - medium rounded - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow-cyan-500 / 25\"  /> <span  /> Get Started Today</span> <ArrowRight className=\"w - 4 h-4 ml-2 inline\" /> </a> </div> </div> </motion.aside>;
 }
-
 export default EnhancedSidebar2025;
 
 const sidebar_items: SidebarItem[] = [;
@@ -285,9 +266,7 @@ const sidebar_items: SidebarItem[] = [;
 },{ name: '2027 Services'}
   href: '/revolutionary - 2027 - services - showcase', description: 'Future - ready services'}
 },{ name: 'Ultimate 2026'}
-  href: '/ultimate - 2026 - services - showcase', description: 'Premium service collection'}
-}
-    ];
+  href: '/ultimate - 2026 - services - showcase', description: 'Premium service collection'];
   }
   {name: 'AI & Consciousness',"
   href: '/ai - services',icon: <Brain className=\"w-5 h-5\" />,description: 'Revolutionary AI consciousness and emotional intelligence',
@@ -319,9 +298,7 @@ const sidebar_items: SidebarItem[] = [;
 },{ name: 'AI Sustainability Platform'}
   href: '/ai - sustainability - platform', description: 'Environmental AI solutions'}
 },{ name: 'AI Legal Contract Analyzer'}
-  href: '/ai - legal - contract - analyzer', description: 'Legal document analysis'}
-}
-    ];
+  href: '/ai - legal - contract - analyzer', description: 'Legal document analysis'];
   }
   {name: 'Quantum & Emerging Tech',"
   href: '/quantum - services',icon: <Atom className=\"w-5 h-5\" />,description: 'Quantum computing and breakthrough technologies',
@@ -351,9 +328,7 @@ const sidebar_items: SidebarItem[] = [;
 },{ name: 'Quantum IoT Platform'}
   href: '/quantum - iot', description: 'Quantum - secured IoT'}
 },{ name: 'Quantum Financial Trading'}
-  href: '/quantum - financial - trading', description: 'Quantum trading algorithms'}
-}
-    ];
+  href: '/quantum - financial - trading', description: 'Quantum trading algorithms'];
   }
   {name: 'Enterprise IT',"
   href: '/enterprise - it',icon: <Shield className=\"w-5 h-5\" />,color: 'text - blue - 400',
@@ -384,9 +359,7 @@ const sidebar_items: SidebarItem[] = [;
   href: '/quantum - cybersecurity'}
 },
 { name: 'Quantum Cloud Migration'}
-  href: '/quantum - cloud - migration'}
-}
-    ];
+  href: '/quantum - cloud - migration'];
   }
   {name: 'Micro SAAS',"
   href: '/micro - saas',icon: <Rocket className=\"w-5 h-5\" />,description: 'Innovative business solutions for modern enterprises',
@@ -410,9 +383,7 @@ const sidebar_items: SidebarItem[] = [;
 },{ name: 'AI Supply Chain'}
   href: '/ai - supply - chain - optimization', description: 'Supply chain optimization'}
 },{ name: 'AI Legal Analysis'}
-  href: '/ai - legal - document - analysis', description: 'Legal document processing'}
-}
-    ];
+  href: '/ai - legal - document - analysis', description: 'Legal document processing'];
   }
   {name: 'Creative & Design',"
   href: '/creative - services',icon: <Palette className=\"w-5 h-5\" />,description: 'AI - powered creative and design solutions',
@@ -428,9 +399,7 @@ const sidebar_items: SidebarItem[] = [;
 },{ name: 'AI Video Generation'}
   href: '/ai - video - generation', description: 'Automated video content'}
 },{ name: 'AI Music Composition'}
-  href: '/ai - music - composition', description: 'AI - generated music'}
-}
-    ];
+  href: '/ai - music - composition', description: 'AI - generated music'];
   }
   {name: 'Research & Development',"
   href: '/research - development',icon: <BookOpen className=\"w-5 h-5\" />,description: 'Cutting - edge research and development services',
@@ -446,9 +415,7 @@ const sidebar_items: SidebarItem[] = [;
 },{ name: 'Neuroscience Research'}
   href: '/neuroscience - research - platform', description: 'Brain research tools'}
 },{ name: 'Climate Research AI'}
-  href: '/climate - research - ai', description: 'Environmental research automation'}
-}
-    ];
+  href: '/climate - research - ai', description: 'Environmental research automation'];
   }
   {name: 'Industry Solutions',"
   href: '/industry - solutions',icon: <Truck className=\"w-5 h-5\" />,description: 'Specialized solutions for specific industries',
@@ -464,9 +431,7 @@ const sidebar_items: SidebarItem[] = [;
 },{ name: 'Education AI'}
   href: '/education - ai - solutions', description: 'Educational technology'}
 },{ name: 'Transportation AI'}
-  href: '/transportation - ai - solutions', description: 'Smart transportation'}
-}
-    ];
+  href: '/transportation - ai - solutions', description: 'Smart transportation'];
   }
   {name: 'Pricing & Plans',"
   href: '/pricing',icon: <DollarSign className=\"w-5 h-5\" />,description: 'Flexible pricing options for all services',
@@ -482,9 +447,7 @@ const sidebar_items: SidebarItem[] = [;
 },{ name: 'Custom Solutions'}
   href: '/custom - pricing', description: 'Tailored pricing'}
 },{ name: 'ROI Calculator'}
-  href: '/roi - calculator', description: 'Calculate your return on investment'}
-}
-    ];
+  href: '/roi - calculator', description: 'Calculate your return on investment'];
   }
   {name: 'Resources',"
   href: '/resources',icon: <BookOpen className=\"w-5 h-5\" />,description: 'Educational resources and documentation',
@@ -500,9 +463,7 @@ const sidebar_items: SidebarItem[] = [;
 },{ name: 'Blog'}
   href: '/blog', description: 'Latest insights and news'}
 },{ name: 'Research Papers'}
-  href: '/research - papers', description: 'Academic publications'}
-}
-    ];
+  href: '/research - papers', description: 'Academic publications'];
   }
   {name: 'Support',"
   href: '/support',icon: <Settings className=\"w-5 h-5\" />,description: 'Technical support and customer service',
@@ -518,37 +479,38 @@ const sidebar_items: SidebarItem[] = [;
 },{ name: 'Community Forum'}
   href: '/community', description: 'User community'}
 },{ name: 'Status Page'}
-  href: '/status', description: 'Service status'}
-}
-    ];
-  }
-];
+  href: '/status', description: 'Service status'];
+  ];
   { name: 'Community'}
-  href: '/community', description: 'Connect with users'}
-}
-];
+  href: '/community', description: 'Connect with users'];
 
 const toggleSection = (title: string) => ;
   const newExpanded = new Set(expandedSections)if (newExpanded.has(title)) {newExpanded.delete(title)} else {new_expanded.add (title)}
   ;
-  return (<motion&& motion.aside;
-      initial={{ x: -300, opacity: 0 }
-}
-      animate={{ x: 0, opacity: 1 }
-}
-            <AnimatePresence />;
-              {expandedSections.has(section.title) && (<motion.div;}
+  return (
+          <motion&& motion.aside;
+      initial={{ x: -300}
+            opacity: 0
+            animate={{ x: 0;
+  opacity: 1
+             
+            <AnimatePresence />}
+            {expandedSections.has(section.title) && (
+          <motion.div;
     setExpandedSections (new_expanded)}
 
 const filtered_services = sidebar_items.flat_map (item = />;
     item.children?.filter (child =>;
       child.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      child.description?.toLowerCase ().includes (search_query.toLowerCase ())) || [])return (<motion.aside;
-      initial={{ coordinate_x: -300, opacity: 0 }
-}
-      animate={{ coordinate_x: 0, opacity: 1 }
-}"
-      transition={{ duration: 0.5, ease: \"ease_out\" }}"
+      child.description?.toLowerCase ().includes (search_query.toLowerCase ())) || [])return (
+          <motion.aside;
+      initial={{ coordinate_x: -300}
+            opacity: 0
+            animate={{ coordinate_x: 0}
+            opacity: 1
+             "
+      transition={{ duration: 0.5
+            ease: \"ease_out\" "
       className=\"fixed left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - r border - cyan - 500 / 20 shadow - 2xl shadow - cyan - 500 / 20 z - 40 overflow - y-auto scrollbar - thin scrollbar - thumb - cyan - 500 / 50 scrollbar-track-transparent\" />
 
       {/* Header *}
@@ -586,21 +548,26 @@ const filtered_services = sidebar_items.flat_map (item = />;
       </div>;
       {/* Navigation Sections */}"
       <div className=\"p-4 space-y-2\" />;"
-        {sidebar_sections.map ((section) => (<div key={section.title} className=\"space-y-1\" />;
-            <button;
-              on_click={() = /> toggle_section (section.title)}"
+        {sidebar_sections.map ((section) => (
+          <div key={section.title}
+            className=\"space-y-1\" />
+            <button on_click={() = /> toggle_section (section.title)"
               className=\"w - full flex items - center justify - between p - 3 text - left text - gray - 300 hover:text - white hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-200 group\">
 "
-              <div className=\"flex items-center space-x-3\" />;"
-                <div className=\"text - cyan - 400 group - hover:text - cyan - 300 transition-colors duration-200\" />;
-                  {section.icon}
+              <div className=\"flex items-center space-x-3\" />
+            "
+                <div className=\"text - cyan - 400 group - hover:text - cyan - 300 transition-colors duration-200\" />
+            {section.icon
                 </div>;"
                 <span className=\"font-medium\" />{section.title}</span>;"
-                {section.badge && (<span className=\"px - 2 py - 1 text - xs font - medium bg - gradient - to - r from - cyan - 500 to - blue - 600 text-white rounded-full\" />;}
+                {section.badge && (
+          <span className=\"px - 2 py - 1 text - xs font - medium bg - gradient - to - r from - cyan - 500 to - blue - 600 text-white rounded-full\" />;}
                     {section.badge}
                   </span>)}
               </div>;"
-              {expanded_sections.has (section.title) ? (<ChevronDown className=\"w - 4 h - 4 text - gray - 500 group - hover: text - cyan - 400 transition-colors duration-200\" />) : (<ChevronRight className=\"w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition-colors duration-200\" />}
+              {expanded_sections.has (section.title) ? (
+          <ChevronDown className=\"w - 4 h - 4 text - gray - 500 group - hover: text - cyan - 400 transition-colors duration-200\" />) : (
+          <ChevronRight className=\"w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition-colors duration-200\" />}
 }
             </button>;
             <AnimatePresence />;
@@ -616,8 +583,7 @@ const filtered_services = sidebar_items.flat_map (item = />;
   '      {'}
         name: 'About Us, href: '/about}
   ', '        icon: Users, description:, Learn about Zion Tech Group', '        subItems['          { name: 'Our Mission, href:, /mission' }, '          { name: 'Leadership Team, href:, /leadership'}
-  ' },'          { name: 'Comp History, href:, /history' }, '          { name: 'Careers, href:, /careers}
-  ' }'        ]
+  ' },'          { name: 'Comp History, href:, /history' }, '          { name: 'Careers, href:, /careers]
   '      }, {'}
 }
         name: 'Resources,',
@@ -628,10 +594,8 @@ const filtered_services = sidebar_items.flat_map (item = />;
   description:, Get help and support', subItems[}
   '          { name: 'Contact Support, href:, /contact-support}
   ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:, /training'}, '          { name: 'Community Forum, href:, /community' },'          { name: 'Knowledge Base, href: '}
-  '/knowledge-base' }'        ]'      }]  }
-]
+  '/knowledge-base' ]'      ]
 
- 
 };
   {
     name: 'AI & Consciousness',
@@ -681,9 +645,8 @@ const filtered_services = sidebar_items.flat_map (item = />;
   href: '/ai-sustainability-platform', description: 'Environmental AI solutions'}
 },
       { name: 'AI Legal Contract Analyzer'}
-  href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' }
-    ]
- 
+  href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' ]
+
 };
   {
     name: 'Quantum & Emerging Tech',
@@ -730,9 +693,8 @@ const filtered_services = sidebar_items.flat_map (item = />;
   href: '/quantum-iot', description: 'Quantum-secured IoT'}
 },
       { name: 'Quantum Financial Trading'}
-  href: '/quantum-financial-trading', description: 'Quantum trading algorithms' }
-    ]
- 
+  href: '/quantum-financial-trading', description: 'Quantum trading algorithms' ]
+
 };
   {
     name: 'Enterprise IT',
@@ -776,9 +738,8 @@ const filtered_services = sidebar_items.flat_map (item = />;
 },
 
       { name: 'Quantum Cloud Migration'}
-  href: '/quantum-cloud-migration' }
-    ]
- 
+  href: '/quantum-cloud-migration' ]
+
 };
   {
     name: 'Micro SAAS',
@@ -815,9 +776,8 @@ const filtered_services = sidebar_items.flat_map (item = />;
   href: '/ai-supply-chain-optimization', description: 'Supply chain optimization'}
 },
       { name: 'AI Legal Analysis'}
-  href: '/ai-legal-document-analysis', description: 'Legal document processing' }
-    ]
- 
+  href: '/ai-legal-document-analysis', description: 'Legal document processing' ]
+
 };
   {
     name: 'Creative & Design',
@@ -841,9 +801,8 @@ const filtered_services = sidebar_items.flat_map (item = />;
   href: '/ai-video-generation', description: 'Automated video content'}
 },
       { name: 'AI Music Composition'}
-  href: '/ai-music-composition', description: 'AI-generated music' }
-    ]
- 
+  href: '/ai-music-composition', description: 'AI-generated music' ]
+
 };
   {
     name: 'Research & Development',
@@ -867,9 +826,8 @@ const filtered_services = sidebar_items.flat_map (item = />;
   href: '/neuroscience-research-platform', description: 'Brain research tools'}
 },
       { name: 'Climate Research AI'}
-  href: '/climate-research-ai', description: 'Environmental research automation' }
-    ]
- 
+  href: '/climate-research-ai', description: 'Environmental research automation' ]
+
 };
   {
     name: 'Industry Solutions',
@@ -893,9 +851,8 @@ const filtered_services = sidebar_items.flat_map (item = />;
   href: '/education-ai-solutions', description: 'Educational technology'}
 },
       { name: 'Transportation AI'}
-  href: '/transportation-ai-solutions', description: 'Smart transportation' }
-    ]
- 
+  href: '/transportation-ai-solutions', description: 'Smart transportation' ]
+
 };
   {
     name: 'Pricing & Plans',
@@ -920,8 +877,7 @@ const filtered_services = sidebar_items.flat_map (item = />;
 },
       { name: 'ROI Calculator'}
   href: '/roi-calculator', description: 'Calculate your;}
-  return on investment' }
-    ]
+  return on investment' ]
   };
   {
     name: 'Resources',
@@ -945,9 +901,8 @@ const filtered_services = sidebar_items.flat_map (item = />;
   href: '/blog', description: 'Latest insights and news'}
 },
       { name: 'Research Papers'}
-  href: '/research-papers', description: 'Academic publications' }
-    ]
- 
+  href: '/research-papers', description: 'Academic publications' ]
+
 };
   {
     name: 'Support',
@@ -971,10 +926,7 @@ const filtered_services = sidebar_items.flat_map (item = />;
   href: '/community', description: 'User community'}
 },
       { name: 'Status Page'}
-  href: '/status', description: 'Service status' }
-    ]
- 
-}
+  href: '/status', description: 'Service status' ]
 
 ];
   }{name: 'AI & Consciousness',"
@@ -1007,9 +959,7 @@ const filtered_services = sidebar_items.flat_map (item = />;
 },{ name: 'AI Sustainability Platform'}
   href: '/ai-sustainability-platform', description: 'Environmental AI solutions'}
 },{ name: 'AI Legal Contract Analyzer'}
-  href: '/ai-legal-contract-analyzer', description: 'Legal document analysis'}
-}
-    ];
+  href: '/ai-legal-contract-analyzer', description: 'Legal document analysis'];
   }{name: 'Quantum & Emerging Tech',"
   href: '/quantum-services',icon: <Atom className=\"w-5 h-5\" />,description: 'Quantum computing and breakthrough technologies',
   badge: 'Hot',isHot: true,children: [;
@@ -1038,9 +988,7 @@ const filtered_services = sidebar_items.flat_map (item = />;
 },{ name: 'Quantum IoT Platform'}
   href: '/quantum-iot', description: 'Quantum-secured IoT'}
 },{ name: 'Quantum Financial Trading'}
-  href: '/quantum-financial-trading', description: 'Quantum trading algorithms'}
-}
-    ];
+  href: '/quantum-financial-trading', description: 'Quantum trading algorithms'];
   }{name: 'Enterprise IT',"
   href: '/enterprise-it',icon: <Shield className=\"w-5 h-5\" />,color: 'text-blue-400',
   items: [;
@@ -1070,9 +1018,7 @@ const filtered_services = sidebar_items.flat_map (item = />;
   href: '/quantum-cybersecurity'}
 },
 { name: 'Quantum Cloud Migration'}
-  href: '/quantum-cloud-migration'}
-}
-    ];
+  href: '/quantum-cloud-migration'];
   }{name: 'Micro SAAS',"
   href: '/micro-saas',icon: <Rocket className=\"w-5 h-5\" />,description: 'Innovative business solutions for modern enterprises',
   badge: 'Popular',children: [;
@@ -1095,9 +1041,7 @@ const filtered_services = sidebar_items.flat_map (item = />;
 },{ name: 'AI Supply Chain'}
   href: '/ai-supply-chain-optimization', description: 'Supply chain optimization'}
 },{ name: 'AI Legal Analysis'}
-  href: '/ai-legal-document-analysis', description: 'Legal document processing'}
-}
-    ];
+  href: '/ai-legal-document-analysis', description: 'Legal document processing'];
   }{name: 'Creative & Design',"
   href: '/creative-services',icon: <Palette className=\"w-5 h-5\" />,description: 'AI-powered creative and design solutions',
   children: [;
@@ -1112,9 +1056,7 @@ const filtered_services = sidebar_items.flat_map (item = />;
 },{ name: 'AI Video Generation'}
   href: '/ai-video-generation', description: 'Automated video content'}
 },{ name: 'AI Music Composition'}
-  href: '/ai-music-composition', description: 'AI-generated music'}
-}
-    ];
+  href: '/ai-music-composition', description: 'AI-generated music'];
   }{name: 'Research & Development',"
   href: '/research-development',icon: <BookOpen className=\"w-5 h-5\" />,description: 'Cutting-edge research and development services',
   children: [;
@@ -1129,9 +1071,7 @@ const filtered_services = sidebar_items.flat_map (item = />;
 },{ name: 'Neuroscience Research'}
   href: '/neuroscience-research-platform', description: 'Brain research tools'}
 },{ name: 'Climate Research AI'}
-  href: '/climate-research-ai', description: 'Environmental research automation'}
-}
-    ];
+  href: '/climate-research-ai', description: 'Environmental research automation'];
   }{name: 'Industry Solutions',"
   href: '/industry-solutions',icon: <Truck className=\"w-5 h-5\" />,description: 'Specialized solutions for specific industries',
   children: [;
@@ -1146,9 +1086,7 @@ const filtered_services = sidebar_items.flat_map (item = />;
 },{ name: 'Education AI'}
   href: '/education-ai-solutions', description: 'Educational technology'}
 },{ name: 'Transportation AI'}
-  href: '/transportation-ai-solutions', description: 'Smart transportation'}
-}
-    ];
+  href: '/transportation-ai-solutions', description: 'Smart transportation'];
   }{name: 'Pricing & Plans',"
   href: '/pricing',icon: <DollarSign className=\"w-5 h-5\" />,description: 'Flexible pricing options for all services',
   children: [;
@@ -1163,9 +1101,7 @@ const filtered_services = sidebar_items.flat_map (item = />;
 },{ name: 'Custom Solutions'}
   href: '/custom-pricing', description: 'Tailored pricing'}
 },{ name: 'ROI Calculator'}
-  href: '/roi-calculator', description: 'Calculate your return on investment'}
-}
-    ];
+  href: '/roi-calculator', description: 'Calculate your return on investment'];
   }{name: 'Resources',"
   href: '/resources',icon: <BookOpen className=\"w-5 h-5\" />,description: 'Educational resources and documentation',
   children: [;
@@ -1180,9 +1116,7 @@ const filtered_services = sidebar_items.flat_map (item = />;
 },{ name: 'Blog'}
   href: '/blog', description: 'Latest insights and news'}
 },{ name: 'Research Papers'}
-  href: '/research-papers', description: 'Academic publications'}
-}
-    ];
+  href: '/research-papers', description: 'Academic publications'];
   }{name: 'Support',"
   href: '/support',icon: <Settings className=\"w-5 h-5\" />,description: 'Technical support and customer service',
   children: [;
@@ -1197,11 +1131,8 @@ const filtered_services = sidebar_items.flat_map (item = />;
 },{ name: 'Community Forum'}
   href: '/community', description: 'User community'}
 },{ name: 'Status Page'}
-  href: '/status', description: 'Service status'}
-}
-    ];
-  }
-];
+  href: '/status', description: 'Service status'];
+  ];
 
 const resources = [
   { name: 'Documentation'}"
@@ -1220,67 +1151,72 @@ const resources = [
   href: '/training', icon: <Award className=\"w-4 h-4\" />}
 }
   { name: 'Community Forum'}"
-  href: '/community', icon: <Users className=\"w-4 h-4\" />}
-}
-];
+  href: '/community', icon: <Users className=\"w-4 h-4\" />];
 
 const supportLinks = [
   { name: 'Community'}
-  href: '/community', description: 'Connect with users'}
-}
-];
+  href: '/community', description: 'Connect with users'];
 
 const toggleSection = (title: string) => ;
   const newExpanded = new Set(expandedSections)if (newExpanded.has(title)) {newExpanded.delete(title)} else {newExpanded.add(title)}
     setExpandedSections(newExpanded;
-  return (<motion.aside;
-      initial={{ x: -300, opacity: 0 }
-}
-      animate={{ x: 0, opacity: 1 }}
-            <span />{contactInfo.websit}
+  return (
+          <motion.aside;
+      initial={{ x: -300}
+            opacity: 0
+            animate={{ x: 0}
+            opacity: 1
+             
+            <span />{contactInfo.websit
 }</span>;
           </div>;
-        </div>;
-      </div>;
-                    {section.badge}
-                  </span>;
-                )}
+        </div>,
+  </div>,
+  {section.badge}
+                  </span>;,,
+   )}
               </div>;
-              {expandedSections.has(section.title) ? (<AnimatePresence />;
-              {expandedSections.has(section.title) && (<motion.div;}
-                  initial={{ opacity: 0, height: 0 }
-}
-                  animate={{ opacity: 1, height: 'auto' }
-}
-                  exit={{ opacity: 0, height: 0 }}
+              {expandedSections.has(section.title) ? (
+          <AnimatePresence />;
+              {expandedSections.has(section.title) && (
+          <motion.div;}
+                  initial={{ opacity: 0}
+            height: 0
+             
+                  animate={{ opacity: 1}
+            height: 'auto' 
+
+                  exit={{ opacity: 0}
+            height: 0
+             
                   transition={{ duration: 0.2 }}
               {/* Search Bar *}
 }"
               <div className=\"relative\" />;"
                 <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400\" />;
-                <input;"
+                <input"
                   type=\"text\";"
                   placeholder=\"Search services...\";
                   value={searchQuery}
-                        <Link;
-                          key={service && service.name}
-                          href={service && service.href}
-                          onClick={onClose}"
-                          className=\"block p-2 rounded-lg hover:bg-gray-800/30 transition-colors duration-200 group\" />;"
-                          <div className=\"text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-200\" />;
-                            {service && service.name}
+                        <Link key={service && service.name href={service && service.href onClick={onClose"
+                          className=\"block p-2 rounded-lg hover:bg-gray-800/30 transition-colors duration-200 group\" />}
+            "
+                          <div className=\"text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-200\" />
+            {service && service.name
                           </div>;"
                           <div className=\"text-xs text-gray-500\" />;
                             {service && service.description}
                           </div>;
                         </Link>;
                       ))}"
-                      {filteredServices && filteredServices.length > 5 && (<div className=\"text-xs text-cyan-400 text-center\" />;}
-                          +{filteredServices && filteredServices.length - 5} more results;
+                      {filteredServices && filteredServices.length > 5 && (
+          <div className=\"text-xs text-cyan-400 text-center\" />;}
+                          +{filteredServices && filteredServices.length - 5 more results;
                         </div>;
                       )}
                     </div>;"
-                  ) : (<div className=\"text-sm text-gray-500 text-center py-2\" />;
+                  ) : (
+          <div className=\"text-sm text-gray-500 text-center py-2\" />;
                       No services found;
                     </div>;
                   )}
@@ -1320,14 +1256,17 @@ const toggleSection = (title: string) => ;
                 <span />Company Stats</span>;
               </h3>;"
               <div className=\"grid grid-cols-2 gap-4\" />;
-                {stats && stats.map((stat, index) => (<motion&& motion.div;}
+                {stats && stats.map((stat,,,
+  index) => (
+          <motion&& motion.div;}
                     key={stat && stat.label}
-                    initial={{ opacity: 0, scale: 0 && 0.8 }
-}
-                    animate={{ opacity: 1, scale: 1 }
-}
-                    transition={{ duration: 0 && 0.3, delay: index * 0 && 0.1 }
-}"
+            initial={{ opacity: 0 scale: 0 && 0.8
+            animate={{ opacity: 1}
+            scale: 1
+             
+                    transition={{ duration: 0 && 0.3
+            delay: index * 0 && 0.1 
+"
                     className=\"text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30\" />;"
                     <div className=\"text-2xl font-bold text-white mb-1\" />{stat && stat.value}</div>;"
                     <div className=\"text-xs text-gray-400\" />{stat && stat.label}</div>;
@@ -1340,16 +1279,16 @@ const toggleSection = (title: string) => ;
                 <span />Quick Links</span>;
               </h3>;"
               <div className=\"space-y-2\" />;
-                {quickLinks && quickLinks.map((link) => (<Link;}
-                    key={link && link.name}
-                    href={link && link.href}
-                    onClick={onClose}"
-                    className=\"flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group\" />;"
-                    <div className=\"text-gray-400 group-hover:text-cyan-400 transition-colors duration-200\" />;
-                      {link && link.icon}
+                {quickLinks && quickLinks.map((link) => (
+          <Link key={link && link.name}
+            href={link && link.href onClick={onClose"
+                    className=\"flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group\" />
+            "
+                    <div className=\"text-gray-400 group-hover:text-cyan-400 transition-colors duration-200\" />
+            {link && link.icon
                     </div>;"
-                    <span className=\"text-gray-300 group-hover:text-white transition-colors duration-200\" />;
-                      {link && link.name}
+                    <span className=\"text-gray-300 group-hover:text-white transition-colors duration-200\" />}
+            {link && link.name
                     </span>;
                   </Link>;
                 ))}
@@ -1360,8 +1299,9 @@ const toggleSection = (title: string) => ;
                 <span />Service Categories</span>;
               </h3>;"
               <div className=\"space-y-2\" />;
-                {sidebarItems && sidebarItems.map((item) => (<div key={item && item.name} />;
-                    <button;"
+                {sidebarItems && sidebarItems.map((item) => (
+          <div key={item && item.name} />;
+                    <button"
                   className=\"ml-8 space-y-1\" />
 "
                   <CloseIcon className=\"w-5 h-5\" />;
@@ -1370,21 +1310,21 @@ const toggleSection = (title: string) => ;
               {/* Search Bar */}"
               <div className=\"relative\" />;"
                 <Search className=\"absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text-gray-400\" />;
-                <input;"
+                <input"
                   type=\"text\";"
                   placeholder=\"Search services...\";
-                  value={search_query}
-                  on_change={(e) = /> setSearchQuery (e.target.value)}"
-                  className=\"w - full pl - 10 pr - 4 py - 2 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border-cyan-500 / 50\";
-                />;
-              </div>;
-              {/* Search Results */}"
-              {search_query && (<div className=\"mt-4 space-y-2\" />;"
+                  value={search_query on_change={(e) = /> setSearchQuery (e.target.value)"
+                  className=\"w - full pl - 10 pr - 4 py - 2 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border-cyan-500 / 50\"}
+            />
+            </div>
+            {/* Search Results */"
+              {search_query && (
+          <div className=\"mt-4 space-y-2\" />;"
                   <h4 className=\"text - sm font - medium text-gray-300\" />Search Results</h4>;"
-                  {filtered_services.length > 0 ? (<div className=\"space-y-1\" />;}
-                      {filtered_services.slice (0, 5).map ((service) => (<Link;}
-                          key={service.name}
-                          href={service.href}
+                  {filtered_services.length > 0 ? (
+          <div className=\"space-y-1\" />;
+                      {filtered_services.slice (0, 5).map ((service) => (
+          <Link key={service.name href={service.href}
             {/* Contact Information */}"
             <div className=\"p-6 border-b border-cyan-500/30\" />;"
               <h3 className=\"text-lg font-semibold text-white mb-4 flex items-center space-x-2\" />;"
@@ -1419,14 +1359,16 @@ const toggleSection = (title: string) => ;
                 <span />Company Stats</span>;
               </h3>;"
               <div className=\"grid grid-cols-2 gap-4\" />;
-                {stats.map((stat, index) => (<motion.div;}
+                {stats.map((stat,,,
+  index) => (
+          <motion.div;}
                     key={stat.label}
-                    initial={{ opacity: 0, scale: 0.8 }
-}
-                    animate={{ opacity: 1, scale: 1 }
-}
-                    transition={{ duration: 0.3, delay: index * 0.1 }
-}
+            initial={{ opacity: 0 scale: 0.8
+            animate={{ opacity: 1}
+            scale: 1
+             
+                    transition={{ duration: 0.3 delay: index * 0.1 
+
                    />;"
                     <div className=\"text - 2xl font - bold text-white mb-1\" />{stat.value}</div>;"
                     <div className=\"text - xs text-gray-400\" />{stat.label}</div>;
@@ -1440,10 +1382,8 @@ const toggleSection = (title: string) => ;
                 <span  /> Quick Links</span>;
               </h3>;"
               <div className=\"space-y-2\" />;
-                {quick_links.map ((link) => (<Link;}
-                    key={link.name}
-                    href={link.href}
-                    on_click={on_close}"
+                {quick_links.map ((link) => (
+          <Link key={link.name href={link.href on_click={on_close}"
                     className=\"flex items - center space - x-3 p - 3 rounded - lg hover:bg - gray - 800 / 50 transition-colors duration-200 group\" />
 "
                     <div className=\"text - gray - 400 group - hover:text - cyan - 400 transition-colors duration-200\" />;
@@ -1463,9 +1403,9 @@ const toggleSection = (title: string) => ;
                 <span  /> Service Categories</span>;
               </h3>;"
               <div className=\"space-y-2\" />;
-                {sidebar_items.map ((item) => (<div key={item.name} />;
-                    <button;
-                      on_click={() = /> toggle_category (item.name)}"
+                {sidebar_items.map ((item) => (
+          <div key={item.name} />;
+                    <button on_click={() = /> toggle_category (item.name)}"
                       className=\"w - full flex items - center justify - between p - 3 rounded - lg hover:bg - gray - 800 / 50 transition-colors duration-200 group\">
 "
                       <div className=\"flex items-center space-x-3\" />;
@@ -1476,7 +1416,8 @@ const toggleSection = (title: string) => ;
                         <span className=\"text - gray - 300 group - hover:text - white transition-colors duration-200\" />;
                           {item.name}
                     <AnimatePresence />;
-                      {expandedCategory === item.name && (<motion.div;}
+                      {expandedCategory === item.name && (
+          <motion.div;}
                       onClick={() = /> toggleCategory(item && item.name)}"
                       className=\"w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group\">
 "
@@ -1504,10 +1445,8 @@ const toggleSection = (title: string) => ;
                 <span />Quick Links</span>;
               </h3>;"
               <div className=\"space-y-2\" />;
-                {quickLinks.map((link) => (<Link;}
-                    key={link.name}
-                    href={link.href}
-                    onClick={onClose}"
+                {quickLinks.map((link) => (
+          <Link key={link.name href={link.href onClick={onClose}"
                     className=\"flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group\" />
 "
                     <div className=\"text-gray-400 group-hover:text-cyan-400 transition-colors duration-200\" />;
@@ -1527,9 +1466,9 @@ const toggleSection = (title: string) => ;
                 <span />Service Categories</span>;
               </h3>;"
               <div className=\"space-y-2\" />;
-                {sidebarItems.map((item) => (<div key={item.name} />;
-                    <button;
-                      onClick={() = /> toggleCategory(item.name)}"
+                {sidebarItems.map((item) => (
+          <div key={item.name} />;
+                    <button onClick={() = /> toggleCategory(item.name)}"
                       className=\"w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group\">
 "
                       <div className=\"flex items-center space-x-3\" />;
@@ -1542,17 +1481,15 @@ const toggleSection = (title: string) => ;
 
                         </span>
                       </div>
-                      <ChevronRight;
-className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${}
+                      <ChevronRight className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${}
                           expandedCategory === item && item.name ? 'rotate-90' : ''}
                         }`} 
                       />;
                     </button>;
 
 const filteredServices = sidebarSections.flatMap(section =>
-    section.items.flatMap(item =>
-      item.subItems?.filter(child =>
-        child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    section.items.flatMap(item =>,
+  item.subItems?.filter(child => child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         child.description?.toLowerCase().includes(searchQuery.toLowerCase())
       ) || []
     )
@@ -1578,7 +1515,8 @@ document.body.style.overflow = 'hidden'} else {''}
 
       {/* Backdrop */}
       <AnimatePresence />;
-        {isOpen && (<motion && motion.div />;}
+        {isOpen && (
+          <motion && motion.div />;}
 initial = {{ opacity: 0}}"
             animate=\"{{\" opacity: 1}"
 }\";"
@@ -1621,7 +1559,8 @@ child.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
   const is_active = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               =>: any router.pathname === href;return (<>;
       {/* comment */}
       <AnimatePresence />;
-        {is_open && (<motion.div />;}
+        {is_open && (
+          <motion.div />;}
 initial = {{ opacity: 0}}"
             animate=\"{{\" opacity: 1}"
 }\";"
@@ -1634,7 +1573,8 @@ initial = {{ opacity: 0}}"
   return (<>;
       {/* Backdrop */}
       <AnimatePresence />;
-        {is_open && (<motion.div />;}
+        {is_open && (
+          <motion.div />;}
 initial = {{ opacity: 0}}"
             animate=\"{{\" opacity: 1}"
 }\";"
@@ -1669,7 +1609,8 @@ className=\"{\"fixed\" left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop
       {/* Sidebar */}
 
       <motion.div;
-initial={{ x:, -100%}
+initial={{ x:}
+            -100%
   ' }}'        animate={{ x: isOpen ? 0 :}
   '-100% }
 }'
@@ -1681,8 +1622,7 @@ initial={{ x:, -100%}
         <div className=\"sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6 />          <div className=\"flex items-center justify-between mb-6\" />\"            <div className=\"flex items-center gap-3 />              <div className=\"relative\" />\"                <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center />                  <Zap className=\"w-6 h-6 text-white\" />\"                </div>\"                <div className=\"absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20 /></div>              </div>\"              <div />;"
                 <h2 className=\"text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent />                  Zion Tech Group\"                </h2>;"
                 <p className=\"text-gray-400 text-sm />Revolutionary Technology</p>              </div>\"            </div>;
-            <button;
-              onClick={onClose}"
+            <button onClick={onClose}"
               className=\"lg:hidden p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200\"              <X className=\"w-5 h-5 text-gray-400 />            </button>\"          </div>;
           {/* Contact Bar */}"
           <div className=\"space-y-3 />            <div className=\"flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30\" />\"              <Phone className=\"w-4 h-4 text-cyan-400 />              <span className=\"text-sm text-gray-300\" />{contactInfo && contactInfo.mobile}</span>\"            </div>\"            <div className=\"flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30 />              <Mail className=\"w-4 h-4 text-cyan-400\" />\"              <span className=\"text-sm text-gray-300 />{contactInfo && contactInfo.email}</span>            </div>\"          </div>;
@@ -1690,12 +1630,14 @@ initial={{ x:, -100%}
         {/* comment */}\";
           {/* comment */}
         {/* Navigation Content */}"
-        <div className=\"p-6 space-y-6 />          {/* Home Link */}\"          <Link;"
+        <div className=\"p-6 space-y-6 />          {/* Home Link */}\"          <Link"
             href=\"/\"\"            onClick={onClose}\"            className=\"flex items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover:from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group\"            <Home className=\"w-5 h-5 text-cyan-400 />            <span className=\"text-white font-semibold\" />Home</span>\"          </Link>\";
           {/* Service Sections */}"
-          {sidebarSections && sidebarSections.map((section, sectionIndex) => (<div key={sectionIndex} className=\"space-y-3 />              <button\"                onClick={() = /> toggleSection(section && section.title)}"
-                className=\"w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group\"                <div className=\"flex items-center gap-3 />                  <div className={`w-8 h-8 bg-gradient-to-r ${section && section.color} rounded-lg flex items-center justify-center`} />\"                    <section && section.icon className=\"w-4 h-4 text-white />                  </div>\"                  <span className=\"text-white font-semibold />{section && section.titl}"
-}</span>                </div>\"                <ChevronDownclassName={w-4 h-4 text-gray-400 transition-transform duration-300 ${`;}
+          {sidebarSections && sidebarSections.map((section, sectionIndex) => (
+          <div key={sectionIndex className=\"space-y-3 />              <button\"                onClick={() = /> toggleSection(section && section.title)}"
+                className=\"w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group\"                <div className=\"flex items-center gap-3 />                  <div className={`w-8 h-8 bg-gradient-to-r ${section && section.color}
+            rounded-lg flex items-center justify-center` />\"                    <section && section.icon className=\"w-4 h-4 text-white />                  </div>\"                  <span className=\"text-white font-semibold />{section && section.titl"
+</span>                </div>\"                <ChevronDownclassName={w-4 h-4 text-gray-400 transition-transform duration-300 ${`;}
                     expandedSections && expandedSections.has(section && section.title) ? 'rotate-180' :;}
 '                  }`}'                />              </button><AnimatePresence />;
 initial={{ coordinate_x: '-100%' }}'        animate={{ coordinate_x: is_open ? 0 : '-100%' }
@@ -1708,19 +1650,19 @@ className={`fixed left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - bl
         <div className=\"sticky top - 0 bg - black / 80 backdrop - blur - xl border - b border - gray-800 / 50 p-6 />          <div className=\"flex items - center justify - between mb - 6\" />\"            <div className=\"flex items-center gap-3 />              <div className=\"relative\" />\"                <div className=\"w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items-center justify-center />                  <Zap className=\"w - 6 h - 6 text - white\" />\"                </div>\"                <div className=\"absolute -inset - 1 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded-xl blur opacity-20 /></div>              </div>\"              <div />;"
                 <h2 className=\"text - xl font - bold bg - gradient - to - r from - white to - cyan - 300 bg - clip-text text-transparent />                  Zion Tech Group\"                </h2>;"
                 <p className=\"text - gray-400 text-sm  /> Revolutionary Technology</p>              </div>\"            </div>;
-            <button;
-              on_click={on_close}"
+            <button on_click={on_close}"
               className=\"lg:hidden p - 2 hover:bg - gray - 800 / 50 rounded - lg transition-colors duration-200\"              <X className=\"w - 5 h - 5 text-gray-400 />            </button>\"          </div>;{/* Contact Bar */}"
           <div className=\"space-y-3 />            <div className=\"flex items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray-700 / 30\" />\"              <Phone className=\"w - 4 h - 4 text-cyan-400 />              <span className=\"text - sm text - gray - 300\" />{contact_info.mobile}</span>\"            </div>\"            <div className=\"flex items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border-gray-700 / 30 />              <Mail className=\"w - 4 h - 4 text - cyan - 400\" />\"              <span className=\"text - sm text-gray-300 />{contact_info.email}</span>            </div>\"          </div>;
         </div>;"
         {/* comment */}\";"
         <div className=\"p-6\" space - y-6 />\"          {/* comment */}\"          <Link href=/\"            on_click={on_close}\"            className=\"flex\" items - center gap - 3 p - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 hover: from - cyan - 500 / 30 hover:to - purple - 600 / 30 rounded - lg border border - cyan - 500 / 30 transition - all duration - 300 group\"\"            <Home className=\"w-5\" h - 5 text - cyan - 400       />\"            <span className=\"text-white font-semibold  /> Home</span>          </Link>\",{/* comment */}
         {/* Navigation Content */}"
-        <div className=\"p-6 space-y-6 />          {/* Home Link */}\"          <Link;"
+        <div className=\"p-6 space-y-6 />          {/* Home Link */}\"          <Link"
             href=\"/\"\"            on_click={on_close}\"            className=\"flex items - center gap - 3 p - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 hover:from - cyan - 500 / 30 hover:to - purple - 600 / 30 rounded - lg border border - cyan - 500 / 30 transition-all duration-300 group\"            <Home className=\"w - 5 h - 5 text-cyan-400 />            <span className=\"text - white font - semibold\" />Home</span>\"          </Link>\";
           {/* Service Sections */}"
-          {sidebar_sections.map ((section, section_index) => (<div key={section_index} className=\"space-y-3 />              <button\"                on_click={() = /> toggle_section (section.title)}"
-                className=\"w - full flex items - center justify - between p - 3 bg - gray - 800 / 30 hover: bg - gray - 800 / 50 rounded - lg border border - gray - 700 / 30 transition-all duration-300 group\"                <div className=\"flex items - center gap - 3 />                  <div className={`w - 8 h - 8 bg - gradient - to - r ${section.color} rounded - lg flex items-center justify-center`} />\"                    <section.icon className=\"w - 4 h-4 text-white />                  </div>\"                  <span className=\"text-white font-semibold />{section.titl}"
+          {sidebar_sections.map ((section, section_index) => (
+          <div key={section_index className=\"space-y-3 />              <button\"                on_click={() = /> toggle_section (section.title)}"
+                className=\"w - full flex items - center justify - between p - 3 bg - gray - 800 / 30 hover: bg - gray - 800 / 50 rounded - lg border border - gray - 700 / 30 transition-all duration-300 group\"                <div className=\"flex items - center gap - 3 />                  <div className={`w - 8 h - 8 bg - gradient - to - r ${section.color rounded - lg flex items-center justify-center` />\"                    <section.icon className=\"w - 4 h-4 text-white />                  </div>\"                  <span className=\"text-white font-semibold />{section.titl"
 }</span>                </div>\"                <ChevronDown                  className={w - 4 h - 4 text - gray - 400 transition - transform duration - 300 ${`;}
                     expanded_sections.has (section.title) ? 'rotate - 180' : ;}
 '                  }`}'                />              </button><AnimatePresence />;
@@ -1740,7 +1682,8 @@ const [expanded_sections, setExpandedSections] =;}
         initial=\"{{\" x: \"-100%\" }}"
         animate=\"{{\" x: isOpen ? 0 : \"-100%\" }
 }"
-        transition=\"{{\" type \"spring\", damping: 25, stiffness: 200 }"
+        transition=\"{{\" type \"spring\", damping: 25;
+  stiffness: 200; }"
 }\";"
         className=\"fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto />;"
       >\";"
@@ -1784,7 +1727,8 @@ const [expanded_sections, setExpandedSections] =;}
 }\";"
         animate=\"{{\" coordinate_x: is_open ? 0 : -320 }"
 }\";"
-        transition=\"{{\" type spring\", stiffness: 300, damping: 30 }"
+        transition=\"{{\" type spring\", stiffness: 300;
+  damping: 30; }"
 }\";"
         className=\"fixed top - 0 left - 0 h - full w - 80 bg - white shadow - xl z - 50 lg: translate-x-0 lg:static lg:shadow-none\";"
           <div className=\"flex\" items - center justify - between p - 6 border - b border - gray - 200\" />\";"
@@ -1827,7 +1771,8 @@ const [expanded_sections, setExpandedSections] =;}
             <div className=\"space-y-6\" />\";"
                 <div key=\"{section_index}\" />\";"
                     on_click=\"{()\" => toggle_section (section.title)}"
-                    className=\"w - full flex items - center justify - between p - 3 rounded - lg hover: bg - gray-50 transition-colors\",<div className=\"{\"w - 8\" h - 8 bg - gradient - to - r ${section.color} rounded - lg flex items - center justify - center mr - 3\"} />;"
+                    className=\"w - full flex items - center justify - between p - 3 rounded - lg hover: bg - gray-50 transition-colors\",<div className=\"{\"w - 8\" h - 8 bg - gradient - to - r ${section.color,
+  rounded - lg flex items - center justify - center mr - 3\"} />;"
                         <section.icon className=\"w-4\" h - 4 text - white\" />\";"
                       <span className=\"font - semibold text-gray-900 />{section.title}</span>;"
                     {expanded_sections.includes (section.title) ? (\";"
@@ -1884,19 +1829,25 @@ const [expanded_sections, setExpandedSections] =;}
                 </div>;
                     transition={{ duration: 0.3 }
 }"
-className=\"space-y-2 ml-6\"                    {section.items.map ((item, item_index) => (<div key={item_index} className=\"space-y-2 />                        <button\"                          on_click={() = /> toggle_item (item.name)}"
-                          className=\"w - full flex items - center justify - between p - 2 hover: bg - gray - 800 / 30 rounded - lg transition - all duration-300 group text-left\"                          <div className=\"flex items-center gap-3 />                            <item.icon className=\"w - 4 h - 4 text - gray - 400 group - hover:text - cyan - 400 transition - colors duration - 200\" />\"                            <div />\"                              <span className=\"text - gray - 300 group - hover:text - white transition - colors duration - 200 text-sm font-medium />                                {item.nam}"
+className=\"space-y-2 ml-6\"                    {section.items.map ((item, item_index) => (
+          <div key={item_index}
+            className=\"space-y-2 />                        <button\"                          on_click={() = /> toggle_item (item.name)"
+                          className=\"w - full flex items - center justify - between p - 2 hover: bg - gray - 800 / 30 rounded - lg transition - all duration-300 group text-left\"                          <div className=\"flex items-center gap-3 />                            <item.icon className=\"w - 4 h - 4 text - gray - 400 group - hover:text - cyan - 400 transition - colors duration - 200\" />\"                            <div />\"                              <span className=\"text - gray - 300 group - hover:text - white transition - colors duration - 200 text-sm font-medium />                                {item.nam"
 }\"                              </span>;"
                               <p className=\"text - gray-500 text-xs />{item.description}</p>                            </div>\"                          </div>;
-                          {item.sub_items && item.sub_items.length > 0 && (<ChevronRight;"
+                          {item.sub_items && item.sub_items.length > 0 && (
+          <ChevronRight"
                                             ? \"bg-blue-50 text-blue-700\";}"
-                                            : \"text-gray-600 hover: bg-gray-50\",                    {section && section.items.map((item, itemIndex) = /> (\";}"
+                                            : \"text-gray-600 hover: bg-gray-50\",                    {section && section.items.map((item,,,
+  itemIndex) = /> (\";}"
                       <div key=\"{itemIndex}\" className=\"space-y-2 />\";"
                           onClick=\"{()\" => toggleItem(item && item.name)}\";"
                           className=\"w-full\" flex items-center justify-between p-2 hover: bg-gray-800/30 rounded-lg transition-all duration-300 group text-left\"\";"
-                        initial=\"{{\" opacity: 0, height: 0 }"
+                        initial=\"{{\" opacity: 0;
+  height: 0; }"
 }\"\";"
-                        animate=\"{{\" opacity: 1, height: auto }"
+                        animate=\"{{\" opacity: 1;
+  height: auto; }"
 }\";"
                         className=\"ml - 4 mt-2 space-y-1\";"
                         {section.items.map ((item) => (\";}"
@@ -2005,14 +1956,14 @@ initial = {{ opacity: 0,height: 0,, ,}}
                 )}
               </AnimatePresence>;
             </div>;
-          ))}{ opacity: 0, height: 0}}
+          ))}{ opacity: 0;
+  height: 0; }}
                                 transition={{ duration: 0.3 }
 }"
-className=\"space-y-1 ml-6\"                                {item.sub_items.map ((sub_item, sub_index) => (<Link;}
-                                    key={sub_index}
-                                    href={sub_item.href}
-                                    on_click={on_close}"
-className=\"flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded - lg transition-all duration-300 group\"                                    <div className=\"w - 1.5 h - 1.5 bg - cyan - 400 rounded - full group - hover:scale - 150 transition-transform duration-200 /></div>                                    <span className=\"text - gray - 400 group - hover:text - cyan - 300 transition - colors duration - 200 text - xs\" />\"                                      {sub_item.name}\"                                    </span></Link>))}
+className=\"space-y-1 ml-6\"                                {item.sub_items.map ((sub_item, sub_index) => (
+          <Link key={sub_index}
+            href={sub_item.href on_click={on_close"
+className=\"flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded - lg transition-all duration-300 group\"                                    <div className=\"w - 1.5 h - 1.5 bg - cyan - 400 rounded - full group - hover:scale - 150 transition-transform duration-200 /></div>                                    <span className=\"text - gray - 400 group - hover:text - cyan - 300 transition - colors duration - 200 text - xs\" />\"                                      {sub_item.name\"                                    </span></Link>))}
                               </motion.div>)}
                           </AnimatePresence>)}
                       </div>))}

@@ -1,15 +1,13 @@
-
-
-import type { NextApiRequest, NextApiResponse } from \"next\";
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+import type { NextApiRequest, NextApiResponse,
+  from \"next\";
+export default async function handler(req: NextApiRequest,,,
+  res: NextApiResponse) {}
   const type = null;}
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(
-  req: NextApiRequest;
-res: NextApiResponse;
-try {
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
+export default async function handler(req: NextApiRequest,
+  res: NextApiResponse,
+  try {,,
   const type = (req && req.query.type as string) || 'rest';
 
 ) {;
@@ -18,14 +16,15 @@ const type = (req.query.type as string) || 'rest';
 
 ) {
   if (type === 'graphql') {
-    res && res.setHeader('Content-Type', 'text/markdown');
+    res && res.setHeader('Content-Type',,,
+  'text/markdown');
     return res;
       .status(200)
       .send(
         `# Zion Partner SDK (GraphQL)\n\nSchemas and resolvers are coming soon. For now, use REST endpoints documented in the REST SDK.`}
       );}
   }
-  res && res.setHeader('Content-Type', 'text/markdown');
+  res && res.setHeader('Content-Type' 'text/markdown');
   return res;
     .status(200)
     .send(

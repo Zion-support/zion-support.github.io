@@ -1,8 +1,6 @@
-
-
-
 import React from 'react';
-import { motion  } from 'framer-motion';
+import { motion,
+  from 'framer-motion';
 import { Mail, Phone, MapPin, Globe;
   Twitter, Linkedin, Github;
   ArrowUp, Crown, Zap, Brain, Rocket;
@@ -29,18 +27,16 @@ Briefcase,
 Atom;}
 }
 } from 'lucide-react';
-
-
 import Link from 'next/link';
-import { AnimatePresence  } from 'framer-motion';
-  Mail,Phone,MapPin,Globe,Twitter,Linkedin,Github,ArrowUp,Crown,Zap,Brain,Rocket,Shield,Users,BookOpen} from 'lucide-react';
+import { AnimatePresence from 'framer-motion';
+  Mail,Phone,MapPin,Globe,Twitter,Linkedin,Github,ArrowUp,Crown,Zap,Brain,Rocket,Shield,Users,BookOpen,
+  from 'lucide-react';
 
 interface FooterLink {
   interface FooterLink  {label: string;
   href: string;
 
   description?: string;
-
 
   links: FooterLink[];}
 }
@@ -79,9 +75,7 @@ const footerSections: FooterSection[] = [;
       }
       {label: 'View All Services';
         href: '/services';}
-        description: 'Complete service portfolio';}
-      }
-    ];
+        description: 'Complete service portfolio';];
   }
 
   {
@@ -135,9 +129,8 @@ const footerSections: FooterSection[] = [;
   href: '/careers', description: 'Join our team'}
 }
       { label: 'Contact'}
-  href: '/contact', description: 'Get in touch' }
-    ]
- 
+  href: '/contact', description: 'Get in touch' ]
+
 },  {
     title: 'Resources',
   links: [
@@ -163,9 +156,7 @@ const footerSections: FooterSection[] = [;
   href: '/solutions?industry=government', description: 'Public sector'}
 }
       { label: 'Education'}
-  href: '/solutions?industry=education', description: 'EdTech solutions'}
-}
-    ];
+  href: '/solutions?industry=education', description: 'EdTech solutions'];
   }
   {title: 'Company';
     links: [;
@@ -176,11 +167,8 @@ const footerSections: FooterSection[] = [;
   href: '/careers', description: 'Join our team'}
 }
       { label: 'Contact'}
-  href: '/contact', description: 'Get in touch' }
+  href: '/contact', description: 'Get in touch' ]
 
-    ]
-
- 
 }
   {
     title: 'Resources',
@@ -205,11 +193,8 @@ const footerSections: FooterSection[] = [;
       {
         label: 'Education',
   href: '/education-technology-solutions'}
-        description: 'EdTech solutions'}
-      }
-    ]
-  }
-];
+        description: 'EdTech solutions']
+  ];
 
 const socialLinks = [
   {
@@ -228,9 +213,7 @@ const socialLinks = [
     icon: <Github className='w-5 h-5' />,
     href: 'https://github.com/ziontechgroup',
   label: 'GitHub'}
-    external: true}
-  }
-];
+    external: true];
 
 const quickLinks = [
   { name: 'About Us'}
@@ -253,18 +236,16 @@ const quickLinks = [
   href: '/api', icon: <Code className='w-4 h-4' />}
 },
   { name: 'Status'}
-  href: '/status', icon: <TrendingUp className='w-4 h-4' />}
-}
-];
+  href: '/status', icon: <TrendingUp className='w-4 h-4' />];
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
  ;
   const scrollToTop = () => {
   return $3;}
 }
-window.scrollTo({ top: 0, behavior: 'smooth' })
+window.scrollTo({ top: 0,,,
+  behavior: 'smooth' })
 };
-
 
 const footerSections = [
     {
@@ -284,9 +265,7 @@ const footerSections = [
   href: '/cybersecurity'}
 },
 { label: '2040 Services'}
-  href: '/innovative-2040-services-showcase'}
-}
-      ]
+  href: '/innovative-2040-services-showcase']
     },
     {
       title: 'Solutions',
@@ -305,9 +284,7 @@ const footerSections = [
 },
 
 { label: 'Research & Development'}
-  href: '/research-development'}
-}
-      ]
+  href: '/research-development']
     },
     {
       title: 'Company',
@@ -326,9 +303,7 @@ const footerSections = [
 },
 
 { label: 'Press & Media'}
-  href: '/press'}
-}
-      ]
+  href: '/press']
     },
     {
       title: 'Resources',
@@ -346,11 +321,8 @@ const footerSections = [
   href: '/docs'}
 },
 { label: 'Support'}
-  href: '/support'}
-}
-      ]
-    }
-  ];
+  href: '/support']
+    ];
 
 const socialLinks = [
     {
@@ -367,9 +339,7 @@ const socialLinks = [
   label: 'GitHub'}
 },
     { icon: Globe, href: 'https://ziontechgroup.com'}
-  label: 'Website'}
-}
-  ];
+  label: 'Website'];
 
 const containerVariants = {}
     hidden: { opacity: 0}
@@ -383,7 +353,8 @@ staggerChildren: 0.1}
   };
 
 const itemVariants = {}
-    hidden: { y: 20, opacity: 0}
+    hidden: { y: 20;
+  opacity: 0; }
 }
     visible: {
       y: 0;
@@ -400,23 +371,25 @@ duration: 0.5}
       {/* Animated Background Elements */}
       <div className='absolute inset-0 -z-10' />
         {/* Quantum Particle Field */}
-        {[...Array(30)].map((_, i) => (;}
+        {[...Array(30)].map((_,,,
+  i) => (;}
           <motion&& motion.div;}
 key={i}
-
-className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full'
+            className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full'
             animate={{
-              x: [0, Math.random() * 1000, 0],
-              y: [0, Math.random() * 1000, 0],
-              opacity: [0, 0.6, 0]}
+              x: [0
+            Math.random() * 1000 0]
+            y: [0, Math.random() * 1000
+            0]
+            opacity: [0, 0.6 0]}
               scale: [0, 1, 0]}
             }}
             transition={{
-              duration: 15 + Math.random() * 10,
-              repeat: -1,
-              delay: Math.random() * 8}
-ease: 'easeInOut'}
-            }}
+              duration: 15 + Math.random() * 10}
+            repeat: -1
+            delay: Math.random() * 8
+            ease: 'easeInOut'
+            
           />;
         ))}
         {/* Main Footer Content */}
@@ -476,8 +449,7 @@ help businesses transform and thrive in the digital age.
                 </div>
                 <div className='flex items-center space-x-3 text-gray-300' />
                   <Globe className='w-4 h-4 text-blue-400' />
-                  <a;
-href='https: //ziontechgroup.com'
+                  <a href='https: //ziontechgroup.com'
                     className='hover:text-white transition-colors duration-200'
                    />
                     ziontechgroup.com;
@@ -488,55 +460,67 @@ href='https: //ziontechgroup.com'
 
             {/* Footer Sections *}
 }
-            {footerSections.map((section, index) => (}
-              <motion.div key={section.title} variants={itemVariants} />
+            {footerSections.map((section,,,
+  index) => (}
+              <motion.div key={section.title}
+            variants={itemVariants />
 <h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2' />
                   {section.title === 'Services' && (
-                    <Briefcase className='w-5 h-5 text-cyan-400' />}
+                    <Briefcase className='w-5 h-5 text-cyan-400' />
 }
                   )}
-                  {section.title === 'Solutions' && (<Zap className='w-5 h-5 text-purple-400' />;}
+                  {section.title === 'Solutions' && (
+          <Zap className='w-5 h-5 text-purple-400' />;}
                   )}
-                  {section.title === 'Company' && (<Users className='w-5 h-5 text-pink-400' />;}
+                  {section.title === 'Company' && (
+          <Users className='w-5 h-5 text-pink-400' />;}
                   )}
-                  {section.title === 'Resources' && (<BookOpen className='w-5 h-5 text-blue-400' />;}
+                  {section.title === 'Resources' && (
+          <BookOpen className='w-5 h-5 text-blue-400' />;}
                   )}
                   <span />{section.title}</span>;
                 </h4>;
                 <ul className='space-y-3' />;
-                  {section.items.map(item => (<li key={item.label} />;
-                      <Link;
-                        href={item.href}
-
-                        className='text-gray-300 hover: text-white transition-colors duration-200 hover:translate-x-1 inline-block'
+                  {section.items.map(item => (
+          <li key={item.label} />,
+  <Link href={item.href}
+            className='text-gray-300 hover: text-white transition-colors duration-200 hover:translate-x-1 inline-block'
                        />
 
-                        {item.label}
-            {/* Footer Sections *}
-}
-            {footerSections && footerSections.map((section, index) => (<motion && motion.div key={section && section.title} variants={itemVariants} />;
-                <h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2' />;
-                  {section && section.title === 'Services' && (<Briefcase className='w-5 h-5 text-cyan-400' />;}
+                        {item.label
+            {/* Footer Sections *
+
+            {footerSections && footerSections.map((section,,,
+  index) => (
+          <motion && motion.div key={section && section.title}
+            variants={itemVariants />
+            <h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2' />
+            {section && section.title === 'Services' && (
+          <Briefcase className='w-5 h-5 text-cyan-400' />}
+            )
+                  {section && section.title === 'Solutions' && (
+          <Zap className='w-5 h-5 text-purple-400' />;}
                   )}
-                  {section && section.title === 'Solutions' && (<Zap className='w-5 h-5 text-purple-400' />;}
+                  {section && section.title === 'Company' && (
+          <Users className='w-5 h-5 text-pink-400' />;}
                   )}
-                  {section && section.title === 'Company' && (<Users className='w-5 h-5 text-pink-400' />;}
-                  )}
-                  {section && section.title === 'Resources' && (<BookOpen className='w-5 h-5 text-blue-400' />;}
+                  {section && section.title === 'Resources' && (
+          <BookOpen className='w-5 h-5 text-blue-400' />;}
                   )}
                   <span />{section && section.title}</span>;
                 </h4>;
                 <ul className='space-y-3' />;
-                  {section && section.items.map(item => (<li key={item && item.label} />;
-                      <Link;
-                        href={item && item.href}
-                        className='text-gray-300 hover: text-white transition-colors duration-200 hover:translate-x-1 inline-block' />                  <span />{section && section.titl}
-}</span>;
-                </h4>;
-                <ul className=\"space-y-3\" />;
-                  {section && section.items.map((item) => (<li key={item && item.label} />;
-                      <Link;
-                        href={item && item.href}"
+                  {section && section.items.map(item => (
+          <li key={item && item.label} />;
+                      <Link href={item && item.href}
+            className='text-gray-300 hover: text-white transition-colors duration-200 hover:translate-x-1 inline-block' />                  <span />{section && section.titl
+</span>,
+  </h4>
+            <ul className=\"space-y-3\" />
+            ,,
+  {section && section.items.map((item) => (
+          <li key={item && item.label />}
+            <Link href={item && item.href"
                         className=\"text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block\" />;
                         {item && item.label}
                       </Link>;
@@ -547,9 +531,12 @@ href='https: //ziontechgroup.com'
             ))}
           {/* Social Links & Newsletter */}
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 }
-}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0}
+            y: 20
+             
+            whileInView={{ opacity: 1}
+            y: 0
+             
             transition={{ duration: 0 && 0.6 }}
 
             viewport={{ once: true }}
@@ -562,22 +549,19 @@ className='mt-16 pt-12 border-t border-gray-800/50'
 }
               <div className='flex items-center space-x-6' />;
                 <span className='text-gray-400 font-medium' />Follow Us:</span>;
-                {socialLinks && socialLinks.map(social => (<motion&& motion.a;}
+                {socialLinks && socialLinks.map(social => (
+          <motion&& motion.a;}
                     key={social && social.label}
-                    href={social && social.href}
-
-                    target='_blank'
+            href={social && social.href target='_blank'
                     rel='noopener noreferrer'
                     className='w-10 h-10 bg-gray-800/50 hover: bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110'
-                    whileHover={{ y: -2 }}
-
-
-                    whileTap={{ scale: 0.95 }
+                    whileHover={{ y: -2
+            whileTap={{ scale: 0.95 
 }
-                   />;
-                    <social.icon className='w-5 h-5' />;
-                  </motion.a>;
-                ))}
+                   />,
+  <social.icon className='w-5 h-5' />,
+  </motion.a>;,,
+   ))}
 
               </div>
               {/* Newsletter Signup */}
@@ -590,8 +574,7 @@ className='mt-16 pt-12 border-t border-gray-800/50'
 computing, and future technology.
                 </p>
                 <div className='flex space-x-2' />
-                  <input;
-type='email'
+                  <input type='email'
                     placeholder='Enter your email'
                     className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
                   />
@@ -627,9 +610,12 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
           </motion.div>;
           {/* Social Links & Newsletter */}
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }
-}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            initial={{ opacity: 0}
+            coordinate_y: 20
+             
+            whileInView={{ opacity: 1}
+            coordinate_y: 0
+             
             transition={{ duration: 0.6 }}
             viewport={{ once: true }
 }
@@ -639,13 +625,13 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
               {/* Social Links */}
               <div className='flex items - center space - x-6' />;
                 <span className='text - gray - 400 font - medium' />Follow Us:</span>;
-                {social_links.map (social => (<motion.a;}
+                {social_links.map (social => (
+          <motion.a;}
                     key={social.label}
-                    href={social.href}
-                    target='_blank';
-                    rel='noopener noreferrer';
-                    className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gradient - to - r hover:from - cyan - 500 hover:to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 hover:text - white transition - all duration - 200 hover:scale - 110';
-                    while_hover={{ coordinate_y: -2 }}
+            href={social.href target='_blank'
+            rel='noopener noreferrer'
+            className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gradient - to - r hover:from - cyan - 500 hover:to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 hover:text - white transition - all duration - 200 hover:scale - 110'
+            while_hover={{ coordinate_y: -2 
                     while_tap={{ scale: 0.95 }
 }
                    />;
@@ -654,14 +640,16 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
               {/* Social Links */}"
               <div className=\"flex items-center space-x-6\" />;"
                 <span className=\"text - gray-400 font-medium\" />Follow Us:</span>;
-                {social_links.map ((social) => (<motion.a;}
+                {social_links.map ((social) => (
+          <motion.a;}
                     key={social.label}
-                    href={social.href}"
+            href={social.href"
                     target=\"_blank\";"
-                    rel=\"noopener noreferrer\";"
-                    className=\"w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gradient - to - r hover:from - cyan - 500 hover:to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 hover:text - white transition - all duration-200 hover:scale-110\";
-                    while_hover={{ coordinate_y: -2 }}
-                    while_tap={{ scale: 0.95 }
+                    rel=\"noopener noreferrer\"
+            "
+                    className=\"w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gradient - to - r hover:from - cyan - 500 hover:to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 hover:text - white transition - all duration-200 hover:scale-110\"
+            while_hover={{ coordinate_y: -2}
+            while_tap={{ scale: 0.95 
 }
                    />;"
                     <social.icon className=\"w-5 h-5\" />;
@@ -677,8 +665,7 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
                   computing, and future technology.;
                 </p>;
                 <div className='flex space - x-2' />;
-                  <input;
-                    type='email';
+                  <input type='email';
                     placeholder='Enter your email';
                     className='flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent';
                   />;
@@ -686,7 +673,7 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
                     className='px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover: from - purple - 600 hover:to - pink - 600 transition - all duration - 200'                    while_hover={{ scale: 1.05 }
 }                </p />;"
                 <div className=\"flex space-x-2\" />;
-                  <input;"
+                  <input"
                     type=\"email\";"
                     placeholder=\"Enter your email\";"
                     className=\"flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple-500 focus:border-transparent\";
@@ -723,15 +710,13 @@ className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6' />;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4' />;
               <div className='text-gray-400 text-sm' />;
-                <Link;
-                  href='/privacy';
+                <Link href='/privacy';
                   className='hover:text-white transition-colors duration-200 ml-2' />;
                   Privacy Policy;
 
                 </Link>{' '}
 
-                <Link;
-href='/terms'
+                <Link href='/terms'
                   className='hover: text-white transition-colors duration-200 ml-2'
                  />
                   Terms of Service;
@@ -764,14 +749,18 @@ onClick={scrollToTo}
 }
 className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'
 
-        whileHover={{ scale: 1.1, y: -2 }}
-        whileTap={{ scale: 0.9 }
+        whileHover={{ scale: 1.1}
+            y: -2
+            whileTap={{ scale: 0.9 
 }
-        initial={{ opacity: 0, scale: 0 }
-}
-        animate={{ opacity: 1, scale: 1 }
-}
-        transition={{ duration: 0.3, delay: 1 }}
+        initial={{ opacity: 0}
+            scale: 0
+             
+        animate={{ opacity: 1}
+            scale: 1
+             
+        transition={{ duration: 0.3}
+            delay: 1 
 
        />
 
@@ -780,8 +769,6 @@ className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-
     </footer>
   )
 };
-
-
 export default UltraAdvancedFuturisticFooter2025;
 
 "

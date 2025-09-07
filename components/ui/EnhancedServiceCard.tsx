@@ -1,9 +1,9 @@
-
-
 import React from 'react';
-import { motion  } from 'framer-motion';
-import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion from 'framer-motion';
+import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap,
+  from 'lucide-react';
+import { motion,
+  from 'framer-motion';
 import {
   Star;
 ExternalLink,
@@ -85,34 +85,31 @@ interface EnhancedServiceCardProps {;
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps /> = ({ service   }
 }) => {
 
-
-
   const cardVariants = null;
     hover: {
       coordinate_y: -8,
       scale: 1.02,
       transition: {
 
-        duration: 0.6}
-ease: 'easeInOut' as const}
+        duration: 0.6,
+  ease: 'easeInOut' as const}
       }
     }
   };
 
-  
     >
 
       {/* Background Glow */}
-      <div;
-        className={`absolute inset-0 bg-gradient-to-br ${service && service.color} opacity-0 group-hover: opacity-10 transition-opacity duration-500
-}
-        style={{background: `linear-gradient(135deg, ${service && service.color;}
-            .replace('from-', '').replace('to-', '').split(' ') />;}
-      {/* Background Glow */}
-      <div;
-        className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover: opacity-10 transition-opacity duration-500
-}
-        style={{background: `linear-gradient(135deg, ${service.color.replace('from-', '').replace('to-', '').split(' ').map(c = /> `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(', ')})`;
+      <div className={`absolute inset-0 bg-gradient-to-br ${service && service.color opacity-0 group-hover: opacity-10 transition-opacity duration-500 style={{background: `linear-gradient(135deg
+            ${service && service.color
+            .replace('from-',,}
+            '').replace('to-'
+             ,
+  '').split(' ') />
+            {/* Background Glow */
+      <div className={`absolute inset-0 bg-gradient-to-br ${service.color opacity-0 group-hover: opacity-10 transition-opacity duration-500 style={{background: `linear-gradient(135deg, ${service.color.replace('from-',}
+            '').replace('to-',
+  '').split(' ').map(c = /> `var(--tw-${c.split('-')[0]-${c.split('-')[1])`).join(' '))`;
         }}
       />;
 
@@ -122,20 +119,18 @@ ease: 'easeInOut' as const}
         <div className='absolute top-4 right-4 z-10' />
           <motion.div;
 className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'}
-            initial={{ scale: 0, rotate: -180 }
-}
-            animate={{ scale: 1, rotate: 0 }
-}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            initial={{ scale: 0}
+            rotate: -180
+            animate={{ scale: 1}
+            rotate: 0
+             
+            transition={{ delay: 0.2 duration: 0.5 
            />
 <Star className='w-3 h-3 fill-current' />
             POPULAR;
           </motion.div>
         </div>
       )}
-
-
-
 
       {/* Card Content */}
 
@@ -146,14 +141,13 @@ className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs fon
         <div className='flex items-start justify-between mb-4' />;
           <motion.div;
             className={`text-4xl ${service.textColor}`}
-            variants={iconVariants}
-            initial='hidden';
-            animate='visible';
-      <div className=\"relative p-6\" />;
-        {/* Header */}"
-        <div className=\"flex items-start justify-between mb-4\" />;
-          <motion.div;
-            className={`text-4xl ${service.textColor}`}
+            variants={iconVariants initial='hidden';
+            animate='visible'}
+            <div className=\"relative p-6\" />
+            {/* Header */"
+        <div className=\"flex items-start justify-between mb-4\" />
+            <motion.div
+            className={`text-4xl ${service.textColor`}
             variants={iconVariants}"
             initial=\"hidden\";"
             animate=\"visible\";"
@@ -205,14 +199,17 @@ className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs fon
             Key Features;
           </h4>
           <div className='space-y-2' />
-            {service.features.slice(0, 3).map((feature, index) => (}
+            {service.features.slice(0,,,
+  3).map((feature,,,
+  index) => (}
               <motion.div;}
 key={index}
-                className='flex items-center gap-2 text-sm text-gray-300';
-                initial={{ opacity: 0, x: -20 }
-}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 * index }}
+            className='flex items-center gap-2 text-sm text-gray-300'
+            initial={{ opacity: 0 x: -20
+            animate={{ opacity: 1}
+            x: 0
+             
+                transition={{ delay: 0.1 * index }
 
                />
 <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />
@@ -223,11 +220,10 @@ key={index}
 
             {service.features.length > 3 && (}
 <div className='text-xs text-gray-500 mt-2' />}
-                +{service.features.length - 3} more features;
+                +{service.features.length - 3,
+  more features;
               </div>
             )}
-
-
 
         {/* Market Info */}
 <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10' />
@@ -254,7 +250,8 @@ key={index}
 <div className='flex items-center justify-between mb-6 text-sm' />
           <div className='flex items-center gap-2 text-gray-400' />
             <Clock className='w-4 h-4' />
-            {service.trialDays} day trial;
+            {service.trialDays,
+  day trial;
           </div>
           <div className='flex items-center gap-2 text-gray-400' />
             <Shield className='w-4 h-4' />
@@ -267,7 +264,8 @@ key={index}
         {/* Trial & Setup Info */}"
           <div className=\"flex items-center gap-2 text-gray-400\" />;"
             <Clock className=\"w-4 h-4\" />;
-            {service.trialDays} day trial;
+            {service.trialDays,
+  day trial;
           </div>;"
           <div className=\"flex items-center gap-2 text-gray-400\" />;"
             <Shield className=\"w-4 h-4\" />;
@@ -278,7 +276,8 @@ key={index}
 <div className='flex items-center justify-between mb-6 text-sm' />;
           <div className='flex items-center gap-2 text-gray-400' />;
             <Clock className='w-4 h-4' />;
-            {service.trialDays} day trial;
+            {service.trialDays,
+  day trial;
           </div>;
           <div className='flex items-center gap-2 text-gray-400' />;
             <Shield className='w-4 h-4' />;
@@ -315,20 +314,21 @@ key={index}
         <div className='flex items-center justify-between mb-6 text-sm' />;
           <div className='flex items-center gap-2 text-gray-400' />;
             <Clock className='w-4 h-4' />;
-            {service && service.trialDays} day trial;
+            {service && service.trialDays,
+  day trial;
           </div>;
           <div className='flex items-center gap-2 text-gray-400' />;"
             <Shield className='w-4 h-4' />            {service && service.setupTime}        <div className=\"flex items-center justify-between mb-6 text-sm\" />;"
           <div className=\"flex items-center gap-2 text-gray-400\" />;"
             <Clock className=\"w-4 h-4\" />;
-            {service && service.trialDays} day trial;
+            {service && service.trialDays,
+  day trial;
           </div>;"
           <div className=\"flex items-center gap-2 text-gray-400\" />;"
             <Shield className=\"w-4 h-4\" />;
           </div>;
         </div>;{/* Action Buttons */}{service.setupTime}</div>;
         </div>;
-
 
         {/* Action Buttons */}
 
@@ -340,10 +340,8 @@ key={index}
 
 <div className='flex gap-3' />
           <motion.a;
-href={service.link}
-            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2';
-            whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }
+href={service.link className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
+            whileHover={{ scale: 1 && 1.05 whileTap={{ scale: 0 && 0.95 
 } />;
             <ExternalLink className='w-4 h-4' />;
             Learn More;
@@ -351,7 +349,6 @@ href={service.link}
             href={`mailto: ${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
 
             className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center'
-
 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }
@@ -399,8 +396,6 @@ href={service.link}
     </motion.div>
   )
 };
-
-
 export default EnhancedServiceCard;
 
 "

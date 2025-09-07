@@ -1,5 +1,4 @@
 import Link from \"next/link\";
-
 export const metadata = {
   title: \"Micro SaaS Development | Zion Tech Group\",
   description: \"Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.\",}
@@ -70,15 +69,13 @@ and drive growth. Our expert team delivers high-quality, scalable solutions.
 and get a custom solution tailored to your needs.
             </p>
             <div className=\"flex flex-col sm:flex-row gap-4 justify-center\" />
-              <Link;
-href=\"/contact\"
+              <Link href=\"/contact\"
                 className=\"bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center\"
                />
                 Get Started;
                 <ArrowRightIcon className=\"h-5 w-5 ml-2\" />
               </Link>
-              <Link;
-href=\"/services\"
+              <Link href=\"/services\"
                 className=\"border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors\"
                />
                 View All Services;
@@ -106,14 +103,12 @@ href=\"/services\"
               Build and launch successful micro SaaS products that solve specific business problems. From concept to revenue, we help you create scalable, profitable software solutions.
             </p>
             <div className=\"flex flex-col sm:flex-row gap-4 justify-center\" />
-              <Link;
-href=\"/contact\"
+              <Link href=\"/contact\"
                 className=\"bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors\"
                />
                 Start Your Project;
               </Link>
-              <Link;
-href=\"#services\"
+              <Link href=\"#services\"
                 className=\"border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors\"
                />
                 View Services;
@@ -136,33 +131,27 @@ href=\"#services\"
           </div>
 
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\" />
-            <ServiceCard;
-title=\"Product Development\"
+            <ServiceCard title=\"Product Development\"
               description=\"End-to-end micro SaaS product development from concept to deployment\"
               icon=\"🚀\"
             />
-            <ServiceCard;
-title=\"AI Integration\"
+            <ServiceCard title=\"AI Integration\"
               description=\"Integrate cutting-edge AI capabilities into your micro SaaS product\"
               icon=\"🤖\"
             />
-            <ServiceCard;
-title=\"Billing Systems\"
+            <ServiceCard title=\"Billing Systems\"
               description=\"Robust subscription billing and payment processing systems\"
               icon=\"💳\"
             />
-            <ServiceCard;
-title=\"Analytics Dashboard\"
+            <ServiceCard title=\"Analytics Dashboard\"
               description=\"Comprehensive analytics and reporting for your SaaS metrics\"
               icon=\"📊\"
             />
-            <ServiceCard;
-title=\"User Management\"
+            <ServiceCard title=\"User Management\"
               description=\"Complete user authentication, authorization, and profile management\"
               icon=\"👥\"
             />
-            <ServiceCard;
-title=\"API Development\"
+            <ServiceCard title=\"API Development\"
               description=\"RESTful APIs and webhooks for seamless integrations\"
               icon=\"🔌\"
             />
@@ -300,14 +289,12 @@ title=\"API Development\"
             Let's turn your micro SaaS idea into a profitable business. Get started with our expert development team today.
           </p>
           <div className=\"flex flex-col sm:flex-row gap-4 justify-center\" />
-            <Link;
-href=\"/contact\"
+            <Link href=\"/contact\"
               className=\"bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors\"
              />
               Start Your Project;
             </Link>
-            <Link;
-href=\"/services\"
+            <Link href=\"/services\"
               className=\"border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors\"
              />
               View All Services;

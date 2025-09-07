@@ -1,12 +1,12 @@
-
 <div className=\"container mx-auto px-4 py-10\" />;
 "
-export default function CategoryIndexPage() {return (<div className=\"container mx-auto px-4 py-10\" />;
-
+export default function CategoryIndexPage() {return (
+    <div className=\"container mx-auto px-4 py-10\" />;
 export default function CategoryIndexPage() {export default /**;
  * CategoryIndexPage - Function description;
  */;
-function CategoryIndexPage() {return (<div className='container mx-auto px-4 py-10' />;
+function CategoryIndexPage() {return (
+    <div className='container mx-auto px-4 py-10' />;
       <h1 className='text-2xl font-semibold' />Categories</h1>;
       <p className='mt-2 text-gray-600' />;
         Browse AI categories. Content coming soon.;
@@ -16,14 +16,16 @@ function CategoryIndexPage() {return (<div className='container mx-auto px-4 py-
   ))export default /**;
  * CategoryIndexPage - Function description;
  */;
-function CategoryIndexPage() {return (<div className='container mx-auto px-4 py-10' />;
+function CategoryIndexPage() {return (
+    <div className='container mx-auto px-4 py-10' />;
       <h1 className='text-2xl font-semibold' />Categories</h1>;
       <p className='mt-2 text-gray-600' />;
         Browse AI categories. Content coming soon.;
       </p>;
     </div>;
     </div>;"
-  )<div className=\"container mx-auto px-4 py-10\" />;"
+  )}
+      <div className=\"container mx-auto px-4 py-10\" />;"
       <h1 className=\"text-2xl font-semibold\" />Categories</h1>;"
       <p className=\"mt-2 text-gray-600\" />Browse AI categories. Content coming soon.</p>;}
     </div>;}
@@ -46,9 +48,7 @@ function CategoryIndexPage() {return (<div className='container mx-auto px-4 py-
     </div>
   );
 
-
   );
-
 export default /**
  * CategoryIndexPage - Function description;
  */
@@ -59,7 +59,8 @@ function CategoryIndexPage() {
       <p className='mt - 2 text - gray - 600' />;
         Browse AI categories. Content coming soon.;
       </p>;"
-    </div>)<div className=\"container mx - auto px - 4 py - 10\" />;"
+    </div>)}
+      <div className=\"container mx - auto px - 4 py - 10\" />;"
       <h1 className=\"text - 2xl font - semibold\" />Categories</h1>;"
       <p className=\"mt - 2 text - gray - 600\" />Browse AI categories. Content coming soon.</p>
     </div>}

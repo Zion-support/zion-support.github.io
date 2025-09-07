@@ -1,11 +1,10 @@
-
-
 'use client',
 
-import { useState, useEffect  } from 'react';
-
+import { useState, useEffect,
+  from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence,
+  from 'framer-motion';
 import { Menu, ChevronDown;
   Brain, Rocket, Shield;
   Zap;
@@ -18,4 +17,3 @@ import { Menu, ChevronDown;
  } from 'lucide-react';
 
 const navigationItems = null;
-
