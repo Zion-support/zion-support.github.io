@@ -1,8 +1,4 @@
-const bundleAnalyzer = require('@next/bundle-analyzer');
-
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
+// Bundle analyzer removed due to platform compatibility issues
 
 const nextConfig = {
   compress: true,
@@ -19,24 +15,8 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   
-  // Webpack configuration to handle TypeScript and JSX
+  // Webpack configuration simplified - Next.js handles TypeScript natively
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Handle TypeScript files
-    config.module.rules.push({
-      test: /\.tsx?$/,
-      use: [
-        {
-          loader: 'ts-loader',
-          options: {
-            transpileOnly: true,
-            compilerOptions: {
-              jsx: 'preserve',
-            },
-          },
-        },
-      ],
-    });
-    
     return config;
   },
   
@@ -98,4 +78,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withBundleAnalyzer(nextConfig);
+module.exports = nextConfig;
