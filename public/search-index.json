@@ -1,65 +1,20 @@
-<<<<<<< HEAD
 {
   "pages": [
     {
-      "title": "Home",
       "url": "/",
-      "content": "Zion Holdings - Technology Solutions"
+      "title": "Home",
+      "description": "Zion Tech Group - Homepage"
     },
     {
-      "title": "Services",
-      "url": "/services",
-      "content": "Our comprehensive technology services"
-    },
-    {
-      "title": "About",
       "url": "/about",
-      "content": "About Zion Holdings"
+      "title": "About",
+      "description": "About Zion Tech Group"
+    },
+    {
+      "url": "/contact",
+      "title": "Contact",
+      "description": "Contact Zion Tech Group"
     }
   ],
-  "generated": "2025-09-06T20:25:06.960Z"
+  "generatedAt": "2025-09-07T08:40:22.346Z"
 }
-=======
-[
-  {
-    "title": "Home",
-    "url": "/",
-    "content": "Zion Tech Group - Leading technology solutions provider",
-    "keywords": [
-      "home",
-      "technology",
-      "solutions"
-    ]
-  },
-  {
-    "title": "About",
-    "url": "/about",
-    "content": "Learn about Zion Tech Group and our mission",
-    "keywords": [
-      "about",
-      "company",
-      "mission"
-    ]
-  },
-  {
-    "title": "Services",
-    "url": "/services",
-    "content": "Our comprehensive technology services",
-    "keywords": [
-      "services",
-      "technology",
-      "solutions"
-    ]
-  },
-  {
-    "title": "Contact",
-    "url": "/contact",
-    "content": "Get in touch with Zion Tech Group",
-    "keywords": [
-      "contact",
-      "reach",
-      "support"
-    ]
-  }
-]
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
