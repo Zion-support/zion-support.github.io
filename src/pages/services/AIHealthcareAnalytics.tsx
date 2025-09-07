@@ -346,7 +346,7 @@ export default function AIHealthcareAnalytics() {
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
-                    </span>
+                    </Badge>
                   </div>
                 )}
                 <div className="text-center">

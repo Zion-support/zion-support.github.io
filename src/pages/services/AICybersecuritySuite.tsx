@@ -147,6 +147,7 @@ export default function AICybersecuritySuite() {
     { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' }
   ];
 
+export default function AICybersecuritySuite() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
