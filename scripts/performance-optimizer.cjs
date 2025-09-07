@@ -1,3 +1,9 @@
+=======
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+>>>>>>> cursor/automate-test-improve-and-merge-code-a45b
 
 #!/usr/bin/env node;
 const { execSync } = require('child_process');''
@@ -10,6 +16,7 @@ class PerformanceOptimizer {
     this.projectRoot = process.cwd();
     this.optimizations = [];
   }
+<<<<<<< HEAD
 '
   log(message, type = 'INFO') {'
     const timestamp = new Date().toISOString();
@@ -332,6 +339,14 @@ const path = require('path')''
       'Use tree shaking to eliminate dead code',''
       'Implement proper error boundaries'']
     ];
+  },
+};
+
+module.exports = nextConfig;`;
+
+    fs.writeFileSync(nextConfigPath, optimizedConfig);
+    this.optimizations.push('Next.js configuration optimized');
+    this.log('✅ Next.js configuration optimized');
   }
 
   saveReport(report) {'
@@ -340,7 +355,69 @@ const path = require('path')''
     this.log(`Performance report saved to: ${reportFile}`);
   }}
 
-;  async checkCaching() {
+export const config = {
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+};`;
+
+    fs.writeFileSync(middlewarePath, middleware);
+    this.optimizations.push('Performance middleware created');
+    this.log('✅ Performance middleware created');
+  }
+
+  async optimizePackageJson() {
+    this.log('🔧 Optimizing package.json scripts...');
+    
+    const packageJsonPath = path.join(this.projectRoot, 'package.json');
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+    
+    packageJson.scripts = {
+      ...packageJson.scripts,
+      'analyze': 'ANALYZE=true npm run build',
+      'lighthouse': 'lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html',
+      'perf:audit': 'npm run build && npm run lighthouse',
+      'perf:analyze': 'npm run analyze',
+      'perf:test': 'npm run build && npm run test:smoke && npm run lighthouse'
+    };
+    
+    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+    this.optimizations.push('Package.json performance scripts added');
+    this.log('✅ Package.json performance scripts added');
+  }
+
+  async createPerformanceReport() {
+    this.log('📊 Creating performance report...');
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      optimizations: this.optimizations,
+      recommendations: [
+        'Enable gzip compression',
+        'Optimize images with WebP/AVIF formats',
+        'Implement code splitting',
+        'Add performance monitoring',
+        'Use CDN for static assets',
+        'Implement service worker for caching',
+        'Optimize bundle size',
+        'Add performance budgets'
+      ],
+      nextSteps: [
+        'Run lighthouse audit',
+        'Monitor Core Web Vitals',
+        'Set up performance monitoring',
+        'Implement lazy loading',
+        'Optimize critical rendering path'
+      ]
+    };
+    
+    fs.writeFileSync('performance-optimization-report.json', JSON.stringify(report, null, 2));
+    this.log('📊 Performance report created');
+  }
+
+  async run() {
+    this.log('🚀 Starting Performance Optimizer...');
+    
     try {
   // TODO: Implement
 }
@@ -357,8 +434,8 @@ const path = require('path')''
       };'
       console.log('✅ Caching Check - Success');'
     } catch (error) {
-      this.results.caching = { success: false, error: error.message };
-      console.log(`❌ Caching Check - Failed: ${error.message}`);
+      this.log(`❌ Error during performance optimization: ${error.message}`);
+      throw error;
     }
   }
 }

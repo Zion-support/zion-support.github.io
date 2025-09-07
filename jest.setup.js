@@ -1,4 +1,4 @@
-require('@testing-library/jest-dom');
+import '@testing-library/jest-dom';
 
 // Mock Next.js router
 jest.mock("next/router", () => ({
@@ -24,24 +24,23 @@ jest.mock("next/router", () => ({
   },
 }));
 
-// Mock Next.js Image component
-jest.mock("next/image", () => ({
-  __esModule: true,
-  default: (props) => {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} />;
+// Mock Next.js navigation
+jest.mock("next/navigation", () => ({
+  useRouter() {
+    return {
+      push: jest.fn(),
+      replace: jest.fn(),
+      prefetch: jest.fn(),
+      back: jest.fn(),
+      forward: jest.fn(),
+      refresh: jest.fn(),
+    };
   },
-}));
-
-// Mock Next.js Link component
-jest.mock("next/link", () => ({
-  __esModule: true,
-  default: ({ children, href, ...props }) => {
-    return (
-      <a href={href} {...props}>
-        {children}
-      </a>
-    );
+  useSearchParams() {
+    return new URLSearchParams();
+  },
+  usePathname() {
+    return "/";
   },
 }));
 
@@ -52,8 +51,8 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
@@ -76,20 +75,7 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 };
 
-// Suppress console warnings in tests
-const originalWarn = console.warn;
-beforeAll(() => {
-  console.warn = (...args) => {
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
-    ) {
-      return;
-    }
-    originalWarn.call(console, ...args);
-  };
-});
-
-afterAll(() => {
-  console.warn = originalWarn;
+// Global test setup
+beforeEach(() => {
+  jest.clearAllMocks();
 });

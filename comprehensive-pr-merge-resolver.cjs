@@ -325,7 +325,7 @@ function main() {'
   runCommand('git checkout main', 'Switch to main branch');''
   runCommand('git pull origin main', 'Pull latest changes');'
   let successCount = 0;
-  let totalCount = allBranches.length;
+  const totalCount = allBranches.length;
   
   // Try to merge each branch;
   for (const branch of allBranches) {
