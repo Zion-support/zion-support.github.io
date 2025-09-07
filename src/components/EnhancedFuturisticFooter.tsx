@@ -266,7 +266,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com',
+    hours: 'Mon-Fri: 9:00 AM - 6:00 PM EST',
+    emergency: '24/7 Support Available'
   };
 
   return (

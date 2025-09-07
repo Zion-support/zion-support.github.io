@@ -307,6 +307,29 @@ export default function Services() {
               Request Quote
             </Link>
           </div>
+          
+          {/* Contact Information */}
+          <div className="mt-12 pt-8 border-t border-cyan-400/30">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-300">
+              <div>
+                <div className="font-semibold text-white mb-2">Phone</div>
+                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div>
+                <div className="font-semibold text-white mb-2">Email</div>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div>
+                <div className="font-semibold text-white mb-2">Address</div>
+                <div>364 E Main St STE 1008</div>
+                <div>Middletown DE 19709</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
