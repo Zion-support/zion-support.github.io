@@ -8,23 +8,33 @@
     "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
     "start": "next start",
     "export": "next export",
+<<<<<<< HEAD
     "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
     "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
     "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck --project tsconfig.minimal.json",
+=======
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 1000",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix --max-warnings 1000",
+    "type-check": "tsc --noEmit --skipLibCheck",
+>>>>>>> cursor/automate-test-improve-and-merge-code-6af4
     "test": "jest --config jest.config.cjs",
-    "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
-    "test:watch": "jest --watch --config jest.config.ts",
-    "test:coverage": "jest --coverage --config jest.config.ts",
+    "test:smoke": "jest --config jest.config.cjs --passWithNoTests",
+    "test:watch": "jest --config jest.config.cjs --watch",
+    "test:coverage": "jest --config jest.config.cjs --coverage",
     "verify": "npm run type-check && npm run build && npm run test:smoke",
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
+<<<<<<< HEAD
     "prepare": "echo 'Husky prepare script disabled'",
     "analyze": "ANALYZE=true npm run build",
     "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
     "perf:audit": "npm run build && npm run lighthouse",
     "perf:analyze": "npm run analyze",
     "perf:test": "npm run build && npm run test:smoke && npm run lighthouse"
+=======
+    "prepare": "echo \"Husky prepare script disabled\""
+>>>>>>> cursor/automate-test-improve-and-merge-code-6af4
   },
   "dependencies": {
     "@babel/core": "^7.28.4",
