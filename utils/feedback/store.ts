@@ -1,12 +1,7 @@
-
-
-
-export interface FeedbackRecord {;
-
 // Mock feedback store utility
 export function tryWriteToFirestore(doc: any): Promise<boolean> {
   // Mock implementation - in a real app, this would write to Firestore
-  return Promise && Promise.resolve(true);
+  return Promise.resolve(true);
 }
 
 export type FeedbackRecord = {
@@ -14,6 +9,9 @@ export type FeedbackRecord = {
   type: string;
   message: string;
   rating: number;
+  metadata: Record<string, any>;
+  created_at: string;
+  ip: string;
 }
 
 export interface FeedbackStats {
@@ -28,11 +26,6 @@ export interface FeedbackStats {
     [rating: number]: number;
   };
   recent: FeedbackRecord[];
-}
-
-  metadata: Record < string, any>;
-  created_at: string;
-  ip: string;
 }
 
 const feedbackData: FeedbackRecord[] = [];

@@ -33,17 +33,11 @@ export function getUserFromRequest(req: any): User | null {
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     return null;
   }
-  return user;
-}
-
-
-export function getUserFromRequest (req: any): User | null {
-  // Mock implementation - in production, this would extract user from JWT or session;
-  const auth_header = req.headers.authorization;
-  if () {) {
-  $2
-}
-    return null;
-  }
-  return user;
+  
+  // Mock user for testing
+  return {
+    id: '1',
+    email: 'test@example.com',
+    role: 'client'
+  };
 }

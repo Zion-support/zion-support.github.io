@@ -1,4 +1,20 @@
-  };
+export interface SearchFilters {
+  keywords?: string[];
+  skills?: string[];
+  location?: string;
+  type?: string;
+  minPrice?: number;
+  maxPrice?: number;
+  experience?: string;
+  availability?: string;
+}
+
+export interface SearchResults {
+  all: any[];
+  talent: any[];
+  jobs: any[];
+  projects: any[];
+}
 
 export async function parseQueryToFilters(
   query: string,
@@ -9,14 +25,14 @@ export async function parseQueryToFilters(
     return filters;
   }
 
-  const words = query && query.toLowerCase().split(/\s+/);
+  const words = query.toLowerCase().split(/\s+/);
   const keywords: string[] = [];
   const skills: string[] = [];
 
   // Simple keyword extraction
   for (const word of words) {
     if (word && word.length > 2) {
-      keywords && keywords.push(word);
+      keywords.push(word);
     }
   }
 
@@ -87,8 +103,8 @@ export async function parseQueryToFilters(
   ];
 
   for (const word of words) {
-    if (skillKeywords && skillKeywords.includes(word)) {
-      skills && skills.push(word);
+    if (skillKeywords.includes(word)) {
+      skills.push(word);
     }
   }
 
@@ -97,32 +113,9 @@ export async function parseQueryToFilters(
   }
 
   return filters;
-
-    keywords: [],
-    skills: [],
-    location: null,
-    type: null;
-  return {
-    all: [],
-    talent: [],
-    jobs: [],
-    projects: [];
-
-  };
-};
-
+}
 
 export const suggestDidYouMean = (query: string) => {
-  // Add did you mean functionality here;
+  // Add did you mean functionality here
   return null;
-
 };
-
-}
-  }
-}
-;
-export const suggestDidYouMean = (query: string) =>: any {
-  // Add did you mean functionality here;
-  return null;
-}

@@ -1,16 +1,12 @@
-  logEvent: (event: any) => null
-  getArticles: () => []
-  getArticleById: (id: string) => null
+export interface HelpArticle {
+  id: string;
+  title: string;
+  content: string;
+  category: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
 }
-  logEvent: (event: any) => null,
-  getArticles: () => [],
-  getArticleById: (id: string) => null;
-};
-
-export const logSupportEventToOperator = (event: any) => {
-  // Add support event logging functionality here
-  return null;
-
 
 export interface IntentMatch {
   intentMatched: boolean;
@@ -34,13 +30,13 @@ export function matchIntent(
     );
 
     if (titleMatch || contentMatch || tagMatch) {
-      matchedArticles && matchedArticles.push(article && article.id);
-      confidence += titleMatch ? 0 && 0.8 : contentMatch ? 0 && 0.6 : tagMatch ? 0 && 0.4 : 0;
+      matchedArticles.push(article.id);
+      confidence += titleMatch ? 0.8 : contentMatch ? 0.6 : tagMatch ? 0.4 : 0;
     }
   }
 
   return {
-    intentMatched: matchedArticles && matchedArticles.length > 0,
+    intentMatched: matchedArticles.length > 0,
     matchedArticleIds: matchedArticles,
     confidence: Math.min(confidence, 1),
   };
@@ -72,13 +68,15 @@ export function searchArticles(
       article.tags.some((tag) => tag.toLowerCase().includes(queryLower)),
   );
 }
-  // Add support functionality here;
-  log_event: (event: any) => null,
-  get_articles: () => [],
-}
-}
-}
+
+// Support utilities
+export const support = {
+  logEvent: (event: any) => null,
+  getArticles: () => [],
+  getArticleById: (id: string) => null
+};
+
 export const logSupportEventToOperator = (event: any) => {
-  // Add support event logging functionality here;
+  // Add support event logging functionality here
   return null;
-}
+};

@@ -1,4 +1,3 @@
-
 export interface Version {
   major: number;
   minor: number;
@@ -16,13 +15,22 @@ export function parseVersion(versionString: string): Version {
   };
 }
 
+export function versionToString(version: Version): string {
+  let result = `${version.major}.${version.minor}.${version.patch}`;
+  if (version.build !== undefined) {
+    result += `.${version.build}`;
+  }
+  return result;
 }
-export function nextVersionFor(
-  state: MultiverseState,
-  entityKey: string
-): number {
-  const current = state.latestVersionByEntityId[entityKey] || 0;
-  return current + 1;
+
+export function compareVersions(a: Version, b: Version): number {
+  if (a.major !== b.major) return a.major - b.major;
+  if (a.minor !== b.minor) return a.minor - b.minor;
+  if (a.patch !== b.patch) return a.patch - b.patch;
+  if (a.build !== undefined && b.build !== undefined) {
+    return a.build - b.build;
+  }
+  return 0;
 }
 
 export function nextVersionFor(
@@ -57,18 +65,42 @@ export function isVersionGreater(a: string, b: string): boolean {
 export function isVersionEqual(a: string, b: string): boolean {
   return compareVersions(parseVersion(a), parseVersion(b)) === 0;
 }
-export interface Version {
-  major: number;
-  minor: number;
-  patch: number;
-  build?: number;
+
+export function isVersionLess(a: string, b: string): boolean {
+  return compareVersions(parseVersion(a), parseVersion(b)) < 0;
 }
 
-
+export function isValidVersion(versionString: string): boolean {
+  const version = parseVersion(versionString);
+  return version.major >= 0 && version.minor >= 0 && version.patch >= 0;
 }
-  getVersion: () => '1.0.0',
-  compareVersions: (v1: string, v2: string) => 0,
-  incrementVersion: (version: string) => version;
-};
 
+export function getLatestVersion(versions: string[]): string {
+  if (versions.length === 0) return "0.0.0";
+  
+  return versions.reduce((latest, current) => {
+    return isVersionGreater(current, latest) ? current : latest;
+  });
+}
+
+export function sortVersions(versions: string[]): string[] {
+  return versions.sort((a, b) => compareVersions(parseVersion(a), parseVersion(b)));
+}
+
+export function getVersionRange(versions: string[], min: string, max: string): string[] {
+  return versions.filter(version => {
+    return isVersionGreater(version, min) && isVersionLess(version, max);
+  });
+}
+
+export function incrementVersion(version: string): string {
+  return nextVersionFor(version, "patch");
+}
+
+export function incrementMinorVersion(version: string): string {
+  return nextVersionFor(version, "minor");
+}
+
+export function incrementMajorVersion(version: string): string {
+  return nextVersionFor(version, "major");
 }

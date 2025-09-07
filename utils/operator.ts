@@ -1,4 +1,3 @@
-
 export interface OperatorSession {
   id: string;
   name: string;
@@ -16,20 +15,9 @@ export interface SupportEvent {
   timestamp: Date;
 }
 
-
-// Operator utilities
-export const operator = {
-  // Add operator functionality here
-  logEvent: (event: any) => null
-  getEvents: () => []
-  getEventById: (id: string) => null
-}
-
-  logEvent: (event: any) => null,
-  getEvents: () => [],
-  getEventById: (id: string) => null;
-};
-
+class OperatorManager {
+  private sessions: Map<string, OperatorSession> = new Map();
+  private events: SupportEvent[] = [];
 
   tagOperatorSession(sessionId: string, tag: string): void {
     // Simple implementation - in a real app this would update a database
@@ -60,5 +48,10 @@ export const logSupportEventToOperator = (event: SupportEvent) =>
 
 export const getOperatorSessions = () => operatorManager.getOperatorSessions();
 export const getSupportEvents = () => operatorManager.getSupportEvents();
-export const getOperatorSessions = () => operatorManager.getOperatorSessions();
-export const getSupportEvents = () => operatorManager.getSupportEvents();
+
+// Operator utilities
+export const operator = {
+  logEvent: (event: any) => null,
+  getEvents: () => [],
+  getEventById: (id: string) => null
+};

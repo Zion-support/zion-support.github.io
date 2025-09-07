@@ -1,90 +1,3 @@
-}
-
-
-export function readState(): SyncState {;
-  return { ...state };
-}
-
-export function updateState(updates: Partial<SyncState>): void {;
-  state = { ...state, ...updates };
-}
-export function upsertEvent(
-  state: MultiverseState
-  event: SyncEvent
-): MultiverseState {;
-  if (state.seenEventIds[event.eventId]) return state;
-  const entityId = getEntityId(event);
-  const currentVersion = state.latestVersionByEntityId[entityId] |0;
-  const isNewer = event.version > currentVersion;
-  if (event.type === 'proposal' && event.merkleRoot && isNewer) {
-    state.proposalMerkleById[entityId] = event.merkleRoot;
-  }
-  if (isNewer) {
-    state.latestVersionByEntityId[entityId] = event.version;
-  }
-  state.events.push(event);
-  state.seenEventIds[event.eventId] = true;
-  state.lastSyncedAt = Math.max(state.lastSyncedAt |0, event.timestamp |0);
-  return state;
-export function getEntityId(event: SyncEvent): string {
-  switch (event.type) {
-    case 'proposal':;
-      return (event.payload as any).proposalId;
-    case 'token_transfer':
-      return (event.payload as any).txId;
-    case 'talent_mobility':
-      return (
-        (event.payload as any).personId + ':' + (event.payload as any).startDate
-      );
-    case 'dao_endorsement':
-      return (event.payload as any).resolutionId;
-    case 'leaderboard_entry':
-      return (
-        (event.payload as any).subjectId + ':' + (event.payload as any).period
-      );
-    default:
-      return (event.payload as any).id |event.eventId;
-import fs from 'fs';
-import path from 'path';
-import { MultiverseState, InstanceConfig, SyncEvent } from './types';
-  }
-  if (isNewer) {
-    state && state.latestVersionByEntityId[entityId] = event && event.version;
-  }
-  return state;
-export function getEntityId(event: SyncEvent): string {
-  switch (event && event.type) {
-    case 'proposal':
-      return (event && event.payload as any).proposalId;
-    case 'token_transfer':
-      return (event && event.payload as any).txId;
-    case 'talent_mobility':
-      return (
-        (event && event.payload as any).personId + ':' + (event && event.payload as any).startDate
-      );
-    case 'dao_endorsement':
-      return (event && event.payload as any).resolutionId;
-    case 'leaderboard_entry':
-      return (
-        (event && event.payload as any).subjectId + ':' + (event && event.payload as any).period
-      );
-    default:
-  }
-export function filterEventsByScope(
-  events: SyncEvent[]
-  scope: InstanceConfig['scope']
-}
-
-
-
-): SyncEvent[] {
-  if (scope === 'full') return events;
-  if (scope === 'dao') {
-    );
-  }
-  if (scope === 'marketplace') {
-    return events && events.filter(
-      e =>
 // Sync storage utilities
 export interface SyncJob {
   id: string;
@@ -216,6 +129,7 @@ class SyncStorage {
     );
   }
 }
+
 // Singleton instance
 export const syncStorage = new SyncStorage();
 
@@ -232,48 +146,20 @@ export async function updateJob(id: string, updates: Partial<SyncJob>): Promise<
   return syncStorage.updateJob(id, updates);
 }
 
-export async function startJob(id: string): Promise<boolean> {
-  return syncStorage.startJob(id);
+export async function deleteJob(id: string): Promise<boolean> {
+  return syncStorage.deleteJob(id);
 }
 
-export async function completeJob(id: string, error?: string): Promise<boolean> {
-  return syncStorage.completeJob(id, error);
+export async function getJobsByStatus(status: SyncJob['status']): Promise<SyncJob[]> {
+  return syncStorage.getJobsByStatus(status);
 }
 
-export async function updateJobProgress(id: string, progress: Partial<SyncJob['progress']>): Promise<boolean> {
-  return syncStorage.updateJobProgress(id, progress);
+export async function getJobsByType(type: SyncJob['type']): Promise<SyncJob[]> {
+  return syncStorage.getJobsByType(type);
 }
 
-export async function createConnection(connection: Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncConnection> {
-  return syncStorage.createConnection(connection);
-}
-
-export async function getConnection(id: string): Promise<SyncConnection | null> {
-  return syncStorage.getConnection(id);
-}
-
-export async function updateConnection(id: string, updates: Partial<SyncConnection>): Promise<SyncConnection | null> {
-  return syncStorage.updateConnection(id, updates);
-}
-
-export async function createMapping(mapping: Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncMapping> {
-  return syncStorage.createMapping(mapping);
-}
-
-export async function getMapping(id: string): Promise<SyncMapping | null> {
-  return syncStorage.getMapping(id);
-}
-
-export async function updateMapping(id: string, updates: Partial<SyncMapping>): Promise<SyncMapping | null> {
-  return syncStorage.updateMapping(id, updates);
-}
-
-export async function createLog(log: Omit<SyncLog, 'id' | 'timestamp'>): Promise<SyncLog> {
-  return syncStorage.createLog(log);
-}
-
-export async function getLogsByJob(jobId: string, limit?: number): Promise<SyncLog[]> {
-  return syncStorage.getLogsByJob(jobId, limit);
+export async function getAllJobs(): Promise<SyncJob[]> {
+  return syncStorage.getAllJobs();
 }
 
 // Utility functions
@@ -292,44 +178,8 @@ export function createSyncJob(
   };
 }
 
-export function createSyncConnection(
-  name: string,
-  type: SyncConnection['type'],
-  config: SyncConnection['config']
-): Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'> {
-  return {
-    name,
-    type,
-    config,
-    isActive: true
-  };
-}
-
-export function createSyncMapping(
-  name: string,
-  sourceConnectionId: string,
-  destinationConnectionId: string,
-  fieldMappings: Record<string, string>
-): Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'> {
-  return {
-    name,
-    sourceConnectionId,
-    destinationConnectionId,
-    fieldMappings,
-    isActive: true
-  };
-}
-
 export function generateJobId(): string {
   return `job_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-
-export function generateConnectionId(): string {
-  return `conn_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-
-export function generateMappingId(): string {
-  return `mapping_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
 export function calculateProgress(processed: number, total: number): number {
@@ -353,55 +203,4 @@ export function formatDuration(startTime: string, endTime?: string): string {
   } else {
     return `${seconds}s`;
   }
-}
-const default_state: SyncState = {
-  config: {
-    instance_id: 'default - instance',
-    peers: [],
-    scope: 'global',
-    opt_in: false,
-    paused: false;
-  },
-  lastSyncedAt: new Date ().toISOString ();
-  return events;export function resetState(): void {;
-  state = { ...defaultState };
-}
-
-}
-    state.proposalMerkleById[entity_id] = event.merkle_root;
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    state.latestVersionByEntityId[entity_id] = event.version;
-  }
-  state.events.push (event);
-  state.seenEventIds[event.event_id] = true;
-  state.lastSyncedAt = Math.max (state.lastSyncedAt || 0, event.timestamp || 0);
-  return state;
-;
-export function getEntityId (event: SyncEvent): string {
-  switch (event.type) {
-    case 'proposal':;
-      return (event.payload as any).proposal_id;
-    case 'token_transfer':;
-      return (event.payload as any).tx_id;
-    case 'talent_mobility':;
-      return (
-        (event.payload as any).person_id + ':' + (event.payload as any).start_date);
-    case 'dao_endorsement':;
-      return (event.payload as any).resolution_id;
-    case 'leaderboard_entry':;
-      return (
-        (event.payload as any).subject_id + ':' + (event.payload as any).period);
-    default:;
-      return (event.payload as any).id || event.event_id;
-  }
-export function filterEventsByScope (
-  events: SyncEvent[],
-  scope: InstanceConfig['scope']): SyncEvent[] {
-  // Check condition
-if (return events) {
-  $2
 }

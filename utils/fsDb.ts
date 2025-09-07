@@ -1,47 +1,9 @@
-import { promises as fs } from "fs";
-import path from "path";
-
-const DATA_DIR = path.join(process.cwd(), "data");
-
-
-  read: (path: string) => null
-  write: (path: string, data: any) => null
-  exists: (path: string) => false
-  delete: (path: string) => null
-
-
-  read: (path: string) => null,
-  write: (path: string, data: any) => null,
-  exists: (path: string) => false,
-  delete: (path: string) => null;
-};
-
-
-  read: (path: string) => null,
-  write: (path: string, data: any) => null,
-  exists: (path: string) => false,
-  delete: (path: string) => null;
-};
-
-
-
-
-
-
-  read: (path: string) => null,
-  write: (path: string, data: any) => null,
-  exists: (path: string) => false,
-  delete: (path: string) => null;
-};
 import { promises as fs } from 'fs';
 import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 
-
-
-
-
+export function readJson<T>(filePath: string, defaultValue: T): T {
   try {
     const fullPath = path.join(DATA_DIR, filePath);
     const data = fs.readFileSync(fullPath, "utf8");
@@ -50,8 +12,6 @@ const DATA_DIR = path.join(process.cwd(), 'data');
     return defaultValue;
   }
 }
-
-
 
 export function writeJson<T>(filePath: string, data: T): void {
   try {
@@ -91,18 +51,10 @@ export async function writeJsonAsync<T>(
   }
 }
 
-
-// File system database utilities;
+// File system database utilities
 export const fs_db = {
-  // Add file system database functionality here;
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
-  delete: (path: string) => null;
-}
-
-}
-
-}
-}
-
+  delete: (path: string) => null
+};
