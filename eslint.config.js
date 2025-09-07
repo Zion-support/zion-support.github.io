@@ -29,7 +29,6 @@ export default [
         'warn',
         { argsIgnorePattern: '^_' }
       ],
-      'no-explicit-any': 'warn',
     },
   },
   {
