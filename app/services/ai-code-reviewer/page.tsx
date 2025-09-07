@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const metadata = {
   title: 'AI Code Reviewer - Zion Tech Group',

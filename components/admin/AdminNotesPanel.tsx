@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 export type AdminNotesPanelProps = {
   targetType: string; // e.g., 'user' | 'listing'
@@ -25,7 +25,7 @@ export default function AdminNotesPanel({
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
 
-  async function fetchNotes() {
+  const fetchNotes = useCallback(async () => {
     try {
       setLoading(true);
       const res = await fetch(
@@ -43,13 +43,13 @@ export default function AdminNotesPanel({
     } finally {
       setLoading(false);
     }
-  }
+  }, [targetType, targetId, isAdmin]);
 
   useEffect(() => {
     if (isAdmin) {
       fetchNotes();
     }
-  }, [isAdmin, targetType, targetId]);
+  }, [isAdmin, targetType, targetId, fetchNotes]);
 
   async function addNote() {
     if (!text.trim()) return;

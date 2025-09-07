@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
 type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'gradient';
