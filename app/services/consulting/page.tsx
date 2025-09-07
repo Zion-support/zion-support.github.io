@@ -211,7 +211,8 @@ export default function ConsultingPage() {
       {/* Contact CTA */}
       <ContactCTA />
     </div>
-  )
+  );
+}
 function ConsultingSolution({ title, description, features, pricing, icon }: {
   title: string
   description: string
@@ -318,7 +319,9 @@ function ConsultingPricingPlan({ name, price, duration, features, popular }: {
         Get Started
       </a>
     </div>
-  )
+  );
+}
+
 function ContactCTA() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center mt-12">

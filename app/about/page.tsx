@@ -71,15 +71,14 @@ export default function AboutPage() {
           </div>
         </div>
 
-          <div className="text-center">
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-            >
-              Get in Touch
-              <ArrowRightIcon className="ml-2 h-5 w-5" />
-            </Link>
-          </div>
+        <div className="text-center">
+          <Link 
+            href="/contact" 
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            Get in Touch
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
         </div>
       </div>
     </div>

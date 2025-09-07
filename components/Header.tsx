@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap } from 'lucide-react';
 import { useRouter } from 'next/router';
@@ -11,38 +10,37 @@ const servicesDropdown = [
     title: 'AI & Machine Learning',
     description: 'Intelligent solutions for business automation',
     href: '/ai-services',
-  };
+  },
   {
     icon: Shield,
     title: 'Cybersecurity',
     description: 'Advanced security and threat protection',
     href: '/it-services',
-  };
+  },
   {
     icon: Cloud,
     title: 'Cloud Infrastructure',
     description: 'Scalable cloud solutions and migration',
     href: '/it-services',
-  };
+  },
   {
     icon: Code,
     title: 'Custom Software Development',
     description: 'Tailored applications to meet your specific business needs',
     href: '/services',
-  };
+  },
   {
     icon: Network,
     title: 'System Integration',
     description: 'Seamless integration of existing systems',
     href: '/services',
-  };
+  },
   {
     icon: Zap,
     title: 'Digital Transformation',
     description: 'Complete digital overhaul of your business processes',
     href: '/services',
   }
-
 ];
 
 const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
