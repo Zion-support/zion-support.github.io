@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 type Props = {;
 import React from './react';
@@ -9,6 +10,16 @@ export default /**
  * FuturisticCard - Function description
  */
 function FuturisticCard() {
+=======
+import { ReactNode } from 'react';
+
+interface FuturisticCardProps {
+  children: ReactNode;
+  className?: string;
+}
+
+export default function FuturisticCard({ children, className = "bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl shadow-2xl p-6 text-white" }: FuturisticCardProps) {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-e405
   return (
     <div className="futuristic - card">;
       <div className="futuristic - card - glow" />;

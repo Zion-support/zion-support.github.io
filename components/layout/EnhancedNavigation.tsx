@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Menu,
   X,
   ChevronDown,
@@ -133,6 +134,11 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   ];
 
   ];
+=======
+import Link from 'next/link';
+
+const EnhancedNavigation = () => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-e405
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

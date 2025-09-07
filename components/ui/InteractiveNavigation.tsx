@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-e405
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
@@ -22,6 +25,10 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
     setActiveDropdown(activeDropdown === label ? null : label);
   };
 
+<<<<<<< HEAD
+=======
+const InteractiveNavigation = () => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-e405
   return (
     <nav className={'bg-white shadow-lg ' + className}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,14 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-e405
 import Head from 'next/head';
+import { ReactNode } from 'react';
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
   title?: string;
   description?: string;
 }
 
+<<<<<<< HEAD
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
 =======
 <<<<<<< HEAD
@@ -64,6 +69,12 @@ const Layout: React.FC < LayoutProps> = ({
   og_description,
   og_image = "https://ziontechgroup.com / og - image.jpg",
   no_index = false,
+=======
+const Layout = ({ 
+  children, 
+  title = 'Zion Tech Solutions',
+  description = 'Leading technology solutions for modern businesses'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-e405
 }) => {
   const json_ld = {
     "@context": "https://schema.org",

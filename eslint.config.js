@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 <<<<<<< HEAD
@@ -6,10 +7,16 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import globals from 'globals';
+=======
+import js from '@eslint/js';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-e405
 
 export default [
   js.configs.recommended,
   {
+<<<<<<< HEAD
     ignores: [
       'node_modules/**',
       'dist/**',
@@ -120,12 +127,20 @@ export default [
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
+=======
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parserOptions: {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-e405
         ecmaFeatures: {
           jsx: true,
         },
       },
     },
     plugins: {
+<<<<<<< HEAD
       '@typescript-eslint': typescript,
 <<<<<<< HEAD
       'react': react,
@@ -186,4 +201,33 @@ export default [
     },
   },
 >>>>>>> main
+=======
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      'no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_' }
+      ],
+      'no-explicit-any': 'warn',
+    },
+  },
+  {
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      '*.config.js',
+      '*.config.ts',
+    ],
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-e405
 ];

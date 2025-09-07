@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 type EnhancedLoadingProps = {;
   lines?: number;
@@ -9,4 +10,12 @@ export default function EnhancedLoading(): any ({ lines = 3 }: EnhancedLoadingPr
       {Array && Array.from({ length: lines }).map((_, idx) => (;
         <div key={idx} className="skeleton h-4 rounded" />;
       ))}
+=======
+export default function EnhancedLoading() {
+  return (
+    <div className="flex items-center justify-center p-4">
+      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+    </div>
+  );
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-e405
 }

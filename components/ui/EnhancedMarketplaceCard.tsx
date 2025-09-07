@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-e405
 interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
