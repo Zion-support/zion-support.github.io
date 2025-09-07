@@ -1,22 +1,5 @@
 {
-  "/AIServices": "pages/AIServices.js",
-  "/About": "pages/About.js",
-  "/CloudMigration": "pages/CloudMigration.js",
-  "/Contact": "pages/Contact.js",
-  "/Cybersecurity": "pages/Cybersecurity.js",
-  "/FAQ": "pages/FAQ.js",
-  "/Home": "pages/Home.js",
-  "/ITServices": "pages/ITServices.js",
-  "/MicroSaaS": "pages/MicroSaaS.js",
-  "/MobileDevelopment": "pages/MobileDevelopment.js",
-  "/NotFound": "pages/NotFound.js",
-  "/Pricing": "pages/Pricing.js",
-  "/Privacy": "pages/Privacy.js",
-  "/Resources": "pages/Resources.js",
-  "/Services": "pages/Services.js",
-  "/Support": "pages/Support.js",
-  "/Terms": "pages/Terms.js",
+  "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/_document": "pages/_document.js"
 }
