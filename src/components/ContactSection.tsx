@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
@@ -25,8 +22,6 @@ const ContactSection: React.FC = () => {
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We\'ll get back to you soon.');
   };
-=======
->>>>>>> main
 fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -448,9 +443,6 @@ if ( {) {
                 />
               </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
@@ -483,10 +475,6 @@ if ( {) {
 };
 
 export default ContactSection;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
@@ -527,8 +515,3 @@ description: err.message;
 }'"}
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main

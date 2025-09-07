@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Performance optimization utilities
 export const optimizeImages = () => {;
   const images = document.querySelectorAll('img');
@@ -8,8 +7,6 @@ export const optimizeImages = () => {;
     }
     if (!img.decoding) {
       img.decoding = "async";
-=======
-<<<<<<< HEAD
 // Performance optimization utilities
 export const preloadCriticalResources = () => {
   const criticalResources = ['/fonts/main.woff2', '/css/critical.css'];
@@ -20,7 +17,6 @@ export const preloadCriticalResources = () => {
     link.href = resource;
     link.as = resource.endsWith('.css') ? 'style' : 'font';
     document.head.appendChild(link);
-=======
 const images = document && document.querySelectorAll('img');
   images && images.forEach(img => {
     if (!img && img.loading) {
@@ -29,7 +25,6 @@ const images = document && document.querySelectorAll('img');
     if (!img && img.decoding) {
       img && img.decoding = 'async';
 
->>>>>>> main
     }
 
 export const preloadCriticalResources = () => {
@@ -41,22 +36,17 @@ export const preloadCriticalResources = () => {
     link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font';
     document && document.head.appendChild(link);
 
-<<<<<<< HEAD
   criticalResources.forEach((resource) => {
     const link = document.createElement("link");
     link.rel = "preload";
     link.href = resource;
     link.as = resource.endsWith(".css") ? "style" : "font";
     document.head.appendChild(link);
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
   });
 };
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-<<<<<<< HEAD
   return Promise.resolve();
 };
 
@@ -92,7 +82,6 @@ export const throttle = (func: Function, limit: number) => {
     }
   };
 };
-=======
 
 // Performance optimization utilities;
 export const optimize_images = () =>: any {
@@ -157,13 +146,9 @@ export const optimizeBundleSize = () => {
 
   return { loadComponent };
 };
-<<<<<<< HEAD
 link.rel = "preload";
 ((link.href = resource),
   (link.as = resource.endsWith(".css") ? "style" : "font"));
-=======
 
     link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main

@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import React, { Component, ReactNode } from 'react';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 
 interface Props {
   children: ReactNode;
@@ -34,17 +20,13 @@ class ErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
     console.error('ErrorBoundary caught an error: ', error, errorInfo);
-=======
-<<<<<<< HEAD
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
->>>>>>> main
     this.setState({
       error,
       errorInfo
@@ -66,7 +48,6 @@ class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center mb-4">
@@ -105,7 +86,6 @@ class ErrorBoundary extends Component<Props, State> {
                 </pre>
               </details>
             )}
-=======
         <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
           <div className="max-w-md w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
             <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 dark:bg-red-900 rounded-full mb-4">
@@ -152,24 +132,16 @@ class ErrorBoundary extends Component<Props, State> {
                 </details>
               )}
             </div>
->>>>>>> main
           </div>
         </div>
       );
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     return this.props.children;
   }
 }
 
 export default ErrorBoundary;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
 export default ErrorBoundary
     return { hasError: true, error };
   };
@@ -238,8 +210,3 @@ export { ErrorBoundary };
   }
 }
 export default ErrorBoundary;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main

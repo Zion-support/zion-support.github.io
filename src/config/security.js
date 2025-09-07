@@ -1,18 +1,12 @@
-<<<<<<< HEAD
 // Security Configuration;
 export const security_config = {
   // Content Security Policy;
-=======
-<<<<<<< HEAD
 // Security Configuration;
 export const security_config = {
   // Content Security Policy;
-=======
 // Security Configuration
 export const securityConfig = {
   // Content Security Policy
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
   csp: {
     directives: {
 
@@ -26,10 +20,6 @@ export const securityConfig = {
       objectSrc: ["'none'"],
       baseUri: ["'self'"],
       formAction: ["'self'"],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
       upgradeInsecureRequests: [],
     },
   },
@@ -50,9 +40,6 @@ export const securityConfig = {
 };
 
 export default securityConfig;
-<<<<<<< HEAD
-=======
-=======
 
       upgradeInsecureRequests: []
     }
@@ -95,5 +82,3 @@ export default securityConfig;
   }
 };
 export default securityConfig;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main

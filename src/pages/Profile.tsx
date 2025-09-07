@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 
 const Profile = () => {
   return (
@@ -17,5 +15,4 @@ const Profile = () => {
   );
 };
 
->>>>>>> main
 export default Profile;

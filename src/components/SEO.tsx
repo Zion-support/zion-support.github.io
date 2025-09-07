@@ -5,9 +5,6 @@ interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   image?: string;
   url?: string;
   type?: string;
@@ -52,8 +49,6 @@ export const SEO = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="theme-color" content="#000000" />
     </Head>
-=======
->>>>>>> main
   url?: string;
   image?: string;
   type?: string;

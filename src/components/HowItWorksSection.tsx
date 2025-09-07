@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 const HowItWorksSection = () => {
   const steps = [
@@ -50,8 +47,6 @@ const HowItWorksSection = () => {
         </div>
       </div>
     </section>
-=======
->>>>>>> main
 import { GradientHeading } from "./GradientHeading";
 
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -599,15 +594,8 @@ function HowItWorksSection() {
   );
 };
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export default HowItWorksSection;
-=======
-<<<<<<< HEAD
 export default HowItWorksSection;
-=======
->>>>>>> main
 export default Component;
 
 }
@@ -642,8 +630,3 @@ export default Component;
 }
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main

@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 export default function Sidebar() {
   return (
@@ -19,10 +16,6 @@ export default function Sidebar() {
     </aside>
   );
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
 import { Link } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {;
@@ -272,8 +265,3 @@ export default Sidebar;
   );
 };
 export default Sidebar;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main

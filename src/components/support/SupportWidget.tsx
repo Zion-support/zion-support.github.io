@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
@@ -45,9 +41,6 @@ export function SupportWidget() {
                 className={cn(
                   "font-semibold",
                   theme === "dark" ? "text-white" : "text-gray-800",
-<<<<<<< HEAD
-=======
-=======
 const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
@@ -81,8 +74,6 @@ const [isOpen, setIsOpen] = useState(false)
                 className={cn(
                   'font-semibold'
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
                 )}
               >
 
@@ -144,10 +135,6 @@ export function SupportWidget() {;
               </h3>
             </div>
             <div className="flex items-center gap-2">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
               <Button
                 variant="ghost"
                 size="icon"
@@ -175,11 +162,6 @@ export function SupportWidget() {;
     </>
   );
 }
-<<<<<<< HEAD
 ;
-=======
 ;
-=======
               <Button
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
