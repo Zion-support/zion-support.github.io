@@ -115,11 +115,21 @@ const ReviewSummary: React.FC<Props /> = ({ summary   ,}
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD:components/reviews/ReviewSummary.tsx
+<<<<<<< HEAD
+  )}const ReviewSummary: React.FC<Props> = ({ summary }) => {return (<div className="enhanced-card flex items-center justify-between">;
+      <div>;
+        <div className="flex items-center gap-3">;
+          <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>;
+          <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />;
+=======
   )}const ReviewSummary: React.FC<Props /> = ({ summary }) => {return (<div className=\"enhanced-card flex items-center justify-between\" />;
       <div />;}
         <div className=\"flex items-center gap-3\" />;}
           <span className=\"text-2xl font-semibold\" />{summary.averageRating.toFixed(1)}</span>;
           <StarRating value={Math.round(summary.averageRating)} onChange={() = /> {}} readOnly />;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
         </div>;
         <div className=\"text-sm text-gray-600 mt-1\" />;
           <span className=\"mr-3\" />{summary.totalReviews} reviews</span>;
@@ -144,6 +154,13 @@ export default ReviewSummary;
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
+export default ReviewSummary;}export default ReviewSummary;}export default ReviewSummary;      <div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/reviews/ReviewSummary.tsx
+  );
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 export default ReviewSummary;}
 

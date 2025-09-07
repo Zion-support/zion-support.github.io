@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+
+import React, { useState, useEffect, useMemo } from 'react',;
+import {;
+  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
 } from 'lucide-react';
 interface ContentItem {id: string;,
@@ -11,10 +21,16 @@ interface ContentItem {id: string;,
   tags: string[];,
   source: string;
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import React, { useState, useEffect, useMemo } from 'react',
+import { 
+=======
 import React, { useState, useEffect, useMemo } from 'react';
 import {
   // TODO: Implement;
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,
 } from 'lucide-react',
@@ -26,6 +42,27 @@ interface ContentItem {
   desc: string;,
   category: string;,
   subcategory?: string,
+<<<<<<< HEAD
+  date: string,
+  relevance: 'high' | 'medium' | 'low',
+  tags: string[],
+  source: string,
+  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+}
+interface ContentCategory {id: string;
+  name: string;
+  icon: any;
+=======
+}
+interface ContentCategory {id: string;
+  name: string;
+  icon: any,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
   date: string;,
   relevance: 'high' | 'medium' | 'low';,
   tags: string[];,
@@ -36,10 +73,19 @@ interface ContentCategory {id: string;,
   icon: any;,
   icon: any;,
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: string;
   color: string;,
   count: number;
   subcategories?: string[];
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
     {;
@@ -54,6 +100,13 @@ pr-12325
       tags: ['seojson-ldschemaaudit'];',
   source: 'autonomous-auditor';
       type: 'report';
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const ContentCategorizer: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(),
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -78,6 +131,84 @@ const contentItems: ContentItem[] = [
       source: 'autonomous-auditor';,
       type: 'report;
     },
+<<<<<<< HEAD
+    {
+      id: '2',
+      title: 'Security Vulnerability Scan Results',
+      href: '/reports/security-scan-2025-08-19',
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',
+      category: 'security',
+      subcategory: 'vulnerability-scan',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['securityvulnerabilityscanremediation'],
+      source: 'security-scanner',
+      type: 'security'
+    },
+    {
+      id: '3',
+      title: 'AI Model Performance Update',
+      href: '/reports/ai-model-performance-2025-08-19',
+      desc: 'Latest performance metrics and optimization insights for deployed AI models.',
+      category: 'ai',
+      subcategory: 'performance',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['aiperformanceoptimizationmetrics'],
+      source: 'ai-monitor',
+      type: 'update'
+    },
+    {
+      id: '4',
+      title: 'Feature Deployment Summary',
+      href: '/reports/feature-deployment-2025-08-19',
+      desc: 'Overview of newly deployed features and their impact on user experience.',
+      category: 'features',
+      subcategory: 'deployment',
+      date: '2025-08-19',
+      relevance: 'medium',
+      tags: ['featuresdeploymentuximpact'],
+      source: 'deployment-tracker',
+      type: 'feature'
+    },
+    {
+      id: '5',
+      title: 'System Health Dashboard',
+      href: '/reports/system-health-2025-08-19',
+      desc: 'Real-time system performance metrics and infrastructure health status.',
+      category: 'monitoring',
+      subcategory: 'system-health',
+      date: '2025-08-19',
+      relevance: 'medium',
+      tags: ['monitoringperformanceinfrastructurehealth'],
+      source: 'health-monitor',
+      type: 'report'
+    },
+    {
+      id: '6',
+      title: 'User Behavior Insights',
+      href: '/reports/user-behavior-2025-08-19',
+      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',
+      category: 'analytics',
+      subcategory: 'user-behavior',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['analyticsuser-behaviorengagementoptimization'],
+      source: 'behavior-analyzer',
+      type: 'insight'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    }
+    {id: '2';
+      title: 'Security Vulnerability Scan Results';
+      href: '/reports/security-scan-2025-08-19';
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';
+      category: 'security';
+      subcategory: 'vulnerability-scan';
+      date: '2025-08-19';
+      relevance: 'high';
+      tags: ['securityvulnerabilityscanremediation'];
+      source: 'security-scanner';
+=======
       id: '2';,
       title: 'Security Vulnerability Scan Results';,
       href: '/reports/security-scan-2025-08-19';,
@@ -133,6 +264,7 @@ const contentItems: ContentItem[] = [
   relevance: 'high';
       tags: ['securityvulnerabilityscanremediation'];',
   source: 'security-scanner';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       type: 'security';
     {id: '3';',
   title: 'AI Model Performance Update';
@@ -174,55 +306,118 @@ const contentItems: ContentItem[] = [
   const categories: ContentCategory[] = [;
     {id: 'all';
       name: 'All Content';
+<<<<<<< HEAD
+<<<<<<< HEAD
+      icon: Globe;
+      description: 'Complete collection of autonomous content';
+=======
+      icon: Globe,
+=======
       icon: Globe;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: 'Complete collection of autonomous content';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-blue-500 to-cyan-500';
       count: contentItems.length;
     }
     {id: 'seo';
       name: 'SEO & Analytics';
+<<<<<<< HEAD
+<<<<<<< HEAD
+      icon: BarChart3;
+      description: 'Search optimization and performance analytics';
+=======
+      icon: BarChart3,
+=======
       icon: BarChart3;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: 'Search optimization and performance analytics';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-green-500 to-emerald-500';
       count: contentItems.filter(item => item.category === 'seo').length;
       subcategories: ['structured-dataperformancetechnical-seo'];
     }
     {id: 'security';
       name: 'Security & Compliance';
+<<<<<<< HEAD
+<<<<<<< HEAD
+      icon: Shield;
+      description: 'Security assessments and compliance reports';
+=======
+      icon: Shield,
+=======
       icon: Shield;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: 'Security assessments and compliance reports';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-red-500 to-orange-500';
       count: contentItems.filter(item => item.category === 'security').length;
       subcategories: ['vulnerability-scancompliancethreat-detection'];
     }
     {id: 'ai';
       name: 'AI & Machine Learning';
+<<<<<<< HEAD
+<<<<<<< HEAD
+      icon: Brain;
+      description: 'AI model performance and insights';
+=======
+      icon: Brain,
+=======
       icon: Brain;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: 'AI model performance and insights';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-purple-500 to-pink-500';
       count: contentItems.filter(item => item.category === 'ai').length;
       subcategories: ['performancetrainingdeployment'];
     }
     {id: 'features';
       name: 'Feature Updates';
+<<<<<<< HEAD
+<<<<<<< HEAD
+      icon: Zap;
+      description: 'New features and system updates';
+=======
+      icon: Zap,
+=======
       icon: Zap;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: 'New features and system updates';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-yellow-500 to-orange-500';
       count: contentItems.filter(item => item.category === 'features').length;
       subcategories: ['deploymentenhancementsroadmap'];
     }
     {id: 'monitoring';
       name: 'System Monitoring';
+<<<<<<< HEAD
+<<<<<<< HEAD
+      icon: Cpu;
+      description: 'Infrastructure and system health';
+=======
+      icon: Cpu,
+=======
       icon: Cpu;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: 'Infrastructure and system health';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-indigo-500 to-purple-500';
       count: contentItems.filter(item => item.category === 'monitoring').length;
       subcategories: ['system-healthperformanceinfrastructure'];
     }
     {id: 'analytics';
       name: 'User Analytics';
+<<<<<<< HEAD
+<<<<<<< HEAD
+      icon: TrendingUp;
+      description: 'User behavior and engagement insights';
+=======
+      icon: TrendingUp,
+=======
       icon: TrendingUp;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: 'User behavior and engagement insights';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       color: 'from-teal-500 to-cyan-500';
       count: contentItems.filter(item => item.category === 'analytics').length;
     {id: 'all';',
@@ -289,10 +484,21 @@ pr-12325
     { id: 'month';, name: 'This Month' ;}
     { id: 'quarter';, name: 'This Quarter' ;}']
   const relevanceLevels = [;
+<<<<<<< HEAD
+    { id: 'all', name: 'All Relevance', color: 'text-gray-400' }
+    { id: 'high', name: 'High Priority', color: 'text-green-400' }
+    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
+    { id: 'low', name: 'Low Priority', color: 'text-red-400' }
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
     { id: 'all';, name: 'All Relevance';, color: 'text-gray-400' ;}
     { id: 'high';, name: 'High Priority';, color: 'text-green-400' ;}
     { id: 'medium';, name: 'Medium Priority';, color: 'text-yellow-400' ;}
     { id: 'low';, name: 'Low Priority';, color: 'text-red-400' ;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
@@ -300,7 +506,15 @@ pr-12325
       switch (sortBy) {;
         case 'date':;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
+<<<<<<< HEAD
+          break;
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
           break;]
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ],
 
   const filteredItems = useMemo(() => {
@@ -325,7 +539,13 @@ filtered.sort((a, b) => {
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],
           break,        case 'title':
           comparison = a.title.localeCompare(b.title),
+<<<<<<< HEAD
+          break
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      }
+=======
           break;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return sortOrder === 'asc' ? comparison : -comparison;
     return filtered;
   }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
@@ -362,8 +582,26 @@ type=&quot;text&quot;
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
           {/* Category Filter */}          <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+              {categories.map(category => (
+                <option key={category.id} value={category.id}>
+                  {category.name} ({category.count})
+                </option>
+              ))}
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
                 <option key={category.id} value={category.id}>
 </option>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
 value={selectedSubcategory}
@@ -371,17 +609,41 @@ value={selectedSubcategory}
 </select>
               <option value=&quot;all&quot;>All Subcategories</option>
                 <option key={sub} value={sub}>
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
 value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
                 <option key={type.id} value={type.id}>
                 </option>;
+<<<<<<< HEAD
+              ))}
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
 value={selectedRelevance}
               onChange={(e) => setSelectedRelevance(e.target.value)}
                 <option key={level.id} value={level.id}>
             </select>;
           </div>;
+<<<<<<< HEAD
+        </div>;
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        {/* Sort Controls and Clear Filters */}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
           <div className=&quot;flex items-center gap-4&quot;>
             <div className=&quot;flex items-center gap-2&quot;>
@@ -393,7 +655,26 @@ value={sortBy}
                 <option value=&quot;title&quot;>Title</option>
               <button,
 onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
+<<<<<<< HEAD
+                className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
+<<<<<<< HEAD
+                {sortOrder === 'asc' ? '↑' : '↓'}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            Clear All Filters
+          </button>
+        </div>
+      </div>
+<<<<<<< HEAD
+<<<<<<< HEAD:components/ContentCategorizer.tsx
+      {/* Category Pills */}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 </button>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
             <button;
@@ -405,11 +686,65 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
 </span>
               </span>;
             </button>;
+<<<<<<< HEAD
+          ))}
+        </div>;
+      </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      {/* Results Summary */}
+<div className=&quot;text-sm text-white/60&quot;>
+        Showing {filteredItems.length} of {contentItems.length} items
+        {searchTerm && ` matching &quot;${searchTerm}&quot;`}
+        {selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
+        {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
+      </div>;
+      {/* Content Grid */}
+<<<<<<< HEAD
+:components/ContentCategorizer.tsx
+
+                  {item.type}
+                </div>;
+              </div>;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                  {item.type}
+                </div>;
+              </div>;
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">        {filteredItems.map((item) => {
+          const CategoryIcon = getCategoryIcon(item.category),
+          const TypeIcon = getTypeIcon(item.type),
+          const category = categories.find(c => c.id === item.category),
+      {_/* Results Summary */}
+      <div className="text-sm text-white/60">
+        Showing {filteredItems.length} of {contentItems.length} items
+        {searchTerm && ` matching "${searchTerm}"`}
+        {selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
+        {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
+      </div>
+
+      {_/* Content Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredItems.map(_(item) => {
+          const CategoryIcon = getCategoryIcon(item.category);
+          const TypeIcon = getTypeIcon(item.type);
+          const category = categories.find(c => c.id === item.category);
+          
+          return (
+=======
 <div className=&quot;text-sm text-white/60&quot;>
       <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">        {filteredItems.map((item) => {"
 </div>"
       <div className="text-sm text-white/60">"
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div key={item.id} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105&quot;>
               <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
               <div className=&quot;flex items-center justify-between mb-3&quot;>
@@ -419,14 +754,49 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                   <span className=&quot;text-xs text-white/60 uppercase tracking-wider&quot;>
                 <div className=&quot;flex items-center gap-1 text-xs text-white/50&quot;>
                   <TypeIcon className=&quot;w-3 h-3&quot; />
+<<<<<<< HEAD
+                  {item.type}
+                </div>;
+              </div>;
+;
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+              {/* Title and Description */}
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
 </h3>
               <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
 </p>
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+              {/* Tags */}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
                   <span key={index} className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
+<<<<<<< HEAD
+                    {tag}
+                  </span>;
+                ))}
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+              {/* Metadata */}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>
                   <Calendar className=&quot;w-3 h-3&quot; />
@@ -437,6 +807,25 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
 
               <div className=&quot;flex items-center justify-between&quot;>
                 <span className=&quot;text-xs text-white/40&quot;>
+<<<<<<< HEAD
+                  Source: {item.source}
+                </span>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        })}
+      </div>;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      {/* No Results */}
+{filteredItems.length === 0 && (
+        <div className=&quot;text-center py-12&quot;>
+          <div className=&quot;text-white/40 text-6xl mb-4&quot;>🔍</div>
+=======
+        })}
+      </div>;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <a,
 href={item.href} 
                   target="blank"""
@@ -450,8 +839,29 @@ href={item.href}
                   <span aria-hidden></span>
         <div className=&quot;text-center py-12&quot;>
           <div className=&quot;text-white/40 text-6xl mb-4&quot;></div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+          <h3 className=&quot;text-xl font-semibold text-white/70 mb-2&quot;>No content found</h3>
+=======
           <h3 className=&quot;text-xl font-semibold text-white/70 mb-2&quot;>No content found</h3>"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <p className=&quot;text-white/50 mb-4&quot;>            Try adjusting your search terms or filters to find what you're looking for.
 onClick={clearAllFilters}
             className=&quot;px-6 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-lg text-cyan-300 hover:bg-cyan-500/30 transition-all duration-200&quot;
+<<<<<<< HEAD
+          >
+            Reset All Filters
+          </button>
+        </div>
+      )}
+    </div>;
+  );
+}
+<<<<<<< HEAD
+export default ContentCategorizer;
+=======
+export default ContentCategorizer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
     </div>;`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -35,66 +35,18 @@ class $1 {}
     // Check for outdated packages;"
     const outdatedResult = await this.runCommand("npm outdated --json");"
     if (outdatedResult.success) {}
-<<<<<<< HEAD
-  const outdatedData = JSON.parse(outdatedResult.output);"`;
-        if (Object.keys(outdatedData).length > 0) {this.log(`Found ${Object.keys(outdatedData).length} outdated dependencies`, "warn");this.errorsFound.push(`Outdated "dependencies": ${Object.keys(outdatedData).join(", ")}`)} else {`}""
-=======
-  try {}
-  const outdatedData = JSON.parse(outdatedResult.output);"
-        if (Object.keys(outdatedData).length > 0) {this.log(`Found ${Object.keys(outdatedData).length} outdated dependencies`, "warn");this.errorsFound.push(`Outdated "dependencies": ${Object.keys(outdatedData).join(", ")})} else {`}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   this.log("All dependencies are up to date", "success")};"
   this.log("No outdated dependencies found", "success")};"
     // Check for security vulnerabilities;"
     const auditResult = await this.runCommand("npm audit --json");"
     if (auditResult.success) {}
   const auditData = JSON.parse(auditResult.output);
-<<<<<<< HEAD
-        if (auditData.vulnerabilities) {}"`;
-  const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, "warn");this.errorsFound.push(`Security "vulnerabilities": ${vulnCount} found`)} else {`}""
-  this.log("No security vulnerabilities found", "success")};"
-      } catch (error) {}
-=======
-        if (auditData.vulnerabilities) {}"
-  const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, "warn");this.errorsFound.push(`Security "vulnerabilities": ${vulnCount} found`)} else {`}
-  this.log("No security vulnerabilities found", "success")};"
-      } catch (error) {}
-  async runCommand(command, options = {}) {}
-  try {}
-  const result = execSync(command, {})"
-  "encoding": "utf8",
-        "cwd": this.projectRoot,
-        "stdio": "pipe","
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         ...options }
   return { "success": false, "output": error.message, "code": error.status };"
     // Check for outdated packages;"
-<<<<<<< HEAD
-    // Check for security vulnerabilities;"
-=======
-    const outdatedResult = await this.runCommand("npm outdated --json");"
-    if (outdatedResult.success) {}
-  try {}
-  const outdatedData = JSON.parse(outdatedResult.output);"
-        if (Object.keys(outdatedData).length > 0) {this.log(`Found ${Object.keys(outdatedData).length} outdated dependencies`, "warn");this.errorsFound.push(`Outdated "dependencies": ${Object.keys(outdatedData).join(", ")})} else {`}
-  this.log("All dependencies are up to date", "success")};"
-      } catch (error) {}"
-  this.log("No outdated dependencies found", "success")};"
-    };
-    ;
-    // Check for security vulnerabilities;"
-    const auditResult = await this.runCommand("npm audit --json");"
-    if (auditResult.success) {}
-  try {}
-  const auditData = JSON.parse(auditResult.output);
-        if (auditData.vulnerabilities) {}"
-  const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, "warn");this.errorsFound.push(`Security "vulnerabilities": ${vulnCount} found`)} else {`}
-  this.log("No security vulnerabilities found", "success")};"
-      } catch (error) {}"
-  this.log("No security vulnerabilities found", "success")};"
-    };
-    ;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     // Check for missing dependencies;"
     const lsResult = await this.runCommand("npm ls --depth=0");"
     if (!lsResult.success) {}"
@@ -110,43 +62,31 @@ class $1 {}
       "summary": {}"
   dependenciesHealthy: this.errorsFound.length === 0,"
         "totalIssues": this.errorsFound.length,"
-<<<<<<< HEAD
-        "totalIssues": this.errorsFound.length,""
-=======
-  async generateReport() {}"
-  this.log("Generating dependency monitor report...");"
-    const report = {}"
-  "timestamp": new Date().toISOString(),
-      "duration": Date.now() - this.startTime,
-      "errorsFound": this.errorsFound,
-      "fixesApplied": this.fixesApplied,
-      "summary": {}"
-  dependenciesHealthy: this.errorsFound.length === 0,"
-        "totalIssues": this.errorsFound.length,
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         "totalFixes": this.fixesApplied.length};"
     await this.ensureDirectoryExists(path.dirname(this.logFile));
-<<<<<<< HEAD
-    fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));"`;
-    this.log(`Dependency monitor report "generated": ${this.logFile}`)};"
-=======
-    fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));"
-    this.log(`Dependency monitor report "generated": ${this.logFile})};"
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async run() {}"
   this.log("Starting dependency monitoring process...");"
   await this.checkDependencies();
-<<<<<<< HEAD
-      await this.generateReport();"`;
-      this.log("Dependency monitoring completed", "success")} catch (error) {  this.log(`Error during dependency "monitoring": ${error.message  }`, "error");this.errorsFound.push(`Process "error": ${error.message}`);"
-=======
-      await this.generateReport();"
-      this.log("Dependency monitoring completed", "success")} catch (error) {  this.log(`Error during dependency "monitoring": ${error.message  }, "error");this.errorsFound.push(`Process "error": ${error.message});"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       await this.generateReport()};
 
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+monitor.run().catch(console.error);
+monitor.run().catch(console.error);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 monitor.run().catch(console.error);
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

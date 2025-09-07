@@ -45,25 +45,7 @@ class AutoFixer {}
         const originalContent = content;
         // Remove merge conflict markers;
         content = content.replace(/[\s\S]*?[\s\S]*?        content = content.replace(/[\s\S]*?        content = content.replace(/[\s\S]*?                if (content !== originalContent) {}
-<<<<<<< HEAD
-          fs.writeFileSync(file, content);"`;
-          this.log("info", `Fixed merge conflicts in ${file}`);"
-          fixedFiles++"
-          this.fixesApplied.push({file,"type": "merge_conflicts";})"
-            timestamp: new Date().toISOString()})};
-      } catch (error) {}"`;
-        this.log("warn", `Error processing ${file}: ${error.message}`)};"
-    };"`;
-=======
-          fs.writeFileSync(file, content);"
-          this.log("info", `Fixed merge conflicts in ${file});"
-          fixedFiles++"
-          this.fixesApplied.push({file,"type": "merge_conflicts";})"
-            timestamp: new Date().toISOString()})};
-      } catch (error) {}"
-        this.log("warn", `Error processing ${file}: ${error.message})};"
-    };"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     this.log("info", `Fixed merge conflicts in ${fixedFiles} files`);"
     return fixedFiles};
   async fixSyntaxErrors() {}"
@@ -85,43 +67,12 @@ class AutoFixer {}
             content = content.replace(fix.pattern, fix.replacement);
             fileFixes++};
         if (content !== originalContent) {}
-<<<<<<< HEAD
-          this.log("info", `Applied ${fileFixes} syntax fixes in ${file}`);"
-          this.fixesApplied.push({file,"type": "syntax_fixes","count": fileFixes;})"
-=======
-          fs.writeFileSync(file, content);"
-          this.log("info", `Applied ${fileFixes} syntax fixes in ${file});"
-          fixedFiles++"
-          this.fixesApplied.push({file,"type": "syntax_fixes","count": fileFixes;})"
-            timestamp: new Date().toISOString()})};
-      } catch (error) {}"
-        this.log("warn", `Error processing ${file}: ${error.message})};"
-    };"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     this.log("info", `Applied syntax fixes to ${fixedFiles} files`);"
   async fixImportErrors() {}"
     this.log("info", "Fixing import errors...");"
         // Fix common import issues;"
-<<<<<<< HEAD
-        content = content.replace(/import\s+{\s*}\s+from\s+["][^""]+[""];?/g, "");""
-        content = content.replace(/import\s+\*\s+as\s+\w+\s+from\s+["][^"]+["];?/g, "");""
-        content = content.replace(/import\s+\w+\s+from\s+["][^""]+[""];?/g, "");"
-          this.log("info", `Fixed import errors in ${file}`);"
-          this.fixesApplied.push({file,"type": "import_fixes";})"
-=======
-        content = content.replace(/import\s+{\s*}\s+from\s+["][^]+[];?/g, );
-        content = content.replace(/import\s+\*\s+as\s+\w+\s+from\s+["][^"]+["];?/g, );
-        content = content.replace(/import\s+\w+\s+from\s+["][^]+[];?/g, );"
-        if (content !== originalContent) {}
-          fs.writeFileSync(file, content);"
-          this.log("info", `Fixed import errors in ${file});"
-          fixedFiles++"
-          this.fixesApplied.push({file,"type": "import_fixes";})"
-            timestamp: new Date().toISOString()})};
-      } catch (error) {}"
-        this.log("warn", `Error processing ${file}: ${error.message})};"
-    };"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     this.log("info", `Fixed import errors in ${fixedFiles} files`);"
   async fixTypeScriptErrors() {}"
     this.log("info", "Fixing TypeScript errors...");"
@@ -138,38 +89,35 @@ class AutoFixer {}
           content = content.replace(/:\s*string\s*/g, ": string");
           content = content.replace(/:\s*number\s*/g, ": number");
           content = content.replace(/:\s*boolean\s*/g, ": boolean");"
-<<<<<<< HEAD
-            this.log("info", `Fixed TypeScript errors in ${file}`);"
-            this.fixesApplied.push({file,"type": "typescript_fixes";})"
-=======
-          if (content !== originalContent) {}
-            fs.writeFileSync(file, content);"
-            this.log("info", `Fixed TypeScript errors in ${file});"
-            fixedFiles++"
-            this.fixesApplied.push({file,"type": "typescript_fixes";})"
-              timestamp: new Date().toISOString()})};
-        } catch (error) {}"
-          this.log("warn", `Error processing ${file}: ${error.message})};"
-      };"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.log("info", `Fixed TypeScript errors in ${fixedFiles} files`);"
   async runAllFixes() {}"
     this.log("info", "Starting comprehensive auto-fix process...");
+<<<<<<< HEAD
+    const results = {"timestamp": new Date().toISOString(),"mergeConflicts": await this.fixMergeConflicts(),"syntaxErrors": await this.fixSyntaxErrors();}
+      importErrors: await this.fixImportErrors();
+      typescriptErrors: await this.fixTypeScriptErrors();
+      totalFixes: 0;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      importErrors: await this.fixImportErrors(), typescriptErrors: await this.fixTypeScriptErrors(),
+      totalFixes: 0,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
     const results = {"timestamp": new Date().toISOString(),"mergeConflicts": await this.fixMergeConflicts(),"syntaxErrors": await this.fixSyntaxErrors();}"
       importErrors: await this.fixImportErrors();,
   typescriptErrors: await this.fixTypeScriptErrors();
       totalFixes: 0;,
   importErrors: await this.fixImportErrors(), typescriptErrors: await this.fixTypeScriptErrors(),
       totalFixes: 0,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       duration: 0};
     results.totalFixes = results.mergeConflicts + results.syntaxErrors + results.importErrors + results.typescriptErrors;
-<<<<<<< HEAD
-    results.duration = Date.now() - this.startTime.getTime();"`;
-    this.log("info", `Auto-fix completed. Total fixes "applied": ${results.totalFixes}`);""`;
-=======
-    results.duration = Date.now() - this.startTime.getTime();"
-    this.log("info", `Auto-fix completed. Total fixes "applied": ${results.totalFixes});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     this.log("info", `"Duration": ${results.duration}ms`);"
     // Save results;"
     const resultsFile = path.join(this.logDir, "auto-fixer-results.json");
@@ -180,26 +128,26 @@ if (require.main === module) {}
   const autoFixer = new AutoFixer();
   autoFixer.runAllFixes();
     .then(results => {})"
-<<<<<<< HEAD
-      console.log("\n=== Auto-Fix Results ===");""`;
-      console.log(`Merge Conflicts "Fixed": ${results.mergeConflicts}`);""`;
-      console.log(`Syntax Errors "Fixed": ${results.syntaxErrors}`);""`;
-      console.log(`Import Errors "Fixed": ${results.importErrors}`);""`;
-      console.log(`TypeScript Errors "Fixed": ${results.typescriptErrors}`);""`;
-      console.log(`Total "Fixes": ${results.totalFixes}`);""`;
-=======
-      console.log("\n=== Auto-Fix Results ===");
-      console.log(`Merge Conflicts "Fixed": ${results.mergeConflicts});
-      console.log(`Syntax Errors "Fixed": ${results.syntaxErrors});
-      console.log(`Import Errors "Fixed": ${results.importErrors});
-      console.log(`TypeScript Errors "Fixed": ${results.typescriptErrors});
-      console.log(`Total "Fixes": ${results.totalFixes});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       console.log(`"Duration": ${results.duration}ms`);"
       process.exit(0)}
 });
     .catch(error => {})"
       console.error("Auto-fixer "failed": ", error);"
       process.exit(1)})};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = AutoFixer;
+module.exports = AutoFixer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 module.exports = AutoFixer;
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

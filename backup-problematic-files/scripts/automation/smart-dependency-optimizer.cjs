@@ -1,172 +1,5 @@
 <<<<<<< HEAD
-#!/""usr/bin/env""""
-const fs = require("fs")""
-const path = require("path")""
-const { execSync, spawn } = require("child_process")""
-const crypto = require("crypto")""
-      this.projectRoot,logs"""
-      "smart-dependency-optimizer.log"""
-      "dependency-optimizations.json"""
-      "dependency-usage-analysis.json"""
-  fs.mkdirSync(logsDir, { "recursive"})""
-          fs.readFileSync(this.optimizationLog, "utf8")""
-  "optimizations"""
-          "lastRun"""
-          "totalSavings"""
-  log(message, level = "INFO")""
-  this.log("🧠 Starting Smart Dependency Optimization...")""
-    const savings = { "size": 0, "installTime": 0, "buildTime"}""
-      this.log( Smart Dependency Optimization "completed": ${appliedOpts.length} optimizations applied")""
-      return { "optimizations"}""
-  this.log( "Smart Dependency Optimization "failed": ${error.message  }",ERROR")""
-  this.log( `Smart Dependency Optimization "failed": ${error.message}",ERROR"`)"`;
-  this.log(` Analyzing dependency usage patterns...``)"
-  "direct"""
-      "indirect"""
-      "unused"""
-      "usagePatterns"""
-        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"""
-  const depName = dep.split("@")""
-  "name"""
-            "version"""
-            "usageCount"""
-            "files"""
-            "lastUsed"""`;
-  this.log(`Dependency usage analysis "failed": ${error.message  }`, "ERROR"`)""
-  const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]""
-  const fullPath = path.join(this.projectRoot, ")""
-          fullPath", [".ts", ".tsx", ".js", ".jsx"]""
-        !item.startsWith(".")""
-        item !== "node_modules"""
-  const content = fs.readFileSync(file, "utf8")""
-        const lines = content.split("\n")""
-  if (line.includes("import") && line.includes("from")""
-  const importMatch = line.match(/from\s+[""]([^""]+)[""]""
-              if (packageName && !packageName.startsWith(".")""
-  "count"""
-                    "lastUsed"""
-  // Skip files that can"""
-  // Skip files that can"""
-    if (importPath.startsWith("@")""
-  const parts = importPath.split("/")""
-  return importPath.split("/")""
-  const usage = { "count": 0, "files": [], "lastUsed"}""
-  if (pkg === depName || pkg.startsWith(depName + "/")""
-  "mostUsed"""
-      "recentlyUsed"""
-      "rarelyUsed"""
-      (["", "a"], ["", "b")]""
-    patterns.mostUsed = sortedByUsage.slice(0, 10).map((["pkg", "data")]""
-  "package"""
-      ([", "a"], [", "b")]""
-    patterns.recentlyUsed = sortedByDate.slice(0, 10).map((["pkg", "data")]""
-  this.log(" Identifying unused dependencies...")""
-            "type"""
-              ? "dependency"""
-              : "devDependency"""
-            "reason": "No imports found in source code"""
-  this.log(Unused dependency identification "failed": ${error.message  }")""
-        "ERROR"""
-  const packageLockPath = path.join(this.projectRoot, "package-lock.json")""
-          fs.readFileSync(packageLockPath, "utf8")""
-  this.log("⚡ Analyzing dependency conflicts...")""
-  "type": "DUPLICATE_PACKAGE"""
-            "versions"""
-            "severity": "MEDIUM"""
-            "suggestion": "Consider using package resolution to avoid duplicates"""
-  this.log(Dependency conflict analysis "failed": ${error.message  }")""
-    const traverse = (deps, path = "")""
-  const traverse = (deps, path = ")""
-  Object.keys(deps).forEach(pkg => {const fullPath = path ? "${path}.${pkg}")""
-          "path"""
-            "paths"""
-  "type": "MISSING_PEER_DEPENDENCY"""
-              "required"""
-              "severity": "HIGH","suggestion"""
-              "required"""`;
-              "severity": "HIGH","suggestion": `Install ${peerDep}@${requiredVersion} as a dependency;""
-        "package.json"""
-        this.projectRoot,node_modules"""
-  const pkg = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")""
-  this.log("� Checking for outdated dependencies...")""
-      // For now, we"""
-            "current"""
-            "latest"""
-            "severity": "LOW"""
-            "suggestion": Consider updating to latest version for security and features"""`;
-  this.log(`Outdated dependency check "failed": ${error.message  }`, "ERROR"`)""
-  this.log(`Outdated dependency check "failed": ${error.message}`, "ERROR"`)""
-    const versionParts = currentVersion.replace(/^[\^~]/, "").split(".")""
-  this.log("� Analyzing bundle impact...")""
-  "totalSize"""
-      "largestPackages"""
-      "optimizationOpportunities"""
-  if (fs.existsSync("dist")""
-  "type": "BUNDLE_SIZE"""
-            "message": "Bundle size is large"""
-            "suggestion": Consider code splitting, tree shaking, and removing unused dependencies"""`;
-    } catch (error) {  this.log(`Bundle impact analysis "failed": ${error.message  }`, "ERROR"`)""
-  const distPath = path.join(this.projectRoot, "dist")""
-  const distPath = path.join(this.projectRoot, "dist")""`;
-    } catch (error) {  this.log(`Bundle size analysis "failed": ${error.message  }`, "ERROR"`)""
-  const fullPath = path.join(directory, ")""
-    usageAnalysis"""
-  this.log(" Generating optimization recommendations...")""
-  "type": "REMOVE_UNUSED"""
-        "dependencies"""
-        "priority": "HIGH"""
-        "impact": "REDUCE_BUNDLE_SIZE"""
-        "action": Remove unused dependencies to reduce bundle size and install time"""
-  "type": "RESOLVE_CONFLICTS"""
-        "conflicts"""
-        "priority": "MEDIUM"""
-        "impact": "IMPROVE_STABILITY"""
-        "action": "Resolve dependency conflicts to improve build stability"""
-  "type": "UPDATE_DEPENDENCIES"""
-        "priority": "LOW"""
-        "impact": "SECURITY_FEATURES"""
-        "action": "Update dependencies for security patches and new features"""
-  "type": "OPTIMIZE_BUNDLE"""
-        "opportunities"""
-        "impact": "IMPROVE_PERFORMANCE"""
-        "action": "Optimize bundle size for better loading performance"""
-  this.log(" Applying safe optimizations...")""
-  if (rec.type === "REMOVE_UNUSED" && rec.priority === "HIGH")""
-              "result": "success"""
-  this.log(Safe optimization application "failed": ${error.message  }")""
-        """
-  this.log(Safe optimization application "failed": ${error.message}")""
-        "ERROR""`;
-        if (dep.type === `devDependency``)"
-  try {execSync("npm uninstall ${dep.name}")""
-  "cwd"""
-              "stdio": "pipe"""
-            removed.push(dep.name);this.log(" Removed unused dev "dependency": ${dep.name}")} catch (error) {  this.log("Failed to remove ${dep.name  }: ${error.message}", "WARN")""
-    } catch (error) {  this.log("Dependency removal "failed": ${error.message  }", "ERROR")""
-  this.log(" Measuring optimization results...")""
-  "bundleSizeReduction"""
-      "installTimeReduction"""
-      "buildTimeReduction"""
-      "dependencyCountReduction"""
-  // Measure bundle size ""before/after""""
-        .filter(opt => opt.type === "REMOVE_UNUSED")""
-  // Measure bundle size "before/after"""
-        .reduce((total, opt) => total + opt.dependencies.length, 0)} catch (error) {  this.log("Results measurement "failed": ${error.message  }", "ERROR")""
-  "timestamp"""
-      "results"""
-      "summary"""
-      "recommendations"""
-      "history"""
-      this.projectRoot,logs", "dependency-optimization-report-${Date.now()}.json"""
-      this.projectRoot, "logs"""`;
-this.log(` Optimization Report "generated"`)""
-  this.log(" Smart Dependency Optimizer starting...")""
-this.log(" Smart Dependency Optimization completed successfully")""
-      this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"""
-        " Smart Dependency Optimization "failed": ${error.message  }",ERROR"""`;
-        ` Smart Dependency Optimization "failed": ${error.message}"""`;
-=======
-#!/usr/bin/env
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -192,8 +25,8 @@ const crypto = require("crypto")
       this.log( Smart Dependency Optimization "completed": ${appliedOpts.length} optimizations applied")
       return { "optimizations"}
   this.log( "Smart Dependency Optimization "failed": ${error.message  }",ERROR")
-  this.log( `Smart Dependency Optimization "failed": ${error.message}",ERROR"`)"
-  this.log(` Analyzing dependency usage patterns...``)"
+  this.log( `Smart Dependency Optimization "failed": ${error.message}",ERROR"`)
+  this.log(` Analyzing dependency usage patterns...``)
   "direct"
       "indirect"
       "unused"
@@ -206,7 +39,7 @@ const crypto = require("crypto")
             "usageCount"
             "files"
             "lastUsed"
-  this.log(`Dependency usage analysis "failed": ${error.message  }, "ERROR"`)
+  this.log(`Dependency usage analysis "failed": ${error.message  }`, "ERROR"`)
   const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
   const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
   const fullPath = path.join(this.projectRoot, ")
@@ -216,7 +49,7 @@ const crypto = require("crypto")
   const content = fs.readFileSync(file, "utf8")
         const lines = content.split("\n")
   if (line.includes("import") && line.includes("from")
-  const importMatch = line.match(/from\s+[]([^]+)[]
+  const importMatch = line.match(/from\s+[""]([^""]+)[""]
               if (packageName && !packageName.startsWith(".")
   "count"
                     "files"
@@ -232,7 +65,7 @@ const crypto = require("crypto")
   "mostUsed"
       "recentlyUsed"
       "rarelyUsed"
-      ([, "a"], [, "b")]
+      (["", "a"], ["", "b")]
     patterns.mostUsed = sortedByUsage.slice(0, 10).map((["pkg", "data")]
   "package"
       "usageCount"
@@ -268,7 +101,7 @@ const crypto = require("crypto")
             "suggestion": "Consider using package resolution to avoid duplicates"
   this.log(Dependency conflict analysis "failed": ${error.message  }")
         "ERROR"
-    const traverse = (deps, path = )
+    const traverse = (deps, path = "")
   const traverse = (deps, path = ")
   Object.keys(deps).forEach(pkg => {const fullPath = path ? "${path}.${pkg}")
           "path"
@@ -283,7 +116,7 @@ const crypto = require("crypto")
   "type": "MISSING_PEER_DEPENDENCY"
               "package"
               "required"
-              "severity": "HIGH","suggestion": `Install ${peerDep}@${requiredVersion} as a dependency;
+              "severity": "HIGH","suggestion": `Install ${peerDep}@${requiredVersion} as a dependency
         "package.json"
         this.projectRoot,node_modules"
         "package.json"
@@ -297,14 +130,14 @@ const crypto = require("crypto")
             "latest"
             "severity": "LOW"
             "suggestion": Consider updating to latest version for security and features"
-  this.log(`Outdated dependency check "failed": ${error.message  }, "ERROR"`)
+  this.log(`Outdated dependency check "failed": ${error.message  }`, "ERROR"`)
   "package"
             "current"
             "latest"
             "severity": "LOW"
             "suggestion": Consider updating to latest version for security and features"
-  this.log(`Outdated dependency check "failed": ${error.message}, "ERROR"`)
-    const versionParts = currentVersion.replace(/^[\^~]/, ).split(".")
+  this.log(`Outdated dependency check "failed": ${error.message}`, "ERROR"`)
+    const versionParts = currentVersion.replace(/^[\^~]/, "").split(".")
   this.log("� Analyzing bundle impact...")
   "totalSize"
       "largestPackages"
@@ -314,12 +147,12 @@ const crypto = require("crypto")
             "severity": "MEDIUM"
             "message": "Bundle size is large"
             "suggestion": Consider code splitting, tree shaking, and removing unused dependencies"
-    } catch (error) {  this.log(`Bundle impact analysis "failed": ${error.message  }, "ERROR"`)
+    } catch (error) {  this.log(`Bundle impact analysis "failed": ${error.message  }`, "ERROR"`)
   "totalSize"
       "largestPackages"
   const distPath = path.join(this.projectRoot, "dist")
   const distPath = path.join(this.projectRoot, "dist")
-    } catch (error) {  this.log(`Bundle size analysis "failed": ${error.message  }, "ERROR"`)
+    } catch (error) {  this.log(`Bundle size analysis "failed": ${error.message  }`, "ERROR"`)
   const fullPath = path.join(directory, ")
     usageAnalysis"
     usageAnalysis"
@@ -372,8 +205,8 @@ const crypto = require("crypto")
   this.log(Safe optimization application "failed": ${error.message  }")
         "
   this.log(Safe optimization application "failed": ${error.message}")
-        "ERROR
-        if (dep.type === `devDependency``)"
+        "ERROR"
+        if (dep.type === `devDependency``)
   try {execSync("npm uninstall ${dep.name}")
   "cwd"
               "stdio": "pipe"
@@ -384,7 +217,7 @@ const crypto = require("crypto")
       "installTimeReduction"
       "buildTimeReduction"
       "dependencyCountReduction"
-  // Measure bundle size before/after
+  // Measure bundle size ""before/after""
       if (fs.existsSync("dist")
         .filter(opt => opt.type === "REMOVE_UNUSED")
   this.log(" Measuring optimization results...")
@@ -417,6 +250,16 @@ this.log(` Optimization Report "generated"`)
 this.log(" Smart Dependency Optimization completed successfully")
       this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
         ` Smart Dependency Optimization "failed": ${error.message}"
         ` Smart Dependency Optimization "failed": ${error.message}"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,50 +1,44 @@
+
 <<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-      "status"""
-        "message"""
-      return { "status"}""
-      return { "status": 'skipped', "message"}""
-      return { status: 'skipped', "message"}""
-        "stdio"""
-      return { "status": 'success', "message"}""
-          "missing"""
-    console.log('\n Performance Optimization "Summary")""');
-    console.error('Performance optimization "failed")""
-=======
-#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
+
 const { execSync } = require('child_process')
       "status"
         "status"
         "message"
         "status"
       return { "status"}
-      return { "status": skipped, "message"}
-      return { status: skipped, "message"}
-      return { "status": skipped, "message"}
-      return { status: skipped, "message"}
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
       "status"
         "stdio"
             "status"
-      return { "status": success, "message"}
+      return { "status": 'success', "message"}
       return { "status"}
-      return { "status": skipped, "message"}
-      return { status: skipped, "message"}
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
       "status"
-      return { "status": skipped, "message"}
-      return { "status": skipped, "message"}
+      return { "status": 'skipped', "message"}
+      return { "status": 'skipped', "message"}
       "status"
       "message"
-      return { "status": skipped, "message"}
-      return { status: skipped, "message"}
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
           "missing"
           "missing"
       "status"
     console.log('\n Performance Optimization "Summary")
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
     console.error('Performance optimization "failed")
     console.error('Performance optimization "failed")
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

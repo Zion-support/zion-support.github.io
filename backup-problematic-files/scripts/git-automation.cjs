@@ -1,10 +1,46 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+    try {
+      const { stdout, stderr } = await execAsync(command, {
+        cwd: process.cwd(),
+        timeout: 60000,
+        ...options
+=======
 async runCommand(command, options = {}) {
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  async runCommand(command, options = {}) {
+=======
+async runCommand(command, options = {}) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
   // TODO: Implement
 }
       const { stdout, stderr } = await execAsync(command, { )
         cwd: process.cwd(), 
         timeout: 60000, 
+<<<<<<< HEAD
+        ...options 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      });
+      return { success: true, stdout, stderr };
+    } catch (error) {
+      this.log(`Command failed: ${command} - ${error.message}`);
+<<<<<<< HEAD
+      return {
+        success: false,
+        stdout: error.stdout || "",
+        stderr: error.stderr || error.message
+=======
+      return { 
+        success: false, 
+        stdout: error.stdout || "", 
+        stderr: error.stderr || error.message 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
         ...options;
       });
       return { success: true, stdout, stderr };
@@ -15,28 +51,29 @@ async runCommand(command, options = {}) {
         success: false, 
         stdout: error.stdout || ,"
         stderr: error.stderr || error.message;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       };
 
-  async checkGitStatus() {"
 <<<<<<< HEAD
+  async checkGitStatus() {
     this.log('Checking git status...');
     const result = await this.runCommand('git status --porcelain');
-    if (result.success) {
-      const changes = result.stdout.trim().split('\n').filter(line => line.length > 0);`;
+<<<<<<< HEAD
+
 =======
-    this.log('Checking git status...);
-    const result = await this.runCommand('git status --porcelain');
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (result.success) {
       const changes = result.stdout.trim().split('\n').filter(line => line.length > 0);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+=======
+  async checkGitStatus() {"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`Found ${changes.length} changes`);
       return changes;
     } else {
   // TODO: Implement
-<<<<<<< HEAD
-=======
-}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.log('Failed to check git status');
       return [];
 
@@ -44,130 +81,101 @@ async runCommand(command, options = {}) {
 <<<<<<< HEAD
     this.log('Adding all changes...');
     const result = await this.runCommand('git add .');
+<<<<<<< HEAD
+
 =======
-    this.log('Adding all changes...);
-    const result = await this.runCommand('git add .);
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (result.success) {
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log('✅ All changes added');
       return true;
   // TODO: Implement
-<<<<<<< HEAD
-=======
-}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.log('❌ Failed to add changes');
       return false;
 
 <<<<<<< HEAD
-  async commitChanges(message) {`;
-    this.log(`Committing changes: ${message}`);`;
-    const result = await this.runCommand(`git commit -m "${message}"`);"
-    if (result.success) {"
-      this.log('✅ Changes committed');
-  // TODO: Implement
-      this.log('❌ Failed to commit changes');
-
-  async pushChanges(branch = 'main') {`;
-    this.log(`Pushing changes to ${branch}...`);`;
-    const result = await this.runCommand(`git push origin ${branch}`);
-    
-      this.log('✅ Changes pushed');
-  // TODO: Implement
-      this.log('❌ Failed to push changes');
-
-  async mergeToMain() {
-    this.log('Merging to main branch...');
-=======
   async commitChanges(message) {
-    this.log(`Committing changes: ${message});
-    const result = await this.runCommand(`git commit -m "${message}"`);"
-    if (result.success) {"
+    this.log(`Committing changes: ${message}`);
+    const result = await this.runCommand(`git commit -m "${message}"`);
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    if (result.success) {
       this.log('✅ Changes committed');
       return true;
     } else {
-  // TODO: Implement
-}
       this.log('❌ Failed to commit changes');
       return false;
     }
   }
-'
+
   async pushChanges(branch = 'main') {
     this.log(`Pushing changes to ${branch}...`);
-    const result = await this.runCommand(`git push origin ${branch});
+    const result = await this.runCommand(`git push origin ${branch}`);
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (result.success) {
       this.log('✅ Changes pushed');
       return true;
     } else {
-  // TODO: Implement
-}
       this.log('❌ Failed to push changes');
       return false;
     }
   }
 
   async mergeToMain() {
-    this.log('Merging to main branch...);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    this.log('Merging to main branch...');
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    // Checkout main branch
+=======
+
     // Checkout main branch;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const checkoutResult = await this.runCommand('git checkout main');
     if (!checkoutResult.success) {
       this.log('❌ Failed to checkout main branch');
-<<<<<<< HEAD
-=======
-      return false;
-    }
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 
     // Pull latest changes;
     const pullResult = await this.runCommand('git pull origin main');
     if (!pullResult.success) {
       this.log('❌ Failed to pull latest changes');
-<<<<<<< HEAD
 
-    // Merge current branch;
-    const mergeResult = await this.runCommand('git merge --no-ff -m "Automated merge of automation improvements"');
-    if (!mergeResult.success) {
-      this.log('❌ Failed to merge changes');
-=======
-      return false;
-    }
-
-    // Merge current branch;
-    const mergeResult = await this.runCommand('git merge --no-ff -m "Automated merge of automation improvements");
-    if (!mergeResult.success) {
-      this.log('❌ Failed to merge changes');
-      return false;
-    }
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
     // Push merged changes;
     const pushResult = await this.pushChanges('main');
     if (!pushResult.success) {
       this.log('❌ Failed to push merged changes');
+
 <<<<<<< HEAD
-
-    this.log('✅ Successfully merged to main branch');
-
-  async runFullWorkflow() {
-    this.log('Starting full git automation workflow...');
-    // Ensure logs directory exists;
-    const logsDir = path.join(__dirname, '..', 'automation', 'logs');
-=======
-      return false;
-    }
-'
     this.log('✅ Successfully merged to main branch');
     return true;
   }
 
   async runFullWorkflow() {
-    this.log('Starting full git automation workflow...);
-    // Ensure logs directory exists;
-    const logsDir = path.join(__dirname,..,automation,logs');
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    this.log('Starting full git automation workflow...');
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    // Ensure logs directory exists
+    const logsDir = path.join(__dirname, '..', 'automation', 'logs');
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
 
@@ -175,11 +183,7 @@ async runCommand(command, options = {}) {
     const changes = await this.checkGitStatus();
     if (changes.length === 0) {
       this.log('No changes to commit');
-<<<<<<< HEAD
-=======
-      return true;
-    }
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 
     // Add all changes;
     const added = await this.addAllChanges();
@@ -196,18 +200,7 @@ async runCommand(command, options = {}) {
     // Merge to main;
     const merged = await this.mergeToMain();
     if (!merged) {
-<<<<<<< HEAD
 
-    this.log('Full git automation workflow completed successfully');
-=======
-      return false;
-    }
-'
-    this.log('Full git automation workflow completed successfully');
-    return true;
-  }
-}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
 // Handle command line arguments;
 if (require.main === module) {
@@ -220,25 +213,7 @@ if (require.main === module) {
       break;"
     case "add":"
       gitAutomation.addAllChanges();
-<<<<<<< HEAD
-    case "commit":""
-      const message = process.argv[3] || 'Automated commit';
-      gitAutomation.commitChanges(message);
-      break;
-    case "push":""
-      const branch = process.argv[3] || 'main';
-      gitAutomation.pushChanges(branch);
-=======
-      break;"
-    case "commit":
-      const message = process.argv[3] ||Automated commit';
-      gitAutomation.commitChanges(message);
-      break;
-    case "push":
-      const branch = process.argv[3] ||main';
-      gitAutomation.pushChanges(branch);
-      break;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     case "merge":"
       gitAutomation.mergeToMain();
     case "workflow":"
@@ -258,30 +233,16 @@ module.exports = GitAutomation;
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+
 <<<<<<< HEAD
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
     this.logDir = path.join(this.projectRoot, 'automation', 'logs')
+  log(message, level = 'INFO')
   log(message, level = 'INFO')
     const logFile = path.join(this.logDir, 'git-automation.log')
     fs.appendFileSync(logFile, logMessage + '\n')
-        "encoding"""
-        "stdio"""`;
-      this.log(` ${description} "failed"`)""
-      return { "success": false, "error": error.message, "output"}""
-      "status"""
-      "currentBranch"""
-      "operation"""`;
-    const result = await this.runCommand(`git commit -m "${message}"`)""
-      "operation"""
-      return { "success": true, "message"}""
-    const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")""
-      this.log(" Git automation workflow "failed": ${error.message}")""
-      this.log(" Git automation workflow "failed": ${error.message}")""`;
-=======
-    this.logDir = path.join(this.projectRoot,automation,logs')
-  log(message, level = 'INFO')
-  log(message, level = 'INFO')
-    const logFile = path.join(this.logDir,git-automation.log')
-    fs.appendFileSync(logFile, logMessage +\n')
         "encoding"
         "stdio"
       this.log(` ${description} "failed"`)
@@ -294,8 +255,14 @@ const path = require('path')
       "operation"
       "operation"
       return { "success": true, "message"}
-    const mergeResult = await this.runCommand('git merge --no-ff -m feat": automated improvements and fixes")
+    const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       this.log(" Git automation workflow "failed": ${error.message}")
       this.log(" Git automation workflow "failed": ${error.message}")
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

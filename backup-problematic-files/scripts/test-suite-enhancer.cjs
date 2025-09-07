@@ -4,21 +4,6 @@ const fs = require('fs')
 const path = require('path')
 function log(message, level = 'INFO')
   log('🧪 Creating comprehensive test suite...')
-  const testUtilsContent = """
-  "id"""
-  "name"""
-  "email"""
-  "role"""
-  "text"""
-  "sender"""
-  const jestSetupContent = """
-    log(` Test suite enhancement "failed"`)""`;
-=======
-#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-function log(message, level = 'INFO')
-  log('🧪 Creating comprehensive test suite...)
   const testUtilsContent = "
   "id"
   "name"
@@ -28,6 +13,16 @@ function log(message, level = 'INFO')
   "text"
   "sender"
   const jestSetupContent = "
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
     log(` Test suite enhancement "failed"`)
     log(` Test suite enhancement "failed"`)
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

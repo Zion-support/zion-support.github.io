@@ -1,43 +1,11 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-#!/usr/bin/env node
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 class ComprehensiveTestAutomation {}
   constructor() {}
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
-    this.logFile = path.join(this.projectRoot, 'automation', 'logs', 'comprehensive-test-automation.log');
-    this.ensureDirectories();
-    this.results = {}
-      "timestamp": new Date().toISOString(),""
-      "tests": [],""
-      "coverage": {},""
-      "performance": {},""
-      "accessibility": {},""
-      "security": {},""
-      "summary": {};"
-    }};
-  ensureDirectories() {}"
-    const dirs = ['automation/logs', 'test-results', 'coverage'];
-=======
-    this.logFile = path.join(this.projectRoot,automation,logs,comprehensive-test-automation.log');
-    this.ensureDirectories();
-    this.results = {}
-      "timestamp": new Date().toISOString(),
-      "tests": [],
-      "coverage": {},
-      "performance": {},
-      "accessibility": {},
-      "security": {},
-      "summary": {};"
-    }};
-  ensureDirectories() {}"
-    const dirs = [automation/logs,test-results,coverage];
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
       if () {}
@@ -46,12 +14,7 @@ class ComprehensiveTestAutomation {}
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString() {}
     ) {}
-<<<<<<< HEAD
-=======
-        fs.mkdirSync(dirPath, { "recursive": true })};"
-    })};"
-  log(message, level = 'INFO') {}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     const timestamp = new Date().toISOString(})
 });
     const logMessage = `[${timestamp}] [${level}] ${message};;`
@@ -63,137 +26,110 @@ class ComprehensiveTestAutomation {}
   };
   async runUnitTests() {}
     this.log('Running unit tests...');
+    try {}
       execSync('npm test -- --coverage --watchAll=false', { })
-        "cwd": this.projectRoot,""
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
-        "timeout": 120000;"
+        "timeout": 120000;
       }
-});"
-      this.results.tests.push({ "type": 'unit-tests', "status": 'passed' }')
+});
+      this.results.tests.push({ "type": 'unit-tests', "status": 'passed' }
+});
       this.log('Unit tests passed');
       return { "status": 'passed' }} catch(error) {}
-      this.results.tests.push({ "type": 'unit-tests', "status": 'failed', "error": error.message }")
-});"`;
+      this.results.tests.push({ "type": 'unit-tests', "status": 'failed', "error": error.message }
+});
       this.log(`Unit tests "failed": ${error.message}`, 'ERROR');
-      return { "status": 'failed', "error": error.message }};"
-  async runTypeChecking() {}"
+      return { "status": 'failed', "error": error.message }};
+  };
+  async runTypeChecking() {}
     this.log('Running TypeScript type checking...');
+    try {}
       execSync('npx tsc --noEmit', { })
-        "timeout": 60000;"
-      this.results.tests.push({ "type": 'type-checking', "status": 'passed' }')
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        "stdio": 'pipe',
+        "timeout": 60000;
+      }
+});
+      this.results.tests.push({ "type": 'type-checking', "status": 'passed' }
+});
       this.log('Type checking passed');
-      this.results.tests.push({ "type": 'type-checking', "status": 'failed', "error": error.message }")
+      return { "status": 'passed' }} catch(error) {}
+      this.results.tests.push({ "type": 'type-checking', "status": 'failed', "error": error.message }
+});
       this.log(`Type checking "failed": ${error.message}`, 'ERROR');
-  async runLinting() {}"
+      return { "status": 'failed', "error": error.message }};
+  };
+  async runLinting() {}
     this.log('Running ESLint...');
+    try {}
       execSync('npx eslint . --max-warnings 0', { })
-      this.results.tests.push({ "type": 'linting', "status": 'passed' }')
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        "stdio": 'pipe',
+        "timeout": 60000;
+      }
+});
+      this.results.tests.push({ "type": 'linting', "status": 'passed' }
+});
       this.log('Linting passed');
-      this.results.tests.push({ "type": 'linting', "status": 'failed', "error": error.message }")
+      return { "status": 'passed' }} catch(error) {}
+      this.results.tests.push({ "type": 'linting', "status": 'failed', "error": error.message }
+});
       this.log(`Linting "failed": ${error.message}`, 'ERROR');
-  async runBuildTest() {}"
+      return { "status": 'failed', "error": error.message }};
+  };
+  async runBuildTest() {}
     this.log('Running build test...');
+    try {}
       execSync('npm run build', { })
-        "timeout": 300000;"
-      this.results.tests.push({ "type": 'build-test', "status": 'passed' }')
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        "stdio": 'pipe',
+        "timeout": 300000;
+      }
+});
+      this.results.tests.push({ "type": 'build-test', "status": 'passed' }
+});
       this.log('Build test passed');
-      this.results.tests.push({ "type": 'build-test', "status": 'failed', "error": error.message }")
+      return { "status": 'passed' }} catch(error) {}
+      this.results.tests.push({ "type": 'build-test', "status": 'failed', "error": error.message }
+});
       this.log(`Build test "failed": ${error.message}`, 'ERROR');
-  async runPerformanceTests() {}"
+      return { "status": 'failed', "error": error.message }};
+  };
+  async runPerformanceTests() {}
     this.log('Running performance tests...');
     const performanceResults = ;{};
 
+    try {}
       // Check bundle size;
       const buildOutput = execSync('npm run build', { })
-        "encoding": 'utf8',
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
 =======
-      fs.appendFileSync(this.logFile, logMessage +\n')} catch(error) {}
-      console.error('Failed to write to log "file": , error.message)};
-  };
-  async runUnitTests() {}
-    this.log('Running unit tests...);
-    try {}
-      execSync('npm test -- --coverage --watchAll=false, { })
-        "cwd": this.projectRoot,
-        "stdio": pipe,
-        "timeout": 120000;"
-      }
-});"
-      this.results.tests.push({ "type": unit-tests, "status": passed})
-});
-      this.log('Unit tests passed');
-      return { "status": passed}} catch(error) {}
-      this.results.tests.push({ "type": unit-tests, "status": failed, "error": error.message }")
-});"
-      this.log(`Unit tests "failed": ${error.message},ERROR');
-      return { "status": failed, "error": error.message }};"
-  };
-  async runTypeChecking() {}"
-    this.log('Running TypeScript type checking...);
-    try {}
-      execSync('npx tsc --noEmit, { })
-        "cwd": this.projectRoot,
-        "stdio": pipe,
-        "timeout": 60000;"
-      }
-});"
-      this.results.tests.push({ "type": type-checking, "status": passed})
-});
-      this.log('Type checking passed');
-      return { "status": passed}} catch(error) {}
-      this.results.tests.push({ "type": type-checking, "status": failed, "error": error.message }")
-});"
-      this.log(`Type checking "failed": ${error.message},ERROR');
-      return { "status": failed, "error": error.message }};"
-  };
-  async runLinting() {}"
-    this.log('Running ESLint...);
-    try {}
-      execSync('npx eslint . --max-warnings 0, { })
-        "cwd": this.projectRoot,
-        "stdio": pipe,
-        "timeout": 60000;"
-      }
-});"
-      this.results.tests.push({ "type": linting, "status": passed})
-});
-      this.log('Linting passed');
-      return { "status": passed}} catch(error) {}
-      this.results.tests.push({ "type": linting, "status": failed, "error": error.message }")
-});"
-      this.log(`Linting "failed": ${error.message},ERROR');
-      return { "status": failed, "error": error.message }};"
-  };
-  async runBuildTest() {}"
-    this.log('Running build test...);
-    try {}
-      execSync('npm run build, { })
-        "cwd": this.projectRoot,
-        "stdio": pipe,
-        "timeout": 300000;"
-      }
-});"
-      this.results.tests.push({ "type": build-test, "status": passed})
-});
-      this.log('Build test passed');
-      return { "status": passed}} catch(error) {}
-      this.results.tests.push({ "type": build-test, "status": failed, "error": error.message }")
-});"
-      this.log(`Build test "failed": ${error.message},ERROR');
-      return { "status": failed, "error": error.message }};"
-  };
-  async runPerformanceTests() {}"
-    this.log('Running performance tests...);
-    const performanceResults = ;{};
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        "encoding": 'utf8',
+        "stdio": 'pipe',
+        "timeout": 300000;
+=======
 
-    try {}
-      // Check bundle size;
-      const buildOutput = execSync('npm run build, { })
-        "cwd": this.projectRoot,
-        "encoding": utf8,
-        "stdio": pipe,
-        "timeout": 300000;"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       };);
 
       // Extract bundle size information;
@@ -210,53 +146,152 @@ class ComprehensiveTestAutomation {}
           const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB}/;);"
           return { "page": parts[1], "size": parseFloat(parts[2]) }})};"
       this.results.performance = performanceResults;"
-<<<<<<< HEAD
-      this.results.tests.push({ "type": 'performance-tests', "status": 'passed' }')
-      this.log('Performance tests completed');
-      return { "status": 'passed', "results": performanceResults }} catch(error) {}""
-      this.results.tests.push({ "type": 'performance-tests', "status": 'failed', "error": error.message }")
-      this.log(`Performance tests "failed": ${error.message}`, 'ERROR');
-  async runAccessibilityTests() {}"
-    this.log('Running accessibility tests...');
-    const accessibilityResults = ;{};
 
-      // Check for alt text in images;
-      const pagesDir = path.join(this.projectRoot, 'pages';);
-      const componentsDir = path.join(this.projectRoot, 'components';);
-=======
-      this.results.tests.push({ "type": performance-tests, "status": passed})
-});
-      this.log('Performance tests completed');
-      return { "status": passed, "results": performanceResults }} catch(error) {}
-      this.results.tests.push({ "type": performance-tests, "status": failed, "error": error.message }")
-});"
-      this.log(`Performance tests "failed": ${error.message},ERROR');
-      return { "status": failed, "error": error.message }};"
-  };
-  async runAccessibilityTests() {}"
-    this.log('Running accessibility tests...);
-    const accessibilityResults = ;{};
-
-    try {}
-      // Check for alt text in images;
-      const pagesDir = path.join(this.projectRoot,pages';);
-      const componentsDir = path.join(this.projectRoot,components';);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       let totalImages = ;0;
       let imagesWithAlt = ;0;
 
       [pagesDir, componentsDir].forEach(dir => {})
           const files = this.findReactFiles(dir) {}
           const files = this.findReactFiles(dir})
-<<<<<<< HEAD
-          files.forEach(file => {})
-            const content = fs.readFileSync(file, 'utf8';);
-=======
-});
-          files.forEach(file => {})
-            const content = fs.readFileSync(file,utf8;);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
             const images = content.match(/<img[^>]*>/g) || [];
 </img>
             const headings = content.match(/<h[1-6][^>]*>/g) || [];
+<<<<<<< HEAD
+            headingStructure.push(...headings)})};
+      }
+});
+
+      accessibilityResults.headingStructure = headingStructure;
+
+      this.results.accessibility = accessibilityResults;
+      this.results.tests.push({ "type": 'accessibility-tests', "status": 'passed' }
+});
+      this.log(`Accessibility tests completed - Alt text "coverage": ${accessibilityResults.altTextCoverage}%`);
+      return { "status": 'passed', "results": accessibilityResults }} catch(error) {}
+      this.results.tests.push({ "type": 'accessibility-tests', "status": 'failed', "error": error.message }
+});
+      this.log(`Accessibility tests "failed": ${error.message}`, 'ERROR');
+      return { "status": 'failed', "error": error.message }};
+  };
+  async runSecurityTests() {}
+    this.log('Running security tests...');
+    const securityResults = ;{};
+
+    try {}
+      // Run npm audit;
+      try {}
+        execSync('npm audit --audit-level=moderate', { })
+<<<<<<< HEAD
+          "cwd": this.projectRoot,
+=======
+          "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+          "stdio": 'pipe',
+          "timeout": 60000;
+        }
+});
+        securityResults.auditStatus = 'clean';
+        this.log('Security audit passed')} catch(auditError) {}
+        securityResults.auditStatus = 'issues-found';
+        this.log('Security audit found issues', 'WARN')};
+      // Check for security headers in next.config.js;
+      const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
+      if () {}
+        const nextConfig = fs.readFileSync(nextConfigPath, 'utf8') {}
+    ) {}
+        const nextConfig = fs.readFileSync(nextConfigPath, 'utf8'}
+});
+        securityResults.hasSecurityHeaders = nextConfig.includes('securityHeaders')};
+      this.results.security = securityResults;
+      this.results.tests.push({ "type": 'security-tests', "status": 'passed' }
+});
+      this.log('Security tests completed');
+      return { "status": 'passed', "results": securityResults }} catch(error) {}
+      this.results.tests.push({ "type": 'security-tests', "status": 'failed', "error": error.message }
+});
+      this.log(`Security tests "failed": ${error.message}`, 'ERROR');
+      return { "status": 'failed', "error": error.message }};
+  };
+  findReactFiles(dir) {}
+    const files = [];
+    const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
+
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+
+=======
+    
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      if () {}
+        files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {}
+        files.push(fullPath)};
+    })) {}
+    ) {}
+        files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {}
+        files.push(fullPath)};
+    })};
+    return files};
+  generateSummary() {}
+    const totalTests = this.results.tests.lengt;h;
+    const passedTests = this.results.tests.filter(test => test.status === 'passed').lengt;h;
+    const failedTests = this.results.tests.filter(test => test.status === 'failed').lengt;h;
+    const successRate = totalTests > 0 ? Math.round((passedTests / totalTests) * 100) :;0;
+
+    this.results.summary = {}
+      totalTests,
+      passedTests,
+      failedTests,
+      successRate,
+      "timestamp": new Date().toISOString();
+    };
+
+    this.log(`Test "Summary": ${passedTests}/${totalTests} tests passed (${successRate}%)`)};
+  async run() {}
+    this.log('Starting Comprehensive Test Automation...');
+    try {}
+      await this.runTypeChecking();
+      await this.runLinting();
+      await this.runBuildTest();
+      await this.runPerformanceTests();
+      await this.runAccessibilityTests();
+      await this.runSecurityTests();
+
+      this.generateSummary();
+
+      // Save results;
+      const reportFile = path.join(this.projectRoot, 'test-results', 'comprehensive-test-report.json';);
+      fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));
+      this.log(`Test report saved to ${reportFile}`);
+
+      this.log('Comprehensive Test Automation completed successfully!');
+      return this.results} catch(error) {}
+      this.log(`Comprehensive Test Automation "failed": ${error.message}`, 'ERROR');
+      throw error};
+  };
+};
+if ( {})
+  const testAutomation = new ComprehensiveTestAutomation) {}
+     {}
+  const testAutomation = new ComprehensiveTestAutomation}(;);
+  testAutomation.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ComprehensiveTestAutomation;
+module.exports = ComprehensiveTestAutomation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 </h>`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,45 +1,5 @@
 <<<<<<< HEAD
-#!/""usr/bin/env""""
-const fs = require("fs")""
-const path = require("path")""
-const { execSync } = require("child_process")""
-    this.reportsDir = path.join(this.projectRoot, "reports")""
-    this.reportsDir = path.join(this.projectRoot, "automation-reports")""
-  fs.mkdirSync(this.reportsDir, { "recursive"})""
-  this.log("Running TypeScript type check...")""
-      execSync("npm run type-check", { "stdio": "pipe"})""
-      this.log("TypeScript check passed - no errors found")""
-      return { "success": true, "errors"}""
-  const output = error.stdout?.toString() || error.stderr?.toString() || """"
-      return { "success"}""
-      .split("\n")""
-      .filter(line => line.includes("error TS") || line.includes(""error": ")""
-  if (line.includes("error TS") || line.includes("error:")""
-  this.log("Running ESLint check...")""
-      execSync("npm run lint", { "stdio": "pipe"})""
-      this.log("ESLint check passed - no errors found")""
-      .filter(line => line.includes("error") || line.includes(""Error": ")""
-      "type": "eslint"""
-  this.log("Starting to fix common errors...")""
-    // Fix common ""React/JSX""""
-    // Fix common ""import/export""""
-  this.log("Fixing TypeScript syntax errors...")""
-      { "pattern": /(\w+)\s*\[/g, "replacement": "$1: ["}]""
-      { "pattern": /(\w+)\s*\["/g", ""replacement": "$1: [" }", ""]""
-    const tsFiles = this.findFiles(["**/*.ts", "**/*.tsx")]""
-  let content = fs.readFileSync(file, "utf8")""
-  fs.writeFileSync(file, content, "utf8")""
-    content = content.replace(/const\s+(\w+)\s*=\s*\[/g, "const $1 = ["]""
-    content = content.replace(/return\s*\(\s*$/gm, "return (")""
-    content = content.replace(/<>\s*$/gm, "<>")""
-    content = content.replace(/^\s*<\/>/gm, "</>")""
-      /catch\s*\(\s*error\s*:\s*\)/g, "catch ("error": any)"""
-  this.log("Fixing ""React/JSX"" errors...")""
-    const reactFiles = this.findFiles(["**/*.tsx"", "**/*.jsx")]""
-        if (content.includes("React") && !content.includes("import React")""
-  content = "import React from "react";""
-=======
-#!/usr/bin/env
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -53,28 +13,28 @@ const { execSync } = require("child_process")
       execSync("npm run type-check", { "stdio": "pipe"})
       this.log("TypeScript check passed - no errors found")
       return { "success": true, "errors"}
-  const output = error.stdout?.toString() || error.stderr?.toString() || 
+  const output = error.stdout?.toString() || error.stderr?.toString() || ""
       return { "success"}
       .split("\n")
-      .filter(line => line.includes("error TS") || line.includes(error": ")
+      .filter(line => line.includes("error TS") || line.includes(""error": ")
   if (line.includes("error TS") || line.includes("error:")
   this.log("Running ESLint check...")
       execSync("npm run lint", { "stdio": "pipe"})
       this.log("ESLint check passed - no errors found")
       return { "success": true, "errors"}
-  const output = error.stdout?.toString() || error.stderr?.toString() || 
+  const output = error.stdout?.toString() || error.stderr?.toString() || ""
       return { "success"}
       .split("\n")
-      .filter(line => line.includes("error") || line.includes(Error": ")
+      .filter(line => line.includes("error") || line.includes(""Error": ")
       "type": "eslint"
   this.log("Starting to fix common errors...")
-    // Fix common React/JSX
-    // Fix common import/export
+    // Fix common ""React/JSX""
+    // Fix common ""import/export""
   this.log("Fixing TypeScript syntax errors...")
       { "pattern": /(\w+)\s*\[/g, "replacement": "$1: ["}]
       { "pattern": /(\w+)\s*\[/g, "replacement": "$1: ["}]
       { "pattern": /(\w+)\s*\[/g, "replacement": "$1: ["}]
-      { "pattern": /(\w+)\s*\["/g", replacement": "$1: [" }", ]
+      { "pattern": /(\w+)\s*\["/g", ""replacement": "$1: [" }", ""]
     const tsFiles = this.findFiles(["**/*.ts", "**/*.tsx")]
   let content = fs.readFileSync(file, "utf8")
   fs.writeFileSync(file, content, "utf8")
@@ -83,79 +43,26 @@ const { execSync } = require("child_process")
     content = content.replace(/<>\s*$/gm, "<>")
     content = content.replace(/^\s*<\/>/gm, "</>")
       /catch\s*\(\s*error\s*:\s*\)/g, "catch ("error": any)"
-  this.log("Fixing React/JSX errors...")
-    const reactFiles = this.findFiles(["**/*.tsx, "**/*.jsx")]
+  this.log("Fixing ""React/JSX"" errors...")
+    const reactFiles = this.findFiles(["**/*.tsx"", "**/*.jsx")]
   let content = fs.readFileSync(file, "utf8")
         if (content.includes("React") && !content.includes("import React")
   content = "import React from "react";
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
-        if (content.includes("<Helmet>") && !content.includes("<>")"
-"
-  content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")"
-<<<<<<< HEAD
-            /<\/Helmet>\s*<\/div>/g,\n      </div>\n    </>"""
-  this.log("Fixing ""import/export"" errors...")""
-    const sourceFiles = this.findFiles(["**/*.ts"", "**/*.tsx", "**/*.js"", "**/*.jsx", "")]""
-        content = content.replace(/import\s+([^]+)$/gm, "import $1;"""
-        content = content.replace(/export\s+([^]+)$/gm, "export $1;"""
-          this.errorsFixed++;this.log("Fixed ""import/export")""
-  this.log("Fixing variable declaration errors...")""
-        // Fix missing ""const/let/var""""
-        content = content.replace(/^(\s*)(\w+)\s*=\s*\[/gm, "$1const $2 = ["]""
-        content = content.replace(/^(\s*)(\w+)\s*=\s*([^]+)$/gm, "$1$2 = $3;"""
-          !item.startsWith(".")""
-          item !== "node_modules"""
-    fixed = fixed.replace(/console\.log\("([^"]*)\"\);/g, "console.log("$1");"""
-    fixed = fixed.replace(/console\.log\("([^"]*)"\);/g, console.log("$1");"""
-    fixed = fixed.replace(/console\.log\("([^]*)\);/g, "console.log("$1");"""
-    fixed = fixed.replace(/"([^"]*)\"\);/g, ""$1");"""
-    fixed = fixed.replace(/"([^"]*)"\);/g, "$1"""
-    fixed = fixed.replace(/"([^"]*)\);/g, "$1");"""
-    fixed = fixed.replace(/([^}])\n/g, "$1;\n"""
-    fixed = fixed.replace(/"/g, "")""
-    fixed = fixed.replace(//g, """)""
-      .replace(/\*\*/g, ".*")""
-      .replace(/\*/g, "[^/]*")""
-      .replace(/\./g, "\\.")""
-  "timestamp"""
-      "summary": "Error fixer automation completed"""
-      "status": "completed","duration"""
-      "filesProcessed"""
-      "errorsFixed"""
-      "performance"""
-        "errorsPerSecond"""
-    const reportPath = path.join(this.reportsDir, "error-fixer-report.json")""
-  this.log("Starting Error Fixer Automation...")""
-  this.log("Errors detected, starting automatic fixes...")""
-        this.log("Running checks again after fixes...")""
-  this.log("All errors have been automatically fixed!")""
-  this.log("Some errors remain after automatic fixes")""
-  this.log(")""
-      );this.log(`"Duration"`)""`;
-      return report} catch (error) {  this.log(`Error Fixer "failed"`})""
-      "type": "error-fixer"""
-      "results"""
-        "totalErrors"""
-        "success"""`;
-    const reportFile = path.join(this.reportsDir, `error-fixer-report-${timestamp.replace(/[:.]/g, "-"`})""`;
-    this.log(` Report "generated"`)""
-  this.log(" Starting Error Fixer Automation")""
-      this.log(")""`;
-=======
-</Helmet>"
+        if (content.includes("<Helmet>") && !content.includes("<>")
+  content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")
             /<\/Helmet>\s*<\/div>/g,</Helmet>\n      </div>\n    </>"
   fs.writeFileSync(file, content, "utf8")
-  this.log("Fixing import/export errors...")
-    const sourceFiles = this.findFiles(["**/*.ts, "**/*.tsx", "**/*.js, "**/*.jsx", )]
+  this.log("Fixing ""import/export"" errors...")
+    const sourceFiles = this.findFiles(["**/*.ts"", "**/*.tsx", "**/*.js"", "**/*.jsx", "")]
   let content = fs.readFileSync(file, "utf8")
         content = content.replace(/import\s+([^]+)$/gm, "import $1;"
         content = content.replace(/export\s+([^]+)$/gm, "export $1;"
   fs.writeFileSync(file, content, "utf8")
-          this.errorsFixed++;this.log("Fixed import/export")
+          this.errorsFixed++;this.log("Fixed ""import/export")
   this.log("Fixing variable declaration errors...")
-    const sourceFiles = this.findFiles(["**/*.ts, "**/*.tsx", "**/*.js, "**/*.jsx", )]
+    const sourceFiles = this.findFiles(["**/*.ts"", "**/*.tsx", "**/*.js"", "**/*.jsx", "")]
   let content = fs.readFileSync(file, "utf8")
-        // Fix missing const/let/var
+        // Fix missing ""const/let/var""
         content = content.replace(/^(\s*)(\w+)\s*=\s*\[/gm, "$1const $2 = ["]
         content = content.replace(/^(\s*)(\w+)\s*=\s*([^]+)$/gm, "$1$2 = $3;"
   fs.writeFileSync(file, content, "utf8")
@@ -164,12 +71,12 @@ const { execSync } = require("child_process")
     fixed = fixed.replace(/console\.log\("([^"]*)\"\);/g, "console.log("$1");"
     fixed = fixed.replace(/console\.log\("([^"]*)"\);/g, console.log("$1");"
     fixed = fixed.replace(/console\.log\("([^]*)\);/g, "console.log("$1");"
-    fixed = fixed.replace(/"([^"]*)\"\);/g, $1");"
+    fixed = fixed.replace(/"([^"]*)\"\);/g, ""$1");"
     fixed = fixed.replace(/"([^"]*)"\);/g, "$1"
     fixed = fixed.replace(/"([^"]*)\);/g, "$1");"
     fixed = fixed.replace(/([^}])\n/g, "$1;\n"
-    fixed = fixed.replace(/"/g, )
-    fixed = fixed.replace(//g, ")
+    fixed = fixed.replace(/"/g, "")
+    fixed = fixed.replace(//g, """)
       .replace(/\*\*/g, ".*")
       .replace(/\*/g, "[^/]*")
       .replace(/\./g, "\\.")
@@ -196,6 +103,20 @@ const { execSync } = require("child_process")
     const reportFile = path.join(this.reportsDir, `error-fixer-report-${timestamp.replace(/[:.]/g, "-"`})
     this.log(` Report "generated"`)
   this.log(" Starting Error Fixer Automation")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+        if (content.includes("<Helmet>") && !content.includes("<>")"
+"
+  content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       this.log(")
       this.log(")
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

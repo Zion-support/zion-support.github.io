@@ -1,8 +1,14 @@
 <<<<<<< HEAD
-#!/usr/bin/env node;
+<<<<<<< HEAD
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -11,34 +17,14 @@ class AutomationOrchestrator {
 }
   constructor() {
     this.results = {
-<<<<<<< HEAD
-      "timestamp": new Date().toISOString(),""
-      "health": {},""
-      "security": {},""
-      "performance": {},""
-      "linting": {},""
-      "testing": {},""
-      "build": {},""
-=======
-      "timestamp": new Date().toISOString(),
-      "health": {},
-      "security": {},
-      "performance": {},
-      "linting": {},
-      "testing": {},
-      "build": {},
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       "deployment": {}"
     };
   async runHealthChecks() {
     try {
   // TODO: Implement
 }"
-<<<<<<< HEAD
-      execSync('npm run "automation": health', { "stdio": 'pipe' });
-=======
-      execSync('npm run "automation": health, { "stdio": pipe});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.results.health.status = 'passed';
       this.results.health.message = 'All health checks passed';
     } catch (error) {
@@ -46,127 +32,41 @@ class AutomationOrchestrator {
       this.results.health.error = error.message;
   async runSecurityScan() {
   // TODO: Implement
-<<<<<<< HEAD
-      execSync('npm run "automation": security', { "stdio": 'pipe' });
-      this.results.security.status = 'passed';
-      this.results.security.message = 'Security scan completed';
-=======
-}
-      execSync('npm run "automation": security, { "stdio": pipe});
-      this.results.security.status = 'passed';
-      this.results.security.message = 'Security scan completed';
-    } catch (error) {
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.results.security.status = 'failed';
       this.results.security.error = error.message;
   async runPerformanceOptimization() {
   // TODO: Implement
-<<<<<<< HEAD
-      execSync('npm run "automation": performance', { "stdio": 'pipe' });
-      this.results.performance.status = 'passed';
-      this.results.performance.message = 'Performance optimization completed';
-=======
-}
-      execSync('npm run "automation": performance, { "stdio": pipe});
-      this.results.performance.status = 'passed';
-      this.results.performance.message = 'Performance optimization completed';
-    } catch (error) {
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.results.performance.status = 'failed';
       this.results.performance.error = error.message;
   async runLinting() {
   // TODO: Implement
-<<<<<<< HEAD
-      execSync('npm run "lint": fix', { "stdio": 'pipe' });
-      this.results.linting.status = 'passed';
-      this.results.linting.message = 'Linting completed';
-=======
-}
-      execSync('npm run "lint": fix, { "stdio": pipe});
-      this.results.linting.status = 'passed';
-      this.results.linting.message = 'Linting completed';
-    } catch (error) {
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.results.linting.status = 'failed';
       this.results.linting.error = error.message;
   async runTypeChecking() {
   // TODO: Implement
-<<<<<<< HEAD
-      execSync('npm run type-check', { "stdio": 'pipe' });
-      this.results.typeChecking = { "status": 'passed', "message": 'Type checking completed' };
-      this.results.typeChecking = { "status": 'failed', "error": error.message };"
-=======
-}
-      execSync('npm run type-check, { "stdio": pipe});
-      this.results.typeChecking = { "status": passed, "message": Type checking completed};
-    } catch (error) {
-      this.results.typeChecking = { "status": failed, "error": error.message };"
-    }
-  }
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async runBuild() {
   // TODO: Implement
-<<<<<<< HEAD
-      execSync('npm run build', { "stdio": 'pipe' });
-      this.results.build.status = 'passed';
-      this.results.build.message = 'Build completed successfully';
-=======
-}"
-      execSync('npm run build, { "stdio": pipe});
-      this.results.build.status = 'passed';
-      this.results.build.message = 'Build completed successfully';
-    } catch (error) {
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.results.build.status = 'failed';
       this.results.build.error = error.message;
   async runTests() {
   // TODO: Implement
-<<<<<<< HEAD
-      execSync('npm run "test": smoke', { "stdio": 'pipe' });
-      this.results.testing.status = 'passed';
-      this.results.testing.message = 'Tests passed';
-=======
-}
-      execSync('npm run "test": smoke, { "stdio": pipe});
-      this.results.testing.status = 'passed';
-      this.results.testing.message = 'Tests passed';
-    } catch (error) {
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.results.testing.status = 'failed';
       this.results.testing.error = error.message;
   async optimizeDependencies() {
   // TODO: Implement
-<<<<<<< HEAD
-      // Remove unused dependencies;
-      execSync('npm prune', { "stdio": 'pipe' });
-      // Update dependencies;
-      execSync('npm update', { "stdio": 'pipe' });
-      this.results.dependencies = { "status": 'optimized', "message": 'Dependencies optimized' };
-      this.results.dependencies = { "status": 'failed', "error": error.message };"
-=======
-}
-      // Remove unused dependencies;
-      execSync('npm prune, { "stdio": pipe});
-      // Update dependencies;
-      execSync('npm update, { "stdio": pipe});
-      this.results.dependencies = { "status": optimized, "message": Dependencies optimized};
-    } catch (error) {
-      this.results.dependencies = { "status": failed, "error": error.message };"
-    }
-  }
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async generateReports() {
     const report = {"
       "timestamp": this.results.timestamp,
       "summary": {"
         totalChecks: Object.keys(this.results).length - 1, // Exclude timestamp;"
-<<<<<<< HEAD
-        "passed": Object.values(this.results).filter(r => r.status === 'passed').length,
-        "failed": Object.values(this.results).filter(r => r.status === 'failed').length;
-=======
-        "passed": Object.values(this.results).filter(r => r.status ===passed').length,
-        "failed": Object.values(this.results).filter(r => r.status ===failed').length;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       },
       "details": this.results;"
     const reportPath = `automation-report-${Date.now()}.json`;
@@ -185,51 +85,44 @@ class AutomationOrchestrator {
 // Run the orchestrator;
 const orchestrator = new AutomationOrchestrator();
 <<<<<<< HEAD
-orchestrator.runAll().catch(console.error);"`;
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Starting Enhanced Automation Orchestrator.");class AutomationOrchestrator { constructor() { this.results = { timestamp: new Date().toISOString()," health: {}," security: {}," performance: {}," linting: {}," testing: {}," build: {}," deployment: {} }; } async runHealthChecks() {" console.log(" Running Health Checks."); try {"" execSync("npm run automation: health", { stdio: "pipe" });" this.results.health.status = "passed";" this.results.health.message = "All health checks passed"; } catch (error) {" this.results.health.status = "failed"; this.results.health.error = error.message; } } async runSecurityScan() {" console.log(" Running Security Scan."); try {"" execSync("npm run automation: security", { stdio: "pipe" });" this.results.security.status = "passed";" this.results.security.message = "Security scan completed"; } catch (error) {" this.results.security.status = "failed"; this.results.security.error = error.message; } } async runPerformanceOptimization() {" console.log(" Running Performance Optimization."); try {"" execSync("npm run automation: performance", { stdio: "pipe" });" this.results.performance.status = "passed";" this.results.performance.message = "Performance optimization completed"; } catch (error) {" this.results.performance.status = "failed"; this.results.performance.error = error.message; } } async runLinting() {" console.log(" Running Linting."); try {"" execSync("npm run lint: fix", { stdio: "pipe" });" this.results.linting.status = "passed";" this.results.linting.message = "Linting completed"; } catch (error) {" this.results.linting.status = "failed"; this.results.linting.error = error.message; } } async runTypeChecking() {" console.log(" Running Type Checking."); try {"" execSync("npm run type-check", { stdio: "pipe" });"" this.results.typeChecking = { status: "passed", message: "Type checking completed" }; } catch (error) {"" this.results.typeChecking = { status: "failed", error: error.message }; } } async runBuild() {" console.log(" Running Build."); try {"" execSync("npm run build", { stdio: "pipe" });" this.results.build.status = "passed";" this.results.build.message = "Build completed successfully"; } catch (error) {" this.results.build.status = "failed"; this.results.build.error = error.message; } } async runTests() {" console.log(" Running Tests."); try {"" execSync("npm run test: smoke", { stdio: "pipe" });" this.results.testing.status = "passed";" this.results.testing.message = "Tests passed"; } catch (error) {" this.results.testing.status = "failed"; this.results.testing.error = error.message; } } async optimizeDependencies() {" console.log(" Optimizing Dependencies."); try { / Remove unused dependencies"" execSync("npm prune", { stdio: "pipe" }); / Update dependencies"" execSync("npm update", { stdio: "pipe" }); "" this.results.dependencies = { status: "optimized", message: "Dependencies optimized" }; } catch (error) {"" this.results.dependencies = { status: "failed", error: error.message }; } } async generateReports() {" console.log(" Generating Reports."); const report = {" timestamp: this.results.timestamp," summary: { totalChecks: Object.keys(this.results).length - 1, / Exclude timestamp"" passed: Object.values(this.results).filter(r => r.status === "passed").length,"" failed: Object.values(this.results).filter(r => r.status === "failed").length }," details: this.results }; const reportPath = `automation-report-${Date.now()}.json`; fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)); "` console.log(` Report saved to: ${reportPath}`); return report; } async runAll() {" console.log(" Starting Comprehensive Automation Suite.\n"); await this.runHealthChecks(); await this.runSecurityScan(); await this.runPerformanceOptimization(); await this.runLinting(); await this.runTypeChecking(); await this.optimizeDependencies(); await this.runBuild(); await this.runTests(); const report = await this.generateReports(); " console.log("\n Automation Suite Completed!");"` console.log(` Summary: ${report.summary.passed}/${report.summary.totalChecks} checks passed`); return report; }}/ Run the orchestratorconst orchestrator = new AutomationOrchestrator();orchestrator.runAll().catch(console.error);""`"`"
-#!/usr/bin/env node;"
+orchestrator.runAll().catch(console.error);
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Starting Enhanced Automation Orchestrator.");class AutomationOrchestrator { constructor() { this.results = { timestamp: new Date().toISOString()," health: {}," security: {}," performance: {}," linting: {}," testing: {}," build: {}," deployment: {} }; } async runHealthChecks() {" console.log(" Running Health Checks."); try {"" execSync("npm run automation: health", { stdio: "pipe" });" this.results.health.status = "passed";" this.results.health.message = "All health checks passed"; } catch (error) {" this.results.health.status = "failed"; this.results.health.error = error.message; } } async runSecurityScan() {" console.log(" Running Security Scan."); try {"" execSync("npm run automation: security", { stdio: "pipe" });" this.results.security.status = "passed";" this.results.security.message = "Security scan completed"; } catch (error) {" this.results.security.status = "failed"; this.results.security.error = error.message; } } async runPerformanceOptimization() {" console.log(" Running Performance Optimization."); try {"" execSync("npm run automation: performance", { stdio: "pipe" });" this.results.performance.status = "passed";" this.results.performance.message = "Performance optimization completed"; } catch (error) {" this.results.performance.status = "failed"; this.results.performance.error = error.message; } } async runLinting() {" console.log(" Running Linting."); try {"" execSync("npm run lint: fix", { stdio: "pipe" });" this.results.linting.status = "passed";" this.results.linting.message = "Linting completed"; } catch (error) {" this.results.linting.status = "failed"; this.results.linting.error = error.message; } } async runTypeChecking() {" console.log(" Running Type Checking."); try {"" execSync("npm run type-check", { stdio: "pipe" });"" this.results.typeChecking = { status: "passed", message: "Type checking completed" }; } catch (error) {"" this.results.typeChecking = { status: "failed", error: error.message }; } } async runBuild() {" console.log(" Running Build."); try {"" execSync("npm run build", { stdio: "pipe" });" this.results.build.status = "passed";" this.results.build.message = "Build completed successfully"; } catch (error) {" this.results.build.status = "failed"; this.results.build.error = error.message; } } async runTests() {" console.log(" Running Tests."); try {"" execSync("npm run test: smoke", { stdio: "pipe" });" this.results.testing.status = "passed";" this.results.testing.message = "Tests passed"; } catch (error) {" this.results.testing.status = "failed"; this.results.testing.error = error.message; } } async optimizeDependencies() {" console.log(" Optimizing Dependencies."); try { / Remove unused dependencies"" execSync("npm prune", { stdio: "pipe" }); / Update dependencies"" execSync("npm update", { stdio: "pipe" }); "" this.results.dependencies = { status: "optimized", message: "Dependencies optimized" }; } catch (error) {"" this.results.dependencies = { status: "failed", error: error.message }; } } async generateReports() {" console.log(" Generating Reports."); const report = {" timestamp: this.results.timestamp," summary: { totalChecks: Object.keys(this.results).length - 1, / Exclude timestamp"" passed: Object.values(this.results).filter(r => r.status === "passed").length,"" failed: Object.values(this.results).filter(r => r.status === "failed").length }," details: this.results }; const reportPath = `automation-report-${Date.now()}.json`; fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)); "` console.log(` Report saved to: ${reportPath}`); return report; } async runAll() {" console.log(" Starting Comprehensive Automation Suite.\n"); await this.runHealthChecks(); await this.runSecurityScan(); await this.runPerformanceOptimization(); await this.runLinting(); await this.runTypeChecking(); await this.optimizeDependencies(); await this.runBuild(); await this.runTests(); const report = await this.generateReports(); " console.log("\n Automation Suite Completed!");"` console.log(` Summary: ${report.summary.passed}/${report.summary.totalChecks} checks passed`); return report; }}/ Run the orchestratorconst orchestrator = new AutomationOrchestrator();orchestrator.runAll().catch(console.error);""`"`
+<<<<<<< HEAD
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Starting Enhanced Automation Orchestrator...')
     console.log('� Running Health Checks...')
-      execSync('npm run "automation": health', { "stdio"})""
-      execSync('npm run "automation": security', { "stdio"})""
-      execSync('npm run "automation": performance', { "stdio"})""
-      execSync('npm run "lint": fix', { "stdio"})""
-      execSync('npm run type-check', { "stdio"})""
-      this.results.typeChecking = { "status": 'passed', "message"}""
-      this.results.typeChecking = { "status"}""
-      execSync('npm run build', { "stdio"})""
-      execSync('npm run "test": smoke', { "stdio"})""
-      execSync('npm prune', { "stdio"})""
-      execSync('npm update', { "stdio"})""
-      this.results.dependencies = { "status": 'optimized', "message"}""
-      this.results.dependencies = { "status"}""
-        "passed"""
-        "failed"""`;
-=======
-orchestrator.runAll().catch(console.error);"
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Starting Enhanced Automation Orchestrator.");class AutomationOrchestrator { constructor() { this.results = { timestamp: new Date().toISOString()," health: {}," security: {}," performance: {}," linting: {}," testing: {}," build: {}," deployment: {} }; } async runHealthChecks() {" console.log(" Running Health Checks."); try { execSync("npm run automation: health", { stdio: "pipe" });" this.results.health.status = "passed";" this.results.health.message = "All health checks passed"; } catch (error) {" this.results.health.status = "failed"; this.results.health.error = error.message; } } async runSecurityScan() {" console.log(" Running Security Scan."); try { execSync("npm run automation: security", { stdio: "pipe" });" this.results.security.status = "passed";" this.results.security.message = "Security scan completed"; } catch (error) {" this.results.security.status = "failed"; this.results.security.error = error.message; } } async runPerformanceOptimization() {" console.log(" Running Performance Optimization."); try { execSync("npm run automation: performance", { stdio: "pipe" });" this.results.performance.status = "passed";" this.results.performance.message = "Performance optimization completed"; } catch (error) {" this.results.performance.status = "failed"; this.results.performance.error = error.message; } } async runLinting() {" console.log(" Running Linting."); try { execSync("npm run lint: fix", { stdio: "pipe" });" this.results.linting.status = "passed";" this.results.linting.message = "Linting completed"; } catch (error) {" this.results.linting.status = "failed"; this.results.linting.error = error.message; } } async runTypeChecking() {" console.log(" Running Type Checking."); try { execSync("npm run type-check", { stdio: "pipe" }); this.results.typeChecking = { status: "passed", message: "Type checking completed" }; } catch (error) { this.results.typeChecking = { status: "failed", error: error.message }; } } async runBuild() {" console.log(" Running Build."); try { execSync("npm run build", { stdio: "pipe" });" this.results.build.status = "passed";" this.results.build.message = "Build completed successfully"; } catch (error) {" this.results.build.status = "failed"; this.results.build.error = error.message; } } async runTests() {" console.log(" Running Tests."); try { execSync("npm run test: smoke", { stdio: "pipe" });" this.results.testing.status = "passed";" this.results.testing.message = "Tests passed"; } catch (error) {" this.results.testing.status = "failed"; this.results.testing.error = error.message; } } async optimizeDependencies() {" console.log(" Optimizing Dependencies."); try { / Remove unused dependencies execSync("npm prune", { stdio: "pipe" }); / Update dependencies execSync("npm update", { stdio: "pipe" });  this.results.dependencies = { status: "optimized", message: "Dependencies optimized" }; } catch (error) { this.results.dependencies = { status: "failed", error: error.message }; } } async generateReports() {" console.log(" Generating Reports."); const report = {" timestamp: this.results.timestamp," summary: { totalChecks: Object.keys(this.results).length - 1, / Exclude timestamp passed: Object.values(this.results).filter(r => r.status === "passed").length, failed: Object.values(this.results).filter(r => r.status === "failed").length }," details: this.results }; const reportPath = `automation-report-${Date.now()}.json`; fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)); "` console.log(` Report saved to: ${reportPath}); return report; } async runAll() {" console.log(" Starting Comprehensive Automation Suite.\n"); await this.runHealthChecks(); await this.runSecurityScan(); await this.runPerformanceOptimization(); await this.runLinting(); await this.runTypeChecking(); await this.optimizeDependencies(); await this.runBuild(); await this.runTests(); const report = await this.generateReports(); " console.log("\n Automation Suite Completed!");"` console.log(` Summary: ${report.summary.passed}/${report.summary.totalChecks} checks passed`); return report; }}/ Run the orchestratorconst orchestrator = new AutomationOrchestrator();orchestrator.runAll().catch(console.error);`"`"
-#!/usr/bin/env node"
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-// console.log(' Starting Enhanced Automation Orchestrator...)
-    console.log('� Running Health Checks...)
-      execSync('npm run "automation": health, { "stdio"})
-      execSync('npm run "automation": security, { "stdio"})
-      execSync('npm run "automation": performance, { "stdio"})
-      execSync('npm run "lint": fix, { "stdio"})
-      execSync('npm run type-check, { "stdio"})
-      this.results.typeChecking = { "status": passed, "message"}
+      execSync('npm run "automation": health', { "stdio"})
+      execSync('npm run "automation": security', { "stdio"})
+      execSync('npm run "automation": performance', { "stdio"})
+      execSync('npm run "lint": fix', { "stdio"})
+      execSync('npm run type-check', { "stdio"})
+      this.results.typeChecking = { "status": 'passed', "message"}
       this.results.typeChecking = { "status"}
-      execSync('npm run build, { "stdio"})
-      execSync('npm run "test": smoke, { "stdio"})
-      execSync('npm prune, { "stdio"})
-      execSync('npm update, { "stdio"})
-      this.results.dependencies = { "status": optimized, "message"}
+      execSync('npm run build', { "stdio"})
+      execSync('npm run "test": smoke', { "stdio"})
+      execSync('npm prune', { "stdio"})
+      execSync('npm update', { "stdio"})
+      this.results.dependencies = { "status": 'optimized', "message"}
       this.results.dependencies = { "status"}
         "passed"
+<<<<<<< HEAD
+
         "failed"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+        "failed"
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+        "failed"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

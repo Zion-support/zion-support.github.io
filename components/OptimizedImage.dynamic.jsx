@@ -1,8 +1,7 @@
 import React from 'react';
-
-pr-12243
+export default OptimizedImage.dynamic;
 ;
-const OptimizedImage.dynamic = () => {
+const OptimizedImage.dynamic = () => {}
   return (
     <div data - testid="optimizedimage.dynamic">;
       <h1 > OptimizedImage.dynamic</h1>;
@@ -13,6 +12,8 @@ const OptimizedImage.dynamic = () => ;
     </div>
   );
 }
+;
 
 pr-12243
 export default OptimizedImage.dynamic;
+

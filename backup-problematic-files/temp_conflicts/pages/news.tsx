@@ -26,11 +26,115 @@ import React from 'react';
       <div className="min-h-screen">;"
 </div>
         <Head>;
+<<<<<<< HEAD
+          <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>;
+          <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />;
+        </Head>;
+;
+      id:1,;
+      title:"Zion Tech Group Launches Revolutionary Quantum AI Platform",;
+      excerpt:"Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.",;
+      category:"Product Launch",;
+      author:"Zion Tech Group Team",;
+      date:"2025-01-15",;
+      readTime:"5 min read",;
+      image:"/images/news/quantum-ai-launch.jpg",;
+      tags:["Quantum Computing", "AI", "Product Launch"];
+    },;
+    {;
+      id:2,;
+      title:"New Partnership with Global Healthcare Consortium",;
+      excerpt:"We're excited to announce our strategic partnership with the Global Healthcare Consortium to revolutionize medical diagnostics using our AI-powered healthcare solutions.",;
+      category:"Partnership",;
+      author:"Business Development",;
+      date:"2025-01-12",;
+      readTime:"4 min read",;
+      image:"/images/news/healthcare-partnership.jpg",;
+      tags:["Healthcare", "Partnership", "AI"];
+    },;
+    {;
+      id:3,;
+      title:"Breakthrough in Autonomous Cybersecurity Systems",;
+      excerpt:"Our research team has achieved a major breakthrough in autonomous cybersecurity, developing systems that can detect and respond to threats in real-time without human intervention.",;
+      category:"Research",;
+      author:"Research Team",;
+      date:"2025-01-10",;
+      readTime:"6 min read",;
+      image:"/images/news/cybersecurity-breakthrough.jpg",;
+      tags:["Cybersecurity", "Research", "Autonomous Systems"];
+    },;
+    {;
+      id:4,;
+      title:"Space Technology Division Expands Operations",;
+      excerpt:"Our space technology division is expanding operations to support growing demand for satellite operations, space resource mining, and orbital analytics services.",;
+      category:"Company News",;
+      author:"Space Technology Team",;
+      date:"2025-01-08",;
+      readTime:"3 min read",;
+      image:"/images/news/space-expansion.jpg",;
+      tags:["Space Technology", "Expansion", "Satellites"];
+    },;
+    {;
+      id:5,;
+      title:"AI Ethics and Governance Framework Released",;
+      excerpt:"We've published our comprehensive AI ethics and governance framework, setting new standards for responsible AI development and deployment in enterprise environments.",;
+      category:"Policy",;
+      author:"AI Ethics Team",;
+      date:"2025-01-05",;
+      readTime:"7 min read",;
+      image:"/images/news/ai-ethics-framework.jpg",;
+      tags:["AI Ethics", "Governance", "Policy"];
+    },;
+    {;
+      id:6,;
+      title:"Financial Services Innovation Award Winner",;
+      excerpt:"Zion Tech Group has been recognized as the winner of the Financial Services Innovation Award for our quantum financial modeling and risk assessment platforms.",;
+      category:"Awards",;
+      author:"Marketing Team",;
+      date:"2025-01-03",;
+      readTime:"3 min read",;
+      image:"/images/news/financial-award.jpg",;
+      tags:["Awards", "Financial Services", "Quantum Computing"];
+export default function News() {;
+  const featuredNews = [;
+    {;
+      id:1,;
+      title:'Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform',;
+      excerpt:'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptography, optimization, and scientific research.',;
+      category:'Company News',;
+      author:'Dr. Sarah Chen',;
+      date:'2024-01-15',;
+      readTime:'5 min read',;
+      image:'/api/placeholder/600/400',;
+      tags:['AIQuantum Computing', 'Innovation'],;
+import Head from 'next/head',;
+;
+export default function NewsPage() {;
+  const newsArticles = [;
+    {;
+      id:1,;
+      title:"Zion Tech Group Launches New AI-Powered Automation Platform",;
+      excerpt:"Our latest innovation brings autonomous decision-making capabilities to enterprise environments, revolutionizing how businesses operate.",;
+      date:"2025-01-19",;
+      category:"Company News",;
+      author:"Zion Tech Group",;
+      readTime:"3 min read",;
+<<<<<<< HEAD
+      image:"🚀",;
+=======
+      image:"",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      featured:true;
+    },;
+    {;
+      id:2,;
+=======
 
           <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>;"
           <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />;"
 </meta>
         ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </motion.div>;
           </div>;
         </section>;"
@@ -243,6 +347,36 @@ export default function News() {;
       date: '2023-12-28';,;
       tags: ['Micro-SaaSStartups';, 'Software Industry'];
   const upcomingEvents = [;
+<<<<<<< HEAD
+    {;
+      id:1,;
+      title:'AI Consciousness Summit 2024',;
+      type:'Conference',;
+      date:'2024-02-15',;
+      time:'9:00 AM - 6:00 PM',;
+<<<<<<< HEAD
+      location:'San Francisco, CA',;
+      description:'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',;
+=======
+      location:'San Francisco, CA',,
+  description:'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      registration:'https://ziontechgroup.com/events/ai-consciousness-summit-2024';
+    },;
+    {;
+      id:2,;
+      title:'Quantum Computing Workshop',;
+      type:'Workshop',;
+      date:'2024-02-22',;
+      time:'1:00 PM - 5:00 PM',;
+<<<<<<< HEAD
+      location:'Virtual',;
+      description:'Hands-on workshop covering quantum computing fundamentals and practical applications.',;
+=======
+      location:'Virtual',,
+  description:'Hands-on workshop covering quantum computing fundamentals and practical applications.',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
       title: 'AI Consciousness Summit 2024';,;
       type: 'Conference';,;
       date: '2024-02-15';,;
@@ -256,6 +390,7 @@ export default function News() {;
       time: '1:00 PM - 5:00 PM';,;
       location: 'Virtual';,,
   description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.';,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       registration:'https://ziontechgroup.com/events/quantum-workshop';
     }]
   const filteredNews = [...featuredNews, ...latestNews, ...industryInsights].filter(article => {;
@@ -468,6 +603,246 @@ export default function News() {;
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;"
                   key={news.title}
+<<<<<<< HEAD
+                  initial={{ opacity:0, y:20 }}
+                  whileInView={{ opacity:1, y:0 }}
+                  transition={{ duration:0.6, delay:index * 0.1 }}
+                  viewport={{ once:true }}
+                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group";
+                >;
+                  <div className="flex items-center gap-2 mb-3">;
+                    <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">;
+                      {news.category}
+                    </span>;
+                    <span className="text-gray-400 text-sm">{news.readTime}</span>;
+                  </div>;
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">;
+                    {news.title}
+                  </h3>;
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
+                    {news.excerpt}
+                  </p>;
+                  <div className="flex items-center justify-between">;
+                    <div className="flex items-center gap-2">;
+                      <User className="w-4 h-4 text-gray-400" />;
+                      <span className="text-gray-400 text-sm">{news.author}</span>;
+                    </div>;
+                    <div className="flex items-center gap-2">;
+                      <Calendar className="w-4 h-4 text-gray-400" />;
+                      <span className="text-gray-400 text-sm">{news.date}</span>;
+                    </div>;
+                  </div>;
+                </motion.article>;
+              ))}
+            </div>;
+          </div>;
+        </section>;
+;
+        {/* Media Contact */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-4xl mx-auto text-center">;
+            <motion.div;
+              initial={{ opacity:0, y:30 }}
+              whileInView={{ opacity:1, y:0 }}
+              transition={{ duration:0.8 }}
+              viewport={{ once:true }}
+            >;
+              <h2 className="text-4xl font-bold text-white mb-4">;
+                Media Inquiries;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8">;
+                For press inquiries, media interviews, or additional information, ;
+                please contact our communications team.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <a;
+                  href="/contact";
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105";
+                >;
+                  Contact Media Team;
+                  <Mic className="ml-2 w-5 h-5" />;
+                </a>;
+                <a;
+                  href="/press";
+                  className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300";
+                >;
+                  Press Kit;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <motion.div;
+            initial={{ opacity:0, y:20 }}
+            whileInView={{ opacity:1, y:0 }}
+            transition={{ duration:0.8 }}
+            viewport={{ once:true }}
+          >;
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">;
+              Ready to Stay Informed?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8">;
+              Explore our latest research, industry insights, and technology breakthroughs ;
+              that are shaping the future of AI and quantum computing.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <Link ;
+                href="/blog";
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105";
+              >;
+                Explore Our Blog;
+                <ArrowRight className="w-5 h-5 ml-2" />;
+              </Link>;
+              <Link ;
+                href="/contact";
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300";
+              >;
+                Contact Our Team;
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+      {/* Call to Action */}
+      <section className="py-20">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
+          <motion.div ;
+            initial={{ opacity:0, y:20 }}
+            whileInView={{ opacity:1, y:0 }}
+            transition={{ duration:0.8 }}
+            viewport={{ once:true }}
+          >;
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">;
+              Get in Touch;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Have questions about our news or want to learn more about our latest developments? Contact our team.;
+            </p>;
+            <div className="flex flex-wrap justify-center gap-4">;
+              <a href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">;
+                <span>Contact Us</span>;
+                <ArrowRight className="w-5 h-5" />;
+              </a>;
+              <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">;
+                About Zion Tech Group;
+              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+      title:"Partnership with TechCorp Announced for Cloud Infrastructure",;
+      excerpt:"Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.",;
+      date:"2025-01-18",;
+      category:"Partnerships",;
+      author:"Sarah Chen",;
+      readTime:"2 min read",;
+<<<<<<< HEAD
+      image:"🤝";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    },;
+    {;
+      id:3,;
+      title:"AI Ethics Guidelines Released for Responsible Development",;
+      excerpt:"Comprehensive framework ensuring our AI solutions are developed with transparency, fairness, and societal benefit in mind.",;
+      date:"2025-01-17",;
+      category:"Innovation",;
+      author:"Dr. Emily Watson",;
+      readTime:"4 min read",;
+<<<<<<< HEAD
+      image:"⚖️";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    },;
+    {;
+      id:4,;
+      title:"New Office Opening in Singapore",;
+      excerpt:"Expanding our global presence to better serve clients in the Asia-Pacific region with local expertise and support.",;
+      date:"2025-01-16",;
+      category:"Company News",;
+      author:"Marcus Rodriguez",;
+      readTime:"2 min read",;
+<<<<<<< HEAD
+      image:"🌏";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    },;
+    {;
+      id:5,;
+      title:"Machine Learning Model Achieves 99.7% Accuracy",;
+      excerpt:"Breakthrough in predictive analytics demonstrates our commitment to pushing the boundaries of AI window.window.window.performance.",;
+      date:"2025-01-15",;
+      category:"Technology",;
+      author:"Dr. James Wilson",;
+      readTime:"5 min read",;
+<<<<<<< HEAD
+      image:"🧠";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    },;
+    {;
+      id:6,;
+      title:"Annual Sustainability Report Published",;
+      excerpt:"Comprehensive overview of our environmental impact and commitment to sustainable technology development.",;
+      date:"2025-01-14",;
+      category:"Sustainability",;
+      author:"Lisa Park",;
+      readTime:"6 min read",;
+<<<<<<< HEAD
+      image:"🌱";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    },;
+    {;
+      id:7,;
+      title:"Customer Success Story:Retail Automation",;
+      excerpt:"How we helped a major retailer increase efficiency by 300% through intelligent automation systems.",;
+      date:"2025-01-13",;
+      category:"Case Studies",;
+      author:"Alex Thompson",;
+      readTime:"4 min read",;
+<<<<<<< HEAD
+      image:"📊";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    },;
+    {;
+      id:8,;
+      title:"New Research Paper on Autonomous Systems",;
+      excerpt:"Published in leading AI journal, our research explores the future of self-managing technology infrastructure.",;
+      date:"2025-01-12",;
+      category:"Research",;
+      author:"Prof. Maria Garcia",;
+      readTime:"7 min read",;
+<<<<<<< HEAD
+      image:"📚";
+=======
+      image:"";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    }
+  ],;
+;
+  const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"],;
+;
+  return (;
+=======
                     <span className="text-gray-400 text-sm">{news.readTime}</span>;"
                       <span className="text-gray-400 text-sm">{news.author}</span>;"
                       <span className="text-gray-400 text-sm">{news.date}</span>;"
@@ -491,6 +866,7 @@ export default function News() {;
                 <span>Contact Us</span>;"
 
               <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>;
 
         <title>News | Zion Tech Group - Latest Updates & Insights</title>;"
@@ -520,8 +896,18 @@ export default function News() {;
                     <p className="text-white/80 mb-4 text-lg leading-relaxed">;"
                     <div className="flex items-center gap-4 text-sm text-white/60 mb-4">;"
                       <span>By {article.author}</span>;
+<<<<<<< HEAD
+                      <span>•</span>;
+                      <span>{article.date}</span>;
+                      <span>•</span>;
+=======
                       <span></span>;
                       <span>{article.date}</span>;
+<<<<<<< HEAD
+                      <span></span>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <span>{article.readTime}</span>;
                     <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">;"
                 <article key={article.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105">;"
@@ -543,4 +929,20 @@ export default function News() {;
         </main>;
     </>;
   );
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+:temp_conflicts/pages/news.tsx
+;
+}
+}
+:backup-problematic-files/temp_conflicts/pages/news.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

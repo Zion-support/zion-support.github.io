@@ -1,23 +1,24 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 const path = require('path');
 function improveSEO() {}
   try {}
-<<<<<<< HEAD
-    const pagesDir = path.join(process.cwd(), 'pages;';);
-    const componentsDir = path.join(process.cwd(), 'components;';);
-    // Add meta tags to pages;
-    const metaTemplate = 
-import Head from 'next/hea;d;';
-=======
-    const pagesDir = path.join(process.cwd(),pages;;);
-    const componentsDir = path.join(process.cwd(),components;;);
-    // Add meta tags to pages;
-    const metaTemplate = '
-import Head from 'next/hea;d;;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 export default function Page() {}
   return (;)
     <>
@@ -27,30 +28,12 @@ export default function Page() {}
         <meta name="description" content="Leading provider of comprehensive IT services, cloud solutions, and digital transformation services." />"
 </meta>"
         <meta name="keywords" content="IT services, cloud solutions, digital transformation, cybersecurity, software development" />"
-<<<<<<< HEAD
-        <meta property=""og": title" content="Zion Tech Group - Professional IT Services" />"
-        <meta property="og: description" content="Leading provider of comprehensive IT services, cloud solutions, and digital transformation services." />"
-        <meta property=""og": type" content="website" />"
-=======
-</meta>"
-        <meta property=og": title" content="Zion Tech Group - Professional IT Services" />"
-</meta>"
-        <meta property="og: description" content="Leading provider of comprehensive IT services, cloud solutions, and digital transformation services." />"
-</meta>"
-        <meta property=og": type" content="website" />"
-</meta>"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         <meta name="twitter: card" content="summary_large_image" />"
         <meta name="twitter: title" content="Zion Tech Group - Professional IT Services" />"
         <meta name="twitter: description" content="Leading provider of comprehensive IT services, cloud solutions, and digital transformation services." />"
-<<<<<<< HEAD
-        <link rel="canonical" href=""https": //ziontechgroup.com" />"
-=======
-</meta>"
-        <link rel="canonical" href=https": //ziontechgroup.com" />"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 </link>
-      
     </>
   )};"
       ";"
@@ -75,26 +58,41 @@ export default function Page() {}
     <priority>0.7</priority>
   </url>`;
 </urlset;>;`;`"
+
 <<<<<<< HEAD
-      fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
-      // Generate robots.txt;
-      const robotsContent = "User-"agent": *"
-Allow: /,"
-  Sitemap: https://ziontechgroup.com/sitemap.xml;";""
+Sitemap: https://ziontechgroup.com/sitemap.xml;";
+      
       fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      
+      
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.log('SEO improvements completed')} catch (error) {}
       console.error('SEO improvement "failed": ', error.message)};
-=======
-      fs.writeFileSync(path.join(process.cwd(),public,sitemap.xml'), sitemapContent);
-      // Generate robots.txt;
-      const robotsContent = "User-"agent": *"
-Allow: /,"
-  Sitemap: https://ziontechgroup.com/sitemap.xml;";
-      fs.writeFileSync(path.join(process.cwd(),public,robots.txt'), robotsContent);
-      console.log('SEO improvements completed')} catch (error) {}
-      console.error('SEO improvement "failed": , error.message)};
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   };
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
 improveSEO();
       
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  };
+improveSEO();
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

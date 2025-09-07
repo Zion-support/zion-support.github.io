@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-#!/usr/bin/env node
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 class ErrorPreventionOrchestrator {}
   constructor() {}
     this.processes = new Map();
-<<<<<<< HEAD
-    this.logFile = path.join(__dirname, '..', '..', 'logs', 'error-prevention.log');
-=======
-    this.logFile = path.join(__dirname,..,..,logs,error-prevention.log');
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     this.ensureLogDirectory()};
   ensureLogDirectory() {}
     const logDir = path.dirname(this.logFile;);
@@ -28,19 +20,23 @@ class ErrorPreventionOrchestrator {}
     const logMessage = `[${timestamp}] ${message}\;n;`;`
     console.log(logMessage.trim(););
     fs.appendFileSync(this.logFile, logMessage)};
-  async start() {}"
 <<<<<<< HEAD
+  async start() {}
     this.log('Starting Error Prevention System...');
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const scripts = ['linter-watcher.cjs',]
       'build-monitor.cjs',
       'security-auditor.cjs',
       'dependency-monitor.cjs',
-      'type-checker.cjs
+      'type-checker.cjs'
 =======
-    this.log('Starting Error Prevention System...);
-    const scripts = [linter-watcher.cjs]
-      'build-monitor.cjs,security-auditor.cjs,dependency-monitor.cjs,type-checker.cjs
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+  async start() {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ];
 
     for (const script of scripts) {}
@@ -48,74 +44,48 @@ class ErrorPreventionOrchestrator {}
     this.log('Error Prevention System started successfully')};
   async startScript(scriptName) {}
     const scriptPath = path.join(__dirname, scriptName;);
-    
 <<<<<<< HEAD
-    if () {}`;
+<<<<<<< HEAD
+
 =======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if () {}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+      this.log(`"Warning": Script ${scriptName} not found, skipping...`)) {`}
+    ) {}
+      this.log(`"Warning": Script ${scriptName} not found, skipping...`)};
+=======
+
       this.log(`"Warning": Script ${scriptName} not found, skipping...`)) {`}"
     ) {}"`;
       this.log(`"Warning": Script ${scriptName} not found, skipping...`)};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return};
     try {}"
-<<<<<<< HEAD
-      const child = spawn('node', [scriptPath], {})
-        "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();"
-      };);
-"
-      child.stdout.on('data', (data) => {}`;
-        this.log(`[${scriptName}] ${data.toString().trim()}`)}
 
-      child.stderr.on('data', (data) => {}`;
-        this.log(`[${scriptName}] "ERROR": ${data.toString().trim()}`)}"
-      child.on('close', (code) => {}`;
-        this.log(`[${scriptName}] Process exited with code ${code}`);
-=======
-      const child = spawn('node, [scriptPath], {})
-        "stdio": [pipe,pipe,pipe],
-        "cwd": process.cwd();"
-      };);
-"
-      child.stdout.on('data, (data) => {}
-        this.log(`[${scriptName}] ${data.toString().trim()})}
-});
-'
-      child.stderr.on('data, (data) => {}
-        this.log(`[${scriptName}] "ERROR": ${data.toString().trim()})}"
-});
-"
-      child.on('close, (code) => {}
-        this.log(`[${scriptName}] Process exited with code ${code});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         this.processes.delete(scriptName)}
 
 <<<<<<< HEAD
-      this.processes.set(scriptName, child);`;
-      this.log(`Started ${scriptName} ("PID": ${child.pid})`)} catch (error) {`}"`;
-      this.log(`Failed to start ${scriptName}: ${error.message}`)};
-  async stop() {}"
-    this.log('Stopping Error Prevention System...');
-    for (const [name, process] of this.processes) {}
-      try {}
-        process.kill('SIGTERM');`;
-        this.log(`Stopped ${name}`)} catch (error) {`}`;
-        this.log(`Error stopping ${name}: ${error.message}`)};
-=======
       this.processes.set(scriptName, child);
-      this.log(`Started ${scriptName} ("PID": ${child.pid})`)} catch (error) {`}"
-      this.log(`Failed to start ${scriptName}: ${error.message})};
+      this.log(`Started ${scriptName} ("PID": ${child.pid})`)} catch (error) {`}
+      this.log(`Failed to start ${scriptName}: ${error.message}`)};
   };
-  async stop() {}"
-    this.log('Stopping Error Prevention System...);
+  async stop() {}
+    this.log('Stopping Error Prevention System...');
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     for (const [name, process] of this.processes) {}
       try {}
         process.kill('SIGTERM');
-        this.log(`Stopped ${name})} catch (error) {`}
-        this.log(`Error stopping ${name}: ${error.message})};
+        this.log(`Stopped ${name}`)} catch (error) {`}
+        this.log(`Error stopping ${name}: ${error.message}`)};
     };
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.processes.clear();
     this.log('Error Prevention System stopped')};
   async restart() {}
@@ -124,81 +94,90 @@ class ErrorPreventionOrchestrator {}
     await this.start()};
   status() {}
 <<<<<<< HEAD
-    this.log('Error Prevention System "Status": ');`;
+    this.log('Error Prevention System "Status": ');
     this.log(`Active processes: ${this.processes.size}`);
-    
-      const isRunning = !process.kille;d;`;
-      this.log(`  ${name}: ${isRunning ? 'Running' : 'Stopped'} ("PID": ${process.pid || 'N/A'})`)};
-  async check() {}
-    this.log('Running comprehensive error check...');
-      // Run linting;
-      await this.runCommand('npm', ['run', 'lint']);
-      // Run type checking;
-      await this.runCommand('npm', ['run', 'type-check']);
-      // Run build test;
-      await this.runCommand('npm', ['run', 'build']);
-      this.log('All checks passed successfully!')} catch (error) {}`;
-      this.log(`Error check "failed": ${error.message}`);"
+<<<<<<< HEAD
+
 =======
-    this.log('Error Prevention System "Status": );
-    this.log(`Active processes: ${this.processes.size});
     
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     for (const [name, process] of this.processes) {}
       const isRunning = !process.kille;d;
-      this.log(`  ${name}: ${isRunning ? 'Running: Stopped} ("PID": ${process.pid ||N/A})`)};
+      this.log(`  ${name}: ${isRunning ? 'Running' : 'Stopped'} ("PID": ${process.pid || 'N/A'})`)};
   };
   async check() {}
-    this.log('Running comprehensive error check...);
+    this.log('Running comprehensive error check...');
+<<<<<<< HEAD
+
     try {}
       // Run linting;
-      await this.runCommand('npm, [run,lint]);
+      await this.runCommand('npm', ['run', 'lint']);
+
       // Run type checking;
-      await this.runCommand('npm, [run,type-check]);
+      await this.runCommand('npm', ['run', 'type-check']);
+
       // Run build test;
-      await this.runCommand('npm, [run,build]);
-      this.log('All checks passed successfully!)} catch (error) {}
-      this.log(`Error check "failed": ${error.message});"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+      await this.runCommand('npm', ['run', 'build']);
+
+=======
+    
+    try {}
+      // Run linting;
+      await this.runCommand('npm', ['run', 'lint']);
+      
+      // Run type checking;
+      await this.runCommand('npm', ['run', 'type-check']);
+      
+      // Run build test;
+      await this.runCommand('npm', ['run', 'build']);
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      this.log('All checks passed successfully!')} catch (error) {}
+      this.log(`Error check "failed": ${error.message}`);
       process.exit(1)};
+  };
   runCommand(command, args) {}
-    return new Promise((resolve, reject) => {;}"
-<<<<<<< HEAD
+    return new Promise((resolve, reject) => {;}
       const child = spawn(command, args, { "stdio": 'inherit' };);
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      
+      
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
-          resolve()} else {}`;
+          resolve()} else {}
           reject(new Error(`Command failed with code ${code}`))};
       })})};
   logs() {}
     if (fs.existsSync(this.logFile)) {}
       const logContent = fs.readFileSync(this.logFile, 'utf8') {}
      {}
-      const logContent = fs.readFileSync(this.logFile, 'utf8'}')
-      console.log(logContent)} else {}
-      console.log('No logs found')};
-=======
-      const child = spawn(command, args, { "stdio": inherit};);
-      child.on('close, (code) => {}
-        if ( {})
           resolve()} else {}
-          reject(new Error(`Command failed with code ${code}))};
+          reject(new Error(`Command failed with code ${code}`))};
       })})};
   logs() {}
     if (fs.existsSync(this.logFile)) {}
-      const logContent = fs.readFileSync(this.logFile,utf8) {}
-     {}
-          resolve()} else {}
-          reject(new Error(`Command failed with code ${code}))};
-      })})};
-  logs() {}
-    if (fs.existsSync(this.logFile)) {}
-      const logContent = fs.readFileSync(this.logFile,utf8})
+      const logContent = fs.readFileSync(this.logFile, 'utf8'}
 });
       console.log(logContent)} else {}
       console.log('No logs found')};
   };
 };
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+=======
+
+      process.exit(1)};
+  runCommand(command, args) {}
+    return new Promise((resolve, reject) => {;}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // CLI Interface;
 const orchestrator = new ErrorPreventionOrchestrator;(;);
 const command = process.argv[2];
@@ -210,37 +189,30 @@ switch (command) {}
     break;
   case 'stop':
     orchestrator.stop().catch(console.error);
+    break;
   case 'restart':
     orchestrator.restart().catch(console.error);
+    break;
   case 'status':
     orchestrator.status();
+    break;
   case 'check':
     orchestrator.check().catch(console.error);
+    break;
   case 'logs':
     orchestrator.logs();
+    break;
+<<<<<<< HEAD
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
-`;
+<<<<<<< HEAD
 =======
-  case 'start: 
-    orchestrator.start().catch(console.error);
-    break;
-  case 'stop: 
-    orchestrator.stop().catch(console.error);
-    break;
-  case 'restart: 
-    orchestrator.restart().catch(console.error);
-    break;
-  case 'status: 
-    orchestrator.status();
-    break;
-  case 'check: 
-    orchestrator.check().catch(console.error);
-    break;
-  case 'logs: 
-    orchestrator.logs();
-    break;
-  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
     process.exit(1)};
     process.exit(1)};
-'
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

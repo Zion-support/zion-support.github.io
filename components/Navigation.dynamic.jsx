@@ -1,8 +1,7 @@
 import React from 'react';
-
-pr-12243
+export default Navigation.dynamic;
 ;
-const Navigation.dynamic = () => {
+const Navigation.dynamic = () => {}
   return (
     <div data - testid="navigation.dynamic">;
       <h1 > Navigation.dynamic</h1>;
@@ -13,6 +12,8 @@ const Navigation.dynamic = () => ;
     </div>
   );
 }
+;
 
 pr-12243
 export default Navigation.dynamic;
+

@@ -1,196 +1,273 @@
-import React, { useState } from \"react\",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\",;
-import { Input } from \"@/components/ui/input\",;
-import { Button } from \"@/components/ui/button\",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from \"@/components/ui/select\",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from \"@/components/ui/table\",;
-import { Badge } from \"@/components/ui/badge\",;
-import { Search, Filter } from \"lucide-react\",;
-import { AppLayout } from \"@/layout/AppLayout\";
-import { SEO } from \"@/components/SEO\";
-import { AppLayout } from \"@/layout/AppLayout\",;
-import { SEO } from \"@/components/SEO\",;
-// Mock data for support requests;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React, { useState } from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Search, Filter} from "lucide-react";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import React, { useState } from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Search, Filter } from "lucide-react",
+import { AppLayout } from "@/layout/AppLayout";
+import { SEO } from "@/components/SEO";
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+// Mock data for support requests
+
 const MOCK_SUPPORT_REQUESTS = [
   {
-    id: \"id\",
-    user: \"john.doe@example.com\"
-    userId: \"user-123\"
-    issue: \"Cannot access account after password reset\"
-    status: \"open\"
-    priority: \"high\"
-    createdAt: \"2023-12-15T14:30:00Z\"
-    lastUpdated: \"2023-12-15T15:45:00Z\"
-    category: \"authentication\"
-  {
-    id: \"SR-1002\"
-    user: \"sarah.smith@company.co\"
-    userId: \"user-456\"
-    issue: \"Payment failed but funds were deducted\"
-    status: \"in-progress\"
-    priority: \"high\"
-    createdAt: \"2023-12-14T09:15:00Z\"
-    lastUpdated: \"2023-12-15T13:20:00Z\"
-    category: \"billing\"
-  {
-    id: \"SR-1003\"
-    user: \"tech.guru@startup.io\"
-    userId: \"user-789\"
-    issue: \"Unable to download invoice PDF\"
-    status: \"open\"
-    priority: \"medium\"
-    createdAt: \"2023-12-15T11:00:00Z\"
-    lastUpdated: \"2023-12-15T11:00:00Z\"
-    category: \"billing\"
-  {
-    id: \"SR-1004\"
-    user: \"developer@codelab.dev\"
-    userId: \"user-235\"
-    issue: \"API integration documentation is outdated\"
-    status: \"open\"
-    priority: \"low\"
-    createdAt: \"2023-12-13T16:45:00Z\"
-    lastUpdated: \"2023-12-13T16:45:00Z\"
-    category: \"api\"
-  {
-    id: \"SR-1005\"
-    user: \"maria.rodriguez@design.co\"
-    userId: \"user-567\"
-    issue: \"Dispute with freelancer over delivered work quality\"
-    status: \"in-progress\"
-    priority: \"high\"
-    createdAt: \"2023-12-12T10:30:00Z\"
-    lastUpdated: \"2023-12-15T09:15:00Z\"
-    category: \"disputes\"
-  {
-    id: \"SR-1006\"
-    user: \"alex.wong@datacompany.com\"
-    userId: \"user-890\"
-    issue: \"Profile verification pending for over 7 days\"
-    status: \"resolved\"
-    priority: \"medium\"
-    createdAt: \"2023-12-08T13:20:00Z\"
-    lastUpdated: \"2023-12-15T08:30:00Z\"
-    category: \"verification\"
-  {
-    id: \"SR-1007\"
-    user: \"jamie.taylor@tech.org\"
-    userId: \"user-345\"
-    issue: \"Cannot upload portfolio images\"
-    status: \"resolved\"
-    priority: \"medium\"
-    createdAt: \"2023-12-10T15:10:00Z\"
-    lastUpdated: \"2023-12-13T11:25:00Z\"}
-    category: \"profile\"}
+    id: "SR-1001"
+    user: "john.doe@example.com"
+    userId: "user-123"
+    issue: "Cannot access account after password reset"
+    status: "open"
+    priority: "high"
+    createdAt: "2023-12-15T14:30:00Z"
+    lastUpdated: "2023-12-15T15:45:00Z"
+    category: "authentication"
+<<<<<<< HEAD
+
+=======
   }
-  const [searchQuery, setSearchQuery] = useState(\"\");
-  const [statusFilter, setStatusFilter] = useState<string | null />(null);
-  const [priorityFilter, setPriorityFilter] = useState<string | null />(null);
-  const [categoryFilter, setCategoryFilter] = useState<string | null />(null);
-  // Apply filters to the request data;
-const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
-    // Apply search query filter;
-if (searchQuery &&
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  {
+    id: "SR-1002"
+    user: "sarah.smith@company.co"
+    userId: "user-456"
+    issue: "Payment failed but funds were deducted"
+    status: "in-progress"
+    priority: "high"
+    createdAt: "2023-12-14T09:15:00Z"
+    lastUpdated: "2023-12-15T13:20:00Z"
+    category: "billing"
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  {
+    id: "SR-1003"
+    user: "tech.guru@startup.io"
+    userId: "user-789"
+    issue: "Unable to download invoice PDF"
+    status: "open"
+    priority: "medium"
+    createdAt: "2023-12-15T11:00:00Z"
+    lastUpdated: "2023-12-15T11:00:00Z"
+    category: "billing"
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  {
+    id: "SR-1004"
+    user: "developer@codelab.dev"
+    userId: "user-235"
+    issue: "API integration documentation is outdated"
+    status: "open"
+    priority: "low"
+    createdAt: "2023-12-13T16:45:00Z"
+    lastUpdated: "2023-12-13T16:45:00Z"
+    category: "api"
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  {
+    id: "SR-1005"
+    user: "maria.rodriguez@design.co"
+    userId: "user-567"
+    issue: "Dispute with freelancer over delivered work quality"
+    status: "in-progress"
+    priority: "high"
+    createdAt: "2023-12-12T10:30:00Z"
+    lastUpdated: "2023-12-15T09:15:00Z"
+    category: "disputes"
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  {
+    id: "SR-1006"
+    user: "alex.wong@datacompany.com"
+    userId: "user-890"
+    issue: "Profile verification pending for over 7 days"
+    status: "resolved"
+    priority: "medium"
+    createdAt: "2023-12-08T13:20:00Z"
+    lastUpdated: "2023-12-15T08:30:00Z"
+    category: "verification"
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  {
+    id: "SR-1007"
+    user: "jamie.taylor@tech.org"
+    userId: "user-345"
+    issue: "Cannot upload portfolio images"
+    status: "resolved"
+    priority: "medium"
+    createdAt: "2023-12-10T15:10:00Z"
+    lastUpdated: "2023-12-13T11:25:00Z"
+    category: "profile"
+  }
+<<<<<<< HEAD
+
+=======
+  const [searchQuery, setSearchQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState<string | null>(null);
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  // Apply filters to the request data
+  const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
+    // Apply search query filter
+    if (searchQuery &&
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {}
-      return false;}
-import React, { useState } from \"react\";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\";
-import { Input } from \"@/components/ui/input\",;
-import { Button } from \"@/components/ui/button\",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from \"@/components/ui/select\",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from \"@/components/ui/table\",;
-import { Badge } from \"@/components/ui/badge\",;
-import { Search, Filter } from \"lucide-react\",;
-import { AppLayout } from \"@/layout/AppLayout\",;
-import { SEO } from \"@/components/SEO\",;
+        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
+      return false
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+import React, { useState } from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { Search, Filter } from "lucide-react",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { SEO } from "@/components/SEO",;
 // Mock data for support requests;
 const MOCK_SUPPORT_REQUESTS = [;
   {;
-    id: \"SR-1001\",;
-    userId: \"user-123\",;
-    issue: \"Cannot access account after password reset\",;
-    status: \"open\",;
-    priority: \"high\",;
-    createdAt: \"2023-12-15T14:30:00Z\",;
-    lastUpdated: \"2023-12-15T15:45:00Z\",;
-    category: \"authentication\";
-    userId: \"user-456\",;
-    issue: \"Payment failed but funds were deducted\",;
-    status: \"in-progress\",;
-    priority: \"high\",;
-    createdAt: \"2023-12-14T09:15:00Z\",;
-    lastUpdated: \"2023-12-15T13:20:00Z\",;
-    category: \"billing\";
-    userId: \"user-789\",;
-    issue: \"Unable to download invoice PDF\",;
-    status: \"open\",;
-    priority: \"medium\",;
-    createdAt: \"2023-12-15T11:00:00Z\",;
-    lastUpdated: \"2023-12-15T11:00:00Z\",;
-    category: \"billing\";
-    userId: \"user-235\",;
-    issue: \"API integration documentation is outdated\",;
-    status: \"open\",;
-    priority: \"low\",;
-    userId: \"user-567\",;
-    issue: \"Dispute with freelancer over delivered work quality\",;
-    status: \"in-progress\",;
-    priority: \"high\",;
-    createdAt: \"2023-12-12T10:30:00Z\",;
-    lastUpdated: \"2023-12-15T09:15:00Z\",;
-    category: \"disputes\";
-    userId: \"user-890\",;
-    issue: \"Profile verification pending for over 7 days\",;
-    status: \"resolved\",;
-    priority: \"medium\",;
-    createdAt: \"2023-12-08T13:20:00Z\",;
-    lastUpdated: \"2023-12-15T08:30:00Z\",;
-    category: \"verification\";
-    userId: \"user-345\",;
-    issue: \"Cannot upload portfolio images\",;
-    status: \"resolved\",;
-    priority: \"medium\",;
-    createdAt: \"2023-12-10T15:10:00Z\",;
-    lastUpdated: \"2023-12-13T11:25:00Z\",;}
-    category: \"profile\";}
+    id: "SR-1001",;
+    userId: "user-123",;
+    issue: "Cannot access account after password reset",;
+    status: "open",;
+    priority: "high",;
+    createdAt: "2023-12-15T14:30:00Z",;
+    lastUpdated: "2023-12-15T15:45:00Z",;
+    category: "authentication";
+    userId: "user-456",;
+    issue: "Payment failed but funds were deducted",;
+    status: "in-progress",;
+    priority: "high",;
+    createdAt: "2023-12-14T09:15:00Z",;
+    lastUpdated: "2023-12-15T13:20:00Z",;
+    category: "billing";
+    userId: "user-789",;
+    issue: "Unable to download invoice PDF",;
+    status: "open",;
+    priority: "medium",;
+    createdAt: "2023-12-15T11:00:00Z",;
+    lastUpdated: "2023-12-15T11:00:00Z",;
+    category: "billing";
+    userId: "user-235",;
+    issue: "API integration documentation is outdated",;
+    status: "open",;
+    priority: "low",;
+    userId: "user-567",;
+    issue: "Dispute with freelancer over delivered work quality",;
+    status: "in-progress",;
+    priority: "high",;
+    createdAt: "2023-12-12T10:30:00Z",;
+    lastUpdated: "2023-12-15T09:15:00Z",;
+    category: "disputes";
+    userId: "user-890",;
+    issue: "Profile verification pending for over 7 days",;
+    status: "resolved",;
+    priority: "medium",;
+    createdAt: "2023-12-08T13:20:00Z",;
+    lastUpdated: "2023-12-15T08:30:00Z",;
+    category: "verification";
+    userId: "user-345",;
+    issue: "Cannot upload portfolio images",;
+    status: "resolved",;
+    priority: "medium",;
+    createdAt: "2023-12-10T15:10:00Z",;
+    lastUpdated: "2023-12-13T11:25:00Z",;
+    category: "profile";
   }
-  const [searchQuery, setSearchQuery] = useState(\"\"),;
-  const [statusFilter, setStatusFilter] = useState<string | null />(null),;
-  const [priorityFilter, setPriorityFilter] = useState<string | null />(null),;
-  const [categoryFilter, setCategoryFilter] = useState<string | null />(null),;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  const [statusFilter, setStatusFilter] = useState<string | null>(null),;
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null),;
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),;
   // Apply filters to the request data;
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {;
     // Apply search query filter;
     if (searchQuery &&;
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
-        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;}
-      return false;}
+        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
+      return false;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
-    // Apply status filter;
-if (statusFilter && request.status !== statusFilter) {}
-      return false}
+    // Apply status filter
+    if (statusFilter && request.status !== statusFilter) {
+      return false
     }
-    // Apply priority filter;
-if (priorityFilter && request.priority !== priorityFilter) {}
-      return false}
+    // Apply priority filter
+    if (priorityFilter && request.priority !== priorityFilter) {
+      return false
     }
-    // Apply category filter;
-if (categoryFilter && request.category !== categoryFilter) {}
-      return false}
+    // Apply category filter
+    if (categoryFilter && request.category !== categoryFilter) {
+      return false
     }
-    return true;
+<<<<<<< HEAD
+
+  const resetFilters = () => {
+    setSearchQuery(""),
+    setStatusFilter(null),
+    setPriorityFilter(null),
+    setCategoryFilter(null)
+
+=======
+    return true
   });
-  // Count by status for the summary dashboard;
-return (
-    <AppLayout />
-      <SEO;
-title=\"Support Requests | Admin Dashboard\"
-        description=\"Manage and track user support requests and issues\"
+  // Count by status for the summary dashboard
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  return (
+    <AppLayout>
+      <SEO
+        title="Support Requests | Admin Dashboard"
+        description="Manage and track user support requests and issues"
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       />
       <div className=\"container mx-auto px-4 py-8\" />
         <div className=\"flex flex-col md:flex-row items-start md:items-center justify-between mb-8\" />
@@ -242,7 +319,14 @@ title=\"Support Requests | Admin Dashboard\"
             <TabsTrigger value=\"ai-flagged\" />AI Flagged</TabsTrigger>
             <TabsTrigger value=\"need-response\" />Need Response</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
+          <TabsContent value="all" className="mt-6">
+<<<<<<< HEAD
+=======
+
+=======
           <TabsContent value=\"all\" className=\"mt-6\" />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Apply filters to the request data;
   const filteredRequests = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(request => {;
     // Apply search query filter;
@@ -333,6 +417,7 @@ title=\"Support Requests | Admin Dashboard\"
             <TabsTrigger value=\"ai-flagged\" />AI Flagged</TabsTrigger>;
             <TabsTrigger value=\"need-response\" />Need Response</TabsTrigger>;
           </TabsList>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* Search and Filters */}
             <div className=\"flex flex-col md:flex-row gap-4 mb-6\" />;
               <div className=\"relative flex-1\" />;
@@ -340,9 +425,34 @@ title=\"Support Requests | Admin Dashboard\"
                 <Input;
 placeholder=\"Search by ID, user or issue...\"
                   value={searchQuery}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10"
+                />
+              </div>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+              <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Status" />
+=======
               <Select value={statusFilter || \"\"} onValueChange={value = /> setStatusFilter(value || null)}>
                 <SelectTrigger className=\"w-[180px]\" />
                   <SelectValue placeholder=\"Status\" />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </SelectTrigger>
                 <SelectContent />
                   <SelectItem value=\"\" />All Statuses</SelectItem>
@@ -351,9 +461,28 @@ placeholder=\"Search by ID, user or issue...\"
                   <SelectItem value=\"resolved\" />Resolved</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+=======
+
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Priority" />
+=======
               <Select value={priorityFilter || \"\"} onValueChange={value = /> setPriorityFilter(value || null)}>
                 <SelectTrigger className=\"w-[180px]\" />
                   <SelectValue placeholder=\"Priority\" />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </SelectTrigger>
                 <SelectContent />
                   <SelectItem value=\"\" />All Priorities</SelectItem>
@@ -362,9 +491,29 @@ placeholder=\"Search by ID, user or issue...\"
                   <SelectItem value=\"low\" />Low</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
+              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Category" />
+=======
               <Select value={categoryFilter || \"\"} onValueChange={value = /> setCategoryFilter(value || null)}>
                 <SelectTrigger className=\"w-[180px]\" />
                   <SelectValue placeholder=\"Category\" />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </SelectTrigger>
                 <SelectContent />
                   <SelectItem value=\"\" />All Categories</SelectItem>
@@ -408,9 +557,19 @@ placeholder=\"Search by ID, user or issue...\"
                             request.status === 'open'
                               ? 'default'
                               : request.status === 'in-progress'
+<<<<<<< HEAD
+                              ? 'secondary'
+                              : 'outline'
+                          }>
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
                               ? 'secondary'}
                               : 'outline'}
                           } />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                             {request.status}
                           </Badge>
                         </TableCell>
@@ -419,9 +578,20 @@ placeholder=\"Search by ID, user or issue...\"
                             request.priority === 'high'
                               ? 'destructive'
                               : request.priority === 'medium'
+<<<<<<< HEAD
+                              ? 'default'
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                              : 'outline'
+                          }>;
+=======
                               ? 'default'}
                               : 'outline'}
                           } />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                             {request && request.status}
                           </Badge>;
                         </TableCell>;
@@ -430,6 +600,64 @@ placeholder=\"Search by ID, user or issue...\"
                             request && request.priority === 'high' 
                               ? 'destructive' 
                               : request && request.priority === 'medium' 
+<<<<<<< HEAD
+                              ? 'default' 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                              : 'outline'
+                          }>;
+                            {request && request.priority}
+                          </Badge>;
+                        </TableCell>;
+                        <TableCell>{request && request.category}</TableCell>;
+                        <TableCell>{new Date(request && request.createdAt).toLocaleDateString()}</TableCell>;
+                        <TableCell>{new Date(request && request.lastUpdated).toLocaleDateString()}</TableCell>;
+                        <TableCell>;
+                          <Button variant="ghost" size="sm">View</Button>;
+                          <Button variant="ghost" size="sm">Assign</Button>;
+                        </TableCell>;
+<<<<<<< HEAD
+                      </TableRow>;
+                    ))}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="escalated" className="mt-6">
+            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
+              <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>
+              <p className="text-zion-slate-light">
+                This tab will show support requests that have been escalated by agents or the system.
+              </p>
+            </div>
+          </TabsContent>
+          <TabsContent value="ai-flagged" className="mt-6">
+            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
+              <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>
+              <p className="text-zion-slate-light">
+                This tab shows issues that our AI system has identified as requiring human attention.
+              </p>
+            </div>
+          </TabsContent>
+          <TabsContent value="need-response" className="mt-6">
+            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
+              <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
+              <p className="text-zion-slate-light">
+                These support requests have been waiting for an agent response for over 24 hours.
+              </p>
+            </div>
+          </TabsContent>
+        </Tabs>
+      </div>
+    </AppLayout>
+  )
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
                               ? 'default' }
                               : 'outline'}
                           } />;
@@ -443,3 +671,4 @@ placeholder=\"Search by ID, user or issue...\"
                           <Button variant=\"ghost\" size=\"sm\" />View</Button>;
                           <Button variant=\"ghost\" size=\"sm\" />Assign</Button>;
                         </TableCell>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

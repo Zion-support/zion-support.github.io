@@ -1,7 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
+import { useTranslation } from 'react-i18next',;
+import { supabase } from '../integrations/supabase/client',;
+import { toast } from '../components/ui/use-toast',;
+=======
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { supabase } from '../integrations/supabase/client';
 import { toast } from '../components/ui/use-toast';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar',;
 export type LanguageContextType = {;
@@ -38,6 +48,7 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
     }
   }, [currentLanguage, i18n]),;
   ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Sync language preference with user profile when authenticated;
   useEffect(() => {;
     const syncLanguageWithProfile = async () => {;
@@ -45,7 +56,14 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
         try {;
           const { error } = await supabase;
             .from('profiles');
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+            .update({ preferred_language:currentLanguage });
+=======
             .update({ preferred_language: currentLanguage ;});
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             .eq('id', user.id),;
             ;
           if (error) {;
@@ -117,3 +135,8 @@ const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage> ( (i18
 }> {
 )
 }</LanguageContext.Provider>) 
+<<<<<<< HEAD
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,21 +1,20 @@
 import Link from 'next/link';
-
-import {motion} from 'framer-motion';
-import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
-    { name: 'Pricing';, href: '/pricing-2025';, icon: Award;, description: 'Transparent pricing for all solutions' ;}
+'
+import {motion} from 'framer-motion';'
+import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';'
+    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
   ];
-  const company = [
-    { name: 'About Us';, href: '/about';, icon: Users;, description: 'Learn about our mission and team' ;}
-    { name: 'Our Work';, href: '/portfolio';, icon: Award;, description: 'See our latest projects and achievements' ;}
-    { name: 'Content Hub';, href: '/reports';, icon: BookOpen;, description: 'Access autonomous content and insights' ;}
-    { name: 'Blog & Insights';, href: '/blog';, icon: BookOpen;, description: 'Stay updated with industry trends' ;}
-    { name: 'Contact';, href: '/contact';, icon: Phone;, description: 'Get in touch with our experts' ;}
+  const company = ['
+    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' }'
+    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' }'
+    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' }'
+    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' }'
+    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
   ];
-  const toggleDropdown = (dropdown: string) => {
+  const toggleDropdown = (dropdown: string) => {}
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
-  const closeAllDropdowns = () => {
-
+  const closeAllDropdowns = () => {}
 const EnhancedNavigation: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,21 +29,21 @@ const EnhancedNavigation: React.FC = () => {;
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const services = [;
-    { name: 'All Solutions';, href: '/comprehensive-2025-services-showcase';, icon: Globe;, description: 'Complete collection of innovative solutions' ;},;
-    { name: 'AI Business Intelligence';, href: 'https://ziontechgroup && ziontechgroup.com/ai-business-intelligence';, icon: Brain;, description: 'AI-powered analytics and insights' ;},;
-    { name: 'Quantum Cybersecurity';, href: 'https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity';, icon: Shield;, description: 'Quantum-resistant security solutions' ;},;
-    { name: 'Edge Computing';, href: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration';, icon: Cpu;, description: 'Edge orchestration and IoT management' ;},;
-    { name: 'Space Technology';, href: 'https://ziontechgroup && ziontechgroup.com/space-technology';, icon: Rocket;, description: 'Space exploration and satellite tech' ;},;
-    { name: 'Pricing';, href: '/pricing-2025';, icon: Award;, description: 'Transparent pricing for all solutions' ;}
+  const services = [;'
+    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },;'
+    { name: 'AI Business Intelligence', href: 'https://ziontechgroup && ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },;'
+    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' },;'
+    { name: 'Edge Computing', href: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },;'
+    { name: 'Space Technology', href: 'https://ziontechgroup && ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },;'
+    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
   ];
 
-  const company = [;
-    { name: 'About Us';, href: '/about';, icon: Users;, description: 'Learn about our mission and team' ;},;
-    { name: 'Our Work';, href: '/portfolio';, icon: Award;, description: 'See our latest projects and achievements' ;},;
-    { name: 'Content Hub';, href: '/reports';, icon: BookOpen;, description: 'Access autonomous content and insights' ;},;
-    { name: 'Blog & Insights';, href: '/blog';, icon: BookOpen;, description: 'Stay updated with industry trends' ;},;
-    { name: 'Contact';, href: '/contact';, icon: Phone;, description: 'Get in touch with our experts' ;}
+  const company = [;'
+    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },;'
+    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' },;'
+    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },;'
+    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },;'
+    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
   ];
 
   const toggleDropdown = (dropdown: string) => {;
@@ -55,47 +54,47 @@ const EnhancedNavigation: React.FC = () => {;
     setActiveDropdown(null);
     setIsOpen(false);
   }
-  return (
+  return ('
         : 'bg-transparent'
     }`}>;
-      <div className="max-w-7xl mx-auto px-6">;
+      <div className="max-w-7xl mx-auto px-6">;"
         <div className="flex items-center justify-between h-20">;
           {/* Logo */}
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation */}"
           <div className="hidden lg:flex items-center space-x-8">;
-            {/* Services Dropdown */}
+            {/* Services Dropdown */}"
             <div className="relative">;
-              <button
-                onClick={() => toggleDropdown('services')}
+              <button'
+                onClick={() => toggleDropdown('services')}'
               {activeDropdown === 'services' && (
-                <motion.div
+                <motion.div"
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
               >;
-                <span>Services</span>;
+                <span>Services</span>;'`
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;
               </button>;
-
+'
               {activeDropdown === 'services' && (;
-                <motion&& motion.div
-                  initial={{ opacity: 0;, y: 10 ;}}
-                  animate={{ opacity: 1;, y: 0 ;}}
-                  exit={{ opacity: 0;, y: 10 ;}}
+                <motion&& motion.div;
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}"
                   className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6"
-                >
+                >"
                   <div className="grid grid-cols-2 gap-4 px-6">
                     {services.map((service) => (
-                      <Link
+                      <Link;
                         key={service.name}
-                        href={service.href}
+                        href={service.href}"
                         className="group p-4 rounded-lg hover:bg-gray-50 transition-colors"
                         onClick={closeAllDropdowns}
-                      >
-                        <div className="flex items-start space-x-3">
+                      >"
+                        <div className="flex items-start space-x-3">"
                           <service.icon className="w-6 h-6 text-blue-600 mt-1" />
-                          <div>
+                          <div>"
                             <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
                               {service.name}
-                            </h3>
+                            </h3>"
                             <p className="text-sm text-gray-600">{service.description}</p>
                           </div>
                         </div>
@@ -105,43 +104,43 @@ const EnhancedNavigation: React.FC = () => {;
                 </motion.div>
               )}
             </div>
-            {/* Company Dropdown */}
+            {/* Company Dropdown */}"
             <div className="relative">
-              <button
-                onClick={() => toggleDropdown('company')}
+              <button'
+                onClick={() => toggleDropdown('company')}"
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
               >
-                <span>Company</span>
+                <span>Company</span>'`
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
-              </button>
-              {activeDropdown === 'company' && (
+              </button>'
+              {activeDropdown === 'company' && ('
               {activeDropdown === 'services' && (
-                <motion.div
+                <motion.div"
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
               >;
-                <span>Services</span>;
+                <span>Services</span>;'`
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;
               </button>;
-
+'
               {activeDropdown === 'services' && (;
-                <motion&& motion.div
-                  initial={{ opacity: 0;, y: 10 ;}}
-                  animate={{ opacity: 1;, y: 0 ;}}
-                  exit={{ opacity: 0;, y: 10 ;}}
-                  className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">;
+                <motion&& motion.div;
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}"
+                  className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">;"
                   <div className="grid grid-cols-2 gap-4 px-6">;
                     {services && services.map((service) => (;
-                      <Link
+                      <Link;
                         key={service && service.name}
-                        href={service && service.href}
+                        href={service && service.href}"
                         className="group p-4 rounded-lg hover:bg-gray-50 transition-colors"
-                        onClick={closeAllDropdowns}>;
-                        <div className="flex items-start space-x-3">;
+                        onClick={closeAllDropdowns}>;"
+                        <div className="flex items-start space-x-3">;"
                           <service && service.icon className="w-6 h-6 text-blue-600 mt-1" />;
-                          <div>;
+                          <div>;"
                             <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">;
                               {service && service.name}
-                            </h3>;
+                            </h3>;"
                             <p className="text-sm text-gray-600">{service && service.description}</p>;
                           </div>;
                         </div>;
@@ -150,26 +149,26 @@ const EnhancedNavigation: React.FC = () => {;
                   </div>;
                 </motion && motion.div>;
               )}
-            {/* Company Dropdown */}
+            {/* Company Dropdown */}"
             <div className="relative">;
-              <button
+              <button'
                 onClick={() => toggleDropdown('company')}
-                  initial={{ opacity: 0;, y: 10 ;}}
-                  animate={{ opacity: 1;, y: 0 ;}}
-                  exit={{ opacity: 0;, y: 10 ;}}
-                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">;
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}"
+                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">;"
                   <div className="space-y-2 px-6">;
                     {company && company.map((item) => (;
-                      <Link
+                      <Link;
                         key={item && item.name}
-                        href={item && item.href}
+                        href={item && item.href}"
                         className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                        onClick={closeAllDropdowns}>;
+                        onClick={closeAllDropdowns}>;"
                         <item && item.icon className="w-5 h-5 text-blue-600 mt-1" />;
-                        <div>;
+                        <div>;"
                           <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">;
                             {item && item.name}
-                          </h3>;
+                          </h3>;"
                           <p className="text-sm text-gray-600">{item && item.description}</p>;
                         </div>;
                       </Link>;
@@ -178,96 +177,99 @@ const EnhancedNavigation: React.FC = () => {;
                 </motion && motion.div>;
               )}
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
+          <button;
+            onClick={() => setIsOpen(!isOpen)}"
             className="lg:hidden p-2 text-white hover:text-blue-300 transition-colors";
-          >;
+          >;"
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         {/* Mobile Menu */}
         {isOpen && (;
-          <motion&& motion.div
-            initial={{ opacity: 0;, height: 0 ;}}
-            animate={{ opacity: 1;, height: 'auto' ;}}
-            exit={{ opacity: 0;, height: 0 ;}}
-            className="lg:hidden bg-white rounded-xl shadow-2xl border border-gray-200 mt-2 py-6">;
+          <motion&& motion.div;
+            initial={{ opacity: 0, height: 0 }}'
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}"
+            className="lg:hidden bg-white rounded-xl shadow-2xl border border-gray-200 mt-2 py-6">;"
             <div className="px-6 space-y-6">;
               {/* Mobile Services */}
-              <div>;
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Services</h3>;
+              <div>;"
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Services</h3>;"
                 <div className="space-y-2">;
                   {services && services.map((service) => (;
-                    <Link
+                    <Link;
                       key={service && service.name}
-                      href={service && service.href}
+                      href={service && service.href}"
                       className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                      onClick={closeAllDropdowns}>;
+                      onClick={closeAllDropdowns}>;"
                       <service && service.icon className="w-5 h-5 text-blue-600 mt-1" />;
-                      <div>;
-                        <h4 className="font-medium text-gray-900">{service && service.name}</h4>;
+                      <div>;"
+                        <h4 className="font-medium text-gray-900">{service && service.name}</h4>;"
                         <p className="text-sm text-gray-600">{service && service.description}</p>;
                       </div>;
                     </Link>;
                   ))}
               {/* Mobile Company */}
-              <div>;
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Company</h3>;
+              <div>;"
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Company</h3>;"
                 <div className="space-y-2">;
                   {company && company.map((item) => (;
-                    <Link
+                    <Link;
                       key={item && item.name}
-                      href={item && item.href}
+                      href={item && item.href}"
                       className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                      onClick={closeAllDropdowns}>;
+                      onClick={closeAllDropdowns}>;"
                       <item && item.icon className="w-5 h-5 text-blue-600 mt-1" />;
-                      <div>;
-                        <h4 className="font-medium text-gray-900">{item && item.name}</h4>;
+                      <div>;"
+                        <h4 className="font-medium text-gray-900">{item && item.name}</h4>;"
                         <p className="text-sm text-gray-600">{item && item.description}</p>;
                       </div>;
                     </Link>;
                   ))}
-              {/* Mobile CTA */}
+              {/* Mobile CTA */}"
               <div className="pt-4 border-t border-gray-200">;
-                <Link
-                  href="/contact"
+                <Link"
+                  href="/contact""
                   className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
                   onClick={closeAllDropdowns}>;
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
 ;
-const EnhancedNavigation: React.FC = () => {
+const EnhancedNavigation: React.FC = () => {}
   const [is_open, setIsOpen] = useState (false);
   const [is_scrolled, setIsScrolled] = useState (false);
   const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
 ;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
+  useEffect (() => {}
+    const handle_scroll = () =>: any {}
       setIsScrolled (window.scroll_y > 20);
     }
-;
-    window.addEventListener ('scroll', handle_scroll);
+;'
+    window.addEventListener ('scroll', handle_scroll);'
     return () => window.removeEventListener ('scroll', handle_scroll);
   }, []);
 ;
-  const services = [;
-    { name: 'All Solutions';, href: '/comprehensive - 2025 - services - showcase';, icon: Globe;, description: 'Complete collection of innovative solutions' ;},
-    { name: 'AI Business Intelligence';, href: 'https://ziontechgroup.com / ai - business - intelligence';, icon: Brain;, description: 'AI - powered analytics and insights' ;},
-    { name: 'Quantum Cybersecurity';, href: 'https://ziontechgroup.com / quantum - cybersecurity';, icon: Shield;, description: 'Quantum - resistant security solutions' ;},
-    { name: 'Edge Computing';, href: 'https://ziontechgroup.com / edge - computing - orchestration';, icon: Cpu;, description: 'Edge orchestration and IoT management' ;},
-    { name: 'Space Technology';, href: 'https://ziontechgroup.com / space - technology';, icon: Rocket;, description: 'Space exploration and satellite tech' ;},
-    { name: 'Pricing';, href: '/pricing - 2025';, icon: Award;, description: 'Transparent pricing for all solutions' ;}
+  const services = [;'
+    { name: 'All Solutions', href: '/comprehensive - 2025 - services - showcase', icon: Globe, description: 'Complete collection of innovative solutions' },'
+    { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com / ai - business - intelligence', icon: Brain, description: 'AI - powered analytics and insights' },'
+    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com / quantum - cybersecurity', icon: Shield, description: 'Quantum - resistant security solutions' },'
+    { name: 'Edge Computing', href: 'https://ziontechgroup.com / edge - computing - orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },'
+    { name: 'Space Technology', href: 'https://ziontechgroup.com / space - technology', icon: Rocket, description: 'Space exploration and satellite tech' },'
+    { name: 'Pricing', href: '/pricing - 2025', icon: Award, description: 'Transparent pricing for all solutions' }
   ];
 ;
-  const company = [;
-    { name: 'About Us';, href: '/about';, icon: Users;, description: 'Learn about our mission and team' ;},
-    { name: 'Our Work';, href: '/portfolio';, icon: Award;, description: 'See our latest projects and achievements' ;},
-    { name: 'Content Hub';, href: '/reports';, icon: BookOpen;, description: 'Access autonomous content and insights' ;},
-    { name: 'Blog & Insights';, href: '/blog';, icon: BookOpen;, description: 'Stay updated with industry trends' ;},
-    { name: 'Contact';, href: '/contact';, icon: Phone;, description: 'Get in touch with our experts' ;}
+  const company = [;'
+    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },'
+    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' },'
+    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },'
+    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },'
+    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
   ];
 ;
-  const toggle_dropdown = (dropdown: string) =>: any {
+  const toggle_dropdown = (dropdown: string) =>: any {}
     setActiveDropdown (active_dropdown === dropdown ? null : dropdown),
   }
 ;
-  const closeAllDropdowns = () =>: any {
+  const closeAllDropdowns = () =>: any {}
     setActiveDropdown (null);
     setIsOpen (false);
   }
@@ -297,14 +299,14 @@ const EnhancedNavigation: React.FC = () => {
                 on_click={() => toggle_dropdown ('services')}
                 className="flex items - center space - x-1 text - white hover:text - blue-300 transition-colors";
               >;
-                <span > Services</span>;
+                <span > Services</span>;'`
                 <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === 'services' ? 'rotate - 180' : ''}`} />;
-              </button>;
+              </button>;'
               {active_dropdown === 'services' && (
                 <motion.div;
-                  initial={{ opacity: 0;, coordinate_y: 10 ;}}
-                  animate={{ opacity: 1;, coordinate_y: 0 ;}}
-                  exit={{ opacity: 0;, coordinate_y: 10 ;}}
+                  initial={{ opacity: 0, coordinate_y: 10 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
+                  exit={{ opacity: 0, coordinate_y: 10 }}
                   className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6";
                 >;
                   <div className="grid grid - cols - 2 gap-4 px-6">;
@@ -328,20 +330,20 @@ const EnhancedNavigation: React.FC = () => {
                   </div>;
                 </motion.div>)}
             </div>;
-            {/* Company Dropdown */}
+            {/* Company Dropdown */}"
             <div className="relative">;
               <button;
                 on_click={() => toggle_dropdown ('company')}
                 className="flex items - center space - x-1 text - white hover:text - blue-300 transition-colors";
               >;
-                <span > Company</span>;
+                <span > Company</span>;'`
                 <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === 'company' ? 'rotate - 180' : ''}`} />;
-              </button>;
+              </button>;'
               {active_dropdown === 'company' && (
                 <motion.div;
-                  initial={{ opacity: 0;, coordinate_y: 10 ;}}
-                  animate={{ opacity: 1;, coordinate_y: 0 ;}}
-                  exit={{ opacity: 0;, coordinate_y: 10 ;}}
+                  initial={{ opacity: 0, coordinate_y: 10 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
+                  exit={{ opacity: 0, coordinate_y: 10 }}
                   className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6";
                 >;
                   <div className="space-y-2 px-6">;
@@ -382,9 +384,9 @@ const EnhancedNavigation: React.FC = () => {
         {/* Mobile Menu */}
         {is_open && (
           <motion.div;
-            initial={{ opacity: 0;, height: 0 ;}}
-            animate={{ opacity: 1;, height: 'auto' ;}}
-            exit={{ opacity: 0;, height: 0 ;}}
+            initial={{ opacity: 0, height: 0 }}'
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg - white rounded - xl shadow - 2xl border border - gray - 200 mt-2 py-6";
           >;
             <div className="px-6 space-y-6">;

@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ai Content Optimizer | Zion Tech Group',
+  description: 'Professional ai content optimizer services for your business needs.',
+  keywords: 'ai content optimizer, services, business, technology'
+}
+>>>>>>> 0714acd114000de6b37f3e877c372fa83b93c45c
 
 export default function ServicePage() {
   return (
@@ -9,6 +20,7 @@ export default function ServicePage() {
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Ai Content Optimizer
           </h1>
+<<<<<<< HEAD
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional ai content optimizer services for your business.
           </p>
@@ -20,6 +32,35 @@ export default function ServicePage() {
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               Contact us today to learn more about our ai content optimizer services.
+=======
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional ai content optimizer services for your business needs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
+            <p className="text-gray-300">
+              High-performance solutions that deliver results quickly and consistently.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+            <p className="text-gray-300">
+              Seamlessly integrate with your existing systems and workflows.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
+            <p className="text-gray-300">
+              Grow with your business with our flexible and scalable platform.
+>>>>>>> 0714acd114000de6b37f3e877c372fa83b93c45c
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
@@ -32,7 +73,17 @@ export default function ServicePage() {
             </div>
           </div>
         </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our ai content optimizer services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,106 +1,9 @@
 <<<<<<< HEAD
-#!/""usr/bin/env""""
-const fs = require("fs")""
-const path = require("path")""
-const { execSync, spawn } = require("child_process")""
-    this.logFile = path.join(this.projectRoot, ""automation/logs/auto-merge-resolver.log"")""
-    this.reportFile = path.join(this.projectRoot, "auto-merge-resolver-report.json")""
-  fs.mkdirSync(logsDir, { "recursive"})""
-  log(message, level = "INFO")""
-    console.log(")""
-    fs.appendFileSync(this.logFile, logMessage + "\n")""
-  "cwd"""
-        "encoding": "utf8"""
-        "stdio": options.silent ? "pipe" : "inherit"""
-      return { "success": true, "output"}""
-  return { "success": false, "error": error.message, "output"}""
-    const logMessage = "[${timestamp}] [${level}] ${message}"""
-  this.log(" Detecting merge conflicts...")""
-    const status = await this.runCommand("git status --porcelain", { "silent"})""
-  this.log(" Failed to get git status", "ERROR")""
-    const lines = status.output.split("\n")""
-  if (line.includes("UU ") || line.includes("AA ") || line.includes("DD ")""
-  const filePath = line.substring(3);"""
-        conflictedFiles.push(filePath);")}")}"""
-this.log( Found ${conflictedFiles.length} conflicted files")""
-  async resolveFileConflict(filePath) {this.log(" Resolving conflict "in": ${filePath}")""
-  const content = fs.readFileSync(filePath, "utf8")""
-      if (!content.includes("<<<<<<<")) {this.log(" No conflict markers found in ${filePath}")""
-        return { "success": true, "action": "no_conflict"}""
-      // Create backupconst backupPath = "${filePath}.backup.${Date.now()}"""
-      fs.writeFileSync(backupPath, content);this.log("� Created "backup": ${backupPath}")""
-      // Pattern "1"""
-      // Pattern "2"""
-      // Pattern "3"""
-  "file"""
-        "timestamp"""
-        "action": "resolved"""
-this.log(" Resolved conflict in ${filePath}")""
-      return { "success": true, "action": "resolved"}""
-} catch (error) {  this.log(" Failed to resolve conflict in ${filePath  }: ${error.message}", "ERROR")""
-      return { "success": false, "error"}""
-  const headImports = headContent.match(/import.*?from.*?["")]""
-      const incomingImports = incomingContent.match(/import.*?from.*?[")]""
-      const allImports = ["...new Set([...headImports", "...incomingImports")]""
-      const reactImport = allImports.find(imp => imp.includes("react")""
-      const otherImports = allImports.filter(imp => !imp.includes("react")""
-      let result = """
-      if (reactImport) result += reactImport + "\n"""
-      result += otherImports.join("\n")""
-    if (filePath.includes("package.json")""
-    if (filePath.includes("tsconfig.json")""
-    // "Default"""
-    } catch (error) {  this.log("⚠ Failed to merge package.json, using incoming "version": ${error.message  }", "WARN")""
-    // "Fallback"""
-  // "Fallback"""
-      .replace(/\s*\""n/g"", "")""
-      .replace(/\s*\"n/g", ")""
-  async processBranch(branchName) {this.log("� Processing "branch": ${branchName}")""
-  // Checkout the branchconst checkoutResult = await this.runCommand("git checkout ${branchName}")""
-      if (!checkoutResult.success) {this.log(" Failed to checkout ${branchName}", "ERROR")""
-      const mergeResult = await this.runCommand("git merge main")""
-      if (mergeResult.success) {this.log(" Successfully merged ${branchName} with main")""
-  "branch"""
-          "status": "merged"""
-        await this.runCommand("git add .");const commitResult = await this.runCommand("git commit -m Auto-resolve merge conflicts in ${branchName}")""
-        if (commitResult.success) {this.log(" Successfully resolved conflicts in ${branchName}")""
-            "status": "conflicts_resolved"""
-        await this.runCommand("git add .");const commitResult = await this.runCommand("git commit -m Auto-resolve merge conflicts in ${branchName}"")""
-          return true} else {this.log(" Failed to commit resolved conflicts in ${branchName}", "ERROR")""
-    } catch (error) {  this.log(" Error processing branch ${branchName  }: ${error.message}", "ERROR")""
-  this.log("� Getting list of branches to process...")""
-    const result = await this.runCommand("git branch -r", { "silent"})""
-  this.log(" Failed to get branch list", "ERROR")""
-      .split("\n")""
-      .filter(line => line.startsWith("""origin/cursor/""")""
-      .map(line => line.replace("origin/", "")""
-this.log(" Found ${branches.length} cursor branches to process")""
-      "duration"""
-      "conflictsResolved"""
-      "branchesProcessed"""
-      "summary"""
-        "totalBranches"""
-        "successfulBranches": this.branchesProcessed.filter(b => b.status === "merged" || b.status === "conflicts_resolved")""
-        "failedBranches": this.branchesProcessed.filter(b => b.status === "failed")""
-      .filter(line => line.startsWith(""origin/cursor/"")""
-      .map(line => line.replace("origin/", ")""
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(" Report "generated": ${this.reportFile}")""
-  this.log(" Starting Auto Merge Conflict Resolver")""
-    this.log("")""
-  // Ensure we"""
-      await this.runCommand("git checkout main")""
-      await this.runCommand("git pull origin main")""
-            "status": "failed"""
-      this.log("� Auto Merge Conflict Resolver completed!");this.log(" "Summary": ");this.log("   - Branches processed: ${report.summary.totalBranches}");this.log("   - Successful "merges": ${report.summary.successfulBranches}");this.log("   - Failed "merges": ${report.summary.failedBranches}");this.log("   - Conflicts "resolved": ${report.summary.totalConflicts}");this.log("   - "Duration": ${Math.round(report.duration / 1000)}s"""
-      return report} catch (error) {  this.log(" Fatal "error": ${error.message  }", "ERROR")""
-      return report} catch (error) {this.log(" Fatal "error": ${error.message}", "ERROR")""
-  console.error(" Auto merge conflict resolution "failed": ")""
-=======
-#!/usr/bin/env
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
-    this.logFile = path.join(this.projectRoot, automation/logs/auto-merge-resolver.log)
+    this.logFile = path.join(this.projectRoot, ""automation/logs/auto-merge-resolver.log"")
     this.reportFile = path.join(this.projectRoot, "auto-merge-resolver-report.json")
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
@@ -148,7 +51,7 @@ this.log(" Resolved conflict in ${filePath}")
       return { "success": true, "action": "resolved"}
 } catch (error) {  this.log(" Failed to resolve conflict in ${filePath  }: ${error.message}", "ERROR")
       return { "success": false, "error"}
-  const headImports = headContent.match(/import.*?from.*?[)]
+  const headImports = headContent.match(/import.*?from.*?["")]
       const incomingImports = incomingContent.match(/import.*?from.*?[")]
       const allImports = ["...new Set([...headImports", "...incomingImports")]
       const reactImport = allImports.find(imp => imp.includes("react")
@@ -164,7 +67,7 @@ this.log(" Resolved conflict in ${filePath}")
     } catch (error) {  this.log("⚠ Failed to merge package.json, using incoming "version": ${error.message  }", "WARN")
     // "Fallback"
   // "Fallback"
-      .replace(/\s*\n/g, )
+      .replace(/\s*\""n/g"", "")
       .replace(/\s*\"n/g", ")
   async processBranch(branchName) {this.log("� Processing "branch": ${branchName}")
   // Checkout the branchconst checkoutResult = await this.runCommand("git checkout ${branchName}")
@@ -179,7 +82,7 @@ this.log(" Resolved conflict in ${filePath}")
   "branch"
             "status": "conflicts_resolved"
             "timestamp"
-        await this.runCommand("git add .");const commitResult = await this.runCommand("git commit -m Auto-resolve merge conflicts in ${branchName})
+        await this.runCommand("git add .");const commitResult = await this.runCommand("git commit -m Auto-resolve merge conflicts in ${branchName}"")
         if (commitResult.success) {this.log(" Successfully resolved conflicts in ${branchName}")
   "branch"
             "status": "conflicts_resolved"
@@ -190,8 +93,8 @@ this.log(" Resolved conflict in ${filePath}")
     const result = await this.runCommand("git branch -r", { "silent"})
   this.log(" Failed to get branch list", "ERROR")
       .split("\n")
-      .filter(line => line.startsWith("origin/cursor/")
-      .map(line => line.replace("origin/", )
+      .filter(line => line.startsWith("""origin/cursor/""")
+      .map(line => line.replace("origin/", "")
 this.log(" Found ${branches.length} cursor branches to process")
   "timestamp"
       "duration"
@@ -202,7 +105,7 @@ this.log(" Found ${branches.length} cursor branches to process")
         "successfulBranches": this.branchesProcessed.filter(b => b.status === "merged" || b.status === "conflicts_resolved")
         "failedBranches": this.branchesProcessed.filter(b => b.status === "failed")
       .split("\n")
-      .filter(line => line.startsWith(origin/cursor/)
+      .filter(line => line.startsWith(""origin/cursor/"")
       .map(line => line.replace("origin/", ")
 this.log(" Found ${branches.length} cursor branches to process")
   "timestamp"
@@ -215,7 +118,7 @@ this.log(" Found ${branches.length} cursor branches to process")
         "failedBranches": this.branchesProcessed.filter(b => b.status === "failed")
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(" Report "generated": ${this.reportFile}")
   this.log(" Starting Auto Merge Conflict Resolver")
-    this.log()
+    this.log("")
   // Ensure we"
       await this.runCommand("git checkout main")
       await this.runCommand("git pull origin main")
@@ -230,6 +133,16 @@ this.log(" Found ${branches.length} cursor branches to process")
       this.log("� Auto Merge Conflict Resolver completed!");this.log(" "Summary": ");this.log("   - Branches processed: ${report.summary.totalBranches}");this.log("   - Successful "merges": ${report.summary.successfulBranches}");this.log("   - Failed "merges": ${report.summary.failedBranches}");this.log("   - Conflicts "resolved": ${report.summary.totalConflicts}");this.log("   - "Duration": ${Math.round(report.duration / 1000)}s"
       return report} catch (error) {this.log(" Fatal "error": ${error.message}", "ERROR")
   console.log(")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.error(" Auto merge conflict resolution "failed": ")
   console.error(" Auto merge conflict resolution "failed": ")
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

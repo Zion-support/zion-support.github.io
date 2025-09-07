@@ -1,6 +1,15 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import React from "react",;
+import { Card } from "@/components/ui/card",;
+=======
 import React from "react";""
 import { Card } from "@/components/ui/card";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Table,;
   TableBody,;
@@ -47,8 +56,29 @@ const syncLogs = [;
 ],;
 export function IntegrationsSyncLog() {;
   const getStatusBadge = (status:string) => {;
+<<<<<<< HEAD
+    switch (status) {;
+      case "success":return <Badge className="bg-green-500">Success</Badge>,;
+      case "error":;
+        return <Badge variant="destructive">Error</Badge>,;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      case "warning":;
+        return <Badge className="bg-amber-500">Warning</Badge>,;
+      default:;
+        return <Badge variant="outline">Unknown</Badge>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
     switch (status) {;"
       case "success":return <Badge className="bg-green-500">Success,;""
         return <Badge variant="destructive">Error,;""
         return <Badge className="bg-amber-500">Warning,;""
         return <Badge variant="outline">Unknown;""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

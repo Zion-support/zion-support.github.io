@@ -30,13 +30,7 @@ function cleanContent(content) {}
     .replace(/([)}>])\s*"\s*(?=\s*[, ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;"
   // In-line fixes across the whole file;
-<<<<<<< HEAD
-    // Comma followed by stray apostrophe (e.g., Shield,"");""
-=======
-  out = out;"
-    // Comma followed by stray apostrophe (e.g., Shield);
-    .replace(/,\s*"/g, ",");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     // Remove apostrophe after closing tokens if followed by punctuation or end;"
     .replace(/([)}>])\s*"\s*(?=\s*[", ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;
@@ -61,19 +55,42 @@ function $1() {}
   const original = fs.readFileSync(f, "utf8");"
       const updated = cleanContent(original);
       if (updated !== original) {}"
-<<<<<<< HEAD
-  fs.writeFileSync(f, updated, "utf8');
-=======
-  fs.writeFileSync(f, updated, "utf8);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         changed += 1};
     } catch (e) {}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   
   
   
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+} catch (e) {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
   console.log(`Cleaned ${changed} files.`)};
 if (require.main === module) {}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  main()};
+  main()};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
   main()};
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

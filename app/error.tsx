@@ -1,10 +1,8 @@
-'use client';
-
-import React from 'react';
-
+'use client'
+import React from 'react'
 interface ErrorProps {
-  error: Error & { digest?: string };
-  reset: () => void;
+  error: Error & { digest?: string }
+  reset: () => void
 }
 
 export default function Error({ error, reset }: ErrorProps) {
@@ -53,5 +51,5 @@ export default function Error({ error, reset }: ErrorProps) {
         )}
       </div>
     </div>
-  );
+  )
 }

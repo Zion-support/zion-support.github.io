@@ -50,6 +50,16 @@ const SecurityAuditingChat: NextPage = () => {
       <Head>;
 
         <title>SecurityAuditingChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
+<<<<<<< HEAD:components/services/security-auditing-chat.tsx
+        <meta name="description" content="SecurityAuditingChat service" />{" "}
+<<<<<<< HEAD
+
+
+=======
+        <meta name="description" content="SecurityAuditingChat service" />{" "
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/services/security-auditing-chat.tsx
+=======
         <meta name="description" content="SecurityAuditingChat service" />{" ""
 </meta>
 
@@ -84,6 +94,7 @@ const SecurityAuditingChat: NextPage = () => {
         <title>SecurityAuditingChat - Zion Tech Solutions</title>"
       
 "
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 const SecurityAuditingChat: NextPage = () => {
   return (
     <div />
@@ -91,6 +102,19 @@ const SecurityAuditingChat: NextPage = () => {
 
       </Head>;
 
+<<<<<<< HEAD
+<<<<<<< HEAD:components/services/security-auditing-chat.tsx
+
+=======
+      </Head>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/services/security-auditing-chat.tsx
+      <main>
+        <h1>SecurityAuditingChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+=======
       </Head>;
 
 const SecurityAuditingChat: NextPage = () => {
@@ -98,6 +122,7 @@ const SecurityAuditingChat: NextPage = () => {
         <h1 />SecurityAuditingChat</h1>
         <p />Service details coming soon...</p>
         <a href=\"/services\" />Back to Services</a>
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       </main>
     </div>
       </Head>;

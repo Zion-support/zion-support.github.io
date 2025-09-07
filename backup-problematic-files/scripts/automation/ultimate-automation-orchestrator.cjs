@@ -1,44 +1,12 @@
+
 <<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
 const { execSync } = require('child_process')
     this.logFile = path.join(this.projectRoot, 'automation', 'logs', 'ultimate-automation.log')
     const dirs = ['automation/logs', 'test-results', 'deployment-reports', 'automation/reports']
   log(message, level = 'INFO')
+  log(message, level = 'INFO')
       fs.appendFileSync(this.logFile, logMessage + '\n')
-      console.error('Failed to write to log "file")""
-        "status"""
-      this.log(` Failed "Phase"`)""
-    this.log(' Phase "1")""
-        "stdio"""`;
-      this.log(`⚠ ESLint issues "found"`)""
-      this.log(`⚠ TypeScript issues "found"`)""
-    return { "status"}""
-    this.log('🧪 Phase "2")""
-      this.log(`⚠ Unit tests "failed"`)""
-      this.log(` Build test "failed"`)""
-    this.log('⚡ Phase "3")""`;
-      this.log(`⚠ App optimization "failed"`)""
-    this.log(' Phase "4")""`;
-      this.log(`⚠ Comprehensive testing "failed"`)""
-    this.log(' Phase "5")""`;
-      this.log(`⚠ Deployment "failed"`)""
-    this.log(' Phase "6")""
-      this.log(` Final build test "failed"`)""
-      this.log(`⚠ Final test run "failed"`)""
-      "overallStatus"""`;
-      this.log(`Ultimate Automation Orchestrator "failed"`)""`;
-=======
-#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.logFile = path.join(this.projectRoot,automation,logs,ultimate-automation.log')
-    const dirs = [automation/logs,test-results,deployment-reports,automation/reports]
-  log(message, level = 'INFO')
-  log(message, level = 'INFO')
-      fs.appendFileSync(this.logFile, logMessage +\n')
       console.error('Failed to write to log "file")
         "status"
         "status"
@@ -71,6 +39,16 @@ const { execSync } = require('child_process')
       this.log(`⚠ Final test run "failed"`)
     return { "status"}
       "overallStatus"
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       this.log(`Ultimate Automation Orchestrator "failed"`)
       this.log(`Ultimate Automation Orchestrator "failed"`)
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

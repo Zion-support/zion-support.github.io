@@ -34,13 +34,7 @@ class SimpleAutomationOrchestrator {}
       fs.appendFileSync(this.logFile, logMessage + "\n")} catch(error) {}
       console.error("Failed to write to log "file": ", error.message)};"
   };
-<<<<<<< HEAD
-  async runStep(stepName, stepFunction) {}"`;
-    this.log(`Starting "step": ${stepName}`);"
-=======
-  async runStep(stepName, stepFunction) {}"
-    this.log(`Starting "step": ${stepName});"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     const stepStart = Date.now(;);
     try {}
       const result = await stepFunction;(;);
@@ -54,220 +48,225 @@ class SimpleAutomationOrchestrator {}
 });"`;
       this.log(`Completed "step": ${stepName} (${duration}ms)`);"
       return result} catch(error) {}
-<<<<<<< HEAD
-        "status": "error",""
-=======
-      const duration = Date.now() - stepSta;r;t;
-      this.results.steps.push({})"
-        "name": stepName,
-        "status": "error",
-        "duration": duration,
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         "error": error.message;"
       this.results.errors.push({})"
         "step": stepName,
         "error": error.message,
         "timestamp": new Date().toISOString();"
-<<<<<<< HEAD
-      this.log(`Failed "step": ${stepName} - ${error.message}`, "ERROR");"
-=======
-      }
-});"
-      this.log(`Failed "step": ${stepName} - ${error.message}, "ERROR");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return null};
   async checkDependencies() {}"
     this.log("Checking project dependencies...");
+<<<<<<< HEAD
+    const nodeModulesPath = path.join(this.projectRoot, "node_modules";);
+    if () {}
+      this.log("Installing dependencies...")) {}
+    ) {}
+      this.log("Installing dependencies...")};
+      try {}
+        execSync("npm install --no-audit --no-fund", { })
+<<<<<<< HEAD
+          "cwd": this.projectRoot,
+=======
+          "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+          "stdio": "pipe",
+          "timeout": 300000;
+        }
+});
+        this.log("Dependencies installed successfully");
+        return { "installed": true }} catch(error) {}
+        this.log(`npm install failed, trying "yarn": ${error.message}`, "WARN");
+        try {}
+          execSync("yarn install --silent", { })
+<<<<<<< HEAD
+            "cwd": this.projectRoot,
+=======
+            "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            "stdio": "pipe",
+            "timeout": 300000;
+          }
+});
+          this.log("Dependencies installed with yarn");
+          return { "installed": true, "method": "yarn" }} catch(yarnError) {}
+          this.log(`Both npm and yarn "failed": ${yarnError.message}`, "ERROR");
+          return { "installed": false, "error": yarnError.message }};
+      };
+    };
+=======
     const nodeModulesPath = path.join(this.projectRoot, "node_modules";);"
       this.log("Installing dependencies...")) {}"
       this.log("Installing dependencies...")};"
-<<<<<<< HEAD
-        execSync("npm install --no-audit --no-fund", { })""
-          "cwd": this.projectRoot,""
-          "stdio": "pipe",""
-=======
-      try {}"
-        execSync("npm install --no-audit --no-fund", { })
-          "cwd": this.projectRoot,
-          "stdio": "pipe",
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
           "timeout": 300000;"
 });"
-<<<<<<< HEAD
-        this.log("Dependencies installed successfully");""
-        return { "installed": true }} catch(error) {}""`;
-        this.log(`npm install failed, trying "yarn": ${error.message}`, "WARN");"
-          execSync("yarn install --silent", { })""
-          this.log("Dependencies installed with yarn");""
-          return { "installed": true, "method": "yarn" }} catch(yarnError) {}""`;
-          this.log(`Both npm and yarn "failed": ${yarnError.message}`, "ERROR");""
-=======
-        this.log("Dependencies installed successfully");
-        return { "installed": true }} catch(error) {}
-        this.log(`npm install failed, trying "yarn": ${error.message}, "WARN");"
-        try {}"
-          execSync("yarn install --silent", { })
-            "cwd": this.projectRoot,
-            "stdio": "pipe",
-            "timeout": 300000;"
-          }
-});"
-          this.log("Dependencies installed with yarn");
-          return { "installed": true, "method": "yarn" }} catch(yarnError) {}
-          this.log(`Both npm and yarn "failed": ${yarnError.message}, "ERROR");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
           return { "installed": false, "error": yarnError.message }};"
     };"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log("Dependencies already installed");
     return { "installed": true, "existing": true }};"
   async runBasicTests() {}"
     this.log("Running basic application tests...");"
     const tests = [];
-    
-    // Test TypeScript compilation;
 <<<<<<< HEAD
-      execSync("npx tsc --noEmit", { })""
-=======
-    try {}"
+<<<<<<< HEAD
+
+    // Test TypeScript compilation;
+    try {}
       execSync("npx tsc --noEmit", { })
         "cwd": this.projectRoot,
+=======
+    
+    // Test TypeScript compilation;
+    try {}
+      execSync("npx tsc --noEmit", { })
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": "pipe",
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+        "timeout": 60000;
+      }
+});
+      tests.push({ "name": "TypeScript compilation", "status": "pass" }
+});
+      this.log("TypeScript compilation passed")} catch(error) {}
+      tests.push({ "name": "TypeScript compilation", "status": "fail", "error": error.message }
+});
+      this.log(`TypeScript compilation "failed": ${error.message}`, "ERROR")};
+    // Test ESLint;
+    try {}
+      execSync("npx eslint . --max-warnings 0", { })
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        "stdio": "pipe",
+        "timeout": 60000;
+      }
+});
+      tests.push({ "name": "ESLint", "status": "pass" }
+});
+      this.log("ESLint passed")} catch(error) {}
+      tests.push({ "name": "ESLint", "status": "fail", "error": error.message }
+});
+      this.log(`ESLint found "issues": ${error.message}`, "WARN")};
+    return { tests, "passed": tests.filter(t => t.status === "pass").length, "total": tests.length }};
+  async fixCommonIssues() {}
+    this.log("Fixing common issues...");
+    const fixes = [];
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    // Fix import issues;
+    try {}
+      const fixImportScript = path.join(this.projectRoot, "scripts", "fix-import-errors.cjs";);
+      if () {}
+        execSync(`node ${fixImportScript}`, { `})
+<<<<<<< HEAD
+          "cwd": this.projectRoot,
+=======
+          "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+          "stdio": "pipe",
+          "timeout": 120000;
+        })) {}
+    ) {}
+        execSync(`node ${fixImportScript}`, { `})
+<<<<<<< HEAD
+          "cwd": this.projectRoot,
+=======
+          "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+          "stdio": "pipe",
+          "timeout": 120000;
+        })};
+        fixes.push({ "type": "imports", "status": "fixed" }
+});
+        this.log("Import issues fixed")};
+    } catch(error) {}
+      this.log(`Import fix "failed": ${error.message}`, "WARN")};
+    // Fix syntax errors;
+    try {}
+      const fixSyntaxScript = path.join(this.projectRoot, "scripts", "fix-syntax-errors.cjs";);
+      if () {}
+        execSync(`node ${fixSyntaxScript}`, { `})
+<<<<<<< HEAD
+          "cwd": this.projectRoot,
+=======
+          "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+          "stdio": "pipe",
+          "timeout": 120000;
+        })) {}
+    ) {}
+        execSync(`node ${fixSyntaxScript}`, { `})
+<<<<<<< HEAD
+          "cwd": this.projectRoot,
+=======
+          "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+          "stdio": "pipe",
+          "timeout": 120000;
+        })};
+        fixes.push({ "type": "syntax", "status": "fixed" }
+});
+        this.log("Syntax issues fixed")};
+    } catch(error) {}
+      this.log(`Syntax fix "failed": ${error.message}`, "WARN")};
+=======
+    // Test TypeScript compilation;
+
         "timeout": 60000;"
       tests.push({ "name": "TypeScript compilation", "status": "pass" }")
-<<<<<<< HEAD
-      this.log("TypeScript compilation passed")} catch(error) {}""
-      tests.push({ "name": "TypeScript compilation", "status": "fail", "error": error.message }")
-      this.log(`TypeScript compilation "failed": ${error.message}`, "ERROR")};"
-    // Test ESLint;
-      execSync("npx eslint . --max-warnings 0", { })""
-      tests.push({ "name": "ESLint", "status": "pass" }")
-      this.log("ESLint passed")} catch(error) {}""
-      tests.push({ "name": "ESLint", "status": "fail", "error": error.message }")
-      this.log(`ESLint found "issues": ${error.message}`, "WARN")};""
-=======
-});"
-      this.log("TypeScript compilation passed")} catch(error) {}
-      tests.push({ "name": "TypeScript compilation", "status": "fail", "error": error.message }")
-});"
-      this.log(`TypeScript compilation "failed": ${error.message}, "ERROR")};"
-    // Test ESLint;
-    try {}"
-      execSync("npx eslint . --max-warnings 0", { })
-        "cwd": this.projectRoot,
-        "stdio": "pipe",
-        "timeout": 60000;"
-      }
-});"
-      tests.push({ "name": "ESLint", "status": "pass" }")
-});"
-      this.log("ESLint passed")} catch(error) {}
-      tests.push({ "name": "ESLint", "status": "fail", "error": error.message }")
-});"
-      this.log(`ESLint found "issues": ${error.message}, "WARN")};
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     return { tests, "passed": tests.filter(t => t.status === "pass").length, "total": tests.length }};"
   async fixCommonIssues() {}"
     this.log("Fixing common issues...");"
     const fixes = [];
-    
     // Fix import issues;
       const fixImportScript = path.join(this.projectRoot, "scripts", "fix-import-errors.cjs";);"
-<<<<<<< HEAD
-      if () {}`;
-        execSync(`node ${fixImportScript}`, { `})"
-          "timeout": 120000;"
-        })) {}
-    ) {}`;
-=======
-      if () {}
-        execSync(`node ${fixImportScript}, { `})"
-          "cwd": this.projectRoot,
-          "stdio": "pipe",
-          "timeout": 120000;"
-        })) {}
-    ) {}
-        execSync(`node ${fixImportScript}, { `})"
-          "cwd": this.projectRoot,
-          "stdio": "pipe",
-          "timeout": 120000;"
-        })};"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         fixes.push({ "type": "imports", "status": "fixed" }")
         this.log("Import issues fixed")};"
-<<<<<<< HEAD
-    } catch(error) {}"`;
-      this.log(`Import fix "failed": ${error.message}`, "WARN")};"
-=======
-    } catch(error) {}"
-      this.log(`Import fix "failed": ${error.message}, "WARN")};"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     // Fix syntax errors;
       const fixSyntaxScript = path.join(this.projectRoot, "scripts", "fix-syntax-errors.cjs";);"
-<<<<<<< HEAD
-        execSync(`node ${fixSyntaxScript}`, { `})"
-=======
-      if () {}
-        execSync(`node ${fixSyntaxScript}, { `})"
-          "cwd": this.projectRoot,
-          "stdio": "pipe",
-          "timeout": 120000;"
-        })) {}
-    ) {}
-        execSync(`node ${fixSyntaxScript}, { `})"
-          "cwd": this.projectRoot,
-          "stdio": "pipe",
-          "timeout": 120000;"
-        })};"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         fixes.push({ "type": "syntax", "status": "fixed" }")
         this.log("Syntax issues fixed")};"
-<<<<<<< HEAD
-      this.log(`Syntax fix "failed": ${error.message}`, "WARN")};"
-=======
-    } catch(error) {}"
-      this.log(`Syntax fix "failed": ${error.message}, "WARN")};"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.results.fixes = fixes;
     return fixes};
   async createAdditionalScripts() {}"
     this.log("Creating additional automation scripts...");"
     const newScripts = [];
-    
-    // Create enhanced error checker;"
 <<<<<<< HEAD
-    const enhancedErrorChecker = "#!/usr/bin/env node;""
+<<<<<<< HEAD
+
 =======
-    const enhancedErrorChecker = "#!/usr/bin/env node
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    // Create enhanced error checker;
+    const enhancedErrorChecker = "#!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
-const { execSync } = require("child_process");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+const { execSync } = require("child_process");
+=======
+    // Create enhanced error checker;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 class EnhancedErrorChecker {}
     this.logFile = path.join(this.projectRoot, "automation", "logs", "enhanced-error-checker.log");"
     this.ensureDirectories()};
     const dirs = ["automation/logs"];"
     const logMessage = \"[\${timestamp}] [\${level}] \${message}\;";"
-<<<<<<< HEAD
-      fs.appendFileSync(this.logFile, logMessage + "\\n")} catch(error) {}""
-  async checkTypeScriptErrors() {}"
-    this.log("Checking TypeScript errors...");"
-      const result = execSync("npx tsc --noEmit --pretty", {})""
-        "encoding": "utf8",""
-=======
-    console.log(logMessage);
-    try {}"
-      fs.appendFileSync(this.logFile, logMessage + "\\n")} catch(error) {}
-      console.error("Failed to write to log "file": ", error.message)};"
-  };
-  async checkTypeScriptErrors() {}"
-    this.log("Checking TypeScript errors...");"
-    try {}"
-      const result = execSync("npx tsc --noEmit --pretty", {})
-        "cwd": this.projectRoot,
-        "encoding": "utf8",
-        "timeout": 60000;"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       };);"
       this.log("No TypeScript errors found");
       return { "errors": 0, "output": result }} catch(error) {}
@@ -276,10 +275,7 @@ class EnhancedErrorChecker {}
   async run() {}"
     this.log("Starting Enhanced Error Checker...");"
     const results = {}"
-<<<<<<< HEAD
-=======
-      "timestamp": new Date().toISOString(),
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       "typescript": await this.checkTypeScriptErrors();"
     this.log("Enhanced Error Checker completed");"
     return results};
@@ -292,6 +288,55 @@ module.exports = EnhancedErrorChecker;";"
     fs.writeFileSync()"
       path.join(this.projectRoot, "scripts", "automation", "enhanced-error-checker.cjs"),"
       enhancedErrorChecker;
+<<<<<<< HEAD
+    );
+    newScripts.push({ "name": "enhanced-error-checker.cjs", "status": "created" }
+});
+    this.log("Enhanced error checker created");
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    this.results.newScripts = newScripts;
+    return newScripts};
+  async commitAndPushChanges() {}
+    this.log("Committing and pushing changes...");
+    try {}
+      // Add all changes;
+      execSync("git add .", { "cwd": this.projectRoot }
+});
+      this.log("Changes staged");
+<<<<<<< HEAD
+
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      // Commit changes;
+      const commitMessage = `"feat": automation improvements and fixes - ${new Date().toISOString()};;`
+      execSync(`git commit -m "${commitMessage}"`, { "cwd": this.projectRoot }
+});
+      this.log("Changes committed");
+<<<<<<< HEAD
+
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      // Push to current branch;
+      const currentBranch = execSync("git branch --show-current", {})
+        "cwd": this.projectRoot,
+        "encoding": "utf8"
+      }).trim(;);
+      execSync(`git push origin ${currentBranch}`, { "cwd": this.projectRoot }
+});
+      this.log(`Changes pushed to ${currentBranch}`);
+<<<<<<< HEAD
+
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      return {;}
+=======
     );"
     newScripts.push({ "name": "enhanced-error-checker.cjs", "status": "created" }")
     this.log("Enhanced error checker created");"
@@ -302,63 +347,122 @@ module.exports = EnhancedErrorChecker;";"
       // Add all changes;"
       execSync("git add .", { "cwd": this.projectRoot }")
       this.log("Changes staged");"
-<<<<<<< HEAD
-      // Commit changes;"`;
-      const commitMessage = `"feat": automation improvements and fixes - ${new Date().toISOString()};;`""`;
-=======
-      // Commit changes;"
-      const commitMessage = `"feat": automation improvements and fixes - ${new Date().toISOString()};;`
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       execSync(`git commit -m "${commitMessage}"`, { "cwd": this.projectRoot }")
       this.log("Changes committed");"
       // Push to current branch;"
-<<<<<<< HEAD
-      const currentBranch = execSync("git branch --show-current", {})""
-        "encoding": "utf8""
-      }).trim(;);"`;
-      execSync(`git push origin ${currentBranch}`, { "cwd": this.projectRoot }")
-});`;
-      this.log(`Changes pushed to ${currentBranch}`);
-=======
-      const currentBranch = execSync("git branch --show-current", {})
-        "cwd": this.projectRoot,
-        "encoding": "utf8
-      }).trim(;);"
-      execSync(`git push origin ${currentBranch}, { "cwd": this.projectRoot }")
-});
-      this.log(`Changes pushed to ${currentBranch});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
-      
+
       return {;}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         "committed": true,
         "pushed": true,
         "branch": currentBranch,
         "message": commitMessage;"
+
+      }).trim(;);
 <<<<<<< HEAD
-      }} catch(error) {}"`;
-      this.log(`Git operations "failed": ${error.message}`, "ERROR");"
-        "committed": false,""
-        "pushed": false,""
-  async mergeToMain() {}"
-    this.log("Merging changes to main branch...");"
+<<<<<<< HEAD
+
 =======
-      }} catch(error) {}"
-      this.log(`Git operations "failed": ${error.message}, "ERROR");"
-      return {;}"
-        "committed": false,
-        "pushed": false,
-        "error": error.message;"
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      if ( {})
+        this.log("Already on main branch")) {}
+     {}
+        this.log("Already on main branch")};
+        return { "merged": true, "alreadyOnMain": true }};
+      // Switch to main;
+      execSync("git checkout main", { "cwd": this.projectRoot }
+});
+      this.log("Switched to main branch");
+<<<<<<< HEAD
+
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      // Pull latest changes;
+      execSync("git pull origin main", { "cwd": this.projectRoot }
+});
+      this.log("Pulled latest main changes");
+<<<<<<< HEAD
+
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      // Merge current branch;
+      execSync(`git merge ${currentBranch}`, { "cwd": this.projectRoot }
+});
+      this.log(`Merged ${currentBranch} into main`);
+<<<<<<< HEAD
+
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      // Push to main;
+      execSync("git push origin main", { "cwd": this.projectRoot }
+});
+      this.log("Pushed merged changes to main");
+<<<<<<< HEAD
+
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      return {;}
+        "merged": true,
+        "fromBranch": currentBranch,
+        "toBranch": "main"
+      }} catch(error) {}
+      this.log(`Merge "failed": ${error.message}`, "ERROR");
+      return {;}
+        "merged": false,
+        "error": error.message;
       }};
   };
-  async mergeToMain() {}"
-    this.log("Merging changes to main branch...");"
-    try {}"
-      const currentBranch = execSync("git branch --show-current", {})
-        "cwd": this.projectRoot,
-        "encoding": "utf8
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
-      }).trim(;);
+  async run() {}
+    this.log("Starting Simple Automation Orchestrator...");
+    try {}
+      // Step "1": Check dependencies;
+      await this.runStep("Check Dependencies", () => this.checkDependencies());
+<<<<<<< HEAD
+
+      // Step "2": Run basic tests;
+      await this.runStep("Run Basic Tests", () => this.runBasicTests());
+
+      // Step "3": Fix common issues;
+      await this.runStep("Fix Common Issues", () => this.fixCommonIssues());
+
+      // Step "4": Create additional scripts;
+      await this.runStep("Create Additional Scripts", () => this.createAdditionalScripts());
+
+      // Step "5": Commit and push changes;
+      await this.runStep("Commit and Push Changes", () => this.commitAndPushChanges());
+
+      // Step "6": Merge to main;
+      await this.runStep("Merge to Main", () => this.mergeToMain());
+
+=======
       
+      // Step "2": Run basic tests;
+      await this.runStep("Run Basic Tests", () => this.runBasicTests());
+      
+      // Step "3": Fix common issues;
+      await this.runStep("Fix Common Issues", () => this.fixCommonIssues());
+      
+      // Step "4": Create additional scripts;
+      await this.runStep("Create Additional Scripts", () => this.createAdditionalScripts());
+      
+      // Step "5": Commit and push changes;
+      await this.runStep("Commit and Push Changes", () => this.commitAndPushChanges());
+      
+      // Step "6": Merge to main;
+      await this.runStep("Merge to Main", () => this.mergeToMain());
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      this.results.status = "completed";
+      this.log("Simple Automation Orchestrator completed successfully!")} catch(error) {}
+      this.results.status = "failed";
+      this.log(`Simple Automation Orchestrator "failed": ${error.message}`, "ERROR")} finally {`}
+=======
       if ( {})"
         this.log("Already on main branch")) {}"
      {}"
@@ -370,89 +474,28 @@ module.exports = EnhancedErrorChecker;";"
       // Pull latest changes;"
       execSync("git pull origin main", { "cwd": this.projectRoot }")
       this.log("Pulled latest main changes");"
-<<<<<<< HEAD
-      // Merge current branch;"`;
-      execSync(`git merge ${currentBranch}`, { "cwd": this.projectRoot }")
-=======
-      // Merge current branch;"
-      execSync(`git merge ${currentBranch}, { "cwd": this.projectRoot }")
-});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.log(`Merged ${currentBranch} into main`);
-      
       // Push to main;"
       execSync("git push origin main", { "cwd": this.projectRoot }")
       this.log("Pushed merged changes to main");"
-<<<<<<< HEAD
-        "merged": true,""
-        "fromBranch": currentBranch,""
-        "toBranch": "main""
-      this.log(`Merge "failed": ${error.message}`, "ERROR");"
-        "merged": false,""
-    this.log("Starting Simple Automation Orchestrator...");"
-      // Step "1": Check dependencies;""
-      await this.runStep("Check Dependencies", () => this.checkDependencies());""
-      // Step "2": Run basic tests;""
-      await this.runStep("Run Basic Tests", () => this.runBasicTests());""
-      // Step "3": Fix common issues;""
-      await this.runStep("Fix Common Issues", () => this.fixCommonIssues());""
-      // Step "4": Create additional scripts;""
-      await this.runStep("Create Additional Scripts", () => this.createAdditionalScripts());""
-      // Step "5": Commit and push changes;""
-      await this.runStep("Commit and Push Changes", () => this.commitAndPushChanges());""
-      // Step "6": Merge to main;""
-      await this.runStep("Merge to Main", () => this.mergeToMain());""
-      this.results.status = "completed";""
-      this.log("Simple Automation Orchestrator completed successfully!")} catch(error) {}""
-      this.results.status = "failed";""`;
-      this.log(`Simple Automation Orchestrator "failed": ${error.message}`, "ERROR")} finally {`}"
-=======
-      return {;}"
-        "merged": true,
-        "fromBranch": currentBranch,
-        "toBranch": "main
-      }} catch(error) {}"
-      this.log(`Merge "failed": ${error.message}, "ERROR");"
-      return {;}"
-        "merged": false,
-        "error": error.message;"
-      }};
-  };
-  async run() {}"
-    this.log("Starting Simple Automation Orchestrator...");"
-    try {}"
-      // Step "1": Check dependencies;
-      await this.runStep("Check Dependencies", () => this.checkDependencies());
-      // Step "2": Run basic tests;
-      await this.runStep("Run Basic Tests", () => this.runBasicTests());
-      // Step "3": Fix common issues;
-      await this.runStep("Fix Common Issues", () => this.fixCommonIssues());
-      // Step "4": Create additional scripts;
-      await this.runStep("Create Additional Scripts", () => this.createAdditionalScripts());
-      // Step "5": Commit and push changes;
-      await this.runStep("Commit and Push Changes", () => this.commitAndPushChanges());
-      // Step "6": Merge to main;
-      await this.runStep("Merge to Main", () => this.mergeToMain());
-      this.results.status = "completed";
-      this.log("Simple Automation Orchestrator completed successfully!")} catch(error) {}
-      this.results.status = "failed";
-      this.log(`Simple Automation Orchestrator "failed": ${error.message}, "ERROR")} finally {`}"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Save results;
         const reportFile = path.join(this.projectRoot, "automation", "logs", "simple-automation-report.json";);"
-<<<<<<< HEAD
-        fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));`;
-        this.log(`Results saved to ${reportFile}`)} catch(error) {`}"`;
-        this.log(`Failed to save "results": ${error.message}`, "WARN")};"
-=======
-        fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));
-        this.log(`Results saved to ${reportFile})} catch(error) {`}"
-        this.log(`Failed to save "results": ${error.message}, "WARN")};"
-    };
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     return this.results};
   const orchestrator = new SimpleAutomationOrchestrator) {}
   const orchestrator = new SimpleAutomationOrchestrator}(;);
   orchestrator.run().catch(console.error)};
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
 module.exports = SimpleAutomationOrchestrator;
+<<<<<<< HEAD
+module.exports = SimpleAutomationOrchestrator;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

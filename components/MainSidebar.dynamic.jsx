@@ -1,8 +1,7 @@
 import React from 'react';
-
-pr-12243
+export default MainSidebar.dynamic;
 ;
-const MainSidebar.dynamic = () => {
+const MainSidebar.dynamic = () => {}
   return (
     <div data - testid="mainsidebar.dynamic">;
       <h1 > MainSidebar.dynamic</h1>;
@@ -13,6 +12,8 @@ const MainSidebar.dynamic = () => ;
     </div>
   );
 }
+;
 
 pr-12243
 export default MainSidebar.dynamic;
+

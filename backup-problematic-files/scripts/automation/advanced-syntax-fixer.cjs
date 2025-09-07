@@ -6,49 +6,32 @@ console.log([INFO]  Starting advanced syntax error fix automation...")
     const scriptTagRegex = /<script type="application\/ld\+json \/\/ "TODO"
     content = content.replace(scriptTagRegex, "<script type=application/ld+json dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
     const scriptTagRegex = /<script type=application\/ld\+json" \/\/ "TODO"
-    content = content.replace(scriptTagRegex, "<script type=application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
-  return match.replace(/<script[^>]*><\/script>\s*/, ")"
-</script>"
 <<<<<<< HEAD
-    content = content.replace(malformedJSXCloseRegex, "</>")""
-  return "})"""
-    const orphanedImportRegex = /^\s*\} from "lucide-react"""
-    content = content.replace(orphanedImportRegex, "")""
-    content = content.replace(malformedTryCatchRegex, "  } catch (")""
-  fs.writeFileSync(filePath, content, "utf8")""
-      console.log(")""
-    return fixes} catch (error) {  console.log([ERROR] Failed to fix ${filePath  }: ${error.message}"")""
-=======
+    content = content.replace(scriptTagRegex, "<script type=""application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
+  return match.replace(/<script[^>]*><\/script>\s*/, ")
+    const duplicateCommentsRegex = /\/\/ "TODO": Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if ""needed/g""
+    content = content.replace(duplicateCommentsRegex, "  // "TODO": Add dependencies if needed")
+    content = content.replace(malformedUseEffectRegex, "}, []);"
+    const orphanedPatterns = ["/^\s*}", "\[\"]
+    const duplicateCommentsRegex = /\/\/ "TODO": Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if "needed/g"
+    content = content.replace(duplicateCommentsRegex, "  // "TODO": Add dependencies if needed")
+    content = content.replace(malformedUseEffectRegex, "}, []);"
+    const orphanedPatterns = ["/^\s*}", "\[\"]
+  content = content.replace(pattern, ")
     content = content.replace(malformedJSXCloseRegex, "</>")
     content = content.replace(malformedJSXCloseRegex, "</>")
   return "})"
     const orphanedImportRegex = /^\s*\} from "lucide-react"
-    content = content.replace(orphanedImportRegex, )
+    content = content.replace(orphanedImportRegex, "")
     content = content.replace(malformedTryCatchRegex, "  } catch (")
   fs.writeFileSync(filePath, content, "utf8")
       console.log(")
-    return fixes} catch (error) {  console.log([ERROR] Failed to fix ${filePath  }: ${error.message})
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
-function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]"
-  console.log(`[INFO]  Fixed advanced syntax errors in ${path.basename(filePath)}`;
-});`)}"
-<<<<<<< HEAD
-""`;
-    return fixes;`)} catch (error) {console.log([ERROR] Failed to fix ${filePath}: ${error.message}```)"
-function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]""
-      if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules"""
-const srcDir = path.join(process.cwd(), "src"""
-console.log("\n Advanced Syntax Error Fixer "Summary": ");console.log(" Total fixes applied: ${totalFixes}");console.log("� Files "fixed": ${fixedFiles.length}");console.log("� Fixed "files": ${fixedFiles.join(", ")}"""
-  "timestamp"""
-  fixedFiles,"summary": "Fixed ${totalFixes} advanced syntax errors across ${fixedFiles.length} files"""
-const logsDir = path.join(process.cwd(), "logs"""
-  fs.mkdirSync(logsDir, { "recursive"})""
-  path.join(logsDir, "advanced-syntax-fixes.json")""
-console.log(" Report "generated": "logs/advanced-syntax-fixes.json")""
-console.log(" Report "generated": "logs/advanced-syntax-fixes.json")""`;
-=======
-
-    return fixes;`)} catch (error) {console.log([ERROR] Failed to fix ${filePath}: ${error.message}``)"
+    return fixes} catch (error) {  console.log([ERROR] Failed to fix ${filePath  }: ${error.message}"")
+function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]
+  console.log(`[INFO]  Fixed advanced syntax errors in ${path.basename(filePath)}
+});`)}
+"
+    return fixes;`)} catch (error) {console.log([ERROR] Failed to fix ${filePath}: ${error.message}```)
 function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]
       if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules"
 const srcDir = path.join(process.cwd(), "src"
@@ -59,6 +42,23 @@ console.log("\n Advanced Syntax Error Fixer "Summary": ");console.log(" Total fi
 const logsDir = path.join(process.cwd(), "logs"
   fs.mkdirSync(logsDir, { "recursive"})
   path.join(logsDir, "advanced-syntax-fixes.json")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    content = content.replace(scriptTagRegex, "<script type=application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
+  return match.replace(/<script[^>]*><\/script>\s*/, ")"
+</script>"
+
+function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]"
+  console.log(`[INFO]  Fixed advanced syntax errors in ${path.basename(filePath)}`;
+});`)}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

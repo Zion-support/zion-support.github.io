@@ -1,8 +1,7 @@
 import React from 'react';
-
-pr-12243
+export default SEO.dynamic;
 ;
-const SEO.dynamic = () => {
+const SEO.dynamic = () => {}
   return (
     <div data - testid="seo.dynamic">;
       <h1 > SEO.dynamic</h1>;
@@ -13,6 +12,8 @@ const SEO.dynamic = () => ;
     </div>
   );
 }
+;
 
 pr-12243
 export default SEO.dynamic;
+

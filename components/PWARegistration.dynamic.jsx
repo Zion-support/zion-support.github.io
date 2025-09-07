@@ -1,8 +1,7 @@
 import React from 'react';
-
-pr-12243
+export default PWARegistration.dynamic;
 ;
-const PWARegistration.dynamic = () => {
+const PWARegistration.dynamic = () => {}
   return (
     <div data - testid="pwaregistration.dynamic">;
       <h1 > PWARegistration.dynamic</h1>;
@@ -13,6 +12,8 @@ const PWARegistration.dynamic = () => ;
     </div>
   );
 }
+;
 
 pr-12243
 export default PWARegistration.dynamic;
+

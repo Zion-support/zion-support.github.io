@@ -1,15 +1,4 @@
-use client';
 
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceData {
-  domContentLoaded: number;
-  loadComplete: number;
-  totalLoadTime: number;
-  firstPaint: number;
-  firstContentfulPaint: number;
-  resourceCount: number;
-pr-12325
   memory: {
     used: number;
     total: number;
@@ -18,9 +7,12 @@ pr-12325
 }
 import React, { useEffect } from 'react';
 
-interface PerformanceMonitorProps {
+interface PerformanceMonitorProps {}
   onPerformanceData?: (data: any) => void;
 }
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+
 interface Performance {
   getEntriesByType (type: string): PerformanceEntry[];
   now (): number;
@@ -157,9 +149,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 // Only run on client side
     if (typeof window === 'undefined' |typeof window.performance === 'undefined') return;
     const measurePerformance = () => {
+
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = window.performance.getEntriesByType('paint');
-      
       const performanceData = null;
         // Memory usage (if available)
         memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number ;} }).memory ? {
@@ -184,17 +176,16 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         resourceCount: window.performance.getEntriesByType('resource').length
 // Memory usage (if available)
 ursor/fix-syntax-push-and-merge-to-main-7db5
-        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory ? {
-          used: (window.performance as Performance & { memory: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory.usedJSHeapSize
-          total: (window.performance as Performance & { memory: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory.totalJSHeapSize
-          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory.jsHeapSizeLimit
+        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize
+          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize
+          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
       }
       if (onPerformanceData) {
         onPerformanceData(performanceData);
       }
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
-         
         console.log('Performance Metrics: ';, performanceData);
       }
     }
@@ -301,10 +292,12 @@ interface PerformanceMetrics {fcp?: number;
           </div>;
         )}
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData ;}) => {
-  useEffect(() => {
-    // Only run on client side
-    if (typeof window === 'undefined' || typeof performance === 'undefined') {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
+  onPerformanceData,
+}) => {}
+  useEffect(() => {}
+    // Only run on client side"
+    if (typeof window === "undefined" || typeof performance === "undefined") {}
       return;
     if (typeof window === 'undefined') return
     // Only show in development or for admin users
@@ -347,109 +340,23 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         'paint', 'largest-contentful-paint'
       ] })
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-    }
-  useEffect(() => {
-    const collectPerformanceData = () => {
-      if (typeof window === 'undefined' || !window.performance) {
-        return;
-pr-12325
-
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = window.performance.getEntriesByType('paint');
-      const resources = window.performance.getEntriesByType('resource');
-
-      const firstPaint = paintEntries.find(entry => entry.name.includes('first-paint'))?.startTime || 0;
-      const firstContentfulPaint = paintEntries.find(entry => entry.name.includes('first-contentful-paint'))?.startTime || 0;
-
-      const data: PerformanceData = {
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;,
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart;,
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart;,
-        firstPaint,
-        firstContentfulPaint,
-        resourceCount: resources.length;,
-        memory: (window.performance as any).memory ? {
-          used: (window.performance as any).memory.usedJSHeapSize;,
-          total: (window.performance as any).memory.totalJSHeapSize;,
-          limit: (window.performance as any).memory.jsHeapSizeLimit;
-        } : null
-      };
-pr-12243
-pr-12325
-
-      setPerformanceData(data);
-      onPerformanceData?.(data);
-
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-}
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
-        
-        if (navigationEntry) {
-          setMetrics({
-            loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;,
-            renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;,
-            memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0;
-          });
-      const metrics: PerformanceMetrics = {;};
-
-      // Monitor Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            metrics.lcp = entry.startTime;
-            // Send to analytics in production
-            if (process.env.NODE_ENV === 'production') {
-              // gtag('event', 'web_vitals', {
-              //   name: 'LCP';,
-              //   value: Math.round(entry.startTime);,
-              //   event_category: 'Web Vitals'
-              // });
-            }
-          }
-        }
-      });
-      
-      try {
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] ;});
-      } catch (e) {
-        // Fallback for browsers that don't support LCP
-      }
-
-      // Monitor First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'first-input') {
-            const fid = (entry as any).processingStart - entry.startTime;
-            metrics.fid = fid;
-            if (process.env.NODE_ENV === 'production') {
-              // gtag('event', 'web_vitals', {
-              //   name: 'FID';,
-              //   value: Math.round(fid);,
-              //   event_category: 'Web Vitals'
-              // });
-            }
-          }
-origin/cursor/analyze-improve-and-deploy-application-347d
-        }
-      });
 
       observer.observe({ entryTypes: ['navigation'] ;});
 
+// Log performance data in development
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Metrics:', performanceData);
+      }
+    };
+
+    // Measure performance after page load"
+    if (document.readyState === "complete") {}
+      measurePerformance();
+    } else {"
+      window.addEventListener("load", measurePerformance);
+    }
+
         console.log('Performance Metrics: ';, performanceData);
       }
     };
@@ -463,6 +370,7 @@ pr-12325
       window.addEventListener('load', collectPerformanceData);
 
     return () => {
+
       observer.disconnect ();
       clear_timeout (timer);
 if (typeof window ===, undefined
@@ -525,7 +433,6 @@ observer.observe({ entryTypes: [
   return (
     <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs">
       <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>
-      
       <div className="space-y-2 text-xs">
         {metrics.fcp && (
           <div className="flex justify-between">
@@ -535,7 +442,6 @@ observer.observe({ entryTypes: [
             </span>
           </div>
         )}
-        
         {metrics.lcp && (
           <div className="flex justify-between">
             <span className="text-gray-600">LCP: </span>
@@ -544,7 +450,6 @@ observer.observe({ entryTypes: [
             </span>
           </div>
         )}
-        
         {metrics.fid && (
           <div className="flex justify-between">
             <span className="text-gray-600">FID: </span>
@@ -553,7 +458,6 @@ observer.observe({ entryTypes: [
             </span>
           </div>
         )}
-        
         {metrics.cls && (
           <div className="flex justify-between">
             <span className="text-gray-600">CLS: </span>
@@ -562,7 +466,6 @@ observer.observe({ entryTypes: [
             </span>
           </div>
         )}
-        
         {metrics.ttfb && (
           <div className="flex justify-between">
             <span className="text-gray-600">TTFB: </span>
@@ -572,7 +475,6 @@ observer.observe({ entryTypes: [
           </div>
         )}
       </div>
-      
       <div className="mt-3 pt-2 border-t border-gray-200">
         <button
           onClick={() => setIsVisible(false)}
@@ -584,7 +486,6 @@ observer.observe({ entryTypes: [
     </div>
   const getScoreColor = (value: number;, thresholds: { good: number poor: number ;}) => {
 if (value <= thresholds.good) return 'text-green-600'
-  
    if (value <= thresholds.poor) return
   'text-yellow-600'
    return
@@ -677,6 +578,10 @@ if (return 'Needs Improvement) {
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
       </div>;
       window.removeEventListener('load', measurePerformance);
+
+    return () => {"
+      window.removeEventListener("load", measurePerformance);
+
     };
   }, [onPerformanceData]);
 pr-12243
@@ -735,12 +640,8 @@ pr-12243
 origin/cursor/analyze-improve-and-deploy-application-347d
     }
   }, []);
-      window.removeEventListener('load', collectPerformanceData);
-  }, [onPerformanceData]);
-pr-12325
 
-  if (!performanceData) {
-    return null;
+  if (!metrics) return null;
 
   return (
     <div className="performance-monitor fixed bottom-4 left-4 z-50 bg-black bg-opacity-75 text-white text-xs p-2 rounded font-mono">
@@ -757,10 +658,21 @@ pr-12325
 };
 
 export default PerformanceMonitor;
-  return null; // This component doesn't render anything
+
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [onPerformanceData]);
+
+  if (!metrics) return null;
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
+      <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
+      <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
+      <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;
-origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
-  );
-pr-12325
+

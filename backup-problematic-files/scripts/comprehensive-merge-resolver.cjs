@@ -1,124 +1,32 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-#!/usr/bin/env node
-#!/usr/bin/env node
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 console.log('🚀 Comprehensive Merge Conflict Resolver');
-<<<<<<< HEAD
-console.log('==');
-=======
-console.log('=);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 // Function to remove merge conflict markers;
 function removeMergeConflictMarkers(content) {
+<<<<<<< HEAD
+  return content
+<<<<<<< HEAD
+    .replace(/[a-f0-9]+/g, '');
+=======
+
+    .replace(/
+    .replace(/
+    .replace(/
+
+    .replace(/
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
   return content;
     .replace(/
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 // Function to fix common syntax errors;)
 function fixSyntaxErrors(content) {
-<<<<<<< HEAD
-    // Fix object literal syntax;
-    .replace(/\{\s*$/gm, '{')
-    .replace(/\[\s*$/gm, '[')
-    .replace(/\(\s*$/gm, '(')
-    // Fix semicolons in wrong places;
-    .replace(/;\s*$/gm, )
-    .replace(/;\s*}/g, '}')']
-    .replace(/;\s*]/g, ']')
-    .replace(/;\s*\)/g, ')')
-    // Fix quotes in className;
-    .replace(/"hover":\s*/g, 'hover:')
-    .replace(/"focus":\s*/g, 'focus:')
-    .replace(/"group-hover":\s*/g, 'group-hover:')
-    .replace(/"sm":\s*/g, 'sm:')
-    .replace(/"md":\s*/g, 'md:')
-    .replace(/"lg":\s*/g, 'lg:')
-    .replace(/"xl":\s*/g, 'xl:')
-    .replace(/"2xl":\s*/g, '2xl:')
-    // Fix function declarations;
-    .replace(/function\s+\w+\s*\{\s*$/gm, 'function $1() {')
-    .replace(/export\s+default\s+function\s+\w+\s*\{\s*$/gm, 'export default function $1() {')
-    // Fix array and object syntax;
-    .replace(/\[\s*\{\s*$/gm, '[{')
-    .replace(/\{\s*\[\s*$/gm, '{[')']
-    .replace(/\}\s*\]\s*$/gm, '}]')
-    .replace(/\]\s*\}\s*$/gm, ']}')
-    // Fix JSX syntax;
-    .replace(/<\s*\/\s*>\s*$/gm, '</>')
-    .replace(/<\s*\/\w+\s*>\s*$/gm, '</$1>')
-    // Fix quotes in strings;
-    // Clean up extra semicolons;
-    .replace(/;;+/g, ';')
-    .replace(/;\s*;/g, ';')
-    // Fix empty objects and arrays;
-    .replace(/\{\s*\}/g, '{}')
-    .replace(/\[\s*\]/g, '[]')
-    // Fix trailing commas;
-    .replace(/,\s*}/g, '}')
-    .replace(/,\s*]/g, ']')
-    .replace(/,\s*\)/g, ')')
-    // Fix quotes in JSX;
-    // Clean up whitespace;
-    .replace(/\n\s*\n\s*\n/g, '\n\n')
-    .replace(/\s+$/gm, );
-=======
-  return content;
-    // Fix object literal syntax;
-    .replace(/\{\s*$/gm,{)
-    .replace(/\[\s*$/gm,[)
-    .replace(/\(\s*$/gm,(')
-    // Fix semicolons in wrong places;
-    .replace(/;\s*$/gm, )
-    .replace(/;\s*}/g, })]
-    .replace(/;\s*]/g, ])
-    .replace(/;\s*\)/g,))
-    // Fix quotes in className;
-    .replace(/"hover":\s*/g,hover: )
-    .replace(/"focus":\s*/g,focus: )
-    .replace(/"group-hover":\s*/g,group-hover: )
-    .replace(/"sm":\s*/g,sm: )
-    .replace(/"md":\s*/g,md: )
-    .replace(/"lg":\s*/g,lg: )
-    .replace(/"xl":\s*/g,xl: )
-    .replace(/"2xl":\s*/g,2xl: )
-    // Fix function declarations;
-    .replace(/function\s+\w+\s*\{\s*$/gm,function $1() {)
-    .replace(/export\s+default\s+function\s+\w+\s*\{\s*$/gm,export default function $1() {)
-    // Fix array and object syntax;
-    .replace(/\[\s*\{\s*$/gm,[{)
-    .replace(/\{\s*\[\s*$/gm,{[)]
-    .replace(/\}\s*\]\s*$/gm, }])
-    .replace(/\]\s*\}\s*$/gm, ]})
-    // Fix JSX syntax;
-    .replace(/<\s*\/\s*>\s*$/gm,</>')
-    .replace(/<\s*\/\w+\s*>\s*$/gm,</$1>')
-    .replace(/;\s*$/gm, )
-    // Fix quotes in strings;
-    .replace(/;\s*$/gm, )
-    .replace(/;\s*$/gm, )
-    // Clean up extra semicolons;
-    .replace(/;;+/g,;)
-    .replace(/;\s*;/g,;)
-    // Fix empty objects and arrays;
-    .replace(/\{\s*\}/g,{})
-    .replace(/\[\s*\]/g,[])
-    // Fix trailing commas;
-    .replace(/,\s*}/g, })
-    .replace(/,\s*]/g, ])
-    .replace(/,\s*\)/g,))
-    // Fix quotes in JSX;
-    .replace(/;\s*$/gm, )
-    .replace(/;\s*$/gm, )
-    // Clean up whitespace;
-    .replace(/\n\s*\n\s*\n/g,\n\n')
-    .replace(/\s+$/gm, );
-}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 // Function to process a file;
 function processFile(filePath) {
   try {
@@ -126,51 +34,50 @@ function processFile(filePath) {
     if (!fs.existsSync(filePath)) {
       console.log(`⚠️  File not found: ${filePath});
       return false;
-<<<<<<< HEAD
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    // Check for merge conflict markers;
-    if (content.includes()`;
-      console.log(`🔧 Removing merge conflict markers from ${filePath}`);
-=======
-    }
-    let content = fs.readFileSync(filePath,utf8);
-    let modified = false;
-    // Check for merge conflict markers;
-    if (content.includes()
-      console.log(`🔧 Removing merge conflict markers from ${filePath});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       content = removeMergeConflictMarkers(content);
       modified = true;
     // Fix syntax errors;
     const originalContent = content;
     content = fixSyntaxErrors(content);
+
 <<<<<<< HEAD
-    if (content !== originalContent) {`;
-      console.log(`🔧 Fixing syntax errors in ${filePath}`);
-    if (modified) {
-      fs.writeFileSync(filePath, content);`;
-      console.log(`✅ Fixed ${filePath}`);
-      return true;
-  } catch (error) {`;
-    console.log(`❌ Error processing ${filePath}: ${error.message}`);
+    // Check for merge conflict markers
+<<<<<<< HEAD
 =======
-    if (content !== originalContent) {
-      console.log(`🔧 Fixing syntax errors in ${filePath});
-      modified = true;
+
+    if (content.includes('
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+            files.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be read
+        }
+      }
     }
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed ${filePath});
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.log(`❌ Error processing ${filePath}: ${error.message});
-    return false;
   }
+  
+  searchDirectory('/workspace');
+  return files;
+      // Remove any remaining conflict markers;
+      content = content.replace(/\n/g, "")
+      content = content.replace(/\n/g, "")
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, "utf8")
+        this.resolvedFiles.push(filePath)
+        this.log(`✅ Resolved conflicts in ${filePath}`),,
 }
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+    } catch (error) {
+      this.errors.push({ file: filePath, error: error.message })
+      this.log(`❌ Error resolving ${filePath}: ${error.message}`),,
+}
+  }
+  cleanupBuildArtifacts() {
+    this.log("🧹 Cleaning up build artifacts...")
+    const artifactsToRemove = [
+=======
 // Function to find all files with merge conflicts;
 function findFilesWithConflicts() {
   const files = [];
@@ -179,63 +86,11 @@ function findFilesWithConflicts() {
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        searchDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
-  // TODO: Implement
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes()
-            files.push(fullPath);
-        } catch (error) {
-          // Skip files that can't be read;
-  searchDirectory('/workspace');
-  return files;
-      // Remove any remaining conflict markers;
-      content = content.replace(/\n/g, "")""
-      content = content.replace(/\n/g, "")"
-      if (content !== originalContent) {"
-        fs.writeFileSync(filePath, content, "utf8")"
-        this.resolvedFiles.push(filePath)`;
-        this.log(`✅ Resolved conflicts in ${filePath}`),,
-      this.errors.push({ file: filePath, error: error.message })`;
-      this.log(`❌ Error resolving ${filePath}: ${error.message}`),,
-=======
-      if (stat.isDirectory() && !item.startsWith('.) && item !==node_modules') {
-        searchDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
-        try {
-  // TODO: Implement
-}
-          const content = fs.readFileSync(fullPath,utf8);
-          if (content.includes()
-            files.push(fullPath);
-          }
-        } catch (error) {
-          // Skip files that can't be read;
-        }
-      }
-    }
-  }
-  searchDirectory('/workspace');
-  return files;
-      // Remove any remaining conflict markers;
-      content = content.replace(/\n/g, )
-      content = content.replace(/\n/g, )"
-      if (content !== originalContent) {"
-        fs.writeFileSync(filePath, content, "utf8")"
-        this.resolvedFiles.push(filePath)
-        this.log(`✅ Resolved conflicts in ${filePath}),,
-}
-    } catch (error) {
-      this.errors.push({ file: filePath, error: error.message })
-      this.log(`❌ Error resolving ${filePath}: ${error.message}),,
-}
-  }
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   cleanupBuildArtifacts() {"
     this.log("🧹 Cleaning up build artifacts...")"
     const artifactsToRemove = ["
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ".next",
       "node_modules/.cache",
       "dist",
@@ -244,96 +99,25 @@ function findFilesWithConflicts() {
       "package-lock.json"]"
     for (const artifact of artifactsToRemove) {
   // TODO: Implement
-<<<<<<< HEAD
-        if (fs.existsSync(artifact)) {`;
-          execSync(`rm -rf ${artifact}`, { cwd: this.projectRoot })`;
-          this.log(`🗑️ Removed ${artifact}`),,
-        this.log(`⚠️ Could not remove ${artifact}: ${error.message}`),,
-=======
-}
-        if (fs.existsSync(artifact)) {
-          execSync(`rm -rf ${artifact}, { cwd: this.projectRoot })
-          this.log(`🗑️ Removed ${artifact}),,
-}
-      } catch (error) {
-        this.log(`⚠️ Could not remove ${artifact}: ${error.message}),,
-}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 // Main execution;
 async function main() {
   // TODO: Implement
 }"
-<<<<<<< HEAD
-    console.log('🔍 Searching for files with merge conflicts...');
-=======
-    console.log('🔍 Searching for files with merge conflicts...);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     const conflictFiles = findFilesWithConflicts();
     if (conflictFiles.length === 0) {
       console.log('✅ No files with merge conflicts found');
     } else {
   // TODO: Implement
-<<<<<<< HEAD
-}`;
-      console.log(`📁 Found ${conflictFiles.length} files with merge conflicts:`);`;
-      conflictFiles.forEach(file => console.log(`   - ${file}`));
-    // Process all TypeScript/JavaScript files;
-    const allFiles = [
-      'pages/about.tsx',
-      'pages/blog.tsx',
-      'pages/ai-services.tsx',
-      'pages/api.tsx',
-      'pages/accessibility.tsx',
-      'pages/careers.tsx',
-      'components/Header.tsx',
-      'components/Footer.tsx',
-      'components/Layout.tsx',
-      'components/layout/MainLayout.tsx]
-    ];
-    console.log('\n🔧 Processing all files...');
-=======
-}
-      console.log(`📁 Found ${conflictFiles.length} files with merge conflicts:`);
-      conflictFiles.forEach(file => console.log(`   - ${file}));
-    }
-    // Process all TypeScript/JavaScript files;
-    const allFiles = [
-      'pages/about.tsx,pages/blog.tsx,pages/ai-services.tsx,pages/api.tsx,pages/accessibility.tsx,pages/careers.tsx,components/Header.tsx,components/Footer.tsx,components/Layout.tsx,components/layout/MainLayout.tsx]
-    ];
-    console.log('\n🔧 Processing all files...);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     let totalFixed = 0;
     for (const file of allFiles) {
       if (processFile(file)) {
         totalFixed++;
     console.log(`\n✅ Fixed ${totalFixed} files`);
     // Try to build;
-<<<<<<< HEAD
-    console.log('\n🔨 Testing build...');
-  // TODO: Implement
-      execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' }')
-});
-      console.log('✅ Build successful!');
-      console.log('⚠️  Build still has issues, but conflicts were resolved');
-      console.log('Error:', error.message);
-    console.log('\n🎉 Merge conflict resolution completed!');
-    console.error('❌ Error:', error.message);
-=======
-    console.log('\n🔨 Testing build...);
-    try {
-  // TODO: Implement
-}
-      execSync('npm run build, { cwd: /workspace, stdio: pipe})
-});
-      console.log('✅ Build successful!);
-    } catch (error) {
-      console.log('⚠️  Build still has issues, but conflicts were resolved');
-      console.log('Error: , error.message);
-    }
-    console.log('\n🎉 Merge conflict resolution completed!);
-  } catch (error) {
-    console.error('❌ Error: , error.message);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     process.exit(1);
 
 main();

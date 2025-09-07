@@ -1,72 +1,35 @@
+
 <<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
 const { execSync } = require('child_process')
 console.log(' Starting Smart Deployment Automation...')
-  "environment"""
-  "status"""
-    "HOST"""
-    execSync('npm install --production', { "stdio"})""
-      "encoding"""
-      "stdio"""
-    return { "dependenciesInstalled": true, "securityAudit"}""
-    execSync('npm run build', { "stdio"})""
-  const buildStats = execSync('du -sh .next', { "encoding"})""
-    execSync('pm2 --version', { "stdio"})""
-      execSync('pm2 stop all', { "stdio"})""
-      execSync('pm2 delete all', { "stdio"})""
-      execSync(`pm2 start ${ecosystemFile}`, { "stdio"`})""
-          "script"""
-          "args"""
-          "instances"""
-          "exec_mode"""`;
-          "exec_mode"""
-      execSync('pm2 start ecosystem.basic.cjs', { "stdio"})""
-    const pm2Status = execSync('pm2 status', { "encoding"})""
-      "fallbackMethod"""
-    const healthCheck = execSync('curl -f "http": //localhost:3000 || echo "Health check failed")""
-      "applicationResponding"""
-      "healthCheckResult"""
-    "buildExists"""
-    "logsDirectory"""
-    "applicationStatus"""
-    const pm2List = execSync('pm2 list --json', { "encoding"})""
-  console.log('� Application should be running on "http")""');
-  console.log('� Application should be running on "http")""');`;
-=======
-#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-console.log(' Starting Smart Deployment Automation...)
   "environment"
   "status"
       "status"
       "status"
     "HOST"
-    execSync('npm install --production, { "stdio"})
+    execSync('npm install --production', { "stdio"})
       "encoding"
       "stdio"
     return { "dependenciesInstalled": true, "securityAudit"}
     return { "dependenciesInstalled": true, "securityAudit"}
-    execSync('npm run build, { "stdio"})
-  const buildStats = execSync('du -sh .next, { "encoding"})
-    execSync('pm2 --version, { "stdio"})
-      execSync('pm2 stop all, { "stdio"})
-      execSync('pm2 delete all, { "stdio"})
-      execSync(`pm2 start ${ecosystemFile}, { "stdio"`})
+    execSync('npm run build', { "stdio"})
+  const buildStats = execSync('du -sh .next', { "encoding"})
+    execSync('pm2 --version', { "stdio"})
+      execSync('pm2 stop all', { "stdio"})
+      execSync('pm2 delete all', { "stdio"})
+      execSync(`pm2 start ${ecosystemFile}`, { "stdio"`})
           "script"
           "args"
           "instances"
           "exec_mode"
-      execSync(`pm2 start ${ecosystemFile}, { "stdio"`})
+      execSync(`pm2 start ${ecosystemFile}`, { "stdio"`})
           "script"
           "args"
           "instances"
           "exec_mode"
-      execSync('pm2 start ecosystem.basic.cjs, { "stdio"})
-    const pm2Status = execSync('pm2 status, { "encoding"})
+      execSync('pm2 start ecosystem.basic.cjs', { "stdio"})
+    const pm2Status = execSync('pm2 status', { "encoding"})
       "fallbackMethod"
     const healthCheck = execSync('curl -f "http": //localhost:3000 || echo "Health check failed")
       "encoding"
@@ -75,7 +38,17 @@ console.log(' Starting Smart Deployment Automation...)
     "buildExists"
     "logsDirectory"
     "applicationStatus"
-    const pm2List = execSync('pm2 list --json, { "encoding"})
+    const pm2List = execSync('pm2 list --json', { "encoding"})
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.log('� Application should be running on "http")
   console.log('� Application should be running on "http")
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

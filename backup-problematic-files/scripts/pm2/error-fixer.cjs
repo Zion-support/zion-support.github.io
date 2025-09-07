@@ -22,63 +22,63 @@ class ErrorFixer {}
     const errorMessage = `[${timestamp}] "ERROR": ${message}\n`;`"
     fs.appendFileSync(this.errorFile, errorMessage);
     console.error(message);
-  async fixSyntaxErrors() {}"
 <<<<<<< HEAD
+  };
+  async fixSyntaxErrors() {}
     this.log('Starting syntax error fixing...');
-    try {}
-      const fixes = [{}]
-          "pattern": /;/g,""
-          "replacement": ';',
-          "description": 'Fix double semicolons
-        },
-        {}
-          "pattern": /import\s+([^;]+);\s*import/g,""
-          "replacement": 'import $1;\nimport',
-          "description": 'Fix malformed imports
-          "pattern": /return\s*\(;/g,)""
-          "replacement": 'return (',)
-          "description": 'Fix malformed return statements
-          "pattern": /className="([^"]+)"/g,""
-          "replacement": 'className="$1"',
-          "description": 'Fix template literal className attributes
+<<<<<<< HEAD
+
 =======
-    this.log('Starting syntax error fixing...);
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {}
       const fixes = [{}]
           "pattern": /;/g,
-          "replacement": ;,
-          "description": Fix double semicolons
+          "replacement": ';',
+          "description": 'Fix double semicolons'
         },
         {}
           "pattern": /import\s+([^;]+);\s*import/g,
-          "replacement": import $1;\nimport,
-          "description": Fix malformed imports
+          "replacement": 'import $1;\nimport',
+          "description": 'Fix malformed imports'
         },
         {}
-          "pattern": /return\s*\(;/g)
-          "replacement": return (')
-          "description": Fix malformed return statements
+          "pattern": /return\s*\(;/g,)
+          "replacement": 'return (',)
+          "description": 'Fix malformed return statements'
         },
         {}
           "pattern": /className="([^"]+)"/g,
-          "replacement": className="$1",
-          "description": Fix template literal className attributes
+          "replacement": 'className="$1"',
+          "description": 'Fix template literal className attributes'
         };
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+=======
+  async fixSyntaxErrors() {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ];
 
       let totalFixed = 0;
       const files = this.getSourceFiles();
-      
-      for (const file of files) {}
 <<<<<<< HEAD
-          let content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
+
 =======
-        try {}
-          let content = fs.readFileSync(file,utf8);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      for (const file of files) {}
+
           let fileFixed = false;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
           
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           for (const fix of fixes) {}
             const before = content;
             content = content.replace(fix.pattern, fix.replacement);
@@ -95,18 +95,25 @@ class ErrorFixer {}
       return totalFixed;
       this.error("Error in "fixSyntaxErrors": ${err.message}");"
       return 0;
-  async fixLintingErrors() {}"
 <<<<<<< HEAD
+    };
+  };
+  async fixLintingErrors() {}
     this.log('Starting linting error fixing...');
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    try {}
       execSync('npm run "lint": fix', { })
         "stdio": 'pipe',
+        "cwd": process.cwd();
 =======
-    this.log('Starting linting error fixing...);
-    try {}
-      execSync('npm run "lint": fix, { })
-        "stdio": pipe,
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+  async fixLintingErrors() {}"
+
         "cwd": process.cwd();"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
 });"
       this.log('ESLint auto-fix completed');
@@ -115,63 +122,78 @@ class ErrorFixer {}
       this.error("ESLint fix "failed": ${err.message}");"
       return false;
   getSourceFiles() {}"
-<<<<<<< HEAD
-    const sourceDirs = ['src', 'pages', 'components', '__tests__', 'scripts'];
-    const extensions = ['.ts', '.tsx', '.js', '.jsx'];
-=======
-    const sourceDirs = [src,pages,components,__tests__,scripts];
-    const extensions = [.ts,.tsx,.js,.jsx];
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     const files = [];
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const dir of sourceDirs) {}
       if (fs.existsSync(dir)) {}
         this.getFilesRecursively(dir, extensions, files);
     return files;
   getFilesRecursively(dir, extensions, files) {}
     const items = fs.readdirSync(dir);
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    for (const item of items) {}
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+
+=======
     
     for (const item of items) {}
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    for (const item of items) {}
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (stat.isDirectory()) {}
         this.getFilesRecursively(fullPath, extensions, files);
       } else if (extensions.some(ext => item.endsWith(ext))) {}
         files.push(fullPath);
 <<<<<<< HEAD
-  async run() {}
-    this.log('Starting error fixing automation...');
-      const syntaxFixed = await this.fixSyntaxErrors();
-      const lintingFixed = await this.fixLintingErrors();
-      
-      this.log("Error fixing "completed": - Syntax errors fixed: ${syntaxFixed} files;)""
-        - Linting errors "fixed": ${lintingFixed ? 'Yes' : 'No'}");"
-=======
       };
     };
   };
   async run() {}
-    this.log('Starting error fixing automation...);
+    this.log('Starting error fixing automation...');
+<<<<<<< HEAD
+
     try {}
       const syntaxFixed = await this.fixSyntaxErrors();
       const lintingFixed = await this.fixLintingErrors();
-      '
+
       this.log("Error fixing "completed": - Syntax errors fixed: ${syntaxFixed} files;)
-        - Linting errors "fixed": ${lintingFixed ? 'Yes: No}");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+        - Linting errors "fixed": ${lintingFixed ? 'Yes' : 'No'}");
+
+=======
+    
+    try {}
+      const syntaxFixed = await this.fixSyntaxErrors();
+      const lintingFixed = await this.fixLintingErrors();
+      
+      this.log("Error fixing "completed": - Syntax errors fixed: ${syntaxFixed} files;)
+        - Linting errors "fixed": ${lintingFixed ? 'Yes' : 'No'}");
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return {}
         syntaxFixed,
         lintingFixed,"
         "success": true;"
-<<<<<<< HEAD
-    } catch (err) {}"`;
-      this.error("Error in "run": ${err.message}`);""
-=======
-      };
-    } catch (err) {}"
-      this.error("Error in "run": ${err.message});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return { "success": false, "error": err.message };"
 // Run if called directly;
 if (require.main === module) {}
@@ -181,5 +203,23 @@ if (require.main === module) {}
       process.exit(0);
     } else {}
       process.exit(1);
+<<<<<<< HEAD
+    };
+  }
+});
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ErrorFixer;
+module.exports = ErrorFixer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 module.exports = ErrorFixer;
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

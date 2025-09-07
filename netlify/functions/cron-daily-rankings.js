@@ -1,8 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
 
 ;
           0;
         )}))const top = entries && entries.sort((a, b) => b && b.points - a && a.points).slice(0, 100;
   const owner = process && process.env.GITHUB_OWNER;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const repo = process && process.env.GITHUB_REPO;
 
@@ -31,7 +37,19 @@ if ( {) {$2;}
     return {exports.handler = async function() {try {// Demo ranking: based on certifications and progress;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         content,
         message: 'chore (automation): daily rankings update',
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));}
@@ -100,7 +118,24 @@ ursor/fix-website-loading-errors-and-merge-6662;
         token,
       });
     }
+<<<<<<< HEAD
     return {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 exports.handler = async function() {
   try {
@@ -133,25 +168,79 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       name: u.name || u.user_id,
       points: (u.certifications?.length || 0) * 100 + Object.values (u.progress || {}).reduce ((acc, p) => acc + (p.percent || 0), 0);
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+    return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
   // TODO: Implement
 pr-12325
   // TODO: Implement
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     })),
 
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100),
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
-    // Check condition
-if ( {) {
-  $2
-}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
       await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     const content = JSON.stringify({ updatedAt: Date.now(), top }, null, 2);
     if (owner && repo && token) {
@@ -165,6 +254,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+
+  } catch (e) {}
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+<<<<<<< HEAD
+  }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -191,62 +289,105 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const token = process && process.env.GITHUB_TOKEN,
     const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), top }, null, 2),
 
-
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/marketplace/rankings-daily && daily.json', content, message: 'chore(automation): daily rankings update', token })
     }
 
-
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, topCount: top && top.length }) }
 
+    return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
 
 
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
+<<<<<<< HEAD
+
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+<<<<<<< HEAD
+  } catch (e) {
+=======
+  }  } catch (e) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+}
+},
+<<<<<<< HEAD
+},
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+<<<<<<< HEAD
+=======
 ursor/fix-website-loading-errors-and-merge-6662
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
 },
 },
-
-},
-
-},
-
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-    const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
-    // Check condition;
-if ( {) {
-  $2;
-      await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
-}'
-      await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });'
 
-    }
-    return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
- ,
-} catch (e) {}
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
- ,
-} catch (e) {}
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
-}
-}
-}
-
-}
-,
+<<<<<<< HEAD
+<<<<<<< HEAD
 },
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
 
 
-pr-12325
 '
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+},
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

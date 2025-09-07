@@ -12,7 +12,7 @@ interface Toast {
   title: string;
   message?: string;
   duration?: number;
-  action?: {
+  action?: {}
     label: string;
     onClick: () => void
 };
@@ -27,7 +27,7 @@ interface ToastContextType {
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
-export const useToast = () => {
+export const useToast = () => {};
   const context = useContext(ToastContext);
   if (!context) {
     throw new Error("useToast must be used within a ToastProvider");
@@ -35,7 +35,7 @@ export const useToast = () => {
   return context
 };
 
-interface ToastProviderProps {
+interface ToastProviderProps {}
   children: React.ReactNode;
   maxToasts?: number;
 }
@@ -76,7 +76,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
     setToasts((prev) => prev.filter((toast) => toast.id !== id));
   }, []);
 
-  const clearToasts = useCallback(() => {
+  const clearToasts = useCallback(() => {}
     setToasts([]);
   }, []);
 
@@ -90,7 +90,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
   )
 };
 
-interface ToastContainerProps {
+interface ToastContainerProps {}
   toasts: Toast[];
   onRemove: (id: string) => void;
 }
@@ -108,22 +108,22 @@ const ToastContainer: React.FC<ToastContainerProps> = ({
   )
 };
 
-interface ToastItemProps {
+interface ToastItemProps {}
   toast: Toast;
   onRemove: (id: string) => void;
 }
 
-const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
+const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {}
   const [isVisible, setIsVisible] = useState(false);
   const [isLeaving, setIsLeaving] = useState(false);
 
-  useEffect(() => {
-    // Trigger entrance animation
+  useEffect(() => {}
+    // Trigger entrance animation;
     const timer = setTimeout(() => setIsVisible(true), 10);
     return () => clearTimeout(timer);
   }, []);
 
-  const handleRemove = () => {
+  const handleRemove = () => {}
     setIsLeaving(true);
     setTimeout(() => onRemove(toast.id), 300)
 };
@@ -197,17 +197,17 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
             {toast.message && (
               <p className={`mt-1 text-sm ${messageColor}`}>{toast.message}</p>
             )}
-            {toast.action && (
+            {toast.action && ("
               <div className="mt-2">
-                <button
-                  onClick={toast.action.onClick}
+                <button;
+                  onClick={toast.action.onClick}`
                   className={`text-sm font-medium ${titleColor} hover:underline`}
                 >
                   {toast.action.label}
                 </button>
               </div>
             )}
-          </div>
+          </div>"
           <div className="ml-4 flex-shrink-0 flex">
             <button
               onClick={handleRemove}
@@ -229,8 +229,8 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
   )
 };
 
-// Convenience hooks for different toast types
-export const useToastNotifications = () => {
+// Convenience hooks for different toast types;
+export const useToastNotifications = () => {};
   const { addToast } = useToast();
 
   return {

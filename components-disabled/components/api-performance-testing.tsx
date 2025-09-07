@@ -1,7 +1,12 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD:components/api-performance-testing.tsx
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     }return this.props.children;
   }
 }import React from 'react';
@@ -31,11 +36,23 @@ import React from 'react';,export default function ApiPerformanceTestingPage() {
 ];
 return (<>;
   
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/api-performance-testing.tsx
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 class ErrorBoundary extends React.Component {
   constructor(props) {}
     super(props);}
     this.state = { hasError: false };
+<<<<<<< HEAD
+<<<<<<< HEAD:components/api-performance-testing.tsx
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   static getDerivedStateFromError(error) {
     return { hasError: true };
 
@@ -56,10 +73,32 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/api-performance-testing.tsx
+
+=======
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
 
 import React from \"react\";
 import SEO from \"../components/SEO\";
 import { Check, ExternalLink } from \"lucide-react\";
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default function ApiPerformanceTestingPage() {
   const features = [
     \"k6/Gatling-compatible test runner\"
@@ -679,6 +718,10 @@ href=\"https://gatling.io/open-source/\"
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+<<<<<<< HEAD:components/api-performance-testing.tsx
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     </>;
   )return (<>;
       <SEO;
@@ -745,4 +788,10 @@ href=\"https://gatling.io/open-source/\"
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/api-performance-testing.tsx
+=======
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

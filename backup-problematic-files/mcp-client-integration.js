@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 #!/usr/bin/env node;
 ;
 /**;
@@ -33,4 +36,9 @@ if (require.main === module) {;
   // TODO: Implement
   status: 'placeholder', message: 'Not implemented yet
 }//Export for use in other modules module.exports = MCPClientIntegration;
+<<<<<<< HEAD
+// Run if called directly 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 // Run if called directly;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

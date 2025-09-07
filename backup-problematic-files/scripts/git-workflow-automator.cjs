@@ -6,25 +6,6 @@ const { execSync } = require('child_process')
     this.reportsDir = path.join(this.projectRoot, 'git-workflow-reports')
     this.log(' Checking git status...')
       const result = execSync('git status --porcelain')
-        "encoding"""
-        "status"""
-          "message"""
-          "name"""
-        "type"""
-        "priority"""
-        "impact"""
-      this.log(` Current "branch"`)""`;
-      console.log(` Current "branch"`)""
-      console.error('\n� Git Workflow Automator "failed")""
-      console.error('\n� Git Workflow Automator "failed")""`;
-=======
-#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.reportsDir = path.join(this.projectRoot,git-workflow-reports')
-    this.log(' Checking git status...)
-      const result = execSync('git status --porcelain')
         "encoding"
         "status"
         "encoding"
@@ -59,6 +40,16 @@ const { execSync } = require('child_process')
         "impact"
       this.log(` Current "branch"`)
       console.log(` Current "branch"`)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       console.error('\n� Git Workflow Automator "failed")
       console.error('\n� Git Workflow Automator "failed")
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

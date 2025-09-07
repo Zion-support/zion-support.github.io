@@ -1,10 +1,9 @@
-import Head from 'next/head';
+import Head from 'next/head';'
 import Link from 'next/link';
-export default function TechnologyInsightsPage() {
-
-  const technologyTrends = [
-    {
-      id: 'quantum-computing'
+export default function TechnologyInsightsPage() {}
+  const technologyTrends = []
+    {'
+      id: 'quantum-computing''
       title: 'Quantum Computing in 2025'
       description:
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
@@ -17,16 +16,16 @@ export default function TechnologyInsightsPage() {
       description: 'How edge computing is transforming AI deployment and enabling real-time intelligent applications.'
       category: 'AI/ML'
       readTime: '12 min read'
-      featured: false
+      featured: false;
     }
-    {
-      id: 'autonomous-vehicles'
-      title: 'Autonomous Vehicle Technology'
-      description: 'The current state and future of autonomous vehicle technology and its broader applications.'
-      category: 'Autonomy'
+    {'
+      id: 'autonomous-vehicles''
+      title: 'Autonomous Vehicle Technology''
+      description: 'The current state and future of autonomous vehicle technology and its broader applications.''
+      category: 'Autonomy''
       readTime: '18 min read'
-      featured: false
-    },      featured: false
+      featured: false;
+    },      featured: false;
     }
   ];
 
@@ -35,12 +34,12 @@ export default function TechnologyInsightsPage() {
       title: 'Autonomous Systems Research',,
   description:;
         'Pioneering research in building truly autonomous systems that can operate independently.',;
-      focus: [;
-        'Decision Making',;
-        'Self-Learning',;
-        'Adaptive Behavior',;
+      focus: [;'
+        'Decision Making',;'
+        'Self-Learning',;'
+        'Adaptive Behavior',;'
         'System Integration',;
-      ],;
+      ],;'
       icon: '🔬',;
     },;
       title: 'AI Ethics & Governance',,
@@ -53,10 +52,10 @@ export default function TechnologyInsightsPage() {
       title: 'Human-AI Collaboration',,
   description:;
         'Exploring how humans and AI can work together effectively and safely.',;
-      focus: [;
-        'Human-AI Interface',;
-        'Collaborative Decision Making',;
-        'Safety Protocols',;
+      focus: [;'
+        'Human-AI Interface',;'
+        'Collaborative Decision Making',;'
+        'Safety Protocols',;'
         'Trust Building',;
       ],;
       icon: '🤝',;
@@ -64,34 +63,34 @@ export default function TechnologyInsightsPage() {
   description: 'Exploring how humans and AI can work together effectively and safely.',;
       focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],;
       icon: '🤝';
-    }
-      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
-        <main className='container mx-auto px-6 py-12'>;
-          <section className='text-center mb-16'>;
+    }'
+      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;'
+        <main className='container mx-auto px-6 py-12'>;'
+          <section className='text-center mb-16'>;'
             <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>;
               Technology Insights;
-            </h1>;
+            </h1>;'
             <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
-        <meta;
-          name='description';
+        <meta;'
+          name='description';'
           content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies.";
         />;
-        <meta;
-          property='og:title';
+        <meta;'
+          property='og:title';'
           content='Technology Insights | Zion Tech Group';
         />;
-        <meta;
-          property='og:description';
+        <meta;'
+          property='og:description';'
           content='Research insights, technology trends, and thought leadership in AI and automation.';
-        />;
+        />;'
         <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-      <div className='min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white'>;
-        <main className='container mx - auto px - 6 py - 12'>;
-          <section className='text - center mb - 16'>;
+      </Head>;'
+      <div className='min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white'>;'
+        <main className='container mx - auto px - 6 py - 12'>;'
+          <section className='text - center mb - 16'>;'
             <h1 className='text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent'>;
               Technology Insights;
-            </h1>;
+            </h1>;'
             <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;
 
               Research insights, technology trends, and thought leadership in;
@@ -231,36 +230,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
 
-                      href={`/blog/${trend && trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
+                      href={`/blog/${trend && trend.id}`}'
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;'
                       Read More <span className='ml-1'>→</span>                    </Link>      </Head>;
-
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
-        <main className="container mx-auto px-6 py-12">;
-          <section className="text-center mb-16">;
+"
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;"
+        <main className="container mx-auto px-6 py-12">;"
+          <section className="text-center mb-16">;"
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">;
               Technology Insights;
-            </h1>;
+            </h1>;"
             <p className="text-xl text-white/80 max-w-3xl mx-auto">;
               Research insights, technology trends, and thought leadership in AI, automation, and emerging technologies;
             </p>;
-          </section>;
+          </section>;"
           <section className="mx-auto max-w-7xl">;
-            {/* Technology Trends */}
-            <div className="mb-16">;
-              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Latest Technology Trends</h2>;
+            {/* Technology Trends */}"
+            <div className="mb-16">;"
+              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Latest Technology Trends</h2>;"
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-                {technologyTrends && technologyTrends.map((trend, index) => (;
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
-                    <div className="flex items-center justify-between mb-4">;
-                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{trend && trend.category}</span>;
+                {technologyTrends && technologyTrends.map((trend, index) => (;"
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;"
+                    <div className="flex items-center justify-between mb-4">;"
+                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{trend && trend.category}</span>;"
                       <span className="text-white/60 text-sm">{trend && trend.readTime}</span>;
-                    </div>;
-                    <h3 className="text-xl font-bold mb-3 text-white">{trend && trend.title}</h3>;
+                    </div>;"
+                    <h3 className="text-xl font-bold mb-3 text-white">{trend && trend.title}</h3>;"
                     <p className="text-white/70 mb-4">{trend && trend.description}</p>;
-                    <Link
-                      href={`/blog/${trend && trend.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">;
+                    <Link;`
+                      href={`/blog/${trend && trend.id}`}"
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">;"
                       Read More <span className="ml-1">→</span>;
                     </Link>;
                   </div>;
@@ -271,27 +270,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Research Areas */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
-                Research Focus Areas
-              </h2>
+                Research Focus Areas;
+              </h2>'
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-                {researchAreas.map((area, index) => (
-            <div className='mb-16'>;
+                {researchAreas.map((area, index) => ('
+            <div className='mb-16'>;'
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>;
                 Research Focus Areas;
-              </h2>;
+              </h2>;'
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
                 {researchAreas && researchAreas.map((area, index) => (;
-                  <div
-                    key={index}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;
-                    <div className='text-4xl mb-4'>{area && area.icon}</div>;
+                  <div;
+                    key={index}'
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;'
+                    <div className='text-4xl mb-4'>{area && area.icon}</div>;'
                     <h3 className='text-xl font-bold mb-3 text-white'>;
                       {area && area.title}
-                    </h3>;
-                    <p className='text-white/70 mb-4'>{area && area.description}</p>;
+                    </h3>;'
+                    <p className='text-white/70 mb-4'>{area && area.description}</p>;'
                     <ul className='space-y-2'>;
                       {area && area.focus.map((focus, focusIndex) => (;
-                        <li
+                        <li;
                           key={focusIndex}
                           className='text-sm text-white/60 flex items-center'
                         >
@@ -312,38 +311,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Whitepapers */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
-                Research Whitepapers
-              </h2>
+                Research Whitepapers;
+              </h2>'
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                 {whitepapers.map((paper, index) => (
-                  <div
-                    key={index}
+                  <div;
+                    key={index}'
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'
-                  >
-                    <div className='flex items-center justify-between mb-3'>
+                  >'
+                    <div className='flex items-center justify-between mb-3'>'
                       <span className='px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full'>
                         {paper.category}
-                      </span>
+                      </span>'
                       <span className='text-white/60 text-sm'>
-                        {paper.pages} pages
+                        {paper.pages} pages;
                       </span>
-                    </div>
+                    </div>'
                     <h3 className='text-xl font-bold mb-3 text-white'>
                       {paper.title}
-                    </h3>
+                    </h3>'
                     <p className='text-white/70 mb-4'>{paper.description}</p>
-                    <Link
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
+                    <Link"
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">"
+                    <div className="flex items-center justify-between mb-3">"
+                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>"
                       <span className="text-white/60 text-sm">{paper.pages} pages</span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white">{paper.title}</h3>
+                    </div>"
+                    <h3 className="text-xl font-bold mb-3 text-white">{paper.title}</h3>"
                     <p className="text-white/70 mb-4">{paper.description}</p>
-                    <Link
-                      href={paper.downloadUrl}
+                    <Link;
+                      href={paper.downloadUrl}"
                       className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
-                    >
+                    >"
                       Download PDF <span className="ml-1">→</span>
                       href={paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
@@ -363,23 +362,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Innovation Lab */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
-                Innovation Lab
-              </h2>
-              <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
+                Innovation Lab;
+              </h2>'
+              <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>'
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
 
-                  <div>
+                  <div>'
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
-                      Cutting-Edge Research
-                    </h3>
+                      Cutting-Edge Research;
+                    </h3>'
                     <p className='text-white/80 mb-6'>
-                      Our innovation lab is dedicated to exploring the frontiers
-                      of technology, conducting research in autonomous systems
-                      AI ethics, and human-AI collaboration. We work with
-                      leading institutions and industry partners to advance the
+                      Our innovation lab is dedicated to exploring the frontiers;
+                      of technology, conducting research in autonomous systems;
+                      AI ethics, and human-AI collaboration. We work with;
+                      leading institutions and industry partners to advance the;
                       state of the art.
-                    </p>
-                    <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
+                    </p>"
+                    <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>"
                     <p className="text-white/80 mb-6">
                       Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
                     <ul className='space-y-2 text-white/70'>
@@ -391,7 +390,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <li>• Ethical AI framework development</li>
                       <li>• Industry collaboration and partnerships</li>
                     </ul>
-                  </div>
+                  </div>"
                     <p className="text-white/60 text-sm">Innovation Lab</p>
 <div className='text-center'>
                     <div className='text-6xl mb-4'>🧪</div>
@@ -405,8 +404,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
             </div>;
-                <Link
-                  href="/contact"
+                <Link"
+                  href="/contact""
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
             {/* Call to Action */}
 <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
@@ -423,9 +422,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
-                  Get in Touch
+                  Get in Touch;
                 </Link>
-                <Link
+                <Link"
                   href="/blog"
                   Read Our Blog;
                 </Link>;
@@ -443,17 +442,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
     </>);
 }
-                  href='/blog'
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
-                >
-                  Read Our Blog
-                </Link>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    </>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
+

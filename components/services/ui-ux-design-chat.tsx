@@ -3,24 +3,14 @@ pr-12243
 
 import type { NextPage } from "next";
 import Head from "next/head";
+
 import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-
-
-const UiUxDesignChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-
 const UiUxDesignChat: NextPage = () => {;
   return (
     <div>;
       <Head>;
-        <title>UiUxDesignChat - Zion Tech Solutions</title>;
+        <title>UiUxDesignChat - Zion Tech Solutions</title>;"
         <meta name="description" content="UiUxDesignChat service" />{" "}
-
 
 const UiUxDesignChat: NextPage = () => {
   return (
@@ -28,24 +18,19 @@ const UiUxDesignChat: NextPage = () => {
       <Head>
 pr-12243
 
-      </Head>;
-
-
-        <meta name="description" content="UiUxDesignChat service" />
-      </Head>
-pr-12243
       <main>
         <h1>UiUxDesignChat</h1>
-        <p>Service details coming soon...</p>
+        <p>Service details coming soon...</p>"
         <a href="/services">Back to Services</a>
       </main>
     </div>
       </Head>;
 
 pr-12243
+
       <main>;
         <h1>UiUxDesignChat</h1>;
-        <p>Service details coming soon...</p>;
+        <p>Service details coming soon...</p>;"
         <a href="/services">Back to Services</a>;
       </main>;
     </div>;
@@ -53,28 +38,25 @@ pr-12243
 }
 export default UiUxDesignChat;
 
-
 pr-12243
 
         <title>UiUxDesignChat - Zion Tech Solutions</title>
 
-
-        <title>UiUxDesignChat - Zion Tech Solutions</title>
-
 pr-12243
+
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const UiUxDesignChat: NextPage = () => {
+const UiUxDesignChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
-        <title > UiUxDesignChat - Zion Tech Solutions</title>;
+        <title > UiUxDesignChat - Zion Tech Solutions</title>;"
         <meta name="description" content="UiUxDesignChat service" />{" "}
       </Head>;
       <main>;
         <h1 > UiUxDesignChat</h1>;
-        <p > Service details coming soon...</p>;
+        <p > Service details coming soon...</p>;"
         <a href="/services">Back to Services</a>;
       </main>;
     </div>);
@@ -101,27 +83,3 @@ pr-12243
 
 export default UiUxDesignChat
 
-
-
-const UiUxDesignChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>UiUxDesignChat - Zion Tech Solutions</title>
-        <meta name="description" content="UiUxDesignChat service" />{" "}
-      </Head>
-      <main>
-        <h1>UiUxDesignChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
-  );
-}
-export default UiUxDesignChat;
-
-        <title>UiUxDesignChat - Zion Tech Solutions</title>
-        <title>UiUxDesignChat - Zion Tech Solutions</title>
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243

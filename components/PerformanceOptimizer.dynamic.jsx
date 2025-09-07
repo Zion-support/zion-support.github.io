@@ -1,8 +1,7 @@
 import React from 'react';
-
-pr-12243
+export default PerformanceOptimizer.dynamic;
 ;
-const PerformanceOptimizer.dynamic = () => {
+const PerformanceOptimizer.dynamic = () => {}
   return (
     <div data - testid="performanceoptimizer.dynamic">;
       <h1 > PerformanceOptimizer.dynamic</h1>;
@@ -13,6 +12,8 @@ const PerformanceOptimizer.dynamic = () => ;
     </div>
   );
 }
+;
 
 pr-12243
 export default PerformanceOptimizer.dynamic;
+

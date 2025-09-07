@@ -1,9 +1,17 @@
+<<<<<<< HEAD
+
+// Function to fix unused variables;
+function fixUnusedVariables(content) {}};
+// Function to fix specific syntax issues;
+
+=======
 for (const item of, items) {}; const fullPath = path.join(dir, item) try {}; // Skip nodemodules, .git, and other common directories}; if (!['nodemodules.gitdistbuild.next'].includes(item)) {'}; files = files.concat(findFiles(fullPath, extensions)) }} else if (extensions.some(ext = > item.endsWith(ext))) {}; files.push(fullPath) }} catch (error) {; // Skip files that can't be accessed'}; continue }}};// Function to fix specific parsing errors;
 function fixParsingErrors(content) {}};
 // Function to fix unused variables;
 function fixUnusedVariables(content) {}};
 // Function to fix specific syntax issues;
 function fixSyntaxIssues(content) {}; fixed = fixed.replace(/(\w+)\s*(\n\s*[a-zA-Z_$])/g, (match, p1, p2) = > {}; if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{_') && !p1.trim().endsWith('}')) {_'}; return p1 + + p2,' }};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Main function;
 function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file, content, 'utf8'),' fixedCount++ _ }} catch (error) {}; errorCount++ _ }}; try {}; const result = execSync('npm run lint 2>&1', {encoding: 'utf8'}),' const lines = result.split('\n'),' const lastLine = lines[lines.length - 2] _ } catch (error) {}; _,' }}; fixedCount++}} catch (error) {_;  errorCount++}}
  }
@@ -13,6 +21,28 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
       continue;
 };
 // Function to fix specific parsing errors;
+<<<<<<< HEAD
+
+// Function to fix specific parsing errors,;function fixParsingErrors(content) {};
+};
+// Function to fix unused variables,;
+function fixUnusedVariables(content) {};
+};
+// Function to fix specific syntax issues,;
+
+};
+};
+  try {};
+    const result = execSync('npm run lint 2>&1', { encodin:g:'utf8' }),',;
+
+        fixedCount++,
+        _console.log(`✅ Fixed: ${file}`)
+      };
+    } catch (error) {};
+      errorCount++,
+
+};
+=======
   for (const item of, items) {};
     const fullPath = path.join(dir, item),;
     try {};
@@ -107,11 +137,25 @@ pr-12325
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
 }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };  try {};
     const result = execSync('npm run lint 2>&1', { encoding: 'utf8' }),',
     const lines = result.split('\n'),',
     const lastLine = lines[lines.length - 2],
+<<<<<<< HEAD
+    _console.log(`📈 Lint result: ${lastLine}`)
+  } catch (error) {};
+
+};
+};
+        fixedCount++};
+    } catch (error) {;
+
+=======
 }
 };
         fixedCount++};
@@ -123,7 +167,37 @@ pr-12325
 ;  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};""
   // console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)};""
     const result = execSync('npm run lint 2>&1', {encoding: 'utf8'}),',
+<<<<<<< HEAD
+    const lines = result.split('\n'),',
+    const lastLine = lines[lines.length - 2],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    _
+  } catch (error) {};
+    _,'
+}
+};
+        fixedCount++}
+<<<<<<< HEAD
+    } catch (error) {_;
+=======
+<<<<<<< HEAD
+      errorCount++}
+}
+
+  };
+};
+        fixedCount++};
+    } catch (error) {,
+  console.error(`Error processing ${file}:`, error.message),
+      errorCount++};
+  };
+,
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
     _;
     _,
         fixedCount++}
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

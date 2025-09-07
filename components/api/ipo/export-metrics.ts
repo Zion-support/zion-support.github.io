@@ -1,18 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
-
-
-
-
 
 pr-12243
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
-  const rows = [
+  const rows = ['
     ['MetricValueTrend%'];
-
+'
 import { requireSuperadminApi } from '../../../utils/api/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -20,11 +17,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
-  const rows = [
+  const rows = ['
     ['MetricValueTrend%'];
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 pr-12243
+
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
     ['Active users (monthly)184523.9'];
@@ -35,7 +33,6 @@ pr-12243
 
   res.status(200).send(csv)
 }
-
     ['Metric', 'Value', 'Trend%'],
     ['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],
     ['GMV', '$4,800,000', '5 && 5.1'],
@@ -60,15 +57,17 @@ pr-12243
   res && res.setHeader('Content-Dispositionattachment, filename="ipo-metrics && metrics.csv"');
   res && res.status(200).send(csv)
 
+  res.status(200).send(csv)
+
 }
 pr-12243
 import { requireSuperadminApi } from '../../../utils / api / auth';
-export default /**
- * handler - Function description
+export default /**;
+ * handler - Function description;
  */
-function handler() {
-  if () return) {
-  $2
+function handler() {}
+  if () return) {}
+  $2;
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -76,15 +75,17 @@ pr-12243
 
 }
 
-
 }
 
+}
+}
+}
 
-}
-}
-}
   res.status(200).send(csv);
   res.status(200).send(csv)
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+
+pr-12243
+

@@ -3,14 +3,25 @@
  * Real-time Health Dashboard;
  * Comprehensive monitoring dashboard for PM2 processes;
  */
-
-
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const pm2 = require('pm2')
 =======
-const pm2 = require('pm2)
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 const http = require('http')
@@ -23,56 +34,21 @@ const { execSync } = require('child_process')
   log(message, level = 'INFO')
     fs.appendFile(this.logFile, logMessage + '\n')
     this.log('� Initializing Health Dashboard...')
-          this.log(` Failed to connect to "PM2"`)""`;
-      this.log(` Dashboard update "failed"`)""
-      return { "status": 'offline', "color": 'red', "message"}""
-      return { "status": 'unstable', "color": 'orange', "message"}""
-      return { "status": 'warning', "color": 'yellow', "message"}""
-    return { "status": 'healthy', "color": 'green', "message"}""`;
-      this.log(` Failed to get system "metrics"`)""
-      const result = execSync('free -m', { "encoding"})""
-      const result = execSync('top -bn1 | grep "Cpu(s)"', { "encoding"}""
-        "cores"""
-      const result = execSync('df -h /', { "encoding"})""
-        "usagePercent"""
-      return { "total": '0', "used": '0', "available"}""
-      const result = execSync('uptime', { "encoding"})""`;
-      this.log(` Failed to save dashboard "data"`)""`;
-      this.log(` Health report generation "failed"`)""
-        "type"""
-        "action"""
-        "message"""
-        res.end(JSON.stringify({ "error"})""
-        body { font-"family"}""
-            \"""
-                    <div class="metric-value"""
-                container.innerHTML = '<div style=""color": #6b7280;"""
-                    "onlineProcesses"""
-                console.error('Failed to refresh "data")""`;
-      this.log(` Fatal "error"`)""`;
-=======
-    this.logFile = path.join(this.projectRoot,logs,health-dashboard.log')
-    this.dashboardFile = path.join(this.projectRoot,logs,dashboard-data.json')
-      await fs.mkdir(path.join(this.projectRoot,logs')
-      console.log('Logs directory already exists')
-  log(message, level = 'INFO')
-    fs.appendFile(this.logFile, logMessage +\n')
-    this.log('� Initializing Health Dashboard...)
           this.log(` Failed to connect to "PM2"`)
       this.log(` Dashboard update "failed"`)
-      return { "status": offline, "color": red, "message"}
-      return { "status": unstable, "color": orange, "message"}
-      return { "status": warning, "color": yellow, "message"}
-      return { "status": warning, "color": yellow, "message"}
-    return { "status": healthy, "color": green, "message"}
+      return { "status": 'offline', "color": 'red', "message"}
+      return { "status": 'unstable', "color": 'orange', "message"}
+      return { "status": 'warning', "color": 'yellow', "message"}
+      return { "status": 'warning', "color": 'yellow', "message"}
+    return { "status": 'healthy', "color": 'green', "message"}
       this.log(` Failed to get system "metrics"`)
-      const result = execSync('free -m, { "encoding"})
-      const result = execSync('top -bn1 | grep "Cpu(s)", { "encoding"}
+      const result = execSync('free -m', { "encoding"})
+      const result = execSync('top -bn1 | grep "Cpu(s)"', { "encoding"}
         "cores"
-      const result = execSync('df -h /, { "encoding"})
+      const result = execSync('df -h /', { "encoding"})
         "usagePercent"
-      return { "total": 0, "used": 0, "available"}
-      const result = execSync('uptime, { "encoding"})
+      return { "total": '0', "used": '0', "available"}
+      const result = execSync('uptime', { "encoding"})
       this.log(` Failed to save dashboard "data"`)
       this.log(` Health report generation "failed"`)
         "type"
@@ -93,10 +69,21 @@ const { execSync } = require('child_process')
         body { font-"family"}
             \"
                     <div class="metric-value"
-                container.innerHTML = '<div style=color": #6b7280;"
+                container.innerHTML = '<div style=""color": #6b7280;"
             \"
                     "onlineProcesses"
                 console.error('Failed to refresh "data")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       this.log(` Fatal "error"`)
       this.log(` Fatal "error"`)
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

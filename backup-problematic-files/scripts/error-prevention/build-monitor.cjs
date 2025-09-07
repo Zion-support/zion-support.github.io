@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-#!/usr/bin/env node
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -12,70 +8,82 @@ class BuildMonitor {}
     this.interval = 60000; // 1 minute;
     this.lastBuildTime = null};
   async start() {}
-<<<<<<< HEAD
-    console.log('Starting Build Monitor...');
-=======
-    console.log('Starting Build Monitor...);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     this.isRunning = true;
-    
+<<<<<<< HEAD
+<<<<<<< HEAD
+
     // Initial build check;
     await this.runBuildCheck();
-    
+
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
     
-    
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    // Initial build check;
+    await this.runBuildCheck();
+    // Set up interval for periodic checks;
+    this.intervalId = setInterval(() => {}
+      this.runBuildCheck()}, this.interval);
 <<<<<<< HEAD
     
+    
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
       console.log('Running build check...');
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const child = spawn('npm', ['run', 'build'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();"
+        "cwd": process.cwd();
       };);
-"
+
       let output = ;';';
       let errorOutput = ;';';
+
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
 
       child.stderr.on('data', (data) => {}
-=======
-    '
-    console.log('Build Monitor started successfully')};
-  async runBuildCheck() {}
-    try {}
-      console.log('Running build check...);
-      const child = spawn('npm, [run,build], {})
-        "stdio": [pipe,pipe,pipe],
-        "cwd": process.cwd();"
-      };);
-"
-      let output = ;;;
-      let errorOutput = ;;;
-      child.stdout.on('data, (data) => {}
-        output += data.toString()}
-});
-'
-      child.stderr.on('data, (data) => {}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         errorOutput += data.toString()}
+});
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
 
 <<<<<<< HEAD
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
 =======
-'
-      child.on('close, (code) => {}
-        if ({})
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+        errorOutput += data.toString()}
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           console.log('Build check passed ✓')) {}
      {}
           console.log('Build check passed ✓')};
@@ -84,63 +92,57 @@ class BuildMonitor {}
 <<<<<<< HEAD
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
+<<<<<<< HEAD
+
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           // Attempt to fix common build issues;
           this.attemptBuildFix()};
       })} catch (error) {}
       console.error('Error running build "check": ', error.message)};
   };
   async attemptBuildFix() {}
+    try {}
       console.log('Attempting to fix build issues...');
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Clean build directory;
       const cleanChild = spawn('npm', ['run', 'clean'], {})
         "stdio": 'inherit',
+        "cwd": process.cwd();
+      };);
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
 
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       cleanChild.on('close', (code) => {}
+        if ( {})
           console.log('Clean completed, retrying build...')) {}
+     {}
           console.log('Clean completed, retrying build...')};
           this.runBuildCheck()} else {}
           console.log('Clean failed')};
+      })} catch (error) {}
       console.error('Error running build "fix": ', error.message)};
+  };
   stop() {}
     console.log('Stopping Build Monitor...');
-    
-      clearInterval(this.intervalId)};
-    console.log('Build Monitor stopped')) {}
-    console.log('Build Monitor stopped')}};
-=======
-          console.log('"Output": , output);
-          console.log('"Errors": , errorOutput);
-          // Attempt to fix common build issues;
-          this.attemptBuildFix()};
-      })} catch (error) {}
-      console.error('Error running build "check": , error.message)};
-  };
-  async attemptBuildFix() {}
-    try {}
-      console.log('Attempting to fix build issues...);
-      // Clean build directory;
-      const cleanChild = spawn('npm, [run,clean], {})
-        "stdio": inherit,
-        "cwd": process.cwd();"
-      };);
-
-
-"
-      cleanChild.on('close, (code) => {}
-        if ({})
-          console.log('Clean completed, retrying build...)) {}
-     {}
-          console.log('Clean completed, retrying build...)};
-          this.runBuildCheck()} else {}
-          console.log('Clean failed')};
-      })} catch (error) {}
-      console.error('Error running build "fix": , error.message)};
-  };
-  stop() {}
-    console.log('Stopping Build Monitor...);
     this.isRunning = false;
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if ( {})
       clearInterval(this.intervalId)};
     console.log('Build Monitor stopped')) {}
@@ -148,29 +150,51 @@ class BuildMonitor {}
       clearInterval(this.intervalId)};
     console.log('Build Monitor stopped')}};
 };
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Start the monitor if run directly;
   const monitor = new BuildMonitor) {}
   const monitor = new BuildMonitor}(;);
-  
-  // Handle graceful shutdown;
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     monitor.stop();
     process.exit(0)}
-  
-  process.on('SIGTERM', () => {}
+});
+<<<<<<< HEAD
+
 =======
-  process.on('SIGINT, () => {}
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  process.on('SIGTERM', () => {}
     monitor.stop();
     process.exit(0)}
 });
-  '
-  process.on('SIGTERM, () => {}
-    monitor.stop();
-    process.exit(0)}
-});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+<<<<<<< HEAD
+
+  monitor.start().catch(console.error)};
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   
   monitor.start().catch(console.error)};
+<<<<<<< HEAD
 module.exports = BuildMonitor;
+module.exports = BuildMonitor;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // Handle graceful shutdown;
+
+  monitor.start().catch(console.error)};
+module.exports = BuildMonitor;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

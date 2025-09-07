@@ -21,7 +21,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Database,;
   Network,;
 
-
 } from 'lucide-react';
 
 interface PerformanceMetrics {;
@@ -35,29 +34,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Gauge,
   Cpu,
 
-
+'
 } from 'lucide-react';
-interface PerformanceMetrics {
+interface PerformanceMetrics {}
   load_time: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-interface PerformanceMetrics {
-  loadTime: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
-  firstInputDelay: number
-//Add responsive sizes if not present // Check condition
-if ( {) {
-  $2
+interface PerformanceMetrics {}
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+//Add responsive sizes if not present // Check condition;
+if ( {) {}
+  $2;
 }
   optimized_count++;
-const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
+const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({'
   class_name = '',
-}) => {  const [metrics, set_metrics] = useState < PerformanceMetrics>({
-interface PerformanceMetrics {
+}) => {  const [metrics, set_metrics] = useState < PerformanceMetrics>({}
+interface PerformanceMetrics {}
   load_time: number,
   firstContentfulPaint: number,
   largestContentfulPaint: number,
@@ -80,7 +79,7 @@ timeToInteractive: 0,
   timeToInteractive: number
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-interface PerformanceOptimizerProps {
+interface PerformanceOptimizerProps {}
   class_name?: string;
 }
     firstContentfulPaint: 0,
@@ -121,26 +120,26 @@ timeToInteractive:
     }
 origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
-  // Optimize images
-  const optimizeImages = useCallback(async () => {
-    setIsOptimizing(true);
+  // Optimize images;
+  const optimizeImages = useCallback(async () => {}
+    setIsOptimizing(true);'
     setOptimizationStatus('Optimizing images...');
-    try {
+    try {'
       const images = document.querySelectorAll('img');
       let optimizedCount = 0;
-      for (const img of Array.from(images)) {
-        if (img.complete && img.naturalWidth > 0) {
-          // Add lazy loading
+      for (const img of Array.from(images)) {}
+        if (img.complete && img.naturalWidth > 0) {}
+          // Add lazy loading'
           img.loading = 'lazy';
           }
           optimized_count++;        }
       }
       setOptimizationStatus (`Optimized ${optimized_count} images`);
           // Add responsive sizes if not present;
-          // Check condition
-if ( {) {
-  $2
-}
+          // Check condition;
+if ( {) {}
+  $2;
+}'
             img.sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw';
           }
           optimized_count++;
@@ -163,13 +162,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (error) {
       setOptimizationStatus ('Image optimization failed');
       console.error ('Image optimization error:', error);
-    } finally {
+    } finally {}
       setIsOptimizing (false);
     }
-  }, []);
+  }, []);'
           font-display: swap;        }          font-family: 'Orbitron',;
           font-display: swap;
-        }
+        }`
       `;
       document && document.head.appendChild(style);
       setIsOptimizing(false);
@@ -206,7 +205,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (error) {
       setOptimizationStatus ('Font optimization failed');
       console.error ('Font optimization error:', error);
-    } finally {
+    } finally {}
       ];
 
       preloadLinks && preloadLinks.forEach(linkAttrs => {;
@@ -217,27 +216,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
 ;
   // Optimize CSS and JavaScript;
-  const optimize_code = useCallback (async () => {
-    setIsOptimizing (true);
+  const optimize_code = useCallback (async () => {}
+    setIsOptimizing (true);'
     setOptimizationStatus ('Optimizing code...');
 ;
-    try {
+    try {}
       // Add resource hints for critical resources;
       const preload_links = [;
-        {
-          rel: 'preload',
-          href: '/fonts / inter - var.woff2',
-          as: 'font',
-          type: 'font / woff2',
+        {'
+          rel: 'preload','
+          href: '/fonts / inter - var.woff2','
+          as: 'font','
+          type: 'font / woff2','
           crossorigin: 'anonymous',
         },
-        {
-          rel: 'preload',
-          href: '/fonts / jetbrains - mono - var.woff2',
-          as: 'font',
-          type: 'font / woff2',
-          crossorigin: 'anonymous',
-        },      ];        { rel: 'preload', href: '/fonts / inter - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' },
+        {'
+          rel: 'preload','
+          href: '/fonts / jetbrains - mono - var.woff2','
+          as: 'font','
+          type: 'font / woff2','
+          crossorigin: 'anonymous','
+        },      ];        { rel: 'preload', href: '/fonts / inter - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' },'
         { rel: 'preload', href: '/fonts / jetbrains - mono - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' }
       // Add resource hints for critical resources
       const preloadLinks = [
@@ -258,26 +257,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
       ];
 ;
-      preload_links.for_each (link_attrs => {
-import React, { useEffect } from 'react;
+      preload_links.for_each (link_attrs => {'
+import React, { useEffect } from 'react;'
 import Head from 'next / head;
 interface PerformanceOptimizerProps {preload_images?: string[];
   preload_fonts?: string[];
   criticalCSS?: string;
 }
-    // Performance monitoring;
+    // Performance monitoring;'
     if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {;
-        for (const entry of list && list.getEntries()) {;
-if (entry && entry.entryType === 'largest-contentful-paint') {'            console && console.log('LCP: ', entry && entry.startTime);
+        for (const entry of list && list.getEntries()) {;'
+if (entry && entry.entryType === 'largest-contentful-paint') {'            console && console.log('LCP: ', entry && entry.startTime);'
 '          }'          if (entry && entry.entryType === 'first-input') {'            console && console.log('FID: ', entry && entry.processingStart - entry && entry.startTime);'          }'          if (entry && entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console && console.log('CLS: ', (entry as any).value);'            }'          }}
-      });
-'      } catch (e) {'        // Fallback for browsers that don&apos;t support all entry types;
-        console && console.log('Performance monitoring not fully supported');
+      });'
+'      } catch (e) {'        // Fallback for browsers that don&apos;t support all entry types;'
+        console && console.log('Performance monitoring not fully supported');'
 '      }';
       // Resource hints for better performance;
-      const addResourceHint = (href: string, as: string, type?: string) => {;
+      const addResourceHint = (href: string, as: string, type?: string) => {;'
         const link = document && document.createElement('link');
-        Object && Object.entries(linkAttrs).forEach(([key, value]) => {;
+        Object && Object.entries(linkAttrs).forEach(([key, value]) => {;'
           if (key === 'crossorigin') {;
             link && link.setAttribute(key, value as string);
           } else {;
@@ -343,12 +342,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }
         }
       });
-      return () => {
+      return () => {'
         window.removeEventListener('load', measurePerformance);
         observer.disconnect();
-      };    }
+      };    }'
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
-      return () => {
+      return () => {'
         window.removeEventListener('load', measurePerformance);
         observer.disconnect()
       })
@@ -360,7 +359,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         console.log('Performance monitoring not fully supported')
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       }
-  const getPerformanceScore = (): number => {
+  const getPerformanceScore = (): number => {}
     let score = 100;
 
     
@@ -414,8 +413,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </button>
       </div>
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${performanceScore}%` }}
+            initial={{ width: 0 }}`
+            animate={{ width: `${performanceScore}%` }}"
             transition={{ duration: 1, ease: "easeOut" }}
       {/* Performance Score */}
 <div className='mb-6'>
@@ -440,8 +439,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Metrics Display */}
       {showMetrics && (;
-        <motion&& motion.div
-          initial={{ opacity: 0, height: 0 }}
+        <motion&& motion.div;
+          initial={{ opacity: 0, height: 0 }}'
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
 className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
@@ -450,83 +449,82 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
-              {Math.round(metrics.loadTime)}ms
-            </div>
+              {Math.round(metrics.loadTime)}ms;
+            </div>'
             <div className='text-xs text-white/60'>Load Time</div>
-          </div>
-          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
-            <Activity className='w-6 h-6 text-green-400 mx-auto mb-2' />
+          </div>'
+          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>'
+            <Activity className='w-6 h-6 text-green-400 mx-auto mb-2' />'
             <div className='text-lg font-bold text-white'>
-              {Math.round(metrics.firstContentfulPaint)}ms
-            </div>
+              {Math.round(metrics.firstContentfulPaint)}ms;
+            </div>'
             <div className='text-xs text-white/60'>FCP</div>
-          </div>
-          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
-            <TrendingUp className='w-6 h-6 text-purple-400 mx-auto mb-2' />
+          </div>'
+          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>'
+            <TrendingUp className='w-6 h-6 text-purple-400 mx-auto mb-2' />'
             <div className='text-lg font-bold text-white'>
-              {Math.round(metrics.largestContentfulPaint)}ms
-            </div>
+              {Math.round(metrics.largestContentfulPaint)}ms;
+            </div>'
             <div className='text-xs text-white/60'>LCP</div>
-          </div>
-          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
-            <Cpu className='w-6 h-6 text-yellow-400 mx-auto mb-2' />
+          </div>'
+          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>'
+            <Cpu className='w-6 h-6 text-yellow-400 mx-auto mb-2' />'
             <div className='text-lg font-bold text-white'>
-              {Math.round(metrics.timeToInteractive)}ms
-            </div>
+              {Math.round(metrics.timeToInteractive)}ms;
+            </div>'
             <div className='text-xs text-white/60'>TTI</div>
-          </div>
-          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
-            <Database className='w-6 h-6 text-orange-400 mx-auto mb-2' />
+          </div>'
+          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>'
+            <Database className='w-6 h-6 text-orange-400 mx-auto mb-2' />'
             <div className='text-lg font-bold text-white'>
               {metrics.cumulativeLayoutShift.toFixed(3)}
-            </div>
+            </div>'
             <div className='text-xs text-white/60'>CLS</div>
-          </div>
-          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
-            <Network className='w-6 h-6 text-red-400 mx-auto mb-2' />
+          </div>'
+          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>'
+            <Network className='w-6 h-6 text-red-400 mx-auto mb-2' />'
             <div className='text-lg font-bold text-white'>
-              {Math.round(metrics.firstInputDelay)}ms
-            </div>
-            <div className='text-xs text-white/60'>FID</div>          </div>
+              {Math.round(metrics.firstInputDelay)}ms;
+            </div>'
+            <div className='text-xs text-white/60'>FID</div>          </div>"
           className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
-        >
-          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-            <Clock className="w-6 h-6 text-blue-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-white">{Math.round(metrics.loadTime)}ms</div>
+        >"
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">"
+            <Clock className="w-6 h-6 text-blue-400 mx-auto mb-2" />"
+            <div className="text-lg font-bold text-white">{Math.round(metrics.loadTime)}ms</div>"
             <div className="text-xs text-white/60">Load Time</div>
           </div>
-          
-          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-            <Activity className="w-6 h-6 text-green-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-white">{Math.round(metrics.firstContentfulPaint)}ms</div>
+          "
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">"
+            <Activity className="w-6 h-6 text-green-400 mx-auto mb-2" />"
+            <div className="text-lg font-bold text-white">{Math.round(metrics.firstContentfulPaint)}ms</div>"
             <div className="text-xs text-white/60">FCP</div>
           </div>
-          
-          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-            <TrendingUp className="w-6 h-6 text-purple-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-white">{Math.round(metrics.largestContentfulPaint)}ms</div>
+          "
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">"
+            <TrendingUp className="w-6 h-6 text-purple-400 mx-auto mb-2" />"
+            <div className="text-lg font-bold text-white">{Math.round(metrics.largestContentfulPaint)}ms</div>"
             <div className="text-xs text-white/60">LCP</div>
           </div>
-          
-          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-            <Cpu className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-white">{Math.round(metrics.timeToInteractive)}ms</div>
+          "
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">"
+            <Cpu className="w-6 h-6 text-yellow-400 mx-auto mb-2" />"
+            <div className="text-lg font-bold text-white">{Math.round(metrics.timeToInteractive)}ms</div>"
             <div className="text-xs text-white/60">TTI</div>
           </div>
-          
-          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-            <Database className="w-6 h-6 text-orange-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-white">{metrics.cumulativeLayoutShift.toFixed(3)}</div>
+          "
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">"
+            <Database className="w-6 h-6 text-orange-400 mx-auto mb-2" />"
+            <div className="text-lg font-bold text-white">{metrics.cumulativeLayoutShift.toFixed(3)}</div>"
             <div className="text-xs text-white/60">CLS</div>
           </div>
-          
-          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-            <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>
-            <div className="text-xs text-white/60">FID</div>
+          "
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">"
+            <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />"
+            <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>"
+            <div className="text-xs text-white/60">FID</div>'"
       <div className='space-y-3'>        <button      <div className="space-y-3">
         <button
-
 
             <div className='text-xs text-white/60'>FID</div>
           </div>
@@ -540,24 +538,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <button
 
-
-
       {/* Optimization Controls */}
 
-        <button
+        <button;
           onClick={runAllOptimizations}
-          disabled={isOptimizing}
-          className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
-            isOptimizing
-              ? 'bg-gray-600 cursor-not-allowed'
+          disabled={isOptimizing}`
+          className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${}
+            isOptimizing'
+              ? 'bg-gray-600 cursor-not-allowed''
               : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 hover:scale-105'
-      {/* Performance Tips */}
-      <div className='mt-6 pt-4 border-t border-white/10'>;
+      {/* Performance Tips */}'
+      <div className='mt-6 pt-4 border-t border-white/10'>;'
         <h4 className='text-sm font-semibold text-white/80 mb-3'>;
           Performance Tips;
-        </h4>;
-        <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt-6 pt-4 border-t border-white/10">;
-        <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>;
+        </h4>;'"
+        <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt-6 pt-4 border-t border-white/10">;"
+        <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>;"
         <ul className="text-xs text-white/60 space-y-1">;
           <li>• Use WebP images for better compression</li>;
           <li>• Implement lazy loading for images</li>;
@@ -569,32 +565,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   );
 };export default PerformanceOptimizer;}
-      // Preload critical resources;
+      // Preload critical resources;'
 '      });'    }}, [preloadImages, preloadFonts]);
   return (
     <Head>;
       {/* Critical CSS inlined for above-the-fold content */}
       {criticalCSS && (;
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
-      )}
-"            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet;
+      )}'"
+"            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet;'`
 }'          }}`        />;
       ))}
-      {/* Performance hints */}
+      {/* Performance hints */}"
       <meta httpEquiv="x-dns-prefetch-control" content="on" />"      "      {/* Service Worker registration */}
-}
+}`
           ``        }}/>;
     </Head>;
   );
-      {/* Performance Tips */}
-      <div className="mt-6 pt-4 border-t border-white/10">
-        <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
+      {/* Performance Tips */}"
+      <div className="mt-6 pt-4 border-t border-white/10">"
+        <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>"
         <ul className="text-xs text-white/60 space-y-1">
-      {/* Performance Tips */}
-      <div className="mt-6 pt-4 border-t border-white/10">
-        <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
+      {/* Performance Tips */}"
+      <div className="mt-6 pt-4 border-t border-white/10">"
+        <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>"
         <ul className="text-xs text-white/60 space-y-1">
-
 
           } flex items-center justify-center gap-2`}
         >
@@ -621,7 +616,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Performance Tips */}
 <div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
-          Performance Tips
+          Performance Tips;
         </h4>
         <ul className='text-xs text-white/60 space-y-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -636,192 +631,192 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   }, [measure_performance]);
 ;
-  const getPerformanceScore = (): number => {
+  const getPerformanceScore = (): number => {}
     let score = 100;
 ;
-    // Check condition
-if (score -= 20) {
-  $2
+    // Check condition;
+if (score -= 20) {}
+  $2;
 }
-    // Check condition
-if (score -= 25) {
-  $2
+    // Check condition;
+if (score -= 25) {}
+  $2;
 }
-    // Check condition
-if (score -= 15) {
-  $2
+    // Check condition;
+if (score -= 15) {}
+  $2;
 }
-    // Check condition
-if (score -= 20) {
-  $2
+    // Check condition;
+if (score -= 20) {}
+  $2;
 }
     return Math.max (0, score);  } ;
     return Math.max (0, score);
   }
 ;
-  const getPerformanceGrade = (score: number): string => {
-    // Check condition
-if (return 'A') {
-  $2
+  const getPerformanceGrade = (score: number): string => {}
+    // Check condition'
+if (return 'A') {}
+  $2;
 }
-    // Check condition
-if (return 'B') {
-  $2
+    // Check condition'
+if (return 'B') {}
+  $2;
 }
-    // Check condition
-if (return 'C') {
-  $2
+    // Check condition'
+if (return 'C') {}
+  $2;
 }
-    // Check condition
-if (return 'D') {
-  $2
-}
+    // Check condition'
+if (return 'D') {}
+  $2;
+}'
     return 'F';  }    return 'F';
   }
 ;
   const performance_score = getPerformanceScore ();
   const performance_grade = getPerformanceGrade (performance_score);
 ;
-    >;
-      <div className='flex items - center justify - between mb - 6'>;
-        <h3 className='text - xl font - bold text - white flex items - center gap - 2'>;
+    >;'
+      <div className='flex items - center justify - between mb - 6'>;'
+        <h3 className='text - xl font - bold text - white flex items - center gap - 2'>;'
           <Gauge className='w - 5 h - 5 text - cyan - 400' />          Performance Optimizer;
         </h3>;
         <button;
-          on_click={() => setShowMetrics (!show_metrics)}
-          className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'        >  return (
-    <div className={`bg - slate - 800 / 50 backdrop - blur - xl rounded - 2xl border border - white / 10 p - 6 ${class_name}`}>;
-      <div className="flex items - center justify - between mb - 6">;
-        <h3 className="text - xl font - bold text - white flex items - center gap - 2">;
+          on_click={() => setShowMetrics (!show_metrics)}'
+          className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'        >  return (`
+    <div className={`bg - slate - 800 / 50 backdrop - blur - xl rounded - 2xl border border - white / 10 p - 6 ${class_name}`}>;"
+      <div className="flex items - center justify - between mb - 6">;"
+        <h3 className="text - xl font - bold text - white flex items - center gap - 2">;"
           <Gauge className="w - 5 h - 5 text - cyan - 400" />;
         </h3>;
         <button;
-          on_click={() => setShowMetrics (!show_metrics)}
+          on_click={() => setShowMetrics (!show_metrics)}'"
           className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'          className="text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300";
-        >;
+        >;'
           {show_metrics ? 'Hide' : 'Show'} Metrics;
         </button>;
       </div>;
-      {/* Performance Score */}
-      <div className='mb - 6'>;
-        <div className='flex items - center justify - between mb - 2'>;
-          <span className='text - white / 70'>Performance Score</span>;
+      {/* Performance Score */}'
+      <div className='mb - 6'>;'
+        <div className='flex items - center justify - between mb - 2'>;'
+          <span className='text - white / 70'>Performance Score</span>;'
           <span className='text - 2xl font - bold text - cyan - 400'>;
             {performance_grade}
           </span>;
-        </div>;
+        </div>;'
         <div className='w - full bg - white / 10 rounded - full h - 3'>;
-          <motion.div;
+          <motion.div;'
             className='h - 3 bg - gradient - to - r from - red - 500 via - yellow - 500 to - green - 500 rounded - full';
-            initial={{ width: 0 }}
-            animate={{ width: `${performance_score}%` }}
+            initial={{ width: 0 }}`
+            animate={{ width: `${performance_score}%` }}'
             transition={{ duration: 1, ease: 'ease_out' }}
           />;
-        </div>;
-        <div className='text - right mt - 1'>;
-          <span className='text - sm text - white / 60'>{performance_score}/100</span>        </div>        </div>;
+        </div>;'
+        <div className='text - right mt - 1'>;'
+          <span className='text - sm text - white / 60'>{performance_score}/100</span>        </div>        </div>;"
         <div className="w - full bg - white / 10 rounded - full h - 3">;
-          <motion.div;
+          <motion.div;"
             className="h - 3 bg - gradient - to - r from - red - 500 via - yellow - 500 to - green - 500 rounded - full";
-            initial={{ width: 0 }}
-            animate={{ width: `${performance_score}%` }}
+            initial={{ width: 0 }}`
+            animate={{ width: `${performance_score}%` }}"
             transition={{ duration: 1, ease: "ease_out" }}
           />;
-        </div>;
-        <div className="text - right mt - 1">;
+        </div>;"
+        <div className="text - right mt - 1">;"
           <span className="text - sm text - white / 60">{performance_score}/100</span>;
         </div>;
       </div>;
       {/* Metrics Display */}
       {show_metrics && (
         <motion.div;
-          initial={{ opacity: 0, height: 0 }}
+          initial={{ opacity: 0, height: 0 }}'
           animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          className='grid grid - cols - 2 md:grid - cols - 3 gap - 4 mb - 6';
-          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
-            <Clock className='w - 6 h - 6 text - blue - 400 mx - auto mb - 2' />;
+          exit={{ opacity: 0, height: 0 }}'
+          className='grid grid - cols - 2 md:grid - cols - 3 gap - 4 mb - 6';'
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;'
+            <Clock className='w - 6 h - 6 text - blue - 400 mx - auto mb - 2' />;'
             <div className='text - lg font - bold text - white'>;
               {Math.round (metrics.load_time)}ms;
-            </div>;
+            </div>;'
             <div className='text - xs text - white / 60'>Load Time</div>;
-          </div>;
-          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
-            <Activity className='w - 6 h - 6 text - green - 400 mx - auto mb - 2' />;
+          </div>;'
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;'
+            <Activity className='w - 6 h - 6 text - green - 400 mx - auto mb - 2' />;'
             <div className='text - lg font - bold text - white'>;
               {Math.round (metrics.firstContentfulPaint)}ms;
-            </div>;
+            </div>;'
             <div className='text - xs text - white / 60'>FCP</div>;
-          </div>;
-          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
-            <TrendingUp className='w - 6 h - 6 text - purple - 400 mx - auto mb - 2' />;
+          </div>;'
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;'
+            <TrendingUp className='w - 6 h - 6 text - purple - 400 mx - auto mb - 2' />;'
             <div className='text - lg font - bold text - white'>;
               {Math.round (metrics.largestContentfulPaint)}ms;
-            </div>;
+            </div>;'
             <div className='text - xs text - white / 60'>LCP</div>;
-          </div>;
-          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
-            <Cpu className='w - 6 h - 6 text - yellow - 400 mx - auto mb - 2' />;
+          </div>;'
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;'
+            <Cpu className='w - 6 h - 6 text - yellow - 400 mx - auto mb - 2' />;'
             <div className='text - lg font - bold text - white'>;
               {Math.round (metrics.timeToInteractive)}ms;
-            </div>;
+            </div>;'
             <div className='text - xs text - white / 60'>TTI</div>;
-          </div>;
-          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
-            <Database className='w - 6 h - 6 text - orange - 400 mx - auto mb - 2' />;
+          </div>;'
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;'
+            <Database className='w - 6 h - 6 text - orange - 400 mx - auto mb - 2' />;'
             <div className='text - lg font - bold text - white'>;
               {metrics.cumulativeLayoutShift.to_fixed (3)}
-            </div>;
+            </div>;'
             <div className='text - xs text - white / 60'>CLS</div>;
-          </div>;
-          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
-            <Network className='w - 6 h - 6 text - red - 400 mx - auto mb - 2' />;
+          </div>;'
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;'
+            <Network className='w - 6 h - 6 text - red - 400 mx - auto mb - 2' />;'
             <div className='text - lg font - bold text - white'>;
               {Math.round (metrics.firstInputDelay)}ms;
-            </div>;
-            <div className='text - xs text - white / 60'>FID</div>          </div>;
-          <div className="text - center p - 3 rounded - lg bg - white / 5 border border - white / 10">;
-            <Network className="w - 6 h - 6 text - red - 400 mx - auto mb - 2" />;
-            <div className="text - lg font - bold text - white">{Math.round (metrics.firstInputDelay)}ms</div>;
+            </div>;'
+            <div className='text - xs text - white / 60'>FID</div>          </div>;"
+          <div className="text - center p - 3 rounded - lg bg - white / 5 border border - white / 10">;"
+            <Network className="w - 6 h - 6 text - red - 400 mx - auto mb - 2" />;"
+            <div className="text - lg font - bold text - white">{Math.round (metrics.firstInputDelay)}ms</div>;"
             <div className="text - xs text - white / 60">FID</div>;
         </motion.div>)}
-      {/* Optimization Controls */}
+      {/* Optimization Controls */}'"
       <div className='space - y-3'>        <button      <div className="space - y-3">;
         <button;
           on_click={runAllOptimizations}
-          disabled={is_optimizing}
-          className={`w - full px - 4 py - 3 rounded - lg font - semibold text - white transition - all duration - 300 ${
-            is_optimizing;
-              ? 'bg - gray - 600 cursor - not - allowed';
-              : 'bg - gradient - to - r from - cyan - 600 to - blue - 600 hover:from - cyan - 700 hover:to - blue - 700 hover:scale - 105';
+          disabled={is_optimizing}`
+          className={`w - full px - 4 py - 3 rounded - lg font - semibold text - white transition - all duration - 300 ${}
+            is_optimizing;'
+              ? 'bg - gray - 600 cursor - not - allowed';'
+              : 'bg - gradient - to - r from - cyan - 600 to - blue - 600 hover:from - cyan - 700 hover:to - blue - 700 hover:scale - 105';`
           } flex items - center justify - center gap - 2`}
         >;
           {is_optimizing ? (
-            <>;
+            <>;'
               <div className='w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />              <span > Optimizing...</span>;
             </>) : (
-            <>;
+            <>;'"
               <Zap className='w - 4 h - 4' />              <span > Run All Optimizations</span>              <div className="w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded - full animate - spin" />;
               <span > Optimizing...</span>;
             </>) : (
-            <>;
+            <>;'"
               <Zap className='w - 4 h - 4' />              <Zap className="w - 4 h - 4" />;
               <span > Run All Optimizations</span>;
             </>)}
-        </button>;
-        {optimization_status !== 'idle' && (
-          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
-            <div className='text - sm text - white / 80'>{optimization_status}</div>          </div>          <div className="text - center p - 3 rounded - lg bg - white / 5 border border - white / 10">;
+        </button>;'
+        {optimization_status !== 'idle' && ('
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;'"
+            <div className='text - sm text - white / 80'>{optimization_status}</div>          </div>          <div className="text - center p - 3 rounded - lg bg - white / 5 border border - white / 10">;"
             <div className="text - sm text - white / 80">{optimization_status}</div>;
           </div>)}
       </div>;
-      {/* Performance Tips */}
-      <div className='mt - 6 pt - 4 border - t border - white / 10'>;
+      {/* Performance Tips */}'
+      <div className='mt - 6 pt - 4 border - t border - white / 10'>;'
         <h4 className='text - sm font - semibold text - white / 80 mb - 3'>;
           Performance Tips;
-        </h4>;
-        <ul className='text - xs text - white / 60 space - y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt - 6 pt - 4 border - t border - white / 10">;
-        <h4 className="text - sm font - semibold text - white / 80 mb - 3">Performance Tips</h4>;
+        </h4>;'"
+        <ul className='text - xs text - white / 60 space - y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt - 6 pt - 4 border - t border - white / 10">;"
+        <h4 className="text - sm font - semibold text - white / 80 mb - 3">Performance Tips</h4>;"
         <ul className="text - xs text - white / 60 space - y-1">;
           <li>• Use WebP images for better compression</li>;
           <li>• Implement lazy loading for images</li>;
@@ -833,37 +828,37 @@ if (return 'D') {
     </div>);
 }export default PerformanceOptimizer;}
       // Preload critical resources;
-      preload_images.for_each (image => {
-addResourceHint (image, 'image');
+      preload_images.for_each (image => {'
+addResourceHint (image, 'image');'
 '      });';
-      preload_fonts.for_each (font => {
-        addResourceHint (font, 'style');
+      preload_fonts.for_each (font => {'
+        addResourceHint (font, 'style');'
 '      });'    }}, [preload_images, preload_fonts]);
   return (
     <Head>;
 {/* Preload critical resources */}
       {preload_images.map ((image, index) => (
-        <link;
+        <link;"`
 key={`preload - image-${index}}          rel="preload""          as="image""          href={image}"        />))}
       {preload_fonts.map ((font, index) => (
-        <link;
-key={`preload - font-${index}`}          rel="preload""          as="style""          href={font}"          on_load={() => {
-            const link = document.query_selector (link[href="${font}"]`);
-"            if ( {"              (link as HTMLLinkElement).rel = 'stylesheet) {
-  $2
-}
+        <link;"`
+key={`preload - font-${index}`}          rel="preload""          as="style""          href={font}"          on_load={() => {"`
+            const link = document.query_selector (link[href="${font}"]`);'"
+"            if ( {"              (link as HTMLLinkElement).rel = 'stylesheet) {}
+  $2;
+}'`
 }'          }}`        />))}
-      {/* Performance hints */}
+      {/* Performance hints */}"
       <meta http_equiv="x - dns - prefetch - control" content="on" />"      "      {/* Service Worker registration */}
       <script;
-        dangerouslySetInnerHTML={{
-          __html:             // Check condition
-if ( {'              window.addEventListener ('load', function () {'                navigator.service_worker.register ('/sw.js')'                  .then (function (registration) {'                    console.log ('SW registered: ', registration)) {
-  $2
-}
-'                  })'                  .catch (function (registration_error) {
+        dangerouslySetInnerHTML={{}
+          __html:             // Check condition'
+if ( {'              window.addEventListener ('load', function () {'                navigator.service_worker.register ('/sw.js')'                  .then (function (registration) {'                    console.log ('SW registered: ', registration)) {}
+  $2;
+}'
+'                  })'                  .catch (function (registration_error) {'
                     console.log ('SW registration failed: ', registration_error);'                  });'              });
-}
+}`
           ``        }}/>;
     </Head>);
 }
@@ -875,7 +870,7 @@ if ( {'              window.addEventListener ('load', function () {'            
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default PerformanceOptimizer;
 ;
-interface PerformanceMetrics {
+interface PerformanceMetrics {}
   fcp: number;
   lcp: number;
   fid: number;
@@ -887,17 +882,15 @@ interface PerformanceMetrics {
     limit: number;
   }
 }
-interface PerformanceOptimizerProps {
+interface PerformanceOptimizerProps {}
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enable_reporting?: boolean;
 }
       measureWebVitals();
-    } else {;
+    } else {;'
       window && window.addEventListener('load', measureWebVitals);
     }
 export default PerformanceOptimizer;
   );
-
-
 
 origin/cursor/automate-test-improve-and-merge-code-2533

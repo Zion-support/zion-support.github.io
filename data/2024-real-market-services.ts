@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ServiceVariant } from "../types/service-variants";
 
 export interface RealMarketService {
@@ -5,7 +9,15 @@ export interface RealMarketService {
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
   period: string,
+=======
+  period: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  period: string,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: string;
   features: string[];
   popular: boolean;
@@ -31,8 +43,18 @@ export interface RealMarketService {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
     website: string
 };
+=======
+    website: string;
+  };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    website: string
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -92,8 +114,39 @@ export const realMarketServices: RealMarketService[] = [
     customers: 1800,
     rating: 4.7,
     reviews: 950
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  };
+],
+=======
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+];
+=======
+// Placeholder content - file was empty after conflict resolution
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
   }
 ];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  };
+],
+  }
+];
+// Placeholder content - file was empty after conflict resolution
 import { ServiceVariant } from "../types/service-variants";"
 export interface RealMarketService {
   // TODO: Implement
@@ -191,3 +244,4 @@ export const realMarketServices: RealMarketService[] = [
 ];
 "
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -24,13 +24,7 @@ class ComprehensiveErrorFixer {}
       const sourceFiles = this.findSourceFiles();
       for (const file of sourceFiles) {}
         try {}
-<<<<<<< HEAD
-          await this.fixFileErrors(file)} catch (error) {}"`;
-          this.log(`Failed to fix ${file}: ${error.message}`, "error")};"
-=======
-          await this.fixFileErrors(file)} catch (error) {}"
-          this.log(`Failed to fix ${file}: ${error.message}, "error")};"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       };"
       this.log("Common syntax errors fixed", "success");
       this.fixes.push("syntax_errors")} catch (error) {}
@@ -82,12 +76,7 @@ class ComprehensiveErrorFixer {}
       this.log("Error fixing ${filePath}: ${error.message}", "error");
       this.errors.push({ "file": filePath, "error": error.message })};"
   async runTypeScriptCheck() {}
-<<<<<<< HEAD
-      this.log("Running TypeScript check...");""
-=======
-    try {}"
-      this.log("Running TypeScript check...");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       execSync("npx tsc --noEmit", { "cwd": this.projectRoot, "stdio": "pipe" }")
 });"
       this.log("TypeScript check passed", "success");
@@ -95,21 +84,7 @@ class ComprehensiveErrorFixer {}
       this.log("TypeScript check failed", "error");
       this.errors.push({ "check": "typescript", "error": error.message })};"
   async runLinting() {}
-<<<<<<< HEAD
-      this.log("Running ESLint...");""
-      execSync("npx eslint . --fix", { "cwd": this.projectRoot, "stdio": "pipe" }")
-      this.log("ESLint passed", "success");""
-      this.fixes.push("eslint_fix")} catch (error) {}""
-      this.log("ESLint failed", "error");""
-=======
-    try {}"
-      this.log("Running ESLint...");
-      execSync("npx eslint . --fix", { "cwd": this.projectRoot, "stdio": "pipe" }")
-});"
-      this.log("ESLint passed", "success");
-      this.fixes.push("eslint_fix")} catch (error) {}
-      this.log("ESLint failed", "error");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.errors.push({ "check": "eslint", "error": error.message })};"
   async generateReport() {}
     const report = {}"
@@ -129,21 +104,25 @@ class ComprehensiveErrorFixer {}
       await this.runTypeScriptCheck();
       await this.runLinting();
       const report = await this.generateReport();"
-<<<<<<< HEAD
-      this.log("Comprehensive Error Fixer completed");""
-      this.log(""Summary": ${report.summary.totalFixes} fixes applied, ${report.summary.totalErrors} errors found");"
-      return report} catch (error) {}"`;
-      this.log("Error fixer "failed": ${error.message}`, "error");"
-=======
-      this.log("Comprehensive Error Fixer completed");
-      this.log(Summary": ${report.summary.totalFixes} fixes applied, ${report.summary.totalErrors} errors found");"
-      return report} catch (error) {}"
-      this.log("Error fixer "failed": ${error.message}, "error");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       throw error};
 // Run the error fixer;
 if (require.main === module) {}
   const fixer = new ComprehensiveErrorFixer();
   fixer.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ComprehensiveErrorFixer;
+module.exports = ComprehensiveErrorFixer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 module.exports = ComprehensiveErrorFixer;
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

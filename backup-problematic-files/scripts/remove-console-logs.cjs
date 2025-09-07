@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-#!/usr/bin/env node
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 const fs = require('fs');
 const path = require('path');
 const { glob } = require('glob');
@@ -15,11 +11,7 @@ const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
   /console\.info\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
   // Keep console.error for debugging;
-<<<<<<< HEAD
-=======
-];
-const EXCLUDE_PATTERNS = [node_modules,.next,dist,build,coverage,scripts,*.test.*,*.spec.*]
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 ];
 const EXCLUDE_PATTERNS = ['node_modules',
   '.next',
@@ -31,13 +23,7 @@ const EXCLUDE_PATTERNS = ['node_modules',
   '*.spec.*]
 function shouldProcessFile(filePath) {
   return !EXCLUDE_PATTERNS.some(pattern => {)
-<<<<<<< HEAD
-    if (pattern.includes('*')) {
-      return filePath.includes(pattern.replace('*', ))}
-=======
-    if (pattern.includes('*)) {
-      return filePath.includes(pattern.replace('*, ))}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     return filePath.includes(pattern)})}
 function removeConsoleStatements(content) {
   let modifiedContent = content;
@@ -46,42 +32,36 @@ function removeConsoleStatements(content) {
     const matches = modifiedContent.match(pattern);
     if (matches) {
       removedCount += matches.length;
-<<<<<<< HEAD
-      modifiedContent = modifiedContent.replace(pattern, )}
-  });
-=======
-      modifiedContent = modifiedContent.replace(pattern, )}});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   return { "content": modifiedContent, removedCount }}"
 function processFile(filePath) {
   try {
   // TODO: Implement
 }"
-<<<<<<< HEAD
-    const content = fs.readFileSync(filePath, 'utf8');
-    const { "content": newContent, removedCount } = removeConsoleStatements(content);"
-    if (removedCount > 0) {"
-      fs.writeFileSync(filePath, newContent, 'utf8');
-=======
-    const content = fs.readFileSync(filePath,utf8);
-    const { "content": newContent, removedCount } = removeConsoleStatements(content);"
-    if (removedCount > 0) {"
-      fs.writeFileSync(filePath, newContent,utf8);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return removedCount}
     return 0} catch (error) {
     console.error(`✗ Error processing ${filePath}:`, error.message);
     return 0}
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
 
 <<<<<<< HEAD
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
 =======
-'
-function getAllFiles(dir, extensions = [.js,.jsx,.ts,.tsx]) {
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   let results = [];
   const list = fs.readdirSync(dir);
   list.forEach(file => {)
@@ -96,17 +76,32 @@ function getAllFiles(dir, extensions = [.js,.jsx,.ts,.tsx]) {
         results.push(filePath);
   return results;
 <<<<<<< HEAD
-function main() {
-  const srcDir = path.join(process.cwd(), 'src');
-  const pagesDir = path.join(process.cwd(), 'pages');`;
-  const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,`;
-=======
 }
+
 function main() {
-  const srcDir = path.join(process.cwd(),src');
-  const pagesDir = path.join(process.cwd(),pages');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/remove-console-logs.cjs
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/remove-console-logs.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  const srcDir = path.join(process.cwd(), 'src');
+  const pagesDir = path.join(process.cwd(), 'pages');
+  
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    `${pagesDir}/**/*.{js,jsx,ts,tsx}`
+  ];
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`]
   let totalRemoved = 0;
   let filesProcessed = 0;
@@ -117,25 +112,44 @@ function main() {
         const removed = processFile(file);
         totalRemoved += removed;
         filesProcessed++}
-<<<<<<< HEAD
-  console.log("\n📊 Summary: ");"`;
-  console.log(`   Files processed: ${filesProcessed}`);"`;
-  console.log(`   Console statements "removed": ${totalRemoved}`);"
-  if (totalRemoved > 0) {`;
-=======
-    }
-  }
-  console.log("\n📊 Summary: ");"
-  console.log(`   Files processed: ${filesProcessed});"
-  console.log(`   Console statements "removed": ${totalRemoved});"
-  if (totalRemoved > 0) {
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     console.log(`\n✨ Production build optimized!`);
   // TODO: Implement
 }`;
     console.log(`\n✨ No console statements found to remove.`);
+<<<<<<< HEAD
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/remove-console-logs.cjs
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/remove-console-logs.cjs
+}
+if (require.main === module) {
+  main().catch(console.error)}
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+}
+
+if (require.main === module) {
+  main().catch(console.error)}
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+module.exports = { removeConsoleStatements, processFile };
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 if (require.main === module) {
   main().catch(console.error)}
 
 module.exports = { removeConsoleStatements, processFile };
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

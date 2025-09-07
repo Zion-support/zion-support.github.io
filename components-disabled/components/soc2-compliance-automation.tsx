@@ -8,8 +8,80 @@ import Link from 'next/link';
             pipelines, and prebuilt auditor workflows. Integrates with cloud;
             providers and ticketing systems.;
           </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD:components/soc2-compliance-automation.tsx
+<<<<<<< HEAD
+          <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+            {[;
+              {title: 'Controls Library';
+                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.';
+              }
+              {title: 'Evidence Automation';
+                desc: 'Pull evidence from cloud, CI, ticketing, security tools.';
+              }
+              {title: 'Vendor Risk';
+                desc: 'Automated questionnaires, tracking, and remediation workflows.';
+              }
+              {title: 'Asset Inventory';
+                desc: 'Infrastructure and device inventory with configuration checks.';
+              }
+              {title: 'Workflow & Tasks';
+                desc: 'Assign remediation tasks, SLAs, and approvals.';
+              }
+              {<div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+            {[;
+              {title: 'Controls Library',desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.'},{title: 'Evidence Automation',desc: 'Pull evidence from cloud, CI, ticketing, security tools.'},{title: 'Vendor Risk',desc: 'Automated questionnaires, tracking, and remediation workflows.'},{title: 'Asset Inventory',desc: 'Infrastructure and device inventory with configuration checks.'},{title: 'Workflow & Tasks',desc: 'Assign remediation tasks, SLAs, and approvals.'},{title: 'Audit Room',desc: 'Share evidence securely with auditors; immutable logs.'}].map(f => (title: 'Audit Room';
+                desc: 'Share evidence securely with auditors; immutable logs.';
+              }
+            ].map(f => (<div;
+                key={f.title}
+                className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur';
+              >;
+                <h3 className='text-lg font-semibold text-white'>{f.title}</h3>;
+                <p className='mt-2 text-sm text-gray-300'>{f.desc}</p>;
+              </div>;
+            ))}</div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/soc2-compliance-automation.tsx
+
+          <div className='mt - 8 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
+            {[;
+
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+              {
+<<<<<<< HEAD:components/soc2-compliance-automation.tsx
+                title: "title",
+    desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.'
+              }
+=======
+                title: 'Controls Library'
+                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.'
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/soc2-compliance-automation.tsx
+              {
+                title: 'Evidence Automation'
+                desc: 'Pull evidence from cloud, CI, ticketing, security tools.'
+
+              {
+                title: 'Vendor Risk'
+                desc: 'Automated questionnaires, tracking, and remediation workflows.'
+
+              {
+                title: 'Asset Inventory'
+                desc: 'Infrastructure and device inventory with configuration checks.'
+
+              {
+                title: 'Workflow & Tasks'
+                desc: 'Assign remediation tasks, SLAs, and approvals.'
+
+              {
+<<<<<<< HEAD
+
+=======
           <div className='mt - 8 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
 </div>
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
               <div;
                 key={f.title}
@@ -209,18 +281,51 @@ key={f.title}
                 </p>;
                 <p className='mt-4 text-3xl font-bold' />;
                   $290;
+<<<<<<< HEAD
+<<<<<<< HEAD:components/soc2-compliance-automation.tsx
+<<<<<<< HEAD
+                  <span className='text - base font - normal text - gray - 300'>;/mo;
+                  </span>;
+                </p>;
+              </div>;<div className='rounded - 2xl border border - cyan - 400 / 30 p - 6'>;
+=======
+                  <span className='text - base font - normal text - gray - 300'>;
+=======
                   <span className='text-base font-normal text-gray-300' />;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
                     /mo;
                   </span>;
                 </p>;
               </div>;
+<<<<<<< HEAD
+              <div className='rounded - 2xl border border - cyan - 400 / 30 p - 6'>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+                  <span className='text - base font - normal text - gray - 300'>;
+
+                    /mo;
+                  </span>;
+                </p>;
+              </div>;
+
+              <div className='rounded - 2xl border border - cyan - 400 / 30 p - 6'>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/soc2-compliance-automation.tsx
+                <h3 className='text - xl font - bold'>Growth</h3>;
+                <p className='mt - 2 text - gray - 300'>;
+=======
               <div className='rounded-2xl border border-cyan-400/30 p-6' />;
                 <h3 className='text-xl font-bold' />Growth</h3>;
                 <p className='mt-2 text-gray-300' />;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
                   Vendor risk, SSO, SIEM, ticketing.;
                 </p>;
                 <p className='mt-4 text-3xl font-bold' />;
                   $690;
+<<<<<<< HEAD
+<<<<<<< HEAD:components/soc2-compliance-automation.tsx
+<<<<<<< HEAD
+                  <span className='text - base font - normal text - gray - 300'>;/mo;
+=======
                   <span className='text-base font-normal text-gray-300' />;
                     /mo;
                   </span>;
@@ -344,6 +449,7 @@ key={f.title}
                 <p className='mt - 4 text - 3xl font - bold' />;
                   $690;
                   <span className='text - base font - normal text - gray - 300' />;/mo;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
                   </span>;
                 </p>;
               </div>;rel='noreferrer'>;
@@ -353,9 +459,26 @@ key={f.title}
                 </p>;
               </div>;
                 rel='noreferrer'>;
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+                  <span className='text - base font - normal text - gray - 300'>;
+
+                    /mo;
+                  </span>;
+                </p>;
+              </div>;
+
+                rel='noreferrer'>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/soc2-compliance-automation.tsx
+              <div className='rounded - 2xl border border - purple - 400 / 30 p - 6'>;
+                <h3 className='text - xl font - bold'>Enterprise</h3>;
+                <p className='mt - 2 text - gray - 300'>;
+=======
               <div className='rounded - 2xl border border - purple - 400 / 30 p - 6' />;
                 <h3 className='text - xl font - bold' />Enterprise</h3>;
                 <p className='mt - 2 text - gray - 300' />;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
                   Custom controls, private cloud, audit support.;
                 </p>;
                 <p className='mt - 4 text - 3xl font - bold' />Custom</p>;
@@ -407,19 +530,44 @@ key={f.title}
                 className='underline hover:text - cyan - 300';
                 href='https://securityscorecard.com/';
                 target='_blank';
+<<<<<<< HEAD
+                rel='noreferrer';
+<<<<<<< HEAD:components/soc2-compliance-automation.tsx
+<<<<<<< HEAD
+=======
                />;SecurityScorecard;
               >;
                 SecurityScorecard;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
               >;SecurityScorecard;
               >;
                 SecurityScorecard;
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+              >;
+
+                SecurityScorecard;
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/soc2-compliance-automation.tsx
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
               </a>;
               .;
             </p>;
           </div>;}
           </div>;
 
+<<<<<<< HEAD
+<<<<<<< HEAD:components/soc2-compliance-automation.tsx
+
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/soc2-compliance-automation.tsx
+          <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
+=======
           <div className='mt - 12 flex flex - wrap items - center gap - 4' />;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
             <Link;
               href='/contact';
               className='px - 5 py - 3 rounded - lg bg - pink - 400 text - black font - semibold' />
@@ -443,6 +591,11 @@ key={f.title}
     </div>;
     </div>;
   </section>;
+<<<<<<< HEAD
+<<<<<<< HEAD:components/soc2-compliance-automation.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   </>)}}}ursor/fix-website-loading-errors-and-merge-6662;
 }}
 }
@@ -454,4 +607,12 @@ key={f.title}
 }
   </>);
 }
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+  </>);
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/soc2-compliance-automation.tsx
+=======
+
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

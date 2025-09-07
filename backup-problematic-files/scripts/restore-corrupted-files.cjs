@@ -15,14 +15,7 @@ class FileRestorer {}
       // Fix common corruption patterns;
       let fixedContent = content;
         // Remove extra semicolons and quotes at end of lines;"
-<<<<<<< HEAD
-        .replace(/;"$/gm, "");""
-        .replace(/;$/gm, "");"
-=======
-        .replace(/;"$/gm, );
-        .replace(/;"$/gm, );
-        .replace(/;$/gm, );"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         // Fix unterminated strings;"
         .replace(/from "([^"]*);$/gm, "from "$1);
         .replace(/from "([^"]*);$/gm, "from "$1);"
@@ -52,23 +45,7 @@ class FileRestorer {}
       // Only write if content actually changed;
       if (fixedContent !== content) {}"
         fs.writeFileSync(filePath, fixedContent, "utf8");"
-<<<<<<< HEAD
-        this.fixedFiles.push(filePath);"`;
-        this.log(`[SUCCESS] Restored corrupted "file": ${filePath}`);"
-        return true};
-      return false} catch (error) {}"
-      this.errors.push({ "file": filePath, "error": error.message }")
-});`;
-      this.log(`[ERROR] Failed to restore ${filePath}: ${error.message}`);
-=======
-        this.fixedFiles.push(filePath);"
-        this.log(`[SUCCESS] Restored corrupted "file": ${filePath});"
-        return true};
-      return false} catch (error) {}"
-      this.errors.push({ "file": filePath, "error": error.message }")
-});
-      this.log(`[ERROR] Failed to restore ${filePath}: ${error.message});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return false};
   };
   async findCorruptedFiles(dir) {}
@@ -112,19 +89,24 @@ class FileRestorer {}
       errors: this.errors};"
     const reportPath = path.join(this.projectRoot, "file-restoration-report.json");"
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));"
-<<<<<<< HEAD
-    this.log("[SUCCESS] File restoration completed");""`;
-    this.log(`[INFO] "Summary": ${this.fixedFiles.length} files restored, ${this.errors.length} errors`);"`;
-    this.log(`[INFO] Report saved to ${reportPath}`)};
-=======
-    this.log("[SUCCESS] File restoration completed");
-    this.log(`[INFO] "Summary": ${this.fixedFiles.length} files restored, ${this.errors.length} errors`);"
-    this.log(`[INFO] Report saved to ${reportPath})};
-};
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 // Main execution;
 if (require.main === module) {}
   const restorer = new FileRestorer();
   restorer.restoreCorruptedFiles().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = FileRestorer;
+module.exports = FileRestorer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 module.exports = FileRestorer;
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

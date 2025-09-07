@@ -1,5 +1,13 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import { useState } from "react",;
+=======
 import { useState } from "react";""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { BookOpen, Terminal } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";""
@@ -9,18 +17,38 @@ import { Badge } from "@/components/ui/badge";"
 import CodeBlock from "./CodeBlock";""
 import { logInfo } from '@/utils/productionLogger';
 interface EndpointParam {;
+<<<<<<< HEAD
+  name:string,;
+<<<<<<< HEAD
+  type:string,;
+=======
+  type:string,,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  description:string,;
+=======
   name: string;,;
   type: string;,,
   description: string;,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   required?:boolean;
 }
 ;
 interface EndpointSectionProps {;
+<<<<<<< HEAD
+  method:string,;
+<<<<<<< HEAD
+  endpoint:string,;
+=======
+  endpoint:string,,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  description:string,;
+=======
   method: string;,;
   endpoint: string;,,
   description: string;,;
   endpoint: string;,;
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   note?:string,;
   params?:EndpointParam[],;
   codeExamples?:Record<string string>,;
@@ -148,6 +176,20 @@ job_id = 'job_abc123';
     'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';
   },;
   body:JSON.stringify({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    title:'Senior React Developer',;
+    description:'We need an experienced React developer...',;
+=======
+    title:'Senior React Developer',,
+  description:'We need an experienced React developer...',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    category:'development',;
+    skills:['reacttypescript', 'node.js'],;
+    budget:{;
+      min:5000,;
+      max:10000,;
+=======
     title: 'Senior React Developer';,,
   description: 'We need an experienced React developer...';,;
   body: JSON.stringify({;,
@@ -159,6 +201,7 @@ pr-12325
     budget: {;,
   min: 5000;,;
       max: 10000;,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       currency:'USD';
     deadline:'2025-06-30T23:59:59Z';')
   });
@@ -632,6 +675,63 @@ app.post('/webhook', express.raw({type: 'application/json';}), (req, res) => {;
         "field":"project_name",;""
         "message":"Project name is required";"
     ];
+<<<<<<< HEAD
+  }
+}`}
+                language="json";
+              />;
+              ;
+              <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>;
+              <p className="text-zinc-400 mb-4">;
+                The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.;
+                Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive ;
+                a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code> response.;
+              </p>;
+              ;
+              <p className="text-zinc-400 mb-2">;
+                Rate limit information is included in the response headers:</p>;
+              ;
+              <ul className="list-disc pl-6 space-y-1 text-zinc-400">;
+                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Limit</code>:Number of requests allowed in the time window</li>;
+                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Remaining</code>:Number of requests remaining in the current window</li>;
+                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>:Unix timestamp when the rate limit resets</li>;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+              </ul>;
+            </div>;
+          </TabsContent>;
+        </Tabs>;
+      </CardContent>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    </Card>;
+  );
+}
+;
+// Helper component for API endpoint documentation;
+function EndpointSection({;
+  method,;
+  endpoint,;
+  description,;
+  note,;
+  params = [],;
+  codeExamples,;
+  responseExamples;
+} EndpointSectionProps) {;
+  const [activeTab, setActiveTab] = useState("curl"),;
+  ;
+  return (;
+    <div className="border border-zinc-800 rounded-md">;
+      <div className="p-4">;
+        <div className="flex items-center">;
+          <Badge ;
+            variant="outline" ;
+            className={;
+=======
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>;""
                 a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code> response.;"
                 Rate limit information is included in the response headers:</p>;"
@@ -648,6 +748,7 @@ app.post('/webhook', express.raw({type: 'application/json';}), (req, res) => {;
           <Badge ;"
             variant="outline" ;"
             className={;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               method === 'GET' ;
                 ? "border-green-500 text-green-400 font-mono" ;""
                 :method === 'POST' ;
@@ -677,10 +778,28 @@ app.post('/webhook', express.raw({type: 'application/json';}), (req, res) => {;
                   <td className="py-2 text-sm text-zinc-400">{param.type}</td>;""
                   <td className="py-2 text-sm text-zinc-400">{param.description}</td>;"
                 </tr>;              ))}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            </tbody>;
+          </table>;
+        </div>;
+      )}
+<<<<<<< HEAD
+
+=======
+      ;
+      {codeExamples && (;
+        <div className="border-t border-zinc-800 p-4">;
+          <div className="flex items-center mb-2">;
+            <h4 className="font-medium">Request Example</h4>;
+            <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">;
+              {Object.keys(codeExamples).map((lang) => (;
+=======
           </table>;
           <div className="flex items-center mb-2">;"
             <h4 className="font-medium">Request Example</h4>;""
             <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <button;
                   key={lang}`;
                   className={`px-3 py-1 text-xs font-medium ${;
@@ -753,9 +872,18 @@ headers=headers) data = response.json () print (data) ` ;
 }</tbody> </table> </div>) ;
   activeTab === lang </button>) ) ;
 }</div> </div> <CodeBlock /> </div>) ;
+<<<<<<< HEAD
+}<CodeBlock code= {;
+  responseExamples.success ";
+}language=" json" /> </div>) ;
+}</div>) ;
+}'"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 
 }<CodeBlock code= {;"
   responseExamples.success ";""
 }language=" json" /> </div>) ;"
 
 }</div>) ;"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

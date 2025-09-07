@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-#!/usr/bin/env node
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -10,167 +6,179 @@ class DependencyMonitor {}
   constructor() {}
     this.isRunning = false;
     this.interval = 600000; // 10 minutes;
-<<<<<<< HEAD
-    this.packageJsonPath = path.join(process.cwd(), 'package.json')};
-  async start() {}
-    console.log('Starting Dependency Monitor...');
-=======
-    this.packageJsonPath = path.join(process.cwd(),package.json')};
-  async start() {}
-    console.log('Starting Dependency Monitor...);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     this.isRunning = true;
-    
+<<<<<<< HEAD
+<<<<<<< HEAD
+
     // Initial dependency check;
     await this.runDependencyCheck();
-    
+
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
     
-    
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    // Initial dependency check;
+    await this.runDependencyCheck();
+    // Set up interval for periodic checks;
+    this.intervalId = setInterval(() => {}
+      this.runDependencyCheck()}, this.interval);
 <<<<<<< HEAD
     
+    
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
       console.log('Running dependency check...');
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Check for outdated packages;
       const child = spawn('npm', ['outdated'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();"
+        "cwd": process.cwd();
       };);
-"
+
       let output = ;';';
       let errorOutput = ;';';
+
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
 
       child.stderr.on('data', (data) => {}
-=======
-    '
-    console.log('Dependency Monitor started successfully')};
-  async runDependencyCheck() {}
-    try {}
-      console.log('Running dependency check...);
-      // Check for outdated packages;
-      const child = spawn('npm, [outdated], {})
-        "stdio": [pipe,pipe,pipe],
-        "cwd": process.cwd();"
-      };);
-"
-      let output = ;;;
-      let errorOutput = ;;;
-      child.stdout.on('data, (data) => {}
-        output += data.toString()}
-});
-'
-      child.stderr.on('data, (data) => {}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         errorOutput += data.toString()}
+});
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
 
 <<<<<<< HEAD
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
 =======
-'
-      child.on('close, (code) => {}
-        if ({})
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+        errorOutput += data.toString()}
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           console.log('Dependency check passed ✓')) {}
      {}
           console.log('Dependency check passed ✓')}} else {}
           console.log('Dependency check found outdated packages ✗');
 <<<<<<< HEAD
           console.log('"Output": ', output);
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+          
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           // Log outdated packages but don't auto-update;
           this.logOutdatedPackages(output)};
       })} catch (error) {}
       console.error('Error running dependency "check": ', error.message)};
 =======
-          console.log('"Output": , output);
-          // Log outdated packages but don't auto-update;
-          this.logOutdatedPackages(output)};
-      })} catch (error) {}
-      console.error('Error running dependency "check": , error.message)};
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   };
   logOutdatedPackages(output) {}
     const lines = output.split('\n';);
     const outdatedPackages = lines.filter(line => )
       line.includes('→') && !line.includes('Package');
    ;);
-    
-    
-    
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    
+    
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    if ( {})
       console.log('Outdated packages "found": ')) {}
+     {}
       console.log('Outdated packages found:')};
       outdatedPackages.forEach(pkg => {})
         console.log(`  ${pkg}`)})};
-  async checkPackageIntegrity() {}
-      console.log('Checking package integrity...');
-      const child = spawn('npm', ['ls'], {})
-
-
-
-
-          console.log('Package integrity check passed ✓')) {}
-          console.log('Package integrity check passed ✓')}} else {}
-          console.log('Package integrity issues found ✗');
-          console.log('"Errors": ', errorOutput)};
-      console.error('Error checking package "integrity": ', error.message)};
-  stop() {}
-    console.log('Stopping Dependency Monitor...');
-    
-      clearInterval(this.intervalId)};
-    console.log('Dependency Monitor stopped')) {}
-    console.log('Dependency Monitor stopped')}};
-=======
-    if ({})
-      console.log('Outdated packages "found": )) {}
-     {}
-      console.log('Outdated packages found: )};
-      outdatedPackages.forEach(pkg => {})
-        console.log(`  ${pkg})})};
   };
   async checkPackageIntegrity() {}
     try {}
-      console.log('Checking package integrity...);
-      const child = spawn('npm, [ls], {})
-        "stdio": [pipe,pipe,pipe],
-        "cwd": process.cwd();"
+      console.log('Checking package integrity...');
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      const child = spawn('npm', ['ls'], {})
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd();
       };);
-"
-      let output = ;;;
-      let errorOutput = ;;;
-      child.stdout.on('data, (data) => {}
+
+      let output = ;';';
+      let errorOutput = ;';';
+
+      child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
-'
-      child.stderr.on('data, (data) => {}
+
+      child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
 
 
-'
-      child.on('close, (code) => {}
-        if ({})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      child.on('close', (code) => {}
+        if ( {})
           console.log('Package integrity check passed ✓')) {}
      {}
           console.log('Package integrity check passed ✓')}} else {}
           console.log('Package integrity issues found ✗');
-          console.log('"Errors": , errorOutput)};
+          console.log('"Errors": ', errorOutput)};
       })} catch (error) {}
-      console.error('Error checking package "integrity": , error.message)};
+      console.error('Error checking package "integrity": ', error.message)};
   };
   stop() {}
-    console.log('Stopping Dependency Monitor...);
+    console.log('Stopping Dependency Monitor...');
     this.isRunning = false;
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if ( {})
       clearInterval(this.intervalId)};
     console.log('Dependency Monitor stopped')) {}
@@ -178,30 +186,51 @@ class DependencyMonitor {}
       clearInterval(this.intervalId)};
     console.log('Dependency Monitor stopped')}};
 };
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Start the monitor if run directly;
   const monitor = new DependencyMonitor) {}
   const monitor = new DependencyMonitor}(;);
-  
-  // Handle graceful shutdown;
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     monitor.stop();
     process.exit(0)}
-  
-  process.on('SIGTERM', () => {}
+});
+<<<<<<< HEAD
+
 =======
-  process.on('SIGINT, () => {}
-    monitor.stop();
-    process.exit(0)}
-});
-  '
-  process.on('SIGTERM, () => {}
-    monitor.stop();
-    process.exit(0)}
-});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  process.on('SIGTERM', () => {}
+    monitor.stop();
+    process.exit(0)}
+});
+<<<<<<< HEAD
+
+  monitor.start().catch(console.error)};
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  
+  monitor.start().catch(console.error)};
+<<<<<<< HEAD
+module.exports = DependencyMonitor;
+module.exports = DependencyMonitor;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // Handle graceful shutdown;
+
   monitor.start().catch(console.error)};
 module.exports = DependencyMonitor;
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

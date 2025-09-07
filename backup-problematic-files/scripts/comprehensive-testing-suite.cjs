@@ -33,21 +33,7 @@ class ComprehensiveTestingSuite {;}
         this.testResults.unit.total = 1;"
         this.log("Unit tests completed successfully", "success")} else {;}
         this.log("No Jest configuration found, skipping unit tests", "warn");"
-<<<<<<< HEAD
-        this.testResults.unit.total = 0,};
-    } catch (error) {;}"`;
-      this.log(`Unit tests "failed": ${error.message}`, "error");"
-      this.testResults.unit.failed = 1;
-      this.testResults.unit.total = 1,};
-=======
-        this.testResults.unit.total = 0};
-    } catch (error) {;}"
-      this.log(`Unit tests "failed": ${error.message}, "error");"
-      this.testResults.unit.failed = 1;
-      this.testResults.unit.total = 1};
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async runIntegrationTests() {;}
       this.log("Running integration tests...");"
       // Check for integration test files;"
@@ -60,34 +46,14 @@ class ComprehensiveTestingSuite {;}
             file.includes("integration") || file.includes("test"));"
           if (integrationTestFiles.length > 0) {;}
             integrationTestsFound = true;
-<<<<<<< HEAD
-            break,};
-=======
-            break};
-        };
-      };
-      ;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       if (integrationTestsFound) {;}"
         execSync("npm run "test": integration", { "cwd": this.projectRoot, "stdio": "pipe" }")
         this.testResults.integration.passed = 1;
         this.testResults.integration.total = 1;"
         this.log("Integration tests completed successfully", "success")} else {;}
         this.log("No integration tests found, skipping", "warn");"
-<<<<<<< HEAD
-        this.testResults.integration.total = 0,};
-      this.log(`Integration tests "failed": ${error.message}`, "error");"
-      this.testResults.integration.failed = 1;
-      this.testResults.integration.total = 1,};
-=======
-        this.testResults.integration.total = 0};
-    } catch (error) {;}"
-      this.log(`Integration tests "failed": ${error.message}, "error");"
-      this.testResults.integration.failed = 1;
-      this.testResults.integration.total = 1};
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async runE2ETests() {;}
       this.log("Running end-to-end tests...");"
       // Check for E2E test configuration;"
@@ -96,32 +62,14 @@ class ComprehensiveTestingSuite {;}
       for (const config of e2eConfigs) {;}
         if (fs.existsSync(config)) {;}
           e2eConfigFound = true;
-<<<<<<< HEAD
-=======
-          break};
-      };
-      ;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       if (e2eConfigFound) {;}"
         execSync("npm run "test": e2e", { "cwd": this.projectRoot, "stdio": "pipe" }")
         this.testResults.e2e.passed = 1;
         this.testResults.e2e.total = 1;"
         this.log("E2E tests completed successfully", "success")} else {;}
         this.log("No E2E test configuration found, skipping", "warn");"
-<<<<<<< HEAD
-        this.testResults.e2e.total = 0,};
-      this.log(`E2E tests "failed": ${error.message}`, "error");"
-      this.testResults.e2e.failed = 1;
-      this.testResults.e2e.total = 1,};
-=======
-        this.testResults.e2e.total = 0};
-    } catch (error) {;}"
-      this.log(`E2E tests "failed": ${error.message}, "error");"
-      this.testResults.e2e.failed = 1;
-      this.testResults.e2e.total = 1};
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async runCoverageAnalysis() {;}
       this.log("Running coverage analysis...");"
       // Run tests with coverage;"
@@ -129,15 +77,7 @@ class ComprehensiveTestingSuite {;}
       // Parse coverage report;
       const coverageReport = this.parseCoverageReport();
       this.testResults.coverage = coverageReport;"
-<<<<<<< HEAD
-      this.log("Coverage analysis completed", "success"),} catch (error) {;}""`;
-      this.log(`Coverage analysis "failed": ${error.message}`, "error"),};"
-=======
-      this.log("Coverage analysis completed", "success")} catch (error) {;}
-      this.log(`Coverage analysis "failed": ${error.message}, "error")};"
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   parseCoverageReport() {;}
     try {;}
       // Look for coverage report files;"
@@ -147,73 +87,7 @@ class ComprehensiveTestingSuite {;}
           if (file.endsWith(".json")) {;}
             const coverage = JSON.parse(fs.readFileSync(file, "utf8"));"
             return {;}"
-<<<<<<< HEAD
-              "percentage": coverage.total.lines.pct,""
-              "lines": coverage.total.lines.covered,""
-              "functions": coverage.total.functions.covered,""
-              "branches": coverage.total.branches.covered,};"
-      return { "percentage": 0, "lines": 0, "functions": 0, "branches": 0 };"
-      this.log(`Failed to parse coverage "report": ${error.message}`, "error");""
-  async runLintingTests() {;}
-      this.log("Running linting tests...");""
-      execSync("npm run lint", { "cwd": this.projectRoot, "stdio": "pipe" }")
-});"
-      this.log("Linting tests passed", "success"),} catch (error) {;}""`;
-      this.log(`Linting tests "failed": ${error.message}`, "error"),};"
-  async runTypeChecking() {;}
-      this.log("Running type checking...");""
-      execSync("npm run type-check", { "cwd": this.projectRoot, "stdio": "pipe" }")
-      this.log("Type checking passed", "success"),} catch (error) {;}""`;
-      this.log(`Type checking "failed": ${error.message}`, "error"),};"
-  async runBuildTests() {;}
-      this.log("Running build tests...");""
-      execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe" }")
-      this.log("Build tests passed", "success"),} catch (error) {;}""`;
-      this.log(`Build tests "failed": ${error.message}`, "error"),};"
-=======
-              "percentage": coverage.total.lines.pct,
-              "lines": coverage.total.lines.covered,
-              "functions": coverage.total.functions.covered,
-              "branches": coverage.total.branches.covered};"
-          };
-        };
-      };
-      ;"
-      return { "percentage": 0, "lines": 0, "functions": 0, "branches": 0 };"
-    } catch (error) {;}"
-      this.log(`Failed to parse coverage "report": ${error.message}, "error");
-      return { "percentage": 0, "lines": 0, "functions": 0, "branches": 0 };"
-    };
-  };
-;
-  async runLintingTests() {;}
-    try {;}"
-      this.log("Running linting tests...");
-      execSync("npm run lint", { "cwd": this.projectRoot, "stdio": "pipe" }")
-});"
-      this.log("Linting tests passed", "success")} catch (error) {;}
-      this.log(`Linting tests "failed": ${error.message}, "error")};"
-  };
-;
-  async runTypeChecking() {;}
-    try {;}"
-      this.log("Running type checking...");
-      execSync("npm run type-check", { "cwd": this.projectRoot, "stdio": "pipe" }")
-});"
-      this.log("Type checking passed", "success")} catch (error) {;}
-      this.log(`Type checking "failed": ${error.message}, "error")};"
-  };
-;
-  async runBuildTests() {;}
-    try {;}"
-      this.log("Running build tests...");
-      execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe" }")
-});"
-      this.log("Build tests passed", "success")} catch (error) {;}
-      this.log(`Build tests "failed": ${error.message}, "error")};"
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async generateTestReport() {;}
     const totalTests = this.testResults.unit.total + this.testResults.integration.total + this.testResults.e2e.total;
     const totalPassed = this.testResults.unit.passed + this.testResults.integration.passed + this.testResults.e2e.passed;
@@ -235,16 +109,7 @@ class ComprehensiveTestingSuite {;}
         "Add security tests",
         "Set up continuous testing in CI/CD"]};
     const reportPath = path.join(this.projectRoot, "comprehensive-testing-suite-report.json");"
-<<<<<<< HEAD
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));"`;
-    this.log(`Test report saved to ${reportPath}`, "success");"
-    return report,};
-=======
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));"
-    this.log(`Test report saved to ${reportPath}, "success");"
-    return report};
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async run() {;}"
     this.log("Starting Comprehensive Testing Suite");"
       await this.runUnitTests();
@@ -254,38 +119,39 @@ class ComprehensiveTestingSuite {;}
       await this.runLintingTests();
       await this.runTypeChecking();
       await this.runBuildTests();
-      const report = await this.generateTestReport();"
 <<<<<<< HEAD
-      this.log("Comprehensive Testing Suite completed");""`;
-      this.log(`"Summary": ${report.summary.totalPassed}/${report.summary.totalTests} tests passed`);""`;
-      this.log(`Success "Rate": ${report.summary.successRate}%`);"
-      if (report.summary.totalFailed > 0) {;}"`;
-        this.log(`${report.summary.totalFailed} tests failed`, "error"),};"
-      return report,} catch (error) {;}"`;
-      this.log(`Comprehensive testing suite "failed": ${error.message}`, "error");"
-      throw error,};
-// Run the comprehensive testing suite;
-if (require.main === module) {;}
-  const testSuite = new ComprehensiveTestingSuite();
-  testSuite.run().catch(console.error),};
-=======
+      const report = await this.generateTestReport();
       this.log("Comprehensive Testing Suite completed");
       this.log(`"Summary": ${report.summary.totalPassed}/${report.summary.totalTests} tests passed`);
-      this.log(`Success "Rate": ${report.summary.successRate}%`);"
-      if (report.summary.totalFailed > 0) {;}"
-        this.log(`${report.summary.totalFailed} tests failed`, "error")};"
+      this.log(`Success "Rate": ${report.summary.successRate}%`);
+      if (report.summary.totalFailed > 0) {;}
+        this.log(`${report.summary.totalFailed} tests failed`, "error"),};
       ;
-      return report} catch (error) {;}"
-      this.log(`Comprehensive testing suite "failed": ${error.message}, "error");"
-      throw error};
+      return report,} catch (error) {;}
+      this.log(`Comprehensive testing suite "failed": ${error.message}`, "error");
+      throw error,};
   };
 };
 ;
 // Run the comprehensive testing suite;
 if (require.main === module) {;}
   const testSuite = new ComprehensiveTestingSuite();
-  testSuite.run().catch(console.error)};
+  testSuite.run().catch(console.error),};
 ;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ComprehensiveTestingSuite;
+module.exports = ComprehensiveTestingSuite;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      const report = await this.generateTestReport();"
+
 module.exports = ComprehensiveTestingSuite;
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

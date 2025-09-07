@@ -5,37 +5,12 @@ const fs = require('fs')
 const path = require('path')
 // console.log('� Starting error recovery manager...')
       console.log(' Checking for recovery issues...')
-      console.error(' Error recovery manager "failed")""
-      execSync('npm run build', { "stdio"})""
-        "type"""
-        "message"""
-        "severity"""
-      execSync('npm test', { "stdio"})""
-              "details"""
-        "default": return { success: false, "reason"}""
-      execSync('rm -rf .next out dist build', { "stdio"})""
-        "action"""
-      return { "success": false, "reason"}""
-      execSync('rm -rf node_modules package-lock.json', { "stdio"})""
-      execSync('npm install --legacy-peer-deps', { "stdio"})""
-        execSync(`git checkout -- "${file}"`, { "stdio"`})""
-    fixedContent = fixedContent.replace(/"Error")""
-    fixedContent = fixedContent.replace(/"Exception")""`;
-      "ignore"""
-    console.error(' Error recovery manager "failed")""`;
-=======
-#!/usr/bin/env node
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
-// console.log('� Starting error recovery manager...)
-      console.log(' Checking for recovery issues...)
       console.error(' Error recovery manager "failed")
-      execSync('npm run build, { "stdio"})
+      execSync('npm run build', { "stdio"})
         "type"
         "message"
         "severity"
-      execSync('npm test, { "stdio"})
+      execSync('npm test', { "stdio"})
         "type"
         "message"
         "severity"
@@ -56,15 +31,15 @@ const path = require('path')
         "message"
         "severity"
         "default": return { success: false, "reason"}
-      execSync('rm -rf .next out dist build, { "stdio"})
-      execSync('npm run build, { "stdio"})
+      execSync('rm -rf .next out dist build', { "stdio"})
+      execSync('npm run build', { "stdio"})
         "type"
         "action"
         "details"
       return { "success": false, "reason"}
-      execSync('rm -rf node_modules package-lock.json, { "stdio"})
-      execSync('npm install --legacy-peer-deps, { "stdio"})
-      execSync('npm test, { "stdio"})
+      execSync('rm -rf node_modules package-lock.json', { "stdio"})
+      execSync('npm install --legacy-peer-deps', { "stdio"})
+      execSync('npm test', { "stdio"})
         "type"
         "action"
         "details"
@@ -87,22 +62,32 @@ const path = require('path')
         "action"
         "details"
       return { "success": false, "reason"}
-      execSync('npm install --legacy-peer-deps, { "stdio"})
+      execSync('npm install --legacy-peer-deps', { "stdio"})
         "type"
         "action"
         "details"
       return { "success": false, "reason"}
-      execSync('npm install --legacy-peer-deps, { "stdio"})
+      execSync('npm install --legacy-peer-deps', { "stdio"})
         "type"
         "action"
         "details"
       return { "success": false, "reason"}
-      execSync('npm run build, { "stdio"})
+      execSync('npm run build', { "stdio"})
         "type"
         "action"
         "details"
       return { "success": false, "reason"}
       "ignore"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
     console.error(' Error recovery manager "failed")
     console.error(' Error recovery manager "failed")
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,8 +1,7 @@
 import React from 'react';
-
-pr-12243
+export default LoadingSpinner.dynamic;
 ;
-const LoadingSpinner.dynamic = () => {
+const LoadingSpinner.dynamic = () => {}
   return (
     <div data - testid="loadingspinner.dynamic">;
       <h1 > LoadingSpinner.dynamic</h1>;
@@ -13,6 +12,8 @@ const LoadingSpinner.dynamic = () => ;
     </div>
   );
 }
+;
 
 pr-12243
 export default LoadingSpinner.dynamic;
+

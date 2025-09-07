@@ -6,14 +6,7 @@ class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
     this.automationInterval =;
-<<<<<<< HEAD
-#!/usr/bin/env node;"
-=======
-#!/usr/bin/env node"
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 class BuildHealthMonitor {}
       parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes default};
 ;
@@ -24,15 +17,7 @@ class BuildHealthMonitor {}
   this.log("Starting build health monitoring...");"
     try {}
   await this.monitorBuildHealth();"
-<<<<<<< HEAD
-      this.log("Build health monitoring completed.")} catch (error) {}""`;
-  this.log("Build health monitoring completed.");`)} catch (error) {`);`}""`;
-      this.log(Error during build health "monitoring": ${error.message}`)};"
-=======
-      this.log("Build health monitoring completed.")} catch (error) {}
-  this.log("Build health monitoring completed.");`)} catch (error) {`);`}
-      this.log(Error during build health "monitoring": ${error.message})};"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   };
   async monitorBuildHealth() {}"
   this.log("Monitoring build health...");"
@@ -54,59 +39,27 @@ class BuildHealthMonitor {}
           "buildTime": buildTime,
           "details": "Build completed successfully"};"
         report.performance = {}"
-<<<<<<< HEAD
-          "status": buildTime < 60000;""
-=======
-  "buildTime": buildTime,
-          "status": buildTime < 60000;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
               ? "good";"
               : buildTime < 120000;"
                 ? "warning";
                 : "poor"};"
       } catch (error) {}
-<<<<<<< HEAD
-  "status": "error",""
-=======
-  report.buildStatus = {}"
-  "status": "error",
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
           "details": error.message};"
       // Check bundle size;
-<<<<<<< HEAD
-  const bundleAnalysis = execSync("npm run analyze", {})""
-  "stdio": "pipe",""
-=======
-      try {}"
-  const bundleAnalysis = execSync("npm run analyze", {})
-  "stdio": "pipe",
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
           "encoding": "utf8"}"
         report.bundleSize = {}"
   "details": bundleAnalysis};"
-<<<<<<< HEAD
-=======
-      } catch (error) {}
-  report.bundleSize = {}"
-  "status": "error",
-          "details": error.message};"
-      };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       // Generate recommendations;
       report.recommendations = this.generateRecommendations(report);
       // Save report;
       const timestamp = Date.now();
       const reportPath = path.join(;)"`;
         this.projectRoot,error-reports", `build-health-report-${timestamp}.json`} catch (error) {`}"
-<<<<<<< HEAD
-=======
-  report.bundleSize = {}"
-  "status": "error",
-          "details": error.message};"
-      };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       // Generate recommendations;
 
       // Save report;
@@ -114,32 +67,50 @@ class BuildHealthMonitor {}
       );
 
       const dir = path.dirname(reportPath);
-      if (!fs.existsSync(dir)) {}"
-  fs.mkdirSync(dir, { "recursive": true })};"
 <<<<<<< HEAD
-;"`;
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`Build health report saved "to": ${reportPath}`)} catch (error) {  this.log(`Error monitoring build "health": ${error.message  }`)};"
-=======
-;"
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`Build health report saved "to": ${reportPath})} catch (error) {  this.log(`Error monitoring build "health": ${error.message  })};"
+      if (!fs.existsSync(dir)) {}
+  fs.mkdirSync(dir, { "recursive": true })};
+;
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`Build health report saved "to": ${reportPath}`)} catch (error) {  this.log(`Error monitoring build "health": ${error.message  }`)};
   };
 ;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+  generateRecommendations(report) {}
+  const recommendations = [];
+    if (report.buildStatus.status === "error") {}
+  recommendations.push(Fix build errors to ensure project compiles correctly";)
+      )};
+;
+    if (report.performance?.status === "poor") {}
+  recommendations.push(Optimize build performance - consider code splitting and lazy loading';)
+      )};
+;
+    return recommendations};
+};
+;
+const monitor = new BuildHealthMonitor();
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+monitor.run().catch(console.error);
+monitor.run().catch(console.error);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      if (!fs.existsSync(dir)) {}"
+  fs.mkdirSync(dir, { "recursive": true })};"
+
   generateRecommendations(report) {}
   const recommendations = [];"
     if (report.buildStatus.status === "error") {}
   recommendations.push(Fix build errors to ensure project compiles correctly";)"
 ;"
-<<<<<<< HEAD
-    if (report.performance?.status === "poor") {}""
-  recommendations.push(Optimize build performance - consider code splitting and lazy loading';)
-=======
-    if (report.performance?.status === "poor") {}
-  recommendations.push(Optimize build performance - consider code splitting and lazy loading';)
-      )};
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     return recommendations};
 const monitor = new BuildHealthMonitor();
 monitor.run().catch(console.error);
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

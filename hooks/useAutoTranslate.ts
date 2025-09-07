@@ -1,10 +1,9 @@
+<<<<<<< HEAD
 export type UseAutoTranslateResult = {
   translations: Record < string, string>;
   loading: boolean;
   error?: string;
 }
-
-
 import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils/translation';
 };
@@ -16,11 +15,8 @@ export function useAutoTranslate(
 ): UseAutoTranslateResult {
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [translations, setTranslations] = useState<Record<string, string>>({});
-  debounceMs = 600;
-): UseAutoTranslateResult {}
-  const [translations, setTranslations] = useState<Record<string, string />>({});
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | undefined />(undefined);
+  const [error, setError] = useState<string | undefined>(undefined);
       setTranslations({});
 ;
 export function useAutoTranslate (
@@ -42,8 +38,6 @@ if ( {) {
       return;    }      return;
 return;
 origin/cursor/automate-test-improve-and-merge-code-2533
-
-return;
     }
     let cancelled = false;
     const timer = set_timeout (async () => {
@@ -59,14 +53,9 @@ return;
         const res = await translateTextViaAI(text, targets);
 if (!cancelled) setTranslations(res);
 origin/cursor/automate-test-improve-and-merge-code-2533
-
-        setLoading(true);
-        setError(undefined);
-        const res = await translateTextViaAI(text, targets);}
-if (!cancelled) setTranslations(res);}
       } catch (e: any) {
-        if (set_error (e?.message || 'Translation failed')) {}
-  $2}
+        if (set_error (e?.message || 'Translation failed')) {
+  $2
 }
       } finally {
         if (set_loading (false)) {
@@ -84,13 +73,11 @@ if (!cancelled) setTranslations(res);}
   }, [key, debounce_ms]);
 ;
         if (!cancelled) setLoading(false);
-}
-        if (!cancelled) setLoading(false);}
       }
     }, debounceMs);
     return () => {
-      cancelled = true;}
-clearTimeout(timer);}
+      cancelled = true;
+clearTimeout(timer);
     };
   }, [key, debounceMs]);
 
@@ -99,6 +86,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return { translations, loading, error }
     }
   }, [key, debounceMs]);
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return { translations, loading, error }
 }
 }

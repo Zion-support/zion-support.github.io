@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+const UserEngagementSystem = () => {
+  return (
+    <div className="bg-white rounded-lg shadow-md p-6">
+      <h3 className="text-lg font-semibold mb-4">User Engagement</h3>
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <span>Active Users</span>
+          <span className="font-semibold">1,234</span>
+        </div>
+        <div className="flex items-center justify-between">
+          <span>Session Duration</span>
+          <span className="font-semibold">5m 32s</span>
+        </div>
+        <div className="flex items-center justify-between">
+          <span>Bounce Rate</span>
+          <span className="font-semibold">23%</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default UserEngagementSystem;
+=======
 import React from \"React\";
 export type EmptyStateProps = {
   emoji?: string;
@@ -12,3 +37,4 @@ export type EmptyStateProps = {
       <p className=\"mt-1 text-sm text-gray-600 dark:text-gray-300\" />{message}</p>;
       {action && <div className=\"mt-3\" />{action}</div>}
 }
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

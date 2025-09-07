@@ -50,6 +50,16 @@ const DatabaseDesignChat: NextPage = () => {
       <Head>;
 
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
+<<<<<<< HEAD:components/services/database-design-chat.tsx
+        <meta name="description" content="DatabaseDesignChat service" />{" "}
+<<<<<<< HEAD
+
+
+=======
+        <meta name="description" content="DatabaseDesignChat service" />{" "
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/services/database-design-chat.tsx
+=======
         <meta name="description" content="DatabaseDesignChat service" />{" ""
 </meta>
 
@@ -84,6 +94,7 @@ const DatabaseDesignChat: NextPage = () => {
         <title>DatabaseDesignChat - Zion Tech Solutions</title>"
       
 "
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 const DatabaseDesignChat: NextPage = () => {
   return (
     <div />
@@ -91,6 +102,19 @@ const DatabaseDesignChat: NextPage = () => {
 
       </Head>;
 
+<<<<<<< HEAD
+<<<<<<< HEAD:components/services/database-design-chat.tsx
+
+=======
+      </Head>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/services/database-design-chat.tsx
+      <main>
+        <h1>DatabaseDesignChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+=======
       </Head>;
 
 const DatabaseDesignChat: NextPage = () => {
@@ -98,6 +122,7 @@ const DatabaseDesignChat: NextPage = () => {
         <h1 />DatabaseDesignChat</h1>
         <p />Service details coming soon...</p>
         <a href=\"/services\" />Back to Services</a>
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       </main>
     </div>
       </Head>;

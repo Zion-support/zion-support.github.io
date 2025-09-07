@@ -1,26 +1,24 @@
+
 <<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
 const { execSync } = require('child_process')
 console.log('� Running Health Check...')
-  "status"""
-    execSync('npm run build', { "stdio"})""
-    execSync('npm run lint', { "stdio"})""
-    execSync('npm run type-check', { "stdio"})""
-console.log('� Overall "status")""');
-=======
-#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-console.log('� Running Health Check...)
   "status"
       "status"
       "status"
-    execSync('npm run build, { "stdio"})
-    execSync('npm run lint, { "stdio"})
-    execSync('npm run type-check, { "stdio"})
+    execSync('npm run build', { "stdio"})
+    execSync('npm run lint', { "stdio"})
+    execSync('npm run type-check', { "stdio"})
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
 console.log('� Overall "status")
 console.log('� Overall "status")
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

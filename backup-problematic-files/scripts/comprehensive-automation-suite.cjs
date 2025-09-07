@@ -4,40 +4,6 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
   console.log(' Starting Comprehensive Automation Suite...')
-    "overallStatus"""
-      "status"""
-// console.log(`   - "Successful"`)""`;
-    console.log(`   - "Failed"`)""
-      "name"""
-        execSync('npm install', { "stdio"})""
-        execSync('node automation/health-check.cjs', { "stdio"})""
-        return { "healthStatus"}""
-        execSync('node automation/security-scanner.cjs', { "stdio"})""
-        return { "securityStatus"}""
-        execSync('node scripts/fix-syntax-errors.cjs', { "stdio"})""
-        execSync('npx tsc --noEmit', { "stdio"})""
-        execSync('npm run lint', { "stdio"})""
-        execSync('node scripts/advanced-app-optimizer.cjs', { "stdio"})""
-        execSync('npm run build', { "stdio"})""
-          execSync('npm test', { "stdio"})""
-          return { "testsPassed": false, "message"}""
-        execSync('node scripts/performance-monitor.cjs', { "stdio"})""
-        execSync('node scripts/smart-deployment-automation.cjs', { "stdio"})""
-          execSync('pm2 status', { "stdio"})""
-          return { "pm2ProcessesRunning": false, "message"}""
-        execSync('node scripts/code-quality-monitor.cjs', { "stdio"})""
-        execSync('node scripts/dependency-updater.cjs', { "stdio"})""
-        "type"""
-        "message"""
-    console.log('\n "Recommendations")""');
-    console.error(' Automation suite "failed")""
-    console.error(' Automation suite "failed")""`;
-=======
-#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-  console.log(' Starting Comprehensive Automation Suite...)
     "overallStatus"
       "status"
           "status"
@@ -45,37 +11,37 @@ const { execSync } = require('child_process')
 // console.log(`   - "Successful"`)
     console.log(`   - "Failed"`)
       "name"
-        execSync('npm install, { "stdio"})
+        execSync('npm install', { "stdio"})
       "name"
-        execSync('node automation/health-check.cjs, { "stdio"})
+        execSync('node automation/health-check.cjs', { "stdio"})
         return { "healthStatus"}
       "name"
-        execSync('node automation/security-scanner.cjs, { "stdio"})
+        execSync('node automation/security-scanner.cjs', { "stdio"})
         return { "securityStatus"}
       "name"
-        execSync('node scripts/fix-syntax-errors.cjs, { "stdio"})
+        execSync('node scripts/fix-syntax-errors.cjs', { "stdio"})
       "name"
-        execSync('npx tsc --noEmit, { "stdio"})
+        execSync('npx tsc --noEmit', { "stdio"})
       "name"
-        execSync('npm run lint, { "stdio"})
+        execSync('npm run lint', { "stdio"})
       "name"
-        execSync('node scripts/advanced-app-optimizer.cjs, { "stdio"})
+        execSync('node scripts/advanced-app-optimizer.cjs', { "stdio"})
       "name"
-        execSync('npm run build, { "stdio"})
+        execSync('npm run build', { "stdio"})
       "name"
-          execSync('npm test, { "stdio"})
+          execSync('npm test', { "stdio"})
           return { "testsPassed": false, "message"}
       "name"
-        execSync('node scripts/performance-monitor.cjs, { "stdio"})
+        execSync('node scripts/performance-monitor.cjs', { "stdio"})
       "name"
-        execSync('node scripts/smart-deployment-automation.cjs, { "stdio"})
+        execSync('node scripts/smart-deployment-automation.cjs', { "stdio"})
       "name"
-          execSync('pm2 status, { "stdio"})
+          execSync('pm2 status', { "stdio"})
           return { "pm2ProcessesRunning": false, "message"}
       "name"
-        execSync('node scripts/code-quality-monitor.cjs, { "stdio"})
+        execSync('node scripts/code-quality-monitor.cjs', { "stdio"})
       "name"
-        execSync('node scripts/dependency-updater.cjs, { "stdio"})
+        execSync('node scripts/dependency-updater.cjs', { "stdio"})
       "name"
         "type"
         "type"
@@ -84,6 +50,16 @@ const { execSync } = require('child_process')
         "type"
         "message"
     console.log('\n "Recommendations")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
     console.error(' Automation suite "failed")
     console.error(' Automation suite "failed")
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

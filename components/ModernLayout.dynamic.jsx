@@ -1,8 +1,7 @@
 import React from 'react';
-
-pr-12243
+export default ModernLayout.dynamic;
 ;
-const ModernLayout.dynamic = () => {
+const ModernLayout.dynamic = () => {}
   return (
     <div data - testid="modernlayout.dynamic">;
       <h1 > ModernLayout.dynamic</h1>;
@@ -13,6 +12,8 @@ const ModernLayout.dynamic = () => ;
     </div>
   );
 }
+;
 
 pr-12243
 export default ModernLayout.dynamic;
+

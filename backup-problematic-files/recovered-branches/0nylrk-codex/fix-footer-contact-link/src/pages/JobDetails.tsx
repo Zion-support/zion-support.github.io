@@ -1,4 +1,25 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import React, { useState, useEffect } from 'react',;
+import { useParams, useNavigate } from 'react-router-dom',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from '@/components/icons',;
+import { formatDistanceToNow } from 'date-fns',;
+import { toast } from 'sonner',;
+import { useAuth } from '@/hooks/useAuth',;
+import useJobDetails from '@/hooks/useJobDetails',;
+import { ApplyToJobModal } from '@/components/messaging/job-application',;
+import { SEO } from '@/components/SEO',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+=======
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Header } from '@/components/Header';
@@ -14,6 +35,7 @@ import useJobDetails from '@/hooks/useJobDetails';
 import { ApplyToJobModal } from '@/components/messaging/job-application';
 import { SEO } from '@/components/SEO';
 import { useWhitelabel } from '@/context/WhitelabelContext';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 export default function JobDetails() {;
   // Cast to specify the expected route param type since useParams may be untyped;
@@ -29,6 +51,18 @@ export default function JobDetails() {;
 </div>"
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;"
       </div>;
+<<<<<<< HEAD
+    ),;
+  }
+;
+  if (error || !job) {;
+    return (;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <>;
         <Header />;
 "
@@ -39,6 +73,10 @@ export default function JobDetails() {;
         <Footer />;
 
       </>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
     ),;
   }
   const handleApply = () => {;
@@ -60,7 +98,34 @@ export default function JobDetails() {;
       <SEO ;"`;
         title={`${job.title} - ${isWhitelabel ? brandName :'Zion AI Marketplace'}`}')
         description={job.description.substring(0, 160)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       />;
+<<<<<<< HEAD
+      <Header />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className="mb-6">;
+<<<<<<< HEAD
+
+            onClick={() => navigate('/jobs')}
+          >;
+            ← Back to Jobs;
+          </Button>;
+        </div>;
+
+=======
+          <Button ;
+            variant="outline" ;
+            size="sm";
+            onClick={() => navigate('/jobs')}
+          >;
+             Back to Jobs;
+          </Button>;
+        </div>;
+        ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
+          <div className="lg:col-span-2">;
+=======
 
 
       <main className="container mx-auto px-4 py-8">;"
@@ -74,11 +139,129 @@ export default function JobDetails() {;
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;"
           <div className="lg:col-span-2">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <Card>;
 
               <CardHeader>;
                 <div className="flex justify-between items-start">;"
                   <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+                    <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>;
+                    <div className="flex items-center text-muted-foreground">;
+                      <Calendar className="mr-2 h-4 w-4" />;
+                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix:true })}</span>;
+                    </div>;
+                  </div>;
+                  <Badge>{job.category}</Badge>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                </div>;
+              </CardHeader>;
+              <CardContent className="space-y-6">;
+                <div>;
+                  <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
+                  <div className="whitespace-pre-wrap">;
+<<<<<<< HEAD
+
+=======
+                    {job.description}
+                  </div>;
+                </div>;
+                ;
+                <div>;
+                  <h3 className="font-semibold text-lg mb-3">Required Skills</h3>;
+                  <div className="flex flex-wrap gap-2">;
+                    {job.skills?.map((skill:string, i:number) => (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                      <Badge key={i} variant="secondary">;
+                        {skill}
+                      </Badge>;
+                    ))}
+                  </div>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          </div>;
+<<<<<<< HEAD
+
+=======
+          ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+          <div>;
+            <Card>;
+              <CardContent className="pt-6 space-y-4">;
+                <div className="flex items-start">;
+                  <DollarSign className="mt-1 h-5 w-5 text-muted-foreground" />;
+                  <div className="ml-3">;
+                    <p className="text-sm text-muted-foreground">Budget</p>;
+<<<<<<< HEAD
+
+=======
+                    <p className="font-medium">{formatBudget(job.budget)}</p>;
+                  </div>;
+                </div>;
+                ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                <div className="flex items-start">;
+                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" />;
+                  <div className="ml-3">;
+                    <p className="text-sm text-muted-foreground">Deadline</p>;
+                    <p className="font-medium">;
+<<<<<<< HEAD
+
+=======
+                      {job.deadline ? new Date(job.deadline).toLocaleDateString() :"Flexible"}
+                    </p>;
+                  </div>;
+                </div>;
+                ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                <div className="flex items-start">;
+                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />;
+                  <div className="ml-3">;
+                    <p className="text-sm text-muted-foreground">Job Type</p>;
+                    <p className="font-medium">Freelance / Remote</p>;
+                  </div>;
+                </div>;
+<<<<<<< HEAD
+
+=======
+                ;
+                {!isOwnJob && (;
+                  <Button ;
+                    className="w-full mt-4" ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                    onClick={handleApply}
+                    disabled={isOwnJob}
+                  >;
+                    Apply Now;
+<<<<<<< HEAD
+
+=======
+                  </Button>;
+                )}
+                ;
+                {isOwnJob && (;
+                  <div className="text-center p-2 bg-muted rounded-md mt-4">;
+                    <p className="text-sm text-muted-foreground">This is your job posting</p>;
+                  </div>;
+                )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+              </CardContent>;
+            </Card>;
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+<<<<<<< HEAD
+
+=======
+      ;
+      {/* Job application modal */}
+      {job && (;
+=======
                     <CardTitle className="text-2xl mb-2">{job.title};""
                     <div className="flex items-center text-muted-foreground">;"
                       <Calendar className="mr-2 h-4 w-4" />;"
@@ -118,6 +301,7 @@ export default function JobDetails() {;
                     <p className="text-sm text-muted-foreground">This is your job posting</p>;"
       </main>;
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <ApplyToJobModal;
           job={{;
             id: job.id;,;
@@ -130,10 +314,20 @@ export default function JobDetails() {;
 pr-12325
             budget: job.budget;,;
             client_id:job.client_id;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           }}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
+<<<<<<< HEAD
+        />;
+      )}
+    </>;
+<<<<<<< HEAD
 
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ),;}
  const [isApplyModalOpen, setIsApplyModalOpen] = useState (false);
 if (error || !job) {"
@@ -157,4 +351,9 @@ if (error || !job) {"
   />) 
 
 }</>) 
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

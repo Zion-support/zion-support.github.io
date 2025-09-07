@@ -2,6 +2,11 @@ import React, { useEffect, useRef } from 'react';
 interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
 }
+<<<<<<< HEAD
+<<<<<<< HEAD:components/broken/UltraFuturisticBackground2036.tsx
+export default function UltraFuturisticBackground2036({variant = 'default';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   intensity = 'medium';
 }: UltraFuturisticBackground2036Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -156,6 +161,19 @@ interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 
         cancelAnimationFrame(animationRef.current);
       window.removeEventListener('resize', resizeCanvas);
 }, [variant, intensity])
+<<<<<<< HEAD
+      }
+      window.removeEventListener('resize', resizeCanvas)
+    }
+  }, [variant, intensity]),
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+:components/broken/UltraFuturisticBackground2036.tsx
+}, [variant, intensity]),
+
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 
 export default function UltraFuturisticBackground2036({ 
   variant = 'default',
@@ -359,6 +377,7 @@ const nebulaGradient = ctx.createRadialGradient(
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
 </div>
@@ -371,14 +390,55 @@ ref={canvasRef}
 <div className=&quot;absolute inset-0 pointer-events-none&quot;>
 </div>)
           <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)1px,transparent1px),linear-gradient(90deg,rgba(0,255,255,0.1)1px,transparent1px)] bg-[size:50px50px]&quot; />
+<<<<<<< HEAD
+        )}
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        {/* Quantum field lines */}
+{variant === 'quantum' && (
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className=&quot;absolute inset-0&quot;>
               <motion.div,
 key={i}
                 className=&quot;absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent&quot;
+<<<<<<< HEAD
+
+                  delay: i * 0.5}}
+              />;
+            ))}
+          </div>;
+        )}
+
+                animate={_{
+                  opacity: [0.3, 0.8, 0.3]}}
+                transition={_{
+                  duration: 3, repeat: Infinity, delay: i * 0.5}}
+              />
+            ))}
+          </div>;
+        )}
+        ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
         {/* AI neural network overlay */}
 {variant === 'ai' && (
+<<<<<<< HEAD
+          <div className=&quot;absolute inset-0&quot;>
+            {[...Array(6)].map((_, i) => (
+              <motion.div,
+key={i}
+                className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent&quot;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 </motion>
                 className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent&quot;)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             ))}
           </div>;
     </div>;`;
