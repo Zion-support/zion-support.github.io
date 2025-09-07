@@ -54,8 +54,12 @@ class ExecuteAllScripts {
   }
 }
 
-const executor = new ExecuteAllScripts();
-executor.run().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+if (require.main === module) {
+  const executor = new ExecuteAllScripts();
+  executor.run().catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
+}
+
+module.exports = ExecuteAllScripts;
