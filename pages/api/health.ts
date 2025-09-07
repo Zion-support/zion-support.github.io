@@ -24,7 +24,11 @@ export default async function handler(
 
     res.status(200).json(healthCheck);
   } catch (error) {
-    console.error('Health check error:', error);
+    // Log error (in production, use proper logging service)
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Health check error:', error);
+    }
     res.status(500).json({
       status: 'unhealthy',
       timestamp: new Date().toISOString(),

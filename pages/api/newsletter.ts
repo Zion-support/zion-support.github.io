@@ -38,13 +38,19 @@ export default async function handler(
     // 3. Add to email marketing platform (Mailchimp, ConvertKit, etc.)
     // 4. Track subscription analytics
 
-    console.log('Newsletter subscription:', {
+    // Log subscription data (in production, use proper logging service)
+    const subscriptionData = {
       email,
       name,
       interests,
       timestamp: new Date().toISOString(),
       ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
-    });
+    };
+    
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.log('Newsletter subscription:', subscriptionData);
+    }
 
     // Simulate processing time
     await new Promise(resolve => setTimeout(resolve, 500));
@@ -55,7 +61,11 @@ export default async function handler(
     });
 
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
+    // Log error (in production, use proper logging service)
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Newsletter subscription error:', error);
+    }
     res.status(500).json({ 
       message: 'Internal server error. Please try again later.',
       success: false
