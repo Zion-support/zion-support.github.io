@@ -12,6 +12,27 @@ interface SEOHeadProps {
   structuredData?: any;
   noindex?: boolean;
   nofollow?: boolean;
+}
+      <meta name="twitter:title" content={title} />;
+      <meta name="twitter:description" content={description} />;
+      <meta name="twitter:image" content={fullOgImage} />;
+      <meta name="twitter:site" content="@ziontechgroup" />;
+      <meta name="twitter:creator" content="@ziontechgroup" />;
+      {/* Structured Data */}
+      <script;
+        type="application / ld + json";
+        dangerouslySetInnerHTML={{{/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
+      <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
+      <link rel="preconnect" href="https://images && images.unsplash.com" />;
+    </Head>;
+  )__html: JSON.stringify (structured_data || defaultStructuredData)}}
+      />;
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />;
+      <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="anonymous" />;
+      <link rel="preconnect" href="https://images.unsplash.com" />;
+    </Head>)}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
@@ -23,7 +44,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',
   structuredData,
   noindex = false,
-  nofollow = false,
+  nofollow = false
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
@@ -38,15 +59,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     description: 'Leading provider of AI services, IT solutions, and micro SaaS development',
     address: {
       '@type': 'PostalAddress',
-      addressCountry: 'US'},
+      addressCountry: 'US'
+    },
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-123-4567',
-      contactType: 'customer service'},
+      contactType: 'customer service'
+    },
     sameAs: [
       'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-    ],
+      'https://twitter.com/ziontechgroup'
+    ]
   };
 
   const mergedStructuredData = structuredData || defaultStructuredData;
@@ -64,6 +87,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
       {/* Open Graph Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -101,7 +125,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(mergedStructuredData)}}
+          __html: JSON.stringify(mergedStructuredData)
+        }}
       />
       {/* Additional SEO Meta Tags */}
       <meta name="google-site-verification" content="your-google-verification-code" />

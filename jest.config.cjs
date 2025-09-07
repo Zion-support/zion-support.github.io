@@ -1,21 +1,10 @@
 <<<<<<< HEAD
-const nextJest = require('next/jest')
-
-const createJestConfig = nextJest({
-  dir: './',
-})
-
-const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testEnvironment: 'jsdom',
-=======
 
 module.exports = {
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
   },
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', {
@@ -26,7 +15,6 @@ module.exports = {
       ]
     }]
   },
-<<<<<<< HEAD
   testMatch: [
     '<rootDir>/__tests__/**/*.(js|jsx|ts|tsx)',
     '<rootDir>/**/*.(test|spec).(js|jsx|ts|tsx)'
@@ -37,7 +25,7 @@ module.exports = {
     'app/**/*.{js,jsx,ts,tsx}',
     'utils/**/*.{js,jsx,ts,tsx}',
     '!**/node_modules/**',
-    '!**/*.d.ts',
+    '!**/*.d.ts'
   ],
   testPathIgnorePatterns: [
     '<rootDir>/.next/',
@@ -76,6 +64,72 @@ module.exports = {
     '<rootDir>/corrupted_backup/',
     '<rootDir>/corrupted-files-backup/',
     '<rootDir>/broken_files_backup/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-website/',
+    '<rootDir>/zion-ai-assistant/',
+    '<rootDir>/zion_academy/',
+    '<rootDir>/apps/',
+    '<rootDir>/pages_backup*/',
+    '<rootDir>/pages.*/',
+    '<rootDir>/pages-*/',
+    '<rootDir>/pages_disabled*/',
+    '<rootDir>/pages.disabled*/',
+    '<rootDir>/pages.broken*/',
+    '<rootDir>/pages.corrupted*/',
+    '<rootDir>/pages.old*/',
+    '<rootDir>/pages._*/',
+    '<rootDir>/pages.__*/',
+    '<rootDir>/backup-pages/',
+    '<rootDir>/src.pages.disabled/',
+    '<rootDir>/lib_backup*/',
+    '<rootDir>/corrupted-files-backup*/',
+    '<rootDir>/performance-reports*/',
+    '<rootDir>/log-analysis-reports*/',
+    '<rootDir>/link-reports*/',
+    '<rootDir>/lint-target*/',
+    '<rootDir>/monitoring*/',
+    '<rootDir>/pm2-automation*/',
+    '<rootDir>/automation/logs*/',
+    '<rootDir>/automation/backup*/'
+  ],
+  modulePathIgnorePatterns: [
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/temp_exclude/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/temp_backup/',
+    '<rootDir>/temp_components/',
+    '<rootDir>/temp_conflicts/',
+    '<rootDir>/temp_working/',
+    '<rootDir>/backup*/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/temp_*/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-website/',
+    '<rootDir>/zion-ai-assistant/',
+    '<rootDir>/zion_academy/',
+    '<rootDir>/apps/',
+    '<rootDir>/pages_backup*/',
+    '<rootDir>/pages.*/',
+    '<rootDir>/pages-*/',
+    '<rootDir>/pages_disabled*/',
+    '<rootDir>/pages.disabled*/',
+    '<rootDir>/pages.broken*/',
+    '<rootDir>/pages.corrupted*/',
+    '<rootDir>/pages.old*/',
+    '<rootDir>/pages._*/',
+    '<rootDir>/pages.__*/',
+    '<rootDir>/backup-pages/',
+    '<rootDir>/src.pages.disabled/',
+    '<rootDir>/lib_backup*/',
+    '<rootDir>/corrupted-files-backup*/',
+    '<rootDir>/performance-reports*/',
+    '<rootDir>/log-analysis-reports*/',
+    '<rootDir>/link-reports*/',
+    '<rootDir>/lint-target*/',
+    '<rootDir>/monitoring*/',
+    '<rootDir>/pm2-automation*/',
+    '<rootDir>/automation/logs*/',
+    '<rootDir>/automation/backup*/'
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   verbose: true,
@@ -92,7 +146,45 @@ module.exports = {
   }
 }
 
-module.exports = createJestConfig(customJestConfig)
 =======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+module.exports = {
+  preset: "ts-jest",
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: [
+    "@testing-library/jest-dom",
+    "<rootDir>/src/test/setup.ts"
+  ],
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/fileMock.js",
+    "\\.(gif|ttf|eot|svg|png|jpg|jpeg)$": "<rootDir>/src/__mocks__/fileMock.js"
+  },
+  testMatch: [
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/src/**/*.{test,spec}.{js,jsx,ts,tsx}",
+    "<rootDir>/tests/**/*.{test,spec}.{js,jsx,ts,tsx}"
+  ],
+  collectCoverageFrom: [
+    "src/**/*.{js,jsx,ts,tsx}",
+    "!src/**/*.d.ts",
+    "!src/index.tsx",
+    "!src/reportWebVitals.ts"
+  ],
+  coverageDirectory: "coverage",
+  coverageReporters: ["text", "lcov", "html"],
+  transform: {
+    "^.+\\.(ts|tsx)$": "ts-jest",
+    "^.+\\.(js|jsx)$": "babel-jest"
+  },
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+  testPathIgnorePatterns: [
+    "<rootDir>/node_modules/",
+    "<rootDir>/dist/",
+    "<rootDir>/build/"
+  ],
+  transformIgnorePatterns: [
+    "node_modules/(?!(.*\\.mjs$))"
+  ]
+};
+>>>>>>> origin/chore/fix-automation-and-build

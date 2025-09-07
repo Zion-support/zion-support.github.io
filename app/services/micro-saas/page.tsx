@@ -1,132 +1,199 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Micro SaaS Solutions | Zion Tech Group',
-  description: 'Comprehensive micro SaaS development services including AI-powered tools, productivity apps, business automation, and revenue-generating solutions. From MVP to enterprise scale.',
-  keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, business automation, business intelligence'
+  title: 'Micro SaaS Development - Build Revenue-Generating Solutions | Zion Tech Group',
+  description: 'Build and launch your next micro SaaS product with our comprehensive development services. From AI-powered tools to productivity apps, we help you create revenue-generating solutions.',
+  keywords: 'micro SaaS development, SaaS products, web applications, mobile apps, AI tools, productivity apps, revenue-generating solutions',
 };
 
-export default function MicroSAASPage() {
+export default function MicroSaaSPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Micro SaaS Solutions
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Micro SaaS Development
           </h1>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Build and scale profitable micro SaaS products with our comprehensive development services. 
-            From MVP to enterprise scale, we help you create revenue-generating solutions.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Build and launch your next micro SaaS product with our comprehensive development services. 
+            From AI-powered tools to productivity apps, we help you create revenue-generating solutions.
           </p>
         </div>
-      </div>
 
-      {/* Services Overview */}
-      <div className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Micro SaaS Services</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We specialize in building focused, profitable micro SaaS products that solve specific business problems 
-              and generate recurring revenue.
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className="text-xl font-semibold text-white mb-3">AI-Powered Tools</h3>
+            <p className="text-gray-300 mb-4">Build intelligent SaaS products that leverage AI to solve specific business problems.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• AI chatbots</li>
+              <li>• Content generation tools</li>
+              <li>• Data analysis platforms</li>
+              <li>• Automation solutions</li>
+            </ul>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI-Powered Tools</h3>
-              <p className="text-gray-600 mb-4">
-                Build intelligent micro SaaS products that leverage AI to automate tasks and provide valuable insights.
-              </p>
-              <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Content generation tools</li>
-                <li>• Data analysis platforms</li>
-                <li>• Automation workflows</li>
-              </ul>
-            </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">📊</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Analytics & BI Tools</h3>
+            <p className="text-gray-300 mb-4">Create powerful analytics and business intelligence solutions for data-driven decisions.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• Dashboard applications</li>
+              <li>• Reporting tools</li>
+              <li>• Data visualization</li>
+              <li>• KPI tracking</li>
+            </ul>
+          </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Productivity Apps</h3>
-              <p className="text-gray-600 mb-4">
-                Create focused productivity tools that help users accomplish specific tasks more efficiently.
-              </p>
-              <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Task management tools</li>
-                <li>• Time tracking apps</li>
-                <li>• Collaboration platforms</li>
-              </ul>
-            </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">💼</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Productivity Apps</h3>
+            <p className="text-gray-300 mb-4">Develop productivity-focused SaaS applications that help teams work more efficiently.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• Project management tools</li>
+              <li>• Task automation</li>
+              <li>• Team collaboration</li>
+              <li>• Workflow optimization</li>
+            </ul>
+          </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Business Automation</h3>
-              <p className="text-gray-600 mb-4">
-                Develop automation solutions that streamline business processes and reduce manual work.
-              </p>
-              <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Workflow automation</li>
-                <li>• Integration platforms</li>
-                <li>• Process optimization</li>
-              </ul>
-            </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">💰</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Financial Tools</h3>
+            <p className="text-gray-300 mb-4">Build fintech solutions for accounting, invoicing, and financial management.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• Invoice generators</li>
+              <li>• Expense tracking</li>
+              <li>• Financial dashboards</li>
+              <li>• Payment processing</li>
+            </ul>
+          </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Marketing Tools</h3>
-              <p className="text-gray-600 mb-4">
-                Build marketing-focused micro SaaS products that help businesses grow and engage customers.
-              </p>
-              <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Email marketing tools</li>
-                <li>• Social media management</li>
-                <li>• Analytics dashboards</li>
-              </ul>
-            </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">🎨</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Creative Tools</h3>
+            <p className="text-gray-300 mb-4">Develop creative and design-focused SaaS applications for content creators.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• Design tools</li>
+              <li>• Content creation</li>
+              <li>• Image processing</li>
+              <li>• Video editing</li>
+            </ul>
+          </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Data & Analytics</h3>
-              <p className="text-gray-600 mb-4">
-                Create data-driven micro SaaS products that provide valuable insights and reporting.
-              </p>
-              <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Business intelligence tools</li>
-                <li>• Reporting platforms</li>
-                <li>• Data visualization</li>
-              </ul>
-            </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Developer Tools</h3>
+            <p className="text-gray-300 mb-4">Create tools and utilities that help developers be more productive.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• Code generators</li>
+              <li>• API testing tools</li>
+              <li>• Documentation generators</li>
+              <li>• Development utilities</li>
+            </ul>
+          </div>
+        </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Custom Solutions</h3>
-              <p className="text-gray-600 mb-4">
-                Develop custom micro SaaS products tailored to specific industry needs and use cases.
-              </p>
-              <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Industry-specific tools</li>
-                <li>• Custom integrations</li>
-                <li>• Specialized workflows</li>
-              </ul>
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Development Process</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-white">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>
+              <p className="text-gray-300">Market research and concept validation</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-white">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Design</h3>
+              <p className="text-gray-300">UI/UX design and user experience</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-white">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Development</h3>
+              <p className="text-gray-300">Full-stack development and testing</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-white">4</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Launch</h3>
+              <p className="text-gray-300">Deployment and go-to-market support</p>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* CTA Section */}
-      <div className="py-16 bg-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Build Your Micro SaaS Product?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss your micro SaaS idea and how we can help you bring it to market. 
-            Contact us today for a free consultation.
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Pricing Plans</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white/5 rounded-xl p-6 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">MVP Development</h3>
+              <div className="text-4xl font-bold text-blue-400 mb-6">$15,000<span className="text-lg text-gray-300"> one-time</span></div>
+              <ul className="space-y-3 text-gray-300 mb-8">
+                <li>Basic functionality</li>
+                <li>Simple UI/UX</li>
+                <li>Core features only</li>
+                <li>Basic hosting</li>
+                <li>3 months support</li>
+              </ul>
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Get Started
+              </button>
+            </div>
+            <div className="bg-white/5 rounded-xl p-6 text-center border-2 border-blue-500">
+              <h3 className="text-2xl font-bold text-white mb-4">Full SaaS</h3>
+              <div className="text-4xl font-bold text-blue-400 mb-6">$35,000<span className="text-lg text-gray-300"> one-time</span></div>
+              <ul className="space-y-3 text-gray-300 mb-8">
+                <li>Complete functionality</li>
+                <li>Professional UI/UX</li>
+                <li>Advanced features</li>
+                <li>Scalable hosting</li>
+                <li>6 months support</li>
+                <li>Payment integration</li>
+              </ul>
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Most Popular
+              </button>
+            </div>
+            <div className="bg-white/5 rounded-xl p-6 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
+              <div className="text-4xl font-bold text-blue-400 mb-6">$75,000<span className="text-lg text-gray-300"> one-time</span></div>
+              <ul className="space-y-3 text-gray-300 mb-8">
+                <li>Custom features</li>
+                <li>Enterprise UI/UX</li>
+                <li>Advanced integrations</li>
+                <li>High availability</li>
+                <li>12 months support</li>
+                <li>White-label options</li>
+              </ul>
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Build Your Micro SaaS?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let our development team help you create a successful micro SaaS product that generates revenue.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200"
-          >
-            Get Started Today
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
+              Start Your Project
+            </button>
+            <button className="border border-white text-white hover:bg-white hover:text-slate-900 font-semibold py-4 px-8 rounded-lg transition-colors">
+              Schedule Consultation
+            </button>
+          </div>
+          <div className="mt-8 text-gray-400">
+            <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+          </div>
         </div>
       </div>
     </div>

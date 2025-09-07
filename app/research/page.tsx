@@ -1,6 +1,8 @@
+import React from 'react';
+
 export const metadata = {
   title: "Research | Zion Tech Group",
-  description: "Explore our cutting-edge research in AI, quantum computing, and autonomous systems.",
+  description: "Explore our cutting-edge research in AI, quantum computing, and autonomous systems."
 };
 
 export default function ResearchPage() {
