@@ -220,13 +220,21 @@ export default function Home() {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's discuss how our AI and technology solutions can accelerate your growth.
             </p>
-            <a 
-              href="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-            >
-              Start Your Project
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact" 
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+              >
+                Start Your Project
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+              <a 
+                href="/pricing" 
+                className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors font-semibold"
+              >
+                View Pricing
+              </a>
+            </div>
           </div>
         </section>
       </div>
