@@ -1,3 +1,4 @@
+
 // Test setup file for Jest;
 import "@testing-library/jest-dom";"
 // Mock window.matchMedia;"
@@ -20,21 +21,29 @@ Object.defineProperty(window, "matchMedia", {"
 global && global.IntersectionObserver = class IntersectionObserver {
   // TODO: Implement
 }
+
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
+}// Mock ResizeObserver;
+global && global.ResizeObserver = class ResizeObserver {global.ResizeObserver = class ResizeObserver {}
+// Mock ResizeObserver;
 }
 // Mock ResizeObserver;
+
 global && global.ResizeObserver = class ResizeObserver {
   // TODO: Implement
 }
+
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
+}// Mock console methods to reduce noise in tests;
 }
 // Mock console methods to reduce noise in tests;
+
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
 
@@ -74,3 +83,4 @@ afterAll(() => {
   console.warn = originalWarn;
 });
 "
+

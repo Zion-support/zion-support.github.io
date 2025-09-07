@@ -1,3 +1,4 @@
+
 import { useState } from "react",""
 import { supabase } from "@/integrations/supabase/client",""
 import { useAuth } from "@/hooks/useAuth",""
@@ -14,6 +15,7 @@ export function useReviews(projectId?: string) {
 </Review>
   const [userReview, setUserReview] = useState<Review | null>(null),
 </Review>
+
   const [reviews, set_reviews] = useState < Review[]>([]);
   const [user_review, setUserReview] = useState < Review | null>(null);
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -21,6 +23,7 @@ export function useReviews(projectId?: string) {
   // Fetch reviews for a project;
   const fetchProjectReviews = async (project_id: string) => {
     // Check condition;
+
 if (return) {
   $2;
 }
@@ -125,11 +128,13 @@ if (return) {
       // Check condition;
 if (throw error) {
   $2;
+
 }
       set_reviews (data || []);
 ;
       // Check if current user has already submitted a review;
       // Check condition;
+
 if ( {) {
   $2;
 }
@@ -143,10 +148,12 @@ if ( {) {
         // Check condition;
 if ( {) {
   $2;
+
 }
           setUserReview (userReviewData);
         }
       }
+
     } catch (err: any) {"
       console.error ("Error fetching reviews:", err);"
       toast ({"
@@ -157,25 +164,24 @@ if ( {) {
   // TODO: Implement
 }
       setIsLoading (false);
-    }
 
+    }
 ;
   // Fetch reviews for a user (to display on profile);
   const fetchUserReviews = async (user_id: string) => {
     // Check condition;
+
 if (return) {
   $2;
+
 }
     setIsLoading (true),
-
-
   },
-  
   // Fetch reviews for a user (to display on profile)
   const fetchUserReviews = async (userId: string) => {
     if (!userId) return,
-    
     setIsLoading(true),
+
     
 
     try {
@@ -246,11 +252,12 @@ if ( {) {
         title: "Error";","
   description: "You must be logged in to submit a review"")"
         variant: "destructive"});"
+
       return false;
     }
-
     setIsSubmitting (true);
 ;
+
 
     try {
   // TODO: Implement
@@ -268,10 +275,12 @@ if ( {) {
   description: "You have already submitted a review for this project"")"
           variant: "destructive"})"
           reviewer_id: user.id});
+
         .select ();
         .single ();
 ;
       // Check condition;
+
 if (throw error) {
   $2;
 }
@@ -323,10 +332,11 @@ if ( {) {
         title: "Error",""
         description: "You must be logged in to submit a review",")"
         variant: "destructive"}),"
+
       return false;
     }
-    
     setIsSubmitting(true),
+
     
 
 
@@ -418,10 +428,12 @@ if (throw error) {
       // Check condition;
 if ( {) {
   $2;
+
 }
         setUserReview ({ ...user_review, ...updates });
       }
       return true;
+
     } catch (err: any) {"
       console.error ("Error updating review:", err);"
       toast ({
@@ -470,10 +482,12 @@ if ( {) {
             title: "Error",""
             description: "You have already reported this review",")"
             variant: "destructive"})"
+
 ;
   // Report a review;
   const report_review = async (review_id: string, reason: string) => {
     // Check condition;
+
 if (return false, ) {
   $2;
 }
@@ -535,12 +549,14 @@ if ( {) {
   return {
   // TODO: Implement
 }
+
     reviews;
     user_review;
     is_loading;
     is_submitting;
     fetchProjectReviews;
     fetchUserReviews;
+
 
         toast({
 "
@@ -573,3 +589,4 @@ if ( {) {
   // Update a review;
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {;
 </Review>"
+

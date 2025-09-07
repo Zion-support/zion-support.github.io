@@ -1,3 +1,4 @@
+
 export function RoleManagement() {
   // Mock team members data;
   const teamMembers = [
@@ -28,14 +29,9 @@ function RoleManagement() {
   const team_members = [;
     {
 
-        view_candidates: true,
-        edit_candidates: true,
-        create_jobs: true,
-        manage_team: true,
-        view_billing: true,
-        manage_billing: true,
-      },
-    },
+
+;
+
 
     {
       id: 2;,'
@@ -400,8 +396,10 @@ export function RoleManagement() {;
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>;"
               </div>;"
               <p className="text-sm text-muted-foreground">{description}</p>;"
+
             </div>;
         </div>;
+
       </div>;"
       <div className='rounded-md border'>;'
 </div>
@@ -428,10 +426,12 @@ export function RoleManagement() {;
                       </TooltipTrigger>;
                       <TooltipContent>;
 </TooltipContent>
+
                       </TooltipContent>;
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
+
               </TableHead>;'
               <TableHead className='text-center'>;'
 </TableHead>'
@@ -448,10 +448,12 @@ export function RoleManagement() {;
                       </TooltipTrigger>;
                       <TooltipContent>;
 </TooltipContent>
+
                       </TooltipContent>;
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
+
               </TableHead>;'
               <TableHead className='text-center'>;'
 </TableHead>'
@@ -468,10 +470,12 @@ export function RoleManagement() {;
                       </TooltipTrigger>;
                       <TooltipContent>;
 </TooltipContent>
+
                       </TooltipContent>;
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
+
               </TableHead>;'
               <TableHead className='text-center'>;'
 </TableHead>'
@@ -488,10 +492,12 @@ export function RoleManagement() {;
                       </TooltipTrigger>;
                       <TooltipContent>;
 </TooltipContent>
+
                       </TooltipContent>;
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
+
               </TableHead>;'
               <TableHead className='text-center'>;'
 </TableHead>'
@@ -508,6 +514,7 @@ export function RoleManagement() {;
                       </TooltipTrigger>;
                       <TooltipContent>;
 </TooltipContent>
+
                       </TooltipContent>;
                     </Tooltip>;
                   </TooltipProvider>;
@@ -515,6 +522,7 @@ export function RoleManagement() {;
               </TableHead>;
             </TableRow>;
           </TableHeader>;
+
           <TableBody>;
 </TableBody>
             {teamMembers && teamMembers.map(member => (              <TableRow key={member && member.id}>;
@@ -578,10 +586,12 @@ export function RoleManagement() {;
                       </TooltipTrigger>;
                       <TooltipContent>;
 </TooltipContent>
+
                       </TooltipContent>;
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
+
               </TableHead>;'
               <TableHead className='text - center'>;'
 </TableHead>'
@@ -598,10 +608,12 @@ export function RoleManagement() {;
                       </TooltipTrigger>;
                       <TooltipContent>;
 </TooltipContent>
+
                       </TooltipContent>;
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
+
               </TableHead>;'
               <TableHead className='text - center'>;'
 </TableHead>'
@@ -618,10 +630,12 @@ export function RoleManagement() {;
                       </TooltipTrigger>;
                       <TooltipContent>;
 </TooltipContent>
+
                       </TooltipContent>;
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
+
               </TableHead>;'
               <TableHead className='text - center'>;'
 </TableHead>'
@@ -638,10 +652,12 @@ export function RoleManagement() {;
                       </TooltipTrigger>;
                       <TooltipContent>;
 </TooltipContent>
+
                       </TooltipContent>;
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
+
               </TableHead>;'
               <TableHead className='text - center'>;'
 </TableHead>'
@@ -658,6 +674,7 @@ export function RoleManagement() {;
                       </TooltipTrigger>;
                       <TooltipContent>;
 </TooltipContent>
+
                       </TooltipContent>;
                     </Tooltip>;
                   </TooltipProvider>;
@@ -665,6 +682,7 @@ export function RoleManagement() {;
               </TableHead>;
             </TableRow>;
           </TableHeader>;
+
           <TableBody>;
 </TableBody>
             {team_members.map (member => (              <TableRow key={member.id}>;
@@ -786,8 +804,16 @@ export function RoleManagement() {;
                     onCheckedChange={checked =>;
 </Switch>
                 </TableCell>;)
+
               </TableRow>))}
           </TableBody>;
         </Table>;
+      </div>
+    </div>
+  );
+}</TableBody>;
+        </Table>;
       </div>;
+
     </div>);'
+

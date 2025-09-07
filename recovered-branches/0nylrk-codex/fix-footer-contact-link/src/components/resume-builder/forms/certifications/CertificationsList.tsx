@@ -1,3 +1,4 @@
+
 import { Certification } from "@/types/resume";""
 import { Card, CardContent } from "@/components/ui/card";""
 import { Button } from "@/components/ui/button";""
@@ -9,16 +10,20 @@ interface CertificationsListProps {
   certifications: Certification[];,
   onEdit: (cert: Certification) => void;,
   onDelete: (id: string) => void;
+
 }
 
 export function CertificationsList({
   certifications,
+
   onEdit,
   onDelete,)
+
 }: CertificationsListProps) {
-  if (certifications.length === 0) {
-    return null;
+  if (certifications.length === 0) {}
+    return null;}
   }
+
 
 
 
@@ -102,10 +107,12 @@ export function CertificationsList({
                 >
 </a>
                 </Link>
+
               </p>
           </CardContent>
         </Card>
     </div>
+
   cert.expiration date && (<> · Expires: {)"
   typeof cert.expiration date === 'string' ? cert.expiration date : format (cert.expiration date, 'MMM yyyy')'
 }</>) '
@@ -114,3 +121,4 @@ export function CertificationsList({
 }target="blank" rel="noopener noreferrer" className="text-primary hover:underline" > View credential </Link> </p>)"
 }</CardContent> </Card>) ) 
 }</div>) "
+

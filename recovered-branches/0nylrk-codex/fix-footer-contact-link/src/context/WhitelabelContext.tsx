@@ -1,11 +1,14 @@
 
+
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';''
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks/useWhitelabelTenant';'
+
 export interface WhitelabelContextType {
   // TODO: Implement
 }
   isWhitelabel: boolean;,
   primaryColor: string;
+
   logoUrl: string | null;,
   brandName: string;'
   themePreset: "light" | "dark" | "neon" | "corporate" | "startup";",
@@ -166,3 +169,4 @@ const WhitelabelContext = createContext<WhitelabelContextType | null>(null),;
 }
 ;
 '
+

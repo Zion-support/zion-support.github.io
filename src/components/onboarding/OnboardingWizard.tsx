@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'''
 import { useRouter } from 'next/router'''
 import { useAuth } from '@/hooks/useAuth'''
@@ -11,11 +12,13 @@ import {
   CardHeader;
   CardTitle;'
 } from '@/components/ui/card''
+
   Rocket;
   FileText;
   Users;
   Calendar;
   Eye;
+
   MessageSquare;'
 } from 'lucide-react'''
 import { cn } from '@/lib/utils'''
@@ -241,3 +244,4 @@ export function OnboardingWizard(): any ({;
           </Button>)}
       </CardFooter>;
     </Card>);'
+

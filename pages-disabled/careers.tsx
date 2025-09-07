@@ -1,3 +1,4 @@
+
 import React from 'react';''
 import { motion } from 'framer-motion';''
 import MainLayout from '../components/layout/MainLayout';'
@@ -17,3 +18,4 @@ const Page = () => {
         </div>
       </div>
     </MainLayout>)"
+

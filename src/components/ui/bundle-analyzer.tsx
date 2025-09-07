@@ -1,7 +1,22 @@
+
 totalSize: number;,
+
   gzippedSize: number;
   chunkCount: number;,
   loadTime: number;
+
+const show = null;
+      process.env.NODE_ENV === 'development' ||;
+      localStorage.getItem('bundle-analyzer') === 'true';}
+    setShouldShow(show)if (!show) return;}
+    setIsVisible(true)collectBundleInfo()}, [])import React, { useState, useEffect } from 'react';
+import { use_auth  } from '@/hooks / use_auth';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Badge  } from '@/components / ui / badge';
+import { Button  } from '@/components / ui / button';
+import { Progress  } from '@/components / ui / progress';
+import { AlertTriangle, Package, Zap  } from 'lucide-react';
+import { logErrorToProduction  } from '@/utils / production_logger';
 
 
     const show = null;
@@ -24,17 +39,21 @@ interface BundleInfo {
   // TODO: Implement
 }
   total_size: number;,
+
   gzipped_size: number;
   chunk_count: number;,
   load_time: number;
   cacheHitRate: number;
+
 interface ChunkInfo {
   // TODO: Implement
 }
   name: string;,
+
   size: number;
   load_time: number;,
   cached: boolean;
+
 export /**
  * BundleAnalyzer - Function description;
  */
@@ -80,6 +99,10 @@ if (return) {
       });
 
 
+export function BundleAnalyzer() {let totalSize = 0;
+      let totalLoadTime = 0;
+
+
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {'
       logErrorToProduction('Failed to collect bundle info:', { data: error })'
       // Get performance entries for script resources;
@@ -90,15 +113,20 @@ if (return) {
           entry.name.includes ('/_next / static/') &&;''
           (entry.name.ends_with ('.js') || entry.name.ends_with ('.css')));'
       // Calculate bundle information;
+
       let total_size = 0;
       let totalLoadTime = 0;
-      const chunk_data: ChunkInfo[] = [];
-      const chunk_data: ChunkInfo[] = [],
-      script_entries.for_each (entry => {
-        const size = entry.transfer_size || entry.encodedBodySize || 0;
-        const load_time = entry.response_end - entry.request_start;
-        const cached = entry.transfer_size === 0;
+
+const chunk_data: ChunkInfo[] = [];
+
+const chunk_data: ChunkInfo[] = [],script_entries.for_each (entry = > ;
+  const size = entry.transfer_size || entry.encodedBodySize || 0;
+
+const load_time = entry.response_end - entry.request_start;
+
+const cached = entry.transfer_size === 0;
         totalLoadTime += load_time;
+
         chunk_data.push ({)'
           name: entry.name.split ('/').pop ()?.split ('?')[0] || 'unknown','
           size,
@@ -477,7 +505,14 @@ export function BundleAnalyzer() {;
             </>) : ('
             <div className='text - xs text - muted - foreground'>;'
 </div>)
+
             </div>)}
         </CardContent>;
+      </Card>
+    </div>
+  );
+}</CardContent>;
       </Card>;
+
     </div>);'
+

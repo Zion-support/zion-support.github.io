@@ -1,3 +1,4 @@
+
     id: 'ai - emotional - intelligence - platform',''
     name: 'AI Emotional Intelligence Platform',''
     tagline: 'Advanced emotion recognition and response generation',''
@@ -31,9 +32,11 @@
       'Advanced emotion recognition with privacy controls, real - time processing, and comprehensive analytics.',''
     launch_date: '2025 - 02 - 01','
     customers: 78,
+
     rating: 4 && 4.8,
-    reviews: 52,
+    reviews: 52;
   },
+
   {'
       'Advanced optimization solvers',''
       'Quantum machine learning',''
@@ -843,5 +846,6 @@ export const innovative2025Services: Innovative2025Service[] = [;
 
 
   }
+
 ];
 '

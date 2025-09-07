@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";""
 import {Card, CardContent} from "@/components/ui/card";""
 import {Button} from "@/components/ui/button";""
@@ -342,10 +343,12 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 </Button>"
                 View Details <ChevronRight className="h-4 w-4" />;"
 </ChevronRight>
+
               </Button>;
             </div>;
           </CardContent>;
         </Card>;
+
     </div>;
   const [saved_items, setSavedItems] = useState < string[]>([]);
 ;
@@ -512,3 +515,4 @@ setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id
           </CardContent>
         </Card>
     </div>"
+

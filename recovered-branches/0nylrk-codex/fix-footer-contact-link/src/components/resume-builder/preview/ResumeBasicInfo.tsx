@@ -1,3 +1,4 @@
+
 import { ResumeBasicInfo } from "@/types/resume";"
 interface ResumeBasicInfoSectionProps {
   // TODO: Implement
@@ -23,3 +24,4 @@ export function ResumeBasicInfoSection({
       </h1>"
       {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}"
     </div>)"
+

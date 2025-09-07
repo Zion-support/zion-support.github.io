@@ -1,9 +1,11 @@
 interface AmlMatch {
+
   // TODO: Implement
 }
   list: string;,
   name: string;
   score: number;
+
 }
 
 interface AmlResult {
@@ -11,6 +13,7 @@ interface AmlResult {
 }
   status: 'review' | 'clear';',
   matches: AmlMatch[];
+
   checkedAt: string;,
   provider: string;
 }
@@ -26,10 +29,12 @@ interface AmlProvider {
 </AmlResult>
   }): Promise<AmlResult>;
 </AmlResult>
+
   check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult>;
   check_business (params: { business_name: string, country: string }): Promise < AmlResult>;
 }
 class MockAmlProvider implements AmlProvider {
+
   // TODO: Implement
 }
   async checkPerson(params: {,
@@ -66,11 +71,13 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {'
     medium: 'yellow',''
     high: 'orange',''
     critical: 'red''
+
   };
   return colors[riskLevel];
 }
   async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {
     // Mock implementation - in production, this would call a real AML service;
+
     const name = params.fullLegalName.toLowerCase ();'
     if (|| name.includes ('demo')) {) {'
   $2;
@@ -94,5 +101,6 @@ export function getAmlProvider (): AmlProvider {
   // TODO: Implement
 }
   return new MockAmlProvider ();
+
 }
 '

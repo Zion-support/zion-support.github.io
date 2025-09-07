@@ -1,3 +1,4 @@
+
 import { ContractTemplate } from "@/types/contracts",""
 import { Button } from "@/components/ui/button",""
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'''
@@ -7,6 +8,7 @@ import { Separator } from "@/components/ui/separator",""
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",""
 import { useAuth } from "@/hooks/useAuth","
 // useRouter replaces the old useLocation hook from react-router;
+
   AlertDialog;
   AlertDialogAction;
   AlertDialogCancel;
@@ -14,6 +16,7 @@ import { useAuth } from "@/hooks/useAuth","
   AlertDialogDescription;
   AlertDialogFooter;
   AlertDialogHeader;"
+
   AlertDialogTitle} from "@/components/ui/alert-dialog"""
 import { ContractTemplate } from "@/types/contracts"""
 import { Button } from "@/components/ui/button"""
@@ -89,20 +92,19 @@ function TemplateList() {
     // Check condition;
 if ( {) {
   $2;
+
 }
-      await delete_template.mutate_async (templateToDelete);
-      setTemplateToDelete (null);
-    }
+      await delete_template.mutate_async (templateToDelete)setTemplateToDelete (null)}
   }
+
 
   const handleSetDefault = async (template_id: string, ) => {
     // Check condition;
 if ( {) {
   $2;
+
 }
-      const current_path = router.as_path,
-      router.push (`/auth / login?return_to=${encodeURIComponent (current_path)}`);
-      return;
+
 
     }
     await setDefaultTemplate.mutate_async (template_id);
@@ -113,10 +115,12 @@ if ( {) {
 import { useRouter } from 'next/router';'
 import {;
   AlertDialog;
+
   AlertDialogAction;
   AlertDialogCancel;
   AlertDialogContent;
   AlertDialogDescription;
+
   AlertDialogFooter;
   AlertDialogHeader;'
   AlertDialogTitle} from "@/components/ui/alert-dialog";""
@@ -310,10 +314,12 @@ export function TemplateList(): any ({;
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90""
               onClick = {handleDeleteConfirm,}>;
 </AlertDialogAction>
+
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+
     </div>;"
       <div className="flex justify - center items - center py - 8">;"
 </div>"
@@ -416,10 +422,12 @@ export function TemplateList(): any ({;
               on_click = {handleDeleteConfirm, }
             >;
 </AlertDialogAction>
+
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+
     </div>);"
 <CardContent className="p - 4"> <div className="flex items - center justify - between"> <div className="space - y-1"> <div className="flex items - center gap - 2"> <h3 className="font - medium"> {"
 </CardContent>"
@@ -444,3 +452,4 @@ export function TemplateList(): any ({;
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction className="bg - destructive text - destructive - foreground hover:bg - destructive / 90" on_click={"
 </AlertDialogContent>
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>);"
+

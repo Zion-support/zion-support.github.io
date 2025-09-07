@@ -1,12 +1,44 @@
-keys,
 
-    loading, 
+;
+
+export function ApiKeysManager() {const {keys,loading,newApiKey,fetchApiKeys,createApiKey,regenerateApiKey,revokeApiKey,import { format } from \"date-fns\",import { useApiKeys, type ApiKeyScope } from \"@/hooks/useApiKeys\",import { Button } from \"@/components/ui/button\",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from \"@/components/ui/card\",import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from \"@/components/ui/dialog\",import { Input } from \"@/components/ui/input\",import { Checkbox } from \"@/components/ui/checkbox\",import { Label } from \"@/components/ui/label\",import { Badge } from \"@/components/ui/badge\",import { Popover, PopoverContent, PopoverTrigger } from \"@/components/ui/popover\",import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from \"@/components/ui/dropdown-menu\",import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from '@/components/ui/alert-dialog';
+import CodeBlock from './CodeBlock';
+
+export function ApiKeysManager() {const {keys;
+    loading;
     newApiKey;
-    fetchApiKeys, 
-    createApiKey, 
-    regenerateApiKey, 
+    fetchApiKeys;
+    createApiKey;
+    regenerateApiKey;
+    revokeApiKey;}
+    clearNewApiKey;}
+  } = useApiKeys()const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null />(null),const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null />(null),// Create key form state;
+"
+const [keyName, setKeyName] = useState(\"\"),const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[] />([]),// Load keys on mount;
+  useState(() => {fetchApiKeys()keys,loading,newApiKey;
+    fetchApiKeys,createApiKey,regenerateApiKey,revokeApiKey,const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[] />([]),// Load keys on mount;}
+  useState(() => {fetchApiKeys()if (keyName.trim() === '' || selectedScopes.length = == 0);}
+  return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)setKeyName('')setSelectedScopes([]) }
 
-    revokeApiKey,
+const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null;}
+  useState(() => {fetchApiKeys()};"
+  const handleCreateKey = async () => {if (keyName.trim() === \"\" || selectedScopes.length === 0);}"
+  return;await createApiKey(keyName, selectedScopes)setShowCreateDialog(false)setKeyName(\"\")setSelectedScopes([])import { useState  } from 'react';
+import { Check, Clock, Key, MoreVertical, RefreshCw, X  } from 'lucide-react';
+import { format  } from 'date - fns';
+import { useApiKeys, type ApiKeyScope  } from '@/hooks / useApiKeys';
+import { Button  } from '@/components / ui / button';
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components / ui / card';
+  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger} from '@/components / ui / dialog';
+import { Input  } from '@/components / ui / input';
+import { Checkbox  } from '@/components / ui / checkbox';
+import { Label  } from '@/components / ui / label';
+import { Badge  } from '@/components / ui / badge';
+  Popover,PopoverContent,PopoverTrigger} from '@/components / ui / popover';
+  DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components / ui / dropdown - menu';
+  AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle} from '@/components / ui / alert - dialog';
+
 
 
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
@@ -45,24 +77,30 @@ keys,
     setKeyName ("");"
     setSelectedScopes ([]);
 
-  }
-  const handleRegenerateKey = async (key_id: string) => {
-    await regenerateApiKey (key_id);
-    setShowRegenerateConfirm (null);
-  const handleRevokeKey = async (key_id: string) => {
-    await revokeApiKey (key_id);
-    setShowDeleteConfirm (null);
-  }
 
-  const handleRegenerateKey = async (key_id: string, ) => {
-    await regenerateApiKey (key_id),
-    setShowRegenerateConfirm (null);
-  },
-  const handleRevokeKey = async (key_id: string, ) => {
-    await revokeApiKey (key_id),
-    setShowDeleteConfirm (null);
-  },
+const [key_name, setKeyName] = useState ('')const [selected_scopes, setSelectedScopes] = useState < ApiKeyScope[]>([])// Load keys on mount;
+  useState (() => {fetchApiKeys ()})const handleCreateKey = async () => {if (=== '' || selected_scopes.length === 0);}
+  return) {$2;}
+}
+    await createApiKey (key_name, selected_scopes)setShowCreateDialog (false)setKeyName ('')setSelectedScopes ([]) }
+
+const handleRegenerateKey = async (key_id: string) => {await regenerateApiKey (key_id)setShowRegenerateConfirm (null;}
+  useState (() => {fetchApiKeys ()};"
+  const handleCreateKey = async () => {if (=== \"\" || selected_scopes.length === 0);}
+  return) {$2;}
+}"
+    await createApiKey (key_name, selected_scopes)setShowCreateDialog (false)setKeyName (\"\")setSelectedScopes ([])}
+
+const handleRegenerateKey = async (keyId: string) => {await regenerateApiKey(keyId)setShowRegenerateConfirm(null}
+});
+  const handleCreateKey  = null;
+
+const handleRevokeKey = async (keyId: string) => {await revokeApiKey(keyId)setShowDeleteConfirm(null}
+}
+;
+  const handleRegenerateKey = async (keyId: string,) => {await regenerateApiKey(keyId),setShowRegenerateConfirm(null)},await revokeApiKey(keyId),setShowDeleteConfirm(null)}
   // Scope options;
+
   const scope_options: {,
   value: ApiKeyScope;
     label: string;,
@@ -155,7 +193,11 @@ keys,
     setShowCreateDialog (false);
   }
 
-  return (
+
+const handleDialogClose = () =>: any {setKeyName ('')setShowCreateDialog (false)}setSelectedScopes(prev =>;
+      prev.includes(scope) ? prev.filter(s => s !== scope) : [...prev, scope];
+    )}
+
 
 '
 import { useState } from 'react';''
@@ -458,10 +500,12 @@ export function ApiKeysManager() {;
                 <Button variant="outline" on_click={handleDialogClose}>Cancel</Button>;""
                 <Button on_click={handleCreateKey} disabled={key_name.trim () === "" || selected_scopes.length === 0}>;"
 </Button>
+
                 </Button>;
               </DialogFooter>;
             </DialogContent>;
           </Dialog>;
+
         </div>;"
           <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">;"
 </div>"
@@ -760,10 +804,12 @@ export function ApiKeysManager() {;
                         aria - label='More options';'
                       >;
 </Button>
+
                         <MoreVertical size={16} />;
 </MoreVertical>
                       </Button>;
                     </DropdownMenuTrigger>;
+
                     <DropdownMenuContent;'
                       align='end';''
                       className='bg - zinc - 900 border - zinc - 800 text - white';'
@@ -848,10 +894,12 @@ export function ApiKeysManager() {;
         </div>;"
         <Button variant="outline" size="sm" on_click={fetchApiKeys}>;"
 </Button>
+
         </Button>;
       </CardFooter>;
       <AlertDialog;
         open={showRegenerateConfirm !== null}
+
         onOpenChange={open => !open && setShowRegenerateConfirm (null)}
 </AlertDialog>"
         <AlertDialogContent className='bg - zinc - 900 border - zinc - 800 text - white'>;'
@@ -920,10 +968,12 @@ export function ApiKeysManager() {;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
 </AlertDialogFooter>
+
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
@@ -959,3 +1009,4 @@ export function ApiKeysManager() {;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;"
+

@@ -1,6 +1,7 @@
 
 
 
+
 import { useState  } from 'react';''
 import { Button  } from '@/components/ui/button';''
 import { Sparkles, Loader2  } from 'lucide-react';''
@@ -24,14 +25,14 @@ export function AIEnhancementButton({;
 
   buttonText?: string;
   className?: string;
+
 }
 export function AIEnhancementButton({
-
 export function AIEnhancementButton({;
-  currentContent;
   enhancementType;
   context;
   onEnhanced;
+
 '
   buttonText = "Enhance with AI";")
   const handleEnhance = async () => {;
@@ -39,29 +40,28 @@ export function AIEnhancementButton({;
 "
       setError('Please enter at least some basic content before enhancing');'
       return;
+
     }
-
-
-
     setError(null);
     const enhancedContent = await enhanceContent(;
       currentContent;
       enhancementType;
       context;)
     );
-
-
-    if (enhancedContent) {;
-      onEnhanced(enhancedContent);
+    if (enhancedContent) {;}
+      onEnhanced(enhancedContent);}
     }
   };
 
 
+
 '
   buttonText = "Enhance with AI";"
+
   className;
-}: AIEnhancementButtonProps) {;
+}: AIEnhancementButtonProps) {;}
   const { enhanceContent, isEnhancing } = useResumeEnhancer();
+
   const [error, setError] = useState<string | null>(null);
 </string>
   const [error, setError] = useState<string | null>(null);
@@ -123,6 +123,7 @@ export function AIEnhancementButton({
     
     if (enhancedContent) {
       onEnhanced(enhancedContent)
+
     }
   };
 ;
@@ -132,10 +133,11 @@ export function AIEnhancementButton({
       enhancementType,;
       context;)
     );
-    if (enhancedContent) {;
-      onEnhanced(enhancedContent);
+    if (enhancedContent) {;}
+      onEnhanced(enhancedContent);}
     }
   },
+
   
   
   
@@ -160,3 +162,4 @@ export function AIEnhancementButton({
 
 
 "
+

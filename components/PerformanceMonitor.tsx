@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -71,6 +72,7 @@ export default function PerformanceMonitor({ onPerformanceData }: PerformanceMon
     return () => {
       window.removeEventListener('load', collectPerformanceData);
     };
+
   }, [onPerformanceData]);
 
   if (!performanceData) {
@@ -78,6 +80,7 @@ export default function PerformanceMonitor({ onPerformanceData }: PerformanceMon
   }
 
   return (
+
     <div className="performance-monitor fixed bottom-4 left-4 z-50 bg-black bg-opacity-75 text-white text-xs p-2 rounded font-mono">
       <div>DOM Load: {performanceData.domContentLoaded.toFixed(2)}ms</div>
       <div>Total Load: {performanceData.totalLoadTime.toFixed(2)}ms</div>
@@ -90,3 +93,4 @@ export default function PerformanceMonitor({ onPerformanceData }: PerformanceMon
     </div>
   );
 }
+

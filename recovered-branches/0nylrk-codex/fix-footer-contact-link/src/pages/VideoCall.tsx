@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";""
 import { useParams, useNavigate } from "react-router-dom";""
 import { Header } from "@/components/Header";""
@@ -39,12 +40,15 @@ export default function VideoCall() {
     id: string;,
   name: string;
     avatar?: string;
+
     isMuted?: boolean;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
     isHost?: boolean;
   }>>([
+
 </Array>]
+
   const [participants, setParticipants] = useState<Array<{;
     id: string,;
     name: string,;
@@ -53,10 +57,10 @@ export default function VideoCall() {
     isVideoEnabled?: boolean,;
     isScreenSharing?: boolean,;
     isHost?: boolean;
-
     id: string,
     name: string,
     avatar?: string;
+
     isMuted?: boolean;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
@@ -115,11 +119,13 @@ export default function VideoCall() {
 "
       id: 'user - 1',''
       name: 'You','
+
       isVideoEnabled: true,
       is_muted: false;
     }
   ]);
 ;
+
 ;
   const handleLeaveCall = () =>: any {
   // TODO: Implement
@@ -201,3 +207,4 @@ export default function VideoCall() {
 ;
 
 "
+

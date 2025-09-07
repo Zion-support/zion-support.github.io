@@ -1,13 +1,16 @@
+
 import React, { useState } from "react";""
 import { Button } from "@/components/ui/button";""
 import { Card, CardContent } from "@/components/ui/card";""
 import { Input } from "@/components/ui/input";""
 import { Textarea } from "@/components/ui/textarea";"
+
 import {
   // TODO: Implement
 }
   Select,
   SelectContent,
+
   SelectItem,
   SelectTrigger,
   SelectValue,"
@@ -41,12 +44,14 @@ export function MobileResumeBuilder() {;"
           <Textarea;"
             id="summary"""
             placeholder="Write a brief summary about yourself""
+
             rows={4}
           />
 </Textarea>
         </div>
       </CardContent>
     </Card>
+
           <Textarea;"
             id="summary"""
             placeholder="Write a brief summary about yourself"""
@@ -163,11 +168,13 @@ export function MobileResumeBuilder() {"
           <Textarea;"
             id="summary"""
             placeholder="Write a brief summary about yourself""
+
             rows={4}
           />
 </Textarea>
         </div>
       </CardContent>
+
     </Card>"
     <div className="space - y-6 px - 4 pb - 24">;"
 </div>"
@@ -494,10 +501,12 @@ export function MobileResumeBuilder() {"
                 <Label htmlFor={`eduEndDate-${edu && edu.id}`}>End Date</Label>;"
                 <Input id={`eduEndDate-${edu && edu.id}`} type="month" placeholder="Present" />;"
 </Input>
+
               </div>;
             </div>;
           </CardContent>;
         </Card>;
+
       <Button;"
         variant="outline"""
         className="w-full gap-2""
@@ -634,3 +643,4 @@ return (<div className="space-y-6 px-4 pb-24" > <div className="flex justify-bet
 }</div>) ) "
 }<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className="p-4" > <div className="space-y-2" > <Label>Skill Categories</Label> <div className="grid grid-cols-2 gap-2" > <Button variant="outline" className="justify-start" >Development</Button> <Button variant="outline" className="justify-start" >Design</Button> <Button variant="outline" className="justify-start" >Marketing</Button> <Button variant="outline" className="justify-start" >Business</Button> <Button variant="outline" className="justify-start" >Data Analysis</Button> <Button variant="outline" className="justify-start" >Languages</Button> </div> </div> </CardContent> </Card> </div>)"
     </div>);"
+

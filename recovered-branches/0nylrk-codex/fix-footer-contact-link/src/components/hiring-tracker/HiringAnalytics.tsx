@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect } from './react';''
 import { useJobApplications } from '@/hooks / useJobApplications';''
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';''
@@ -50,16 +51,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',;'
 interface HiringAnalyticsProps {;
   jobId?: string;
-}
 
-export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
+}
+export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;}
   const { applications, isLoading } = useJobApplications(jobId);
-interface HiringAnalyticsProps {;
-  jobId?: string;
+interface HiringAnalyticsProps {;}
+  jobId?: string;}
 }
 ;
-export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
+export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;}
   const { applications, isLoading } = useJobApplications(jobId),;
+
   const [analyticsData, setAnalyticsData] = useState<{;
     statusDistribution: any[],;
     timeToHire: number,;
@@ -291,12 +293,14 @@ if ( {) {
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />))}
 </Cell>
               </Pie>;
+
               <Tooltip />;
 </Tooltip>
             </PieChart>;
           </ResponsiveContainer>;
         </CardContent>;
       </Card>;
+
       <Card>;
 </Card>
         <CardHeader>;
@@ -436,6 +440,7 @@ if ( {) {
 </XAxis>"
               <YAxis dataKey="name" type="category" width={100} />;"
 </YAxis>
+
               <Tooltip />;
 </Tooltip>
               </Bar>;
@@ -444,6 +449,7 @@ if ( {) {
         </CardContent>;
       </Card>;
     </div>);
+
     </div>;
 const [analyticsData, setAnalyticsData] = useState< {
   statusDistribution: any[];,
@@ -479,3 +485,4 @@ if (applications && applications.length > 0) {
 }<Card> <CardHeader> <CardTitle>Application Conversion Rate</CardTitle> </CardHeader> </div> <div className="text-sm text-muted-foreground mt-2" > Applications to hired ratio </div> </CardContent> </Card> <CardHeader> <CardTitle>Hiring Funnel</CardTitle> </CardHeader> <CardContent className="h-80" > <ResponsiveContainer width="100%" height="100%" > <BarChart) )"
 }</Bar> </BarChart> </ResponsiveContainer> </CardContent> </Card> </div>) 
     </div>;"
+

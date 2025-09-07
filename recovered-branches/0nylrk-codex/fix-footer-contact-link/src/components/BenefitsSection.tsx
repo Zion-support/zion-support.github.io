@@ -1,4 +1,5 @@
 
+
 import {GradientHeading} from "./GradientHeading";""
 import {FeatureCard} from "./FeatureCard";""
 import {Bot, Clock, Globe, TrendingDown} from "lucide-react";"
@@ -94,11 +95,13 @@ const benefits = [;
               description={benefit.description}
               icon={benefit.icon}"
               className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";"
+
             />))}
 </FeatureCard>
         </div>;
       </div>;
     </section>);
+
             <FeatureCard;
 }
 
@@ -133,3 +136,4 @@ icon: <Clock className="w-8 h-8" />"
 ;
 ;
 "
+

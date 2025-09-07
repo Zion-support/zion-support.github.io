@@ -1,3 +1,4 @@
+
 import { Search } from 'lucide-react''
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
@@ -214,11 +215,13 @@ export default function HelpCenter() {;
                   >
 </Button>
                   </Button>
+
                   <HelpArticleList;
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
                   />;
+
 </HelpArticleList>
                 </>;)
               )}
@@ -324,6 +327,7 @@ export default function HelpCenter() {;
                     className='mb - 4';'
                   >;
 </Button>
+
                   </Button>;
                   <HelpArticleList;
                     category_id={selected_category}
@@ -331,6 +335,7 @@ export default function HelpCenter() {;
                     search_query={search_query}                  />;
 </HelpArticleList>
                 </>)}
+
               {selected_article && (
                 <>;
                   <Button;'
@@ -338,10 +343,12 @@ export default function HelpCenter() {;
                     on_click={handleBackToArticles}'
                     className='mb - 4'                  >;'
 </Button>
+
                   </Button>;
                   <HelpArticleView article_id={selected_article} />;
 </HelpArticleView>)
                 </>)}
+
             </TabsContent>;'
             <TabsContent value='faq'>;'
 </TabsContent>'
@@ -580,6 +587,7 @@ export default function HelpCenter() {;
                     </div>;"
                     <Button className='w - full bg - zion - cyan hover:bg - zion - cyan / 80'>;'
 </Button>
+
                     </Button>;
                   </form>;
                 </div>;
@@ -587,6 +595,7 @@ export default function HelpCenter() {;
             </TabsContent>;
           </Tabs>;
         </div>;
+
       </div>;
     </>);
 }
@@ -594,3 +603,4 @@ export default function HelpCenter() {;
       </div>
     </>
   )'
+

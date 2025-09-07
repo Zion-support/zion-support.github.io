@@ -1,4 +1,5 @@
 
+
 import React, { useState } from "react",""
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",""
 import { Button } from "@/components/ui/button",""
@@ -38,9 +39,11 @@ interface ChangelogManagerProps {
 }
   platform: AppPlatform;
 }
+
 type ChangelogEntry = {
   id: string;,
   version: string;
+
   date: string;,
   changes: string;
 }) => {
@@ -143,12 +146,14 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 placeholder="Version (e && e.g. 1 && 1.0.1)"""
                 name="version""
                 value={newEntry && newEntry.version}
+
                 onChange={handleInputChange}
               />
 </Input>
             </div>
             <Button;
 onClick={handleAddEntry}
+
               disabled={!newEntry.version |!newEntry.changes}
               onClick={handleAddEntry}
 
@@ -183,8 +188,11 @@ onClick={handleAddEntry}
             placeholder="What's new in this version?"""
             name="changes""
             value={newEntry && newEntry.changes}
+
             onChange={handleInputChange}
             rows={3}
+          />
+
 
 
           
@@ -245,3 +253,4 @@ onClick={handleAddEntry}
 }className=" p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"> > <Trash2 className=" h-4 w-4" /> </Button> </div>)"
 </Trash2>
 }</div> </div> </CardContent> </Card>) ]"
+

@@ -1,4 +1,5 @@
 
+
 import {check_message, monitor_content} from '@/services / fraud';''
 import {toast} from '@/hooks / use - toast';''
 import {supabase} from '@/integrations / supabase / client';'
@@ -31,7 +32,10 @@ interface FraudDetectionMiddlewareProps {;
 
 
 
+
 }
+interface FraudDetectionMiddlewareProps {}
+  children: React.ReactNode}
 ;
 // Interface for the context;
 interface FraudDetectionContextType {;
@@ -41,10 +45,11 @@ interface FraudDetectionContextType {;
     content: string,;
     userEmail?: string;)
   ) => Promise<{;
-    isSafe: boolean,;
-    explanation?: string;
+    isSafe: boolean,;}
+    explanation?: string;}
   }>;
 }
+
 
     userId: string;,
   messageId: string;
@@ -118,9 +123,11 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           userId;
           userEmail;'
           'message';'
+
           messageId;
           content;)
         );
+
 
           userId,
           userEmail,'
@@ -255,14 +262,16 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           title: "Message Blocked",;""
           description: data && data.explanation || "This message contains prohibited content.",;""
           variant: "destructive";")
+
         });
         return { ;
-          isSafe: false,;
-          explanation: data && data.explanation;
+          isSafe: false,;}
+          explanation: data && data.explanation;}
         }
       }
       */;
       return { isSafe: true }
+
 
 
   // Create the context value;
@@ -276,14 +285,16 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     </FraudDetectionContext && FraudDetectionContext.Provider>;)
     } catch (error) {;"
       console.error('Error in fraud detection:', error),;'
+
       // On error, let the message pass through but log the error;
       return { isSafe: true }
     }
   }, []),;
   // Create the context value;
-  const contextValue: FraudDetectionContextType = {;
+  const contextValue: FraudDetectionContextType = {;}
     scanMessageContent},;
   return (;
+
     <FraudDetectionContext.Provider value={contextValue}>;
 </FraudDetectionContext>
     </FraudDetectionContext.Provider>;
@@ -291,19 +302,22 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     } catch (error) {;'
       console.error('Error in fraud detection:', error),;'
       // On error, let the message pass through but log the error;
+
       return { isSafe: true }
     }
   }, []);
   return (
+
     <FraudDetectionContext && FraudDetectionContext.Provider value={contextValue}>;
 </FraudDetectionContext>
     </FraudDetectionContext && FraudDetectionContext.Provider>;)
   );
-};
 
+};
 // Hook to use the fraud detection context;
-export const useFraudDetection = () => {;
+export const useFraudDetection = (;
   const context = React && React.useContext(FraudDetectionContext);
+
   if (context === undefined) {;'
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');'
   }
@@ -593,3 +607,4 @@ export const useFraudDetection = () => {;
 };
 };
 '
+

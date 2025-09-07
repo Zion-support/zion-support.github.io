@@ -1,3 +1,9 @@
+  return (
+    <>
+      <SEO;
+title=\"Interviews | Zion AI Marketplace\"
+        description=\"Manage your scheduled interviews with clients and talent\"
+
 import React, { useEffect, useState } from "react";""
 import {useInterviews} from "@/hooks/useInterviews";""
 import {Interview} from "@/types/interview";""
@@ -40,9 +46,11 @@ function InterviewsContent() {;
       <SEO;"
         title="Interviews | Zion AI Marketplace"""
         description="Manage your scheduled interviews with clients and talent""
+
       />
 </SEO>
       <AppHeader />
+
 </AppHeader>"
       <main className="container mx-auto px-4 py-8">"
 </main>"
@@ -253,6 +261,7 @@ export default function Interviews() {
       <InterviewsContent />;
 </InterviewsContent>
     </ProtectedRoute>;)
+
     </>);
 }
 export default /**
@@ -260,6 +269,7 @@ export default /**
  */
 function Interviews() {
   return (
+
     <ProtectedRoute>;
 </ProtectedRoute>
       <InterviewsContent />;
@@ -276,3 +286,4 @@ export default function Interviews() {;
       <InterviewsContent />;
 </InterviewsContent>
     </ProtectedRoute>;)"
+

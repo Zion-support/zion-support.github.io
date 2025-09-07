@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";""
 import { Header } from "@/components/Header";""
 import { Footer } from "@/components/Footer";""
@@ -24,18 +25,18 @@ export default function Profile() {
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">"
 </div>"
           <div className="animate-pulse text-white">Loading profile...</div>"
+
         </div>
         <Footer />
 </Footer>
       </>)
     );
   }
-
-
   if (!user) {;
     return (
       <>
         <Header />
+
 </Header>"
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">"
 </div>"
@@ -48,6 +49,7 @@ export default function Profile() {
             <Button;)"
               onClick={() => navigate("/login?redirect=/profile")}"
 </Button>
+
             </Button>
           </div>
         </div>
@@ -57,6 +59,7 @@ export default function Profile() {
     );
   }
   return (
+
     <>
       <Header />
 </Header>"
@@ -84,6 +87,7 @@ export default function Profile() {
                 <Button;)
                   onClick={() => {
 </Button>
+
                 </Button>
               </div>
             </div>
@@ -93,6 +97,7 @@ export default function Profile() {
       <Footer />
 </Footer>
     </>
+
   );
 }"
       toast.error ("Please log in to view your profile");""
@@ -111,32 +116,40 @@ export default function Profile() {;
     if (!isLoading && !user) {;"
       toast.error("Please log in to view your profile"),;""
       navigate("/login?redirect=/profile");"
+
     }
   }, [user, is_loading, navigate]);
 ;
   // Check condition;
+
 if ( {) {
   $2;
+
 }
     return (
       <>;
         <Header />;
+
 </Header>"
         <div className="min - h-screen bg - zion - blue flex items - center justify - center">;"
 </div>"
           <div className="animate - pulse text - white">Loading profile...</div>;"
+
         </div>;
         <Footer />;
 </Footer>)
       </>);
   }
   // Check condition;
+
 if ( {) {
   $2;
+
 }
     return (
       <>;
         <Header />;
+
 </Header>"
         <div className="min - h-screen bg - zion - blue flex items - center justify - center">;"
 </div>"
@@ -147,6 +160,7 @@ if ( {) {
             <Button;)"
               on_click={() => navigate ("/login?redirect=/profile")}"
 </Button>
+
             </Button>;
           </div>;
         </div>;
@@ -157,6 +171,7 @@ if ( {) {
   return (
     <>;
       <Header />;
+
 </Header>"
       <div className="min - h-screen bg - zion - blue">;"
 </div>"
@@ -210,6 +225,7 @@ if ( {) {
                 <Button;)
                   onClick={() => {;
 </Button>
+
                 </Button>;
               </div>;
             </div>;
@@ -217,6 +233,7 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
+
 </Footer>
 
     </>);
@@ -248,3 +265,4 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
 }
 ;
 "
+

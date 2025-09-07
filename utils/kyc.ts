@@ -1,4 +1,6 @@
+
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';',
+
   url: string;
   uploaded_at: string;,'
   status: 'pending' | 'approved' | 'rejected';'
@@ -29,6 +31,7 @@ export interface KycProfile {
   risk_score?: number;
   created_at: string;,
   lastUpdatedAt: string;
+
   audit_trail: Array<{,
   at: string;
     by: string;,
@@ -45,16 +48,20 @@ export interface KycProfile {
   // TODO: Implement
 }'
     return ['bank_statement', 'utility_bill', 'tax_certificate'];'
+
   }
 }
   const missing: string[] = [];
   
+
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {'
     missing && missing.push('name'),'
+
   }
   if (!profile && profile.country) {'
     missing && missing.push('country');'
   const missing: string[] = [];
+
   if (!profile.fullLegalName && !profile.businessName) {'
     missing.push('name');'
   }
@@ -79,6 +86,7 @@ export interface KycDocumentMeta {;'
   url: string;
   uploadedAt: string;,'
   status: 'pending' | 'approved' | 'rejected';'
+
 }
 export interface KycProfile {
   // TODO: Implement
@@ -97,6 +105,7 @@ export interface KycProfile {
   riskScore?: number;
   createdAt: string;,
   lastUpdatedAt: string;
+
   auditTrail: Array<{,
   at: string;
     by: string;,
@@ -122,12 +131,14 @@ export function isKycProfileExpired(profile: KycProfile): boolean {
 }
   if (!profile.expiresAt) return false;
   return new Date(profile.expiresAt) < new Date();
+
 }
 
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
 ;
   // Check condition;
+
 if ( {) {
   $2;
 }'
@@ -156,6 +167,7 @@ if ( {) {
 }
     ok: missing.length === 0,
     missing;
+
   }
 }
 

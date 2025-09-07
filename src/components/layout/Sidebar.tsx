@@ -1,3 +1,4 @@
+
 import React from 'react';'
 export default function Sidebar() {
   return ('
@@ -47,10 +48,12 @@ export default function Sidebar() {
             to="/pricing"""
             className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;"
 </Link>
+
           </Link>;
         </nav>;
       </div>;
     </div>;
+
     <motion.aside,
       initial={false};
       animate={{ x: isOpen ? 0 : -320 }};"
@@ -193,3 +196,4 @@ export default function Sidebar() {
 };
 export default Sidebar;
 "
+

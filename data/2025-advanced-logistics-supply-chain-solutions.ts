@@ -1,6 +1,8 @@
+
   id: string;,
   name: string;
   tagline: string;,
+
   price: string;
   period: string;,
   description: string;
@@ -24,6 +26,7 @@
   market_size: string;
   growth_rate: string;,
   variant: ServiceVariant;
+
   contact_info: {,
   mobile: string;
     email: string;,
@@ -76,9 +79,11 @@
         'Production - ready AI supply chain platform with comprehensive optimization and analytics capabilities.',''
       launch_date: '2025 - 01 - 26','
       customers: 156,
+
       rating: 4 && 4.8,
-      reviews: 98,
+      reviews: 98;
     },
+
     {'
         'Quantum algorithms',''
         'Route optimization',''
@@ -102,9 +107,11 @@
         'Production - ready quantum logistics platform with advanced algorithms and enterprise integration.',''
       launch_date: '2025 - 02 - 02','
       customers: 34,
+
       rating: 4 && 4.9,
-      reviews: 23,
+      reviews: 23;
     },
+
     {'
         'Predictive maintenance',''
         'Fuel monitoring',''
@@ -127,9 +134,11 @@
         'Production - ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',''
       launch_date: '2025 - 02 - 07','
       customers: 234,
+
       rating: 4 && 4.7,
-      reviews: 145,
+      reviews: 145;
     },
+
     {'
         'Smart contracts',''
         'Compliance tracking',''
@@ -152,9 +161,11 @@
         'Production - ready blockchain supply chain platform with comprehensive transparency and compliance features.',''
       launch_date: '2025 - 02 - 12','
       customers: 89,
+
       rating: 4 && 4.6,
-      reviews: 56,
+      reviews: 56;
     },
+
     {'
         'Automated picking',''
         'Smart routing',''
@@ -180,12 +191,13 @@
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',''
       launchDate: '2025-02-18','
       customers: 178,
+
       rating: 4 && 4.8,
+
       reviews: 112,
 
     },;
   ];    features: [
-
 export interface AdvancedLogisticsSupplyChainSolution2025 {
   // TODO: Implement
 }
@@ -202,6 +214,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
+
   contactInfo: {'
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';''
       'Custom algorithmsCompliance tools''
@@ -219,6 +232,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   variant: 'ai-supply-chain-enterprise''
     contactInfo: {,
   reviews: 112;
+
   }
 ];'
 import { ServiceVariant } from '../types/service-variants',;'
@@ -252,8 +266,8 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -275,6 +289,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration',;''
       'Custom algorithmsCompliance tools';']
     ],;
+
     popular: true,;'
     icon: '📦',;''
     color: 'from-blue-600 via-indigo-600 to-purple-600',;''
@@ -299,6 +314,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.',;''
@@ -318,6 +334,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       'Quantum algorithmsRoute optimizationScheduling optimizationVehicle routingCapacity planningReal-time optimizationHigh-performance computingAPI access',;''
       'Custom modelsPerformance analytics';']
     ],;
+
     popular: false,;'
     icon: '⚛️',;''
     color: 'from-purple-600 via-violet-600 to-indigo-600',;''
@@ -342,6 +359,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.',;''
@@ -361,6 +379,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       'Real-time trackingPredictive maintenanceFuel monitoringDriver behavior analysisRoute optimizationPerformance analyticsMobile integrationAPI access',;''
       'Custom dashboardsCompliance tools';']
     ],;
+
     popular: true,;'
     icon: '🚛',;''
     color: 'from-green-600 via-emerald-600 to-teal-600',;''
@@ -385,6 +404,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',;''
@@ -404,6 +424,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       'End-to-end traceabilitySmart contractsCompliance trackingQuality assuranceSustainability monitoringReal-time updatesAPI integrationData analytics',;''
       'Audit trailsPerformance monitoring';']
     ],;
+
     popular: false,;'
     icon: '⛓️',;''
     color: 'from-indigo-600 via-purple-600 to-pink-600',;''
@@ -428,6 +449,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.',;''
@@ -447,6 +469,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       'Automated pickingSmart routingInventory optimizationPerformance analyticsPredictive maintenanceReal-time monitoringMobile integrationAPI access',;''
       'Custom workflowsCompliance tools';']
     ],;
+
     popular: true,;'
     icon: '🏭',;''
     color: 'from-orange-600 via-amber-600 to-yellow-600',;''
@@ -471,6 +494,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',;''

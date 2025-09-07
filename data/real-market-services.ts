@@ -1,3 +1,4 @@
+
   customers: number;,
   rating: number;
   reviews: number;,
@@ -109,12 +110,14 @@ export const realMarketServices: RealMarketService[] = [
       'Grafana dashboards and alerts',''
       'Latency heatmaps and p95 / p99',''
       'Service map and dependency view',']
+
     ],
     popular: true,
     customers: 120,
-    rating: 4 && 4.7,
-    reviews: 73,
+    rating: 4 && 4.7,}
+    reviews: 73}
   },
+
   {'
       'Automated sending warmup schedules',''
       'Blocklist and reputation monitoring',''
@@ -132,9 +135,11 @@ export const realMarketServices: RealMarketService[] = [
       'DNS checks, seed - list tests, blacklist APIs, and scheduled warmup orchestration.',''
     launch_date: '2025 - 02 - 01','
     customers: 120,
+
     rating: 4 && 4.6,
-    reviews: 44,
+    reviews: 44;
   },
+
   {'
       'UTM, ref, and coupon tracking',''
       'Attribution windows and LTV credit',''
@@ -159,9 +164,11 @@ export const realMarketServices: RealMarketService[] = [
       'Attribution pipelines, event deduplication, and payout batch jobs.',''
     launch_date: '2025 - 01 - 15','
     customers: 65,
+
     rating: 4 && 4.5,
-    reviews: 29,
+    reviews: 29;
   },
+
   {'
       'AI chat and email drafting',''
       'RAG over product docs and tickets',''
@@ -194,9 +201,11 @@ export const realMarketServices: RealMarketService[] = [
       'Knowledge sync, embeddings, intent detection, and action tools.',''
     launch_date: '2025 - 02 - 05','
     customers: 42,
+
     rating: 4 && 4.7,
-    reviews: 21,
+    reviews: 21;
   },
+
   {'
       'Traffic and conversion funnels',''
       'Source / medium and campaigns',''
@@ -224,9 +233,11 @@ export const realMarketServices: RealMarketService[] = [
       'Snippet - based analytics with server - side aggregation and privacy safeguards.',''
     launch_date: '2025 - 02 - 10','
     customers: 33,
+
     rating: 4 && 4.5,
-    reviews: 17,
+    reviews: 17;
   },
+
   {'
       'Idle resource detection',''
       'Rightsizing and reservations',''
@@ -235,12 +246,14 @@ export const realMarketServices: RealMarketService[] = [
       'Weekly savings reports',''
       'Auto - created tickets',''
       'RBAC and multi - account','
+
     ],
     popular: true,
     customers: 65,
-    rating: 4 && 4.6,
-    reviews: 48,
+    rating: 4 && 4.6,}
+    reviews: 48}
   },
+
   {'
       'Automated evidence collectors',''
       'Control mapping (AICPA)',''
@@ -249,11 +262,12 @@ export const realMarketServices: RealMarketService[] = [
       'Risk register and ownership',''
       'Change management checks',''
       'Continuous monitoring','
+
     ],
     popular: true,
     customers: 42,
-    rating: 4 && 4.7,
-    reviews: 37,
+    rating: 4 && 4.7,}
+    reviews: 37}
   },
   {'
       'Provider selection guide'''
@@ -263,6 +277,7 @@ export const realMarketServices: RealMarketService[] = [
       'Latency and cost tuning'''
       'Sample RAG app integration''
     ]
+
     popular: false;,'
   icon: '🧭'''
     color: 'from-sky-600 to-indigo-700'','
@@ -484,10 +499,12 @@ export const realMarketServices: RealMarketService[] = [
     real_implementation: true,'
     implementation_details: 'Job store, scheduler, runners and alerting.',''
     launch_date: '2024 - 05 - 12','
+
     customers: 73,
-    rating: 4 && 4.5,
-    reviews: 39,
+    rating: 4 && 4.5,}
+    reviews: 39}
   },
+
   {'
       'Custom fonts and CSS',''
       'Headers / footers, page numbers',''
@@ -589,10 +606,12 @@ export const realMarketServices: RealMarketService[] = [
     real_implementation: true,'
     implementation_details: 'Extension - based metrics collectors and advisors.',''
     launch_date: '2024 - 08 - 01','
+
     customers: 39,
-    rating: 4 && 4.6,
-    reviews: 23,
+    rating: 4 && 4.6,}
+    reviews: 23}
   },
+
   {'
       'IaC blueprints and GitOps',''
       'SSO and RBAC policies',''
@@ -612,12 +631,14 @@ export const realMarketServices: RealMarketService[] = [
       'Geo / device breakdowns',''
       'Anomaly alerts to Slack / Email',''
       'Privacy - friendly, cookie - lite','
+
     ],
     popular: false,
     customers: 26,
-    rating: 4 && 4.6,
-    reviews: 14,
+    rating: 4 && 4.6,}
+    reviews: 14}
   },
+
   {'
       'CI gate on severity thresholds',''
       'Page template scanning',''
@@ -670,10 +691,12 @@ export const realMarketServices: RealMarketService[] = [
     real_implementation: true,'
     implementation_details: 'Scheduled scans with diffs and playbooks.',''
     launch_date: '2025 - 02 - 20','
+
     customers: 44,
-    rating: 4 && 4.6,
-    reviews: 22,
+    rating: 4 && 4.6,}
+    reviews: 22}
   },
+
   {'
       'Policy page generator',''
       'Audit log export',''
@@ -697,20 +720,24 @@ export const realMarketServices: RealMarketService[] = [
     real_implementation: true,'
     implementation_details: 'Client + middleware rules with storage & audit.',''
     launch_date: '2025 - 02 - 22','
+
     customers: 21,
-    rating: 4 && 4.5,
-    reviews: 10,
+    rating: 4 && 4.5,}
+    reviews: 10}
   },
+
   {'
       'Drift detection',''
       'Weekly compliance reports',''
       'Auto - ticket workflows','
+
     ],
     popular: false,
     customers: 12,
-    rating: 4 && 4.5,
-    reviews: 7,
+    rating: 4 && 4.5,}
+    reviews: 7}
   },
+
   {'
       'Consent receipts and log exports',''
       'Cookie inventory and auto - blocking',''
@@ -816,11 +843,13 @@ export const realMarketServices: RealMarketService[] = [
       'Replay - safe pullers, checksum compare, and reconciliation dashboards.',''
     launch_date: '2025 - 08 - 22','
     customers: 15,
+
     rating: 4 && 4.7,
-    reviews: 9,
+    reviews: 9;
   },
   {
   {
+
 '
       'Bridges the gap between brittle webhook flows and reliable data pipelines.',''
     targetAudience: 'Data engineers, platform teams, RevOps','
@@ -989,12 +1018,14 @@ export const realMarketServices: RealMarketService[] = [
       'PII tagging and masking policies',''
       'Glossary and ownership workflows',''
       'dbt / Snowflake / BigQuery integrations','
+
     ],
     popular: true,
     customers: 34,
-    rating: 4 && 4.7,
-    reviews: 18,
+    rating: 4 && 4.7,}
+    reviews: 18}
   },
+
   {'
       'Bundle and upsell optimizer',''
       'A / B testing and holdouts',''
@@ -1066,9 +1097,11 @@ export const realMarketServices: RealMarketService[] = [
       'Edge verify and adaptive challenge, policy config UI, analytics.',''
     launch_date: '2025 - 02 - 25','
     customers: 19,
+
     rating: 4 && 4.6,
-    reviews: 8,
+    reviews: 8;
   },
+
   {'
       'Warehouse connectors',''
       'Field mapping UI',''
@@ -1100,9 +1133,11 @@ export const realMarketServices: RealMarketService[] = [
       'Connectors, incremental keys, idempotent upserts, error DLQ.',''
     launch_date: '2025 - 02 - 26','
     customers: 12,
+
     rating: 4 && 4.5,
-    reviews: 6,
+    reviews: 6;
   },
+
   {'
       'RAG over proposals & policies',''
       'Section templates and styles',''
@@ -1162,9 +1197,11 @@ export const realMarketServices: RealMarketService[] = [
       'Task runners, judge prompts, scoring stores, CI plugin.',''
     launch_date: '2025 - 02 - 12','
     customers: 16,
+
     rating: 4 && 4.5,
-    reviews: 7,
+    reviews: 7;
   },
+
   {'
       'Consent receipts & exports',''
       'Auto - blocking for tags',''
@@ -1182,9 +1219,11 @@ export const realMarketServices: RealMarketService[] = [
       'Banner + middleware policy, receipts store, export jobs.',''
     launch_date: '2025 - 02 - 18','
     customers: 27,
+
     rating: 4 && 4.6,
-    reviews: 12,
+    reviews: 12;
   },
+
   {'
       'Headless rendering & queues',''
       'IP rotation and backoff',''
@@ -1210,9 +1249,11 @@ export const realMarketServices: RealMarketService[] = [
       'Worker pools, proxy rotation, rate - limiters, extractors, exporters.',''
     launch_date: '2025 - 02 - 22','
     customers: 10,
+
     rating: 4 && 4.4,
-    reviews: 5,
+    reviews: 5;
   },
+
   {'
       'Label generation and tracking',''
       'Exchange / repair workflows',''
@@ -1231,9 +1272,11 @@ export const realMarketServices: RealMarketService[] = [
       'Embedded portal, label API wiring, policy engine and analytics.',''
     launch_date: '2025 - 02 - 08','
     customers: 52,
+
     rating: 4 && 4.6,
-    reviews: 24,
+    reviews: 24;
   },
+
   {'
       'Sequence builder and templates',''
       'Reply / booking detection and stops',''
@@ -1263,9 +1306,11 @@ export const realMarketServices: RealMarketService[] = [
       'Sequence engine, deliverability checks, reply webhooks.',''
     launch_date: '2025 - 02 - 06','
     customers: 78,
+
     rating: 4 && 4.5,
-    reviews: 33,
+    reviews: 33;
   },
+
   {'
       'Speaker diarization',''
       'Summaries and chaptering',''
@@ -1284,9 +1329,11 @@ export const realMarketServices: RealMarketService[] = [
       'Batch ASR, diarization, topic modeling, clip renderers.',''
     launch_date: '2025 - 02 - 02','
     customers: 140,
+
     rating: 4 && 4.7,
-    reviews: 58,
+    reviews: 58;
   },
+
   {'
       'Case study generator',''
       'Contact and booking forms',''
@@ -1313,8 +1360,9 @@ export const realMarketServices: RealMarketService[] = [
       'Template presets, CMS‑like editing, lead capture widgets.',''
     launch_date: '2025 - 02 - 04','
     customers: 210,
+
     rating: 4 && 4.6,
-    reviews: 64,
+    reviews: 64;
   },
   {'
       'Contacts and notes'''
@@ -1324,6 +1372,7 @@ export const realMarketServices: RealMarketService[] = [
       'Import/export and tags'''
       'Mobile‑friendly UI''
     ]
+
     popular: true;,'
   icon: '📇'''
     color: 'from-amber-600 to-orange-700'','
@@ -1401,9 +1450,11 @@ export const realMarketServices: RealMarketService[] = [
       'Minimal CRM with reminders and basic pipeline views.',''
     launch_date: '2025 - 02 - 03','
     customers: 320,
+
     rating: 4 && 4.5,
-    reviews: 77,
+    reviews: 77;
   },
+
   {'
       'AI suggestions and variants',''
       'Tone and length tuning',''
@@ -1475,9 +1526,11 @@ export const realMarketServices: RealMarketService[] = [
       'Prompting templates, scoring heuristics, and ESP exports.',''
     launch_date: '2025 - 02 - 07','
     customers: 95,
+
     rating: 4 && 4.4,
-    reviews: 28,
+    reviews: 28;
   },
+
   {'
       'Cycle time and WIP analysis',''
       'Review depth and latency',''
@@ -1497,9 +1550,11 @@ export const realMarketServices: RealMarketService[] = [
       'Ingestion workers, metrics engine, dashboard and alerts.',''
     launch_date: '2025 - 02 - 09','
     customers: 44,
+
     rating: 4 && 4.6,
-    reviews: 19,
+    reviews: 19;
   },
+
   {'
       'Preference center',''
       'DSAR intake and workflows',''
@@ -1533,6 +1588,7 @@ export const realMarketServices: RealMarketService[] = [
   email: 'kleber@ziontechgroup && ziontechgroup.com';''
       address: '364 E Main St STE 1008 Middletown DE 19709',''
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface RealMarketService {;
   id: string,;
   name: string,;
@@ -1563,8 +1619,8 @@ export interface RealMarketService {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -1574,11 +1630,13 @@ export interface RealMarketService {;
   reviews: number;
 }
 ;
+
 const contact = {;'
   mobile: '+1 302 464 0950',;''
   email: 'kleber@ziontechgroup.com',;''
   address: '364 E Main St STE 1008 Middletown DE 19709',;''
   website: 'https://ziontechgroup.com';'
+
 },;
 export const realMarketServices: RealMarketService[] = [;
   {;'
@@ -1616,8 +1674,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Multi-tenant gateway with policy engine, provider adapters, and per-project metering.',;''
     launchDate: '2024-12-01',;'
     customers: 85,;
-    rating: 4.8,;
-    reviews: 61;
+    rating: 4.8,;}
+    reviews: 61;}
   },;
   {;'
     id: 'api-observability-starter',;''
@@ -1653,8 +1711,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Ready-made Terraform/Grafana dashboards, alerts, and OpenTelemetry setup.',;''
     launchDate: '2024-11-10',;'
     customers: 120,;
-    rating: 4.7,;
-    reviews: 73;
+    rating: 4.7,;}
+    reviews: 73;}
   },;
   {;'
     id: 'email-deliverability-warmup',;''
@@ -1666,6 +1724,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'SPF/DKIM/DMARC configuration checksSeed-list deliverability testsAutomated sending warmup schedulesBlocklist and reputation monitoringBIMI and TLS validationAlerts to Slack/Email with remediation steps';']
     ],;
+
     popular: true,;'
     icon: '📧',;''
     color: 'from-cyan-600 to-blue-700',;''
@@ -3330,21 +3389,24 @@ export const realMarketServices: RealMarketService[] = [;
 
 
 
+
   }
 ];
 ;
+
     rating: 4.6;,
   reviews: 36;
   }
 ];
 '
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface RealMarketService {;
   id: string,;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,;
+  period: string,,
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -3369,8 +3431,8 @@ export interface RealMarketService {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -3380,6 +3442,7 @@ export interface RealMarketService {;
   reviews: number;
 }
 ;
+
 const contact = {;'
   mobile: '+1 302 464 0950',;''
   email: 'kleber@ziontechgroup.com',;''
@@ -3397,6 +3460,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'Unified API for multiple LLM providersSpend caps, rate limits, and usage alertsPII redaction and secrets filteringPrompt templates and versioningLatency and cost-aware routingBatch and streaming inferenceAudit logs and RBACLangChain/LlamaIndex SDK support',;''
       'Export to data warehouse';']
+
     ],;
     popular: true,;'
     icon: '🧠',;''
@@ -3422,9 +3486,10 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Multi-tenant gateway with policy engine, provider adapters, and per-project metering.',;''
     launchDate: '2024-12-01',;'
     customers: 85,;
-    rating: 4.8,;
-    reviews: 61;
+    rating: 4.8,;}
+    reviews: 61;}
   },;
+
   {;'
     id: 'api-observability-starter',;''
     name: 'API Observability Starter',;''
@@ -3434,6 +3499,7 @@ export const realMarketServices: RealMarketService[] = [;
     description: 'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next.js, with error budgets, golden signals, and alerts integrated out of the box.',;'
     features: [;'
       'OpenTelemetry auto-instrumentationGolden signals dashboardsError budgets and SLO templatesJaeger/Tempo tracing readyGrafana dashboards and alertsLatency heatmaps and p95/p99Service map and dependency view';']
+
     ],;
     popular: true,;'
     icon: '📈',;''
@@ -3459,9 +3525,10 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Ready-made Terraform/Grafana dashboards, alerts, and OpenTelemetry setup.',;''
     launchDate: '2024-11-10',;'
     customers: 120,;
-    rating: 4.7,;
-    reviews: 73;
+    rating: 4.7,;}
+    reviews: 73;}
   },;
+
   {;'
     id: 'email-deliverability-warmup',;''
     name: 'Email Deliverability & Warmup Monitor',;''
@@ -3496,6 +3563,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'DNS checks, seed-list tests, blacklist APIs, and scheduled warmup orchestration.',;''
@@ -3504,6 +3572,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4.6,;
     reviews: 44;
   },;
+
   {;'
     id: 'affiliate-attribution-hub',;''
     name: 'Affiliate Attribution & Payouts Hub',;''
@@ -3538,6 +3607,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Attribution pipelines, event deduplication, and payout batch jobs.',;''
@@ -3546,6 +3616,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4.5,;
     reviews: 29;
   },;
+
   {;'
     id: 'ai-customer-support-suite',;''
     name: 'AI Customer Support Suite',;''
@@ -3580,6 +3651,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Knowledge sync, embeddings, intent detection, and action tools.',;''
@@ -3588,6 +3660,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4.7,;
     reviews: 21;
   },;
+
   {;'
     id: 'smb-analytics-starter',;''
     name: 'SMB Web Analytics Starter',;''
@@ -3622,6 +3695,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Snippet-based analytics with server-side aggregation and privacy safeguards.',;''
@@ -3630,6 +3704,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4.5,;
     reviews: 17;
   },;
+
   {;'
     id: 'cloud-cost-optimizer',;''
     name: 'Cloud Cost Optimizer',;''
@@ -3639,6 +3714,7 @@ export const realMarketServices: RealMarketService[] = [;
     description: 'Automate detection of idle resources, rightsizing, and savings plans across AWS/GCP/Azure with weekly reports and Jira-ready tickets.',;'
     features: [;'
       'Idle resource detectionRightsizing and reservationsAnomaly detection and alertsTag hygiene and complianceWeekly savings reportsAuto-created ticketsRBAC and multi-account';']
+
     ],;
     popular: true,;'
     icon: '💸',;''
@@ -3664,9 +3740,10 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Read-only billing access, tagging policy checks, automated recommendation engine.',;''
     launchDate: '2024-10-05',;'
     customers: 65,;
-    rating: 4.6,;
-    reviews: 48;
+    rating: 4.6,;}
+    reviews: 48;}
   },;
+
   {;'
     id: 'soc2-evidence-automation',;''
     name: 'SOC 2 Evidence Automation',;''
@@ -3676,6 +3753,7 @@ export const realMarketServices: RealMarketService[] = [;
     description: 'Automate SOC 2 controls evidence from cloud providers, identity, CI/CD, and ticketing systems with auditor export packs.',;'
     features: [;'
       'Automated evidence collectorsControl mapping (AICPA)Auditor export packsException workflowsRisk register and ownershipChange management checksContinuous monitoring';']
+
     ],;
     popular: true,;'
     icon: '🔐',;''
@@ -3701,9 +3779,10 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Collectors for major SaaS/Cloud, control mapping engine, audit packs.',;''
     launchDate: '2024-09-01',;'
     customers: 42,;
-    rating: 4.7,;
-    reviews: 37;
+    rating: 4.7,;}
+    reviews: 37;}
   },;
+
   {;'
     id: 'vector-search-starter',;''
     name: 'Vector Search Starter',;''
@@ -3713,6 +3792,7 @@ export const realMarketServices: RealMarketService[] = [;
     description: 'Ready-to-run vector database setup (Pinecone/Weaviate/Elastic) with embeddings pipelines, schema, and example retrieval for your data.',;'
     features: [;'
       'Provider selection guideSchema and index templatesETL/ingestion pipelinesEmbeddings and chunking best practicesLatency and cost tuningSample RAG app integration';']
+
     ],;
     popular: false,;'
     icon: '🧭',;''
@@ -3738,9 +3818,10 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Terraform and IaC modules, ETL pipelines, sample notebooks.',;''
     launchDate: '2024-08-20',;'
     customers: 58,;
-    rating: 4.6,;
-    reviews: 41;
+    rating: 4.6,;}
+    reviews: 41;}
   },;
+
   {;'
     id: 'tls-certificate-monitor',;''
     name: 'TLS Certificate Monitor',;''
@@ -3750,6 +3831,7 @@ export const realMarketServices: RealMarketService[] = [;
     description: 'Simple, reliable certificate expiry and chain monitoring with Slack/Email alerts and status pages.',;'
     features: [;'
       'Multi-domain monitoringHTTP/TLS and OCSP checksSlack/Email alertsPublic status pagesWeekly compliance reports';']
+
     ],;
     popular: false,;'
     icon: '🔒',;''
@@ -3775,9 +3857,10 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Agentless checks, scheduled runners, alerting integrations.',;''
     launchDate: '2024-07-12',;'
     customers: 90,;
-    rating: 4.5,;
-    reviews: 52;
+    rating: 4.5,;}
+    reviews: 52;}
   },;
+
   {;'
     id: 'api-security-scanner',;''
     name: 'API Security Scanner',;''
@@ -3787,6 +3870,7 @@ export const realMarketServices: RealMarketService[] = [;
     description: 'Continuous API security scanning for REST/GraphQL with schema discovery, auth testing, fuzzing and CI/CD gates. Reports mapped to OWASP API Top 10 with Jira-ready tickets.',;'
     features: [;'
       'OpenAPI/GraphQL schema discoveryAuth and permission testingOWASP API Top 10 mappingFuzzing and payload mutationsCI/CD quality gatesJira tickets and Slack alerts';']
+
     ],;
     popular: true,;'
     icon: '🛡️',;''
@@ -3812,9 +3896,10 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Schema crawler, auth probes, mutational fuzzing, reporters and CI gates.',;''
     launchDate: '2024-12-05',;'
     customers: 54,;
-    rating: 4.7,;
-    reviews: 33;
+    rating: 4.7,;}
+    reviews: 33;}
   },;
+
   {;'
     id: 'email-deliverability-monitor',;''
     name: 'Email Deliverability Monitor',;''
@@ -3824,6 +3909,7 @@ export const realMarketServices: RealMarketService[] = [;
     description: 'Continuously monitors DNS auth records, blocklists and seed inbox placement. Actionable runbooks and alerts to keep campaigns landing in the inbox.',;'
     features: [;'
       'SPF/DKIM/DMARC validationSeed inbox placement testsBlocklist monitoringDMARC aggregate reports (RUA/RUF)Alerts and weekly scorecards';']
+
     ],;
     popular: false,;'
     icon: '📧',;''
@@ -3849,9 +3935,10 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'DNS validators, seed inbox network, blocklist checkers and alerting.',;''
     launchDate: '2024-09-22',;'
     customers: 77,;
-    rating: 4.6,;
-    reviews: 44;
+    rating: 4.6,;}
+    reviews: 44;}
   },;
+
   {;'
     id: 'domain-dns-monitor',;''
     name: 'Domain & DNS Monitor',;''
@@ -3861,6 +3948,7 @@ export const realMarketServices: RealMarketService[] = [;
     description: 'Watches critical DNS records (A/AAAA, MX, TXT, NS) and TLS changes for drift and hijacks. Keeps an audit trail for compliance.',;'
     features: [;'
       'DNS record drift detectionTLS and chain changesAudit log and diffsSlack/Email alertsExportable reports';']
+
     ],;
     popular: false,;'
     icon: '🌐',;''
@@ -3887,7 +3975,9 @@ export const realMarketServices: RealMarketService[] = [;
     launchDate: '2024-08-18',;'
     customers: 61,;
     rating: 4.5,;
-    reviews: 36;
+
+reviews: 36;}
+}
   },;
   {;'
     id: 'uptime-slo-monitor',;''
@@ -3923,8 +4013,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Probers, SLI calculators, error-budget math and alerting integrations.',;''
     launchDate: '2024-07-28',;'
     customers: 112,;
-    rating: 4.6,;
-    reviews: 58;
+    rating: 4.6,;}
+    reviews: 58;}
   },;
   {;'
     id: 'status-pages-slo',;''
@@ -3960,8 +4050,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Static+API hybrid pages, component health, subscriptions.',;''
     launchDate: '2024-06-30',;'
     customers: 49,;
-    rating: 4.5,;
-    reviews: 27;
+    rating: 4.5,;}
+    reviews: 27;}
   },;
   {;'
     id: 'serverless-cron-manager',;''
@@ -3997,8 +4087,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Job store, scheduler, runners and alerting.',;''
     launchDate: '2024-05-12',;'
     customers: 73,;
-    rating: 4.5,;
-    reviews: 39;
+    rating: 4.5,;}
+    reviews: 39;}
   },;
   {;'
     id: 'pdf-render-api',;''
@@ -4034,8 +4124,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Headless Chrome workers, queueing and asset sandboxing.',;''
     launchDate: '2024-04-08',;'
     customers: 140,;
-    rating: 4.7,;
-    reviews: 91;
+    rating: 4.7,;}
+    reviews: 91;}
   },;
   {;'
     id: 'gdpr-dsar-automation',;''
@@ -4071,8 +4161,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Ticketing workflows, connectors, redaction and audit logs.',;''
     launchDate: '2024-11-01',;'
     customers: 31,;
-    rating: 4.6,;
-    reviews: 21;
+    rating: 4.6,;}
+    reviews: 21;}
   },;
   {;'
     id: 'vendor-risk-automation',;''
@@ -4108,8 +4198,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Questionnaire engine, evidence vault, risk scoring and reminders.',;''
     launchDate: '2024-10-15',;'
     customers: 26,;
-    rating: 4.5,;
-    reviews: 18;
+    rating: 4.5,;}
+    reviews: 18;}
   },;
   {;'
     id: 'browser-performance-monitor',;''
@@ -4145,8 +4235,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Lightweight RUM SDK, vitals aggregation and alerting.',;''
     launchDate: '2024-09-08',;'
     customers: 52,;
-    rating: 4.5,;
-    reviews: 29;
+    rating: 4.5,;}
+    reviews: 29;}
   },;
   {;'
     id: 'database-performance-monitor',;''
@@ -4182,8 +4272,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Extension-based metrics collectors and advisors.',;''
     launchDate: '2024-08-01',;'
     customers: 39,;
-    rating: 4.6,;
-    reviews: 23;
+    rating: 4.6,;}
+    reviews: 23;}
   },;
   {;'
     id: 'cloud-platform-managed-kubernetes',;''
@@ -4219,8 +4309,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Blueprints, policies, GitOps pipelines and SRE runbooks.',;''
     launchDate: '2025-01-10',;'
     customers: 17,;
-    rating: 4.7,;
-    reviews: 12;
+    rating: 4.7,;}
+    reviews: 12;}
   },;
   {;'
     id: 'rum-analytics-starter',;''
@@ -4256,8 +4346,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Snippet capture with server-side aggregation and privacy controls.',;''
     launchDate: '2025-02-15',;'
     customers: 26,;
-    rating: 4.6,;
-    reviews: 14;
+    rating: 4.6,;}
+    reviews: 14;}
   },;
   {;'
     id: 'accessibility-compliance-auditor',;''
@@ -4293,8 +4383,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Headless scans with rulesets, diffing, and gated pipelines.',;''
     launchDate: '2025-02-12',;'
     customers: 31,;
-    rating: 4.7,;
-    reviews: 19;
+    rating: 4.7,;}
+    reviews: 19;}
   },;
   {;'
     id: 'api-latency-budget-enforcer',;''
@@ -4330,8 +4420,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'SLO definitions, budget math, and actionable ownership routes.',;''
     launchDate: '2025-02-18',;'
     customers: 18,;
-    rating: 4.5,;
-    reviews: 11;
+    rating: 4.5,;}
+    reviews: 11;}
   },;
   {;'
     id: 'security-headers-monitor',;''
@@ -4367,8 +4457,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Scheduled scans with diffs and playbooks.',;''
     launchDate: '2025-02-20',;'
     customers: 44,;
-    rating: 4.6,;
-    reviews: 22;
+    rating: 4.6,;}
+    reviews: 22;}
   },;
   {;'
     id: 'cookie-consent-manager',;''
@@ -4404,8 +4494,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Client + middleware rules with storage & audit.',;''
     launchDate: '2025-02-22',;'
     customers: 21,;
-    rating: 4.5,;
-    reviews: 10;
+    rating: 4.5,;}
+    reviews: 10;}
   },;
   {;'
     id: 'backup-policy-auditor',;''
@@ -4441,8 +4531,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Read-only checks, sample restores, and compliance export.',;''
     launchDate: '2025-02-24',;'
     customers: 12,;
-    rating: 4.5,;
-    reviews: 7;
+    rating: 4.5,;}
+    reviews: 7;}
   },;
   {;'
     id: 'consent-compliance-kit',;''
@@ -4478,8 +4568,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Embeddable banner, policy config UI, consent log store, export jobs.',;''
     launchDate: '2025-08-22',;'
     customers: 22,;
-    rating: 4.6,;
-    reviews: 11;
+    rating: 4.6,;}
+    reviews: 11;}
   },;
   {;'
     id: 'api-backfill-reconciliation',;''
@@ -4515,8 +4605,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Replay-safe pullers, checksum compare, and reconciliation dashboards.',;''
     launchDate: '2025-08-22',;'
     customers: 15,;
-    rating: 4.7,;
-    reviews: 9;
+    rating: 4.7,;}
+    reviews: 9;}
   },;
   {;'
     id: 'data-quality-sla-monitor',;''
@@ -4552,8 +4642,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Metadata collectors, rules engine, SLA store, and alert webhooks.',;''
     launchDate: '2025-08-22',;'
     customers: 28,;
-    rating: 4.6,;
-    reviews: 13;
+    rating: 4.6,;}
+    reviews: 13;}
   },;
   {;'
     id: 'postgres-index-advisor',;''
@@ -4589,8 +4679,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Read-only plan capture, advisor engine, change scripts, and dashboards.',;''
     launchDate: '2025-08-22',;'
     customers: 18,;
-    rating: 4.5,;
-    reviews: 8;
+    rating: 4.5,;}
+    reviews: 8;}
   },;
   {;'
     id: 'gitops-drift-monitor',;''
@@ -4626,8 +4716,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Cluster collectors, policy engine, reconciler workers, and PR bots.',;''
     launchDate: '2025-08-22',;'
     customers: 14,;
-    rating: 4.6,;
-    reviews: 7;
+    rating: 4.6,;}
+    reviews: 7;}
   },;
   {;'
     id: 'soc2-readiness-scanner',;''
@@ -4663,8 +4753,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Connector checks, control mapping DB, gap scoring and exports.',;''
     launchDate: '2025-08-22',;'
     customers: 24,;
-    rating: 4.7,;
-    reviews: 12;
+    rating: 4.7,;}
+    reviews: 12;}
   },;
   {;'
     id: 'cloud-asset-attack-surface',;''
@@ -4700,8 +4790,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'API collectors, exposure heuristics, ticket routing, dashboards.',;''
     launchDate: '2025-08-22',;'
     customers: 19,;
-    rating: 4.5,;
-    reviews: 9;
+    rating: 4.5,;}
+    reviews: 9;}
   },;
   {;'
     id: 'llm-red-team-simulator',;''
@@ -4737,8 +4827,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Scenario libraries, orchestrator, CI integration, dashboards.',;''
     launchDate: '2025-08-22',;'
     customers: 17,;
-    rating: 4.6,;
-    reviews: 8;
+    rating: 4.6,;}
+    reviews: 8;}
   },;
   {;'
     id: 'affiliate-fraud-detector',;''
@@ -4774,8 +4864,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Data connectors, identity resolution, MMM fitting, and optimizer UI.',;''
     launchDate: '2025-01-21',;'
     customers: 48,;
-    rating: 4.7,;
-    reviews: 29;
+    rating: 4.7,;}
+    reviews: 29;}
   },;
   {;'
     id: 'data-governance-starter',;''
@@ -4811,8 +4901,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'OpenLineage-based scanners, dbt metadata, and policy engine.',;''
     launchDate: '2025-01-21',;'
     customers: 34,;
-    rating: 4.7,;
-    reviews: 18;
+    rating: 4.7,;}
+    reviews: 18;}
   },;
   {;'
     id: 'ecommerce-personalization',;''
@@ -4848,8 +4938,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'SDK snippet, event collectors, and real-time model serving.',;''
     launchDate: '2025-01-21',;'
     customers: 120,;
-    rating: 4.6,;
-    reviews: 77;
+    rating: 4.6,;}
+    reviews: 77;}
   },;
   {;'
     id: 'iot-fleet-telemetry',;''
@@ -4885,8 +4975,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Device registry, stream processors, and feature store for ML.',;''
     launchDate: '2025-01-21',;'
     customers: 21,;
-    rating: 4.5,;
-    reviews: 12;
+    rating: 4.5,;}
+    reviews: 12;}
   },;
   {;'
     id: 'api-security-testing',;''
@@ -4922,8 +5012,8 @@ export const realMarketServices: RealMarketService[] = [;
     implementationDetails: 'Quota enforcer, advisor engine, and GitOps PR flow with alerts.',;''
     launchDate: '2025-08-22',;'
     customers: 13,;
-    rating: 4.5,;
-    reviews: 7;
+    rating: 4.5,;}
+    reviews: 7;}
   },;
   {;'
     id: 'cloudflare-turnstile-proxy',;''
@@ -4935,6 +5025,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'Turnstile token verificationReputation and ASN heuristicsIP/device fingerprintingAdaptive challengesBlock/allow lists and webhooks';']
     ],;
+
     popular: false,;'
     icon: '🛡️',;''
     color: 'from-cyan-600 to-blue-700',;''
@@ -4959,6 +5050,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Edge verify and adaptive challenge, policy config UI, analytics.',;''
@@ -4977,6 +5069,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'Warehouse connectorsField mapping UISchedules and retriesDry-run and diffsRow-level filters';']
     ],;
+
     popular: true,;'
     icon: '🔄',;''
     color: 'from-emerald-600 to-teal-700',;''
@@ -5001,6 +5094,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Connectors, incremental keys, idempotent upserts, error DLQ.',;''
@@ -5019,6 +5113,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'RAG over proposals & policiesSection templates and stylesEvidence citationsGap coverage trackingWord/PDF export';']
     ],;
+
     popular: true,;'
     icon: '📝',;''
     color: 'from-violet-600 to-fuchsia-700',;''
@@ -5043,6 +5138,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Document loaders, chunking, topic maps, structured draft generator.',;''
@@ -5061,6 +5157,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'Golden sets and promptsJudge model scoringMulti-model matrixRegression and drift alertsCI quality gates';']
     ],;
+
     popular: false,;'
     icon: '🧪',;''
     color: 'from-indigo-600 to-slate-700',;''
@@ -5085,6 +5182,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Task runners, judge prompts, scoring stores, CI plugin.',;''
@@ -5103,6 +5201,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'Geo rules (EEA/UK/US states)Consent receipts & exportsAuto-blocking for tagsPolicy page generatorA/B banner tests';']
     ],;
+
     popular: true,;'
     icon: '🍪',;''
     color: 'from-amber-600 to-orange-700',;''
@@ -5127,6 +5226,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Banner + middleware policy, receipts store, export jobs.',;''
@@ -5145,6 +5245,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'Headless rendering & queuesIP rotation and backoffRobots/politeness guardsDeduplication and diffsWarehouse exports';']
     ],;
+
     popular: false,;'
     icon: '🕸️',;''
     color: 'from-slate-600 to-slate-800',;''
@@ -5169,6 +5270,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Worker pools, proxy rotation, rate-limiters, extractors, exporters.',;''
@@ -5188,6 +5290,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'Self‑serve returns portalLabel generation and trackingExchange/repair workflowsReturn reasons and defect analyticsEmail/SMS notificationsWarehouse and RMA integrations';']
     ],;
+
     popular: true,;'
     icon: '📦',;''
     color: 'from-emerald-600 to-teal-700',;''
@@ -5212,6 +5315,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Embedded portal, label API wiring, policy engine and analytics.',;''
@@ -5230,6 +5334,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'Sequence builder and templatesReply/booking detection and stopsInbox rotation and throttlingA/B testing for subject linesWarmup and reputation checksCRM sync and webhooks';']
     ],;
+
     popular: true,;'
     icon: '📨',;''
     color: 'from-sky-600 to-indigo-700',;''
@@ -5254,6 +5359,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Sequence engine, deliverability checks, reply webhooks.',;''
@@ -5272,6 +5378,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'High‑accuracy transcriptionSpeaker diarizationSummaries and chapteringTopic and keyword extractionClip generator for socialEmbeds and RSS sync';']
     ],;
+
     popular: true,;'
     icon: '🎙️',;''
     color: 'from-purple-600 to-indigo-700',;''
@@ -5296,6 +5403,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Batch ASR, diarization, topic modeling, clip renderers.',;''
@@ -5314,6 +5422,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'Drag‑and‑drop templatesCase study generatorContact and booking formsTestimonials and logosBasic SEO and analyticsCustom domains';']
     ],;
+
     popular: false,;'
     icon: '🖼️',;''
     color: 'from-pink-600 to-fuchsia-700',;''
@@ -5338,6 +5447,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Template presets, CMS‑like editing, lead capture widgets.',;''
@@ -5356,6 +5466,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'Contacts and notesReminders and tasksSimple pipeline stagesEmail/SMS nudgesImport/export and tagsMobile‑friendly UI';']
     ],;
+
     popular: true,;'
     icon: '📇',;''
     color: 'from-amber-600 to-orange-700',;''
@@ -5380,6 +5491,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Minimal CRM with reminders and basic pipeline views.',;''
@@ -5398,6 +5510,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'AI suggestions and variantsTone and length tuningPerformance benchmarksESP export and A/B testsSpam words and previewTeam review workflow';']
     ],;
+
     popular: false,;'
     icon: '🧪',;''
     color: 'from-cyan-600 to-blue-700',;''
@@ -5422,6 +5535,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Prompting templates, scoring heuristics, and ESP exports.',;''
@@ -5440,6 +5554,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'Cycle time and WIP analysisReview depth and latencyFlaky test detectionRepo hotspots and ownershipTeam scorecards and alertsJira/Linear linkage';']
     ],;
+
     popular: true,;'
     icon: '🧩',;''
     color: 'from-emerald-600 to-teal-700',;''
@@ -5464,6 +5579,7 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Ingestion workers, metrics engine, dashboard and alerts.',;''
@@ -5482,6 +5598,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;'
       'Geo/rule‑based bannersPreference centerDSAR intake and workflowsCookie catalog and scansConsent logs and exportsMulti‑site management';']
     ],;
+
     popular: true,;'
     icon: '⚖️',;''
     color: 'from-slate-700 to-slate-900',;''
@@ -5506,13 +5623,16 @@ export const realMarketServices: RealMarketService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Region rules, consent logging, banner/prefs widgets.',;''
     launchDate: '2025-02-01',;'
     customers: 88,;
+
     rating: 4.6;,
   reviews: 36;
   }
+
 ];
 '

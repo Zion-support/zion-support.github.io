@@ -1,21 +1,23 @@
-
 class ErrorBoundary extends React.Component {
+
   // TODO: Implement
 }
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);'
+
   }
-  
   render() {
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
@@ -69,6 +71,7 @@ class ErrorBoundary extends React.Component {
     switch (filterType) {'
       case 'productType':'
         setSelectedProductTypes(prev =>)
+
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
         );
         break;'
@@ -80,43 +83,37 @@ class ErrorBoundary extends React.Component {
       case 'availability':'
         setSelectedAvailability(prev =>)
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   const filterOptions = generateFilterOptions();
-
   // Filter listings based on selected filters;
   const filteredListings = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {;
     // Search filter;)
     if (searchQuery && !listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) && ;
         !listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) &&;
-        !listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()))) {;
-      return false;
+        !listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()))) {;}
+      return false;}
     }
-
     // Product type filter;
-    if (selectedProductTypes && selectedProductTypes.length > 0 && !selectedProductTypes && selectedProductTypes.includes(listing && listing.category)) {;
-      return false;
+    if (selectedProductTypes && selectedProductTypes.length > 0 && !selectedProductTypes && selectedProductTypes.includes(listing && listing.category)) {;}
+      return false;}
     }
-
     // Location filter;
-    if (selectedLocations && selectedLocations.length > 0 && listing && listing.location && !selectedLocations && selectedLocations.includes(listing && listing.location)) {;
-      return false;
+    if (selectedLocations && selectedLocations.length > 0 && listing && listing.location && !selectedLocations && selectedLocations.includes(listing && listing.location)) {;}
+      return false;}
     }
-
     // Availability filter;
-    if (selectedAvailability && selectedAvailability.length > 0 && listing && listing.availability && !selectedAvailability && selectedAvailability.includes(listing && listing.availability)) {;
-      return false;
+    if (selectedAvailability && selectedAvailability.length > 0 && listing && listing.availability && !selectedAvailability && selectedAvailability.includes(listing && listing.availability)) {;}
+      return false;}
     }
-
     // Rating filter;
-    if (selectedRating && (!listing && listing.rating || listing && listing.rating < selectedRating)) {;
-      return false;
+    if (selectedRating && (!listing && listing.rating || listing && listing.rating < selectedRating)) {;}
+      return false;}
     }
-
     return true;
   });
-
-  const handleFilterChange = (filterType: string, value: string) => {;
+  const handleFilterChange = (;) => {
+  return $3;}
+}
     console && console.log(`Filter changed: ${filterType} = ${value}`),;
     switch (filterType) {;'
       case 'productType':;'
@@ -132,21 +129,23 @@ class ErrorBoundary extends React.Component {
       case 'availability':;'
         setSelectedAvailability(prev => ;)
           prev && prev.includes(value) ? prev && prev.filter(item => item !== value) : [...prev, value];
-        );
-        break;
+        );}
+        break;}
     }
-
   };
+
 
   const clearAllFilters = () => {;
 '
     setSearchQuery("");"
+
     setSelectedProductTypes([]);
     setSelectedLocations([]);
-    setSelectedAvailability([]);
-
-
+    setSelectedAvailability([]);) => {
+  return $3;}
+}
   },
+
   
 
         );
@@ -257,6 +256,7 @@ export default /**
 function Marketplace() {
   const navigate = use_navigate ();'
   const [search_query, setSearchQuery] = useState ("");"
+
   const [selectedProductTypes, setSelectedProductTypes] = useState < string[]>([]);
   const [selected_locations, setSelectedLocations] = useState < string[]>([]);
   const [selected_availability, setSelectedAvailability] = useState < string[]>([]);
@@ -267,44 +267,56 @@ function Marketplace() {
 ;
   // Filter listings based on selected filters;
   const filtered_listings = MARKETPLACE_LISTINGS.filter (listing => {
+
     // Search filter;)
     if (.includes (search_query.toLowerCase ()) &&) {
   $2;
+
 }
         !listing.description.toLowerCase ().includes (search_query.toLowerCase ()) &&;
-        !listing.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()))) {
-      return false;
+        !listing.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()))) {}
+      return false;}
     }
     // Product type filter;
+
     if () {) {
   $2;
+
 }
       return false;
     }
     // Location filter;
+
     if () {) {
   $2;
+
 }
       return false;
     }
     // Availability filter;
+
     if () {) {
   $2;
+
 }
       return false;
     }
     // Rating filter;
+
     if () {) {
   $2;
+
 }
       return false;
     }
     return true;
   });
 ;
+
   const handleFilterChange = (filter_type: string, value: string) =>: any {
   // TODO: Implement
 }
+
     console.log (`Filter changed: ${filter_type} = ${value}`),
     switch (filter_type) {"
       case 'product_type':;'
@@ -314,26 +326,31 @@ function Marketplace() {
       case 'location':;'
         setSelectedLocations (prev =>;)
           prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
+
         break;'
       case 'availability':;'
         setSelectedAvailability (prev =>;)
           prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
         break;
+
     }
   }
 ;
   const clearAllFilters = () =>: any {
+
   // TODO: Implement
 }'
     setSearchQuery ("");"
+
     setSelectedProductTypes ([]);
     setSelectedLocations ([]);
-    setSelectedAvailability ([]);
-    setSelectedRating (null);
+    setSelectedAvailability ([]);}
+    setSelectedRating (null);}
   }
 ;
   // Handle requesting a quote;
   const handleRequestQuote = (listing_id: string) =>: any {
+
   // TODO: Implement
 }
     const listing = MARKETPLACE_LISTINGS.find (item => item.id === listing_id),
@@ -356,25 +373,20 @@ if ( {) {
             category: listing.category,
             image: listing.images?.[0];,
   id: listing.id,;
-            title: listing.title,;
-            category: listing.category,;
-            image: listing.images?.[0];
 
+            title: listing.title,;
+            category: listing.category,;}
+            image: listing.images?.[0];}
           }
         })
       });
     }
-
-
-  },
   };
-  },
-
-
-
+  },  },
   };
   },
   return (
+
 
     <AppLayout>;
 </AppLayout>"
@@ -429,9 +441,10 @@ if ( {) {
 </div>"
           <div className="lg: col - span - 1">;"
 </div>
-            <FilterSidebar;
 
+            <FilterSidebar;
               filters={{
+
 
                 selectedProductTypes;
                 selectedLocations;
@@ -457,11 +470,13 @@ if ( {) {
 </FilterSidebar>"
           <div className="lg: col - span - 1">;"
 </div>
+
             <FilterSidebar;
               filters={{
                 selectedProductTypes;
                 selectedLocations;
                 selectedAvailability;
+
                 selectedProductTypes,
                 selectedLocations,
                 selectedAvailability,
@@ -495,10 +510,12 @@ if ( {) {
 </div>
             <ActiveFiltersBar;
               selectedProductTypes={selectedProductTypes}
+
               selectedLocations={selectedLocations}
               selectedAvailability={selectedAvailability}
               selectedRating={selectedRating}
               searchQuery={searchQuery}
+
               onRemoveFilter={handleFilterChange})
               onRemoveRating={() => setSelectedRating(null)}
 </ActiveFiltersBar>"
@@ -667,3 +684,4 @@ Discover professional services and products for your AI and tech projects. Brows
 }className="bg-zion-purple hover:bg-zion-purple-dark" > Clear Filters </Button> </div>)"
 }</div> </div> </div> </main> </AppLayout>) 
     </AppLayout>;"
+

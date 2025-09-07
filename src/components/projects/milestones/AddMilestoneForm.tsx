@@ -1,3 +1,4 @@
+
 // If there are multiple milestones, submit them one by one;
     milestones.forEach(milestone => {
       onSubmit({
@@ -9,9 +10,42 @@
     })
 
 
-  },
+// If there are multiple milestones, submit them one by one;
+    milestones.forEach(milestone => {onSubmit({title: milestone.title;
+        description: milestone.description;
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;}
+        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;}
+      })})},const handleAddMilestone = (onSubmit({title: milestone.title;
+      description: milestone.description;
+      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;
+      amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;) => {
+  return $3;}
+}
+    })type MilestoneFormValues = z.infer < typeof form_schema>;import React from 'react';
+import { use_form  } from 'react - hook - form';
+import { zod_resolver  } from '@hookform / resolvers / zod';
+import { z  } from 'zod';
+import { CalendarIcon, Loader2 } from 'lucide-react'import { format  } from 'date - fns';
+import { Button  } from '@/components / ui / button';
+import { Calendar  } from '@/components / ui / calendar';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;}
+  FormLabel;}
+  FormMessage } from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { Textarea  } from '@/components / ui / textarea';
+  Popover;
+  PopoverContent;PopoverTrigger} from '@/components / ui / popover'; import { AIMilestoneGenerator  } from './AIMilestoneGenerator';
+import { GeneratedMilestone  } from '@/hooks / useMilestoneGenerator';
 
-  const handleAddMilestone = (milestone: GeneratedMilestone) => {
+const form_schema = z.object ({title: z.string ().min (1, 'Title is required')description: z.string ().optional (),due_date: z.date ().optional (),amount: z.coerce.number ().min (0, 'Amount must be greater than or equal to 0')})type MilestoneFormValues = z.infer < typeof form_schema>;PopoverTrigger } from '@/components/ui/popover';
+import { AIMilestoneGenerator   } from './AIMilestoneGenerator';
+import { GeneratedMilestone  } from '@/hooks/useMilestoneGenerator';
+
+const formSchema = null;
+
 
 
     onSubmit({
@@ -56,11 +90,13 @@ interface AddMilestoneFormProps {
   on_submit: (data: MilestoneFormValues, ) => void,
   is_submitting: boolean,
   on_cancel?: () => void;
+
   project_scope?: string;
   projectStartDate?: string;
   projectEndDate?: string;
-  project_type?: string;
+  project_type?: string;}
 }
+
 export /**
  * AddMilestoneForm - Function description;
  */
@@ -130,12 +166,14 @@ type MilestoneFormValues = z.infer<typeof formSchema>,;
     <div className="space-y-6">"
 </div>
         <AIMilestoneGenerator;
+
           scope={projectScope}
           startDate={projectStartDate}
           endDate={projectEndDate}
           projectType={projectType}
           onAddMilestones={handleAddMilestones}
           onAddMilestone={handleAddMilestone}
+
         />;
 </AIMilestoneGenerator>
       <Form {...form}>;
@@ -338,10 +376,12 @@ type MilestoneFormValues = z.infer<typeof formSchema>,;
                       min="0";""
                       step="0.01";""
                       placeholder="0.00";"
+
                       {...field}
                     />;
 </Input>
                   </FormControl>;
+
                   <FormMessage />;
 </FormMessage>
           </div>;"
@@ -366,10 +406,12 @@ type MilestoneFormValues = z.infer<typeof formSchema>,;
               )}
 
             </Button>;
+
           </div>;
         </form>;
       </Form>;
     </div>;
+
                 </FormItem>)}
           </div>;"
           <div className="flex justify - end space - x-2 pt - 4">;"
@@ -389,10 +431,29 @@ type MilestoneFormValues = z.infer<typeof formSchema>,;
 </Loader2>
                 </>) : ()"
                 "Add Milestone")}"
+
             </Button>;
           </div>;
         </form>;
+      </Form>
+    </div>
+  );
+}//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {project_scope;}
+}start_date= {projectStartDate;}
+}end_date= {projectEndDate;}
+}project_type= {project_type;}onAddMilestones= {handleAddMilestones;}
+}onAddMilestone= {handleAddMilestone;}"
+}/>)}</FormControl> <FormMessage /> </FormItem>)}/> <FormField <FormItem /> <FormLabel  /> Description (optional) </FormLabel> <FormControl /> <Textarea /> </FormControl> <FormMessage /> </FormItem>)}/> <div className=\"grid grid - cols - 1 md:grid - cols - 2 gap - 4\"  /> <FormField <FormLabel  /> Due Date (optional) </FormLabel> <Popover /> <PopoverTrigger as_child /> <FormControl /> <Button variant=\"outline\" className=\"w - full pl - 3 text - left font - normal\"  />) : (<span className=\"text - muted - foreground\"  /> Pick a date </span>) \";"
+}<CalendarIcon className=\"ml - auto h - 4 w - 4 opacity - 50\" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className=\"w - auto p - 0\" align=\"start\"  /> <Calendar initial_focus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)}/> <FormField <FormItem /> <FormLabel  /> Amount ($) </FormLabel> <FormControl /> <Input /> </FormControl> <FormMessage /> </FormItem>) \";"
+}/> </div> <Button type=\"button\" variant=\"outline\" on_click={on_cancel;}
+}disabled= {is_submitting;}"
+} /> Cancel </Button>) \";"
+}<> <Loader2 className=\"mr - 2 h - 4 w - 4 animate - spin\" /> Saving... </>) : (\"Add Milestone\")}</Button> </div> </form> </Form> </div>)}'\"}
+}</Button>;
+          </div>;
+        </form>;
       </Form>;
+
     </div>);
 }//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {
   project_scope;
@@ -429,3 +490,4 @@ type MilestoneFormValues = z.infer<typeof formSchema>,;
 }<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : ("Add Milestone");"
 </Loader2>
 }</Button> </div> </form> </Form> </div>);"
+

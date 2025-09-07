@@ -1,9 +1,22 @@
+
 interface AIMilestoneGeneratorProps {;
   scope: string;,
   startDate: string;
   endDate: string | null;,
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
+
+
+const input: MilestoneInput = {scope;
+      startDate;
+      endDate;}
+      projectType;}
+import { Button  } from '@/components / ui / button';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Accordion,AccordionContent,AccordionItem,AccordionTrigger} from '@/components / ui / accordion';
+import { format, parseISO  } from 'date - fns';
+  MilestoneInput,GeneratedMilestone,useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
+import { Badge  } from '@/components / ui / badge';
 
 
 
@@ -40,11 +53,13 @@ interface AIMilestoneGeneratorProps {
   // TODO: Implement
 }
   scope: string;,
+
   start_date: string;
   end_date: string | null;,
   project_type: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;,
   onAddMilestone: (milestone: GeneratedMilestone) => void;
+
 export /**
  * AIMilestoneGenerator - Function description;
  */
@@ -112,6 +127,10 @@ if ( {) {
       return dateString;
     }
   }
+
+
+const toggleMilestoneSelection = (index: number, ) =>: any {setSelectedMilestones (prev => ({...prev,[index]: !prev[index]});
+}
 
 
 '
@@ -241,10 +260,12 @@ export function AIMilestoneGenerator({;
 </h3>'
           <Sparkles className='w - 5 h - 5 mr - 2 text - primary' />;'
 </Sparkles>
+
         </h3>;
         <Button;'
           variant='outline';'
           on_click={handleGenerateMilestones}
+
           disabled={is_generating || !scope || !start_date || !project_type}        >;
 </Button>
             <>;'
@@ -376,10 +397,12 @@ export function AIMilestoneGenerator({;
                       </div>;'
                       <div className='text-sm text-muted-foreground'>;'
 </div>
+
                       </div>;
                     </div>;
                   </AccordionContent>;
                 </AccordionItem>;
+
             </Accordion>;
           </CardContent>;
         </Card>;
@@ -405,6 +428,7 @@ export function AIMilestoneGenerator({;
                       </div>;'
                       <div className='text - sm text - muted - foreground'>;'
 </div>
+
                       </div>;
                     </div>;
                   </AccordionContent>;
@@ -412,4 +436,6 @@ export function AIMilestoneGenerator({;
             </Accordion>;
           </CardContent>;
         </Card>)}
+
     </div>);'
+

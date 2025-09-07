@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { Button } from "@/components/ui/button";""
 import { useNavigate } from "react-router-dom";""
@@ -35,11 +36,14 @@ export default function PaymentSuccess() {
             variant="outline"""
             onClick={() => navigate("/")}"
 </Button>
+
           </Button>
         </div>
       </div>
     </div>
+
     </div>);
+
     </div>);
     </div>);
     </div>;"
@@ -48,5 +52,7 @@ export default function PaymentSuccess() {
 }className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Go to Dashboard </Button> <Button;"
 }
     </div>;
+
 </Button>
     </div>);"
+

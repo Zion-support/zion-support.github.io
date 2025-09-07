@@ -1,13 +1,14 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 interface CardProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
   className?: string;
-  onClick?: () => void;
+  onClick?: () => void;}
 }
+}
+
 
 const Card: React.FC<CardProps> = ({ 
   children, 
@@ -29,9 +30,12 @@ const Card: React.FC<CardProps> = ({
       {description && (
         <p className="text-gray-300 mb-4">{description}</p>
       )}
+
       {children}
-    </motion.div>
+    </div>
   );
 };
 
+
 export default Card;
+

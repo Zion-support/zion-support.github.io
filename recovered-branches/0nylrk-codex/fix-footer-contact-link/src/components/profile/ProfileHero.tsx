@@ -3,6 +3,7 @@
 
 
 
+
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";""
 import {AspectRatio} from "@/components/ui/aspect-ratio";""
 import {Badge} from "@/components/ui/badge";""
@@ -22,6 +23,7 @@ interface ProfileHeroProps {
   name: string;,
   title: string;
   avatarUrl?: string;
+
   coverImageUrl?: string;
   location?: string;
   rating?: number;
@@ -29,6 +31,7 @@ interface ProfileHeroProps {
   aiScore?: number;"
   profileType: 'service' | 'talent';'
 }
+
 
 
 export function ProfileHero(): any ({;
@@ -48,6 +51,7 @@ export function ProfileHero(): any ({;
 interface ProfileHeroProps {
   // TODO: Implement
 }
+
   name: string,
   title: string,
   avatarUrl?: string,
@@ -55,6 +59,7 @@ interface ProfileHeroProps {
   location?: string,
   rating?: number,
   reviewCount?: number,
+
   aiScore?: number,'
   profileType: 'service' | 'talent''
 }
@@ -205,9 +210,10 @@ export function ProfileHero({
                   </div>;"
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">"
 </div>
-                  </div>
 
+                  </div>
                   </div>;
+
                   </div>;"
                   <div className="px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">;"
 </div>
@@ -273,3 +279,4 @@ export function ProfileHero({
         </div>;
       </div>;
     </div>);"
+

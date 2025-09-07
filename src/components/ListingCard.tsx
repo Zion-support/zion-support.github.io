@@ -1,3 +1,4 @@
+
 id?: string,;
   title: string,;
   description: string,;
@@ -205,3 +206,4 @@ export function ListingCard(): any ({;
           </div>)}
       </div>;
     </Link>);"
+

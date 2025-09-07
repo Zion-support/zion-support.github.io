@@ -27,6 +27,7 @@ export interface SpaceTechService {
   market_size: string;
   growth_rate: string;,
   variant: string;
+
   contact_info: {,
   mobile: string;
     email: string;,
@@ -54,6 +55,7 @@ export interface SpaceTechService {
     icon: '🛰️',''
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.';''
@@ -65,6 +67,7 @@ export interface SpaceTechService {
   }
 
 ;
+
     realImplementation: true;,
   implementationDetails:'
       'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'''
@@ -113,6 +116,7 @@ export interface SpaceTechService {
       'Internet infrastructure'''
       'Telecom systems'''
       'Monitoring tools'']
+
     ]
     useCases: ['
       'Constellation management'''
@@ -143,6 +147,7 @@ export interface SpaceTechService {
       'Insurance platforms'''
       'Research databases'']
     ]
+
     useCases: ['
       'Debris monitoring'''
       'Collision avoidance'''
@@ -171,6 +176,7 @@ export interface SpaceTechService {
       'Power grids'''
       'Telecom systems'''
       'Aviation systems'']
+
     ]
     useCases: ['
       'Weather forecasting'''
@@ -201,6 +207,7 @@ export interface SpaceTechService {
       'Mission control'''
       'Satellite networks'']
     ]
+
     useCases: ['
       'Launch coordination'''
       'Mission planning'''
@@ -229,6 +236,7 @@ export interface SpaceTechService {
       'Telecom systems'''
       'Monitoring tools'''
       'Control systems'']
+
     ]
     useCases: ['
       'Network management'''
@@ -259,6 +267,7 @@ export interface SpaceTechService {
       'Media systems'''
       'Government databases'']
     ]
+
     useCases: ['
       'Research analysis'''
       'Educational content'''
@@ -287,6 +296,7 @@ export interface SpaceTechService {
       'Space services'''
       'Financial systems'''
       'Compliance platforms'']
+
     ]
     useCases: ['
       'Asset trading'''
@@ -317,6 +327,7 @@ export interface SpaceTechService {
       'Career platforms'''
       'Social networks'']
     ]
+
     useCases: ['
       'Space education'''
       'Career training'''
@@ -348,6 +359,7 @@ export interface SpaceTechService {
   customers: 500;
     rating: 4.9;,
   reviews: 250;
+
   }
 ];
   id: string,;
@@ -379,8 +391,8 @@ export interface SpaceTechService {
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -402,6 +414,7 @@ export const spaceTechServices: SpaceTechService[] = [;
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',;''
       'Regulatory compliance toolsMulti-satellite operations';']
     ],;
+
     popular: true,;'
     icon: '🚀',;''
     color: 'from-cyan-600 to-blue-700',;''
@@ -426,6 +439,7 @@ export const spaceTechServices: SpaceTechService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.';''
@@ -433,9 +447,8 @@ export const spaceTechServices: SpaceTechService[] = [;
   customers: 500;
     rating: 4.9,
     reviews: 250;
+  }
 
-  }
-;
-  }
+;  }
 ];
 '

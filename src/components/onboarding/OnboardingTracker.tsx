@@ -1,4 +1,7 @@
+
+;
 {/* Progress bar */}
+
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">"
 </div>
         <div;"
@@ -72,10 +75,38 @@
 </Link>"
                   {step.action} <ArrowRight className="ml - 1 h - 4 w - 4" />;"
 </ArrowRight>
+
                 </Link>;
               </Button>)}
           </div>))}
+      </div>
+    </div>
+  );"
+}></div> </div> {/* Steps list */ \";}"
+}<div className=\"space-y-3\"  /> {steps.map ( (step) => (<div key= {step.link;}"
+} /> </Link> </Button>)}</div>) )}</div> </div>)}\"}</div>;
+    </div>;"
+  )}step.id \";"
+}className=\"flex items - center\" > <div className=\"mr - 3\"  /> {\";}"
+  step.completed ? (<CheckCircle className=\"h - 5 w - 5 text - zion - cyan\" /> h - 5 w - 5 text - zion - slate - light\"/>)}</div> </div> {\";}"
+  !step.completed && step.action && (<Button as_child variant=\" ghost\"size=\" sm\"className=\" text - zion - purple hover:text - zion - cyan hover:bg - zion - blue\"  /> <Link href= {step.link;}"
+} /> </Link> </Button>)}</div>) )}</div> </div>)}\"}
+}<Button;
+                asChild;"
+                variant=\"ghost\";"
+                size=\"sm\";"
+                className=\"text-zion-purple hover: text-zion-cyan hover:bg-zion-blue\" />
+
+                <Link href={step.lin}
+} />;"
+                  {step.action} <ArrowRight className=\"ml-1 h-4 w-4\" />;
+                </Link>;
+              </Button>;
+            )}
+          </div>;
+        ))}
       </div>;
+
     </div>);
 }></div> </div> {"
 }<div className="space-y-3" > {"
@@ -100,3 +131,4 @@
 }> </Link> </Button>);
 }</div>) );
 }</div> </div>);"
+

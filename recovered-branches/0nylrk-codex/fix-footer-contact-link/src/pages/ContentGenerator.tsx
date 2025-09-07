@@ -1,21 +1,23 @@
-
 class ErrorBoundary extends React.Component {
+
   // TODO: Implement
 }
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);'
+
   }
-  
   render() {
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;'
   const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');''
@@ -134,11 +136,13 @@ class ErrorBoundary extends React.Component {
     } catch (error) {;"
       console.error("Error sending test newsletter:", error);""
       toast.error("Failed to send test newsletter. Please try again.");"
+
     }
   };
   // Check if user is still loading;
   if (isLoading) {;
     return (;
+
       <>;
 </Switch>
         <Header />;
@@ -151,12 +155,13 @@ class ErrorBoundary extends React.Component {
 </Footer>
       </>;)
     );
+
   }
 ;
   return (;
-
     <>;
       <Header />;
+
 </Header>"
       <div className="min-h-screen bg-zion-blue py-12">;"
 </div>"
@@ -225,10 +230,11 @@ class ErrorBoundary extends React.Component {
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>;"
                         <Switch;"
                           id="autoPublish""
+
                           checked={autoPublish}
                           onCheckedChange={setAutoPublish}
-
                         />;
+
 </Switch>
                       </div>;"
                       <div className="flex items-center justify-between">;"
@@ -915,12 +921,14 @@ if ( {) {
   )
 }
                 </CardContent>;
+
               </Card>;
             </div>;
           </div>;
         </div>;
       </div>;
       <Footer />;
+
 </Footer>
 
     </>);
@@ -977,3 +985,4 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
 }
 ;
 "
+

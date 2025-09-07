@@ -2,6 +2,7 @@
 
 
 
+
 import { Button } from "./ui/button",""
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";""
 import { toast } from "./ui/use-toast";"
@@ -142,10 +143,12 @@ export function SocialShareSection() {;
               >;
 </Button>
                 <span>{link.name}</span>;
+
               </Button>))}
           </div>;
         </div>;
       </div>;
+
     </section>);"
       icon:<Twitter className="h-5 w-5" />,;"
 </Twitter>"
@@ -176,3 +179,4 @@ export function SocialShareSection() {;
 }
 ;
 ]"
+

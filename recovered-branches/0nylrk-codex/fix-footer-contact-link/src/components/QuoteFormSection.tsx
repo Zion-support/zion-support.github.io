@@ -1,3 +1,4 @@
+
 import { Button } from "./ui/button";""
 import { Input } from "./ui/input";""
 import { GradientHeading } from "./GradientHeading";""
@@ -122,10 +123,12 @@ import { useState } from "react","
                     id="name"""
                     type="text"""
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white""
+
                     required;
                   />
 </Input>
                 </div>
+
                 <div>
 </div>
                   <label;"
@@ -138,9 +141,11 @@ import { useState } from "react","
                     id="company"""
                     type="text"""
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white""
+
                   />
 </Input>
                 </div>
+
                 <div>
 </div>
                   <label;"
@@ -153,10 +158,12 @@ import { useState } from "react","
                     id="email"""
                     type="email"""
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white""
+
                     required;
                   />
 </Input>
                 </div>
+
                 <div>
 </div>
                   <label;"
@@ -169,10 +176,12 @@ import { useState } from "react","
                     id="phone"""
                     type="tel"""
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white""
+
                   />
 </Input>
                 </div>
               </div>
+
 "
               <div className="mt-6">"
 </div>
@@ -225,11 +234,13 @@ import { useState } from "react","
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3""
                 >
 </Button>
+
                 </Button>
               </div>
             </form>
         </div>
       </div>
+
     </section>"
     <section className="py - 20 bg - zion - blue">;"
 </section>"
@@ -397,3 +408,4 @@ import { useState } from "react","
         </div>;
       </div>;
     </section>);"
+

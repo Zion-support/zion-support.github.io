@@ -1,5 +1,6 @@
 
 
+
 import React from './react';''
 import { SeverityIndicator  } from '@/components / ui / severity - indicator';'
 interface SeverityDisplayProps {
@@ -50,3 +51,4 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
       show_text={true}
     />);
 </SeverityIndicator>"
+

@@ -1,6 +1,8 @@
+
   id: string;,
   name: string;
   tagline: string;,
+
   price: string;
   period: string;,
   description: string;
@@ -24,7 +26,9 @@
   marketSize: string;
   growthRate: string;,
   variant: string;
+
   contactInfo: {,
+
   text_color: string;
   link: string;,
   market_position: string;
@@ -40,6 +44,7 @@
   competitors: string[];
   market_size: string;,
   growth_rate: string;
+
   variant: string;,
   contact_info: {
     mobile: string;,
@@ -101,6 +106,7 @@
       'PostgreSQL'''
       'AWS'''
       'Docker'']
+
     ]
     integrations: ['
       'Research databases'''
@@ -109,6 +115,7 @@
       'Regulatory databases'''
       'Analytics platforms'']
     ]
+
     useCases: ['
       'Drug discovery'''
       'Genetic research'''
@@ -175,6 +182,7 @@
       'PostgreSQL'''
       'Redis'''
       'AWS'']
+
     ]
     integrations: ['
       'Bloomberg Terminal'''
@@ -183,6 +191,7 @@
       'Risk systems'''
       'Compliance tools'']
     ]
+
     useCases: ['
       'Algorithmic trading'''
       'Risk management'''
@@ -254,6 +263,7 @@
       'Redis'''
       'AWS'''
       'Kubernetes'']
+
     ]
     integrations: ['
       'SIEM systems'''
@@ -262,6 +272,7 @@
       'Identity providers'''
       'Compliance tools'']
     ]
+
     useCases: ['
       'Data protection'''
       'Network security'''
@@ -333,6 +344,7 @@
       'Redis'''
       'AWS'''
       'Kubernetes'']
+
     ]
     integrations: ['
       'Network equipment'''
@@ -341,6 +353,7 @@
       'Monitoring systems'''
       'Compliance platforms'']
     ]
+
     useCases: ['
       'Secure communications'''
       'Network protection'''
@@ -407,6 +420,7 @@
       'Redis'''
       'AWS'''
       'Kubernetes'']
+
     ]
     integrations: ['
       'IoT devices'''
@@ -415,6 +429,7 @@
       'Business systems'''
       'Compliance platforms'']
     ]
+
     useCases: ['
       'Smart manufacturing'''
       'Predictive maintenance'''
@@ -489,6 +504,7 @@
       'Redis'''
       'AWS'''
       'Kubernetes'']
+
     ]
     integrations: ['
       'ERP systems'''
@@ -497,6 +513,7 @@
       'Analytics tools'''
       'Compliance platforms'']
     ]
+
     useCases: ['
       'Supply chain optimization'''
       'Route planning'''
@@ -563,6 +580,7 @@
       'Node.js'''
       'Blockchain'''
       'AI/ML'']
+
     ]
     integrations: ['
       'VR headsets'''
@@ -571,6 +589,7 @@
       'Payment systems'''
       'Analytics platforms'']
     ]
+
     useCases: ['
       'Virtual events'''
       'Gaming experiences'''
@@ -640,6 +659,7 @@
       'PostgreSQL'''
       'AWS'''
       'Kubernetes'']
+
     ]
     integrations: ['
       'Robot hardware'''
@@ -648,6 +668,7 @@
       'Analytics platforms'''
       'Compliance tools'']
     ]
+
     useCases: ['
       'Manufacturing automation'''
       'Warehouse operations'''
@@ -715,6 +736,7 @@
       'Redis'''
       'AWS'''
       'Kubernetes'']
+
     ]
     integrations: ['
       'Manufacturing systems'''
@@ -723,6 +745,7 @@
       'Analytics tools'''
       'Compliance platforms'']
     ]
+
     useCases: ['
       'Production optimization'''
       'Quality control'''
@@ -794,6 +817,7 @@
       'PostgreSQL'''
       'Redis'''
       'AWS'']
+
     ]
     integrations: ['
       'Vehicle systems'''
@@ -802,6 +826,7 @@
       'Analytics platforms'''
       'Compliance tools'']
     ]
+
     useCases: ['
       'Autonomous driving'''
       'Fleet management'''
@@ -837,12 +862,14 @@
   implementationDetails: 'Advanced autonomous vehicle platform with quantum AI, real-time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.';''
     launchDate: '2024-01-01';',
   customers: 8;
+
     rating: 4 && 4.9,
     reviews: 6;
   }
 ];
 // New Innovative Micro-SaaS Services;
 export const newInnovativeServices = [
+
   {'
       'Complete space mission control platform with AI integration and real-time operations'''
     launchDate: '2024-08-01'',
@@ -867,9 +894,9 @@ export const newInnovativeServices = [
   customers: 12;
     rating: 4.9;,
   reviews: 6;
+
   }
 ];
-
 export interface InnovativeMicroSaasService {;
   id: string,;
   name: string,;
@@ -900,8 +927,8 @@ export interface InnovativeMicroSaasService {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -913,6 +940,76 @@ export interface InnovativeMicroSaasService {;
 ;
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
   // Quantum Computing & AI Services;
+    id: 'quantum - internet - security - platform',
+
+name: 'Quantum Internet Security Platform',
+  tagline: 'Unhackable quantum - secured internet infrastructure',
+    price: '$12, 999',
+  period: '/month',
+    description:;
+      'Unhackable quantum - secured internet infrastructure with quantum key distribution and post - quantum cryptography. First - to - market quantum internet security.',
+    features: [;
+      'Quantum key distribution (QKD)',
+      'Post - quantum cryptography',
+      'Quantum entanglement security',
+      'Real - time threat detection',
+      'Multi - node quantum network',
+      'Government compliance (FIPS 140 - 3)',
+      'Quantum network monitoring',
+      'API for enterprise integration',
+      '24 / 7 quantum security operations',
+      'Unhackable communication channels'
+    ],
+    popular: true,
+    icon: '🌐',
+  color: 'from - indigo - 600 to - purple - 700',
+    text_color: 'text - indigo - 400',
+  link: 'https://ziontechgroup.com / quantum - internet - security - platform',
+    market_position:;
+      'First - to - market quantum internet security with no direct competitors',
+    target_audience:;
+      'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Fortune 500 companies',
+    trial_days: 30,
+    setup_time: '4 - 6 weeks',
+  category: 'Quantum Cybersecurity',
+    real_service: true,
+    technology: [;
+      'Quantum Computing',
+      'Quantum Key Distribution',
+      'Post - Quantum Cryptography',
+      'Quantum Networks'
+    ],
+    integrations: [;
+      'Enterprise systems',
+      'Government networks',
+      'Financial platforms',
+      'Healthcare systems'
+    ],
+    use_cases: [;
+      'Secure communications',
+      'Government networks',
+      'Financial transactions',
+      'Healthcare data',
+      'Defense systems'
+    ],
+    roi: '500% ROI within 12 months through security cost savings',
+  competitors: ['Traditional cybersecurity (Palo Alto, CrowdStrike)'],
+    market_size:;
+      '$150B cybersecurity market, quantum segment growing 400% annually',
+    growth_rate: '400% annual growth',
+  variant: 'quantum - cyberpunk',
+    contact_info: {
+      mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
+  website: 'https://ziontechgroup && ziontechgroup.com'}
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Complete quantum internet security platform with real - time monitoring and enterprise integration',
+    launch_date: '2024 - 11 - 15',
+  customers: 25,
+
   {;'
     id: 'quantum-ai-brain-computer-interface',;''
     name: 'Quantum AI Brain-Computer Interface',;''
@@ -989,10 +1086,12 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Complete quantum internet security platform with real - time monitoring and enterprise integration',''
     launch_date: '2024 - 11 - 15','
     customers: 25,
+
     rating: 4 && 4.8,
-    reviews: 12,
+    reviews: 12;
   },
   {
+
 '
       'AI-powered production planning','
   {
@@ -1070,10 +1169,12 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Complete autonomous manufacturing platform with AI integration and real - time optimization',''
     launch_date: '2024 - 10 - 01','
     customers: 35,
+
     rating: 4 && 4.7,
-    reviews: 18,
+    reviews: 18;
   },
   {
+
 '
     id: 'quantum - financial - trading - platform',''
     name: 'Quantum Financial Trading Platform',''
@@ -1106,9 +1207,11 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Advanced quantum AI trading platform with real - time market analysis and automated strategies',''
     launch_date: '2024 - 09 - 15','
     customers: 28,
+
     rating: 4 && 4.8,
-    reviews: 15,
+    reviews: 15;
   },
+
   {'
       'Satellite mission control',''
       'Orbital mechanics calculation',''
@@ -1271,11 +1374,13 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     },'
     realImplementation: true, implementationDetails: 'Complete space mission control platform with AI integration and real-time operations',''
     launchDate: '2024-08-01', customers: 12,'
+
     rating: 4.9,
     reviews: 6;
   }
 ];
     website: string;
+
   }'
       'Direct neural interface with quantum AI for unprecedented cognitive enhancement',''
     price: '$2, 999',''
@@ -1332,9 +1437,11 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Advanced BCI hardware with quantum AI processing, real - time neural signal analysis, and comprehensive research tools. Includes safety protocols and medical compliance.',''
     launch_date: '2024 - 12 - 01','
     customers: 15,
+
     rating: 4 && 4.9,
-    reviews: 8,
+    reviews: 8;
   },
+
 '
     id: 'quantum-ai-brain-computer-interface'','
   name: 'Quantum AI Brain-Computer Interface'''
@@ -1375,6 +1482,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'React'''
       'Python'''
       'TensorFlow'']
+
     ]
     integrations: ['
       'Research databases'''
@@ -1383,6 +1491,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Gaming engines'''
       'Analytics tools'']
     ]
+
     useCases: ['
       'Cognitive research'''
       'Medical diagnosis'''
@@ -1450,6 +1559,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Redis',''
       'AWS',''
       'Kubernetes',']
+
     ],
     integrations: ['
       'SpaceX API'''
@@ -1458,6 +1568,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Ground stations'''
       'Launch providers'']
     ]
+
     useCases: ['
       'Satellite operations'''
       'Mission planning'''
@@ -1482,10 +1593,12 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Comprehensive space operations platform with real - time satellite tracking, mission planning tools, and advanced analytics. Includes regulatory compliance and safety protocols.',''
     launch_date: '2024 - 11 - 15','
     customers: 8,
+
     rating: 4 && 4.8,
-    reviews: 12,
+    reviews: 12;
   },
   // Biotech AI Services;
+
   {'
     id: 'biotech-ai-platform'','
   name: 'Biotech AI Platform'''
@@ -1525,6 +1638,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'PostgreSQL',''
       'AWS',''
       'Docker',']
+
     ],
     integrations: ['
       'Research databases'''
@@ -1533,6 +1647,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Regulatory databases'''
       'Analytics platforms'']
     ]
+
     useCases: ['
       'Drug discovery'''
       'Genetic research'''
@@ -1557,10 +1672,12 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Advanced AI platform for biotech research with machine learning algorithms, data analysis tools, and research collaboration features. Includes regulatory compliance and safety protocols.',''
     launch_date: '2024 - 10 - 01','
     customers: 25,
+
     rating: 4 && 4.7,
-    reviews: 18,
+    reviews: 18;
   },
   // Quantum Financial Trading;
+
   {'
     id: 'quantum-financial-trading'','
   name: 'Quantum Financial Trading Platform'''
@@ -1600,6 +1717,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'PostgreSQL',''
       'Redis',''
       'AWS',']
+
     ],
     integrations: ['
       'Bloomberg Terminal'''
@@ -1608,6 +1726,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Risk systems'''
       'Compliance tools'']
     ]
+
     useCases: ['
       'Algorithmic trading'''
       'Risk management'''
@@ -1637,10 +1756,12 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Advanced quantum AI trading platform with real - time market analysis, algorithmic trading capabilities, and comprehensive risk management. Includes regulatory compliance and performance analytics.',''
     launch_date: '2024 - 09 - 01','
     customers: 12,
+
     rating: 4 && 4.9,
-    reviews: 15,
+    reviews: 15;
   },
   // Quantum Cybersecurity;
+
   {'
     id: 'quantum-cybersecurity-suite'','
   name: 'Quantum Cybersecurity Suite'''
@@ -1679,6 +1800,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Redis',''
       'AWS',''
       'Kubernetes',']
+
     ],
     integrations: ['
       'SIEM systems'''
@@ -1687,6 +1809,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Identity providers'''
       'Compliance tools'']
     ]
+
     useCases: ['
       'Data protection'''
       'Network security'''
@@ -1716,10 +1839,12 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Comprehensive cybersecurity platform with quantum - resistant encryption, AI - powered threat detection, and automated incident response. Includes compliance reporting and security analytics.',''
     launch_date: '2024 - 08 - 15','
     customers: 45,
+
     rating: 4 && 4.8,
-    reviews: 32,
+    reviews: 32;
   },
   // Quantum Internet Security;
+
   {'
     id: 'quantum-internet-security-platform'','
   name: 'Quantum Internet Security Platform'''
@@ -1759,6 +1884,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Redis',''
       'AWS',''
       'Kubernetes',']
+
     ],
     integrations: ['
       'Network equipment'''
@@ -1767,6 +1893,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Monitoring systems'''
       'Compliance platforms'']
     ]
+
     useCases: ['
       'Secure communications'''
       'Network protection'''
@@ -1791,10 +1918,12 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Advanced quantum internet security platform with quantum key distribution, AI - powered monitoring, and comprehensive network protection. Includes compliance tools and security analytics.',''
     launch_date: '2024 - 07 - 01','
     customers: 28,
+
     rating: 4 && 4.7,
-    reviews: 22,
+    reviews: 22;
   },
   // Quantum IoT Platform;
+
   {'
     id: 'quantum-iot-platform'','
   name: 'Quantum IoT Platform'''
@@ -1832,6 +1961,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Redis',''
       'AWS',''
       'Kubernetes',']
+
     ],
     integrations: ['
       'IoT devices'''
@@ -1840,6 +1970,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Business systems'''
       'Compliance platforms'']
     ]
+
     useCases: ['
       'Smart manufacturing'''
       'Predictive maintenance'''
@@ -1865,10 +1996,12 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Advanced IoT platform with quantum security, AI analytics, and edge computing capabilities. Includes device management, monitoring, and automation tools.',''
     launch_date: '2024 - 06 - 15','
     customers: 65,
+
     rating: 4 && 4.6,
-    reviews: 48,
+    reviews: 48;
   },
   // Quantum Logistics;
+
   {'
     id: 'quantum-logistics-platform'','
   name: 'Quantum Logistics Platform'''
@@ -1906,6 +2039,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Redis',''
       'AWS',''
       'Kubernetes',']
+
     ],
     integrations: ['
       'ERP systems'''
@@ -1914,6 +2048,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Analytics tools'''
       'Compliance platforms'']
     ]
+
     useCases: ['
       'Supply chain optimization'''
       'Route planning'''
@@ -1938,10 +2073,12 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Advanced logistics platform with quantum AI optimization, real - time tracking, and comprehensive supply chain management. Includes analytics, compliance, and sustainability tools.',''
     launch_date: '2024 - 05 - 01','
     customers: 38,
+
     rating: 4 && 4.7,
-    reviews: 29,
+    reviews: 29;
   },
   // Quantum Metaverse;
+
   {'
     id: 'quantum-metaverse-platform'','
   name: 'Quantum Metaverse Platform'''
@@ -1979,6 +2116,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Node && Node.js',''
       'Blockchain',''
       'AI / ML',']
+
     ],
     integrations: ['
       'VR headsets'''
@@ -1987,6 +2125,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Payment systems'''
       'Analytics platforms'']
     ]
+
     useCases: ['
       'Virtual events'''
       'Gaming experiences'''
@@ -2011,10 +2150,12 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Advanced metaverse platform with quantum rendering, AI - powered experiences, and blockchain integration. Includes content creation tools and monetization features.',''
     launch_date: '2024 - 04 - 15','
     customers: 52,
+
     rating: 4 && 4.8,
-    reviews: 41,
+    reviews: 41;
   },
   // Quantum Robotics;
+
   {'
     id: 'quantum-robotics-platform'','
   name: 'Quantum Robotics Platform'''
@@ -2052,6 +2193,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'PostgreSQL',''
       'AWS',''
       'Kubernetes',']
+
     ],
     integrations: ['
       'Robot hardware'''
@@ -2060,6 +2202,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Analytics platforms'''
       'Compliance tools'']
     ]
+
     useCases: ['
       'Manufacturing automation'''
       'Warehouse operations'''
@@ -2084,10 +2227,12 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Advanced robotics platform with quantum AI, autonomous learning, and multi - robot coordination. Includes safety protocols, monitoring, and analytics tools.',''
     launch_date: '2024 - 03 - 01','
     customers: 18,
+
     rating: 4 && 4.9,
-    reviews: 14,
+    reviews: 14;
   },
   // Autonomous Manufacturing;
+
   {'
     id: 'autonomous-manufacturing-platform'','
   name: 'Autonomous Manufacturing Platform'''
@@ -2126,6 +2271,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Redis',''
       'AWS',''
       'Kubernetes',']
+
     ],
     integrations: ['
       'Manufacturing systems'''
@@ -2134,6 +2280,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Analytics tools'''
       'Compliance platforms'']
     ]
+
     useCases: ['
       'Production optimization'''
       'Quality control'''
@@ -2163,10 +2310,12 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Advanced autonomous manufacturing platform with AI optimization, IoT integration, and predictive analytics. Includes quality control, maintenance, and compliance automation.',''
     launch_date: '2024 - 02 - 15','
     customers: 22,
+
     rating: 4 && 4.7,
-    reviews: 19,
+    reviews: 19;
   },
   // Autonomous Vehicle AI;
+
   {'
     id: 'autonomous-vehicle-ai-platform'','
   name: 'Autonomous Vehicle AI Platform'''
@@ -2206,6 +2355,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'PostgreSQL',''
       'Redis',''
       'AWS',']
+
     ],
     integrations: ['
       'Vehicle systems'''
@@ -2214,6 +2364,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Analytics platforms'''
       'Compliance tools'']
     ]
+
     useCases: ['
       'Autonomous driving'''
       'Fleet management'''
@@ -2238,13 +2389,16 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Advanced autonomous vehicle platform with quantum AI, real - time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.',''
     launch_date: '2024 - 01 - 01','
     customers: 8,
+
     rating: 4 && 4.9,
-    reviews: 6,
+    reviews: 6;
 }
+
 
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [,'
   address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup && ziontechgroup.com''
+
     };
     realImplementation: true,'
     implementationDetails: 'Advanced autonomous vehicle platform with quantum AI, real-time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.';''
@@ -2252,6 +2406,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [,'
   customers: 8;
     rating: 4 && 4.9,
     reviews: 6;
+
   }]
 ];
 // New Innovative Micro-SaaS Services;
@@ -2288,6 +2443,7 @@ export const newInnovativeServices = [
       'Brain-Computer Interface'''
       'AI/ML'''
       'Quantum Encryption'']
+
     ]
     integrations: ['
       'Research APIs'''
@@ -2295,6 +2451,7 @@ export const newInnovativeServices = [
       'Laboratory equipment'''
       'Data analysis tools'']
     ]
+
     useCases: ['
       'Cognitive research'''
       'Medical diagnostics'''
@@ -2318,9 +2475,11 @@ export const newInnovativeServices = [
       'Advanced quantum neural interface system with real - time processing, secure encryption, and comprehensive analytics',''
     launch_date: '2024 - 12 - 01','
     customers: 15,
+
     rating: 4 && 4.9,
-    reviews: 8,
+    reviews: 8;
   },
+
   {'
       'Quantum key distribution (QKD)',''
       'Post - quantum cryptography',''
@@ -2347,6 +2506,7 @@ export const newInnovativeServices = [
       'Quantum Key Distribution'''
       'Post-Quantum Cryptography'''
       'Quantum Networks'']
+
     ]
     integrations: ['
       'Enterprise systems'''
@@ -2354,6 +2514,7 @@ export const newInnovativeServices = [
       'Financial platforms'''
       'Healthcare systems'']
     ]
+
     useCases: ['
       'Secure communications'''
       'Government networks'''
@@ -2378,9 +2539,11 @@ export const newInnovativeServices = [
       'Complete quantum internet security platform with real - time monitoring and enterprise integration',''
     launch_date: '2024 - 11 - 15','
     customers: 25,
+
     rating: 4 && 4.8,
-    reviews: 12,
+    reviews: 12;
   },
+
   {'
       'Predictive maintenance',''
       'Quality control automation',''
@@ -2407,6 +2570,7 @@ export const newInnovativeServices = [
       'Computer Vision'''
       'Robotics'''
       'Predictive Analytics'']
+
     ]
     integrations: ['
       'ERP systems'''
@@ -2414,6 +2578,7 @@ export const newInnovativeServices = [
       'SCADA systems'''
       'Robotics platforms'']
     ]
+
     useCases: ['
       'Production optimization'''
       'Quality control'''
@@ -2441,9 +2606,11 @@ export const newInnovativeServices = [
       'Complete autonomous manufacturing platform with AI integration and real - time optimization',''
     launch_date: '2024 - 10 - 01','
     customers: 35,
+
     rating: 4 && 4.7,
-    reviews: 18,
+    reviews: 18;
   },
+
   {'
       'Quantum AI market prediction',''
       'Automated trading strategies',''
@@ -2471,6 +2638,7 @@ export const newInnovativeServices = [
       'Blockchain'''
       'Predictive Analytics'''
       'High-Frequency Trading'']
+
     ]
     integrations: ['
       'Bloomberg Terminal'''
@@ -2478,6 +2646,7 @@ export const newInnovativeServices = [
       'Trading platforms'''
       'Risk management systems'']
     ]
+
     useCases: ['
       'Algorithmic trading'''
       'Risk management'''
@@ -2505,9 +2674,11 @@ export const newInnovativeServices = [
       'Advanced quantum AI trading platform with real - time market analysis and automated strategies',''
     launch_date: '2024 - 09 - 15','
     customers: 28,
+
     rating: 4 && 4.8,
-    reviews: 15,
+    reviews: 15;
   },
+
   {'
       'Satellite mission control',''
       'Orbital mechanics calculation',''
@@ -2535,6 +2706,7 @@ export const newInnovativeServices = [
       'Orbital Mechanics'''
       'Ground Station Systems'''
       'Mission Control Software'']
+
     ]
     integrations: ['
       'Satellite networks'''
@@ -2542,6 +2714,7 @@ export const newInnovativeServices = [
       'Communication systems'''
       'Tracking systems'']
     ]
+
     useCases: ['
       'Satellite operations'''
       'Mission planning'''
@@ -2737,9 +2910,12 @@ export const newInnovativeServices = [
     },'
     realImplementation: true, implementationDetails: 'Complete space mission control platform with AI integration and real-time operations',''
     launchDate: '2024-08-01', customers: 12,'
+
     rating: 4.9,
     reviews: 6;
   }
 ];
+
 ;
 '
+

@@ -5,20 +5,22 @@
 
 
 
+
 interface ErrorStateProps {
   // TODO: Implement
 }
   error: string;
+
 }
 export function ErrorState({ error }: ErrorStateProps) {
 
-interface ErrorStateProps {;
-  error: string;
+interface ErrorStateProps {;}
+  error: string;}
 }
 
 export function ErrorState(): any ({ error }: ErrorStateProps) {;
-
   return (
+
     <Card className="border-red-200">;"
 </Card>"
       <CardContent className="p-6 text-center">;"
@@ -60,3 +62,4 @@ export function ErrorState(): any ({ error }: ErrorStateProps) {;
       </CardContent>;
     </Card>;
     </Card>;"
+

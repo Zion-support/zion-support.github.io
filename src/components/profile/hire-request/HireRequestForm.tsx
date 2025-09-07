@@ -1,3 +1,4 @@
+
 import { Loader2 } from 'lucide-react'''
 import { TalentProfile } from "@/types/talent",""
 import { PersonalInfoFields } from "./PersonalInfoFields",""
@@ -65,9 +66,11 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 </form>'
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;'
 </div>
+
           <PersonalInfoFields form={form} />;
 </PersonalInfoFields>
         </div>;
+
         <ProjectDetailsField form={form} />;
 </ProjectDetailsField>
         <TimelineField form={form} />;
@@ -176,22 +179,39 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 }
 
 
+
+            Cancel;
           </Button>;
+          <Button;"
+            type=\"submit\";}"
+            className=\"bg-zion-purple hover:bg-zion-purple-dark text-white\";}
+            disabled={isSubmitting}
+           />;
+            {isSubmitting ? (<>;"
+                <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" />;
+<Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                Submitting...;
+              </>;}
+            ) : ('Submit Request';}
+}</Button>;
         </DialogFooter>;
       </form>;
     </Form>;
+
     <Form {...form}>;
 </Form>)'
       <form on_submit={form.handle_submit (on_submit)} className='space - y-6'>;'
 </form>'
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;'
 </div>
+
           <PersonalInfoFields form={form} />;
 </PersonalInfoFields>
         </div>;
         <ProjectDetailsField form={form} />;
 </ProjectDetailsField>
         <TimelineField form={form} />;
+
 </TimelineField>'
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;'
 </div>
@@ -222,10 +242,12 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 </form>"
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;"
 </div>
+
           <PersonalInfoFields form={form} />;
 </PersonalInfoFields>
         </div>;
         <ProjectDetailsField form={form} />;
+
 </ProjectDetailsField>
         <TimelineField form={form} />;
 </TimelineField>"
@@ -271,3 +293,4 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         </DialogFooter>;
       </form>;
     </Form>);'
+

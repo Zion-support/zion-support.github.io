@@ -1,6 +1,8 @@
+
   id: string;,
   name: string;
   tagline: string;,
+
   price: string;
   period: string;,
   description: string;
@@ -24,6 +26,7 @@
   marketSize: string;
   growthRate: string;,
   variant: string;
+
   contactInfo: {,
   mobile: string;
     email: string;,
@@ -31,6 +34,8 @@
 
 
   {
+      mobile: '+1 302 464 0950',
+
 
     id: 'edge - computing - orchestrator',''
     name: 'Edge Computing Orchestrator',''
@@ -64,9 +69,11 @@
       'Complete edge computing orchestration platform with intelligent resource management and real - time optimization.',''
     launch_date: '2024 - 10 - 01','
     customers: 156,
+
     rating: 4 && 4.7,
-    reviews: 89,
+    reviews: 89;
   },
+
   {'
     id: 'ai-powered-cloud-migration'','
   name: 'AI-Powered Cloud Migration'''
@@ -106,6 +113,7 @@
       'Migration Tools'''
       'Performance Analysis'''
       'Cost Optimization'']
+
     ]
     integrations: ['
       'AWS'''
@@ -114,6 +122,7 @@
       'On-premises systems'''
       'Monitoring tools'']
     ]
+
     useCases: ['
       'Cloud migration'''
       'Cost optimization'''
@@ -221,10 +230,12 @@
       'AI - powered DevOps platform with intelligent automation, testing, and monitoring capabilities.',''
     launch_date: '2024 - 08 - 01','
     customers: 234,
+
     rating: 4 && 4.6,
-    reviews: 123,
+    reviews: 123;
   },
   {
+
 '
     id: 'blockchain - enterprise - platform',''
     name: 'Blockchain Enterprise Platform',''
@@ -299,10 +310,12 @@
       'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.',''
     launch_date: '2024 - 07 - 01','
     customers: 67,
+
     rating: 4 && 4.7,
-    reviews: 34,
+    reviews: 34;
   },
   {
+
 '
     id: 'quantum - data - center',''
     name: 'Quantum Data Center',''
@@ -377,10 +390,12 @@
       'Quantum - enhanced data center with quantum computing integration and AI optimization capabilities.',''
     launch_date: '2024 - 11 - 01','
     customers: 12,
+
     rating: 4 && 4.9,
-    reviews: 6,
+    reviews: 6;
   },
   {
+
 '
     id: 'ai - powered - network - security',''
     name: 'AI - Powered Network Security',''
@@ -455,10 +470,12 @@
       'AI - powered network security platform with real - time threat detection and automated response capabilities.',''
     launch_date: '2024 - 09 - 15','
     customers: 178,
+
     rating: 4 && 4.7,
-    reviews: 89,
+    reviews: 89;
   },
   {
+
 '
     id: 'quantum - iot - platform',''
     name: 'Quantum IoT Platform',''
@@ -533,10 +550,12 @@
       'Quantum - enhanced IoT platform with quantum encryption and AI - powered analytics capabilities.',''
     launch_date: '2024 - 08 - 15','
     customers: 234,
+
     rating: 4 && 4.6,
-    reviews: 123,
+    reviews: 123;
   },
   {
+
 '
     id: 'ai - powered - cloud - migration',''
     name: 'AI - Powered Cloud Migration',''
@@ -652,6 +671,7 @@
       'Migration Tools'''
       'Performance Analysis'''
       'Cost Optimization'']
+
     ]
     integrations: ['
       'AWS'''
@@ -660,6 +680,7 @@
       'On-premises systems'''
       'Monitoring tools'']
     ]
+
     useCases: ['
       'Cloud migration'''
       'Cost optimization'''
@@ -698,10 +719,12 @@
   implementation_details: 'AI - powered cloud migration platform with intelligent planning and automated execution capabilities.';''
     launch_date: '2024 - 10 - 01';',
   customers: 89;
+
     rating: 4.8,
     reviews: 45;,
   website: string;
   }
+
   {'
       'Intelligent resource allocation',''
       'Real - time performance optimization',''
@@ -729,6 +752,7 @@
       'IoT'''
       'Container Orchestration'''
       'Real-time Analytics'']
+
     ]
     integrations: ['
       'AWS IoT'''
@@ -737,6 +761,7 @@
       'Kubernetes'''
       'Docker'']
     ]
+
     useCases: ['
       'IoT management'''
       'Real-time analytics'''
@@ -763,9 +788,11 @@
       'Complete edge computing orchestration platform with intelligent resource management and real - time optimization.',''
     launch_date: '2024 - 10 - 01','
     customers: 156,
+
     rating: 4 && 4.7,
-    reviews: 89,
+    reviews: 89;
   },
+
   {'
       'Continuous identity verification',''
       'Micro - segmentation',''
@@ -793,6 +820,7 @@
       'Identity Management'''
       'Network Security'''
       'Threat Intelligence'']
+
     ]
     integrations: ['
       'Active Directory'''
@@ -801,6 +829,7 @@
       'CrowdStrike'''
       'SIEM systems'']
     ]
+
     useCases: ['
       'Enterprise security'''
       'Government compliance'''
@@ -827,9 +856,11 @@
       'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.',''
     launch_date: '2024 - 09 - 01','
     customers: 89,
+
     rating: 4 && 4.8,
-    reviews: 45,
+    reviews: 45;
   },
+
   {'
       'Intelligent testing',''
       'Predictive monitoring',''
@@ -856,6 +887,7 @@
       'CI/CD'''
       'Container Orchestration'''
       'Cloud Computing'']
+
     ]
     integrations: ['
       'GitHub'''
@@ -866,6 +898,7 @@
       'AWS'''
       'Azure'']
     ]
+
     useCases: ['
       'CI/CD automation'''
       'DevOps optimization'''
@@ -892,9 +925,11 @@
       'AI - powered DevOps platform with intelligent automation, testing, and monitoring capabilities.',''
     launch_date: '2024 - 08 - 01','
     customers: 234,
+
     rating: 4 && 4.6,
-    reviews: 123,
+    reviews: 123;
   },
+
   {'
       'Enterprise blockchain networks',''
       'Smart contract development',''
@@ -922,6 +957,7 @@
       'Web3'''
       'Cryptography'''
       'Distributed Systems'']
+
     ]
     integrations: ['
       'Ethereum'''
@@ -930,6 +966,7 @@
       'Enterprise systems'''
       'Payment platforms'']
     ]
+
     useCases: ['
       'Supply chain tracking'''
       'Financial transactions'''
@@ -956,9 +993,11 @@
       'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.',''
     launch_date: '2024 - 07 - 01','
     customers: 67,
+
     rating: 4 && 4.7,
-    reviews: 34,
+    reviews: 34;
   },
+
   {'
       'Quantum computing integration',''
       'AI - powered optimization',''
@@ -987,6 +1026,7 @@
       'Data Center Infrastructure'''
       'Cloud Computing'''
       'Quantum Networks'']
+
     ]
     integrations: ['
       'AWS'''
@@ -995,6 +1035,7 @@
       'On-premises systems'''
       'Quantum computers'']
     ]
+
     useCases: ['
       'High-performance computing'''
       'Quantum research'''
@@ -1021,9 +1062,11 @@
       'Quantum - enhanced data center with quantum computing integration and AI optimization capabilities.',''
     launch_date: '2024 - 11 - 01','
     customers: 12,
+
     rating: 4 && 4.9,
-    reviews: 6,
+    reviews: 6;
   },
+
   {'
       'AI threat detection',''
       'Real - time monitoring',''
@@ -1051,6 +1094,7 @@
       'Threat Intelligence'''
       'Behavioral Analytics'''
       'Automation'']
+
     ]
     integrations: ['
       'Cisco'''
@@ -1059,6 +1103,7 @@
       'SIEM systems'''
       'Firewalls'']
     ]
+
     useCases: ['
       'Network protection'''
       'Threat detection'''
@@ -1085,9 +1130,11 @@
       'AI - powered network security platform with real - time threat detection and automated response capabilities.',''
     launch_date: '2024 - 09 - 15','
     customers: 178,
+
     rating: 4 && 4.7,
-    reviews: 89,
+    reviews: 89;
   },
+
   {'
       'Quantum encryption',''
       'AI - powered analytics',''
@@ -1115,6 +1162,7 @@
       'AI/ML'''
       'Quantum Encryption'''
       'Edge Computing'']
+
     ]
     integrations: ['
       'AWS IoT'''
@@ -1123,6 +1171,7 @@
       'Device manufacturers'''
       'Analytics platforms'']
     ]
+
     useCases: ['
       'Smart cities'''
       'Industrial IoT'''
@@ -1149,9 +1198,11 @@
       'Quantum - enhanced IoT platform with quantum encryption and AI - powered analytics capabilities.',''
     launch_date: '2024 - 08 - 15','
     customers: 234,
+
     rating: 4 && 4.6,
-    reviews: 123,
+    reviews: 123;
   },
+
   {'
       'AI migration planning',''
       'Cost optimization',''
@@ -1179,6 +1230,7 @@
       'Migration Tools'''
       'Performance Analysis'''
       'Cost Optimization'']
+
     ]
     integrations: ['
       'AWS'''
@@ -1187,6 +1239,7 @@
       'On-premises systems'''
       'Monitoring tools'']
     ]
+
     useCases: ['
       'Cloud migration'''
       'Cost optimization'''
@@ -1228,6 +1281,7 @@
     rating: 4 && 4.8,
     reviews: 45;,'
   website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true;,'
   implementation_details: 'AI - powered cloud migration platform with intelligent planning and automated execution capabilities.';''
@@ -1268,8 +1322,8 @@ export interface AdvancedITService {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -1291,6 +1345,7 @@ export const advancedITServices: AdvancedITService[] = [;
       'Quantum computing resourcesQuantum algorithm libraryHybrid classical-quantum workflowsQuantum machine learningQuantum cryptographyPerformance optimizationReal-time quantum monitoringAdvanced analytics dashboard',;''
       'API for integration24/7 quantum support';']
     ],;
+
     popular: true,;'
     icon: '☁️',;''
     color: 'from-blue-600 to-indigo-700',;''
@@ -1315,6 +1370,7 @@ export const advancedITServices: AdvancedITService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.',;''
@@ -1334,6 +1390,7 @@ export const advancedITServices: AdvancedITService[] = [;
       'Intelligent resource allocationReal-time performance optimizationEdge device managementLoad balancingSecurity and complianceMonitoring and analyticsAutomated scalingAPI gateway',;''
       'Integration tools24/7 support';']
     ],;
+
     popular: true,;'
     icon: '🌐',;''
     color: 'from-green-600 to-emerald-700',;''
@@ -1358,6 +1415,7 @@ export const advancedITServices: AdvancedITService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Complete edge computing orchestration platform with intelligent resource management and real-time optimization.',;''
@@ -1377,6 +1435,7 @@ export const advancedITServices: AdvancedITService[] = [;
       'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsCompliance toolsReal-time monitoringAutomated responseIntegration APIs',;''
       'Security dashboard24/7 security support';']
     ],;
+
     popular: true,;'
     icon: '🛡️',;''
     color: 'from-red-600 to-orange-700',;''
@@ -1401,6 +1460,7 @@ export const advancedITServices: AdvancedITService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.',;''
@@ -1420,6 +1480,7 @@ export const advancedITServices: AdvancedITService[] = [;
       'AI-powered automationIntelligent testingPredictive monitoringPerformance optimizationSecurity scanningCompliance automationReal-time analyticsIntegration APIs',;''
       'Mobile applications24/7 support';']
     ],;
+
     popular: true,;'
     icon: '⚡',;''
     color: 'from-purple-600 to-pink-700',;''
@@ -1444,6 +1505,7 @@ export const advancedITServices: AdvancedITService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'AI-powered DevOps platform with intelligent automation, testing, and monitoring capabilities.',;''
@@ -1463,6 +1525,7 @@ export const advancedITServices: AdvancedITService[] = [;
       'Enterprise blockchain networksSmart contract developmentToken managementCompliance toolsSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboard',;''
       'Mobile applications24/7 support';']
     ],;
+
     popular: true,;'
     icon: '🔗',;''
     color: 'from-yellow-600 to-orange-700',;''
@@ -1487,6 +1550,7 @@ export const advancedITServices: AdvancedITService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.',;''
@@ -1506,6 +1570,7 @@ export const advancedITServices: AdvancedITService[] = [;
       'Quantum computing integrationAI-powered optimizationAdvanced securityEnergy efficiencyPerformance monitoringScalabilityCompliance toolsIntegration APIs',;''
       '24/7 supportQuantum support team';']
     ],;
+
     popular: true,;'
     icon: '🏢',;''
     color: 'from-cyan-600 to-blue-700',;''
@@ -1530,6 +1595,7 @@ export const advancedITServices: AdvancedITService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Quantum-enhanced data center with quantum computing integration and AI optimization capabilities.',;''
@@ -1549,6 +1615,7 @@ export const advancedITServices: AdvancedITService[] = [;
       'AI threat detectionReal-time monitoringAutomated responseBehavioral analyticsNetwork segmentationCompliance toolsPerformance analyticsIntegration APIs',;''
       'Security dashboard24/7 security support';']
     ],;
+
     popular: true,;'
     icon: '🔒',;''
     color: 'from-indigo-600 to-purple-700',;''
@@ -1573,6 +1640,7 @@ export const advancedITServices: AdvancedITService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'AI-powered network security platform with real-time threat detection and automated response capabilities.',;''
@@ -1592,6 +1660,7 @@ export const advancedITServices: AdvancedITService[] = [;
       'Quantum encryptionAI-powered analyticsReal-time monitoringDevice managementSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboard',;''
       'Mobile applications24/7 support';']
     ],;
+
     popular: true,;'
     icon: '📱',;''
     color: 'from-green-600 to-teal-700',;''
@@ -1616,6 +1685,7 @@ export const advancedITServices: AdvancedITService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Quantum-enhanced IoT platform with quantum encryption and AI-powered analytics capabilities.',;''
@@ -1635,6 +1705,7 @@ export const advancedITServices: AdvancedITService[] = [;
       'AI migration planningCost optimizationPerformance analysisSecurity assessmentCompliance toolsAutomated migrationReal-time monitoringIntegration APIs',;''
       'Migration dashboard24/7 support';']
     ],;
+
     popular: true,;'
     icon: '☁️',;''
     color: 'from-blue-600 to-indigo-700',;''
@@ -1659,6 +1730,7 @@ export const advancedITServices: AdvancedITService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',;''
@@ -1668,8 +1740,7 @@ export const advancedITServices: AdvancedITService[] = [;
     reviews: 45;
   }
 
-export interface AdvancedITService {;
-
+export interface AdvancedITService {;}
   }
 ];
 '

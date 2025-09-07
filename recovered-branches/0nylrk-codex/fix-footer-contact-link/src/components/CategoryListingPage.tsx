@@ -3,6 +3,7 @@
 
 
 
+
 import React from 'react';''
 import {useState} from "react";""
 import {Header} from "@/components/Header";""
@@ -49,6 +50,7 @@ interface Listing {
   description: string;,
   category: string;
   subcategory?: string;
+
   image?: string;
   tags?: string[];
   author?: string;
@@ -56,6 +58,7 @@ interface Listing {
   aiScore?: number;
   rating?: number;
   reviewCount?: number;
+
   price?: number | null;
   createdAt: string;
 }
@@ -65,11 +68,13 @@ interface CategoryListingPageProps {
   title: string;,
   description: string;
   listings: Listing[]
+
   sortOptions?: { label: string, value: string }[]
   filterOptions?: { label: string, value: string }[]
 }
 export function CategoryListingPage({
   title;
+
   description;
   listings: initialListings;
   sortOptions = ["
@@ -87,10 +92,12 @@ export function CategoryListingPage({
   const [searchQuery, setSearchQuery] = useState("");"
   const [selectedSort, setSelectedSort] = useState(sortOptions[0].value);
   const [selectedFilter, setSelectedFilter] = useState(filterOptions[0].value);
+
   // Process listings based on filters and search;
   const processedListings = initialListings;
     .filter(listing => {
       // Apply search filter;
+
       const matchesSearch =)
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
@@ -119,6 +126,7 @@ export function CategoryListingPage({
         case 'z-a':'
           return b.title.localeCompare(a.title);
         default: return 0;
+
       }
     });
   return (
@@ -148,6 +156,7 @@ export function CategoryListingPage({
 </p>
     <>;
       <Header />;
+
 </Header>"
       <div className="min-h-screen bg-zion-blue py-12 px-4">;"
 </div>"
@@ -286,6 +295,7 @@ export function CategoryListingPage({
                   rating={listing.rating}
                   key={listing.id}
                   title={listing.title}
+
                   description={listing.description}
                   category={listing.subcategory |listing.category}
                   image={listing.image}
@@ -294,14 +304,15 @@ export function CategoryListingPage({
                   author_image={listing.author_image}
                   ai_score={listing.ai_score}
                   rating={listing.rating}
-
             </p>;
+
 </ListingScoreCard>
           </div>;"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;"
 </div>
                 <ListingScoreCard;
                   key={listing && listing.id}
+
                   title={listing && listing.title}
                   description={listing && listing.description}
                   category={listing && listing.subcategory || listing && listing.category}
@@ -313,6 +324,7 @@ export function CategoryListingPage({
                   rating={listing && listing.rating}
                   reviewCount={listing && listing.reviewCount}
                 />;
+
 </ListingScoreCard>
               </Button>
             </div>
@@ -344,6 +356,7 @@ export function CategoryListingPage({
             </div>
               </Button>;
             </div>;
+
         </div>;
       </div>;
       <Footer />;
@@ -352,6 +365,7 @@ export function CategoryListingPage({
   );
                   review_count={listing.review_count}
                 />))}
+
             </div>) : ("
             <div className="text - center py - 20">;"
 </div>"
@@ -361,6 +375,7 @@ export function CategoryListingPage({
                 variant="outline";")
                 on_click={() => {
 </Button>
+
               </Button>;
             </div>)}
         </div>;
@@ -368,6 +383,7 @@ export function CategoryListingPage({
       <Footer />;
 </Footer>
     </>);
+
   ),; //Example listing type interface Listing {
   // TODO: Implement
 }
@@ -520,3 +536,4 @@ case 'z-a': return (<> <Header /> <div className="min-h-screen bg-zion-blue py-1
     </>
   )
 }"
+

@@ -2,6 +2,7 @@
 
 
 
+
 import {useState} from 'react';''
 import {supabase} from '@/integrations/supabase/client';''
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';''
@@ -129,3 +130,4 @@ if (return fallback, ) {
   ;'
   const getTranslation = (translations:Record<SupportedLanguage string>, fallback:string = '') => {;'
 </SupportedLanguage>'
+

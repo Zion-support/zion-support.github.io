@@ -1,19 +1,29 @@
+
 name: string;
   role?: string;
   text: string;
   avatar?: string;
+
+
+}
+
+export interface Testimonial  {name: string;role?: string;
+  text: string;}
+  avatar?: string;}
 }
 
 
 interface ServiceLandingTemplateProps {;
 
   title: string;,
+
   subtitle: string;
   heroImage?: string;
   description: string;,
   benefits: Benefit[];
   testimonials: Testimonial[];,
   ctaText: string;
+
 import React from "react";""
 import { GradientHeading } from "@/components/GradientHeading";""
 import { Button } from "@/components/ui/button";""
@@ -30,9 +40,11 @@ export interface Benefit {
   // TODO: Implement
 }
   title: string;,
+
   description: string;
-  icon?: React.ReactNode;
+  icon?: React.ReactNode;}
 }
+
 export interface Testimonial {
   // TODO: Implement
 }
@@ -62,8 +74,9 @@ export interface Benefit {;
   title: string,;
   description: string,;
   icon?: React.ReactNode;
+
 }
-export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
+
 
 
 export interface Benefit {
@@ -321,10 +334,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
     </div>
                   </div>;"
                   <div className="text - gray - 600">{stat.label}</div>;"
+
                 </div>))}
             </div>;
           </div>;
         </section>)}"
+
       <section className="py - 16 px - 4 bg - blue - 600">;"
 </section>"
         <div className="max - w-4xl mx - auto text - center">;"
@@ -344,3 +359,4 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
         </div>;
       </section>;
     </div>);"
+

@@ -7,8 +7,10 @@ interface SitemapUrl {
   changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';',
   priority: number;
 
-const Sitemap = () => {
-  return null;
+const Sitemap = (
+  return null;) => {
+  return $3;}
+}
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {'
@@ -16,6 +18,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {'
   const currentDate = new Date().toISOString();
 
   // Define all pages with their metadata;
+
   const staticPages: SitemapUrl[] = [
     {'
       loc: '/','
@@ -91,6 +94,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {'
       loc: '/privacy','
       lastmod: currentDate,'
       changefreq: 'yearly','
+
       priority: 0.3},
     {'
       loc: '/terms','
@@ -100,6 +104,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {'
   ];
 
   // Service pages;
+
   const servicePages = ['
     'ai-development',''
     'ai-implementation',''
@@ -145,11 +150,13 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {'
     'real-estate',''
     'retail',''
     'transportation',']
+
   ];
 
-  industryPages.forEach(industry => {
-    staticPages.push({
+  industryPages.forEach(industry => {}
+    staticPages.push({}
       loc: `/industries/${industry}`,
+
       lastmod: currentDate,'
       changefreq: 'monthly',')
       priority: 0.5});
@@ -167,3 +174,4 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {'
     <priority>${page.priority}</priority>
   </url>`
 </urlset>`;"
+

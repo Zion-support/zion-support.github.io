@@ -1,3 +1,4 @@
+
 import React from 'react';''
 import MainLayout from '../components/layout/MainLayout';'
 const Page = () => {
@@ -16,3 +17,4 @@ const Page = () => {
         </div>
       </div>
     </MainLayout>)"
+

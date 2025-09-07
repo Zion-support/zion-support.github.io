@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";""
 import { useParams, Link, useNavigate } from "react-router-dom";""
 import { SEO } from "@/components/SEO";""
@@ -648,3 +649,4 @@ return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-l
 }</div> </div>) "
 }<Button asChild > <Link to=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </AppLayout>)"
     </AppLayout>;"
+

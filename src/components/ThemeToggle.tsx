@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Sun, Moon, Monitor } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
@@ -33,3 +34,4 @@ const ThemeToggle: React.FC = () => {
 };
 
 export default ThemeToggle;
+

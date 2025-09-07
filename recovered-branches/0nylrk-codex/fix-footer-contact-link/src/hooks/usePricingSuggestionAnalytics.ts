@@ -1,4 +1,5 @@
 
+
 import {useState, useEffect} from 'react';''
 import { supabase } from '@/integrations / supabase / client';'
 interface PricingSuggestionAnalytics {
@@ -26,9 +27,10 @@ import { supabase } from "@/integrations/supabase/client","
 interface PricingSuggestionAnalytics {
   // TODO: Implement
 }
+
   totalSuggestions: number,
-  acceptanceRate: number,
-  averagePriceGap: number,
+  acceptanceRate: number,}
+  averagePriceGap: number,}
   suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[],
   recentSuggestions: {,
   id: string,
@@ -37,6 +39,7 @@ interface PricingSuggestionAnalytics {
     suggestedMax: number,
     actualValue?: number,
     accepted: boolean,
+
     createdAt: string,"
     type: 'client' | 'talent''
   }[],
@@ -161,3 +164,4 @@ interface PricingSuggestionAnalytics {;
 export function usePricingSuggestionAnalytics(days = 30) {;
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
 </PricingSuggestionAnalytics>)'
+

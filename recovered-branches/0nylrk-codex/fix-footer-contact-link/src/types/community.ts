@@ -1,4 +1,5 @@
 export type ForumCategory =
+
   | "getting-hired"""
   | "project-help"""
   | "ai-tools"""
@@ -7,12 +8,12 @@ export type ForumCategory =
   id: ForumCategory;,
   name: string;
   description: string;,
+
   adminOnly: boolean;
   icon: string;
 }
-
-
 export interface ForumPost {;
+
 
 export interface ForumPost {
   // TODO: Implement
@@ -22,6 +23,7 @@ export interface ForumPost {
   // TODO: Implement
 }
   id: string;,
+
   title: string;
   content: string;,
   author_id: string;
@@ -37,12 +39,11 @@ export interface ForumPost {
   replyCount: number;
   isAnswered?: boolean;
   isPinned?: boolean;
-  isLocked?: boolean;
-  isFeatured?: boolean;
+  isLocked?: boolean;}
+  isFeatured?: boolean;}
 }
-
-
 export interface ForumReply {;
+
 
 export interface ForumReply {
   // TODO: Implement
@@ -53,6 +54,7 @@ export interface ForumReply {
   // TODO: Implement
 }
   id: string;,
+
   post_id: string;
   parentReplyId?: string;
   content: string;,
@@ -62,25 +64,27 @@ export interface ForumReply {
   author_role?: string;
   created_at: string;,
   updated_at: string;
+
   upvotes: number;,
   downvotes: number;
   isAnswer?: boolean;
+
 }
-
-
 export interface Badge {;
+
 
   id: string;,
   name: string;
   description: string;,
   icon: string;
   color: string;
-}
 
+}
   icon: string,
   color: string;
 }
 export interface UserBadge {
+
   // TODO: Implement
 }
   user_id: string;,
@@ -109,13 +113,18 @@ export interface CommunityUser {
   // TODO: Implement
 }
 export interface CommunityUser {;
+
 }
+export interface UserBadge {}
+export interface UserBadge {;}
 export interface Badge {
+
   // TODO: Implement
 }
   id: string;,
   name: string;
   description: string;
+
 }
 export interface CommunityUser {
   // TODO: Implement
@@ -125,6 +134,7 @@ export interface CommunityUser {
   avatar?: string;
   role: string;,
   reputation: number;
+
   post_count: number;,
   reply_count: number;
   badges: Badge[];,
@@ -132,3 +142,4 @@ export interface CommunityUser {
   isModerator: boolean;
 }
 "
+

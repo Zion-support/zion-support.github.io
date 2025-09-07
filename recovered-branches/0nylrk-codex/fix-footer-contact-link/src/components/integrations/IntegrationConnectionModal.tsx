@@ -1,10 +1,9 @@
-
-
 import {;
   Dialog,;
   DialogContent,;
   DialogDescription,;
   DialogFooter,;
+
   DialogHeader,;
   DialogTitle,;
 
@@ -47,11 +46,13 @@ import { toast  } from './sonner';'
   DialogTitle,;
 
 
+
 import {;
   Dialog,;
   DialogContent,;
   DialogDescription,;
   DialogFooter,;
+
   DialogHeader,;
   DialogTitle,;
 '
@@ -117,11 +118,12 @@ export function IntegrationConnectionModal(): any ({;
     // In a real application, this would save the sync settings;'
     toast && toast.success("Integration settings saved");"
     onClose();
-  }
 
-  const handleConnectOAuth = () => {
+  }
+  const handleConnectOAuth = (
     setIsConnecting(true);
     // Simulate OAuth flow;
+
     setTimeout(() => {
       setIsConnecting(false);
       toast.success(`Connected to ${integration.name} successfully`);
@@ -149,12 +151,14 @@ import { Label } from "@/components/ui/label",""
 import { Checkbox } from "@/components/ui/checkbox",""
 import { Switch } from "@/components/ui/switch",""
 import { toast } from "sonner","
+
 interface Integration {
   // TODO: Implement
 }
   id: string,
   name: string,
   description: string,
+
   logoUrl?: string,"
   status: "connected" | "warning" | "disconnected","
   lastSync?: string;"
@@ -166,33 +170,36 @@ import { Label } from "@/components/ui/label",;""
 import { Checkbox } from "@/components/ui/checkbox",;""
 import { Switch } from "@/components/ui/switch",;""
 import { toast } from "sonner",;"
+
 interface Integration {;
   id: string,;
-  name: string,;
+  name: string,,
   description: string,;
+
   logoUrl?: string,;"
   status: "connected" | "warning" | "disconnected",;"
   lastSync?: string;
+
 }
 ;
 interface IntegrationConnectionModalProps {;
   isOpen: boolean,;
-  onClose: () => void,;
-  integration: Integration;
+  onClose: () => void,;}
+  integration: Integration;}
 }
-
 export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {
   const [isConnecting, setIsConnecting] = useState(false),
-
   const [syncSettings, setSyncSettings] = useState({
     autoCreateContacts: true,
     pushNotes: false,
+
     syncJobDetails: true,
     syncApplicantData: true;)
+
   }),
-  
-  const handleConnectOAuth = () => {
+  const handleConnectOAuth = (
     setIsConnecting(true),
+
     
     // Simulate OAuth flow;
     setTimeout(() => {
@@ -215,11 +222,10 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
     // In a real application, this would save the sync settings;'
     toast.success("Integration settings saved"),"
     onClose()
+
   },
-  
-    onClose();
-  }
   return (
+
     <Dialog open={isOpen} onOpenChange={onClose}>;
 </Dialog>"
       <DialogContent className="sm:max-w-md">;"
@@ -417,10 +423,12 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
               </Button>"
               <Button onClick={handleSaveSettings} type="button">"
 </Button>
+
               </Button>
             </DialogFooter>
           </>
         ) : (
+
           <>"
             <div className="space-y-4 py-4">"
 </div>"
@@ -711,11 +719,13 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 </DialogFooter>
               <Button on_click={handleConnectOAuth} disabled={is_connecting}>;
 </Button>
+
               </Button>;
             </DialogFooter>;)
           </>)}
       </DialogContent>;
     </Dialog>);
+
 return (<Dialog open= {
   isOpen;
 }onOpenChange= {
@@ -733,3 +743,4 @@ return (<Dialog open= {
 }/> <Label htmlFor="syncApplicantData" >Sync applicant data</Label> </div> </div> ? new Date (integration.lastSync) .toLocaleString () : "Never"""
 }</p> </div> </div> Save Settings </Button> </DialogFooter> </>) : (<> </p> <div className="space-y-4" > <h3 className="text-sm font-medium" >What will be synced:</h3> <ul className="list-disc pl-4 text-sm space-y-1" > <li>Contact information</li> <li>Job details and descriptions</li> <li>Applicant data and status</li> <li>Activity logs and notes</li> </ul> </div> </div> <DialogFooter> </Button> </DialogFooter> </>)"
 }</DialogContent> </Dialog>) "
+

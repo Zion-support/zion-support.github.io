@@ -1,4 +1,5 @@
 // Types used across fraud detection modules;
+
 import { FraudSeverity } from "@/types/fraud";"
 export interface AnalysisResult {
   // TODO: Implement
@@ -63,3 +64,4 @@ export interface SignupCheckResult extends AnalysisResult {}
 
 export interface SignupCheckResult extends AnalysisResult {}
 "
+

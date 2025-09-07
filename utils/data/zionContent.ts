@@ -1,25 +1,28 @@
 export type Infobox = {;
   founder: string,;
   launchYear: string,;
-  token: string,;
-  protocolType: string;
+  token: string,;}
+  protocolType: string;}
 }
+
 export type WikiSection = {id: string;,
   title: string;
   paragraphs: string[];
+
 },;
 export type WikiContent = {;
   title: string,;
   intro: string,;
   infobox: Infobox,;
-  sections: WikiSection[],;
-  references: string[];
+  sections: WikiSection[],;}
+  references: string[];}
 },;
 export type DocsContent = {;
   productOverview: WikiSection,;
 export type Infobox = {
   founder: string;,
   launchYear: string;
+
   token: string;,
   protocolType: string;
 };
@@ -27,14 +30,15 @@ export type WikiSection = {
   id: string;,
   title: string;
   paragraphs: string[];
+
 };
 export type WikiContent = {
   title: string;,
   intro: string;
   infobox: Infobox;,
   sections: WikiSection[];
-  references: string[];
-|---|---|;
+  references: string[];}
+|---|---|;}
 | Founder | ${wiki.infobox.founder} |;
 | Launch Year | ${wiki.infobox.launch_year} |;
 | Token | ${wiki.infobox.token} |;
@@ -49,9 +53,11 @@ export function buildNotionMarkdownFromDocs (docs: DocsContent): string {
     docs.team,]
     docs.public_roadmap],
   const lines: string[] = [],
+
   lines.push ('# Zion OS — Internal Documentation'),''
   lines.push (''),'
   for (const s of sections) {
+
     lines.push (`## ${s.title}`),
     for (const p of s.paragraphs) lines.push (p);'
     lines.push ('');'
@@ -66,10 +72,11 @@ export type DocsContent = {
   developerApi: WikiSection,;
   governanceGuide: WikiSection,;
   tokenomics: WikiSection,;
-  team: WikiSection,;
-  publicRoadmap: WikiSection;
+  team: WikiSection,;}
+  publicRoadmap: WikiSection;}
 };
 export const operatorPrompt = `Write a Wikipedia-style article about Zion OS — the world’s first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`,;
+
 export function generateZionWiki(): WikiContent {;'
   const title = 'Zion OS';''
   const intro = 'Zion OS is a decentralized AI marketplace protocol that coordinates trust, work, and talent across open networks. It combines an AI agent layer (ZionGPT), token incentives (ZION$), and a modular protocol to enable verifiable marketplaces for tasks, models, and contributions.',;'
@@ -120,6 +127,7 @@ export function generateZionWiki(): WikiContent {;'
   return { title, intro, infobox, sections, references   } catch (error) {'
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
     .toLowerCase();"
@@ -131,6 +139,7 @@ export function slugify (input: string): string {
   // TODO: Implement
 }
   return input;
+
     .toLowerCase ();'
     .replace (/[^a - z0 - 9\s-]/g, '');'
     .trim ();'
@@ -142,12 +151,14 @@ export function slugify (input: string): string {
   } catch (error) {'
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
 export function generateZionDocs(): DocsContent {;
   const wiki = generateZionWiki();
   return {;
+
     productOverview: {;,"
   id: 'product-overview';''
       title: 'Product Overview';','
@@ -184,17 +195,19 @@ export function generateZionDocs(): DocsContent {;
   } catch (error) {"
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
 export function buildMarkdownFromWiki(wiki: WikiContent): string {;
-  const infobox = `| | |;
-|---|---|;
+  const infobox = `| | |;}
+|---|---|;}
 | Founder | ${wiki.infobox.founder} |;
 | Launch Year | ${wiki.infobox.launchYear} |;
 | Token | ${wiki.infobox.token} |;
 | Protocol Type | ${wiki.infobox.protocolType} |`;
   const lines: string[] = [];
+
   lines.push(`# ${wiki.title}`);"
   lines.push('');'
   lines.push(infobox);'
@@ -222,17 +235,19 @@ export function buildMarkdownFromWiki(wiki: WikiContent): string {;
   } catch (error) {'
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
 export function buildWikitextFromWiki(wiki: WikiContent): string {;
-  const lines: string[] = [];
-  lines.push(`{{Infobox software`);
+  const lines: string[] = [];}
+  lines.push(`{{Infobox software`);}
   lines.push(`| name = ${wiki.title}`);
   lines.push(`| developer = ${wiki.infobox.founder}`);
   lines.push(`| released = ${wiki.infobox.launchYear}`);
   lines.push(`| genre = ${wiki.infobox.protocolType}`);
   lines.push(`| license = Open`);
+
   lines.push(`}}`);"
   lines.push('');'
   lines.push(wiki.intro);'
@@ -258,6 +273,7 @@ export function buildWikitextFromWiki(wiki: WikiContent): string {;
   } catch (error) {'
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
@@ -269,6 +285,7 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {;
     docs.tokenomics;
     docs.team,;]
     docs.publicRoadmap],;
+
   const lines: string[] = [];"
   lines.push('# Zion OS — Internal Documentation');''
   lines.push('');'
@@ -285,11 +302,13 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {;
   } catch (error) {'
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
 export function slugify(input: string): string {;
   return input;
+
     .toLowerCase();"
     .replace(/[^a-z0-9\s-]/g, '');'
     .trim();'
@@ -298,6 +317,7 @@ export function slugify(input: string): string {;
   } catch (error) {'
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 }

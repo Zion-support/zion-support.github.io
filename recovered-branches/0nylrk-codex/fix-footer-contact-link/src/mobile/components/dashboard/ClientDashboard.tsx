@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { Card, CardContent } from "@/components/ui/card";""
 import { Button } from "@/components/ui/button";""
@@ -45,10 +46,12 @@ export function ClientDashboard() {
                   <h3 className="font-medium">Website Redesign</h3>""
                   <div className="text-sm text-muted-foreground">"
 </div>
+
                   </div>
                 </div>
-                <Badge>3 Milestones</Badge>
+                <Badge />3 Milestones</Badge>
               </div>
+
 "
               <div className="space-y-1">"
 </div>"
@@ -83,12 +86,14 @@ export function ClientDashboard() {
                 </div>"
                 <Button size="sm" variant="outline">"
 </Button>
+
                 </Button>
               </div>
             </div>
           </CardContent>
         </Card>
       </section>
+
 
       <section>
 </section>"
@@ -125,12 +130,14 @@ export function ClientDashboard() {
                     <h3 className="font-medium">Sarah Johnson</h3>""
                     <p className="text-sm text-muted-foreground">"
 </p>
+
                     </p>
                   </div>
                 </div>"
                 <div className="bg-primary/10 text-primary font-medium self-start rounded-full px-2 py-1 text-xs">"
 </div>
                 </div>
+
               </div>"
               <div className="mt-3 flex gap-1 flex-wrap">"
 </div>"
@@ -149,10 +156,12 @@ export function ClientDashboard() {
                 <Button size="sm">View Profile</Button>""
                 <Button size="sm" variant="outline">"
 </Button>
+
                 </Button>
               </div>
             </CardContent>
           </Card>
+
 
           <Card>
 </Card>"
@@ -172,12 +181,14 @@ export function ClientDashboard() {
                     <h3 className="font-medium">Michael Chen</h3>""
                     <p className="text-sm text-muted-foreground">"
 </p>
+
                     </p>
                   </div>
                 </div>"
                 <div className="bg-primary/10 text-primary font-medium self-start rounded-full px-2 py-1 text-xs">"
 </div>
                 </div>
+
               </div>"
               <div className="mt-3 flex gap-1 flex-wrap">"
 </div>"
@@ -196,12 +207,14 @@ export function ClientDashboard() {
                 <Button size="sm">View Profile</Button>""
                 <Button size="sm" variant="outline">"
 </Button>
+
                 </Button>
               </div>
             </CardContent>
           </Card>
         </div>
       </section>
+
 
       <section>
 </section>"
@@ -250,8 +263,11 @@ export function ClientDashboard() {
 "
             <Button variant="outline" className="w-full">"
 </Button>
+
             </Button>
           </CardContent>
         </Card>
       </section>
+
     </div>)"
+

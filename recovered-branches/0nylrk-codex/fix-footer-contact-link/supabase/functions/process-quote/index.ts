@@ -1,4 +1,5 @@
 
+
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",""
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",""
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;""
@@ -85,18 +86,20 @@ const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',;'
 const supabase = createClient(supabaseUrl, supabaseServiceKey),;
 const corsHeaders = {;'
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;'
+
 interface Service {;
   id: string,;
-  title: string,;
-  category: string;
+  title: string,;}
+  category: string;}
 }
 ;
-interface QuoteDetails {;
+interface QuoteDetails {,
   description: string,;
   email: string,;
   budget: string,;
   timeframe: string,;
   startDate?: string,;
+
   endDate?: string;
 
 
@@ -140,6 +143,7 @@ serve(async (req) => {
           userId = user.id;
 ;
   try {;
+
     const { service, quoteDetails } = await req.json() as RequestBody,;
     // Extract user identity if authenticated;
     let userId = null,;
@@ -147,6 +151,7 @@ serve(async (req) => {
       // Get the JWT from the Authorization header;'
       const authHeader = req.headers.get('Authorization'),;'
       if (authHeader) {;
+
         // Extract user information from the JWT;'
         const token = authHeader.replace('Bearer ', ''),;'
         const { data: { user }, error } = await supabase.auth.getUser(token),;
@@ -239,10 +244,12 @@ serve(async (req) => {
               }
             ],;
             temperature: 0.5;
+
           });
         }),;
         const aiResult = await openAIResponse.json(),;
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {;
+
           aiAnalysis = aiResult.choices[0].message.content;
 
               }
@@ -394,10 +401,11 @@ if ( {) {
       status: 500,
 '
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})'
-  }
-});
 
   }
+});
+  }
+
 });
 
           description: quote_details.description;,
@@ -408,11 +416,13 @@ if ( {) {
   end_date: quote_details.end_date;
           ai_analysis: ai_analysis,'
           status: 'pending';'
+
         }
       ]);
       .select ();
 ;
     // Check condition;
+
 if (throw error) {
   $2;
 }
@@ -520,3 +530,4 @@ if (error) throw error;
   }
 });
 '
+

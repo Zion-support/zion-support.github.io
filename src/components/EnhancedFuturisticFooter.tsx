@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
+
 import { motion } from 'framer-motion';
 import { 
   Phone, 
@@ -66,6 +68,7 @@ import {
   City,
   CheckCircle,
   ArrowUpRight,
+
   Play,
   MailIcon
 } from 'lucide-react';
@@ -272,10 +275,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5" />
+
                 </a>
               ))}
             </div>
           </div>
+
 
           {/* Footer Sections */}
           <div className="lg:col-span-1 xl:col-span-2">
@@ -310,6 +315,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                           <span>{link.name}</span>
                           {link.featured && (
                             <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+
                           )}
                         </Link>
                       </li>
@@ -317,6 +323,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   </ul>
                 </motion.div>
               ))}
+
             </div>
           </div>
         </div>
@@ -414,11 +421,13 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   <h4 className="text-sm font-semibold text-slate-400 mb-2">Global Support</h4>
                   <p className="text-sm text-slate-500">24/7 availability worldwide</p>
                 </div>
+
               </div>
             </div>
           </div>
         </section>
       </div>
+
 
       {/* Bottom Footer */}
       <div className="border-t border-slate-700/50">
@@ -438,11 +447,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 aria-label="Scroll to top"
               >
                 <ArrowUpRight className="w-5 h-5 rotate-45" />
+
               </button>
             </div>
           </div>
         </div>
       </div>
     </footer>
+
   );
 };
+

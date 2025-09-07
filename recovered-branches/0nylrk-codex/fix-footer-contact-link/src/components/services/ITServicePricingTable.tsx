@@ -1,3 +1,4 @@
+
 import { useState, useMemo } from "react";"
 import {
   // TODO: Implement
@@ -6,6 +7,7 @@ import {
   CountryPricing,"
 } from "@/data/onsiteServicePricing";""
 import { Input } from "@/components/ui/input";"
+
 import {
   // TODO: Implement
 }
@@ -13,6 +15,7 @@ import {
   TableBody,
   TableCell,
   TableHead,
+
   TableHeader,
   TableRow,"
 } from "@/components/ui/table";""
@@ -26,10 +29,13 @@ export function ITServicePricingTable() {"
   }>({"
     key: "country",""
     direction: "ascending",")
+
   });
+
 
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing];
+
 "
     key: "country",""
     direction: "ascending","
@@ -40,10 +46,12 @@ export function ITServicePricingTable() {"
     
     // Filter by search query;
     if (searchQuery) {
+
       filteredData = filteredData.filter((item) =>
-        item.country.toLowerCase().includes(searchQuery.toLowerCase()),
-      );
+        item.country.toLowerCase().includes(searchQuery.toLowerCase()),}
+      );}
     }
+
 
     // Sort data;
     filteredData.sort((a, b) => {
@@ -52,6 +60,7 @@ export function ITServicePricingTable() {"
       }
       if (a[sortConfig.key] > b[sortConfig.key]) {"
         return sortConfig.direction === "ascending" ? 1 : -1;"
+
       }
       return 0;
     });
@@ -59,9 +68,10 @@ export function ITServicePricingTable() {"
     return filteredData;
   }, [onsiteServicePricing, searchQuery, sortConfig]);
 
-  const handleSort = (key: keyof CountryPricing) => {
+  const handleSort = (
     setSortConfig({
       key,
+
       direction:"
         sortConfig.key === key && sortConfig.direction === "ascending"""
           ? "descending"""
@@ -188,11 +198,13 @@ export function ITServicePricingTable() {;"
                   className="text-center py-10 text-zion-slate-light""
                 >
 </TableCell>
+
                 </TableCell>
               </TableRow>
           </TableBody>
         </Table>
       </div>
+
     </div>"
     <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 w - full">;"
 </div>"
@@ -271,3 +283,4 @@ export function ITServicePricingTable() {;"
         </Table>;
       </div>;
     </div>);"
+

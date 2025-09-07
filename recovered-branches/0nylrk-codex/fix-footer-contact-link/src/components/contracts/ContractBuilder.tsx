@@ -1,4 +1,5 @@
 interface ContractBuilderProps {
+
   // TODO: Implement
 }
   isOpen: boolean;,
@@ -16,18 +17,18 @@ import {ContractForm, ContractFormValues} from "./components/ContractForm";""
 import {ContractPreview} from "./components/ContractPreview";""
 import {TemplateManager} from "./templates/TemplateManager";""
 import {SmartContractBuilder} from "./SmartContractBuilder";"
+
 interface ContractBuilderProps {;
   isOpen: boolean,;
   onClose: () => void,;
   talent: TalentProfile,;
-  clientName: string,;
-  onContractGenerated?: (contractContent: string) => void;
+  clientName: string,;}
+  onContractGenerated?: (contractContent: string) => void;}
 }
-
 export function ContractBuilder(): any ({;
-
-export function ContractBuilder({;
+export function ContractBuilder({;export function ContractBuilder({;
   isOpen;
+
   onClose;
   talent;
   clientName;
@@ -182,12 +183,13 @@ if ( {) {
             <ContractForm;
 
               talent={talent}
+
               client_name={client_name}
               initial_values={form_values}
               onFormValuesChange={setFormValues}
               onContractGenerated={handleContractGenerated}
-
             />;
+
 </ContractForm>
           </TabsContent>;"
           <TabsContent value="preview" className="pt-4">;"
@@ -247,8 +249,11 @@ return (<SmartContractBuilder isOpen= {
 }onClose= {
   () => setTemplateManagerOpen (false) 
 </TemplateManager>
+
 }/> </DialogContent> </Dialog>) 
       </DialogContent>
     </Dialog>
       </DialogContent>;
+
     </Dialog>;"
+

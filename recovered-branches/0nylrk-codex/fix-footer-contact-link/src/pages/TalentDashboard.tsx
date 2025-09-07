@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";""
 import { AppHeader } from "@/layout/AppHeader";""
 import { Footer } from "@/components/Footer";""
@@ -43,9 +44,11 @@ function TalentDashboardContent() {
       <SEO;"
         title="Talent Dashboard | Zion AI Marketplace"""
         description="Your personalized talent dashboard with job matches and professional opportunities.""
+
       />
 </SEO>
       <AppHeader />
+
 </AppHeader>"
       <main className="container mx-auto px-4 py-8">"
 </main>"
@@ -74,17 +77,21 @@ function TalentDashboardContent() {
 </Link>"
                 <Inbox className="h-4 w-4 mr-2" /> Application Tracker;"
 </Inbox>
+
               </Link>
             </Button>
           </div>
         </div>
+
     <>;
       <SEO;"
         title="Talent Dashboard | Zion AI Marketplace";""
         description="Your personalized talent dashboard with job matches and professional opportunities.";"
+
       />;
 </SEO>
       <AppHeader />;
+
 </AppHeader>"
       <main className="container mx-auto px-4 py-8">;"
 </main>"
@@ -111,11 +118,13 @@ function TalentDashboardContent() {
 </Link>"
                 <Inbox className="h-4 w-4 mr-2" /> Application Tracker;"
 </Inbox>
+
               </Link>;
             </Button>;
           </div>;
         </div>;
         <ProjectOfferBanner />
+
 </ProjectOfferBanner>
 "
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">"
@@ -193,9 +202,11 @@ function TalentDashboardContent() {
 </TalentOnboardingSteps>"
             <div className="mt-8">"
 </div>
+
               <UpcomingInterviewsCard />
 </UpcomingInterviewsCard>
             </div>
+
 "
             <Card className="mt-8">"
 </Card>
@@ -228,11 +239,13 @@ function TalentDashboardContent() {
 </span>
                     </span>"
                     <span className="font-medium">85%</span>"
+
                   </div>
                 </div>
               </CardContent>
             </Card>
           </div>
+
 "
           <div className="lg:col-span-2">"
 </div>"
@@ -251,9 +264,11 @@ function TalentDashboardContent() {
 "
               <TabsContent value="job-matches" className="mt-0">"
 </TabsContent>
+
                 <SuggestedJobs />
 </SuggestedJobs>
               </TabsContent>
+
 "
               <TabsContent value="applications" className="mt-0">"
 </TabsContent>
@@ -267,10 +282,12 @@ function TalentDashboardContent() {
 </Link>"
                       <Inbox className="h-4 w-4 mr-2" /> View Full Application;"
 </Inbox>
+
                     </Link>
                   </Button>
                 </div>
               </TabsContent>
+
 "
               <TabsContent value="saved" className="mt-0">"
 </TabsContent>"
@@ -284,6 +301,7 @@ function TalentDashboardContent() {
                     <Button className="mt-4" asChild>"
 </Button>"
                       <Link to="/jobs">Browse Jobs</Link>"
+
                     </Button>
                   </CardContent>
                 </Card>
@@ -297,9 +315,9 @@ function TalentDashboardContent() {
     </>)
   );
 }
-
 export default function TalentDashboard() {
   return (
+
     <ProtectedRoute>
 </ProtectedRoute>
       <TalentDashboardContent />
@@ -314,9 +332,11 @@ export default function TalentDashboard() {
       <SEO;"
         title="Talent Dashboard | Zion AI Marketplace";""
         description="Your personalized talent dashboard with job matches and professional opportunities.";"
+
       />;
 </SEO>
       <AppHeader />;
+
 </AppHeader>"
       <main className="container mx - auto px - 4 py - 8">;"
 </main>"
@@ -343,11 +363,13 @@ export default function TalentDashboard() {
 </Link>"
                 <Inbox className="h - 4 w - 4 mr - 2" /> Application Tracker;"
 </Inbox>
+
               </Link>;
             </Button>;
           </div>;
         </div>;
         <ProjectOfferBanner />;
+
 </ProjectOfferBanner>"
         <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">;"
 </div>
@@ -405,12 +427,14 @@ export default function TalentDashboard() {
 </Link>"
                       <MessageSquare className="h - 4 w - 4 mr - 2" />;"
 </MessageSquare>
+
                     </Link>;
                   </Button>;
                 </div>;
               </CardContent>;
             </Card>;
             <TalentOnboardingSteps />;
+
 </TalentOnboardingSteps>"
             <div className="mt - 8">;"
 </div>
@@ -446,10 +470,12 @@ export default function TalentDashboard() {
 </div>"
                     <span className="text - muted - foreground">Profile completion</span>;""
                     <span className="font - medium">85%</span>;"
+
                   </div>;
                 </div>;
               </CardContent>;
             </Card>;
+
           </div>;"
           <div className="lg:col - span - 2">;"
 </div>"
@@ -498,6 +524,7 @@ export default function TalentDashboard() {
                     <Button className="mt - 4" as_child>;"
 </Button>"
                       <Link to="/jobs">Browse Jobs</Link>;"
+
                     </Button>;
                   </CardContent>;
                 </Card>;
@@ -515,6 +542,7 @@ export default /**
  */
 function TalentDashboard() {
   return (
+
     <ProtectedRoute>;
 </ProtectedRoute>
       <TalentDashboardContent />;
@@ -530,3 +558,4 @@ function TalentDashboard() {
       <TalentDashboardContent />;
 </TalentDashboardContent>
     </ProtectedRoute>;"
+

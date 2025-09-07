@@ -1,21 +1,23 @@
-
 class ErrorBoundary extends React.Component {
+
   // TODO: Implement
 }
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);'
+
   }
-  
   render() {
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
@@ -29,6 +31,7 @@ class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
     quotes;
+
     is_loading;
     error;
     status_filter;
@@ -38,15 +41,18 @@ class ErrorBoundary extends React.Component {
     search_query;
     setSearchQuery;
     date_range;
+
     setDateRange;'
 import type { QuoteRequest } from "@/types/quotes",""
 import { ProtectedRoute } from "@/components/ProtectedRoute",""
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",""
 import { ExportToCSV } from "@/components/quotes/ExportToCSV","
+
 import {
   // TODO: Implement
 }
   QuoteStatusCards,
+
   QuotesFilter,
   QuotesTable;"
 } from "@/components/admin/quotes","
@@ -96,6 +102,7 @@ export default function QuoteManager() {
 </QuotesFilter>
             <QuoteStatusCards statusCounts={statusCounts} />;
 </QuoteStatusCards>
+
   const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
   const [show_details, setShowDetails] = useState (false);
 ;
@@ -111,9 +118,10 @@ export default function QuoteManager() {
     setArchiveFilter;
     search_query;
     setSearchQuery;
-    date_range;
-    setDateRange;
+    date_range;}
+    setDateRange;}
   }
+
   return (
             {/* Filters */}
             <QuotesFilter;
@@ -174,9 +182,11 @@ export default function QuoteManager() {
             </Tabs>;
           </div>;
         </div>;
+
         <QuoteDetails;
-          quote={selectedQuote}
+quote={selectedQuote}
           isOpen={showDetails}
+
 
 
           onClose={() => {;
@@ -191,9 +201,11 @@ export default function QuoteManager() {
           isOpen={showDetails}
           onClose={() => {
 </QuoteDetails>
+
         <Footer />
 </Footer>
       </div>
+
     </ProtectedRoute>"
     return <Navigate to="/unauthorized" replace />;"
 </Navigate>
@@ -268,9 +280,11 @@ export default function QuoteManager() {
 </Footer>
       </div>;
     </ProtectedRoute>);
+
         <Footer />;
 </Footer>
       </div>;
+
     </ProtectedRoute>;"
 }min-h-screen bg-zion-blue px-4 py-8"> <div className=" container mx-auto"> <div className=" flex flex-col md:flex-row justify-between items-start md:items-center mb-8"> <div> <h1 className=" text-3xl font-bold text-white mb-2">Quote Request Manager</h1> <p className=" text-zion-slate-light">Manage and respond to all talent hire requests</p> </div> </div> {"
 }<QuoteStatusCards statusCounts= {
@@ -302,3 +316,4 @@ export default function QuoteManager() {
 }/> </Card> </TabsContent> </Tabs> </div> </div> {
 }<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
 </QuoteDetails>"
+

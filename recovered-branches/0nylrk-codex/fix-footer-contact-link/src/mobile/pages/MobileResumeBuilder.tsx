@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { MobileHeader } from "../components/common/MobileHeader";""
 import { BottomNavigation } from "../components/common/BottomNavigation";"
@@ -48,9 +49,11 @@ export function MobileResumeBuilder() {
 </MobileHeader>"
       <main className="py - 4">;"
 </main>
+
         <ResumeBuilderComponent />;
 </ResumeBuilderComponent>
       </main>;
+
       <BottomNavigation />;
 </BottomNavigation>)
     </div>);"
@@ -70,3 +73,4 @@ export function MobileResumeBuilder() {
 </BottomNavigation>
     </div>;"
   return (<div className="min-h-screen" > Resume Builder"showBack /> <main className=" py-4" > <ResumeBuilderComponent /> </main> <BottomNavigation /> </div>")"
+

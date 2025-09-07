@@ -1,4 +1,5 @@
 
+
 import {use_navigate} from 'react-router-dom';'
 export default /**
  * ReferralsPage - Function description;
@@ -43,10 +44,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import {Button} from '@/components / ui / button';''
 import {toast} from '@/hooks / use - toast';''
 import {Share, Users} from 'lucide-react';'
+
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
   const {;
     isLoading;
+
     referralCode;'
 import {use_navigate} from 'react-router-dom';'
 export default /**
@@ -109,14 +112,16 @@ export default function ReferralsPage() {
   const {
   // TODO: Implement
 }
+
     isLoading,
     referralCode,
     referrals,
     rewards,
     stats,
-    getReferralLink,
-    copyReferralLink,
+    getReferralLink,}
+    copyReferralLink,}
     shareOnSocialMedia} = useReferrals(),
+
 
   useEffect(() => {
     if (!isAuthenticated) {
@@ -249,10 +254,12 @@ export default function ReferralsPage() {
             </TabsContent>;"
             <TabsContent value="rewards" className="p-0 mt-6">;"
 </TabsContent>
+
               <RewardsCard rewards={rewards} isLoading={isLoading} />;
 </RewardsCard>
             </TabsContent>;
           </Tabs>;
+
         </div>;"
         <div className="space-y-6">;"
 </div>"
@@ -278,3 +285,4 @@ return (<div className="container max-w-7xl py-10" > <div className="mb-8 flex f
 }/> <Tabs defaultValue="referrals" className="w-full" > <TabsList className="w-full grid grid-cols-2" > <TabsTrigger value="referrals" className="flex items-center gap-2" > <Users className="h-4 w-4" /> Your Referrals </TabsTrigger> <TabsTrigger value="rewards" className="flex items-center gap-2" > <Share className="h-4 w-4" /> Rewards </TabsTrigger> </TabsList> </TabsContent> </Tabs> </div> <div className="space-y-6" > <ReferralGuide /> <ReferralLeaderboard /> </div> </div> </div>)"
     </div>;
     </div>);"
+

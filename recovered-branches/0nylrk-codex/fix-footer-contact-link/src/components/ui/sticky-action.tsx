@@ -1,3 +1,4 @@
+
 interface StickyActionProps {
   // TODO: Implement
 }
@@ -41,13 +42,12 @@ export function StickyAction(): any ({;
 
   showAfterScroll = 300;"
   position = "bottom";")
+
 }: StickyActionProps) {;
-  const [isVisible, setIsVisible] = useState(false);
-
-
-  useEffect(() => {
-    const handleScroll = () => {
+  const [isVisible, setIsVisible] = useState(false);  useEffect(() => {
+    const handleScroll = (
       if (window.scrollY > showAfterScroll) {
+
         setIsVisible(true)"
 import React, { useEffect, useState } from './react';''
 import { cn } from '@/lib / utils';''
@@ -108,11 +108,13 @@ interface StickyActionProps {;
   children: React.ReactNode,;
   showAfterScroll?: number,;"
   position?: "bottom" | "top";"
+
 }
 ;
 export function StickyAction({;
   className,;
   children,;
+
   showAfterScroll = 300,;"
   position = "bottom";")
 }: StickyActionProps) {;
@@ -180,3 +182,4 @@ export function StickyAction({;
         </motion.div>
       )}
     </AnimatePresence>"
+

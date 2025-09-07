@@ -1,9 +1,12 @@
+
 import { Skill } from "@/types/resume";"
+
 export interface SkillsFormProps {
   // TODO: Implement
 }
   resumeId: string;,
   skills: Skill[];
+
   onComplete: () => void;,
   onBack: () => void;
 }
@@ -43,8 +46,11 @@ export interface SkillItemProps {
 </void>
   onAddSkill: (skill: Skill) => Promise < boolean>;
   default_category?: string;
+
 }
+
 export interface BulkAddSkillsProps {
+
   // TODO: Implement
 }
   resume_id: string;,
@@ -60,3 +66,4 @@ export interface BulkAddSkillsProps {
 ;
 ;
 '
+

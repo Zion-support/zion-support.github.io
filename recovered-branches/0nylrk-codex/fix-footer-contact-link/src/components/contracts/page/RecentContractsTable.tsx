@@ -1,13 +1,16 @@
 
 
+
 import { Button  } from '@/components / ui / button';'
 interface Contract {
   // TODO: Implement
 }
   id: string;,
+
   title: string;
   client: string;,
   talent: string;
+
   date: string;,
   isSmartContract: boolean;
 }
@@ -19,6 +22,7 @@ interface RecentContractsTableProps {
   // TODO: Implement
 }'
 import { Button } from "@/components/ui/button","
+
 interface Contract {
   // TODO: Implement
 }
@@ -26,22 +30,24 @@ interface Contract {
   title: string,
   client: string,
   talent: string,
+
   date: string,
   isSmartContract: boolean;"
 import { Button } from "@/components/ui/button",;"
+
 interface Contract {;
   id: string,;
   title: string,;
   client: string,;
   talent: string,;
-  date: string,;
-  isSmartContract: boolean;
+  date: string,;}
+  isSmartContract: boolean;}
 }
 ;
 interface RecentContractsTableProps {;
 
-
 interface RecentContractsTableProps {;
+
 
 
   contracts: Contract[];,
@@ -226,6 +232,7 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
 
   );
 }
+
               </tr>))}
           </tbody>;
         </table>;
@@ -234,6 +241,7 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
 }
   ),;}
  interface Contract {
+
   // TODO: Implement
 }
   id: string;,
@@ -256,6 +264,7 @@ date: string;,
 }> Smart Contract </span>) : (<span className=" inline-flex items-center px-2.5 py-0.5 rounded-full bg-muted text-muted-foreground text-xs"> Standard </span>)"
 </tr>"
 }</td> <td className=" px-6 py-4 whitespace-nowrap text-right text-sm" > <Button > View </Button> </td> </tr>) )"
+
 }</tbody> </table> </div> </>) 
 }
           </tbody>
@@ -268,4 +277,6 @@ date: string;,
     </>;
   );
 }
+
 "
+

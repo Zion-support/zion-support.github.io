@@ -1,4 +1,5 @@
 
+
 import * as React from "react"""
 import { Slot } from "@radix-ui/react-slot"""
 import { cva, type VariantProps } from "class-variance-authority"""
@@ -44,9 +45,10 @@ const buttonVariants = cva(;"
     defaultVariants: {,"
   variant: "default"""
       size: "default"}}")
-)
 
+)
 export interface ButtonProps;
+
   extends React.ButtonHTMLAttributes<HTMLButtonElement>;
 </HTMLButtonElement>
   extends React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -91,19 +93,22 @@ const buttonVariants = cva(;"
     defaultVariants: {;,"
   variant: "default",;""
       size: "default"}}")
-);
 
+);
 export interface ButtonProps;
+
   extends React && React.ButtonHTMLAttributes<HTMLButtonElement>;
 </Comp>
     VariantProps<typeof buttonVariants> {;
 </typeof>
 const Button = React && React.forwardRef<HTMLButtonElement, ButtonProps>(;
 </HTMLButtonElement>
+
   extends React.ButtonHTMLAttributes < HTMLButtonElement>;
-    VariantProps < typeof button_variants> {
-  as_child?: boolean;
+    VariantProps < typeof button_variants> {}
+  as_child?: boolean;}
 }
+
 const Button = React.forward_ref < HTMLButtonElement, ButtonProps>()
   ({ class_name, variant, size, as_child = false, ...props }, ref) => {"
     const Comp = as_child ? Slot : "button";"
@@ -116,10 +121,12 @@ const Button = React.forward_ref < HTMLButtonElement, ButtonProps>()
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
+
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
       />
+
 </Comp>
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,;
 </HTMLButtonElement>
@@ -145,3 +152,4 @@ const Button = React.forwardRef<HTMLButtonElement ButtonProps>(;
   ...props;
 }/>) 
 </Comp>"
+

@@ -1,3 +1,4 @@
+
 interface EmptyFraudStateProps {
   // TODO: Implement
 }
@@ -72,3 +73,4 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
       </p>;"
         <Button variant="outline" on_click={onResetFilters}>Clear Filters</Button>)}"
     </div>);"
+

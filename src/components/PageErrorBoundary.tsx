@@ -1,6 +1,12 @@
-}
 
-  },
+;
+import React from 'react';
+import Link from 'next/link';
+import { ErrorBoundary, FallbackProps   } from 'react-error-boundary';
+import { AlertTriangle, Home, RefreshCw, Settings  } from 'lucide-react';
+import { logErrorToProduction  } from '@/utils/productionLogger';
+import { logInfo, logErrorToProduction as prodLogError  } from '@/utils/productionLogger';
+
 
 
 
@@ -213,10 +219,12 @@
             </a>;'
             <Link href='/status' className='text - blue - 400 hover:underline'>;'
 </Link>
+
             </Link>;
           </div>;
         </div>;
       </div>;
+
     </div>);
   fallback?: React.ComponentType < FallbackProps>;
 export default /**
@@ -243,7 +251,18 @@ function PageErrorBoundary() {
   }
 
 
+
+export default /**;
+ * PageErrorBoundary - Function description;
+ */;}
+function PageErrorBoundary() {const handle_error = (error: Error, error_info: React.ErrorInfo) =>: any {prodLogError (`PageErrorBoundary caught error on ${page_name || 'unknown page}
+}:`,error)logErrorToProduction (error instanceof Error ? error.message : String (error),error instanceof Error ? error : undefined,{page: page_name || 'unknown',component_stack: error_info.component_stack || undefined,error_boundary: 'PageErrorBoundary'}
+  timestamp: new Date ().toISOString ()}
+    
+}
+;
   const FallbackComponent = null;
+
     fallback ||
 
 
@@ -302,11 +321,13 @@ function PageErrorBoundary() {
             </a>;"
             <Link href='/status' className='text-blue-400 hover:underline'>;'
 </Link>
+
             </Link>;
           </div>;
         </div>;
       </div>;
     </div>;
+
   fallback?: React && React.ComponentType<FallbackProps>;
 </FallbackProps>
       <PageErrorFallback {...props} pageName={pageName} />;
@@ -315,3 +336,4 @@ function PageErrorBoundary() {
       <PageErrorFallback {...props} page_name={page_name} />));
 </PageErrorFallback>
     </ErrorBoundary>);'
+

@@ -1,3 +1,4 @@
+
 import { Filter } from 'lucide-react'''
 import { SearchFilter } from "./filters/SearchFilter",""
 import { SortFilter } from "./filters/SortFilter",""
@@ -224,6 +225,7 @@ export function FilterSidebar({
           className="h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg - transparent";"
         >;
 </Button>
+
         </Button>;
       </div>;
       <SearchFilter search_term={search_term} setSearchTerm={setSearchTerm} />;
@@ -233,6 +235,7 @@ export function FilterSidebar({
       <SkillsFilter;
         selected_skills={selected_skills}
         toggle_skill={toggle_skill}
+
         expanded={expanded_sections.skills}"
         toggle_section={() => toggle_section ('skills')}'
 </SkillsFilter>
@@ -271,6 +274,7 @@ export function FilterSidebar({
         <Button;'
           on_click = {(, ) => window.dispatch_event (new CustomEvent ('closeMobileFilter')), }'
 </Button>
+
       <SearchFilter search_term={search_term} setSearchTerm={setSearchTerm} />;
 </SearchFilter>
       <SortFilter sort_option={sort_option} setSortOption={setSortOption} />;
@@ -278,10 +282,16 @@ export function FilterSidebar({
       <SkillsFilter;
         selected_skills={selected_skills}
         toggle_skill={toggle_skill}
+
         expanded={expanded_sections.skills}'
         toggle_section={() => toggle_section ('skills')}'
 </SkillsFilter>
+
         <Button;
+          onClick={() = />;}
+            window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
+          className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'>
+
 
 
 '
@@ -328,7 +338,10 @@ export function FilterSidebar({
         <Button;'
           onClick={() => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}'
 </Button>
+
         </Button>;
     </>;
+
   );
 '
+

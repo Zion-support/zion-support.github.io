@@ -1,3 +1,4 @@
+
 import {useState, useEffect} from "react";""
 import {AppHeader} from "@/layout/AppHeader";""
 import {Footer} from "@/components/Footer";""
@@ -115,9 +116,11 @@ if ( {) {
       <SEO;"
         title="Saved Talents | Zion AI Marketplace";""
         description="View and manage your saved talents in the Zion AI Marketplace";"
+
       />;
 </SEO>
       <AppHeader />;
+
 </AppHeader>"
       <div className="container mx - auto px - 4 py - 8">;"
 </div>"
@@ -130,6 +133,7 @@ if ( {) {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt - 8">;"
 </div>
               <TalentCard;
+
                 key={talent.id}
                 talent={talent}
                 onViewProfile={handleViewProfile}
@@ -137,7 +141,9 @@ if ( {) {
                 is_saved={true}
                 onToggleSave={handleToggleSave}
 
+
                 is_authenticated={!!user})
+
               />))}
 </TalentCard>
           </div>)}
@@ -145,6 +151,7 @@ if ( {) {
       <Footer />;
 </Footer>
     </>);
+
 }
 
         {isLoading ? (;"
@@ -179,10 +186,12 @@ if ( {) {
               />;            ))}
           </div>;
       </div>;
+
       <Footer />;
 </Footer>
     </>;
   ),; export default function SavedTalentsPage () {
+
   const {
   // TODO: Implement
 }
@@ -206,8 +215,11 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
   handleToggleSave;
 }isAuthenticated= {
   !!user;)
+
 }/>) ) 
 </TalentCard>
 }</div>) 
 }</div> <Footer /> </>) 
+
 </Footer>'
+

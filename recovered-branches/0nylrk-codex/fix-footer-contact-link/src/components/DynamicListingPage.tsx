@@ -1,4 +1,5 @@
 
+
 import React from 'react';''
 import {useState, useEffect} from "react";""
 import {useNavigate} from "react-router-dom";""
@@ -87,13 +88,15 @@ interface PriceRange {
       selectedRating === null |
       (listing.rating !== undefined && listing.rating >= selectedRating);
     return matchesSearch && matchesCategory && matchesPrice && matchesRating;
+
   });
-  const handleRequestQuote = (listingId: string) => {
+  const handleRequestQuote = (
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
     setTimeout(() => {
       setIsLoading(false)
       if (listing) {
+
         toast({"
           title: "Quote Requested"",
   description: `Your quote request for ${listing.title} has been sent.`)
@@ -273,13 +276,14 @@ if ( {) {
               category: listing.category,
               image: listing.images?.[0];,
   id: listing.id,;
-              title: listing.title,;
-              category: listing.category,;
-              image: listing.images?.[0];
 
+              title: listing.title,;
+              category: listing.category,;}
+              image: listing.images?.[0];}
             }
           })
         });
+
       }
 
   return (
@@ -374,11 +378,13 @@ if ( {) {
                 <div className="mt-6 px-2">;"
 </div>
                   <Slider;
+
                     defaultValue={[priceRange && priceRange.min, priceRange && priceRange.max]}
                     min={priceRange && priceRange.min}
                     max={priceRange && priceRange.max}
                     step={(priceRange && priceRange.max - priceRange && priceRange.min) / 100}
                     value={currentPriceFilter}
+
                     onValueChange={handleSliderChange}"
                     className="mb-4"""
                     className="mb-4""
@@ -401,10 +407,12 @@ if ( {) {
 </div>
                   <Slider;
                     defaultValue={[priceRange.min, priceRange.max]}
+
                     min={priceRange.min}
                     max={priceRange.max}
                     step={(priceRange.max - priceRange.min) / 100}
                     value={currentPriceFilter}
+
                     onValueChange={handleSliderChange}"
                     className="mb-4""
                   />
@@ -418,39 +426,42 @@ if ( {) {
   const [currentPriceFilter, setCurrentPriceFilter] = useState<[number, number]>([
     initialPrice.min,
     initialPrice.max;)]
-  ]),
 
-  const handleSliderChange = (values: number[]) => {
-    setCurrentPriceFilter([values[0], values[1]])
+  ]),
+  const handleSliderChange = (
+    setCurrentPriceFilter([values[0], values[1]])) => {
+  return $3;}
+}
   },
   const filteredListings = allListings.filter(listing => {const matchesSearch = !searchQuery || )
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
       listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
+
     "
     const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory,      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())));""
     const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;"
+
     const matchesPrice = listing.price === null || (
       listing.price >= currentPriceFilter[0] && 
       listing.price <= currentPriceFilter[1])
     ),
-    
     const matchesRating = 
       selectedRating === null || 
+
       (listing.rating !== undefined && listing.rating >= selectedRating),
     
     return matchesSearch && matchesCategory && matchesPrice && matchesRating;
-  }),
 
-  const handleRequestQuote = (listingId: string) => {
+  }),
+  const handleRequestQuote = (
     setIsLoading(true),
-    
     const listing = allListings.find(item => item.id === listingId),
-    
     setTimeout(() => {
       setIsLoading(false),
       if (listing) {
         toast({
+
           title: &quot;Quote Requested&quot;,
           description: `Your quote request for ${listing.title} has been sent.`)
         }),
@@ -464,10 +475,12 @@ if ( {) {
               category: listing.category,
               image: listing.images?.[0]
             }          })
+
         })
       }
     }, 500)
   },
+
 "
   return (_<div className="min-h-screen bg-zion-blue py-12 px-4">"
 </div>"
@@ -512,9 +525,11 @@ value={selectedCategory} )
                     <SelectItem value=&quot;all" className="text-white">All Categories</SelectItem>""
                       <SelectItem key={filter.value} value={filter.value} className="text-white">"
 </SelectItem>
+
                         {filter.label}                      </SelectItem>
                   </SelectContent>
                 </Select>
+
               </div>
               "
               <div className="mb-6">"
@@ -686,9 +701,11 @@ value={selectedCategory} )
                 variant="outline""
                       )}
                     </Button>;
+
                 </div>
               </div>
                     </Button>;
+
               <Button;"
                 variant="outline"""
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10""
@@ -958,12 +975,18 @@ value={selectedCategory} )
 </ProductListingCard>"
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;"
 </div>
+
                   <ProductListingCard;
+key={listing.id}
+                    listing={listing}
+                    view={view}
+                    onRequestQuote={handleRequestQuote}
                     key={listing.id}
                     listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
                   />
+
 </ProductListingCard>
               </div>"
               <div className="text-center py-20">"
@@ -986,10 +1009,12 @@ value={selectedCategory} )
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" :"grid-cols-1"}`}>;"
 </div>
                   <ProductListingCard ;
+
                     key={listing.id}                    listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
                   />;
+
 </ProductListingCard>
               </div>;"
               <div className="text-center py-20">;"
@@ -1002,15 +1027,19 @@ value={selectedCategory} )
 </Button>
                 </Button>;
               </div>;
+
           </div>;
         </div>;
       </div>;
     </div>;
+
+
                 </Button>;
               </div>)}
           </div>;
         </div>;
       </div>;
+
     </div>);
   ),;  const [selectedRating, setSelectedRating] = useState<number | null> (null);
 </number>
@@ -1068,3 +1097,4 @@ return (<div className="min-h-screen bg-zion-blue py-12 px-4"> <div className="c
         </div>
       </div>
     </div>"
+

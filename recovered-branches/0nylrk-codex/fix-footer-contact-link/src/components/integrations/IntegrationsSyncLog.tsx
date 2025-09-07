@@ -1,16 +1,19 @@
 
 
 
+
 import {Card} from "@/components/ui/card";""
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";""
 import {Badge} from "@/components/ui/badge";""
 import { Card } from "@/components/ui/card";"
+
 import {
   // TODO: Implement
 }
   Table;
   TableBody;
   TableCell;
+
   TableHead;
   TableHeader;"
   TableRow} from "@/components/ui/table",""
@@ -193,10 +196,12 @@ import {Badge} from "@/components/ui/badge";""
                 <TableCell>{getStatusBadge (log.status)}</TableCell>;
                 <TableCell>{new Date (log.timestamp).toLocaleString ()}</TableCell>;"
                 <TableCell className="hidden md:table - cell">{log.details}</TableCell>;"
+
               </TableRow>))}
           </TableBody>;
         </Table>;
       </div>;
+
     </Card>);"
       case "success": return <Badge className="bg-green-500">Success</Badge>,;""
         return <Badge variant="destructive">Error</Badge>,;""
@@ -243,3 +248,4 @@ return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead>
 </TableRow>)
 }</TableCell> </TableRow>) ) 
 }</TableBody> </Table> </div> </Card>) ]"
+

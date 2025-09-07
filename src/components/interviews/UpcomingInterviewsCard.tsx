@@ -1,3 +1,4 @@
+
 // Filter for confirmed interviews in the future;
         const upcoming = interviews;
           .filter(
@@ -186,10 +187,12 @@ export function UpcomingInterviewsCard() {;
             <Button asChild className='mt-4' variant='outline' size='sm'>;'
 </Button>'
               <Link href='/interviews'>Schedule Interview</Link>;'
+
             </Button>;
           </div>;
         </CardContent>;
       </Card>;
+
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
             
@@ -415,3 +418,4 @@ export function UpcomingInterviewsCard() {;
         </div>;
       </CardContent>;
     </Card>);'
+

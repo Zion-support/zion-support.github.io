@@ -4,11 +4,13 @@ export interface OperatorSession {
 }
   id: string;,
   name: string;
+
   status: "active" | "inactive" | "busy";",
   currentSessions: string[];
   tags: string[];,
   createdAt: Date;
   updatedAt: Date;
+
 }
 
 export interface SupportEvent {
@@ -16,23 +18,28 @@ export interface SupportEvent {
 }
   type: string;,
   sessionId: string;
+
   payload: any;,
   timestamp: Date;
+
 }
 
 
 // Operator utilities;
 export const operator = {
   // Add operator functionality here;
+
   logEvent: (event: any) => null;,
   getEvents: () => []
   getEventById: (id: string) => null;
+
 }
 
   logEvent: (event: any) => null,
   getEvents: () => [],
   getEventById: (id: string) => null;
 };
+
 
 
   tagOperatorSession(sessionId: string, tag: string): void {
@@ -47,14 +54,15 @@ export const operator = {
 }
     this.events.push(event);"
     console.log("Support event logged:", event);"
+
   }
 
-  getOperatorSessions(): OperatorSession[] {
-    return Array.from(this.sessions.values());
+  getOperatorSessions(): OperatorSession[] {}
+    return Array.from(this.sessions.values());}
   }
 
-  getSupportEvents(): SupportEvent[] {
-    return [...this.events];
+  getSupportEvents(): SupportEvent[] {}
+    return [...this.events];}
   }
 }
 

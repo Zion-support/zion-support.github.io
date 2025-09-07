@@ -1,3 +1,4 @@
+
 }
     setLocalIsSaved(!localIsSaved)
     if (onToggleSave) {
@@ -84,3 +85,4 @@ export function TalentCardSaveButton(): any ({;
 </Heart>
     </button>;
 }/> </button>);"
+

@@ -1,3 +1,4 @@
+
 import * as React from 'react';''
 import MainLayout from '../components/layout/MainLayout';'
 import {
@@ -65,10 +66,12 @@ const accessibilityFeatures = [
       "Progress indicators",""
       "Customizable interface complexity""]
     ]
+
   }
 ];
 
 const standardsCompliance = [
+
   {"
     standard: "WCAG 2.1 AA",""
     description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",""
@@ -465,10 +468,12 @@ export default function AccessibilityPage() {
 </p>
                   </p>
                 </div>
+
               </motion.div>
             </div>
           </div>
         </section>
+
 "
         <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">"
 </section>"
@@ -500,3 +505,4 @@ export default function AccessibilityPage() {
         </section>
       </div>
     </MainLayout>"
+

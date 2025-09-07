@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";""
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
 import {Button} from "@/components/ui/button";""
@@ -22,11 +23,13 @@ import { PlusCircle, Save, Trash, Play } from "lucide-react",""
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",""
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";""
 import { toast } from "sonner";"
+
 export function WebhookManager() {
   const {
   // TODO: Implement
 }
     webhooks;
+
 
     loading;
     error;
@@ -68,10 +71,11 @@ export function WebhookManager() {
   
   useEffect(() => {
     fetchWebhooks()
+
   }, []),
-  
-  const handleAddEvent = () => {
+  const handleAddEvent = (
     if (!newWebhook.selectedEvent) return,
+
     
 
 
@@ -98,9 +102,13 @@ export function WebhookManager() {
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],"
       selectedEvent: "" as WebhookEventType;")
+
     })
+  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {}
+    await testWebhook(webhookId, eventType)}
   }
   },
+
   
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
@@ -294,12 +302,14 @@ export function WebhookManager() {
                         <Button;"
                           variant="outline"""
                           size="sm"")
+
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
 </Button>
                         </Button>
                       </div>
                     </div>
                   </div>
+
                 </CardHeader>"
                 <CardContent className="py-2">"
 </CardContent>"
@@ -394,10 +404,12 @@ export function WebhookManager() {
                           size="sm";"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
 </Button>
+
                         </Button>;
                       </div>;
                     </div>;
                   </div>;
+
                 </CardHeader>;"
                 <CardContent className="py - 2">;"
 </CardContent>"
@@ -446,10 +458,12 @@ export function WebhookManager() {
 </SelectContent>"
                       <SelectItem value="test_event">Test (generic)</SelectItem>;"
                         </SelectItem>;
+
                     </SelectContent>;
                   </Select>;
                 </CardFooter>;
               </Card>;
+
           </div>;"
                     {testResult.responseBody || '<empty>'}'
 </empty>
@@ -487,9 +501,12 @@ export function WebhookManager() {
                     {testResult.responseBody || '<empty>'}'
 </empty>
                   </pre>;
+
                 </div>;
               </div>;
             </CardContent>;
           </Card>)}
       </div>;
+
     </div>);'
+

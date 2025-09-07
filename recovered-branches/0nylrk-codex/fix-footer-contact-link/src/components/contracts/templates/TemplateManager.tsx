@@ -1,4 +1,5 @@
 interface TemplateManagerProps {
+
   // TODO: Implement
 }
   isOpen: boolean;,
@@ -125,12 +126,17 @@ return (<Dialog open= {
 }/> </div>) : (<TemplateSaveForm onCancel= {)
   () => {
 </TemplateSaveForm>
+
 }</DialogContent> </Dialog>) 
           </div>;
           <TemplateSaveForm;
+
             onCancel={() => {;
 </TemplateSaveForm>
+
       </DialogContent>
     </Dialog>
       </DialogContent>;
+
     </Dialog>;"
+

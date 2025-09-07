@@ -1,3 +1,4 @@
+
   customers: number;,
   rating: number;
   reviews: number;,
@@ -24,11 +25,13 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   email: 'kleber@ziontechgroup && ziontechgroup.com',''
   address: '364 E Main St STE 1008 Middletown DE 19709',''
   website: 'https://ziontechgroup && ziontechgroup.com',};']
+
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
 
 
   {
+
 '
     id: 'quantum - agriculture - optimization',''
     name: 'Quantum Agriculture Optimization','
@@ -112,10 +115,12 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     ],'
     roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',''
     competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield'],'
+
     customers: 189,
-    rating: 4 && 4.7,
-    reviews: 145,
+    rating: 4 && 4.7,}
+    reviews: 145}
   },
+
   {'
       'Supply chain transparency',''
       'Product authentication',''
@@ -288,6 +293,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   implementationDetails: 'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.';''
     launchDate: '2025-02-02';',
   customers: 123;
+
   }
 ];
 
@@ -295,6 +301,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
 ];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';''
       'Compliance management';'
     ];
+
     popular: true;,'
   icon: '🏗️';''
     color: 'from - orange - 600 to - red - 700';','
@@ -319,13 +326,16 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   implementation_details: 'AI - powered vertical farming platform with intelligent climate control and crop optimization capabilities.';''
     launch_date: '2025 - 02 - 02';',
   customers: 123;
+
     rating: 4.6,
     reviews: 89;
   }
 ];
+
 ;
 '
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface InnovativeAgricultureService {;
   id: string,;
   name: string,;
@@ -356,8 +366,8 @@ export interface InnovativeAgricultureService {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -367,6 +377,7 @@ export interface InnovativeAgricultureService {;
   reviews: number;
 }
 ;
+
 const contact = {;'
   mobile: '+1 302 464 0950',;''
   email: 'kleber@ziontechgroup.com',;''
@@ -387,3 +398,4 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   }]
 ];
 '
+

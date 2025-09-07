@@ -1,5 +1,6 @@
 
 
+
 import {useState} from 'react';''
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';''
 import {quoteRequestService} from '@/services/quoteRequestService';''
@@ -91,6 +92,7 @@ export const useAdminQuotes = () => {;
   // Update quote status mutation;
   const updateStatusMutation = useMutation({)
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+
       quoteRequestService && quoteRequestService.updateStatus(id, status);
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
@@ -98,6 +100,7 @@ export const useAdminQuotes = () => {;
       quoteRequestService.updateStatus(id, status),
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
     onSuccess: () => {
+
       toast({'
         title: "Status updated"","
   description: "The quote request status has been updated"")"
@@ -156,11 +159,12 @@ export const useAdminQuotes = () => {;
         title: "Error";","
   description: "Failed to update quote: " + error && error.message,""
         variant: "destructive"")
+
       })
     }
-  });
-    },
+  });    },
     onError: (error: Error) => {
+
       toast({"
         title: "Error",""
         description: "Failed to update quote: " + error.message,""
@@ -382,11 +386,13 @@ if ( {) {
         title: "Error",""
         description: "Failed to delete quote: " + error.message,""
         variant: "destructive"")
+
       })
 ;
     return true;
   }),;
   // Update quote status mutation;
+
   const updateStatusMutation = useMutation({;)
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>;
       quoteRequestService.updateStatus(id, status),;
@@ -402,10 +408,12 @@ if ( {) {
         title: "Error",;""
         description: "Failed to update status: " + error.message,;""
         variant: "destructive";")
+
       });
     }
   }),;
   // Archive/Unarchive mutation;
+
   const toggleArchiveMutation = useMutation({;)
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>;
       quoteRequestService.toggleArchive(id, isArchived),;
@@ -423,6 +431,7 @@ if ( {) {
         title: "Error",;""
         description: "Failed to update quote: " + error.message,;""
         variant: "destructive";")
+
       });
     }
   }),;
@@ -430,6 +439,7 @@ if ( {) {
   const deleteMutation = useMutation({;)
     mutationFn: (id: string) => quoteRequestService.delete(id),;
     onSuccess: () => {;
+
       toast({;"
         title: "Quote deleted",;""
         description: "The quote request has been permanently deleted";")
@@ -441,6 +451,7 @@ if ( {) {
         title: "Error",;""
         description: "Failed to delete quote: " + error.message,;""
         variant: "destructive";")
+
       });
     }
   }),;
@@ -455,32 +466,20 @@ if ( {) {
     searchQuery,;
     setSearchQuery,;
     dateRange,;
-    setDateRange,;
-    updateStatus: (id: string, status: QuoteStatus) =>;
+    setDateRange,;}
+    updateStatus: (id: string, status: QuoteStatus) =>;}
       updateStatusMutation.mutate({ id, status }),;
     toggleArchive: (id: string, isArchived: boolean) =>;
-
-
-
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }
-
-    setDateRange,
     updateStatus: (id: string, status: QuoteStatus) => 
       updateStatusMutation && updateStatusMutation.mutate({ id, status });
     toggleArchive: (id: string, isArchived: boolean) => 
       toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation && deleteMutation.mutate(id)}
-};
-    date_range;
-    setDateRange,
-    update_status: (id: string, status: QuoteStatus) =>;
-      updateStatusMutation.mutate ({ id, status });
-    toggle_archive: (id: string, is_archived: boolean) =>;
-      toggleArchiveMutation.mutate ({ id, is_archived });
-    delete_quote: (id: string) => delete_mutation.mutate (id)}
 }
+
 ;"
 import { useState } from 'react',;''
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;''
@@ -612,3 +611,4 @@ export const useAdminQuotes = () => {;
 })
 });
 '
+

@@ -1,6 +1,8 @@
+
   id: string;,
   name: string;
   description: string;,
+
   category: string;
   price: string;,
   features: string[];
@@ -10,11 +12,14 @@
   marketSize: string;
   competitiveAdvantage: string;,
   implementationTime: string;
+
   roi: string;,
+
   link: string;
 
 
   {
+
     id: 'quantum-machine-learning'','
   name: 'Quantum Machine Learning Platform'''
     description: 'Revolutionary platform that combines quantum computing with machine learning for unprecedented AI capabilities and computational power.'','
@@ -27,6 +32,7 @@
       'Quantum feature selection'''
       'Quantum clustering'''
       'Real-time quantum processing'']
+
     ]
     benefits: ['
       '1000x faster ML training'''
@@ -42,6 +48,7 @@
       'Material science'''
       'Cryptographic analysis'']
     ]
+
     targetAudience: ['
       'Research institutions'''
       'Pharmaceutical companies'''
@@ -76,6 +83,7 @@
       'Low-power consumption'''
       'Real-time learning'''
       'Adaptive algorithms'']
+
     ]
     benefits: ['
       '100x more energy efficient'''
@@ -91,6 +99,7 @@
       'Robotics'''
       'Sensor networks'']
     ]
+
     targetAudience: ['
       'IoT companies'''
       'Robotics manufacturers'''
@@ -119,6 +128,7 @@
       'Metabolic pathway optimization'''
       'Biological simulation'''
       'Lab automation integration'']
+
     ]
     benefits: ['
       'Faster biological design'''
@@ -134,6 +144,7 @@
       'Environmental remediation'''
       'Biofuel production'']
     ]
+
     targetAudience: ['
       'Pharmaceutical companies'''
       'Agricultural companies'''
@@ -153,12 +164,14 @@
       'AI'''
       'Genetic Engineering'']
   use_cases: string[];,
+
   target_audience: string[];
   market_size: string;,
   competitive_advantage: string;
   implementation_time: string;,
   roi: string;
   link: string;
+
   {'
       'Pharmaceutical companies',''
       'Agricultural companies',''
@@ -191,6 +204,7 @@
       'Network synchronization'''
       'Environmental monitoring'''
       'Medical imaging capabilities'']
+
     ]
     benefits: ['
       '1000x more precise measurements'''
@@ -206,6 +220,7 @@
       'Scientific research'''
       'Industrial inspection'']
     ]
+
     targetAudience: ['
       'Medical device companies',''
       'Environmental monitoring firms',''
@@ -235,6 +250,7 @@
       'Neural feedback systems'''
       'Safety protocols'''
       'Real-time processing'']
+
     ]
     benefits: ['
       'Direct brain communication'''
@@ -250,6 +266,7 @@
       'Gaming and entertainment'''
       'Communication aids'']
     ]
+
     targetAudience: ['
       'Medical device companies',''
       'Research institutions',''
@@ -264,10 +281,12 @@
       'Assistive Technology'''
       'Research'']
     ]
+
   }
-  {
-    ]
+  {}
+    ]}
   }
+
   {'
       'Manufacturing companies',''
       'Logistics companies',''
@@ -378,6 +397,7 @@
   competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';''
     implementationTime: '7-9 weeks';','
   roi: '800% within 18 months';'
+
 ;
   }
 ];
@@ -395,8 +415,8 @@ export interface Service {;
   competitiveAdvantage: string,;
   implementationTime: string,;
   roi: string,;
-  link: string,;
-  tags: string[];
+  link: string,;}
+  tags: string[];}
 }
 ;
 export const emergingTech2027Services: Service[] = [;
@@ -415,6 +435,7 @@ export const emergingTech2027Services: Service[] = [;
     useCases: [;'
       'Drug discoveryFinancial modelingClimate predictionMaterial scienceCryptographic analysis';']
     ],;
+
     targetAudience: [;'
       'Research institutionsPharmaceutical companiesFinancial institutionsGovernment agenciesTech companies';']
     ],;'
@@ -424,6 +445,7 @@ export const emergingTech2027Services: Service[] = [;
     roi: '1200% within 18 months',;''
     link: 'https://ziontechgroup.com/services/quantum-machine-learning',;''
     tags: ['Quantum ComputingMachine LearningAIResearchOptimization'];'
+
   },;
   {;'
     id: 'neuromorphic-computing',;''
@@ -440,6 +462,7 @@ export const emergingTech2027Services: Service[] = [;
     useCases: [;'
       'Edge computingIoT devicesAutonomous systemsRoboticsSensor networks';']
     ],;
+
     targetAudience: [;'
       'IoT companiesRobotics manufacturersEdge computing providersSensor manufacturersAutonomous vehicle companies';']
     ],;'
@@ -449,6 +472,7 @@ export const emergingTech2027Services: Service[] = [;
     roi: '800% within 12 months',;''
     link: 'https://ziontechgroup.com/services/neuromorphic-computing',;''
     tags: ['Neuromorphic ComputingAIEdge ComputingIoTRobotics'];'
+
   },;
   {;'
     id: 'synthetic-biology-platform',;''
@@ -465,6 +489,7 @@ export const emergingTech2027Services: Service[] = [;
     useCases: [;'
       'Pharmaceutical developmentAgricultural biotechnologyIndustrial biotechnologyEnvironmental remediationBiofuel production';']
     ],;
+
     targetAudience: [;'
       'Pharmaceutical companiesAgricultural companiesIndustrial biotech firmsResearch institutionsEnvironmental companies';']
     ],;'
@@ -474,6 +499,7 @@ export const emergingTech2027Services: Service[] = [;
     roi: '1500% within 24 months',;''
     link: 'https://ziontechgroup.com/services/synthetic-biology-platform',;''
     tags: ['Synthetic BiologyBiotechnologyAIGenetic EngineeringResearch'];'
+
   },;
   {;'
     id: 'quantum-sensors-network',;''
@@ -490,6 +516,7 @@ export const emergingTech2027Services: Service[] = [;
     useCases: [;'
       'Medical imagingEnvironmental monitoringNavigation systemsScientific researchIndustrial inspection';']
     ],;
+
     targetAudience: [;'
       'Medical device companiesEnvironmental monitoring firmsNavigation companiesResearch institutionsIndustrial companies';']
     ],;'
@@ -499,6 +526,7 @@ export const emergingTech2027Services: Service[] = [;
     roi: '900% within 15 months',;''
     link: 'https://ziontechgroup.com/services/quantum-sensors-network',;''
     tags: ['Quantum TechnologySensorsMedical ImagingEnvironmentalNavigation'];'
+
   },;
   {;'
     id: 'brain-computer-interface',;''
@@ -515,6 +543,7 @@ export const emergingTech2027Services: Service[] = [;
     useCases: [;'
       'Assistive technologyMedical rehabilitationResearch applicationsGaming and entertainmentCommunication aids';']
     ],;
+
     targetAudience: [;'
       'Medical device companiesResearch institutionsAssistive technology firmsGaming companiesHealthcare providers';']
     ],;'
@@ -524,6 +553,7 @@ export const emergingTech2027Services: Service[] = [;
     roi: '2000% within 30 months',;''
     link: 'https://ziontechgroup.com/services/brain-computer-interface',;''
     tags: ['Brain-Computer InterfaceNeural TechnologyMedicalAssistive TechnologyResearch'];'
+
   },;
   {;'
     id: 'quantum-internet-security',;''
@@ -540,6 +570,7 @@ export const emergingTech2027Services: Service[] = [;
     useCases: [;'
       'Government communicationsFinancial transactionsHealthcare data protectionMilitary communicationsCritical infrastructure';']
     ],;
+
     targetAudience: [;'
       'Government agenciesFinancial institutionsHealthcare organizationsMilitary organizationsCritical infrastructure';']
     ],;'
@@ -549,6 +580,7 @@ export const emergingTech2027Services: Service[] = [;
     roi: '1000% within 18 months',;''
     link: 'https://ziontechgroup.com/services/quantum-internet-security',;''
     tags: ['Quantum SecurityCybersecurityEncryptionGovernmentFinancial'];'
+
   },;
   {;'
     id: 'autonomous-robotics-platform',;''
@@ -565,6 +597,7 @@ export const emergingTech2027Services: Service[] = [;
     useCases: [;'
       'Manufacturing automationWarehouse operationsAgricultural automationService robotsExploration robots';']
     ],;
+
     targetAudience: [;'
       'Manufacturing companiesLogistics companiesAgricultural companiesService providersResearch institutions';']
     ],;'
@@ -574,6 +607,7 @@ export const emergingTech2027Services: Service[] = [;
     roi: '700% within 12 months',;''
     link: 'https://ziontechgroup.com/services/autonomous-robotics-platform',;''
     tags: ['RoboticsAIAutomationManufacturingLogistics'];'
+
   },;
   {;'
     id: 'quantum-materials-discovery',;''
@@ -590,6 +624,7 @@ export const emergingTech2027Services: Service[] = [;
     useCases: [;'
       'Semiconductor developmentBattery technologyAerospace materialsMedical devicesEnergy storage';']
     ],;
+
     targetAudience: [;'
       'Semiconductor companiesBattery manufacturersAerospace companiesMedical device companiesEnergy companies';']
     ],;'
@@ -599,6 +634,7 @@ export const emergingTech2027Services: Service[] = [;
     roi: '1100% within 20 months',;''
     link: 'https://ziontechgroup.com/services/quantum-materials-discovery',;''
     tags: ['Materials ScienceQuantum ComputingAIDiscoveryInnovation'];'
+
   },;
   {;'
     id: 'quantum-financial-modeling',;''
@@ -615,6 +651,7 @@ export const emergingTech2027Services: Service[] = [;
     useCases: [;'
       'Risk managementPortfolio optimizationMarket analysisStress testingRegulatory reporting';']
     ],;
+
     targetAudience: [;'
       'Investment banksHedge fundsAsset managersInsurance companiesRegulatory bodies';']
     ],;'
@@ -624,6 +661,7 @@ export const emergingTech2027Services: Service[] = [;
     roi: '900% within 16 months',;''
     link: 'https://ziontechgroup.com/services/quantum-financial-modeling',;''
     tags: ['Financial TechnologyQuantum ComputingRisk ManagementPortfolioModeling'];'
+
   },;
   {;'
     id: 'quantum-climate-modeling',;''
@@ -640,6 +678,7 @@ export const emergingTech2027Services: Service[] = [;
     useCases: [;'
       'Climate researchWeather forecastingEnvironmental planningPolicy developmentDisaster preparedness';']
     ],;
+
     targetAudience: [;'
       'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies';']
     ],;'
@@ -652,3 +691,4 @@ export const emergingTech2027Services: Service[] = [;
   }
 ;
 '
+

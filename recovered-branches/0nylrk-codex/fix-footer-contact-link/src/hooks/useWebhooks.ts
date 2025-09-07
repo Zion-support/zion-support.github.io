@@ -2,6 +2,7 @@
 
 
 
+
 import {useState} from "react";""
 import {useAuth} from "@/hooks/useAuth";""
 import {supabase} from "@/integrations/supabase/client";""
@@ -28,15 +29,18 @@ export interface Webhook {
   // TODO: Implement
 }
   id: string;,
+
   name: string;
   url: string;,
   event_types: WebhookEventType[];
+
   is_active: boolean;,
+
   created_at: string,
   last_triggered_at: string | null;
 }
-
 export interface TestWebhookResult {;
+
   status: number;,
   statusText: string,
   responseBody: string;
@@ -52,6 +56,7 @@ export function useWebhooks() {;
 </string>
   const [testResult, setTestResult] = useState<TestWebhookResult | null>(null);
 </TestWebhookResult>
+
   const [webhooks, set_webhooks] = useState < Webhook[]>([]);
   const [loading, set_loading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
@@ -64,20 +69,23 @@ export function useWebhooks() {;
     // import.meta may be undefined when this hook is executed in a Node;
     // environment (e.g. during server side rendering or tests). Using optional;
     // chaining avoids a TypeError in those cases and falls back to process.env.;
-    const env = (import.meta as any)?.env ?? process.env;
-    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL;
+    const env = (import.meta as any)?.env ?? process.env;}
+    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL;}
     return `${url}/functions / v1 / webhook - manager`;
   }
 ;'
   // Fetch user's webhooks;'
   const fetch_webhooks = async () => {
     // Check condition;
+
 if (return) {
   $2;
+
 }
     set_loading (true);
     set_error (null);
 ;
+
     try {
   // TODO: Implement
 }
@@ -94,12 +102,14 @@ if ( {) {
         headers: {'
           'Authorization': `Bearer ${session.access_token}`;''
           'Content - Type': 'application / json';'
+
         }
       });
 ;
       const result = await response.json ();
 ;
       // Check condition;
+
 if ( {) {
   $2;
 }'
@@ -111,12 +121,13 @@ if ( {) {
       const result = await response.json();
       if (!response.ok) {'
         throw new Error(result.error |'Failed to fetch webhooks')'
+
       }
       setWebhooks(result.webhooks |[])
-
 ;
-export function useWebhooks() {;
+export function useWebhooks() {;}
   const { user } = useAuth(),;
+
   const [webhooks, setWebhooks] = useState<Webhook[]>([]),;
 </Webhook>
   const [error, setError] = useState<string | null>(null),;
@@ -129,3 +140,4 @@ export function useWebhooks() {;
 </string>
   const [testResult, setTestResult] = useState<TestWebhookResult | null>(null),;
 </TestWebhookResult>'
+

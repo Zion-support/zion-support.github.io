@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";""
 import { Button } from "@/components/ui/button";""
 import { Header } from "@/components/Header";""
@@ -37,11 +38,13 @@ export default function Unauthorized() {
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center""
             >
 </Link>
+
             </Link>
           </div>
         </div>
       </div>
       <Footer />
+
 </Footer>
     </>)
   );
@@ -65,3 +68,4 @@ export default function Unauthorized() {
     </>);
 }
 "
+

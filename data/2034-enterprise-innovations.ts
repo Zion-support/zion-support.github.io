@@ -1,6 +1,8 @@
+
   id: string;,
   name: string;
   description: string;,
+
   category: string;
   price: string;,
   features: string[];
@@ -25,6 +27,7 @@
 
 
   {
+
       'Advanced AI algorithms',''
       'Machine learning systems',''
       'Automation frameworks',''
@@ -207,8 +210,8 @@
     scalability: 'Unlimited data center management';'
   }
 
-];
 
+];
   id: string,;
   name: string,;
   description: string,;
@@ -236,7 +239,6 @@
   website: string;
 }
 ;
-
 export interface EnterpriseService2034 {;
   id: string,;
   name: string,;
@@ -261,19 +263,21 @@ export interface EnterpriseService2034 {;
   security: string[],;
   scalability: string,;
   uptime: string,;
-  contact: string,;
-  website: string;
+  contact: string,;}
+  website: string;}
 }
 ;
   }
+
 ];'
     contact: '+1 302 464 0950',''
     website: 'https://ziontechgroup.com / ai - autonomous - data - center';'
+
   }
 ;
-
-export interface EnterpriseService2034 {;
-
+export interface EnterpriseService2034 {;}
   }
+
 ];
 '
+

@@ -1,6 +1,7 @@
 
 
 
+
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;''
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';''
 import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',''
@@ -97,27 +98,32 @@ serve(async (req) => {
 }
 const cors_headers = {'
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Methods': 'GET, POST, OPTIONSAccess - Control - Allow - Headers': 'Content - Type, Authorization, x - client - info_access - Control - Max - Age': '86400'}'
+
 ;
 // Initialize Supabase client;'
 const supabase_url = Deno.env.get ('SUPABASE_URL');''
 const supabaseServiceKey = Deno.env.get ('SUPABASE_SERVICE_ROLE_KEY');'
 ;
 // Check condition;
+
 if ( {) {
   $2;
 }'
   throw new Error ('Required environment variables are not set');'
+
 }
 const supabase = create_client (supabase_url, supabaseServiceKey);
 ;
 serve (async (req) => {
   // Handle CORS preflight requests;
   // Check condition;
+
 if ( {) {
   $2;
 }
     return new Response (null, {
       status: 204,)
+
       headers: cors_headers});
   }
   try {
@@ -134,16 +140,20 @@ if ( {) {
       url.hostname;
 ;
     // Check condition;
+
 if ( {) {
   $2;
 }'
       throw new Error ('No hostname or subdomain provided');'
+
     }
     // Extract tenant info;
     let tenant_info: TenantInfo | null = null,
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       // Direct subdomain lookup;
       const { data, error } = await supabase;'
@@ -154,6 +164,7 @@ if ( {) {
         .single ();
 ;
       // Check condition;
+
 if ( {) {
   $2;
 }'
@@ -195,6 +206,7 @@ if ( {) {
         const subdomain = hostname.split ('.')[0];'
         if () {) {
   $2;
+
 }
           const subdomain_result = await supabase;'
             .from ('whitelabel_tenants');''
@@ -204,6 +216,7 @@ if ( {) {
             .single ();
 ;
           // Check condition;
+
 if ( {) {
   $2;
 }
@@ -250,11 +263,13 @@ if ( {) {
       {
         headers: {'
           'Content - Type': 'application / json','
+
           ...cors_headers}}
     );
   } catch (error) {'
     console.error ('Tenant detector error:', error);'
     return new Response (
+
       JSON.stringify ({'
         error: error.message || 'Internal server error',''
         status: 'error';')'
@@ -303,10 +318,12 @@ if ( {) {
 });
 '
           'Content - Type': 'application / json','
+
           ...cors_headers}}
     );
   }
 });
+
 ;'
 import { serve } from 'https://deno.land/std@0.208.0/http/server.ts',;''
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.7',;'
@@ -443,3 +460,4 @@ if (subdomainParam) {
 });
 
 '
+

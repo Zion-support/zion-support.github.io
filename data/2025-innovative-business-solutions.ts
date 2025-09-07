@@ -1,6 +1,8 @@
+
   id: string;,
   name: string;
   tagline: string;,
+
   price: string;
   period: string;,
   description: string;
@@ -24,10 +26,12 @@
   market_size: string;
   growth_rate: string;,
   variant: string;
+
   contact_info: {,
   mobile: string;
     email: string;,
   address: string;
+
 export interface InnovativeBusinessSolution {
   // TODO: Implement
 }
@@ -42,15 +46,15 @@ export interface InnovativeBusinessSolution {
   category: string, realService: boolean,
   technology: string[], integrations: string[],
   useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: string,
-  contactInfo: {
-    },
+  competitors: string[], marketSize: string,}
+  growthRate: string, variant: string,}
+  contactInfo: {},
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number;
 }
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
       address: '364 E Main St STE 1008 Middletown DE 19709','
     real_implementation: true,'
@@ -60,8 +64,9 @@ export interface InnovativeBusinessSolution {
     rating: 4.7,
     reviews: 26;
 
-];
+
 ;
+
     realImplementation: true;,
   implementationDetails:'
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'''
@@ -117,6 +122,7 @@ export interface InnovativeBusinessSolution {
       'Python'''
       'TensorFlow'''
       'React'']
+
     ]
     integrations: ['
       'CRM systems'''
@@ -125,6 +131,7 @@ export interface InnovativeBusinessSolution {
       'Analytics tools'''
       'Business applications'']
     ]
+
     useCases: ['
       'Lead scoring'''
       'Sales forecasting'''
@@ -198,6 +205,7 @@ export interface InnovativeBusinessSolution {
       'Python'''
       'TensorFlow'''
       'React'']
+
     ]
     integrations: ['
       'Help desk systems'''
@@ -206,6 +214,7 @@ export interface InnovativeBusinessSolution {
       'Knowledge base systems'''
       'Social media platforms'']
     ]
+
     useCases: ['
       'Customer support automation'''
       'Chatbot implementation'''
@@ -279,6 +288,7 @@ export interface InnovativeBusinessSolution {
       'Python'''
       'TensorFlow'''
       'React'']
+
     ]
     integrations: ['
       'HRIS systems'''
@@ -287,6 +297,7 @@ export interface InnovativeBusinessSolution {
       'Performance management tools'''
       'Learning platforms'']
     ]
+
     useCases: ['
       'Recruitment automation'''
       'Workforce planning'''
@@ -360,6 +371,7 @@ export interface InnovativeBusinessSolution {
       'Python'''
       'TensorFlow'''
       'React'']
+
     ]
     integrations: ['
       'ERP systems'''
@@ -368,6 +380,7 @@ export interface InnovativeBusinessSolution {
       'Trading platforms'''
       'Risk management tools'']
     ]
+
     useCases: ['
       'Financial analysis'''
       'Risk management'''
@@ -441,6 +454,7 @@ export interface InnovativeBusinessSolution {
       'Python'''
       'TensorFlow'''
       'React'']
+
     ]
     integrations: ['
       'Project management tools'''
@@ -449,6 +463,7 @@ export interface InnovativeBusinessSolution {
       'Resource management systems'''
       'Communication tools'']
     ]
+
     useCases: ['
       'Project planning'''
       'Resource optimization'''
@@ -489,6 +504,7 @@ export interface InnovativeBusinessSolution {
   }
 ];'
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface InnovativeBusinessSolution {;
   id: string,;
   name: string,;
@@ -519,8 +535,8 @@ export interface InnovativeBusinessSolution {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -530,6 +546,7 @@ export interface InnovativeBusinessSolution {;
   reviews: number;
 }
 ;
+
     realImplementation: true;,
   implementationDetails:'
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'''
@@ -569,6 +586,7 @@ export interface InnovativeBusinessSolution {;
       'Python'''
       'TensorFlow'''
       'React'']
+
     ]
     integrations: ['
       'CRM systems'''
@@ -579,6 +597,7 @@ export interface InnovativeBusinessSolution {;
     ]
     useCases: [
   // AI Customer Service Platform;
+
   {'
     id: 'ai-customer-service-platform'','
   name: 'AI Customer Service Platform'''
@@ -609,6 +628,7 @@ export interface InnovativeBusinessSolution {;
       'Python'''
       'TensorFlow'''
       'React'']
+
     ]
     integrations: ['
       'Help desk systems'''
@@ -619,6 +639,7 @@ export interface InnovativeBusinessSolution {;
     ]
     useCases: [
   // AI HR Management Platform;
+
   {'
     id: 'ai-hr-management-platform'','
   name: 'AI HR Management Platform'''
@@ -649,6 +670,7 @@ export interface InnovativeBusinessSolution {;
       'Python'''
       'TensorFlow'''
       'React'']
+
     ]
     integrations: ['
       'HRIS systems'''
@@ -659,6 +681,7 @@ export interface InnovativeBusinessSolution {;
     ]
     useCases: [
   // AI Financial Analytics Platform;
+
   {'
     id: 'ai-financial-analytics-platform'','
   name: 'AI Financial Analytics Platform'''
@@ -689,6 +712,7 @@ export interface InnovativeBusinessSolution {;
       'Python'''
       'TensorFlow'''
       'React'']
+
     ]
     integrations: ['
       'ERP systems'''
@@ -699,6 +723,7 @@ export interface InnovativeBusinessSolution {;
     ]
     useCases: [
   // AI Project Management Platform;
+
   {'
     id: 'ai-project-management-platform'','
   name: 'AI Project Management Platform'''
@@ -738,6 +763,7 @@ export interface InnovativeBusinessSolution {;
       'Communication tools'']
     ]
     useCases: [
+
 }
 ;]
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
@@ -753,6 +779,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
       'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems',;''
       'Advanced analytics and reportingCustom business intelligence workflows';']
     ],;
+
     popular: true,;'
     icon: '📈',;''
     color: 'from-blue-500 to-indigo-600',;''
@@ -782,6 +809,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709','
     reviews: 26;,'
   website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.';''
@@ -789,6 +817,8 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
   customers: 38;
     rating: 4.7,
     reviews: 26;
+
   }
 ;
 ]'
+

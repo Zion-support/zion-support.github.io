@@ -1,10 +1,13 @@
 
+
 import { ResumeSelector, ResumeOption } from "../resume-selector";""
 import { Button } from "@/components/ui/button";"
+
 export interface ResumeTabProps {;
   selectedResumeId?: string | null;
   onSelectResume?: (resumeId: string) => void;
   onResumeSelected?: (resume: ResumeOption) => void;
+
   onApply?: () => Promise<void>;
 </void>"
     <div className="space-y-4">"
@@ -23,10 +26,12 @@ import { Button } from "@/components/ui/button",""
 import React from './react';''
 import { ResumeSelector, ResumeOption  } from '../resume - selector';''
 import { Button  } from '@/components / ui / button';'
+
 export interface ResumeTabProps {
   // TODO: Implement
 }
   selectedResumeId?: string | null,
+
   onSelectResume?: (resumeId: string) => void,
 </Button>
   onApply?: () => Promise<void>,
@@ -138,3 +143,4 @@ onApply?: () => Promise<void>;
         </div>
     </div>
     </div>;"
+

@@ -5,8 +5,8 @@ export interface DeployConfig {
   governanceMode: string;
   tokenActivation: boolean;,
   modules: {
-    token: boolean;
-    [key: string]: boolean;
+    token: boolean;}
+    [key: string]: boolean;}
   };
 }
 
@@ -15,11 +15,12 @@ export interface DeployResult {
 }
   success: boolean;,
   instanceId: string;
-  configPath: string;
-  message?: string;
+  configPath: string;}
+  message?: string;}
 }
 
 export function toSlug(name: string): string {
+
   // TODO: Implement
 }
   return name;
@@ -54,10 +55,12 @@ export async function perform_deploy (input: DeployInput): Promise < DeployResul
   // Check condition;
 if ( {) {
   $2;
+
 }
     ensure_dir (gpt_dir),
     const promptBasePath = path.join (gpt_dir, `${instance_slug}-prompt - base.md`),
     const prompt_base = `# ZionGPT Prompt Base\n\n_instance: ${input.instance_name}\n_language: ${input.default_language}\n_governance: ${input.governance_mode}\n\n_behaviors:\n- Assist with proposals, resumes, and marketplace tasks.\n- Route to domain experts per module.\n`,
+
     writeTextFile (promptBasePath, prompt_base),"
     assets.push ({ kind: "file", path: promptBasePath, description: "ZionGPT prompt base" }),""
     logs.push ({ timestamp: now_iso (), level: "info", action: "zion_gpt_initialized" });"
@@ -66,13 +69,14 @@ if ( {) {
   // Check condition;
 if ( {) {
   $2;
+
 }
     ensure_dir (dao_dir),
     const daoConfigPath = path.join (dao_dir, `${instance_slug}-dao.json`),
     writeTextFile (
       daoConfigPath,
       JSON.stringify (
-        {
+        {}
           treasury: `${instance_slug}-treasury`,
           governance_mode: input.governance_mode,
           quorum: 0.6,
@@ -80,6 +84,7 @@ if ( {) {
           constitution_doc: `/constitution`,)
           created_at: now_iso ()},
         null,
+
         2)),"
     assets.push ({ kind: "config", path: daoConfigPath, description: "DAO configuration" }),""
     logs.push ({ timestamp: now_iso (), level: "info", action: "dao_configured" });"
@@ -87,12 +92,14 @@ if ( {) {
   // Check condition;
 if ( {) {
   $2;
+
 }
     ensure_dir (token_dir),
     const tokenConfigPath = path.join (token_dir, `${instance_slug}-token.json`),
     writeTextFile (
       tokenConfigPath,
       JSON.stringify (
+
         {"
           symbol: "ZION$","
           decimals: 18,
@@ -104,6 +111,7 @@ if ( {) {
         2)),"
     assets.push ({ kind: "config", path: tokenConfigPath, description: "Token configuration" }),""
     logs.push ({ timestamp: now_iso (), level: "info", action: "token_configured" });"
+
   }
   // 3. Publish Assets;
   const wp_path = path.join (docs_dir, `whitepaper-${instance_slug}.md`),
@@ -112,6 +120,7 @@ if ( {) {
   const book_path = path.join (docs_dir, `zion - book-${instance_slug}.md`),
   const trailerScriptPath = path.join (docs_dir, `trailer - script-${instance_slug}.md`),
   // Check condition;
+
 if ( {) {
   $2;
 }
@@ -149,6 +158,7 @@ if ( {) {
       trailerScriptPath,)
       `# Launch Trailer Script\n\n_voiceover: Welcome to ${input.instance_name}, a sovereign digital nation built on Zion OS.\n`),"
     assets.push ({ kind: "file", path: trailerScriptPath, description: "Trailer script" });"
+
   }
   // Schedule launch stream (/summit);
   ensure_dir (events_dir),
@@ -156,6 +166,7 @@ if ( {) {
   writeTextFile (
     summitEventPath,
     JSON.stringify (
+
       {
         name: `${input.instance_name} Summit`,"
         route: "/summit",")
@@ -166,10 +177,12 @@ if ( {) {
   // 4. Activate Public Pages (record intent);"
   const pagesActivationPath = path.join (base_dir, "pages.json"),""
   const defaultNationRoute = `/nation/${to_slug (input.default_language || "default")}`,"
+
   writeTextFile (
     pagesActivationPath,
     JSON.stringify (
       {
+
         activate: [;"
           "/about",""
           "/manifesto",""
@@ -199,6 +212,7 @@ if ( {) {
     .map (([k]) => k);"
     .join (", ")}.`,""
   logs.push ({ timestamp: now_iso (), level: "info", action: "deploy_complete", details: { instance_slug } }),"
+
   return {
   // TODO: Implement
 }
@@ -207,22 +221,25 @@ if ( {) {
     config_path,
     assets,
 
-    logs;
-    summary;
+    logs;}
+    summary;}
     version}
 }
       changelogPath,;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
+
     ),;"
     assets.push({ kind: "file", path: changelogPath, description: "Changelog" });"
     } catch (error) {"
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
   if (input.modules.bookBuilder) {;
     ensureDir(docsDir);
+
     writeTextFile(;
       bookPath,;
       `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`;)
@@ -231,11 +248,13 @@ if ( {) {
     } catch (error) {"
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
   if (input.modules.launchKit) {;
     ensureDir(docsDir);
+
     writeTextFile(;
       trailerScriptPath,;
       `# Launch Trailer Script\n\nVoiceover: Welcome to ${input.instanceName}, a sovereign digital nation built on Zion OS.\n`;)
@@ -244,12 +263,14 @@ if ( {) {
     } catch (error) {"
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
   writeTextFile(;
     summitEventPath;
     JSON.stringify(;
+
       {name: `${input.instanceName} Summit`;"
         route: "/summit";",)
   scheduledAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()}
@@ -260,10 +281,12 @@ if ( {) {
   // 4. Activate Public Pages (record intent);"
   const pagesActivationPath = path.join(baseDir, "pages.json");""
   const defaultNationRoute = `/nation/${toSlug(input.defaultLanguage || "default")}`;"
+
   writeTextFile(;
     pagesActivationPath;
     JSON.stringify(;
       {;
+
         activate: [;"
           "/about";""
           "/manifesto";""
@@ -272,10 +295,12 @@ if ( {) {
           "/academy",;""
           "/marketplace",;""
           "/dao",;"]
+
           defaultNationRoute]},;
       null,;
       2;)
     );
+
   ),;"
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" }),;""
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });"
@@ -293,14 +318,16 @@ if ( {) {
     .map(([k]) => k);"
     .join(", ")}.`;""
   logs.push({ timestamp: nowIso(), level: "info", action: "deploy_complete", details: { instanceSlug } });"
+
   return {success: true;
     instanceSlug;
     configPath;
     assets;
-    logs;
-    summary;
+    logs;}
+    summary;}
     version}
     .map(([key]) => key),;
+
   if (optionalModules.length > 0) {;"
     const optionalPath = path.join(baseDir, "optional-modules.json");"
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),;"
@@ -308,29 +335,35 @@ if ( {) {
     } catch (error) {"
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
   const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules);
+
     .filter(([ v]) => v);
     .map(([k]) => k);"
     .join(", ")}.`,;""
   logs.push({ timestamp: nowIso(), level: "info", action: "deploy_complete", details: { instanceSlug } }),;"
+
   return {;
     success: true,;
     instanceSlug,;
     configPath,;
     assets,;
+
     logs;
     summary;
     version  } catch (error) {"
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
   if (input.modules.bookBuilder) {;
     ensureDir(docsDir);
+
     writeTextFile(;
       bookPath,;
       `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`;)
@@ -339,11 +372,13 @@ if ( {) {
     } catch (error) {"
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
   if (input.modules.launchKit) {;
     ensureDir(docsDir);
+
     writeTextFile(;
       trailerScriptPath,;
       `# Launch Trailer Script\n\nVoiceover: Welcome to ${input.instanceName}, a sovereign digital nation built on Zion OS.\n`;)
@@ -352,6 +387,7 @@ if ( {) {
     } catch (error) {"
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
@@ -365,20 +401,24 @@ if ( {) {
 
     summitEventPath,;
     JSON.stringify(;
+
       {;
         name: `${input.instanceName} Summit`,;"
         route: "/summit",;")
+
         scheduledAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()},;
       null,;
       2;
     );
   ),;
+
 "
           "/constitution",;""
           "/partners",;""
           "/academy",;""
           "/marketplace",;""
           "/dao",;"
+
           defaultNationRoute]},;
       null,;
       2;
@@ -387,9 +427,11 @@ if ( {) {
 
 
 }
+
   } catch (error) {"
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 }

@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { Card, CardContent } from "@/components/ui/card";""
 import { Button } from "@/components/ui/button";""
@@ -24,10 +25,16 @@ interface Milestone {
   dueDate: string;,"
   status: "completed" | "in_progress" | "pending";""
   paymentStatus: "paid" | "pending" | "overdue";",
-  amount: string;
-}
 
+  amount: string;
+  id: string;
+    title: string;
+dueDate: string;
+status: \"completed\" | \"in_progress\" | \"pending\"}
+  paymentStatus: \"paid\" | \"pending\" | \"overdue\"}
+  amount: string}
 interface ProjectViewProps {
+
   // TODO: Implement
 }
   project: {,
@@ -232,10 +239,12 @@ interface ProjectViewProps {
 </Button>"
                     View Details <ChevronRight className="h-4 w-4" />"
 </ChevronRight>
+
                   </Button>
                 </div>
               </CardContent>
             </Card>
+
 
 
                   </Badge>;
@@ -359,11 +368,13 @@ interface ProjectViewProps {
 </Button>"
                 <Video className="h-4 w-4" /> Call;"
 </Video>
+
               </Button>;
             </div>;
           </div>;
         </CardContent>;
       </Card>;
+
       <section>;
 </section>"
         <h2 className="text-lg font-medium mb-4">Milestones</h2>;""
@@ -414,12 +425,14 @@ interface ProjectViewProps {
 </Button>"
                     View Details <ChevronRight className="h-4 w-4" />;"
 </ChevronRight>
+
                   </Button>;
                 </div>;
               </CardContent>;
             </Card>;
         </div>;
       </section>;
+
     </div>;"
     <div className="space - y-6 px - 4 pb - 24">;"
 </div>
@@ -443,14 +456,16 @@ interface ProjectViewProps {
                     <AvatarFallback>{project.client.name[0]}</AvatarFallback>;
                   </Avatar>;"
                   <span className="text - sm">{project.client.name}</span>;"
+
                 </div>;
               </div>;
-              <Badge>{project.status}</Badge>;
+              <Badge />{project.status}</Badge>;
             </div>;
               </Button>;
             </div>;
           </div>;
         </CardContent>;
+
       </Card>;"
 <Card> <CardContent className="p-4" > <div className="space-y-4" > <div className="flex items-center justify-between" > <div> </div> </div> <Badge> {"
 </Card>"
@@ -458,3 +473,4 @@ interface ProjectViewProps {
 }</Badge> </div> </div> sm"variant=" outline"className=" w-full mt-3 gap-1"> View Details <ChevronRight className=" h-4 w-4" /> </Button> </div> </CardContent> </Card>) )"
 </ChevronRight>
 }</div> </section> </div>) "
+

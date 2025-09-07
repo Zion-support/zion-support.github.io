@@ -1,3 +1,4 @@
+
 useState;
   useEffect;
   useRef;
@@ -289,9 +290,11 @@ export interface ChatAssistantProps {;
                       className="text-xs""
                       onClick={() => handleSendMessage(q)}
 </Button>
+
                     </Button>;
                 </div>;
             </div>;
+
               <ChatMessage key={msg && msg.id} role={msg && msg.role} message={msg && msg.message} />;
 </ChatMessage>
           <div ref={messagesEndRef} />;
@@ -299,9 +302,11 @@ export interface ChatAssistantProps {;
         </div>;"
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;"
 </div>
+
           <ChatInput onSend={handleSendMessage} />;
 </ChatInput>
         </div>;
+
       </div>;
         <div;"
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"""
@@ -402,10 +407,12 @@ export interface ChatAssistantProps {;
         </div>;"
         <div className="p - 3 border - t border - zion - purple / 20 bg - zion - blue - dark / 30">;"
 </div>
+
           <ChatInput on_send={handleSendMessage} />;
 </ChatInput>
         </div>;
       </div>;
+
         <div;"
           className="fixed inset - 0 bg - black / 60 z-[100] flex items - center justify - center p - 4";""
           role="dialog";""
@@ -455,3 +462,4 @@ export interface ChatAssistantProps {;
     </div>;
         </div>)}
     </div>);"
+

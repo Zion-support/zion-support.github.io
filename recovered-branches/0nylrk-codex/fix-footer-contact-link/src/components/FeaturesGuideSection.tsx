@@ -1,4 +1,5 @@
 
+
 import {Link} from "react-router-dom";""
 import {GradientHeading} from "./GradientHeading";""
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";""
@@ -244,11 +245,13 @@ export function FeaturesGuideSection() {
 </Link>"
               <ArrowRight className="ml-2 h-4 w-4" />"
 </ArrowRight>
+
             </Link>
           </Button>
         </div>
       </div>
     </section>
+
         </Tabs>;"
         <div className="mt-12 text-center">;"
 </div>
@@ -333,8 +336,11 @@ export function FeaturesGuideSection() {
 </Link>"
               <ArrowRight className="ml-2 h-4 w-4" />;"
 </ArrowRight>
+
             </Link>;
           </Button>;
         </div>;
       </div>;
+
     </section>);"
+

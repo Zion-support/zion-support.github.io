@@ -1,4 +1,6 @@
+
 import React from "react";"
+
 import {
   // TODO: Implement
 }
@@ -6,6 +8,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
+
   CardTitle,;
 "
 } from "@/components/ui/card";""
@@ -21,21 +24,25 @@ import {;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";"
   timeRange: string;,
   onTimeRangeChange: (range: string) => void;
+
 }
+} from \"@/components/ui/card\";
+import { AnalyticsChart } from \"@/components/analytics/AnalyticsChart\";
+
 
 
 interface PageViewsChartProps {
   // TODO: Implement
 }
+
   data: Array<{ date: string, views: number }>,
   timeRange: string,
   onTimeRangeChange: (range: string) => void;
 }
 
-
-export function PageViewsChart(): any ({;
   data,;
   timeRange,;
+
   onTimeRangeChange,;)
 }: PageViewsChartProps) {;
   return ("
@@ -60,12 +67,14 @@ export function PageViewsChart(): any ({;
 </AnalyticsChart>
       </CardContent>
     </Card>
+
   data: Array<{ date: string, views: number }>,;
   timeRange: string;,)
   onTimeRangeChange: (range: string) => void;
 }
 ;
 export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {;
+
   return (;"
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;"
 </Card>"
@@ -84,11 +93,13 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
           dataKeys={["views"]}"
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
+
         />;
 </AnalyticsChart>
       </CardContent>;
     </Card>;
     </Card>;
+
   data: Array<{ date: string; views: number }>;
   time_range: string;,)
   onTimeRangeChange: (range: string) => void;
@@ -119,3 +130,4 @@ function PageViewsChart() {
 </AnalyticsChart>
       </CardContent>;)
     </Card>);"
+

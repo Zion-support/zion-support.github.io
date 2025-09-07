@@ -3,6 +3,7 @@
 
 
 
+
 import React, { useState } from "react";""
 import {useToast} from "@/hooks/use-toast";""
 import {Button} from "@/components/ui/button";""
@@ -110,6 +111,7 @@ interface GeneratedContent {;
   suggestedPrice: {;,
   min: number,;
     max: number;
+
   },;
   keyPoints: string[];
 }
@@ -119,10 +121,11 @@ interface AIListingGeneratorProps {;
   initialValues?: {;
     title?: string,;
     category?: string,;
-    keyFeatures?: string,;
-    targetAudience?: string;
+    keyFeatures?: string,;}
+    targetAudience?: string;}
   }
 }
+
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
   const { toast } = useToast();"
@@ -143,6 +146,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {"
       case 'title':'
+
         setTitle(e.target.value),
         break,'
       case 'category':'
@@ -153,6 +157,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         break,'
       case 'targetAudience':'
         setTargetAudience(e.target.value)
+
         break;
     }
 
@@ -181,6 +186,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       });
         break;"
       case 'category':;'
+
         setCategory(e && e.target.value);
         break;'
       case 'keyFeatures':;'
@@ -188,33 +194,36 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         break;'
       case 'targetAudience':;'
         setTargetAudience(e && e.target.value),;
-        break;
-
-
+        break;) => {
+  return $3;}
+}
   },
-
-
-
   const handleGenerate = async () => {
     if (!title |!category) {
+
       toast({'
         title: "Missing required fields"","
   description: "Please provide at least a title and category."""
         variant: "destructive"")
+
       });
+        break;      });
       return;
     }
+
     try {
   // TODO: Implement
 }"
       const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {'
         body: { title, category, key_features, target_audience })
+
       });
-      if (error) {
-        throw new Error(error.message)
+      if (error) {}
+        throw new Error(error.message)}
       }),
       return;
 ;
+
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast(),;'
   const [title, setTitle] = useState(initialValues.title || ""),;""
@@ -226,6 +235,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const handleInputChange = (e: { target: { value: string } }, field: string) => {;
     switch(field) {;"
       case 'title':;'
+
         setTitle(e.target.value),;
         break,;'
       case 'category':;'
@@ -237,12 +247,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       case 'targetAudience':;'
         setTargetAudience(e.target.value),;
         break;
-
-    }
-  };
-
-  const handleGenerate = async () => {;
     if (!title || !category) {;
+
       toast({;'
         title: "Missing required fields",;""
         description: "Please provide at least a title and category.",;""
@@ -262,14 +268,17 @@ import { Skeleton } from '@/components / ui / skeleton';''
 import { Sparkles, ArrowRight } from '@/components / icons';''
 import { supabase } from '@/integrations / supabase / client';''
 import { Badge } from '@/components / ui / badge';'
+
 interface GeneratedContent {
   // TODO: Implement
 }
   description: string,
   tags: string[],
+
   suggested_price: {,
   min: number,
     max: number;
+
   }
   key_points: string[];
 }
@@ -280,19 +289,21 @@ interface AIListingGeneratorProps {
   initial_values?: {
     title?: string;
     category?: string;
-    key_features?: string;
-    target_audience?: string;
+    key_features?: string;}
+    target_audience?: string;}
   }
 }
 export /**
  * AIListingGenerator - Function description;
  */
+
 function AIListingGenerator() {
   const { toast } = use_toast ();'
   const [title, set_title] = useState (initial_values.title || "");""
   const [category, set_category] = useState (initial_values.category || "");""
   const [key_features, setKeyFeatures] = useState (initial_values.key_features || "");""
   const [target_audience, setTargetAudience] = useState (initial_values.target_audience || "");"
+
   const [is_loading, setIsLoading] = useState (false);
   const [generated_content, setGeneratedContent] = useState (null as GeneratedContent | null);
 ;
@@ -308,15 +319,18 @@ function AIListingGenerator() {
         break;'
       case 'key_features':;'
         setKeyFeatures (e.target.value);
+
         break;'
       case 'target_audience':;'
         setTargetAudience (e.target.value),
         break;
+
     }
   }
 ;
   const handle_generate = async () => {
     // Check condition;
+
 if ( {) {
   $2;
 }
@@ -324,22 +338,25 @@ if ( {) {
         title: "Missing required fields",""
         description: "Please provide at least a title and category.",""
         variant: "destructive";")
+
       });
       return;
     }
     setIsLoading (true);
 ;
-
 ;
     setIsLoading(true),;
     ;
+
     try {;"
       const { data, error } = await supabase.functions.invoke('ai-listing-generator', {;'
         body:{ title, category, keyFeatures, targetAudience })
+
       }),;
-      if (error) {;
+      if (error) {;}
       }
       ;
+
       if (data.error) {;
         throw new Error(data.error),;
       }
@@ -837,3 +854,4 @@ if ( {) {
           </CardFooter>;
         </Card>)}
     </div>);"
+

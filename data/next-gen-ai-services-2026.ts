@@ -1,9 +1,12 @@
+}
 
 import { ServiceVariant } from '../types/service-variants';'
 export interface NextGenAIService2026 {
+
   // TODO: Implement
 }
   name: string;,
+
   tagline: string;
   price: string;,
   period: string;
@@ -27,8 +30,10 @@ export interface NextGenAIService2026 {
   competitors: string[];
   market_size: string;,
   growth_rate: string;
+
   variant: ServiceVariant;,
   website: string;
+
   }
   customers: number;,
   rating: number;
@@ -62,6 +67,7 @@ export interface NextGenAIService2026 {
 
 
 
+
   contactInfo: {,
   mobile: string;
     email: string;,
@@ -71,9 +77,11 @@ export interface NextGenAIService2026 {
   }
 
   realImplementation: boolean;,
+
   implementationDetails: string;
   launchDate: string;,
   customers: number;
+
   rating: number;,
   reviews: number;    mobile: string;,
   email: string;
@@ -89,7 +97,16 @@ export interface NextGenAIService2026 {
   customers: number;
   rating: number;,
   reviews: number;
+
     website: string;
+  }
+  realImplementation: boolean;
+implementationDetails: string;
+launchDate: string;
+customers: number;
+rating: number;
+reviews: number;
+website: string;
   },
   real_implementation: boolean,
   implementation_details: string,
@@ -97,6 +114,7 @@ export interface NextGenAIService2026 {
   customers: number,
   rating: number,
   reviews: number;
+
 }'
   mobile: '+1 302 464 0950',''
   email: 'kleber@ziontechgroup.com',''
@@ -104,10 +122,11 @@ export interface NextGenAIService2026 {
   website: 'https://ziontechgroup.com',''
 };  website: 'https://ziontechgroup.com'','
   website: 'https://ziontechgroup.com''
-},
 
+},
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   {
+
     description:'
       'Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.''
     features: [,
@@ -422,38 +441,45 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     competitors: ['SonarQubeCodeClimateDeepCodeSnyk'],''
     growthRate: '110% annual growth',''
     variant: 'ai-futuristic','
+
     contactInfo: contact,
     realImplementation: true,
 
 
     customers: 203,
-    rating: 4 && 4.7,
-    reviews: 445,
+    rating: 4 && 4.7,}
+    reviews: 445}
   },
+
 '
     implementationDetails: 'Production-ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',''
     launchDate: '2025-01-25','
+
     customers: 203,
     rating: 4 && 4.7,
     reviews: 445;
   }
 
 ],
+
 '
 ];    implementation_details: 'Production - ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',''
     launch_date: '2025 - 01 - 25','
+
     customers: 203,
     rating: 4.7,
     reviews: 445;
   }
 ],
+
 '
   mobile: '+1 302 464 0950',''
   email: 'kleber@ziontechgroup.com',''
   address: '364 E Main St STE 1008 Middletown DE 19709','
-},
 
+},
 export const nextGenAIServices2026: NextGenAIService2026[] = [
+
   {'
     id: 'ai-emotional-intelligence-platform',''
     name: 'AI Emotional Intelligence Platform',''
@@ -658,6 +684,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     customers: 203,
     reviews: 445;'
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface NextGenAIService2026 {;
   id: string,;
   name: string,;
@@ -688,8 +715,8 @@ export interface NextGenAIService2026 {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -699,11 +726,13 @@ export interface NextGenAIService2026 {;
   reviews: number;
 }
 ;
+
 const contact = {;'
   mobile: '+1 302 464 0950',;''
   email: 'kleber@ziontechgroup.com',;''
   address: '364 E Main St STE 1008 Middletown DE 19709',;''
   website: 'https://ziontechgroup.com';'
+
 },;
 export const nextGenAIServices2026: NextGenAIService2026[] = [;
   {;'
@@ -741,8 +770,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     implementationDetails: 'Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.',;''
     launchDate: '2025-06-01',;'
     customers: 45,;
-    rating: 4.9,;
-    reviews: 89;
+    rating: 4.9,;}
+    reviews: 89;}
   },;
   {;'
     id: 'ai-predictive-maintenance-platform',;''
@@ -779,8 +808,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     implementationDetails: 'Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.',;''
     launchDate: '2025-03-15',;'
     customers: 78,;
-    rating: 4.7,;
-    reviews: 156;
+    rating: 4.7,;}
+    reviews: 156;}
   },;
   {;'
     id: 'ai-content-personalization-engine',;''
@@ -817,8 +846,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     implementationDetails: 'Production-ready personalization engine with real-time processing, comprehensive analytics, and easy integration capabilities.',;''
     launchDate: '2025-04-20',;'
     customers: 92,;
-    rating: 4.6,;
-    reviews: 203;
+    rating: 4.6,;}
+    reviews: 203;}
   },;
   {;'
     id: 'ai-voice-cloning-platform',;''
@@ -855,8 +884,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     implementationDetails: 'Professional-grade voice cloning platform with advanced AI models, comprehensive voice management, and easy integration.',;''
     launchDate: '2025-02-10',;'
     customers: 156,;
-    rating: 4.8,;
-    reviews: 312;
+    rating: 4.8,;}
+    reviews: 312;}
   },;
   {;'
     id: 'ai-code-review-assistant',;''
@@ -893,8 +922,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     implementationDetails: 'Production-ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',;''
     launchDate: '2025-01-25',;'
     customers: 203,;
+
     rating: 4.7;,
   reviews: 445;
   }
 ];
 '
+

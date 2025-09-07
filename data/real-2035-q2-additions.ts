@@ -1,3 +1,4 @@
+
       'Intent classification + prioritization'''
       'On-brand response drafting'''
       'Automatic polite follow-ups'''
@@ -59,11 +60,13 @@
       'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard',''
     launch_date: '2025 - 08 - 20','
     customers: 48,
+
     rating: 4 && 4.7,
-    reviews: 12,
+    reviews: 12;
   },
   {
   {
+
 '
       'Branching logic + A/B prompts',''
       'SMS/WhatsApp/web delivery',''
@@ -118,10 +121,12 @@
     real_implementation: true,'
     implementation_details: 'Templates + KPI widgets + export',''
     launch_date: '2025 - 08 - 20','
+
     customers: 18,
-    rating: 4 && 4.5,
-    reviews: 7,
+    rating: 4 && 4.5,}
+    reviews: 7}
   },
+
   {'
       'Agenda builder',''
       'Feedback forms',''
@@ -139,10 +144,12 @@
     real_implementation: true,'
     implementation_details: 'Ticketing + agenda + comms + analytics',''
     launch_date: '2025 - 08 - 20','
+
     customers: 31,
-    rating: 4 && 4.7,
-    reviews: 11,
+    rating: 4 && 4.7,}
+    reviews: 11}
   },
+
   {'
       'Custom referral links',''
       'UTM attribution',''
@@ -162,10 +169,12 @@
     real_implementation: true,'
     implementation_details: 'Link generator + rules + exports',''
     launch_date: '2025 - 08 - 20','
+
     customers: 12,
-    rating: 4 && 4.5,
-    reviews: 5,
+    rating: 4 && 4.5,}
+    reviews: 5}
   },
+
   {'
       'Page + event analytics',''
       'Funnels + cohorts',''
@@ -185,10 +194,12 @@
     real_implementation: true,'
     implementation_details: 'Tracker script + dashboard',''
     launch_date: '2025 - 08 - 20','
+
     customers: 40,
-    rating: 4 && 4.6,
-    reviews: 8,
+    rating: 4 && 4.6,}
+    reviews: 8}
   },
+
   {'
       'KB + article templates',''
       'SLAs + escalations',''
@@ -207,10 +218,12 @@
     real_implementation: true,'
     implementation_details: 'Ticketing + KB + SLAs + reports',''
     launch_date: '2025 - 08 - 20','
+
     customers: 16,
-    rating: 4 && 4.7,
-    reviews: 6,
+    rating: 4 && 4.7,}
+    reviews: 6}
   },
+
   {'
       'Label generation',''
       'Return reasons analytics',''
@@ -229,10 +242,12 @@
     real_implementation: true,'
     implementation_details: 'Portal + labels + analytics',''
     launch_date: '2025 - 08 - 20','
+
     customers: 14,
-    rating: 4 && 4.6,
-    reviews: 5,
+    rating: 4 && 4.6,}
+    reviews: 5}
   },
+
   {'
       'Sequences + delays',''
       'Inbox integration',''
@@ -255,10 +270,12 @@
     real_implementation: true,'
     implementation_details: 'Sequencer + inbox + analytics',''
     launch_date: '2025 - 08 - 20','
+
     customers: 28,
-    rating: 4 && 4.5,
-    reviews: 8,
+    rating: 4 && 4.5,}
+    reviews: 8}
   },
+
   {'
       'Fast transcripts',''
       'Timestamps + chapters',''
@@ -278,10 +295,12 @@
     real_implementation: true,'
     implementation_details: 'Uploader + ASR + export',''
     launch_date: '2025 - 08 - 20','
+
     customers: 20,
-    rating: 4 && 4.6,
-    reviews: 6,
+    rating: 4 && 4.6,}
+    reviews: 6}
   },
+
   {'
       'Topic clustering',''
       'SERP intent match',''
@@ -303,10 +322,12 @@
     real_implementation: true,'
     implementation_details: 'Crawler + editor plugin + suggestions',''
     launch_date: '2025 - 08 - 20','
+
     customers: 33,
-    rating: 4 && 4.7,
-    reviews: 10,
+    rating: 4 && 4.7,}
+    reviews: 10}
   },
+
   {'
       'Content repurposing',''
       'Calendar + auto - times',''
@@ -329,10 +350,12 @@
     real_implementation: true,'
     implementation_details: 'Calendar + generator + queue',''
     launch_date: '2025 - 08 - 20','
+
     customers: 26,
-    rating: 4 && 4.5,
-    reviews: 7,
+    rating: 4 && 4.5,}
+    reviews: 7}
   },
+
   {'
       'Firmographics',''
       'Role detection',''
@@ -355,10 +378,12 @@
     real_implementation: true,'
     implementation_details: 'REST + dashboard + quotas',''
     launch_date: '2025 - 08 - 20','
+
     customers: 9,
-    rating: 4 && 4.4,
-    reviews: 4,
+    rating: 4 && 4.4,}
+    reviews: 4}
   },
+
   {'
       'Geo rules',''
       'IAB TCF',''
@@ -381,10 +406,12 @@
     real_implementation: true,'
     implementation_details: 'Banner + preferences + logs',''
     launch_date: '2025 - 08 - 20','
+
     customers: 37,
-    rating: 4 && 4.7,
-    reviews: 10,
+    rating: 4 && 4.7,}
+    reviews: 10}
   },
+
   {'
       'Site scan',''
       'Tracker classification',''
@@ -407,10 +434,12 @@
     real_implementation: true,'
     implementation_details: 'Scanner + policy generator',''
     launch_date: '2025 - 08 - 20','
+
     customers: 19,
-    rating: 4 && 4.5,
-    reviews: 5,
+    rating: 4 && 4.5,}
+    reviews: 5}
   },
+
   {'
       'Incident log',''
       'Public status page',''
@@ -454,10 +483,12 @@
     real_implementation: true,'
     implementation_details: 'Widget + flows + routing',''
     launch_date: '2025 - 08 - 20','
+
     customers: 23,
     rating: 4 && 4.6,
-    reviews: 7,
+    reviews: 7;
   },
+
   {'
       'Request intake',''
       'Identity check',''
@@ -477,22 +508,25 @@
     real_implementation: true,'
     implementation_details: 'Portal + workflow + exports',''
     launch_date: '2025 - 08 - 20','
+
     customers: 10,
-    rating: 4 && 4.5,
-    reviews: 4,
+    rating: 4 && 4.5,}
+    reviews: 4}
   },
+
   {'
       'Repo scanner',''
       'Flag inventory',''
       'Risk detection',''
       'PR suggestions',''
       'CI integration','
+
     ],
     popular: false,
 
 
-
   {
+
 '
     id: 'postgres - index - advisor - pro',''
     name: 'Postgres Index Advisor Pro',''
@@ -523,10 +557,12 @@
     real_implementation: true,'
     implementation_details: 'Collector + advisor + PRs',''
     launch_date: '2025 - 08 - 20','
+
     customers: 15,
-    rating: 4 && 4.6,
-    reviews: 5,
+    rating: 4 && 4.6,}
+    reviews: 5}
   },
+
   {'
       'Usage analysis',''
       'Rule suggestions',''
@@ -549,10 +585,12 @@
     real_implementation: true,'
     implementation_details: 'Analyzer + simulator + rule export',''
     launch_date: '2025 - 08 - 20','
+
     customers: 17,
-    rating: 4 && 4.5,
-    reviews: 4,
+    rating: 4 && 4.5,}
+    reviews: 4}
   },
+
   {'
       'Connectors',''
       'Sensitive entity detection',''
@@ -575,10 +613,12 @@
     real_implementation: true,'
     implementation_details: 'Connectors + scan jobs + exports',''
     launch_date: '2025 - 08 - 20','
+
     customers: 13,
-    rating: 4 && 4.6,
-    reviews: 5,
+    rating: 4 && 4.6,}
+    reviews: 5}
   },
+
   {'
     id: 'api-breaking-change-watcher',''
     name: 'API Breaking Change Watcher',''
@@ -619,11 +659,13 @@
     real_implementation: true,'
     implementation_details: 'Registry + diff engine + CI',''
     launch_date: '2025 - 08 - 20','
+
     customers: 12,
-    rating: 4 && 4.5,
-    reviews: 3,
+    rating: 4 && 4.5,}
+    reviews: 3}
   },
   {
+
 
   {'
     id: 'postgres-index-advisor-pro'','
@@ -782,10 +824,12 @@
     real_implementation: true,'
     implementation_details: 'Recorder + runner + alerts',''
     launch_date: '2025 - 08 - 20','
+
     customers: 21,
-    rating: 4 && 4.5,
-    reviews: 6,
+    rating: 4 && 4.5,}
+    reviews: 6}
   },
+
   {'
       'Policy inventory',''
       'Usage analysis',''
@@ -808,10 +852,12 @@
     real_implementation: true,'
     implementation_details: 'Collector + analyzer + PRs',''
     launch_date: '2025 - 08 - 20','
+
     customers: 9,
-    rating: 4 && 4.6,
-    reviews: 3,
+    rating: 4 && 4.6,}
+    reviews: 3}
   },
+
   {'
       'Query profiling',''
       'Size / schedule proposals',''
@@ -834,10 +880,12 @@
     real_implementation: true,'
     implementation_details: 'Analyzer + simulator + PRs',''
     launch_date: '2025 - 08 - 20','
+
     customers: 7,
-    rating: 4 && 4.5,
-    reviews: 3,
+    rating: 4 && 4.5,}
+    reviews: 3}
   },
+
   {'
       'Warmup campaigns',''
       'Seed inbox tests',''
@@ -860,10 +908,12 @@
     real_implementation: true,'
     implementation_details: 'Warmup + tests + alerts',''
     launch_date: '2025 - 08 - 20','
+
     customers: 16,
-    rating: 4 && 4.5,
-    reviews: 4,
+    rating: 4 && 4.5,}
+    reviews: 4}
   },
+
   {'
       'Transcription',''
       'Action extraction',''
@@ -1808,15 +1858,13 @@
   realImplementation: true;'
 		implementationDetails: 'Transcribe + extract + tickets';','
   launchDate: '2025-08-20';'
+
 		customers: 24;
 ];
 ;
-
 	}
 ];
 
-	}
-];
 
 '
   id: 'ai - email - responder';','
@@ -1854,6 +1902,7 @@
   customers: 48;,
   rating: 4.7,
   reviews: 12;
+
 }
 {'
   id: 'mobile - survey - studio';','
@@ -1865,6 +1914,7 @@
   features: [;'
   'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API';']
   ];
+
   popular: false;,'
   icon: '📱';''
   color: 'from - emerald - 600 to - teal - 700';','
@@ -1891,6 +1941,7 @@
   customers: 22;,
   rating: 4.6,
   reviews: 9;
+
 }
 {'
   id: 'niche - productivity - planner';','
@@ -1922,12 +1973,14 @@
   growth_rate: '8% CAGR';''
   variant: 'ai - futuristic';',
   contact_info: contact;
+
   real_implementation: true;,'
   implementation_details: 'Templates + KPI widgets + export';''
   launch_date: '2025 - 08 - 20';',
   customers: 18;
   rating: 4.5,
   reviews: 7;
+
 }
 {'
   id: 'event - management - dashboard';','
@@ -1939,6 +1992,7 @@
   features: [;'
   'QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports';']
   ];
+
   popular: true;,'
   icon: '🎟️';''
   color: 'from - pink - 600 to - rose - 700';','
@@ -2350,6 +2404,7 @@
   customers: 19;,
   rating: 4.5,
   reviews: 5;
+
 }
 {'
   id: 'statuspage - sla - tracker';','
@@ -2379,6 +2434,7 @@
   growth_rate: '9% CAGR';''
   variant: 'ai - futuristic';',
   contact_info: contact;
+
   real_implementation: true;,'
   implementation_details: 'Monitors + incidents + pages';''
   launch_date: '2025 - 08 - 20';',
@@ -2420,6 +2476,7 @@
   customers: 23;,
   rating: 4.6,
   reviews: 7;
+
 }
 {'
   id: 'gdpr - dsar - portal - lite';','
@@ -2449,6 +2506,7 @@
   growth_rate: '18% CAGR';''
   variant: 'holographic - matrix';',
   contact_info: contact;
+
   real_implementation: true;,'
   implementation_details: 'Portal + workflow + exports';''
   launch_date: '2025 - 08 - 20';',
@@ -2490,6 +2548,7 @@
   customers: 8;,
   rating: 4.4,
   reviews: 3;
+
 }
 {'
   id: 'postgres - index - advisor - pro';','
@@ -2519,12 +2578,14 @@
   growth_rate: '9% CAGR';''
   variant: 'network - futuristic';',
   contact_info: contact;
+
   real_implementation: true;,'
   implementation_details: 'Collector + advisor + PRs';''
   launch_date: '2025 - 08 - 20';',
   customers: 15;
   rating: 4.6,
   reviews: 5;
+
 }
 {'
   id: 's3 - lifecycle - optimizer';','
@@ -2554,6 +2615,7 @@
   growth_rate: '12% CAGR';''
   variant: 'holographic - matrix';',
   contact_info: contact;
+
   real_implementation: true;,'
   implementation_details: 'Analyzer + simulator + rule export';''
   launch_date: '2025 - 08 - 20';',
@@ -2665,6 +2727,7 @@
   customers: 21;,
   rating: 4.5,
   reviews: 6;
+
 }
 {'
   id: 'iam - permission - analyzer';','
@@ -2694,12 +2757,14 @@
   growth_rate: '13% CAGR';''
   variant: 'ai - futuristic';',
   contact_info: contact;
+
   real_implementation: true;,'
   implementation_details: 'Collector + analyzer + PRs';''
   launch_date: '2025 - 08 - 20';',
   customers: 9;
   rating: 4.6,
   reviews: 3;
+
 }
 {'
   id: 'warehouse - cost - optimizer';','
@@ -2729,12 +2794,14 @@
   growth_rate: '12% CAGR';''
   variant: 'network - futuristic';',
   contact_info: contact;
+
   real_implementation: true;,'
   implementation_details: 'Analyzer + simulator + PRs';''
   launch_date: '2025 - 08 - 20';',
   customers: 7;
   rating: 4.5,
   reviews: 3;
+
 }
 {'
   id: 'email - warmup - monitor';','
@@ -2764,6 +2831,9 @@
   growth_rate: '9% CAGR';''
   variant: 'holographic - matrix';',
   contact_info: contact;
+	}
+];	}
+
   real_implementation: true;,'
   implementation_details: 'Warmup + tests + alerts';''
   launch_date: '2025 - 08 - 20';',
@@ -4803,5 +4873,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		rating: 4.6;,
   reviews: 6;
 	}
+
 ];
 '

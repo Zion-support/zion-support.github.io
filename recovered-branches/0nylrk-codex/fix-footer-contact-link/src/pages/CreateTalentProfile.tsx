@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";"
 export default function CreateTalentProfile() {
@@ -13,15 +14,20 @@ export default function CreateTalentProfile() {
           </h1>"
           <p className="text-zion-slate-light max-w-2xl mx-auto">"
 </p>
+
           </p>
         </div>
 
         <TalentRegistrationForm />
 </TalentRegistrationForm>
       </div>
+
     </div>)
     </div>);
+
         <TalentRegistrationForm />;
 </TalentRegistrationForm>
       </div>;
+
     </div>;"
+

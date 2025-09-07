@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/header";""
 import { Footer } from "@/components/Footer";""
 import { JobPostingForm } from "@/components/jobs";"
@@ -28,9 +29,11 @@ export default function PostJob() {
       <SEO;"
         title="Post a Job | Zion AI Marketplace"""
         description="Post a job to find the perfect AI talent for your project.""
+
       />
 </SEO>
       <Header />
+
 </Header>
       <main;"
         className={`container mx-auto px-${isMobile ? "2" : "4"} py-${isMobile ? "6" : "12"} max-w-4xl`}"
@@ -49,12 +52,14 @@ export default function PostJob() {
           </CardHeader>
           <CardContent>
 </CardContent>
+
             <JobPostingForm />
 </JobPostingForm>
           </CardContent>
         </Card>
       </main>
       <Footer />
+
 </Footer>"
       {isMobile && <div className="h-16"></div>}"
     </>)
@@ -156,3 +161,4 @@ if (isLoading) {"
     </>);
 }
 "
+

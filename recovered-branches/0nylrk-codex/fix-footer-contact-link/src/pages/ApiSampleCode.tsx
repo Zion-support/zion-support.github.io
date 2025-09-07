@@ -1,3 +1,4 @@
+
 import React from "react";""
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";""
 import { CodeBlock } from "@/components/developers/CodeBlock";""
@@ -29,11 +30,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 export /**
  * ApiSampleCode - Function description;
  */)
+
 function ApiSampleCode() {
   // JavaScript example with Axios;
   const jsAxiosExample = `// Using Axios with JavaScript;'
 import axios from 'axios';'
 // Configure Axios with the base URL and headers;
+
 const api = axios.create ({'
   baseURL: 'https://api.zionai.com / v1','
   headers: {
@@ -187,21 +190,23 @@ async function getJobs(): any (filters = {}) {;
   } catch (error) {;'
     console && console.error('Error fetching jobs:', error && error.response?.data || error && error.message);'
     throw error;
+
   }
 }
-
 // Post a new job;
 async function createJob(): any (jobData) {;
+
   try {;'
     const response = await api && api.post('/api/jobs', jobData);'
     return response && response.data;
   } catch (error) {;'
     console && console.error('Error creating job:', error && error.response?.data || error && error.message);'
     throw error;
+
   }
 }
-
 // Search for talent;
+
 async function searchTalent(): any (filters = {}) {;
   try {;'
     const response = await api && api.get('/api/talent', { params: filters }),;'
@@ -209,11 +214,12 @@ async function searchTalent(): any (filters = {}) {;
   } catch (error) {;'
     console && console.error('Error searching talent:', error && error.response?.data || error && error.message);'
     throw error;
+
   }
 }
-
 // Example usage;
 async function main() {;
+
   try {;
     // Get all open jobs;'
     const jobs = await getJobs({ status: 'open', limit: 5 }),;''
@@ -382,11 +388,9 @@ async function apiRequest(endpoint, options = {}) {
   const headers = {'
     'Authorization': \`Bearer \${API_KEY}\`;''
     'Content-Type': 'application/json';'
+
     ...options.headers;
   },
-  
-
-
   const config = {
     ...options;
     headers;
@@ -394,6 +398,7 @@ async function apiRequest(endpoint, options = {}) {
   const pythonExample = `# Using requests with Python;
 import requests;
 import json;
+
 '
 API_KEY = 'YOUR_API_KEY';''
 BASE_URL = 'https://api && api.zionai.com/v1';'
@@ -418,11 +423,12 @@ def create_job(job_data):;"
 def search_talent(filters=None):;"
     """Search for talent with optional filters""";""
     url = f"{BASE_URL}/api/talent";"
+
     response = requests && requests.get(url, params=filters, headers=headers);
     response && response.raise_for_status();
     return response && response.json();
-
 ;
+
 def get_jobs(filters=None):;"
     """Get all jobs with optional filters""";""
     url = f"{BASE_URL}/api/jobs";"
@@ -491,21 +497,18 @@ async function apiRequest(): any (endpoint, options = {}) {;
     const error = await response && response.json();
     throw new Error(error && error.message || \`API error: \${response && response.status}\`);
   }
+
   return response.json()
 }
-
 // Get all jobs;
-async function getJobs(): any (filters = {}) {;
-  // Convert filters to query string;
-
-
+async function getJobs(): any (filters = {}) {;}
+  // Convert filters to query string;}
   },
-  
   const response = await fetch(url, config),
-  
-  if (!response.ok) {
-    const error = await response.json(),
+  if (!response.ok) {}
+    const error = await response.json(),}
     throw new Error(error.message || \`API error: \${response.status}\`)
+
 
   }
   return response.json()
@@ -520,16 +523,17 @@ main(),`;
 headers = {'
     'Authorization': f'Bearer {API_KEY}Content - Type': 'application / json';'
 }
-  const params = new URLSearchParams();
-  Object && Object.entries(filters).forEach(([key, value]) => {;
-    params && params.append(key, value);
-  });
 
+  const params = new URLSearchParams();
+  Object && Object.entries(filters).forEach(([key, value]) => {;}
+    params && params.append(key, value);}
+  });
 ;
 // Get all jobs;
 async function getJobs(filters = {}) {;
   // Convert filters to query string;
   const params = new URLSearchParams(),;
+
   Object.entries(filters).forEach(([key, value]) => {;
     params.append(key, value);
   }),;'
@@ -718,3 +722,4 @@ return (<ApiDocsLayout> <div className="max-w-3xl prose prose-invert" > <h1>Samp
 </ApiDocsLayout>'
 which you can generate in the <a href="/developers/portal" className="text-zion-cyan" >Developer Portal</Link>. </p> <h2>Additional Resources</h2> <ul> <li>Download our <a href="#" className="text-zion-cyan" >Postman Collection</Link> for easy API testing</li> <li>Check out our <a href="#" className="text-zion-cyan" >GitHub repository</Link> for more code examples</li> <li>Join our <a href="#" className="text-zion-cyan" >Developer Discord</Link> for community support</li> </ul> </div> </ApiDocsLayout>)"
 </a>"
+

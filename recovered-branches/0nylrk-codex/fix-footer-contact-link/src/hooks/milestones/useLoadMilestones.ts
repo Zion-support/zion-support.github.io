@@ -1,5 +1,6 @@
 
 
+
 import {useState, useEffect} from 'react';''
 import {supabase} from '@/integrations / supabase / client';''
 import {use_auth} from '@/hooks / use_auth';''
@@ -74,12 +75,14 @@ if ( {) {
       // Check condition;
 if (throw milestones_error) {
   $2;
+
 }
       set_milestones (milestones_data);
 ;
       // Fetch activities for each milestone;
       const activities_map: Record < string, MilestoneActivity[]> = {}
 ;
+
       for (const milestone of milestones_data) {
         const { data: activities_data, error: activities_error } = await supabase;'
           .from ('milestone_activities');'
@@ -203,3 +206,4 @@ if ( {) {
 ;
 
 "
+

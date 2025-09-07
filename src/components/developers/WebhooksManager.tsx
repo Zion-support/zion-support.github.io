@@ -1,11 +1,71 @@
-loading,
-    testResult,
-    fetchWebhooks,
-    createWebhook,
-    toggleWebhook,
-    deleteWebhook,
-    testWebhook,
 
+;
+loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[] />([]),const [testEventType, setTestEventType] = useState<WebhookEventType />('new_application'),// Load webhooks on mount;
+  useEffect(() => {}
+fetchWebhooks()import { useState, useEffect  } from 'react';
+import { format  } from 'date - fns';
+import { useState, useEffect } from \"react\",import { format } from \"date-fns\",import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X  } from 'lucide-react';"
+import { useWebhooks, type WebhookEventType } from \"@/hooks/useWebhooks\",import { Button } from \"@/components/ui/button\",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from \"@/components/ui/card\",import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from \"@/components/ui/dialog\",import { Input } from \"@/components/ui/input\",import { Checkbox } from \"@/components/ui/checkbox\",import { Label } from \"@/components/ui/label\",import { Badge } from \"@/components/ui/badge\",import { Switch } from \"@/components/ui/switch\",import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from \"@/components/ui/dropdown-menu\",import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from \"@/components/ui/alert-dialog\",import { ScrollArea  } from '@/components/ui/scroll-area';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
+
+export function WebhooksManager() {const {webhooks;
+    loading;
+    testResult;
+    fetchWebhooks;
+    createWebhook;
+    toggleWebhook;
+    deleteWebhook;
+    testWebhook;}
+    clearTestResult;}
+  } = useWebhooks()const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null />(null),const [showTestDialog, setShowTestDialog] = useState<string | null />(null),const [showTestResult, setShowTestResult] = useState(false)import { format  } from 'date-fns';
+import { Globe,MoreVertical,PlayCircle,Plus,RefreshCw,Webhook} from 'lucide-react';
+import { useWebhooks, type WebhookEventType  } from '@/hooks/useWebhooks';
+import { Button  } from '@/components/ui/button';
+  Card;
+  CardContent;
+  CardDescription;
+  CardFooter;
+  CardHeader;
+  CardTitle;
+} from '@/components/ui/card';
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle;
+  DialogTrigger;
+} from '@/components/ui/dialog';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { Label  } from '@/components/ui/label';
+import { Badge  } from '@/components/ui/badge';
+import { Switch  } from '@/components/ui/switch';
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger;
+} from '@/components/ui/dropdown-menu';
+  AlertDialog;
+  AlertDialogAction;
+  AlertDialogCancel;
+  AlertDialogContent;
+  AlertDialogDescription;
+  AlertDialogFooter;
+  AlertDialogHeader;
+  AlertDialogTitle;
+} from '@/components/ui/alert-dialog';
+  Select;
+  SelectContent;
+  SelectItem;
+  SelectTrigger;
+  SelectValue;
+} from '@/components/ui/select';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger  } from '@/components/ui/dialog';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger  } from '@/components/ui/dropdown-menu';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from '@/components/ui/alert-dialog';
 
 
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
@@ -55,11 +115,9 @@ if (=== '' ||) {'
     setShowTestResult (true);  const handleToggleStatus = async (webhook_id: string, current_status: boolean) => {
     await toggle_webhook (webhook_id, !current_status);
 
-  }
-  const handleDeleteWebhook = async (webhook_id: string) => {
-    await delete_webhook (webhook_id);
-    setShowDeleteConfirm (null);    setShowDeleteConfirm (null);
-  }
+
+const handleToggleStatus = async (webhook_id: string,current_status: boolean) => {await toggle_webhook (webhook_id, !current_status) }
+
 
   const handleTestWebhook = async (webhook_id: string) => {
     await test_webhook (webhook_id, testEventType);
@@ -83,8 +141,39 @@ if (=== '' ||) {'
     setWebhookSecret ('');'
     setSelectedEvents ([]);
 
-  }
+
+const handleTestWebhook = async (webhook_id: string) => {await test_webhook (webhook_id, testEventType)setShowTestResult (true)const handleToggleStatus = async (webhook_id: string, current_status: boolean) => {await toggle_webhook (webhook_id, !current_status)}
+
+const handleDeleteWebhook = async (webhook_id: string) => {await delete_webhook (webhook_id)setShowDeleteConfirm (null)setShowDeleteConfirm (null}
+}
+
+const handleTestWebhook = async (webhook_id: string) => {await test_webhook (webhook_id, testEventType)setShowTestResult (true)const handleToggleStatus = async (webhook_id: string, current_status: boolean, ) => {await toggle_webhook (webhook_id, !current_status)},const handleDeleteWebhook = async (webhook_id: string, ) => {await delete_webhook (webhook_id),setShowDeleteConfirm (null)},const handleTestWebhook = async (webhook_id: string, ) => {await test_webhook (webhook_id, testEventType),setShowTestResult (true)},const resetWebhookForm = () =>: any {setWebhookName ('')setWebhookUrl ('')setWebhookSecret ('')setSelectedEvents ([])}
+
+const handleDeleteWebhook = async (webhookId: string,) => {await deleteWebhook(webhookId)setShowDeleteConfirm(null;}
+}
+
+const handleTestWebhook = async (webhookId: string,) => {await testWebhook(webhookId, testEventType)setShowTestResult(true)}
+;
+  const {    webhooks,    webhooks;
+    loading;
+    testResult;
+    fetchWebhooks;
+    createWebhook;
+    toggleWebhook;
+    deleteWebhook;
+    testWebhook;
+    clearTestResult;
+
+const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null />(null;}
+  )const [showTestDialog, setShowTestDialog] = useState<string | null />(null)const [showTestResult, setShowTestResult] = useState(false)// Create webhook form state;}
+  }, []),const handleCreateWebhook  = null;
+
+const resetWebhookForm = (setWebhookName('')setWebhookUrl('')setWebhookSecret('')setSelectedEvents([])) => {
+  return $3;}
+}
   // Event type options;
+
   const event_options: {,
   value: WebhookEventType;
     label: string;,
@@ -478,10 +567,12 @@ if (=== '' ||) {'
 </span>'
                           </span>                        </Label>                          className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70";""
                           <span className="block text - xs text - zinc - 400 mt - 1">{event.description}</span>;"
+
                       </div>))}
                   </div>;
                 </div>;
               </div>;
+
                 <Button;"
                   variant='outline';'
                   on_click={() => {
@@ -699,10 +790,12 @@ if (=== '' ||) {'
                   selectedEvents.length === 0;
                 }>;
 </Button>
+
                 </Button>;
               </DialogFooter>;
             </DialogContent>;
           </Dialog>;
+
         </div>;"
         <div className="space-y-4">;"
 </div>"
@@ -828,10 +921,12 @@ if (=== '' ||) {'
                           aria - label='More options';'
                         >;
 </Button>
+
                           <MoreVertical size={16} />;
 </MoreVertical>
                         </Button>;
                       </DropdownMenuTrigger>;
+
                       <DropdownMenuContent;'
                         align='end';''
                         className='bg - zinc - 900 border - zinc - 800 text - white';'
@@ -848,10 +943,12 @@ if (=== '' ||) {'
 </DropdownMenuItem>'
                           <X size={14} className='mr - 2' /> Delete                        </DropdownMenuItem>                          <X size={14} className="mr - 2" /> Delete;"
 </X>
+
                         </DropdownMenuItem>;
                       </DropdownMenuContent>;
                     </DropdownMenu>;
                   </div>;
+
                 </div>;"
                 <div className='mt - 3 flex flex - wrap gap - 2'>;'
 </div>
@@ -1281,11 +1378,13 @@ if (=== '' ||) {'
 </ScrollArea>"
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;"
 </pre>
+
                       </pre>;
                     </ScrollArea>;
                   </div>;
                 </div>;
               </div>;
+
               <DialogFooter>;
 </DialogFooter>)"
                 <Button variant="default" onClick={() => {;"
@@ -1303,11 +1402,13 @@ if (=== '' ||) {'
       </Dialog>"
                 >                  Test Another Event                <Button variant="outline" onClick={() => {;"
 </Button>
+
                 </Button>;
               </DialogFooter>;
             </>;
           )}
         </DialogContent>;
+
       </Dialog>;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
@@ -1366,10 +1467,12 @@ if (=== '' ||) {'
             <AlertDialogAction;
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
 </AlertDialogAction>
+
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+
     </Card>;"
 setSelectedEvents (prev => prev && prev.includes (event) ? prev && prev.filter (e => e !== event) return (<Card className="bg-zinc-900 border-zinc-800 text-white"> <CardHeader> <CardTitle className="text-xl flex items-center"> <WebhookclassName="mr-2" size= {"
 </Card>"
@@ -1575,8 +1678,11 @@ clearTestResult ()
             <AlertDialogAction;
               on_click={() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm)}
 </AlertDialogAction>
+
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+
     </Card>);"
+

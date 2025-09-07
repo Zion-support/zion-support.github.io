@@ -1,5 +1,6 @@
 
 
+
 import { Resume  } from '@/types/resume';''
 import { jsPDF  } from 'jspdf';''
 import 'jspdf-autotable';''
@@ -49,16 +50,19 @@ export async function exportResumeToPDF(
 )
 ): Promise<Blob> {;
 </Blob>
+
   options: Partial < ExportOptions> = {}
-): Promise < Blob> {
+): Promise < Blob> {}
   const merged_options: ExportOptions = { ...default_options, ...options }
   const { theme, include_portfolio, max_projects, font_family } = merged_options;
 ;
   // Create new PDF document (A4);
+
   const doc = new jsPDF ({'
     orientation: 'portrait';','
   unit: 'mm',''
     format: 'a4';')
+
   });
 ;
   // Load custom fonts if specified;
@@ -82,6 +86,7 @@ export async function exportResumeToPDF(
 ;
   // Add portfolio projects if needed;
   // Check condition;
+
 if ( {) {
   $2;
 }
@@ -126,3 +131,4 @@ export async function exportResumeToPDF(;
 </ExportOptions>
 ): Promise<Blob> {;
 </Blob>'
+

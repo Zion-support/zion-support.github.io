@@ -2,6 +2,7 @@
 
 
 
+
 interface TranslatableJobFormProps {
   // TODO: Implement
 }
@@ -201,8 +202,10 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
                   value={description[lang && lang.code] || ''}'
                   onChange={(e) => handleDescriptionChange(e && e.target.value)}
 </Textarea>
+
               </TabsContent>;
           </Tabs>;
+
         </div>;'
         <div className="space-y-2">;"
 </div>"
@@ -612,12 +615,14 @@ if ( {) {
             <>;"
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;              {t('jobs.submitting')}'
 </Loader2>
+
             </>;
           ) :(;)'
             t('jobs.post_job_button');'
           )}
         </Button>;
       </div>;
+
     </form>;'
   ) : (<Globe className=" h-4 w-4"/>)"
 </Globe>
@@ -637,3 +642,4 @@ if ( {) {
 </Loader2>)"
 }</>) : (t ('jobs.post job button') )'
 }</Button> </div> </form>) '
+

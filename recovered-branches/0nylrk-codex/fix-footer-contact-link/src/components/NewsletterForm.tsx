@@ -1,16 +1,19 @@
+
 import { Button } from "@/components/ui/button";""
 import { Input } from "@/components/ui/input";""
 import { useState } from "react";"
 export function NewsletterForm() {"
   const [email, setEmail] = useState("");"
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
+  const handleSubmit = (
+    e.preventDefault();
     setIsSubmitting(true);
 
     // Simulate API call;
+
     setTimeout(() => {
       setIsSubmitting(false);"
       (setIsSubmitted(true), setEmail(""));"
@@ -91,3 +94,4 @@ export function NewsletterForm() {"
         </form>;
     </div>;
     </div>"
+

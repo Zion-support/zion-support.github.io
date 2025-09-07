@@ -1,11 +1,14 @@
+
 export type ProjectStatus = 'InProgress' | 'Completed';'
 export type Project = {
   id: string;,
+
   userId: string;
   serviceId: string;,
   rating: number;
   comment: string;,
   createdAt: Date;
+
   updatedAt: Date;
 }'
 export type ReviewRole = 'client' | 'talent';'
@@ -32,10 +35,11 @@ export type Review = {
   projectId: string;
   fromRole: ReviewRole;,
   fromId: string, // clientId or talentSlug depending on fromRole;
+
   toRole: ReviewRole, // opposite of fromRole;
-  toId: string, // target id (talentSlug or clientId);
-  rating: number, // 1-5;
+  toId: string, // target id (talentSlug or clientId)rating: number, // 1-5;
   text: string;
+
   categories?: ReviewCategoryScores,;
   anonymous?: boolean,;
   approved: boolean, // admin moderated visibility;
@@ -64,16 +68,13 @@ export type Project = {
 export type ReviewRole = 'client' | 'talent','
 export type ReviewCategoryScores = {
   communication?: number, // 1 - 5 optional;
+
   qualityOfWork?: number, // 1 - 5 optional;
-  timeliness?: number, // 1 - 5 optional;
-  wouldWorkWithAgain?: boolean, // optional;
-},
-export type Review = {
-  id: string,
-  project_id: string,
-  from_role: ReviewRole,
-  from_id: string, // client_id or talent_slug depending on from_role;
+  timeliness?: number, // 1 - 5 optional;}
+  wouldWorkWithAgain?: boolean, // optional;}
+},export type Review = {id: string,project_id: string,from_role: ReviewRole,from_id: string, // client_id or talent_slug depending on from_role;
   to_role: ReviewRole, // opposite of from_role;
+
   to_id: string, // target id (talent_slug or client_id);
   rating: number, // 1 - 5;
   text: string,
@@ -95,3 +96,4 @@ export type ReviewsSummary = {
 }
 };
 '
+

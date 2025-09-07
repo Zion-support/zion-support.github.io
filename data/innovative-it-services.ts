@@ -27,12 +27,14 @@ export interface InnovativeITService {
   market_size: string;
   growth_rate: string;,
   variant: string;
+
   contact_info: {,
   mobile: string;
     email: string;,
   address: string;
 
     website: string;
+
   }
   {
       'Distributed edge nodes',''
@@ -46,6 +48,7 @@ export interface InnovativeITService {
       'IoT integration',''
       '5G optimization','
     ],
+
     popular: true,'
     icon: '🌐',''
       'Edge Computing',''
@@ -122,6 +125,7 @@ export interface InnovativeITService {
       'Node.js'''
       'Python'''
       'AWS'']
+
     ]
     integrations: ['
       'AWS IoT'''
@@ -170,6 +174,7 @@ export interface InnovativeITService {
       'Webhooks'''
       'SDK'']
     ]
+
     useCases: ['
       'Drug discovery'''
       'Financial modeling'''
@@ -287,6 +292,7 @@ export interface InnovativeITService {
   customers: 2500;
     rating: 4.7;,
   reviews: 1250;
+
   }
 ];
   id: string,;
@@ -318,8 +324,8 @@ export interface InnovativeITService {
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -341,6 +347,7 @@ export const innovativeITServices: InnovativeITService[] = [;
       'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management',;''
       'Compliance reportingReal-time monitoring';']
     ],;
+
     popular: true,;'
     icon: '🔒',;''
     color: 'from-red-500 to-pink-600',;''
@@ -365,6 +372,7 @@ export const innovativeITServices: InnovativeITService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.';''
@@ -372,9 +380,8 @@ export const innovativeITServices: InnovativeITService[] = [;
   customers: 2500;
     rating: 4.7,
     reviews: 1250;
+  }
 
-  }
-;
-  }
+;  }
 ];
 '

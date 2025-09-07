@@ -1,8 +1,31 @@
-Table;
-  TableBody;
+
+;
+Table;import React from 'react';
+import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { Download, FileText, Search  } from 'lucide-react';
+import { Input  } from '@/components/ui/input';
+import { toast  } from '@/hooks/use-toast';
+import { Table;TableBody;
   TableCell;
   TableHead;
-  TableHeader;
+  TableHeader;Table;
+  TableBody;
+  TableCell;
+  TableHead;}
+  TableHeader;}
+  TableRow } from '@/components/ui/table';
+import { Download, FileText, Search } from 'lucide-react'import { Input  } from '@/components/ui/input';
+import {import React from \"react\",Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from \"@/components/ui/table\",import { Button } from \"@/components/ui/button\",import { Badge } from \"@/components/ui/badge\",import { Input } from \"@/components/ui/input\",import { toast } from \"@/hooks/use-toast\",export function InvoiceHistory() {// Mock invoice data;
+}
+const invoices = [}
+  {TableRow } from '@/components / ui / table';
+import { Button   } from '@/components / ui / button';
+import { Badge   } from '@/components / ui / badge';
+import { Download, FileText, Search } from 'lucide-react'import { Input   } from '@/components / ui / input';
+import { toast   } from '@/hooks / use - toast';
+
 
   Table;
   TableBody;
@@ -235,3 +258,4 @@ function InvoiceHistory() {
       case "paid": return <Badge className="bg - green - 500">Paid</Badge>;""
         return <Badge variant="destructive">Overdue</Badge>;""
         return <Badge variant="outline">{status}</Badge>;""
+

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -279,10 +280,13 @@ const Footer = () => {
               </div>
             </div>
           </motion.div>
+
         </div>
       </div>
     </footer>
   );
+
 };
+
 
 export default Footer;

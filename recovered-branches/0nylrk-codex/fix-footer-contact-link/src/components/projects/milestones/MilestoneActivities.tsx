@@ -1,4 +1,5 @@
 
+
 import {supabase} from '@/integrations / supabase / client';''
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';''
 import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';''
@@ -28,6 +29,7 @@ interface Activity {
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
 </Activity>
+
   const [activities, set_activities] = useState < Activity[]>([]);
   const [is_loading, setIsLoading] = useState (true);
 ;
@@ -37,16 +39,19 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
  */
 function fetch_activities() {
       try {
+
   // TODO: Implement
 }
         setIsLoading (true);
 ;
         const { data, error } = await supabase;'
           .from ('milestone_activities');'
+
           .select (`;
             *;)
             milestone: milestone_id (title),
             created_by_profile:profiles ! user_id (display_name, avatar_url);
+
           `);'
           .eq ('project_id', project_id);''
           .order ('created_at', { ascending: false }),'
@@ -73,6 +78,7 @@ interface MilestoneActivitiesProps {;
   projectId: string;
 }
 
+
 interface Activity {;
   id: string,;
   milestone_id: string,;
@@ -82,16 +88,18 @@ interface Activity {;
   new_status: string,;
   comment: string | null,;
   created_at: string,;
+
   milestone: {;,
   title: string;
   };
   created_by_profile: {;,
   display_name: string,;
     avatar_url: string | null;
+
   }
 }
-
 export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesProps) {;
+
   const [activities, setActivities] = useState<Activity[]>([]);
 </Activity>'
       <div className="space-y-4">"
@@ -153,10 +161,12 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 </Skeleton>"
                   <Skeleton className="h-4 w-60" />;"
 </Skeleton>
+
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
+
       </div>;"
       <div className="space-y-4">;"
 </div>
@@ -231,3 +241,4 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
         </CardContent>;
       </Card>;
     </div>;"
+

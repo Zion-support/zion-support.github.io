@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react",""
 import { WorkspaceHeader } from "./WorkspaceHeader",""
 import { SharedInbox } from "./SharedInbox",""
@@ -21,6 +22,7 @@ export interface Company {
 
 
     primaryColor: string,
+
     backgroundColor: string,
     textColor: string;
   },
@@ -28,6 +30,7 @@ export interface Company {
   teamSize: number,
   teamLimit: number,
   billingCycle: string,
+
   workspaceUrl: string;"
 import React from "react",;""
 import { WorkspaceHeader } from "./WorkspaceHeader",;""
@@ -36,11 +39,13 @@ import { TeamStats } from "./TeamStats",;""
 import { QuickActions } from "./QuickActions",;""
 import { RecentActivity } from "./RecentActivity",;""
 import { TalentPool } from "./TalentPool",;"
+
 export interface Company {;
   id: string;,
   name: string;
   logoUrl?: string;
   theme?: {;
+
     primaryColor: string;,
   backgroundColor: string;
 
@@ -54,24 +59,16 @@ export interface Company {;
   teamLimit: number;,
   billingCycle: string;
   workspaceUrl: string;
+
 }
-
-
-  company: Company;
-}
-
-;
-interface CompanyDashboardProps {;
-
 interface CompanyDashboardProps {
   // TODO: Implement
 }
 ;
-interface CompanyDashboardProps {;
-
-
-  company: Company;
+interface CompanyDashboardProps {;}
+  company: Company;}
 }
+
 
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return ("
@@ -90,6 +87,7 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 </div>"
         <div className="lg:col-span-2 space-y-6">"
 </div>
+
           <QuickActions />
 </QuickActions>
           <RecentActivity />
@@ -99,6 +97,7 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
         </div>
 
 
+
         
 
 
@@ -106,11 +105,13 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
         "
         <div className="space-y-6">"
 </div>
+
           <TeamStats />
 </TeamStats>
           <SharedInbox />
 </SharedInbox>
         </div>
+
       </div>"
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">;"
 </div>
@@ -174,3 +175,4 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
         </div>;
       </div>;
     </div>;"
+

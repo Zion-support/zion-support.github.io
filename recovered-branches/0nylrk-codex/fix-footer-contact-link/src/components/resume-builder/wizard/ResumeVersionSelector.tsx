@@ -1,21 +1,26 @@
+
 import { useState } from "react";"
+
 import {
   // TODO: Implement
 }
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+
   DropdownMenuSeparator,
   DropdownMenuTrigger,"
 } from "@/components/ui/dropdown-menu";""
 import { Button } from "@/components/ui/button";""
 import { Input } from "@/components/ui/input";"
+
 import {
   // TODO: Implement
 }
   Dialog,
   DialogContent,
   DialogFooter,
+
   DialogHeader,
   DialogTitle,"
 } from "@/components/ui/dialog";""
@@ -27,9 +32,12 @@ interface ResumeVersionSelectorProps {
 }
   currentResume: Resume;,
   onResumeChange: (resumeId: string) => void;
+
 }
 
+
 export function ResumeVersionSelector({
+
   currentResume,
   onResumeChange,)
 }: ResumeVersionSelectorProps) {
@@ -59,17 +67,21 @@ export function ResumeVersionSelector({
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
 </DropdownMenuItem>
+
             </DropdownMenuItem>
           <DropdownMenuSeparator />
+
 </DropdownMenuSeparator>
           <DropdownMenuItem;
             onClick={() => setSaveDialogOpen(true)}
 </DropdownMenuItem>"
             <Plus className="h-4 w-4 mr-2" />"
 </Plus>
+
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+
 
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
 </Dialog>"
@@ -129,10 +141,10 @@ export function ResumeVersionSelector({
 </Button>
             </Button>
             <Button;
+
 onClick={handleCreateNewVersion}
-              disabled={!newResumeTitle.trim() |isLoading}
-              onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
+
 "
               className="gap-2""
             >
@@ -141,11 +153,14 @@ onClick={handleCreateNewVersion}
 </Loader2>"
               <Save className="h-4 w-4" />"
 </Save>
+
             </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
     </div>
+
 }</DropdownMenuItem>) ) "
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>)"
 </DropdownMenuSeparator>"
+

@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { Star } from "lucide-react";"
 export const CommunityTrust: React.FC = () => {
@@ -55,10 +56,12 @@ export const CommunityTrust: React.FC = () => {
 </div>"
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>""
             <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>"
+
           </div>
         </div>
       </div>
     </section>
+
           </div>;"
           <blockquote className="text - center text - lg text - white italic mb - 4">;"
 </blockquote>
@@ -71,3 +74,4 @@ export const CommunityTrust: React.FC = () => {
         </div>;
       </div>;)
     </section>);"
+

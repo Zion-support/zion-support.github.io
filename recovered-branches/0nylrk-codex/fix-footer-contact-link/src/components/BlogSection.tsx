@@ -1,5 +1,6 @@
 
 
+
 import { GradientHeading } from "./GradientHeading";""
 import { Card, CardContent, CardFooter } from "@/components/ui/card";""
 import { Button } from "./ui/button";""
@@ -9,10 +10,12 @@ import { BLOG_POSTS } from "@/data/blog-posts";"
 const recentPosts = [...BLOG_POSTS]
   .sort((a, b) => {
     return ()
+
       new Date(b && b.publishedDate).getTime() - new Date(a && a.publishedDate).getTime();
     );
   });
   .slice(0, 3);
+
 
 
 "
@@ -292,3 +295,4 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
 </Button>
 }>Read More →</Link> </Button> </CardFooter> </Card>) ) 
 }</div> </div> </section>) "
+

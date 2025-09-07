@@ -1,5 +1,6 @@
 
 
+
 import React from "react";""
 import Layout from "../components/Layout";""
 import React from 'react';''
@@ -10,6 +11,7 @@ import MainLayout from '../components/layout/MainLayout';'
 import {
   // TODO: Implement
 }
+
   TrendingUp,
   Building,
   Rocket,
@@ -30,6 +32,7 @@ import {
   Clock, 
   BarChart3,
   Phone,
+
   Mail,
   MapPin;'
 } from 'lucide-react';'
@@ -159,9 +162,11 @@ export default function AboutPage() {
                   <h3 className="text-2xl font-bold text-white">{value.title}</h3>"
                 </div>"
                 <p className="text-gray-300">{value.description}</p>"
+
               </motion.div>
             ))}
           </div>
+
 
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -195,11 +200,13 @@ export default function AboutPage() {
                 <MapPin className="h-5 w-5 mr-2" />"
 </MapPin>
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
+
               </div>
             </div>
           </motion.div>
         </div>
       </div>
+
     </MainLayout>"
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
 </div>
@@ -262,6 +269,7 @@ export default function AboutPage() {
 </div>"
                 <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>""
                 <Button href="/pricing" variant="outline" className="border border-gray-600 text-gray-200">Pricing</Button>"
+
               </div>
             </div>
           </section>
@@ -270,14 +278,17 @@ export default function AboutPage() {
     </>
   )
 
+
 export default AboutPage;"
 import React from './react';''
 import Layout from "../components / Layout";;"
+
 export default /**
  * About - Function description;
  */
 function About() {
   return (
+
     <Layout;"
       title="About Us - Zion Tech Group";""
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting - edge technology solutions.";"
@@ -303,3 +314,4 @@ function About() {
         </div>;
       </div>;)
     </Layout>);"
+

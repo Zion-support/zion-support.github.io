@@ -3,6 +3,7 @@
 
 
 
+
 import React, { useState } from "react";""
 import {Star} from "lucide-react";""
 import {Button} from "@/components/ui/button";""
@@ -33,13 +34,15 @@ import { HireRequestModal } from '@/components / profile / hire - request';''
 import { useAuthStatus } from '@/hooks / talent';''
 import { UserProfile } from '@/types / auth';''
 import { use_navigate } from './react-router-dom';'
+
 interface TalentCardFooterProps {
   // TODO: Implement
 }
   profile: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire?: (profile: TalentProfile) => void;
+  onViewProfile: (id: string) => void,}
+  onRequestHire?: (profile: TalentProfile) => void}
 }
+
 export /**
  * TalentCardFooter - Function description;
  */
@@ -240,10 +243,12 @@ if ( {) {
   $2;
 }'
       onViewProfile (profile.id || '');'
+
     }
   }
 ;
   return (
+
     <>;'
       <div className="mt - 4 pt - 4 border - t border - zion - blue - light flex items - center justify - between">;"
 </div>
@@ -280,12 +285,14 @@ if ( {) {
 </Button>"
             <ExternalLink className="h - 3 w - 3 ml - 1" />;"
 </ExternalLink>
+
           </Button>;
         </div>;
       </div>;
       <HireRequestModal;
         talent={profile}
         is_open={isHireModalOpen}
+
         on_close={() => setIsHireModalOpen (false)}
 </HireRequestModal>
     </>);
@@ -308,6 +315,7 @@ profile.id || '''
 }onClose= {
   () => setIsHireModalOpen (false) 
 </HireRequestModal>
+
 }/> </>) 
 }
       />
@@ -319,4 +327,6 @@ profile.id || '''
   );
 }
 ;
+
 "
+

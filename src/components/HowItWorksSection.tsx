@@ -1,3 +1,4 @@
+
 import React from 'react';'
 const HowItWorksSection = () => {
   const steps = [
@@ -395,10 +396,12 @@ function HowItWorksSection() {
                     </div>;
                 </div>;
               </div>;
+
           </div>;
         </div>;
       </div>;
     </section>;
+
                       </p>                    </div>                    </div>) : null}
                 </div>;"
                       <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;""
@@ -423,3 +426,4 @@ function HowItWorksSection() {
         </div>;
       </div>;
     </section>);"
+

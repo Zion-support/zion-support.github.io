@@ -2,19 +2,23 @@ export interface DevIdentity {
   // TODO: Implement
 }
 export interface DevIdentity {;
+
   isAuthenticated: boolean;,
   roles: DevRole[];
   userId?: string;
 }
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {''
       stdio: ['ignore', 'pipe', 'ignore']')
+
     })
       .toString()
       .trim();
     return { connected: true, branch }
+
   } catch {
   // TODO: Implement
 }
+
     return { connected: false }
   }
 }
@@ -24,23 +28,28 @@ export interface DevIdentity {;
 export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 
+
   // TODO: integrate real auth; for now, check a header and env var for dev;'
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];'
-  const adminToken = process && process.env.ADMIN_TOKEN;
 
-  if (token && adminToken && token === adminToken) {
+  const adminToken = process && process.env.ADMIN_TOKEN;
+}
+  if (token && adminToken && token === adminToken) {}
   }
   return { isAuthenticated: false, roles: [] }
 }
+
   if (token && adminToken && token === adminToken) {
 '
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }''
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };'
+
   }
   return { isAuthenticated: false, roles: [] }
 }
 
 export function requireRoles(
+
   req: NextApiRequest;,
   res: NextApiResponse;
   allowed: DevRole[])
@@ -53,6 +62,7 @@ export function requireRoles(
   const hasRole = identity.roles.some(r => allowed.includes(r));
   if (!hasRole) {'
     res && res.status(403).json({ error: 'Forbidden' });'
+
     return undefined;
   }
   return identity;
@@ -62,9 +72,11 @@ export interface DevAccessConfig {
 }
   enabled: boolean;,
   allowedIps: string[];
+
   allowedUsers: string[];,
   requireAuth: boolean;
   maxRequestsPerMinute: number;
+
 }
 
 export interface DevUser {
@@ -72,6 +84,7 @@ export interface DevUser {
 }
   id: string;,
   name: string;
+
   email: string;,'
   role: 'developer' | 'admin' | 'tester';'
   permissions: string[];,
@@ -84,11 +97,13 @@ class DevAccessManager {
   private config: DevAccessConfig;
   private users: Map<string, DevUser> = new Map();
 </string>
+
   private accessLog: Array<{ ip: string; user: string; timestamp: number; action: string }> = [];
 
-  constructor(config: DevAccessConfig) {
-    this.config = config;
+  constructor(config: DevAccessConfig) {}
+    this.config = config;}
   }
+
 
   isDevAccessEnabled(): boolean {
   // TODO: Implement
@@ -108,14 +123,17 @@ class DevAccessManager {
 }
     if (!this.config.enabled) return false;'
     return this.config.allowedUsers.includes(userId) || this.config.allowedUsers.includes('*');'
+
   }
 
   hasPermission(userId: string, permission: string): boolean {
   // TODO: Implement
 }
     const user = this.users.get(userId);
+
     if (!user) return false;'
     return user.permissions.includes('*') || user.permissions.includes(permission);'
+
   }
 
   logAccess(ip: string, user: string, action: string): void {
@@ -123,6 +141,7 @@ class DevAccessManager {
 }
     this.accessLog.push({
       ip,
+
       user,)
       timestamp: Date.now(),
       action;
@@ -131,12 +150,14 @@ class DevAccessManager {
     // Keep only last 1000 entries;
     if (this.accessLog.length > 1000) {
       this.accessLog = this.accessLog.slice(-1000);
+
     }
   }
 
-  getAccessLog(): Array<{ ip: string; user: string; timestamp: number; action: string }> {
-    return [...this.accessLog];
+  getAccessLog(): Array<{ ip: string; user: string; timestamp: number; action: string }> {}
+    return [...this.accessLog];}
   }
+
 
   addUser(user: DevUser): void {
   // TODO: Implement
@@ -154,11 +175,14 @@ class DevAccessManager {
   // TODO: Implement
 }
     return this.users.get(userId);
+
   }
 
-  getAllUsers(): DevUser[] {
-    return Array.from(this.users.values());
+  getAllUsers(): DevUser[] {}
+    return Array.from(this.users.values());}
   }
+
 
   updateConfig(newConfig: Partial<DevAccessConfig>): void {
 </DevAccessConfig>'
+

@@ -1,3 +1,4 @@
+
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors;
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {''
@@ -133,10 +134,14 @@ if ( {) {
     to_console: true,'
   }, });    mocha_file: 'cypress / results / junit-[hash].xml';',
   to_console: true;
+
   }
+
 });
 
 
 
 
+
 '
+

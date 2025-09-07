@@ -1,6 +1,7 @@
 
 
 
+
 import { useState  } from 'react';''
 import { SmartContractBuilder  } from '@/components/contracts/SmartContractBuilder';''
 import { ContractBuilder  } from '@/components/contracts/ContractBuilder';''
@@ -251,3 +252,4 @@ function ContractBuilderContent() {
   )
 }
 '
+

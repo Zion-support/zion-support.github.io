@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";""
 import { Skill } from "@/types/resume";""
 import { SkillCategory } from "./SkillCategory";"
@@ -19,6 +20,7 @@ interface SkillsListProps {
 </div>
           <SkillCategory;
             key={category}
+
             category={category}
             skills={categorySkills}
             onDelete={onDeleteSkill}
@@ -26,6 +28,7 @@ interface SkillsListProps {
 </SkillCategory>
       </div>
     </div>
+
       {} as Record < string, Skill[]>,
     );
 ;
@@ -62,3 +65,4 @@ return (<div className="space-y-6" > <h3 className="text-md font-medium" >Your S
     </div>
       </div>;
     </div>;"
+

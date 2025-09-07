@@ -2,6 +2,7 @@
 
 
 
+
 import {useState} from "react";""
 import {zodResolver} from "@hookform/resolvers/zod";""
 import {useForm} from "react-hook-form";""
@@ -83,13 +84,11 @@ function ProfileSetup() {
         return "Client","
       default:"
         return "User""
+
     }
-
   },
-
-
-
   return (
+
 
           <FormField;
             control={form.control}"
@@ -208,10 +207,12 @@ function ProfileSetup() {
                       "business and needs";"
                     }`}"
                     className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]";"
+
                     {...field}
                   />;
 </Textarea>
                 </FormControl>;
+
           <Button;"
             type="submit"""
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;"
@@ -245,3 +246,4 @@ function ProfileSetup() {
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) 
     </div>;
     </div>);"
+

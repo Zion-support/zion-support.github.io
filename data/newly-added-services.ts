@@ -1,4 +1,50 @@
+
+const contact = {mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',}
+  website: 'https://ziontechgroup.com'}const contact = {mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';}
+  address: '364 E Main St STE 1008 Middletown DE 19709';}
+  website: 'https://ziontechgroup.com'}
+export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
+  {const contact = {mobile: '+1 302 464 0950';
+export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
+  {const contact = {mobile: '+1 302 464 0950';export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
+  {const contact = {mobile: '+1 302 464 0950';email: 'kleber@ziontechgroup && ziontechgroup.com';
+	address: '364 E Main St STE 1008 Middletown DE 19709',}
+  website: 'https://ziontechgroup && ziontechgroup.com';}
+}export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
+  {id: 'managed-ml-feature-store-starter';
+    name: 'Managed ML Feature Store Starter';
+    tagline: 'Production-ready feature store with governance and lineage';
+    price: '$249';}
+    period: '/month';}
+    id: 'managed-ml-feature-store-starter',
+  name: 'Managed ML Feature Store Starter',tagline: 'Production-ready feature store with governance and lineage',
+  price: '$249',period: '/month',import { EnhancedRealMicroSaasService  } from './enhanced-real-micro-saas-services';
+const contact  = null;description:;
+      'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.';
+    features: [;
+      'Online/offline consistency checks';
+      'Schema/version governance';
+      'Backfills and point-in-time joins';
+      'Drift alerts and quality tests';
+      'RBAC and audit logs';
+    ];
+    popular: true;
+      'Online/offline consistency checks','Schema/version governance','Backfills and point-in-time joins','Drift alerts and quality tests','RBAC and audit logs',description: 'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.',
+  features: [;
+      'Online/offline consistency checksSchema/version governance','Backfills and point-in-time joinsDrift alerts and quality tests','RBAC and audit logs';
+    ],popular: true,icon: '🧬',
+  color: 'from-purple-600 to-indigo-700',textColor: 'text-purple-300',
+  link: 'https://ziontechgroup.com/services/managed-ml-feature-store-starter',marketPosition:;
+      'Accelerates ML platform maturity versus building from scratch.';
+    targetAudience: 'ML platform teams and data engineering';
+    trialDays: 14;
+    setupTime: '1-3 days';
+    category: 'AI & Data',
+  features: [;
 const contact = {
+
   mobile: '+1 302 464 0950',''
   email: 'kleber@ziontechgroup.com',''
   address: '364 E Main St STE 1008 Middletown DE 19709',''
@@ -8,10 +54,12 @@ const contact = {'
   email: 'kleber@ziontechgroup.com'''
   address: '364 E Main St STE 1008 Middletown DE 19709'','
   website: 'https://ziontechgroup.com',}'
+
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {const contact = {'
 	mobile: '+1 302 464 0950';']
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
+
   {const contact = {'
 	mobile: '+1 302 464 0950';','
   email: 'kleber@ziontechgroup && ziontechgroup.com';''
@@ -1923,20 +1971,24 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
       'Provisioned infra, SDKs, CI templates, and dashboards.',''
     launch_date: '2025 - 03 - 15','
     customers: 7,
+
     rating: 4 && 4.7,
-    reviews: 4,
+    reviews: 4;
   },
+
   {'
       'Auto - wait and idempotent steps',''
       'Proxies and device profiles',''
       'Run history and replays',''
       'Webhooks and schedules','
+
     ],
     popular: false,
     customers: 5,
-    rating: 4 && 4.6,
-    reviews: 3,
+    rating: 4 && 4.6,}
+    reviews: 3}
   },
+
   {'
       'SCIM provisioning adapters',''
       'End - to - end test suites',''
@@ -1955,10 +2007,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Adapters, sample app, e2e tests, and docs.',''
     launch_date: '2025 - 03 - 17','
+
     customers: 4,
-    rating: 4 && 4.8,
-    reviews: 2,
+    rating: 4 && 4.8,}
+    reviews: 2}
   },
+
   {'
       'Synthetic latency monitoring',''
       'Adaptive rate - limit tuner',''
@@ -2055,10 +2109,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'ETL + anomaly models + alerting with IaC guidance.',''
     launch_date: '2025 - 03 - 09','
+
     customers: 11,
-    rating: 4 && 4.7,
-    reviews: 5,
+    rating: 4 && 4.7,}
+    reviews: 5}
   },
+
   {'
       'YAML job specs',''
       'Cross - cloud scheduler',''
@@ -2246,10 +2302,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Connectors, NLP pipelines, and dashboard.',''
     launch_date: '2025 - 02 - 12','
+
     customers: 63,
-    rating: 4 && 4.5,
-    reviews: 24,
+    rating: 4 && 4.5,}
+    reviews: 24}
   },
+
   {'
       'ICP & persona modeling',''
       'Sequence generator',''
@@ -2273,10 +2331,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Template library, sequence runner, and analytics.',''
     launch_date: '2025 - 01 - 28','
+
     customers: 210,
-    rating: 4 && 4.8,
-    reviews: 77,
+    rating: 4 && 4.8,}
+    reviews: 77}
   },
+
   {'
       'Throughput profiler',''
       'Parallelism tuner',''
@@ -2300,10 +2360,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Scheduler hooks, profilers, and policy engine.',''
     launch_date: '2025 - 03 - 02','
+
     customers: 11,
-    rating: 4 && 4.4,
-    reviews: 6,
+    rating: 4 && 4.4,}
+    reviews: 6}
   },
+
   {'
       'SAML & OIDC',''
       'SCIM provisioning',''
@@ -2353,10 +2415,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   implementationDetails:'
       'Connect billing export, train anomaly baselines, configure guardrails and alert routes.',''
     launch_date: '2025 - 03 - 10','
+
     customers: 11,
-    rating: 4 && 4.7,
-    reviews: 6,
+    rating: 4 && 4.7,}
+    reviews: 6}
   },
+
   {'
       'Identity verification & consent',''
       'Cross - system data discovery',''
@@ -2432,10 +2496,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Sequencer, warmup checks, and CRM connector pack.',''
     launch_date: '2025 - 03 - 15','
+
     customers: 17,
-    rating: 4 && 4.8,
-    reviews: 10,
+    rating: 4 && 4.8,}
+    reviews: 10}
   },
+
   {'
       'Schema diff & validation',''
       'Data quality checks',''
@@ -2501,10 +2567,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Survey builder, response store, analytics.',''
     launch_date: '2025 - 03 - 18','
+
     customers: 3,
-    rating: 4 && 4.6,
-    reviews: 2,
+    rating: 4 && 4.6,}
+    reviews: 2}
   },
+
   {'
       'Return portal & policies',''
       'Label generation',''
@@ -2563,10 +2631,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Visual builder, CDN forms, realtime aggregation.',''
     launch_date: '2026 - 03 - 11','
+
     customers: 18,
-    rating: 4 && 4.6,
-    reviews: 6,
+    rating: 4 && 4.6,}
+    reviews: 6}
   },
+
   {'
       'Referral links and attribution',''
       'Commission rules and schedules',''
@@ -2595,10 +2665,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Tracking pixels, webhook handlers, payout engine.',''
     launch_date: '2026 - 03 - 12','
+
     customers: 11,
-    rating: 4 && 4.5,
-    reviews: 5,
+    rating: 4 && 4.5,}
+    reviews: 5}
   },
+
   {'
       'Cheaper than fully managed agencies; better tooling than DIY.',''
     target_audience: 'Podcasters, media teams, agencies','
@@ -2658,10 +2730,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Ticket intake, workflow, roles, portal and KB UI.',''
     launch_date: '2026 - 03 - 07','
+
     customers: 16,
-    rating: 4 && 4.5,
-    reviews: 8,
+    rating: 4 && 4.5,}
+    reviews: 8}
   },
+
   {'
       'Automated system discovery and RoPA builder',''
       'DPIA templates with AI risk suggestions',''
@@ -2720,10 +2794,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Agentless collectors with export pipelines.',''
     launch_date: '2025 - 06 - 01','
+
     customers: 11,
-    rating: 4 && 4.5,
-    reviews: 7,
+    rating: 4 && 4.5,}
+    reviews: 7}
   },
+
   {'
       'Competitor monitoring and diffs',''
       'User review mining and clustering',''
@@ -2746,10 +2822,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Scheduled crawlers + summarization with citations.',''
     launch_date: '2025 - 07 - 01','
+
     customers: 18,
-    rating: 4 && 4.6,
-    reviews: 10,
+    rating: 4 && 4.6,}
+    reviews: 10}
   },
+
   {'
       'Persona and JTBD inputs',''
       'Channel mix recommendations',''
@@ -2776,10 +2854,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Guided workflow with template library and exports.',''
     launch_date: '2025 - 05 - 15','
+
     customers: 25,
-    rating: 4 && 4.5,
-    reviews: 9,
+    rating: 4 && 4.5,}
+    reviews: 9}
   },
+
   {'
       'Topic clustering and trends',''
       'Product area routing rules',''
@@ -2794,10 +2874,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     use_cases: ['Feedback centralization', 'Prioritization', 'VOC analytics'],''
     roi: 'Improve roadmap - fit and customer satisfaction',''
     competitors: ['Canny', 'Productboard (lite)'],'
+
     customers: 15,
-    rating: 4 && 4.6,
-    reviews: 8,
+    rating: 4 && 4.6,}
+    reviews: 8}
   },
+
   {'
       'Edge evaluation and low latency',''
       'SDKs for JS, Node, Python',''
@@ -2820,10 +2902,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Edge functions and SDK package templates.',''
     launch_date: '2025 - 07 - 20','
+
     customers: 10,
-    rating: 4 && 4.5,
-    reviews: 5,
+    rating: 4 && 4.5,}
+    reviews: 5}
   },
+
   {'
       'Risk heatmap and clause classification',''
       'Suggested language with alternatives',''
@@ -2850,10 +2934,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Template packs + contract parsers.',''
     launch_date: '2025 - 05 - 28','
+
     customers: 8,
-    rating: 4 && 4.5,
-    reviews: 4,
+    rating: 4 && 4.5,}
+    reviews: 4}
   },
+
   {'
       'Timeline and RCA suggestions',''
       'Change correlation and diffs',''
@@ -2875,10 +2961,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Event ingestors and summarization pipelines.',''
     launch_date: '2025 - 08 - 05','
+
     customers: 7,
-    rating: 4 && 4.6,
-    reviews: 3,
+    rating: 4 && 4.6,}
+    reviews: 3}
   },
+
   {'
       'Schema and distribution monitoring',''
       'Drift detection and anomaly alerts',''
@@ -2905,10 +2993,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Warehouse connectors, alerting, and PR generators.',''
     launch_date: '2025 - 07 - 14','
+
     customers: 12,
-    rating: 4 && 4.6,
-    reviews: 6,
+    rating: 4 && 4.6,}
+    reviews: 6}
   },
+
   {'
       'Copy suggestions with tone controls',''
       'Experiment setup in minutes',''
@@ -2935,10 +3025,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Browser extension + flag hooks + PR templates.',''
     launch_date: '2025 - 06 - 18','
+
     customers: 14,
-    rating: 4 && 4.5,
-    reviews: 5,
+    rating: 4 && 4.5,}
+    reviews: 5}
   },
+
   {'
       'System registry and ownership',''
       'Risk assessment and mitigations',''
@@ -4053,8 +4145,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 45,
     rating: 4.7,
     reviews: 19;
+
   }
   ,
+
 
 
 
@@ -5239,6 +5333,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Registry + eval runners + approval flows.', launchDate: '2025-08-15','
     customers: 5, rating: 4.6,
     reviews: 2;
+
   }
 ];
 
@@ -5250,4 +5345,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 '
+

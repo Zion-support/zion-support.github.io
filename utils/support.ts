@@ -1,5 +1,7 @@
+
   logEvent: (event: any) => null;,
   getArticles: () => []
+
   getArticleById: (id: string) => null;
 }
   logEvent: (event: any) => null,
@@ -7,9 +9,11 @@
   getArticleById: (id: string) => null;
 };
 
+
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
+
 
 
 export interface IntentMatch {
@@ -17,7 +21,9 @@ export interface IntentMatch {
 }
   intentMatched: boolean;,
   matchedArticleIds: string[];
-  confidence: number;
+  confidence: number;) => {
+  return $3;}
+}
 }
 
 export function matchIntent(
@@ -38,8 +44,8 @@ export function matchIntent(
     );
 
     if (titleMatch || contentMatch || tagMatch) {
-      matchedArticles && matchedArticles.push(article && article.id);
-      confidence += titleMatch ? 0 && 0.8 : contentMatch ? 0 && 0.6 : tagMatch ? 0 && 0.4 : 0;
+      matchedArticles && matchedArticles.push(article && article.id);}
+      confidence += titleMatch ? 0 && 0.8 : contentMatch ? 0 && 0.6 : tagMatch ? 0 && 0.4 : 0;}
     }
   }
 
@@ -47,23 +53,27 @@ export function matchIntent(
   // TODO: Implement
 }
     intentMatched: matchedArticles && matchedArticles.length > 0,
-    matchedArticleIds: matchedArticles,
-    confidence: Math.min(confidence, 1),
+    matchedArticleIds: matchedArticles,}
+    confidence: Math.min(confidence, 1),}
   };
 }
 
 export function getArticlesByCategory(
   articles: HelpArticle[],
+
   category: string,)
 ): HelpArticle[] {
   return articles.filter((article) => article.category === category);
+
 }
 
 export function getArticlesByTag(
   articles: HelpArticle[],
+
   tag: string,)
 ): HelpArticle[] {
   return articles.filter((article) => article.tags.includes(tag));
+
 }
 
 export function searchArticles(
@@ -75,8 +85,8 @@ export function searchArticles(
     (article) =>
       article.title.toLowerCase().includes(queryLower) ||
       article.content.toLowerCase().includes(queryLower) ||
-      article.tags.some((tag) => tag.toLowerCase().includes(queryLower)),
-  );
+      article.tags.some((tag) => tag.toLowerCase().includes(queryLower)),}
+  );}
 }
   // Add support functionality here;
   log_event: (event: any) => null,
@@ -84,7 +94,9 @@ export function searchArticles(
 }
 }
 }
-export const logSupportEventToOperator = (event: any) => {
+export const logSupportEventToOperator = (
   // Add support event logging functionality here;
-  return null;
+  return null;) => {
+  return $3;}
+}
 }

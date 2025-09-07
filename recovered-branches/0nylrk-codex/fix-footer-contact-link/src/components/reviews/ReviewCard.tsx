@@ -1,3 +1,4 @@
+
 import { useState } from "react";""
 import { formatDistanceToNow } from "date-fns";""
 import { Star, Flag, User } from "lucide-react";""
@@ -5,6 +6,7 @@ import { Review } from "@/types/reviews";""
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";""
 import { Button } from "@/components/ui/button";""
 import { Badge } from "@/components/ui/badge";"
+
 import {
   // TODO: Implement
 }
@@ -13,6 +15,7 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
+
   DialogTitle,
   DialogTrigger,"
 } from "@/components/ui/dialog";""
@@ -262,11 +265,13 @@ interface ReviewCardProps {
                 disabled={!reportReason.trim() || isReporting}
               >
 </Button>
+
               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
       </div>
+
     </div>"
 return (<div className="flex" > {"
 </div>)
@@ -317,3 +322,4 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 }disabled= {
   !reportReason.trim () || isReporting;
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>) "
+

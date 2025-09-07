@@ -1,14 +1,17 @@
 
+
 import {formatDate} from "@/utils/dateUtils";"
+
 interface QuotesTableProps {;
   quotes: QuoteRequest[],;
   isArchived?: boolean;
   isLoading: boolean,;
   updateStatus: (id: string, status: QuoteStatus) => void,;
   toggleArchive: (id: string, isArchived: boolean) => void,;
-  deleteQuote: (id: string) => void,;
-  onViewDetails: (quote: QuoteRequest) => void;
+  deleteQuote: (id: string) => void,;}
+  onViewDetails: (quote: QuoteRequest) => void;}
 }
+
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
 </QuotesTableProps>
@@ -57,12 +60,14 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                 </TableCell>"
                 <TableCell className="text-white">"
 </TableCell>
+
 export const QuotesTable: React.FC < QuotesTableProps> = ({
   quotes;
   is_archived = false;
   is_loading;
   update_status;
   toggle_archive;
+
   delete_quote,
   onViewDetails;)
 }) => {
@@ -97,8 +102,10 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
               <TableCell col_span={7} className="text - center py - 10 text - zion - slate - light">;"
 </TableCell>
               </TableCell>;)
+
             </TableRow>) : (
               <TableRow;
+
                 key={quote.id}"
                 className="border - zion - blue - light hover:bg - zion - blue";"
               >;
@@ -369,12 +376,14 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
                       </DropdownMenu>;                    )}
+
                   </div>
                 </TableCell>
               </TableRow>
         </TableBody>
       </Table>
     </div>
+
                   </div>;
                 </TableCell>;
               </TableRow>;
@@ -522,3 +531,4 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
         </TableBody>;
       </Table>;
     </div>;"
+

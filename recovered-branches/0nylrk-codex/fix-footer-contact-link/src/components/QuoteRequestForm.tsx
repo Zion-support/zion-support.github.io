@@ -2,6 +2,7 @@
 
 
 
+
 import {useState} from "react";""
 import {useToast} from "@/hooks/use-toast";""
 import {useNavigate} from "react-router-dom";""
@@ -378,6 +379,9 @@ return (<div className="container mx-auto px-4 py-12" > <div className="max-w-3x
 }<Button onClick= {
   handleNext;"
 }className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > Continue </Button>) : (<Button </Button>)"
+
 }</div> </CardContent> </Card> </div> </div>) 
     </div>;
+
     </div>);"
+

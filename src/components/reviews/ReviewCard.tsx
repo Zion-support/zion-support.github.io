@@ -1,3 +1,4 @@
+
 return (
       <div className='flex'>;'
 </div>
@@ -426,12 +427,14 @@ if (return null) {
           </DialogContent>
         </Dialog>"
                 {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}"
+
               </Button>;
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       </div>;
     </div>;
+
               <DialogTitle > Report Review</DialogTitle>;
               <DialogDescription>;
 </DialogDescription>
@@ -453,10 +456,12 @@ if (return null) {
                 disabled={!report_reason.trim () || is_reporting}              >;
 </Button>'
                 {is_reporting ? 'Submitting...' : 'Submit Report'}              </Button>                {is_reporting ? "Submitting..." : "Submit Report"}"
+
               </Button>;
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
+
       </div>;
     </div>);
 }</div>);"
@@ -498,3 +503,4 @@ return (<div className="border rounded - lg p - 4 bg - card"> <div className="fl
 }disabled= {
   !report_reason.trim () || is_reporting;
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>);"
+

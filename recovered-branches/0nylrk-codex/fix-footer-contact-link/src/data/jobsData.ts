@@ -2,6 +2,7 @@
 
 ];
 
+
 updated at: "2024-05-05""
 }];
 "
@@ -92,10 +93,12 @@ export const JOB_POSTS: Job[] = [;
     status: "new",;""
     created_at: "2024-05-05";","
   updated_at: "2024-05-05"}"
+
 ];
 
 
   {
+
 "
     id: 'job-1'','
   client_id: 'client-1'''
@@ -154,6 +157,7 @@ id: 'job - 2',''
 ];'
 created at: "2024 - 05 - 05";""
 updated at: "2024 - 05 - 05";"
+
 }];
 ;
 "

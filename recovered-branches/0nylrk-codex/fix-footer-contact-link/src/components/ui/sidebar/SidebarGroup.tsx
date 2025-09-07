@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { cn } from "@/lib/utils";"
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -10,15 +11,18 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
     </div>;"
     <div className={cn("mb-4", className)} {...props}>;"
 </div>
+
 interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement> {
-  class_name?: string;
-  children?: React.ReactNode;
+  class_name?: string;}
+  children?: React.ReactNode;}
 }
 export /**
  * SidebarGroup - Function description;
  */
+
 function SidebarGroup() {
   return ()"
     <div className={cn ("mb - 4", class_name)} {...props}>;"
 </div>
     </div>);"
+

@@ -1,339 +1,98 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';''
-import Button from '../components/Button';''
-import Card from '../components/Card';''
-import { useToast } from '../hooks/useToast';'
-const Contact: React.FC = () => {
-  const { success, error } = useToast();
-  const [formData, setFormData] = useState({'
-    name: '',''
-    email: '',''
-    company: '',''
-    message: ''')
-  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-</HTMLInputElement>'
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white pt-20">"
-</div>"
-      <div className="container mx-auto px-4 py-16">"
-</div>"
-        <div className="max-w-4xl mx-auto">"
-</div>"
-          <div className="text-center mb-16">"
-</div>"
-            <h1 className="text-5xl font-extrabold mb-6">Contact Us</h1>""
-            <p className="text-xl text-gray-300">"
-</p>
-            </p>
-          </div>
-"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">"
-</div>
-=======
-import React, { useState } from 'react';
-<<<<<<< HEAD
 
-const Contact: React.FC = () => {
-=======
-import Button from '../components/Button';
-import Card from '../components/Card';
-import { useToast } from '../hooks/useToast';
-
-const Contact: React.FC = () => {
-  const { success, error } = useToast();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-f9ca
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+  lastName: '',
     email: '',
+
     company: '',
     message: ''
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+      [e.target.name]: e.target.value,) => {
+  return $3;}
+}
+    })
+};
 
-  const handleSubmit = (e: React.FormEvent) => {
+
+const handleSubmit = (
     e.preventDefault();
+
     // Handle form submission
     console.log('Form submitted:', formData);
-<<<<<<< HEAD
-  };
 
-  return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-foreground mb-4">Contact Us</h1>
-            <p className="text-lg text-foreground/80">
-              Get in touch with our team to discuss your technology needs
-=======
-    success('Thank you for your message! We will get back to you soon.');
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      message: ''
-    });
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white pt-20">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-extrabold mb-6">Contact Us</h1>
-            <p className="text-xl text-gray-300">
-              Ready to transform your business? Get in touch with our team of experts.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-f9ca
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-<<<<<<< HEAD
-            <div>
-              <h2 className="text-2xl font-semibold text-foreground mb-6">Send us a message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-=======
-            {/* Contact Form */}
->>>>>>> a2c6a2cc86d6e83a9083c45bfcf5a35f741b3208
-            <Card>
-</Card>"
-              <h2 className="text-3xl font-bold mb-6">Send us a Message</h2>""
-              <form onSubmit={handleSubmit} className="space-y-6">"
-</form>
-                <div>
-</div>"
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">"
-</label>
-                  </label>
-                  <input;"
-                    type="text"""
-                    id="name"""
-                    name="name""
-                    value={formData.name}
-                    onChange={handleChange}
-                    required;"
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"""
-                    placeholder="Your name""
-                  />
-</input>
-                </div>
-
-                <div>
-</div>"
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">"
-</label>
-                  </label>
-                  <input;"
-                    type="email"""
-                    id="email"""
-                    name="email""
-                    value={formData.email}
-                    onChange={handleChange}
-                    required;"
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"""
-                    placeholder="your@email.com""
-                  />
-</input>
-                </div>
-
-                <div>
-</div>"
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">"
-</label>
-                  </label>
-                  <input;"
-                    type="text"""
-                    id="company"""
-                    name="company""
-                    value={formData.company}
-                    onChange={handleChange}"
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"""
-                    placeholder="Your company""
-                  />
-</input>
-                </div>
-
-                <div>
-<<<<<<< HEAD
-</div>"
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">"
-</label>
-=======
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-f9ca
-                    Message
->>>>>>> a2c6a2cc86d6e83a9083c45bfcf5a35f741b3208
                   </label>
                   <textarea;"
                     id="message"""
                     name="message""
                     value={formData.message}
                     onChange={handleChange}
-<<<<<<< HEAD
-                    required;
-                    rows={5}"
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"""
-                    placeholder="Tell us about your project...""
-=======
+
                     rows={5}
                     className="w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent"
                     required
-<<<<<<< HEAD
-                  />
-                </div>
-                
-                <button
-                  type="submit"
-                  className="w-full bg-primary text-primary-foreground py-3 px-6 rounded-lg font-medium hover:bg-primary/90 transition-colors"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-            
-            <div>
-              <h2 className="text-2xl font-semibold text-foreground mb-6">Get in touch</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                    <span className="text-primary text-xl">📧</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">Email</h3>
-                    <p className="text-foreground/70">info@ziontechgroup.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                    <span className="text-primary text-xl">📞</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">Phone</h3>
-                    <p className="text-foreground/70">+1 (555) 123-4567</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                    <span className="text-primary text-xl">📍</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">Address</h3>
-                    <p className="text-foreground/70">
-                      123 Tech Street<br />
-                      San Francisco, CA 94105
-                    </p>
-                  </div>
-                </div>
-              </div>
-=======
-                    rows={5}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Tell us about your project..."
->>>>>>> a2c6a2cc86d6e83a9083c45bfcf5a35f741b3208
-                  />
-</textarea>
-                </div>
-"
-                <Button type="submit" variant="primary" size="large" className="w-full">"
-</Button>
-                </Button>
-              </form>
-            </Card>"
-            <div className="space-y-8">"
-</div>
-              <Card>
-</Card>"
-                <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>""
-                <div className="space-y-4">"
-</div>"
-                  <div className="flex items-center space-x-4">"
-</div>"
-                    <div className="text-2xl">📧</div>"
-                    <div>
-</div>"
-                      <p className="font-semibold">Email</p>""
-                      <p className="text-gray-300">info@ziontechgroup.com</p>"
-                    </div>
-                  </div>"
-                  <div className="flex items-center space-x-4">"
-</div>"
-                    <div className="text-2xl">📞</div>"
-                    <div>
-</div>"
-                      <p className="font-semibold">Phone</p>""
-                      <p className="text-gray-300">+1 (555) 123-4567</p>"
-                    </div>
-                  </div>"
-                  <div className="flex items-center space-x-4">"
-</div>"
-                    <div className="text-2xl">📍</div>"
-                    <div>
-</div>"
-                      <p className="font-semibold">Address</p>""
-                      <p className="text-gray-300">"
-</p>
-                        123 Tech Street<br />
-</br>
+
                       </p>
                     </div>
+"
+                    <div className=\"space-y-6\" />"
+                      <div className=\"flex items-start\" />"
+                        <Mail className=\"h-6 w-6 text-cyan-400 mr-4 mt-1\" />
+                        <div />"
+                          <h3 className=\"text-lg font-semibold text-white mb-1\" />Email</h3>"
+                          <p className=\"text-gray-300\" />kleber@ziontechgroup.com</p>"
+                          <p className=\"text-gray-400 text-sm\" />We'll respond within 24 hours</p>
+                        </div>
+                      </div>
+"
+                      <div className=\"flex items-start\" />"
+                        <Phone className=\"h-6 w-6 text-cyan-400 mr-4 mt-1\" />
+                        <div />"
+                          <h3 className=\"text-lg font-semibold text-white mb-1\" />Phone</h3>"
+                          <p className=\"text-gray-300\" />+1 302 464 0950</p>"
+                          <p className=\"text-gray-400 text-sm\" />Mon-Fri 9AM-6PM EST</p>
+                        </div>
+                      </div>
+"
+                      <div className=\"flex items-start\" />"
+                        <MapPin className=\"h-6 w-6 text-cyan-400 mr-4 mt-1\" />
+                        <div />"
+                          <h3 className=\"text-lg font-semibold text-white mb-1\" />Office</h3>"
+                          <p className=\"text-gray-300\" />364 E Main St STE 1008<br />Middletown, DE 19709</p>"
+                          <p className=\"text-gray-400 text-sm\" />Visit us by appointment</p>
+                        </div>
+                      </div>
+                    </div>
+"
+                    <Card className=\"p-6 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30\" />"
+                      <h3 className=\"text-xl font-semibold text-white mb-3\" />Free Consultation</h3>"
+                      <p className=\"text-gray-300 mb-4\" />
+                        Book a free 30-minute consultation to discuss your project requirements;
+and get expert advice on the best solutions for your business.
+                      </p>"
+                      <Button variant=\"outline\" className=\"w-full\" />
+                        Schedule Consultation;
+                      </Button>
+                    </Card>
+"
+                    <Card className=\"p-6 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-blue-400/30\" />"
+                      <h3 className=\"text-xl font-semibold text-white mb-3\" />Emergency Support</h3>"
+                      <p className=\"text-gray-300 mb-4\" />
+                        Need immediate assistance? Our emergency support team is available 24/7;
+for critical issues and urgent technical problems.
+                      </p>"
+                      <div className=\"flex items-center text-cyan-400 font-semibold\" />"
+                        <Phone className=\"w-5 h-5 mr-2\" />
+                        +1 302 464 0950 (Emergency Line)
+                      </div>
+                    </Card>
                   </div>
+
                 </div>
               </Card>
 
@@ -359,9 +118,10 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </Card>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-f9ca
+
             </div>
           </div>
         </div>
       </div>
     </div>"
+

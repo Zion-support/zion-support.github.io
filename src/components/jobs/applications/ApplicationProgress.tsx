@@ -1,4 +1,24 @@
+
+interface ApplicationProgressProps  {status: ApplicationStatus;}
+import { ApplicationStatus  } from '@/types/jobs';
+import { Progress  } from '@/components/ui/progress';
+import { CheckCircle2, Circle, CircleDot  } from 'lucide-react';
+import { cn  } from '@/lib/utils';
+import { ApplicationStatus } from \"@/types/jobs\",interface ApplicationProgressProps {
+  status: ApplicationStatus;className?: string;}
+}
+}
+
+export function ApplicationProgress() {// Define the progress value based on status;}
+}
+const getProgressValue = (import { ApplicationStatus   ) => {
+  return $3;}
+} from '@/types / jobs';
+import { Progress   } from '@/components / ui / progress';
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn   } from '@/lib / utils';
+
 interface ApplicationProgressProps {
+
   // TODO: Implement
 }
   status: ApplicationStatus;
@@ -196,3 +216,4 @@ if ( {) {
 </Circle>"
     return <Circle className="h-4 w-4 text-muted-foreground/50" />"
 </Circle>"
+

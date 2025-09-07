@@ -1,3 +1,4 @@
+
 import { Handshake, MessageSquare, Star } from 'lucide-react'''
 import { Button } from "@/components/ui/button",""
 import { HireNowCTA } from "./HireNowCTA",""
@@ -105,12 +106,14 @@ export function TalentProfile(): any ({;
 </div>'
         <div className='space - y-8'>;'
 </div>
+
           <ProfileSkills skills={skills_array} />;
 </ProfileSkills>
           <ProfileAvailability availability={availability} />;
 </ProfileAvailability>
           <ProfileContact;
             email={profile.user_id}
+
             profile_name={profile.full_name}'
             profile_type='talent'          />;'
 </ProfileContact>
@@ -240,11 +243,13 @@ export function TalentProfile(): any ({;
               <Star className="mr-2 h-5 w-5 text-yellow-400" />"
 </Star>
             </h2>
+
             <ProfileRatings;
               userId={profile.id}
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}
             />;
+
 </ProfileRatings>
           </div>;"
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">"
@@ -310,3 +315,4 @@ export function TalentProfile(): any ({;
         </div>;
       </div>;
     </div>);'
+

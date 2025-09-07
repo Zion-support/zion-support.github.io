@@ -12,6 +12,7 @@ import {
   Network, 
   TrendingUp, 
   Clock, 
+
   CheckCircle, 
   ArrowRight;'
 } from 'lucide-react';'
@@ -33,10 +34,12 @@ const solutions = [
     icon: Brain,'
     description: 'Artificial intelligence and machine learning solutions',''
     features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']'
+
 ];
 
 export default function SolutionsPage() {
   return (
+
     <Layout;'
       title="Solutions - Zion Tech Group"""
       description="Comprehensive technology solutions for businesses of all sizes"""
@@ -99,12 +102,14 @@ export default function SolutionsPage() {
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />"
 </CheckCircle>"
                         <span className="text-sm text-gray-600">{feature}</span>"
+
                       </li>
                   </ul>
                 </motion.div>)
               ))}
             </div>
           </div>
+
         </section>"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
 </section>"
@@ -137,6 +142,7 @@ export default function SolutionsPage() {
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors""
                 >
 </a>
+
                 </a>
               </div>
             </motion.div>

@@ -1,4 +1,5 @@
 
+
 import React from './react';''
 import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';''
 import { Badge  } from '@/components / ui / badge';'
@@ -23,9 +24,9 @@ interface QuoteStatusCardsProps {
 
 
     closed: number;
-
-  }
+  };
 }
+
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
 </QuoteStatusCardsProps>"
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">"
@@ -322,3 +323,4 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCount
         </CardContent>;
       </Card>;
     </div>;)"
+

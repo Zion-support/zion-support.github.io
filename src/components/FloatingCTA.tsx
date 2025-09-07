@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button",""
 import { Button } from "@/components/ui/button";""
 import Link from "next/link";""
@@ -188,12 +189,15 @@ return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md
             on_click={ () => setIsExpanded (false) }
 </motion>
       </AnimatePresence>;
+
     </>)}
             on_click={ () => setIsExpanded (false) }
           />) }
       </AnimatePresence>;
     </>)}"
+
 '";"
 }
 }
 ;"
+

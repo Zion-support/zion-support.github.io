@@ -1,16 +1,15 @@
-
-
-  key?: string | number; // Added key prop;
+key?: string | number; // Added key prop;
 }
-
 export function FeatureCard(): any ({;
   title,;
   description,;
+
   icon,;
   className,;)
-}: FeatureCardProps) {;
 
+}: FeatureCardProps) {;
   return (
+
 
     <div;
       className={cn(
@@ -98,3 +97,4 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
   return (<div className= {)
   cn (</div> </div>) 
     </div>;"
+

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';''
 import { useAuth } from '@/hooks/useAuth';''
 import { Button } from '@/components/ui/button';''
@@ -16,9 +17,11 @@ import {;
 } from 'lucide-react';'
 interface QuickAction {;
   id: string;,
+
   label: string;
   description: string;,
   icon: React.ReactNode;
+
   action: () => void;,'
   category: 'performance' | 'development' | 'maintenance';'
 ;
@@ -164,11 +167,13 @@ export function QuickActions() {;
                           <div className="font-medium text-sm">{action.label}</div>""
                           <div className="text-xs opacity-70 mt-1">"
 </div>
+
                           </div>;
                         </div>;
                       </div>;
                     </Button>;
                   </div>;
+
               </div>;
             </div>;
         </CardContent>;
@@ -252,6 +257,7 @@ export function QuickActions() {;
                             </div>;'
                             <div className='text - xs opacity - 70 mt - 1'>;'
 </div>
+
                             </div>                          </div>;
                         </div>;
                       </Button>;)
@@ -259,5 +265,13 @@ export function QuickActions() {;
                 </div>;
               </div>))}
         </CardContent>;
+      </Card>
+    </div>
+  );
+}
+}}))}
+        </CardContent>;
       </Card>;
+
     </div>);'
+

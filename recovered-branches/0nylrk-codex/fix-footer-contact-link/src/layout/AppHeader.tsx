@@ -1,3 +1,4 @@
+
 import { useState } from "react";""
 import { useMessaging } from "@/context/MessagingContext";""
 import { MainNavigation } from "./MainNavigation";""
@@ -8,9 +9,10 @@ import { MobileMenu } from "@/components/header/MobileMenu";""
 import { useIsMobile } from "@/hooks/use-mobile";""
 import { MobileBottomNav } from "@/components/header/MobileBottomNav";"
 export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
+
 "
   // Try to access the messaging context, but provide a fallback value if it's not available;'
   let unreadCount = 0;
@@ -50,12 +52,13 @@ export function AppHeader() {
 </X>"
                 <Menu className="block h-6 w-6" aria-hidden="true" />;"
 </Menu>
+
             </button>
           </div>
-
           <ModeToggle />
 </ModeToggle>
         </div>
+
       </header>"
         <div className="md:hidden fixed inset-0 z-40 pt-16">"
 </div>
@@ -110,11 +113,13 @@ export function AppHeader() {
 </X>)"
                 <Menu className="block h - 6 w - 6" aria - hidden="true" />)}"
 </Menu>
+
             </button>;
           </div>;
           <ModeToggle />;
 </ModeToggle>
         </div>;
+
       </header>;"
         <div className="md:hidden fixed inset - 0 z - 40 pt - 16">;"
 </div>
@@ -128,11 +133,13 @@ export function AppHeader() {
               unread_count={unread_count}
               on_close={() => setMobileMenuOpen (false)}
 </MobileMenu>
+
           </div>;
         </div>)}
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
 </MobileBottomNav>
     </>);
+
 }
   ),;}"
 ) : (<Menu className="block h-6 w-6" aria-hidden="true" />)"
@@ -156,3 +163,4 @@ export function AppHeader() {
   )
 }
 "
+

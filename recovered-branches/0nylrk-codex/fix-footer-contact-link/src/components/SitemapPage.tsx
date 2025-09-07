@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { completeSitemap, dynamicPaths } from "@/config/sitemap";""
 import { Link } from "react-router-dom";""
@@ -36,9 +37,11 @@ export const SitemapPage: React.FC = () => {
 </Link>"
                       <ChevronRight className="h-4 w-4 mr-2" />"
 </ChevronRight>
+
                     </Link>
                   </li>
             </ul>
+
           </div>"
           <div className="bg-zion-blue-dark p-6 rounded-lg">"
 </div>"
@@ -59,9 +62,11 @@ export const SitemapPage: React.FC = () => {
 </Link>"
                       <ChevronRight className="h-4 w-4 mr-2" />"
 </ChevronRight>
+
                     </Link>
                   </li>
             </ul>
+
           </div>"
           <div className="bg-zion-blue-dark p-6 rounded-lg">"
 </div>"
@@ -82,9 +87,11 @@ export const SitemapPage: React.FC = () => {
 </Link>"
                       <ChevronRight className="h-4 w-4 mr-2" />"
 </ChevronRight>
+
                     </Link>
                   </li>
             </ul>
+
           </div>"
           <div className="bg-zion-blue-dark p-6 rounded-lg">"
 </div>"
@@ -105,9 +112,11 @@ export const SitemapPage: React.FC = () => {
 </Link>"
                       <ChevronRight className="h-4 w-4 mr-2" />"
 </ChevronRight>
+
                     </Link>
                   </li>
             </ul>
+
           </div>"
           <div className="bg-zion-blue-dark p-6 rounded-lg">"
 </div>"
@@ -128,9 +137,11 @@ export const SitemapPage: React.FC = () => {
 </Link>"
                       <ChevronRight className="h-4 w-4 mr-2" />"
 </ChevronRight>
+
                     </Link>
                   </li>
             </ul>
+
           </div>"
           <div className="bg-zion-blue-dark p-6 rounded-lg">"
 </div>"
@@ -151,6 +162,7 @@ export const SitemapPage: React.FC = () => {
                     {path} <span className="ml-2 text-xs italic">({key})</span>"
                   </div>
                 </li>
+
             </ul>
           </div>
         </div>

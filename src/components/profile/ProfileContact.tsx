@@ -1,3 +1,4 @@
+
 email?: string;
   profileName: string;,
   profileType: 'service' | 'talent'''
@@ -13,10 +14,12 @@ import { Textarea } from "@/components/ui/textarea",""
 import { Mail, Send } from 'lucide-react'''
 import { useState } from "react",""
 import { toast } from "@/hooks/use-toast","
+
 interface ProfileContactProps {
   // TODO: Implement
 }
   email?: string;
+
   profile_name: string;,"
   profile_type: 'service' | 'talent';'
 export /**
@@ -218,3 +221,4 @@ export function ProfileContact(): any ({;
       </form>;
     </div>);"
 }className="text - zion - cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>);""
+

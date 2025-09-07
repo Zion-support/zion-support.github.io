@@ -1,4 +1,5 @@
 
+
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];""
 import {GradientHeading} from "./GradientHeading";""
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";""
@@ -45,10 +46,12 @@ import {GradientHeading} from "./GradientHeading";""
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";""
 import {FileText} from "lucide-react";""
 import { GradientHeading } from "./GradientHeading","
+
 import {
   // TODO: Implement
 }
   Accordion,
+
   AccordionContent,
   AccordionItem,"
   AccordionTrigger} from "@/components/ui/accordion",""
@@ -160,16 +163,20 @@ function FaqSection() {
                 <AccordionContent className="text-zion-slate-light">;"
 </AccordionContent>
                 </AccordionContent>;
+
               </AccordionItem>;
           </Accordion>;
         </div>;
       </div>;
     </section>;
+
                 </AccordionContent>;)
+
               </AccordionItem>))}
           </Accordion>;
         </div>;
       </div>;
+
     </section>);"
   return (<section className="py-20 bg-zion-blue" id="faq" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="text-center mb-12" > <GradientHeading>Frequently Asked Questions</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto" > Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6"> <div className=" flex items-center mb-6"> <FileText className=" h-6 w-6 text-zion-cyan mr-2"/> <h3 className=" text-xl font-bold text-white" >Common Questions</h3> </div> </AccordionContent> </AccordionItem>) )"
 </section>
@@ -178,3 +185,4 @@ function FaqSection() {
 </AccordionItem>"
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;"
 </AccordionTrigger>"
+

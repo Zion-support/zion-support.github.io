@@ -1,3 +1,4 @@
+
 interface MainNavigationProps {
   // TODO: Implement
 }
@@ -62,10 +63,10 @@ function MainNavigation() {
     // Check condition;
 if ( {) {
   $2;
+
 }
-      e.prevent_default ();
-      setLoginOpen (true);
-      return;
+const { user } = use_auth ()const is_authenticated = !!user;
+
 
     }
     setIsMobileMenuOpen(false)
@@ -152,8 +153,10 @@ class ErrorBoundary extends React.Component {
 </MessageSquare>'
                     <span className='absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>;'
 </span>
+
                     </span>;
                 </Link>;
+
               </li>;'
             <li className="nav-item">"
 </li>
@@ -281,11 +284,12 @@ class ErrorBoundary extends React.Component {
           <div key={link.key}>
 </div>
                       </span>;
+
               </div>;
             </motion && motion.div>;
-          )};
-        </AnimatePresence>;
+          )}</AnimatePresence>;
       </div>;
+
     <nav className = {`${className}`}>;
 </nav>"
       <div className="hidden lg: flex items-center space-x-1">;"
@@ -375,8 +379,10 @@ class ErrorBoundary extends React.Component {
 </Heart>"
                     <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">"
 </span>
+
                     </span>;
                 </Link>;
+
               </li>;"
               <li className="nav-item">"
 </li>
@@ -400,8 +406,10 @@ class ErrorBoundary extends React.Component {
 </MessageSquare>"
                     <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">"
 </span>
+
                     </span>;
                 </Link>;
+
               </li>;"
             <li className="nav-item">"
 </li>
@@ -539,10 +547,12 @@ class ErrorBoundary extends React.Component {
     </>
 
 
+
                         {link && link.name}
                       </Link>;
                               </Link>))}
                           </div>)}
+
                       </div>) : (
                       <Link;
                         to={link.href}`;)
@@ -557,11 +567,13 @@ class ErrorBoundary extends React.Component {
                 </HoverCardTrigger>;
                 <HoverCardContent>;
 </HoverCardContent>
+
                   <MiniCartPreview />;
 </MiniCartPreview>
                 </HoverCardContent>;
               </HoverCard>;
             </li>;
+
           </ul>;'
           <div className='flex items - center gap - 2 mt - 4 md:mt - 0 md:ml - auto'>;'
 </div>
@@ -581,3 +593,4 @@ class ErrorBoundary extends React.Component {
   )
 }
 ;]'
+

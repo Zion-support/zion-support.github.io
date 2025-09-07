@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { AppLayout } from "@/layout/AppLayout";""
 import { SEO } from "@/components/SEO";""
@@ -54,3 +55,4 @@ const AppMetadataManager: React.FC = () => {
 </MetadataManager>
       </div>;
     </AppLayout>;"
+

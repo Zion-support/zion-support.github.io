@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";""
 import { Footer } from "@/components/Footer";""
 import { SEO } from "@/components/SEO";""
@@ -10,9 +11,11 @@ export default function About() {
         description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence."""
         keywords="about Zion, AI marketplace, tech platform, mission, vision, team"""
         canonical="https://app.ziontechgroup.com/about""
+
       />
 </SEO>
       <Header />
+
 </Header>"
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">"
 </main>"
@@ -49,10 +52,12 @@ export default function About() {
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600"""
                 alt="Team collaboration"""
                 className="object-cover w-full h-full""
+
               />
 </img>
             </div>
           </div>
+
 "
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse">"
 </div>
@@ -75,10 +80,12 @@ export default function About() {
                 src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600"""
                 alt="Tech innovation"""
                 className="object-cover w-full h-full""
+
               />
 </img>
             </div>
           </div>
+
 "
           <div className="text-center mb-16">"
 </div>"
@@ -102,9 +109,11 @@ export default function About() {
                       strokeLinejoin="round""
                       strokeWidth={2}"
                       d="M13 10V3L4 14h7v7l9-11h-7z""
+
                     />
 </path>
                   </svg>
+
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-3">"
 </h3>
@@ -131,9 +140,11 @@ export default function About() {
                       strokeLinejoin="round""
                       strokeWidth={2}"
                       d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z""
+
                     />
 </path>
                   </svg>
+
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-3">Community</h3>""
                 <p className="text-zion-slate-light">"
@@ -158,13 +169,16 @@ export default function About() {
                       strokeLinejoin="round""
                       strokeWidth={2}"
                       d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z""
+
                     />
 </path>
                   </svg>
+
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-3">Trust</h3>""
                 <p className="text-zion-slate-light">"
 </p>
+
                 </p>
               </div>
             </div>
@@ -172,14 +186,17 @@ export default function About() {
         </div>
       </main>
       <Footer />
+
 </Footer>
     </>)
   );
 }
+
 ;
 }
 ;
     </>);
+
 }
     </>;
   ),;}
@@ -195,3 +212,4 @@ export default function About() {
 }
 ;
 "
+

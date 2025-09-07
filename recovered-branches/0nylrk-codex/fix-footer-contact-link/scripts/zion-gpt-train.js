@@ -1,5 +1,6 @@
 
 
+
 import {createClient} from '@supabase/supabase-js';''
 import fs from 'fs/promises';''
 import { createReadStream  } from 'fs';''
@@ -22,11 +23,13 @@ import { createReadStream } from 'fs',;''
 import path from 'path',;''
 import FormData from 'form-data',;''
 import fetch from 'node-fetch',;'
+
 const {;
   SUPABASE_URL,;
-  SUPABASE_SERVICE_ROLE_KEY,;
-  OPENAI_API_KEY;
+  SUPABASE_SERVICE_ROLE_KEY,;}
+  OPENAI_API_KEY;}
 } = process.env,;
+
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;'
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),;'
   process.exit(1);
@@ -60,17 +63,9 @@ function stripPii(text) {
   result = result && result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]'),'
   // Naive full name removal (two capitalized words)'
   result = result && result.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, '[name]'),'
+
   return result;
 }
-
-
-
-
-
-function buildTrainingPairs(records) {
-
-
-
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {'
@@ -78,6 +73,7 @@ async function fetchData() {'
   const resumes = await supabase.from('resumes').select('summary, skills')''
   const supportLogs = await supabase.from('support_logs').select('question, answer')'
   return {
+
   // TODO: Implement
 }
     jobs: jobPosts.data |[],
@@ -90,16 +86,19 @@ function stripPii(text) {
 
   if (!text) return text;
   let result = text;
+
   // Emails;
 function buildTrainingPairs(records) {
-
   const pairs = []
+
   for (const job of records.jobs) {
     pairs.push({)'
       prompt: `Create a job description titled "${stripPii(job.title)}"`"
+
       completion: stripPii(job.description)
-    })
+    })    })
   }
+
   for (const resume of records.resumes) {
     pairs.push({
 ;)
@@ -210,11 +209,13 @@ async function createFineTune(filePath) {;
     method: 'POST',;'
     headers: {;,
   Authorization: `Bearer ${OPENAI_API_KEY}`,;)
+
       ...formData.getHeaders();
     },;
     body: formData;
   }),;
   const uploaded = await uploadRes.json(),;
+
   // NOTE: additional parameters may be required depending on OpenAI API changes;'
   const jobRes = await fetch('https://api.openai.com/v1/fine_tuning/jobs', {;''
     method: 'POST',;'
@@ -570,3 +571,4 @@ await createFineTune ('training-data.jsonl')'
   console.error ('Training workflow failed', err)'
 });
 '
+

@@ -1,3 +1,4 @@
+
 import React from 'react';''
 import MainLayout from '../components/layout/MainLayout';'
 const Page = () => {
@@ -35,9 +36,11 @@ const Page = () => {
 			<Head>
 </Head>
 				<title>Blog | Zion Tech Group</title>
+
 				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/blog&quot; />
 </link>
 			</Head>
+
 			<section className=&quot;container mx-auto px-4 py-24&quot;>
 </section>
 				<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;>Blog & News</h1>
@@ -58,3 +61,4 @@ const Page = () => {
 				<p className="text-gray-300">Insights, guides, and announcements. New content coming soon.</p>"
 			</section>
 		</Layout>)"
+

@@ -1,3 +1,4 @@
+
 export function BillingHeader() {
   return (
     <div className="space-y-2">"
@@ -17,6 +18,13 @@ export function BillingHeader() {
             <Mail className="h-4 w-4" />"
 </Mail>
           </Button>
+
+
+;
+import React from \"react\",import { Button  } from '@/components/ui/button';
+import { Download, Mail, BarChart3  } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
 
 
 
@@ -144,10 +152,12 @@ export function BillingHeader() {
 </Link>"
               <BarChart3 className="h - 4 w - 4" />;"
 </BarChart3>
+
             </Link>;
           </Button>;
         </div>;
       </div>;"
+
       <p className='text - muted - foreground'>;'
 </p>
       </p>;)'
@@ -155,3 +165,4 @@ export function BillingHeader() {
 </p>
       </p>;
     </div>);"
+

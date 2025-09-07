@@ -1,6 +1,7 @@
 import React from 'react';''
 import MainLayout from '../components/layout/MainLayout';'
 export default function SitemapPage() {
+
   return ('
     <MainLayout title="Sitemap - Zion Tech Group">"
 </MainLayout>"
@@ -12,3 +13,4 @@ export default function SitemapPage() {
         </p>
       </div>
     </MainLayout>)"
+

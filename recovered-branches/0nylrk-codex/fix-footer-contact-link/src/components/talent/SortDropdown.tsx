@@ -1,12 +1,15 @@
+
 import React from "react";""
 import { Button } from "@/components/ui/button";""
 import { SORT_OPTIONS } from "@/data/sortOptions";""
 import { SortDesc, ChevronDown } from "lucide-react";"
+
 import {
   // TODO: Implement
 }
   DropdownMenu,
   DropdownMenuContent,
+
   DropdownMenuItem,
   DropdownMenuTrigger,"
 } from "@/components/ui/dropdown-menu";""
@@ -33,7 +36,12 @@ interface SortDropdownProps {
 }
   sortOption: string;,
   setSortOption: (option: string) => void;
+
 }
+}
+}
+export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
+
 
 export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdownProps) {;
   return (
@@ -53,8 +61,11 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
           </div>"
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />"
 </ChevronDown>
+
         </Button>
+
       </DropdownMenuTrigger>
+
       <DropdownMenuContent;"
         align="start"""
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light""
@@ -64,9 +75,12 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
             key={option.value})
             onClick={() => setSortOption(option.value)}
 </DropdownMenuItem>
+
           </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+
           </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>"
+

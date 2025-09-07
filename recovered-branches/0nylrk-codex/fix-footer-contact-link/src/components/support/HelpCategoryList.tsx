@@ -1,10 +1,13 @@
+
 import React from "react";"
+
 import {
   // TODO: Implement
 }
   Card,
   CardContent,
   CardDescription,
+
   CardHeader,
   CardTitle,"
 } from "@/components/ui/card";""
@@ -15,16 +18,19 @@ interface HelpCategoryListProps {
   categories: HelpCategory[];,
   onCategorySelect: (categoryId: string) => void;,
   searchQuery: string;
+
 }
 
 export function HelpCategoryList({
   categories,
+
   onCategorySelect,
   searchQuery,)
 }: HelpCategoryListProps) {
   // Filter categories based on search query;
   const filteredCategories = searchQuery;
     ? categories.filter()
+
         (category) =>
           category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
           category.description;
@@ -36,6 +42,7 @@ export function HelpCategoryList({
               article.content.toLowerCase().includes(searchQuery.toLowerCase()),
           ),
       )
+
     : categories,
 
 
@@ -145,3 +152,4 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
           </CardContent>;
         </Card>))}
     </div>);"
+

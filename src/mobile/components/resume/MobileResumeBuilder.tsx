@@ -1,6 +1,7 @@
-import {;
-  Select;
+
+import {Select;
   SelectContent;
+
   SelectItem;
   SelectTrigger;
   SelectValue} from "@/components/ui/select";""
@@ -166,11 +167,13 @@ export function MobileResumeBuilder() {;"
             id="summary"""
             placeholder="Write a brief summary about yourself""
             rows = {4,}
+
           />;
 </Textarea>
         </div>;
       </CardContent>;
     </Card>;
+
           <Textarea;"
             id="summary"""
             placeholder="Write a brief summary about yourself""
@@ -272,8 +275,11 @@ function ExperienceStep() {"
             id="summary";""
             placeholder="Write a brief summary about yourself";"
             rows = {4, }
+
           />;
 </Textarea>
         </div>;
       </CardContent>;
+
     </Card>);"
+

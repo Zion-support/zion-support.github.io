@@ -1,6 +1,8 @@
+
   id: string;,
   name: string;
   description: string;,
+
   category: string[];
   price: string;,
   features: string[];
@@ -28,6 +30,7 @@
   partnership: string;
   funding: string;,
   exit: string;
+
   contact: {,
   mobile: string;
     email: string;,
@@ -40,6 +43,7 @@
         'Quantum materials science',''
         'Quantum chemistry',''
         'Quantum machine learning','
+
       ],
       competitors: ['
         'IBM Quantum'''
@@ -53,6 +57,7 @@
         'Research Tools'''
         'Collaboration'']
       ]
+
       integration: ['
         'Quantum hardware'''
         'Research platforms'''
@@ -134,6 +139,7 @@
         'Market research',''
         'Scientific studies',''
         'Literature reviews','
+
       ],
       technology: ['
         'AI/ML'''
@@ -141,6 +147,7 @@
         'Data Analysis'''
         'Research Tools'']
       ]
+
       integration: ['
         'Research databases'''
         'Analysis tools'''
@@ -246,6 +253,7 @@
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'']
   ];    features: [;'
       'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management';']
+
     ];
     benefits: ['
       'Accelerate research by 5xReduce manual errors by 90%Improve research qualityEnhance collaborationStreamline workflowsIncrease productivity'']
@@ -259,6 +267,7 @@
     benefits: [;'
       'Accelerate research by 5xReduce manual errors by 90%Improve research quality_enhance collaboration_streamline workflows_increase productivity';']
     ];
+
     use_cases: [;'
       'Academic research_corporate R & DGovernment research_pharmaceutical research_market research_scientific studies';']
     ];'
@@ -289,10 +298,12 @@
     category: ['Quantum ComputingResearchScientific ComputingTechnology Development'],''
     price: '$8, 999 / month',    features: [;''
       'Quantum computing access_quantum algorithm library_quantum simulation tools_research collaboration space_quantum education resources_performance analytics_research project management_publication tools';']
+
     ];
     benefits: ['
       'Access to quantum computingAccelerate quantum researchCollaborate with quantum expertsLearn quantum technologiesPublish quantum researchAdvance quantum science'']
     ];
+
     useCases: ['
       'Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning'']
     ];'
@@ -323,10 +334,12 @@
     category: ['AIResearchData AnalysisScientific ComputingKnowledge Management'],''
     price: '$2, 999 / month',    features: [;''
       'Intelligent literature review_data analysis assistance_hypothesis generation_research planning tools_knowledge synthesis_citation management_research collaboration_progress tracking';']
+
     ];
     benefits: ['
       'Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows'']
     ];
+
     useCases: ['
       'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews'']
     ];'
@@ -357,10 +370,12 @@
     category: ['BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials'],''
     price: '$6, 999 / month',    features: [;''
       'Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools';']
+
     ];
     benefits: ['
       'Accelerate biotech researchImprove drug discoveryStreamline clinical trialsEnhance collaborationEnsure complianceReduce research costs'']
     ];
+
     useCases: ['
       'Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech'']
     ];'
@@ -384,6 +399,7 @@
 ;'
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'','
   website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709''
+
     }
   }
 ];
@@ -424,8 +440,8 @@ export interface ResearchDevelopmentService2029 {;
   contact: {;,
   mobile: string,;
     email: string,;
-    website: string,;
-    address: string;
+    website: string,;}
+    address: string;}
   }
 }
 ;
@@ -442,6 +458,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     benefits: [;'
       'Accelerate research by 5xReduce manual errors by 90%Improve research qualityEnhance collaborationStreamline workflowsIncrease productivity';']
     ],;
+
     useCases: [;'
       'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies';']
     ],;'
@@ -475,6 +492,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       email: 'kleber@ziontechgroup.com',;''
       website: 'https://ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709';'
+
     }
   },;
   {;'
@@ -489,6 +507,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     benefits: [;'
       'Access to quantum computingAccelerate quantum researchCollaborate with quantum expertsLearn quantum technologiesPublish quantum researchAdvance quantum science';']
     ],;
+
     useCases: [;'
       'Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning';']
     ],;'
@@ -522,6 +541,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       email: 'kleber@ziontechgroup.com',;''
       website: 'https://ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709';'
+
     }
   },;
   {;'
@@ -536,6 +556,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     benefits: [;'
       'Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows';']
     ],;
+
     useCases: [;'
       'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews';']
     ],;'
@@ -569,6 +590,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       email: 'kleber@ziontechgroup.com',;''
       website: 'https://ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709';'
+
     }
   },;
   {;'
@@ -583,6 +605,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     benefits: [;'
       'Accelerate biotech researchImprove drug discoveryStreamline clinical trialsEnhance collaborationEnsure complianceReduce research costs';']
     ],;
+
     useCases: [;'
       'Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech';']
     ],;'
@@ -626,3 +649,4 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
   }
 ;
 '
+

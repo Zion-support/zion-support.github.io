@@ -1,5 +1,6 @@
 
 
+
 import {useState} from 'react';''
 import {Conversation, Message} from '@/types/messaging';'
 /**
@@ -16,6 +17,7 @@ export function useConversationState() {;
 </Conversation>
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
 </Conversation>
+
   const [messages, set_messages] = useState < Message[]>([]);
   const [active_messages, setActiveMessages] = useState < Message[]>([]);
   const [conversations, set_conversations] = useState < Conversation[]>([]);
@@ -33,16 +35,19 @@ export function useConversationState() {;
     setActiveMessages;
     conversations;
     set_conversations;
+
     unread_count;
     setUnreadCount;
 
     activeConversation;'
 import { useState } from 'react',;''
 import { Conversation, Message } from '@/types/messaging',;'
+
 /**;
  * Hook to manage messaging state;
  */;
 export function useConversationState() {;
+
   const [messages, setMessages] = useState<Message[]>([]),;
 </Message>
   const [activeMessages, setActiveMessages] = useState<Message[]>([]),;
@@ -51,3 +56,4 @@ export function useConversationState() {;
 </Conversation>
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),;
 </Conversation>'
+

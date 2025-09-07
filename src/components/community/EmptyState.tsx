@@ -1,3 +1,4 @@
+
 import React from 'react'''
 import Link from 'next/link'''
 import { MessageSquare } from 'lucide-react'''
@@ -111,8 +112,11 @@ const EmptyState: React.FC < EmptyStateProps> = ({
                 <Link href={href}>{cta}</Link>;)
               </Button>) : ()
               <Button disabled>{cta}</Button>)}
+
           </TooltipTrigger>;
-          {!has_session && <TooltipContent > Login required</TooltipContent>}
+          {!has_session && <TooltipContent  /> Login required</TooltipContent>}
         </Tooltip>;
+
       </TooltipProvider>;
     </div>);"
+

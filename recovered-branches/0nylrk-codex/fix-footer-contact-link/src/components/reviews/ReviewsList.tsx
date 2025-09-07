@@ -1,3 +1,4 @@
+
 import { Review } from "@/types/reviews";""
 import { ReviewCard } from "./ReviewCard";"
 interface ReviewsListProps {
@@ -58,3 +59,4 @@ interface ReviewsListProps {
         <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
 </ReviewCard>
     </div>);"
+

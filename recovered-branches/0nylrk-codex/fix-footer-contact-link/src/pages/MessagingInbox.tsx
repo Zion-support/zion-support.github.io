@@ -1,5 +1,6 @@
 
 
+
 import React, { useEffect, useState } from 'react';'
   } = useMessaging();
 
@@ -9,11 +10,13 @@ import React, { useEffect, useState } from 'react';'
 </string>
   const [activeCall, setActiveCall] = useState<string | null>(null),
 </string>
+
   const [active_call, setActiveCall] = useState < string | null>(null);
 ;
   useEffect (() => {
     // Fetch conversations when component mounts;
     const load_data = async () => {
+
       try {
   // TODO: Implement
 }
@@ -50,10 +53,12 @@ import React, { useEffect, useState } from 'react';'
     navigate(`/call/${roomId}`)
   }
 
+
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
     
+
     // Show toast notification;"
     toast.success("Starting video call", {""
       description: "Initializing video call connection..."")
@@ -61,12 +66,12 @@ import React, { useEffect, useState } from 'react';'
     
     // Navigate to video call page;
     navigate(`/call/${roomId}`)
+
   },
   
 
-
-
   return (
+
     <ProtectedRoute>
 </ProtectedRoute>"
       <div className="min-h-screen bg-zion-blue">"
@@ -178,22 +183,14 @@ export default function MessagingInbox() {;
                 <div className="flex - 1 flex items - center justify - center p - 8">;"
 </div>"
                   <div className="animate - pulse">Loading conversations...</div>;"
+
                 </div>) : (
                 <ConversationsList;
-
-                <ConversationsList;
-
-                  conversations={conversations}
-                  active_conversation={active_conversation}
-                  setActiveConversation={setActiveConversation}
-                  markAsRead={markAsRead}
-
-
-              {/* Conversation Detail */}
               <ConversationDetailView />;
 </ConversationsList>
             </div>;
           </div>;
+
         </div>;"
         {isMobile && <div className="h-16"></div>}"
       </div>;
@@ -222,6 +219,7 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
   markAsRead;)
 }/>) 
 </ConversationsList>
+
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) 
 </ConversationDetailView>
                 <ConversationsList;
@@ -235,7 +233,9 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 </ConversationDetailView>
             </div>
           </div>
+
         </div>"
         {isMobile && <div className="h-16"></div>}"
       </div>
     </ProtectedRoute>"
+

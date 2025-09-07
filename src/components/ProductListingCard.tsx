@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
@@ -69,10 +70,11 @@ const ProductListingCardComponent = ({;
     listing && listing.images && listing && listing.images.length > 0 && listing && listing.images[0];
       ? listing && listing.images[0];'
       : '/placeholder && placeholder.svg';')
-  );
-  const [imageError, setImageError] = useState(false);
 
+  );
+  const [imageError, setImageError]  = useState(false);
   const stockStatus =;
+
     listing && listing.stock === undefined;'
       ? 'In stock';'
       : listing && listing.stock <= 0;'
@@ -226,11 +228,13 @@ const ProductListingCardComponent = ({;
               variant={stock_variant as any}'
               className='absolute top - 2 left - 2'            >;'
 </Badge>
+
             </Badge>)}
           <FavoriteButton item_id={listing.id} />;
 </FavoriteButton>
         </div>;
       </div>;
+
       <div;'
         className={`flex flex - col justify - between ${is_grid ? 'p - 4 flex - 1' : 'p - 4 flex - 1'}`}'
       >;
@@ -291,8 +295,10 @@ const ProductListingCardComponent = ({;
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full""
                 >
 </span>
+
                 </span>;
             </div>;
+
         </div>;
           </div>;"
           <div className='flex gap-2'>;'
@@ -446,10 +452,12 @@ const ProductListingCardComponent = ({;
                 on_click={handleRequestQuote}'
                 className='border - primary text - primary hover:bg - primary / 10 hover:text - primary - foreground'              >;'
 </Button>
+
               </Button>)}
           </div>;
         </div>;
       </div>;
+
     </div>);'
 const stock_variant = listing.stock === undefined ? 'success' : listing.stock <= 0 ? 'destructive' : listing.stock <= 5 ? 'warning' : 'success';'
 const handleImageError = () =>: any {
@@ -465,12 +473,13 @@ setImageError (true);'
 //Debug logging for development // Check condition;
 if ( {) {
   $2;
+
 }
   return;
 }
-}> {
-  /* Image */;
+}> {/* Image */;}
 }<div;
+
 }> <div className= {
 </div>
 }<Image Featured </Badge>);
@@ -565,3 +574,4 @@ if ( {) {
         </div>;
       </div>;
     </div>) }"
+

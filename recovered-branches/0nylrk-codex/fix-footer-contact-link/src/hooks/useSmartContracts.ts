@@ -1,4 +1,5 @@
 
+
 import { useState  } from 'react';''
 import { useAuth  } from '@/hooks/useAuth';''
 import { supabase  } from '@/integrations/supabase/client';''
@@ -42,11 +43,13 @@ export function useSmartContracts() {
   ): Promise<string> => {
 </string>'
   const [deployment_status, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');'
+
 ;
   const generateSolidityContract = async (
     values: ContractFormValues,
     talent: TalentProfile,)
     client_name: string): Promise < string> => {
+
     try {
   // TODO: Implement
 }
@@ -61,10 +64,12 @@ export function useSmartContracts() {
           end_date: values.end_date?.toISOString ();,
   payment_terms: values.payment_terms;
           payment_amount: values.payment_amount,
+
           additional_clauses: values.additional_clauses || []}
       });
 ;
       // Check condition;
+
 if (throw error) {
   $2;
 }
@@ -77,8 +82,11 @@ if ( {) {
   // TODO: Implement
 }"
         throw new Error ("Failed to generate Solidity contract");"
+
       }
+    } catch (err: any) {      return mockSmartContractInfo}
     } catch (err: any) {
+
 "
       console.error ("Error generating Solidity contract:", err);""
       toast.error ("Failed to generate smart contract");"
@@ -278,3 +286,4 @@ deploymentStatus;
 }
 ;
 '
+

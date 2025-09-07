@@ -1,14 +1,13 @@
-
-
 export function MessageTab(): any ({;
   message,;
   setMessage,;
+
   proposalLink,;
   setProposalLink,;)
+
 }: MessageTabProps) {;
-
-
   return (
+
     <div className="space-y-4">;"
 </div>
       <div>;
@@ -101,11 +100,11 @@ export interface MessageTabProps {
 </Input>
       </div>;
     </div>);
+
       </div>
-
     </div>
-
     </div>;
+
     </div>"
     <div className="space-y-4">;"
 </div>
@@ -130,3 +129,4 @@ export interface MessageTabProps {
       </div>;
     </div>;
     </div>;"
+

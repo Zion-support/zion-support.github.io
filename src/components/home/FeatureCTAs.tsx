@@ -1,6 +1,4 @@
-interface FeatureCTAsProps {;
-  className?: string;
-  style?: React && React.CSSProperties;
+
 
 export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
   const { t } = useTranslation();  const features = [    {;
@@ -299,10 +297,13 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
                     <span>{t ('general.explore')} {t (`features.${feature.key}`)}</span>;''
                     <ArrowRight className="h - 4 w - 4" />;"
 </ArrowRight>
+
                   </Link>;
                 </Button>;
               </CardFooter>;
             </Card>))}
         </div>;
       </div>;
+
     </section>));]"
+

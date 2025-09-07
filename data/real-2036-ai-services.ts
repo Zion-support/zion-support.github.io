@@ -1,6 +1,8 @@
 
+
 export const real2036AIServices = [
   {
+
     id: 'ai-emotion-intelligence-platform'','
   name: 'AI Emotion Intelligence Platform'''
     tagline: 'Advanced emotional AI understanding'',
@@ -339,6 +341,7 @@ export const real2036AIServices = [
       'Better emotional understanding'''
       'Improved human-AI interaction'''
       'Emotional intelligence development'']
+
     ]
     useCases: ['
       'Customer service'''
@@ -347,6 +350,7 @@ export const real2036AIServices = [
       'Human resources'']
     ]
   }
+
   {'
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems''
     ]
@@ -1006,6 +1010,7 @@ export const real2036AIServices = [;
       'Safety systems',']
     ],
 
+
   },;'
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems''
     ]
@@ -1019,6 +1024,7 @@ export const real2036AIServices = [;
 export const real2036AIServices = [
   {
 
+
 '
       'Autonomous vehicles',''
       'Fleet management',''
@@ -1028,10 +1034,12 @@ export const real2036AIServices = [
 
   },;'
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems''
+
     ]
 
   }
 ];
+
 ;
   },;'
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems''
@@ -1247,5 +1255,6 @@ export const real2036AIServices = [;
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems';']
     ];
   }
+
 ];
 '

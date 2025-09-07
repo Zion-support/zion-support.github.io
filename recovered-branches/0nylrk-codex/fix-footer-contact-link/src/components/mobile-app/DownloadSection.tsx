@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { QrCodeIcon } from "lucide-react";""
 import { AppStoreButtons } from "./AppStoreButtons";"
@@ -45,11 +46,13 @@ export const DownloadSection: React.FC = () => {
               </div>"
               <p className="text-center text-xs mt-2 text-zion-blue-dark">"
 </p>
+
               </p>
             </div>
           </div>
         </div>
       </div>
+
     </section>"
               <div className="text-sm text-gray-400">;"
 </div>
@@ -69,3 +72,4 @@ export const DownloadSection: React.FC = () => {
           </div>;
         </div>;
       </div>;"
+

@@ -1,3 +1,4 @@
+
 import { Star } from 'lucide-react''
 interface SaveTalentButtonProps {
   // TODO: Implement
@@ -60,3 +61,4 @@ export function SaveTalentButton(): any ({ talentId, onSave, isSaved }: SaveTale
       <Star className={`h - 4 w - 4 ${is_saved ? 'fill - current' : ''} mr - 1`} />;'
 </Star>
     </Button>);'
+

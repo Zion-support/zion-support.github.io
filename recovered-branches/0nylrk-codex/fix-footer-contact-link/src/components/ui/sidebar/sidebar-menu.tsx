@@ -1,3 +1,4 @@
+
 import React, { forwardRef } from "react";""
 import {ChevronDown} from "lucide-react";""
 import {cn} from "@/lib/utils";""
@@ -37,9 +38,11 @@ if ( {) {
 </div>"
             {icon && <span className="text-muted-foreground">{icon}</span>}"
             <span>{children}</span>
+
           </div>
-          {badge && <span>{badge}</span>}
+          {badge && <span />{badge}</span>}
         </a>
+
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {;
 </HTMLButtonElement>
 const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
@@ -68,9 +71,11 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
 </div>"
             {icon && <span className="text - muted - foreground">{icon}</span>}"
             <span>{children}</span>;
+
           </div>;
-          {badge && <span>{badge}</span>}
+          {badge && <span />{badge}</span>}
         </a>);
+
       <button;
         ref={ref}
 "
@@ -93,9 +98,11 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
 </div>"
           {icon && <span className="text-muted-foreground">{icon}</span>}"
           <span>{children}</span>;
+
         </div>;
-        {badge && <span>{badge}</span>}
+        {badge && <span />{badge}</span>}
       </button>;
+
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 </HTMLDivElement>
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {
@@ -120,13 +127,17 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
 </div>"
           {icon && <span className="text - muted - foreground">{icon}</span>}"
           <span>{children}</span>;
+
         </div>;
-        {badge && <span>{badge}</span>}
+        {badge && <span />{badge}</span>}
       </button>);
+
+
 interface SidebarMenuGroupProps extends React.HTMLAttributes < HTMLDivElement> {
-  title: string,
-  children: React.ReactNode;
+  title: string,}
+  children: React.ReactNode;}
 }
+
 const SidebarMenuGroup: React.FC < SidebarMenuGroupProps> = ({ title, children, ...props }) => {
   return ("
     <div className="space - y-1" {...props}>;"
@@ -170,3 +181,4 @@ className) "
 }</span> 
 }</button>) 
 </div>) "
+

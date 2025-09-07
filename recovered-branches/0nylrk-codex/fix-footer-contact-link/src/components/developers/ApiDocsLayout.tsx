@@ -1,6 +1,7 @@
 
 
 
+
 import React from "react",""
 import { Link, useLocation } from "react-router-dom",""
 import { Search } from "lucide-react",""
@@ -62,10 +63,12 @@ import { Input } from "@/components/ui/input",;""
 import { cn } from "@/lib/utils",;"
 interface ApiDocsLayoutProps {;
   children: React.ReactNode;
+
 }
 ;)
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
   const location = useLocation(),;
+
   const currentPath = location.pathname,;
   const navigationItems = [;"
     { title: "Getting Started", path: "/developers/docs/getting-started" },;""
@@ -122,3 +125,4 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
 </div>
       </div>;
     </div>;"
+

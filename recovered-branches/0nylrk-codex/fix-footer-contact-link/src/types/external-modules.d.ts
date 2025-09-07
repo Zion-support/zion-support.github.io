@@ -1,5 +1,6 @@
 
 
+
 declare module "@radix - ui / react - hover - card";""
 declare module "input - otp";""
 declare module "react - markdown";""
@@ -17,16 +18,16 @@ declare module '@tanstack/react-query';'
 }
     from?: Date;
     to?: Date;
-  }
 
-  // Minimal placeholder for the DayPicker component used in the app;
+  }
+}  // Minimal placeholder for the DayPicker component used in the app;
   // The actual library provides full typings but we stub them here so the;
   // TypeScript compiler can understand the imports without requiring the real;
   // type definitions.;
   // eslint - disable - next - line @typescript - eslint / no - explicit - any;
   export const DayPicker: any;
-
 }
+
 
 }'
 declare module "cmdk",""
@@ -57,19 +58,22 @@ declare module "@radix-ui/react-toggle-group",;""
 declare module "@radix-ui/react-toggle",;""
 declare module '@tanstack/react-query',;''
 declare module 'react-day-picker' {;'
-  export interface DateRange {;
-    from?: Date,;
-    to?: Date;
 
+  export interface DateRange {;
+    from?: Date,;}
+    to?: Date}
 };
+
 '
 declare module 'sonner';''
 declare module 'lucide-react' {''
 import {FC, SVGProps} from 'react';'
+
   export type LucideProps = SVGProps < SVGSVGElement>;
   export type LucideIcon = FC < LucideProps>;
 ;
   export interface DateRange {;
+
     from?: Date;
     to?: Date;
   }
@@ -344,10 +348,11 @@ declare module 'react - hook - form' {''
   export type FieldPath < TFieldValues extends FieldValues> =;
     keyof TFieldValues & string;
   export type Control < TFieldValues extends FieldValues = FieldValues> = any;
-  export interface UseFormReturn<;
 
+  export interface UseFormReturn<;
     TFieldValues extends FieldValues = FieldValues;
   > {
+
     control: Control < TFieldValues>;,
   handle_submit: any;
     register: any;,
@@ -499,20 +504,18 @@ declare module 'class-variance-authority' {'
   >(options?: any): UseFormReturn < TFieldValues>;
   export function useFieldArray<;
     TFieldValues extends FieldValues = FieldValues;
+
   >(options: any): any;
-  export interface ControllerProps<;
-    TFieldValues extends FieldValues = FieldValues;
-    TName extends FieldPath < TFieldValues> = FieldPath < TFieldValues>,
-  > {
+export interface ControllerProps<  > {
     name: TName;
     control?: Control < TFieldValues>;
     rules?: any;
-    default_value?: any;
-    render: (props: any) => ReactElement;
+    default_value?: any;}
+    render: (props: any) => ReactElement;}
   }
-
   export const Controller: ComponentType < ControllerProps < any, any>>;
   export interface FormProviderProps<;
+
 
   export const Controller: ComponentType<ControllerProps<any, any>>
 </ControllerProps>
@@ -521,17 +524,20 @@ declare module 'class-variance-authority' {'
   export interface FormProviderProps<;
 
   export const Controller: ComponentType < ControllerProps < any, any>>;
+
   export interface FormProviderProps<;
     TFieldValues extends FieldValues = FieldValues;
   > {
-    children?: ReactNode;
-    [key: string]: any;
+    children?: ReactNode;}
+    [key: string]: any;}
   }
-
-  export const FormProvider: ComponentType < FormProviderProps < any>>;
+}
+declare module 'react - i18next';
+declare module 'react-dom / client';  export const FormProvider: ComponentType < FormProviderProps < any>>;
   export function useFormContext<;
     TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn < TFieldValues>;
+
 
 }'
 declare module 'react - i18next';''
@@ -620,3 +626,4 @@ declare module 'lucide-react' {;''
   export function useFormContext<;
     TFieldValues extends FieldValues = FieldValues>(): UseFormReturn<TFieldValues>;
 </TFieldValues>'
+

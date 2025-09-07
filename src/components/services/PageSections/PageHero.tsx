@@ -1,3 +1,4 @@
+
 export function PageHero() {
   return (
     <div className="text-center mb-12">"
@@ -6,6 +7,11 @@ export function PageHero() {
       <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">"
 </p>
       </p>
+
+
+;
+import { GradientHeading  } from '@/components/GradientHeading';
+import { Clock, Map, DollarSign  } from 'lucide-react';
 
 
       "
@@ -263,3 +269,4 @@ export function PageHero() {
         </div>;
       </div>;
     </div>);"
+

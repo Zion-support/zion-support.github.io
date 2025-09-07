@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";""
 import {format} from "date-fns";""
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";""
@@ -517,10 +518,12 @@ export function WebhooksManager() {
                   selectedEvents && selectedEvents.length === 0;
                 }>;
 </ButtononClick>
+
                 </Button>;
               </DialogFooter>;
             </DialogContent>;
           </Dialog>;
+
         </div>;"
         <div className="space-y-4">;"
 </div>"
@@ -571,24 +574,35 @@ export function WebhooksManager() {
 "
                         <Button variant="ghost" size="icon">;"
 </Button>
+
                           <MoreVertical size={16} />;
 </MoreVertical>
                         </Button>;
+
                       </DropdownMenuTrigger>;"
                           <X size={14} className="mr-2" /> Delete;"
 </X>
                         </DropdownMenuItem>;
+
                       </DropdownMenuContent>;
                     </DropdownMenu>;
                   </div>;
                 </div>;
+
                 </div>;"
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;"
 </div>"
                   <span>Created: {format(new Date(webhook && webhook.created_at), 'MMM d, yyyy')}</span>;''
                     <span>Last triggered: {format(new Date(webhook && webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>;'
+
                 </div>;
+                <div className=\"mt-3 text-xs text-zinc-500 flex items-center space-x-4\" />;
+                  <span />Created: {format(new Date(webhook && webhook.created_at), 'MMM d, yyyy')}</span>;
+                  {webhook && webhook.last_triggered_at && (;}
+                    <span />Last triggered: {format(new Date(webhook && webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>;
+                  )}                </div>;
               </div>;
+
       <Dialog;
         open={showTestDialog !== null} 
 
@@ -674,10 +688,12 @@ export function WebhooksManager() {
                 </Button>;
                 <Button onClick={() => showTestDialog && handleTestWebhook(showTestDialog)}>;
 </Button>
+
                 </Button>;
               </DialogFooter>;
             </>;
           ) :(;
+
             <>;"
               <div className="space-y-4 py-4">;"
 </div>"
@@ -769,11 +785,13 @@ export function WebhooksManager() {
             <AlertDialogAction ;
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
 </AlertDialogAction>
+
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
     </Card>
+
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
@@ -872,3 +890,4 @@ clearTestResult ();
 </AlertDialog>"
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>)"
     </Card>;"
+

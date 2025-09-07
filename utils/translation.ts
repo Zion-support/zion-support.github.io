@@ -1,3 +1,4 @@
+
   const res = await fetch('/api/translate', {;''
     method: 'POST',;''
     headers: { 'Content-Type': 'application/json' },;')
@@ -44,10 +45,12 @@ export async function translateTextViaAI (text: string, targets: string[]): Prom
   } catch (error) {'
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
   return res.json ();
 }
+
 export function getSelectedLanguage (): string {
   // TODO: Implement
 }"
@@ -71,5 +74,6 @@ export function getSelectedLanguage(): string {;"
   } catch (error) {'
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 "

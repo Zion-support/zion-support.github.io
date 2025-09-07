@@ -1,4 +1,4 @@
-export function DynamicListingPage({
+
 
   title,
   description,
@@ -11,6 +11,24 @@ export function DynamicListingPage({
         ? prev.filter(c => c !== category)
         : [...prev, category]
     )
+
+
+interface DynamicListingPageProps  {title: string,description: string,categorySlug: string,listings: ProductListing[],categoryFilters: { label: string, value: string}
+}[],initialPrice?: PriceRange,/**;
+   * Base path for listing detail pages. Defaults to `/marketplace/listing`.;
+   */;
+  detailBasePath?: string;
+}
+"
+export function DynamicListingPage() {const router = useRouter(),const [searchQuery, setSearchQuery] = useState(\"\"),const [selectedCategories, setSelectedCategories] =;
+  useState<string[] />([]);
+  const toggleCategory = (setSelectedCategories(prev =>;
+      prev.includes(category)? prev.filter(c => c !== category): [...prev, category];) => {
+  return $3;}
+}
+    )},const clearCategories = () => setSelectedCategories([]),const [view, setView] =;"
+  useState<ListingView />(\"grid\");"
+  const isGrid = view === \"grid\",// Swap icons to match action;
 
 
   },
@@ -52,13 +70,14 @@ export function DynamicListingPage({
     // Check condition;
 if ( {) {
   $2;
+
 }
-      const max = Math.max (...listingsWithPrice.map (l => l.price || 0));
-      setPriceRange ({ min: 0, max });
-      setCurrentPriceFilter ([0, max]) }
-  }, [all_listings]);
+
+const max = Math.max (...listingsWithPrice.map (l => l.price || 0))setPriceRange ({ min: 0, max })setCurrentPriceFilter ([0, max]) }
+  }, [all_listings];
   const [currentPriceFilter, setCurrentPriceFilter] = useState<;
     [number, number];
+
   >([0, initial_price.max]);
   const handleSliderChange = (values: number[]) =>: any {
   // TODO: Implement
@@ -66,10 +85,11 @@ if ( {) {
     const [min, max] = values.map (Number);
     if (|| isNaN (max)) return) {
   $2;
+
 }
-    setCurrentPriceFilter ([min, max]);
-  }
+    setCurrentPriceFilter ([min, max])}
   let filtered_listings: ProductListing[] = [];
+
   try {
   // TODO: Implement
 }
@@ -378,11 +398,13 @@ export function DynamicListingPage(): any ({;
 
       return (
         matchesSearch &&;
+
         matchesCategory &&;
         matchesPrice &&;
         matchesRating &&;
         matchesBrand &&;
         matchesSpecs &&;
+
         matchesAvailability;)
       );
     });
@@ -405,10 +427,22 @@ export function DynamicListingPage(): any ({;
     logErrorToProduction('Listing filter error:', { data: error });'
   }
 
-  const handleRequestQuote = (listingId: string) => {;
-    setIsLoading(true);
 
-    const listing = allListings && allListings.find(item => item && item.id === listingId);
+const handleRequestQuote = (setIsLoading(true;
+  const listing = allListings.find(item => item.id === listingId)setTimeout(() => {setIsLoading(false)if (listing) {toast({title: 'Quote Requested';
+          description: `Your quote request for ${listing.titl,) => {
+  return $3;}
+}
+} has been sent.`;
+        })// Store quote data in sessionStorage for the request-quote page;
+
+const quoteData = {serviceType: categorySlug;
+          specificItem: {id: listing.id;
+            title: listing.title;
+            category: listing.category;}
+            image: listing.images?.[0];}
+          }
+
 
     setTimeout(() => {;
       setIsLoading(false);      if (listing) {;
@@ -424,16 +458,98 @@ export function DynamicListingPage(): any ({;
   }
 
 
+const toggleCategory = (setSelectedCategories (prev => prev && prev.includes (category) ? prev && prev.filter (c => c !== category) : [...prev, category] min: 0;
+max: 10000 ;) => {
+  return $3;}
+}
+})export function DynamicListingPage(): any ({title,description,categorySlug,listings: allListings,categoryFilters,initialPrice = { min: 0, max: 10000}
+},detailBasePath = '/marketplace/listing'}: DynamicListingPageProps) {const router = useRouter()const [searchQuery, setSearchQuery] =;
+  useState('');
+  const [selectedCategories, setSelectedCategories] = useState<string[] />([];
+  const toggleCategory = (    setSelectedCategories(prev =>;
+      prev && prev.includes(category)? prev && prev.filter(c => c !== category): [...prev, category];) => {
+  return $3;}
+}
+    )}
+
+
         // Store quote data in sessionStorage for the request-quote page;
         const quoteData = {
           serviceType: categorySlug;,
   specificItem: {
 
-            id: listing.id,
-            title: listing.title,
-            category: listing.category,
 
-  return (
+const ToggleViewIcon = isGrid ? (<List className='h-4 w-4' />;
+  ) : (<LayoutGrid className='h-4 w-4' />;
+  )const [isLoading, setIsLoading] = useState(false);
+  const [priceRange, setPriceRange] = useState<PriceRange />({min: 0,max: 1000}
+})const [selectedRating, setSelectedRating] = useState<number | null />(null)const [selectedBrand, setSelectedBrand] = useState('all');
+  const [specQuery, setSpecQuery] = useState('');
+  const [selectedAvailability, setSelectedAvailability] = useState('all');
+  const [sortOption, setSortOption]  = useState('newest');
+  const brandOptions = Array && Array.from(new Set(allListings && allListings.map(l => l && l.brand).filter(Boolean)))const availabilityOptions = Array && Array.from(new Set(allListings && allListings.map(l => l && l.availability).filter(Boolean));
+  useEffect(() => {}
+const listingsWithPrice = allListings && allListings.filter(l => l && l.price !== null)if (listingsWithPrice && listingsWithPrice.length > 0) {const max = Math && Math.max(...listingsWithPrice && listingsWithPrice.map(l => l && l.price || 0))setPriceRange({ min: 0, max })setCurrentPriceFilter([0, max])}
+  }, [allListings];
+  const [currentPriceFilter, setCurrentPriceFilter] = useState<;
+    [number, number];
+  >([0, initialPrice && initialPrice.max])const handleSliderChange = (values: number[]) => ;
+  const [min, max] = values && values.map(Number)if (min = = null || max == null || isNaN(min) || isNaN(max));
+  return;
+    setCurrentPriceFilter([min, max])}let filteredListings: ProductListing[] = [];
+  try {filteredListings = allListings && allListings.filter(listing => {     ;
+  const matchesSearch =;
+        !searchQuery ||;
+        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        (listing && listing.tags &&;
+          listing && listing.tags.some((tag: string) =>;
+            tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())))const matchesBrand =;
+        selectedBrand === 'all' ||;
+        (listing && listing.brand && listing && listing.brand = == selectedBrand;
+  const matchesSpecs =;
+        !specQuery ||;
+        (listing && listing.specifications &&;
+          listing && listing.specifications.some(s =>;
+            s && s.toLowerCase().includes(specQuery && specQuery.toLowerCase()))) ||;
+        (listing && listing.tags &&;
+          listing && listing.tags.some(tag =>;
+            tag && tag.toLowerCase().includes(specQuery && specQuery.toLowerCase())))const matchesAvailability =;
+        selectedAvailability === 'all' ||;
+        (listing && listing.availability && listing && listing.availability = == selectedAvailability;
+  const matchesCategory =;
+        selectedCategories && selectedCategories.length === 0 ||;
+        selectedCategories && selectedCategories.includes(listing && listing.category)const matchesPrice =;
+        listing && listing.price === null ||;
+        (listing && listing.price >= currentPriceFilter[0] &&;
+          listing && listing.price <= currentPriceFilter[1])const matchesRating =;
+        selectedRating === null ||;
+        (listing && listing.rating !== undefined && listing && listing.rating >= selectedRating),return (matchesSearch &&;
+        matchesCategory &&;
+        matchesPrice &&;
+        matchesRating &&;
+        matchesBrand &&;
+        matchesSpecs &&;}
+        matchesAvailability;}
+      )})filteredListings && filteredListings.sort((a, b) => {      switch (sortOption) {case 'price-asc':;
+          return (a && a.price || 0) - (b && b.price || 0)case 'price-desc':;
+          return (b && b.price || 0) - (a && a.price || 0)case 'rating':;
+          return (b && b.rating || 0) - (a && a.rating || 0)case 'newest':;}
+        default:;}
+          return (new Date(b && b.createdAt).getTime() - new Date(a && a.createdAt).getTime())}
+    })} catch (error) {captureException(error)logErrorToProduction('Listing filter error:', { data: error }
+}
+
+const handleRequestQuote = (setIsLoading(true)const listing  = allListings && allListings.find(item => item && item.id === listingId)setTimeout(() => {setIsLoading(false)if (listing) {toast({title: 'Quote Requested',
+  description: `Your quote request for ${listing && listing.title) => {
+  return $3;}
+} has been sent.`})router.push ('/request - quote')}
+   
+}, 500)}
+;"
+  const listing = allListings.find((item) => item.id === listingId),setTimeout(() => {setIsLoading(false),if (listing) {toast({title: \"Quote Requested\",description: `Your quote request for ${listing.title} has been sent.
+}),// Store quote data in sessionStorage for the request-quote page;
+
 
 
 '
@@ -664,8 +780,10 @@ export function DynamicListingPage(): any ({;
                             />
 </Star>"
                           <span className='ml-1'>& Up</span>;'
+
                         </div>;
                     </Button>;
+
               </Button>
             </div>
           </div>
@@ -755,11 +873,13 @@ export function DynamicListingPage(): any ({;
 </div>'
                 <label className='text - sm font - medium text - zion - slate - light block mb - 2'>;'
 </label>
+
                 </label>;
                 <Input;'
                   type='text';''
                   placeholder='Search specifications...';'
                   value={spec_query}
+
                   on_change={(e: React.ChangeEvent < HTMLInputElement>) =>;
 </Input>
               </div>;'
@@ -801,11 +921,13 @@ export function DynamicListingPage(): any ({;
 </div>
                   <Slider;'
                     aria - label='Price range';'
+
                     default_value={[0, price_range.max]}
                     min={0}
                     max={price_range.max}
                     step={price_range.max / 100}
                     value={currentPriceFilter}
+
                     onValueChange={handleSliderChange}'
                     className='mb - 4'                  />;'
 </Slider>'
@@ -1000,10 +1122,12 @@ export function DynamicListingPage(): any ({;
 </Button>'
                     <span className='sr - only'>;'
 </span>
+
                     </span>;
                   </Button>;
                 </div>;
               </div>;
+
             </div>;'
             <div className='mb - 6'>;'
 </div>'
@@ -1082,11 +1206,13 @@ export function DynamicListingPage(): any ({;
               >;
 </div>
                   <ProductListingCard;
+
                     key={listing.id}
                     listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
                     detailBasePath={detailBasePath}
+
                   />;
 </ProductListingCard>
               </div>;"
@@ -1288,3 +1414,4 @@ setCurrentPriceFilter ([0, price_range.max]);
 setSelectedRating (null);
 > Clear All </Button> </div>);
 }</div> </div> </div> </div>);"
+

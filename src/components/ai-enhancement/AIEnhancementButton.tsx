@@ -1,3 +1,4 @@
+
 const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -280,3 +281,4 @@ export function AIEnhancementButton(): any ({;
         <Sparkles className="h-4 w-4" />"
 </Sparkles>"
       <span className="text-xs">{buttonText}</span>""
+

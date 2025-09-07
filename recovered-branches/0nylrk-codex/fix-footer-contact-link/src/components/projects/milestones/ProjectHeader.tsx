@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { useNavigate } from "react-router-dom";""
 import { Button } from "@/components/ui/button";""
@@ -6,10 +7,12 @@ interface ProjectHeaderProps {
   // TODO: Implement
 }
   title: string;
+
 }
 
-export function ProjectHeader({ title }: ProjectHeaderProps) {;
+export function ProjectHeader({ title }: ProjectHeaderProps) {
   const navigate = useNavigate();
+
 
   return ("
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">"
@@ -82,3 +85,4 @@ export function ProjectHeader({ title } ProjectHeaderProps) {;
 </Button>"
 }> <ArrowLeft className="h-4 w-4 mr-1" /> Back </Button> </div> </div>)"
 </ArrowLeft>"
+

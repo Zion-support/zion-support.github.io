@@ -1,3 +1,4 @@
+
 import React from 'react';''
 import { useRouter } from 'next/router';''
 import Link from 'next/link';''
@@ -41,7 +42,18 @@ function SignUpForm() {
       errors.password = 'Password is required''
     } else if (!strongPasswordRegex.test(formData.password)) {'
       errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.''
+
     }
+    try {setShowVerificationMessage(false), // Reset verification message;}
+      if (signupMode) {const result = await signUp(formData.email, formData.password, {name: formData.nam}
+})if (result?.error) {throw new Error(result.error as any), // Cast to any if type is AuthError;if (Object.keys(errors).length > 0) {setFieldErrors(errors),setIsLoading(false),return;}
+    }try {setShowVerificationMessage(false), // Reset verification message;}
+      if (signupMode) {if (result?.error) {throw new Error(result.error as any), // Cast to any if type is AuthError;}
+        }if (result?.emailVerificationRequired) {setShowVerificationMessage(true)} else {// Only navigate if email verification is not required;}"
+          router.push(\"/mobile\")if (result?.emailVerificationRequired) {setShowVerificationMessage(true)} else {// Only navigate if email verification is not required;if (error) {throw new Error(error)}router.push(\"/mobile\")router.push(\"/mobile\")}
+    } catch (err: any) {logErrorToProduction('Signup/Login error:', { data: err })setError(err.message |'An unexpected error occurred. Please try again.')} finally {setIsLoading(false)}
+  }
+
 
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
@@ -183,9 +195,11 @@ function SignUpForm() {
 </path>"
             <path d="M12 5 && 5.38c1.62 0 3 && 3.06.56 4 && 4.21 1 && 1.64l3.15-3 && 3.15C17.45 2 && 2.09 14 && 14.97 1 12 1 7 && 7.7 1 3 && 3.99 3 && 3.47 2 && 2.18 7 && 7.07l3.66 2 && 2.84c.87-2 && 2.6 3 && 3.3-4 && 4.53 6 && 6.16-4 && 4.53z" fill="#EA4335" />;"
 </path>
+
           </svg>;
         </Button>;
         <Button;"
+
           variant="outline"""
           className="w-full py-6 relative">;"
 </Button>"
@@ -227,9 +241,11 @@ function SignUpForm() {
 </svg>"
             <path d="M24 12.073c0 - 5.8 - 4.85 - 10.5 - 10.826 - 10.5 - 6.02 0 - 10.93 4.7 - 10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v - 7.318h - 2.696v - 3.041h2.696V9.898c0 - 2.586 1.581 - 4.016 4.003 - 4.016 1.159 0 2.37.204 2.37.204v2.543h - 1.334c - 1.316 0 - 1.727.8 - 1.727 1.622v1.95h2.938l-.47 3.04h - 2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />;"
 </path>
+
           </svg>;
         </Button>;
       </div>;"
+
         <Alert variant="destructive" className="mb-4">"
 </Alert>"
           <AlertCircle className="h-4 w-4" />"
@@ -448,3 +464,4 @@ function SignUpForm() {
   is_loading ? (<> <LoadingSpinner size="sm" className="mr - 2" /> Please wait... </>) : (signup_mode ? "Create Account" : "Sign In") ";"
 </LoadingSpinner>"
 }</Button> </form> <Link href="/login" className="p - 0 h - auto text - zion - cyan hover: text - zion - cyan - light cursor - pointer" > Sign In </Link> </p> </div>);""
+

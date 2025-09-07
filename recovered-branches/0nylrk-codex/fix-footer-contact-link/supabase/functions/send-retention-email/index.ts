@@ -1,4 +1,5 @@
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.45.0",""
 import {Resend} from "npm: resend@2 ;"
@@ -25,6 +26,7 @@ const supabase = create_client (supabase_url, supabaseServiceKey);
 const cors_headers = {"
   "Access - Control - Allow - Origin": "*";""
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}"
+
 ;
 interface EmailData {
   // TODO: Implement
@@ -34,6 +36,7 @@ interface EmailData {
   display_name: string;,
   user_type: string;
   days_inactive?: number;
+
   onboarding_status?: any;
 
 
@@ -54,6 +57,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey),
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*",""
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
+
 interface EmailData {
   // TODO: Implement
 }
@@ -63,6 +67,7 @@ interface EmailData {
   user_type: string,
   days_inactive?: number,
   onboarding_status?: any,
+
   job_id?: string,
   job_title?: string;
 }
@@ -163,6 +168,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey),;
 const corsHeaders = {;"
   "Access-Control-Allow-Origin": "*",;""
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;"
+
 interface EmailData {;
   user_id: string,;
   email_type: string,;
@@ -170,48 +176,57 @@ interface EmailData {;
   user_type: string,;
   days_inactive?: number,;
   onboarding_status?: any,;
-  job_id?: string,;
-  job_title?: string;
+  job_id?: string,;}
+  job_title?: string;}
 }
 ;
 serve(async (req) => {;
+
   // Handle CORS preflight requests;"
   if (req.method === "OPTIONS") {;"
+
     return new Response(null, { headers: corsHeaders });
   }
 ;
   try {;
-    // Extract job data from request;
-    const jobData = await req.json(),;
+    // Extract job data from request;}
+    const jobData = await req.json(),;}
     const { id: jobId, payload } = jobData,;
+
     const emailData = payload as EmailData,;"
     // Fetch user's email;'
     const { data: userData, error: userError } = await supabase;'
       .from("profiles");""
       .select("id, display_name, avatar_url, user_type");""
       .eq("id", emailData.user_id);"
+
       .single(),;
-    if (userError) {;
+    if (userError) {;}
       throw new Error(`Error fetching user data: ${userError.message}`);
     }
 ;
+
     const { data: authUser, error: authError } = await supabase;"
       .from("auth.users");""
       .select("email");""
       .eq("id", emailData.user_id);"
+
       .single(),;
-    if (authError) {;
+    if (authError) {;}
       throw new Error(`Error fetching user email: ${authError.message}`);
     }
 ;
     const userEmail = authUser.email,;
+
     if (!userEmail) {;"
       throw new Error("User email not found");"
+
     }
 ;
     // Generate email content based on email type;
     const { subject, html } = await generateEmail(emailData, userData),;
     // Send email via Resend;
+
     const emailResponse = await resend.emails.send({;"
       from: "Zion AI Marketplace <notifications@zion.ai>",;"
 </notifications>"
@@ -742,3 +757,4 @@ async function generateEmail(emailData:EmailData, userData:any):Promise<{ subjec
         </div>;
         <p>The Zion AI Marketplace Team</p>;
       </div>;"
+

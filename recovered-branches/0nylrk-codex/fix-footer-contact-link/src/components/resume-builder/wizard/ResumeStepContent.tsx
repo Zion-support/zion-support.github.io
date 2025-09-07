@@ -1,19 +1,17 @@
 interface ResumeStepContentProps {
+
   // TODO: Implement
 }
   activeTab: string;,
   resume: Resume;
   onNextStep: () => void;,
   onPrevStep: () => void;
+
 }
-
-
-
-
-
 }: ResumeStepContentProps) => {
   return (
     <>
+
       <TabsContent value="basic-info">"
 </TabsContent>
         <BasicInfoForm;
@@ -147,11 +145,12 @@ export const ResumeStepContent = ({;
 </TabsContent>
         <WorkExperienceForm;
           resumeId={resume?.id!}
+
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
-
         />;
+
 </WorkExperienceForm>
       </TabsContent>;"
       <TabsContent value="education">;"
@@ -350,14 +349,14 @@ onPrevStep;)
 
         <PreviewResume;
           resume={resume as Resume} 
+
           onBack={onPrevStep}
         />;
 </PreviewResume>
       </TabsContent>;
     </>;
-  );
-
-
-
+  )
 };
+
 "
+

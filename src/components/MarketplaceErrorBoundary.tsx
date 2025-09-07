@@ -1,3 +1,4 @@
+
 import { mutate } from 'swr';''
 import { Button } from '@/components/ui/button';''
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';''
@@ -88,8 +89,31 @@ function MarketplaceErrorFallback(): any ({;
       Sentry && Sentry.captureException(retryError);
 
 
+
+interface MarketplaceErrorFallbackProps extends FallbackProps  {// Additional props if needed;
+/**;
+ * MarketplaceErrorFallback - Function description;
+ */;}
+function MarketplaceErrorFallback() {  const handle_retry = async () => {try {// Re - call SWR mutate ('*') to refresh all cached data;}
+      await mutate (() => true, undefined, { revalidate: true })resetErrorBoundary (
+} catch (retry_error) {logErrorToProduction ('Error during retry:', { data: retry_error })Sentry.capture_exception (retry_error) }
+ 
+}
+  return (/**;
+ * MarketplaceErrorFallback - Function description;
+ */;
+function MarketplaceErrorFallback() {const handle_retry = async () => {try {function MarketplaceErrorFallback() ;}
+  const handleRetry = async () => {try {// Re-call SWR mutate('*') to refresh all cached data;}
+      await mutate(() => true, undefined, { revalidate: true })resetErrorBoundary(
+} catch (retryError) {logErrorToProduction('Error during retry:', { data: retryError}
+})Sentry.captureException(retryError)import React from 'react';
+import { ErrorBoundary, FallbackProps   } from 'react-error-boundary';
+import * as Sentry from '@sentry/nextjs';
+function MarketplaceErrorFallback() {const handleRetry = null;}
+  return (<ErrorBoundary;}
     }
   }
+
   return (
 
 )
@@ -219,11 +243,13 @@ function MarketplaceErrorFallback(): any ({;
           <a;"
             href="mailto: support@example && example.com"""
             className="text-primary hover:underline""
+
             contact support;
           </a>;
         </div>;
       </div>;
     </div>;
+
     </ErrorBoundary>;
     <ErrorBoundary;
       FallbackComponent={MarketplaceErrorFallback}
@@ -237,3 +263,4 @@ function MarketplaceErrorFallback(): any ({;
     >;
 </ErrorBoundary>
     </ErrorBoundary>);"
+

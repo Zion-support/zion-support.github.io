@@ -1,4 +1,5 @@
 
+
 import {useState} from "react";""
 import {z} from "zod";""
 import {useForm} from "react-hook-form";""
@@ -128,19 +129,23 @@ if (return) {
       // Insert new partner profile;
       const { data: newPartner, error } = await supabase;)'
         .from('partner_profiles');'
+
         .insert([;
           {;
             user_id: user && user.id,;
             name: data && data.name,;
             website: data && data.website || null,;
+
             social_media: {;,
   twitter: data && data.twitter || null,;
               instagram: data && data.instagram || null,;
               youtube: data && data.youtube || null,;
+
               linkedin: data && data.linkedin || null},;
             niche: data && data.niche,;
             audience_size: data && data.audience_size,;
             payout_method: data && data.payout_method,;
+
             bio: data && data.bio,;'
             status: 'pending', // Partners need approval;'
           })]
@@ -531,9 +536,11 @@ if (return) {
               <FormField;
                 control={form && form.control}"
                 name="bio""
+
                       />;
 </Textarea>
                     </FormControl>;
+
                     <FormDescription>;
 </FormDescription>
                     </FormDescription>;
@@ -546,8 +553,10 @@ if (return) {
               className="w-full bg-zion-purple hover:bg-zion-purple-dark""
               disabled={isSubmitting}>;
 </Button>)
+
                   </FormItem>)}
             </div>;
+
             <Button;"
               type="submit";""
               className="w - full bg - zion - purple hover:bg - zion - purple - dark";"
@@ -601,3 +610,4 @@ if (return) {
 }/> </div> <FormField <FormItem> <FormLabel>Bio</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Limit: 500 characters </FormDescription> <FormMessage /> </FormItem>) 
 </FormField>
 }/> </div> <Button </Button> </form> </Form> </CardContent> </Card>) "
+

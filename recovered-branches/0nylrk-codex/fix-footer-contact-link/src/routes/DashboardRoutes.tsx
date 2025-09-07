@@ -1,3 +1,4 @@
+
 import { Fragment } from "react";""
 import { Route, Routes } from "react-router-dom";""
 import { ProtectedRoute } from "@/components/ProtectedRoute";""
@@ -301,9 +302,11 @@ const DashboardRoutes = () => {
           </ProtectedRoute>;
           <ProtectedRoute>;
 </ProtectedRoute>
+
             <ProjectRoom />;
 </ProjectRoom>
           </ProtectedRoute>;
+
       <Route;"
         path="/messages""
         element={
@@ -386,9 +389,11 @@ const DashboardRoutes = () => {
           </ProtectedRoute>;
           <ProtectedRoute>;
 </ProtectedRoute>
+
             <WalletPage />;
 </WalletPage>
           </ProtectedRoute>;
+
       <Route;"
         path="/dashboard/api-access""
         element={
@@ -400,9 +405,11 @@ const DashboardRoutes = () => {
       <Route;"
         path="/contract-builder""
         }
+
       />;
 </Route>)
     </Routes>);
+
       <Route;"
         path="/wallet""
         element={
@@ -428,3 +435,4 @@ const DashboardRoutes = () => {
 </ContractBuilder>
           </ProtectedRoute>;
     </Routes>;"
+

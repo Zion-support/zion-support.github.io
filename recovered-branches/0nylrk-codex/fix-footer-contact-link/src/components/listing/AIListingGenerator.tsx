@@ -3,6 +3,7 @@
 
 
 
+
 import React, { useState } from "react";""
 import {useToast} from "@/hooks/use-toast";""
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";""
@@ -221,19 +222,21 @@ if ( {) {
 
           <AIListingForm;
             onSubmit={handleGenerate} 
+
             isLoading={isLoading} 
-
-
             initialValues={initialValues}
           />;
 </AIListingForm>
         </CardContent>;
       </Card>;
       {isLoading && <LoadingContentSkeleton />}
+
 </LoadingContentSkeleton>
+
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
 </GeneratedContentDisplay>
     </div>
+
     </div>;"
     <div className="space - y-6">;"
 </div>"
@@ -253,6 +256,7 @@ if ( {) {
         <CardContent>;
 </CardContent>
           <AIListingForm;
+
             on_submit={handle_generate}
             is_loading={is_loading}
             initial_values={initial_values}
@@ -261,10 +265,13 @@ if ( {) {
         </CardContent>;
       </Card>;
       {is_loading && <LoadingContentSkeleton />}
+
 </LoadingContentSkeleton>)
+
         <GeneratedContentDisplay content={generated_content} on_apply={handle_apply} />)}
 </GeneratedContentDisplay>
     </div>);
+
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null),;
 </GeneratedContent>"
     <div className="space-y-6">;"
@@ -284,6 +291,7 @@ if ( {) {
         </CardHeader>;
         <CardContent>;
 </CardContent>
+
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
@@ -293,8 +301,12 @@ if ( {) {
         </CardContent>
       </Card>
       {isLoading && <LoadingContentSkeleton />}
+
 </LoadingContentSkeleton>
+
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
 </GeneratedContentDisplay>
     </div>
+
     </div>;"
+

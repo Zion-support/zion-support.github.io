@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";""
 import {ClickableBadge} from "@/components/ui/clickable-badge";""
 import {X} from "lucide-react";""
@@ -40,6 +41,7 @@ interface ActiveFiltersBarProps {;
 export function ActiveFiltersBar(): any ({;
 
 export function ActiveFiltersBar({;
+
   selectedProductTypes;
   selectedLocations;
   selectedAvailability;
@@ -61,14 +63,15 @@ export function ActiveFiltersBar({
   selectedRating;
   searchQuery;
   onRemoveFilter;
+
   onRemoveRating;
 
 
 
 
   onClearSearch;)
-}: ActiveFiltersBarProps) {
 
+}: ActiveFiltersBarProps) {
   const hasActiveFilters =
     selectedProductTypes.length > 0 |
     selectedLocations.length > 0 |
@@ -76,15 +79,14 @@ export function ActiveFiltersBar({
     selectedRating !== null |
     !!searchQuery;
   if (!hasActiveFilters) return null;
-
   const hasActiveFilters = 
     selectedProductTypes.length > 0 || 
     selectedLocations.length > 0 || 
     selectedAvailability.length > 0 || 
     selectedRating !== null ||
     !!searchQuery,
-    
   if (!hasActiveFilters) return null,
+
   
   return ("
     <div className="flex flex-wrap gap-2 items-center mb-4">"
@@ -124,12 +126,14 @@ import { X } from "lucide-react",;""
 import React from "react";""
 import {ClickableBadge} from "@/components/ui/clickable-badge";""
 import {X} from "lucide-react";"
+
 interface ActiveFiltersBarProps {;
   selectedProductTypes: string[],;
   selectedLocations: string[],;
   selectedAvailability: string[],;
   selectedRating: number | null,;
   searchQuery: string,;
+
   onRemoveFilter: (filterType: string, value: string) => void,;
 </ClickableBadge>"
     <div className="flex flex-wrap gap-2 items-center mb-4">"
@@ -267,3 +271,4 @@ return (<div className="flex flex-wrap gap-2 items-center mb-4" > <span classNam
 </X>
         </ClickableBadge>
     </div>"
+

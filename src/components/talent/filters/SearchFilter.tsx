@@ -1,4 +1,8 @@
-export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
+
+;
+import { Input  } from '@/components/ui/input';
+import { SearchIcon  } from 'lucide-react';
+import { SearchFilterProps  } from '@/types/filters';
 
 
   return (
@@ -17,6 +21,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           type='text'''
           placeholder='Search talents...''
           value={searchTerm}
+
 
 
 
@@ -45,6 +50,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 </p>
         </p>;
       </div>;
+
     </div>;"
     <div className='mb - 6'>;'
 </div>'
@@ -76,3 +82,4 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
         </p>;
       </div>;
     </div>);"
+

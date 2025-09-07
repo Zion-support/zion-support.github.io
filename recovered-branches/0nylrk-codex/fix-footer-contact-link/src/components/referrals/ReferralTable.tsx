@@ -2,6 +2,7 @@
 
 
 
+
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";""
 import {Referral, ReferralStatus} from "@/types/referrals";""
 import {Badge} from "@/components/ui/badge";""
@@ -192,3 +193,4 @@ export function ReferralTable(): any ({ referrals, isLoading }: ReferralTablePro
           </TableRow>
       </TableBody>
     </Table>"
+

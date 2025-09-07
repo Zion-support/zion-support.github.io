@@ -1,4 +1,5 @@
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.131.0/http/server && server.ts",""
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.20.0",""
 import {corsHeaders} from "../_shared/cors ;""
@@ -167,21 +168,25 @@ serve(async (req) => {;
 '
         JSON && JSON.stringify({ error: 'Failed to create referral' });''
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }'
+
       )
     }
     return new Response()
       JSON && JSON.stringify({ success: true, data });'
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }'
     )
+
   } catch (err) {'
     console && console.error('Unexpected error processing referral:', err);'
     return new Response()'
       JSON.stringify({ error: 'Internal server error' });'
+
 ;
     return new Response(;)
       JSON.stringify({ success: true, data }),;'
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }'
     );
+
   } catch (err) {;'
     console.error('Unexpected error processing referral:', err),;'
     return new Response(;)'
@@ -302,6 +307,7 @@ serve(async (req) => {;
   // Handle CORS pre-flight request;"
   if (req.method === 'OPTIONS') {;''
     return new Response('ok', { headers:corsHeaders }),;'
+
   }
 ;
   // Get request data;
@@ -314,6 +320,7 @@ serve(async (req) => {;
     Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '';'
   ),;
 ;
+
   try {;
     // Look up the referrer from the referral code;
     const { data:refCodeData, error:refError } = await supabase;'
@@ -327,6 +334,7 @@ serve(async (req) => {;
       return new Response(;)'
         JSON.stringify({ error:'Invalid referral code' }),;''
         { headers:{ ...corsHeaders, 'Content-Type':'application/json' }, status:400 }'
+
       ),;
     }
 ;
@@ -337,10 +345,12 @@ serve(async (req) => {;
       .eq('referred_id', userId);'
       .single(),;
 ;
+
     if (existingReferral) {;
       return new Response(;)'
         JSON.stringify({ message:'User already has a referral' }),;''
         { headers:{ ...corsHeaders, 'Content-Type':'application/json' }, status:200 }'
+
       ),;
     }
 ;
@@ -351,17 +361,21 @@ serve(async (req) => {;
         referrer_id:refCodeData.user_id,;
         referred_id:userId,;
         referral_code:refCode,;
+
         email,;
         ip_address:ipAddress;)]
+
       }]);
       .select();
       .single(),;
 ;
+
     if (error) {;'
       console.error('Error creating referral:', error),;'
       return new Response(;)'
         JSON.stringify({ error:'Failed to create referral' }),;''
         { headers:{ ...corsHeaders, 'Content-Type':'application/json' }, status:500 }'
+
       ),;
     }
 ;
@@ -370,17 +384,20 @@ serve(async (req) => {;
       { headers:{ ...corsHeaders, 'Content-Type':'application/json' }, status:200 }'
     ),;
     ;
+
   } catch (err) {;'
     console.error('Unexpected error processing referral:', err),;'
     return new Response(;)'
       JSON.stringify({ error:'Internal server error' }),;''
       { headers:{ ...corsHeaders, 'Content-Type':'application/json' }, status:500 }'
+
     ),;
   }'
 }),; //Handle CORS pre-flight request if (req.method === 'OPTIONS') {''
   //Create Supabase client const supabase = createClient (Deno.env.get ('SUPABASE URL') ?? '';''
 Deno.env.get ('SUPABASE SERVICE ROLE KEY') ?? '');'
 try {
+
   // TODO: Implement
 }
   //Look up the referrer from the referral code const {
@@ -405,3 +422,4 @@ try {
 
 
 '
+

@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";""
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
 import {Badge} from "@/components/ui/badge";""
@@ -73,12 +74,14 @@ export function SharedInbox() {;
 import React from './react';''
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';''
 import { Badge } from '@/components / ui / badge';'
+
 export /**
  * SharedInbox - Function description;
  */
 function SharedInbox() {
   // Mock messages;
   const messages = [;
+
     {'
       id: "msg - 1",""
       from: "John Smith",""
@@ -192,17 +195,22 @@ export function SharedInbox() {;
         </div>;
       </CardContent>;
     </Card>);
+
     </Card>);
     </Card>);
+
     </Card>;"
 flex items-center justify-between" > <div> <CardTitle>Shared Inbox</CardTitle> <CardDescription>Team messages and notifications</CardDescription> </div> <div key= {"
   message.id;
 }className= {
   `flex flex-col p-4 hover:bg-muted/50 cursor-pointer $ {"
   message.unread ? 'bg-blue-50 dark:bg-blue-900/10': '''
+
 }` 
-}> </div>) ) 
+} /> </div>) ) 
 }</div> No new messages </div>) 
 }View All Messages </button> </div> </CardContent> </Card>) 
     </Card>;
+
     </Card>);'
+

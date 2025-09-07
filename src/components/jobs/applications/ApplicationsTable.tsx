@@ -1,3 +1,4 @@
+
 import { format } from 'date-fns'''
 import { JobApplication } from '@/types/jobs'''
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed;''
@@ -70,10 +71,12 @@ interface ApplicationsTableProps {;
     <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}"
 </AvatarPrimitive>
         <Image;
+
           src={application.talent_profile.profile_picture_url}
           alt={talentName}
           width={32} // for h-8 w-8;
           height={32} // for h-8 w-8;"
+
           className="rounded-full object-cover""
           onError={() => setAvatarError(true)}
 </Image>"
@@ -296,6 +299,7 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
 </ClickableBadge>"
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;"
 </Briefcase>
+
                     </ClickableBadge>;
                     <ApplicationActions;
                       application={application}
@@ -312,6 +316,7 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
       </div>;
       <HireConfirmationModal;
         isOpen={hireModalOpen}
+
         onClose={() => setHireModalOpen(false)}
 </HireConfirmationModal>
 }</AvatarPrimitive>);"
@@ -336,3 +341,4 @@ return (<> <div className=" rounded - md border"> hidden md:table - cell" >Appli
   );
 }
 ;"
+

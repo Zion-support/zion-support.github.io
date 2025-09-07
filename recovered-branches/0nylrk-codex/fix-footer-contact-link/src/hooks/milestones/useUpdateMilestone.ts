@@ -1,5 +1,6 @@
 
 
+
 import {useState} from 'react';''
 import {supabase} from '@/integrations / supabase / client';''
 import {use_auth} from '@/hooks / use_auth';''
@@ -70,6 +71,7 @@ if (return false) {
 }
     try {
   // TODO: Implement
+
 }
       setIsSubmitting (true),
       const { error } = await supabase;'
@@ -77,6 +79,7 @@ if (return false) {
         .update (data);'
         .eq ('id', milestone_id);'
 ;
+
       // Check condition;
 if (throw error) {
   $2;
@@ -95,10 +98,10 @@ if (throw error) {
   // TODO: Implement
 }
       setIsSubmitting (false);
+
     }
-
-
   },
+
   
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
 </Milestone>
@@ -155,3 +158,4 @@ if (throw error) {
 ;
 
 "
+

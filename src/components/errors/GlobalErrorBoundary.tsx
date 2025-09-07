@@ -1,3 +1,4 @@
+
 import {
   // TODO: Implement
 }
@@ -20,29 +21,47 @@ interface ErrorBoundaryState {
   // TODO: Implement
 }
   has_error: boolean;,
+
   error: Error | null;
   error_info: ErrorInfo | null;,
   error_id: string | null;
   retry_count: number;,
   user_feedback: string;
   show_details: boolean;
+
 interface ErrorBoundaryProps {
   // TODO: Implement
 }
   children: ReactNode;
   fallback?: ReactNode;
 
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableRetry?: boolean;
 
-  maxRetries?: number;
-
-  showReportButton?: boolean;
+interface ErrorBoundaryProps  {children: ReactNode;
+  fallback?: ReactNode;onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableRetry?: boolean;maxRetries?: number;showReportButton?: boolean;
   context?: string;  enable_retry?: boolean;
   max_retries?: number;
-  showReportButton?: boolean;
-  context?: string;
+  showReportButton?: boolean;}
+  context?: string;}
+}hasError: false,error: null,errorInfo: null,errorId: null,retryCount: 0,userFeedback: '',
+  showDetails: false;
+    }
+  }
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState /> {return {hasError: true,error;}
+    }this.state;
+  }
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState /> {return {hasError: true,error}}componentDidCatch(error: Error, errorInfo: ErrorInfo) {const errorId  = this.generateErrorId()// Enhanced error logging;
+
+const enhancedError = {scope.setLevel('error')scope.setContext('errorInfo', {componentStack: errorInfo.componentStack;}
+        retryCount: this.state.retryCount;}
+      })Sentry.captureException(error)...error;...error,componentStack: errorInfo.componentStack,errorBoundary: this.props.context || 'GlobalErrorBoundary',timestamp: new Date().toISOString(),userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'SSR',url: typeof window !== 'undefined' ? window.location.href : 'SSR',userId: this.getUserId(),buildInfo: this.getBuildInfo()export class GlobalErrorBoundary extends Component<;
+  ErrorBoundaryProps,ErrorBoundaryState;
+> {private retry_timeouts: NodeJS.Timeout[] = [];}
+  constructor (props: ErrorBoundaryProps) {super (props)export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBoundaryState> {private retry_timeouts: NodeJS.Timeout[] = [];}
+  constructor (props: ErrorBoundaryProps) {super (props)this.state = {has_error: false,error: null,error_info: null,error_id: null,retry_count: 0,user_feedback: ''}
+  show_details: false} }    
 }
+
 
       hasError: false,
       error: null,
@@ -264,6 +283,7 @@ import * as Sentry from '@sentry/nextjs';''
 import { logErrorToProduction } from '@/utils/productionLogger';'
 interface ErrorBoundaryState {;
   hasError: boolean;,
+
   error: Error | null;
   errorInfo: ErrorInfo | null;,
   errorId: string | null;
@@ -271,8 +291,7 @@ interface ErrorBoundaryState {;
   userFeedback: string;
   showDetails: boolean;
 
-interface ErrorBoundaryProps {;
-  children: ReactNode;
+interface ErrorBoundaryProps  {children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableRetry?: boolean;
@@ -281,10 +300,12 @@ interface ErrorBoundaryProps {;
   context?: string;  enableRetry?: boolean;
   maxRetries?: number;
   showReportButton?: boolean;
-  context?: string;
+  context?: string;}
+}
 }
 
 export class GlobalErrorBoundary extends Component<;
+
   ErrorBoundaryProps,;
   ErrorBoundaryState;
 > {;
@@ -371,8 +392,10 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                   </Badge>;'
                     <Badge variant='outline' className='text-xs'>                    <Badge variant="outline" className="text-xs">;"
 </Badge>
+
                     </Badge>;
                 </div>;
+
               </CardHeader>;"
               <CardContent className='space-y-6'>;'
 </CardContent>'
@@ -485,9 +508,12 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       return ('
         <div className="min - h-screen flex items - center justify - center p - 4 bg - gradient - to - br from - red - 50 to - orange - 50 dark:from - red - 950 / 20 dark:to - orange - 950 / 20">;"
 </div>
+
           <motion.div;
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.95 }
+}
             animate={{ opacity: 1, scale: 1 }}
+
             transition={{ duration: 0.3 }}
           >;
 </motion>"
@@ -726,3 +752,4 @@ export const withErrorBoundary = <P extends object>(
       <Component {...props} />;
 </Component>)
     </GlobalErrorBoundary>);'
+

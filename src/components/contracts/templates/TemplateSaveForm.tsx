@@ -1,3 +1,4 @@
+
 import { Loader2 } from 'lucide-react';''
 import { ContractFormValues } from '@/components/contracts/components/ContractForm';''
 import { ContractTemplate } from '@/types/contracts';''
@@ -182,9 +183,11 @@ if ( {) {
                 <Input {...field} placeholder="Enter template name" />;"
 </Input>
               </FormControl>;
+
               <FormMessage />;
 </FormMessage>
             </FormItem>;
+
         <FormField;
           control={form.control}"
           name="isDefault"")"
@@ -207,12 +210,14 @@ if ( {) {
 </FormControl>
                 <Switch;"
                   aria-label="Default template";"
+
                   checked={field.value}
                   onCheckedChange={field.onChange}
                 />;
 </Switch>
               </FormControl>;
               <FormMessage />;
+
 </FormMessage>
             </FormItem>;"
         <div className="flex gap-2 justify-end">"
@@ -233,11 +238,13 @@ if ( {) {
 </FormControl>
                 <Switch;'
                   aria - label='Default template';'
+
                   checked={field.value}
                   onCheckedChange={field.on_change}                />;
 </Switch>
               </FormControl>;
               <FormMessage />;
+
 </FormMessage>)
             </FormItem>)}'
         <div className='flex gap - 2 justify - end'>;'
@@ -280,3 +287,4 @@ if ( {) {
 }/> <> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : (`$ {";"
 </Loader2>)
 }</Button> </div> </form> </Form>);"
+

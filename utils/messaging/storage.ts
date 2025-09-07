@@ -11,10 +11,12 @@
   is_deleted: boolean;
   deletedAtIso?: string;
   replyToId?: string;
+
   reactions: Array<{
 export interface Conversation {
   // TODO: Implement
 }
+
   }>;
 }
 export interface Conversation {
@@ -36,14 +38,16 @@ export interface Conversation {
   metadata?: {
     title?: string;
     description?: string;
+
     type?: 'direct' | 'group' | 'support' | 'project';'
+
 }
 
 
 
 export interface MessageThread {;
-
-
+}
+}
 }
 export interface MessageThread {
   // TODO: Implement
@@ -61,6 +65,7 @@ export interface MessageSearchResult {;
 
   message: Message;,
   conversation: Conversation;
+
   highlights: string[];,
   relevanceScore: number;
 }
@@ -111,15 +116,18 @@ class MessagingStorage {
 </Conversation>
   async getUnreadMessageCount(userId: string): Promise<number> {
 </number>
+
   private messages: Map < string, Message> = new Map ();
   private conversations: Map < string, Conversation> = new Map ();
   private threads: Map < string, MessageThread> = new Map ();
   private user_conversations: Map < string, Set < string>> = new Map (); // user_id -> conversation_ids;
   private conversation_messages: Map < string, Set < string>> = new Map (); // conversation_id -> message_ids;
+
   // Message methods;'
   async create_message (message: Omit < Message, 'id' | 'sentAtIso' | 'is_read' | 'is_edited' | 'is_deleted' | 'reactions'>): Promise < Message> {'
     const new_message: Message = {
       ...message,
+
       id: `msg_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
       sentAtIso: new Date ().toISOString (),
       is_read: false,
@@ -142,14 +150,16 @@ class MessagingStorage {
 ;
     return new_message;
   }
-  async get_message (id: string): Promise < Message | null> {
-    return this.messages.get (id) || null,
+  async get_message (id: string): Promise < Message | null> {}
+    return this.messages.get (id) || null,}
   }
   async update_message (id: string, updates: Partial < Message>): Promise < Message | null> {
     const message = this.messages.get (id);
     // Check condition;
+
 if (return null, ) {
   $2;
+
 }
     const updated_message = { ...message, ...updates }
     this.messages.set (id, updated_message);
@@ -158,8 +168,10 @@ if (return null, ) {
   async delete_message (id: string): Promise < boolean> {
     const message = this.messages.get (id);
     // Check condition;
+
 if (return false) {
   $2;
+
 }
     message.is_deleted = true;
     message.deletedAtIso = new Date ().toISOString (),
@@ -169,8 +181,10 @@ if (return false) {
   async markAsRead (id: string): Promise < boolean> {
     const message = this.messages.get (id);
     // Check condition;
+
 if (return false) {
   $2;
+
 }
     message.is_read = true;
     message.readAtIso = new Date ().toISOString (),
@@ -180,8 +194,10 @@ if (return false) {
   async markAsUnread (id: string): Promise < boolean> {
     const message = this.messages.get (id);
     // Check condition;
+
 if (return false) {
   $2;
+
 }
     message.is_read = false;
     message.readAtIso = undefined,
@@ -191,16 +207,20 @@ if (return false) {
   async add_reaction (message_id: string, user_id: string, emoji: string): Promise < boolean> {
     const message = this.messages.get (message_id);
     // Check condition;
+
 if (return false) {
   $2;
+
 }
     // Remove existing reaction from this user;
     message.reactions = message.reactions.filter (r => r.user_id !== user_id),
     // Add new reaction;
     message.reactions.push ({
       user_id,
+
       emoji,)
       created_at: new Date ().toISOString ();
+
     });
 ;
     this.messages.set (message_id, message);
@@ -209,17 +229,21 @@ if (return false) {
   async remove_reaction (message_id: string, user_id: string): Promise < boolean> {
     const message = this.messages.get (message_id);
     // Check condition;
+
 if (return false) {
   $2;
+
 }
     message.reactions = message.reactions.filter (r => r.user_id !== user_id),
     this.messages.set (message_id, message);
     return true;
   }
+
   // Conversation methods;'
   async create_conversation (conversation: Omit < Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise < Conversation> {'
     const new_conversation: Conversation = {
       ...conversation,
+
       id: `conv_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
       createdAtIso: new Date ().toISOString (),
       updatedAtIso: new Date ().toISOString ();
@@ -228,24 +252,26 @@ if (return false) {
     this.conversations.set (new_conversation.id, new_conversation);
 ;
     // Add to user conversations;
-    for (const participant_id of new_conversation.participants) {
-      this.addToUserConversations (participant_id, new_conversation.id);
+    for (const participant_id of new_conversation.participants) {}
+      this.addToUserConversations (participant_id, new_conversation.id);}
     }
     return new_conversation;
   }
-  async get_conversation (id: string): Promise < Conversation | null> {
-    return this.conversations.get (id) || null,
+  async get_conversation (id: string): Promise < Conversation | null> {}
+    return this.conversations.get (id) || null,}
   }
   async update_conversation (id: string, updates: Partial < Conversation>): Promise < Conversation | null> {
     const conversation = this.conversations.get (id);
     // Check condition;
+
 if (return null, ) {
   $2;
+
 }
     const updated_conversation = {
       ...conversation,
-      ...updates,
-      updatedAtIso: new Date ().toISOString ();
+      ...updates,}
+      updatedAtIso: new Date ().toISOString ();}
     }
 ;
     this.conversations.set (id, updated_conversation);
@@ -254,17 +280,19 @@ if (return null, ) {
   async delete_conversation (id: string): Promise < boolean> {
     const conversation = this.conversations.get (id);
     // Check condition;
+
 if (return false, ) {
   $2;
+
 }
     // Remove from user conversations;
-    for (const participant_id of conversation.participants) {
-      this.removeFromUserConversations (participant_id, id);
+    for (const participant_id of conversation.participants) {}
+      this.removeFromUserConversations (participant_id, id);}
     }
     // Delete all messages in this conversation;
     const message_ids = this.conversation_messages.get (id) || new Set ();
-    for (const message_id of message_ids) {
-      this.messages.delete (message_id);
+    for (const message_id of message_ids) {}
+      this.messages.delete (message_id);}
     }
     this.conversation_messages.delete (id);
 ;
@@ -273,8 +301,10 @@ if (return false, ) {
   async archive_conversation (id: string): Promise < boolean> {
     const conversation = this.conversations.get (id);
     // Check condition;
+
 if (return false) {
   $2;
+
 }
     conversation.is_archived = true;
     conversation.updatedAtIso = new Date ().toISOString (),
@@ -284,8 +314,10 @@ if (return false) {
   async unarchive_conversation (id: string): Promise < boolean> {
     const conversation = this.conversations.get (id);
     // Check condition;
+
 if (return false) {
   $2;
+
 }
     conversation.is_archived = false;
     conversation.updatedAtIso = new Date ().toISOString (),
@@ -295,8 +327,10 @@ if (return false) {
   async mute_conversation (id: string): Promise < boolean> {
     const conversation = this.conversations.get (id);
     // Check condition;
+
 if (return false) {
   $2;
+
 }
     conversation.is_muted = true;
     conversation.updatedAtIso = new Date ().toISOString (),
@@ -306,8 +340,10 @@ if (return false) {
   async unmute_conversation (id: string): Promise < boolean> {
     const conversation = this.conversations.get (id);
     // Check condition;
+
 if (return false) {
   $2;
+
 }
     conversation.is_muted = false;
     conversation.updatedAtIso = new Date ().toISOString (),
@@ -321,8 +357,10 @@ if (return false) {
       const msg_a = this.messages.get (a);
       const msg_b = this.messages.get (b);
       // Check condition;
+
 if (return 0) {
   $2;
+
 }
       return new Date (msg_a.sentAtIso).get_time () - new Date (msg_b.sentAtIso).get_time ();
     });
@@ -339,8 +377,10 @@ if (return 0) {
       .filter ((conv): conv is Conversation => conv !== undefined);
 ;
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       return conversations.filter (conv => !conv.is_archived),
     }
@@ -356,8 +396,10 @@ if ( {) {
       for (const message_id of message_ids) {
         const message = this.messages.get (message_id);
         // Check condition;
+
 if ( {) {
   $2;
+
 }
           count++,
         }
@@ -373,6 +415,7 @@ if ( {) {
     );
   }
   // Search methods;
+
   async searchMessages(query: string, userId: string, limit: number = 20): Promise<MessageSearchResult[]> {
 </MessageSearchResult>
   async getThread(threadId: string): Promise<MessageThread | null> {
@@ -434,22 +477,23 @@ export async function searchMessages(query: string, userId: string, limit?: numb
     return `${Math.floor(diffInHours)}h ago`;
   } else if (diffInHours < 168) { // 7 days;
     return `${Math.floor(diffInHours / 24)}d ago`;
+
   } else {
   // TODO: Implement
 }
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
-    isMuted: false,
-    ...additionalData;
+    isMuted: false,}
+    ...additionalData;}
   };
 }
 
-export function generateMessageId(): string {;
+export function generateMessageId(): string {;}
   return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
-export function generateConversationId(): string {;
+export function generateConversationId(): string {;}
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
@@ -458,6 +502,7 @@ export function formatMessageTime(isoString: string): string {;
   const date = new Date(isoString);
   const now = new Date();
   const diffInHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60);
+
   if (diffInHours < 1) {'
     return 'Just now''
   } else if (diffInHours < 24) {
@@ -469,71 +514,78 @@ export function formatMessageTime(isoString: string): string {;
 }
     return date.toLocaleDateString();
 
+
   }
   // Cleanup methods;
   async clear_all (): Promise < void> {
     this.messages.clear ();
     this.conversations.clear ();
     this.threads.clear ();
-    this.user_conversations.clear ();
-    this.conversation_messages.clear ();
+    this.user_conversations.clear ();}
+    this.conversation_messages.clear ();}
   }
   // Statistics;
   async get_stats (): Promise<{
+
     total_messages: number;,
   total_conversations: number;
     total_threads: number;,
   active_users: number,
+
   }> {
     return {
   // TODO: Implement
 }
       total_messages: this.messages.size,
       total_conversations: this.conversations.size,
-      total_threads: this.threads.size,
-      active_users: this.user_conversations.size;
+      total_threads: this.threads.size,}
+      active_users: this.user_conversations.size;}
     }
   }
 }
 // Singleton instance;
 export const messaging_storage = new MessagingStorage ();
 ;
+
 // Main functions for external use;'
 export async function create_message (message: Omit < Message, 'id' | 'sentAtIso' | 'is_read' | 'is_edited' | 'is_deleted' | 'reactions'>): Promise < Message> {'
   return messaging_storage.create_message (message);
+
 }
-export async function get_message (id: string): Promise < Message | null> {
-  return messaging_storage.get_message (id),
+export async function get_message (id: string): Promise < Message | null> {}
+  return messaging_storage.get_message (id),}
 }
-export async function update_message (id: string, updates: Partial < Message>): Promise < Message | null> {
-  return messaging_storage.update_message (id, updates);
+export async function update_message (id: string, updates: Partial < Message>): Promise < Message | null> {}
+  return messaging_storage.update_message (id, updates);}
 }
-export async function delete_message (id: string): Promise < boolean> {
-  return messaging_storage.delete_message (id),
+export async function delete_message (id: string): Promise < boolean> {}
+  return messaging_storage.delete_message (id),}
 }
+
 export async function markAsRead (id: string): Promise < boolean> {
   return messaging_storage.markAsRead (id),
 }'
 export async function create_conversation (conversation: Omit < Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise < Conversation> {'
   return messaging_storage.create_conversation (conversation);
+
 }
-export async function get_conversation (id: string): Promise < Conversation | null> {
-  return messaging_storage.get_conversation (id),
+export async function get_conversation (id: string): Promise < Conversation | null> {}
+  return messaging_storage.get_conversation (id),}
 }
-export async function update_conversation (id: string, updates: Partial < Conversation>): Promise < Conversation | null> {
-  return messaging_storage.update_conversation (id, updates);
+export async function update_conversation (id: string, updates: Partial < Conversation>): Promise < Conversation | null> {}
+  return messaging_storage.update_conversation (id, updates);}
 }
-export async function getMessagesByConversation (conversation_id: string, limit?: number, offset?: number): Promise < Message[]> {
-  return messaging_storage.getMessagesByConversation (conversation_id, limit, offset);
+export async function getMessagesByConversation (conversation_id: string, limit?: number, offset?: number): Promise < Message[]> {}
+  return messaging_storage.getMessagesByConversation (conversation_id, limit, offset);}
 }
-export async function getConversationsByUser (user_id: string, include_archived?: boolean): Promise < Conversation[]> {
-  return messaging_storage.getConversationsByUser (user_id, include_archived);
+export async function getConversationsByUser (user_id: string, include_archived?: boolean): Promise < Conversation[]> {}
+  return messaging_storage.getConversationsByUser (user_id, include_archived);}
 }
-export async function getUnreadMessageCount (user_id: string): Promise < number> {
-  return messaging_storage.getUnreadMessageCount (user_id),
+export async function getUnreadMessageCount (user_id: string): Promise < number> {}
+  return messaging_storage.getUnreadMessageCount (user_id),}
 }
-export async function search_messages (query: string, user_id: string, limit?: number): Promise < MessageSearchResult[]> {
-  return messaging_storage.search_messages (query, user_id, limit);
+export async function search_messages (query: string, user_id: string, limit?: number): Promise < MessageSearchResult[]> {}
+  return messaging_storage.search_messages (query, user_id, limit);}
 }
 // Utility functions;
 export function createMessageData (
@@ -548,8 +600,8 @@ export function createMessageData (
     conversation_id,
     sender_id,
     recipient_id,
-    body,
-    ...additional_data;
+    body,}
+    ...additional_data;}
   }
 }
 export function createConversationData (
@@ -561,10 +613,11 @@ export function createConversationData (
     participants,
     lastMessageAtIso: new Date ().toISOString (),
     is_archived: false,
-    is_muted: false,
-    ...additional_data;
+    is_muted: false,}
+    ...additional_data;}
   }
 }
+
 export function generateMessageId (): string {
   // TODO: Implement
 }
@@ -573,6 +626,7 @@ export function generateMessageId (): string {
 export function generateConversationId (): string {
   // TODO: Implement
 }
+
   return `conv_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }
 export function formatMessageTime (iso_string: string): string {
@@ -583,6 +637,7 @@ export function formatMessageTime (iso_string: string): string {
   const diffInHours = (now.get_time () - date.get_time ()) / (1000 * 60 * 60);
 ;
   // Check condition;
+
 if ( {) {
   $2;
 }'
@@ -601,6 +656,7 @@ if ( { // 7 days) {
   // TODO: Implement
 }
     return date.toLocaleDateString ();
+
   }
 }
   }

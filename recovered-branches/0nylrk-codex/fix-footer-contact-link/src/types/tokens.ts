@@ -1,4 +1,5 @@
 export interface Wallet {
+
   // TODO: Implement
 }
   user_id: string;,
@@ -7,6 +8,7 @@ export interface Wallet {
 }
 
 export type TransactionType = "earn" | "burn";"
+
 export interface TokenTransaction {
   // TODO: Implement
 }
@@ -14,16 +16,21 @@ export interface TokenTransaction {
   user_id: string;
   amount: number;,
   transaction_type: TransactionType;
+
   reason: string | null;,
   created_at: string;
+
+}
+;
+export type TransactionType = 'earn' | 'burn',;
+export interface TokenTransaction {;
+  id: string,;
+  user_id: string,;
+  amount: number,;}
+  transaction_type: TransactionType,;  created_at: string;}
 }
 ;
 
-
-export interface Wallet {;
-
-  created_at: string;
-}
-;
 }
 "
+

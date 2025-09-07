@@ -1,6 +1,7 @@
 
 
 
+
 import {SearchSuggestion, SearchHighlight} from "@/types/search";""
 import {SearchSuggestion, SearchHighlight} from "@/types/search";""
 import React from "react";""
@@ -22,45 +23,39 @@ interface AutocompleteSuggestionsProps {
   visible: boolean;"
 import React from "react",;""
 import { SearchSuggestion, SearchHighlight } from "@/types/search",;"
+
 interface AutocompleteSuggestionsProps {;
   suggestions: SearchSuggestion[],;
   searchTerm: string,;
-  onSelectSuggestion: (suggestion: string) => void,;
-  visible: boolean;
-
-
+  onSelectSuggestion: (suggestion: string) => void,;}
+  visible: boolean;}
 }
 // Helper function to highlight matching text;
+
 const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   if (!searchTerm |searchTerm.length === 0) {"
     return { before: '', match: text, after: '' }'
+
   }
-
-
-
-  
-
-
   const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
+
   if (index === -1) {'
     return { before: '', match: text, after: '' }'
+
   }
   return {
   // TODO: Implement
 }
     before: text.substring (0, index);
-    match: text.substring (index, index + search_term.length);
-    after: text.substring (index + search_term.length);
-  }
-
-
-};
-
+    match: text.substring (index, index + search_term.length);}
+    after: text.substring (index + search_term.length);}
+  }};
 export function AutocompleteSuggestions({ 
   suggestions, 
   searchTerm, ;
+
   onSelectSuggestion;
 
 
@@ -187,3 +182,4 @@ return (<li key= {
 }</span> </div> <span className="text-xs text-zion-slate-light capitalize" > {"
 </span>
 }</ul> </div>) "
+

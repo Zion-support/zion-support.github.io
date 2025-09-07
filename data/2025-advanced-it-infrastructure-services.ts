@@ -1,3 +1,4 @@
+
         'Quantum algorithm optimization',''
         'Advanced AI model training',''
         'Real - time quantum simulation',''
@@ -7,11 +8,13 @@
         'Performance monitoring',''
         'Cost optimization',''
         'Global edge computing network','
+
       ],
       popular: true,
       integrations: ['
         'AWS, Azure, GCP, IBM Quantum, Google Quantum, Microsoft Quantum'']
       ]
+
       useCases: ['
         'AI model training, Scientific simulations, Financial modeling, Drug discovery, Cryptography',']
       ],'
@@ -40,11 +43,13 @@
         'Performance monitoring',''
         'Cost optimization',''
         'Global edge presence','
+
       ],
       popular: true,
       integrations: ['
         'AWS IoT, Azure IoT, Google Cloud IoT, 5G networks, IoT devices'']
       ]
+
       useCases: ['
         'IoT data processing, Real-time analytics, Edge AI, 5G optimization, Smart manufacturing'']
       ]'
@@ -73,11 +78,13 @@
         'Security monitoring',''
         'Incident response',''
         'Security reporting',']
+
       ],
       popular: true,
       integrations: ['
         'Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls'']
       ]
+
       useCases: ['
         'Identity management, Network security, Access control, Threat detection, Compliance',']
       ],'
@@ -99,11 +106,13 @@
         'Security monitoring',''
         'Incident response',''
         'Security reporting',']
+
       ],
       popular: true,
       integrations: ['
         'Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls'']
       ]
+
       useCases: ['
         'Identity management, Network security, Access control, Threat detection, Compliance',']
       ],'
@@ -188,11 +197,13 @@
         'Global network presence',''
         'Real - time monitoring',''
         'Advanced reporting','
+
       ],
       popular: true,
       integrations: ['
         'Cisco, Juniper, Arista, VMware, OpenStack, SDN controllers'']
       ]
+
       useCases: ['
         'Quantum key distribution (QKD)',''
         'Quantum - secured communication channels',''
@@ -273,13 +284,16 @@
       popular: true,'
       icon: '☁️','
       customers: 32,
-      rating: 4 && 4.7,
-      reviews: 24,
 
+      rating: 4 && 4.7,
+
+      reviews: 24,
     },;
 
 
+
   ];    features: [,
+
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,]
@@ -293,10 +307,12 @@
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
+
   contactInfo: {,
   mobile: string, email: string,
     address: string,
     website: string;
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -305,6 +321,7 @@
 }
 export const advancedITInfrastructureServices2025: AdvancedITInfrastructureService[] = [
   // Quantum-Enhanced Cloud Infrastructure;
+
   {'
     id: 'quantum-enhanced-cloud-infrastructure', name: 'Quantum-Enhanced Cloud Infrastructure',''
     tagline: 'Next-generation cloud computing with quantum processing capabilities',''
@@ -359,6 +376,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Python'''
         'Terraform'''
         'React'']
+
       ]
       integrations: ['
         'AWS'''
@@ -368,6 +386,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Oracle Cloud'''
         'On-premises systems'']
       ]
+
       useCases: ['
         'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.'''
       launchDate: '2025-05-01'',
@@ -405,11 +424,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     },'
     realImplementation: true, implementationDetails: 'Hybrid quantum-classical cloud infrastructure with quantum processing capabilities and classical cloud services.',''
     launchDate: '2024-11-01', customers: 23,'
+
     rating: 4.9,
     reviews: 15;
   };
 
   // Autonomous Edge Computing Network;
+
   {'
     id: 'autonomous-edge-computing-network', name: 'Autonomous Edge Computing Network',''
     tagline: 'Self-managing edge infrastructure with intelligent optimization', price: '$799',''
@@ -439,11 +460,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     },'
     realImplementation: true, implementationDetails: 'Autonomous edge computing network with intelligent optimization and real-time processing capabilities.',''
     launchDate: '2024-10-15', customers: 45,'
+
     rating: 4.8,
     reviews: 28;
   };
 
   // Zero-Trust Security Architecture;
+
   {'
     id: 'zero-trust-security-architecture', name: 'Zero-Trust Security Architecture',''
     tagline: 'Comprehensive security framework with continuous verification', price: '$899',''
@@ -495,11 +518,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     },'
     realImplementation: true, implementationDetails: 'Comprehensive zero-trust security architecture with continuous verification and automated response capabilities.',''
     launchDate: '2024-09-20', customers: 78,'
+
     rating: 4.9,
     reviews: 56;
   };
 
   // Autonomous Data Center Platform;
+
   {'
     id: 'autonomous-data-center-platform', name: 'Autonomous Data Center Platform',''
     tagline: 'Self-managing data center infrastructure with AI optimization',''
@@ -552,11 +577,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     },'
     realImplementation: true, implementationDetails: 'AI-powered autonomous data center platform with intelligent infrastructure management and optimization capabilities.',''
     launchDate: '2024-08-15', customers: 34,'
+
     rating: 4.8,
     reviews: 22;
   };
 
   // Quantum Networking Platform;
+
   {'
     id: 'quantum-networking-platform', name: 'Quantum Networking Platform',''
     tagline: 'Next-generation networking with quantum encryption and optimization',''
@@ -587,11 +614,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     },'
     realImplementation: true, implementationDetails: 'Quantum networking platform with unbreakable encryption and intelligent network optimization capabilities.',''
     launchDate: '2024-07-20', customers: 19,'
+
     rating: 4.9,
     reviews: 12;
   };
 
   // New Advanced IT Infrastructure Services for 2025;
+
   {'
     id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',''
     tagline: 'Next-generation quantum-enhanced cloud computing',''
@@ -673,6 +702,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4 && 4.7;,
   reviews: 24;'
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface AdvancedITInfrastructureService {;
   id: string,;
   name: string,;
@@ -703,8 +733,8 @@ export interface AdvancedITInfrastructureService {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -727,6 +757,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Hybrid quantum-classical computingQuantum algorithm optimizationAdvanced AI model trainingReal-time quantum simulationMulti-cloud orchestrationQuantum-secure encryptionAutonomous resource scalingPerformance monitoring',;''
       'Cost optimizationGlobal edge computing network';']
     ],;
+
     popular: true,;'
     icon: '☁️',;''
     color: 'from-indigo-600 to-purple-600',;''
@@ -758,13 +789,16 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
   customers: 32;
     rating: 4.7;,
   reviews: 24;
+
   }
 ;
 ];
 ;
   }
+
 ];'
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface AdvancedITInfrastructureService {;
   id: string,;
   name: string,;
@@ -795,8 +829,8 @@ export interface AdvancedITInfrastructureService {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -819,6 +853,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Hybrid quantum-classical computingQuantum algorithm optimizationAdvanced AI model trainingReal-time quantum simulationMulti-cloud orchestrationQuantum-secure encryptionAutonomous resource scalingPerformance monitoring',;''
       'Cost optimizationGlobal edge computing network';']
     ],;
+
     popular: true,;'
     icon: '☁️',;''
     color: 'from-indigo-600 to-purple-600',;''
@@ -843,6 +878,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Hybrid quantum-classical cloud infrastructure with quantum processing capabilities and classical cloud services.',;''
@@ -863,6 +899,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Autonomous edge node managementReal-time data processingIntelligent load balancingEdge AI inference5G network optimizationIoT device orchestrationEdge security and privacyPerformance monitoring',;''
       'Cost optimizationGlobal edge presence';']
     ],;
+
     popular: true,;'
     icon: '🌐',;''
     color: 'from-green-600 to-emerald-600',;''
@@ -887,6 +924,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Autonomous edge computing network with intelligent optimization and real-time processing capabilities.',;''
@@ -907,6 +945,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Continuous identity verificationDevice trust scoringNetwork segmentationBehavioral analysisThreat intelligence integrationAutomated responseCompliance automationSecurity monitoring',;''
       'Incident responseSecurity reporting';']
     ],;
+
     popular: true,;'
     icon: '🔒',;''
     color: 'from-red-600 to-orange-600',;''
@@ -931,11 +970,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     features: [;'
       'Continuous identity verificationDevice trust scoringNetwork segmentationBehavioral analysisThreat intelligence integrationAutomated responseCompliance automationSecurity monitoring',;''
       'Incident responseSecurity reporting';']
     ],;
+
     popular: true,;'
     icon: '🔒',;''
     color: 'from-red-600 to-orange-600',;''
@@ -960,6 +1001,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Comprehensive zero-trust security architecture with continuous verification and automated response capabilities.',;''
@@ -980,6 +1022,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'AI-powered infrastructure managementAutomated capacity planningIntelligent power managementPredictive maintenancePerformance optimizationCost optimizationSecurity automationDisaster recovery',;''
       'Compliance monitoringReal-time analytics';']
     ],;
+
     popular: true,;'
     icon: '🏢',;''
     color: 'from-blue-600 to-cyan-600',;''
@@ -1004,11 +1047,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     features: [;'
       'AI-powered infrastructure managementAutomated capacity planningIntelligent power managementPredictive maintenancePerformance optimizationCost optimizationSecurity automationDisaster recovery',;''
       'Compliance monitoringReal-time analytics';']
     ],;
+
     popular: true,;'
     icon: '🏢',;''
     color: 'from-blue-600 to-cyan-600',;''
@@ -1033,6 +1078,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'AI-powered autonomous data center platform with intelligent infrastructure management and optimization capabilities.',;''
@@ -1053,6 +1099,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Quantum key distributionUnbreakable encryptionIntelligent routingNetwork optimizationSecurity monitoringPerformance analyticsCompliance automationGlobal network presence',;''
       'Real-time monitoringAdvanced reporting';']
     ],;
+
     popular: true,;'
     icon: '🌐',;''
     color: 'from-purple-600 to-pink-600',;''
@@ -1077,6 +1124,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Quantum networking platform with unbreakable encryption and intelligent network optimization capabilities.',;''
@@ -1097,6 +1145,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Quantum computing integration and optimizationHybrid quantum-classical computingQuantum-secured cloud servicesAdvanced quantum algorithms and applicationsReal-time quantum resource managementQuantum cloud performance optimizationCustom quantum application developmentIntegration with existing cloud platforms',;''
       'Advanced quantum cloud analyticsComprehensive quantum cloud management';']
     ],;
+
     popular: true,;'
     icon: '☁️',;''
     color: 'from-cyan-500 to-blue-600',;''
@@ -1121,6 +1170,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Advanced quantum cloud infrastructure platform with quantum computing integration, enhanced security, and comprehensive cloud management capabilities.',;''
@@ -1141,6 +1191,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Intelligent edge resource orchestrationReal-time performance optimizationEdge-to-cloud seamless integrationDistributed computing managementLatency optimization and load balancingEdge security and complianceCustom edge application deploymentReal-time monitoring and analytics',;''
       'Integration with cloud platformsAdvanced edge computing analytics';']
     ],;
+
     popular: true,;'
     icon: '🌐',;''
     color: 'from-green-500 to-emerald-600',;''
@@ -1165,6 +1216,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Comprehensive edge computing orchestration platform with intelligent resource management, seamless cloud integration, and advanced analytics.',;''
@@ -1185,6 +1237,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Zero trust architecture implementationContinuous identity verificationLeast-privilege access controlsAdvanced threat detection and preventionReal-time security monitoring and analyticsCompliance and audit capabilitiesIntegration with existing security toolsCustom security policy implementation',;''
       'Advanced security analytics and reporting24/7 security operations and support';']
     ],;
+
     popular: true,;'
     icon: '🛡️',;''
     color: 'from-red-500 to-orange-600',;''
@@ -1209,6 +1262,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Enterprise-grade zero trust security architecture platform with comprehensive security implementation, continuous verification, and advanced threat protection.',;''
@@ -1229,6 +1283,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Fully autonomous data center managementAI-powered infrastructure optimizationPredictive maintenance and optimizationAutomated resource allocation and scalingReal-time performance monitoringEnergy efficiency optimizationCustom data center workflowsIntegration with existing infrastructure',;''
       'Advanced data center analyticsComprehensive infrastructure management';']
     ],;
+
     popular: true,;'
     icon: '🏢',;''
     color: 'from-indigo-500 to-purple-600',;''
@@ -1253,6 +1308,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Advanced autonomous data center platform with AI-powered management, comprehensive optimization, and seamless infrastructure integration.',;''
@@ -1273,6 +1329,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Quantum key distribution (QKD)Quantum-secured communication channelsPost-quantum cryptography implementationQuantum network infrastructure managementReal-time quantum network monitoringAdvanced quantum security protocolsIntegration with existing networksCustom quantum network deployment',;''
       'Quantum network performance analytics24/7 quantum network operations';']
     ],;
+
     popular: true,;'
     icon: '🌐',;''
     color: 'from-cyan-500 to-blue-600',;''
@@ -1297,6 +1354,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Enterprise-grade quantum networking infrastructure with quantum key distribution, advanced security protocols, and comprehensive network management capabilities.',;''
@@ -1317,6 +1375,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'AI-powered infrastructure automationIntelligent resource provisioningAutomated scaling and optimizationInfrastructure monitoring and analyticsCost optimization and managementSecurity and compliance automationCustom infrastructure workflowsIntegration with cloud platforms',;''
       'Advanced infrastructure insightsComprehensive infrastructure management';']
     ],;
+
     popular: false,;'
     icon: '🤖',;''
     color: 'from-purple-500 to-pink-600',;''
@@ -1341,6 +1400,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Comprehensive AI-powered infrastructure management platform with intelligent automation, optimization, and seamless cloud platform integration.',;''
@@ -1361,6 +1421,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Multi-cloud orchestration and managementHybrid cloud integration and optimizationIntelligent workload placementCross-cloud resource optimizationUnified monitoring and analyticsAutomated cloud migrationCustom cloud workflowsIntegration with cloud platforms',;''
       'Advanced cloud analyticsComprehensive cloud management';']
     ],;
+
     popular: true,;'
     icon: '☁️',;''
     color: 'from-blue-500 to-indigo-600',;''
@@ -1385,6 +1446,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.',;''
@@ -1393,5 +1455,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.7;,
   reviews: 24;
   }
+
+];  }
 ];
 '

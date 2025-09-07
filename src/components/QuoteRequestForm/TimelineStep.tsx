@@ -1,3 +1,4 @@
+
 <div;
 interface TimelineStepProps {
   // TODO: Implement
@@ -76,9 +77,17 @@ function TimelineStep() {
               <h4 className='font - medium text - white'>Fixed Dates</h4>;''
               <p className='text - sm text - zion - slate - light'>;'
 </p>
+
               </p>;
+            </div>;<div;"
+              onClick={() = /> updateFormData({ timeline: \"fixed\" }
+}
+            >;"
+              <h4 className=\"font-medium text-white\" />Fixed Dates</h4>;"
+              <p className=\"text-sm text-zion-slate-light\" />I have specific start and end dates</p>;
             </div>;
             <div;
+
               className={`flex - 1 p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${'
                 form_data.timeline === 'flexible';''
                   ? 'bg - zion - purple / 20 border - zion - purple';''
@@ -263,3 +272,4 @@ interface TimelineStepProps {;
         </div>;
       </div>;
     </div>);'
+

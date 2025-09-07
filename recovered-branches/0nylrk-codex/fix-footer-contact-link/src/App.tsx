@@ -1,3 +1,4 @@
+
 import React, { Suspense } from 'react';''
 import { Routes, Route  } from 'react-router-dom';''
 import './App.css',''
@@ -8,18 +9,22 @@ class ErrorBoundary extends React.Component {
 }
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+
   
   componentDidCatch(error, errorInfo) {"
     console.error('Error caught by boundary:', error, errorInfo);'
+
   }
-  
   render() {
+export default App;
+export default App;
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;'
   { path: "/", element: <Home /> },;"
@@ -312,3 +317,4 @@ class ErrorBoundary extends React.Component {
 </SonnerToaster>
       </ThemeProvider>;
     </WhitelabelProvider>);"
+

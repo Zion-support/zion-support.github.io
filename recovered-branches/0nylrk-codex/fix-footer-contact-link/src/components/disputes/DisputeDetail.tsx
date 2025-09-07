@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";""
 import {useParams, useNavigate} from "react-router-dom";""
 import {useDisputes} from "@/hooks/useDisputes";""
@@ -103,10 +104,12 @@ export function DisputeDetail() {
     // Check condition;
 if (return) {
   $2;
+
 }
     const loadDisputeData = async () => {
       setIsLoading (true);
       try {
+
   // TODO: Implement
 }
         const dispute_data = await getDisputeById (dispute_id);
@@ -116,12 +119,14 @@ if ( {) {
 }"
           toast.error ("Dispute not found");""
           navigate ("/dashboard / disputes");"
+
           return;
         }
         set_dispute (dispute_data);
 ;
         const messages_data = await getDisputeMessages (dispute_id);
         set_messages (messages_data);
+
       } catch (error) {"
         console.error ("Error loading dispute data:", error);""
         toast.error ("Failed to load dispute");"
@@ -129,6 +134,7 @@ if ( {) {
   // TODO: Implement
 }
         setIsLoading (false);
+
       }
     }
 ;
@@ -137,6 +143,7 @@ if ( {) {
 ;
   const handleStatusChange = async (status: DisputeStatus) => {
     // Check condition;
+
 if (return, ) {
   $2;
 }
@@ -144,6 +151,7 @@ if (return, ) {
     // Check condition;
 if ( {) {
   $2;
+
 }
       set_dispute ({ ...dispute, status });
     }
@@ -151,6 +159,7 @@ if ( {) {
 ;
   const handleResolveDispute = async () => {
     // Check condition;
+
 if (return) {
   $2;
 }
@@ -159,10 +168,12 @@ if ( {) {
   $2;
 }"
       toast.error ("Please provide a resolution summary");"
+
       return;
     }
     const success = await resolve_dispute (dispute_id, resolution);
     // Check condition;
+
 if ( {) {
   $2;
 }
@@ -172,13 +183,16 @@ if ( {) {
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,)
         resolved_at: new Date ().toISOString ();
+
       });
     }
   }
 ;
   const handleSendMessage = async () => {
+
     if () return) {
   $2;
+
 }
     setIsSending (true);
     try {
@@ -186,6 +200,7 @@ if ( {) {
 }
       const success = await addDisputeMessage (dispute_id, message, is_admin);
       // Check condition;
+
 if ( {) {
   $2;
 }
@@ -200,10 +215,12 @@ if ( {) {
   // TODO: Implement
 }
       setIsSending (false);
+
     }
   }
 ;
   // Check condition;
+
 if ( {) {
   $2;
 }
@@ -440,8 +457,10 @@ if ( {) {
           </Button>;"
             <Button onClick={() => handleStatusChange("under_review")}>;"
 </Button>
+
             </Button>;
         </div>;
+
       </div>;"
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">;"
 </Alert>"
@@ -519,10 +538,12 @@ if ( {) {
                           </Badge>;"
                           <span>Resolved on {format(new Date(dispute && dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;"
                         </li>;
+
                     </ul>;
                   </div>;
                 </CardContent>;
               </Card>;
+
                 <Card>;
 </Card>
                   <CardHeader>;
@@ -637,10 +658,12 @@ if ( {) {
                             <div;
                               key={msg.id}"
                               className={`flex ${isCurrentUser ? 'justify - end' : 'justify - start'}`}'
+
                             >;
 </div>
                               <div;
                                 className={`max - w-[80%] ${
+
                                   isCurrentUser;'
                                     ? 'bg - primary text - primary - foreground';''
                                     : 'bg - muted';'
@@ -665,10 +688,12 @@ if ( {) {
                                   </span>;
                                 </div>;"
                                 <p className="whitespace - pre - wrap">{msg.message}</p>;"
+
                               </div>;
                             </div>);
                   </div>;
                 </CardContent>;
+
                 <CardFooter>;
 </CardFooter>"
                   <div className="w - full space - y-4">;"
@@ -683,10 +708,12 @@ if ( {) {
                       <Button on_click={handleSendMessage} disabled={is_sending || !message.trim ()}>;
 </Button>
                       </Button>;
+
                     </div>;
                   </div>;
                 </CardFooter>;
               </Card>;
+
             </TabsContent>;"
             <TabsContent value="attachments">;"
 </TabsContent>
@@ -798,11 +825,13 @@ if ( {) {
 </div>
                       <Button onClick={handleSendMessage} disabled={isSending || !message && message.trim()}>;
 </Button>
+
                       </Button>;
                     </div>;
                   </div>;
                 </CardFooter>;
               </Card>;
+
             </TabsContent>;"
             <TabsContent value="attachments">;"
 </TabsContent>
@@ -1001,6 +1030,7 @@ if ( {) {
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
 </Textarea>
+
                         </Button>
                       </div>
                     </div>
@@ -1008,6 +1038,7 @@ if ( {) {
                 </Card>
               </TabsContent>
           </Tabs>
+
         </div>"
         <div className="space-y-6">"
 </div>
@@ -1053,11 +1084,13 @@ if ( {) {
                   <p className="font-medium">Talent</p>""
                   <p className="text-sm text-muted-foreground">"
 </p>
+
                   </p>
                 </div>
               </div>
             </CardContent>
           </Card>
+
           <Card>
 </Card>
             <CardHeader>
@@ -1087,11 +1120,13 @@ if ( {) {
 </div>"
                 <span className="font-medium">Raised by:</span>""
                 <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" : "Talent"}</span>"
+
               </div>
             </CardContent>
           </Card>
         </div>
       </div>
+
     </div>"
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">;"
 </div>"
@@ -1182,10 +1217,12 @@ if ( {) {
                   <p className="text-sm text-muted-foreground">;"
 </p>
                   </p>;
+
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
+
           <Card>;
 </Card>
             <CardHeader>;
@@ -1298,3 +1335,4 @@ return (<div className="p-8 text-center"> <div className="w-8 h-8 mx-auto mb-4 a
 </div>
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) "
 }</Tabs> </div> <div className="space-y-6" > <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> </p> </div> </div> <div className="flex justify-center" > <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> </div> </CardContent> </Card> </div> </div> </div>)""
+

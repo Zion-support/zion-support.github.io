@@ -1,14 +1,17 @@
 
+
 import { useFetchResume  } from './useFetchResume';''
 import { useResumeActions } from './useResumeActions';'
 export function useResumeBasic() {
 '
 import {useFetchResume} from './useFetchResume';''
 import {useResumeActions} from './useResumeActions';'
+
 export function useResumeBasic() {;
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
   return {
+
   // TODO: Implement
 }
     // From useFetchResume;
@@ -47,6 +50,7 @@ export function useResumeBasic() {;
     // From useResumeActions;
     createResume: resumeActions && resumeActions.createResume;,
   updateBasicInfo: resumeActions && resumeActions.updateBasicInfo,
+
     setActiveResume: resumeActions && resumeActions.setActiveResume}
 }'
 import {useFetchResume} from './useFetchResume';''
@@ -68,6 +72,7 @@ function useResumeBasic() {
   fetch_resume: fetchResumeOperations.fetch_resume;
 ;
     // From useResumeActions;
+
     create_resume: resume_actions.create_resume;,
   updateBasicInfo: resume_actions.updateBasicInfo,
     setActiveResume: resume_actions.setActiveResume}
@@ -75,6 +80,7 @@ function useResumeBasic() {
 '
 import { useFetchResume } from './useFetchResume',;''
 import { useResumeActions } from './useResumeActions',;'
+
 ;
 export function useResumeBasic() {;
   const fetchResumeOperations = useFetchResume(),;
@@ -88,11 +94,13 @@ export function useResumeBasic() {;
     fetchResume:fetchResumeOperations.fetchResume,;
     ;
     // From useResumeActions;
-    createResume:resumeActions.createResume,;
-    updateBasicInfo:resumeActions.updateBasicInfo,;
+    createResume:resumeActions.createResume,;}
+    updateBasicInfo:resumeActions.updateBasicInfo,;}
     setActiveResume:resumeActions.setActiveResume},;
 } 
 }
     setActiveResume: resumeActions.setActiveResume}
+
 }
 '
+

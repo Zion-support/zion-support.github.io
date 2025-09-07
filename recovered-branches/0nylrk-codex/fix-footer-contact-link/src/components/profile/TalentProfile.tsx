@@ -1,4 +1,5 @@
 interface TalentProfileProps {
+
   // TODO: Implement
 }
   profile: TalentProfileType;,
@@ -18,11 +19,13 @@ import {ProfileRatings} from "./ProfileRatings";""
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";""
 import {useAuth} from "@/hooks/useAuth";""
 import {Availability} from "@/types/profile";"
+
 interface TalentProfileProps {;
   profile: TalentProfileType,;
-  onRequestHire: () => void,;
-  onMessageTalent?: () => void;
+  onRequestHire: () => void,;}
+  onMessageTalent?: () => void;}
 }
+
 
 export function TalentProfile(): any ({ ;
 
@@ -124,9 +127,11 @@ export function TalentProfile({
 </div>"
         <div className="space-y-8">;"
 </div>
+
           <ProfileSkills skills={skillsArray} />;
 </ProfileSkills>
           <ProfileAvailability availability={availability} />;
+
 </ProfileAvailability>
           <ProfileContact;
             email={profile && profile.user_id}
@@ -170,12 +175,14 @@ export function TalentProfile({
 </div>"
         <div className="space - y-8">;"
 </div>
+
           <ProfileSkills skills={skills_array} />;
 </ProfileSkills>
           <ProfileAvailability availability={availability} />;
 </ProfileAvailability>
           <ProfileContact;
             email={profile.user_id}
+
             profile_name={profile.full_name}"
             profile_type="talent";"
           />;
@@ -189,9 +196,11 @@ export function TalentProfile({
             <div className="prose prose - invert max - w-none">;"
 </div>"
               <p className="text - zion - slate whitespace - pre - wrap">{profile.bio}</p>;"
+
             </div>;
           </div>;
           <ProfileProjects projects={projects_array} />;
+
 </ProfileProjects>"
           <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6">;"
 </div>"
@@ -199,12 +208,14 @@ export function TalentProfile({
 </h2>"
               <Star className="mr - 2 h - 5 w - 5 text - yellow - 400" />;"
 </Star>
+
             </h2>;
             <ProfileRatings;
               user_id={profile.id}
               average_rating={profile.average_rating}
               rating_count={profile.rating_count}
             />;
+
 </ProfileRatings>
           </div>;"
             <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6 mb - 8">;"
@@ -347,3 +358,4 @@ return (</div> </div> {
         </div>
       </div>
     </div>"
+

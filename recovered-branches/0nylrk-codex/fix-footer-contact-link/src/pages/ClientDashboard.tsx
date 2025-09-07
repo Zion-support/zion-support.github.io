@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";""
 import { AppHeader } from "@/layout/AppHeader";""
 import { Footer } from "@/components/Footer";""
@@ -42,9 +43,11 @@ function ClientDashboardContent() {"
       <SEO;"
         title="Client Dashboard | Zion AI Marketplace"""
         description="Manage your jobs and talent requests in the Zion AI Marketplace.""
+
       />
 </SEO>
       <AppHeader />
+
 </AppHeader>"
       <main className="container mx-auto px-4 py-8">"
 </main>
@@ -168,9 +171,11 @@ function ClientDashboardContent() {"
       <SEO;"
         title="Client Dashboard | Zion AI Marketplace"""
         description="Manage your jobs and talent requests in the Zion AI Marketplace.""
+
       />;
 </SEO>
       <AppHeader />;
+
 </AppHeader>"
       <main className="container mx-auto px-4 py-8">;"
 </main>"
@@ -316,3 +321,4 @@ export default function ClientDashboard() {
       <ClientDashboardContent />;
 </ClientDashboardContent>
     </ProtectedRoute>;)"
+

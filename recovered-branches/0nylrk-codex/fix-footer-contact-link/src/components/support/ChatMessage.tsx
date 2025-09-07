@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";""
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";""
 import {cn} from "@/lib/utils";""
@@ -89,10 +90,12 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
           : theme === "dark"""
             ? "bg-zion-blue-light text-white"""
             : "bg-gray-100 text-gray-800""
+
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
 </div>
         <div className={cn(
+
 
       </Avatar>;
 </div>
@@ -246,3 +249,4 @@ return (<div className= {)'
 }</Avatar> </div> </div> </div>) "
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';''
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';''
+

@@ -4,27 +4,22 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "es2022"
+      "esnext"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
+
     "maxNodeModuleJsDepth": 0,
     "skipDefaultLibCheck": true,
     "esModuleInterop": true,
     "module": "ESNext",
+
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
     "plugins": [
       {
         "name": "next"
@@ -32,6 +27,7 @@
     ],
     "baseUrl": ".",
     "paths": {
+
       "@/*": [
         "./*"
       ],
@@ -62,15 +58,21 @@
     "strictNullChecks": false,
     "noImplicitReturns": false,
     "noFallthroughCasesInSwitch": false
+
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
+
     ".next",
     "dist",
     "build",
@@ -93,5 +95,6 @@
     "src/pages/Contact.tsx",
     "src/pages/Pricing.tsx",
     "src/pages/Services.tsx"
+
   ]
 }

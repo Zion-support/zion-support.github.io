@@ -1,3 +1,4 @@
+
 import { Fragment } from "react";""
 import { Route, Routes } from "react-router-dom";""
 import { ProtectedRoute } from "@/components/ProtectedRoute";"
@@ -164,9 +165,11 @@ const AdminRoutes = () => {
         element={
           <ProtectedRoute admin_only={true}>;
 </Route>
+
             <QuoteManager />;
 </QuoteManager>
           </ProtectedRoute>;
+
     </Routes>"
 <Routes> <Route path="/admin/quotes" element= {"
 </Routes>
@@ -190,3 +193,4 @@ const AdminRoutes = () => {
 }/> <Route <IntegrationsPage /> </ProtectedRoute> 
 </Route>)
 }/> </Routes>) "
+

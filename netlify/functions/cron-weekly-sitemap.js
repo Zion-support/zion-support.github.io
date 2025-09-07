@@ -1,3 +1,4 @@
+
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
 exports && exports.handler = async function () {
   try {
@@ -39,3 +40,4 @@ exports && exports.handler = async function () {
 </urlset>"
       pages && pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +'
       `</urlset>`,'
+

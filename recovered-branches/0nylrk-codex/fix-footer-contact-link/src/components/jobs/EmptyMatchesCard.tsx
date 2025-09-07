@@ -1,8 +1,10 @@
 
 
+
 import { Card } from "@/components/ui/card",""
 import { Button } from "@/components/ui/button",""
 import { Sparkles, RefreshCcw } from "lucide-react","
+
 export interface EmptyMatchesCardProps {
   // TODO: Implement
 }
@@ -10,13 +12,13 @@ export interface EmptyMatchesCardProps {
   isProcessing: boolean;
 export interface EmptyMatchesCardProps {;
 
+
   onRefresh: () => void;,
   isProcessing: boolean;
+
 }
-
-
-export function EmptyMatchesCard(): any ({;
   onRefresh,;
+
   isProcessing,;)
 }: EmptyMatchesCardProps) {;
 
@@ -28,12 +30,12 @@ import { Sparkles, RefreshCcw } from "lucide-react";"
 )
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
 
-}
 
-export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
 }
-
+export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {}
+}
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
+
   return ("
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">"
 </Card>"
@@ -119,3 +121,4 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 </RefreshCcw>
 }</Button> </Card>) 
     </Card>;"
+

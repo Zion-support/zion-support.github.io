@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock  } from 'lucide-react';
 
-const ContactSection: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: '',
+const ContactSection: React.FC = () => ;
+  const [formData, setFormData] = useState({name: '',
+  email: '',company: ''}
+  subject: '',message: '';}
   });
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -147,3 +146,4 @@ const ContactSection: React.FC = () => {
 };
 
 export default ContactSection;
+

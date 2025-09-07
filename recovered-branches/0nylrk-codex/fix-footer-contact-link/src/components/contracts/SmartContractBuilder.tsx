@@ -1,4 +1,5 @@
 interface SmartContractBuilderProps {
+
   // TODO: Implement
 }
   isOpen: boolean;,
@@ -19,22 +20,22 @@ import {TemplateManager} from "./templates/TemplateManager";""
 import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from "@/types/smart-contracts";""
 import {useSmartContracts} from "@/hooks/useSmartContracts";""
 import {toast} from "sonner";"
+
 interface SmartContractBuilderProps {;
   isOpen: boolean,;
   onClose: () => void,;
   talent: TalentProfile,;
   clientName: string,;
-  onContractGenerated?: (contractContent: string) => void,;
-  onDeploy?: (contractContent: string) => void;
+  onContractGenerated?: (contractContent: string) => void,;}
+  onDeploy?: (contractContent: string) => void;}
 }
-
 export function SmartContractBuilder(): any ({;
-
-export function SmartContractBuilder({;
+export function SmartContractBuilder({;export function SmartContractBuilder({;
   isOpen;
   onClose;
   talent;
   clientName;
+
   onContractGenerated;
   onDeploy;)
 }: SmartContractBuilderProps) {;"
@@ -63,36 +64,44 @@ export function SmartContractBuilder({;
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
 </SmartContractInfo>'
   const [active_tab, setActiveTab] = useState < string>("form");"
+
   const [generated_contract, setGeneratedContract] = useState < string | null>(null);
   const [form_values, setFormValues] = useState < ContractFormValues | undefined>()
     undefined);
   const [templateManagerOpen, setTemplateManagerOpen] = useState (false);
+
   const [deploy_options, setDeployOptions] = useState < DeploymentOptions>({"
     network: 'ethereum','
     use_escrow: true,
     deployToChain: false;)
   });'
   const [deploy_status, setDeployStatus] = useState < string>('');'
+
   const [deployment_info, setDeploymentInfo] = useState < SmartContractInfo | null>(null);
 ;
   const { generateSolidityContract, deploySmartContract, deployment_status } = useSmartContracts ();
 ;
+
   const handleLoadTemplate = (template_data: ContractFormValues) =>: any {
   // TODO: Implement
 }
     setFormValues (template_data);
+
   }
 ;
   // Convert ContractFormValues to contract content string;
   const handleContractGenerated = async (form_values: ContractFormValues) => {
     // Check condition;
+
 if (return, ) {
   $2;
+
 }
     try {
   // TODO: Implement
 }
       const generatedContractText = await generateSolidityContract (form_values, talent, client_name);
+
       setGeneratedContract (generatedContractText);'
       setActiveTab ("preview");"
       // Check condition;
@@ -135,6 +144,7 @@ if ( {) {
     // Check condition;
 if (return) {
   $2;
+
 }
     try {
   // TODO: Implement
@@ -143,6 +153,7 @@ if (return) {
       const contract_info = await deploySmartContract (generated_contract, deploy_options);
 ;
       // Check condition;
+
 if ( {) {
   $2;
 }
@@ -154,9 +165,11 @@ if ( {) {
 }"
         setDeployStatus ('error');''
         toast.error ("Failed to deploy smart contract");"
+
       }
-    } catch (error) {
+    } catch (error) {}
   }
+
   };
 
 
@@ -177,13 +190,14 @@ import { TemplateManager } from "./templates/TemplateManager",;""
 import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",;""
 import { useSmartContracts } from "@/hooks/useSmartContracts",;""
 import { toast } from "sonner",;"
+
 interface SmartContractBuilderProps {;
   isOpen: boolean,;
   onClose: () => void,;
   talent: TalentProfile,;
   clientName: string,;
-  onContractGenerated?: (contractContent: string) => void,;
-  onDeploy?: (contractContent: string) => void;
+  onContractGenerated?: (contractContent: string) => void,;}
+  onDeploy?: (contractContent: string) => void;}
 }
 ;
 export function SmartContractBuilder({;
@@ -191,6 +205,7 @@ export function SmartContractBuilder({;
   onClose,;
   talent,;
   clientName,;
+
   onContractGenerated,;
   onDeploy;)
 }: SmartContractBuilderProps) {;"
@@ -282,12 +297,13 @@ export function SmartContractBuilder({;
 
                 <ContractPreview;
                   generatedContract={generatedContract}
+
                   talent={talent}
                   onClose={onClose}
                   deployStatus={deployStatus}
                   deploymentInfo={deploymentInfo}
-
                 />;
+
 </ContractPreview>"
                   <div className="mt-6 flex justify-center">;"
 </div>
@@ -314,12 +330,14 @@ export function SmartContractBuilder({;
               <div>;
 </div>
                 <ContractPreview;
+
                   generated_contract={generated_contract}
                   talent={talent}
                   on_close={on_close}
                   deploy_status={deploy_status}
                   deployment_info={deployment_info}
                 />;
+
 </ContractPreview>"
                   <div className="mt - 6 flex justify - center">;"
 </div>
@@ -329,6 +347,7 @@ export function SmartContractBuilder({;
                       className="bg - gradient - to - r from - blue - 600 to - indigo - 600 hover:from - blue - 700 hover:to - indigo - 700";"
                     >;
 </Button>
+
                     </Button>;
                   </div>)}
               </div>)}
@@ -336,6 +355,7 @@ export function SmartContractBuilder({;
         </Tabs>;
         <TemplateManager;
           is_open={templateManagerOpen}
+
           on_close={() => setTemplateManagerOpen (false)}
 </TemplateManager>
       </DialogContent>;
@@ -357,8 +377,11 @@ const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null> (
 }onClose= {
   () => setTemplateManagerOpen (false) 
 </TemplateManager>
+
 }/> </DialogContent> </Dialog>) 
       </DialogContent>
     </Dialog>
       </DialogContent>;
+
     </Dialog>;'
+

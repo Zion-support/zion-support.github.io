@@ -1,7 +1,11 @@
+
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment;
   const handlePaymentInitiated = () => {
     toast({
+
+
+export function PaymentSection() {// Handle successful payment;
 
 
       title: 'Processing your request','
@@ -82,3 +86,4 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
 </p>
       </p>
     </div>)"
+

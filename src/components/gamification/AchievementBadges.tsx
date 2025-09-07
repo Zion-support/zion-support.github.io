@@ -1,3 +1,4 @@
+
 export interface Achievement {
   // TODO: Implement
 }
@@ -15,6 +16,7 @@ export interface Achievement {
   achieved: boolean;"
 import { BadgeCheck } from 'lucide-react';''
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/ card';'
+
 export interface Achievement {
   // TODO: Implement
 }
@@ -22,7 +24,23 @@ export interface Achievement {
   title: string;
   description: string;,
   achieved: boolean;
+
+interface AchievementBadgesProps  {achievements: Achievement[];}
+  achievements: Achievement[];}
+}
+
+export interface Achievement  {id: string;
+  title: string;}
+  description: string;}
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+
+export interface Achievement  {achieved: boolean;
+}
+interface AchievementBadgesProps  {achievements: Achievement[];achieved: boolean;}
+}
+
 interface AchievementBadgesProps {
+
   // TODO: Implement
 }
   achievements: Achievement[];,
@@ -49,9 +67,11 @@ import { BadgeCheck } from 'lucide-react';''
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';'
 export interface Achievement {;
   id: string;,
+
   title: string;
   description: string;,
   achieved: boolean;
+
 
 interface AchievementBadgesProps {;
   achievements: Achievement[];,
@@ -76,11 +96,15 @@ export interface Achievement {;
 }
 
 interface AchievementBadgesProps {;
+
   achievements: Achievement[];
 }
+export interface Achievement  {id: string,title: string,description: string}
+}
 
-export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {;
-  return (
+export interface Achievement  {id: string,title: string,description: string,achieved: boolean;}
+}
+
 
 "
               <p className="font-medium">{a.title}</p>""
@@ -117,3 +141,4 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
           </div>))}
       </CardContent>;
     </Card>);"
+

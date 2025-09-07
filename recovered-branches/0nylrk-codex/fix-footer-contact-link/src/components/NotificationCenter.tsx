@@ -1,4 +1,5 @@
 
+
 // Use the shared icon wrapper;
 // Use the shared icon wrapper;
 
@@ -12,14 +13,15 @@ import {NotificationFilter, NotificationHeader, NotificationList, NotificationFo
 import {FilterType} from '@/components/notifications/NotificationFilter';'
 export const NotificationCenter: React.FC = () => {;
   const { ;
+
     filteredNotifications,;
     unreadCount, ;
     markAsRead, ;
     markAllAsRead;
     dismissNotification, ;
-
     loading;
     filter;
+
     setFilter;
     fetchNotifications;
   } = useNotifications();
@@ -54,13 +56,14 @@ export const NotificationCenter: React.FC = () => {
     markAllAsRead,
 
     dismissNotification, 
+
     loading,
     filter,
     setFilter,
     fetchNotifications;
   } = useNotifications(),
-  
   const [open, setOpen] = useState(false),
+
   const [error, setError] = useState<string | null>(null),
 </string>
   const [error, setError] = useState<string | null>(null);
@@ -197,16 +200,14 @@ if ( {) {
         <NotificationList;
         />;
 </NotificationList>
+
         <NotificationList;
           loading={loading}
           error={error}
           notifications={filtered_notifications}
           onMarkAsRead={markAsRead}
-
-
-
-
         />;
+
 </NotificationList>
 
         <NotificationFooter onClose={() => setOpen(false)} />;
@@ -265,3 +266,4 @@ if ( {) {
 </NotificationFooter>
       </PopoverContent>;
     </Popover>;"
+

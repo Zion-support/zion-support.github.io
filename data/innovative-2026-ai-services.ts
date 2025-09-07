@@ -1,13 +1,16 @@
+
   contactInfo: {,
   mobile: string, email: string,
     address: string,
     website: string;
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number;
 }
+
       'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'''
     launchDate: '2025-06-20'',
   customers: 1900;
@@ -30,12 +33,14 @@
   customers: 1900;
     rating: 4.8;,
   reviews: 950;
+
   }
-}
+
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence;
   {
+
 '
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',''
     tagline: 'Transform data into actionable insights with AI', price: '$299',''
@@ -61,6 +66,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709','
     reviews: 950;,'
   website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Enterprise - grade sales intelligence platform with AI - powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';''
@@ -68,8 +74,10 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
   customers: 1900;
     rating: 4.8,
     reviews: 950;
+
 ];'
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface Innovative2026AIService {;
   id: string,;
   name: string,;
@@ -100,8 +108,8 @@ export interface Innovative2026AIService {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -124,6 +132,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'AI-powered data analysis and visualizationPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time dashboard updatesCustom KPI tracking and alertsData integration from 100+ sourcesAdvanced machine learning models',;''
       'Collaborative workspace for teamsMobile app for on-the-go insights';']
     ],;
+
     popular: true,;'
     icon: '🧠',;''
     color: 'from-blue-600 to-purple-700',;''
@@ -148,6 +157,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Full-stack BI platform with real-time data processing, advanced ML models, interactive dashboards, and enterprise-grade security. Includes API access and custom integrations.',;''
@@ -168,6 +178,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'AI-powered personalization engineReal-time customer behavior analysisDynamic content optimizationPredictive customer journey mappingAutomated A/B testingMulti-channel experience orchestrationCustomer sentiment analysisPersonalized recommendations',;''
       'Automated customer supportCustomer lifetime value optimization';']
     ],;
+
     popular: true,;'
     icon: '🎯',;''
     color: 'from-green-500 to-teal-600',;''
@@ -192,6 +203,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Enterprise-grade CX platform with real-time personalization, advanced ML algorithms, comprehensive analytics, and seamless integrations. Includes mobile SDK and API access.',;''
@@ -212,6 +224,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'AI-powered threat detectionReal-time security monitoringAutomated incident responseBehavioral analysisVulnerability assessmentCompliance reportingSecurity awareness trainingThreat intelligence feeds',;''
       'Incident management dashboard24/7 security operations center';']
     ],;
+
     popular: true,;'
     icon: '🛡️',;''
     color: 'from-red-600 to-orange-600',;''
@@ -236,6 +249,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Enterprise-grade cybersecurity platform with advanced AI algorithms, real-time monitoring, automated response capabilities, and comprehensive reporting. Includes SOC services and 24/7 support.',;''
@@ -256,6 +270,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'AI-powered campaign optimizationMulti-channel automationPersonalized content generationPredictive analyticsA/B testing automationLead scoring and nurturingEmail marketing automationSocial media management',;''
       'Marketing attributionROI tracking and optimization';']
     ],;
+
     popular: true,;'
     icon: '📈',;''
     color: 'from-purple-500 to-pink-600',;''
@@ -280,6 +295,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Comprehensive marketing automation platform with AI-powered optimization, multi-channel capabilities, advanced analytics, and seamless integrations. Includes mobile app and API access.',;''
@@ -300,6 +316,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'AI-powered prospect identificationSales forecasting and predictionLead scoring and prioritizationCompetitive intelligenceSales performance analyticsPipeline optimizationCustomer behavior analysisSales coaching recommendations',;''
       'Revenue optimizationIntegration with CRM systems';']
     ],;
+
     popular: true,;'
     icon: '💰',;''
     color: 'from-yellow-500 to-orange-600',;''
@@ -324,6 +341,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.',;''
@@ -334,5 +352,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
   }
 ];
   }
+
 ;
 '
+

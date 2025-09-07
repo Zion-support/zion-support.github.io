@@ -1,4 +1,5 @@
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;""
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",""
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;"
@@ -109,9 +110,10 @@ serve(async (req) => {;"
 ;
     if (!transactionId) {;'
       throw new Error("Transaction ID is required"),;"
+
     }
-;
     // Get transaction details;
+
     const { data:transaction, error:fetchError } = await supabaseAdmin;"
       .from("transactions");""
       .select("*");""
@@ -201,10 +203,12 @@ if ( {) {
   const supabase_admin = create_client ()"
     Deno.env.get ("SUPABASE_URL") ?? "";""
     Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY") ?? "";"
+
     { auth: { persist_session: false } }
   );
 ;
   try {
+
   // TODO: Implement
 }
     // Authenticate the user;"
@@ -241,6 +245,7 @@ if ( {) {
   $2;
 }"
       throw new Error ("Transaction not found");"
+
     }
     // Verify user is authorized to manage this transaction;
     const is_client = transaction.user_id === user.id;
@@ -248,6 +253,7 @@ if ( {) {
 ;
     // Clients can cancel or request refunds, providers can only release funds;
     // Check condition;
+
 if ( {) {
   $2;
 }"
@@ -495,11 +501,10 @@ if ( {) {
       status: 500});
 "
       headers: { ...corsHeaders, "Content-Type": "application/json" },"
-      status: 500})
 
+      status: 500})
   }
 });
-;
   }
 });
 ;
@@ -509,16 +514,19 @@ if ( {) {
     const isProvider = transaction.provider_id === user.id,;
     ;
     // Clients can cancel or request refunds, providers can only release funds;
+
     if (!isClient && !isProvider) {;"
       throw new Error("You are not authorized to manage this transaction"),;"
     }
 ;"
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {;""
       apiVersion:"2023-10-16"}),;"
+
 ;
     let result,;
     ;
 ;
+
   const supabaseClient = createClient(;)"
     Deno.env.get("SUPABASE_URL") ?? "",;""
     Deno.env.get("SUPABASE_ANON_KEY") ?? "";"
@@ -552,22 +560,26 @@ if ( {) {
       .single(),;
     if (fetchError || !transaction) {;"
       throw new Error("Transaction not found");"
+
     }
 ;
     // Verify user is authorized to manage this transaction;
     const isClient = transaction.user_id === user.id,;
     const isProvider = transaction.provider_id === user.id,;
     // Clients can cancel or request refunds, providers can only release funds;
+
     if (!isClient && !isProvider) {;"
       throw new Error("You are not authorized to manage this transaction");"
     }
 ;"
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {;""
       apiVersion: "2023-10-16"}),;"
+
     let result,;
     switch (action) {;"
       case 'release':;'
         // Only providers or admins can release escrow funds;
+
         if (!isProvider) {;'
           throw new Error("Only service providers can release funds from escrow");"
         }
@@ -587,6 +599,7 @@ if ( {) {
         // Check if transaction can be refunded;'
         if (transaction.status !== "completed" && transaction.status !== "pending") {;""
           throw new Error("This transaction cannot be refunded");"
+
         }
 ;
         // Process refund via Stripe;
@@ -594,6 +607,7 @@ if ( {) {
           // Retrieve payment intent from session;
           const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),;
           if (session.payment_intent) {;
+
             const refund = await stripe.refunds.create({;)
               payment_intent: session.payment_intent.toString(),;"
               reason: "requested_by_customer";"
@@ -644,3 +658,4 @@ if ( {) {
   }
 });
 "
+

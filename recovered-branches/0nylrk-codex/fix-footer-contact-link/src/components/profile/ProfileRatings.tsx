@@ -1,4 +1,5 @@
 
+
 import {useState, useEffect} from "react";""
 import {Star} from "lucide-react";""
 import {ReviewStats} from "@/components/reviews/ReviewStats";""
@@ -6,16 +7,18 @@ import {ReviewsList} from "@/components/reviews/ReviewsList";""
 import {useReviews} from "@/hooks/useReviews";""
 import {Button} from "@/components/ui/button";""
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";"
+
 interface ProfileRatingsProps {
   // TODO: Implement
 }
   userId: string;
-  averageRating?: number;
-  ratingCount?: number;
+  averageRating?: number;}
+  ratingCount?: number;}
 }
 
 export function ProfileRatings({
   userId,
+
   averageRating = 0,
   ratingCount = 0,)
 }: ProfileRatingsProps) {
@@ -27,6 +30,7 @@ export function ProfileRatings({
 </number>
         if (review.rating >= 1 && review.rating <= 5) {
           distribution[review.rating] = (distribution[review.rating] || 0) + 1;
+
         }
       });
 
@@ -35,6 +39,7 @@ export function ProfileRatings({
   }, [reviews]);
 
   // Fetch reviews when component mounts;
+
   useEffect(() => {
     fetchUserReviews(userId);
   }, [userId]);
@@ -54,11 +59,13 @@ export function ProfileRatings({
 </div>
           <ReviewStats;
             averageRating={averageRating}
+
             totalReviews={ratingCount}
             ratingDistribution={ratingDistribution}
           />
 </ReviewStats>
         </div>
+
 "
         <div className="md:w-2/3">"
 </div>"
@@ -77,11 +84,13 @@ export function ProfileRatings({
 </TabsContent>
               <ReviewsList;
                 reviews={reviews}
+
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
 </ReviewsList>
             </TabsContent>
+
 "
             <TabsContent value="positive">"
 </TabsContent>
@@ -95,11 +104,13 @@ export function ProfileRatings({
               <ReviewsList;
                 reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
 </ReviewsList>
+
             </TabsContent>
           </Tabs>
         </div>
       </div>
     </div>
+
     </div>;
 const [ratingDistribution, setRatingDistribution] = useState<Record<number number>> ({
 </Record>
@@ -128,3 +139,4 @@ const [ratingDistribution, setRatingDistribution] = useState<Record<number numbe
 }onReportReview= {
   reportReview;
 }/> </TabsContent> </Tabs> </div> </div> </div>) "
+

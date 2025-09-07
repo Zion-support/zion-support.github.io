@@ -1,3 +1,4 @@
+
 // Accessibility utilities and helpers;
 export interface AccessibilityConfig {
   // TODO: Implement
@@ -146,3 +147,4 @@ export const isAccessibleContrast = (color1: string, color2: string, level: 'AA'
   const ratio = getContrastRatio(color1, color2);'
   return level === 'AA' ? ratio >= 4.5 : ratio >= 7;'
 };'
+

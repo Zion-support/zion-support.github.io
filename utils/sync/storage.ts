@@ -1,9 +1,10 @@
 }
 
 
-export function readState(): SyncState {;
+export function readState(): SyncState {;}
   return { ...state };
 }
+
 
 export function updateState(updates: Partial<SyncState>): void {;
 </SyncState>
@@ -84,3 +85,4 @@ export async function getLogsByJob(jobId: string, limit?: number): Promise<SyncL
 </string>'
 ): Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'> {'
 </SyncMapping>'
+

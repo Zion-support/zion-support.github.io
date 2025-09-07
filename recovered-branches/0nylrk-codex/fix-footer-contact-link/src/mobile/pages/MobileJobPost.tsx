@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";""
 import { MobileHeader } from "../components/common/MobileHeader";""
 import { BottomNavigation } from "../components/common/BottomNavigation";""
@@ -179,9 +180,11 @@ export function MobileJobPost() {;"
           id="description"""
           placeholder="Describe the job role and responsibilities""
           rows={5}
+
         />;
 </Textarea>
       </div>;
+
     </div>;"
       case "details": return <DetailsStep />;"
 </DetailsStep>
@@ -235,10 +238,12 @@ export function MobileJobPost() {;"
 </Button>"
             {current_step !== "preview" && <ChevronRight className="h - 4 w - 4" />}"
 </ChevronRight>
+
           </Button>;
         </div>;
       </main>;
       <BottomNavigation />;
+
 </BottomNavigation>
     </div>);"
     <div className="space-y-4">"
@@ -401,9 +406,11 @@ export function MobileJobPost() {;"
           id="responsibilities"""
           placeholder="List the key responsibilities for this role""
           rows={4}
+
         />
 </Textarea>
       </div>
+
     </div>"
     <div className="space-y-4">;"
 </div>"
@@ -640,10 +647,12 @@ export function MobileJobPost() {;"
             <h4 className="font-medium mb-2">Description</h4>""
             <p className="text-sm">"
 </p>
+
             </p>
           </div>
         </CardContent>
       </Card>
+
 "
       <Button variant="outline" className="w-full">"
 </Button>
@@ -699,3 +708,4 @@ export function MobileJobPost() {;"
       </Card>;'
       <Button variant="outline" className="w - full">Edit Job Post</Button>;"
     </div>);]"
+

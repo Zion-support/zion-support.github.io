@@ -1,3 +1,4 @@
+
 return (
 
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;'
@@ -81,12 +82,15 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 </ChevronDown>
           <Slider;"
             aria-label="Experience range";"
+
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
             step={1}
+
             onValueChange={handleChange}
 
 
     </div>;
 </Slider>"
+

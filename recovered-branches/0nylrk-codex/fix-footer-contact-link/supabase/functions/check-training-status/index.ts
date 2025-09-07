@@ -1,4 +1,5 @@
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;""
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;""
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";""
@@ -34,12 +35,10 @@ serve(async (req) => {"
     const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");"
     if (!openAIApiKey) {"
       throw new Error("OpenAI API key is not set in environment variables")"
+
     }
-
-
-
-
     const { modelId, jobId } = await req && req.json();
+
     
     if (!modelId && !jobId) {"
       throw new Error("Either modelId or jobId is required")"
@@ -91,10 +90,12 @@ serve (async (req) => {
   // Check condition;
 if ( {) {
   $2;
+
 }
     return new Response (null, { headers: cors_headers });
   }
   try {
+
   // TODO: Implement
 }"
     const openAIApiKey = Deno.env.get ("OPENAI_API_KEY");"
@@ -103,20 +104,24 @@ if ( {) {
   $2;
 }"
       throw new Error ("OpenAI API key is not set in environment variables");"
+
     }
     const { model_id, job_id } = await req.json ();
 ;
     // Check condition;
+
 if ( {) {
   $2;
 }"
       throw new Error ("Either model_id or job_id is required");"
+
     }
     // If we have a specific job ID, check that job;
     // Otherwise, look up the job ID from our database first;
     let finetuneJobId = job_id;
 ;
     // Check condition;
+
 if ( {) {
   $2;
 }
@@ -223,6 +228,7 @@ if ( {) {
         return new Response ()'
           JSON.stringify ({ status: "unknown", error: "Fine - tuning job not found" });""
           { headers: { ...cors_headers, "Content - Type": "application / json" } }"
+
         );
       }
       const error_data = await response.json ();
@@ -230,12 +236,15 @@ if ( {) {
     }
     const data = await response.json ();
 ;
+
 "
         error = data && data.error?.message || "Unknown error occurred during training";"
+
     // Map OpenAI status to our internal status names;
     let status;
     let error = null;
 ;
+
     switch (data.status) {"
       case "succeeded": status = "succeeded";"
         break;"
@@ -466,3 +475,4 @@ serve(async (req) => {;"
   }
 });
 "
+

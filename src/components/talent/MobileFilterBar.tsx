@@ -1,3 +1,4 @@
+
 interface MobileFilterBarProps {
   // TODO: Implement
 }
@@ -95,3 +96,4 @@ export function MobileFilterBar({
         </p>;
       </div>;
     </div>);'
+

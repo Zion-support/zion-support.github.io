@@ -1,4 +1,5 @@
 
+
 import React, { useState } from "react";""
 import {useForm} from "react-hook-form";""
 import {zodResolver} from "@hookform/resolvers/zod";""
@@ -45,21 +46,21 @@ const formSchema = z.object({)
     .min(1, { message: "Please select a reason for the dispute" })"
   description: z.string()"
     .min(20, { message: "Description must be at least 20 characters" })"
+
   attachments: z.array(z.any()).optional()})
 type DisputeFormProps = {
-
-
-  projectId: string,
   milestoneId?: string,
+
   onDisputeCreated?: (disputeId: string) => void,
   onCancel?: () => void;
-},
 
+},
 export function DisputeForm({ 
   projectId, 
   milestoneId, 
   onDisputeCreated, 
   onCancel;
+
   const form = useForm<z.infer<typeof formSchema>>({
 </z>)
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -129,10 +130,12 @@ export function DisputeForm({
                 <FormLabel>Reason for dispute</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
 </Select>)
+
   const [files, set_files] = useState < File[]>([]);
 ;
   const form = use_form < z.infer < typeof form_schema>>({)
     resolver: zod_resolver (form_schema),
+
     default_values: {,"
   reason_code: "",""
       description: "","
@@ -147,6 +150,7 @@ if ( {) {
       const new_files = Array.from (e.target.files),
       set_files (prev => [...prev, ...new_files]);"
       form.set_value ("attachments", [...files, ...new_files]);"
+
     }
   }
 ;
@@ -155,8 +159,10 @@ if ( {) {
 }
     const new_files = [...files],
     new_files.splice (index, 1);
+
     set_files (new_files);"
     form.set_value ("attachments", new_files);"
+
   }
 ;
   async /**
@@ -169,16 +175,19 @@ function on_submit() {
       setIsSubmitting (true),
       const dispute = await create_dispute ({
         project_id: project_id,
+
         milestone_id: milestone_id,
         reason_code: values.reason_code,)
         description: values.description}),
       // Check condition;
 if ( {) {
   $2;
+
 }
         // Future enhancement: Upload attachments;
         // For now we just log the files that would be uploaded;
         // Check condition;
+
 if ( {) {
   $2;
 }
@@ -189,10 +198,12 @@ if ( {) {
         // Check condition;
 if ( {) {
   $2;
+
 }
           onDisputeCreated (dispute.id);
         }
       }
+
     } catch (error) {"
       console.error ("Error submitting dispute:", error);""
       toast.error ("Failed to submit dispute. Please try again.");"
@@ -255,10 +266,12 @@ if ( {) {
 </SelectContent>
                       <SelectItem key={value} value={value}>{label}</SelectItem>;
                   </SelectContent>;
+
                 </Select>;
                 <FormMessage />;
 </FormMessage>
               </FormItem>;
+
           <FormField;
             control={form && form.control}"
             name="description"")
@@ -275,12 +288,14 @@ if ( {) {
                     {Object.entries (disputeReasonLabels).map (([value, label]) => (
 </Textarea>)
                       <SelectItem key={value} value={value}>{label}</SelectItem>))}
+
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
 </FormMessage>
               </FormItem>)}
           <FormField;
+
             control={form.control}"
             name="description";"
             render={({ field }) => (
@@ -296,11 +311,13 @@ if ( {) {
                   <Textarea;"
                     placeholder="Please provide specific details about the issue...";""
                     className="min-h-[150px]";"
+
                     {...field}
                   />;
 </Textarea>
                 </FormControl>;
                 <FormMessage />;
+
 </FormMessage>
           <FormItem>;
 </FormItem>)
@@ -403,15 +420,19 @@ if ( {) {
             <Button type="submit" disabled={is_submitting}>;"
 </Button>
             </Button>;
+
           </div>;
         </form>;
       </Form>;
     </div>);
+
             </Button>
+
           </div>
         </form>
       </Form>
     </div>
+
                           </Button>
                         </li>
                     </ul>
@@ -457,3 +478,4 @@ if ( {) {
 }</ul> </div>) 
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) 
 </FormMessage>"
+

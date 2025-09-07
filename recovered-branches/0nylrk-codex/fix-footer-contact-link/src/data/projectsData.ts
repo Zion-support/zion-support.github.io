@@ -1,4 +1,8 @@
 
+job: {
+      title: \"title\",
+    description: 'Develop dashboards using React and integrate ML models'}
+
 
     job: {,
   title: 'AI Dashboard Development'''
@@ -71,15 +75,16 @@ export const PROJECTS: Project[] = [;
     talent_profile: {;,"
   full_name: "Alexandra Chen";""
       professional_title: "Senior AI Engineer";"
+
     }
   }]
 ];
-
 
 ;
     }
   }
 ];
+
     }
   }
 ];"
@@ -89,3 +94,4 @@ export const PROJECTS: Project[] = [;
 ];
 ;
 "
+

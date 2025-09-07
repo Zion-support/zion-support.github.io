@@ -1,3 +1,4 @@
+
 import { Check, Copy, ExternalLink } from 'lucide-react''
 export function ZapierIntegration() {
 
@@ -242,6 +243,7 @@ export function ZapierIntegration() {;
                 <div className='flex gap - 2'>;'
 </div>
                   <Input;
+
                     value={api_key}
                     read_only;'
                     className='font - mono text - sm'                  />;'
@@ -250,6 +252,7 @@ export function ZapierIntegration() {;
                     size='sm';''
                     variant='outline';'
                     on_click={handleCopyApiKey}
+
                   >;
 </Button>)'
                       <Check className='h - 4 w - 4' />) : ('
@@ -315,9 +318,15 @@ export function ZapierIntegration() {;
                 <Check className="h - 4 w - 4 text - green - 500" />;"
 </Check>
                 <span > Create calendar events for interviews</span>;
+
               </li>;
+              <li className='flex items - center gap - 2' />;"
+                <Check className='h - 4 w - 4 text - green - 500' />                <span  /> Create calendar events for interviews</span>              <li className=\"flex items - center gap - 2\" />;"
+                <Check className=\"h - 4 w - 4 text - green - 500\" />;
+                <span  /> Create calendar events for interviews</span>;</li>;
             </ul>;
           </CardContent>;
+
           <CardFooter>;
 </CardFooter>
 
@@ -343,3 +352,4 @@ export function ZapierIntegration() {;
           </div>;
         </CardContent>;
       </Card>;"
+

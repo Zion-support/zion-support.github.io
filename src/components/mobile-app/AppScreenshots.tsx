@@ -1,3 +1,4 @@
+
 if (scrollContainerRef.current) {
       const scrollAmount = 300;
       scrollContainerRef.current.scrollBy({
@@ -158,11 +159,13 @@ if ( {) {
                   alt = {screenshot.alt, }"
                   className="w - full h - full object - cover";""
                   loading="lazy";"
+
                 />;
 </img>
               </div>))}
           </div>;
           <Button;"
+
             variant="ghost";""
             size="icon";""
             className="absolute right - 0 top - 1/2 -translate - y-1 / 2 z - 10 bg - zion - blue - dark / 70 text - white";""
@@ -174,3 +177,4 @@ if ( {) {
         </div>;
       </div>;
     </section>);"
+

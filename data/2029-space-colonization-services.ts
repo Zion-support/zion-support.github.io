@@ -1,3 +1,4 @@
+
       'Quantum communication protocols',''
       'AI - powered routing optimization',''
       'Multi - planet network management',''
@@ -40,8 +41,9 @@
       'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',''
     launchDate: '2029-03-01','
     customers: 18,
+
     rating: 4.8,
-    reviews: 52,
+    reviews: 52;
   },;
   id: string, name: string,
   tagline: string, price: string,
@@ -56,8 +58,7 @@
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-    },
+  contactInfo: {},
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
@@ -66,6 +67,7 @@
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   // Space Colonization & Mining Services;
   {
+
 '
     id: 'mars-colonization-automation-platform', name: 'Mars Colonization Automation Platform',''
     tagline: 'Automate Mars colonization process with AI and robotics',''
@@ -90,6 +92,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Advanced space energy harvesting platform with multi - source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';''
@@ -100,6 +103,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
 
 ];
 ;
+
     realImplementation: true;,
   implementationDetails:'
       'Advanced interplanetary communication network with quantum protocols, AI routing, satellite management, and real-time monitoring. Includes security protocols and emergency communication systems.'''
@@ -148,6 +152,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       'Resource Processing'''
       'Autonomous Systems'''
       'Satellite Technology'']
+
     ]
     integrations: ['
       'Mining equipment'''
@@ -201,6 +206,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       'Structural Analysis'''
       'Space Technology'']
     ]
+
     integrations: ['
       'Design software'''
       '3D modeling tools'''
@@ -253,6 +259,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       'AI Optimization'''
       'Power Systems'''
       'Space Technology'']
+
     ]
     integrations: ['
       'Solar panels'''
@@ -262,6 +269,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       'Research platforms'''
       'Analytics tools'']
     ]
+
     useCases: ['
       'Space power generation'''
       'Energy optimization'''
@@ -301,6 +309,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   }
 ];'
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface SpaceColonization2029Service {;
   id: string,;
   name: string,;
@@ -331,8 +340,8 @@ export interface SpaceColonization2029Service {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -341,12 +350,13 @@ export interface SpaceColonization2029Service {;
   rating: number,;
   reviews: number;
 }
-
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   // Space Colonization & Mining Services;
   {
+
 '
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface SpaceColonization2029Service {;
   id: string,;
   name: string,;
@@ -377,8 +387,8 @@ export interface SpaceColonization2029Service {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -386,9 +396,11 @@ export interface SpaceColonization2029Service {;
   customers: number,;
   rating: number,;
   reviews: number;
+
 }'
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Advanced space energy harvesting platform with multi - source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';''
@@ -396,7 +408,6 @@ export interface SpaceColonization2029Service {;
   customers: 18;
     rating: 4.8,
     reviews: 52;
-
 ];
 ;
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
@@ -412,6 +423,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       'Autonomous habitat constructionAI-powered resource managementLife support system automationColony expansion planningRobotic workforce managementEnvironmental monitoring AISupply chain automationEmergency response systems',;''
       'Colony health monitoringSustainable development AI';']
     ],;
+
     popular: true,;'
     icon: '🚀',;''
     color: 'from-red-600 to-orange-600',;''
@@ -436,6 +448,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Advanced Mars colonization platform with autonomous systems, AI-powered planning, robotic workforce management, and comprehensive colony monitoring. Includes real-time communication and emergency response.',;''
@@ -455,6 +468,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       'Real-time interplanetary communicationQuantum communication protocolsAI-powered routing optimizationMulti-planet network managementSatellite constellation controlCommunication security protocolsBandwidth optimizationNetwork redundancy systems',;''
       'Real-time monitoringEmergency communication channels';']
     ],;
+
     popular: true,;'
     icon: '🌐',;''
     color: 'from-blue-600 to-cyan-600',;''
@@ -479,6 +493,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Advanced interplanetary communication network with quantum protocols, AI routing, satellite management, and real-time monitoring. Includes security protocols and emergency communication systems.',;''
@@ -498,6 +513,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       'Autonomous mining operationsAI-powered resource detectionRobotic mining equipmentResource processing automationSupply chain managementQuality control systemsSafety monitoring AIEnvironmental impact assessment',;''
       'Resource optimizationMining fleet management';']
     ],;
+
     popular: false,;'
     icon: '⛏️',;''
     color: 'from-yellow-600 to-orange-600',;''
@@ -522,6 +538,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Advanced space mining platform with autonomous operations, AI-powered resource detection, robotic equipment management, and comprehensive safety monitoring. Includes resource processing and optimization.',;''
@@ -542,6 +559,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       'AI-powered habitat designEnvironmental simulation toolsMaterial optimization AILife support integrationSustainable design systems3D modeling and visualizationStructural analysis toolsResource efficiency optimization',;''
       'Modular design systemsHabitat expansion planning';']
     ],;
+
     popular: false,;'
     icon: '🏠',;''
     color: 'from-green-600 to-teal-600',;''
@@ -566,6 +584,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Advanced space habitat design platform with AI-powered design tools, environmental simulation, material optimization, and comprehensive planning capabilities. Includes 3D modeling and structural analysis.',;''
@@ -585,6 +604,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       'Multi-source energy harvestingAI-powered energy optimizationAdvanced energy storagePower distribution systemsEnergy efficiency monitoringRenewable space energyPower grid managementEnergy demand forecasting',;''
       'Storage optimizationBackup power systems';']
     ],;
+
     popular: true,;'
     icon: '⚡',;''
     color: 'from-purple-600 to-pink-600',;''
@@ -609,12 +629,15 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',;''
     launchDate: '2029-03-01',;'
     customers: 18,;
+
     rating: 4.8;,
   reviews: 52;
   }
 '
+

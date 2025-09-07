@@ -1,6 +1,7 @@
 
 
 
+
 import { ApplicationStatus } from "@/types/jobs",""
 import { Progress } from "@/components/ui/progress",""
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";""
@@ -28,11 +29,11 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 
   // Define the progress value based on status;
   const getProgressValue = () => {
+
     switch (status) {
-
-
 export function ApplicationProgress(): any ({;
   status,;
+
   className,;)
 }: ApplicationProgressProps) {;
   // Define the progress value based on status;
@@ -48,6 +49,7 @@ interface ApplicationProgressProps {
 }
   status: ApplicationStatus;
   class_name?: string;
+
 }
 export /**
  * ApplicationProgress - Function description;
@@ -55,6 +57,7 @@ export /**
 function ApplicationProgress() {
   // Define the progress value based on status;
   const getProgressValue = () =>: any {
+
   // TODO: Implement
 }
     switch (status) {'
@@ -274,3 +277,4 @@ return (<div className= {)"
 }current="interview" /> <span className="mt-1" >Interview</span> </div> <div className="flex flex-col items-center" > <StatusIcon status= {"
   status;"
 }current="hired" /> <span className="mt-1" >Decision</span>""
+

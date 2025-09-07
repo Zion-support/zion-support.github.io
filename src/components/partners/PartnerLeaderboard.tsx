@@ -1,3 +1,4 @@
+
 badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -116,3 +117,4 @@ export function PartnerLeaderboard() {;
         return <Medal className="h-5 w-5 text-amber-700" />;"
 </Medal>"
         return <span className="text-sm font-semibold">{rank}</span>;""
+

@@ -1,5 +1,6 @@
 
 
+
 import React from 'react';''
 import { ScrollArea } from '@/components/ui/scroll-area';''
 import Skeleton from '@/components/ui/skeleton';''
@@ -9,11 +10,14 @@ interface Notification {
   // TODO: Implement
 }
   id: string;,
+
   title: string;
   message: string;,
   timestamp: string;
+
   read: boolean;,'
   type: 'info' | 'warning' | 'error' | 'success';'
+
 }
 
 interface NotificationListProps {
@@ -23,8 +27,10 @@ interface NotificationListProps {
   notifications: Notification[];
   onMarkAsRead: (id: string) => void;,
   onMarkAllAsRead: () => void;
-  onClearAll: () => void;
+  onClearAll: () => void;}
 }
+}
+
 
 export const NotificationList: React.FC<NotificationListProps> = ({
 </NotificationListProps>'
@@ -128,11 +134,14 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   onMarkAsRead: (id: string, ) => Promise < void>,
   on_dismiss: (id: string, ) => Promise < void>,
   on_retry: () => void;
+
 }
-export const NotificationList: React.FC < NotificationListProps> = ({
-  loading;
+}
+
+export const NotificationList: React.FC < NotificationListProps> = ({loading;
   error;
   notifications;
+
   onMarkAsRead;
   on_dismiss,
   on_retry;)
@@ -262,11 +271,14 @@ export const NotificationList: React.FC<NotificationListProps> = ({
       <div className="space-y-1">"
 </div>
           <NotificationItem;
+
             key={notification.id}
             notification={notification}
             onMarkAsRead={onMarkAsRead}
             onDismiss={onDismiss}
+
           />
 </NotificationItem>
       </div>
     </ScrollArea>)"
+

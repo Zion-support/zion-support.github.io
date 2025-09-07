@@ -1,6 +1,7 @@
 
 
 
+
 import { format  } from 'date-fns';''
 import { MessageSquare  } from 'lucide-react';''
 import { useMessaging  } from '@/context/MessagingContext';''
@@ -24,10 +25,12 @@ export function ConversationDetailView() {;
 
 
   const { user } = useAuth();
+
   const {
   // TODO: Implement
 }
     activeConversation;
+
 
     activeMessages;
     sendMessage;
@@ -229,11 +232,14 @@ export function ConversationDetailView() {;
   message;
 }isUserMessage= {
   message.sender id === user?.id;)
+
 }/>) ) 
 </MessageBubble>
 }</div> </div>) ) ) 
+
 }<div ref= {
   messagesEndRef;"
 }/> </div> placeholder="Type a message..." className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan" submit"className=" bg-zion-purple hover:bg-zion-purple-dark text-white" > Send </Button> </form> </div> </div>)"
     </div>;
     </div>);"
+

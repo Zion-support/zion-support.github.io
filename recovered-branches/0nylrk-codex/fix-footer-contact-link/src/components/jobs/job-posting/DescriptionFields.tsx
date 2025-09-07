@@ -1,9 +1,11 @@
+
   FormField;
   FormItem;
   FormLabel;
   FormControl;
   FormDescription;
   FormMessage;
+
 import {;
   FormField,;
   FormItem,;
@@ -11,14 +13,11 @@ import {;
   FormControl,;
   FormDescription,;
   FormMessage,;
-
-
-
-
   FormField,
   FormItem,
   FormLabel,
   FormControl,
+
   FormDescription,
   FormMessage,;
 
@@ -250,11 +249,13 @@ function DescriptionFields() {
     </>);
 }
   );
+
           </FormItem>)}
     </>);
 }
   ),;}
  interface DescriptionFieldsProps {
+
   // TODO: Implement
 }
   control: Control<JobSchemaType>;
@@ -271,6 +272,7 @@ function DescriptionFields() {
 </FormField>
 }/> <FormField <FormItem> <FormLabel>Application Instructions (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Provide instructions on how to apply for this job. </FormDescription> <FormMessage /> </FormItem>) 
 </FormField>
+
 }/> </>) 
 }
         )}
@@ -280,4 +282,6 @@ function DescriptionFields() {
     </>;
   );
 }
+
 "
+

@@ -2,6 +2,7 @@
 
 
 
+
 import {useState} from "react";""
 import {Briefcase, Star, User} from "lucide-react";""
 import {Button} from "@/components/ui/button";""
@@ -155,13 +156,14 @@ function UserTypeSelection() {
       </div>;"
       <div className="grid gap - 4 md: grid - cols - 3">;"
 </div>
+
             <Button;
               key={type.id}
-
           return (
             <Button;
               key={type.id}
               }`}
+
             >
 </Button>"
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>"
@@ -239,3 +241,4 @@ function UserTypeSelection() {
             </Button>;
       </div>;
     </div>;"
+

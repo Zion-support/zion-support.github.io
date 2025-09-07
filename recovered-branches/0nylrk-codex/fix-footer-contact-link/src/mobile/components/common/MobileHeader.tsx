@@ -3,6 +3,7 @@
 
 
 
+
 import React from "react";""
 import {useNavigate} from "react-router-dom";""
 import {ChevronLeft, Bell, Settings} from "lucide-react";""
@@ -20,6 +21,7 @@ interface MobileHeaderProps {
 }
   title: string;
   showBack?: boolean;
+
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
@@ -28,12 +30,13 @@ interface MobileHeaderProps {
 }
 
 
+
 export function MobileHeader(): any ({;
 )
+
   onSettingsClick?: () => void;
 }
   title;
-
   showBack = false;
   showNotifications = false;
   showSettings = false;
@@ -41,15 +44,18 @@ export function MobileHeader(): any ({;
   onNotificationsClick;
   onSettingsClick}: MobileHeaderProps) {;
   const navigate = useNavigate();
+
   return (
 
 interface MobileHeaderProps {
   // TODO: Implement
 }
+
   title: string,
   showBack?: boolean,
   showNotifications?: boolean,
   showSettings?: boolean,
+
   className?: string,)
   onNotificationsClick?: () => void,
 
@@ -64,6 +70,7 @@ interface MobileHeaderProps {
   onSettingsClick?: () => void;
 }
 export function MobileHeader({;
+
   title;
   showBack = false;
   showNotifications = false;
@@ -72,13 +79,11 @@ export function MobileHeader({;
   onNotificationsClick;
 export function MobileHeader({
   title;
-
-
-
   title,
   showBack = false,
   showNotifications = false,
   showSettings = false,
+
   className,
   onNotificationsClick,)
   onSettingsClick}: MobileHeaderProps) {
@@ -137,10 +142,12 @@ export function MobileHeader({
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";"
       className;
 )
+
   onSettingsClick} MobileHeaderProps) {;
   const navigate = useNavigate(),;
 ;
   return (;
+
     <header className={cn(;"
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",;"
       className;)
@@ -285,3 +292,4 @@ className) "
         </div>;
       </div>;
     </header>;"
+

@@ -1,3 +1,4 @@
+
 import * as React from "react"""
 import { PanelLeft } from 'lucide-react''
 export const SidebarTrigger = React.forwardRef<
@@ -13,11 +14,13 @@ export const SidebarTrigger = React.forward_ref<;
 
   return (
     <Button;
+
       ref={ref}
       data - sidebar=&quot;trigger & quot;
       variant=&quot;ghost & quot;
       size=&quot;icon & quot;)
       className={cn (&quot;h - 7 w - 7&quot;, props.class_name)}
+
       on_click={(event) => {
 </Button>
     <Button;
@@ -32,3 +35,4 @@ export const SidebarTrigger = React.forward_ref<;
 </PanelLeft>
       <span className=&quot;sr - only & quot;>Toggle Sidebar</span>;
     </Button>);"
+

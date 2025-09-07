@@ -1,4 +1,6 @@
+
 import { Resume } from "@/types/resume";"
+
 import {
   // TODO: Implement
 }
@@ -6,6 +8,7 @@ import {
   ResumeBasicInfoSection,
   WorkExperienceSection,
   EducationSection,
+
   SkillsSection,
   CertificationsSection,"
 } from "./preview";"
@@ -44,6 +47,7 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
 </PreviewHeader>"
       <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">"
 </div>
+
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />
 </ResumeBasicInfoSection>
         <WorkExperienceSection workExperience={resume.work_experience} />
@@ -56,5 +60,7 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
 </CertificationsSection>
       </div>
     </div>
+
     </div>;)
  </div> </div>) "
+

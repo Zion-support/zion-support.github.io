@@ -1,6 +1,7 @@
 
 
 export const COMMON_SKILLS = [
+
   'Machine Learning',''
   'Python',''
   'JavaScript',''
@@ -109,7 +110,9 @@ export const REGIONS = [;"
   "South America",;""
   "Middle East",;""
   "Africa";"]
+
 ];
+
 
 
 
@@ -125,10 +128,12 @@ export const COMMON_SKILLS = ["
   'DevOps'''
   'Cloud Architecture'']'
   'TensorFlow',];'
+
 // Regions;
 // Common skills for filtering;
 export const COMMON_SKILLS = [;
 // Common skills for filtering;
+
 export const COMMON_SKILLS = ['
   'Machine Learning',''
   'Python',''
@@ -173,3 +178,4 @@ export const COMMON_SKILLS = ['
   "Cloud Architecture",""
   "TensorFlow"""
   "Africa";"]"
+

@@ -1,6 +1,8 @@
+
   id: string;,
   name: string;
   tagline: string;,
+
   price: string;
   period: string;,
   description: string;
@@ -24,14 +26,17 @@
   market_size: string;
   growth_rate: string;,
   variant: ServiceVariant;
+
   contact_info: {,
   mobile: string;
     email: string;,
   address: string;
   customers: number;,
+
   rating: number;
   reviews: number;,
   benefits: string[];
+
   capabilities: string[];
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities''
     }'
@@ -133,3 +138,4 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
   }
 ];
 '
+

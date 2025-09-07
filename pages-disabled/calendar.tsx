@@ -13,6 +13,7 @@ import {
   Mail,
   MapPin,
   Video,
+
   MessageSquare,
   Building;'
 } from 'lucide-react';'
@@ -139,10 +140,12 @@ export default function Calendar() {
                 <CheckCircle className="w-5 h-5 mr-2" />"
 </CheckCircle>"
                 <span className="font-semibold">Flexible Scheduling</span>"
+
               </div>
             </div>
           </motion.div>
         </div>
+
       </section>"
       <section className="py-20 px-4 bg-white">"
 </section>"
@@ -194,11 +197,13 @@ export default function Calendar() {
                 </ul>"
                 <button className="w-full bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">"
 </button>
+
                 </button>
               </motion.div>)
             ))}
           </div>
         </div>
+
       </section>"
       <section className="py-20 px-4 bg-gray-50">"
 </section>"
@@ -240,11 +245,13 @@ export default function Calendar() {
                     : 'bg-red-100 text-red-800''
                 }`}>
 </div>
+
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
+
       </section>'
       <section className="py-20 px-4 bg-white">"
 </section>"
@@ -266,11 +273,13 @@ export default function Calendar() {
 </div>
               <motion.button;
                 key={index}
+
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.05 }}
                 disabled={!slot.available}
                 className={`p-4 rounded-lg text-center transition-all ${
+
                   slot.available;"
                     ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl'''
                     : 'bg-gray-200 text-gray-500 cursor-not-allowed''
@@ -281,10 +290,12 @@ export default function Calendar() {
                 <div className="text-sm opacity-75">{slot.type}</div>""
                   <CheckCircle className="w-5 h-5 mx-auto mt-2" />"
 </CheckCircle>
+
               </motion.button>
             ))}
           </div>
         </div>
+
       </section>"
       <section className="py-20 px-4 bg-gray-50">"
 </section>"
@@ -332,11 +343,13 @@ export default function Calendar() {
 </div>"
                     <div className="font-semibold text-gray-900">Office</div>""
                     <div className="text-gray-600">123 Tech Street, San Francisco, CA</div>"
+
                   </div>
                 </div>
               </div>
             </motion.div>
             <motion.div;
+
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}"
@@ -386,11 +399,13 @@ export default function Calendar() {
 </Link>"
                   <ArrowRight className="w-5 h-5 ml-2" />"
 </ArrowRight>
+
                 </Link>
               </div>
             </motion.div>
           </div>
         </div>
+
       </section>"
       <section className="py-20 px-4 bg-white">"
 </section>"
@@ -423,6 +438,7 @@ export default function Calendar() {
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors""
               >
 </Link>
+
               </Link>
             </div>
           </motion.div>

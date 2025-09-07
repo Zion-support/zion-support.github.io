@@ -1,11 +1,13 @@
 export function getConfig() {
   return {
+
   // TODO: Implement
 }
     tokenName: 'Zion Token',''
     tokenSymbol: 'ZION','
     decimals: 18,
     totalSupply: 1000000;
+
   };
 export interface TokenTransaction {;
   id: string;,
@@ -19,13 +21,15 @@ export interface TokenTransaction {
 }
   id: string;,
   user_id: string;
+
   amount: number;,'
   type: "issue" | "redeem" | "transfer";"
   reason: string;,
+
   timestamp: number;
 
-
-
+}
+}
 }
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
@@ -33,6 +37,7 @@ let transactions: TokenTransaction[] = [];
 export function issueTokens(
   userId: string,
   amount: number,
+
   reason: string,)
 ): TokenTransaction {
   // TODO: Implement
@@ -49,6 +54,7 @@ export function issueTokens(
     userId,
     amount,'
     type: "issue","
+
     reason,
     timestamp: Date.now(),
   };
@@ -61,6 +67,7 @@ export function issueTokens(
 export function redeemTokens(
   userId: string,
   amount: number,
+
   reason: string,)
 ): TokenTransaction {
   // TODO: Implement
@@ -76,6 +83,7 @@ export function redeemTokens(
 "
     type: "redeem",""
     type: 'redeem','
+
     reason,
     timestamp: Date.now(),
   };
@@ -104,6 +112,7 @@ export interface TokenConfig {
   contractAddress?: string;
   network: string;,
   isActive: boolean;
+
   createdAt: Date;,
   updatedAt: Date;
 }
@@ -111,12 +120,13 @@ export interface TokenConfig {
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>,
 </ReturnType>)
+
   partial: Partial < ReturnType < typeof get_config>>): void {
   // TODO: Implement
 }
   const current = get_config ();
-  // Update the configuration;
-  Object.assign (current, partial);
+  // Update the configuration;}
+  Object.assign (current, partial);}
 }
 
 '

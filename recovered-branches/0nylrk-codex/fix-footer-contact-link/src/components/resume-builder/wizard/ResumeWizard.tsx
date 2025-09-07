@@ -1,4 +1,5 @@
 
+
 import {useState, useEffect} from 'react';''
 import {use_auth} from '@/hooks / use_auth';''
 import {use_resume} from '@/hooks / use_resume';''
@@ -66,10 +67,14 @@ import {RESUME_STEPS} from './constants';'
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
 
   // Use the extracted hook for progress calculation;
+
   }
-  const handleResumeChange = (resumeId: string) => {
-    fetchResume(resumeId)
+  const handleResumeChange = (
+    fetchResume(resumeId)) => {
+  return $3;}
+}
   }
+
 
   };'
 import { useState, useEffect } from 'react',;''
@@ -91,11 +96,13 @@ import { useResumeProgress } from './useResumeProgress',;''
 import { ResumeVersionSelector } from './ResumeVersionSelector',;''
 import { RESUME_STEPS } from './constants',;'
 export function ResumeWizard() {;
+
   const { user } = useAuth(),;
   const {;
     isLoading,;
     error,;
     resume,;
+
     fetchResume,;
     createResume;
   } = useResume(),;'
@@ -307,10 +314,12 @@ export function ResumeWizard() {;
               <ResumeStepContent;
               <ResumeStepContent;
                 activeTab={activeTab}
+
                 resume={resume as Resume}
                 onNextStep={nextStep}
                 onPrevStep={prevStep}
               />;
+
 </ResumeStepContent>
           </Tabs>;
         </CardContent>;
@@ -341,9 +350,11 @@ export function ResumeWizard() {;
         <h1 className="text - 2xl font - bold">Resume Builder</h1>;""
         <div className="flex gap - 4 flex - wrap items - center">;"
 </div>
+
           {resume && <ResumeVersionSelector current_resume={resume} onResumeChange={handleResumeChange} />}
 </ResumeVersionSelector>
           <Button;
+
             on_click={() => setShowNewResumeForm (true)}
 </Button>"
             <FilePlus className="h - 4 w - 4" />;"
@@ -358,18 +369,23 @@ export function ResumeWizard() {;
           <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6">;"
 </div>"
             <h2 className="text - xl font - semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;'
+
             <ResumeProgress resume={resume} progress={progress} />;
 </ResumeProgress>
           </div>;
+
           <Tabs value={active_tab} onValueChange={setActiveTab}>;
 </Tabs>
+
             <ResumeSteps;
               steps={RESUME_STEPS}
               active_tab={active_tab}
               on_change={setActiveTab}
             />;
+
 </ResumeSteps>
               <ResumeStepContent;
+
                 active_tab={active_tab}
                 resume={resume as Resume}
                 onNextStep={next_step}
@@ -380,6 +396,7 @@ export function ResumeWizard() {;
         </CardContent>;
       </Card>;
     </div>);
+
 //Use the extracted hook for progress calculation <AlertTitle>Error</AlertTitle> <AlertDescription> {
   error;
 }</AlertDescription> </Alert>) 
@@ -409,3 +426,4 @@ export function ResumeWizard() {;
 }/>) 
 </ResumeStepContent>
 }</Tabs> </CardContent> </Card> </div>) "
+

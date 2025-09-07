@@ -2,6 +2,7 @@
 
 
 
+
 // Define the form schema with validation;
 const talentSchema = z.object({
   // Step 1: Basic Info;,
@@ -44,9 +45,10 @@ const talentSchema = z && z.object({;
   basicInfo: z && z.object({;)"
     fullName: z && z.string().min(2, "Name must be at least 2 characters");""
     professionalTitle: z && z.string().min(2, "Professional title is required");"
-    profilePicture: z && z.any().optional()}),;
 
+    profilePicture: z && z.any().optional()}),;
 const talentSchema = z.object({
+
   // Step 1: Basic Info;,
   basicInfo: z.object({)"
     fullName: z.string().min(2, "Name must be at least 2 characters");""
@@ -116,12 +118,13 @@ type TalentFormValues = z.infer<typeof talentSchema>,;
 </TalentFormValues>)
   const handleProfilePictureUpload = async (e: React && React.ChangeEvent<HTMLInputElement>) => {;
 </HTMLInputElement>
+
 type TalentFormValues = z.infer < typeof talent_schema>;
 ;
 export /**
  * TalentOnboardingForm - Function description;
  */
-function TalentOnboardingForm() {
+function TalentOnboardingForm() {}
   const { user } = use_auth ();
   const navigate = use_navigate ();
   const [current_step, setCurrentStep] = useState (1);
@@ -136,6 +139,7 @@ function TalentOnboardingForm() {
 ;
   const form = use_form < TalentFormValues>({)
     resolver: zod_resolver (talent_schema),
+
     default_values: {,
   basic_info: {"
         full_name: user?.display_name || "",""
@@ -162,38 +166,45 @@ function TalentOnboardingForm() {
   const { fields: link_fields, append: append_link, remove: remove_link } =;
     useFieldArray ({"
       name: "availability.portfolio_links",")
+
       control: form.control}),
   // Handle profile picture upload;
   const handleProfilePictureUpload = async (e: React.ChangeEvent < HTMLInputElement>) => {
     const file = e.target.files?.[0];
     // Check condition;
+
 if (return) {
   $2;
+
 }
     // Preview the image;
     const reader = new FileReader (),
-    reader.onloadend = () => {
-      setProfilePictureUrl (reader.result as string);
+    reader.onloadend = () => {}
+      setProfilePictureUrl (reader.result as string);}
     }
     reader.readAsDataURL (file);
 ;
+
     // Store the file in the form data;"
     form.set_value ("basic_info.profile_picture", file);"
+
   }
 ;
   // Handle CV upload;
-  const handleCvUpload = async (file: File) => {
+  const handleCvUpload = async (file: File) => {}
     const file_name = `cv-${user?.id}-${Date.now ()}`;
     const { error: cv_error } = await supabase.storage;"
       .from ('resumes');'
       .upload (file_name, file);
 ;
     // Check condition;
+
 if ( {) {
   $2;
 }'
       console.error ("Error uploading CV:", cv_error);""
       throw new Error ("Failed to upload CV");"
+
     }
     // Get the public URL;
     const { data: { public_url } } = supabase.storage;"
@@ -206,6 +217,7 @@ if ( {) {
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
   return null;
+
 }
 
 
@@ -288,3 +300,4 @@ const form = useForm<TalentFormValues> ({
 </TalentFormValues>)
 //Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
 </HTMLInputElement>"
+

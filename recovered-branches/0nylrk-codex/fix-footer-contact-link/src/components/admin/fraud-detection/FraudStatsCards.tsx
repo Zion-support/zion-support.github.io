@@ -1,4 +1,6 @@
 
+import React from \"react\";
+
 
 import {;
   Card,;
@@ -31,12 +33,14 @@ import {
   CardTitle;
   CardDescription;"
 import React from "react";"
+
 import {
   // TODO: Implement
 }
   Card,
   CardHeader,
   CardTitle,
+
   CardDescription,;
 
 
@@ -126,8 +130,10 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           </div>"
           <AlertTriangle className="h-5 w-5 text-amber-500" />"
 </AlertTriangle>
+
         </CardHeader>
       </Card>
+
 
 
       
@@ -154,8 +160,10 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           </div>"
           <AlertCircle className="h-5 w-5 text-red-500" />"
 </AlertCircle>
+
         </CardHeader>
       </Card>
+
 
 
       
@@ -373,3 +381,4 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
         </CardHeader>;
       </Card>;
     </div>;"
+

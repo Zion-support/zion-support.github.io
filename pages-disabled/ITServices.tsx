@@ -30,6 +30,7 @@ import {
   BarChart3,
   Headphones,
   Wrench,
+
   FileText,
   Cpu;'
 } from 'lucide-react';'
@@ -159,9 +160,11 @@ export default function ITServicesPage() {
 </li>"
                         <CheckCircle className="h-4 w-4 text-green-400 mr-2" />"
 </CheckCircle>
+
                       </li>
                   </ul>
                 </div>
+
                 "
                 <div className="mb-6">"
 </div>"
@@ -172,9 +175,11 @@ export default function ITServicesPage() {
 </li>"
                         <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />"
 </CheckCircle>
+
                       </li>
                   </ul>
                 </div>
+
                 "
                 <div className="flex items-center justify-between">"
 </div>"
@@ -186,6 +191,7 @@ export default function ITServicesPage() {
 </Link>"
                     <ArrowRight className="h-4 w-4 ml-2" />"
 </ArrowRight>
+
                   </Link>
                 </div>
               </motion.div>
@@ -193,6 +199,7 @@ export default function ITServicesPage() {
           </div>
 
           <motion.div;
+
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}"
@@ -224,6 +231,7 @@ export default function ITServicesPage() {
                 <MapPin className="h-5 w-5 mr-2" />"
 </MapPin>
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
+
               </div>
             </div>
           </motion.div>

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";""
 import {useForm} from "react-hook-form";""
 import {zodResolver} from "@hookform/resolvers/zod";""
@@ -30,9 +31,11 @@ export interface BasicInfoFormProps {;
 </form>"
         <Card className="p-6 space-y-6">;"
 </Card>
+
           <PersonalInfoFields control={form && form.control} />;
 </PersonalInfoFields>
           <ContactFields control={form && form.control} />;
+
 </ContactFields>
 "
           <div className="pt-4 border-t border-gray-200">;"
@@ -44,11 +47,11 @@ export interface BasicInfoFormProps {;
 </BasicInfoFormData>
             <RateOptimizationSection;
               control={form && form.control}
+
               setValue={form && form.setValue}
               skills={skills}
-
-
               yearsExperience={yearsExperience || 0}
+
 
 )
   }, [initialData, form]);
@@ -62,9 +65,11 @@ export interface BasicInfoFormProps {;
               yearsExperience={yearsExperience || 0}"
               location={form.getValues("location")}""
               rateType="hourly""
+
             />
 </RateOptimizationSection>
           </div>
+
         </Card>"
         <div className="flex justify-end">"
 </div>"
@@ -80,11 +85,12 @@ export interface BasicInfoFormProps {;
         </div>;
       </form>;
     </Form>;
+
   initial_data?: Partial < BasicInfoFormData>;
   on_save: (data: BasicInfoFormData) => void,
   skills?: string[];
-  years_experience?: number;
-  on_complete?: () => void;
+  years_experience?: number;}
+  on_complete?: () => void;}
 }
 export /**
  * BasicInfoForm - Function description;
@@ -92,6 +98,7 @@ export /**
 function BasicInfoForm() {
   const form = use_form < BasicInfoFormData>({)
     resolver: zod_resolver (basicInfoSchema),
+
     default_values: {,"
   full_name: "",""
       title: "",""
@@ -108,3 +115,4 @@ function BasicInfoForm() {
 
 
 "
+

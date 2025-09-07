@@ -1,3 +1,4 @@
+
 import Link from 'next/link';''
 import { useRouter  } from 'next/router';''
 import { Logo  } from '@/components/header/Logo';''
@@ -218,9 +219,11 @@ export function PrimaryNav() {;
             </form>;'
             <div className='flex items-center gap-1'>;'
 </div>
+
               <PointsBadge />;
 </PointsBadge>
               <CartDrawer />;
+
 </CartDrawer>
             </div>;'
             <div className='flex items-center gap-1 border-l border-primary/20 pl-1 ml-1'>;'
@@ -251,18 +254,22 @@ export function PrimaryNav() {;
 </Link>"
             <div className="flex items-center gap-1">;"
 </div>
+
               <PointsBadge />;
 </PointsBadge>
               <CartDrawer />;
+
 </CartDrawer>
             </div>;"
             <div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'>;'
 </div>
+
               <ModeToggle />;
 </ModeToggle>
               <LanguageSelector />;
 </LanguageSelector>
             </div>;
+
                   <Link;'
                     href="/auth/login";""
                     className="text-sm hover: text-primary whitespace-nowrap";""
@@ -300,9 +307,11 @@ export function PrimaryNav() {;
 </Link>"
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">;"
 </div>
+
             <ModeToggle />;
 </ModeToggle>
             <LanguageSelector />;
+
 </LanguageSelector>
               <Link;"
                 href="/auth/login";""
@@ -313,8 +322,10 @@ export function PrimaryNav() {;
               </Link>
             {isLoggedIn && <UserMenu />}
 </UserMenu>
+
               </Link>;
             {isLoggedIn && <UserMenu />}
+
 </UserMenu>
           </div>;"
             <div className='flex items - center gap - 1 flex - wrap'>;'
@@ -332,17 +343,21 @@ export function PrimaryNav() {;
                     className='text - sm hover:text - primary whitespace - nowrap';'
                   >;
 </Link>
+
                   </Link>;
                 </>)}
               {isLoggedIn && <UserMenu />}
 </UserMenu>
             </div>;
+
           </div>;'
           <div className='hidden md:flex lg:hidden items - center gap - 2 order - 2'>;'
 </div>
+
             <ModeToggle />;
 </ModeToggle>
             <LanguageSelector />;
+
 </LanguageSelector>
               <Link;'
                 href='/auth / login';''
@@ -350,10 +365,12 @@ export function PrimaryNav() {;
                 data - testid='login - link';'
                 on_click={e => {
 </Link>
+
               </Link>)}
             {isLoggedIn && <UserMenu />}
 </UserMenu>
           </div>;
+
               {isLoggedIn && <UserMenu  />}
 </UserMenu>
             </div>;
@@ -373,9 +390,11 @@ export function PrimaryNav() {;
         <div className="lg:hidden fixed inset-0 z-60 pt-16">"
 </div>
           <div;
+
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
 </div>
     </>;
+
   );
 
 };"
@@ -431,9 +450,11 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
                           className="block text-gray-300 hover:text-white transition-colors duration-200""
                           onClick={( setIsOpen(false)}>;
 </Link>
+
                         </Link>;
                     </div>;
                   </div>;"
+
                 <div className="pt-4 border-t border-white/10 space-y-2">;"
 </div>"
                   <Linkto="/solutions"""
@@ -455,13 +476,14 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
                     className="block text-gray-300 hover:text-white transition-colors duration-200""
                     onClick={: unknown setIsOpen(false)}>;
 </Linkto>
+
                   </Link>;
                 </div>;
               </div>;
             </motion && motion.div>;
-          )};
-        </AnimatePresence>;
+          )}</AnimatePresence>;
       </nav>;
+
     </header>;"
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />"
 </header>
@@ -492,3 +514,4 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
 }/> </div> </div>)
   isMobile && <MobileBottomNav unreadCount= {
 "
+

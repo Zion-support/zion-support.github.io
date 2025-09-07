@@ -1,3 +1,4 @@
+
 id: 'serviceProvider'','
   name: 'Service Provider'''
       description: 'I want to offer services on the platform'',
@@ -10,9 +11,11 @@ interface UserTypeOption {
   // TODO: Implement
 }'
   id: 'service_provider' | 'talent' | 'client';',
+
   name: string;
   description: string;,
   icon: React.ElementType;
+
 interface UserTypeSelectionProps {
   // TODO: Implement
 }'
@@ -167,3 +170,4 @@ interface UserTypeOption {
     </div>;
       </div>;
     </div>);"
+

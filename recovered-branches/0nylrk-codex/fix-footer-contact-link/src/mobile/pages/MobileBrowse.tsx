@@ -1,4 +1,5 @@
 // Mock data for demonstration;
+
 const jobsData = [
   {
 
@@ -203,10 +204,12 @@ export function MobileBrowse() {
             className="rounded-full"""
             onClick={() => setBrowseType("talents")}"
 </Button>
+
           </Button>
         </div>
       </div>
       <BrowseFilters type={browseType} />
+
 </BrowseFilters>"
       <div className="py-4 px-4">"
 </div>
@@ -253,10 +256,11 @@ const jobsData = [;
     price: "$75-100/hr",;""
     timePosted: "1 week ago",;"
     match: 78;
+
   }
 ];
-
 const talentsData = [;
+
   {;"
     id: "1",;""
     title: "Sarah Johnson",;""
@@ -289,10 +293,11 @@ const talentsData = [;
     price: "$85/hr",;""
     image: "",;"
     match: 82;
+
   }
 ];
-
 export function MobileBrowse() {;
+
   const { user } = useAuth();"
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';''
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");"
@@ -328,10 +333,12 @@ export function MobileBrowse() {;
   const handleViewDetails = (id: string) =>: any {
   // TODO: Implement
 }
+
     console.log (`View details for item ${id}`);
     // Navigate to details page;
   }
 ;
+
   return ("
     <div className="min - h-screen">;"
 </div>
@@ -366,15 +373,16 @@ export function MobileBrowse() {;
 
 "
           items={browseType === "jobs" ? jobsData : talentsData}"
+
           type={browseType}
           onViewDetails={handleViewDetails}
-
         />;
 </BrowseCards>
       </div>;
       <BottomNavigation />;
 </BottomNavigation>
     </div>;
+
         <BrowseCards;"
           items={browseType === "jobs" ? jobsData : talentsData}"
           type={browseType}
@@ -385,6 +393,7 @@ export function MobileBrowse() {;
 </div>
         <BrowseCards;"
           items={browse_type === "jobs" ? jobs_data : talents_data}"
+
           type={browse_type}
           onViewDetails={handleViewDetails}
         />;
@@ -393,6 +402,7 @@ export function MobileBrowse() {;
       <BottomNavigation />;
 </BottomNavigation>
     </div>);
+
       <BrowseFilters type={browseType} />;
 </BrowseFilters>"
       <div className="py-4 px-4">;"
@@ -426,3 +436,4 @@ return (<div className="min-h-screen" > <MobileHeader title= {"
       <BottomNavigation />
 </BottomNavigation>
     </div>"
+

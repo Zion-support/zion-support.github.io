@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useRef, ReactNode } from "react",""
 import { cn } from "@/lib/utils";""
 import { Skeleton } from "@/components/ui/skeleton";"
@@ -7,14 +8,15 @@ interface LazyLoadProps {
 import {useEffect, useState, useRef, ReactNode} from "react";""
 import {cn} from "@/lib/utils";""
 import {Skeleton} from "@/components/ui/skeleton";"
+
 interface LazyLoadProps {;
   height?: string | number;
   width?: string | number;
   children: ReactNode,;
-
-  loadingComponent?: ReactNode;
-  className?: string;
+  loadingComponent?: ReactNode;}
+  className?: string;}
 }
+
 
 
 export function LazyLoad(): any ({;
@@ -52,9 +54,18 @@ if ( {) {
       }
       {"
         root_margin: "200px", // Start loading when element is within 200px of viewport;"
-        threshold: 0.1}
 
+        threshold: 0.1}
+          setIsVisible(true),;
+          observer.disconnect(),;
+        }
+      },;
+      {;}
+        rootMargin:\"200px\", // Start loading when element is within 200px of viewport;}
+        threshold:0.1}
+    ),;
 ;
+
     // Check condition;
 if ( {) {
   $2;
@@ -62,11 +73,12 @@ if ( {) {
       observer.observe (container_ref.current);
 
 
+
           setIsVisible(true),
           observer.disconnect()
         }
-
       },
+
       {"
         rootMargin: "200px", // Start loading when element is within 200px of viewport;"
     }
@@ -118,15 +130,15 @@ if ( {) {
       )}>;
 </div>
         <>;
+
           {!isLoaded && (loadingComponent || defaultLoadingComponent)}
           {isLoaded && children}
         </>;
       ) : (;
         loadingComponent || defaultLoadingComponent;)
       )}
-
-
     </div>;
+
     <Skeleton;
       style={{ height, width }}"
       className="rounded-md bg-zion-blue-light/20""
@@ -152,9 +164,11 @@ if ( {) {
     <Skeleton;
       style={{ height, width }}"
       className="rounded - md bg - zion - blue - light / 20";"
+
     />);
 </Skeleton>
     <div;
+
       ref={container_ref}"
       className={cn ("transition - opacity duration - 500",""
         is_loaded ? "opacity - 100" : "opacity - 0";")
@@ -162,6 +176,7 @@ if ( {) {
     >;
 </div>
         <>;
+
           {!is_loaded && (loading_component || defaultLoadingComponent)}
           {is_loaded && children}
         </>) : ()
@@ -170,6 +185,7 @@ if ( {) {
 const defaultLoadingComponent = (<Skeleton />);
 </Skeleton>
 return (<div) 
+
 }> {
 </div>
   isVisible ? (<> {)
@@ -178,3 +194,4 @@ return (<div)
   isLoaded && children;
 }</>) : (loadingComponent || defaultLoadingComponent) 
 }</div>) "
+

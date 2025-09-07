@@ -1,10 +1,13 @@
+
 import React from "react";"
+
 import {
   // TODO: Implement
 }
   Card,
   CardContent,
   CardDescription,
+
   CardHeader,
   CardTitle,"
 } from "@/components/ui/card";""
@@ -15,10 +18,12 @@ interface HelpArticleListProps {
   categoryId: string;,
   onArticleSelect: (articleId: string) => void;,
   searchQuery: string;
+
 }
 
 export function HelpArticleList({
   categoryId,
+
   onArticleSelect,
   searchQuery,)
 }: HelpArticleListProps) {
@@ -58,11 +63,13 @@ export function HelpArticleList({
 </CardContent>"
                 <p className="text-sm text-zion-slate-light truncate">"
 </p>
+
                 </p>
               </CardContent>
             </Card>
         </div>
     </div>
+
             <Card;
               key={article.id}"
               className="cursor-pointer hover:border-zion-purple/50 transition-colors""
@@ -170,3 +177,4 @@ export function HelpArticleList({
 </div>
 }</div>) 
 }</div>) "
+

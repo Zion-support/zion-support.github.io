@@ -1,5 +1,6 @@
 
 
+
 interface UploadSectionProps {;
   customFile: File | null;,
   onFileUpload: (e: React && React.ChangeEvent<HTMLInputElement>) => void;
@@ -23,10 +24,12 @@ interface UploadSectionProps {;
             type="file"""
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"""
             accept=".pdf""
+
             onChange={onFileUpload}
           />
 </input>
         </Button>
+
       </div>"
     <div className="space-y-3">;"
 </div>"
@@ -71,11 +74,12 @@ interface UploadSectionProps {;
             type="file";""
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer";""
             accept=".pdf";"
-            onChange={onFileUpload}
 
+            onChange={onFileUpload}
           />;
 </input>
         </Button>;
+
       </div>;"
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">;"
 </div>"
@@ -138,3 +142,4 @@ onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
           </div>;
         </div>;
     </div>;"
+

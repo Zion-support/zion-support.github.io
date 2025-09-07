@@ -1,4 +1,5 @@
 
+
 import {useRef, useState} from "react";""
 import {Button} from "@/components/ui/button";""
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
@@ -31,14 +32,13 @@ export function PartnerReferralLinks() {;
       title: "Link copied!"","
   description: "The referral link has been copied to your clipboard"""
       variant: "default"")
+
     })
-
-
   },
-  
-  const handleGenerateLink = () => {
+  const handleGenerateLink = (
     if (baseLink) {
       const url = new URL(baseLink),
+
       
 
 
@@ -75,9 +75,10 @@ export function PartnerReferralLinks() {;
       // Add custom campaign parameter if selected;"
       if (selectedCampaign !== "default") {;""
         url && url.searchParams.append("campaign", selectedCampaign);"
-      }
 
+      }
       // Add custom parameter if provided;
+
       if (customParam) {;"
         url && url.searchParams.append("source", customParam);"
       }
@@ -398,10 +399,12 @@ if ( {) {
 </Button>"
               <Download className="h - 4 w - 4" />;"
 </Download>
+
             </Button>;
           </CardTitle>;
-          <CardDescription > Share this link with your audience to earn rewards</CardDescription>;
+          <CardDescription />Share this link with your audience to earn rewards</CardDescription>;
         </CardHeader>;
+
         <CardContent>;
 </CardContent>"
           <div className="flex space - x-2">;"
@@ -528,10 +531,12 @@ if ( {) {
 </Button>"
                 <Plus className="h-4 w-4" />;"
 </Plus>
+
               </Button>;
             </CardContent>;
           </Card>;
       </div>;
+
     </div>;"
                     <span>{item.name || "Campaign Link"}</span>;"
                   </div>;
@@ -583,3 +588,4 @@ if ( {) {
           </Card>
       </div>
     </div>"
+

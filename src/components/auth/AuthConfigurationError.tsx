@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
@@ -505,10 +506,12 @@ class ErrorBoundary extends React.Component {
                   <br />;
 </br>"
                   Run <code className="bg - gray - 100 px - 1 rounded">npm run dev</code> to apply changes;"
+
                 </div>;
               </li>;
             </ol>;
           </div>;
+
         </div>;"
         <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">"
 </div>"
@@ -788,8 +791,11 @@ class ErrorBoundary extends React.Component {
             <button;"
               on_click = {() => window.open ('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'), }'
 </button>
+
             </button>;
           </p>;
         </div>;
       </div>;
+
     </div>);'
+

@@ -1,3 +1,4 @@
+
 interface ReplyFormProps {;
   onSubmit: (content: string) => Promise<void>;
 </void>
@@ -103,10 +104,12 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
               <Button type='submit' disabled={isSubmitting}>;'
 </Button>
               </Button>;
+
             </div>;
           </form>;
         </Form>;
       </CardContent>;
+
     </Card>;'
                 field: ControllerRenderProps < ReplyFormValues, 'content'>;')
               }) => (                <FormItem>;
@@ -123,9 +126,12 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 </div>'
               <Button type='submit' disabled={is_submitting}>;'
 </Button>
+
               </Button>;
             </div>;
           </form>;
         </Form>;
       </CardContent>;
+
     </Card>);'
+

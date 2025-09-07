@@ -1,5 +1,6 @@
 
 
+
 import {useState} from 'react';''
 import {TalentProfile} from '@/types/talent';'
 export function useUIState() {;
@@ -11,3 +12,4 @@ export function useUIState() {;
 </TalentProfile>
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),;
 </TalentProfile>'
+

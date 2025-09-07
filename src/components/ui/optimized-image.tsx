@@ -1,3 +1,4 @@
+
 import { ImageIcon, AlertTriangle } from 'lucide-react'''
 import { cn  } from '@/lib/utils';''
 import { imageOptimization  } from '@/utils/performance';''
@@ -14,12 +15,15 @@ interface OptimizedImageProps {
   // TODO: Implement
 }
   src: string;,
+
   alt: string;
   width?: number;
   height?: number;
 
+
   class_name?: string;'
   placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty';'
+
   placeholder_color?: string;
   priority?: boolean;
   quality?: number;
@@ -37,6 +41,7 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager';'
   style?: React.CSSProperties;
   object_position?: string;
+
 export const OptimizedImage: React.FC < OptimizedImageProps> = ({
   src,
   alt,
@@ -78,8 +83,11 @@ export const OptimizedImage: React.FC < OptimizedImageProps> = ({
     // Check condition;
 if (return) {
   $2;
+
 }
-    observer_ref.current = new IntersectionObserver (
+export const OptimizedImage: React.FC < OptimizedImageProps> = ({ src,alt,width,height,class_name,placeholder = 'shimmer',placeholder_color = '#f3f4f6',priority = false,quality = 75,sizes,on_load,on_error,fallback_src,aspect_ratio,object_fit = 'cover',lazy = true,retry_count = 3,showLoadingProgress = false,fill = false,blurDataURL,loading = 'lazy',style,object_position = 'center',...props;}
+   }) => {
+
 
       entries => {
         const [entry] = entries;        // Check condition;)
@@ -160,10 +168,14 @@ if ( {) {
         entries.for_each (entry => {          // Check condition;)
 if ( {) {
   $2;
+
 }
-            const resource_entry = entry as PerformanceResourceTiming;
-            const file_size =;
+
+const resource_entry = entry as PerformanceResourceTiming;
+
+const file_size =;
               resource_entry.transfer_size || resource_entry.encodedBodySize || 0;
+
             const load_time =;
               resource_entry.response_end - resource_entry.request_start;
             set_metrics ({
@@ -434,25 +446,35 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
             <span className="text-sm">Failed to load image</span>""
               <span className="text-xs mt-1">Retried {retries} times</span>"
           </motion.div>)
+
         )}
-        {/* Actual image */}
-
-
-        {isInView && !hasError && (;
-          <motion.img;
+        {/* Actual image */}<motion.img;
             src={optimizedSrc}
             srcSet={srcSet}
             alt={alt}"
             loading={priority ? 'eager' : 'lazy'}'
             onLoad={handleLoad}
             onError={handleError}
+
             className={cn(;'
               'w-full h-full transition-opacity duration-300',;'
               `object-${objectFit}`,;'
               isLoading ? 'opacity-0' : 'opacity-100';')
+
             )}
+          </motion && motion.div />;
+        )}
+        {/* Actual image */}{isInView && !hasError && (<motion.img;}
+            src={optimizedSrc}
+            srcSet={srcSet}
+            alt={alt}
+            loading={priority ? 'eager' : 'lazy'}
+            onLoad={handleLoad}
+            onError={handleError}
+            className={cn('w-full h-full transition-opacity duration-300',`object-${objectFit}`,isLoading ? 'opacity-0' : 'opacity-100';)}
             initial={{ opacity: 0 }}
             animate={{ opacity: isLoading ? 0 : 1 }}
+
             transition={{ duration: 0.3 }}
           />
 </motion>
@@ -487,10 +509,17 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 
       
       <div;
+
         className={`grid gap-4`}
-        style={{;
-          gridTemplateColumns: `repeat(${columns}, 1fr)`;
+        style={{gridTemplateColumns: `repeat(${column}
+}, 1fr)`        }}>;
+        {images && images.map((image, index,) => (<motion&& motion.div;}
+            key = {index}<div;
+        className={`grid gap-4`}
+        style={{gridTemplateColumns: `repeat(${column}
+}, 1fr)`;
         }}
+
       >;
 </div>
           <motion.div;
@@ -524,11 +553,21 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
                 </div>;
             </div>
           </motion.div>
+
         ))}
 
+const initials = null;
+    fallback ||;
+    alt;
+      .split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)>;
+      {src ? (</div>;}
+    </div>;}
+  )}//Gallery component with optimized loading </span> </div> <divclassName= {`grid gap-4`;}
+}style= {{gridTemplateColumns: `repeat ($ {columns;}
+}, 1fr) `;
 
-  const initials = null;
-    fallback ||
+export const OptimizedAvatar: React.FC<OptimizedAvatarProps /> = ({ src,alt,size = 'md',fallback,className   }) => {
+
 
 
     alt;'
@@ -585,11 +624,12 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
                 />;
 </motion>
               </div>)}
+
           </motion.div>)}
         {/* Error state */}
-        {has_error && (
-          <motion.div;
+        {has_error && (<motion.div;}
             initial={{ opacity: 0 }}
+
             animate={{ opacity: 1 }}'
             className='absolute inset - 0 flex flex - col items - center justify - center bg - gray - 100 text - gray - 400';'
           >;
@@ -660,10 +700,12 @@ export const ImageGallery: React.FC < ImageGalleryProps> = ({
         <h3 className='text - lg font - semibold'>Gallery</h3>;''
         <span className='text - sm text - muted - foreground'>;'
 </span>
+
         </span>;
       </div>;
       <div;
         className={`grid gap - 4`}
+
         style={{
           gridTemplateColumns: `repeat (${columns}, 1fr)`,        }}
       >;
@@ -678,6 +720,7 @@ export const ImageGallery: React.FC < ImageGalleryProps> = ({
 </motion>'
             <div className='relative'>;'
 </div>
+
               <OptimizedImage;
                 src={image.src}
                 alt={image.alt}
@@ -685,6 +728,7 @@ export const ImageGallery: React.FC < ImageGalleryProps> = ({
                 className='rounded - lg group - hover:scale - 105 transition - transform duration - 300';'
                 on_load={handleImageLoad}                priority={index < 3} // Prioritize first 3 images;
               />;
+
 </OptimizedImage>'
                 <div className='absolute bottom - 0 left - 0 right - 0 bg - black / 50 text - white p - 2 rounded - b-lg'>;'
 </div>'
@@ -718,3 +762,4 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
 </div>)
         </div>)}
     </div>);'
+

@@ -1,4 +1,5 @@
 
+
 import {useState, useEffect} from "react";""
 import {useParams, useNavigate, Link} from "react-router-dom";""
 import {format} from "date-fns";""
@@ -20,13 +21,14 @@ import {toast} from "@/hooks/use-toast";""
 import {supabase} from "@/integrations/supabase/client";""
 import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";""
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";"
+
 function ProjectDetailsContent() {;
-  // useParams may be untyped in this environment, so avoid passing a;
-  // type argument and cast the result instead to prevent TS2347 errors.;
-  const { projectId } = useParams() as { projectId?: string };
-  const { user } = useAuth();
+  // useParams may be untyped in this environment, so avoid passing a;}
+  // type argument and cast the result instead to prevent TS2347 errors.;}
+  const { projectId } = useParams() as { projectId?: string };  const { user } = useAuth();
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
+
 
 
   const [project, setProject] = useState<Project | null>(null);
@@ -382,9 +384,11 @@ if ( {) {
       <SEO;"
         title={`Project: ${project.job?.title |'Project Details'} | Zion AI Marketplace`}''
         description="View and manage your project details and collaboration.""
+
       />
 </SEO>
       <AppHeader />
+
 </AppHeader>"
       <main className="container mx-auto px-4 py-8">"
 </main>"
@@ -491,9 +495,11 @@ if ( {) {
 </Button>"
                   <MessageSquare className="mr-2 h-4 w-4" /> Message;"
 </MessageSquare>
+
                 </Button>
             </div>
           </div>
+
         </div>"
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">"
 </div>"
@@ -545,11 +551,13 @@ if ( {) {
                         <div className="bg-muted/30 p-4 rounded-md">"
 </div>"
                           <p className="whitespace-pre-wrap">{project.job?.description}</p>"
+
                         </div>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
+
               </TabsContent>"
               <TabsContent value="timeline">"
 </TabsContent>
@@ -585,12 +593,14 @@ if ( {) {
                           <h3 className="font-semibold">Project Status</h3>""
                           <div className="mt-1">"
 </div>
+
                           </div>
                         </div>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
+
               </TabsContent>"
               <TabsContent value="documents">"
 </TabsContent>
@@ -634,10 +644,12 @@ if ( {) {
                         <h3 className="font-semibold">No Documents Yet</h3>""
                         <p className="text-sm text-muted-foreground">"
 </p>
+
                         </p>
                       </div>
                   </CardContent>
                 </Card>
+
               </TabsContent>"
               <TabsContent value="notes">"
 </TabsContent>
@@ -661,9 +673,11 @@ if ( {) {
       <SEO;"
         title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`}''
         description="View and manage your project details and collaboration.";"
+
       />;
 </SEO>
       <AppHeader />;
+
 </AppHeader>"
       <main className="container mx - auto px - 4 py - 8">;"
 </main>"
@@ -708,10 +722,12 @@ if ( {) {
                         <AlertDialogCancel > Cancel</AlertDialogCancel>;"
                         <AlertDialogAction on_click={() => handleStatusChange ("offer_accepted")}>;"
 </AlertDialogAction>
+
                         </AlertDialogAction>;
                       </AlertDialogFooter>;
                     </AlertDialogContent>;
                   </AlertDialog>;
+
                 <AlertDialog>;
 </AlertDialog>
                   <AlertDialogTrigger as_child>;
@@ -771,6 +787,7 @@ if ( {) {
                         <h3 className="font - semibold mb - 2">Payment Terms</h3>;""
                         <Badge variant="outline" className="capitalize">;"
 </Badge>
+
                         </Badge>;
                       </div>;
                         </div>;
@@ -778,6 +795,7 @@ if ( {) {
                     </div>;
                   </CardContent>;
                 </Card>;
+
               </TabsContent>;"
               <TabsContent value="timeline">;"
 </TabsContent>
@@ -792,12 +810,14 @@ if ( {) {
                   </CardHeader>;
                   <CardContent>;
 </CardContent>
+
                           </div>;
                         </div>;
                       </div>;
                     </div>;
                   </CardContent>;
                 </Card>;
+
               </TabsContent>;"
               <TabsContent value="documents">;"
 </TabsContent>
@@ -822,12 +842,14 @@ if ( {) {
                         </div>;"
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">;"
 </a>
+
                           </a>;
                         </Button>;
                         </p>;
                       </div>)}
                   </CardContent>;
                 </Card>;
+
               </TabsContent>;"
               <TabsContent value="notes">;"
 </TabsContent>
@@ -962,9 +984,11 @@ if ( {) {
 </Button>"
                   <MessageSquare className="mr-2 h-4 w-4" /> Message;"
 </MessageSquare>
+
                 </Button>;
             </div>;
           </div>;
+
         </div>;"
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;"
 </div>"
@@ -1017,10 +1041,12 @@ if ( {) {
 </div>"
                           <p className="whitespace-pre-wrap">{project && project.job?.description}</p>;"
                         </div>;
+
                       </div>;
                     </div>;
                   </CardContent>;
                 </Card>;
+
               </TabsContent>;"
               <TabsContent value="timeline">;"
 </TabsContent>
@@ -1057,11 +1083,13 @@ if ( {) {
                           <div className="mt-1">;"
 </div>
                           </div>;
+
                         </div>;
                       </div>;
                     </div>;
                   </CardContent>;
                 </Card>;
+
               </TabsContent>;"
               <TabsContent value="documents">;"
 </TabsContent>
@@ -1104,10 +1132,12 @@ if ( {) {
                         <h3 className="font-semibold">No Documents Yet</h3>;""
                         <p className="text-sm text-muted-foreground">;"
 </p>
+
                         </p>;
                       </div>;
                   </CardContent>;
                 </Card>;
+
               </TabsContent>;"
               <TabsContent value="notes">;"
 </TabsContent>
@@ -1155,9 +1185,11 @@ if ( {) {
 </MessageSquare>"
                             <p className="text-muted-foreground">;"
 </p>
+
                             </p>;
                           </div>;
                       </div>;
+
                         <div>;
 </div>
 "
@@ -1175,10 +1207,35 @@ if ( {) {
 </Button>
                           </Button>;
                         </div>;
+
                     </div>;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
+                        <img;
+src={project.talent_profile.profile_picture_url}
+                          alt={project.talent_profile.full_name}
+                        />
+                      ) : (
+                        <User className=\"h-6 w-6\" />
+                      )}
+                    </Avatar>
+                    <div />
+                      <h3 className=\"font-semibold\" />
+                        {project.talent_profile?.full_name |\"Talent\"}
+                      </h3>
+                      <p className=\"text-sm text-muted-foreground\" />
+                        {project.talent_profile?.professional_title |\"Professional\"}
+                      </p>
+                      {isClient && (
+                        <Button;
+variant=\"outline\"
+                          size=\"sm\"}
+                          className=\"mt-2\"}
+                          onClick={() = /> navigate(`/messages?talentId=${project.talent_id}`)}
+                        >
+                          <MessageSquare className=\"mr-1 h-3 w-3\" /> Message;
+
                         <img;
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
@@ -1203,8 +1260,10 @@ if ( {) {
 </Button>"
                           <MessageSquare className="mr-1 h-3 w-3" /> Message;"
 </MessageSquare>
+
                         </Button>
                     </div>
+
                   </div>"
                   <div className="flex items-start gap-4">"
 </div>"
@@ -1541,10 +1600,12 @@ if ( {) {
                   </p>;
                 </CardFooter>;
             </Card>;
+
           </div>;
         </div>;
       </main>;
       <Footer />;
+
 </Footer>
 
     </>;
@@ -1552,12 +1613,14 @@ if ( {) {
 
 }
     </>);
+
 }
 export default /**
  * ProjectDetails - Function description;
  */
 function ProjectDetails() {
   return (
+
     <ProtectedRoute>;
 </ProtectedRoute>
       <ProjectDetailsContent />;
@@ -1585,3 +1648,4 @@ export default function ProjectDetails() {;
       <ProjectDetailsContent />;
 </ProjectDetailsContent>
     </ProtectedRoute>;)"
+

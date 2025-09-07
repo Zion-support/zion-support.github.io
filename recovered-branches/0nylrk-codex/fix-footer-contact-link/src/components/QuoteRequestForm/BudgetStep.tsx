@@ -2,6 +2,7 @@
 
 
 
+
 import {QuoteFormData} from "@/types/quotes";""
 import {Label} from "@/components/ui/label";""
 import {Slider} from "@/components/ui/slider";""
@@ -285,11 +286,13 @@ interface BudgetStepProps {;
 </div>
                   <span>{formatCurrency(formData && formData.budget.amount)}</span>;
                   <span>$100,000+</span>;
+
                 </div>;
               </div>;
             </div>;
         </div>;
       </div>;
+
     </div>;"
     <div className="space - y-6">;"
 </div>
@@ -338,11 +341,13 @@ interface BudgetStepProps {;
 </div>"
               <Label className="text - zion - slate - light mb - 4 block">;"
 </Label>
+
               </Label>;
               <Slider;
                 default_value={[form_data.budget.amount]}
                 max={50000}
                 step={500}
+
                 onValueChange={(value) => updateFormData ({
 </Slider>"
               <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;"
@@ -355,11 +360,13 @@ interface BudgetStepProps {;
 </div>"
               <Label className="text - zion - slate - light mb - 4 block">;"
 </Label>
+
               </Label>;
               <Slider;
                 default_value={[form_data.budget.amount]}
                 max={500}
                 step={5}
+
                 onValueChange={(value) => updateFormData ({
 </Slider>"
               <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;"
@@ -374,11 +381,13 @@ interface BudgetStepProps {;
 </div>"
                 <Label className="text - zion - slate - light mb - 4 block">;"
 </Label>
+
                 </Label>;
                 <Slider;
                   default_value={[form_data.budget.amount]}
                   max={50000}
                   step={500}
+
                   onValueChange={(value) => {
 </Slider>"
                 <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;"
@@ -391,23 +400,27 @@ interface BudgetStepProps {;
 </div>"
                 <Label className="text - zion - slate - light mb - 4 block">;"
 </Label>
+
                 </Label>;
                 <Slider;
                   default_value={[form_data.budget.max_amount || form_data.budget.amount + 5000]}
                   min={form_data.budget.amount}
                   max={100000}
                   step={500}
+
                   onValueChange={(value) => updateFormData ({
 </Slider>"
                 <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;"
 </div>)
                   <span>{format_currency (form_data.budget.amount)}</span>;
                   <span>$100, 000+</span>;
+
                 </div>;
               </div>;
             </div>)}
         </div>;
       </div>;
+
     </div>);"
             <div className="mt-6 space-y-8">;"
 </div>
@@ -491,3 +504,4 @@ updateFormData: (data: Partial<QuoteFormData>) => void;
         </div>
       </div>
     </div>"
+

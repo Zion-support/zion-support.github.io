@@ -1,3 +1,4 @@
+
       'Intent classification and priority scoring'''
       'One-click reply drafts with tone controls'''
       'Auto-tagging and routing to teams'''
@@ -66,6 +67,7 @@
     customers: 120,
     rating: 4 && 4.8,
     reviews: 74,
+
   },
   {'
       'Branching logic and progress-save'''
@@ -75,6 +77,7 @@
       'Real-time charts and cohort filters'''
       'GDPR/CCPA consent and deletion tools''
     ]
+
     popular: false;,'
   icon: '📱'''
     color: 'from-emerald-600 to-teal-700'','
@@ -173,10 +176,12 @@
     real_implementation: true,'
     implementation_details: 'Rotations engine and integrations with chat tools.',''
     launch_date: '2029 - 10 - 30','
+
     customers: 32,
-    rating: 4 && 4.5,
-    reviews: 19,
+    rating: 4 && 4.5,}
+    reviews: 19}
   },
+
   {'
       'Keyword clustering and topical maps',''
       'Competitor gap analysis',''
@@ -200,10 +205,12 @@
     real_implementation: true,'
     implementation_details: 'SERP fetchers with caching and AI summarization.',''
     launch_date: '2029 - 09 - 10','
+
     customers: 95,
-    rating: 4 && 4.6,
-    reviews: 54,
+    rating: 4 && 4.6,}
+    reviews: 54}
   },
+
   {'
       'Boolean, multivariate, and JSON flags',''
       'User and cohort targeting',''
@@ -222,10 +229,12 @@
     use_cases: ['Kill switches', 'Safe migrations', 'Cohort experiments'],''
     roi: 'Reduce incident impact and deploy more frequently.',''
     competitors: ['LaunchDarkly (entry)', 'Flagsmith'],'
+
     customers: 70,
-    rating: 4 && 4.5,
-    reviews: 21,
+    rating: 4 && 4.5,}
+    reviews: 21}
   },
+
   {'
       'Tech stack detection and hiring signals',''
       'CSV bulk processing and API',''
@@ -314,9 +323,10 @@
     real_implementation: true,'
     implementation_details: 'Detectors with policy engine and audit export.',''
     launch_date: '2029 - 12 - 03','
+
     customers: 22,
-    rating: 4 && 4.3,
-    reviews: 12,
+    rating: 4 && 4.3,}
+    reviews: 12}
   },
   {'
       'Goal trees and KPI ownership'''
@@ -326,6 +336,7 @@
       'Shareable links with permissions'''
       'Annotations and change logs''
     ]
+
     popular: false;,'
   icon: '📊'''
     color: 'from-green-600 to-emerald-700'','
@@ -383,11 +394,13 @@
     real_implementation: true,'
     implementation_details: 'Metrics ingestion and templated reporting.',''
     launch_date: '2029 - 10 - 20','
+
     customers: 36,
     rating: 4 && 4.4,
-    reviews: 16,
+    reviews: 16;
 ];	{
 ];	{
+
 const contact = {'
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
 	address: '364 E Main St STE 1008 Middletown DE 19709',''
@@ -766,15 +779,13 @@ export const real2029Q4Additions: RealMarketService[] = [
   realImplementation: true;'
 		implementationDetails: 'Metrics ingestion and templated reporting.';','
   launchDate: '2029-10-20';'
+
 		customers: 36;
 ];
 ;
-
 	}
 ];
 
-	}
-];
 
 '
   id: 'ai - email - triage - copilot';','
@@ -809,9 +820,10 @@ export const real2029Q4Additions: RealMarketService[] = [
   real_implementation: true,'
   implementation_details: 'Shared inbox connectors, rules engine, and prompt templates with human - in - the - loop.';''
   launch_date: '2029 - 10 - 12';',
+
   customers: 120;
-  rating: 4.8,
-  reviews: 74;
+  rating: 4.8,}
+  reviews: 74;}
 }
 {'
   id: 'mobile - survey - studio';','
@@ -823,6 +835,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   features: [;'
   'Branching logic and progress - save_question bank: CSAT, NPS, PMF, churn_anonymous or identified responses_webhooks and Zapier integration_real - time charts and cohort filtersGDPR / CCPA consent and deletion tools';']
   ];
+
   popular: false;,'
   icon: '📱';''
   color: 'from - emerald - 600 to - teal - 700';','
@@ -849,6 +862,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   customers: 60;,
   rating: 4.6,
   reviews: 33;
+
 }
 {'
   id: 'event - ops - dashboard';','
@@ -860,6 +874,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   features: [;'
   'QR tickets and check - in app_speaker / sponsor asset management_automated reminders and WhatsApp / SMS alerts_feedback / NPS post - event forms_budget tracker and P & L exports_embeddable agendas and live updates';']
   ];
+
   popular: true;,'
   icon: '🎟️';''
   color: 'from - purple - 600 to - pink - 600';','
@@ -886,6 +901,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   customers: 48;,
   rating: 4.7,
   reviews: 29;
+
 }
 {'
   id: 'oncall - scheduler - pro';','
@@ -897,6 +913,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   features: [;'
   'Flexible rotations and override rules_escalation policies and schedules_slack / Teams integration and on - call handoffs_vacation / holiday calendars_incident reports and postmortem templatesSLO and error budget reminders';']
   ];
+
   popular: false;,'
   icon: '📆';''
   color: 'from - indigo - 600 to - blue - 700';','
@@ -923,6 +940,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   customers: 32;,
   rating: 4.5,
   reviews: 19;
+
 }
 {'
   id: 'seo - content - optimizer - pro';','
@@ -934,6 +952,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   features: [;'
   'Keyword clustering and topical maps_competitor gap analysis_outline and brief generation_on - page audit and schema suggestions_rank tracking and change logsCMS export (Markdown / Headless)';']
   ];
+
   popular: true;,'
   icon: '🔎';''
   color: 'from - amber - 600 to - orange - 700';','
@@ -960,6 +979,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   customers: 95;,
   rating: 4.6,
   reviews: 54;
+
 }
 {'
   id: 'feature - flags - lite';','
@@ -971,6 +991,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   features: [;'
   'Boolean, multivariate, and JSON flags_user and cohort targeting_gradual rollouts and percentage splits_audit logs and environment scoping_server and client SDKsWebhook notifications';']
   ];
+
   popular: false;,'
   icon: '🚩';''
   color: 'from - slate - 700 to - gray - 800';','
@@ -997,6 +1018,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   customers: 70;,
   rating: 4.5,
   reviews: 21;
+
 }
 {'
   id: 'sales - lead - enrichment';','
@@ -1008,6 +1030,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   features: [;'
   'Company / person enrich via email or domain_tech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflows_confidence scores and data provenance_usage - based pricing tiers';']
   ];
+
   popular: true;,'
   icon: '🧭';''
   color: 'from - sky - 600 to - blue - 700';','
@@ -1034,6 +1057,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   customers: 40;,
   rating: 4.4,
   reviews: 17;
+
 }
 {'
   id: 'invoice - ocr - processor';','
@@ -1045,6 +1069,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   features: [;'
   'High - accuracy OCR and field mapping_line item extraction and taxes_validation UI and review queues_export to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies';']
   ];
+
   popular: false;,'
   icon: '🧾';''
   color: 'from - rose - 600 to - pink - 700';','
@@ -1071,6 +1096,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   customers: 27;,
   rating: 4.5,
   reviews: 14;
+
 }
 {'
   id: 'rpa - browser - automation';','
@@ -1082,6 +1108,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   features: [;'
   'Workflow editor and step recorder_retry logic and backoff policies_captcha solving hooks and proxies_file storage and PII redaction_job queue, metrics, and alerts_human approval steps';']
   ];
+
   popular: true;,'
   icon: '🤖';''
   color: 'from - fuchsia - 600 to - purple - 700';','
@@ -1145,6 +1172,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   customers: 22;,
   rating: 4.3,
   reviews: 12;
+
 }
 {'
   id: 'kpi - scorecards - studio';','
@@ -1156,6 +1184,9 @@ export const real2029Q4Additions: RealMarketService[] = [
   features: [;'
   'Goal trees and KPI ownership_weekly executive summaries_alerting on thresholds and trends_warehouse connectors_shareable links with permissions_annotations and change logs';']
   ];
+	}
+];	}
+
   popular: false;,'
   icon: '📊';''
   color: 'from - green - 600 to - emerald - 700';','
@@ -2018,5 +2049,6 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		rating: 4.4;,
   reviews: 16;
 	}
+
 ];
 '

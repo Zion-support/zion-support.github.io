@@ -1,9 +1,12 @@
+
+import 'react';
 /*;
   Minimal React type declarations.;
   ---------------------------------------------------------------------------;
   TypeScript will prefer those and ignore this file, because paths declared in;
   `type_roots` are merged with normal type resolution.;
-*/;
+*/;declare module \"react\" {// Basic ReactElement stub (JSX trees ultimately compile into this).;
+
 
 declare module "react" {"
   // Basic ReactElement stub (JSX trees ultimately compile into this).;
@@ -33,7 +36,11 @@ declare module "react" {;"
   useMemo: typeof useMemo;
   } & Record < string, unknown>;
   export default React;
+
 }
+export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any /> = any>  {}
+}// Function Component (very trimmed - down).;
+
 
 ;
     type: T,;
@@ -83,3 +90,4 @@ declare module "react" {;"
 </T>
   } & Record<string, unknown>;
 </string>"
+

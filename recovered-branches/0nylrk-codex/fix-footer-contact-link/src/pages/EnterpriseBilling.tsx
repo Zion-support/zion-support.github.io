@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { Header } from "@/components/Header";""
 import { Footer } from "@/components/Footer";""
@@ -40,17 +41,22 @@ export default function EnterpriseBilling() {
       <SEO;"
         title="Enterprise Billing - Zion AI Marketplace";""
         description="Manage your subscription, view invoice history, and download billing statements.";"
+
       />;
 </SEO>
       <Header />;
+
 </Header>"
       <main className="min - h-screen bg - background">;"
 </main>
+
         <BillingDashboard />;
 </BillingDashboard>
       </main>;
       <Footer />;
+
 </Footer>
     </ProtectedRoute>);"
 }Enterprise Billing - Zion AI Marketplace"description=" Manage your subscription, view invoice history, and download billing statements."/> <Header /> <main className=" min-h-screen bg-background" > <BillingDashboard /> </main> <Footer /> </ProtectedRoute>)"
 </Header>"
+

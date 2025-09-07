@@ -1,7 +1,19 @@
-export function MobileConversationList({
 
-  conversations,
-  activeConversation,
+export function MobileConversationList() {return (<div className='space-y-4' />;
+      <div className='px-4 mb-2' />;
+        <div className='relative' />;
+          <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground' />;
+          <Input placeholder='Search messages...' className='pl-9' />;
+        </div>;
+      </div>;}
+import React from 'react';}
+import { Card  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
+import { Search  } from 'lucide-react';
+import { Input  } from '@/components/ui/input';
+import { cn  } from '@/lib/utils';
+
 
   onSelectConversation;)
 }: MobileConversationListProps) {
@@ -190,11 +202,22 @@ export function MobileConversationList({
                   </p>;'
                     <Badge className='ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full'>                      {conversation.unread_count}                    <Badge className="ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full">;"
 </Badge>)
+
                     </Badge>)}
                 </div>;
               </div>;
             </div>;"
+
             <div className='border - t border - border ml - 12'></div>          </div>            <div className="border - t border - border ml - 12"></div>;"
+
           </div>))}
+      </div>
+    </div>
+  );
+}<div className='border-t border-border ml-12' /></div>;
+          </div>;
+        ))}
       </div>;
+
     </div>);"
+

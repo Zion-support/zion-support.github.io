@@ -1,3 +1,4 @@
+
 import { useJobApplications } from "@/hooks/useJobApplications",""
 import { useResume } from "@/hooks/useResume",""
 import { useAuth } from "@/hooks/useAuth",""
@@ -399,3 +400,4 @@ if ( {) {
 }</SelectContent> </Select> > Create Resume </Button> </div>) ";""
 }</div> <div> <Label html_for="cv_upload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify - end gap - 2" > <Button <> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Submitting... </>) : ("Submit Application");"
 }</Button> </div> </form>);"
+

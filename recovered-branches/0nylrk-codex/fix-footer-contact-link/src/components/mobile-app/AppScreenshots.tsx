@@ -2,6 +2,7 @@
 
 
 
+
 // These would be replaced with actual screenshots;
 import React, { useRef } from "react";""
 import {ChevronLeft, ChevronRight} from "lucide-react";""
@@ -56,10 +57,12 @@ export const AppScreenshots: React.FC = () => {;
 </Button>"
             <ChevronRight className="h-6 w-6" />"
 </ChevronRight>
+
           </Button>
         </div>
       </div>
     </section>
+
   const scrollContainerRef = useRef<HTMLDivElement>(null),;
 </HTMLDivElement>"
     <section className="py-16 bg-zion-blue-dark">;"
@@ -100,9 +103,11 @@ export const AppScreenshots: React.FC = () => {;
   }
   return ("
                   className="w-full h-full object-cover""
+
                 />;
 </img>
               </div>;
+
           </div>;
           <Button;"
             variant="ghost"""
@@ -112,10 +117,12 @@ export const AppScreenshots: React.FC = () => {;
 </Button>"
             <ChevronRight className="h-6 w-6" />;"
 </ChevronRight>
+
           </Button>;
         </div>;
       </div>;
     </section>;
+
   const scrollContainerRef = useRef < HTMLDivElement>(null);
 ;"
   const scroll = (direction: "left" | "right") =>: any {"
@@ -170,10 +177,12 @@ if ( {) {
                   src={screenshot.src}
                   alt={screenshot.alt}"
                   className="w - full h - full object - cover";"
+
                 />;
 </img>
               </div>))}
           </div>;
+
           <Button;"
             variant="ghost";""
             size="icon";""
@@ -182,10 +191,12 @@ if ( {) {
 </Button>"
             <ChevronRight className="h - 6 w - 6" />;"
 </ChevronRight>
+
           </Button>;
         </div>;
       </div>;
     </section>);
+
           <div ;
             ref={scrollContainerRef}"
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory";""
@@ -225,3 +236,4 @@ Take a visual tour through the Zion app's intuitive interface. </p> </div> <div 
   screenshot.id;)"
 }className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30" > <img /> </div>) )""
 }</div> <Button > <ChevronRight className="h-6 w-6" /> </Button> </div> </div> </section>)""
+

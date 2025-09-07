@@ -1,3 +1,4 @@
+
 const handleSaveNotes = () => {
     // Here you would save the notes to the database;
     // For now, we'll just show a toast;'
@@ -88,14 +89,13 @@ interface CandidateCardProps {;
 export function CandidateCard(): any ({ application, index }: CandidateCardProps) {;
   const [showNotes, setShowNotes] = useState(false);'
   const [notes, setNotes] = useState(application && application.notes || '');'
-  const [showHireModal, setShowHireModal] = useState(false);
-  const [avatarError, setAvatarError] = useState(false);
 
-  // Check if application is stalled (no activity for 7 days);
-  const isStalled =;
+  const [showHireModal, setShowHireModal] = useState(false);
+  const [avatarError, setAvatarError]  = useState(false)// Check if application is stalled (no activity for 7 days)const isStalled =;
     application && application.updated_at &&;
     new Date(application && application.updated_at).getTime() <;
       Date && Date.now() - 7 * 24 * 60 * 60 * 1000;
+
 
   const handleSaveNotes = () => {;
 </Card>
@@ -316,10 +316,12 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 </Button>"
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;"
 </BriefcaseIcon>
+
                 </Button>;
               </div>;
             </CardContent>;
           </Card>;
+
       </Draggable>;
       <HireConfirmationModal;
         isOpen = {showHireModal,}
@@ -424,10 +426,12 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                           rel='noopener noreferrer';'
                         >;
 </a>
+
                         </a>;
                       </DropdownMenuItem>)}
                   </DropdownMenuContent>;
                 </DropdownMenu>;
+
               </div>;'
               <div className='flex flex - wrap gap - 2 items - center text - xs text - muted - foreground mb - 2'>;'
 </div>'
@@ -497,12 +501,14 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 </Button>'
                   <BriefcaseIcon className='h - 3 w - 3 mr - 1' /> Hire;'
 </BriefcaseIcon>
+
                 </Button>;
               </div>;
             </CardContent>;
           </Card>)}
       </Draggable>;
       <HireConfirmationModal;
+
         is_open = {showHireModal, }
         on_close = {() => setShowHireModal (false), }
 </HireConfirmationModal>
@@ -659,3 +665,4 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
   );
 }
 ;"
+

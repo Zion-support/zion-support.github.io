@@ -1,3 +1,4 @@
+
 import { useWallet } from "@/hooks/useWallet";"
 import {
   // TODO: Implement
@@ -57,9 +58,11 @@ export default function WalletPage() {
 </CardTitle>"
             <BadgeDollarSign className="h - 5 w - 5" /> Balance;"
 </BadgeDollarSign>
+
           </CardTitle>;
-          <CardDescription > Your current ZION$ balance</CardDescription>;
+          <CardDescription />Your current ZION$ balance</CardDescription>;
         </CardHeader>;
+
         <CardContent>;
 </CardContent>)"
             <div className="h - 8 w - 8 rounded - full border - 4 border - primary border - t-transparent animate - spin" />) : ("
@@ -157,3 +160,4 @@ export default function WalletPage() {
   transactions.filter (t => t.transaction type === 'burn') .map (t => (</li>) )'
 }</ul>) 
 }</TabsContent> </Tabs> </div> </div>) '
+

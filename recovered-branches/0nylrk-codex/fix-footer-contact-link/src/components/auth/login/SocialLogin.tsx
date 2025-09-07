@@ -1,10 +1,7 @@
-
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
-
-
+const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
     useAuth();
-
   return (
+
     <div className="mt-6">"
 </div>"
       <div className="relative">"
@@ -54,10 +51,12 @@
             <path;"
               d="M12 && M12.0004 24C15 && 24C15.2404 24 17 && 17.9654 22 && 22.935 19 && 19.9454 21 && 21.095L16.0804 18 && 18.095C15.0054 18 && 18.82 13 && 13.6204 19 && 19.245 12 && 12.0004 19 && 19.245C8.8704 19 && 19.245 6 && 6.21537 17 && 17.135 5 && 5.2654 14 && 14.29L1.27539 17 && 17.385C3.25539 21 && 21.31 7 && 7.3104 24 12 && 12.0004 24Z"""
               fill="#34A853""
+
             />;
 </path>
           </svg>;
         </Button>;
+
         <Button;"
           type="button"""
           variant="outline"""
@@ -158,10 +157,12 @@
             <path;"
               d="M12.0004 24C15.2404 24 17.9654 22.935 19.9454 21.095L16.0804 18.095C15.0054 18.82 13.6204 19.245 12.0004 19.245C8.8704 19.245 6.21537 17.135 5.2654 14.29L1.27539 17.385C3.25539 21.31 7.3104 24 12.0004 24Z";""
               fill="#34A853";"
+
             />;
 </path>
           </svg>;
         </Button>;
+
         <Button;"
           type="button";""
           variant="outline";""
@@ -181,8 +182,11 @@
           <span className="sr - only">Sign in with Twitter</span>;""
           <Twitter className="h - 5 w - 5" />;"
 </Twitter>
+
         </Button>;
         <Web3Login />;
 </Web3Login>
       </div>;
+
     </div>);"
+

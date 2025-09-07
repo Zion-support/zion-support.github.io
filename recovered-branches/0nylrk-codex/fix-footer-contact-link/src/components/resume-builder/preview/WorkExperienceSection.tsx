@@ -1,4 +1,5 @@
 
+
 import {WorkExperience} from '@/types / resume';''
 import {format} from 'date - fns';''
 import {WorkExperience} from '@/types/resume';''
@@ -27,17 +28,15 @@ interface WorkExperienceSectionProps {
   // TODO: Implement
 }
   work_experience: WorkExperience[];
+
 }
-
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
-
-
-    if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
-    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
-    return dateB.getTime() - dateA.getTime()
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);}
+    return dateB.getTime() - dateA.getTime()}
   });
+
   const formatDate = (date: Date | string | undefined) => {'
     if (!date) return ''''
     if (typeof date === 'string') {''
@@ -46,6 +45,7 @@ import { WorkExperience } from '@/types/resume',;''
 import { format } from 'date-fns',;'
 interface WorkExperienceSectionProps {;
   workExperience: WorkExperience[];
+
 }
 ;
 export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {;
@@ -54,9 +54,10 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     if (a.is_current && !b.is_current) return -1,;
     if (!a.is_current && b.is_current) return 1,;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date),;
-    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
-    return dateB.getTime() - dateA.getTime();
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;}
+    return dateB.getTime() - dateA.getTime();}
   }),;
+
   const formatDate = (date: Date | string | undefined) => {;'
     if (!date) return '',;''
     if (typeof date === 'string') {;''
@@ -123,3 +124,4 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
           </div>
       </div>
     </div>"
+

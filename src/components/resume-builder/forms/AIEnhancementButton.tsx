@@ -1,3 +1,4 @@
+
 export function AIEnhancementButton({
   currentContent,
   enhancementType,
@@ -59,10 +60,12 @@ interface AIEnhancementButtonProps {
     | 'work - description';''
     | 'skill - categorization';''
     | 'general';'
+
   context?: string;
   on_enhanced: (enhanced_content: string) => void;
   button_text?: string;
   class_name?: string;
+
 export /**
  * AIEnhancementButton - Function description;
  */
@@ -89,3 +92,4 @@ if ( {) {
       on_enhanced (enhanced_content);
     }
 '
+

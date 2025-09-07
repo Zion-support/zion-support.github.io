@@ -1,4 +1,5 @@
 interface ApplicationsTableProps {
+
   // TODO: Implement
 }
   applications: JobApplication[],
@@ -255,6 +256,7 @@ interface ApplicationsTableProps {;
                     </ClickableBadge>;
                     <ApplicationActions;
 
+
                       application={application}
                       processing_id={processing_id}
                       onViewApplication={onViewApplication}
@@ -266,6 +268,7 @@ interface ApplicationsTableProps {;
           </TableBody>;
         </Table>;
       </div>;
+
       <HireConfirmationModal;
         isOpen={hireModalOpen}
         onClose={() => setHireModalOpen(false)}
@@ -274,18 +277,26 @@ interface ApplicationsTableProps {;
   );
 }
 
+
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
+isOpen={hireModalOpen}
+        onClose={() = /> setHireModalOpen(false)}
+        application={selectedApplication |undefined}
+        onConfirm={handleHireConfirmed}
+      <HireConfirmationModal;
         isOpen={hireModalOpen}
+
         onClose={() => setHireModalOpen(false)}
 </HireConfirmationModal>
+
     </>;
-              </TableRow>))}
           </TableBody>;
         </Table>;
       </div>;
       <HireConfirmationModal;
         is_open={hireModalOpen}
+
         on_close={() => setHireModalOpen (false)}
 </HireConfirmationModal>
     </>);
@@ -328,3 +339,4 @@ interface ApplicationsTableProps {;
   )
 }
 "
+

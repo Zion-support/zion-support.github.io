@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";""
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
 import {Button} from "@/components/ui/button";""
@@ -203,6 +204,7 @@ function FeatureCTAs() {
                     <span > Explore {feature.title}</span>;"
                     <ArrowRight className="h - 4 w - 4" />;"
 </ArrowRight>
+
                   </Link>;
                 </Button>;
               </CardFooter>;
@@ -210,6 +212,7 @@ function FeatureCTAs() {
         </div>;
       </div>;
     </section>);
+
 }</Badge>) 
 }</div> </Link> </Button> </CardFooter> </Card>) ) 
 }</div> </div> </section>) "
@@ -240,3 +243,4 @@ function FeatureCTAs() {
         </div>
       </div>
     </section>]"
+

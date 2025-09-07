@@ -1,4 +1,8 @@
 
+{}
+          'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',      {}
+          'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',import { ProfileData } from '@/types/profile';
+
 
       {
 
@@ -72,3 +76,4 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
 </string>
 export const MOCK_PROFILES: Record<string ProfileData> = {;
 </string>'
+

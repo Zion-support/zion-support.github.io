@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";""
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
 import {Badge} from "@/components/ui/badge";""
@@ -179,10 +180,12 @@ import {Button} from "@/components/ui/button";"
 </div>"
                 <Button size="sm" variant="outline">View Profile</Button>;""
                 <Button size="sm">Contact</Button>;"
+
               </div>;
             </div>;
         </div>;
       </CardContent>;
+
     </Card>;"
   case "interviewing": return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;""
 case "hired": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>;""
@@ -208,6 +211,7 @@ return (<Card> <CardHeader> <div className="flex items-center justify-between" >
 </div>"
                 <Button size="sm" variant="outline">View Profile</Button>""
                 <Button size="sm">Contact</Button>"
+
               </div>
             </div>
         </div>
@@ -215,4 +219,6 @@ return (<Card> <CardHeader> <div className="flex items-center justify-between" >
     </Card>
         </div>;
       </CardContent>;
+
     </Card>;]"
+

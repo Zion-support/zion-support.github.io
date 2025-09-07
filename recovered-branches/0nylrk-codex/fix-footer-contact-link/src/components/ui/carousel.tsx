@@ -1,5 +1,6 @@
 
 
+
 import * as React from "react"""
 import useEmblaCarousel from "embla-carousel-react"""
 import { ArrowLeft, ArrowRight } from "lucide-react"""
@@ -39,6 +40,7 @@ const Carousel = React.forwardRef<
 </HTMLDivElement>
       (event: React.KeyboardEvent<HTMLDivElement>) => {
 </HTMLDivElement>
+
 type CarouselApi = ReturnType < typeof useEmblaCarousel>[1];
 type UseCarouselParameters = Parameters < typeof useEmblaCarousel>;
 type CarouselOptions = UseCarouselParameters[0];
@@ -46,17 +48,19 @@ type CarouselPlugin = UseCarouselParameters[1];
 type CarouselProps = {
   opts?: CarouselOptions;
   plugins?: CarouselPlugin;
-  orientation?: &quot;horizontal & quot; | &quot;vertical & quot;
-  set_api?: (api: CarouselApi) => void;
+  orientation?: &quot;horizontal & quot; | &quot;vertical & quot;}
+  set_api?: (api: CarouselApi) => void;}
 }
 type CarouselContextProps = {
   carousel_ref: ReturnType < typeof useEmblaCarousel>[0];,
   api: ReturnType < typeof useEmblaCarousel>[1];
+
   scroll_prev: () => void;,
   scroll_next: () => void;
   canScrollPrev: boolean;,
   canScrollNext: boolean;
   }
+
   return context as CarouselContextProps;
 }
 const Carousel = React.forward_ref<;
@@ -70,6 +74,7 @@ const Carousel = React.forward_ref<;
       set_api,
       plugins,
       class_name,
+
       children,
       ...props;
     },)
@@ -78,11 +83,13 @@ const Carousel = React.forward_ref<;
       {
         ...opts,
         axis: orientation === &quot;horizontal & quot; ? &quot;x & quot; : &quot;y & quot;},)
+
       plugins);
     const [canScrollPrev, setCanScrollPrev] = React.useState (false);
     const [canScrollNext, setCanScrollNext] = React.useState (false);
     const on_select = React.useCallback ((api: CarouselApi) => {
       // Check condition;
+
 if ( {) {
   $2;
 }
@@ -94,24 +101,28 @@ if ( {) {
 
       return () => {"
         api?.off("select", onSelect)"
+
       }
       set_api (api);
     }, [api, set_api]);
     React.useEffect (() => {
       // Check condition;
+
 if ( {) {
   $2;
+
 }
         return;
       }
 on_select (api);
       api.on (&quot;re_init & quot;, on_select);
       api.on (&quot;select & quot;, on_select);
-      return () => {
-        api?.off (&quot;select & quot;, on_select);
+      return () => {}
+        api?.off (&quot;select & quot;, on_select);}
       }
     return (
       <CarouselContext.Provider;
+
         value={{
 
           carousel_ref,
@@ -149,25 +160,29 @@ on_select (api);
 )
 "
 Carousel.displayName = "Carousel""
+
 className={cn (&quot;relative & quot;, class_name)}
           role=&quot;region & quot;
-          aria - roledescription=&quot;carousel & quot;
+          aria - roledescription=&quot;carousel & quot;          className={cn(\"relative\", className)}
+          role=\"region\"
+          aria-roledescription=\"carousel\"
           {...props}
-        >;
-          {children}
-        </div>;
+         />;
+          {children}        </div>;
       </CarouselContext.Provider>);
   }
+
 const CarouselContent = React.forwardRef<
   HTMLDivElement;
   React.HTMLAttributes<HTMLDivElement>
 </HTMLDivElement>
     <div ref={carousel_ref} className=&quot;overflow - hidden & quot;>;
 </div>
+
       <div;
         ref={ref}
-
         className={cn(
+
 "
           "flex",""
           orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col","
@@ -181,14 +196,16 @@ const CarouselItem = React.forwardRef<
   HTMLDivElement;
   React.HTMLAttributes<HTMLDivElement>
 </HTMLDivElement>
+
     </div>);
 const CarouselItem = React.forward_ref<;
   HTMLDivElement,
   React.HTMLAttributes < HTMLDivElement>;
->(({ class_name, ...props }, ref) => {
+>(({ class_name, ...props }, ref) => {}
   const { orientation } = use_carousel ();
   return (
     <div;
+
       ref={ref}
 "
       role="group"""
@@ -198,18 +215,21 @@ const CarouselItem = React.forward_ref<;
         "min-w-0 shrink-0 grow-0 basis-full",""
         orientation === "horizontal" ? "pl-4" : "pt-4","
         className;)
+
       )}
       {...props}
     />
 </div>
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement;
+
   React.ComponentProps<typeof Button>
 </typeof>
+
 const CarouselPrevious = React.forward_ref<;
   HTMLButtonElement,
   React.ComponentProps < typeof Button>;
->(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {
+>(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {}
   const { orientation, scroll_prev, canScrollPrev } = use_carousel ();
   return (
     <div;
@@ -219,9 +239,9 @@ const CarouselPrevious = React.forward_ref<;
       ref={ref}
       variant={variant}
       size={size}
-
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement;
+
   React.ComponentProps<typeof Button>
 </div>
     <Button;
@@ -242,10 +262,25 @@ const CarouselPrevious = React.forwardRef<
           ? "-left-12 top-1/2 -translate-y-1/2";""
           :"-top-12 left-1/2 -translate-x-1/2 rotate-90",;"
         className;)
+
       )}
       disabled={!canScrollPrev}
       on_click={scroll_prev}
       {...props}
+      disabled={!canScrollPrev}
+      on_click={scroll_prev}
+      {...props}
+    </Button />
+  )
+})
+CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
+    >
+      <ArrowLeft className=\"h-4 w-4\" />
+      <span className=\"sr-only\" />Previous slide</span>
+  )
+})
+CarouselPrevious.displayName = \"CarouselPrevious\"
+
 
 
 
@@ -296,13 +331,14 @@ const CarouselNext = React.forward_ref<;
           :"-bottom-12 left-1/2 -translate-x-1/2 rotate-90",;"
         className;)
       )}
+
       disabled={!canScrollNext}
       on_click={scroll_next}
       {...props}
-
 >;
 </Button>
       <ArrowRight className=&quot;h - 4 w - 4&quot; />;
+
 </ArrowRight>
       <span className=&quot;sr - only & quot;>Next slide</span>;
     </Button>);
@@ -318,3 +354,4 @@ const CarouselNext = React.forward_ref<;
 </ArrowRight>"
       <span className="sr-only">Next slide</span>"
     </Button>"
+

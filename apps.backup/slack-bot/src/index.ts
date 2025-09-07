@@ -1,4 +1,5 @@
 
+
 import fetch from 'node - fetch';'
 dotenv.config (),'
 const api_base = process.env.API_ORIGIN || 'http: //localhost:4000';'
@@ -79,14 +80,16 @@ if ( {) {
     await respond ({ response_type: 'ephemeral', text: help_text () });'
   } catch (err: any) {'
     await respond ({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });'
+
   }
 }),
 (async () => {
   const port = Number (process.env.SLACK_PORT || 3001),
-  await app.start (port),
-  // eslint - disable - next - line no - console;
+  await app.start (port),}
+  // eslint - disable - next - line no - console;}
   console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })(),
+
 
 
 
@@ -157,12 +160,14 @@ app.command('/zion', async ({ command, ack, respond }) => {;'
     await respond({ response_type: 'ephemeral', text: helpText() });'
   } catch (err: any) {;'
     await respond({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });'
+
   }
 })
 (async () => {
 
   const port = Number(process.env.SLACK_PORT || 3001),
   await app.start(port),
+
   // eslint-disable-next-line no-console;'
 import { App } from '@slack/bolt',;''
 import dotenv from 'dotenv',;''
@@ -234,3 +239,4 @@ app.command('/zion', async ({ command, ack, respond }) => {;'
 (async () => {'
 import { App } from '@slack / bolt';''
 import dotenv from 'dotenv';''
+

@@ -1,4 +1,5 @@
 
+
 import { render, screen } from '@testing - library / react';''
 import WalletPage from '@/pages / Wallet';''
 import { vi } from 'vitest';''
@@ -17,3 +18,4 @@ describe ('WalletPage', () => {''
 </WalletPage>
     render(<WalletPage />);
 </WalletPage>'
+

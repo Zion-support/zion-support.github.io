@@ -1,22 +1,17 @@
+export type SitemapItem = {;
+
+
 
 // Define the types for our sitemap structure;
 
 export type SitemapItem = {
-
-
 export type SitemapItem = {;
-
-
-// Define the types for our sitemap structure;
-export type SitemapItem = {
-export type SitemapItem = {;
-
-
 export type SitemapItem = {;
 export type SitemapItem = {
   path: string;,
   label: string;
   description?: string;
+
   priority?: number;
   change_freq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';'
   lastmod?: string;
@@ -28,6 +23,7 @@ export type SitemapItem = {
   required_auth?: boolean;'
   required_roles?: Array<'creator' | 'job_seeker' | 'employer' | 'buyer' | 'admin'>,'
   children?: SitemapItem[];
+
 }
 ;
 // Current date for lastmod;'
@@ -35,6 +31,7 @@ const current_date = '2025 - 05 - 15';'
 ;
 // Public Pages - Accessible to all users;
 export const public_pages: SitemapItem[] = [;
+
   {'
     path: '/';','
   label: 'Home';''
@@ -608,6 +605,7 @@ export const dynamicPaths = {;'
 // The complete sitemap;
 export const completeSitemap: SitemapItem[] = []
 export const completeSitemap: SitemapItem[] = [;
+
   ...publicPages;
   ...authPages;
   ...talentRoutes;
@@ -616,6 +614,7 @@ export const completeSitemap: SitemapItem[] = [;
   ...adminRoutes]
 // Helper function to get appropriate routes based on user role;
 export const getAccessibleRoutes = (
+
   isAuthenticated: boolean;'
   userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null;')
 ) => {
@@ -1073,3 +1072,4 @@ if ( {) {
   return accessibleRoutes;
 };
 '
+

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';''
 import { Button } from '@/components/ui/button';'
 import {;
@@ -161,7 +162,15 @@ interface InterviewRequestFormProps {
   talent: TalentProfile,)
   onClose: () => void,
   userDetails?: UserProfile;
+
 }
+
+const timeSlots = [
+  '09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30','20:00'];return (<Form {...form} />;
+      <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-5' />;
+        <div className='flex items-center mb-6' />;
+          <div className='flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4' />;
+            <img;
 
 
 
@@ -460,10 +469,12 @@ const formSchema = z.object({
                         date < new Date () || date > add_days (new Date (), 90);
                       }                      initial_focus;'
                       className='p - 3 pointer - events - auto';'
+
                     />;
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
+
 </FormMessage>
 
               </FormItem>)}
@@ -488,12 +499,14 @@ const formSchema = z.object({
 </FormField>
                     {time_slots.map (time => (                      <SelectItem key={time} value={time}>;
 </SelectItem>)
+
                       </SelectItem>))}
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
 </FormMessage>
               </FormItem>)}
+
         </div>;'
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;'
 </div>
@@ -620,9 +633,11 @@ const formSchema = z.object({
             }: {
 
 
+
           />;
 </FormField>
           <FormField;
+
             control={form.control}'
             name="platform"")"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => ("
@@ -705,10 +720,12 @@ const formSchema = z.object({
 </FormControl>
                   <Input;'
                     placeholder={`Add your ${form.watch ('platform')} link here`}'
+
                     {...field}
                   />;
 </Input>
                 </FormControl>;
+
                 <FormMessage />;
 </FormMessage>
         </div>;
@@ -850,3 +867,4 @@ const formSchema = z.object({
 }<FormField <FormItem> <FormLabel > Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>);
 </FormField>
 }/> </Button> </div> </form> </Form>);'
+

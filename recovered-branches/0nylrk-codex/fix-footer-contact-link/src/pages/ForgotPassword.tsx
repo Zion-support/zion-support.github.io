@@ -2,6 +2,7 @@
 
 
 
+
 import { useState } from "react",""
 import { Link } from "react-router-dom",""
 import { useForm, type UseFormReturn } from "react-hook-form",""
@@ -11,12 +12,14 @@ import { Mail } from "lucide-react",""
 import { useAuth } from "@/hooks/useAuth",""
 import { Button } from "@/components/ui/button";""
 import { Input } from "@/components/ui/input";"
+
 import {
   // TODO: Implement
 }
   Form;
   FormControl;
   FormField;
+
   FormItem;
   FormLabel;"
   FormMessage} from "@/components/ui/form",""
@@ -24,12 +27,14 @@ import { Header } from "@/components/Header";""
 import { Footer } from "@/components/Footer";""
 import { Button } from "@/components/ui/button",""
 import { Input } from "@/components/ui/input","
+
 import {
   // TODO: Implement
 }
   Form,
   FormControl,
   FormField,
+
   FormItem,
   FormLabel,"
   FormMessage} from "@/components/ui/form",""
@@ -322,11 +327,13 @@ type ForgotPasswordFormValues = z.infer < typeof forgotPasswordSchema>;
 "
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light""
                       >
+
                         Back to login;
                       </Link>
                     </div>
                   </form>
                 </Form>
+
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,;
 </typeof>"
       email: ""}}) as UseFormReturn<ForgotPasswordFormValues>,;"
@@ -395,3 +402,4 @@ return (<> <Header /> <div className="flex min-h-screen bg-zion-blue"> <div clas
 }</div> </div> </div> <div className="hidden lg: block relative w-0 flex-1"> <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80"> <div className="flex flex-col justify-center items-center h-full px-8"> <div className="max-w-md text-center"> <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3> <p className="text-lg text-white/80"> We'll help you get back into your account so you can continue your journey in the Zion marketplace. </p> </div> </div> </div> </div> </div> <Footer /> </>)'
 }
 '
+

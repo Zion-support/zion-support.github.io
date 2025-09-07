@@ -1,3 +1,4 @@
+
 import React from 'react';''
 import { motion } from 'framer-motion';''
 import MainLayout from '../components/layout/MainLayout';'
@@ -34,3 +35,4 @@ export default function CookiesPage() {
 <li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;"
       </div>;
     </UltraAdvancedFuturisticBackground>);"
+

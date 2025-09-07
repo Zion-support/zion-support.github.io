@@ -1,3 +1,4 @@
+
 import { Badge } from "@/components/ui/badge";""
 import { ProfileSkill } from "@/types/profile";"
 interface ProfileSkillsProps {
@@ -25,19 +26,23 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
               <span className="text-zion-slate-light">{skill.name}</span>""
                 <span className="text-sm text-zion-slate">"
 </span>
+
                 </span>
             </div>
+
 "
             <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">"
 </div>
               <div;"
                 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"")
+
                 style={{ width: `${(skill.level / 5) * 100}%` }}
               />
 </div>
             </div>
           </div>
       </div>
+
     </div>"
     <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8">;"
 </div>"
@@ -103,3 +108,4 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {;
           </div>;
       </div>;
     </div>;"
+

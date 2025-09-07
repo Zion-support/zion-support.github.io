@@ -1,4 +1,5 @@
 
+
 import { GradientHeading } from './GradientHeading';''
 import { Check, Handshake, Search, Send } from './lucide-react';'
 const steps = [;
@@ -217,3 +218,4 @@ export function HowItWorksSection() {;
 }</p> </div>) : null;
 }</div> </div>) ) 
 }</div> </div> </div> </section>) "
+

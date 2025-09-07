@@ -1,5 +1,6 @@
 
 
+
 import React, { useState, useEffect } from './react';''
 import { Button  } from '@/components / ui / button';''
 import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';''
@@ -251,12 +252,14 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;'
 
 
         <SelectResumeSection;
+
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
           handleResumeSelect={handleResumeSelect}
           handleDownloadResume={handleDownloadResume}
           isLoading={isLoading}
         />;
+
 </SelectResumeSection>
         <UploadSection;'
       {selectedOption === "upload" && ("
@@ -266,10 +269,12 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;'
         <UploadSection;
 
 
+
           customFile={customFile}
           onFileUpload={handleFileUpload}
           customFile={customFile}
           onFileUpload={handleFileUpload}
+
       ;'
       {selectedOption === 'upload' && (;'
         <UploadSection;
@@ -363,3 +368,4 @@ return (<div className="space-y-4" > <h3 className="text-lg font-medium text-whi
 </UploadSection>'
 }> <Plus className=" h-4 w-4 mr-2" /> Generate Resume Now </Button> </div> </div>)"
 </Plus>"
+

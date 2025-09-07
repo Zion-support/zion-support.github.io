@@ -1,3 +1,4 @@
+
 export type ReferralStatus = "pending" | "completed" | "expired";"
 export interface ReferralCode {
   // TODO: Implement
@@ -5,9 +6,11 @@ export interface ReferralCode {
 export interface ReferralCode {;
 
   id: string;,
+
   user_id: string;
   code: string;,
   created_at: string;
+
   updated_at: string;
 }
 
@@ -21,6 +24,7 @@ export interface Referral {;
 export interface Referral {
   // TODO: Implement
 }
+
 export interface Referral {;
 export interface Referral {
   // TODO: Implement
@@ -35,6 +39,7 @@ export interface Referral {
   referred_user_type: string | null;
   referrer_user_type: string | null;,
   created_at: string;
+
   completed_at: string | null;,
   reward_issued: boolean;
   reward_issued_at: string | null;
@@ -61,26 +66,25 @@ export interface ReferralReward {
   amount: number | null;,
   created_at: string;
   expires_at: string | null;
+
 }
-
-
-
 export interface ReferralStats {;
+
 
 
   totalReferrals: number;,
   pendingReferrals: number;
   completedReferrals: number;,
   totalRewards: number;
-}
 
-  expires_at: string | null;
 }
-
+  totalRewards: number  expires_at: string | null;
+}
 ;
 export interface ReferralStats {;
   totalReferrals: number,;
   pendingReferrals: number,;
+
   completedReferrals: number;,
   totalRewards: number;
 }
@@ -90,3 +94,4 @@ export interface ReferralStats {;
 
 }
 "
+

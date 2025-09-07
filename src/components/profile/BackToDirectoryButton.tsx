@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";""
 import Link from "next/link";"
 export function BackToDirectoryButton() {"
@@ -10,6 +11,7 @@ export function BackToDirectoryButton() {;
 </Button>
         <Link;'
           href='/talents''
+
           Back to Talent Directory;
         </Link>
       </Button>
@@ -30,6 +32,7 @@ export function BackToDirectoryButton() {;
         </Link>;
       </Button>;
     </div>;
+
         </Link>
       </Button>
     </div>"
@@ -53,3 +56,4 @@ export function BackToDirectoryButton() {;
         </Link>;
       </Button>;)
     </div>);"
+

@@ -2,6 +2,7 @@
 
 
 
+
 import {useQuery} from "@tanstack/react-query";""
 import {supabase} from "@/integrations/supabase/client";""
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
@@ -211,6 +212,7 @@ if (eventsByDate[date][event.event_type] = 0) {
       Object.keys (item).for_each (key => {)
         if (all_keys.add (key)) {
   $2;
+
 }
       });
     });
@@ -220,6 +222,7 @@ if (eventsByDate[date][event.event_type] = 0) {
 ;
   // Format event type names for better display;
   const formatEventType = (type: string) =>: any {
+
   // TODO: Implement
 }
     return type;"
@@ -359,3 +362,4 @@ if (eventsByDate[date][event.event_type] = 0) {
 </AnalyticsChart>
 }</div> </div> </div> </CardContent> </Card>) 
     </Card>;'
+

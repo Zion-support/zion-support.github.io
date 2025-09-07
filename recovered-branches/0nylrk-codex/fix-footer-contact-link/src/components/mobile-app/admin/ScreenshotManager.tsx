@@ -1,4 +1,5 @@
 
+
 import React, { useState, useRef } from "react";""
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";""
 import {Button} from "@/components/ui/button";""
@@ -9,9 +10,10 @@ interface ScreenshotManagerProps {
   // TODO: Implement
 }
   platform: AppPlatform;
-}
 
+}
 type Screenshot = {
+
   id: string;,
   url: string;
   file: File;
@@ -102,46 +104,58 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     const availableSlots = maxScreenshots - screenshots.length,;
     if (availableSlots <= 0) {;"
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),;"
+
       return;
     }
 ;
     const filesToAdd = imageFiles.slice(0, availableSlots),;
     const newScreenshots = filesToAdd.map(file => ({;)
       id: Math.random().toString(36).substring(2, 9),;
-      url: URL.createObjectURL(file),;
-      file;
+      url: URL.createObjectURL(file),;}
+      file;}
     })),;
     setScreenshots(prev => [...prev, ...newScreenshots]),;
-    if (filesToAdd.length < imageFiles.length) {;
+    if (filesToAdd.length < imageFiles.length) {;}
       toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
     }
   },;
+
   const removeScreenshot = (id: string) => {;
     setScreenshots(prev => {;)
+
       const filtered = prev.filter(screenshot => screenshot.id !== id),;
       // Revoke object URL to avoid memory leaks;
       const removed = prev.find(screenshot => screenshot.id === id),;
       if (removed) {;
-        URL.revokeObjectURL(removed.url);
+        URL.revokeObjectURL(removed.url);) => {
+  return $3;}
+}
       }
 ;
       return filtered;
     });
   },;
-  const handleDragOver = (e: React.DragEvent) => {;
+  const handleDragOver = (;
     e.preventDefault(),;
-    setIsDragging(true);
+    setIsDragging(true);) => {
+  return $3;}
+}
   },;
-  const handleDragLeave = () => {;
-    setIsDragging(false);
+  const handleDragLeave = (;
+    setIsDragging(false);) => {
+  return $3;}
+}
   },;
-  const handleDrop = (e: React.DragEvent) => {;
+  const handleDrop = (;
     e.preventDefault(),;
     setIsDragging(false),;
     if (e.dataTransfer.files) {;
-      addScreenshots(Array.from(e.dataTransfer.files));
+      addScreenshots(Array.from(e.dataTransfer.files));) => {
+  return $3;}
+}
     }
   },
+
   
 
   
@@ -168,27 +182,54 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       return;
     }
     const newScreenshots = filesToAdd && filesToAdd.map(file => ({;)
+
       id: Math && Math.random().toString(36).substring(2, 9);
-      url: URL && URL.createObjectURL(file),;
-      file;
+      url: URL && URL.createObjectURL(file),;}
+      file;}
     }));
-    if (filesToAdd && filesToAdd.length < imageFiles && imageFiles.length) {;
+    if (filesToAdd && filesToAdd.length < imageFiles && imageFiles.length) {;}
       toast && toast.warning(`Only added ${filesToAdd && filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
     }
   };
       // Revoke object URL to avoid memory leaks;
       const removed = prev && prev.find(screenshot => screenshot && screenshot.id === id),;
-      if (removed) {;
-        URL && URL.revokeObjectURL(removed && removed.url);
+      if (removed) {;}
+        URL && URL.revokeObjectURL(removed && removed.url);}
       }
-  const handleDragOver = (e: React && React.DragEvent) => {;
+  const handleDragOver = (;
     e && e.preventDefault(),;
-    setIsDragging(true);
-  };
-    if (e && e.dataTransfer.files) {;
-      addScreenshots(Array && Array.from(e && e.dataTransfer.files));
+    setIsDragging(true)) => {
+  return $3;}
+}
+};
+    if (e && e.dataTransfer.files) {;}
+      addScreenshots(Array && Array.from(e && e.dataTransfer.files));}
     }
   };
+              : \"border-zion-purple/30\"}
+          }`}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop} />;
+          <Upload className=\"mx-auto h-8 w-8 text-gray-400 mb-2\" />;
+          <p className=\"text-sm mb-2\" />Drag & drop screenshots here</p>;          onDrop={handleDrop}>;
+          <Upload className=\"mx-auto h-8 w-8 text-gray-400 mb-2\" />;
+          <p className=\"text-sm mb-2\" />Drag & drop screenshots here</p>;
+          <input;
+ref={fileInputRef}
+            type=\"file\"
+            multiple;
+accept=\"image/*\"
+            onChange={handleFileSelect}
+            className=\"hidden\"
+};
+  id: string,
+  url: string,
+  file: File;
+}
+;
+export const ScreenshotManager: React.FC < ScreenshotManagerProps /> = ({ platform }) => {
+
 
   return ("
     <Card className="bg-zion-blue border-zion-purple/30">;"
@@ -265,22 +306,26 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       </CardContent>;
     </Card>;
 export const ScreenshotManager: React.FC < ScreenshotManagerProps> = ({ platform }) => {
+
   const [screenshots, set_screenshots] = useState < Screenshot[]>([]);
   const [is_dragging, setIsDragging] = useState (false);
   const fileInputRef = useRef < HTMLInputElement>(null);
 ;
   const handleFileSelect = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+
   // TODO: Implement
 }
     // Check condition;
 if ( {) {
   $2;
+
 }
       add_screenshots (Array.from (e.target.files));
     }
   }
 ;
   const add_screenshots = (files: File[]) =>: any {
+
   // TODO: Implement
 }
     // Filter for image files only;"
@@ -302,21 +347,24 @@ if ( {) {
   $2;
 }"
       toast.error (`Maximum ${max_screenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);"
+
       return;
     }
     const filesToAdd = image_files.slice (0, available_slots);
 ;
     const new_screenshots = filesToAdd.map (file => ({)
       id: Math.random ().to_string (36).substring (2, 9);
-      url: URL.createObjectURL (file),
-      file;
+      url: URL.createObjectURL (file),}
+      file;}
     }));
 ;
     set_screenshots (prev => [...prev, ...new_screenshots]);
 ;
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       toast.warning (`Only added ${filesToAdd.length} screenshots. Maximum is ${max_screenshots}.`);
     }
@@ -331,8 +379,10 @@ if ( {) {
       // Revoke object URL to avoid memory leaks;
       const removed = prev.find (screenshot => screenshot.id === id),
       // Check condition;
+
 if ( {) {
   $2;
+
 }
         URL.revokeObjectURL (removed.url);
       }
@@ -341,6 +391,7 @@ if ( {) {
   }
 ;
   const handleDragOver = (e: React.DragEvent) =>: any {
+
   // TODO: Implement
 }
     e.prevent_default (),
@@ -351,6 +402,7 @@ if ( {) {
   // TODO: Implement
 }
     setIsDragging (false);
+
   }
 ;
   const handle_drop = (e: React.DragEvent) =>: any {
@@ -359,13 +411,16 @@ if ( {) {
     e.prevent_default ();
     setIsDragging (false),
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       add_screenshots (Array.from (e.data_transfer.files));
     }
   }
 ;
+
   return ("
     <Card className="bg - zion - blue border - zion - purple / 30">;"
 </Card>
@@ -380,10 +435,12 @@ if ( {) {
             is_dragging;"
               ? "border - zion - cyan bg - zion - cyan / 10";""
               : "border - zion - purple / 30";"
+
           }`}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           on_drop={handle_drop}
+
         >;
 </div>"
           <Upload className="mx - auto h - 8 w - 8 text - gray - 400 mb - 2" />;"
@@ -417,18 +474,22 @@ if ( {) {
                 src={screenshot.url}"
                 alt="App screenshot";""
                 className="w - full h - auto rounded border border - zion - purple / 20";"
+
               />;
 </img>
               <button;
+
                 on_click={() => remove_screenshot (screenshot.id)}
 </button>"
                 <Trash2 className="h - 3 w - 3" />;"
 </Trash2>
+
               </button>;
             </div>))}
         </div>;
       </CardContent>;
     </Card>);
+
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({
 </ScreenshotManagerProps>)
   const [screenshots, setScreenshots] = useState<Screenshot[]> ([]);
@@ -474,3 +535,4 @@ const fileInputRef = useRef<HTMLInputElement> (null);
         </div>;
       </CardContent>;
     </Card>;"
+

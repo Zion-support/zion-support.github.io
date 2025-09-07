@@ -1,4 +1,5 @@
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
 import {Resend} from "npm: resend@2 ;"
 const corsHeaders = {"
@@ -29,10 +30,12 @@ import { Resend } from "npm: resend@2.0.0","
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*",""
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
+
 interface SendNewsletterRequest {
   // TODO: Implement
 }
   subject: string,
+
   previewText: string,
   body: string,
   testMode?: boolean,
@@ -67,3 +70,4 @@ serve(async (req) => {"
 </newsletter>"
   from: "Zion Marketplace <newsletter@ziontechgroup.com>";"
 </newsletter>)"
+

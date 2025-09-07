@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+
 import { Link } from 'react-router-dom';
+
 import { 
   BookOpen, 
   Target, 
@@ -33,6 +35,7 @@ import {
   MessageCircle,
   Play,
   Headphones,
+
   Bookmark,
   Share2
 } from 'lucide-react';
@@ -189,12 +192,14 @@ export default function Resources() {
     
     if (activeCategory !== 'all') {
       resources = resources.filter(resource => resource.category === activeCategory);
+
     }
     
     if (searchQuery) {
       resources = resources.filter(resource => 
         resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         resource.description?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+
         resource.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       );
     }
@@ -232,10 +237,12 @@ export default function Resources() {
               Resources & Insights
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+
               Access our comprehensive library of resources to stay informed about the latest technology trends, 
               best practices, and insights that drive business innovation and growth.
             </p>
             
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
@@ -246,12 +253,14 @@ export default function Resources() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
+
                 />
               </div>
             </div>
           </motion.div>
         </div>
       </section>
+
 
       {/* Category Filter */}
       <section className="py-8 bg-slate-800/50">
@@ -270,6 +279,7 @@ export default function Resources() {
                 <category.icon className="w-5 h-5" />
                 {category.name}
                 <span className="ml-2 px-2 py-1 bg-slate-600/50 rounded-full text-xs">
+
                   {category.count}
                 </span>
               </button>
@@ -277,6 +287,7 @@ export default function Resources() {
           </div>
         </div>
       </section>
+
 
       {/* Featured Resources */}
       <section className="py-20">
@@ -320,22 +331,26 @@ export default function Resources() {
                 <div className="flex flex-wrap gap-2 mb-4">
                   {resource.tags?.slice(0, 3).map((tag, idx) => (
                     <span key={idx} className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full">
+
                       {tag}
                     </span>
                   ))}
                 </div>
+
                 <Link
                   to={resource.href}
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                 >
                   Read More
                   <ArrowRight className="w-4 h-4" />
+
                 </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* All Resources */}
       <section className="py-20 bg-slate-800/50">
@@ -384,6 +399,7 @@ export default function Resources() {
                     className="text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     <ArrowRight className="w-4 h-4" />
+
                   </Link>
                 </div>
               </motion.div>
@@ -391,6 +407,7 @@ export default function Resources() {
           </div>
         </div>
       </section>
+
 
       {/* CTA Section */}
       <section className="py-20">
@@ -420,6 +437,7 @@ export default function Resources() {
               >
                 Request Custom Content
                 <ArrowRight className="w-5 h-5" />
+
               </Link>
             </div>
           </motion.div>
@@ -428,3 +446,5 @@ export default function Resources() {
     </div>
   );
 }
+
+

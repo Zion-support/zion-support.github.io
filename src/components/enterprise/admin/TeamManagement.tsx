@@ -1,7 +1,26 @@
+
 const handleAddMember = () => {
     // In a real app, this would make an API call to add the member;
     if (!newMemberEmail) {
       toast({
+
+
+;
+import React, { useState } from 'react';
+import {Table;
+  TableBody;
+  TableCell;
+  TableHead;}
+  TableHeader;}
+  TableRow} from \"@/components/ui/table\",Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle;"
+  DialogTrigger} from \"@/components/ui/dialog\",import { Button } from \"@/components/ui/button\",import { Input } from \"@/components/ui/input\",import { Label } from \"@/components/ui/label\",import { Badge  } from '@/components/ui/badge';
+import { Trash, Mail, UserPlus  } from 'lucide-react';
+import { toast  } from '@/hooks/use-toast';
 
 
         title: "Email required",""
@@ -150,7 +169,12 @@ if ( {) {
         description: "Please enter an email address for the new team member.",""
         variant: "destructive"}),"
       return;
+
     }
+    toast ({title: 'Invitation sent'}
+  description: `An invitation has been sent to ${newMemberEmail}`})setNewMemberEmail ('')setIsAddingMember (false
+}
+
 
     toast({
 "
@@ -417,6 +441,7 @@ export function TeamManagement() {;
 </div>'
                 <Label html_for='email' className='text - right'>;'
 </Label>
+
                 </Label>;
                 <Input;'
                   id='email';''
@@ -424,6 +449,7 @@ export function TeamManagement() {;
                   placeholder='colleague@company.com';''
                   className='col - span - 3';'
                   value={newMemberEmail}
+
                   on_change={e => setNewMemberEmail (e.target.value)}                />;
 </Input>
               </div>;'
@@ -447,11 +473,13 @@ export function TeamManagement() {;
             </div>;
             <DialogFooter>;
 </DialogFooter>
+
               </Button>;
-              <Button onClick={handleAddMember}>Send Invitation</Button>;
+              <Button onClick={handleAddMember} />Send Invitation</Button>;
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
+
       </div>;'
       <div className='rounded-md border'>;'
 </div>
@@ -491,11 +519,13 @@ export function TeamManagement() {;
                 variant='outline';'
                 on_click={() => setIsAddingMember (false)}
 </Button>
+
               </Button>;
-              <Button on_click={handleAddMember}>Send Invitation</Button>;
+              <Button on_click={handleAddMember} />Send Invitation</Button>;
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
+
       </div>;'
       <div className='rounded - md border'>;'
 </div>
@@ -571,6 +601,7 @@ export function TeamManagement() {;
 </Button>'
                         <Trash className='h - 4 w - 4' />;'
 </Trash>
+
                       </Button>)}
                   </div>;
                 </TableCell>;
@@ -578,6 +609,7 @@ export function TeamManagement() {;
           </TableBody>;
         </Table>;
       </div>;
+
     </div>);'
 }>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded - md border"> <Table> <TableHeader> <TableRow> <TableHead > Name</TableHead> <TableHead > Role</TableHead> <TableHead > Status</TableHead> <TableHead > Last Active</TableHead> <TableHead className=" text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {"
 </div>
@@ -599,3 +631,4 @@ export function TeamManagement() {;
 </Trash>
 }</div> </TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>);"
+

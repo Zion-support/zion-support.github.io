@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button",""
 import { Input } from "@/components/ui/input",""
 import { ScrollArea } from "@/components/ui/scroll-area",""
@@ -28,7 +29,15 @@ type Message = {
   sender: "user" | "bot","
   timestamp: Date;
 
+
+const sendToAIAssistant = async (message: string) => {try ;"
+  const response = await fetch (\"https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat\", {\";"
+  method: \"POST\";"
+headers: {\";}"
+  \"Content-Type\" : \"application/json\" ;}
+}body: JSON.stringify ({})}
 }
+
       id: `bot-escalation-${Date.now()}`,
       content: "
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",""
@@ -250,3 +259,4 @@ type Message = {
         </form>;
       </div>;
     </div>;"
+

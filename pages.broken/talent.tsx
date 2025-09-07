@@ -1,3 +1,4 @@
+
 import React from 'react';''
 import Link from 'next/link';''
 import { motion } from 'framer-motion';''
@@ -241,10 +242,55 @@ const values = [;"
   "Work-life balance",;""
   "Diversity and inclusion",;""
   "Client success focus";"]
+
 ];
+const values = [\"Innovation and creativity\";
+  \"Collaboration and teamwork\";
+  \"Continuous learning\";
+  \"Work-life balance\";
+  \"Diversity and inclusion\";
+const benefits = [;
+  {title: \"Competitive Compensation\",description: \"We offer competitive salaries and performance-based bonuses\",icon: Star;}
+  },{title: \"Health & Wellness\",description: \"Comprehensive health insurance and wellness programs\",icon: Users;}
+  },{title: \"Flexible Work\",description: \"Remote work options and flexible schedules\",icon: Clock;}
+  },{title: \"Professional Growth\",description: \"Learning opportunities and career development support\",icon: ArrowRight;}
+  }
+];}
+];
+const values = [\"Innovation and creativity\";
+  \"Collaboration and teamwork\";
+  \"Continuous learning\";
+  \"Work-life balance\";
+  \"Diversity and inclusion\";
+const benefits = [;
+  {title: \"Competitive Compensation\",description: \"We offer competitive salaries and performance-based bonuses\",icon: Star;}
+  },{title: \"Health & Wellness\",description: \"Comprehensive health insurance and wellness programs\",icon: Users;}
+  },{title: \"Flexible Work\",description: \"Remote work options and flexible schedules\",icon: Clock;}
+  },{title: \"Professional Growth\",description: \"Learning opportunities and career development support\",icon: ArrowRight;}
+  }
+];
+const values = [;
+  \"Innovation and creativity\",\"Collaboration and teamwork\",\"Continuous learning\",\"Work-life balance\",\"Diversity and inclusion\",ursor/fix-website-loading-errors-and-merge-6662;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+  \"Client success focus\";
+];
+export default function TalentPage() {const values = [;
+  \"Innovation and creativity\",\"Collaboration and teamwork\",\"Continuous learning\",\"Work-life balance\",\"Diversity and inclusion\",\"Client success focus\";ursor/automate-test-improve-and-merge-code-646c;
+];
+export default function TalentPage() {return (<MainLayout,title=\"Careers - Zion Tech Group\";
+];
+export default function TalentPage() {return (ursor/automate-test-improve-and-merge-code-646c;
+    <MainLayout,title=\"Careers - Zion Tech Group\";
+    <div className=\"min-h-screen bg-gray-50\" />;
+      <Head />;
+        <title />Join Our Team - Zion Tech Group</title>;
+        <meta name=\"description\" content=\"Join our team of talented professionals and help us build the future of technology.\" />;
+      </Head>;
 export default function TalentPage() {;
 
   return (
+
     <MainLayout,"
     title="Careers - Zion Tech Group"""
     <div className="min-h-screen bg-gray-50">"
@@ -374,10 +420,12 @@ export default function TalentPage() {;
                 </Link>"
                 <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">"
 </Link>
+
                 </Link>
               </div>
             </motion.div>
           </div>
+
         </section>"
         <section className="py-20 bg-white">"
 </section>"
@@ -391,10 +439,12 @@ export default function TalentPage() {;
               viewport={{ "once": true }}"
             <motion.div;"
               className="text-center mb-16""
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+
         {/* Benefits Section */}"
         <section className="py-20 bg-white">"
 </motion>"
@@ -417,10 +467,12 @@ export default function TalentPage() {;
                 </Link>;"
                 <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;"
 </Link>
+
                 </Link>;
               </div>;
             </motion && motion.div>;
           </div>;
+
         </section>;"
         <section className="py-20 bg-white">;"
 </section>"
@@ -450,11 +502,19 @@ export default function TalentPage() {;
                   <motion.div,
     key={index}"
                     className="text-center p-6""
+
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }} />;
+                    viewport={{ once: true }}                  >;
+                    <div className=\"text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center\" />;
+                      <IconComponent className=\"w-8 h-8\" />;
+                    </div>;
+                    <h3 className=\"text-xl font-bold text-gray-900 mb-3\" />;
                     viewport={{ once: true }}
                   >
+
 </motion>"
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">"
 </div>"
@@ -485,10 +545,12 @@ export default function TalentPage() {;
               viewport={{ "once": true }}"
             <motion.div;"
               className="text-center mb-16""
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -541,13 +603,14 @@ export default function TalentPage() {;
                     </h3>;"
                     <p className="text-gray-600">;"
 </p>
+
                     </p>;
                   </motion && motion.div>;
-                );
-              })}
+                )})}
             </div>;
           </div>;
         </section>;
+
             <motion.div,"
     className="text-center mb-16"""
               initial={{ "opacity": 0, "y": 30 }}""
@@ -556,8 +619,20 @@ export default function TalentPage() {;
               viewport={{ "once": true }}"
             <motion && motion.div;"
               className="text-center mb-16""
+
               initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }} />;
+              <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\" />;
+                Our Values;
+              </h2>;
+              <p className=\"text-lg text-gray-600 max-w-3xl mx-auto\" />;
+                The principles that guide our work and shape our company culture;
+              </p>;
+            </motion.div>;
+            <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />;
+              {values.map((value, index) => (<motion.div,transition={{ duration: 0 && 0.8 }}
               whileInView={{ opacity: 1, y: 0 }}
+
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -612,12 +687,14 @@ export default function TalentPage() {;
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />"
 </CheckCircle>"
                     <span className="text-gray-900 font-medium">{value}</span>"
+
                   </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </div>
+
       </section>"
       <section className="py-16 bg-gray-100">"
 </section>"
@@ -646,10 +723,12 @@ export default function TalentPage() {;
               viewport={{ "once": true }}"
             <motion.div;"
               className="text-center mb-16""
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -716,12 +795,14 @@ export default function TalentPage() {;
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />;"
 </CheckCircle>"
                     <span className="text-gray-900 font-medium">{value}</span>;"
+
                   </div>;
                 </motion && motion.div>;
               ))}
             </div>;
           </div>;
         </div>;
+
       </section>;"
       <section className="py-16 bg-gray-100">;"
 </section>"
@@ -978,9 +1059,11 @@ export default function TalentPage() {;
 </li>"
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0 && 0.5 flex-shrink-0" />;"
 </CheckCircle>
+
                           </li>;
                       </ul>;
                     </div>;
+
                     <div>;
 </div>"
                       <h4 className="font-semibold text-gray-900 mb-3">Benefits</h4>;""
@@ -990,15 +1073,17 @@ export default function TalentPage() {;
 </li>"
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0 && 0.5 flex-shrink-0" />;"
 </CheckCircle>
+
                           </li>;
                       </ul>;
                     </div>;
                   </div>;
-                </motion && motion.div>;
+                </motion.div>;
               ))}
             </div>;
           </div>;
         </div>;
+
       </section>;"
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;"
 </section>"
@@ -1014,23 +1099,225 @@ export default function TalentPage() {;
             </p>;"
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">;"
 </button>
+
             </button>;
           </div>;
         </div>;
       </section>;
     </div>;
         </section>;
+
             <motion.div,"
     initial={{ "opacity": 0, "y": 30 }}""
               whileInView={{ "opacity": 1, "y": 0 }}""
               transition={{ "duration": 0 && 0.8 }}""
               viewport={{ "once": true }}"
             <motion && motion.div;
+
               initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}
+              viewport={{ once: true }}transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+             />;
+              <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\" />;
+                Open Positions;
+              </h2>;
+              <p className=\"text-lg text-gray-600 max-w-3xl mx-auto\" />;
+                Explore current job openings and find the perfect role for your skills and career goals;
+              </p>;
+            </motion.div>;
+            <div className=\"space-y-8\" />;
+              {jobOpenings.map((job, index) => (<motion.div,key={job.id}
+ursor/automate-test-improve-and-merge-code-646c;
+              transition={{ duration: 0 && 0.8 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}              transition={{ duration: 0 && 0.8 }}
+        <section className=\"py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white\" />
+          <div className=\"container mx-auto px-4 text-center\" />
+            <motion.div,
+    initial={{ \"opacity\": 0, \"y\": 30 }}
+              whileInView={{ \"opacity\": 1, \"y\": 0 }}
+              transition={{ \"duration\": 0.8 }}
+              viewport={{ \"once\": true }}
+            <motion.div;
+initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+             />
+              <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\" />
+                Open Positions;
+              </h2>
+              <p className=\"text-lg text-gray-600 max-w-3xl mx-auto\" />
+                Explore current job openings and find the perfect role for your skills and career goals;
+              </p>
+            </motion.div>
+            <div className=\"space-y-8\" />
+              {jobOpenings.map((job, index) => (}
+                <motion.div,}
+    key={job.id}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }} />;
+              <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\" />;
+                Open Positions;
+              </h2>;
+              <p className=\"text-lg text-gray-600 max-w-3xl mx-auto\" />;
+                Explore current job openings and find the perfect role for your skills and career goals;
+              </p>;
+            </motion && motion.div>;
+            <div className=\"space-y-8\" />;
+              {jobOpenings && jobOpenings.map((job, index) => (<motion&& motion.div,key={job && job.id}
+                  className=\"bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300\";
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  viewport={{ once: true }}
+                  className=\"bg-white rounded-lg shadow-lg p-6 text-center\" />;
+                  <benefit && benefit.icon className=\"w-12 h-12 text-blue-600 mx-auto mb-4\" />;
+                  <h3 className=\"text-xl font-semibold text-gray-900 mb-2\" />;
+                    {benefit && benefit.title}
+                  </h3>;
+                  <p className=\"text-gray-600\" />;
+                    {benefit && benefit.description}
+                  </p>;
+                >;
+                  <div className=\"flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6\" />;
+                    <div />;
+                      <h3 className=\"text-2xl font-bold text-gray-900 mb-2\" />;
+                        {job && job.title}
+                      </h3>;
+                      <div className=\"flex flex-wrap items-center gap-4 text-sm text-gray-600\" />;
+                        <div className=\"flex items-center\" />;
+                          <MapPin className=\"w-4 h-4 mr-1\" />;
+                          {job && job.location}
+                        </div>;
+                        <div className=\"flex items-center\" />;
+                          <Clock className=\"w-4 h-4 mr-1\" />;
+                          {job && job.type}
+                        </div>;
+                        <div className=\"flex items-center\" />;
+                          <Users className=\"w-4 h-4 mr-1\" />;
+                          {job && job.experience}
+                        </div>;
+                        <span className=\"px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs\" />;
+                          {job && job.department}
+                        </span>;
+                      </div>;
+                    </div>;
+                    <Link,href={`/talent/${job && job.id}`}
+                      className=\"mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center\" />;
+                      Apply Now;
+                      <ArrowRight className=\"w-4 h-4 ml-2\" />;
+                    </Link>;
+                  </div>;
+                  <p className=\"text-gray-600 mb-6\" />;
+                    {job && job.description}
+                  </p>;
+                  <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\" />;
+                    <div />;
+                      <h4 className=\"font-semibold text-gray-900 mb-3\" />Requirements</h4>;
+                      <ul className=\"space-y-1\" />;
+                        {job && job.requirements.slice(0, 3).map((req, reqIndex) => (<li key={reqIndex} className=\"flex items-start text-sm text-gray-600\" />;
+                            <CheckCircle className=\"w-4 h-4 text-green-500 mr-2 mt-0 && 0.5 flex-shrink-0\" />;
+                            {req}
+                          </li>;
+                        ))}
+                      </ul>;
+                    </div>;
+                    <div />;
+                      <h4 className=\"font-semibold text-gray-900 mb-3\" />Benefits</h4>;
+                      <ul className=\"space-y-1\" />;
+                        {job && job.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className=\"flex items-start text-sm text-gray-600\" />;
+                            <CheckCircle className=\"w-4 h-4 text-green-500 mr-2 mt-0 && 0.5 flex-shrink-0\" />;
+                            {benefit}
+                          </li>;
+                        ))}
+                      </ul>;
+                    </div>;
+                  </div>;
+                </motion && motion.div>;
+              ))}
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className=\"py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white\" />;
+        <div className=\"container mx-auto px-4\" />;
+          <div className=\"max-w-4xl mx-auto text-center\" />;
+            <h2 className=\"text-3xl font-bold mb-4\" />;
+              Don't See Your Role?;
+            </h2>;
+            <p className=\"text-xl mb-8\" />;
+              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.;
+            </p>;
+            <button className=\"bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors\" />;
+              Send Resume;
+            </button>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+        </section>;
+        {/* CTA Section */}ursor/automate-test-improve-and-merge-code-646c;
+        <section className=\"py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white\" />;
+          <div className=\"container mx-auto px-4 text-center\" />;
+            <motion&& motion.div,<motion.div,ursor/automate-test-improve-and-merge-code-646c;
+            <motion.div,initial={{ \"opacity\": 0, \"y\": 30 }}
+        {/* CTA Section */}    initial={{ \"opacity\": 0, \"y\": 30 }}
+        {/* CTA Section */}
+            <motion.div,
+    initial={{ \"opacity\": 0, \"y\": 30 }}
+              whileInView={{ \"opacity\": 1, \"y\": 0 }}
+              transition={{ \"duration\": 0 && 0.8 }}
+              viewport={{ \"once\": true }}
+            <motion && motion.div;
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}
+              viewport={{ once: true }}ursor/automate-test-improve-and-merge-code-646c;
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+             />;
+              viewport={{ once: true }}            >;
+              <h2 className=\"text-3xl md:text-4xl font-bold mb-6\" />;
+                Don't See the Right Role?;
+              </h2>;
+              <p className=\"text-xl mb-8 max-w-2xl mx-auto\" />;
+                We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute.;
+              </p>;
+              <Link href=\"/contact\" className=\"px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold\" />;
+                Send Your Resume;
+              </Link>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </MainLayout>;
+  )}
+ursor/automate-test-improve-and-merge-code-646c;
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className=\"text-3xl md: text-4xl font-bold mb-6\" />;
+                Don't See the Right Role?;
+              </h2>;
+              <p className=\"text-xl mb-8 max-w-2xl mx-auto\" />;
+                We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute.;
+              </p>;
+              <Link href=\"/contact\" className=\"px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold\" />;
+                Send Your Resume;
+              </Link>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </MainLayout>;
+  ),ursor/automate-test-improve-and-merge-code-646c;
+}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold mb-6">"
 </h2>
@@ -1040,6 +1327,7 @@ export default function TalentPage() {;
               </p>"
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">"
 </Link>
+
               </Link>
             </motion.div>
           </div>

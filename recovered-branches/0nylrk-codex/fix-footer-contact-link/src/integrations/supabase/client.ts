@@ -1,3 +1,4 @@
+
 interface PerformanceMetrics {
   // TODO: Implement
 }
@@ -75,3 +76,4 @@ if (!supabaseUrl || !supabaseAnonKey) {'
 // all environments, so we also try a small request with a short timeout.
 export const checkOnline = async (): Promise<boolean> => {
 </boolean>"
+

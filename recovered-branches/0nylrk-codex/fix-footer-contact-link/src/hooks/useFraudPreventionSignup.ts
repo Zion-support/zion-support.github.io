@@ -1,5 +1,6 @@
 
 
+
 import { useState, useCallback  } from 'react';''
 import { checkSignupPatterns  } from '@/services/fraud/signupCheck';''
 import { supabase  } from '@/integrations/supabase/client';''
@@ -32,6 +33,7 @@ export function useFraudPreventionSignup() {;
     } catch (error) {'
       console.error ('Error getting IP:', error);'
       return undefined;
+
     }
   }
 ;
@@ -46,6 +48,7 @@ export function useFraudPreventionSignup() {;
       const fraud_check = await checkSignupPatterns (email, ip_address);
 ;
       // Check condition;
+
 if ( {) {
   $2;
 }'
@@ -69,10 +72,12 @@ if ( {) {
   $2;
 }'
           console.error ('Error creating fraud flag:', error);'
+
         }
         // Depending on how strict we want to be, we could block the signup;
         // If the check is very suspicious, block the signup;
         // Check condition;
+
 if (||) {
   $2;
 }'
@@ -101,20 +106,21 @@ if (||) {
   // TODO: Implement
 }
       setIsCheckingFraud (false);
+
     }
   }, []);
-
 ;
-
   return {
+
   // TODO: Implement
 }
     isCheckingFraud;
 
-    checkFraudBeforeSignup}
-}
-    isCheckingFraud;
 
     checkFraudBeforeSignup}
+}    isCheckingFraud;
+    checkFraudBeforeSignup}
+
 }
 '
+

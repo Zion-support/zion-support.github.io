@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";""
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
 import {Button} from "@/components/ui/button";""
@@ -60,9 +61,11 @@ export function QuickActions() {
                 </div>;"
                 <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;"
               </div>;
+
             </Button>;
         </div>;
       </CardContent>;
+
     </Card>;"
       icon: <FileText className="h - 5 w - 5 mr - 2" />,"
 </FileText>"
@@ -132,3 +135,4 @@ export function QuickActions() {
   return (<Card> <CardHeader> <CardTitle>Quick Actions</CardTitle> <CardDescription>Fast access to common tasks</CardDescription> </CardHeader> <CardContent> </div> </Button>) ) 
 </Card>
 }</div> </CardContent> </Card>) ]"
+

@@ -1,3 +1,4 @@
+
 {/* Honeypot field */}
       <input;
 import React, { useState, useRef } from 'react';''
@@ -372,6 +373,7 @@ export function FooterNewsletter():React.ReactElement {;'
     </form>;'
       <label html_for='newsletter - email' className='sr - only'>;'
 </label>
+
       </label>;
       <Input;'
         type='email';''
@@ -380,6 +382,7 @@ export function FooterNewsletter():React.ReactElement {;'
         placeholder='Enter your email';''
         className='flex - grow bg - zion - blue - light dark:bg - zion - blue - dark text - black dark:text - white border - zion - purple / 20 focus:border - zion - purple focus:ring - zion - purple placeholder - opacity - 50 placeholder:text - center';'
         value={email}
+
         on_change={e => set_email (e.target.value)}
 </Input>'
       {email_error && <p className='text - red - 500 text - sm mt - 1'>{email_error}</p>}'
@@ -408,3 +411,4 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
   isSubmitting ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Subscribing... </>) : ('Subscribe') ;'
 </Loader2>
 }</Button> </form>) ;'
+

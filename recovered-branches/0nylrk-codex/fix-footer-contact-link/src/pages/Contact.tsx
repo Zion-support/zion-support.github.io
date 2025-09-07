@@ -1,22 +1,23 @@
-
-
 class ErrorBoundary extends React.Component {
+
   // TODO: Implement
 }
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);'
+
   }
-  
   render() {
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -609,10 +610,12 @@ if ( {) {
                   <Button;
                     onClick={() => setIsChatOpen(true)}
 </Button>
+
                   </Button>;
                 </Card>;
               </div>;
             </div>;
+
           </div>;"
           <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text - center">;"
 </div>"
@@ -656,3 +659,4 @@ if ( {) {
     </AppLayout>);
     </AppLayout>
     </AppLayout>;"
+

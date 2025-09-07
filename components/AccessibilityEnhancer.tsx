@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -72,10 +73,12 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
     setReducedMotion(newValue);
     localStorage.setItem('reducedMotion', newValue.toString());
     applyAccessibilityStyles(isHighContrast, fontSize, newValue);
+
   };
 
   return (
     <>
+
       {/* Accessibility Controls */}
       <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">
         <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">Accessibility Options</h3>
@@ -98,12 +101,14 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
                 onClick={() => changeFontSize(size)}
                 className={`px-2 py-1 text-xs rounded ${
                   fontSize === size ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+
                 }`}
                 aria-label={`Set font size to ${size}`}
               >
                 {size.charAt(0).toUpperCase()}
               </button>
             ))}
+
           </div>
 
           <button
@@ -149,3 +154,4 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
     </>
   );
 }
+

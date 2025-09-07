@@ -1,5 +1,6 @@
 
 
+
 import * as React from "react"""
 import { cn } from "@/lib/utils""
 export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>"
@@ -75,3 +76,4 @@ export { Textarea }
 ;
 ;
 "
+

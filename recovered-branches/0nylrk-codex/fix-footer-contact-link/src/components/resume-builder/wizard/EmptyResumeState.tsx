@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";""
 import { Button } from "@/components/ui/button";""
 import { FilePlus } from "lucide-react";""
@@ -54,3 +55,4 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
         </div>;
       </CardContent>;)
     </Card>);"
+

@@ -1,4 +1,5 @@
 
+
 import { useState  } from 'react';''
 import { Button  } from '@/components/ui/button';''
 import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';''
@@ -88,46 +89,46 @@ export function AIEnhancementButton({;
         variant: "destructive";")
       });
       return;
+
     }
       setGeneratedContent(enhancedContent);
       setShowActions(true);
     }
-
   },
-
-
-
-  
-
-
-  
-  const handleAccept = () => {
+  const handleAccept = (
     if (generatedContent) {
       onEnhanced(generatedContent);
       setShowActions(false);
-      setGeneratedContent(null);
-  
-  const handleAccept = () => {
+      setGeneratedContent(null);) => {
+  return $3;}
+}
+      }),;
+      return;
+    }
+;
+    const enhancedContent = await enhanceContent(options),;
+    if (enhancedContent) {;
+      setGeneratedContent(enhancedContent),;}
+      setShowActions(true);}
+    }
+  },  const handleAccept = (
     if (generatedContent) {
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
+
       toast({"
         title: "Content applied"",)"
   description: "AI-enhanced content has been applied."})"
+
     }
-
-
+    return (  },
+  const handleRegenerate = async () => {}
+    await handleEnhance()}
   },
-  
-  const handleRegenerate = async () => {
-    await handleEnhance()
-  },
-  
-
-
-  const handleCancel = () => {
+  const handleCancel = (
     setShowActions(false);
+
     setGeneratedContent(null)
 
   };
@@ -351,3 +352,4 @@ return;
 }return (<Button) : (<Sparkles className=" h-4 w-4" />)"
 </Button>
 }</Button>) "
+

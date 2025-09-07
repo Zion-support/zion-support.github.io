@@ -1,7 +1,9 @@
+
 import { useState } from "react";""
 import { Card, CardContent, CardFooter } from "@/components/ui/card";""
 import { Button } from "@/components/ui/button";""
 import { Badge } from "@/components/ui/badge";"
+
 import {
   // TODO: Implement
 }
@@ -11,6 +13,7 @@ import {
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
+
   AlertDialogHeader,
   AlertDialogTitle,"
 } from "@/components/ui/alert-dialog";""
@@ -22,19 +25,21 @@ interface ProjectCardProps {
   project: PortfolioProject;,
   onEdit: (project: PortfolioProject) => void;,
   onDelete: (projectId: string) => void;
+
 }
 
-
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
-
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
-  const handleDelete = () => {
+  const handleDelete = (
     if (project.id) {
-      onDelete(project.id);
+      onDelete(project.id);) => {
+  return $3;}
+}
     }
     setDeleteDialogOpen(false);
   };
+
 
   return ("
     <Card className="h-full flex flex-col">"
@@ -119,9 +124,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 </Button>"
                 <Link className="h-4 w-4" />"
 </Link>
+
               </Button>
             </a>
         </div>
+
 "
         <div className="flex gap-2">"
 </div>)"
@@ -137,9 +144,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 </Button>"
             <Trash2 className="h-4 w-4" />"
 </Trash2>
+
           </Button>
         </div>
       </CardFooter>
+
 
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
 </AlertDialog>
@@ -160,11 +169,13 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
               className="bg-destructive text-destructive-foreground""
             >
 </AlertDialogAction>
+
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
     </Card>
+
     </Card>;"
   />) : (<div className="w-full h-full flex items-center justify-center bg-muted" > <FileText className="h-12 w-12 text-muted-foreground/50" /> </div>)"
 }</div> </Badge>) ) 
@@ -176,3 +187,4 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 }onOpenChange= {
   setDeleteDialogOpen;
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) "
+

@@ -1,6 +1,8 @@
+
 async function scorePage(url) {
 
     const html = await resp && resp.text();
+
     const ms = Date && Date.now() - t0;
     const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '';'
 </title>'
@@ -32,3 +34,4 @@ async function scorePage(url) {
 </meta>
     const h1Count = (html.match(/<h1[^>]*>/gi) || []).length,
 </h1>'
+

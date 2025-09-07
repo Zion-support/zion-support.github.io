@@ -1,9 +1,11 @@
 
 
+
   getData: () => [],
   setData: (data: any) => null;,
   updateData: (id: string, data: any) => null;,
   deleteData: (id: string) => null;
+
 }
 
 
@@ -26,8 +28,10 @@ interface Project {
   title: string;
   description: string;,
   status: string;
+
   createdAt: Date;,
   updatedAt: Date;
+
 }
 
 interface Review {
@@ -35,18 +39,22 @@ interface Review {
 }
   id: string;,
   projectId: string;
+
   fromRole: "client" | "talent";",
   fromId: string;"
   toRole: "client" | "talent";",
+
   toId: string;
   rating: number;,
   text: string;
   categories?: any;
   anonymous: boolean;,
   approved: boolean;
+
   removed: boolean;,
   createdAt: Date;
   updatedAt: Date;
+
 }
 
 class DataStore {
@@ -56,6 +64,7 @@ class DataStore {
   private reviews: Review[] = [];
 
   // Project methods;
+
   findProjectById(id: string): Project | undefined {
   // TODO: Implement
 }
@@ -82,3 +91,4 @@ export const createProject = (data: Partial<Project>) =>
 </Project>
 export const upsertReview = (data: Partial<Review>) => store.upsertReview(data);
 </Review>"
+

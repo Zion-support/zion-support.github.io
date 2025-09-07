@@ -1,3 +1,4 @@
+
 import { AppHeader } from "@/layout/AppHeader";""
 import { Footer } from "@/components/Footer";""
 import { SEO } from "@/components/SEO";""
@@ -44,11 +45,17 @@ function ReviewsModerationContent() {"
 
   const fetchReviews = async () => {"
   const [activeTab, setActiveTab] = useState("pending");"
+
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+function ReviewsModerationContent() {
+  const [activeTab, setActiveTab] = useState(\"pending\"),
+  const [reviews, setReviews] = useState([]),
+  const [isLoading, setIsLoading] = useState(true),
   const fetchReviews = async () => {;
     setIsLoading(true);
     try {
+
   // TODO: Implement
 }
       // In a real application, you would fetch reviews from an API;"
@@ -62,46 +69,37 @@ function ReviewsModerationContent() {"
         title: "Error",""
         description: "Failed to load reviews. Please try again later.",""
         variant: "destructive",")
+
       }),
         setIsLoading(false));
     }
   };
-
-  useEffect(() => {
-    fetchReviews();
-  }, [activeTab]);
-
-  const handleRefresh = () => {;
-    fetchReviews();
-  };
-
   }
-  useEffect(() => {
-    fetchReviews()
+  useEffect(() => {}
+    fetchReviews()}
   }, [activeTab]);
-  const handleRefresh = () => {
-    fetchReviews()
+  const handleRefresh = (
+    fetchReviews()) => {
+  return $3;}
+}
   }
-
   },
-
-  useEffect(() => {
-    fetchReviews()
-  }, [activeTab]),
-
-
-  const handleRefresh = () => {
-    fetchReviews();
-  };
-
+  const handleRefresh = (
+    fetchReviews()) => {
+  return $3;}
+}
+};
   return (
     <>;
+
       <SEO;"
         title="Review Moderation | Zion AI Marketplace"""
         description="Moderate and manage reviews in the Zion AI Marketplace""
+
       />
 </SEO>
       <AppHeader />
+
 </AppHeader>"
       <main className="container mx-auto px-4 py-8">"
 </main>"
@@ -186,9 +184,11 @@ export default function ReviewsModeration() {
       <SEO;"
         title="Review Moderation | Zion AI Marketplace";""
         description="Moderate and manage reviews in the Zion AI Marketplace";"
+
       />;
 </SEO>
       <AppHeader />;
+
 </AppHeader>"
       <main className="container mx - auto px - 4 py - 8">;"
 </main>"
@@ -224,11 +224,13 @@ export default function ReviewsModeration() {
               </TabsList>;"
               <TabsContent value="pending" className="mt - 0">;"
 </TabsContent>
+
                 <ReviewsModerationTable;
                   reviews={reviews}
                   is_loading={is_loading}
                   on_refresh={handle_refresh}
                 />;
+
 </ReviewsModerationTable>
               </TabsContent>;"
               <TabsContent value="reported" className="mt - 0">;"
@@ -240,6 +242,7 @@ export default function ReviewsModeration() {
                   <h3 className="text - lg font - medium mb - 2">Reported Reviews</h3>;""
                   <p className="text - muted - foreground">;"
 </p>
+
                   </p>;
                 </div>;
               </TabsContent>;
@@ -248,8 +251,10 @@ export default function ReviewsModeration() {
         </Card>;
       </main>;
       <Footer />;
+
 </Footer>)
     </>);
+
 
 ;
 }
@@ -258,6 +263,7 @@ export default /**
  */
 function ReviewsModeration() {
   return (
+
     <ProtectedRoute>;
 </ProtectedRoute>
       <ReviewsModerationContent />;
@@ -273,3 +279,4 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
 }/> </TabsContent> <TabsContent value="reported" className="mt-0" > <div className="text-center py-12 border rounded-lg" > <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" /> <h3 className="text-lg font-medium mb-2" >Reported Reviews</h3> <p className="text-muted-foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> <Footer /> </>)"
 } () {
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> )"
+

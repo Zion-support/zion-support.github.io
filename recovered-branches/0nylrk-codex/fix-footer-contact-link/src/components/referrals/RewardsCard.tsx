@@ -1,6 +1,7 @@
 
 
 
+
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
 import {ReferralReward} from "@/types/referrals";""
 import {formatDate} from "@/utils/referralUtils";""
@@ -20,12 +21,14 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
 import {
   // TODO: Implement
 }
+
 import {
   // TODO: Implement
 }
   Card,
   CardContent,
   CardDescription,
+
   CardHeader,
   CardTitle,"
 } from '@/components / ui / card';''
@@ -45,8 +48,13 @@ function RewardsCard() {
   // Check condition;
 if ( {) {
   $2;
+
 }
+
+export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
+  if (isLoading) {
     return (
+
       <Card>
 </Card>
         <CardHeader>
@@ -134,12 +142,14 @@ if ( {) {
                 </p>"
                   <p className="text-xs text-muted-foreground">"
 </p>
+
                   </p>
               </div>
             </div>
         </div>
       </CardContent>
     </Card>
+
       <Card>;
 </Card>
         <CardHeader>;
@@ -290,3 +300,4 @@ if ( {) {
         </div>;
       </CardContent>;
     </Card>;"
+

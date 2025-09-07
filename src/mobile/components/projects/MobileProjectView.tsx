@@ -1,3 +1,4 @@
+
 id: string;,
   title: string;
     client: {,
@@ -106,7 +107,23 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
   };
 
 
+
+interface ProjectViewProps  {project: {id: string;
+    title: string;
+    client: {name: string;}
+      avatar?: string;}
+    }
+    start_date: string;
+    end_date?: string;
+    status: string;
+    total_amount: string;
+    progress: number;
+    description: string;"
+  }id: string,title: string,dueDate: string,status: \"completed\" | \"in_progress\" | \"pending\",paymentStatus: \"paid\" | \"pending\" | \"overdue\",amount: string;
+"
+interface Milestone  {id: string,title: string,dueDate: string,status: \"completed\" | \"in_progress\" | \"pending\",paymentStatus: \"paid\" | \"pending\" | \"overdue\",amount: string;}
 }
+
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   const router = useRouter(),
@@ -127,6 +144,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     // Navigate to messaging with this client;
   },
   
+
+
+export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {const router = useRouter()const startProjectCall = () => ;}
+  const roomId = `project-${project && project.id}`;
+    toast && toast.success('Starting project call', {description: 'Initializing video connection...'})router && router.push(`/call/${roomId}`
+}
 
 
   return (
@@ -296,10 +319,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                       <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>''
                 <Video className='h-4 w-4' /> Call;'
 </Video>
+
               </Button>;
             </div>;
           </div>;
         </CardContent>;
+
       </Card>;
       <section>;
 </section>'
@@ -345,10 +370,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 </Button>'
                     View Details <ChevronRight className='h-4 w-4' />;'
 </ChevronRight>
+
                   </Button>;
                 </div>;
               </CardContent>;
             </Card>;
+
         </div>;
       </section>;
     </div>;'
@@ -456,10 +483,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 <Video className="h-4 w-4" /> Call;"
 </Video>
               </Button>;
+
             </div>;
           </div>;
         </CardContent>;
       </Card>;
+
       <section>;
 </section>"
         <h2 className="text-lg font-medium mb-4">Milestones</h2>;""
@@ -547,10 +576,40 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 </Button>"
                     View Details <ChevronRight className="h-4 w-4" />;"
 </ChevronRight>
+
                   </Button>;
                 </div>;
               </CardContent>;
             </Card>;
+
+
         </div>;
+      </section>;"
+    </div>)<div className=\"pl-7\" />;"
+                  <div className=\"flex justify-between text-sm\" />;"
+                    <span className=\"text-muted-foreground\" />Due Date:</span>;
+                    <span />{milestone.dueDate}</span>;
+                  </div>;"
+                  <div className=\"flex justify-between text-sm\" />;"
+                    <span className=\"text-muted-foreground\" />Amount:</span>;
+                    <span />{milestone.amount}</span>;
+                  </div>;"
+                  <div className=\"flex justify-between text-sm\" />;"
+                    <span className=\"text-muted-foreground\" />Status:</span>;"
+                    <span className=\"capitalize\" />{milestone.status.replace('_ ')}</span>;
+                  </div>;
+                  <Button;"
+                    size=\"sm\";"
+                    variant=\"outline\";"
+                    className=\"w-full mt-3 gap-1\" />
+"
+                    View Details <ChevronRight className=\"h-4 w-4\" />;
+                  </Button>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          ))}</div>;
       </section>;
+
     </div>;"
+

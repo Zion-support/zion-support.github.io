@@ -1,4 +1,5 @@
 
+
 import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';''
 import { supabase } from '@/integrations / supabase / client';''
 import { AuthContext } from '@/context / auth / AuthContext';''
@@ -8,6 +9,7 @@ export interface UserDetails {
   // TODO: Implement
 }
   id?: string;
+
   name?: string;
   email?: string;
   user_type?: string;
@@ -16,9 +18,6 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
-
-
-
   id?: string;
   name?: string;
   email?: string;
@@ -27,11 +26,13 @@ export interface UserDetails {
   avatarUrl?: string;
   headline?: string;
   profileComplete?: boolean;
+
   role?: string;"
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",""
 import { supabase } from "@/integrations/supabase/client",""
 import { AuthContext } from "@/context/auth/AuthContext";""
 import type { UserDetails as AuthUserDetails } from "@/types/auth";"
+
 // Define types for our context;
 export interface UserDetails {
   // TODO: Implement
@@ -48,6 +49,7 @@ export interface UserDetails {
   permissions?: string[],
   companyId?: string;
   bio?: string;
+
   createdAt?: string;
   updatedAt?: string;
 }
@@ -56,6 +58,7 @@ export interface AuthContextType {
 }"
 import { AuthContext } from "@/context/auth/AuthContext",""
 import type { UserDetails as AuthUserDetails } from "@/types/auth","
+
 // Define types for our context;
 export interface UserDetails {
   // TODO: Implement
@@ -72,12 +75,14 @@ export interface UserDetails {
   permissions?: string[],
   companyId?: string,
   bio?: string,
+
   createdAt?: string,
   updatedAt?: string;"
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",;""
 import { supabase } from "@/integrations/supabase/client",;""
 import { AuthContext } from "@/context/auth/AuthContext",;""
 import type { UserDetails as AuthUserDetails } from "@/types/auth",;"
+
 // Define types for our context;
 export interface UserDetails {;
   id?: string,;
@@ -92,6 +97,7 @@ export interface UserDetails {;
   permissions?: string[],;
   companyId?: string,;
   bio?: string,;
+
   createdAt?: string,;
   updatedAt?: string;
 "
@@ -112,13 +118,15 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
+
 }
 ;
 export interface AuthContextType {;
   user: UserDetails | null,;
-  isAuthenticated: boolean,;
-  isLoading: boolean,;
+  isAuthenticated: boolean,;}
+  isLoading: boolean,;}
   signIn: (email: string, password: string) => Promise<{ error: any }>,;
+
   signOut: () => Promise<void>,;
 </void>
   signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
@@ -380,3 +388,4 @@ if ( {) {
 </UserDetails>
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 </AuthContext>"
+

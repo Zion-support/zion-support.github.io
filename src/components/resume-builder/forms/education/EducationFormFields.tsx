@@ -1,4 +1,6 @@
+
 }
+
   })
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true)
@@ -77,6 +79,39 @@ function EducationFormFields() {
   }
 
 
+const education_schema = z.object ({institution: z.string ().min (1, 'Institution is required'),degree: z.string ().min (1, 'Degree is required'),field_of_study: z.string ().optional (),start_date: z.string ().min (1, 'Start date is required'),end_date: z.string ().optional (),is_current: z.boolean ().default (false),description: z.string ().optional (),location: z.string ().optional (}
+})type EducationFormValues = z.infer < typeof education_schema>;
+
+export /**;
+ * EducationFormFields - Function description;
+ */;
+function EducationFormFields() {const [is_loading, setIsLoading] = useState (false)const [error, set_error] = useState < string | null>(null)const form = use_form < EducationFormValues>({resolver: zod_resolver (education_schema),default_values: {institution: '',
+  degree: '',field_of_study: '',
+  start_date: format (new Date (), 'yyyy - MM - dd'),is_current: false,description: ''}
+  location: ''}
+};
+  const handle_submit = async (data: EducationFormValues) => {setIsLoading (true)set_error (null)try {await on_submit (data)} catch (err: any) {set_error (err.message || 'An error occurred')} finally {setIsLoading (false)}
+  }FormMessag
+} from '@/components/ui/form';
+import { Education  } from '@/types/resume';
+import { useForm   } from 'react-hook-form';
+import { zodResolver   } from '@hookform/resolvers/zod';
+import { z   } from 'zod';
+import { format   } from 'date-fns';
+import { Button   } from '@/components/ui/button';
+import { Textarea   } from '@/components/ui/textarea';
+import { Input   } from '@/components/ui/input';
+import { Checkbox   } from '@/components/ui/checkbox';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;}
+  FormLabel;}
+  FormMessage  } from '@/components/ui/form';
+import { useState   } from 'react';
+import { EducationFormFieldsProps   } from './types';
+// Define schema for form validation;
+
 
 
 
@@ -100,10 +135,19 @@ function EducationFormFields() {
                   <Input;'
                     placeholder='University of California, MIT, etc.';'
                     {...field}
+
                   />;
 </Input>
                 </FormControl>;
+                <FormMessage />;control={form.control}name=\"institution\";
+            render={({ field }: { field: any}
+}) => (<FormItem />;
+                <FormLabel />Institution</FormLabel>;
+                <FormControl />;"
+                  <Input placeholder=\"University of California, MIT, etc.\" {...field} />;
+                </FormControl>;
                 <FormMessage />;
+
 </FormMessage>
               <FormItem>
 </FormItem>
@@ -278,9 +322,11 @@ function EducationFormFields() {
 </FormControl>'
                       <Input type='date' {...field} value={field && field.value || ''} />                    </FormControl>;'
 </Input>
+
                     <FormMessage />;
 </FormMessage>
                   </FormItem>;
+
           </div>;
         </div>;
         <FormField;
@@ -316,10 +362,12 @@ function EducationFormFields() {
 </FormField>'
                 <FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;'
 </FormItem>
+
                     <Checkbox;
-                      checked = {field.value, }
-                      onCheckedChange = {field.on_change, }
+                      checked = {field.value }
+                      onCheckedChange = {field.on_change }
                     />;
+
 </Checkbox>
                   </FormControl>;'
                   <div className='space - y-1 leading - none'>;'
@@ -339,12 +387,14 @@ function EducationFormFields() {
 </FormControl>'
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>;'
 </Input>
+
                     <FormMessage />;
 </FormMessage>)
                   </FormItem>)}
           </div>;
         </div>;
         <FormField;
+
           control={form.control}
 
         />;
@@ -403,10 +453,12 @@ function EducationFormFields() {
                 <Textarea;"
                   placeholder="Notable achievements, courses, activities..."""
                   className="min-h-[100px]""
+
                   {...field}
                 />;
 </Textarea>
               </FormControl>;
+
               <FormMessage />;
 </FormMessage>
           </Button>
@@ -426,10 +478,12 @@ function EducationFormFields() {
 </Button>'
             {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}'
 </Loader2>
+
           </Button>;
         </div>;
       </form>;
     </Form>;
+
             </FormItem>)}'
           <Alert variant='destructive'>;'
 </Alert>
@@ -448,3 +502,4 @@ function EducationFormFields() {
         </div>;
       </form>;
     </Form>);'
+

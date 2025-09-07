@@ -1,3 +1,4 @@
+
 import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -699,5 +700,33 @@ export function AppHeader() {
         />
       )}
     </>
+
   );
 }
+            </div>;
+          </motion.div>)}
+      </AnimatePresence>;
+    </header>  )})}
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}<LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  )};
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  )}';
+}> {';';}
+  t ('auth.login')';}
+}</Link> <Link  /> {';';}"
+  t ('auth.signup')}</Link> </div>)\";"
+}<UserMenu /> </div>) \";\";"
+}</div> </header> <div className=\"absolute inset-0 bg-black/50 backdrop-blur-sm\" onClick={\";}"
+  () = /> setMobileMenuOpen (false) \";\";}"
+}aria-hidden=\"true\" /> <div className=\"relative bg-background border-t border-border h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto\"  /> <MobileMenu unreadCount= {unreadCount ;}
+}onClose= {() = /> setMobileMenuOpen (false)}openLoginModal= {openLoginModal ;}
+}/> </div> </div>)}{/* Mobile Bottom Navigation */ ;}
+}{isMobile && <MobileBottomNav unreadCount= {unreadCount ;}
+}/> ;
+}<LoginModal isOpen= {loginOpen ;}
+}onOpenChange= {setLoginOpen ;}"
+}/> </>)'\";"
+}'\"'\";"

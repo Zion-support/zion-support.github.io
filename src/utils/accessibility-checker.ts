@@ -1,3 +1,4 @@
+
 // Accessibility checker utilities;
 export const checkAccessibility = () => {
   console.log('Checking accessibility...');'
@@ -220,3 +221,4 @@ export const generateAccessibilityReport = () => {
     timestamp: new Date().toISOString()
   };
 };'
+

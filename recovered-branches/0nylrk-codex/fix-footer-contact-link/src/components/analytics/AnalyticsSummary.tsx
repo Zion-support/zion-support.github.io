@@ -2,6 +2,7 @@
 
 
 
+
 import {Card, CardContent} from "@/components/ui/card";""
 import {useQuery} from "@tanstack/react-query";""
 import {supabase} from "@/integrations/supabase/client";""
@@ -193,3 +194,4 @@ import {formatDistanceToNow} from "date-fns";"
         </div>;
       </CardContent>;
     </Card>);"
+

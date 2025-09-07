@@ -1,4 +1,5 @@
 
+
 export function ApiKeysManager() {;
   const { ;
     keys;
@@ -173,11 +174,13 @@ export function ApiKeysManager() {;
                 <Button onClick={handleCreateKey} disabled={keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0}>;"
 </Button>
                         </Label>;
+
                       </div>;
                 </Button>;
               </DialogFooter>;
             </DialogContent>;
           </Dialog>;
+
         </div>;"
         <div className="space-y-4">;"
 </div>"
@@ -232,9 +235,11 @@ export function ApiKeysManager() {;
                 on_click={clearNewApiKey}
               >;
 </Button>
+
                 <X size={14} />;
 </X>
               </Button>;
+
             </div>;"
             <p className="text - sm text - zinc - 300 mb - 2">;"
 </p>
@@ -292,10 +297,14 @@ export function ApiKeysManager() {;
 </Badge>
                       </DropdownMenuItem>;
                       <DropdownMenuItem;
+
                       </DropdownMenuItem>;
+                      <DropdownMenuItem;
+                      </DropdownMenuItem />;
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
+
                     </Badge>;"
                 <div className="mt - 3 flex flex - wrap gap - 2">;"
 </div>
@@ -486,10 +495,12 @@ export function ApiKeysManager() {;
             <AlertDialogAction;
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
 </AlertDialogAction>
+
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+
       <AlertDialog;
         open={showDeleteConfirm !== null} 
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
@@ -520,3 +531,4 @@ export function ApiKeysManager() {;
         </AlertDialogContent>;
       </AlertDialog>;
     </Card>);"
+

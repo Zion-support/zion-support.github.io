@@ -1,3 +1,4 @@
+
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">"
@@ -515,10 +516,12 @@ function ClientDashboard() {
                   </div>;
                 </div>;"
                 <Button size="sm" variant="outline">View Details</Button>;"
+
               </div>;
             </div>;
           </CardContent>;
         </Card>;
+
       </section>;
       <section>;
 </section>"
@@ -632,10 +635,12 @@ function ClientDashboard() {
                 <Button size='sm'>View Profile</Button>;''
                 <Button size='sm' variant='outline'>;'
 </Button>
+
                 </Button>              </div>;
             </CardContent>;
           </Card>;
         </div>;
+
       </section>;
       <section>;
 </section>'
@@ -728,3 +733,4 @@ function ClientDashboard() {
         </Card>;
       </section>;)
     </div>);"
+

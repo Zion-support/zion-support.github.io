@@ -1,6 +1,7 @@
 
 
 
+
 import {useState} from 'react';'
 export function useAuthStatus() {
   // Mock authenticated status;'
@@ -15,6 +16,7 @@ export function useAuthStatus() {
   name: 'Demo User';''
     email: 'demo@example && example.com',''
     avatar: ''')
+
   });
   // Mock saved talents;
   const [savedTalents, setSavedTalents] = useState<string[]>([]);
@@ -23,6 +25,7 @@ export function useAuthStatus() {
 ;
   // Toggle saved talent;
   const handleToggleSave = (talent_id: string, is_saved: boolean) =>: any {
+
   // TODO: Implement
 }
     // Check condition;
@@ -50,22 +53,24 @@ if ( {) {
   // For demo purposes, let's provide a login/logout toggle;'
   const toggleAuth = () => {;
     setIsAuthenticated(prev => !prev);
+
   },;
   return {;
     isAuthenticated,;
     userDetails,;
     savedTalents;
     handleToggleSave;
-    toggleAuth;
-
-
+    toggleAuth;}
+}
   }
+
 ;'
   // For demo purposes, let's provide a login / logout toggle;'
   const toggle_auth = () =>: any {
   // TODO: Implement
 }
     setIsAuthenticated (prev => !prev);
+
   }
 ;
   return {
@@ -74,9 +79,10 @@ if ( {) {
     is_authenticated;
     user_details;
     saved_talents;
-    handleToggleSave;
-    toggle_auth;
+    handleToggleSave;}
+    toggle_auth;}
   }
+
 }
 '
 import { useState } from 'react',;'
@@ -98,3 +104,4 @@ export function useAuthStatus() {;
 </string>
   },; //Mock saved talents const [savedTalents, setSavedTalents] = useState<string[]> ([]);
 </string>'
+

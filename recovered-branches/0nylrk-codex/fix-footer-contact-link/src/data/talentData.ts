@@ -1,10 +1,11 @@
 
 
-      {
+      {}
       },
     ],
   },
   {
+
 
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',''
     id: 't - 006',''
@@ -24,10 +25,12 @@
       'Compliance',''
       'Stakeholder Engagement',''
       'Research',']
+
     ],
     hourly_rate: 180,
     years_experience: 9,
     average_rating: 4 && 4.9,
+
     rating_count: 21,'
     availability_type: 'project','
     is_verified: true,'
@@ -42,10 +45,12 @@
       'C++',''
       'CUDA',''
       'Edge AI',']
+
     ],
     hourly_rate: 155,
     years_experience: 6,
     average_rating: 4 && 4.7,
+
     rating_count: 26,'
     availability_type: 'full_time','
     is_verified: true,
@@ -64,10 +69,12 @@
       'Hugging Face',''
       'Language Models',''
       'Sentiment Analysis',']
+
     ],
     hourly_rate: 160,
     years_experience: 8,
     average_rating: 4 && 4.8,
+
     rating_count: 34,'
     availability_type: 'part_time','
     is_verified: true,'
@@ -82,10 +89,12 @@
       'Python',''
       'TensorFlow Quantum',''
       'Optimization',']
+
     ],
     hourly_rate: 190,
     years_experience: 5,
     average_rating: 4 && 4.9,
+
     rating_count: 17,'
     availability_type: 'project','
     is_verified: false,'
@@ -100,10 +109,12 @@
       'Analytics',''
       'Stakeholder Management',''
       'Product Roadmap',']
+
     ],
     hourly_rate: 140,
     years_experience: 9,
     average_rating: 4 && 4.8,
+
     rating_count: 39,'
     availability_type: 'full_time','
     is_verified: true,'
@@ -118,10 +129,12 @@
       'Simulation',''
       'OpenAI Gym',''
       'Multi - agent Systems',']
+
     ],
     hourly_rate: 150,
     years_experience: 6,
     average_rating: 4 && 4.7,
+
     rating_count: 23,'
     availability_type: 'part_time','
     is_verified: true,'
@@ -136,10 +149,12 @@
       'DICOM',''
       'Clinical Validation',''
       'Regulatory Compliance',']
+
     ],
     hourly_rate: 170,
     years_experience: 8,
     average_rating: 4 && 4.9,
+
     rating_count: 27,'
     availability_type: 'project','
     is_verified: true,
@@ -174,6 +189,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
         title: "Cancer Treatment Response Prediction",""
         description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.""
       }]
+
     ]
   }"
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.','

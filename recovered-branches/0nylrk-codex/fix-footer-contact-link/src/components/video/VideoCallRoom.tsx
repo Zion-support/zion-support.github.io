@@ -3,6 +3,7 @@
 
 
 
+
 import React, { useState } from 'react';''
 import {Button} from "@/components/ui/button";""
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";""
@@ -66,11 +67,13 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
 interface Participant {
   // TODO: Implement
 }
+
   id: string,
   name: string,
   avatar?: string,
   isMuted?: boolean,
   isVideoEnabled?: boolean,
+
   isScreenSharing?: boolean,
   isHost?: boolean;
     }
@@ -86,14 +89,15 @@ import { Badge } from "@/components/ui/badge",;""
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;""
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',;''
 import './video-call.css',;'
+
 interface Participant {;
   id: string,;
   name: string,;
   avatar?: string,;
   isMuted?: boolean,;
   isVideoEnabled?: boolean,;
-  isScreenSharing?: boolean,;
-  isHost?: boolean;
+  isScreenSharing?: boolean,;}
+  isHost?: boolean;}
 }
 ;
 interface VideoCallRoomProps {;
@@ -102,25 +106,30 @@ interface VideoCallRoomProps {;
   onLeave?: () => void,;
   onToggleMute?: (isMuted: boolean) => void,;
   onToggleVideo?: (isEnabled: boolean) => void,;
-  onToggleScreenShare?: (isSharing: boolean) => void,;
-  className?: string;
+  onToggleScreenShare?: (isSharing: boolean) => void,;}
+  className?: string;}
 }
 ;
+
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 </VideoCallRoomProps>'
     return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;'
   },;)
   const handleToggleMute = () => {;
+
     const newMuteState = !isMuted,;
     setIsMuted(newMuteState),;
     if (onToggleMute) {;
-      onToggleMute(newMuteState);
+      onToggleMute(newMuteState);) => {
+  return $3;}
+}
     }
   },;
-  const handleToggleVideo = () => {;
+  const handleToggleVideo = (;
     const newVideoState = !isVideoEnabled,;
     setIsVideoEnabled(newVideoState),;
     if (onToggleVideo) {;
+
       onToggleVideo(newVideoState);
     }'
     // If turning video back on, ensure we're not in audio-only mode;'
@@ -149,73 +158,58 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 
 
   const handleToggleScreenShare = () => {
+
     const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);
     if (onToggleScreenShare) {
-      onToggleScreenShare(newScreenShareState)
+      onToggleScreenShare(newScreenShareState)) => {
+  return $3;}
+}
     }
   }
-  const handleToggleAudioOnly = () => {
+  const handleToggleAudioOnly = (
     setIsAudioOnly(!isAudioOnly);
     if (!isAudioOnly) {
       setIsVideoEnabled(false);
       if (onToggleVideo) {
-        onToggleVideo(false)
+        onToggleVideo(false)) => {
+  return $3;}
+}
       }
     }
   }
-  const handleLeaveCall = () => {
+  const handleLeaveCall = (
     if (onLeave) {
-      onLeave()
+      onLeave()) => {
+  return $3;}
+}
     }
-
-  };
-
-
-  };
-
+  }
+};
   },;
-  const handleToggleScreenShare = () => {;
+  const handleToggleScreenShare = (;
     const newScreenShareState = !isScreenSharing,;
-    setIsScreenSharing(newScreenShareState),;
-    if (onToggleScreenShare) {;
-      onToggleScreenShare(newScreenShareState);
-    }
-
-  };
-
-  const handleToggleAudioOnly = () => {;
-
-  };
-  const handleToggleAudioOnly = () => {;
+    setIsScreenSharing(newScreenShareState),;) => {
+  return $3;}
+}
     }
     const newScreenShareState = !isScreenSharing;
-    setIsScreenSharing(newScreenShareState);
-    if (onToggleScreenShare) {;
-      onToggleScreenShare(newScreenShareState);
+    setIsScreenSharing(newScreenShareState);    if (onToggleScreenShare) {;}
+      onToggleScreenShare(newScreenShareState);}
     }
+  };
+  const handleToggleAudioOnly = (;
     setIsAudioOnly(!isAudioOnly);
     if (!isAudioOnly) {;
       setIsVideoEnabled(false);
       if (onToggleVideo) {;
-        onToggleVideo(false);
+        onToggleVideo(false);) => {
+  return $3;}
+}
       }
     }
-
-  };
-
-  const handleLeaveCall = () => {;
-    if (onLeave) {;
-      onLeave();
-
-    }
-
-  },
-
-
-
-
   return (
+
 '
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>;'
 </Card>'
@@ -232,14 +226,17 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 </div>"
           <Badge variant="secondary" className="bg-zion-blue-light text-white">;"
 </Badge>
+
 export const VideoCallRoom: React.FC < VideoCallRoomProps> = ({
   room_id,
   participants = [],
   on_leave;
   onToggleMute;
   onToggleVideo;
+
   onToggleScreenShare;
   class_name;)
+
 }) => {
   const [is_muted, setIsMuted] = useState (false);
   const [isVideoEnabled, setIsVideoEnabled] = useState (true);
@@ -249,8 +246,8 @@ export const VideoCallRoom: React.FC < VideoCallRoomProps> = ({
 ;
   // Call duration timer;
   React.useEffect (() => {
-    const timer = set_interval (() => {
-      setCallDuration (prev_duration => prev_duration + 1);
+    const timer = set_interval (() => {}
+      setCallDuration (prev_duration => prev_duration + 1);}
     }, 1000);
 ;
     return () => clear_interval (timer);
@@ -260,9 +257,11 @@ export const VideoCallRoom: React.FC < VideoCallRoomProps> = ({
   // TODO: Implement
 }
     const hrs = Math.floor (seconds / 3600);
+
     const mins = Math.floor ((seconds % 3600) / 60);
     const secs = seconds % 60,"
     return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;'
+
   }
 ;
   const handleToggleMute = () =>: any {
@@ -271,8 +270,10 @@ export const VideoCallRoom: React.FC < VideoCallRoomProps> = ({
     const newMuteState = !is_muted;
     setIsMuted (newMuteState);
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       onToggleMute (newMuteState);
     }
@@ -284,6 +285,7 @@ if ( {) {
     const newVideoState = !isVideoEnabled;
     setIsVideoEnabled (newVideoState);
     // Check condition;
+
 if ( {) {
   $2;
 }
@@ -293,6 +295,7 @@ if ( {) {
     // Check condition;
 if ( {) {
   $2;
+
 }
       setIsAudioOnly (false);
     }
@@ -304,8 +307,10 @@ if ( {) {
     const newScreenShareState = !isScreenSharing;
     setIsScreenSharing (newScreenShareState);
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       onToggleScreenShare (newScreenShareState);
     }
@@ -316,6 +321,7 @@ if ( {) {
 }
     setIsAudioOnly (!isAudioOnly);
     // Check condition;
+
 if ( {) {
   $2;
 }
@@ -323,6 +329,7 @@ if ( {) {
       // Check condition;
 if ( {) {
   $2;
+
 }
         onToggleVideo (false);
       }
@@ -330,16 +337,19 @@ if ( {) {
   }
 ;
   const handleLeaveCall = () =>: any {
+
   // TODO: Implement
 }
     // Check condition;
 if ( {) {
   $2;
+
 }
       on_leave ();
     }
   }
 ;
+
   return ('
     <Card className={`w - full ${class_name || 'max - w-5xl mx - auto'}`}>;'
 </Card>'
@@ -515,10 +525,12 @@ if ( {) {
 </Button>"
             <Phone className="rotate-135" />"
 </Phone>
+
           </Button>
         </div>
       </CardContent>
     </Card>
+
           </Button>;
           <Button;"
             variant="destructive"""
@@ -580,9 +592,11 @@ if ( {) {
             on_click={handleToggleMute}
           >;
 </Button>
+
             {is_muted ? <MicOff /> : <Mic />}
 </MicOff>
           </Button>;
+
           <Button;"
             variant="outline";""
             size="icon";""
@@ -590,9 +604,11 @@ if ( {) {
             on_click={handleToggleVideo}
           >;
 </Button>
+
             {isVideoEnabled ? <Video /> : <VideoOff />}
 </Video>
           </Button>;
+
           <Button;"
             variant="outline";""
             size="icon";""
@@ -600,9 +616,11 @@ if ( {) {
             on_click={handleToggleScreenShare}
           >;
 </Button>
+
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
 </ScreenShareOff>
           </Button>;
+
           <Button;"
             variant="outline";""
             size="icon";""
@@ -610,9 +628,11 @@ if ( {) {
             on_click={handleToggleAudioOnly}
           >;
 </Button>
+
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
 </VolumeX>
           </Button>;
+
           <Button;"
             variant="destructive";""
             size="icon";""
@@ -622,10 +642,12 @@ if ( {) {
 </Button>"
             <Phone className="rotate - 135" />;"
 </Phone>
+
           </Button>;
         </div>;
       </CardContent>;
     </Card>);
+
 }export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
 </VideoCallRoomProps>
 </Badge> </div> </CardHeader> {)"
@@ -649,3 +671,4 @@ if ( {) {
   isAudioOnly ? <VolumeX /> : <Volume2 /> 
 </VolumeX>"
 }</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>)""
+

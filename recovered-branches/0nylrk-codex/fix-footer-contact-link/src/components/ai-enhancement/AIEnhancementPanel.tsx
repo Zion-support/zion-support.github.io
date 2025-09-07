@@ -1,4 +1,5 @@
 
+
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';''
 import {Textarea} from '@/components/ui/textarea';''
 import {Button} from '@/components/ui/button';''
@@ -27,10 +28,12 @@ export function AIEnhancementPanel(): any ({;
 
 '
 import React, { useState } from 'react';')
+
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
 }
+
 
 
 
@@ -358,3 +361,4 @@ if ( {) {
           </Button>
         </CardFooter>
     </Card>"
+

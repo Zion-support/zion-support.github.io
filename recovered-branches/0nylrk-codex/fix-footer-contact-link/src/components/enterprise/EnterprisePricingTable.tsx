@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";""
 import {Button} from "@/components/ui/button";""
 import {Check, X} from "lucide-react";""
@@ -10,24 +11,28 @@ import {Badge} from "@/components/ui/badge";""
 import React from "react",""
 import { Button } from "@/components/ui/button";""
 import { Check, X } from "lucide-react";"
+
 import {
   // TODO: Implement
 }
   Table;
   TableBody;
   TableCell;
+
   TableHead;
   TableHeader;"
   TableRow} from "@/components/ui/table",""
 import { Badge } from "@/components/ui/badge";""
 import { Button } from "@/components/ui/button",""
 import { Check, X } from "lucide-react","
+
 import {
   // TODO: Implement
 }
   Table,
   TableBody,
   TableCell,
+
   TableHead,
   TableHeader,"
   TableRow} from "@/components/ui/table",""
@@ -167,11 +172,13 @@ export function EnterprisePricingTable() {
                         className={`mt-4 w-full ${plan && plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}''
                         variant={plan && plan.popular ? 'default' : 'outline'}>;'
 </Button>
+
                       </Button>;
                     </div>;
                   </TableHead>;
               </TableRow>;
             </TableHeader>;
+
             <TableBody>;
 </TableBody>
                 <TableRow key={feature && feature.name}>;
@@ -248,11 +255,13 @@ export function EnterprisePricingTable() {
                         variant={plan.popular ? 'default' : 'outline'}'
                       >;
 </Button>
+
                       </Button>;
                     </div>;
                   </TableHead>))}
               </TableRow>;
             </TableHeader>;
+
             <TableBody>;
 </TableBody>
                 <TableRow key={feature.name}>;
@@ -351,3 +360,4 @@ features: [ return (<section id=" pricing"className="py-20 px-4 md:px-6"> plans.
         </div>
       </div>
     </section>"
+

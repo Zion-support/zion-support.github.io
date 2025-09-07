@@ -1,3 +1,22 @@
+          {isLoading ? (;
+            <div className=\"flex justify-center items-center h-64\" />;
+              <div className=\"animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-purple\" /></div>;
+            </div>;
+          ) : (;
+            <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\" />;
+              {listings && listings.map((listing) => (;}
+                <ProductListingCard;}
+key={listing && listing.id} 
+                  listing={listing}
+                  onRequestQuote={handleRequestQuote}                 />;
+              ))}
+            </div>;
+          )}  ),; export default function CategoryDetail () {
+  //Cast to specify the expected route param type since useParams may be untyped const {}
+  slug }
+}= useParams () as {}
+  slug?: string }
+
 
 
 
@@ -313,10 +332,12 @@ export default function CategoryDetail() {
   // TODO: Implement
 }
   slug?: string;
+
 };
 const navigate = useNavigate ();
 const [isLoading, setIsLoading] = useState (true);
 const [listings, setListings] = useState (MARKETPLACE LISTINGS);
+
 const [category, setCategory] = useState< {
   title: string, description: string, icon: JSX.Element;
 }> ({
@@ -356,8 +377,11 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue" > <div classNam
   listing;
 }onRequestQuote= {
   handleRequestQuote;)
+
 }/>) ) 
 </ProductListingCard>
 }</div>) 
 }</div> </div> <Footer /> </>) 
+
 </Footer>"
+

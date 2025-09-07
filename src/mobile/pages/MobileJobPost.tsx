@@ -1,3 +1,4 @@
+
 const goToNextStep = () => {
     if (currentStep === "details") {""
       setCurrentStep("requirements")""
@@ -325,9 +326,26 @@ export function MobileJobPost() {;"
 </Button>"
             {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}"
 </ChevronRight>
+
           </Button>;
+        </div>;"
+        {renderStepContent()}<div className=\"flex gap-2 mt-6\" />;"
+          {currentStep !== \"details\" && (<Button;"
+              variant=\"outline\";}"
+              className=\"flex-1 gap-1\";}
+              onClick={goToPrevStep}
+             />;"
+              <ChevronLeft className=\"h-4 w-4\" /> Back;
+            </Button>;
+          )}<Button;"
+            className=\"flex-1 gap-1\";
+            onClick={goToNextStep}
+           />;"
+            {currentStep === \"preview\" ? \"Publish Job\" : \"Continue\"}"
+            {currentStep !== \"preview\" && <ChevronRight className=\"h-4 w-4\" />}</Button>;
         </div>;
       </main>;
+
       <BottomNavigation />;
 </BottomNavigation>
     </div>;"
@@ -389,11 +407,13 @@ export function MobileJobPost() {;"
         <Textarea;"
           id="description";""
           placeholder="Describe the job role and responsibilities";"
+
           rows={5}
         />;
 </Textarea>
       </div>;
     </div>;
+
   const [skills, setSkills] = useState<string[]>([
 </string>"
       <div className="space-y-2">"
@@ -507,9 +527,11 @@ export function MobileJobPost() {;"
           id="description"""
           placeholder="Describe the job role and responsibilities""
           rows = {5,}
+
         />;
 </Textarea>
       </div>;
+
     </div>;]
   const [skills, setSkills] = useState<string[]>([;
 </string>"
@@ -842,10 +864,12 @@ function PreviewStep() {
               <SelectItem value="usd">USD</SelectItem>;""
               <SelectItem value="eur">EUR</SelectItem>;""
               <SelectItem value="gbp">GBP</SelectItem>;"
+
             </SelectContent>;
           </Select>;
         </div>;
       </div>;"
+
       <div className="space-y-2">;"
 </div>"
         <Label htmlFor="deadline">Application Deadline</Label>;""
@@ -1039,10 +1063,12 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
               <SelectItem value="usd">USD</SelectItem>;""
               <SelectItem value="eur">EUR</SelectItem>;""
               <SelectItem value="gbp">GBP</SelectItem>;"
+
             </SelectContent>;
           </Select>;
         </div>;
       </div>;"
+
       <div className="space - y-2">;"
 </div>"
         <Label html_for="deadline">Application Deadline</Label>;""
@@ -1144,3 +1170,4 @@ min - h-screen flex flex - col"> <MobileHeader </div> <Button variant=" outline"
   3;"
 }/> </div> </div>) '";""
 }<Card> <CardContent className=" p - 4"> <h3 className=" font - bold text - lg">Senior React Developer</h3> <p className=" text - muted - foreground">TechCorp Inc. • Remote • Full - time</p> <div className=" flex gap - 2 my - 3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space - y-1 text - sm mt - 3"> <p className=" font - medium">Experience Level:</p> <p > Senior</p> </div> </div> <div className=" mt - 4 pt - 3 border - t border - border"> <h4 className=" font - medium mb - 2">Description</h4> <p className=" text - sm">We are looking for a skilled React developer to help us build out our new customer - facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w - full" >Edit Job Post</Button> </div> '"}"]"
+

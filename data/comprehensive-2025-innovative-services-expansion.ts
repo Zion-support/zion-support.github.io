@@ -1,6 +1,8 @@
+
   id: string;,
   name: string;
   tagline: string;,
+
   price: string;
   period: string;,
   description: string;
@@ -24,12 +26,15 @@
   market_size: string;
   growth_rate: string;,
   variant: ServiceVariant;
+
   contact_info: {,
   mobile: string;
     email: string;,
+
   customers: number;
   rating: number;,
   reviews: number;
+
   benefits: string[];,
   marketAdvantage: string;
   capabilities: string[],
@@ -39,10 +44,12 @@ const contact = {
   mobile: '+1 302 464 0950';','
   address: '364 E Main St STE 1008 Middletown DE 19709',''
   website: 'https://ziontechgroup.com';'
+
 }
 ;
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
   // AI & Machine Learning Services;
+
   {'
     id: 'ai - content - generation - platform';','
   name: 'AI Content Generation Platform';''
@@ -271,6 +278,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     reviews: 98;,
   benefits: [;'
       '40% risk loss reduction50% compliance cost savings_real - time monitoringAI - powered detection_regulatory compliance';']
+
     ];
   {'
     id: 'ai - personalized - learning - platform';','
@@ -283,6 +291,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'Personalized learning paths_adaptive content delivery_progress tracking and analytics_intelligent tutoring system_assessment and feedback_collaborative learning tools_content creation tools_learning analytics dashboard';''
       'Mobile learning support_integration with LMS systems';']
     ];
+
     popular: false;,'
   targetAudience: 'Schools, Universities, Corporate training, Online education platforms';'
     trialDays: 30;,'
@@ -378,12 +387,13 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance';']
     ],'
     market_advantage: 'Advanced AI energy platform with comprehensive sustainability features';'
+
   }
 ];
 export default comprehensiveInnovativeServices;
 ;
 export default comprehensiveInnovativeServices;
 ;
-;
+
 export default comprehensiveInnovativeServices;
 '

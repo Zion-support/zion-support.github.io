@@ -1,11 +1,14 @@
+
 import React from "react";""
 import { UseFormReturn } from "react-hook-form";"
+
 import {
   // TODO: Implement
 }
   FormField,
   FormItem,
   FormLabel,
+
   FormControl,
   FormMessage,"
 } from "@/components/ui/form";""
@@ -36,10 +39,12 @@ interface BudgetFieldsProps {
                 <Input;"
                   type="number"""
                   className="pl-7 bg-zion-blue border-zion-blue-light text-white""
+
                   {...field}
                 />
 </Input>
               </div>
+
             </FormControl>"
             <FormMessage className="text-red-400" />"
 </FormMessage>
@@ -62,17 +67,21 @@ interface BudgetFieldsProps {
                 <Input;"
                   type="number"""
                   className="pl-7 bg-zion-blue border-zion-blue-light text-white""
+
                   {...field}
                 />
 </Input>
               </div>
+
             </FormControl>"
             <FormMessage className="text-red-400" />"
 </FormMessage>
+
           </FormItem>
     </>
   );
 }
+
 ;
 
   form: UseFormReturn<FormValues>;
@@ -112,3 +121,4 @@ interface BudgetFieldsProps {
 }
 ;
 "
+

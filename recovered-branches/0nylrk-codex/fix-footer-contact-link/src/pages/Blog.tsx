@@ -1,6 +1,7 @@
 
 
 
+
 import { useState } from "react",""
 import { Link } from "react-router-dom",""
 import { Header } from "@/components/Header",""
@@ -177,9 +178,11 @@ const BLOG_POSTS: BlogPost[] = [
         description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation."""
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"""
         canonical="https://app.ziontechgroup.com/blog""
+
       />
 </SEO>
       <Header />
+
 </Header>"
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">"
 </div>"
@@ -380,9 +383,11 @@ const BLOG_POSTS: BlogPost[] = [;
         description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation."""
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"""
         canonical="https://app && app.ziontechgroup.com/blog""
+
       />;
 </SEO>
       <Header />;
+
 </Header>"
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">;"
 </div>"
@@ -439,10 +444,12 @@ const BLOG_POSTS: BlogPost[] = [;
                       <p className="text-white font-medium">{featuredPosts[0].author && author.name}</p>;""
                       <p className="text-sm text-zion-slate-light">;"
 </p>
+
                       </p>;
                     </div>;
                   </div>;
                   <Button;
+
                     asChild;"
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;"
 </Button>
@@ -458,10 +465,12 @@ const BLOG_POSTS: BlogPost[] = [;
                       <p className="text-white font-medium">{featuredPosts[0].author.name}</p>;""
                       <p className="text-sm text-zion-slate-light">;"
 </p>
+
                       </p>;
                     </div>;
                   </div>;
                   <Button ;
+
                     asChild;"
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit";"
                   >;
@@ -717,11 +726,13 @@ const BLOG_POSTS: BlogPost[] = [;
               </Button>
             </div>
         </div>
+
       </div>
       <Footer />
 </Footer>
     </>
   )
+
 }
                     </p>;"
                     <div className="flex items-center">;"
@@ -753,6 +764,7 @@ const BLOG_POSTS: BlogPost[] = [;
               </Button>;
             </div>;
         </div>;
+
       </div>;
       <Footer />;
 </Footer>
@@ -762,6 +774,7 @@ const BLOG_POSTS: BlogPost[] = [;
   );
 }
                 </Card>))}
+
             </div>) : ("
             <div className="text - center py - 16">;"
 </div>"
@@ -771,6 +784,7 @@ const BLOG_POSTS: BlogPost[] = [;
                 variant="outline";")
                 on_click={() => {
 </Button>
+
               </Button>;
             </div>)}
         </div>;
@@ -779,6 +793,7 @@ const BLOG_POSTS: BlogPost[] = [;
 </Footer>
     </>);
 }
+
   ),; }];"
 //Categories for filtering "All Categories";""
 "Trends";""
@@ -843,3 +858,4 @@ Blog - AI & Tech Insights" description="Stay updated with the latest trends in A
 </div>)
 }</div> </div> <Footer /> </>) 
 </Footer>"
+

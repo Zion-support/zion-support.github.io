@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button"""
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"""
 import { toast } from "@/hooks/use-toast"""
@@ -329,10 +330,12 @@ export function ModeToggle() {;
             </p>;'
               <p className='text - xs opacity - 60 mt - 1'>;'
 </p>
+
               </p>)}
           </div>;
         </TooltipContent>;
       </Tooltip>;
+
     </TooltipProvider>);'
   //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria - label="Loading theme toggle" className="focus - visible:ring - ring relative text - foreground" > <div className="h - 5 w - 5 bg - muted rounded animate - pulse" /> {"
 </Button>)"
@@ -346,3 +349,4 @@ export function ModeToggle() {;
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>);
 </div>
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>);'
+

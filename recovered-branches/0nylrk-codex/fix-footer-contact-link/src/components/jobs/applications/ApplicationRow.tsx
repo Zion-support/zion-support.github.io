@@ -1,4 +1,5 @@
 interface ApplicationRowProps {
+
   // TODO: Implement
 }
   application: JobApplication;,
@@ -127,10 +128,14 @@ interface ApplicationRowProps {;
             </div>;"
             <div className="text-xs text-muted-foreground">;"
 </div>
+
             </div>;
+            <div className=\"text-xs text-muted-foreground\" />;
+              {application && application.talent_profile?.professional_title || \"Talent\"}            </div>;
           </div>;
         </div>;
       </TableCell>;
+
       <TableCell>;
 </TableCell>"
         <div className="flex items-center gap-1">;"
@@ -142,9 +147,11 @@ interface ApplicationRowProps {;
       </TableCell>;
       <TableCell>;
 </TableCell>
+
         <StatusBadge status={application && application.status} />;
 </StatusBadge>
       </TableCell>;
+
       <TableCell>;
 </TableCell>
         <Button;"
@@ -154,10 +161,12 @@ interface ApplicationRowProps {;
 </Button>"
           <BarChart className="h-4 w-4 mr-1" />;"
 </BarChart>
+
           <ScoreBadge application={application} />;
 </ScoreBadge>
         </Button>;
       </TableCell>;
+
       <TableCell>;
 </TableCell>"
           <Button variant="ghost" size="sm" asChild>;"
@@ -183,19 +192,23 @@ import { JobApplication, ApplicationStatus } from '@/types / jobs';''
 import { StatusBadge } from './StatusBadge';''
 import { ScoreBadge } from './ScoreBadge';''
 import { ApplicationActions } from './ApplicationActions';'
+
 interface ApplicationRowProps {
   // TODO: Implement
 }
   application: JobApplication,
   processing_id: string | null,
+
   onViewApplication: (application_id: string) => Promise < void>,
 </ApplicationActions>
   onStatusChange: (application_id: string, new_status: ApplicationStatus) => Promise < void>,
   onViewScore: (application: JobApplication) => void;
+
 }
 export /**
  * ApplicationRow - Function description;
  */
+
 function ApplicationRow() {
   return (
     <TableRow key={application.id}>;
@@ -207,9 +220,11 @@ function ApplicationRow() {
           <Avatar className="h - 9 w - 9">;"
 </Avatar>
               <img;
+
                 src={application.talent_profile.profile_picture_url}
                 alt={application.talent_profile.full_name})
               />) : (
+
 </img>)"
               <User className="h - 5 w - 5 text - gray - 400" />)}"
 </User>
@@ -221,10 +236,12 @@ function ApplicationRow() {
             </div>;"
             <div className="text - xs text - muted - foreground">;"
 </div>
+
             </div>;
           </div>;
         </div>;
       </TableCell>;
+
       <TableCell>;
 </TableCell>"
         <div className="flex items - center gap - 1">;"
@@ -236,9 +253,11 @@ function ApplicationRow() {
       </TableCell>;
       <TableCell>;
 </TableCell>
+
         <StatusBadge status={application.status} />;
 </StatusBadge>
       </TableCell>;
+
       <TableCell>;
 </TableCell>
         <Button;"
@@ -304,3 +323,4 @@ onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise
 }/> </TableCell> </TableRow>) 
       </TableCell>
     </TableRow>"
+

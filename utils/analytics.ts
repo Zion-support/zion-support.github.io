@@ -3,7 +3,9 @@ export interface TrackEventPayload {
   // TODO: Implement
 }
   event: string;
+
   properties?: Record<string, any>;
 </string>
   properties?: Record<string, any>;
 </string>'
+

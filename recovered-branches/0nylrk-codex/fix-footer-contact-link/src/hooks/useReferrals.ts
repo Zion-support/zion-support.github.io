@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect } from "react",""
 import { toast } from "@/hooks/use-toast",""
 import { useAuth } from "@/hooks/useAuth",""
@@ -22,20 +23,25 @@ export function useReferrals() {
 </ReferralReward>
   const [stats, setStats] = useState<ReferralStats>({
 </ReferralStats>)
+
   const [referral_code, setReferralCode] = useState < ReferralCode | null>(null);
   const [is_loading, setIsLoading] = useState (true);
   const [referrals, set_referrals] = useState < Referral[]>([]);
   const [rewards, set_rewards] = useState < ReferralReward[]>([]);
   const [stats, set_stats] = useState < ReferralStats>({
+
     total_referrals: 0;,
   pending_referrals: 0;
     completed_referrals: 0,)
+
     total_rewards: 0});
 ;
   useEffect (() => {
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       fetchReferralCode ();
       fetchReferralStats ();
@@ -46,6 +52,7 @@ if ( {) {
 ;
   const fetchReferralCode = async () => {
     try {
+
   // TODO: Implement
 }
         .single(),
@@ -91,9 +98,10 @@ if ( {) {
       setIsLoading(false)
     }
   }
-  },
 
+  },
   const fetchReferrals = async () => {
+
     try {
   // TODO: Implement
 }
@@ -106,15 +114,17 @@ if ( {) {
         .select('*')''
         .eq('referrer_id', user.id)''
         .order('created_at', { ascending: false }),'
+
       if (error) throw error,
-      
       setReferrals(data || [])
+
     } catch (error) {'
       console.error("Error fetching referrals:", error)"
+
     }
   },
-
   const fetchRewards = async () => {
+
     try {
   // TODO: Implement
 }
@@ -127,19 +137,21 @@ if ( {) {
         .select('*')''
         .eq('user_id', user.id)''
         .order('created_at', { ascending: false }),'
+
       if (error) throw error,
-      
       setRewards(data || [])
+
     } catch (error) {'
       console.error("Error fetching rewards:", error)"
+
     }
   },
-
   const fetchReferralStats = async () => {
     try {
   // TODO: Implement
 }
       if (!user) return,
+
       
 
 
@@ -312,11 +324,13 @@ if ( {) {
 
 
   const generateReferralCode = async () => {
+
     try {
   // TODO: Implement
 }
       if (!user) {
         toast({
+
 "
           title: "Authentication required",""
           description: "You need to be logged in to generate a referral code",")"
@@ -394,18 +408,23 @@ if (throw error) {
 
   // Copy the referral link to clipboard;)
   const copyReferralLink = () => {
+
     const link = getReferralLink(),
-    if (link) {
+    if (link) {) => {
+  return $3;}
+}
     }
   }
 ;
   // Get the referral link for the current user;
   const getReferralLink = () =>: any {
+
   // TODO: Implement
 }
     // Check condition;"
 if (return "") {"
   $2;
+
 }
     const base_url = window.location.origin;
     return `${base_url}/?ref=${referral_code.code}`;
@@ -417,6 +436,7 @@ if (return "") {"
 }
     const link = getReferralLink ();
     // Check condition;
+
 if ( {) {
   $2;
 }
@@ -470,3 +490,4 @@ const [rewards, setRewards] = useState<ReferralReward[]> ([]);
 </ReferralReward>
 const [stats, setStats] = useState<ReferralStats> ({
 </ReferralStats>)"
+

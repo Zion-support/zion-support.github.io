@@ -1,3 +1,4 @@
+
 import { Check, ArrowDown, X } from 'lucide-react'''
 import { useDisputeCheck  } from '@/hooks/useDisputeCheck';''
 import { DisputeStatusBadge  } from '@/components/disputes/DisputeStatusBadge';''
@@ -7,10 +8,12 @@ interface MilestoneCardProps {
 }
   id: string;,
   projectId: string;
+
   title: string;
   description?: string;
   amount: number;,
   status: string;
+
   dueDate?: string;
   onApprove?: (id: string) => Promise<void>;
 </void>'
@@ -240,11 +243,13 @@ interface MilestoneCardProps {
 </div>"
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor ()} text - white`}>;"
 </Badge>
+
             </Badge>;
               <DisputeStatusBadge status={dispute_status} />)}
 </DisputeStatusBadge>
           </div>;
         </div>;
+
       </CardHeader>;"
       <CardContent className='pb - 2'>;'
 </CardContent>'
@@ -286,3 +291,4 @@ interface MilestoneCardProps {
         </div>;
       </CardFooter>;
     </Card>);"
+

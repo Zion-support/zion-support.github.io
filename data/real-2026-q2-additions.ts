@@ -3,6 +3,7 @@ export const real2026Q2Additions = [
   {
 
 
+
       'Jira',''
       'ServiceNow',''
       'Slack',''
@@ -30,12 +31,14 @@ export const real2026Q2Additions = [
       'Human-in-the-loop approvals and audit workflows'''
       'Realtime controls dashboard and drift alerts'''
       'Export auditor-ready reports (SOC2, ISO, HIPAA add-ons)'']
+
     ]
     useCases: ['
       'Enterprise AI model governance'''
       'Regulatory readiness and audits'''
       'Vendor model risk management'']
     ]
+
     integrations: ['
       'Jira'''
       'ServiceNow'''
@@ -53,11 +56,28 @@ export const real2026Q2Additions = [
   marketPosition: 'Strong enterprise traction with compliance-led buyers'''
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%'','
   link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub''
+
   }
   {
 
 export const real2026Q2Additions = [
   {
+    ];
+
+use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
+    integrations: ['Azure ADOktaSlackServiceNow'];
+    competitors: ['AteraNinjaOne'];
+    price: '$4';
+  }
+];
+;
+    period: '/device/month';
+    trialDays: 14;
+    setupTime: 'Fast';
+    marketPosition: 'Cost-effective RMM for partners and IT teams';
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
+  link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
+
 '
     id: 'ai - synthetic - data - factory',''
     name: 'AI Synthetic Data Factory',''
@@ -218,6 +238,7 @@ export const real2026Q2Additions = [
   marketPosition: 'Cost-effective RMM for partners and IT teams';''
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'','
   link: 'https://ziontechgroup.com/services/msp-remote-device-ops''
+
   }
 ];
 
@@ -231,6 +252,7 @@ export const real2026Q2Additions = [;
     features: [;'
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)';']
     ],;
+
     useCases: [;'
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management';']
     ],;'
@@ -440,6 +462,7 @@ export const real2026Q2Additions = [;
     market_position: 'Cost - effective RMM for partners and IT teams';','
   roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',''
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops';'
+
 export const real2026Q2Additions = [;
   {;'
     id: 'ai-governance-compliance-hub',;''
@@ -450,6 +473,7 @@ export const real2026Q2Additions = [;
     features: [;'
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)';']
     ],;
+
     useCases: [;'
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management';']
     ],;'
@@ -642,6 +666,7 @@ export const real2026Q2Additions = [;
     marketPosition: 'Cost-effective RMM for partners and IT teams',;''
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';','
   link: 'https://ziontechgroup.com/services/msp-remote-device-ops';'
+
   }
 ];
 '

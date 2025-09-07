@@ -3,6 +3,7 @@ export interface User {
 }
   id: string;,
   email: string;
+
   role: 'client' | 'talent' | 'admin';'
   name?: string;
 }
@@ -15,3 +16,4 @@ export interface AuthContext {
 </User>'
   register: (email: string, password: string, role: User['role']) => Promise<User | null>;'
 </User>'
+

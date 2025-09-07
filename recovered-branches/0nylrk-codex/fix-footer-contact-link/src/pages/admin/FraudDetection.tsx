@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState, useEffect } from "react",""
 import { AppLayout } from "@/layout/AppLayout",""
 import { SEO } from "@/components/SEO",""
@@ -15,11 +16,13 @@ import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@
 import { supabase } from "@/integrations/supabase/client",""
 import { FraudFlag, FraudStats } from "@/types/fraud","
 // Import refactored components;
+
 import {
   // TODO: Implement
 }
   FraudStatsCards,
   FraudFilters,
+
   FraudFlagsTable,
   FraudTabContent;"
 } from "@/components/admin/fraud-detection","
@@ -129,10 +132,12 @@ export default function FraudDetection() {
               disabled={isLoading}
             >
 </Button>
+
             </Button>
           </div>
         </div>
         <FraudStatsCards stats={stats} />
+
 </FraudStatsCards>"
         <Tabs defaultValue="all" className="mb-8">"
 </Tabs>
@@ -403,29 +408,31 @@ if (throw error) {
 </CardContent>
                 <FraudFlagsTable;
                   flags={filteredFlags}
+
                   isLoading={isLoading}
                   hasFilters={hasFilters}
                   resetFilters={resetFilters}
                   onAction={handleAction}
-
               reset_filters={reset_filters}
             />;
+
 </FraudFlagsTable>
             <Card>;
 </Card>"
               <CardContent className="p - 0">;"
 </CardContent>
+
                 <FraudFlagsTable;
                   flags={filtered_flags}
                   is_loading={is_loading}
                   has_filters={has_filters}
                   reset_filters={reset_filters}
                   on_action={handle_action}
-
                 />;
 </FraudFlagsTable>
               </CardContent>;
             </Card>;
+
           </TabsContent>;"
           <TabsContent value="pending">;"
 </TabsContent>"
@@ -473,3 +480,4 @@ Fraud Detection | Admin Dashboard"description=" Monitor and manage fraud detecti
 }<Card> <CardContent className=" p-0"> <FraudFlagsTable flags= {"
 </Card>)"
 }/> </CardContent> </Card> </TabsContent> <TabsContent value=" pending"> <FraudTabContent tabValue=" pending"/> </TabsContent> <TabsContent value=" dangerous"> <FraudTabContent tabValue=" dangerous"/> </TabsContent> <TabsContent value=" actioned"> <FraudTabContent tabValue=" actioned" /> </TabsContent> </Tabs> </div> </AppLayout>)""
+

@@ -1,3 +1,4 @@
+
     id: 'ai - business - intelligence - suite',''
     name: 'AI Business Intelligence Suite','
     tagline:;'
@@ -17,11 +18,13 @@
       'ROI tracking automation',''
       'Market opportunity identification',''
       'Competitive intelligence',']
+
     ],
     popular: true,'
     icon: '📊',''
       'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making''
     ],    features: [
+
 '
       'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making',']
     ],    features: [;'
@@ -56,6 +59,7 @@
   // Intelligent Customer Experience Platform;'
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Production - ready AI business intelligence platform with predictive analytics, automated reporting, and real - time insights.';''
@@ -65,6 +69,7 @@
     reviews: 167;
   }
   // Intelligent Customer Experience Platform;
+
   {'
     id: 'intelligent - customer - experience - platform';','
   name: 'Intelligent Customer Experience Platform';''
@@ -117,6 +122,7 @@
   // Smart Supply Chain Optimization;'
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Production customer experience platform with AI personalization, journey optimization, and behavioral analytics.';''
@@ -126,6 +132,7 @@
     reviews: 134;
   }
   // Smart Supply Chain Optimization;
+
   {'
     id: 'smart - supply - chain - optimization';','
   name: 'Smart Supply Chain Optimization';''
@@ -178,6 +185,7 @@
   // Intelligent HR Management System;'
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Advanced supply chain optimization platform with AI forecasting, risk management, and cost optimization.';''
@@ -187,6 +195,7 @@
     reviews: 98;
   }
   // Intelligent HR Management System;
+
   {'
     id: 'intelligent - hr - management - system';','
   name: 'Intelligent HR Management System';''
@@ -239,6 +248,7 @@
   // Smart Financial Management Platform;'
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Production HR management system with AI recruitment, employee analytics, and performance optimization.';''
@@ -248,6 +258,7 @@
     reviews: 189;
   }
   // Smart Financial Management Platform;
+
   {'
     id: 'smart - financial - management - platform';','
   name: 'Smart Financial Management Platform';''
@@ -300,6 +311,7 @@
   // Intelligent Marketing Automation;'
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Advanced financial management platform with AI optimization, risk prediction, and automated accounting.';''
@@ -309,6 +321,7 @@
     reviews: 156;
   }
   // Intelligent Marketing Automation;
+
   {'
     id: 'intelligent - marketing - automation';','
   name: 'Intelligent Marketing Automation';''
@@ -361,6 +374,7 @@
   // Smart Project Management;'
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Production marketing automation platform with AI optimization, personalization, and workflow automation.';''
@@ -370,6 +384,7 @@
     reviews: 234;
   }
   // Smart Project Management;
+
   {'
     id: 'smart - project - management';','
   name: 'Smart Project Management';''
@@ -418,6 +433,7 @@
   // Intelligent Sales Optimization;'
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Advanced project management platform with AI optimization, risk prediction, and workflow automation.';''
@@ -427,6 +443,7 @@
     reviews: 312;
   }
   // Intelligent Sales Optimization;
+
   {'
     id: 'intelligent - sales - optimization';','
   name: 'Intelligent Sales Optimization';''
@@ -474,24 +491,30 @@
   contact_info: {'
       mobile: '+1 302 464 0950';',
   reviews: 198;
+
   }
 ];
-export const getPopularPracticalBusinessSolutions2029 = () => {
+export const getPopularPracticalBusinessSolutions2029 = (
 
-  return practicalBusinessSolutions2029.filter(service => service.popular);
+  return practicalBusinessSolutions2029.filter(service => service.popular)
 
+  return $3;}
+}
+};
+export const getPracticalBusinessSolutions2029ByCategory = (
+  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.category === category)) => {
+  return $3;}
+}
 };
 
-export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
-  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.category === category)
-};
-
 
 };
-
-export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
-  return practicalBusinessSolutions2029.filter(service => service.category === category);
+export const getPracticalBusinessSolutions2029ByCategory = (
+  return practicalBusinessSolutions2029.filter(service => service.category === category);) => {
+  return $3;}
+}
 };
+
 
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
   return practicalBusinessSolutions2029.filter(service => {;)'
@@ -510,6 +533,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     implementation_details: 'Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.';''
     launch_date: '2025 - 02 - 01';',
   customers: 134;
+
     rating: 4.9,
     reviews: 198;
   }
@@ -523,10 +547,13 @@ export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   // TODO: Implement
 }
   return practicalBusinessSolutions2029.filter (service => service.popular);
-export const getPopularPracticalBusinessSolutions2029 = () => {
-  return practicalBusinessSolutions2029.filter(service => service.popular);
+export const getPopularPracticalBusinessSolutions2029 = (
+  return practicalBusinessSolutions2029.filter(service => service.popular);) => {
+  return $3;}
+}
 }
 ;
+
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>: any {
   // TODO: Implement
 }
@@ -730,16 +757,17 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
       'Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.',''
     launch_date: '2025 - 02 - 01','
     customers: 134,
+
     rating: 4 && 4.9,
-    reviews: 198,
-  },
+    reviews: 198;
+  }
 ];
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular);
 };
-
 export const getPracticalBusinessSolutions2029ByCategory = (
+
   category: string;)
 ) => {
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(
@@ -759,22 +787,26 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
 
   {;'
     id: "ai-business-intelligence-suite","
+
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   // TODO: Implement
 }
   return practicalBusinessSolutions2029.filter (service => service.popular);
+
     realImplementation: true,"
     implementationDetails: "Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.",""
     launchDate: "2024-07-01","
     real_implementation: true,"
     implementation_details: "Production - ready AI business intelligence platform with predictive analytics, automated reporting, and real - time insights.",""
     launch_date: "2024 - 07 - 01","
+
     customers: 95,
     rating: 4 && 4.8,
-    reviews: 167;,
+    reviews: 167;
 },
   // Intelligent Customer Experience Platform;
+
   {"
     id: "intelligent - customer - experience - platform",""
     name: "Intelligent Customer Experience Platform",""
@@ -820,11 +852,13 @@ export const getPopularPracticalBusinessSolutions2029 = () =>: any {
     real_implementation: true,"
     implementation_details: "Production customer experience platform with AI personalization, journey optimization, and behavioral analytics.",""
     launch_date: "2024 - 08 - 15","
+
     customers: 78,
     rating: 4 && 4.9,
-    reviews: 134;,
+    reviews: 134;
 },
   // Smart Supply Chain Optimization;
+
   {"
     id: "smart - supply - chain - optimization",""
     name: "Smart Supply Chain Optimization",""
@@ -870,11 +904,13 @@ export const getPopularPracticalBusinessSolutions2029 = () =>: any {
     real_implementation: true,"
     implementation_details: "Advanced supply chain optimization platform with AI forecasting, risk management, and cost optimization.",""
     launch_date: "2024 - 09 - 01","
+
     customers: 65,
     rating: 4 && 4.8,
-    reviews: 98;,
+    reviews: 98;
 },
   // Intelligent HR Management System;
+
   {"
     id: "intelligent - hr - management - system",""
     name: "Intelligent HR Management System",""
@@ -920,11 +956,13 @@ export const getPopularPracticalBusinessSolutions2029 = () =>: any {
     real_implementation: true,"
     implementation_details: "Production HR management system with AI recruitment, employee analytics, and performance optimization.",""
     launch_date: "2024 - 10 - 01","
+
     customers: 112,
     rating: 4 && 4.7,
-    reviews: 189;,
+    reviews: 189;
 },
   // Smart Financial Management Platform;
+
   {"
     id: "smart - financial - management - platform",""
     name: "Smart Financial Management Platform",""
@@ -970,11 +1008,13 @@ export const getPopularPracticalBusinessSolutions2029 = () =>: any {
     real_implementation: true,"
     implementation_details: "Advanced financial management platform with AI optimization, risk prediction, and automated accounting.",""
     launch_date: "2024 - 11 - 15","
+
     customers: 89,
     rating: 4 && 4.8,
-    reviews: 156;,
+    reviews: 156;
 },
   // Intelligent Marketing Automation;
+
   {"
     id: "intelligent - marketing - automation",""
     name: "Intelligent Marketing Automation",""
@@ -1020,11 +1060,13 @@ export const getPopularPracticalBusinessSolutions2029 = () =>: any {
     real_implementation: true,"
     implementation_details: "Production marketing automation platform with AI optimization, personalization, and workflow automation.",""
     launch_date: "2024 - 12 - 01","
+
     customers: 156,
     rating: 4 && 4.9,
-    reviews: 234;,
+    reviews: 234;
 },
   // Smart Project Management;
+
   {"
     id: "smart - project - management",""
     name: "Smart Project Management",""
@@ -1070,11 +1112,13 @@ export const getPopularPracticalBusinessSolutions2029 = () =>: any {
     real_implementation: true,"
     implementation_details: "Advanced project management platform with AI optimization, risk prediction, and workflow automation.",""
     launch_date: "2025 - 01 - 01","
+
     customers: 203,
     rating: 4 && 4.8,
-    reviews: 312;,
+    reviews: 312;
 },
   // Intelligent Sales Optimization;
+
   {"
     id: "intelligent - sales - optimization",""
     name: "Intelligent Sales Optimization",""
@@ -1120,15 +1164,18 @@ export const getPopularPracticalBusinessSolutions2029 = () =>: any {
     real_implementation: true,"
     implementation_details: "Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.",""
     launch_date: "2025 - 02 - 01","
+
     customers: 134,
     rating: 4 && 4.9,
     reviews: 198;
 ]}}
 
-};
+import { ServiceVariant } from '../types/service-variants';
+
 
 "
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface PracticalBusinessSolution2029 {;
   id: string,;
   name: string,;
@@ -1159,8 +1206,8 @@ export interface PracticalBusinessSolution2029 {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -1172,6 +1219,7 @@ export interface PracticalBusinessSolution2029 {;
 ;
 export const getPracticalBusinessSolutions2029ByCategory = ()
   category: string) =>: any {
+
   // TODO: Implement
 }
   return practicalBusinessSolutions2029.filter ()
@@ -1220,11 +1268,13 @@ export const getPracticalBusinessSolutions2029ByCategory = ()
     real_implementation: true,"
     implementation_details: "Production - ready AI business intelligence platform with predictive analytics, automated reporting, and real - time insights.",""
     launch_date: "2024 - 07 - 01","
+
     customers: 95,
     rating: 4 && 4.8,
-    reviews: 167;,
+    reviews: 167;
 },
   // Intelligent Customer Experience Platform;
+
   {"
     id: "intelligent - customer - experience - platform",""
     name: "Intelligent Customer Experience Platform",""
@@ -1262,11 +1312,13 @@ export const getPracticalBusinessSolutions2029ByCategory = ()
     real_implementation: true,"
     implementation_details: "Production customer experience platform with AI personalization, journey optimization, and behavioral analytics.",""
     launch_date: "2024 - 08 - 15","
+
     customers: 78,
     rating: 4 && 4.9,
-    reviews: 134;,
+    reviews: 134;
 },
   // Smart Supply Chain Optimization;
+
   {"
     id: "smart - supply - chain - optimization",""
     name: "Smart Supply Chain Optimization",""
@@ -1304,11 +1356,13 @@ export const getPracticalBusinessSolutions2029ByCategory = ()
     real_implementation: true,"
     implementation_details: "Advanced supply chain optimization platform with AI forecasting, risk management, and cost optimization.",""
     launch_date: "2024 - 09 - 01","
+
     customers: 65,
     rating: 4 && 4.8,
-    reviews: 98;,
+    reviews: 98;
 },
   // Intelligent HR Management System;
+
   {"
     id: "intelligent - hr - management - system",""
     name: "Intelligent HR Management System",""
@@ -1346,11 +1400,13 @@ export const getPracticalBusinessSolutions2029ByCategory = ()
     real_implementation: true,"
     implementation_details: "Production HR management system with AI recruitment, employee analytics, and performance optimization.",""
     launch_date: "2024 - 10 - 01","
+
     customers: 112,
     rating: 4 && 4.7,
-    reviews: 189;,
+    reviews: 189;
 },
   // Smart Financial Management Platform;
+
   {"
     id: "smart - financial - management - platform",""
     name: "Smart Financial Management Platform",""
@@ -1388,11 +1444,13 @@ export const getPracticalBusinessSolutions2029ByCategory = ()
     real_implementation: true,"
     implementation_details: "Advanced financial management platform with AI optimization, risk prediction, and automated accounting.",""
     launch_date: "2024 - 11 - 15","
+
     customers: 89,
     rating: 4 && 4.8,
-    reviews: 156;,
+    reviews: 156;
 },
   // Intelligent Marketing Automation;
+
   {"
     id: "intelligent - marketing - automation",""
     name: "Intelligent Marketing Automation",""
@@ -1430,11 +1488,13 @@ export const getPracticalBusinessSolutions2029ByCategory = ()
     real_implementation: true,"
     implementation_details: "Production marketing automation platform with AI optimization, personalization, and workflow automation.",""
     launch_date: "2024 - 12 - 01","
+
     customers: 156,
     rating: 4 && 4.9,
-    reviews: 234;,
+    reviews: 234;
 },
   // Smart Project Management;
+
   {"
     id: "smart - project - management",""
     name: "Smart Project Management",""
@@ -1467,11 +1527,13 @@ export const getPracticalBusinessSolutions2029ByCategory = ()
     real_implementation: true,"
     implementation_details: "Advanced project management platform with AI optimization, risk prediction, and workflow automation.",""
     launch_date: "2025 - 01 - 01","
+
     customers: 203,
     rating: 4 && 4.8,
-    reviews: 312;,
+    reviews: 312;
 },
   // Intelligent Sales Optimization;
+
   {"
     id: "intelligent - sales - optimization",""
     name: "Intelligent Sales Optimization",""
@@ -1509,6 +1571,7 @@ export const getPracticalBusinessSolutions2029ByCategory = ()
     real_implementation: true,"
     implementation_details: "Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.",""
     launch_date: "2025 - 02 - 01","
+
     customers: 134,
     rating: 4 && 4.9,
     reviews: 198;
@@ -1527,6 +1590,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation',;''
       'Market opportunity identificationCompetitive intelligence';']
     ],;
+
     popular: true,;'
     icon: '📊',;''
     color: 'from-blue-500 via-indigo-500 to-purple-500',;''
@@ -1551,6 +1615,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.',;''
@@ -1571,6 +1636,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       'AI-powered personalizationCustomer journey mappingReal-time optimizationMulti-channel integrationBehavioral analyticsPredictive customer insightsAutomated A/B testingCustomer sentiment analysis',;''
       'Loyalty program optimizationRevenue optimization';']
     ],;
+
     popular: true,;'
     icon: '🎯',;''
     color: 'from-green-500 via-emerald-500 to-teal-500',;''
@@ -1595,6 +1661,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production customer experience platform with AI personalization, journey optimization, and behavioral analytics.',;''
@@ -1615,6 +1682,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       'AI demand forecastingInventory optimizationSupply chain risk managementReal-time monitoringCost optimizationSupplier performance trackingLogistics optimizationSustainability tracking',;''
       'Compliance automationPerformance analytics';']
     ],;
+
     popular: true,;'
     icon: '🚚',;''
     color: 'from-orange-500 via-red-500 to-pink-500',;''
@@ -1639,6 +1707,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Advanced supply chain optimization platform with AI forecasting, risk management, and cost optimization.',;''
@@ -1659,6 +1728,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       'AI-powered recruitmentEmployee engagement analyticsTurnover predictionPerformance optimizationSkills gap analysisTraining recommendationsDiversity and inclusion trackingCompliance automation',;''
       'Employee sentiment analysisHR analytics dashboard';']
     ],;
+
     popular: true,;'
     icon: '👥',;''
     color: 'from-purple-500 via-violet-500 to-indigo-500',;''
@@ -1683,6 +1753,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production HR management system with AI recruitment, employee analytics, and performance optimization.',;''
@@ -1703,6 +1774,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       'AI cash flow optimizationFinancial risk predictionAutomated accountingReal-time financial insightsBudget optimizationExpense tracking automationFinancial forecastingTax optimization',;''
       'Compliance monitoringPerformance analytics';']
     ],;
+
     popular: true,;'
     icon: '💼',;''
     color: 'from-emerald-500 via-teal-500 to-cyan-500',;''
@@ -1727,6 +1799,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Advanced financial management platform with AI optimization, risk prediction, and automated accounting.',;''
@@ -1747,6 +1820,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       'AI campaign optimizationContent personalizationCustomer behavior predictionMarketing workflow automationROI optimizationMulti-channel campaign managementA/B testing automationCustomer segmentation',;''
       'Lead scoring automationPerformance analytics';']
     ],;
+
     popular: true,;'
     icon: '📢',;''
     color: 'from-pink-500 via-rose-500 to-red-500',;''
@@ -1771,6 +1845,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production marketing automation platform with AI optimization, personalization, and workflow automation.',;''
@@ -1791,6 +1866,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       'AI workflow optimizationProject risk predictionTask automationTeam collaboration toolsResource optimizationTimeline predictionQuality assurance automationProgress tracking',;''
       'Communication optimizationPerformance analytics';']
     ],;
+
     popular: true,;'
     icon: '📋',;''
     color: 'from-cyan-500 via-blue-500 to-indigo-500',;''
@@ -1815,6 +1891,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Advanced project management platform with AI optimization, risk prediction, and workflow automation.',;''
@@ -1835,6 +1912,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       'AI lead scoringCustomer behavior predictionSales process optimizationRevenue optimizationPipeline managementForecasting automationCustomer insightsSales training optimization',;''
       'Performance trackingROI analytics';']
     ],;
+
     popular: true,;'
     icon: '💰',;''
     color: 'from-yellow-500 via-orange-500 to-red-500',;''
@@ -1859,6 +1937,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.',;''
@@ -1868,12 +1947,17 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     reviews: 198;
   }
 ],;
-export const getPopularPracticalBusinessSolutions2029 = () => {;
-  return practicalBusinessSolutions2029.filter(service => service.popular);
+export const getPopularPracticalBusinessSolutions2029 = (;
+  return practicalBusinessSolutions2029.filter(service => service.popular);) => {
+  return $3;}
+}
 },;
-export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {;
-  return practicalBusinessSolutions2029.filter(service => service.category === category);
+export const getPracticalBusinessSolutions2029ByCategory = (;
+  return practicalBusinessSolutions2029.filter(service => service.category === category);) => {
+  return $3;}
+}
 },;
+
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {;
   return practicalBusinessSolutions2029.filter(service => {;)'
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));'
@@ -1881,3 +1965,4 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
   });
 };
 '
+

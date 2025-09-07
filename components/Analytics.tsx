@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
+// We avoid declaring global window.gtag types here to prevent conflicts;
 
 // We avoid declaring global window.gtag types here to prevent conflicts
 
 interface AnalyticsProps {
-  trackingId?: string;
+  trackingId?: string;}
 }
+
 
 const Analytics: React.FC<AnalyticsProps> = ({
   trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID
@@ -17,9 +19,17 @@ const Analytics: React.FC<AnalyticsProps> = ({
     script1.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
     document.head.appendChild(script1);
 
-    const script2 = document.createElement('script');
-    script2.innerHTML = `
+
+useEffect(() => {
+if (!trackingId || typeof window = == 'undefined');
+  return;
+
+const script1 = document.createElement('script')script1.async = true;}
+    script1.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingI,}
+}`;
+    document.head.appendChild(script1)const script2 = document.createElement('script')script2.innerHTML = `;
       window.dataLayer = window.dataLayer || [];
+
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', '${trackingId}', {
@@ -84,5 +94,6 @@ export const trackPageView = (url: string, title: string) => {
     });
   }
 };
+
 
 export default Analytics;

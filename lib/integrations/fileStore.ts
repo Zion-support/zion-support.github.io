@@ -5,6 +5,7 @@ import { IntegrationsState } from './types';
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
+
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -22,7 +23,9 @@ export function loadState(): IntegrationsState {
     };
     saveState(initialState);
     return initialState;
+
   }
+
 
   try {
     const data = fs.readFileSync(STATE_FILE, 'utf8');
@@ -84,4 +87,5 @@ export function getConnections(): any[] {
 export function getSyncLogs(): any[] {
   const state = loadState();
   return state.syncLogs;
+
 }

@@ -1,13 +1,16 @@
+
   contactInfo: {,
   mobile: string, email: string,
     address: string,
     website: string;
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number;
 }
+
       'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.'''
     launchDate: '2026-06-15'',
   customers: 65;
@@ -34,6 +37,7 @@
   }
 ];'
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface EmergingTech2026ServiceV2 {;
   id: string,;
   name: string,;
@@ -64,8 +68,8 @@ export interface EmergingTech2026ServiceV2 {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -74,11 +78,12 @@ export interface EmergingTech2026ServiceV2 {;
   rating: number,;
   reviews: number;
 }
-}
+
 
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   // Neuromorphic Computing Platform;
   {
+
 '
     id: 'neuromorphic-computing-platform', name: 'Neuromorphic Computing Platform',''
     tagline: 'Brain-inspired computing for next-generation AI applications',''
@@ -104,12 +109,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Production - ready quantum internet platform with quantum networking, communication protocols, and research tools.';''
     launch_date: '2026 - 06 - 15';',
   customers: 65;
     rating: 4.9,
+
     reviews: 45;'
 import { ServiceVariant } from '../types/service-variants',;'
 export interface EmergingTech2026ServiceV2 {;
@@ -509,3 +516,4 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
   }
 ;
 '
+

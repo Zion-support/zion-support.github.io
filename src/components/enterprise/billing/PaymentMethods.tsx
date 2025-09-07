@@ -1,3 +1,4 @@
+
 import { CreditCard, Plus, Trash } from 'lucide-react'''
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';''
 import React from "react",""
@@ -295,10 +296,12 @@ export function PaymentMethods() {;
 </Button>"
                 <Trash className="h - 4 w - 4" />;"
 </Trash>
+
               </Button>;
             </div>;
           </div>))}
       </CardContent>;
+
       <CardFooter>;
 </CardFooter>"
         <Button className='gap - 1'>;'
@@ -310,3 +313,4 @@ export function PaymentMethods() {;
         </Button>;
       </CardFooter>;
     </Card>);"
+

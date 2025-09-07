@@ -1,3 +1,4 @@
+
 import { Education } from "@/types/resume";"
 export interface EducationFormProps {
   // TODO: Implement
@@ -58,3 +59,4 @@ export interface EducationFormFieldsProps {;
   isEditing: boolean;,
   onSubmit: (data: any) => Promise<void>;
 </void>"
+

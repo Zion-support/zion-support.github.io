@@ -1,7 +1,4 @@
-
-
-
-  projectName: string,
+projectName: string,
   scopeSummary: string,
   startDate: Date,
   endDate?: Date;
@@ -9,12 +6,15 @@
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
 
+
 export function MilestoneSuggestions({;
 import React, { useState } from 'react';'
+
   projectName;
   scopeSummary;
   startDate;
   endDate;
+
   projectType;
 '
 import React, { useState } from 'react',;''
@@ -24,11 +24,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 import { Loader2, Sparkles, Check } from 'lucide-react',;''
 import { Badge } from '@/components/ui/badge',;''
 import { format, parseISO } from 'date-fns',;'
+
 interface MilestoneSuggestionsProps {;
   projectName: string,;
   scopeSummary: string,;
   startDate: Date,;
   endDate?: Date,;
+
   projectType: string,;)
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
@@ -77,29 +79,19 @@ export function MilestoneSuggestions({
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,"
       projectType: projectType || "Other""
+
     },
-
     const milestones = await generateMilestones(input),
-    
-
-    if (milestones.length > 0) {
+        if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
-        onMilestonesGenerated(milestones)
-
-  };
-
-  }
-  };
-
-  };
-
-;
+        onMilestonesGenerated(milestones);
 export function MilestoneSuggestions({;
   projectName,;
   scopeSummary,;
   startDate,;
   endDate,;
+
   projectType,;
   onMilestonesGenerated;)
 }: MilestoneSuggestionsProps) {;
@@ -113,16 +105,17 @@ export function MilestoneSuggestions({;
       endDate: endDate ? endDate && endDate.toISOString() : null,;"
       projectType: projectType || "Other";"
     };
+
   onMilestonesGenerated;
-}: MilestoneSuggestionsProps) {;
+}: MilestoneSuggestionsProps) {;}
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
   const [showSuggestions, setShowSuggestions] = useState(false);
-
       setShowSuggestions(true);
-      if (onMilestonesGenerated) {;
-        onMilestonesGenerated(milestones);
+      if (onMilestonesGenerated) {;}
+        onMilestonesGenerated(milestones);}
       }
     }
+
 "
 import {Button} from '@/components / ui / button';''
 import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';''
@@ -130,6 +123,7 @@ import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card
 import {Loader2, Sparkles, Check} from 'lucide-react';''
 import {Badge} from '@/components / ui / badge';''
 import {format, parseISO} from 'date - fns';'
+
 interface MilestoneSuggestionsProps {
   // TODO: Implement
 }
@@ -137,27 +131,30 @@ interface MilestoneSuggestionsProps {
   scope_summary: string,
   start_date: Date,
   end_date?: Date;
-  project_type: string,
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+  project_type: string,}
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;}
 }
 export /**
  * MilestoneSuggestions - Function description;
  */
-function MilestoneSuggestions() {
+function MilestoneSuggestions() {}
   const { generate_milestones, generated_milestones, is_generating } = useMilestoneGenerator ();
   const [show_suggestions, setShowSuggestions] = useState (false);
 ;
+
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {,
   scope: `${project_name}: ${scope_summary}`,
       start_date: start_date.toISOString (),
       end_date: end_date ? end_date.toISOString () : null,'
       project_type: project_type || "Other";"
+
     }
 ;
     const milestones = await generate_milestones (input);
 ;
     // Check condition;
+
 if ( {) {
   $2;
 }
@@ -165,6 +162,7 @@ if ( {) {
       // Check condition;
 if ( {) {
   $2;
+
 }
         onMilestonesGenerated (milestones);
       }
@@ -172,6 +170,7 @@ if ( {) {
   }
 ;
   const format_date = (date_string: string) =>: any {
+
   // TODO: Implement
 }
     try {
@@ -188,18 +187,11 @@ if ( {) {
     } catch (error) {;
       return dateString;
 
-    }
 
+    }
   },
-
-
-
-
-
-
-
-    }
   }
+
   }
 
   return ('
@@ -247,11 +239,13 @@ if ( {) {
 </div>"
                       <Badge variant="secondary" className="ml-2 text-xs">"
 </Badge>
+
                       </Badge>
                     </div>"
                     <div className="text-sm text-muted-foreground">"
 </div>
                     </div>
+
                   </div>"
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>""
                   <div className="flex justify-between items-center mt-2 text-sm">"
@@ -263,10 +257,12 @@ if ( {) {
 </div>"
                 <Check className="h-4 w-4 mr-1 text-green-500" />"
 </Check>
+
               </div>
             </div>
           </CardContent>
         </Card>
+
         <Card>;
 </Card>"
           <CardHeader className="pb-3">;"
@@ -289,11 +285,13 @@ if ( {) {
 </div>"
                       <Badge variant="secondary" className="ml-2 text-xs">;"
 </Badge>
+
                       </Badge>;
                     </div>;"
                     <div className="text-sm text-muted-foreground">;"
 </div>
                     </div>;
+
                   </div>;"
                   <p className="text-sm text-muted-foreground">{milestone && milestone.description}</p>;""
                   <div className="flex justify-between items-center mt-2 text-sm">;"
@@ -305,11 +303,13 @@ if ( {) {
 </div>"
                 <Check className="h-4 w-4 mr-1 text-green-500" />;"
 </Check>
+
               </div>;
             </div>;
           </CardContent>;
         </Card>)}
     </div>);
+
     </div>;
         </Card>;
     </div>;"
@@ -324,3 +324,4 @@ if ( {) {
 </CardContent>"
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)"
 }</div>) "
+

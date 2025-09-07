@@ -1,4 +1,5 @@
 
+
 import React from 'react';''
 import { Button } from "@/components/ui/button";""
 import { Input } from "@/components/ui/input";""
@@ -6,15 +7,16 @@ import { useState } from "react";""
 import { Mail } from "lucide-react";"
 export function EnhancedNewsletterForm() {;"
   const [email, setEmail] = useState("");"
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
+  const handleSubmit = (
+    e.preventDefault();
     setIsSubmitting(true);
 
-
     // Simulate API call;
+
     setTimeout(() => {;
 "
 import { Button } from "@/components/ui/button",""
@@ -128,12 +130,14 @@ export function EnhancedNewsletterForm() {"
             <div;
               key={i}"
               className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan""
+
             >
 </div>
             </div>
         </div>
-        <span>Join 10,000+ tech professionals who already subscribe</span>
+        <span />Join 10,000+ tech professionals who already subscribe</span>
       </div>
+
     </div>"
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">"
 </div>"
@@ -187,3 +191,4 @@ export function EnhancedNewsletterForm() {"
     </div>;
 }</div>) ) 
 }</div> <span>Join 10, 000+ tech professionals who already subscribe</span> </div> </div>) "
+

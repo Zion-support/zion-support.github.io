@@ -1,26 +1,29 @@
-
-
-
-export function ApiLogs() {
+export function ApiLogs() {}
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
   // Load logs on mount and when pagination changes;
+
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
-  }, [pageSize, currentPage]);
 
-  const handleRefresh = () => {
-    fetchApiLogs(pageSize, currentPage * pageSize)
+  }, [pageSize, currentPage]);
+  const handleRefresh = (
+    fetchApiLogs(pageSize, currentPage * pageSize)) => {
+  return $3;}
+}
   }
   // Helper to format the timestamp;
+
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')'
+
   }
-export function ApiLogs() {;
+export function ApiLogs() {;}
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
+
 
 
 export function ApiLogs() {;
@@ -343,3 +346,4 @@ export function ApiLogs() {
           </div>;
       </CardContent>;
     </Card>;"
+

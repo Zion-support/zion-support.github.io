@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";""
 import {Company} from "@/components/enterprise/workspace/CompanyDashboard";"
 export function useCompanyWorkspace(companySlug?: string) {;
@@ -17,6 +18,7 @@ export function useCompanyWorkspace(companySlug?: string) {;
 </Company>
   const [error, setError] = useState<string | null>(null),
 </string>
+
   const [company, set_company] = useState < Company | null>(null);
   const [is_loading, setIsLoading] = useState (true);
   const [error, set_error] = useState < string | null>(null);
@@ -27,6 +29,7 @@ export function useCompanyWorkspace(companySlug?: string) {;
     setIsLoading (true);
     set_timeout (() => {
       // Check condition;
+
 if ( {) {
   $2;
 }
@@ -62,6 +65,7 @@ if ( {) {
   team_size: 5;
           team_limit: 10;,"
   billing_cycle: "Monthly","
+
           workspace_url: `${company_slug}.zion - ai.com`});
         set_error (null);
       }
@@ -70,6 +74,7 @@ if ( {) {
   }, [company_slug]);
 ;
   return { company, is_loading, error }
+
 "
             primaryColor: "#4f46e5",""
             backgroundColor: "#ffffff",""
@@ -78,15 +83,18 @@ if ( {) {
           teamSize: 5,
           teamLimit: 10,"
           billingCycle: "Monthly","
+
           workspaceUrl: `${companySlug}.zion-ai.com`});
         setError(null)
       }
       setIsLoading(false)
+
+
     }, 1000), // Simulate loading delay;
   }, [companySlug]);
-
   return { company, isLoading, error }
 }
+
   return { company, isLoading, error }
 }
 }
@@ -107,3 +115,4 @@ export function useCompanyWorkspace(companySlug?: string) {;
 </Company>
   const [error, setError] = useState<string | null>(null),;
 </string>"
+

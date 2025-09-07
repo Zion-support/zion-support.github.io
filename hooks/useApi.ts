@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useCallback } from 'react';'
 interface UseApiOptions {
   // TODO: Implement
@@ -25,6 +26,7 @@ interface ApiState < T> {'
 };import { useState, useEffect } from 'react';'
 interface ApiState<T> {
 </T>
+
 export function use_api < T>(url: string, options?: RequestInit) {
   const [state, set_state] = useState < ApiState < T>>({
     data: null,
@@ -32,10 +34,12 @@ export function use_api < T>(url: string, options?: RequestInit) {
     error: null,
 
 
+
     data: null,
     loading: true,
     error: null,;
 )
+
   });
 ;
   useEffect (() => {
@@ -44,12 +48,15 @@ export function use_api < T>(url: string, options?: RequestInit) {
   // TODO: Implement
 }
           data: null,
+
           loading: false,'
           error: error instanceof Error ? error && error.message : 'An error occurred','
+
         });
       }'
 import { useState, useEffect, useCallback } from 'react';'
 }
+
 interface UseApiProps {
   // TODO: Implement
 }
@@ -80,20 +87,21 @@ import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions 
     try {
   // TODO: Implement
 }
+
       set_loading (true);
       set_error (null);
       const result = await api_function (...args);
       set_data (result);
-      options.on_success?.(result);
-      return result;
+      options.on_success?.(result);}
+      return result;}
     } catch (err) {
       const error = err instanceof Error ? err : new Error (String (err));
       set_error (error);
       options.on_error?.(error);
-
-      throw error;
-      set_loading (false);
+      throw error;}
+      set_loading (false);}
     }
+
 
 '
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;'
@@ -133,3 +141,4 @@ export function useApi<T>(
 </T>
   const [error, setError] = useState<string | null>(null);
 </string>'
+

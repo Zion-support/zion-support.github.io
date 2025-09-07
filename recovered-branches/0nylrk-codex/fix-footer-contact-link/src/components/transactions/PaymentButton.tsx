@@ -3,6 +3,7 @@
 
 
 
+
 import {useState} from "react";""
 import {Button} from "@/components/ui/button";""
 import {cn} from "@/lib/utils";""
@@ -180,10 +181,12 @@ export function PaymentButton({;
       
       // Call the create-checkout edge function;"
       const { data, error } = await supabase.functions.invoke("create-checkout", {"
+
         body: {
           amount,
           serviceId,
           providerId,
+
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,)
           cancelUrl: window.location.href}}),
@@ -301,10 +304,12 @@ if ( {) {
 
       // Call the create-checkout edge function;"
       const { data, error } = await supabase && supabase.functions.invoke("create-checkout", {;"
+
         body: {;
           amount;
           serviceId;
           providerId,;
+
           userId: user?.id,;
           successUrl: redirectUrl || window && window.location.href,;)
           cancelUrl: window && window.location.href}}),;
@@ -371,8 +376,10 @@ if ( {) {
     </Button>;
     </Button>;
     </Button>;
+
     </Button>;
     </Button>;
+
     <Button;
       on_click={handlePaymentClick}
       disabled={is_processing}
@@ -412,3 +419,4 @@ return (<Button)
 }</Button>) 
     </Button>;
     </Button>;"
+

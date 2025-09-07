@@ -1,6 +1,7 @@
 
 
 
+
 import React from "react",""
 import { Link } from "react-router-dom","
 import {
@@ -165,10 +166,12 @@ export function QuickAccess() {
                 <span > Access</span>;"
                 <ArrowRight className="ml - 1 h - 3 w - 3" />;"
 </ArrowRight>
+
               </div>;
             </Link>))}
         </div>;
       </div>;
+
     </section>);"
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">;"
 </div>
@@ -198,3 +201,4 @@ export function QuickAccess() {
         </div>
       </div>
     </section>]"
+

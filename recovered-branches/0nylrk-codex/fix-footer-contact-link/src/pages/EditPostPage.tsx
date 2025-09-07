@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";""
 import {Link, useNavigate, useParams} from "react-router-dom";""
 import {AppLayout} from "@/layout/AppLayout";""
@@ -88,9 +89,20 @@ export default function EditPostPage() {;
           <div className="flex justify-center items-center h-64">;"
 </div>"
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;"
+
           </div>;
         </div>;
+      </AppLayout>;}
+    );}
+  }
+        <div className=\"container py-8\" />;
+          <h1 />Post not found</h1>;
+          <Button asChild className=\"mt-4\" />;
+            <Link to=\"/community\" />Back to Community</Link>;
+          </Button>;
+        </div>;
       </AppLayout>;
+
       <AppLayout>;
 </AppLayout>"
         <div className="container py-8">;"
@@ -338,3 +350,4 @@ if ( {) {
 return (<AppLayout> <SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post" /> <div className="container py-8" > <div className="flex items-center gap-3 mb-6" > <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground" > Forum </Link> Post </Link> <span className="text-muted-foreground" >/</span> <span className="text-sm font-medium" >Edit</span> </div> <h1 className="text-3xl font-bold mb-8" >Edit Post</h1> <PostForm initialValues= {"
 </AppLayout>)
 }/> </div> </AppLayout>) "
+

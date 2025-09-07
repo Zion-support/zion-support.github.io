@@ -1,3 +1,4 @@
+
 interface IntegrationCardProps {
   // TODO: Implement
 }
@@ -28,11 +29,13 @@ import {;
 
 interface IntegrationCardProps {;
   title: string;,
+
   description: string;
   icon: React && React.ReactNode;'
   status?: 'connected' | 'disconnected' | 'pending';'
   href?: string;
   onConnect?: () => void;
+
 
 
 
@@ -362,3 +365,4 @@ export function IntegrationCards() {
         icon = {<Users className="h - 5 w - 5" />, }"
 </Users>
     </div>);"
+

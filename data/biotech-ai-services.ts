@@ -27,6 +27,7 @@ export interface BiotechAIService {
   market_size: string;
   growth_rate: string;,
   variant: string;
+
   contact_info: {,
   mobile: string;
     email: string;,
@@ -45,6 +46,7 @@ export interface BiotechAIService {
       email: 'kleber@ziontechgroup && ziontechgroup.com',''
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup && ziontechgroup.com','
+
     },
     real_implementation: true,
     implementation_details: ;,
@@ -64,6 +66,7 @@ export interface BiotechAIService {
       'Mobile app',''
       'API for lab integration','
     ],
+
     popular: true,'
     icon: '🔬',''
       address: '364 E Main St STE 1008 Middletown DE 19709',''
@@ -127,6 +130,7 @@ export interface BiotechAIService {
       'Gene synthesis'''
       'Research databases'''
       'Regulatory platforms'']
+
     ]
     useCases: ['
       'Gene editing'''
@@ -157,6 +161,7 @@ export interface BiotechAIService {
       'Research platforms'''
       'Analytical tools'']
     ]
+
     useCases: ['
       'Therapeutic proteins'''
       'Industrial enzymes'''
@@ -185,6 +190,7 @@ export interface BiotechAIService {
       'Regulatory platforms'''
       'Analytical tools'''
       'Healthcare systems'']
+
     ]
     useCases: ['
       'Trial optimization'''
@@ -215,6 +221,7 @@ export interface BiotechAIService {
       'Analytical tools'''
       'Data sources'']
     ]
+
     useCases: ['
       'Disease diagnosis'''
       'Treatment response'''
@@ -243,6 +250,7 @@ export interface BiotechAIService {
       'Electronic health records'''
       'Laboratory systems'''
       'Clinical platforms'']
+
     ]
     useCases: ['
       'Treatment optimization'''
@@ -273,6 +281,7 @@ export interface BiotechAIService {
       'Analytical tools'''
       'Market data'']
     ]
+
     useCases: ['
       'New indications'''
       'Combination therapy'''
@@ -301,6 +310,7 @@ export interface BiotechAIService {
       'Analytical tools'''
       'Cloud platforms'''
       'Data sources'']
+
     ]
     useCases: ['
       'Genomic analysis'''
@@ -331,6 +341,7 @@ export interface BiotechAIService {
       'Automation systems'''
       'Monitoring tools'']
     ]
+
     useCases: ['
       'Process optimization'''
       'Yield improvement'''
@@ -362,6 +373,7 @@ export interface BiotechAIService {
   customers: 90;
     rating: 4.9;,
   reviews: 45;
+
   }
 ];
   id: string,;
@@ -393,8 +405,8 @@ export interface BiotechAIService {
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -416,6 +428,7 @@ export const biotechAIServices: BiotechAIService[] = [;
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',;''
       'API for research integrationMulti-omics data analysis';']
     ],;
+
     popular: true,;'
     icon: '🧬',;''
     color: 'from-emerald-600 to-teal-700',;''
@@ -440,6 +453,7 @@ export const biotechAIServices: BiotechAIService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Complete biomanufacturing platform with AI optimization, real - time monitoring, and automation tools. Includes mobile app and system integration.';''
@@ -447,9 +461,8 @@ export const biotechAIServices: BiotechAIService[] = [;
   customers: 90;
     rating: 4.9,
     reviews: 45;
+  }
 
-  }
-;
-  }
+;  }
 ];
 '

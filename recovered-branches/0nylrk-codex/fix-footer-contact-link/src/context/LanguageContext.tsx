@@ -1,5 +1,6 @@
 
 
+
   currentLanguage: SupportedLanguage;,
   changeLanguage: (lang: SupportedLanguage) => Promise<void>
 </void>
@@ -168,6 +169,7 @@ if ( {) {
           }
         } catch (err) {'
           console.error ('Error syncing language with profile:', err);'
+
         }
       }
     }
@@ -175,10 +177,12 @@ if ( {) {
     syncLanguageWithProfile ();
   }, [current_language, is_authenticated, user]);
 ;
+
   const change_language = async (lang: SupportedLanguage) => {
     // Check condition;
 if (return) {
   $2;
+
 }
     try {
   // TODO: Implement
@@ -188,15 +192,19 @@ if (return) {
       local_storage.set_item ('zion_language', lang);'
 ;
       // Get language name for toast;
+
       const lang_name = supported_languages.find (l => l.code === lang)?.name || lang;
       toast ({)'
         description: t ('language.language_changed', { language: lang_name });'
+
       });
 ;
       // If user is authenticated, update their profile;
       // Check condition;
+
 if ( {) {
   $2;
+
 }
         const { error } = await supabase;'
           .from ('profiles');'
@@ -204,6 +212,7 @@ if ( {) {
           .eq ('id', user.id);'
 ;
         // Check condition;
+
 if ( {) {
   $2;
 }'
@@ -212,6 +221,7 @@ if ( {) {
       }
     } catch (err) {'
       console.error ('Error changing language:', err);'
+
     }
   }
 ;
@@ -220,9 +230,10 @@ if ( {) {
       value={{
         current_language,
         change_language,
-        isRTL;
-        supported_languages;
+        isRTL;}
+        supported_languages;}
       }}
+
     >;
 </LanguageContext>)
     </LanguageContext.Provider>);
@@ -230,16 +241,16 @@ if ( {) {
 ;
         supportedLanguages;
   },;
+
   return (;
     <LanguageContext.Provider;
       value={{;
         currentLanguage,;
         changeLanguage,;
-        isRTL;
-        supportedLanguages;
-
-
+        isRTL;}
+        supportedLanguages;}
       }}
+
     >
 </LanguageContext>
     </LanguageContext.Provider>;)
@@ -343,3 +354,4 @@ const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage> ( (i18
   );
 };
 '
+

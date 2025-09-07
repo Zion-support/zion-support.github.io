@@ -1,4 +1,5 @@
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",""
 import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;"
@@ -50,12 +51,14 @@ import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1","
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*",""
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
+
 interface HireRequest {
   // TODO: Implement
 }
   talent: {,
   id: string,
     full_name: string,
+
     professional_title: string,
     email?: string;
   },
@@ -75,13 +78,15 @@ import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",;"
 const corsHeaders = {;"
   "Access-Control-Allow-Origin": "*",;""
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;"
+
 interface HireRequest {;
   talent: {;,
   id: string,;
     full_name: string,;
-    professional_title: string,;
-    email?: string;
+    professional_title: string,;}
+    email?: string;}
   },;
+
   requester: {;,
   name: string,;
     email: string,;
@@ -360,15 +365,13 @@ if ( {) {
       
     if (adminError) {"
       console.error("Error fetching admin users:", adminError)"
+
     }
-    
     let adminId: string | undefined = undefined,
-    
-
-
     // Create notification for admin (if any found)
     if (adminUsers && adminUsers.length > 0) {
       adminId = adminUsers[0].id;
+
 ;"
         const response_text = completion.data.choices[0]?.text || "";"
 ;
@@ -391,6 +394,7 @@ if ( {) {
       } catch (ai_error) {"
         console.error ("Error generating enhanced content:", ai_error);"
         // Continue without enhanced content;
+
       }
     }
     // 2. Store the request in the database;
@@ -400,6 +404,7 @@ if ( {) {
         {
           talent_id: talent.id,
           requester_id: requester.id || null, // May be null if user is not authenticated;
+
           requester_name: requester.name;,
   requester_email: requester.email;
           project_overview: project.overview;,
@@ -412,12 +417,15 @@ if ( {) {
   status: 'new',')
           expiry_date: new Date (Date.now () + 30 * 24 * 60 * 60 * 1000), // 30 days from now;
         }]
+
       ]);
       .select ();
 ;
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       throw new Error (`Error storing hire request: ${request_error.message}`);
     }
@@ -430,15 +438,18 @@ if ( {) {
       .limit (1);
 ;
     // Check condition;
+
 if ( {) {
   $2;
 }'
       console.error ("Error fetching admin users:", admin_error);"
+
     }
     let admin_id: string | undefined = undefined;
 ;
     // Create notification for admin (if any found);
     // Check condition;
+
 if ( {) {
   $2;
 }
@@ -535,3 +546,4 @@ if ( {) {
 </p>'
 }</p>` : '''
 }<p>Please log in to your Zion AI Marketplace account to respond to this request.</p> <p>Best regards, <br>The Zion AI Marketplace Team</p> ` '
+

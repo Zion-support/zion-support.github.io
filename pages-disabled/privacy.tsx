@@ -1,3 +1,4 @@
+
 import React from 'react';''
 import MainLayout from '../components/layout/MainLayout';'
 class ErrorBoundary extends React.Component {
@@ -890,3 +891,4 @@ const PrivacyPage: React.FC = () => {
         </main>;
       </Layout>;
     </ErrorBoundary>;"
+

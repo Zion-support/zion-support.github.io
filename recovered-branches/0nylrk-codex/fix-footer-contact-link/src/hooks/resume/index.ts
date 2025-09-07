@@ -1,5 +1,6 @@
 
 
+
 import { useState  } from 'react';''
 import { Resume  } from '@/types/resume';''
 import { useFetchResume  } from './useFetchResume';''
@@ -26,3 +27,4 @@ export function useResume() {;
 </Resume>
   const [resume, setResume] = useState<Resume | null>(null),;
 </Resume>'
+

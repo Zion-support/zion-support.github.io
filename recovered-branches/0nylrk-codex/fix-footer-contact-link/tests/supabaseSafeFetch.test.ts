@@ -1,4 +1,5 @@
 
+
 import { check_online, safe_fetch } from '@/integrations / supabase / client';''
 import { vi } from 'vitest';'
 // Test that check_online returns false when navigator is offline;'
@@ -34,3 +35,4 @@ it('safeFetch throws when fetch rejects', async () => {'
 ;
 ;
 '
+

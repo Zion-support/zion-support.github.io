@@ -2,6 +2,7 @@
 
 
 
+
 import {SEO} from "@/components/SEO";""
 import {GradientHeading} from "@/components/GradientHeading";""
 import {Button} from "@/components/ui/button";""
@@ -536,6 +537,7 @@ export default function Careers() {
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;"
 </Button>
                 </TabsContent>;
+
             </Button>;
           </div>;
         </div>;
@@ -543,6 +545,7 @@ export default function Careers() {
     </AppLayout>);
     </AppLayout>);
     </AppLayout>;
+
 //Benefits list </svg>) "
 return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-20" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="text-center mb-16" > <GradientHeading>Join Our Team</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto" > Help us build the future of AI and technology </p> </div> <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24" > <div> technology are accessed, shared, and implemented globally. text-zion-slate-light text-lg mb-6"> Our team is passionate about democratizing access to cutting-edge technology and connecting talented individuals with meaningful opportunities. We value innovation, collaboration, and impact in everything we do. </p> </p> </div> <div className=" rounded-lg overflow-hidden"> <img src=" https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600"alt=" Team collaboration"className=" object-cover w-full h-full"/> </div> </div> </div>) )"
 </AppLayout>"
@@ -551,3 +554,4 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 }</Tabs> </div> We're always looking for talented individuals who are passionate about AI and technology. Send us your resume and let's start a conversation. </p> <Button className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Send General Application </Button> </div> </div> </main> </AppLayout>)"
     </AppLayout>;
     </AppLayout>);"
+

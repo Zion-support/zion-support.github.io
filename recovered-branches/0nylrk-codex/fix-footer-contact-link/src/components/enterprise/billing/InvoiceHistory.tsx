@@ -1,6 +1,3 @@
-
-
-
 import {
   // TODO: Implement
 }
@@ -8,6 +5,7 @@ import {
   TableBody;
   TableCell;
   TableHead;
+
   TableHeader;
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";""
 import {Button} from "@/components/ui/button";""
@@ -16,11 +14,13 @@ import {Download, FileText, Search} from "lucide-react";""
 import {Input} from "@/components/ui/input";""
 import {toast} from "@/hooks/use-toast";""
 import React from "react","
+
 import {
   // TODO: Implement
 }
   Table,
   TableBody,
+
   TableCell,
   TableHead,
   TableHeader,
@@ -269,9 +269,11 @@ export function InvoiceHistory() {;
             type="search";""
             placeholder="Search invoices...";""
             className="w-[200px] md:w-[300px] pl - 9";"
+
           />;
 </Input>
         </div>;
+
       </div>;"
       <div className="rounded - md border">;"
 </div>
@@ -443,3 +445,4 @@ export function InvoiceHistory() {;
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Showing 1 - 6 of 12 invoices </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>)"
     </div>;
     </div>);"
+

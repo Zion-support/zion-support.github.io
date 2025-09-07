@@ -1,21 +1,21 @@
-
-
-
 import {
   // TODO: Implement
 }
   Table;
   TableBody;
   TableCell;
+
   TableHead;
   TableHeader;
   TableRow} from "@/components/ui/table","
+
 import {
   // TODO: Implement
 }
   Dialog;
   DialogContent;
   DialogDescription;
+
   DialogFooter;
   DialogHeader;
   DialogTitle;"
@@ -31,21 +31,25 @@ export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false);"
   const [newMemberEmail, setNewMemberEmail] = useState("");""
 import React, { useState } from "react","
+
 import {
   // TODO: Implement
 }
   Table,
   TableBody,
   TableCell,
+
   TableHead,
   TableHeader,"
   TableRow} from "@/components/ui/table","
+
 import {
   // TODO: Implement
 }
   Dialog,
   DialogContent,
   DialogDescription,
+
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -244,10 +248,12 @@ export function TeamManagement() {;
                       <div className="font-medium">{member.name}</div>""
                       <div className="text-sm text-muted-foreground">"
 </div>
+
                       </div>
                     </div>
                   </div>
                 </TableCell>
+
                 <TableCell>{member.role}</TableCell>
                 <TableCell>
 </TableCell>
@@ -470,6 +476,7 @@ export function TeamManagement() {;
 </Button>"
                         <Trash className="h-4 w-4" />"
 </Trash>
+
                       </Button>
                   </div>
                 </TableCell>
@@ -478,6 +485,7 @@ export function TeamManagement() {;
         </Table>
       </div>
     </div>
+
                 <TableCell>{member.lastActive}</TableCell>;"
                 <TableCell className="text-right">;"
 </TableCell>"
@@ -527,3 +535,4 @@ export function TeamManagement() {;
 </Trash>
 }</div> </TableCell> </TableRow>) ) 
 }</TableBody> </Table> </div> </div>) "
+

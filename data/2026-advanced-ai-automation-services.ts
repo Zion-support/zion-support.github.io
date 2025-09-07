@@ -1,6 +1,8 @@
+
   id: string;,
   name: string;
   tagline: string;,
+
   price: string;
   period: string;,
   description: string;
@@ -24,6 +26,7 @@
   market_size: string;
   growth_rate: string;,
   variant: ServiceVariant;
+
   contact_info: {,
   mobile: string;
     email: string;,
@@ -136,10 +139,12 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   contactInfo: contact;
     realImplementation: true;,
   implementationDetails:
+
     customers: 89,
-    rating: 4 && 4.8,
-    reviews: 156,
+    rating: 4 && 4.8,}
+    reviews: 156}
   },
+
   {'
       'Risk assessment algorithms',''
       'Market trend analysis',''
@@ -148,11 +153,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Automated reporting',''
       'Scenario planning tools',''
       'Executive dashboard','
+
     ],
     popular: true,
     integrations: ['
       'Salesforce, SAP, Oracle, Microsoft, AWS, Google Cloud, Azure'']
     ]
+
     useCases: ['
       'Financial forecasting'''
       'Supply chain optimization'''
@@ -167,10 +174,12 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   contactInfo: contact;
     realImplementation: true;,
   implementationDetails:
+
     customers: 234,
-    rating: 4 && 4.9,
-    reviews: 312,
+    rating: 4 && 4.9,}
+    reviews: 312}
   },
+
   {'
       'Automatic churn prediction',''
       'Personalized retention strategies',''
@@ -182,11 +191,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Sentiment analysis',''
       'ROI measurement',''
       'Integration with CRM systems','
+
     ],
     popular: true,
     integrations: ['
       'Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack, Teams'']
     ]
+
     useCases: ['
       'SaaS customer retention',''
       'Subscription management',''
@@ -208,11 +219,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Predictive analytics',''
       'Multi - platform integration',''
       'Automated reporting','
+
     ],
     popular: true,
     integrations: ['
       'Google Ads, Facebook Ads, LinkedIn Ads, Twitter Ads, HubSpot, Salesforce, Mailchimp'']
     ]
+
     useCases: ['
       'Multi-channel marketing'''
       'Campaign optimization'''
@@ -227,10 +240,12 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   contactInfo: contact;
     realImplementation: true;,
   implementationDetails:
+
     customers: 145,
-    rating: 4 && 4.8,
-    reviews: 189,
+    rating: 4 && 4.8,}
+    reviews: 189}
   },
+
   {'
       'Automatic lead scoring',''
       'Behavioral analysis',''
@@ -242,11 +257,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Market opportunity detection',''
       'ROI tracking',''
       'CRM integration','
+
     ],
     popular: true,
     integrations: ['
       'Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly'']
     ]
+
     useCases: ['
       'Lead generation'''
       'Sales qualification'''
@@ -288,6 +305,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.';''
     launchDate: '2026-01-25';',
   customers: 198;
+
   }
 ];
 
@@ -295,6 +313,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 ];      'Automatic lead scoring_behavioral analysis_predictive lead qualification_personalized nurturing sequences_sales forecasting AIPipeline optimization_competitor intelligence_market opportunity detection';''
       'ROI trackingCRM integration';'
     ];
+
     popular: true;,'
   icon: '💰';''
     color: 'from - yellow - 600 to - orange - 700';','
@@ -319,13 +338,16 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     implementation_details: 'Multi - tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.';''
     launch_date: '2026 - 01 - 25';',
   customers: 198;
+
     rating: 4.9,
     reviews: 267;
   }
 ];
+
 ;
 '
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface AdvancedAIAutomationService {;
   id: string,;
   name: string,;
@@ -356,8 +378,8 @@ export interface AdvancedAIAutomationService {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -367,11 +389,13 @@ export interface AdvancedAIAutomationService {;
   reviews: number;
 }
 ;
+
 const contact = {;'
   mobile: '+1 302 464 0950',;''
   email: 'kleber@ziontechgroup.com',;''
   address: '364 E Main St STE 1008 Middletown DE 19709',;''
   website: 'https://ziontechgroup.com';'
+
 },;
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
   {;'
@@ -409,8 +433,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     implementationDetails: 'Multi-tenant SaaS with autonomous AI orchestration, process mining, and optimization engine.',;''
     launchDate: '2026-01-15',;'
     customers: 89,;
-    rating: 4.8,;
-    reviews: 156;
+    rating: 4.8,;}
+    reviews: 156;}
   },;
   {;'
     id: 'ai-predictive-enterprise-analytics',;''
@@ -447,8 +471,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     implementationDetails: 'Enterprise SaaS with advanced ML models, real-time processing, and predictive algorithms.',;''
     launchDate: '2026-02-01',;'
     customers: 234,;
-    rating: 4.9,;
-    reviews: 312;
+    rating: 4.9,;}
+    reviews: 312;}
   },;
   {;'
     id: 'ai-autonomous-customer-success',;''
@@ -485,8 +509,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     implementationDetails: 'Multi-tenant SaaS with AI customer intelligence, automated workflows, and retention engine.',;''
     launchDate: '2026-01-20',;'
     customers: 167,;
-    rating: 4.7,;
-    reviews: 203;
+    rating: 4.7,;}
+    reviews: 203;}
   },;
   {;'
     id: 'ai-autonomous-marketing-orchestrator',;''
@@ -523,9 +547,10 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     implementationDetails: 'Enterprise SaaS with AI marketing intelligence, cross-channel coordination, and optimization engine.',;''
     launchDate: '2026-02-15',;'
     customers: 145,;
-    rating: 4.8,;
-    reviews: 189;
+    rating: 4.8,;}
+    reviews: 189;}
   },;
+
   {;'
     id: 'ai-autonomous-sales-intelligence',;''
     name: 'AI Autonomous Sales Intelligence',;''
@@ -539,3 +564,4 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   }]
 ];
 '
+

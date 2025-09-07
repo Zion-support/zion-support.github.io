@@ -1,9 +1,12 @@
+
 import { ReactNode } from "react";"
+
 export interface HelpArticle {
   // TODO: Implement
 }
   id: string;,
   title: string;
+
   content: string;,
   lastUpdated: string;
   tags: string[];
@@ -44,3 +47,4 @@ export interface SupportTicket {;
 
 
 "
+

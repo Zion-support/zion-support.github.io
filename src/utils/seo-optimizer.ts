@@ -1,3 +1,4 @@
+
 // SEO optimizer utilities;
 export const generateMetaTags = (data: {,
   title: string;
@@ -267,3 +268,4 @@ export const optimizePageSpeed = () => {'
     optimizedImages: images.length;
   };
 };'
+

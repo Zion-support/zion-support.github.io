@@ -3,6 +3,7 @@
 
 
 
+
 import React, { useState } from "react";""
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";""
 import {Button} from "@/components/ui/button";""
@@ -412,14 +413,18 @@ if ( {) {
 </Button>"
             <Send className="h-5 w-5" />;"
 </Send>
+
           </Button>;
         </div>;
       </div>;
     </div>;
+
+
                   </span>)}
               </div>;
             </div>;
           </div>))}
+
       </div>;"
       <div className="sticky bottom - 0 bg - background border - t border - border p - 2">;"
 </div>"
@@ -443,10 +448,12 @@ if ( {) {
 </Button>"
             <Send className="h - 5 w - 5" />;"
 </Send>
+
           </Button>;
         </div>;
       </div>;
     </div>);
+
 }/> <AvatarFallback> {
 </AvatarFallback>"
 }</AvatarFallback> </Avatar> <div> </p> </div> </div> </Button> <Button variant=" ghost"size=" icon"> <MoreVertical className="h-5 w-5"/> </Button> </div> </div> </header> <div className="flex-1 overflow-y-auto p-4 space-y-4"> {"
@@ -460,3 +467,4 @@ if ( {) {
 }</span>) 
 }</div> </div> </div>) ) "
 }</div> <div className="sticky bottom-0 bg-background border-t border-border p-2"> <div className="flex items-center gap-2"> <Button variant=" ghost"size=" icon"> <PaperclipIcon className="h-5 w-5"/> </Button> <Input > <Send className=" h-5 w-5" /> </Button> </div> </div> </div>)""
+

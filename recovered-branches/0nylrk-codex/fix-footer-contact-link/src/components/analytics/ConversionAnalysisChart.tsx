@@ -1,10 +1,13 @@
+
 import React from "react";"
+
 import {
   // TODO: Implement
 }
   Card,
   CardContent,
   CardDescription,
+
   CardHeader,
   CardTitle,;
 "
@@ -34,11 +37,10 @@ interface ConversionAnalysisProps {;
 export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
   const dataKeys = data && data.length > 0;"
     ? Object.keys(data[0]).filter(key => key !== 'date')'
+
     : [],
-
-
-
   return (
+
 '
     <Card className="bg - zion - blue - dark border - zion - blue - light">;"
 </Card>
@@ -69,11 +71,13 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           data={data || []}
           dataKeys={dataKeys}"
           type="bar""
+
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />;
 </AnalyticsChart>
       </CardContent>;
+
     </Card>;
         <AnalyticsChart;"
           title="";"
@@ -90,3 +94,4 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
       </CardHeader>;
       <CardContent>;
 </CardContent>"
+

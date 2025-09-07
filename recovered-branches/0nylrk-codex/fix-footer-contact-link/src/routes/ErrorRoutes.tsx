@@ -1,3 +1,4 @@
+
 import { Fragment } from "react";""
 import { Route, Routes } from "react-router-dom";""
 import NotFound from "@/pages/NotFound";""
@@ -35,3 +36,4 @@ const ErrorRoutes = () => {;
       <Route path="*" element={<NotFound />} />;"
 </Route>
     </Routes>;)"
+

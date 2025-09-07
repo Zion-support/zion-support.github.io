@@ -1,4 +1,5 @@
 
+
 import {initReactI18next} from 'react-i18next';''
 import LanguageDetector from 'i18next-browser-languagedetector';''
 import enTranslation from './locales/en/translation ;''
@@ -79,6 +80,7 @@ i18n;
       }
       ar: {,
   translation: ar_translation;
+
       }
     }'
     fallback_lng: 'en', // Default language;''
@@ -86,10 +88,12 @@ i18n;
     interpolation: {,
   escape_value: false, // React already escapes by default;
     }
+
     detection: {,'
   order: ['local_storagenavigator'];''
       lookupLocalStorage: 'zion_language',''
       caches: ['local_storage'];')
+
     }});
 ;
 // For RTL language support;
@@ -102,11 +106,12 @@ i18n.on ('language_changed', (lng) => {'
   // Save language preference to local_storage;'
   local_storage.set_item ('zion_language', lng);'
 ;
-  // If user is authenticated, save language preference to profile;
-  // This will be implemented in the LanguageContext;
+  // If user is authenticated, save language preference to profile;}
+  // This will be implemented in the LanguageContext;}
 });
 ;
 export default i18n;
+
 ;
 '
 import i18n from 'i18next',;''
@@ -159,3 +164,4 @@ i18n.on('languageChanged', (lng) => {;'
 }),;
 export default i18n;
 '
+

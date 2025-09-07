@@ -1,4 +1,5 @@
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;""
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"""
@@ -169,10 +170,12 @@ serve(async (req) => {;
         return new Response(JSON.stringify({ error: "Unauthorized" }), {;"
           status: 401,;"
           headers: { "Content-Type": "application/json" }});"
+
       }
     }
 ;
     // Call the process-retention-emails function;
+
     const response = await fetch(`${supabaseUrl}/functions/v1/process-retention-emails`, {;"
       method: "POST",;"
       headers: {;"
@@ -276,6 +279,10 @@ return new Response (JSON.stringify ({
 });
   }
 });
+
   }
+});  }
 });
+
 "
+

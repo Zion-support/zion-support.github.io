@@ -1,3 +1,4 @@
+
 import {ChevronDown, ChevronUp} from "lucide-react";""
 import {Button} from "@/components/ui/button";""
 import {Checkbox} from "@/components/ui/checkbox";""
@@ -73,9 +74,11 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer""
               >
 </label>
+
               </label>;
             </div>;
         </div>;
+
     </div>;"
     <div className="mb - 6 border - b border - zion - blue - light pb - 6">;"
 </div>
@@ -135,3 +138,4 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
             </div>
         </div>
     </div>"
+

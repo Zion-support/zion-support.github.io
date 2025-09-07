@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { Button } from "@/components/ui/button";""
 import { useNavigate } from "react-router-dom";""
@@ -32,11 +33,14 @@ export default function PaymentCanceled() {
             variant="outline"""
             onClick={() => navigate("/dashboard")}"
 </Button>
+
           </Button>
         </div>
       </div>
     </div>
+
     </div>);
+
     </div>);
     </div>);
     </div>;"
@@ -45,5 +49,7 @@ export default function PaymentCanceled() {
 }className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Try Again </Button> <Button;"
 }
     </div>;
+
 </Button>
     </div>);"
+

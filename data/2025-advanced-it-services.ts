@@ -1,12 +1,8 @@
 
-
-
-
 export const advancedITServices2025 = [
-  {
-
-
+  {}
     };
+
     marketSize: '$15 && 15.7B','
     }'
     category: 'IT Operations'',
@@ -441,14 +437,15 @@ export const advancedITServices2025 = [
     market_size: '$15.7B',''
     target_audience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';''
     competitive_advantage: 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration';'
-  }
-];
-;
-  }
-];
-;
 
+  }
+];
+;
+  }
+];
+;
 export const advancedITServices2025 = [;
+
   {;'
     id: 'quantum-cloud-infrastructure-platform',;''
     name: 'QuantumCloud Infrastructure',;''
@@ -681,3 +678,4 @@ export const advancedITServices2025 = [;
   }
 ];
 '
+

@@ -1,3 +1,4 @@
+
 import React from "react"""
 import {format} from "date-fns"""
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card"""
@@ -163,12 +164,14 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
             <CardTitle className="text - white">{quote.project_name}</CardTitle>;""
             <CardDescription className="text - zion - slate - light">;"
 </CardDescription>
+
             </CardDescription>;
           </div>;
           <QuoteStatusBadge status={quote.status} />;
 </QuoteStatusBadge>
         </div>;
       </CardHeader>;
+
       <CardContent>;
 </CardContent>"
         <div className="text - sm text - zion - slate - light mb - 3">;"
@@ -211,8 +214,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 </RefreshCw>)"
                 <ArchiveIcon className="h - 4 w - 4" />)}"
 </ArchiveIcon>
+
             </Button>;
           </div>;
         </div>;
       </CardContent>;
+
     </Card>);"
+

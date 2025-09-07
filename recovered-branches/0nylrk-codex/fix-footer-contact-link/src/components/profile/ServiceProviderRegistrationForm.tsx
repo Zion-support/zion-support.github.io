@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";""
 import {useForm} from "react-hook-form";""
 import {zodResolver} from "@hookform/resolvers/zod";""
@@ -58,11 +59,13 @@ import { Textarea } from "@/components/ui/textarea",;""
 import { Switch } from "@/components/ui/switch",;""
 import { Badge } from "@/components/ui/badge",;""
 import { Separator } from "@/components/ui/separator",;"
+
 import {;
   Form,;
   FormControl,;
   FormDescription,;
   FormField,;
+
   FormItem,;
   FormLabel,;"
   FormMessage} from "@/components/ui/form",;""
@@ -267,19 +270,16 @@ if ( {) {
 }
           setServiceTags ([...service_tags, ...new_services]);
         }
+
       }
     }
-
-
   },
-
-
-
         }
       }
     }
   }
   },
+
 
   // Handle form submission;
   const onSubmit = async (values: ServiceFormValues) => {
@@ -338,10 +338,12 @@ if ( {) {
       }
     }
 
+
   },;
   // Handle form submission;
   const onSubmit = async (values: ServiceFormValues) => {;
     if (serviceTags.length === 0) {;
+
 
       toast({;'
         title: "Services required",;""
@@ -349,10 +351,12 @@ if ( {) {
         variant: "destructive"}),;"
       return;
 
+
 ;
   // Handle form submission;
   const on_submit = async (values: ServiceFormValues) => {
     // Check condition;
+
 if ( {) {
   $2;
 }
@@ -360,12 +364,13 @@ if ( {) {
         title: "Services required",""
         description: "Please add at least one service to your profile.",")"
         variant: "destructive"}),"
+
       return;
     }
     setIsSubmitting (true);
 ;
-
     try {
+
   // TODO: Implement
 }
       // For actual implementation with Supabase;
@@ -400,29 +405,31 @@ if ( {) {
       // For actual implementation with Supabase;
       if (!user?.id) {;'
         throw new Error("User not authenticated");"
-      }
 
+      }
       // Enhance profile if not already done;
       let finalSummary = values && values.bio;
       let finalServices = serviceTags;
+
 
       if (values && values.enhancedProfile && !generatedContent) {;
         try {;"
           const { data: aiData } = await supabase && supabase.functions.invoke('service-profile-enhancer', {;'
             body: {;,
   providerData: {;
+
                 name: values && values.name,;
                 title: values && values.title,;
                 bio: values && values.bio,;
-                services: serviceTags,;
-                location: values && values.location;
+                services: serviceTags,;}
+                location: values && values.location;}
               }
             })
           });
-
           if (aiData) {;
             finalSummary = (aiData as any).summary || values && values.bio;
             // Merge AI suggested services with user-provided services;
+
             const aiServices = (aiData as any).services || [];
             finalServices = [...new Set([...serviceTags, ...aiServices])];
 
@@ -494,10 +501,12 @@ if ( {) {
         .eq('id', user.id)'
         finalSummary = generatedContent && generatedContent.summary;
         finalServices = [...new Set([...serviceTags, ...generatedContent && generatedContent.services])];
+
       }
       // Get user email for notification;
       const { data: userData } = await supabase && supabase.auth.getUser(),;
       const userEmail = userData && userData.user?.email;
+
 
       // Create the service profile;
       const { data: profileData, error } = await supabase;'
@@ -520,9 +529,10 @@ if ( {) {
 
 
 
-        .select(),
 
+        .select(),
       if (error) throw error,
+
 
 
 
@@ -707,10 +717,12 @@ if ( {) {
                               <Input;"
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"""
                                 placeholder="Your full name""
+
                                 {...field}
                               />
 </Input>
                             </div>
+
                           </FormControl>"
                           <FormMessage className="text-red-400" />"
 </FormMessage>
@@ -735,10 +747,12 @@ if ( {) {
                               <Input;"
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"""
                                 placeholder="e.g., Creative Design Studio""
+
                                 {...field}
                               />
 </Input>
                             </div>
+
                           </FormControl>"
                           <FormMessage className="text-red-400" />"
 </FormMessage>
@@ -763,10 +777,12 @@ if ( {) {
                               <Input;"
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"""
                                 placeholder="City, State/Province, Country""
+
                                 {...field}
                               />
 </Input>
                             </div>
+
                           </FormControl>"
                           <FormMessage className="text-red-400" />"
 </FormMessage>
@@ -791,10 +807,12 @@ if ( {) {
                               <Input;"
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"""
                                 placeholder="https://yourwebsite.com""
+
                                 {...field}
                               />
 </Input>
                             </div>
+
                           </FormControl>"
                           <FormMessage className="text-red-400" />"
 </FormMessage>
@@ -1151,10 +1169,12 @@ if ( {) {
                               <Input;"
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"""
                                 placeholder="Your full name""
+
                                 {...field}
                               />
 </Input>
                             </div>
+
                           </FormControl>"
                           <FormMessage className="text-red-400" />"
 </FormMessage>
@@ -1283,11 +1303,13 @@ if ( {) {
                               <Input;"
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";""
                                 placeholder="https://yourwebsite.com";"
+
                                 {...field}
                               />;
 </Input>
                             </div>;
                           </FormControl>;
+
                   </div>;
                 </div>;"
                           <FormMessage className="text-red-400" />;"
@@ -1487,10 +1509,12 @@ if ( {) {
                                 className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">;"
 </Badge>
                               </Badge>;
+
                           </div>;
                         </div>;
                     </div>;
                   </div>;
+
               </div>;"
               <Separator className="bg-zion-blue-light/50" />;"
 </Separator>"
@@ -1883,3 +1907,4 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>)"
 </FormField>"
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)""
+

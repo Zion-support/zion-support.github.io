@@ -1,3 +1,4 @@
+
 import {useState} from "react";""
 import {useParams} from "react-router-dom";""
 import {Header} from "@/components/Header";""
@@ -8,12 +9,14 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";""
 import {AspectRatio} from "@/components/ui/aspect-ratio";""
 import {ShoppingCart, Star, Truck, Shield, RotateCcw, Clock} from "lucide-react";""
 import {toast} from "@/hooks/use-toast";"
+
 interface EquipmentDetails {
   // TODO: Implement
 }
   id: string,
   name: string,
   description: string,
+
   brand: string,
   category: string,"
 import { useState } from "react",""
@@ -27,11 +30,11 @@ import { AspectRatio } from "@/components/ui/aspect-ratio","
 interface EquipmentSpecification {
   // TODO: Implement
 }
+
 }
-
-
 }
 // Sample data - in a real app this would come from an API;
+
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {"
   "pro-camera-x1000": {""
     id: "pro-camera-x1000"","
@@ -64,9 +67,11 @@ interface EquipmentSpecification {;
 
 
 interface EquipmentDetails {;
+
   id: string,;
-  name: string,;
+  name: string,,
   description: string,;
+
   brand: string,;
   category: string,;"
 import { useState } from './react';''
@@ -84,6 +89,7 @@ interface EquipmentSpecification {
 }
   name: string,
   value: string;
+
 }
 interface EquipmentDetails {
   // TODO: Implement
@@ -93,12 +99,12 @@ interface EquipmentDetails {
   description: string,
   brand: string,
   category: string,
-
   subcategory?: string;
   images: string[],;
   price: number,;
   currency: string,;
   rating?: number;
+
 
 
 
@@ -249,9 +255,10 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;"
     ]"
     warranty: "3 years manufacturer warranty"","
   returnPolicy: "21-day return policy for items in original condition""
-  }
 
+  }
 },
+
 
 
   if (!equipment) {
@@ -288,10 +295,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;"
   description: `${quantity}x ${equipment.name} added to your cart.`})
     }, 800)
 
-  },
 
-  const handleBuyNow = () => {
+  },
+  const handleBuyNow = (
     setIsAdding(true),
+
     
 
     // Simulate API call;
@@ -338,9 +346,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;"
                           src={image}
                           alt={`${equipment.name} - image ${index + 1}`}"
                           className="w-full h-full object-cover""
+
                         />
 </img>
                       </div>
+
       <>;
         <Header />;
 </Header>"
@@ -363,10 +373,12 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;"
 </div>"
               <h1 className="text - 3xl font - bold text - white mb - 4">Equipment Not Found</h1>;""
               <p className="text - zion - slate - light mb - 8">The equipment you're looking for doesn't exist or has been removed.</p>;'
+
             </div>;
           </div>;
         </div>;
         <Footer />;
+
 </Footer>
     <>;
       <Header />;
@@ -837,9 +849,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";"
                   >;
 </Button>
+
                   </Button>;
                   <Button ;
                     onClick={handleAddToCart}
+
                     disabled={isAdding || !equipment.inStock}"
                     variant="outline";""
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10";"
@@ -949,10 +963,12 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;"
                       className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity - 50";"
                       on_click={() => set_quantity (prev => Math.max (1, prev - 1))}
 </button>
+
                       disabled={quantity <= 1 || !equipment.in_stock}
                     >;
                       -;
                     </button>;
+
                     <input;"
                       type="number";""
                       className="w - full text - center bg - transparent border - 0 text - white focus:ring - 0";"
@@ -1205,3 +1221,4 @@ if (!equipment) {"
 }
 ;
 "
+

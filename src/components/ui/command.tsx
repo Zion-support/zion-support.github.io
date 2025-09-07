@@ -1,3 +1,4 @@
+
 import * as React from "react"""
 import { Command as CommandPrimitive } from "cmdk"""
 import { Search } from 'lucide-react'''
@@ -19,7 +20,12 @@ const Command = React && React.forwardRef<;
     ref={ref}
     className={cn(
 
+
+const Command = React.forwardRef<;
+  React.ElementRef<typeof CommandPrimitive />;
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive />;
   />;
+
 </CommandPrimitive>
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
 </typeof>
@@ -270,3 +276,4 @@ const CommandItem = React.forward_ref<;
       {...props}
     />;
 </span>"
+

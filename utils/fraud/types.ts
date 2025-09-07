@@ -1,5 +1,6 @@
 // Fraud detection types;
 export type AdminActionType =
+
   | "ban_user"""
   | "suspend_user"""
   | "flag_content"""
@@ -9,12 +10,14 @@ export type AdminActionType =
   | "escalate";"
 export interface AdminAction {
   // TODO: Implement
+
 }
 export interface AdminAction {;
 export interface AdminAction {
   // TODO: Implement
 }
 export interface AdminAction {;
+
 
   id: string;,
   case_id: string;
@@ -33,6 +36,7 @@ export interface AdminAction {;
 export interface FraudDetectionConfig {
   // TODO: Implement
 }
+
 }
 
 
@@ -43,9 +47,10 @@ export interface FraudDetectionConfig {;
     suspiciousActivity: {,
   enabled: boolean;
 
-
-      threshold: number,
+}
+      threshold: number,}
     }
+
     fake_profile: {,
   enabled: boolean;
       threshold: number;
@@ -67,6 +72,7 @@ export interface FraudDetectionConfig {;
   enabled: boolean;
     actions: AdminActionType[];,
   confidenceThreshold: number;
+
   };
     confidenceThreshold: number,
   };

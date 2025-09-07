@@ -1,9 +1,12 @@
+
 id: string;,
   content: string;
   timestamp: string;,
+
   isMe: boolean;
   sender?: string;
-  avatar?: string;
+  avatar?: string;status?: 'sent' | 'delivered' | 'read';
+
 
   status?: 'sent' | 'delivered' | 'read';'
 interface MobileChatViewProps {;
@@ -37,10 +40,12 @@ interface Message {
   // TODO: Implement
 }
   id: string;,
+
   content: string;
   timestamp: string;,
   is_me: boolean;
   sender?: string;
+
   avatar?: string;'
   status?: 'sent' | 'delivered' | 'read';'
 interface MobileChatViewProps {
@@ -48,13 +53,15 @@ interface MobileChatViewProps {
 }
   contact: {,
   id: string;
+
     name: string;
-    avatar?: string;
-    status?: string;
+    avatar?: string;}
+    status?: string;}
   }
   messages: Message[];,
   on_back: () => void;
   onSendMessage: (content: string) => void;
+
 export /**
  * MobileChatView - Function description;
  */
@@ -75,10 +82,10 @@ if (!== '') {) {'
   const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {    // Check condition;
 if ( {) {
   $2;
+
 }
-      e.prevent_default ();
-      handle_send ();
-    }
+      e.prevent_default ()handle_send ()}
+
 
   const startVideoCall = () =>: any {
   // TODO: Implement
@@ -368,10 +375,12 @@ export function MobileChatView(): any ({;
 </Button>"
               <MoreVertical className="h-5 w-5" />;"
 </MoreVertical>
+
             </Button>;
           </div>;
         </div>;
       </header>;"
+
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;"
 </div>
           <div;
@@ -512,10 +521,12 @@ export function MobileChatView(): any ({;
 </Button>'
             <Send className='h-5 w-5' />;'
 </Send>
+
           </Button>;
         </div>;
       </div>;
     </div>;
+
                   </span>)}
               </div>;
             </div>;
@@ -547,3 +558,4 @@ export function MobileChatView(): any ({;
         </div>;
       </div>;
     </div>);'
+

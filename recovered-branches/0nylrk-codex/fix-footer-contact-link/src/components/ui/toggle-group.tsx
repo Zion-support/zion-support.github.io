@@ -1,6 +1,7 @@
 
 
 
+
 import {cn} from '@/lib/utils';''
 import {toggleVariants} from '@/components/ui/toggle';'
 type ToggleGroupContextProps = VariantProps<typeof toggleVariants>;
@@ -79,6 +80,7 @@ type ToggleGroupContextProps = VariantProps < typeof toggle_variants>;
 const ToggleGroupContext = React.create_context < ToggleGroupContextProps>({'
   size: 'default',''
   variant: 'default',')
+
 });
 ;
 const ToggleGroup = React.forward_ref<;
@@ -90,10 +92,12 @@ const ToggleGroup = React.forward_ref<;
     ref={ref})'
     className={cn ('flex items - center justify - center gap - 1', class_name)}'
     {...props}
+
   >;
 </ToggleGroupPrimitive>
     <ToggleGroupContext.Provider value={{ variant, size }}>;
 </ToggleGroupContext>
+
     </ToggleGroupContext.Provider>;
   </ToggleGroupPrimitive.Root>));
 ;
@@ -106,8 +110,8 @@ const ToggleGroupItem = React.forward_ref<;
 >(({ class_name, children, variant, size, ...props }, ref) => {
   const context = React.useContext ()
     ToggleGroupContext) as ToggleGroupContextProps;
-;
-    >;
+;}
+    >;}
       {children}
     </ToggleGroupPrimitive.Item>);
 });
@@ -116,6 +120,7 @@ ToggleGroupItem.display_name = ToggleGroupPrimitive.Item.display_name;
 ;
 export { ToggleGroup, ToggleGroupItem }
 ;
+
 
 
 
@@ -202,3 +207,4 @@ export { ToggleGroup, ToggleGroupItem }
 export { ToggleGroup, ToggleGroupItem }
 ;
 '
+

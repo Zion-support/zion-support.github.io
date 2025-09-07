@@ -1,6 +1,7 @@
 
 
 
+
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;""
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";""
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;""
@@ -303,9 +304,13 @@ if ( {) {
 
 
 
+
   }
 });
+import { serve } from \"https://deno.land/std@0.168.0/http/server.ts\";
+import { createClient } from \"https://esm.sh/@supabase/supabase-js@2.7.1\";
 ;
+
 "
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;""
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1",;"
@@ -330,12 +335,14 @@ serve(async (req:Request) => {;
   if (req.method === "OPTIONS") {;"
     return new Response(null, {;
       status: 204,;)
+
       headers: corsHeaders});
   }
 ;
   try {;
     const supabase = createClient(;
       supabaseUrl,;
+
       supabaseServiceKey;)
     ),;
     // Run the database function to create scheduled reminders;"
@@ -347,10 +354,12 @@ serve(async (req:Request) => {;
         {;
           status: 500,;"
           headers: { "Content-Type": "application/json", ...corsHeaders }}"
+
       );
     }
 ;
     // Process pending reminder jobs;
+
     const { data: pendingJobs, error: jobsError } = await supabase;"
       .from("scheduled_jobs");""
       .select("id, payload");""
@@ -364,15 +373,17 @@ serve(async (req:Request) => {;
         {;
           status: 500,;"
           headers: { "Content-Type": "application/json", ...corsHeaders }}"
+
       );
     }
 ;
     const processedJobs = [],;
     if (pendingJobs && pendingJobs.length > 0) {;
       for (const job of pendingJobs) {;
-        // Call the send-onboarding-reminder function for each job;
-        const reminderResponse = await fetch(;
+        // Call the send-onboarding-reminder function for each job;}
+        const reminderResponse = await fetch(;}
           `${supabaseUrl}/functions/v1/send-onboarding-reminder`,;
+
           {;"
             method: "POST",;"
             headers: {;"
@@ -401,11 +412,13 @@ serve(async (req:Request) => {;
             .update({;)"
               status: "failed"});""
             .eq("id", job.id);"
+
         }
       }
     }
 ;
     return new Response(;
+
       JSON.stringify({;"
         message: "Reminders processed successfully",;"
         processed_jobs: processedJobs.length,;)
@@ -425,3 +438,4 @@ serve(async (req:Request) => {;
   }
 });
 "
+

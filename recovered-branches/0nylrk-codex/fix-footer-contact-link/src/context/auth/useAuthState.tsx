@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState } from "react",""
 import type { UserProfile } from "@/types/auth";""
 import type { UserProfile } from "@/types/auth","
@@ -24,3 +25,4 @@ export function useAuthState() {
 </boolean>
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),;
 </string>"
+

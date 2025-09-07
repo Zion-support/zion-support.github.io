@@ -2,6 +2,7 @@
 
 
 
+
 import {Header} from "@/components/Header";""
 import {Footer} from "@/components/Footer";""
 import {TrustedBySection} from "@/components/TrustedBySection";""
@@ -49,6 +50,7 @@ import { useLanguage } from "@/context/LanguageContext","
 import {
   // TODO: Implement
 }
+
   ArrowRight,
   Users, 
   Zap, 
@@ -56,6 +58,7 @@ import {
   Search,
   MessageSquare, 
   Sparkles,
+
   BarChart3,
   Smartphone;"
 } from "lucide-react","
@@ -123,11 +126,13 @@ export default function Index() {
         description={t("home.seo_description")} ;""
         keywords={t("home.seo_keywords")}""
         canonical="https://app.ziontechgroup.com/";"
+
       />;
 </SEO>
       <Header />;
 </Header>
       <HeroSection />;
+
 </HeroSection>"
       <section className="py-16 bg-zion-blue-dark">"
 </section>"
@@ -150,6 +155,7 @@ export default function Index() {
 </ArrowRight>
                 </div>;
               </Link>;
+
           </div>
         </div>
       </section>
@@ -176,6 +182,7 @@ export default function Index() {
       <FloatingCTA />
 </FloatingCTA>
       <Footer />
+
 </Footer>
     </div>'
     <div className="min-h-screen bg-zion-blue text-white">;"
@@ -247,6 +254,7 @@ export default function Index() {
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;'
 </ArrowRight>
                 </div>;
+
               </Link>;
           </div>;
         </div>;
@@ -254,9 +262,11 @@ export default function Index() {
       <CategoriesSection />;
 </CategoriesSection>
       <BenefitsSection />;
+
 </BenefitsSection>
       <FeaturesGuideSection />;
 </FeaturesGuideSection>
+
 
       <HowItWorksSection />;
 </HowItWorksSection>
@@ -267,15 +277,18 @@ export default function Index() {
       <TrustedBySection />;
 </TrustedBySection>
       <BlogSection />;
+
 </BlogSection>
       <SocialShareSection />;
 </SocialShareSection>
+
 
       <WaitlistSection />;
 </WaitlistSection>
       <FloatingCTA />;
 </FloatingCTA>
       <Footer />;
+
 </Footer>
     </div>;'
     <div className="min - h-screen bg - zion - blue text - white">;"
@@ -285,11 +298,13 @@ export default function Index() {
         description={t ("home.seo_description")}""
         keywords={t ("home.seo_keywords")}""
         canonical="https://app.ziontechgroup.com/";"
+
       />;
 </SEO>
       <Header />;
 </Header>
       <HeroSection />;
+
 </HeroSection>"
       <section className="py - 16 bg - zion - blue - dark">;"
 </section>"
@@ -322,6 +337,7 @@ export default function Index() {
                   <span>{t ("general.explore")}</span>;""
                   <ArrowRight className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`} />;'
 </ArrowRight>
+
                 </div>;
               </Link>))}
           </div>;
@@ -330,11 +346,13 @@ export default function Index() {
       <CategoriesSection />;
 </CategoriesSection>
       <BenefitsSection />;
+
 </BenefitsSection>
       <FeaturesGuideSection />;
 </FeaturesGuideSection>
       <HowItWorksSection />;
 </HowItWorksSection>
+
       <FeaturedListingsSection />;
 </FeaturedListingsSection>
       <TestimonialCarousel />;
@@ -352,6 +370,7 @@ export default function Index() {
       <Footer />;
 </Footer>
     </div>);
+
       <SocialShareSection />;
 </SocialShareSection>
       <WaitlistSection />;
@@ -384,3 +403,4 @@ min-h-screen bg-zion-blue text-white" > <SEO /> <Header /> <HeroSection /> </p> 
 </FeaturesGuideSection>
 }<SocialShareSection /> <WaitlistSection /> <FloatingCTA /> <Footer /> </div>) 
 </SocialShareSection>]"
+

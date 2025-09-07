@@ -1,3 +1,4 @@
+
 import { useRouter } from 'next/router';''
 import { Search, X, Input } from 'lucide-react'; import { Search, X } from 'lucide-react'''
 import { Input } from '@/components/ui/input'''
@@ -113,12 +114,14 @@ interface SearchBarProps {
 </X>
           </button>
       </div>;
+
       <AutocompleteSuggestions;
         suggestions={suggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelect}
         visible={focused}
         highlightedIndex={highlightedIndex}
+
         listId={listId}
 
       />;
@@ -150,11 +153,11 @@ interface SearchBarProps {
     // Check condition;
 if ( {) {
   $2;
+
 }
-      set_suggestions ([]);
-      setHighlightedIndex (-1);
-      return;
+      set_suggestions ([])setHighlightedIndex (-1)return;
     }
+
     const controller = new AbortController ();
     fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, {
       signal: controller.signal,
@@ -232,12 +235,14 @@ if ( {) {
 </div>'
         <Search className='absolute left - 3 top - 1/2 -translate - y-1 / 2 h - 4 w - 4 text - zion - slate' />;'
 </Search>
+
         <Input;
           ref={input_ref}'
           type='text';''
           id='main - search - input';''
           name='search';'
           value={value}
+
           on_change={e => on_change (e.target.value)}
 </Input>
           <button;'
@@ -250,16 +255,37 @@ if ( {) {
 </X>"
             <X className="h - 4 w - 4" />;"
 </X>
+
           </button>)}
       </div>;
       <AutocompleteSuggestions;
-        suggestions = {suggestions, }
-        search_term = {value, }
-        onSelectSuggestion = {handle_select, }
-        visible = {focused, }
-        highlighted_index = {highlighted_index, }
-        list_id = {list_id, }
+        suggestions = {suggestions }
+        search_term = {value }
+        onSelectSuggestion = {handle_select }
+        visible = {focused }
+        highlighted_index = {highlighted_index }
+        list_id = {list_id }
+      />
+    </div>
+  );
+}/> on_click={';}"
+  () => on_change ('') \";}"
+}aria - label=\"Clear search\" > <X className=\"h - 4 w - 4\" /> </button>)}</div> <AutocompleteSuggestions suggestions= {suggestions;}
+}search_term= {value;}
+}onSelectSuggestion= {handle_select;}
+}visible= {focused;}
+}highlighted_index= {highlighted_index;}
+}list_id= {list_id;}"
+}/> </div>)}'\"  )}</div>;
+      <AutocompleteSuggestions;
+        suggestions = {suggestions}
+        searchTerm = {value}
+        onSelectSuggestion = {handleSelect}
+        visible = {focused}
+        highlightedIndex = {highlightedIndex}
+        listId = {listId}
       />;
+
 </AutocompleteSuggestions>
     </div>);"
 }aria - label="Clear search" > <X className="h - 4 w - 4" /> </button>);"
@@ -278,3 +304,4 @@ if ( {) {
   list_id;
 }/> </div>);
 </AutocompleteSuggestions>"
+

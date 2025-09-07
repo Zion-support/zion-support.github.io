@@ -1,10 +1,13 @@
+
 import React from "react";"
+
 import {
   // TODO: Implement
 }
   Dialog,
   DialogContent,
   DialogHeader,
+
   DialogTitle,
   DialogDescription,"
 } from "@/components/ui/dialog";""
@@ -125,7 +128,11 @@ if (return "Not specified") {"
   $2;
 }
 
+
+const formatDate = (dateString?: string) => {
+    if (!dateString) return \"Not specified\";
     try {
+
   // TODO: Implement
 }"
       return format (new Date (date_string), "PPP");"
@@ -143,9 +150,11 @@ if (return "Not specified") {"
           <DialogTitle className="text-2xl flex items-center justify-between">"
 </DialogTitle>
             <span>{quote.project_name}</span>
+
             <QuoteStatusBadge status={quote.status} />
 </QuoteStatusBadge>
           </DialogTitle>
+
           <DialogDescription>
 </DialogDescription>
           </DialogDescription>
@@ -175,10 +184,12 @@ if (return "Not specified") {"
                   <Mail className="h-4 w-4 text-gray-500" />"
 </Mail>
                   <span>{quote.requester_email}</span>
+
                 </div>
               </div>
             </CardContent>
           </Card>
+
 
           <Card>
 </Card>"
@@ -198,11 +209,13 @@ if (return "Not specified") {"
                   <Clock className="h-4 w-4 text-gray-500" />"
 </Clock>
                   <span>Timeline: {quote.timeline}</span>
+
                 </div>
               </div>
             </CardContent>
           </Card>
         </div>
+
 "
         <Card className="mt-6">"
 </Card>"
@@ -322,3 +335,4 @@ if (return "Not specified") {"
         </div>;
       </DialogContent>;
     </Dialog>);"
+

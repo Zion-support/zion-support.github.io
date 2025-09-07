@@ -1,4 +1,5 @@
 
+
 import React, { useState } from "react",""
 import { MessageCircle } from "lucide-react",""
 import { Button } from "@/components/ui/button",""
@@ -58,8 +59,11 @@ const initial_posts: DiscussionPost[] = [;
   title: "Quick tip: How to rank your Zion listing higher"","
   body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.""
   }]
+
 ];
+
 export const CommunityDiscussion: React.FC = () => {
+
 const initialPosts: DiscussionPost[] = [;
   {;
     id: 1,;"
@@ -91,9 +95,9 @@ const initialPosts: DiscussionPost[] = [;
     ]);"
     setNewTitle("");""
     setNewBody("");"
+
     setShowNew(false);
-  }
-  return (
+
 
   return ("
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">"
@@ -229,12 +233,30 @@ export const CommunityDiscussion: React.FC = () => {;
                 onClick={handleAddPost}
             />;
 </Button>
+
               </Button>
             </div>
           </CardContent>
         </Card>
+      )}
+      <div className=\"flex flex-col gap-6\" />
+        {posts.map((post) => (}
+          <Card;}
+key={post.id}
+            className=\"bg-zion-blue border-zion-slate-dark shadow-lg\"
+           />
+            <CardContent className=\"py-4 flex gap-4\" />
+              <Avatar />
+                <AvatarFallback />
+                  {post.author;
+                    .split(\" \")
+                    .map((s) => s[0])
+                    .join(\"\")}
+                    .toUpperCase()}
+                    .slice(0, 2)}
                 </AvatarFallback>
               </Avatar>
+
               <div>
 </div>"
                 <div className="flex gap-2 items-center">"
@@ -251,6 +273,7 @@ export const CommunityDiscussion: React.FC = () => {;
                 </h3>"
                 <p className="text-zion-slate-light mt-1 whitespace-pre-line">"
 </p>
+
                 </p>
               </div>
             </CardContent>
@@ -259,6 +282,7 @@ export const CommunityDiscussion: React.FC = () => {;
       <div className="mt-8 text-xs text-zion-slate-dark text-center">"
 </div>
       </div>
+
     </div>"
             <div className="flex gap - 3 justify - end">;"
 </div>
@@ -350,3 +374,4 @@ export const CommunityDiscussion: React.FC = () => {;
 </div>
       </div>;
     </div>);"
+

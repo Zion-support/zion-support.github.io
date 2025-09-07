@@ -4,6 +4,7 @@ export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'd
 ;
 
 export interface Dispute {
+
   // TODO: Implement
 }
 export interface Dispute {;
@@ -48,6 +49,7 @@ export interface DisputeMessage {
   // TODO: Implement
 }
   id: string;,
+
   dispute_id: string;
   user_id: string;,
   message: string;
@@ -56,25 +58,26 @@ export interface DisputeMessage {
   user_profile?: {
 
     display_name: string,
-    avatar_url?: string;
-
+    avatar_url?: string;}
+}
   }
 }
 
-
-
 export interface DisputeAttachment {;
+
 
 
 export interface DisputeAttachment {
   // TODO: Implement
 }
   id: string;,
+
   dispute_id: string;
   uploaded_by: string;,
   file_name: string;
   file_path: string;,
   file_type: string;
+
   file_size: number;,
   created_at: string,
   url?: string;
@@ -104,3 +107,4 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {;
 </DisputeReason>
 export const disputeReasonLabels: Record<DisputeReason string> = {;
 </DisputeReason>'
+

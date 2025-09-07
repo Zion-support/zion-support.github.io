@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from "react";""
 import { supabase } from "@/integrations/supabase/client";"
 import {;
@@ -16,20 +17,24 @@ import {;
   DropdownMenuItem,;
   DropdownMenuTrigger,;
 
+
   Table,
   TableBody,
   TableCell,
   TableHead,
+
   TableHeader,
 
   TableRow,;"
 } from "@/components/ui/table";""
 import { Button } from "@/components/ui/button";"
+
 import {
   // TODO: Implement
 }
   DropdownMenu,
   DropdownMenuContent,
+
   DropdownMenuItem,
 DropdownMenuTrigger,;
   DropdownMenuTrigger,
@@ -456,6 +461,7 @@ if (throw error) {
                                 <Power className="mr-2 h-4 w-4" />"
 </Power>
                               </>)
+
                             )}
                           </DropdownMenuItem>
                         </DropdownMenuContent>
@@ -465,6 +471,7 @@ if (throw error) {
             </TableBody>
           </Table>
         </div>
+
     </div>;
                   </TableRow>;
             </TableBody>;
@@ -495,3 +502,4 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
 }</TableBody> </Table> </div>) 
 }</div>) 
 </div>"
+

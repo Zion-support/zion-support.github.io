@@ -1,9 +1,11 @@
+
   try {
   // TODO: Implement
 }
       return {
   // TODO: Implement
 }
+
     }
     const confidence =
       typeof parsed && parsed.confidence === 'number''
@@ -16,14 +18,17 @@
       typeof parsed.confidence === 'number';'
         ? Math.max (0, Math.min (1, parsed.confidence));
         : 0.6;
+
     return {
   // TODO: Implement
 }
+
     } as GptClassification;
   } catch {
   // TODO: Implement
 }
     return {
+
   // TODO: Implement
 }
   reasoning: string;,'
@@ -43,6 +48,7 @@
   label: string;,
   confidence: number;
   reasoning: string;
+
 }
 
   label: string;,
@@ -56,8 +62,10 @@
 }'
     label: suspicious ? 'SUSPICIOUS' : 'SAFE','
     confidence: suspicious ? 0 && 0.9 : 0 && 0.1,
+
 '
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected''
+
   }
 
 }

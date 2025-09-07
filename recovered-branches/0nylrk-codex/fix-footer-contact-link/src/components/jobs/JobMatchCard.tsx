@@ -1,3 +1,4 @@
+
 import React from 'react',''
 import { Badge } from "@/components/ui/badge",""
 import { Button } from "@/components/ui/button",""
@@ -38,27 +39,36 @@ export function JobMatchCard({
   onApply;
   onViewDetails;
   onInvite;)
+
 }: JobMatchProps) {
-  const handleApply = () => {
+  const handleApply = (
     if (onApply) {
-      onApply(matchId)
+      onApply(matchId)) => {
+  return $3;}
+}
     }
   }
-  const handleViewDetails = () => {
+  const handleViewDetails = (
     if (onViewDetails) {
-      onViewDetails(matchId)
+      onViewDetails(matchId)) => {
+  return $3;}
+}
     }
   }
-  const handleInvite = () => {
+  const handleInvite = (
     if (onInvite) {
-      onInvite(matchId)
+      onInvite(matchId)) => {
+  return $3;}
+}
     }
   }
   // Generate a formatted date for display;
+
   const postedDate = new Date();
 "
 import { formatDistanceToNow } from "date-fns",""
 import { JobMatch } from "@/types/jobs","
+
 interface JobMatchProps {
   // TODO: Implement
 }
@@ -73,6 +83,7 @@ interface JobMatchProps {
   match_percent: number,
   skills: string[],
   onApply?: (matchId: string) => void,
+
   onViewDetails?: (matchId: string) => void,
   onInvite?: (matchId: string) => void;
 }
@@ -327,3 +338,4 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 }</Avatar> </Badge>) ) 
 }</div> Apply Now </Button>) 
 }</div> </div> </CardContent> </Card>) "
+

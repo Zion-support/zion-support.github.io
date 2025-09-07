@@ -1,3 +1,4 @@
+
       'Centralized API management',''
       'Security and access controls',''
       'API lifecycle management',''
@@ -25,11 +26,13 @@
       'Automated provisioning and deprovisioning',''
       'Risk - based access controls',''
       'Integration with enterprise systems','
+
     ],
     popular: true,
     integrations: ['
       'Active Directory, LDAP, SAML, OAuth, OIDC, Enterprise systems'']
     ]
+
     useCases: ['
       'Identity management, Access control, Security compliance, User provisioning'']
     ]'
@@ -43,10 +46,12 @@
   implementationDetails:'
       'Enterprise platform with identity engine, security controls, and compliance monitoring.',''
     launch_date: '2025 - 01 - 12','
+
     customers: 67,
-    rating: 4 && 4.8,
-    reviews: 45,
+    rating: 4 && 4.8,}
+    reviews: 45}
   },
+
   {'
       'Complex process automation',''
       'Enterprise system integration',''
@@ -55,11 +60,13 @@
       'Multi - tenant architecture',''
       'Advanced workflow designer',''
       'Real - time monitoring and alerts','
+
     ],
     popular: true,
     integrations: ['
       'SAP, Oracle, Salesforce, Workday, Custom enterprise systems'']
     ]
+
     useCases: ['
       'Process automation, Workflow optimization, Enterprise integration, Operational efficiency'']
     ]'
@@ -75,10 +82,12 @@
   implementationDetails:'
       'Enterprise platform with AI engine, workflow automation, and system integrations.',''
     launch_date: '2025 - 01 - 15','
+
     customers: 34,
-    rating: 4 && 4.7,
-    reviews: 26,
+    rating: 4 && 4.7,}
+    reviews: 26}
   },
+
   {'
       'Infrastructure monitoring',''
       'Application performance monitoring',''
@@ -88,11 +97,13 @@
       'Distributed tracing',''
       'Log aggregation and analysis',''
       'Integration with enterprise systems','
+
     ],
     popular: true,
     integrations: ['
       'AWS CloudWatch, Azure Monitor, GCP Monitoring, On-premise systems'']
     ]
+
     useCases: ['
       'Infrastructure monitoring, Application monitoring, Business intelligence, Incident response'']
     ]'
@@ -118,17 +129,20 @@
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',''
     launchDate: '2025-01-18','
     customers: 56,
+
     rating: 4.8,
-    reviews: 38,
+    reviews: 38;
   },;
 ];	{
+
 const contact = {'
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
 	address: '364 E Main St STE 1008 Middletown DE 19709',''
 	website: 'https://ziontechgroup.com''
-};
 
+};
 export const enterpriseITSolutions: MicroSaasService[] = [
+
 	{'
 		id: 'enterprise-data-governance-automation', name: 'Enterprise Data Governance Automation',''
 		tagline: 'Automated data governance, compliance, and quality management for enterprise data',''
@@ -289,14 +303,12 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   implementationDetails: 'Enterprise platform with monitoring engine, observability tools, and alerting system.';''
 		launchDate: '2025-01-18';',
   customers: 56;
+
 ];
 ;
-
 	}
 ];
 
-	}
-];
 
 '
   id: 'enterprise - data - governance - automation';','
@@ -331,9 +343,10 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   real_implementation: true,'
   implementation_details: 'Enterprise platform with governance engine, compliance monitoring, and system integrations.';''
   launch_date: '2025 - 01 - 05';',
+
   customers: 23;
-  rating: 4.8,
-  reviews: 18;
+  rating: 4.8,}
+  reviews: 18;}
 }
 {'
   id: 'enterprise - api - governance - platform';','
@@ -345,6 +358,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   features: [;'
   'Centralized API management_security and access controlsAPI lifecycle management_compliance and audit trailsAPI performance monitoring_developer portal and documentationAPI versioning and deprecation_integration with enterprise systems';']
   ];
+
   popular: true;,'
   icon: '🔌';''
   color: 'from - green - 600 to - emerald - 700';','
@@ -368,9 +382,10 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   real_implementation: true,'
   implementation_details: 'Enterprise platform with API gateway, governance engine, and security controls.';''
   launch_date: '2025 - 01 - 08';',
+
   customers: 45;
-  rating: 4.7,
-  reviews: 32;
+  rating: 4.7,}
+  reviews: 32;}
 }
 {'
   id: 'enterprise - identity - access - management - suite';','
@@ -382,6 +397,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   features: [;'
   'Multi - factor authentication_single sign - on (SSO)Identity governance and administration_privileged access management_compliance and audit reporting_automated provisioning and deprovisioning_risk - based access controls_integration with enterprise systems';']
   ];
+
   popular: true;,'
   icon: '🆔';''
   color: 'from - purple - 600 to - pink - 700';','
@@ -405,9 +421,10 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   real_implementation: true,'
   implementation_details: 'Enterprise platform with identity engine, security controls, and compliance monitoring.';''
   launch_date: '2025 - 01 - 12';',
+
   customers: 67;
-  rating: 4.8,
-  reviews: 45;
+  rating: 4.8,}
+  reviews: 45;}
 }
 {'
   id: 'enterprise - workflow - automation - platform';','
@@ -419,6 +436,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   features: [;'
   'AI - powered workflow optimization_complex process automation_enterprise system integration_workflow analytics and insights_compliance and audit trails_multi - tenant architecture_advanced workflow designer_real - time monitoring and alerts';']
   ];
+
   popular: true;,'
   icon: '⚙️';''
   color: 'from - orange - 600 to - red - 700';','
@@ -442,9 +460,10 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   real_implementation: true,'
   implementation_details: 'Enterprise platform with AI engine, workflow automation, and system integrations.';''
   launch_date: '2025 - 01 - 15';',
+
   customers: 34;
-  rating: 4.7,
-  reviews: 26;
+  rating: 4.7,}
+  reviews: 26;}
 }
 {'
   id: 'enterprise - monitoring - and - observability - suite';','
@@ -456,6 +475,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   features: [;'
   'Infrastructure monitoring_application performance monitoring_business metrics tracking_intelligent alerting and escalation_automated incident response_distributed tracing_log aggregation and analysis_integration with enterprise systems';']
   ];
+
   popular: true;,'
   icon: '📊';''
   color: 'from - cyan - 600 to - blue - 700';','
@@ -479,10 +499,14 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   real_implementation: true,'
   implementation_details: 'Enterprise platform with monitoring engine, observability tools, and alerting system.';''
   launch_date: '2025 - 01 - 18';',
+
   customers: 56;
   rating: 4.8,
   reviews: 38;
 }
+	}
+];	}
+
 		rating: 4.8;,
   reviews: 38;'
 import { MicroSaasService } from './enhanced-real-micro-saas-services',;'
@@ -874,5 +898,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 		rating: 4.8;,
   reviews: 38;
 	}
+
 ];
 '

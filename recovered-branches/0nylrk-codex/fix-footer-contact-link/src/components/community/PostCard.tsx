@@ -2,6 +2,7 @@
 
 
 
+
 import {formatDistanceToNow} from "date-fns";""
 import {Link} from "react-router-dom";""
 import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";""
@@ -327,8 +328,11 @@ post.isFeatured && "bg-zion-purple/5")""
 }</div> </CardContent>) 
 }</div> </div> {"
   post.isFeatured && (<div> <Badge className="bg-zion-purple" >Featured</Badge> </div>)"
+
 }</CardFooter> </Card>) 
       </CardFooter>
     </Card>
+
       </CardFooter>;
     </Card>;"
+

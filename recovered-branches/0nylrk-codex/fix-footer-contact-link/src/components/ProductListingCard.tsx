@@ -1,4 +1,5 @@
 
+
 import React from 'react';''
 import {useNavigate} from "react-router-dom";""
 import {Badge} from "@/components/ui/badge";""
@@ -65,11 +66,13 @@ export function ProductListingCard({
   const isGrid = view === 'grid','
   const navigate = useNavigate(),
   
+
   // Get the first image or use a placeholder;
   const imageUrl = listing.images && listing.images.length > 0;
     ? listing.images[0] '
     : '/placeholder.svg','
   // Format price display;
+
   const formatPrice = () => {'
     if (listing.price === null) return "Custom pricing";"
     return `${listing.currency}${listing.price.toLocaleString()}`
@@ -81,10 +84,12 @@ import { ProductListing } from '@/types / listings';''
 import { Star, DollarSign } from './lucide-react';'
 interface ProductListingCardProps {
   // TODO: Implement
+
 }
   listing: ProductListing,'
   view?: 'grid' | 'list';'
   // Handle image loading errors;
+
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
 </HTMLImageElement>
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -99,6 +104,7 @@ interface ProductListingCardProps {
   const handleViewListing = () =>: any {
   // TODO: Implement
 }
+
     navigate (`/listing/${listing.id}`);
   }
 ;
@@ -109,6 +115,7 @@ interface ProductListingCardProps {
     e.prevent_default ();
     e.stop_propagation (),
     // Check condition;
+
 if ( {) {
   $2;
 }
@@ -116,10 +123,12 @@ if ( {) {
     } else {
   // TODO: Implement
 }
+
       // Default behavior if no handler provided;
       navigate (`/request - quote?listing=${listing.id}`);
     }
   }
+
 
 
   // Get the first image or use a placeholder;
@@ -187,8 +196,10 @@ if ( {) {
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full""
                 >
 </span>
+
                 </span>
             </div>
+
         </div>"
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">"
 </div>"
@@ -270,8 +281,10 @@ if ( {) {
                   key={idx} "
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full">;"
 </span>
+
                 </span>;
             </div>;
+
         </div>;"
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;"
 </div>"
@@ -391,3 +404,4 @@ return (<div className= {
         </div>
       </div>
     </div>"
+

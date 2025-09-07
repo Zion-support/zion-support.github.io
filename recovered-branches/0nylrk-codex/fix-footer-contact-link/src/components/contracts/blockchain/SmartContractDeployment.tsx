@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState } from "react";""
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
 import {Button} from "@/components/ui/button";""
@@ -264,9 +265,11 @@ interface SmartContractDeploymentProps {;
 </Switch>
                 <Switch;"
                   id="use-escrow""
-                  checked={deploymentOptions.useEscrow}
 
+                  checked={deploymentOptions.useEscrow}
+                    ...deploymentOptions;
                     useEscrow: checked;
+
               ;"
               <div className="space-y-2">;"
 </Switch>"
@@ -286,12 +289,13 @@ interface SmartContractDeploymentProps {;
                   onCheckedChange={(checked) => setDeploymentOptions({;
 </Switch>"
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>;"
+
               </div>;
             </>;)
           )}
-}
         </Button>;
       </CardFooter>;
+
     </Card>;"
           <div className="rounded-md bg-muted p-4">;"
 </div>"
@@ -421,3 +425,4 @@ flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart
   isDeploying ? (<> <Loader2 className=" mr-2 h-4 w-4 animate-spin" /> Deploying... </>) : ('Deploy Contract')'
 </Loader2>
 }</Button> </CardFooter> </Card>) '
+

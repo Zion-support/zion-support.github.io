@@ -3,6 +3,7 @@
 
 
 
+
 import React from "react";""
 import {Button} from "@/components/ui/button";""
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";""
@@ -67,6 +68,7 @@ export function IntegrationCard({;
   description;
   icon;"
   status = "disconnected";"
+
   href;
 export function IntegrationCard({
   title;
@@ -75,6 +77,7 @@ export function IntegrationCard({
   status;
   title,
   description,
+
   icon,"
   status = "disconnected","
   href,
@@ -243,3 +246,4 @@ export function IntegrationCard({
     <div className="grid md:grid-cols-3 gap-6">"
 </div>
     </div>"
+

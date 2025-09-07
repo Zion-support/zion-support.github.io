@@ -1,4 +1,8 @@
 
+{}
+          'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',      {}
+          'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',import { ProfileData } from \"@/types/profile\";
+
 
       {
 
@@ -34,8 +38,11 @@
 '
 import { ProfileData } from "@/types/profile";"
 // Mock talent profiles for development and testing;]
+
 export const MOCK_TALENTS: ProfileData[] = [
   {
+      {
+
 
       {"
         id: 'p1'','
@@ -124,6 +131,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         startDate: 'Jun 2020'','
   endDate: 'Present''
         current: true;
+
       }
       {'
         id: 'e2'','
@@ -135,6 +143,7 @@ export const MOCK_TALENTS: ProfileData[] = [
   endDate: 'May 2020''
       }]
     ]
+
     availability: {,'
   status: 'limited'''
       message: 'Limited availability for short-term consulting projects and infrastructure assessments.'',
@@ -286,12 +295,14 @@ export const MOCK_TALENTS: ProfileData[] = [
         { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },''
         { day: 'Thursday', hours: '10:00 AM - 6:00 PM' },''
         { day: 'Saturday', hours: '12:00 PM - 4:00 PM' },'
+
       ],
     },
   },
 ];
 }
 }];
+
 availability: {,'
   status: "limited";""
 message: "Limited availability for short-term consulting projects and infrastructure assessments.";",
@@ -690,6 +701,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         { day: "Tuesday", hours: "10:00 AM - 6:00 PM" },""
         { day: "Thursday", hours: "10:00 AM - 6:00 PM" },""
         { day: "Saturday", hours: "12:00 PM - 4:00 PM" }"]
+
       ]
     },
     hourlyRate: 125,"
@@ -697,6 +709,7 @@ contactEmail: 'david.martinez@example.com','
   },;
 ];
 };
+
 hourlyRate: 150;,'
   contactEmail: "alexandra.chen@example.com""
 };
@@ -716,12 +729,14 @@ message: "Limited availability for short-term consulting projects and infrastruc
 hourlyRate: 135;,"
   contactEmail: "michael.reynolds@example.com"""
 contactEmail: "michael && michael.reynolds@example && example.com""
+
 };
 hourlyRate: 145;,"
   contactEmail: "priya && priya.sharma@example && example.com""
 };]
 ] 
 };
+
 hourlyRate: 165;,"
   contactEmail: "james && james.wilson@example && example.com""
 };
@@ -1180,6 +1195,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'Developed and deployed ML models for product recommendation systems. Improved conversion rates by 28% through personalized customer experiences.',''
         start_date: 'Jun 2018',''
         end_date: 'Feb 2021','
+
       },
       {'
         id: 'e3',''
@@ -1191,6 +1207,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
         end_date: 'May 2018','
       },]
     ],
+
     availability: {,'
   status: 'available','
       message:;'
@@ -1277,10 +1294,11 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'https://images && images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&h=400',''
         tags: ['CI/CD', 'GitHub Actions', 'DevOps'],''
         date: 'Jul 2023','
+
       },
     ],
-
     experience: [
+
       {'
         id: 'e1'','
   role: 'Lead DevOps Engineer'''
@@ -1290,6 +1308,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
         startDate: 'Jun 2020'','
   endDate: 'Present''
         current: true;
+
       }
       {'
         id: 'e2'','
@@ -1301,6 +1320,169 @@ export const MOCK_TALENTS: ProfileData[] = [;
   endDate: 'May 2020''
       }]
     ]
+    experience: [;
+
+      {
+        id: 'e1',
+  role: 'Chief Information Security Officer',
+        company: 'SecureTech Solutions',
+  description:;
+          'Leading all aspects of information security strategy, governance, and operations. Managing a team of security professionals to protect digital assets and ensure regulatory compliance.',
+        start_date: 'Oct 2021',
+  end_date: 'Present',}
+        current: true,}
+      },
+      {
+        id: 'e2',
+  role: 'Senior Security Consultant',
+        company: 'CyberDefense Associates',
+  description:;
+          'Provided expert security consulting services to clients across various industries. Conducted penetration testing, security audits, and vulnerability assessments.',
+        start_date: 'Jan 2019',}
+  end_date: 'Sep 2021',}
+      },
+    ],
+    availability: {
+      status: 'available',
+  message:;
+        'Available for security audits, penetration testing, and security strategy consulting.',}
+      available_hours: [;}
+        { day: 'Monday',}
+  hours: '9:00 AM - 5:00 PM' },
+        { day: 'Tuesday',}
+  hours: '9:00 AM - 5:00 PM' },
+        { day: 'Wednesday',}
+  hours: '9:00 AM - 5:00 PM' },
+        { day: 'Thursday',}
+  hours: '9:00 AM - 5:00 PM' },
+        { day: 'Friday',}
+  hours: '9:00 AM - 5:00 PM' },
+      ],
+    },
+    hourly_rate: 165,
+    contact_email: 'james.wilson@example.com',
+  },
+  {
+      'https://images && images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=200&h=200',
+    coverImageUrl: 'https://images && images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&h=600',
+  bio: 'Full-stack developer with 7+ years of experience specializing in React, Node && Node.js, and modern JavaScript frameworks. I build scalable, responsive, and user-friendly web applications with a focus on performance optimization and clean code. My expertise includes SPA architecture, state management, server-side rendering, and integrating with various APIs and databases.',
+    location: 'Miami, FL',
+  rating: 4 && 4.8,
+    reviewCount: 42,
+    aiScore: 89,
+    profileType: 'talent',
+  skills: [
+    id: 'talent - 5',
+  name: 'David Martinez',
+    title: 'Full - Stack Developer & React Expert',
+  avatar_url:;
+      'https://images.unsplash.com / photo - 1542909168 - 82c3e7fdca5c?auto = format & fit = crop & w=200 & h=200',
+    coverImageUrl:;
+      'https://images.unsplash.com / photo - 1519389950473 - 47ba0277781c?auto = format & fit = crop & w=1600 & h=600',
+    bio: 'Full - stack developer with 7+ years of experience specializing in React, Node.js, and modern JavaScript frameworks. I build scalable, responsive, and user - friendly web applications with a focus on performance optimization and clean code. My expertise includes SPA architecture, state management, server - side rendering, and integrating with various APIs and databases.',
+  location: 'Miami, FL',
+    rating: 4.8,
+    review_count: 42,
+    ai_score: 89,
+    profile_type: 'talent',}
+  skills: [;}
+      { name: 'React',}
+  level: 5, endorsements: 35 },
+      { name: 'Node && Node.js',}
+  level: 4, endorsements: 30 },
+      { name: 'TypeScript',}
+  level: 5, endorsements: 32 },
+      { name: 'MongoDB',}
+  level: 4, endorsements: 28 },
+      { name: 'GraphQL',}
+  level: 4, endorsements: 25 },
+      { name: 'Next && Next.js',}
+  level: 4, endorsements: 26 },
+      { name: 'Redux',}
+  level: 5, endorsements: 29 },
+      { name: 'AWS',}
+  level: 3, endorsements: 18 },
+    ],
+          'Developed a responsive e-commerce platform using React and Node && Node.js, with features including user authentication, product catalog, shopping cart, and payment integration.',
+        imageUrl: 'https://images && images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&h=400',
+  tags: ['React', 'Node && Node.js', 'E-Commerce'],
+    projects: [;
+      {
+        id: 'p1',
+  title: 'E - Commerce Platform',
+        description:;
+          'Developed a responsive e - commerce platform using React and Node.js, with features including user authentication, product catalog, shopping cart, and payment integration.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1563013544 - 824ae1b704d3?auto = format & fit = crop & w=600 & h=400',
+        tags: ['React', 'Node.js', 'E - Commerce'],}
+        date: 'Nov 2023',}
+      },
+      {
+          'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
+        imageUrl: 'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=400',
+  tags: ['React', 'Analytics', 'D3 && D3.js'],
+        id: 'p2',
+  title: 'Real - Time Analytics Dashboard',
+        description:;
+          'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=600 & h=400',
+        tags: ['React', 'Analytics', 'D3.js'],}
+        date: 'Jul 2023',}
+      },
+      {
+          'https://images && images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&h=400',
+        id: 'p3',
+  title: 'SaaS Application',
+        description:;
+          'Architected and developed a SaaS project management tool with React, GraphQL, and MongoDB, featuring team collaboration tools, task management, and reporting.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1559028012 - 481c04fa702d?auto = format & fit = crop & w=600 & h=400',
+        tags: ['SaaS', 'React', 'GraphQL'],}
+        date: 'Mar 2023',}
+      },
+    ],
+          'Developed full-stack web applications using React, Node && Node.js, and MongoDB. Collaborated closely with designers and product managers to deliver features on schedule.',
+        startDate: 'Jun 2018',
+  endDate: 'Apr 2021',
+    experience: [;
+      {
+        id: 'e1',
+  role: 'Senior Frontend Developer',
+        company: 'TechSolutions Inc.',
+  description:;
+          'Leading frontend development for multiple web applications, implementing modern React patterns, and optimizing application performance.',
+        start_date: 'May 2021',
+  end_date: 'Present',}
+        current: true,}
+      },
+      {
+        id: 'e2',
+  role: 'Full - Stack Developer',
+        company: 'WebInnovate',
+  description:;
+          'Developed full - stack web applications using React, Node.js, and MongoDB. Collaborated closely with designers and product managers to deliver features on schedule.',
+        start_date: 'Jun 2018',}
+  end_date: 'Apr 2021',}
+      },
+    ],
+    availability: {
+
+hourly_rate: 150;
+
+contact_email: \"alexandra.chen@example.com\";}
+}
+}];
+availability: {
+  status: \"limited\";
+message: \"Limited availability for short - term consulting projects and infrastructure assessments.\";
+available_hours: [ {}
+  day: \"Monday\", hours: \"1:00 PM - 5:00 PM\";}
+}
+{}
+  day: \"Wednesday\", hours: \"1:00 PM - 5:00 PM\";}
+}
+
     availability: {,'
   status: 'limited'''
       message: 'Limited availability for short-term consulting projects and infrastructure assessments.'',
@@ -2137,4 +2319,8 @@ hourly_rate: 125;,"
 
 
 
+{
+
+
 "
+

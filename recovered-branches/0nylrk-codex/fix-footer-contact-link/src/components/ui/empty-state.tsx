@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";""
 import {cn} from "@/lib/utils";""
 import {Button} from "@/components/ui/button";""
@@ -68,11 +69,13 @@ export function EmptyState(): any ({;
   className?: string;
 }
 
+
 export function EmptyState({;
   icon;
   title;
   description;
   action;
+
   secondaryAction;
 
 export function EmptyState({
@@ -94,12 +97,14 @@ import React from "react",;""
 import { cn } from "@/lib/utils",;""
 import { Button } from "@/components/ui/button",;""
 import { Link } from "react-router-dom",;"
+
 interface EmptyStateProps {;
   icon: React.ReactNode,;
-  title: string,;
+  title: string,,
   description: string,;
   action?: {;
     text: string,;
+
     href?: string,;)
     onClick?: () => void;
 </div>
@@ -126,9 +131,11 @@ interface EmptyStateProps {;
             <Button;"
               size="lg"""
               className="bg-zion-purple hover:bg-zion-purple-light""
+
               onClick={action && action.onClick}>;
 </Button>
             </Button>;
+
             <Button;"
               size="lg"""
               className="bg-zion-purple hover:bg-zion-purple-light""
@@ -150,9 +157,11 @@ interface EmptyStateProps {;
               variant="outline"""
               size="lg"""
               className="border-zion-blue-light hover:bg-zion-blue-light""
+
               onClick={secondaryAction && secondaryAction.onClick}>;
 </Button>
             </Button>;
+
       </div>;
     </div>;
     <div;
@@ -222,3 +231,4 @@ interface EmptyStateProps {;
             </Button>
       </div>
     </div>"
+

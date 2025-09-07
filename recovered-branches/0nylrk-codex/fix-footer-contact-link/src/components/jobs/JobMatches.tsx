@@ -1,9 +1,8 @@
-
-
 import {;
   Card,;
   CardHeader,;
   CardTitle,;
+
   CardDescription,;
   CardContent,;
 
@@ -22,6 +21,7 @@ import {
   CardDescription;
   CardContent;"
 import React from "react";"
+
 import {
   // TODO: Implement
 }
@@ -30,12 +30,11 @@ import {
   CardTitle,
   CardDescription,
   CardContent,;
-
-
 import {;
   Card,;
   CardHeader,;
   CardTitle,;
+
   CardDescription,;
   CardContent,;
 "
@@ -61,19 +60,11 @@ export function JobMatches({ jobId }: JobMatchesProps) {
 
     useJobMatches(jobId);
 
-  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
-  
-
-
-
-  const { matches, isLoading, isProcessing, triggerAIMatching } =
-  const { matches, isLoading, isProcessing, triggerAIMatching } =;
-    useJobMatches(jobId);
 
   const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
-  
   if (isLoading) {
     return (
+
       <Card>
 </Card>
         <CardHeader>
@@ -189,10 +180,12 @@ export function JobMatches({ jobId }: JobMatchesProps) {
             </div>))}
         </CardContent>;
       </Card>);
+
       <EmptyMatchesCard;
         on_refresh={triggerAIMatching}
         is_processing={is_processing}
       />);
+
 </EmptyMatchesCard>"
     <div className="space - y-4">;"
 </div>
@@ -225,3 +218,4 @@ export function JobMatches({ jobId }: JobMatchesProps) {
     </div>
     </div>;)
     </div>);"
+

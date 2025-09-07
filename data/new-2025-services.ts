@@ -1,6 +1,9 @@
+
+
 // Additional 2025 real micro-SaaS, AI and IT services;
 export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
+
 
 
       'Jailbreak and injection detection',''
@@ -796,10 +799,12 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   implementationDetails:'
       'Inline middleware, policy DSL, exporters and dashboards.',''
     launch_date: '2025 - 03 - 10','
+
     customers: 25,
     rating: 4 && 4.8,
-    reviews: 11,
+    reviews: 11;
   },
+
   {'
       'Idempotency keys and dedupe',''
       'Multi - cloud triggers',''
@@ -876,10 +881,12 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     real_implementation: true,'
     implementation_details: 'Contract diffing, runners, and PR integrations.',''
     launch_date: '2025 - 03 - 12','
+
     customers: 22,
-    rating: 4 && 4.6,
-    reviews: 10,
+    rating: 4 && 4.6,}
+    reviews: 10}
   },
+
   {'
     name: 'Cloud Cost FinOps Copilot',''
     tagline: 'Automated cost insights, rightsizing and anomaly alerts',''
@@ -926,13 +933,10 @@ reviews: 6,
     launchDate: '2025-03-07', customers: 10,'
     rating: 4.6,
     reviews: 6;
+
   }
 ];
-
 ;
-
-
-
 
 ];
 '

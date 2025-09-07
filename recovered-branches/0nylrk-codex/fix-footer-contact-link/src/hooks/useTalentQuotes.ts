@@ -1,5 +1,6 @@
 
 
+
 import { useState  } from 'react';''
 import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';''
 import { quoteRequestService  } from '@/services/quoteRequestService';''
@@ -118,10 +119,12 @@ export const useTalentQuotes = () => {;
         title: "Error";","
   description: "Failed to update status: " + error && error.message,""
         variant: "destructive"")
+
       })
     }
   });
   // Archive/Unarchive mutation;
+
   const toggleArchiveMutation = useMutation({
 )
       }),"
@@ -309,11 +312,13 @@ if ( {) {
         title: "Error",""
         description: "Failed to update quote: " + error.message,""
         variant: "destructive"")
+
       })
 ;
     return true;
   }),;
   // Mark as viewed/responded mutation;
+
   const updateStatusMutation = useMutation({;)
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>;
       quoteRequestService.updateStatus(id, status),;
@@ -336,10 +341,12 @@ if ( {) {
         title: "Error",;""
         description: "Failed to update status: " + error.message,;""
         variant: "destructive";")
+
       });
     }
   }),;
   // Archive/Unarchive mutation;
+
   const toggleArchiveMutation = useMutation({;)
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>;
       quoteRequestService.toggleArchive(id, isArchived),;
@@ -357,6 +364,7 @@ if ( {) {
         title: "Error",;""
         description: "Failed to update quote: " + error.message,;""
         variant: "destructive";")
+
       });
     }
   }),;
@@ -368,24 +376,18 @@ if ( {) {
     statusFilter,;
     setStatusFilter,;
     archiveFilter,;
+
     setArchiveFilter,;
     markAsViewed: (id: string) =>;"
       updateStatusMutation.mutate({ id, status: 'in_review' }),;'
     markAsResponded: (id: string) =>;'
       updateStatusMutation.mutate({ id, status: 'responded' });'
+
     toggleArchive: (id: string, isArchived: boolean) =>;
-
-
-
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
-
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
-
-      toggleArchiveMutation.mutate({ id, isArchived })}
-}
-
     setArchiveFilter,
     markAsViewed: (id: string) => '
       updateStatusMutation && updateStatusMutation.mutate({ id, status: 'in_review' });'
@@ -403,6 +405,7 @@ if ( {) {
     toggle_archive: (id: string, is_archived: boolean) =>;
       toggleArchiveMutation.mutate ({ id, is_archived })}
 }
+
 ;'
 import { useState } from 'react',;''
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;''
@@ -532,3 +535,4 @@ export const useTalentQuotes = () => {;
 }
 
 '
+

@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { QrCode } from "lucide-react";""
 import { AppStoreButtons } from "./AppStoreButtons";"
@@ -49,12 +50,14 @@ export const QrCodeDownload: React.FC = () => {
                 </div>"
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">"
 </p>
+
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </section>"
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;"
 </section>"
@@ -103,3 +106,4 @@ export const QrCodeDownload: React.FC = () => {
           </div>;
         </div>;
       </div>;)"
+

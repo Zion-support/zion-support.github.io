@@ -1,13 +1,17 @@
+
 export interface InvestmentPortfolio {
   // TODO: Implement
 }
 export interface InvestmentPortfolio {;
   id: string;,
+
   userId: string;
   name: string;,
   totalValue: number;
+
   currency: string;,
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive','
+
   investment_horizon: number, // in years;
   target_return: number;,
   assets: PortfolioAsset[];
@@ -18,7 +22,36 @@ export interface InvestmentPortfolio {;
   updated_at: Date;
 
 }
+}
+export interface PortfolioAsset  {export interface PortfolioAsset  {export interface PortfolioAsset  {id: string;
+  symbol: string;
+  name: string;
+  type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
+  quantity: number;current_price: number;
+  market_value: number,allocation: number, // percentage of portfolio;
+  purchase_price: number;
+  purchase_date: Date;
+  performance: {daily_return: number;
+    weekly_return: number;
+    monthly_return: number;
+    yearly_return: number,total_return: number;volatility: number;
+  sharpe_ratio: number;
+  max_drawdown: number;
+  beta: number;
+  alpha: number;
+  id: string;
+  user_id: string;current_price: number;
+  market_value: number,allocation: number, // percentage of portfolio;
+  purchase_price: number;
+  purchase_date: Date;
+  performance: {daily_return: number;
+    weekly_return: number;}
+    monthly_return: number;}
+    yearly_return: number,total_return: number;}
+}
+export interface PortfolioPerformance  {total_return: number;
 export interface PortfolioAsset {
+
   // TODO: Implement
 }'
   riskTolerance: 'conservative' | 'moderate' | 'aggressive'',
@@ -30,12 +63,14 @@ export interface PortfolioAsset {
   // TODO: Implement
 }
 export interface PortfolioAsset {;
+
 }
 export interface PortfolioAsset {
   // TODO: Implement
 }
   id: string;,
   symbol: string;
+
   name: string;,'
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';'
   quantity: number;,
@@ -107,9 +142,11 @@ export interface PortfolioPerformance {;
   totalReturn: number;,
   annualizedReturn: number;
   volatility: number;,
+
   sharpeRatio: number;
   maxDrawdown: number;,
   beta: number;
+
   alpha: number;,
   trackingError: number;
 
@@ -123,12 +160,13 @@ export interface InvestmentRecommendation {;
   id: string;,
   userId: string;'
   type: 'buy' | 'sell' | 'hold' | 'rebalance';',
+
   asset: {
     symbol: string;,
   name: string;
 
-    type: string,
-    current_price: number;
+    type: string,}
+    current_price: number;}
   }
   confidence: number;,
   reasoning: string[];
@@ -160,8 +198,8 @@ export interface MarketAnalysis {
   analysis: string,
   key_metrics: Record < string, number>;
 
-    type: string,
-    current_price: number;
+    type: string,}
+    current_price: number;}
   }
   confidence: number;,
   reasoning: string[];
@@ -189,8 +227,8 @@ export interface FinancialGoal {
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive','
   progress: number, // percentage;
   created_at: Date,
-  updated_at: Date;
-
+  updated_at: Date;}
+}
 }
 export interface MarketAnalysis {
   // TODO: Implement
@@ -207,8 +245,8 @@ export interface MarketAnalysis {
   recommendations: string[];
   confidence: number;,
   last_updated: Date,
-  next_update: Date;
-
+  next_update: Date;}
+}
 }
 export interface FinancialPlan {
   // TODO: Implement
@@ -219,10 +257,12 @@ export interface FinancialPlan {
   summary: string;
 
   goals: FinancialGoal[],
+
   investment_strategy: {,
   asset_allocation: Record < string, number>;'
     rebalancing_frequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually','
     risk_management: string[];
+
   }
   cash_flow: {,
   monthly_income: number;
@@ -230,8 +270,8 @@ export interface FinancialPlan {
   savings_rate: number,
     emergency_fund: number;,
   last_updated: Date,
-  next_update: Date;
-
+  next_update: Date;}
+}
 }
 export interface FinancialPlan {
   // TODO: Implement
@@ -242,6 +282,7 @@ export interface FinancialPlan {
   summary: string;
 
   goals: FinancialGoal[],
+
   investment_strategy: {,
   asset_allocation: Record < string, number>;'
     rebalancing_frequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually','
@@ -259,9 +300,11 @@ export interface FinancialPlan {
     health: boolean;,
   disability: boolean;
 
-    property: boolean,
+
+property: boolean,
     recommendations: string[];
   }
+
   tax: {,
   estimatedTaxLiability: number;
     taxOptimizationStrategies: string[],
@@ -290,10 +333,44 @@ export interface FinancialPlan {
   current_savings: number;
     monthly_contribution: number,
     projected_value: number;
+
   }
-  created_at: Date,
-  updated_at: Date;
+  async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[] /> {try {const response = await fetch(`${this && this.baseUrl}/api/financial/recommendations`, {method: 'POST',}
+  headers: {'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'}body: JSON && JSON.stringify({ userId, riskTolerance, investmentHorizon })})if (!response && response.ok) {throw new Error(`HTTP error! status: ${response && response.status}`)}const data = await response && response.json()return data && data.recommendations || [];
+    } catch (error) {console && console.error('Error getting investment recommendations:', error)} catch (error) {console && console.error('Error getting investment recommendations:', error)throw error;}
+    }
+  }
+  async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan /> {try {const response = await fetch(`${this && this.baseUrl}/api/financial/plan`, {method: 'POST',}
+  headers: {'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'}body: JSON && JSON.stringify(request)})if (!response && response.ok) {throw new Error(`HTTP error! status: ${response && response.status}`)}
+      const data = await response && response.json()return data && data.plan;
+    } catch (error) {console && console.error('Error creating financial plan:', error)const response = await fetch(`${this.baseUrl}/api/financial/plan`, {console && console.error('Error getting investment recommendations:', error)if (!response && response.ok) {throw new Error(`HTTP error! status: ${response && response.status}`)}const data = await response && response.json()return data && data.recommendations || [];
+    } catch (error) {console && console.error('Error getting investment recommendations:', error)const response = await fetch(`${this.baseUrl}/api/financial/recommendations`, {method: 'POST';}
+        headers: {'Authorization': `Bearer ${this.apiKey}`;
+          'Content-Type': 'application/json'}
+        body: JSON.stringify(request)})body: JSON.stringify({ userId, riskTolerance, investmentHorizon })})if (!response.ok) {throw new Error(`HTTP error! status: ${response.status}`)}
+      const data = await response.json()return data.plan;
+    } catch (error) {console.error('Error creating financial plan:', error)} catch (error) {console && console.error('Error creating financial plan:', error)throw error;}
+    }
+  }
+  async trackFinancialGoals(userId: string): Promise<FinancialGoal[] /> {try {if (!response && response.ok) {throw new Error(`HTTP error! status: ${response && response.status}`)}const data = await response && response.json()return data && data.goals || [];
+    } catch (error) {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`HTTP error! status: ${response && response.status}`)}
+      const data = await response && response.json()return data && data.goals || [];
+    } catch (error) {console && console.error('Error tracking financial goals:', error)const response = await fetch(`${this.baseUrl}/api/financial/goals/${userId}`, {headers: {'Authorization': `Bearer ${this.apiKey}`}})if (!response.ok) {throw new Error(`HTTP error! status: ${response.status}`)}
+      const data = await response.json()return data.goals |[];
+    } catch (error) {console.error('Error tracking financial goals:', error)} catch (error) {console && console.error('Error tracking financial goals:', error)throw error;}
+    }
+  }
+  async getMarketAnalysis(market: string): Promise<MarketAnalysis /> {try {return data.recommendations |[];}
+    } catch (error) {console.error('Error getting investment recommendations:', error)throw error;}
+    }
+  }
+  async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan /> {try {} catch (error) {console && console.error('Error creating financial plan:', error)throw error;
+  created_at: Date,}
+  updated_at: Date;}
 }
+
   userId: string;,'
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking''
   parameters: Record<string, any>;
@@ -349,14 +426,16 @@ export interface FinancialResponse {
         headers: {'
           'Authorization': `Bearer ${this && this.apiKey}`;''
           'Content-Type': 'application/json'};')
+
         body: JSON && JSON.stringify({ targetAllocation })});
 
-      if (!response && response.ok) {
+      if (!response && response.ok) {}
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
 
       const data = await response && response.json();
       return data && data.rebalancing;
+
     } catch (error) {'
       console && console.error('Error rebalancing portfolio:', error);'
     } catch (error) {'
@@ -372,9 +451,10 @@ export interface FinancialResponse {
   projectedValue: number;
     assumptions: Record<string, any>;
 </string>
+
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
-    analysis?: MarketAnalysis,
-    goals?: FinancialGoal[];
+    analysis?: MarketAnalysis,}
+    goals?: FinancialGoal[];}
   }
   insights: string[];,
   next_steps: string[];
@@ -385,6 +465,7 @@ export class AIFinancialAdvisorService {
   // TODO: Implement
 }
   private api_key: string;
+
   private base_url: string,'
   constructor (api_key: string, base_url: string = 'https://api.ziontechgroup.com') {'
     this.api_key = api_key,
@@ -423,11 +504,13 @@ if ( {) {
       // Check condition;
 if ( {) {
   $2;
+
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
       return data.plan;
+
     } catch (error) {'
       console.error ('Error creating financial plan:', error);'
       throw error;
@@ -444,11 +527,13 @@ if ( {) {
       // Check condition;
 if ( {) {
   $2;
+
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
       return data.goals || [];
+
     } catch (error) {'
       console.error ('Error tracking financial goals:', error);'
       throw error;
@@ -465,19 +550,23 @@ if ( {) {
       // Check condition;
 if ( {) {
   $2;
+
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
       return data.analysis;
+
     } catch (error) {'
       console.error ('Error getting market analysis:', error);'
       throw error;
+
     }
   }
   async rebalance_portfolio (portfolio_id: string, target_allocation: Record < string, number>): Promise<{
     current_allocation: Record < string, number>;
     target_allocation: Record < string, number>;
+
     rebalancing_actions: Array<{,'
   action: 'buy' | 'sell';'
       symbol: string;,
@@ -500,6 +589,7 @@ if ( {) {
       // Check condition;
 if ( {) {
   $2;
+
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
@@ -507,19 +597,22 @@ if ( {) {
   estimated_savings: number;
     implementation: string[];
 
+
       const response = await fetch(`${this && this.baseUrl}/api/financial/tax-optimization`, {'
         method: 'POST','
         headers: {'
           'Authorization': `Bearer ${this && this.apiKey}`;''
           'Content-Type': 'application/json'};')
+
         body: JSON && JSON.stringify({ userId, taxYear })});
 
-      if (!response && response.ok) {
+      if (!response && response.ok) {}
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
 
       const data = await response && response.json();
       return data && data.optimization;
+
     } catch (error) {'
       console && console.error('Error getting tax optimization strategies:', error);'
     } catch (error) {'
@@ -769,3 +862,4 @@ export interface MarketAnalysis {;
     summary: string,;
     keyMetrics: Record<string any>,;
 </string>'
+

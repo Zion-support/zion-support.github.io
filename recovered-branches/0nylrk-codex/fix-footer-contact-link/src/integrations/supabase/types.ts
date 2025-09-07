@@ -1,10 +1,10 @@
-
 export type Json =;
   | string;
   | number;
   | boolean;
   | null;
   | { [key: string]: Json | undefined }
+
   | Json[];
 
 export type Database = {
@@ -142,6 +142,7 @@ export type Database = {
         }
         Insert: {,
   Insert: {
+
           api_key_id?: string | null;
           created_at?: string;
           endpoint: string;
@@ -150,6 +151,7 @@ export type Database = {
           method: string;
           response_time_ms?: number | null;
           status_code: number;
+
           user_agent?: string | null;
           user_id?: string | null;
         }
@@ -196,8 +198,15 @@ export type Database = {
           },
         }
         Relationships: [;
+
           {
+            foreignKeyName: \"job_applications_resume_id_fkey\";
+            columns: [\"resume_id\"];
+            isOneToOne: false;
+            referenced_relation: \"talent_resumes\";}
+            referenced_columns: [\"id\"];}
           }
+
           {"
             foreignKeyName: "api_logs_user_id_fkey";",]"
   columns: ["user_id"];"
@@ -721,19 +730,20 @@ export type Database = {
           status: string;,
   title: string;
           updated_at: string;
+
         }
         Insert: {
           budget?: Json;
           category: string;,
   client_id: string;
           created_at?: string;
-          deadline?: string | null;
-          description: string;
+          deadline?: string | null,
+  description: string;
           id?: string;
           skills?: string[];
           status?: string;
-          title: string;
-          updated_at?: string;
+          title: string;}
+          updated_at?: string;}
         }
         Update: {
           budget?: Json;
@@ -745,10 +755,11 @@ export type Database = {
           id?: string;
           skills?: string[];
           status?: string;
-          title?: string;
-          updated_at?: string;
+          title?: string;}
+          updated_at?: string;}
         }
         Relationships: [;
+
           {"
             foreignKeyName: "jobs_client_id_fkey";",]"
   columns: ["client_id"];"
@@ -767,16 +778,19 @@ export type Database = {
   new_status: string;
           previous_status: string | null;,
   user_id: string;
+
         }
         Insert: {,
   action: string;
           comment?: string | null;
           created_at?: string;
           id?: string;
+
           milestone_id: string;,
   new_status: string;
           previous_status?: string | null;
           user_id: string;
+
         }
         Update: {
           action?: string;
@@ -785,11 +799,12 @@ export type Database = {
           id?: string;
           milestone_id?: string;
           new_status?: string;
-          previous_status?: string | null;
-          user_id?: string;
+          previous_status?: string | null;}
+          user_id?: string;}
         }
         Relationships: [;
           {
+
 "
             foreignKeyName: "milestone_activities_milestone_id_fkey";",]"
   columns: ["milestone_id"];"
@@ -1201,6 +1216,7 @@ export type Database = {
 
           }
 
+
           },
           {"
             foreignKeyName: "project_milestones_project_id_fkey";","
@@ -1209,6 +1225,7 @@ export type Database = {
   referenced_relation: "projects";""
             referenced_columns: ["id"];"
           {
+
 "
             foreignKeyName: "project_notes_project_id_fkey";","
   columns: ["project_id"];"
@@ -1317,6 +1334,7 @@ export type Database = {
           timeline: string;,
   updated_at: string;
           viewed_at: string | null;
+
         }
         Insert: {
           budget_display?: string | null;
@@ -1332,12 +1350,14 @@ export type Database = {
           requester_email: string;
           requester_id?: string | null;
           requester_name: string;
+
           start_date?: string | null;"
           status?: Database["public"]["Enums"]["quote_request_status"];"
+
           talent_id?: string | null;
           timeline: string;
-          updated_at?: string;
-          viewed_at?: string | null;
+          updated_at?: string;}
+          viewed_at?: string | null;}
         }
         Update: {
           budget_display?: string | null;
@@ -1353,15 +1373,18 @@ export type Database = {
           requester_email?: string;
           requester_id?: string | null;
           requester_name?: string;
+
           start_date?: string | null;"
           status?: Database["public"]["Enums"]["quote_request_status"];"
+
           talent_id?: string | null;
           timeline?: string;
-          updated_at?: string;
-          viewed_at?: string | null;
+          updated_at?: string;}
+          viewed_at?: string | null;}
         }
         Relationships: [;
           {
+
 "
             foreignKeyName: "quote_requests_requester_id_fkey";",]"
   columns: ["requester_id"];"
@@ -1428,6 +1451,7 @@ export type Database = {
   referral_id: string;
           reward_type: string;,
   user_id: string;
+
         }
         Insert: {
           amount?: number | null;
@@ -1435,9 +1459,11 @@ export type Database = {
           expires_at?: string | null;
           id?: string;
           partner_id?: string | null;
+
           referral_id: string;,
   reward_type: string;
           user_id: string;
+
         }
         Update: {
           amount?: number | null;
@@ -1446,10 +1472,11 @@ export type Database = {
           id?: string;
           partner_id?: string | null;
           referral_id?: string;
-          reward_type?: string;
-          user_id?: string;
+          reward_type?: string;}
+          user_id?: string;}
         }
         Relationships: [;
+
           {
 
 
@@ -1606,30 +1633,18 @@ export type Database = {
         }
         Insert: {,
   Insert: {
+
           clicked_at?: string | null;
           email_body: string;,
   email_subject: string;
           id?: string;
           opened_at?: string | null;
           reminder_type: string;
-          sent_at?: string | null;
-          user_id: string;
-        }
-        Update: {
-          clicked_at?: string | null;
-          email_body?: string;
-          email_subject?: string;
-          id?: string;
-          opened_at?: string | null;
-          reminder_type?: string;
-          sent_at?: string | null;
-          user_id?: string;
-
-
-
-        }
-        Relationships: [;
+          sent_at?: string | null;}
+          user_id: string;}
+        }        Relationships: [;
           {
+
           {"
             foreignKeyName: "resume_skills_resume_id_fkey";",]"
   columns: ["resume_id"];"
@@ -1647,6 +1662,7 @@ export type Database = {
           resolved_at: string | null;,
   review_id: string;
           status: string;
+
         }
         Insert: {
           created_at?: string;
@@ -1654,8 +1670,8 @@ export type Database = {
           reason: string;,
   reporter_id: string;
           resolved_at?: string | null;
-          review_id: string;
-          status?: string;
+          review_id: string;}
+          status?: string;}
         }
         Update: {
           created_at?: string;
@@ -1663,11 +1679,12 @@ export type Database = {
           reason?: string;
           reporter_id?: string;
           resolved_at?: string | null;
-          review_id?: string;
-          status?: string;
+          review_id?: string;}
+          status?: string;}
         }
         Relationships: [;
           {
+
 "
             foreignKeyName: "review_reports_reporter_id_fkey";",]"
   columns: ["reporter_id"];"
@@ -2310,8 +2327,13 @@ export type Database = {
         Args: Record<PropertyKey never>;
 </PropertyKey>
         Args: Record < PropertyKey, never>;
+
         Returns: number;
+schedule_email_reminders: {;
+        Args: Record<PropertyKey never />;}
+        Returns: number;}
       }
+
       trigger_resume_scoring: {,
   Args: { application_id: string }
         Returns: undefined;
@@ -2427,10 +2449,12 @@ export type Tables<
 }
         Row: infer R;
       }
+
       ? R;
       : never;
     : never;
 export type TablesInsert<
+
   DefaultSchemaTableNameOrOptions extends;
       ? R;
       : never;
@@ -2771,10 +2795,11 @@ export const Constants = {
         "closed";"]"
         "archived"],""
       referral_status: ["pending", "completed", "expired"]}}} as const;"
-;
 
 ;
+;
 export const Constants = {
+
   public: {,
   Enums: {
 
@@ -2784,12 +2809,14 @@ export const Constants = {
       referral_status: ["pending", "completed", "expired"]}}} as const;"
 ;"
       referral_status:"pending" | "completed" | "expired";"
+
     }
-    CompositeTypes:{;
-      [_ in never]:never;
+    CompositeTypes:{;}
+      [_ in never]:never;}
     }
   }
 }
+
 ;"
 type DefaultSchema = Database[Extract<keyof Database, "public">];"
 </keyof>
@@ -2814,12 +2841,14 @@ export type Tables<;
     ? (DefaultSchema["Tables"] &;")"
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {;"
         Row:infer R;
+
       }
       ? R;
       :never;
     :never;
 ;
 export type TablesInsert<;
+
   DefaultSchemaTableNameOrOptions extends;"
     | keyof DefaultSchema["Tables"];"
     | { schema:keyof Database },;
@@ -2836,12 +2865,14 @@ export type TablesInsert<;
   :DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];""
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;"
         Insert:infer I;
+
       }
       ? I;
       :never;
     :never;
 ;
 export type TablesUpdate<;
+
   DefaultSchemaTableNameOrOptions extends;"
     | keyof DefaultSchema["Tables"];"
     | { schema:keyof Database },;
@@ -2858,12 +2889,14 @@ export type TablesUpdate<;
   :DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];""
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;"
         Update:infer U;
+
       }
       ? U;
       :never;
     :never;
 ;
 export type Enums<;
+
   DefaultSchemaEnumNameOrOptions extends;"
     | keyof DefaultSchema["Enums"];"
     | { schema:keyof Database },;
@@ -2889,6 +2922,7 @@ export type CompositeTypes<;
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];""
   :PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];""
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];"
+
     :never;
 ;
 export const Constants = {;
@@ -2896,6 +2930,7 @@ export const Constants = {;
   Enums:{;
       api_key_scope:[;
 export const Constants = {;
+
   public: {;,
   Enums: {;
       api_key_scope: [;"
@@ -2915,3 +2950,4 @@ export const Constants = {;
       referral_status: ["pending", "completed", "expired"]}}} as const;"
 ;
 "
+

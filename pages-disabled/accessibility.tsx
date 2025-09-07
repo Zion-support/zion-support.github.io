@@ -15,6 +15,7 @@ import {
   Globe,
   Heart,
   Phone,
+
   Mail,
   MapPin;'
 } from 'lucide-react';'
@@ -42,10 +43,12 @@ const accessibilityFeatures = [
     title: 'Security & Privacy',''
     description: 'Secure accessibility features that protect user data and privacy.',''
     features: ['Data encryption', 'Privacy controls', 'Secure authentication', 'GDPR compliance']'
+
 ];
 
 export default function AccessibilityPage() {
   return (
+
     <MainLayout;'
       title="Accessibility - Zion Tech Group"""
       description="Committed to making technology accessible to everyone. Learn about our accessibility features and compliance."""
@@ -94,6 +97,7 @@ export default function AccessibilityPage() {
 </li>"
                       <CheckCircle className="h-4 w-4 text-green-400 mr-2" />"
 </CheckCircle>
+
                     </li>
                 </ul>
               </motion.div>)
@@ -101,6 +105,7 @@ export default function AccessibilityPage() {
           </div>
 
           <motion.div;
+
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}"
@@ -132,6 +137,7 @@ export default function AccessibilityPage() {
                 <MapPin className="h-5 w-5 mr-2" />"
 </MapPin>
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
+
               </div>
             </div>
           </motion.div>

@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { Link } from "react-router-dom";""
 import { ArrowRight, Phone } from "lucide-react";""
@@ -28,10 +29,12 @@ export const MobileAppHero: React.FC = () => {
 </div>
               <AppStoreButtons;
                 appStoreUrl={appStoreUrl}
+
                 googlePlayUrl={googlePlayUrl}
               />
 </AppStoreButtons>
             </div>
+
 "
             <Link to="/open-app">"
 </Link>
@@ -41,11 +44,13 @@ export const MobileAppHero: React.FC = () => {
                 className="flex gap-2 border-white text-white hover:bg-white/10""
               >
 </Button>
+
                 <ArrowRight size={20} />
 </ArrowRight>
               </Button>
             </Link>
           </div>
+
 "
           <div className="flex-1 flex justify-center">"
 </div>"
@@ -98,6 +103,7 @@ export const MobileAppHero: React.FC = () => {
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>;""
               <Phone className="w-full h-auto text-white" />;"
 </Phone>
+
             </div>
           </div>
         </div>

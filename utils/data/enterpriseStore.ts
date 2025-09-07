@@ -6,6 +6,7 @@ export interface CompanyRecord {
   slug: string;
   logoUrl?: string;
   brandColor?: string;
+
   plan: {,
   tier: 'starter' | 'business' | 'enterprise';'
     seatsPurchased: number;,
@@ -63,3 +64,4 @@ const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: see
 </string>
   createCompany(input: Partial<CompanyRecord>): CompanyRecord {;
 </CompanyRecord>'
+

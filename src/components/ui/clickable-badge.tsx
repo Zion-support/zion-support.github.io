@@ -1,4 +1,4 @@
-export function ClickableBadge({
+
 
 
         >
@@ -62,3 +62,4 @@ function ClickableBadge() {
 </X>
         </button>)}
     </div>);"
+

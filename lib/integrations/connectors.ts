@@ -1,6 +1,7 @@
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 
+
 async function mockProviderCall<T>(
   connection: ProviderConnection,
   action: string,
@@ -76,5 +77,6 @@ export class AnalyticsConnector {
   ): Promise<SyncLogEntry> {
     const { log } = await mockProviderCall(connection, 'sync_metric', metric);
     return log;
+
   }
 }

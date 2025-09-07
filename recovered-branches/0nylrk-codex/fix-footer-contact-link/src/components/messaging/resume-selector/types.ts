@@ -1,6 +1,7 @@
 
 
 
+
 import { Resume  } from '@/types / resume';'
 export interface ResumeOption {
   // TODO: Implement
@@ -15,10 +16,12 @@ export interface ResumeSelectorProps {
   // TODO: Implement
 }'
 import { Resume } from "@/types/resume","
+
 export interface ResumeOption {
   // TODO: Implement
 }
   id: string,
+
   title: string,"
   type: 'ai_resume' | 'custom_upload','
   resume?: Resume,
@@ -45,3 +48,4 @@ export interface ResumeSelectorProps {;
   onResumeSelected: (resumeOption: ResumeOption) => void;,
   onResumeSelected: (resume_option: ResumeOption) => void;
 }'
+

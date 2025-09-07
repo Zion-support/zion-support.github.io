@@ -1,9 +1,12 @@
+
 export type UIKitKind = "ios" | "android" | "web";""
 export type UIKitKind = "ios" | "android" | "web";"
+
 export interface TokenSet {
   // TODO: Implement
 }
 export interface TokenSet {;
+
   colors: Record<string, string>;
 </string>
   typography: Record<string, any>;
@@ -44,16 +47,19 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
   g: number;
       b: number;,
   a: number;
+
     };
   }>;
   effects?: Array<{
     type: string;
     radius?: number;
     color?: {
+
       r: number;,
   g: number;
       b: number;,
   a: number;
+
     };
   }>;
   characters?: string;
@@ -61,8 +67,8 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     fontFamily?: string;
     fontSize?: number;
     fontWeight?: number;
-    textAlignHorizontal?: string;
-    textAlignVertical?: string;
+    textAlignHorizontal?: string;}
+    textAlignVertical?: string;}
   };
 }
 
@@ -71,10 +77,12 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
   };
 }
 
+
   getDesignSystem(id: string): DesignSystem | null {
   // TODO: Implement
 }
     return this.designSystems.get(id) || null;
+
   }
 
   addComponent(designSystemId: string, component: DesignElement): boolean {
@@ -87,8 +95,8 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
   // TODO: Implement
 }
     designSystem.components.push(component);
-    designSystem.lastUpdated = new Date();
-    return true;
+    designSystem.lastUpdated = new Date();}
+    return true;}
   }
 
   addToken(designSystemId: string, key: string, value: any): boolean {
@@ -98,8 +106,8 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     if (!designSystem) return false;
 
     designSystem.tokens[key] = value;
-    designSystem.lastUpdated = new Date();
-    return true;
+    designSystem.lastUpdated = new Date();}
+    return true;}
   }
 
   addAsset(designSystemId: string, asset: DesignElement): boolean {
@@ -109,12 +117,14 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     if (!designSystem) return false;
 
     designSystem.assets.push(asset);
-    designSystem.lastUpdated = new Date();
-    return true;
+    designSystem.lastUpdated = new Date();}
+    return true;}
   }
 
   // Figma integration methods;
+
   importFromFigma(figmaData: FigmaNode[], designSystemId: string): DesignElement[] {
+
     const designSystem = this.designSystems.get(designSystemId);
     if (!designSystem) return [];
 
@@ -122,8 +132,8 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     
     for (const node of figmaData) {
       this.figmaNodes.set(node.id, node);
-      const element = this.convertFigmaNodeToDesignElement(node);
-      elements.push(element);
+      const element = this.convertFigmaNodeToDesignElement(node);}
+      elements.push(element);}
     }
 
     designSystem.components.push(...elements);
@@ -139,12 +149,13 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
       type: this.mapFigmaTypeToElementType(node.type),
       name: node.name,
       figmaId: node.id,
-      properties: this.extractProperties(node),
-      children: node.children?.map(child => this.convertFigmaNodeToDesignElement(child))
+      properties: this.extractProperties(node),}
+      children: node.children?.map(child => this.convertFigmaNodeToDesignElement(child))}
     };
 
     return element;
   }
+
 "
   private mapFigmaTypeToElementType(figmaType: string): DesignElement['type'] {''
     const typeMap: Record<string, DesignElement['type']> = {'
@@ -202,14 +213,15 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
   heading1: { fontSize: 32, fontWeight: "bold" },""
       heading2: { fontSize: 24, fontWeight: "bold" },""
       body: { fontSize: 16, fontWeight: "normal" },"
+
     },
     spacing: {,
   xs: 4,
       sm: 8,
       md: 16,
       lg: 24,
-      xl: 32,
-      xl: 32,
+      xl: 32,}
+      xl: 32,}
 }
   };
 
@@ -220,6 +232,8 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
 
 export async function buildUIKit(
   fileId: string,
+
   kind: UIKitKind,)
 ): Promise<UIKit> {
 </UIKit>"
+

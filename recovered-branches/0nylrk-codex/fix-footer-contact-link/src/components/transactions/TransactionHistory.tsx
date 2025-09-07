@@ -3,6 +3,7 @@
 
 
 
+
 import React, { useState } from "react";""
 import {useQuery} from "@tanstack/react-query";""
 import {supabase} from "@/integrations/supabase/client";""
@@ -167,6 +168,7 @@ import { Skeleton } from "@/components/ui/skeleton",;""
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;""
 import { formatDistanceToNow } from "date-fns",;"
 interface Transaction {;
+
   id: string,;
   user_id: string,;
   provider_id: string,;
@@ -179,17 +181,15 @@ interface Transaction {;
   completed_at?: string;
   refunded_at?: string;
   cancelled_at?: string;
-  provider?: {;
-    display_name?: string;
-  };
-  service?: {;
-    title?: string;
+  provider?: {;}
+    display_name?: string}
+};  service?: {;}
+    title?: string;}
   }
 }
-
-export function TransactionHistory() {;
-
+export function TransactionHistory() {;}
   const { user } = useAuth();
+
   const { toast } = useToast();'
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');''
 import React, { useState } from './react';''
@@ -203,6 +203,7 @@ import { Badge } from '@/components / ui / badge';''
 import { Skeleton } from '@/components / ui / skeleton';''
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from './lucide-react';''
 import { formatDistanceToNow } from './date - fns';'
+
 interface Transaction {
   // TODO: Implement
 }
@@ -211,6 +212,7 @@ interface Transaction {
   provider_id: string,
   service_id: string,
   amount: number,
+
   currency: string,'
   status: 'pending' | 'completed' | 'refunded' | 'cancelled','
   in_escrow: boolean,
@@ -227,6 +229,7 @@ import { Badge } from "@/components/ui/badge",;""
 import { Skeleton } from "@/components/ui/skeleton",;""
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;""
 import { formatDistanceToNow } from "date-fns",;"
+
 ;
 interface Transaction {;
   id:string,;
@@ -241,15 +244,15 @@ interface Transaction {;
   completed_at?:string,;
   refunded_at?:string,;
   cancelled_at?:string,;
-  provider?:{;
-    display_name?:string;
+  provider?:{;}
+    display_name?:string;}
   },;
-  service?:{;
-    title?:string,;
+  service?:{;}
+    title?:string,;}
   },;
 }
 ;
-export function TransactionHistory() {;
+export function TransactionHistory() {;}
   const { user } = useAuth(),;
   const { toast } = useToast(),;'
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all'),;'
@@ -265,9 +268,10 @@ export function TransactionHistory() {;
         .select(`;
           *,;)
           provider:profiles!provider_id(display_name),;
-          service:services(title);
-        `);
+          service:services(title);}
+        `);}
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),;
+
       ;'
       if (filter === 'pending') {;''
         query = query.eq('statuspending'),;''
@@ -275,6 +279,7 @@ export function TransactionHistory() {;
         query = query.eq('statuscompleted'),;''
       } else if (filter === 'escrow') {;''
         query = query.eq('in_escrow', true),;'
+
       }
       ;'
       query = query.order('created_at', { ascending:false }),;'
@@ -285,15 +290,18 @@ export function TransactionHistory() {;
       return data as Transaction[],;
     },;
     enabled:!!user}),;
+
 ;'
   const handleManageTransaction = async (transactionId:string, action:'release' | 'refund' | 'cancel') => {;'
     try {;'
       const { data, error } = await supabase.functions.invoke('manage-transaction', {;'
         body:{ transactionId, action })
+
       }),;
       ;
       if (error) throw error,;
       ;
+
       toast({;'
         title:"Success",;")"
         description:data.message || "Transaction updated successfully"}),;"
@@ -439,9 +447,11 @@ export function TransactionHistory() {;
 </CardDescription>"
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>;""
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>;"
+
                         </CardDescription>;
                       </div>;
                     </div>;
+
                   </CardHeader>;"
                   <CardContent className="pb-3">;"
 </CardContent>"
@@ -473,14 +483,16 @@ const {
   data: transactions, isLoading, error, refetch;
 }= useQuery ({'
   queryKey: ['transactions', user?.id, filter];')
+
 queryFn: async () => {
-  if (!user) return [];
-return data as Transaction[] 
+  if (!user) return [];}
+return data as Transaction[] }
 };
 enabled: !!user;
 });
 if (error) throw error;
 refetch () 
+
 }catch (error) {
   
   const { data: transactions, isLoading, error, refetch } = useQuery({'
@@ -489,6 +501,7 @@ refetch ()
       if (!user) return [],'
 import React, {_useState} from "react";"
 interface Transaction {_id: string;,
+
   user_id: string;
   provider_id: string;,
   service_id: string;
@@ -501,6 +514,7 @@ interface Transaction {_id: string;,
   refunded_at?: string;
   cancelled_at?: string;
   provider?: {
+
       
 
       
@@ -713,9 +727,11 @@ interface Transaction {_id: string;,
 </CardDescription>"
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>;""
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>;"
+
                         </CardDescription>
                       </div>
                     </div>
+
                   </CardHeader>"
                   <CardContent className="pb-3">"
 </CardContent>"
@@ -1043,9 +1059,11 @@ interface Transaction {_id: string;,
 </CardDescription>)"
                             <span > Payment to <span className="text - zion - purple">{counterparty_name}</span></span>) : (")"
                             <span > Payment from <span className="text - zion - cyan">Client</span></span>)}"
+
                         </CardDescription>;
                       </div>;
                     </div>;
+
                   </CardHeader>;"
                   <CardContent className="pb - 3">;"
 </CardContent>"
@@ -1156,3 +1174,4 @@ interface Transaction {_id: string;,
     </div>
       </div>;
     </div>;"
+

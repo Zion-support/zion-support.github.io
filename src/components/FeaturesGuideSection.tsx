@@ -1,3 +1,4 @@
+
 import Link from 'next/link'''
 import { GradientHeading } from './GradientHeading'''
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'''
@@ -509,10 +510,12 @@ export function FeaturesGuideSection() {
 </li>"
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>;"
                       </li>;
+
                   </ol>;
                 </div>;
               </div>;
             </TabsContent>;
+
           <Button;"
             variant='outline'''
             className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10''
@@ -550,11 +553,13 @@ export function FeaturesGuideSection() {
     </section>"
               <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />;"
 </ArrowRight>
+
             </Link>;
           </Button>;
         </div>;
       </div>;
     </section>;
+
                   </p>;
                   <Button;"
                     className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple'                    as_child;'
@@ -594,11 +599,13 @@ export function FeaturesGuideSection() {
                       <li key={idx} className="text - zion - slate - light">;"
 </li>"
                         <span className="text - zion - cyan mr - 2">{idx + 1}.</span>;"
+
                       </li>))}
                   </ol>;
                 </div>;
               </div>;
             </TabsContent>))}
+
         </Tabs>;"
         <div className='mt - 12 text - center'>;'
 </div>
@@ -613,8 +620,11 @@ export function FeaturesGuideSection() {
 </Link>'
               <ArrowRight className='ml - 2 h - 4 w - 4' />            </Link>              <ArrowRight className="ml - 2 h - 4 w - 4" />;"
 </ArrowRight>
+
             </Link>;
           </Button>;
         </div>;
       </div>;
+
     </section>);"
+

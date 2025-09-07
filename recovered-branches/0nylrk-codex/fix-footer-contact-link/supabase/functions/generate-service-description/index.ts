@@ -1,4 +1,5 @@
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
 import {Configuration, OpenAIApi} from "npm: openai@4 ;"
 const corsHeaders = {"
@@ -29,10 +30,11 @@ serve(async (req) => {"
         {
           status: 400;,"
   headers: { ...corsHeaders, "Content-Type": "application/json" }"
-    const { title, keyFeatures, targetAudience } = await req.json(),
 
+    const { title, keyFeatures, targetAudience } = await req.json(),
     if (!title) {
       return new Response(
+
         JSON.stringify({ "
           error: "Missing required field: title"")
         }),
@@ -46,23 +48,26 @@ const corsHeaders = {;"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;"
 serve(async (req) => {;"
   if (req.method === "OPTIONS") {;"
+
     return new Response(null, { headers: corsHeaders });
   }
 ;
-  try {;
+  try {;}
     const { title, keyFeatures, targetAudience } = await req.json(),;
     if (!title) {;
       return new Response(;
+
         JSON.stringify({;"
           error: "Missing required field: title";")
         }),;
         {;
           status: 400,;"
           headers: { ...corsHeaders, "Content-Type": "application/json" } ;"
-    const { title, keyFeatures, targetAudience } = await req && req.json();
 
+    const { title, keyFeatures, targetAudience } = await req && req.json();
     if (!title) {
       return new Response(
+
         JSON && JSON.stringify({ "
           error: "Missing required field: title"")
         });
@@ -122,13 +127,11 @@ if ( {) {
 
     const configuration = new Configuration({)"
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});'
+
     const openai = new OpenAIApi(configuration);
     const prompt = `Create a professional and detailed service description for the following service:
-
-
-    
-
 ;
+
     const configuration = new Configuration({;)'
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;'
     const openai = new OpenAIApi(configuration),;
@@ -251,9 +254,10 @@ The description should: 1. Be approximately 200 - 300 words;
     const completion = await openai.chat.completions.create({"
       model: "gpt-4o-mini",""
       messages: [{ role: "user", content: prompt }],")
-      temperature: 0.7}),
 
+      temperature: 0.7}),
     const generatedDescription = completion.choices[0].message.content,
+
     
     return new Response()
       JSON.stringify({ description: generatedDescription }),
@@ -289,33 +293,40 @@ const corsHeaders = {;"
 ;
 serve(async (req) => {;"
   if (req.method === "OPTIONS") {;"
+
     return new Response(null, { headers:corsHeaders }),;
   }
 ;
-  try {;
+  try {;}
     const { title, keyFeatures, targetAudience } = await req.json(),;
 ;
     if (!title) {;
       return new Response(;
+
         JSON.stringify({ ;"
           error:"Missing required field:title" ;")
         }),;
         { ;
           status:400, ;"
           headers:{ ...corsHeaders, "Content-Type":"application/json" } ;"
+
         }
       ),;
     }
 ;
+
     const configuration = new Configuration({;)"
       apiKey:Deno.env.get('OPENAI_API_KEY')}),;'
+
     const openai = new OpenAIApi(configuration),;
 ;
     const prompt = `Create a professional and detailed service description for the following service:;
     ;
+
 Title:${title}'
 Key Features:${keyFeatures || "Not specified"}""
 Target Audience:${targetAudience || "General users"}"
+
 ;
 The description should:1. Be approximately 200-300 words;
 2. Highlight the key benefits and unique selling points;
@@ -323,15 +334,18 @@ The description should:1. Be approximately 200-300 words;
 4. Speak directly to the target audience;
 5. Include a compelling opening and closing statement`,;
 ;
+
     const completion = await openai.chat.completions.create({;"
       model:"gpt-4o-mini",;""
       messages:[{ role:"user", content:prompt }],;")
+
       temperature:0.7}),;
 ;
     const generatedDescription = completion.choices[0].message.content,;
     ;
     return new Response(;)
       JSON.stringify({ description:generatedDescription }),;
+
       { ;"
         headers:{ ...corsHeaders, "Content-Type":"application/json" } ;"
       }
@@ -347,11 +361,12 @@ The description should:1. Be approximately 200-300 words;
       { ;
         status:500, ;"
         headers:{ ...corsHeaders, "Content-Type":"application/json" } ;"
+
       }
     ),;  }
 }),;
- 
 }try {
+
   // TODO: Implement
 }
   const {
@@ -372,6 +387,7 @@ return new Response (JSON.stringify ({
   status: 500;,
   headers: {"
   ...corsHeaders, "Content-Type" : "application/json""
+
 }
 }) 
 }
@@ -383,5 +399,7 @@ return new Response (JSON.stringify ({
       }
     );
   }
+
 });
 "
+

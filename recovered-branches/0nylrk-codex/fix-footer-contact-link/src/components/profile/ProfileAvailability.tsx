@@ -1,4 +1,5 @@
 
+
 import { Availability } from '@/types / profile';''
 import { Badge } from '@/components / ui / badge';''
 import { Calendar, Clock, Check } from './lucide-react';'
@@ -182,10 +183,12 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
                   <Clock className="h-4 w-4 text-zion-cyan" />;"
 </Clock>
                   <span>{slot && slot.hours}</span>;
+
                 </div>;
               </div>;
           </div>;
         </div>;
+
     </div>;
           </div>;
         </div>;"
@@ -237,3 +240,4 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
           </div>
         </div>
     </div>"
+

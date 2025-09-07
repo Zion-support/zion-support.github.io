@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";""
 import {Button} from "@/components/ui/button";""
 import {ChatBotPanel} from "./ChatBotPanel";""
@@ -6,12 +7,23 @@ import {cn} from "@/lib/utils";""
 import {useTheme} from "@/hooks/useTheme";"
 export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false);
+
   const { theme } = useTheme();
-
-
   return (
+import React, { useState } from \"react\",
+import { Button } from \"@/components/ui/button\",
+import { ChatBotPanel } from \"./ChatBotPanel\",
+import { MessageSquare, Info, X } from \"lucide-react\",
+import { cn } from \"@/lib/utils\";
+import { useTheme } from \"@/hooks/useTheme\";
+export function SupportWidget() {}
+  const [isOpen, setIsOpen] = useState(false);}
+  const { theme } = useTheme();
+  return (
+    <>  return (
     <>;
       {/* Fixed button in the bottom right */}
+
       {!isOpen && (;
         <Button;
       {/* Fixed button in the bottom right */}
@@ -42,9 +54,10 @@ import { cn } from "@/lib/utils",""
 import { useTheme } from "@/hooks/useTheme",")
 export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false),
+
   const { theme } = useTheme(),
-  
   return (
+
     <>
 </Button>"
           <MessageSquare className="h-6 w-6" />;"
@@ -86,6 +99,7 @@ export function SupportWidget() {
 </Button>"
                 <X className="h-5 w-5" />;"
 </X>
+
               </Button>;
             </div>;
           </div>;
@@ -94,6 +108,7 @@ export function SupportWidget() {
         </div>;
     </>;
   );
+
 }
 "
 import React, { useState } from './react';''
@@ -199,3 +214,4 @@ const {
   )
 }
 "
+

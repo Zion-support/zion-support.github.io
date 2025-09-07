@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";""
 import {Globe} from "lucide-react";""
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";""
@@ -99,10 +100,12 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
               <SelectItem key={item && item.country} value={item && item.country} className="text-white">;"
 </SelectItem>
               </SelectItem>;
+
           </div>;
         </SelectContent>;
       </Select>;
     </div>;
+
   const [top_countries, setTopCountries] = useState < CountryPricing[]>([]);
 ;
   // Set top / popular countries;
@@ -164,3 +167,4 @@ return (<div className="mb-6" > <h3 className="text-xl font-semibold text-white 
 </div>)"
 }> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Select a country" /> </SelectTrigger> </SelectItem>) )"
 }</div> </SelectContent> </Select> </div>) "
+

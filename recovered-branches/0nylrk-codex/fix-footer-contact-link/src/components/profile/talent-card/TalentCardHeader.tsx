@@ -3,6 +3,7 @@
 
 
 
+
 import React from "react";""
 import {BadgeCheck} from "lucide-react";""
 import {TalentCardAvatar} from "./TalentCardAvatar";""
@@ -42,18 +43,19 @@ import { TalentCardAvailability } from "./TalentCardAvailability","
 interface TalentCardHeaderProps {
   // TODO: Implement
 }
+
   fullName: string,
   professionalTitle: string,
   profilePicture?: string,
   availabilityType: string,
   yearsExperience: number;
 }
-
   professionalTitle, 
   profilePicture, 
   availabilityType,
   yearsExperience;
 }: TalentCardHeaderProps) {
+
   return (
 "
     <div className="flex items-start gap-4 mb-4">;"
@@ -137,3 +139,4 @@ interface TalentCardHeaderProps {
   availabilityType;)
 }/> </div> </div> </div>) 
 </TalentCardAvailability>"
+

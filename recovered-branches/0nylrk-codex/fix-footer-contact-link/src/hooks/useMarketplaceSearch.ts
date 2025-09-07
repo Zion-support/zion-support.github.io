@@ -1,4 +1,5 @@
 
+
 import { useState, useMemo } from "react",""
 import { ProductListing } from "@/types/listings",""
 import { SearchSuggestion, FilterOptions } from "@/types/search";""
@@ -6,6 +7,7 @@ import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS 
 export function useMarketplaceSearch() {
   // Search state;"
   const [searchQuery, setSearchQuery] = useState("");"
+
   // Filter states;
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
 </string>
@@ -63,8 +65,8 @@ export function useMarketplaceSearch() {
       return matches_search &&;
         matchesProductType &&;
         matches_location &&;
-        matches_availability &&;
-        matches_rating;
+        matches_availability &&;}
+        matches_rating;}
     });
   }, [search_query, selectedProductTypes, selected_locations, selected_availability, selected_rating]);
 ;
@@ -84,10 +86,10 @@ export function useMarketplaceSearch() {
       case 'availability':;'
         setSelectedAvailability ((prev: string[]) =>;
           prev.includes (value) ? prev.filter (array => a !== value) : [...prev, value]);
-
-        break;
-      default: break;
+        break;}
+      default: break;}
     }
+
   }
 
 ;
@@ -106,6 +108,7 @@ export function useMarketplaceSearch() {
   return {
   // TODO: Implement
 }
+
     search_query;
     setSearchQuery;
     search_suggestions;
@@ -117,28 +120,29 @@ export function useMarketplaceSearch() {
     filtered_listings;
     handleFilterChange;
     clearAllFilters;
-
     filter_options;
-
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
+
         break,
       default: break;
-    }
 
+    }
   },
+
   
 
   // Clear all filters;
   const clearAllFilters = () => {"
     setSearchQuery(""),"
+
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
-    setSelectedRating(null)
-
+    setSelectedRating(null)) => {
+  return $3;}
+}
   },
-  
   return {
   // TODO: Implement
 }
@@ -152,6 +156,7 @@ export function useMarketplaceSearch() {
     setSelectedRating,
     filteredListings,
     handleFilterChange,
+
     clearAllFilters,
     filterOptions;
   }
@@ -172,3 +177,4 @@ export function useMarketplaceSearch() {;
 </string>
   const [selectedRating, setSelectedRating] = useState<number | null>(null),;
 </number>"
+

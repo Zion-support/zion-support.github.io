@@ -1,6 +1,7 @@
 
 
 
+
 import React from "react";"
 import {
   // TODO: Implement
@@ -84,11 +85,14 @@ export function ApplyToJobModal({
 }/> </DialogContent> </Dialog>) 
 <ApplyForm;
           job={job}
+
           onClose={onClose}
           onApplySuccess={onApplySuccess}
         />
 </ApplyForm>
       </DialogContent>
+
 </Dialog>
     </Dialog>;
     </Dialog>);"
+

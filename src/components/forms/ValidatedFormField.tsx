@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';'
 import {;
   FormField,;
@@ -25,6 +26,7 @@ interface ValidationRule {;
 
 
   name: string;,
+
   label: string;
   type?:'
     | 'text'''
@@ -38,13 +40,16 @@ interface ValidationRule {;
     | 'checkbox''
   placeholder?: string;
   description?: string;
+
   validation?: ValidationRule;
   options?: { value: string; label: string }[]
+
   form: any; // React Hook Form control;
   className?: string;
   disabled?: boolean;
   showValidIcon?: boolean;
   debounceMs?: number;
+
 export function ValidatedFormField({
 
   name;
@@ -164,25 +169,84 @@ if (return null) {
 </NodeJS>)
       if (validation && validation.minLength && value && value.length < validation && validation.minLength) {;
         return `${label} must be at least ${validation && validation.minLength} characters`;
-      }
 
-      if (validation && validation.maxLength && value && value.length > validation && validation.maxLength) {;
-        return `${label} must not exceed ${validation && validation.maxLength} characters`;
       }
-
-      if (validation && validation.pattern && !validation && validation.pattern.test(value)) {;
+      // Check condition;
+if ( {) {$2;}
+}
+        return `${label} must not exceed ${validation.max_length} characters`;
+      }
+      if () {) {$2;}
+}
         return `${label} format is invalid`;
       }
     }
+    // Check condition;
+if ( {) {$2;}
+}
+      return validation.custom (value)}
+    return null;}
 
-    if (validation && validation.custom) {;
-      return validation && validation.custom(value);
+const getValidationIcon = () =>: any {// Check condition;}
+if (return null) {$2;}
+}
+    switch (validation_state) {case 'validating':;return (<div className='animate - spin h - 4 w - 4 border - 2 border - primary border - t-transparent rounded - full' />)case 'valid':;
+        return <CheckCircle className='h - 4 w - 4 text - green - 500' />;
+      case 'invalid':;
+        return <AlertCircle className='h - 4 w - 4 text - red - 500' />;
+      default:;}
+        return null;}
     }
+  }
+
+const getFieldClasses = () =>: any {// Check condition;}
+if (return '') {$2;}
+}
+    switch (validation_state) {case 'valid':;
+        return 'border - green - 500 focus:border - green - 500 focus:ring - green - 500 / 20';
+      case 'invalid':;
+        return 'border - red - 500 focus:border - red - 500 focus:ring - red - 500 / 20';
+      default:;}
+        return '';}
+    }
+  }
 
 
     return null;
   },
 
+
+interface ValidatedFormFieldProps  {name: string;
+  label: string;
+  type?:;
+    | 'text';
+    | 'email';
+    | 'password';
+    | 'tel';
+    | 'url';
+    | 'number';
+    | 'textarea';
+    | 'select';
+    | 'checkbox';
+  placeholder?: string;
+  description?: string;
+  validation?: ValidationRule;}
+  options?: { value: string; label: string}
+}[];
+  form: any; // React Hook Form control;
+  className?: string;
+  disabled?: boolean;
+  showValidIcon?: boolean;
+  debounceMs?: number;
+
+export function ValidatedFormField(): any ({name,label,type = 'text',placeholder,description,validation = {},options = [],form,className,disabled = false,showValidIcon = true,debounceMs = 300}: ValidatedFormFieldProps) {const [showPassword, setShowPassword] =;
+  useState(false;
+  const [validationState, setValidationState] = useState<;
+    'idle' | 'validating' | 'valid' | 'invalid';
+  >('idle');
+  const [debounceTimer, setDebounceTimer] = useState<NodeJS && NodeJS.Timeout | null />(null;
+  )const fieldValue = form && form.watch(name;
+  const fieldError = form && form.formState.errors[name];
 
 
 
@@ -268,11 +332,13 @@ if (return null) {
           </div>;"
           <div className='relative'>;'
 </div>
+
             <Input;
               type={type}
               disabled={disabled}
               className={baseClasses}
               {...form.register(name)}
+
             />
 </Input>'
             <div className="absolute inset-y-0 right-0 flex items-center pr-3">"
@@ -315,9 +381,11 @@ if (return null) {
 </Select>
             >              <SelectTrigger className={base_classes}>;
 </SelectTrigger>
+
                 <SelectValue placeholder={placeholder} />;
 </SelectValue>
               </SelectTrigger>;
+
               <SelectContent>;
 </SelectContent>
                 {options.map (option => (                  <SelectItem key={option.value} value={option.value}>;
@@ -367,12 +435,15 @@ if (return null) {
           </div>);'
           <div className='relative'>;'
 </div>
+
             <Input;
-              type = {type, }
-              disabled = {disabled, }
-              class_name = {base_classes, }
+
+type = {type }
+              disabled = {disabled }
+              class_name = {base_classes }
               {...form.register (name)}
             />;
+
 </Input>'
             <div className='absolute inset - y-0 right - 0 flex items - center pr - 3'>;'
 </div>
@@ -424,3 +495,4 @@ if (return null) {
                 <p className='text - sm text - muted - foreground'>{description}</p>)}'
             </div>)}
         </FormItem>)}'
+

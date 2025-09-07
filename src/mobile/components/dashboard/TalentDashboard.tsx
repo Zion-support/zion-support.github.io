@@ -1,5 +1,4 @@
-export function TalentDashboard() {
-  return (
+
 
     <div className="space-y-6 px-4 pb-24">"
 </div>
@@ -277,11 +276,13 @@ export function TalentDashboard() {
 </div>"
                 <Button size="sm">Apply Now</Button>;""
                 <Button size="sm" variant="outline">View Details</Button>;"
+
               </div>;
             </CardContent>;
           </Card>;
         </div>;
       </section>;
+
       <section>;
 </section>"
         <h2 className='text - lg font - medium mb - 4'>Application Tracker</h2>;'
@@ -303,6 +304,7 @@ export function TalentDashboard() {
                 <div className='text - 2xl font - bold text - primary'>2</div>;''
                 <div className='text - xs text - muted - foreground'>;'
 </div>
+
                 </div>;
               </div>;'
               <div className='text - center p - 3 bg - primary / 5 rounded - lg'>;'
@@ -315,6 +317,7 @@ export function TalentDashboard() {
                 <div className='text - 2xl font - bold text - primary'>12</div>;''
                 <div className='text - xs text - muted - foreground'>Jobs Viewed</div>;'
               </div>;
+
             </div>;'
             <Button variant='outline' className='w - full mt - 4'>              View All Applications      <section>;'
 </Button>'
@@ -348,10 +351,12 @@ export function TalentDashboard() {
             </div>;"
             <Button variant="outline" className="w - full mt - 4">;"
 </Button>
+
             </Button>;
           </CardContent>;
         </Card>;
       </section>;
+
       <section>
 </section>"
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>""
@@ -617,3 +622,4 @@ export function TalentDashboard() {
       </section>;)
     </div>);
     </div>"
+

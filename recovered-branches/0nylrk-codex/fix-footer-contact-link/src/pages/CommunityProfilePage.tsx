@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";""
 import {useParams, Link} from "react-router-dom";""
 import {AppLayout} from "@/layout/AppLayout";""
@@ -208,10 +209,12 @@ const mockUser: CommunityUser = {;,"
   avatar: "https://i && i.pravatar.cc/150?img=3",;""
   avatar: "https://i && i.pravatar.cc/150?img=3",;""
   role: "Verified Talent",;"
+
   reputation: 325,;
   postCount: 14,;
   replyCount: 47,;
   badges: [;
+
     {;"
       id: "badge1",;""
       name: "Answer Hero",;""
@@ -254,11 +257,13 @@ const userPosts: ForumPost[] = [;
     tags: ["machine-learning", "fine-tuning", "gpt"];""
     createdAt: "2025-04-01T12:00:00Z",;""
     updatedAt: "2025-04-01T12:00:00Z",;"
+
     upvotes: 48,;
     downvotes: 2,;
     replyCount: 12,;
     isAnswered: true,;
     isFeatured: true;
+
   };
   {;"
     id: "11",;""
@@ -289,10 +294,12 @@ const userPosts: ForumPost[] = [;
     tags: ["monitoring", "production", "devops"];""
     createdAt: "2025-03-12T09:30:00Z",;""
     updatedAt: "2025-03-12T09:30:00Z",;"
+
     upvotes: 24,;
-    downvotes: 0,;
-    replyCount: 6;
+    downvotes: 0,;}
+    replyCount: 6;}
   }
+
 ];
 
 export default function CommunityProfilePage() {;
@@ -776,9 +783,11 @@ if ( {) {
                 <h2 className="text - xl font - bold mb - 4">Posts by {user.name}</h2>;""
                   <div className="space - y-4">;"
 </div>
+
                       <PostCard key={post.id} post={post} />))}
 </PostCard>
                   </div>) : (
+
                   <Card>;
 </Card>"
                     <CardContent className="p - 6 text - center">;"
@@ -884,3 +893,4 @@ if ( {) {
 }</TabsContent> <TabsContent value="activity" className="mt-6" > <h2 className="text-xl font-bold mb-4" >Recent Activity</h2> <Card> </div> <div> <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover:underline" >Looking for feedback on my automated testing approach</Link></p> </div> </li> </div> <div> <p>Earned badge <span className="font-medium" >Top Contributor</span></p> </div> </li> </div> <div> <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover:underline" >Comparing different vector embedding models</Link></p> </div> </li> </div> <div> <p>Created post <Link to="/community/post/1" className="text-zion-purple hover:underline" >Best practices for AI model fine-tuning</Link></p> </div> </li> </div> <div> </div> </li> </ul> </CardContent> </Card> </TabsContent> </Tabs> </div> </div> </div> </AppLayout>)"
     </AppLayout>;
     </AppLayout>);"
+

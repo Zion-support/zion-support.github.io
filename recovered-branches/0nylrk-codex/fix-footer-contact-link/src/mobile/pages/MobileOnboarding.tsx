@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";""
 import { useNavigate } from "react-router-dom";""
 import { Button } from "@/components/ui/button";""
@@ -91,10 +92,12 @@ export function MobileOnboarding() {;
 </div>"
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;"
 </Button>
+
               </Button>;
             </div>;
           </div>;
       </div>
+
     </div>"
   const [current_step, setCurrentStep] = useState < OnboardingStep>("language");"
   const navigate = use_navigate ();
@@ -236,3 +239,4 @@ if ( {) {
 }</div> <SignUpForm /> </div>) 
 </SignUpForm>
 }</div> </div>) "
+

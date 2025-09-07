@@ -1,11 +1,16 @@
+
 import { Resume } from "@/types/resume";"
 export interface StepProps {
   // TODO: Implement
 }
   id: string;,
   label: string;
+
 }
+
+
 export interface NavigationButtonsProps {
+
   // TODO: Implement
 }
 export interface NavigationButtonsProps {;
@@ -24,15 +29,18 @@ export interface StepProps {
   label: string;
 export interface NavigationButtonsProps {;
 
+
   onBack?: () => void;
   onNext?: () => void;
   isNextDisabled?: boolean;
   backLabel?: string;
   nextLabel?: string;
-  isLoading?: boolean;
+  isLoading?: boolean;}
+
 }
 
 export interface ResumeProgressProps {
+
   // TODO: Implement
 }
   resume: Resume | null;,
@@ -44,3 +52,4 @@ export interface CreateResumeFormProps {;
 </void>
   onCreateResume: (title: string) => Promise<void>;
 </void>"
+

@@ -1,3 +1,4 @@
+
 import { Config } from "tailwindcss",""
 import { fontFamily } from "tailwindcss/defaultTheme",""
 import plugin from "tailwindcss/plugin";""
@@ -347,6 +348,7 @@ export default config;
 export default config;'
           text_align: 'left'}}'
       add_utilities (new_utilities);
+
     })]}
 ;
 export default config;

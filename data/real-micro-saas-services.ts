@@ -1,6 +1,8 @@
+
   id: string;,
   name: string;
   tagline: string;,
+
   price: string;
   period: string;,
   description: string;
@@ -22,18 +24,21 @@
   roi: string;
   competitors: string[];,
   marketSize: string;
+
   growthRate: string;,
+
   contactInfo: {
     mobile: string;,
   email: string;
     address: string;
-
+}
 
   }
 }
 export const realMicroSaasServices: RealMicroSaasService[] = [
   // AI-Powered Business Solutions;
   {
+
     id: 'ai-legal-document-generator',''
     name: 'AI Legal Document Generator',''
     tagline: 'Generate legally compliant documents in seconds with AI',''
@@ -812,9 +817,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: true,'
     launchDate: '2025-02-01','
     customers: 180,
+
     rating: 4.7,
-    reviews: 46,
+    reviews: 46;
   },
+
   {'
     id: 'mobile-conversational-surveys',''
     name: 'Mobile Conversational Surveys',''
@@ -859,9 +866,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: false,'
     launchDate: '2024-12-10','
     customers: 95,
+
     rating: 4.6,
-    reviews: 22,
+    reviews: 22;
   },
+
   {'
     id: 'niche-productivity-planner',''
     name: 'Niche Productivity Planner',''
@@ -902,9 +911,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: false,'
     launchDate: '2025-01-20','
     customers: 60,
+
     rating: 4.5,
-    reviews: 14,
+    reviews: 14;
   },
+
   {'
     id: 'event-management-dashboard',''
     name: 'Event Management Dashboard',''
@@ -944,9 +955,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: false,'
     launchDate: '2024-11-18','
     customers: 70,
+
     rating: 4.6,
-    reviews: 18,
+    reviews: 18;
   },
+
   {'
     id: 'affiliate-tracking-suite',''
     name: 'Affiliate Tracking Suite',''
@@ -986,9 +999,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: false,'
     launchDate: '2024-10-12','
     customers: 55,
+
     rating: 4.4,
-    reviews: 12,
+    reviews: 12;
   },
+
   {'
     id: 'smb-website-analytics',''
     name: 'SMB Website Analytics',''
@@ -1028,9 +1043,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: true,'
     launchDate: '2025-02-05','
     customers: 140,
+
     rating: 4.7,
-    reviews: 28,
+    reviews: 28;
   },
+
   {'
     id: 'it-helpdesk-lite',''
     name: 'IT Helpdesk Lite',''
@@ -1069,9 +1086,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: false,'
     launchDate: '2024-09-22','
     customers: 120,
+
     rating: 4.5,
-    reviews: 31,
+    reviews: 31;
   },
+
   {'
     id: 'ecommerce-return-manager',''
     name: 'E‑commerce Return Manager',''
@@ -1111,9 +1130,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: false,'
     launchDate: '2024-08-30','
     customers: 75,
+
     rating: 4.4,
-    reviews: 19,
+    reviews: 19;
   },
+
   {'
     id: 'auto-email-followups',''
     name: 'Automated Email Follow‑ups',''
@@ -1153,9 +1174,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: false,'
     launchDate: '2025-01-25','
     customers: 90,
+
     rating: 4.5,
-    reviews: 17,
+    reviews: 17;
   },
+
   {'
     id: 'podcast-transcription-studio',''
     name: 'Podcast Transcription Studio',''
@@ -1194,9 +1217,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: true,'
     launchDate: '2024-12-02','
     customers: 210,
+
     rating: 4.7,
-    reviews: 52,
+    reviews: 52;
   },
+
   {'
     id: 'ai-knowledge-graph-studio',''
     name: 'AI Knowledge Graph Studio',''
@@ -1236,9 +1261,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: true,'
     launchDate: '2025-02-08','
     customers: 35,
+
     rating: 4.8,
-    reviews: 11,
+    reviews: 11;
   },
+
   {'
     id: 'llm-guarded-api-gateway',''
     name: 'LLM Guarded API Gateway',''
@@ -1278,9 +1305,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: true,'
     launchDate: '2025-02-08','
     customers: 42,
+
     rating: 4.8,
-    reviews: 13,
+    reviews: 13;
   },
+
   {'
     id: 'serverless-lakehouse-starter',''
     name: 'Serverless Lakehouse Starter',''
@@ -1319,9 +1348,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: false,'
     launchDate: '2025-02-08','
     customers: 24,
+
     rating: 4.6,
-    reviews: 7,
+    reviews: 7;
   },
+
   {'
     id: 'data-contracts-hub',''
     name: 'Data Contracts Hub',''
@@ -1360,9 +1391,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: false,'
     launchDate: '2025-02-08','
     customers: 19,
+
     rating: 4.6,
+
     reviews: 6,
   },];
+    id: \"id\",
+
 
 
 '
@@ -1404,6 +1439,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Legal AI'''
       'Document Generation'''
       'Compliance Engine'']
+
     ]
     integrations: ['
       'DocuSign'''
@@ -1413,6 +1449,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'LawPay'''
       'QuickBooks'']
     ]
+
     useCases: ['
       'Contract generation'''
       'Legal form creation'''
@@ -1470,6 +1507,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Sentiment Analysis'''
       'Voice Recognition'''
       'Chatbot AI'']
+
     ]
     integrations: ['
       'Zendesk'''
@@ -1479,6 +1517,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Microsoft Teams'''
       'Shopify'']
     ]
+
     useCases: ['
       'Customer support'''
       'Order tracking'''
@@ -1536,6 +1575,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Data Analytics'''
       'SEO Algorithms'''
       'Web Crawling'']
+
     ]
     integrations: ['
       'Google Analytics'''
@@ -1545,6 +1585,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'WooCommerce'''
       'HubSpot'']
     ]
+
     useCases: ['
       'Website optimization'''
       'Content marketing'''
@@ -1601,6 +1642,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Audio Processing'''
       'Video Compression'''
       'Cloud Computing'']
+
     ]
     integrations: ['
       'Adobe Creative Suite'''
@@ -1610,6 +1652,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Vimeo'''
       'Social media platforms'']
     ]
+
     useCases: ['
       'Social media content'''
       'Marketing videos'''
@@ -1673,6 +1716,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Statistical Analysis'''
       'Big Data Processing'''
       'Predictive Modeling'']
+
     ]
     integrations: ['
       'Google Analytics'''
@@ -1683,6 +1727,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'AWS'''
       'Google Cloud'']
     ]
+
     useCases: ['
       'Business intelligence'''
       'Customer analytics'''
@@ -1740,6 +1785,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Predictive Analytics'''
       'AI Matching'''
       'Automation'']
+
     ]
     integrations: ['
       'LinkedIn'''
@@ -1750,6 +1796,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Slack'''
       'Microsoft Teams'']
     ]
+
     useCases: ['
       'Candidate sourcing'''
       'Resume screening'''
@@ -1813,6 +1860,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Natural Language Processing'''
       'Automation'''
       'AI Optimization'']
+
     ]
     integrations: ['
       'Salesforce'''
@@ -1823,6 +1871,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Gmail'''
       'Outlook'']
     ]
+
     useCases: ['
       'Lead generation'''
       'Sales forecasting'''
@@ -1886,6 +1935,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Data Mining'''
       'Predictive Analytics'''
       'Web Scraping'']
+
     ]
     integrations: ['
       'Google Trends'''
@@ -1894,6 +1944,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Financial data sources'''
       'Custom databases'']
     ]
+
     useCases: ['
       'Market analysis'''
       'Competitor research'''
@@ -1957,6 +2008,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Cryptography'''
       'Data Analytics'''
       'AI Pattern Recognition'']
+
     ]
     integrations: ['
       'Ethereum'''
@@ -1965,6 +2017,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Polygon'''
       'Custom blockchain APIs'']
     ]
+
     useCases: ['
       'Transaction monitoring'''
       'Risk assessment'''
@@ -2028,6 +2081,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Cost Optimization'''
       'Resource Management'''
       'Predictive Analytics'']
+
     ]
     integrations: ['
       'AWS'''
@@ -2037,6 +2091,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Docker'''
       'Terraform'']
     ]
+
     useCases: ['
       'Cost optimization'''
       'Resource management'''
@@ -2107,6 +2162,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       currency: 'USD'',
   trialDays: 14;'
       setupTime: '15 minutes''
+
     }
     features: ['
       'Inbox labeling and prioritization'''
@@ -2116,6 +2172,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Zendesk/HubSpot/Gmail integration'''
       'Metrics: FRT/ART, deflection rate'']
     ]
+
     benefits: ['
       'Cut response time by 60%'''
       'Deflect 30–50% routine tickets'''
@@ -2159,6 +2216,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       currency: 'USD'',
   trialDays: 7;'
       setupTime: '10 minutes''
+
     }
     features: ['
       'Branching logic'''
@@ -2167,6 +2225,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'CSV/JSON export'''
       'Webhook triggers'']
     ]
+
     benefits: ['
       '+35% completion rate vs. forms'''
       'Cleaner data, fewer drop-offs'']
@@ -2722,11 +2781,13 @@ techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];',
 implementationDetails: 'Template gallery, response store, analytics, export jobs.';'
     rating: 4.6,
     reviews: 6;
+
   }
 ];
 ;
 // Helper functions;
 export const getServicesByCategory = (category: string) =>: any {
+
   // TODO: Implement
 }
   return realMicroSaasServices.filter (service => service.category === category);'
@@ -2831,6 +2892,7 @@ export const getServicesByPriceRange = (min: number, max: number) => {
 export const serviceCategories = ['
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';''
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';'
+
   id: string,;
   name: string,;
   tagline: string,;
@@ -2859,8 +2921,8 @@ export const serviceCategories = ['
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   }
 }
 ;'
@@ -2870,7 +2932,6 @@ export const serviceCategories = ['
 
 
 ;
-
 export interface RealMicroSaasService {;
   id: string,;
   name: string,;
@@ -2900,8 +2961,8 @@ export interface RealMicroSaasService {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   }
 }
 ;
@@ -2918,6 +2979,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       '500+ legal document templatesAI-powered compliance checkingReal-time legal updatesMulti-jurisdiction supportElectronic signature integrationDocument version controlLegal research integrationClient portal access',;''
       'Automated legal advice24/7 legal support';']
     ],;
+
     popular: true,;'
     icon: '⚖️',;''
     color: 'from-blue-500 to-indigo-600',;''
@@ -2941,6 +3003,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
   },;
   {;'
@@ -2954,6 +3017,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'Multi-language support (50+ languages)Natural conversation flowSentiment analysisAutomatic ticket routingKnowledge base integrationVoice and text supportAnalytics dashboardCustom branding',;''
       'API integrationsReal-time learning';']
     ],;
+
     popular: true,;'
     icon: '🤖',;''
     color: 'from-green-500 to-emerald-600',;''
@@ -2977,6 +3041,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
   },;
   {;'
@@ -2990,6 +3055,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'AI-powered keyword researchAutomatic on-page optimizationCompetitor analysisContent optimization suggestionsTechnical SEO auditsRanking trackingBacklink monitoringLocal SEO optimization',;''
       'Mobile optimizationPerformance analytics';']
     ],;
+
     popular: true,;'
     icon: '📈',;''
     color: 'from-purple-500 to-pink-600',;''
@@ -3013,6 +3079,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
   },;
   {;'
@@ -3026,6 +3093,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'AI-powered scene detectionAutomatic color correctionSmart audio enhancementBackground removalText-to-speech generationAuto-captioningVideo templates libraryCloud rendering',;''
       'Collaborative editingExport to multiple formats';']
     ],;
+
     popular: true,;'
     icon: '🎬',;''
     color: 'from-red-500 to-pink-600',;''
@@ -3049,6 +3117,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
   },;
   {;'
@@ -3062,6 +3131,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'AI-powered data discoveryAutomated pattern recognitionPredictive analyticsReal-time data processingInteractive dashboardsData visualizationCustom reportingData integration tools',;''
       'API accessAdvanced security';']
     ],;
+
     popular: true,;'
     icon: '📊',;''
     color: 'from-cyan-500 to-blue-600',;''
@@ -3085,6 +3155,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
   },;
   {;'
@@ -3098,6 +3169,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'AI candidate matchingAutomated resume screeningSkill assessment toolsInterview schedulingBackground verificationDiversity analyticsCandidate trackingPerformance analytics',;''
       'Integration with job boardsMobile app access';']
     ],;
+
     popular: true,;'
     icon: '👥',;''
     color: 'from-indigo-500 to-purple-600',;''
@@ -3121,6 +3193,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
   },;
   {;'
@@ -3134,6 +3207,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'AI lead scoringSales forecastingPipeline managementEmail automationMeeting schedulingPerformance analyticsCRM integrationMobile sales app',;''
       'Real-time notificationsCustom workflows';']
     ],;
+
     popular: true,;'
     icon: '💰',;''
     color: 'from-yellow-500 to-orange-600',;''
@@ -3157,6 +3231,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
   },;
   {;'
@@ -3170,6 +3245,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'AI market analysisCompetitor monitoringTrend predictionCustomer sentiment analysisMarket size estimationCustom reportsData visualizationAPI access',;''
       'Real-time updatesExport capabilities';']
     ],;
+
     popular: true,;'
     icon: '🔍',;''
     color: 'from-teal-500 to-green-600',;''
@@ -3193,6 +3269,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
   },;
   {;'
@@ -3206,6 +3283,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'Real-time transaction monitoringAI pattern recognitionRisk assessmentCompliance reportingPortfolio trackingMarket analysisAPI integrationCustom alerts',;''
       'Data exportMulti-chain support';']
     ],;
+
     popular: true,;'
     icon: '🔗',;''
     color: 'from-gray-500 to-slate-600',;''
@@ -3229,6 +3307,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
   },;
   {;'
@@ -3242,6 +3321,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       'AI cost analysisAutomated optimizationMulti-cloud supportReal-time monitoringCost forecastingResource recommendationsAutomated scalingBudget alerts',;''
       'Detailed reportingAPI integration';']
     ],;
+
     popular: true,;'
     icon: '☁️',;''
     color: 'from-blue-500 to-cyan-600',;''
@@ -3265,6 +3345,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
   },;
   {;'
@@ -3287,9 +3368,10 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     popular: false,;'
     launchDate: '2024-03-05',;'
     customers: 1100,;
-    rating: 4.6,;
-    reviews: 134;
+    rating: 4.6,;}
+    reviews: 134;}
   },;
+
   {;'
     id: 'ai-email-responder-pro',;''
     name: 'AI Email Responder Pro',;''
@@ -3299,6 +3381,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     price: { monthly: 79, yearly: 790, currency: 'USD', trialDays: 14, setupTime: '15 minutes' },;'
     features: [;'
       'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail integrationMetrics: FRT/ART, deflection rate';']
+
     ],;
     benefits: [;'
       'Cut response time by 60%Deflect 30–50% routine ticketsImprove CSAT and NPS';']
@@ -3323,6 +3406,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     rating: 4.7,;
     reviews: 46;
   },;
+
   {;'
     id: 'mobile-conversational-surveys',;''
     name: 'Mobile Conversational Surveys',;''
@@ -3348,10 +3432,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     color: 'from-emerald-600 to-teal-700',;'
     popular: false,;'
     launchDate: '2024-12-10',;'
+
     customers: 95,;
     rating: 4.6,;
     reviews: 22;
   },;
+
   {;'
     id: 'niche-productivity-planner',;''
     name: 'Niche Productivity Planner',;''
@@ -3377,10 +3463,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     color: 'from-purple-600 to-pink-600',;'
     popular: false,;'
     launchDate: '2025-01-20',;'
+
     customers: 60,;
     rating: 4.5,;
     reviews: 14;
   },;
+
   {;'
     id: 'event-management-dashboard',;''
     name: 'Event Management Dashboard',;''
@@ -3406,10 +3494,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     color: 'from-indigo-600 to-blue-700',;'
     popular: false,;'
     launchDate: '2024-11-18',;'
+
     customers: 70,;
     rating: 4.6,;
     reviews: 18;
   },;
+
   {;'
     id: 'affiliate-tracking-suite',;''
     name: 'Affiliate Tracking Suite',;''
@@ -3435,10 +3525,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     color: 'from-rose-600 to-red-700',;'
     popular: false,;'
     launchDate: '2024-10-12',;'
+
     customers: 55,;
     rating: 4.4,;
     reviews: 12;
   },;
+
   {;'
     id: 'smb-website-analytics',;''
     name: 'SMB Website Analytics',;''
@@ -3464,10 +3556,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     color: 'from-sky-600 to-cyan-700',;'
     popular: true,;'
     launchDate: '2025-02-05',;'
+
     customers: 140,;
     rating: 4.7,;
     reviews: 28;
   },;
+
   {;'
     id: 'it-helpdesk-lite',;''
     name: 'IT Helpdesk Lite',;''
@@ -3493,10 +3587,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     color: 'from-slate-600 to-gray-700',;'
     popular: false,;'
     launchDate: '2024-09-22',;'
+
     customers: 120,;
     rating: 4.5,;
     reviews: 31;
   },;
+
   {;'
     id: 'ecommerce-return-manager',;''
     name: 'E‑commerce Return Manager',;''
@@ -3522,10 +3618,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     color: 'from-amber-600 to-orange-700',;'
     popular: false,;'
     launchDate: '2024-08-30',;'
+
     customers: 75,;
     rating: 4.4,;
     reviews: 19;
   },;
+
   {;'
     id: 'auto-email-followups',;''
     name: 'Automated Email Follow‑ups',;''
@@ -3551,10 +3649,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     color: 'from-blue-600 to-indigo-700',;'
     popular: false,;'
     launchDate: '2025-01-25',;'
+
     customers: 90,;
     rating: 4.5,;
     reviews: 17;
   },;
+
   {;'
     id: 'podcast-transcription-studio',;''
     name: 'Podcast Transcription Studio',;''
@@ -3580,10 +3680,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     color: 'from-fuchsia-600 to-violet-700',;'
     popular: true,;'
     launchDate: '2024-12-02',;'
+
     customers: 210,;
     rating: 4.7,;
     reviews: 52;
   },;
+
   {;'
     id: 'ai-knowledge-graph-studio',;''
     name: 'AI Knowledge Graph Studio',;''
@@ -3609,10 +3711,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     color: 'from-teal-600 to-emerald-700',;'
     popular: true,;'
     launchDate: '2025-02-08',;'
+
     customers: 35,;
     rating: 4.8,;
     reviews: 11;
   },;
+
   {;'
     id: 'llm-guarded-api-gateway',;''
     name: 'LLM Guarded API Gateway',;''
@@ -3638,10 +3742,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     color: 'from-cyan-700 to-blue-800',;'
     popular: true,;'
     launchDate: '2025-02-08',;'
+
     customers: 42,;
     rating: 4.8,;
     reviews: 13;
   },;
+
   {;'
     id: 'serverless-lakehouse-starter',;''
     name: 'Serverless Lakehouse Starter',;''
@@ -3667,10 +3773,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     color: 'from-stone-600 to-zinc-700',;'
     popular: false,;'
     launchDate: '2025-02-08',;'
+
     customers: 24,;
     rating: 4.6,;
     reviews: 7;
   },;
+
   {;'
     id: 'data-contracts-hub',;''
     name: 'Data Contracts Hub',;''
@@ -3696,23 +3804,30 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     color: 'from-lime-600 to-green-700',;'
     popular: false,;'
     launchDate: '2025-02-08',;'
+
     customers: 19,;
     rating: 4.6,;
     reviews: 6;
   }
 ],;
 // Helper functions;
-export const getServicesByCategory = (category: string) => {;
-  return realMicroSaasServices.filter(service => service.category === category);
+export const getServicesByCategory = (;
+  return realMicroSaasServices.filter(service => service.category === category);) => {
+  return $3;}
+}
 },;
+
 export const getServicesByPriceRange = (min: number, max: number) => {;
   return realMicroSaasServices.filter(service => {;)'
     const price = parseFloat(service.price.replace('$', '').replace(, '')),;'
     return price >= min && (max === Infinity || price <= max);
+
   });
 },;
-export const getPopularServices = () => {;
-  return realMicroSaasServices.filter(service => service.popular);
+export const getPopularServices = (;
+  return realMicroSaasServices.filter(service => service.popular);) => {
+  return $3;}
+}
 },;
 export const serviceCategories = [;'
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research',;''
@@ -3720,8 +3835,8 @@ export const serviceCategories = [;'
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology',;''
   'Enterprise IT';']
 ];
-
     website: string;
+
   }'
     name: 'AI Legal Document Generator',''
     tagline: 'Generate legally compliant documents in seconds with AI',''
@@ -4408,9 +4523,11 @@ export const serviceCategories = [;'
     popular: true,'
     launch_date: '2025 - 02 - 01','
     customers: 180,
+
     rating: 4 && 4.7,
-    reviews: 46,
+    reviews: 46;
   },
+
   {'
     id: 'mobile - conversational - surveys',''
     name: 'Mobile Conversational Surveys',''
@@ -4451,9 +4568,11 @@ export const serviceCategories = [;'
     popular: false,'
     launch_date: '2024 - 12 - 10','
     customers: 95,
+
     rating: 4 && 4.6,
-    reviews: 22,
+    reviews: 22;
   },
+
   {'
     id: 'niche - productivity - planner',''
     name: 'Niche Productivity Planner',''
@@ -4489,9 +4608,11 @@ export const serviceCategories = [;'
     popular: false,'
     launch_date: '2025 - 01 - 20','
     customers: 60,
+
     rating: 4 && 4.5,
-    reviews: 14,
+    reviews: 14;
   },
+
   {'
     id: 'event - management - dashboard',''
     name: 'Event Management Dashboard',''
@@ -4527,9 +4648,11 @@ export const serviceCategories = [;'
     popular: false,'
     launch_date: '2024 - 11 - 18','
     customers: 70,
+
     rating: 4 && 4.6,
-    reviews: 18,
+    reviews: 18;
   },
+
   {'
     id: 'affiliate - tracking - suite',''
     name: 'Affiliate Tracking Suite',''
@@ -4565,9 +4688,11 @@ export const serviceCategories = [;'
     popular: false,'
     launch_date: '2024 - 10 - 12','
     customers: 55,
+
     rating: 4 && 4.4,
-    reviews: 12,
+    reviews: 12;
   },
+
   {'
     id: 'smb - website - analytics',''
     name: 'SMB Website Analytics',''
@@ -4603,9 +4728,11 @@ export const serviceCategories = [;'
     popular: true,'
     launch_date: '2025 - 02 - 05','
     customers: 140,
+
     rating: 4 && 4.7,
-    reviews: 28,
+    reviews: 28;
   },
+
   {'
     id: 'it - helpdesk - lite',''
     name: 'IT Helpdesk Lite',''
@@ -4640,9 +4767,11 @@ export const serviceCategories = [;'
     popular: false,'
     launch_date: '2024 - 09 - 22','
     customers: 120,
+
     rating: 4 && 4.5,
-    reviews: 31,
+    reviews: 31;
   },
+
   {'
     id: 'ecommerce - return - manager',''
     name: 'E‑commerce Return Manager',''
@@ -4678,9 +4807,11 @@ export const serviceCategories = [;'
     popular: false,'
     launch_date: '2024 - 08 - 30','
     customers: 75,
+
     rating: 4 && 4.4,
-    reviews: 19,
+    reviews: 19;
   },
+
   {'
     id: 'auto - email - followups',''
     name: 'Automated Email Follow‑ups',''
@@ -4715,9 +4846,11 @@ export const serviceCategories = [;'
     popular: false,'
     launch_date: '2025 - 01 - 25','
     customers: 90,
+
     rating: 4 && 4.5,
-    reviews: 17,
+    reviews: 17;
   },
+
   {'
     id: 'podcast - transcription - studio',''
     name: 'Podcast Transcription Studio',''
@@ -4747,9 +4880,11 @@ export const serviceCategories = [;'
     popular: true,'
     launch_date: '2024 - 12 - 02','
     customers: 210,
+
     rating: 4 && 4.7,
-    reviews: 52,
+    reviews: 52;
   },
+
   {'
     id: 'ai - knowledge - graph - studio',''
     name: 'AI Knowledge Graph Studio',''
@@ -4788,9 +4923,11 @@ export const serviceCategories = [;'
     popular: true,'
     launch_date: '2025 - 02 - 08','
     customers: 35,
+
     rating: 4 && 4.8,
-    reviews: 11,
+    reviews: 11;
   },
+
   {'
     id: 'llm - guarded - api - gateway',''
     name: 'LLM Guarded API Gateway',''
@@ -4826,9 +4963,11 @@ export const serviceCategories = [;'
     popular: true,'
     launch_date: '2025 - 02 - 08','
     customers: 42,
+
     rating: 4 && 4.8,
-    reviews: 13,
+    reviews: 13;
   },
+
   {'
     id: 'serverless - lakehouse - starter',''
     name: 'Serverless Lakehouse Starter',''
@@ -4866,9 +5005,11 @@ export const serviceCategories = [;'
     popular: false,'
     launch_date: '2025 - 02 - 08','
     customers: 24,
+
     rating: 4 && 4.6,
-    reviews: 7,
+    reviews: 7;
   },
+
   {'
     id: 'data - contracts - hub',''
     name: 'Data Contracts Hub',''
@@ -4906,6 +5047,7 @@ export const serviceCategories = [;'
     popular: false,'
     launch_date: '2025 - 02 - 08','
     customers: 19,
+
     rating: 4 && 4.6,
     reviews: 6,
   id: string, name: string,
@@ -4921,6 +5063,7 @@ export const serviceCategories = [;'
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string,
+
   contactInfo: {,
   mobile: string, email: string,
     address: string,
@@ -4967,6 +5110,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Legal AI'''
       'Document Generation'''
       'Compliance Engine'']
+
     ]
     integrations: ['
       'DocuSign'''
@@ -4976,6 +5120,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'LawPay'''
       'QuickBooks'']
     ]
+
     useCases: ['
       'Contract generation'''
       'Legal form creation'''
@@ -5033,6 +5178,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Sentiment Analysis'''
       'Voice Recognition'''
       'Chatbot AI'']
+
     ]
     integrations: ['
       'Zendesk'''
@@ -5042,6 +5188,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Microsoft Teams'''
       'Shopify'']
     ]
+
     useCases: ['
       'Customer support'''
       'Order tracking'''
@@ -5099,6 +5246,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Data Analytics'''
       'SEO Algorithms'''
       'Web Crawling'']
+
     ]
     integrations: ['
       'Google Analytics'''
@@ -5108,6 +5256,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'WooCommerce'''
       'HubSpot'']
     ]
+
     useCases: ['
       'Website optimization'''
       'Content marketing'''
@@ -5164,6 +5313,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Audio Processing'''
       'Video Compression'''
       'Cloud Computing'']
+
     ]
     integrations: ['
       'Adobe Creative Suite'''
@@ -5173,6 +5323,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Vimeo'''
       'Social media platforms'']
     ]
+
     useCases: ['
       'Social media content'''
       'Marketing videos'''
@@ -5236,6 +5387,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Statistical Analysis'''
       'Big Data Processing'''
       'Predictive Modeling'']
+
     ]
     integrations: ['
       'Google Analytics'''
@@ -5246,6 +5398,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'AWS'''
       'Google Cloud'']
     ]
+
     useCases: ['
       'Business intelligence'''
       'Customer analytics'''
@@ -5303,6 +5456,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Predictive Analytics'''
       'AI Matching'''
       'Automation'']
+
     ]
     integrations: ['
       'LinkedIn'''
@@ -5313,6 +5467,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Slack'''
       'Microsoft Teams'']
     ]
+
     useCases: ['
       'Candidate sourcing'''
       'Resume screening'''
@@ -5376,6 +5531,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Natural Language Processing'''
       'Automation'''
       'AI Optimization'']
+
     ]
     integrations: ['
       'Salesforce'''
@@ -5386,6 +5542,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Gmail'''
       'Outlook'']
     ]
+
     useCases: ['
       'Lead generation'''
       'Sales forecasting'''
@@ -5449,6 +5606,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Data Mining'''
       'Predictive Analytics'''
       'Web Scraping'']
+
     ]
     integrations: ['
       'Google Trends'''
@@ -5457,6 +5615,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Financial data sources'''
       'Custom databases'']
     ]
+
     useCases: ['
       'Market analysis'''
       'Competitor research'''
@@ -5520,6 +5679,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Cryptography'''
       'Data Analytics'''
       'AI Pattern Recognition'']
+
     ]
     integrations: ['
       'Ethereum'''
@@ -5528,6 +5688,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Polygon'''
       'Custom blockchain APIs'']
     ]
+
     useCases: ['
       'Transaction monitoring'''
       'Risk assessment'''
@@ -5591,6 +5752,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Cost Optimization'''
       'Resource Management'''
       'Predictive Analytics'']
+
     ]
     integrations: ['
       'AWS'''
@@ -5600,6 +5762,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'Docker'''
       'Terraform'']
     ]
+
     useCases: ['
       'Cost optimization'''
       'Resource management'''
@@ -5724,6 +5887,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       currency: 'USD'',
   trialDays: 7;'
       setupTime: '10 minutes''
+
     }
     features: ['
       'Branching logic'''
@@ -5732,6 +5896,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [,'
       'CSV/JSON export'''
       'Webhook triggers'']
     ]
+
     benefits: ['
       '+35% completion rate vs. forms'''
       'Cleaner data, fewer drop-offs'']
@@ -6274,14 +6439,19 @@ marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with bett
 techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];',
   realImplementation: true;'
 implementationDetails: 'Template gallery, response store, analytics, export jobs.';'
+
     rating: 4.6,
-    reviews: 6;
+    reviews: 6;) => {
+  return $3;}
+}
   }
 ];
 ;
 // Helper functions;
 export const getServicesByCategory = (category: string) =>: any {
+
   // TODO: Implement
+
 }
   return realMicroSaasServices.filter (service => service.category === category);'
 market_position: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';','
@@ -6352,6 +6522,7 @@ export const serviceCategories = ['
 reviews: 14;
 }
 ;
+
 export const service_categories = [;'
   'Legal Technology',''
   'Customer Service & Support',''
@@ -6382,6 +6553,7 @@ export const service_categories = [;'
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';''
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';''
   'Enterprise IT';'
+
 ];
 ;
   id: string,;
@@ -6412,12 +6584,14 @@ export const service_categories = [;'
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   }
 }
 ;
 
+
 export interface RealMicroSaasService {;
 
 '
+

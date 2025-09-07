@@ -2,6 +2,7 @@ export interface PricingSuggestion {
   // TODO: Implement
 }
 export interface PricingSuggestion {;
+
   minRate: number;,
   maxRate: number;
 
@@ -23,11 +24,13 @@ export interface PricingSuggestion {
   explanation: string;
 
 }
+
 export interface ClientBudgetParams {
   // TODO: Implement
 }
   job_title: string;,
   category: string;
+
   timeline?: string;
 
 
@@ -150,10 +153,12 @@ if ( {) {
       minRate += 20,;
       maxRate += 30;"
     } else if (lowercaseTitle.includes("junior")) {;"
+
       minRate -= 10,;
       maxRate -= 15,;"
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;'
     // Adjust based on job title keywords;
+
     const lowercase_title = job_title.toLowerCase ();'
     if (|| lowercase_title.includes ("lead")) {) {"
   $2;
@@ -184,16 +189,17 @@ if ( {) {
     }
     // Generate explanation;"
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${job_title}", we recommend a budget range of $${min_rate}-$${max_rate}/hour. This aligns with current market trends for similar projects.`;"
+
 ;
-    
     return {
   // TODO: Implement
 }
       min_rate;
       max_rate;
-      confidence;
-      explanation;
+      confidence;}
+      explanation;}
     }
+
   } catch (error) {
 
 
@@ -201,9 +207,13 @@ if ( {) {
       maxRate: 60,"
       confidence: "Low",""
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.""
+
     }
-  }
+      confidence: \"Low\",
+      explanation: \"We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.\"
+    };  }
 }
+
 
 
 
@@ -255,6 +265,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     return {
   // TODO: Implement
 }
+
     explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
     return {
   // TODO: Implement
@@ -263,6 +274,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       maxRate;
       confidence;
       explanation;
+
       min_rate: 30;,
   max_rate: 60;"
       confidence: "Low",""
@@ -276,6 +288,7 @@ export async function getTalentRateSuggestion (params: TalentRateParams): Promis
 }
     const { skills, years_experience, location } = params;
 ;
+
     // Simulate API call delay;
     await new Promise (resolve => set_timeout (resolve, 1000));
 ;
@@ -288,14 +301,17 @@ export async function getTalentRateSuggestion (params: TalentRateParams): Promis
       inDemandSkills.some (demand_skill => skill.toLowerCase ().includes (demand_skill)));
 ;
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       base_rate += 15;
     }
     // Location adjustment;
     let location_factor = 1.0;
     // Check condition;
+
 if ( {) {
   $2;
 }'
@@ -310,6 +326,7 @@ if ( {) {
         location_factor = 1.2;
       } else if ()) {) {
   $2;
+
 }
         location_factor = 0.8;
       }
@@ -317,6 +334,7 @@ if ( {) {
     const min_rate = Math.round (base_rate * location_factor * 0.9);
     const max_rate = Math.round (base_rate * location_factor * 1.2);
 ;
+
     // Determine confidence;'
     let confidence: "High" | "Medium" | "Low" = "Medium","
     // Check condition;
@@ -329,18 +347,23 @@ if ( {) {
   $2;
 }"
       confidence = "Low";"
+
     }
     // Generate explanation;
     let explanation = `Based on ${years_experience} years of experience`;
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       explanation += ` and your in - demand skills (${skills.join ()})`;
     }
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       explanation += `, considering market rates in ${location}`;
     }
@@ -351,13 +374,10 @@ if ( {) {
 }
       min_rate;
       max_rate;
-      confidence;
-      explanation;
-
-
-
-
+      confidence;}
+      explanation;}
     }
+
   } catch (error) {"
     console.error("Error generating rate suggestion:", error),"
     return {
@@ -400,3 +420,4 @@ export interface TalentRateParams {;
 // In production, this would call an AI service or API;
 export async function getClientBudgetSuggestion(params:ClientBudgetParams):Promise<PricingSuggestion> {;
 </PricingSuggestion>"
+

@@ -1,5 +1,6 @@
 
 
+
 import { useState, useEffect } from 'react',''
 import { useState, useEffect } from 'react',''
 import { Button } from "@/components/ui/button",""
@@ -49,20 +50,22 @@ interface ModelVersionData extends ModelConfig {
 }'
   training_status: 'queued' | 'running' | 'succeeded' | 'failed','
   error_message?: string;
+
 }
 export /**
  * ZionGPTModelManager - Function description;
  */
 function ZionGPTModelManager() {
-  const [models, set_models] = useState < ModelVersionData[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
+  const [models, set_models] = useState < ModelVersionData[]>([]);}
+  const [is_loading, setIsLoading] = useState (true);}
   const [active_jobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
   // Fetch model data on component mount;
-  useEffect (() => {
-    fetch_models ();
+  useEffect (() => {}
+    fetch_models ();}
   }, []);
 ;
   const fetch_models = async () => {
+
     try {
   // TODO: Implement
 }
@@ -74,6 +77,7 @@ function ZionGPTModelManager() {
       // Check condition;
 if (throw error) {
   $2;
+
 }
       // Map the data to our component state;
       set_models (data.map (model => ({
@@ -83,6 +87,7 @@ if (throw error) {
         base_model: model.base_model,
         purpose: model.purpose,
         active: model.active,
+
         training_status: model.training_status,
         error_message: model.error_message;)
       })));
@@ -168,12 +173,14 @@ interface ModelVersionData extends ModelConfig {;'
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]),;
 </ModelVersionData>
+
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
   // Fetch model data on component mount;
-  useEffect(() => {;
-    fetchModels();
+  useEffect(() => {;}
+    fetchModels();}
   }, []),;
   const fetchModels = async () => {;
+
     try {;
       setIsLoading(true),;
 
@@ -233,10 +240,12 @@ export function ZionGPTModelManager() {;
         });'
         .eq('id', modelId);'
     } catch (error) {;
+
       console && console.error(`Error checking status for model ${modelId}:`, error);
-    } finally {;
+    } finally {;}
       setActiveJobs(prev => ({ ...prev, [modelId]: false }));
     }
+
   };
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {;
@@ -494,12 +503,14 @@ export function ZionGPTModelManager() {;
 </Button>"
                         <AlertCircle className="h - 4 w - 4 mr - 1" /> Error;"
 </AlertCircle>)
+
                       </Button>)}
                   </TableCell>;
                 </TableRow>))}
             </TableBody>;
           </Table>)}
       </CardContent>;
+
     </Card>);"
 }//Update this model await supabase .from ('model versions') return (<Card className="w-full" > <CardHeader className="flex flex-row items-center justify-between" > <div> <CardTitle>ZionGPT Models</CardTitle> <CardDescription> Manage fine-tuned AI models for different platform features </CardDescription> </div> </div>) : (<Table> <TableHeader> <TableRow> <TableHead>Model ID</TableHead> <TableHead>Version</TableHead> <TableHead>Purpose</TableHead> <TableHead>Base Model</TableHead> <TableHead>Status</TableHead> <TableHead>Created</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {"
 </Card>)
@@ -518,6 +529,7 @@ export function ZionGPTModelManager() {;
 }</CardContent> </Card>) "
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;"
 </AlertCircle>
+
                       </Button>
                   </TableCell>
                 </TableRow>
@@ -528,4 +540,6 @@ export function ZionGPTModelManager() {;
       </CardContent>
     </Card>
       </CardContent>;
+
     </Card>;"
+

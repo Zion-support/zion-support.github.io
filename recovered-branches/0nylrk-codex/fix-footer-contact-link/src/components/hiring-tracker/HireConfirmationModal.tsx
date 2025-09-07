@@ -1,10 +1,8 @@
-
-
-
 import {
   // TODO: Implement
 }
   Dialog;
+
   DialogContent;
   DialogDescription;
   DialogHeader;
@@ -46,11 +44,11 @@ export interface HireConfirmationModalProps {;
 }
 
 
+
 export function HireConfirmationModal({ ;
-
-
   isOpen;
   onClose, ;
+
   candidateData, ;)
 export function HireConfirmationModal(): any ({ ;
   isOpen;
@@ -68,11 +66,13 @@ import React, { useState } from 'react';'
   const { user } = useAuth();
 '
 import React, { useState } from 'react','
+
 import {
   // TODO: Implement
 }
   Dialog,
   DialogContent,
+
   DialogDescription,
   DialogHeader,'
   DialogTitle} from "@/components/ui/dialog",""
@@ -85,6 +85,7 @@ import { supabase } from "@/integrations/supabase/client",""
 import { TalentProfile } from "@/types/talent",""
 import { useAuth } from "@/hooks/useAuth",""
 import { JobApplication } from "@/types/jobs","
+
 export interface HireConfirmationModalProps {
   // TODO: Implement
 }
@@ -92,6 +93,7 @@ export interface HireConfirmationModalProps {
   onClose: () => void,
   candidateData?: TalentProfile,
   application?: JobApplication,
+
   onConfirm: () => void,
   isSubmitting?: boolean;"
 import React, { useState } from 'react',;'
@@ -110,13 +112,14 @@ import { supabase } from "@/integrations/supabase/client",;""
 import { TalentProfile } from "@/types/talent",;""
 import { useAuth } from "@/hooks/useAuth",;""
 import { JobApplication } from "@/types/jobs",;"
+
 export interface HireConfirmationModalProps {;
   isOpen: boolean,;
   onClose: () => void,;
   candidateData?: TalentProfile,;
   application?: JobApplication,;
-  onConfirm: () => void,;
-  isSubmitting?: boolean;
+  onConfirm: () => void,;}
+  isSubmitting?: boolean;}
 }
 ;
 export function HireConfirmationModal({;
@@ -124,6 +127,7 @@ export function HireConfirmationModal({;
   onClose,;
   candidateData,;
   application,;
+
   onConfirm,;
   isSubmitting = false;)
 }: HireConfirmationModalProps) {;"
@@ -131,11 +135,13 @@ export function HireConfirmationModal({;
   const [projectDescription, setProjectDescription] = useState(''),;'
   const [updateAvailability, setUpdateAvailability] = useState(true),;
   const [isLoading, setIsLoading] = useState(false),;
+
   const { user } = useAuth(),;
   // Get talent information from either candidateData or application;
   const talentData = candidateData || (application?.talent_profile as TalentProfile),;
   const handleHireCandidate = async () => {;
     if (!projectName || !projectDescription) {;
+
       toast({;'
         title: 'Required fields missing',;''
         description: 'Please fill in both project name and description.',;')'
@@ -415,27 +421,24 @@ if ( {) {
             variant: 'destructive'}),;'
             return;
           }
+
           setIsLoading(false);
           return;
         }
-      }
-
-
-    }
-
-  };
-
-;
+      };
     setIsLoading(true),;
     // Create a new project;
+
     try {;
       const { data: projectData, error: projectError } = await supabase;'
         .from('projects');'
+
         .insert([;
           {;
             client_id: user.id,;
             talent_id: talentData.user_id,;
             job_id: application?.job_id || null,;
+
             title: projectName,;
             description: projectDescription,;'
             status: 'active',;')]'
@@ -447,6 +450,7 @@ if ( {) {
           title: 'Error creating project',;'
           description: projectError.message,;)'
           variant: 'destructive'}),;'
+
         setIsLoading(false),;
         return;
       }
@@ -458,6 +462,7 @@ if ( {) {
           {;
             client_id: user.id,;
             talent_id: talentData.user_id,;
+
             project_id: projectData.id,;)
             hire_date: new Date().toISOString(),;]'
             status: 'active'}]),;'
@@ -466,11 +471,13 @@ if ( {) {
           title: 'Error creating hiring record',;'
           description: hiringError.message,;)'
           variant: 'destructive'}),;'
+
         setIsLoading(false),;
         return;
       }
 ;
       // Update the availability status;
+
       if (updateAvailability) {;
         try {;
           const { error: availabilityError } = await supabase;'
@@ -491,11 +498,13 @@ if ( {) {
             title: 'Error updating availability',;''
             description: 'Failed to update candidate availability status.',;')'
             variant: 'destructive'}),;'
+
           setIsLoading(false),;
           return;
         }
       }
 ;
+
 
 
       toast({;'
@@ -511,25 +520,12 @@ if ( {) {
         variant: 'destructive'});'
     } finally {;
       setIsLoading(false);
-    }
 
+    }
   },
-
-
-
-
   return (
-
-
-
-
-  return (
-
-    }
-
-  },
-    }
   }
+
 
   return (
 '
@@ -815,3 +811,4 @@ export function HireConfirmationModal({ ;
       </DialogContent>;
     </Dialog>;"
 }= await supabase .from ('talent profiles') </DialogDescription> </DialogHeader> <div className="grid gap-4 py-4" > <div className="grid grid-cols-4 items-center gap-4" > <Label htmlFor="projectName" className="text-right" > Project Name </Label> <Input /> </div> <div className="grid grid-cols-4 items-start gap-4" > <Label htmlFor="projectDescription" className="text-right mt-2" > Project Description </Label> <Textarea /> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="updateAvailability" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed" > Update talent availability to "Unavailable" </label> </div> </div> </Button> </div> </DialogContent> </Dialog>)""
+

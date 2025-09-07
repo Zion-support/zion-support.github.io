@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";""
 import { Button } from "@/components/ui/button";""
 import { Card } from "@/components/ui/card";""
@@ -17,13 +18,15 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
   // Find the article in all categories;
   let article;
+
   for (const category of HELP_CATEGORIES) {
     const found = category.articles.find((a) => a.id === articleId);
     if (found) {
-      article = found;
-      break;
+      article = found;}
+      break;}
     }
   }
+
 
   if (!article) {
     return <div>Article not found</div>;
@@ -139,3 +142,4 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
         </div>;
       </Card>;
     </div>);"
+

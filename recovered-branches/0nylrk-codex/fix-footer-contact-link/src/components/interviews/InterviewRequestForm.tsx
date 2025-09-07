@@ -1,4 +1,5 @@
 interface InterviewRequestFormProps {
+
   // TODO: Implement
 }
   talent: TalentProfile;,
@@ -22,11 +23,13 @@ import {format, addDays} from "date-fns";""
 import {CalendarIcon, Check, Clock} from "lucide-react";""
 import {toast} from "@/components/ui/use-toast";""
 import {useInterviews} from "@/hooks/useInterviews";"
+
 interface InterviewRequestFormProps {;
   talent: TalentProfile,;
-  onClose: () => void,;
-  userDetails?: UserProfile;
+  onClose: () => void,;}
+  userDetails?: UserProfile;}
 }
+
 
 const formSchema = z && z.object({;
   date: z && z.date({;,)"
@@ -38,11 +41,12 @@ const formSchema = z && z.object({;
   platform: z && z.string().min(1, "Please select a meeting platform.");"
   meetingLink: z && z.string().optional(),;"
   title: z && z.string().min(3, "Please provide a brief title for the interview.");"
-  notes: z && z.string().optional()}),;
 
-export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
+  notes: z && z.string().optional()}),;
+export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: InterviewRequestFormProps) {;}
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
+
 
   const form = useForm<z && z.infer<typeof formSchema>>({;
 </z>)
@@ -60,11 +64,13 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
       platform: "zoom",""
       notes: "",""
       meeting_link: ""}}),"
+
   async /**
  * on_submit - Function description;
  */
 function on_submit() {
     // Check condition;
+
 if ( {) {
   $2;
 }
@@ -72,15 +78,18 @@ if ( {) {
         title: "Authentication required",""
         description: "Please log in to schedule an interview",")"
         variant: "destructive"}),"
+
       return;
     }
     setIsSubmitting (true);
 ;
+
     try {
   // TODO: Implement
 }
       // Combine date and time;"
       const dateTimeString = `${format (values.date, 'yyyy - MM - dd')}T${values.time}:00`;'
+
       const scheduled_date = new Date (dateTimeString);
 ;
       // Calculate end time based on duration;
@@ -93,6 +102,7 @@ if ( {) {
         duration_minutes: duration_minutes,
         notes: values.notes,
         meeting_platform: values.platform as any,
+
         meeting_link: values.meeting_link,'
         interview_type: "video","
         title: values.title;
@@ -163,9 +173,11 @@ if ( {) {
               src={talent && talent.profile_picture_url || "/placeholder && placeholder.svg"}"
               alt={talent && talent.full_name} "
               className="h-full w-full object-cover""
+
             />;
 </img>
           </div>;
+
           <div>;
 </div>"
             <h3 className="text-lg font-medium text-white">{talent && talent.full_name}</h3>;""
@@ -192,9 +204,11 @@ if ( {) {
               src={talent.profile_picture_url || "/placeholder.svg"}"
               alt={talent.full_name}"
               className="h - full w - full object - cover";"
+
             />;
 </img>
           </div>;
+
           <div>;
 </div>"
             <h3 className="text - lg font - medium text - white">{talent.full_name}</h3>;""
@@ -334,9 +348,11 @@ interface InterviewRequestFormProps {;
               src={talent.profile_picture_url || "/placeholder.svg"} ;"
               alt={talent.full_name} ;"
               className="h-full w-full object-cover";"
+
             />;
 </img>
           </div>;
+
           <div>;
 </div>"
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>;""
@@ -400,9 +416,20 @@ interface InterviewRequestFormProps {;
 </Calendar>
                     <Calendar;"
                       mode="single";"
+
                       selected={field.value}
                       onSelect={field.onChange}
+                      disabled={(date) = /> date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;
+                      className=\"p-3 pointer-events-auto\";                    <Calendar;
+                      mode=\"single\";
+                      selected={field.value}
+                      onSelect={field.onChange}
+                      disabled={(date) = /> date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;
+                      className=\"p-3 pointer-events-auto\";
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+
 </Calendar>
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;"
@@ -427,8 +454,10 @@ interface InterviewRequestFormProps {;
                 <FormLabel>Time</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
 </Select>)
+
               </FormItem>)}
           <FormField;
+
             control={form.control}"
             name="time";"
             render={({ field }) => (
@@ -474,12 +503,14 @@ interface InterviewRequestFormProps {;
 </SelectContent>
                       <SelectItem key={time} value={time}>;
 </SelectItem>)
+
                       </SelectItem>))}
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
 </FormMessage>
               </FormItem>)}
+
         </div>;"
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;"
 </div>
@@ -667,10 +698,12 @@ interface InterviewRequestFormProps {;
           </Button>;"
           <Button type="submit" disabled={is_submitting}>;"
 </Button>
+
           </Button>;
         </div>;
       </form>;
     </Form>);
+
 const form = useForm<z.infer<typeof formSchema>> ({
 </z>)
 async function onSubmit (values: z.infer<typeof formSchema>) {
@@ -700,3 +733,4 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
 </FormField>
 }/> </Button> </div> </form> </Form>) '
+

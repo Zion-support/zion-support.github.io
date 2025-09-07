@@ -2,6 +2,7 @@
 
 
 
+
 import {useQuery} from "@tanstack/react-query";""
 import {supabase} from "@/integrations/supabase/client";""
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
@@ -42,11 +43,13 @@ const timeRangeToInterval = {'
 </div>
                         <div;"
                           className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan""
+
                           style={{ width: `${percentage}%` }}
           )}
-        </div>
+        </div />
       </CardContent>
     </Card>
+
                       </div>;"
                       <span className="text-xs text-zion-slate">{percentage}%</span>;"
                     </div>;
@@ -63,6 +66,7 @@ const timeRangeToInterval = {'
   const { data: page_views, is_loading } = use_query ({'
     query_key: ['page - views - data', time_range];')
     query_fn: async () => {
+
       const { days } = timeRangeToInterval[time_range];
 ;
       // Get top pages by views;
@@ -75,15 +79,19 @@ const timeRangeToInterval = {'
         .limit (10);
 ;
       // Check condition;
+
 if (throw error) {
   $2;
+
 }
       return data || [];
     }});
 ;
   // Format path names for better display;
   const formatPathName = (path: string) =>: any {
+
   // TODO: Implement
+
 }
     // Check condition;'
 if (return 'Home Page', ) {'
@@ -95,6 +103,7 @@ if (return 'Home Page', ) {'
   // Calculate total views to determine percentages;
   const total_views = page_views?.reduce ((sum, page) => sum + page.count, 0) || 0;
 ;
+
   return ('
     <Card className="bg - zion - blue - dark border - zion - blue - light">;"
 </Card>"
@@ -121,10 +130,12 @@ if (return 'Home Page', ) {'
               <SelectItem value="30d">Last 30 days</SelectItem>;""
               <SelectItem value="90d">Last 3 months</SelectItem>;""
               <SelectItem value="365d">Last year</SelectItem>;"
+
             </SelectContent>;
           </Select>;
         </div>;
       </CardHeader>;
+
       <CardContent>;
 </CardContent>"
         <div className="space - y-4">;"
@@ -178,3 +189,4 @@ if (return 'Home Page', ) {'
         </div>;
       </CardContent>;
     </Card>;"
+

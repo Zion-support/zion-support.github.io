@@ -1,3 +1,4 @@
+
 import {useState} from "react";""
 import {useParams} from "react-router-dom";""
 import {Badge} from "@/components/ui/badge";""
@@ -69,10 +70,12 @@ export default function ListingDetail() {
 </Button>"
                 <a href="/marketplace">Back to Marketplace</Link>"
 </a>
+
               </Button>
             </div>
           </div>
         </div>
+
       </AppLayout>
     <AppLayout>
 </AppLayout>"
@@ -124,10 +127,12 @@ export default function ListingDetail() {
               <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">;"
 </Button>"
                 <a href="/marketplace">Back to Marketplace</a>;"
+
               </Button>;
             </div>;
           </div>;
         </div>;
+
       </AppLayout>;
     <AppLayout>;
 </AppLayout>"
@@ -414,10 +419,12 @@ export default function ListingDetail() {
 </div>"
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">"
 </Badge>
+
                       </Badge>
                   </div>
                 </div>
               </div>
+
             </div>"
             <div className="lg:col-span-1">"
 </div>"
@@ -671,10 +678,12 @@ export default function ListingDetail() {
             email={listing.author.email} // TypeScript now knows this might be undefined;
             profileName={listing.author.name}"
             profileType="service";"
+
           />;
 </ProfileContact>
         </DialogContent>;
       </Dialog>;
+
     </AppLayout>;"
 }w-full h-full flex items-center justify-center bg-zion-blue-light/20"> <span className=" text-zion-slate-light">No image available</span> </div>)"
 }</div> 
@@ -694,3 +703,4 @@ export default function ListingDetail() {
 </div>"
 }</p> <p className=" text-xs text-zion-slate-light">Member since 2022</p> text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </AppLayout>)"
     </AppLayout>);"
+

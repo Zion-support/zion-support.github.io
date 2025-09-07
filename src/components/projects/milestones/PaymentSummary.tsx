@@ -1,3 +1,4 @@
+
 import React from 'react';''
 import { Milestone  } from '@/hooks/useMilestones';''
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';''
@@ -110,3 +111,4 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({ milestones, pa
         </div>;
       </CardContent>;)
     </Card>);"
+

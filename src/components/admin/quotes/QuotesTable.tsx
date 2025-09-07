@@ -1,3 +1,4 @@
+
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 </QuotesTableProps>
@@ -249,9 +250,11 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                 </TableCell>;
                 <TableCell>;
 </TableCell>
+
                   <QuoteStatusBadge status={quote && quote.status} />;
 </QuoteStatusBadge>
                 </TableCell>;
+
                 <TableCell>;
 </TableCell>"
                   <div className="flex items-center gap-2">;"
@@ -344,9 +347,11 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                 </TableCell>;
                 <TableCell>;
 </TableCell>
+
                   <QuoteStatusBadge status={quote.status} />;
 </QuoteStatusBadge>
                 </TableCell>;
+
                 <TableCell>;
 </TableCell>"
                   <div className="flex items - center gap - 2">;"
@@ -419,6 +424,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 </DropdownMenuItem>"
                             <Trash2 className="h - 4 w - 4 mr - 2" />;"
 </Trash2>
+
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>)}
@@ -426,5 +432,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                 </TableCell>;
               </TableRow>)))}
         </TableBody>;
+
       </Table>;
     </div>);"
+

@@ -1,3 +1,4 @@
+
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
@@ -200,14 +201,16 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                         variant='outline';')
                         on_click={() => setIsReviewModalOpen (true)}
 </Button>
+
                       </Button>)}
                   </div>) : null}
               </div>)}
             <ReviewsList;
-              reviews = {reviews, }
-              is_loading = {is_loading, }
-              onReportReview = {report_review, }
+              reviews = {reviews }
+              is_loading = {is_loading }
+              onReportReview = {report_review }
             />;
+
 </ReviewsList>
           </div>) : ('
           <div className='bg - muted / 20 rounded - lg p - 6 text - center'>;'
@@ -221,10 +224,13 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           </div>)}
       </CardContent>;
         <LeaveReviewModal;
+
           projectId={project.id}
           revieweeId={revieweeId}
           revieweeName={revieweeName}
           isOpen={isReviewModalOpen}
+
           onClose={() => setIsReviewModalOpen(false)}
 </LeaveReviewModal>
     </Card>;'
+

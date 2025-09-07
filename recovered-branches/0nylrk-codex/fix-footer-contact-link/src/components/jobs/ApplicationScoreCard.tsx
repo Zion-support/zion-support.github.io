@@ -2,6 +2,7 @@
 
 
 
+
 import {useState} from "react";""
 import {Badge} from "@/components/ui/badge";""
 import {Button} from "@/components/ui/button";""
@@ -65,19 +66,21 @@ import {JobApplication} from "@/types/jobs";"
 interface ApplicationScoreCardProps {;
   application: JobApplication,;
   onScoreUpdated?: (updatedApplication: JobApplication) => void;
-}
 
+}
 export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
   const [isScoring, setIsScoring] = useState(false);
 
+
   // Determine if application has been scored;"
   const hasScore = typeof application && application.match_score === 'number';'
+
   // Format the date when the application was scored;
   const scoredDate = application && application.scored_at ;
     ? new Date(application && application.scored_at).toLocaleDateString() ;
     : null;
-
   // Get suggestion color;
+
   const getSuggestionColor = (suggestion: string | undefined) => {;
     switch (suggestion) {;'
       case "Strongly Recommended": return "bg-green-100 text-green-800";""
@@ -91,9 +94,10 @@ import { supabase } from "@/integrations/supabase/client",;""
 import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react",;""
 import { toast } from "sonner",;""
 import { JobApplication } from "@/types/jobs",;"
+
 interface ApplicationScoreCardProps {;
-  application: JobApplication,;
-  onScoreUpdated?: (updatedApplication: JobApplication) => void;
+  application: JobApplication,;}
+  onScoreUpdated?: (updatedApplication: JobApplication) => void;}
 }
 ;
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
@@ -105,15 +109,19 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     ? new Date(application.scored_at).toLocaleDateString();
     : null,;
   // Get suggestion color;
+
   const getSuggestionColor = (suggestion: string | undefined) => {;
     switch (suggestion) {;'
       case "Strongly Recommended": return "bg-green-100 text-green-800",;""
       case "Recommended for Review":;""
         return "bg-blue-100 text-blue-800",;"
 ;
+
 interface ApplicationScoreCardProps {;
   application:JobApplication,;
-  onScoreUpdated?:(updatedApplication:JobApplication) => void;
+  onScoreUpdated?:(updatedApplication:JobApplication) => void;) => {
+  return $3;}
+}
 }
 ;
 export function ApplicationScoreCard({ application, onScoreUpdated } ApplicationScoreCardProps) {;
@@ -128,6 +136,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
     :null,;
 ;
   // Get suggestion color;
+
   const getSuggestionColor = (suggestion:string | undefined) => {;
     switch (suggestion) {;'
       case "Strongly Recommended":return "bg-green-100 text-green-800",;""
@@ -152,6 +161,7 @@ interface ApplicationScoreCardProps {
 }
   application: JobApplication,
   onScoreUpdated?: (updated_application: JobApplication) => void;
+
 }
 export /**
  * ApplicationScoreCard - Function description;
@@ -169,6 +179,7 @@ function ApplicationScoreCard() {
 ;
   // Get suggestion color;
   const getSuggestionColor = (suggestion: string | undefined) =>: any {
+
   // TODO: Implement
 }
     switch (suggestion) {'
@@ -179,6 +190,7 @@ function ApplicationScoreCard() {
         return "bg - orange - 100 text - orange - 800","
       default:;"
         return "bg - gray - 100 text - gray - 800";"
+
     }
   }
 ;
@@ -188,21 +200,24 @@ function ApplicationScoreCard() {
   // TODO: Implement
 }
       setIsScoring (true);
-;
-      // Call the trigger_resume_scoring function;
+;}
+      // Call the trigger_resume_scoring function;}
       const { error } = await supabase.rpc (
+
 "
         'trigger_resume_scoring';'
         { application_id: application && application.id })
       );
 '
         'trigger_resume_scoring';'
+
         { application_id: application && application.id }
       );
   },;
   // Trigger the scoring process;
   const handleScore = async () => {;
     try {;
+
       setIsScoring(true),;
       // Call the trigger_resume_scoring function;
       const { error } = await supabase.rpc(;'
@@ -228,13 +243,15 @@ function ApplicationScoreCard() {
           .from("job_applications")""
           .select("*")""
           .eq("id", application.id)"
+
           .single(),
-          
-
-
         if (error) {
-
+      if (error) throw error;}
+        'trigger_resume_scoring';}
+        { application_id: application && application.id }
+      );
       if (error) throw error;
+
 "
       toast && toast.success("Resume scoring has been initiated");"
       // Poll for results every 3 seconds for up to 30 seconds;
@@ -248,15 +265,16 @@ function ApplicationScoreCard() {
           .from("job_applications");""
           .select("*");""
           .eq("id", application && application.id);"
-          .single();
 
+          .single();
         if (error) {;
+
           setIsScoring(false);"
           return toast && toast.error("Failed to check scoring status");"
+
         }
-
-
         if (data && data.scored_at) {;
+
 
           setIsScoring(false);"
           toast && toast.success("Resume scoring completed");"
@@ -299,48 +317,42 @@ function ApplicationScoreCard() {
           toast.success("Resume scoring completed"),;"
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),;
           return;
+
         }
 ;
-        if (attempts < maxAttempts) {;
-          setTimeout(checkScore, 3000);
+        if (attempts < maxAttempts) {;}
+          setTimeout(checkScore, 3000);}
         } else {;
+
           setIsScoring(false),;"
           toast.info("Scoring is taking longer than expected. Check back later.");"
+
         }
       },;
       setTimeout(checkScore, 3000);
-    } catch (error: any) {;
-      setIsScoring(false);
+    } catch (error: any) {;}
+      setIsScoring(false);}
       toast.error(`Failed to score resume: ${error.message}`);
     }
   },
-
-
-
-
-
-    } catch (error: any) {;
-      setIsScoring(false),;
-      toast && toast.error(`Failed to score resume: ${error && error.message}`);
-    }
   }
-
   // Render the score result or button to score;
+
   return ()
         if (attempts < maxAttempts) {;
           setTimeout(checkScore, 3000);
         } else {;
           setIsScoring(false);"
           toast && toast.info("Scoring is taking longer than expected. Check back later.");"
+
         }
       };
       setTimeout(checkScore, 3000);
-    } catch (error: any) {;
-      setIsScoring(false),;
+    } catch (error: any) {;}
+      setIsScoring(false),;}
       toast && toast.error(`Failed to score resume: ${error && error.message}`);
     }
   }
-
   // Render the score result or button to score;
   return (
     }
@@ -350,6 +362,7 @@ function ApplicationScoreCard() {
   const handleScore = async () => {;
     try {;
       setIsScoring(true),;
+
       ;
       // Call the trigger_resume_scoring function;
       const { error } = await supabase.rpc(;"
@@ -360,12 +373,14 @@ function ApplicationScoreCard() {
       if (error) throw error,;
       ;'
       toast.success("Resume scoring has been initiated"),;"
+
       ;
       // Poll for results every 3 seconds for up to 30 seconds;
       let attempts = 0,;
       const maxAttempts = 10,;
       ;
       const checkScore = async () => {;
+
         attempts++,;
         ;
         const { data, error } = await supabase;"
@@ -384,25 +399,29 @@ function ApplicationScoreCard() {
           toast.success("Resume scoring completed"),;"
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),;
           return,;
+
         }
         ;
-        if (attempts < maxAttempts) {;
-          setTimeout(checkScore, 3000),;
+        if (attempts < maxAttempts) {;}
+          setTimeout(checkScore, 3000),;}
         } else {;
+
           setIsScoring(false),;"
           toast.info("Scoring is taking longer than expected. Check back later."),;"
+
         }
       },;
       ;
       setTimeout(checkScore, 3000),;
       ;
-    } catch (error:any) {;
-      setIsScoring(false),;
+    } catch (error:any) {;}
+      setIsScoring(false),;}
       toast.error(`Failed to score resume:${error.message}`),;
     }
   },;
 ;
   // Render the score result or button to score;
+
   return (;"
     <Card className="overflow-hidden">;"
 </Card>"
@@ -689,10 +708,12 @@ function ApplicationScoreCard() {
 </div>"
                         <p className="font - medium">Education Match: {application.match_breakdown.education_match.score}/100</p>;"
                         <p>{application.match_breakdown.education_match.analysis}</p>;
+
                       </div>)}
                   </div>;
                 </details>;
               </div>)}
+
           </div>) : ("
           <div className="text - center py - 4">;"
 </div>"
@@ -710,12 +731,14 @@ function ApplicationScoreCard() {
 </Loader2>)
                 </>) : ()"
                 "Score Resume")}"
+
             </Button>;
           </div>)}
       </CardContent>;
     </Card>);
                   </div>;                )}
               </div>;
+
             </div>;"
               <div className="mt-4 pt-4 border-t">;"
 </div>"
@@ -741,10 +764,12 @@ function ApplicationScoreCard() {
 </div>"
                         <p className="font-medium">Education Match:{application.match_breakdown.education_match.score}/100</p>;"
                         <p>{application.match_breakdown.education_match.analysis}</p>;
+
                       </div>;                    )}
                   </div>;
                 </details>;
               </div>;
+
           </div>;"
           <div className="text-center py-4">;"
 </div>"
@@ -763,9 +788,11 @@ function ApplicationScoreCard() {
                 </>;
               ) :(;)"
                 "Score Resume";              )}"
+
             </Button>;
           </div>;
       </CardContent>;
+
     </Card>;"
 //Render the score result or button to score return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <CardTitle className="text-lg font-medium flex items-center justify-between" > Resume Match Score </Badge> </CardTitle> </CardHeader> <CardContent> {"
 </Card>
@@ -790,3 +817,4 @@ function ApplicationScoreCard() {
 </Loader2>
 }</Button> </div>) 
 }</CardContent> </Card>) "
+

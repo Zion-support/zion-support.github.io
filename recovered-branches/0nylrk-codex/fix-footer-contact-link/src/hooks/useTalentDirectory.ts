@@ -1,4 +1,5 @@
 
+
 import { useAuthStatus } from "./talent/useAuthStatus",""
 import { useTalentData } from "./talent/useTalentData",""
 import { useFilterTalents } from "./talent/useFilterTalents";""
@@ -121,6 +122,7 @@ function useTalentDirectory() {
     
     // Search and filter state;
     searchTerm,
+
     setSearchTerm,
     selectedSkills,
     selectedAvailability,
@@ -131,15 +133,18 @@ function useTalentDirectory() {
     setExperienceRange,
     sortOption,
     setSortOption,
+
     
     // UI state;
     isMobileFilterOpen,
+
     setIsMobileFilterOpen,
     isHireModalOpen,
     setIsHireModalOpen,
     selectedTalent,
     setSelectedTalent,
     expandedSections,
+
     
     // Auth and user state;
     isAuthenticated,
@@ -160,18 +165,19 @@ import { useAuthStatus } from "./talent/useAuthStatus",;""
 import { useTalentData } from "./talent/useTalentData",;""
 import { useFilterTalents } from "./talent/useFilterTalents",;""
 import { useUIState } from "./talent/useUIState",;"
+
 export function useTalentDirectory() {;
   // Fetch auth status and saved talents;
   const {;
     isAuthenticated,;
     userDetails,;
-    savedTalents,;
-    handleToggleSave;
+    savedTalents,;}
+    handleToggleSave;}
   } = useAuthStatus(),;
   // Fetch talent data;
   const {;
-    talents,;
-    isLoading;
+    talents,;}
+    isLoading;}
   } = useTalentData(),;
   // Apply filters and sorting;
   const {;
@@ -189,8 +195,8 @@ export function useTalentDirectory() {;
     setSortOption,;
     toggleSkill,;
     toggleAvailability,;
-    toggleRegion,;
-    clearFilters;
+    toggleRegion,;}
+    clearFilters;}
   } = useFilterTalents(talents),;
   // Manage UI state;
   const {;
@@ -200,8 +206,8 @@ export function useTalentDirectory() {;
     setIsHireModalOpen,;
     selectedTalent,;
     setSelectedTalent,;
-    expandedSections,;
-    toggleSection;
+    expandedSections,;}
+    toggleSection;}
   } = useUIState(),;
   return {;
     // Talents and loading state;
@@ -237,11 +243,11 @@ export function useTalentDirectory() {;
     toggleAvailability,;
     toggleRegion,;
     clearFilters;
-    toggleSection;
-    handleToggleSave;
-
-
-
+    toggleSection;}
+    handleToggleSave;}
+  }
+}
+;
   }
 }
 ;
@@ -258,8 +264,11 @@ export function useTalentDirectory() {;
     toggle_section;
     handleToggleSave;
   }
+}  }
 }
+
   }
 }
 ;
 "
+

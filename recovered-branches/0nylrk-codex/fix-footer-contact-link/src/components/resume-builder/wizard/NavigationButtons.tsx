@@ -2,6 +2,7 @@
 
 
 
+
 import {Button} from "@/components/ui/button";""
 import {Loader2} from "lucide-react";""
 import {NavigationButtonsProps} from "./types";""
@@ -47,10 +48,12 @@ export const NavigationButtons = ({
 </Button>"
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
 </Loader2>
+
         </Button>
     </div>
     </div>;
         </Button>;
+
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
 </Button>
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
@@ -91,3 +94,4 @@ export const NavigationButtons = ({
     </div>
     </div>;
     </div>;"
+

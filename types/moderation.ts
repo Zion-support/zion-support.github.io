@@ -1,3 +1,4 @@
+
 export interface ModerationResult {
   // TODO: Implement
 }
@@ -39,10 +40,12 @@ export interface ModerationFlag {;
   targetId: string;,"
   targetType: "post" | "comment" | "user";"
   status: ModerationStatus;,
+
   createdAt: string;
-  updatedAt: string;
-  adminNotes?: string;
-}
+  updatedAt: string;}
+  adminNotes?: string;}
+}}
+
 
 }
 export interface ModerationFlag {
@@ -60,3 +63,4 @@ export interface ModerationRule {
   severity: 'low' | 'medium' | 'high';'
 }
 '
+

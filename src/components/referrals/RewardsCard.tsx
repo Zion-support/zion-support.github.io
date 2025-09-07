@@ -1,3 +1,4 @@
+
 interface RewardsCardProps {
   // TODO: Implement
 }
@@ -201,9 +202,11 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
 </CardTitle>"
             <BadgeDollarSign className="h-5 w-5" />;"
 </BadgeDollarSign>
+
           </CardTitle>;
-          <CardDescription>Rewards earned from successful referrals</CardDescription>;
+          <CardDescription />Rewards earned from successful referrals</CardDescription>;
         </CardHeader>;
+
         <CardContent>;
 </CardContent>"
           <div className="flex flex-col items-center justify-center p-4 text-center">;"
@@ -220,9 +223,12 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
             <p className='text - muted - foreground'>No rewards yet</p>;''
             <p className='text - sm text - muted - foreground mt - 1'>              Refer users to earn rewards once they complete onboarding            Your Rewards;'
 </p>
+
           </CardTitle>;
-          <CardDescription > Rewards earned from successful referrals</CardDescription>;
+          <CardDescription />Rewards earned from successful referrals;
+          </CardDescription>;
         </CardHeader>;
+
         <CardContent>;
 </CardContent>'
           <div className="flex flex - col items - center justify - center p - 4 text - center">;"
@@ -242,9 +248,12 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
 </CardTitle>'
           <BadgeDollarSign className='h - 5 w - 5' />;'
 </BadgeDollarSign>
+
         </CardTitle>;
-        <CardDescription>Rewards earned from successful referrals</CardDescription>;
+        <CardDescription />Rewards earned from successful referrals;
+        </CardDescription>;
       </CardHeader>;
+
       <CardContent>;
 </CardContent>'
         <div className="space-y-4">;"
@@ -355,9 +364,12 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
                 </p>;"
                   <p className="text - xs text - muted - foreground">;"
 </p>
+
                   </p>)}
               </div>;
             </div>))}
         </div>;
       </CardContent>;
+
     </Card>);"
+

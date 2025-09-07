@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { Header } from "@/components/Header";""
 import { Footer } from "@/components/Footer";""
@@ -20,9 +21,11 @@ export default function Home() {
         description="Discover top AI and tech talent, services, and equipment in one place."""
         keywords="AI, technology, marketplace, services, talent"""
         canonical="https: //app.ziontechgroup.com/""
+
       />
 </SEO>
       <Header />
+
 </Header>
 
       <HeroSection />
@@ -37,6 +40,7 @@ export default function Home() {
       <FeatureHighlights />
 </FeatureHighlights>
 
+
       <CategoriesSection />
 </CategoriesSection>
       <BenefitsSection />
@@ -48,6 +52,7 @@ export default function Home() {
       <NewsletterSection />
 </NewsletterSection>
       <Footer />
+
 </Footer>
     </div>)
     </div>);
@@ -56,3 +61,4 @@ export default function Home() {
 </div>
     </div>;)
     </div>);"
+

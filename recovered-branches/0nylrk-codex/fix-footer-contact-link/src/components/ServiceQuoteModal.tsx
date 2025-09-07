@@ -1,5 +1,6 @@
 
 
+
 import {useState} from 'react';''
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";""
 import {Button} from "@/components/ui/button";""
@@ -453,10 +454,101 @@ function ServiceQuoteModal() {
 
                         disabled={(date) => !startDate || date < startDate}
 </Calendar>
+
                     </PopoverContent>;
                   </Popover>;
                 </div>;
               </div>;
+              <div className=\"bg-zion-blue-dark border border-zion-blue-light rounded-md p-4\" />;
+                <h3 className=\"font-medium text-zion-cyan mb-2\" />Quote Summary</h3>;
+                <div className=\"space-y-2 text-sm\" />;
+                  <div className=\"flex justify-between\" />;}
+                    <span className=\"text-zion-slate-light\" />Service:</span>;}
+                    <span className=\"text-white\" />{service?.title || \"Custom Service\"}</span>;
+                  </div>;
+                  <div className=\"flex justify-between\" />;
+                    <span className=\"text-zion-slate-light\" />Budget:</span>;
+                    <span className=\"text-white\" />{BUDGET_RANGES && BUDGET_RANGES.find(b => b && b.value === formData && formData.budget)?.label}</span>;
+                  </div>;
+                  <div className=\"flex justify-between\" />;
+                    <span className=\"text-zion-slate-light\" />Timeline:</span>;
+                    <span className=\"text-white\" />{TIMELINE_OPTIONS && TIMELINE_OPTIONS.find(t => t && t.value === formData && formData.timeframe)?.label}</span>;                    <span className=\"text-white\" />{BUDGET_RANGES.find(b => b.value === formData.budget)?.label}</span>;
+                  </div>;
+                  <div className=\"flex justify-between\" />;
+                    <span className=\"text-zion-slate-light\" />Timeline:</span>;
+                    <span className=\"text-white\" />{TIMELINE_OPTIONS.find(t => t.value === formData.timeframe)?.label}</span>;
+              </div>;
+            </div>;
+          )}
+                <Button;
+type=\"submit\"
+                  disabled={isSubmitting}
+                  className=\"bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple\" />;
+                  {isSubmitting ? \"Submitting...\" : \"Submit Request\"}
+                </Button>;
+              )}
+;
+  const next_step = () =>: any {
+    if (setCurrentStep ('timeline')) {}
+  $2}
+}
+    else if (setCurrentStep ('contact')) {}
+  $2}
+}
+  }
+;
+  const prev_step = () =>: any {
+    if (setCurrentStep ('details')) {}
+  $2}
+}
+    else if (setCurrentStep ('timeline')) {}
+  $2}
+}
+  }
+;
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange} />;
+      <DialogContent className=\"bg - zion - blue border - zion - blue - light text - white sm:max-w-[600px]\" />;
+        <DialogHeader />;
+          <DialogTitle className=\"text - 2xl font - semibold text-white\" />;
+            Request Service Quote;
+          </DialogTitle>;
+        </DialogHeader>;
+        <form on_submit={handle_submit} className=\"space-y-6\" />;
+          {/* Step 1: Service Details */}
+          {current_step === 'details' && (
+            <div className=\"space-y-4\" />;
+              <div className=\"p - 4 bg - zion - blue - dark rounded - md border border - zion - blue-light\" />;}
+                <h3 className=\"font - medium text - zion - cyan mb-2\" />Selected Service</h3>;}
+                <p className=\"text - white text-lg\" />{service?.title || \"Custom Service\"}</p>;
+                <p className=\"text - zion - slate - light text - sm mt-1\" />{service?.category}</p>;
+              </div>;
+              <div className=\"space-y-2\" />;
+                <Label html_for=\"description\" className=\"text-white\" />Project Description</Label>;
+                <Textarea;
+                  id=\"description\";
+                  name=\"description\";
+                  value={form_data.description}
+                  on_change={handleInputChange}
+                  placeholder=\"Describe your project needs in detail...\";
+                  className=\"h - 32 bg - zion - blue - dark border - zion - blue - light text - white resize-none\";
+                  required;
+                />;
+              </div>;
+              <div className=\"space-y-2\" />;
+                <Label html_for=\"budget\" className=\"text-white\" />Estimated Budget</Label>;
+                <Select;
+                  value={form_data.budget}
+                  onValueChange={(value) = /> setFormData (prev => ({ ...prev, budget: value }))}
+                >;
+                  <SelectTrigger className=\"bg - zion - blue - dark border - zion - blue - light text-white\" />;
+                    <SelectValue placeholder=\"Select your budget range\" />;
+                  </SelectTrigger>;
+                  <SelectContent className=\"bg - zion - blue - dark border - zion - blue-light\" />;
+                    {BUDGET_RANGES.map ((range) => (}
+                      <SelectItem key={range.value} value={range.value} className=\"text - white hover:bg - zion - blue-light\" />;
+                        {range.label}
+
             </div>;"
             <div className="space-y-4">;"
 </div>"
@@ -614,10 +706,12 @@ function ServiceQuoteModal() {
 </SelectContent>"
                       <SelectItem key={range.value} value={range.value} className="text - white hover:bg - zion - blue - light">;"
 </SelectItem>
+
                       </SelectItem>))}
                   </SelectContent>;
                 </Select>;
               </div>;
+
             </div>)}"
             <div className="space - y-4">;"
 </div>"
@@ -670,10 +764,12 @@ function ServiceQuoteModal() {
                         on_select={setStartDate}
                         initial_focus;"
                         className="p - 3 pointer - events - auto bg - zion - blue - dark text - white";"
+
                       />;
 </Calendar>
                     </PopoverContent>;
                   </Popover>;
+
                 </div>;"
                 <div className="space - y-2">;"
 </div>"
@@ -702,10 +798,12 @@ function ServiceQuoteModal() {
                         on_select={setEndDate}
                         disabled={(date) => !start_date || date < start_date}
 </Calendar>
+
                     </PopoverContent>;
                   </Popover>;
                 </div>;
               </div>;
+
             </div>)}"
             <div className="space - y-4">;"
 </div>"
@@ -868,3 +966,4 @@ return (<Dialog open= {
 }className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Next </Button>) : (<Button </Button>)"
 }</div> </DialogFooter> </form> </DialogContent> </Dialog>) 
     </Dialog>;"
+

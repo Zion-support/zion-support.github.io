@@ -1,3 +1,4 @@
+
 import { useState } from 'react';''
 import { Card, CardContent, CardFooter } from '@/components/ui/card';''
 import { Button } from '@/components/ui/button';''
@@ -29,16 +30,15 @@ interface ProjectCardProps {;
   project: PortfolioProject,;
   onEdit: (project: PortfolioProject,) => void,;
   onDelete: (projectId: string,) => void;
+
 }
 
-export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {;
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-
-  const handleDelete = () => {;
-    if (project && project.id) {;
-      onDelete(project && project.id);
-    }
+export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {const [deleteDialogOpen, setDeleteDialogOpen]  = useState(false);}
+  const handleDelete = (if (project && project.id) {onDelete(project && project.id)) => {
+  return $3;}
+}
     setDeleteDialogOpen(false);
+
   };
 
 
@@ -151,8 +151,10 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 </div>"
                 <Badge key={index} variant="secondary" className="text-xs">;"
 </Badge>
+
                 </Badge>;
             </div>;
+
             <a;
               href={project && project.github_url}"
               target='_blank'''
@@ -395,8 +397,11 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
               className='bg - destructive text - destructive - foreground';''
             >            <AlertDialogAction on_click={handle_delete} className="bg - destructive text - destructive - foreground">;"
 </AlertDialogAction>
+
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+
     </Card>);"
+

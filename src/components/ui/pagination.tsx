@@ -1,11 +1,14 @@
+
 import * as React from &quot;react & quot;
+
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';'
+
 import { cn } from &quot;@/lib / utils & quot;
-import { ButtonProps, button_variants } from &quot;@/components/ui/ button & quot;
-;
-const Pagination = ({ class_name, ...props }: React.ComponentProps<&quot;nav & quot;>) =>: any (
-  <nav;
+import { ButtonProps, button_variants } from &quot;@/components / ui / button & quot;
+
+const Pagination = ({ class_name, ...props }: React.ComponentProps<&quot;nav & quot;>) =>: any (<nav;
     role=&quot;navigation & quot;
+
     aria - label=&quot;pagination & quot;)
     className={cn (&quot;mx - auto flex w - full justify - center & quot;, class_name)}
 '
@@ -195,3 +198,4 @@ const PaginationButton = React.forward_ref < HTMLButtonElement PaginationButtonP
 </MoreHorizontal>"
     <span className="sr - only & quot;>More pages</span>;"
   </span>);"
+

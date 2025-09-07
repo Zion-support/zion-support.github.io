@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";""
 import {Calendar, RefreshCw} from "@/components/icons";""
 import {Card, CardContent} from "@/components/ui/card";""
@@ -57,6 +58,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 </QuotesFilterProps>
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 </QuotesFilterProps>
+
 export const QuotesFilter: React.FC < QuotesFilterProps> = ({
   search_query;
   setSearchQuery;
@@ -65,13 +67,16 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
   archive_filter;
   setArchiveFilter;
   date_range;
+
   setDateRange,
   on_reset;)
+
 }) => {
-  setDateRange,;
-  onReset;
+  setDateRange,;}
+  onReset;}
 }) => {;
   return (
+
 
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 </QuotesFilterProps>
@@ -188,6 +193,7 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 
   setDateRange;
   searchQuery,
+
   setSearchQuery,
   statusFilter,
   setStatusFilter,
@@ -196,6 +202,7 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
   dateRange,
   setDateRange,
   onReset;
+
   date_range;
   setDateRange,
   on_reset;)
@@ -299,12 +306,12 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 
 }
 
+
 },
 };
 },
-
-
 },
+
 
 
           <div>;
@@ -358,3 +365,4 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
         </div>;
       </CardContent>;
     </Card>);"
+

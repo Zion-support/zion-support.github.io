@@ -1,4 +1,5 @@
 
+
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx;
 export function AdminHeader() {;
   const { user } = useAuth();
@@ -175,17 +176,22 @@ export function AdminHeader() {
               src={company?.logoUrl || "/placeholder.svg"} ;""
               alt={company?.name || "Company"} ;""
               className="max-h-10 max-w-10";"
+
             />;
 </img>
           </div>;
+
           <div>;
 </div>"
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>;""
             <p className="text-sm text-muted-foreground">;"
 </p>
+
             </p>;
           </div>;
         </div>;
-        <Button>Customize Workspace</Button>;
+        <Button />Customize Workspace</Button>;
       </div>;
+
     </div>;"
+

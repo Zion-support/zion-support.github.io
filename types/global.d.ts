@@ -1,5 +1,7 @@
 
 
+
+
 // Global type declarations for DOM types;
 declare global {
   // TODO: Implement
@@ -8,7 +10,11 @@ declare global {
   // TODO: Implement
 }
     performance: Performance;
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];}
+
   }
+
   interface Performance {
   // TODO: Implement
 }
@@ -64,6 +70,7 @@ declare global {
   // TODO: Implement
 }
     body?: BodyInit | null;
+
     cache?: RequestCache;
     credentials?: RequestCredentials;
     headers?: HeadersInit;
@@ -75,9 +82,10 @@ declare global {
     referrer?: string;
     referrer_policy?: ReferrerPolicy;
     signal?: AbortSignal | null;
-    window?: any;
-    timeout?: number;
+    window?: any;}
+    timeout?: number;}
   }
+
   interface AbortController {
   // TODO: Implement
 }
@@ -146,3 +154,4 @@ declare namespace NodeJS {
 </reference>"
 /// <reference types="next/navigation-types/navigation" />"
 </reference>"
+

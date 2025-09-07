@@ -1,17 +1,14 @@
-
-
-
-  resumeOptions: ResumeOption[],
+resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
   handleDownloadResume: () => void,
   isLoading: boolean;
 }
-
 export function SelectResumeSection({;
 import React from 'react';'
   resumeOptions;
   selectedResume;
+
   handleResumeSelect;
   handleDownloadResume;
 '
@@ -20,13 +17,15 @@ import { FileText } from 'lucide-react',;''
 import { ResumeOption } from '../resume-selector/types',;''
 import { ResumePreviewCard } from './ResumePreviewCard',;''
 import { Resume } from '@/types/resume',;'
+
 interface SelectResumeSectionProps {;
   resumeOptions: ResumeOption[],;
   selectedResume: ResumeOption | null,;)
   handleResumeSelect: (resumeId: string) => void,;
-  handleDownloadResume: () => void,;
-  isLoading: boolean;
+  handleDownloadResume: () => void,;}
+  isLoading: boolean;}
 }
+
 
 
   resumeOptions: ResumeOption[],
@@ -83,12 +82,15 @@ import {ResumePreviewCard} from './ResumePreviewCard';'
                 <span className="text-white">{option.title}</span>;"
               </div>;
             </button>;
+
             <ResumePreviewCard;
-              resume={selectedResume.resume as Resume}              onDownload={handleDownloadResume}
+resume={selectedResume && selectedResume.resume as Resume}
+              onDownload={handleDownloadResume}
               isLoading={isLoading}
             />;
 </ResumePreviewCard>
         </>;
+
       )}
     </div>;
 }> </div> </button>) ) "
@@ -118,3 +120,4 @@ import {ResumePreviewCard} from './ResumePreviewCard';'
         </>
       )}
     </div>"
+

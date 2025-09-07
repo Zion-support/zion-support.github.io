@@ -1,6 +1,7 @@
 
 
 
+
 import { useState } from "react",""
 import { useParams, Link } from "react-router-dom",""
 import { AppLayout } from "@/layout/AppLayout",""
@@ -272,8 +273,10 @@ class ErrorBoundary extends React.Component {
                   <div className="font-medium text-lg">{post.authorName}</div>;""
                     <Badge variant="outline" className="mt-1">;"
 </Badge>
+
                     </Badge>
                 </div>
+
               </div>"
               <div className="flex items-center text-sm text-muted-foreground">"
 </div>"
@@ -710,3 +713,4 @@ class ErrorBoundary extends React.Component {
   () => handleMarkAsAnswer (reply.id) 
 </ReplyCard>
 }</div> </div> </div> </AppLayout>) "
+

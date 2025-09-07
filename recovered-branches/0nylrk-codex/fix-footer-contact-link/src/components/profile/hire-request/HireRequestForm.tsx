@@ -1,3 +1,4 @@
+
 import React from "react";""
 import {useHireRequestForm, FormValues} from "./useHireRequestForm";""
 import {Button} from "@/components/ui/button";""
@@ -76,12 +77,14 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 </form>"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
 </div>
+
           <PersonalInfoFields form={form} />
 </PersonalInfoFields>
         </div>
         <ProjectDetailsField form={form} />
 </ProjectDetailsField>
         <TimelineField form={form} />
+
 </TimelineField>"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
 </div>
@@ -255,3 +258,4 @@ return (<Form {
         </DialogFooter>
       </form>
     </Form>'
+

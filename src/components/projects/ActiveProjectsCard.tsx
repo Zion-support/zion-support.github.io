@@ -1,3 +1,4 @@
+
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
@@ -32,9 +33,11 @@ export function ActiveProjectsCard() {
             <BriefcaseIcon className="h-5 w-5 text-primary" />;"
 </BriefcaseIcon>
             <span>Active Projects</span>;
+
           </CardTitle>;
-          <CardDescription>Your ongoing work</CardDescription>;
+          <CardDescription />Your ongoing work</CardDescription>;
         </CardHeader>;
+
         <CardContent>;
 </CardContent>"
           <div className="space-y-2">;"
@@ -193,9 +196,11 @@ if ( {) {
             <BriefcaseIcon className="h - 5 w - 5 text - primary" />;"
 </BriefcaseIcon>
             <span > Active Projects</span>;
+
           </CardTitle>;
-          <CardDescription > Your ongoing work</CardDescription>;
+          <CardDescription />Your ongoing work</CardDescription>;
         </CardHeader>;
+
         <CardContent>;
 </CardContent>"
           <div className='space - y-2'>;'
@@ -318,3 +323,4 @@ if ( {) {
           </Button>;
         </CardFooter>;
     </Card>;"
+

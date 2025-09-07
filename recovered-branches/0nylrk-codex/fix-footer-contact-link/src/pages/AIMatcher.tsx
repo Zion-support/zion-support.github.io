@@ -1,3 +1,4 @@
+
 import { useState } from "react";""
 import { useNavigate } from "react-router-dom";""
 import { Header } from "@/components/Header";""
@@ -64,13 +65,16 @@ export default function AIMatcherPage() {
                   </SelectItem>"
                   <SelectItem value="equipment" className="text-white">"
 </SelectItem>
+
                   </SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
+
             <AIMatchmaker;"
               serviceType={selectedCategory === "all" ? "" : selectedCategory}"
+
               onMatchSelect={handleMatchSelect}
             />
 </AIMatchmaker>
@@ -81,6 +85,7 @@ export default function AIMatcherPage() {
 </Footer>
     </>
   );
+
 }"
         category === "data science" || category === "development") {""
       item_type = "talent";"
@@ -99,12 +104,14 @@ if (|| category === "hardware") {) {"
   service_type: item_type,
         specific_item: match.item;
       })
+
     });
   }
 ;
   return (
     <>;
       <Header />;
+
 </Header>"
       <div className="min - h-screen bg - zion - blue py - 12 px - 4">;"
 </div>"
@@ -180,3 +187,4 @@ min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div
 ;
 ;
 "
+

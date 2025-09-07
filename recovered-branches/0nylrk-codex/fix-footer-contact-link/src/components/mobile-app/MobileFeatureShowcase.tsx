@@ -1,4 +1,5 @@
 
+
 import React from './react';''
 import { CheckCircle, Smartphone, Users, Star, Mail } from './lucide-react';'
 export const MobileFeatureShowcase: React.FC = () => {
@@ -124,3 +125,4 @@ export const MobileFeatureShowcase: React.FC = () => {
   index;"
 }className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300" > </div>) )"
 }</div> </div> </section>) ]"
+

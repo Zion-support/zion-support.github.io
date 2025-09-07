@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";""
 import {Drawer} from "@/components/ui/drawer";""
 import {FilterSidebar} from "@/components/talent/FilterSidebar";""
@@ -64,3 +65,4 @@ interface MobileFilterDrawerProps {
 }> <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto" > ...filterProps;"
 </Drawer>)
 }/> </div> </Drawer>) "
+

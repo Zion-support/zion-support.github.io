@@ -3,6 +3,7 @@
 
 
 
+
 import {cn} from "@/lib/utils";""
 import {Badge} from "@/components/ui/badge";""
 import {Button} from "@/components/ui/button";""
@@ -13,33 +14,17 @@ interface ListingScoreCardProps {;
 interface ListingScoreCardProps {
   // TODO: Implement
 }
+
   title: string,
   description: string,
-
   image?: string;
   category: string,;
   image?: string;
   category: string,;
-  tags?: string[];
   author?: string;
   author_image?: string;
   ai_score?: number;
   rating?: number;
-
-
-export function ListingScoreCard(): any ({ ;
-  title;
-  description, ;
-  image, ;
-  category, ;
-  tags;
-  author, ;
-
-  authorImage;
-  aiScore = 0;
-  rating = 0;
-  reviewCount = 0;
-
 interface ListingScoreCardProps {
   // TODO: Implement
 }
@@ -52,14 +37,11 @@ interface ListingScoreCardProps {
   authorImage?: string,
   aiScore?: number,
   rating?: number,
+
   reviewCount?: number,
   className?: string;
+
 }
-
-
-export function ListingScoreCard({ 
-  title,
-
   description, 
   image, 
   category, 
@@ -69,6 +51,7 @@ export function ListingScoreCard({
   aiScore = 0,
   rating = 0,
   reviewCount = 0,
+
   className;)
 }: ListingScoreCardProps) {
   return (
@@ -333,3 +316,4 @@ className)
           </div>
       </div>
     </div>"
+

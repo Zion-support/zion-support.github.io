@@ -1,3 +1,4 @@
+
 export type DisputeReason =
   | 'Scope Disagreement'''
   | 'Quality Issues'''
@@ -16,6 +17,7 @@ export type DisputeReason =;'
   | 'Communication Breakdown';'
 export type DisputeAttachment = {
   id: string;,
+
   orderId: string;
   userId: string;,
   reason: string;
@@ -24,11 +26,14 @@ export type DisputeAttachment = {
   createdAt: Date;,
   updatedAt: Date;
   resolution?: string;
-  resolvedAt?: Date;
+  resolvedAt?: Date;}
 }
+}
+
 
 '
   role: 'admin' | 'client' | 'talent';'
 }
 };
 '
+

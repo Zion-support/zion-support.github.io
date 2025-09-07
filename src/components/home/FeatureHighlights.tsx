@@ -1,5 +1,8 @@
+
+;
 className?: string;
   style?: React && React.CSSProperties;
+
 
 export function FeatureHighlights(): any ({;
   className,;
@@ -178,11 +181,13 @@ function FeatureHighlights() {
                       <Check className="h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0" />;"
 </Check>"
                       <span className="text - zion - slate - light">{feature}</span>))}"
+
                 </ul>;
               </CardContent>;
             </Card>))}
         </div>;
       </div>;
+
     </section>);"
     <section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">";"
 </section>"
@@ -191,14 +196,20 @@ function FeatureHighlights() {
         <motion.div          className="text - center mb - 16";"
           initial = {
 
-  { opacity: 0,
-  coordinate_y: 20;
+
+export /**;
+ * FeatureHighlights - Function description;
+ */;"
+function FeatureHighlights() {return (\";"
+    <section className=\"py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900\" />\";"
+      <div className=\"max - w-7xl mx - auto px - 6\" />;"
+        <motion.div          className=\"text - center mb - 16\";}
+          initial = {{ opacity: 0,coordinate_y: 20;}
 }}
-          whileInView = {
-  { opacity: 1,
-  coordinate_y: 0;
+          whileInView = {{ opacity: 1,coordinate_y: 0;}
 }}
           viewport={{ once: true }}
+
           transition={{ duration: 0.6 }}"
         >";"
 </motion>"
@@ -358,3 +369,4 @@ function FeatureHighlights() {
         </motion.div>;
       </div>;
     </section>)}]"
+

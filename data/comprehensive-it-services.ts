@@ -35,6 +35,7 @@ export interface ComprehensiveITService {
 
   {
 
+
     id: 'quantum - cloud - infrastructure',''
     name: 'Quantum Cloud Infrastructure',''
     tagline: 'Next - generation quantum - powered cloud infrastructure',''
@@ -42,6 +43,7 @@ export interface ComprehensiveITService {
     period: '/month','
     description:;'
       'Revolutionary quantum - powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum - grade computing capabilities.','
+
     features: [;
 '
       'Quantum computing resources',''
@@ -55,6 +57,7 @@ export interface ComprehensiveITService {
       'Quantum analytics engine',''
       '24 / 7 quantum operations center',']
     ],
+
     popular: true,'
       'Quantum computing',''
       'Quantum networking',''
@@ -75,6 +78,7 @@ export interface ComprehensiveITService {
       'Advanced quantum cloud infrastructure with quantum computing resources, quantum - secured networking, and comprehensive enterprise features.',''
     launch_date: '2024 - 11 - 15','
     customers: 45,
+
     rating: 4 && 4.9,
     reviews: 32,
   },
@@ -89,6 +93,7 @@ export interface ComprehensiveITService {
       'Predictive analytics dashboard',''
       '24 / 7 AI operations center','
     ],
+
     popular: true,'
       'AI algorithms',''
       'Machine learning',''
@@ -110,6 +115,7 @@ export interface ComprehensiveITService {
       'Comprehensive AI - powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.',''
     launch_date: '2024 - 10 - 01','
     customers: 320,
+
     rating: 4 && 4.8,
     reviews: 245,
   },
@@ -125,6 +131,7 @@ export interface ComprehensiveITService {
       'Compliance automation',''
       '24 / 7 quantum security operations','
     ],
+
     popular: true,'
       'Quantum encryption',''
       'AI algorithms',''
@@ -145,6 +152,7 @@ export interface ComprehensiveITService {
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',''
     launch_date: '2024 - 09 - 15','
     customers: 180,
+
     rating: 4 && 4.9,
     reviews: 156,
   },'
@@ -192,16 +200,18 @@ export interface ComprehensiveITService {
   contactInfo: {,
   mobile: string, email: string,
     address: string,
+
     website: string;
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number;
 }
-
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services;
+
   {'
     price: '$25,999',''
     period: '/month',''
@@ -228,6 +238,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709','
     reviews: 156;,
   id: string,;
+
   name: string,;
   tagline: string,;
   price: string,;
@@ -256,8 +267,8 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -280,6 +291,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Network infrastructure managementServer and storage managementSecurity monitoring and management24/7 infrastructure monitoringPerformance optimizationDisaster recovery planningCompliance managementIT asset management',;''
       'Help desk supportStrategic IT consulting';']
     ],;
+
     popular: true,;'
     icon: '🏢',;''
     color: 'from-gray-600 to-blue-700',;''
@@ -304,6 +316,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.';''
@@ -312,6 +325,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     rating: 4.9,
     reviews: 156;
 ;
+
     realImplementation: true;,
   implementationDetails:'
       'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'''
@@ -362,6 +376,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Incident response'''
       'Vulnerability scanning'''
       'Penetration testing'']
+
     ]
     integrations: ['
       'SIEM systems'''
@@ -371,6 +386,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Vulnerability scanners'''
       'Compliance tools'']
     ]
+
     useCases: ['
       'Threat monitoring'''
       'Incident response'''
@@ -446,6 +462,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Network management'''
       'Storage systems'''
       'Security tools'']
+
     ]
     integrations: ['
       'Data center infrastructure'''
@@ -455,6 +472,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Network equipment'''
       'Power systems'']
     ]
+
     useCases: ['
       'Data center management'''
       'Infrastructure optimization'''
@@ -530,6 +548,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Network automation'''
       'Monitoring tools'''
       'Security analytics'']
+
     ]
     integrations: ['
       'Network equipment'''
@@ -539,6 +558,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Legacy networks'''
       'Security platforms'']
     ]
+
     useCases: ['
       'Network optimization'''
       'Security enhancement'''
@@ -614,6 +634,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Quality assurance'''
       'Risk management'''
       'Reporting tools'']
+
     ]
     integrations: ['
       'Project management platforms'''
@@ -623,6 +644,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Development platforms'''
       'Testing tools'']
     ]
+
     useCases: ['
       'IT project management'''
       'Digital transformation'''
@@ -692,6 +714,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Assessment tools'''
       'Progress tracking'''
       'Mobile learning'']
+
     ]
     integrations: ['
       'Learning platforms'''
@@ -701,6 +724,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Assessment systems'''
       'Progress tracking'']
     ]
+
     useCases: ['
       'Professional development'''
       'Career advancement'''
@@ -776,6 +800,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Redis'''
       'AWS'''
       'Custom quantum hardware'']
+
     ]
     integrations: ['
       'Enterprise systems'''
@@ -784,6 +809,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Security tools'''
       'Monitoring systems'']
     ]
+
     useCases: ['
       'High-performance computing'''
       'Financial modeling'''
@@ -859,6 +885,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'AWS'''
       'Docker'''
       'Kubernetes'']
+
     ]
     integrations: ['
       'GitHub'''
@@ -871,6 +898,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Azure'''
       'Google Cloud'']
     ]
+
     useCases: ['
       'CI/CD automation'''
       'Infrastructure management'''
@@ -940,6 +968,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Redis'''
       'AWS'''
       'Custom quantum hardware'']
+
     ]
     integrations: ['
       'SIEM systems'''
@@ -963,6 +992,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       'Symantec'''
       'Traditional security tools'']
     ]
+
     marketSize:'
       '$150B cybersecurity market, quantum segment growing 400% annually'''
     growthRate: '400% annual growth'','
@@ -2334,3 +2364,4 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,'
   }]
 ];
 '
+

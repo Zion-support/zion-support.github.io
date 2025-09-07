@@ -1,3 +1,4 @@
+
 import React from "react";""
 import {Link, useLocation} from "react-router-dom";""
 import {Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle} from "lucide-react";""
@@ -43,11 +44,13 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const isAuthenticated = !!user;
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const location = useLocation();
+
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation(),
   const { user } = useAuth(),
   const isAuthenticated = !!user,
+
 
   const navItems = [
     {"
@@ -211,3 +214,4 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
           </Link>
       </div>
     </nav>"
+

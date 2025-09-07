@@ -1,5 +1,6 @@
 
 
+
 import {;
   Form,;
   FormControl,;
@@ -36,11 +37,13 @@ import {;
 
 
 
+
   Form,
   FormControl,
   FormDescription,
   FormField,
   FormItem,
+
   FormLabel,
   FormMessage,;
 "
@@ -356,11 +359,13 @@ if ( {) {
                     <Textarea;"
                       placeholder="Detailed description of your app"""
                       className="min-h-32""
+
                       maxLength={maxDescriptionLength}
                       {...field}
                     />
 </Textarea>
                   </FormControl>
+
                   <FormDescription>
 </FormDescription>
                   </FormDescription>
@@ -411,12 +416,14 @@ if ( {) {
 </FormControl>"
                     <Input placeholder="e.g., 1.0.0" {...field} />"
 </Input>
+
                   </FormControl>
                 </FormItem>
           </div>
         </Form>
       </CardContent>
     </Card>
+
                     <Input;"
                       placeholder="e.g., 1.0.0""
                       {...field}
@@ -489,3 +496,4 @@ if ( {) {
         </Form>;
       </CardContent>;
     </Card>;"
+

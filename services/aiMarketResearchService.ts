@@ -1,3 +1,4 @@
+export interface MarketTrend  {export interface MarketTrend  {id: string;
 
 export interface MarketTrend {
   // TODO: Implement
@@ -5,6 +6,7 @@ export interface MarketTrend {
 export interface MarketTrend {;
   id: string;,
   keyword: string;
+
   searchVolume: number;,
   trendDirection: 'rising' | 'falling' | 'stable';'
   growthRate: number;,
@@ -30,6 +32,7 @@ export interface MarketTrend {
   id: string;,
   keyword: string;
 
+
 }
   id: string;,
   competitor_name: string;
@@ -46,6 +49,7 @@ export interface MarketTrend {
   last_updated: Date;
 
 }
+
 export interface MarketSegment {
   // TODO: Implement
 }
@@ -59,6 +63,7 @@ export interface MarketSegment {
 }
 export interface MarketReport {
   // TODO: Implement
+
 }
   pricingStrategy: string;,
   featureComparison: Record<string, boolean>;
@@ -67,14 +72,15 @@ export interface MarketReport {
 </string>
   feature_comparison: Record < string, boolean>;
   socialMediaPresence: Record < string, number>;
-  last_updated: Date;
-
+  last_updated: Date;}
+}
 }
 export interface MarketSegment {
   // TODO: Implement
 }
   id: string;,
   name: string;
+
   size: number;,
   growth_rate: number,
   demographics: Record < string, any>;
@@ -90,6 +96,7 @@ export interface MarketReport {
   id: string;,
   title: string;
   industry: string;,
+
   summary: string;
   key_findings: string[];,
   market_size: number;
@@ -98,9 +105,18 @@ export interface MarketReport {
 
   data_sources: string[];,
   generated_at: Date,
-  expires_at: Date;
-
+  expires_at: Date;}
 }
+}
+export interface MarketResearchRequest {  success: boolean;}
+  data: {trends?: MarketTrend[];}
+    competitors?: CompetitorAnalysis[];  }
+  async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[] /> {try {const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {      const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {method: 'POST',}
+  headers: {'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'}body: JSON && JSON.stringify(request)})method: 'POST',
+  headers: {'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'}body: JSON && JSON.stringify(request)})if (!response && response.ok) {throw new Error(`HTTP error! status: ${response && response.status}`)}const data  = await response && response.json()} catch (error) {console && console.error('Error analyzing market trends:', error)throw error;}
+    }
 export interface MarketResearchRequest {
   // TODO: Implement
 }
@@ -109,8 +125,8 @@ export interface MarketResearchRequest {
   research_type: 'trends' | 'competitors' | 'segments' | 'comprehensive';','
   timeframe: '7d' | '30d' | '90d' | '1y';'
   includeHistoricalData: boolean,
-  custom_metrics?: string[];
-
+  custom_metrics?: string[];}
+}
 }
 export interface MarketResearchResponse {
   // TODO: Implement
@@ -125,6 +141,7 @@ export interface MarketResearchResponse {
     this && this.baseUrl = baseUrl;
 export class AIMarketResearchService {;
   private apiKey: string;
+
 
   private baseUrl: string;'
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {'
@@ -179,11 +196,13 @@ export class AIMarketResearchService {;
       // Check condition;
 if ( {) {
   $2;
+
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
       return data.trends || [];
+
     } catch (error) {'
       console.error ('Error analyzing market trends:', error);'
       throw error;
@@ -203,11 +222,13 @@ if ( {) {
       // Check condition;
 if ( {) {
   $2;
+
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
       return data.competitors || [];
+
     } catch (error) {'
       console.error ('Error analyzing competitors:', error);'
       throw error;
@@ -227,11 +248,13 @@ if ( {) {
       // Check condition;
 if ( {) {
   $2;
+
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
       return data.segments || [];
+
     } catch (error) {'
       console.error ('Error segmenting market:', error);'
       throw error;
@@ -251,11 +274,13 @@ if ( {) {
       // Check condition;
 if ( {) {
   $2;
+
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
       return data.report;
+
     } catch (error) {'
       console.error ('Error generating comprehensive report:', error);'
       throw error;
@@ -272,11 +297,13 @@ if ( {) {
       // Check condition;
 if ( {) {
   $2;
+
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
       return data.trends || [];
+
     } catch (error) {'
       console.error ('Error getting real - time insights:', error);'
       throw error;
@@ -296,11 +323,13 @@ if ( {) {
       // Check condition;
 if ( {) {
   $2;
+
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
       return data.download_url;
+
     } catch (error) {'
       console.error ('Error exporting report:', error);'
       throw error;
@@ -320,14 +349,17 @@ if ( {) {
       // Check condition;
 if ( {) {
   $2;
+
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
       const data = await response.json ();
       return data.schedule_id;
+
     } catch (error) {'
       console.error ('Error scheduling report:', error);'
       throw error;
+
     }
   }
 }'
@@ -338,17 +370,21 @@ export interface MarketTrend {;
 '
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');'
 export interface MarketTrend {;
+
 '
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');'
+
 export interface MarketTrend {;
   id:string,;
   keyword:string,;
   searchVolume:number,;'
   trendDirection:'rising' | 'falling' | 'stable',;'
   growthRate:number,;
+
   relatedKeywords:string[],;'
   marketOpportunity:'high' | 'medium' | 'low',;'
   timestamp:Date;
+
 }
 ;
 export interface CompetitorAnalysis {;
@@ -361,6 +397,7 @@ export interface CompetitorAnalysis {;
   opportunities:string[],;
   threats:string[],;
   pricingStrategy:string,;
+
   featureComparison:Record<string boolean>,;
 </string>
   socialMediaPresence:Record<string number>,;
@@ -385,3 +422,4 @@ export interface CompetitorAnalysis {;
 </string>'
   async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {;'
 </string>'
+

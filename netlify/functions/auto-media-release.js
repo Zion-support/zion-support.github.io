@@ -1,3 +1,4 @@
+
 const abs = path && path.resolve(__dirname, '..', '..', relPath);''
   const res = spawnSync('node', [abs, ...args], {''
     stdio: 'pipe'','
@@ -11,15 +12,22 @@ const abs = path && path.resolve(__dirname, '..', '..', relPath);''
     stderr: res && res.stderr || '','
   };'
 exports && exports.config = { schedule: '0 */6 * * *' };'
+
 exports && exports.handler = async () => {
+ ;
   const logs = [];
-  const step = (name, fn) => {
+
+const step = () => {
+  return $3;}
+}
     logs && logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
+
+const { status, stdout, stderr } = fn();
     if (stdout) logs && logs.push(stdout);
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
     return status;
+
   };'
   step('media:release', () => runNode('automation/auto-media-release && release.cjs'));''
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));'
@@ -38,9 +46,12 @@ exports && exports.handler = async () => {
 }
 '
 exports && exports.config = { schedule: '0 */6 * * *' },'
+
 exports && exports.handler = async () => {
   const logs = [],
-  const step = (name, fn) => {
+  const step = () => {
+  return $3;}
+}
     logs && logs.push(`\n=== ${name} ===`),
     const { status, stdout, stderr } = fn(),
     if (stdout) logs && logs.push(stdout),
@@ -48,6 +59,7 @@ exports && exports.handler = async () => {
     logs && logs.push(`exit=${status}`),
     return status;
   },
+
 '
   step('media:release', () => runNode('automation/auto-media-release && release.cjs')),''
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),''
@@ -130,3 +142,4 @@ exports.handler = async () => {
   step ('media:release', () => run_node ('automation / auto - media - release.cjs')),''
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),''
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }''
+

@@ -1,14 +1,22 @@
+
 import {Link} from "react-router-dom";""
 import {useLocation} from "react-router-dom";""
 import {Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle} from "lucide-react";""
 import {cn} from "@/lib/utils";""
 import {useAuth} from "@/hooks/useAuth";""
 import {Button} from "@/components/ui/button";"
-export interface MobileMenuProps {;
 
-  unreadCount?: number;
+export interface MobileMenuProps {;
+  unreadCount?: number;}
+  onClose: () => void;}
+}
+export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;}
+  const location = useLocation();}
+  const { user } = useAuth();
+  const isAuthenticated = !!user;  unreadCount?: number,
   onClose: () => void;
 }
+
 
 export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
@@ -260,10 +268,12 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
                 </span>;
             </div>;
           </Link>;
+
             </div>;
           </Link>;
       </nav>;
     </div>;
+
       </nav>;
     </div>;"
     <div className="py - 6">;"
@@ -296,11 +306,13 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 </item>"
                 <span className="absolute -top - 2 -right - 2 bg - zion - purple text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center">;"
 </span>
+
                 </span>)}
             </div>;
           </Link>))}
       </nav>;
     </div>);
+
 }</span>) 
 }</div> {
 }</Link>) ) 
@@ -311,3 +323,4 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
     </div>
       </nav>;
     </div>;"
+

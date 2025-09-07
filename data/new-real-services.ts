@@ -1,5 +1,6 @@
 export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
+
     name: 'LLM Observability Suite',''
     tagline: 'Track latency, cost, quality and drift across all prompts',''
     price: '$199',''
@@ -1623,6 +1624,7 @@ const contact = {;'
   email: 'kleber@ziontechgroup.com',;''
   address: '364 E Main St STE 1008 Middletown DE 19709',;''
   website: 'https://ziontechgroup.com';'
+
 },;
 export const newRealServices: EnhancedRealMicroSaasService[] = [;
   {;'
@@ -1659,8 +1661,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.',;''
     launchDate: '2025-01-10',;'
     customers: 32,;
-    rating: 4.8,;
-    reviews: 22;
+    rating: 4.8,;}
+    reviews: 22;}
   },;
   {;'
     id: 'ai-sales-email-copilot',;''
@@ -1696,8 +1698,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Sequencer, enrichment adapters, and warm-up utilities.',;''
     launchDate: '2024-12-20',;'
     customers: 120,;
-    rating: 4.7,;
-    reviews: 58;
+    rating: 4.7,;}
+    reviews: 58;}
   },;
   {;'
     id: 'security-posture-as-code',;''
@@ -1733,8 +1735,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Policy engine plus cloud/K8s scanners and fix generators.',;''
     launchDate: '2025-01-05',;'
     customers: 18,;
-    rating: 4.6,;
-    reviews: 14;
+    rating: 4.6,;}
+    reviews: 14;}
   },;
   {;'
     id: 'etl-observability-starter',;''
@@ -1770,8 +1772,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Light agents and metadata collectors with warehouse connectors.',;''
     launchDate: '2025-01-12',;'
     customers: 25,;
-    rating: 4.5,;
-    reviews: 12;
+    rating: 4.5,;}
+    reviews: 12;}
   },;
   {;'
     id: 'api-performance-shield',;''
@@ -1807,8 +1809,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Managed edge configs and anomaly ML with safe rollout tools.',;''
     launchDate: '2025-01-15',;'
     customers: 14,;
-    rating: 4.7,;
-    reviews: 9;
+    rating: 4.7,;}
+    reviews: 9;}
   },;
   {;'
     id: 'ai-product-analytics',;''
@@ -1844,8 +1846,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Event capture SDKs and warehouse-first analytics.',;''
     launchDate: '2025-01-02',;'
     customers: 41,;
-    rating: 4.6,;
-    reviews: 20;
+    rating: 4.6,;}
+    reviews: 20;}
   },;
   {;'
     id: 'ai-support-deflection',;''
@@ -1881,8 +1883,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Embeddable widget and handoff connectors.',;''
     launchDate: '2024-12-15',;'
     customers: 75,;
-    rating: 4.7,;
-    reviews: 48;
+    rating: 4.7,;}
+    reviews: 48;}
   },;
   {;'
     id: 'cloud-cost-autopilot',;''
@@ -1918,8 +1920,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Read-only billing analysis with PR-based changes.',;''
     launchDate: '2025-01-03',;'
     customers: 19,;
-    rating: 4.5,;
-    reviews: 11;
+    rating: 4.5,;}
+    reviews: 11;}
   },;
   {;'
     id: 'privacy-vault',;''
@@ -1955,8 +1957,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Drop-in SDKs and proxy-based tokenization.',;''
     launchDate: '2025-01-07',;'
     customers: 9,;
-    rating: 4.6,;
-    reviews: 7;
+    rating: 4.6,;}
+    reviews: 7;}
   },;
   {;'
     id: 'ai-fraud-detection-lite',;''
@@ -1992,8 +1994,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Streaming and batch detectors with human-in-the-loop review.',;''
     launchDate: '2025-01-09',;'
     customers: 11,;
-    rating: 4.5,;
-    reviews: 8;
+    rating: 4.5,;}
+    reviews: 8;}
   },;
   {;'
     id: 'managed-postgres-ha-pro',;''
@@ -2029,8 +2031,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Managed cluster with observability and runbooks.',;''
     launchDate: '2025-01-16',;'
     customers: 8,;
-    rating: 4.6,;
-    reviews: 5;
+    rating: 4.6,;}
+    reviews: 5;}
   },;
   {;'
     id: 'browser-performance-monitor-pro',;''
@@ -2066,8 +2068,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Agent + dashboards + anomaly alerts.',;''
     launchDate: '2025-01-17',;'
     customers: 12,;
-    rating: 4.5,;
-    reviews: 6;
+    rating: 4.5,;}
+    reviews: 6;}
   },;
   {;'
     id: 'seo-automation-studio',;''
@@ -2103,8 +2105,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Crawlers, fixers, programmatic builder.',;''
     launchDate: '2025-01-18',;'
     customers: 10,;
-    rating: 4.4,;
-    reviews: 4;
+    rating: 4.4,;}
+    reviews: 4;}
   },;
   {;'
     id: 'webhook-relay-replay-pro',;''
@@ -2140,8 +2142,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Broker + storage + replayer UI.',;''
     launchDate: '2025-01-19',;'
     customers: 7,;
-    rating: 4.6,;
-    reviews: 3;
+    rating: 4.6,;}
+    reviews: 3;}
   },;
   {;'
     id: 'pdf-render-api-pro',;''
@@ -2177,8 +2179,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Isolated renderer pool, signed URLs.',;''
     launchDate: '2025-01-18',;'
     customers: 22,;
-    rating: 4.6,;
-    reviews: 10;
+    rating: 4.6,;}
+    reviews: 10;}
   },;
   {;'
     id: 'api-observability-starter-pro',;''
@@ -2214,8 +2216,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'SDKs, collectors, quick dashboards.',;''
     launchDate: '2025-01-17',;'
     customers: 9,;
-    rating: 4.5,;
-    reviews: 4;
+    rating: 4.5,;}
+    reviews: 4;}
   },;
   {;'
     id: 'sso-in-a-box-pro',;''
@@ -2251,8 +2253,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Hosted broker + mappings UI.',;''
     launchDate: '2025-01-17',;'
     customers: 6,;
-    rating: 4.7,;
-    reviews: 3;
+    rating: 4.7,;}
+    reviews: 3;}
   },;
   {;'
     id: 'it-asset-discovery-agent-pro',;''
@@ -2288,8 +2290,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Scanners, parsers, CMDB sync.',;''
     launchDate: '2025-01-16',;'
     customers: 5,;
-    rating: 4.4,;
-    reviews: 2;
+    rating: 4.4,;}
+    reviews: 2;}
   },;
   {;'
     id: 'vendor-risk-automation-lite',;''
@@ -2325,8 +2327,10 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     implementationDetails: 'Portal + integrations + reports.',;''
     launchDate: '2025-01-19',;'
     customers: 6,;
+
     rating: 4.5;,
   reviews: 3;
+
   }
 ];
 '

@@ -1,3 +1,4 @@
+
 import { Check, X } from 'lucide-react''
 TableBody,
   TableCell,
@@ -318,11 +319,13 @@ export function EnterprisePricingTable() {
                         variant = {plan.popular ? 'default' : 'outline', }'
                       >;
 </Button>
+
                       </Button>;
                     </div>;
                   </TableHead>))}
               </TableRow>;
             </TableHeader>;
+
             <TableBody>;
 </TableBody>
                 <TableRow key={feature.name}>;
@@ -343,10 +346,12 @@ export function EnterprisePricingTable() {
 </Check>)"
                         <X className="h - 5 w - 5 text - muted - foreground mx - auto" />)}"
 </X>
+
                     </TableCell>))}
                 </TableRow>))}
             </TableBody>;
           </Table>;
+
         </div>;"
         <div className='mt - 8 text - center text - sm text - muted - foreground'>;'
 </div>
@@ -358,3 +363,4 @@ export function EnterprisePricingTable() {
         </div>;
       </div>;
     </section>);"
+

@@ -1,5 +1,6 @@
 
 
+
 import { UserProfile, UserDetails  } from '@/types/auth';''
 import { supabase  } from '@/integrations/supabase/client';''
 import { Message, Conversation  } from '@/types/messaging';''
@@ -15,6 +16,7 @@ type UserWithProfile = UserProfile | UserDetails | null;
  */
 export function useMessages(
   user: UserWithProfile;,
+
   active_conversation: Conversation | null;
   active_messages: Message[];,)
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;,
@@ -22,12 +24,10 @@ export function useMessages(
   set_conversations: (updater: (prev: Conversation[]) => Conversation[]) => void;,
   setUnreadCount: (updater: (prev: number) => number) => void;,
   setIsLoading: (loading: boolean) => void;
-
-      
-      if (unreadMessages && unreadMessages.length > 0) {
-
-        await markAsRead(conversationId)
+      if (unreadMessages && unreadMessages.length > 0) {}
+        await markAsRead(conversationId)}
       }
+
     } catch (error) {'
       console && console.error('Error fetching messages:', error)'
   fetch_conversations: () => Promise < void>) {
@@ -81,6 +81,7 @@ import { UserProfile, UserDetails } from '@/types/auth',;''
 import { supabase } from '@/integrations/supabase/client',;''
 import { Message, Conversation } from '@/types/messaging',;''
 import { toast } from '@/hooks/use-toast',;'
+
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null,;
 /**;
@@ -95,9 +96,11 @@ export function useMessages(;
   setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void,;
   setUnreadCount: (updater: (prev: number) => number) => void,;
   setIsLoading: (loading: boolean) => void,;
+
   fetchConversations: () => Promise<void>;
 </void>
   fetchConversations:() => Promise<void>;
 </void>
 fetchConversations: () => Promise<void>) {
 </void>'
+

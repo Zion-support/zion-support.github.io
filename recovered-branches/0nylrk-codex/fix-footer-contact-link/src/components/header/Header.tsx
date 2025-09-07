@@ -1,4 +1,5 @@
 
+
 import { Link  } from 'react-router-dom';''
 import { Logo  } from './Logo';''
 import { UserMenu  } from './UserMenu';''
@@ -58,20 +59,21 @@ export interface HeaderProps {
     primaryColor: string;,
   backgroundColor: string;
     textColor: string;
+
   }
 }
-
-
-
-export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
+export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;}
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
+
   const navigate = useNavigate();"
   const [query, setQuery] = useState("");"
+
   const searchSuggestions = generateSearchSuggestions();
-export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
+export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {}
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
+
   const navigate = useNavigate();"
   const [query, setQuery] = useState("");"
   const searchSuggestions = generateSearchSuggestions();
@@ -177,11 +179,13 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 
 
 
+
           {!hideLogin && <UserMenu />}
 </UserMenu>
         </div>
       </div>
     </header>
+
     <header;"
       className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md";"
       style={header_style}
@@ -253,3 +257,4 @@ return (<header <div className="ml-6 flex-1" > <MainNavigation /> </div> <Enhanc
   !hideLogin && <UserMenu /> 
 </UserMenu>)
 }</div> </div> </header>) "
+

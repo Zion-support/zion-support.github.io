@@ -1,3 +1,4 @@
+
 interface QuoteDetailsProps {
   // TODO: Implement
 }
@@ -283,10 +284,12 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
                   <Mail className="h - 4 w - 4 text - gray - 500" />;"
 </Mail>
                   <span>{quote.requester_email}</span>;
+
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
+
           <Card>;
 </Card>"
             <CardContent className="pt - 6">;"
@@ -305,11 +308,13 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
                   <Clock className="h - 4 w - 4 text - gray - 500" />;"
 </Clock>
                   <span > Timeline: {quote.timeline}</span>;
+
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
         </div>;"
+
         <Card className="mt - 6">;"
 </Card>"
           <CardContent className="pt - 6">;"
@@ -353,3 +358,4 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   quote.budget min ';')'
 }` : 'Not specified');'
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>);'
+

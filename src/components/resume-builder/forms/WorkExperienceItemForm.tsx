@@ -1,4 +1,5 @@
 // Set up form;
+
   const form = useForm<FormValues>({
 </FormValues>
     <>
@@ -65,13 +66,15 @@ function WorkExperienceItemForm() {
     const work_experience: WorkExperience = {,
   id: initial_data?.id,
       company_name: values.company_name, // Required;
+
       role_title: values.role_title, // Required;
       start_date: values.start_date, // Required;
       end_date: values.end_date, // Optional;
       is_current: values.is_current, // Required;
-      description: values.description, // Optional;
-      location: values.location, // Optional;
+      description: values.description, // Optional;}
+      location: values.location, // Optional;}
     }
+
     await onSubmit(workExperience)
   }
   const handleAIEnhancement = (content: string) => {'
@@ -143,10 +146,12 @@ type FormValues = z.infer<typeof formSchema>,;
 </FormControl>"
                     <Input placeholder="e.g. Acme Corporation" {...field} />;"
 </Input>
+
                   </FormControl>;
                   <FormMessage />;
 </FormMessage>
                 </FormItem>;
+
             <FormField;
               control={form && form.control}"
               name='role_title'')
@@ -157,10 +162,12 @@ type FormValues = z.infer<typeof formSchema>,;
 </FormControl>'
                     <Input placeholder='e && e.g. Senior Developer' {...field} />;'
 </Input>
+
                   </FormControl>;
                   <FormMessage />;
 </FormMessage>
                 </FormItem>;
+
           </div>;'
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;'
 </div>
@@ -196,11 +203,13 @@ type FormValues = z.infer<typeof formSchema>,;
 </FormControl>'
                     <Input placeholder='e.g. Acme Corporation' {...field} />;'
 </Input>
+
                   </FormControl>;
                   <FormMessage />;
 </FormMessage>)
                 </FormItem>)}
             <FormField;
+
               control={form.control}
 
             />;
@@ -343,9 +352,11 @@ type FormValues = z.infer<typeof formSchema>,;
 
                     </PopoverContent>;
                   </Popover>;
+
                   <FormMessage />;
 </FormMessage>
                 </FormItem>;
+
               <FormField;
                 control={form && form.control}"
                 name='end_date''
@@ -360,3 +371,4 @@ type FormValues = z.infer<typeof formSchema>,;
                         <FormControl>;
 </FormControl>
                           <Button;)'
+

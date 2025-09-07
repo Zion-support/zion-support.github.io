@@ -1,3 +1,4 @@
+
 isDeploying;
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
@@ -340,10 +341,12 @@ interface SmartContractDeploymentProps {;
             <div className="max - h-52 overflow - y-auto bg - background p - 3 rounded text - xs font - mono">;"
 </div>
               <pre>{solidity_code.slice (0, 500)}...</pre>;
+
             </div>;
           </div>;
         </div>;
       </CardContent>;"
+
       <CardFooter className="flex justify - between">;"
 </CardFooter>"
         <Button variant="outline" on_click={handleDownloadSolidity}>;"
@@ -371,3 +374,4 @@ interface SmartContractDeploymentProps {;
   is_deploying ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Deploying... </>) : ('Deploy Contract');'
 </Loader2>
 }</Button> </CardFooter> </Card>);'
+

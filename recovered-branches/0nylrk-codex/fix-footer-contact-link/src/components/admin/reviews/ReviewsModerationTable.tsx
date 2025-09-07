@@ -1,4 +1,5 @@
 
+
 import {useState} from "react";""
 import {useMutation} from "@tanstack/react-query";""
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";""
@@ -13,29 +14,35 @@ import { format } from "date-fns",""
 import { toast } from "@/hooks/use-toast",""
 import { supabase } from "@/integrations/supabase/client",""
 import { Review, ReviewStatus } from "@/types/reviews","
+
 import {
   // TODO: Implement
 }
   Table,
   TableBody,
   TableCell,
+
   TableHead,
   TableHeader,"
   TableRow} from "@/components/ui/table",""
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
+
 import {
   // TODO: Implement
 }
   Dialog,
   DialogContent,
   DialogDescription,
+
   DialogFooter,
   DialogHeader,"
   DialogTitle} from "@/components/ui/dialog","
+
 import {
   // TODO: Implement
 }
   DropdownMenu,
+
   DropdownMenuContent,
   DropdownMenuItem,"
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",""
@@ -110,18 +117,20 @@ interface ReviewsModerationTableProps {
           />;
 </Star>
       </div>;
+
   const [selected_review, setSelectedReview] = useState < Review | null>(null);
-  const [viewDetailsOpen, setViewDetailsOpen] = useState (false);
-;
+  const [viewDetailsOpen, setViewDetailsOpen] = useState (false);}
+;}
   const { mutate: updateReviewStatus, is_pending } = use_mutation ({
-    mutation_fn: async ({
-      review_id,
+    mutation_fn: async ({}
+      review_id,}
       status}: {
-      review_id: string,
-      status: ReviewStatus;
+      review_id: string,}
+      status: ReviewStatus;}
   }
 ;)
   const get_initials = (name: string) =>: any {
+
   // TODO: Implement
 }
     return name;"
@@ -216,9 +225,11 @@ if ( {) {
                       </span>;"
                           : <User className="h-4 w-4" />}"
 </User>
+
                       </AvatarFallback>;
                   </div>;
                 </div>;
+
               </TableCell>;)
               <TableCell>{renderStars(review && review.rating)}</TableCell>;
               <TableCell>;
@@ -321,10 +332,12 @@ if ( {) {
                       <span className="text - sm font - medium">Anonymous</span>) : (""
                       <span className="text - sm font - medium">;"
 </span>)
+
                       </span>)}
                   </div>;
                 </div>;
               </TableCell>;
+
               <TableCell>{render_stars (review.rating)}</TableCell>;
               <TableCell>;
 </TableCell>
@@ -876,3 +889,4 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
     </>
   )
 }"
+

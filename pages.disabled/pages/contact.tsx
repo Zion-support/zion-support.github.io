@@ -5,10 +5,12 @@
 
 
 
+
 import React, { useState } from 'react';''
 import Head from 'next/head';''
 import Link from 'next/link';''
 import { motion } from 'framer-motion';'
+
 import { ;
   Phone, ;
   Mail, ;
@@ -17,6 +19,7 @@ import { ;
   ArrowRight, ;
   Send,;
   MessageCircle,;
+
   Globe,;
   CheckCircle;'
 } from 'lucide-react';''
@@ -79,11 +82,13 @@ const "ContactPage": React.FC = () => {;"
 </motion>"
                     <Mail className="w-5 h-5"  />;"
 </Mail>
+
                   </motion && motion.a>;
                 </div>;
               </motion && motion.div>;
             </div>;
           </section>;
+
     <MainLayout;"
       title=\"Contact Us - Zion Tech Group\"""
       description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\""
@@ -125,9 +130,11 @@ const "ContactPage": React.FC = () => {;"
 </a>
                   </a>"
                   <p className=\"text-gray-600\">{info.details}</p>"
+
               </div>
           </div>
         </div>
+
       </section>"
       <section className=\"py-20 bg-gray-50\">"
 </section>"
@@ -186,9 +193,11 @@ const "ContactPage": React.FC = () => {;"
 </a>
                   </a>;"
                   <p className=\"text-gray-600\">{info && info.details}</p>;"
+
               </div>;
           </div>;
         </div>;
+
       </section>;"
       <section className=\"py-20 bg-gray-50\">;"
 </section>"
@@ -214,9 +223,11 @@ const "ContactPage": React.FC = () => {;"
                       name=\"firstName\""
                       required;"
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\""
+
                     />
 </input>
                   </div>
+
                   <div>
 </div>"
                     <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
@@ -228,10 +239,12 @@ const "ContactPage": React.FC = () => {;"
                       name=\"lastName\""
                       required;"
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\""
+
                     />
 </input>
                   </div>
                 </div>
+
                 <div>
 </div>"
                   <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
@@ -243,9 +256,11 @@ const "ContactPage": React.FC = () => {;"
                     name=\"email\""
                     required;"
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\""
+
                   />
 </input>
                 </div>
+
                 <div>
 </div>"
                   <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
@@ -256,9 +271,11 @@ const "ContactPage": React.FC = () => {;"
                     id=\"company\"""
                     name=\"company\"""
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\""
+
                   />
 </input>
                 </div>
+
                 <div>
 </div>"
                   <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
@@ -269,9 +286,11 @@ const "ContactPage": React.FC = () => {;"
                     id=\"phone\"""
                     name=\"phone\"""
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\""
+
                   />
 </input>
                 </div>
+
                 <div>
 </div>"
                   <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
@@ -351,6 +370,7 @@ const "ContactPage": React.FC = () => {;"
 </Mail>"
                         <a href={`\"mailto\": ${office.email}`} className=\""hover\": text-blue-600\">"
 </a>
+
                         </a>
                       </div>
                     </div>
@@ -359,6 +379,7 @@ const "ContactPage": React.FC = () => {;"
             </div>
           </div>
         </div>
+
       </section>"
       <section className=\"py-20\">"
 </section>"
@@ -389,11 +410,13 @@ const "ContactPage": React.FC = () => {;"
               </h3>"
               <p className=\"text-gray-600\">"
 </p>
+
               </p>
             </div>
           </div>
         </div>
       </section>
+
     </MainLayout>"
           <section className=\"py-20\">"
 </section>"
@@ -436,11 +459,13 @@ const "ContactPage": React.FC = () => {;"
                       </a>"
                       <p className=\"text-gray-600 whitespace-pre-line\">"
 </p>
+
                       </p>
                   </motion.div>)
                 ))}
               </div>
             </div>
+
           </section>"
           <section className=\"bg-gray-50 py-20\">"
 </section>"
@@ -540,11 +565,13 @@ const "ContactPage": React.FC = () => {;"
               </h3>;"
               <p className=\"text-gray-600\">;"
 </p>
+
               </p>;
             </div>;
           </div>;
         </div>;
       </section>;
+
     </MainLayout>;"
           <section className=\"py-20\">;"
 </section>"
@@ -587,11 +614,13 @@ const "ContactPage": React.FC = () => {;"
                       </a>;"
                       <p className=\"text-gray-600 whitespace-pre-line\">;"
 </p>
+
                       </p>;
                   </motion && motion.div>;
                 ))}
               </div>;
             </div>;
+
           </section>;"
           <section className=\"bg-gray-50 py-20\">;"
 </section>"
@@ -633,9 +662,11 @@ const "ContactPage": React.FC = () => {;"
                         required;"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"""
                         placeholder=\"Your full name\""
+
                        />
 </inputtype>
                     </div>
+
                     <div>
 </div>"
                       <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
@@ -647,10 +678,13 @@ const "ContactPage": React.FC = () => {;"
                         required;"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"""
                         placeholder=\"your.email@example.com\""
+
                        />
 </input>
                     </div>
                   </div>
+
+
 
                     <div>
 </div>"
@@ -662,6 +696,7 @@ const "ContactPage": React.FC = () => {;"
                        />;
 </input>
                     </div>;
+
                   </div>;"
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">;"
 </div>"
@@ -677,9 +712,11 @@ const "ContactPage": React.FC = () => {;"
                         name=\"phone\"""
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"""
                         placeholder=\"+1 (555) 123-4567\""
+
                        />
 </inputtype>
                     </div>
+
                     <div>
 </div>"
                       <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
@@ -690,10 +727,12 @@ const "ContactPage": React.FC = () => {;"
                         name=\"company\"""
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"""
                         placeholder=\"Your company name\""
+
                        />
 </input>
                     </div>
                   </div>
+
                     </label>
                     <select;"
                       id=\"service\"""
@@ -704,10 +743,12 @@ const "ContactPage": React.FC = () => {;"
                       <option value=\"">Select a service</option>"
                         <option key={index} value={service}>
 </option>
+
                         </option>
                     </select>
                   </div>
                     </label>
+
                     </div>;
                   </div>;"
                   <div className=\"mb-6\">;"
@@ -849,9 +890,11 @@ const "ContactPage": React.FC = () => {;"
                           onChange={handleInputChange}"
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"""
                           placeholder=\"Your full name\""
+
                         />
 </input>
                       </div>
+
                       <div>
 </div>"
                         <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-300 mb-2\">"
@@ -866,16 +909,20 @@ const "ContactPage": React.FC = () => {;"
                           onChange={handleInputChange}"
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"""
                           placeholder=\"your@email.com\""
+
                         />
 </input>
                       </div>
                     </div>
+
                       <div>
 </div>"
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">"
 </label>
+
                         </label>
                       </div>;
+
                     </div>;"
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">;"
 </div>"
@@ -890,6 +937,7 @@ const "ContactPage": React.FC = () => {;"
                           type=\"text\"""
                           id=\"company\"""
                           name=\"company\""
+
                           value={formData.company}
                           onChange={handleInputChange}"
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"""
@@ -897,6 +945,7 @@ const "ContactPage": React.FC = () => {;"
                         />
 </input>
                       </div>
+
                       <div>
 </div>"
                         <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-300 mb-2\">"
@@ -906,6 +955,7 @@ const "ContactPage": React.FC = () => {;"
                           type=\"tel\"""
                           id=\"phone\"""
                           name=\"phone\""
+
                           value={formData.phone}
                           onChange={handleInputChange}"
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"""
@@ -914,6 +964,7 @@ const "ContactPage": React.FC = () => {;"
 </input>
                       </div>
                     </div>
+
                     <div>
 </div>"
                       <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-300 mb-2\">"
@@ -941,6 +992,7 @@ const "ContactPage": React.FC = () => {;"
                         name=\"message\""
                         required;
                         rows={6}
+
                         value={formData.message}
                         onChange={handleInputChange}"
                         className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"""
@@ -948,6 +1000,7 @@ const "ContactPage": React.FC = () => {;"
                       />
 </textarea>
                     </div>
+
                     <button;"
                       type=\"submit\""
                       disabled={isSubmitting}"
@@ -987,10 +1040,12 @@ const "ContactPage": React.FC = () => {;"
                         <h3 className=\"text-lg font-semibold text-white mb-1\">{info.title}</h3>""
                         <p className=\"text-cyan-400 font-medium mb-1\">{info.details}</p>""
                         <p className=\"text-gray-400 text-sm\">{info.description}</p>"
+
                       </div>
                     </div>
                 </div>
               </div>
+
             </div>"
           <section className="py-20">;"
 </section>"
@@ -1020,6 +1075,7 @@ const "ContactPage": React.FC = () => {;"
 </motion>"
                     <h3 className="text-lg font-semibold text-gray-900">;"
 </h3>
+
                     </h3>;
                   </motion && motion.div>;
                 ))}
@@ -1031,6 +1087,8 @@ const "ContactPage": React.FC = () => {;"
     </>;
   );
 }
+
+
 
 
 
@@ -1050,6 +1108,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 
 
 
+
 "
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet, Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';'
 }'
@@ -1058,3 +1117,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;]'
+

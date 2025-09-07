@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";""
 import { Card, CardContent } from "@/components/ui/card";""
 import { Button } from "@/components/ui/button";""
@@ -78,10 +79,12 @@ export function PortfolioBuilder() {
                 <Button;
                   onClick={() => setShowAddProject(true)}
 </Button>
+
                 </Button>
               </div>
             </CardContent>
           </Card>
+
     </div>"
       <div className="flex justify - center items - center h - 64">;"
 </div>"
@@ -153,3 +156,4 @@ export function PortfolioBuilder() {
             </CardContent>;
           </Card>))}
     </div>);"
+

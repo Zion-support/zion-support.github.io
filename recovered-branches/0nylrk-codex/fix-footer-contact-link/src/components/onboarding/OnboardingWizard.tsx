@@ -1,5 +1,6 @@
 
 
+
 import { useState, useEffect  } from 'react';''
 import { useNavigate  } from 'react-router-dom';''
 import { useAuth  } from '@/hooks/useAuth';''
@@ -28,10 +29,12 @@ interface WizardStep {
   action: {'
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';''
 import {cn} from '@/lib/utils';'
+
 interface WizardStep {;
-  title: string,;
+  title: string,,
   description: string,;
   icon: React && React.ReactNode,;
+
   action: {;,
   text: string,;
     url: string;
@@ -41,10 +44,12 @@ interface WizardStep {;
 
 interface OnboardingWizardProps {;'
   type: 'client' | 'talent',;'
+
   onComplete: () => void,;
-  onSkip: () => void,;
-  className?: string;
+  onSkip: () => void,;}
+  className?: string;}
 }
+
 
 export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
 
@@ -86,13 +91,16 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import Rocket from 'lucide-react/dist/esm/icons/rocket',;''
 import { FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react',;''
 import { cn } from '@/lib/utils',;'
+
 interface WizardStep {;
-  title: string,;
+  title: string,,
   description: string,;
   icon: React.ReactNode,;
+
   action: {;,
   text: string,;
     url: string;
+
   },;
   skipText?: string;
 }
@@ -102,6 +110,7 @@ interface OnboardingWizardProps {;'
   onComplete: () => void,;
   onSkip: () => void,;
   className?: string;
+
 
 
 }
@@ -167,9 +176,13 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />"
 </Rocket>
     if (currentStep < steps.length - 1) {]
+
       navigate(steps[currentStep].action.url);
-      setCurrentStep(currentStep + 1)
+      setCurrentStep(currentStep + 1)) => {
+  return $3;}
+}
     } else {
+
   // TODO: Implement
 }
       // Last step;
@@ -179,9 +192,13 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   }
   // Skip the current step;
   const handleSkip = () => {
+
     if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1)
+      setCurrentStep(currentStep + 1)) => {
+  return $3;}
+}
     } else {
+
   // TODO: Implement
 }
       // Last step;
@@ -190,31 +207,37 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   }"
         text: "Enable Matchmaking",""
         url: "/talent-dashboard""
+
       }
     }
   };
   ],;"
   const steps = type === 'client' ? clientSteps : talentSteps,;'
   // Navigate to the specified URL;
-  const handleAction = () => {;
+  const handleAction = (;
     if (currentStep < steps.length - 1) {;
       navigate(steps[currentStep].action.url),;
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1);) => {
+  return $3;}
+}
     } else {;
       // Last step;
-      navigate(steps[currentStep].action.url),;
-      onComplete();
+      navigate(steps[currentStep].action.url),;}
+      onComplete();}
     }
   },;
   // Skip the current step;
-  const handleSkip = () => {;
+  const handleSkip = (;
     if (currentStep < steps.length - 1) {;
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1);) => {
+  return $3;}
+}
     } else {;
-      // Last step;
-      onSkip();
+      // Last step;}
+      onSkip();}
     }
   },
+
 
 
   
@@ -243,24 +266,30 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 </Eye>"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,;"
 </Rocket>
+
     if (currentStep < steps && steps.length - 1) {;
       navigate(steps[currentStep].action && action.url);
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1);) => {
+  return $3;}
+}
     } else {;
       // Last step;
-      navigate(steps[currentStep].action && action.url);
-      onComplete();
+      navigate(steps[currentStep].action && action.url);}
+      onComplete();}
     }
   };
   // Skip the current step;
-  const handleSkip = () => {;
+  const handleSkip = (;
     if (currentStep < steps && steps.length - 1) {;
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1);) => {
+  return $3;}
+}
     } else {;
-      // Last step;
-      onSkip();
+      // Last step;}
+      onSkip();}
     }
   };
+
 
   return ()"
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>;"
@@ -416,3 +445,4 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
           </Button>
       </CardFooter>
     </Card>"
+

@@ -1,3 +1,4 @@
+
 interface BrowseItem {;
 import React, { useState } from 'react';''
 import { Card, CardContent } from '@/components/ui/ card';''
@@ -18,6 +19,7 @@ interface BrowseItem {
   // TODO: Implement
 }
   id: string;,
+
   title: string;
   subtitle: string;,
   description: string;
@@ -25,7 +27,8 @@ interface BrowseItem {
   badges: string[];
   price?: string;
   image?: string;
-  match?: number;
+  match?: number;timePosted?: string;
+
 
   timePosted?: string;
 
@@ -462,9 +465,12 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
 </ChevronRight>"
                 View Details <ChevronRight className="h - 4 w - 4" />;"
 </ChevronRight>
+
               </Button>;
             </div>;
           </CardContent>;
         </Card>))}
+
     </div>);
     </div>;"
+

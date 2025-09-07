@@ -1,4 +1,5 @@
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;""
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;""
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";""
@@ -34,10 +35,12 @@ const corsHeaders = {;"
 serve(async (req) => {;
   // Handle CORS preflight requests;'
   if (req.method === 'OPTIONS') {;'
+
     return new Response(null, { headers: corsHeaders });
   }
 ;
   try {;
+
     // Get the OpenAI API key from environment variables;'
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;'
     if (!apiKey) {;'
@@ -363,3 +366,4 @@ serve(async (req) => {;
 });
 
 '
+

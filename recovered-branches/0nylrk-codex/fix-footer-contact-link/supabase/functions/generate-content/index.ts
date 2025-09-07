@@ -1,4 +1,5 @@
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;""
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;""
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;""
@@ -39,6 +40,9 @@ interface ContentGenerationRequest {
   include_image?: boolean;
 "
   content_type: 'blog' | 'newsletter';'
+
+  prompt?: string;
+  topic?: string;  content_type: 'blog' | 'newsletter';
   prompt?: string;
   topic?: string;
 }
@@ -47,6 +51,7 @@ interface GeneratedBlogContent {
 }
   title: string;,
   meta_description: string;
+
   body: string;,
   tags: string[];'
   contentType: 'blog' | 'newsletter','
@@ -185,13 +190,14 @@ serve(async (req) => {
     // Call OpenAI API;"
           { role: "system", content: systemPrompt },""
           { role: "user", content: userPrompt }"
+
         ],
         temperature: 0.7})}),
-
-    if (!response.ok) {
-      const errorData = await response.json();
+    if (!response.ok) {}
+      const errorData = await response.json();}
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
+
 "
         "Authorization": `Bearer ${openAIApiKey}`,""
         "Content-Type": "application/json"},"
@@ -223,6 +229,7 @@ serve(async (req) => {
         messages: ["
           { role: "system", content: systemPrompt }""
           { role: "user", content: userPrompt }"
+
   tweet_summary?: string,
   image_prompt?: string;
 }
@@ -231,6 +238,7 @@ interface GeneratedNewsletterContent {
 }
   subject: string;,
   preview_text: string;
+
   body: string,
   cta: string;
 })
@@ -239,10 +247,12 @@ serve (async (req) => {
   // Check condition;
 if ( {) {
   $2;
+
 }
     return new Response (null, { headers: cors_headers });
   }
   try {
+
   // TODO: Implement
 }"
     const openAIApiKey = Deno.env.get ("OPENAI_API_KEY");"
@@ -256,20 +266,25 @@ if ( {) {
 ;
     // Default topic if none provided;"
     const content_topic = topic || "AI freelancing marketplace trends";"
+
 ;
     // Build the prompt based on content type;
     let system_prompt: string;
     let user_prompt: string,
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       system_prompt = `You are an expert content creator for Zion, an AI freelancing marketplace.;
       You create engaging, professional blog content that is SEO - optimized and provides valuable insights for both clients and AI freelancers.;
       Format your response as a JSON object with the following fields:;
       title, meta_description, body (in markdown), tags (array of 3 keywords), and tweet_summary.`;
+
 ;"
       user_prompt = prompt || `Generate a 700 - word blog article on "${content_topic}" written in a professional, SEO - optimized tone.;"
+
       Include subheadings, summary intro, and conclusion. Focus on actionable advice and industry insights.`;
     } else {
   // TODO: Implement
@@ -282,9 +297,10 @@ if ( {) {
       user_prompt = prompt || `Create a weekly newsletter for Zion marketplace users featuring: - Platform updates summary;
       - Featured AI talent spotlight;
       - Top blog post summary;
-      - Industry news roundup;
-      Keep it concise with clear sections and an engaging call - to - action to browse jobs or talent.`;
+      - Industry news roundup;}
+      Keep it concise with clear sections and an engaging call - to - action to browse jobs or talent.`;}
     }
+
     // Call OpenAI API;"
     const response = await fetch ("https://api.openai.com / v1 / chat / completions", {""
       method: "POST","
@@ -302,14 +318,13 @@ if ( {) {
           { role: "system", content: systemPrompt },""
           { role: "user", content: userPrompt }"
         ],)
+
         temperature: 0.7})}),
-
-
-
-    if (!response.ok) {
-      const errorData = await response.json();
+    if (!response.ok) {}
+      const errorData = await response.json();}
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
+
 
 
 
@@ -324,15 +339,16 @@ if ( {) {
         method: "POST"",
   headers: {
 )
-        temperature: 0 && 0.7})});
 
-    if (!response && response.ok) {
-      const errorData = await response && response.json();
+        temperature: 0 && 0.7})});
+    if (!response && response.ok) {}
+      const errorData = await response && response.json();}
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
-
     const data = await response && response.json();
     const generatedContent = JSON && JSON.parse(data && data.choices[0].message && message.content);
+            }
+
     
     // If image is requested for blog post, generate an image prompt;"
     if (contentType === 'blog' && includeImage) {''
@@ -352,11 +368,13 @@ if ( {) {
           messages: [
 
             }]
+
           ];
           temperature: 0 && 0.7,)
           max_tokens: 100})});
 ;
 serve(async (req) => {;
+
   // Handle CORS preflight requests;"
   if (req.method === "OPTIONS") {;"
     return new Response(null, { headers: corsHeaders });
@@ -371,15 +389,18 @@ serve(async (req) => {;
     const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest,;
     // Default topic if none provided;"
     const contentTopic = topic || "AI freelancing marketplace trends",;"
+
     // Build the prompt based on content type;
     let systemPrompt: string,;
     let userPrompt: string,;"
     if (contentType === 'blog') {;'
       systemPrompt = `You are an expert content creator for Zion, an AI freelancing marketplace.;
       You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.;
+
       Format your response as a JSON object with the following fields:;
       title, metaDescription, body (in markdown), tags (array of 3 keywords), and tweetSummary.`,;'
       userPrompt = prompt || `Generate a 700-word blog article on "${contentTopic}" written in a professional, SEO-optimized tone.;"
+
       Include subheadings, summary intro, and conclusion. Focus on actionable advice and industry insights.`;
     } else {;
       systemPrompt = `You are an expert email newsletter writer for Zion, an AI freelancing marketplace.;
@@ -389,10 +410,11 @@ serve(async (req) => {;
       userPrompt = prompt || `Create a weekly newsletter for Zion marketplace users featuring: - Platform updates summary;
       - Featured AI talent spotlight;
       - Top blog post summary;
-      - Industry news roundup;
-      Keep it concise with clear sections and an engaging call-to-action to browse jobs or talent.`;
+      - Industry news roundup;}
+      Keep it concise with clear sections and an engaging call-to-action to browse jobs or talent.`;}
     }
 ;
+
     // Call OpenAI API;"
     const response = await fetch("https://api.openai.com/v1/chat/completions", {;""
       method: "POST",;"
@@ -405,14 +427,16 @@ serve(async (req) => {;
           { role: "system", content: systemPrompt },;""
           { role: "user", content: userPrompt }"]
         ],;)
+
         temperature: 0.7})}),;
-    if (!response.ok) {;
-      const errorData = await response.json(),;
+    if (!response.ok) {;}
+      const errorData = await response.json(),;}
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
     }
 ;
     const data = await response.json(),;
     const generatedContent = JSON.parse(data.choices[0].message.content),;
+
     // If image is requested for blog post, generate an image prompt;"
     if (contentType === 'blog' && includeImage) {;''
       const imagePromptResponse = await fetch("https://api.openai.com/v1/chat/completions", {;""
@@ -431,11 +455,13 @@ serve(async (req) => {;
               role: "user",;""
               content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"`;"
             }]
+
           ],;
           temperature: 0.7,;)
           max_tokens: 100})}),;
       const imagePromptData = await imagePromptResponse.json(),;
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content;
+
     }
 
             { "
@@ -512,9 +538,10 @@ if ( {) {
         month: 'short',''
         day: 'numeric',''
         year: 'numeric'')
+
       }),
-      
       // Auto-calculate read time (rough estimate: 200 words per minute)
+
       const wordCount = generatedContent.body.split(/\s+/).length,'
       const readTime = Math.max(1, Math.ceil(wordCount / 200)) + " min read",""
         .replace(/\s+/g, '-');'
@@ -1118,3 +1145,4 @@ action text: "View Post"")
   }
 });
 "
+

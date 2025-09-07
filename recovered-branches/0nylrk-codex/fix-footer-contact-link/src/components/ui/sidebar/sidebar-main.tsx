@@ -1,6 +1,7 @@
 
 
 
+
 import * as React from "react"""
 import type { CSSProperties } from "react"""
 import { Sheet, SheetContent } from "@/components/ui/sheet"""
@@ -16,17 +17,21 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 </HTMLDivElement>
       <div;
         className={cn(
+
           &quot;flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground&quot;
 ;)
   if (props.collapsible === &quot;none&quot;) {
+
 "
   if (props.collapsible === "none") {"
+
 ;
   if (props.collapsible === &quot;none&quot;) {
 
 
 ;
   if (props.collapsible === &quot;none&quot;) {
+
 
 "
   if (props.collapsible === "none") {"
@@ -35,6 +40,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
         className={cn("
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground","
           props.className;)
+
         )}
           props.className;
         )}
@@ -47,6 +53,7 @@ import { cn } from &quot;@/lib / utils & quot;
 import { use_sidebar } from &quot;./sidebar - context & quot;
 import type { SafeRef } from &quot;../sidebar.types & quot;
 ;
+
 export interface SidebarProps extends React.ComponentProps<&quot;div & quot;> {
 </div>
 export const Sidebar = React.forward_ref < HTMLDivElement SidebarProps>((props, ref) => {
@@ -76,11 +83,13 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
         className={cn(;"
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",;"
           props.className;)
+
         )}
           props.className;
         )}
         ref={ref}
         {...props}
+
       >;
 </div>
       </div>);
@@ -89,12 +98,14 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 className=&quot;group peer hidden md:block text - sidebar - foreground & quot;
       data - state={state}"
       data - collapsible={state === &quot;collapsed & quot; ? props.collapsible : ""}"
+
       data - variant={props.variant}
       data - side={props.side}
 ;
   return (;
     <div;
       ref={ref}
+
 
 className=&quot;group peer hidden md:block text-sidebar-foreground&quot;"
       className="group peer hidden md:block text-sidebar-foreground""
@@ -143,20 +154,24 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;"
           props.variant === &quot;floating & quot; || props.variant === &quot;inset & quot;)
             ? &quot;group - data-[collapsible = icon]:w-[calc (var (--sidebar - width - icon)_ + _theme (spacing.4)))]&quot;"
             : &quot;group - data-[collapsible = icon]:w-[--sidebar - width - icon]")}"
+
       />;
 </div>
       <div;
+
         className={cn ("
           "duration - 200 fixed inset - y-0 z - 10 hidden h - svh w-[--sidebar - width] transition-[left, right, width] ease - linear md:flex & quot;,"
           props.side === &quot;left & quot;)
+
             ? &quot;left - 0 group - data-[collapsible = offcanvas]:left-[calc (var (--sidebar - width)*-1)]&quot;
             : &quot;right - 0 group - data-[collapsible = offcanvas]:right-[calc (var (--sidebar - width)*-1)]&quot;,
           // Adjust the padding for floating and inset variants.;
           props.variant === &quot;floating & quot; || props.variant === &quot;inset & quot;
-            ? &quot;p - 2 group - data-[collapsible = icon]:w-[calc (var (--sidebar - width - icon)_ + _theme (spacing.4)_ + 2px)]&quot;
-            : &quot;group - data-[collapsible = icon]:w-[--sidebar - width - icon] group - data-[side = left]:border - r group - data-[side = right]:border - l&quot;,
+            ? &quot;p - 2 group - data-[collapsible = icon]:w-[calc (var (--sidebar - width - icon)_ + _theme (spacing.4)_ + 2px)]&quot;}
+            : &quot;group - data-[collapsible = icon]:w-[--sidebar - width - icon] group - data-[side = left]:border - r group - data-[side = right]:border - l&quot;,}
           props.class_name)}
         {...props}
+
       >;
 </div>
         <div;"
@@ -174,16 +189,20 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;"
         "group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar",""
         "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2",""
         "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2","
+
         props.className;
       )}
       {...props}
     />
+
 </button>
+
 export const SidebarInset = React.forwardRef<
 
 
 SidebarRail.displayName = &quot;SidebarRail&quot;
 export const SidebarInset = React.forwardRef<
+
   HTMLDivElement;"
   React.ComponentProps<&quot;main">""
 SidebarRail.displayName = "SidebarRail""
@@ -210,10 +229,12 @@ export const SidebarRail = React.forwardRef<;
   HTMLButtonElement,;"
   React.ComponentProps<"button">;")
 >((props, ref) => {;
+
   const { toggleSidebar } = useSidebar();
 ;
   return (;
     <button;
+
       ref={ref}"
       data-sidebar="rail";""
       aria-label="Toggle Sidebar";"
@@ -271,3 +292,4 @@ export const SidebarInset = React.forwardRef<;
 }) SidebarInset.displayName = "SidebarInset"""
 SidebarInset.displayName = &quot;SidebarInset"""
 SidebarInset.displayName = "SidebarInset"""
+

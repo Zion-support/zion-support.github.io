@@ -1,9 +1,11 @@
 interface IntegrationState {
+
   // TODO: Implement
 }
   connections: any[];,
   logs: any[];
   overrides: any[];
+
 }
 let state: IntegrationState = {,
   connections: [],
@@ -11,6 +13,7 @@ let state: IntegrationState = {,
   overrides: [],
   connections: [],
   logs: [],
+
   overrides: [],
 export function getState(): IntegrationState {
   // TODO: Implement
@@ -26,9 +29,10 @@ export function write_state (updater: (state: IntegrationState) => void): Integr
   // TODO: Implement
 }
   updater (state);
+
 };
 
-export function getState(): IntegrationState {;
+export function getState(): IntegrationState {;}
   return { ...state };
 }
 
@@ -39,10 +43,12 @@ export function writeState()
 }
 export function writeState()
   updater: (state: IntegrationState) => void,
+
 ): IntegrationState {
   // TODO: Implement
 }
   updater(state);
+
   return { ...state }
 }
 export function resetState(): void {
@@ -51,22 +57,26 @@ export function resetState(): void {
   state = {
 
   connections: [],
-  logs: [],
-  overrides: [];
+  logs: [],}
+  overrides: [];}
 }
 ;
+
 export function get_state (): IntegrationState {
   // TODO: Implement
 }
+
   return { ...state }
 }
   updater(state);
   return { ...state }
 }
+
 export function reset_state (): void {
   // TODO: Implement
 }
   state = {
+
   }
     connections: [],
     logs: [],

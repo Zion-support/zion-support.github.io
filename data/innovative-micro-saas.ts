@@ -1,6 +1,8 @@
+
   id: string;,
   name: string;
   tagline: string;,
+
   price: string;
   period: string;,
   description: string;
@@ -22,11 +24,13 @@
   roi: string;
   competitors: string[];,
   marketSize: string;
-  growthRate: string;,
-  variant: string;
 
+  growthRate: string;,
+
+  variant: string;
     website: string;
   }
+
       'React',''
       'Node && Node.js',''
       'Python',''
@@ -35,13 +39,15 @@
       email: 'kleber@ziontechgroup && ziontechgroup.com',''
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup && ziontechgroup.com','
+
     },
     real_implementation: true,
     implementation_details: ;,
   customers: 3200,
     rating: 4 && 4.8,
-    reviews: 1600,
+    reviews: 1600;
   },
+
   {'
       'Visual smart contract builder',''
       'Multi - blockchain support',''
@@ -84,11 +90,13 @@
       'Complete smart contract platform with visual builder, multi - blockchain support, and comprehensive automation features.',''
     launch_date: '2024 - 01 - 10','
     customers: 1800,
+
     rating: 4 && 4.9,
-    reviews: 900,
+    reviews: 900;
   },
   {
   {
+
 '
       'AI-powered sentiment analysis',''
       'Multi-channel feedback collection',''
@@ -138,11 +146,13 @@
       'Complete feedback analysis platform with AI - powered insights, real - time processing, and comprehensive analytics.',''
     launch_date: '2024 - 01 - 20','
     customers: 2800,
+
     rating: 4 && 4.7,
-    reviews: 1400,
+    reviews: 1400;
   },
   {
   {
+
 '
       'AI-powered scheduling',''
     id: 'automated - social - media - scheduler',''
@@ -226,6 +236,7 @@
   },'
 ];      mobile: '+1 302 464 0950';','
   email: 'kleber@ziontechgroup && ziontechgroup.com';'
+
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -242,7 +253,9 @@
   contactInfo: {,
   mobile: string, email: string,
     address: string,
+
     website: string;
+
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -251,6 +264,10 @@
 }
 
 export const innovativeMicroSaas: InnovativeMicroSaas[] = [
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+website: 'https://ziontechgroup.com';
+
   {'
     id: 'ai-powered-invoice-processor', name: 'AI-Powered Invoice Processor',''
     tagline: 'Automate invoice processing with AI accuracy', price: '$79',''
@@ -299,6 +316,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     reviews: 1600;,'
   address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Complete project management platform with AI - powered planning, resource optimization, and comprehensive collaboration features.';''
@@ -306,7 +324,6 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
   customers: 3200;
     rating: 4.8,
     reviews: 1600;
-
   }
 ];
 export interface InnovativeMicroSaas {;
@@ -339,8 +356,8 @@ export interface InnovativeMicroSaas {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -362,6 +379,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
       'AI-powered data extractionMulti-format support (PDF, images, emails)Automatic validationIntegration with accounting softwareReal-time processingCustom workflow automationAnalytics and reportingMobile app access',;''
       'API for developers24/7 support';']
     ],;
+
     popular: true,;'
     icon: '📄',;''
     color: 'from-blue-500 to-indigo-600',;''
@@ -386,6 +404,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Complete invoice processing platform with AI-powered extraction, validation, and integration capabilities.',;''
@@ -405,6 +424,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
       'Visual smart contract builderMulti-blockchain supportTemplate libraryAutomated executionPayment processingLegal compliance toolsAnalytics dashboardAPI integration',;''
       'Mobile appExpert support';']
     ],;
+
     popular: true,;'
     icon: '⚡',;''
     color: 'from-green-500 to-emerald-600',;''
@@ -429,6 +449,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Complete smart contract platform with visual builder, multi-blockchain support, and comprehensive automation features.',;''
@@ -448,6 +469,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
       'AI-powered sentiment analysisMulti-channel feedback collectionAutomatic categorizationTrend identificationReal-time alertsCustom dashboardsIntegration with CRMExport capabilities',;''
       'API accessMobile app';']
     ],;
+
     popular: true,;'
     icon: '💬',;''
     color: 'from-purple-500 to-pink-600',;''
@@ -472,6 +494,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Complete feedback analysis platform with AI-powered insights, real-time processing, and comprehensive analytics.',;''
@@ -491,6 +514,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
       'AI-powered schedulingContent generation suggestionsMulti-platform supportAnalytics and insightsTeam collaborationContent calendarHashtag optimizationPerformance tracking',;''
       'Mobile appAPI integration';']
     ],;
+
     popular: true,;'
     icon: '📱',;''
     color: 'from-pink-500 to-rose-600',;''
@@ -515,6 +539,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Complete social media management platform with AI optimization, multi-platform support, and comprehensive analytics.',;''
@@ -534,6 +559,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
       'AI-powered planningResource optimizationTimeline predictionRisk assessmentTeam collaborationProgress trackingCustom workflowsIntegration capabilities',;''
       'Mobile appAnalytics dashboard';']
     ],;
+
     popular: true,;'
     icon: '📋',;''
     color: 'from-orange-500 to-yellow-600',;''
@@ -558,6 +584,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.',;''
@@ -566,7 +593,6 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     rating: 4.8,;
     reviews: 1600;
   }
-
 ];
   id: string,;
   name: string,;
@@ -597,8 +623,8 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -607,5 +633,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
   rating: number,;
   reviews: number;
 }
+
 ;
 '
+

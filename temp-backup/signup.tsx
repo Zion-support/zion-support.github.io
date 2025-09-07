@@ -1,17 +1,20 @@
 
 
+
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);'
   }
@@ -27,3 +30,4 @@ import Link from \'next/link\'; import Head from \'next/head\'; (): any ({ }: Si
       <h1>Signup</h1>;
       <p>This component is currently under development.</p>;
     </div>;)'
+

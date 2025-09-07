@@ -1,3 +1,4 @@
+
 <CardTitle className="flex items-center gap-2">"
 </CardTitle>"
             <FileText className="h-5 w-5" />"
@@ -235,3 +236,4 @@ interface ContractTypeCardsProps {;
         </CardFooter>;
       </Card>;
     </div>);"
+

@@ -1,4 +1,6 @@
+
 }
+
 export /**
  * DisputesList - Function description;
  */
@@ -148,10 +150,12 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
                   <TableCell><Skeleton className="h-4 w-24" /></TableCell>;""
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>;""
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;"
+
                 </TableRow>;
             </TableBody>;
           </Table>;
         </div>;
+
       </div>;"
       <div className='text-center py-12 border rounded-md bg-muted/20'>;'
 </div>'
@@ -449,11 +453,13 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
                   <Button as_child size="sm">;"
 </Button>
                     <Link href={`/dashboard / disputes/${dispute.id}`}>View Details</Link>;
+
                   </Button>;
                 </TableCell>;
               </TableRow>))}
           </TableBody>;
         </Table>;
+
       </div>;
     </div>);"
   return (<div className="space - y-4" > <div className="flex gap - 2 mb - 4" > {";"
@@ -484,3 +490,4 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
 </TableRow>)
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>);"
+

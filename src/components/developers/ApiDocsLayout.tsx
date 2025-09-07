@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
@@ -59,10 +60,12 @@ class ErrorBoundary extends React.Component {
 
 "
          placeholder="Search documentation""
+
         />;
 </EnhancedSearchInput>
        </form>;
       </div>;"
+
       <nav role="navigation" aria-label="Main" className="flex flex-col space-y-1">;"
 </nav>
         <Link;
@@ -119,10 +122,12 @@ class ErrorBoundary extends React.Component {
           onSelectSuggestion = {handleSelectSuggestion, }
           search_suggestions = {docsSearchSuggestions, }"
           placeholder="Search documentation";"
+
         />;
 </EnhancedSearchInput>
       </form>;
       </div>;"
+
       <nav role="navigation" aria - label="Main" className="flex flex - col space - y-1">;"
 </nav>
         <Link;
@@ -150,3 +155,4 @@ class ErrorBoundary extends React.Component {
 }</div> </div>) 
      </div>;
     </div>;"
+

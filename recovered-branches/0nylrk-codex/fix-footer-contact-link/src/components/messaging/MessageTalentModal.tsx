@@ -1,9 +1,9 @@
-
 import {
   // TODO: Implement
 }
   Dialog;
   DialogContent;
+
   DialogHeader;
   DialogTitle;
   DialogDescription;
@@ -16,12 +16,14 @@ import {TalentProfile} from "@/types/talent";""
 import {toast} from "@/components/ui/use-toast";""
 import {useNavigate} from "react-router-dom";""
 import React, { useState } from 'react','
+
 import {
   // TODO: Implement
 }
   Dialog,
   DialogContent,
   DialogHeader,
+
   DialogTitle,
   DialogDescription,
 '
@@ -66,10 +68,11 @@ export function MessageTalentModal({
 
   jobTitle;
 }: MessageTalentModalProps) {
-  const { createConversation } = useMessaging();
 
+  const { createConversation } = useMessaging();
   const navigate = useNavigate();
   const { createConversation } = useMessaging(),
+
   const navigate = useNavigate(),
   const [message, setMessage] = useState(
     jobTitle;"
@@ -115,18 +118,19 @@ import { use_messaging } from '@/context / MessagingContext';''
 import { TalentProfile } from '@/types / talent';''
 import { toast } from '@/components / ui / use - toast';''
 import { use_navigate } from './react-router-dom';'
+
 export interface MessageTalentModalProps {
   // TODO: Implement
 }
   talent: TalentProfile,
   is_open: boolean,
-  on_close: () => void,
-  job_title?: string;
+  on_close: () => void,}
+  job_title?: string;}
 }
 export /**
  * MessageTalentModal - Function description;
  */
-function MessageTalentModal() {
+function MessageTalentModal() {}
   const { create_conversation } = use_messaging ();
   const navigate = use_navigate ();
   const [message, set_message] = useState (
@@ -136,6 +140,7 @@ function MessageTalentModal() {
   const [is_submitting, setIsSubmitting] = useState (false);
 ;
   const handleSendMessage = async () => {
+
     if () {) {
   $2;
 }
@@ -143,6 +148,7 @@ function MessageTalentModal() {
         title: "Message required",""
         description: "Please enter a message before sending.",""
         variant: "destructive";")
+
       });
       return;
     }
@@ -150,16 +156,19 @@ function MessageTalentModal() {
   // TODO: Implement
 }
       setIsSubmitting(true),
+
       
       // Create context data for the conversation;
       const contextData = {
         title: jobTitle || `Discussion with ${talent.full_name}`,"
         description: talent.bio || talent.professional_title || "",""
         image_url: talent.profile_picture_url || "";"
+
       }
 ;
       // Create conversation with this talent;
       await create_conversation (
+
 "
         image_url: talent.profile_picture_url || """
       },
@@ -198,10 +207,11 @@ function MessageTalentModal() {
       });
       return;
     }
-        talent.user_id;
 
+        talent.user_id;
     try {;
       setIsSubmitting(true);
+
 
       // Create context data for the conversation;
       const contextData = {;
@@ -359,14 +369,18 @@ function MessageTalentModal() {
             className="bg - zion - purple hover:bg - zion - purple - dark text - white";"
           >;
 </Button>
+
           </Button>;
         </DialogFooter>;
       </DialogContent>;
     </Dialog>);
+
+
           </Button>;
         </DialogFooter>;
       </DialogContent>;
     </Dialog>;
+
 return (<Dialog open= {
   isOpen;
 }onOpenChange= {
@@ -380,3 +394,4 @@ return (<Dialog open= {
 }</DialogDescription> </DialogHeader> <div className="space-y-4" > <div> <label className="block text-sm font-medium text-zion-slate mb-1" > Message </label> <Textarea /> </div> </div> <DialogFooter className="gap-2 sm:gap-0" > <Button > Cancel </Button> <Button > {""
   isSubmitting ? 'Sending...' : 'Send Message''
 }</Button> </DialogFooter> </DialogContent> </Dialog>) '
+

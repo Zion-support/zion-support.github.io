@@ -1,3 +1,4 @@
+
 import {useState} from "react";""
 import {useNavigate} from "react-router-dom";""
 import {useAuth} from "@/hooks/useAuth";""
@@ -120,11 +121,11 @@ export default function Onboarding() {
     }
 
 
+
   },
-
-
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
     if (!user |!userType) {
+
       toast({
 
 '
@@ -132,10 +133,11 @@ export default function Onboarding() {
         description: "Your session may have expired. Please log in again.",")"
         variant: "destructive"}),""
       navigate('/login'),'
+
       return;
     }
-    
     const dbUserType = mapUserTypeToDatabase(userType),
+
     
 
 
@@ -181,10 +183,10 @@ export default function Onboarding() {
         title: 'Error'','
   description: 'There was a problem updating your profile. Please try again.'')'
         variant: 'destructive'})'
+
     }
-
-
   },
+
 
 
 
@@ -318,10 +320,12 @@ export default function Onboarding() {
   const handleUserTypeSelect = (type: "service_provider" | "talent" | "client") =>: any {"
   // TODO: Implement
 }
+
     setUserType (type);
 ;
     // Direct to specific registration page based on user type;
     // Check condition;
+
 if ( {) {
   $2;
 }"
@@ -332,6 +336,7 @@ if ( {) {
   $2;
 }'
       navigate ('/talent - onboarding');'
+
       return;
     }
     // Continue with the onboarding flow for clients;
@@ -340,6 +345,7 @@ if ( {) {
 ;
   const handleProfileComplete = async (data: { display_name: string, bio: string, headline: string }) => {
     // Check condition;
+
 if ( {) {
   $2;
 }
@@ -348,6 +354,7 @@ if ( {) {
         description: "Your session may have expired. Please log in again.",")"
         variant: "destructive"}),""
       navigate ('/login');'
+
       return;
     }
     const dbUserType = mapUserTypeToDatabase (user_type);
@@ -360,6 +367,7 @@ if ( {) {
         display_name: data.display_name,
         bio: data.bio, // This is now valid since we added bio to UserDetails;
         user_type: dbUserType,
+
         headline: data.headline,
         profile_complete: true;)
       });
@@ -398,11 +406,13 @@ if ( {) {
   $2;
 }"
     navigate ('/login');'
+
     return null;
   }
   return (
     <>;
       <Header />;
+
 </Header>'
       <div className="min - h-screen bg - zion - blue py - 12 px - 4">;"
 </div>"
@@ -430,9 +440,11 @@ if ( {) {
           </div>;"
           <div className="bg - zion - blue - dark rounded - xl p - 8 shadow - lg border border - zion - blue - light">;"
 </div>)
+
               <UserTypeSelection on_select={handleUserTypeSelect} selected_type={user_type} />) : (
 </UserTypeSelection>)
               <ProfileSetup on_complete={handleProfileComplete} user_type={user_type!} />)}
+
 </ProfileSetup>"
               <div className="mt - 6">;"
 </div>
@@ -445,9 +457,11 @@ if ( {) {
               </div>)}"
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">;"
 </div>
+
               <UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType} />;
 </UserTypeSelection>
               <ProfileSetup onComplete={handleProfileComplete} userType={userType!} />;
+
 </ProfileSetup>"
               <div className="mt-6">;"
 </div>
@@ -455,6 +469,7 @@ if ( {) {
                   variant="outline";""
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light";                  onClick={() => setCurrentStep(0)}"
 </Button>
+
                 </Button>
               </div>
           </div>
@@ -469,6 +484,7 @@ if ( {) {
                   Back to Role Selection;
                 </Button>;
               </div>;
+
               </div>;
           </div>;
         </div>;
@@ -526,3 +542,4 @@ return null;'
     </>);
 }
 "
+

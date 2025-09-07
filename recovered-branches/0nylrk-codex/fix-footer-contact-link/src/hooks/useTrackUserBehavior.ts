@@ -1,5 +1,6 @@
 
 
+
 import {useRef, useEffect} from 'react';''
 import {useAnalytics} from '@/context/AnalyticsContext';'
 export function useTrackUserBehavior(componentName: string) {;
@@ -45,3 +46,4 @@ export function useTrackUserBehavior(componentName: string) {;
 </HTMLDivElement>
   const componentRef = useRef<HTMLDivElement>(null),;
 </HTMLDivElement>'
+

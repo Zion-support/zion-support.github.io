@@ -1,5 +1,6 @@
 
 
+
 import { useState  } from 'react';''
 import { useAuth } from "@/hooks/useAuth";""
 import { supabase  } from '@/integrations/supabase/client';''
@@ -30,24 +31,70 @@ export function useInterviews() {
     // Check condition;
 if ( {) {
   $2;
+
 }
       set_interviews ([]);
       return [];
     }
-
-
-
-
-
+;
+    setIsLoading(true),;
+    setError(null),;
+    try {;}
+      // Insert the interview into the database;}
+      const { data, error: insertError } = await supabase;
+        .from('interviews');
+        .insert({;
+          client_id: interviewRequest.client_id,;
+          talent_id: interviewRequest.talent_id,;
+          scheduled_date: interviewRequest.scheduled_date,;
+          duration_minutes: interviewRequest.duration_minutes,;
+          notes: interviewRequest.notes,;
+          meeting_link: interviewRequest.meeting_link,;
+          meeting_platform: interviewRequest.meeting_platform,;
+          interview_type: interviewRequest.interview_type,;}
+          title: interviewRequest.title,;}
+          status: 'requested'});
+        .select('*');
+        .single(),;
+      if (insertError) {;
+        console.error(\"Error requesting interview:\", insertError),;
+        setError(insertError.message),;}
+        return null;}
+      }
+;
+      // Create notification for talent;
+      await createInterviewNotification(;
+        interviewRequest.talent_id,;
+        'interview_requestNew Interview Request',;
+        `You have received an interview request for ${interviewRequest.scheduled_date}`,;
+        data.id;
+      ),;
+      return data;
+    } catch (err: any) {;
+      console.error(\"Error in requestInterview:\", err),;
+      setError(err.message),;}
+      return null;}
+    } finally {;}
+      setIsLoading(false);}
+    }
+  },;
+  // Fetch interviews for the current user (as client or talent);
+  const fetchInterviews = async (): Promise<Interview[] /> => {;
+    if (!user?.id) {;
+      setInterviews([]),;}
+      return [];}
+    }
     setIsLoading(true),
     setError(null),
-
-    setIsLoading (true);
+      setIsLoading (false);
+    }
+  }    setIsLoading (true);
     set_error (null);
 ;
       setIsLoading (false);
     }
   }
+
     try {
   // TODO: Implement
 }
@@ -240,10 +287,12 @@ if ( {) {
 }
         set_error (update_error.message);
         return false;
+
       }
       // Determine who to notify;
-      const notifyUserId = interview.client_id === user.id;
+const notifyUserId = interview.client_id === user.id;
         ? interview.talent_id;
+
         : interview.client_id;
 ;
       // Create notification for the other party;
@@ -268,12 +317,14 @@ if ( {) {
 
 ;
 
+
   return {
   // TODO: Implement
 }
     interviews;
     is_loading;
     error;
+
     request_interview;
     fetch_interviews;
   },;
@@ -315,3 +366,4 @@ export function useInterviews() {;
 </boolean>
   const cancelInterview = async (interviewId:string):Promise<boolean> => {;
 </boolean>'
+

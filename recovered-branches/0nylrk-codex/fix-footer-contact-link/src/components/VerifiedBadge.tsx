@@ -1,4 +1,5 @@
 
+
 import React from 'react';''
 import {CheckCircle} from 'lucide-react';''
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';'
@@ -27,10 +28,12 @@ export function VerifiedBadge({ verified, size = "sm" }: VerifiedBadgeProps) {"
 </TooltipTrigger>"
           <span className="inline-flex text-blue-500">"
 </span>
+
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
 </CheckCircle>
           </span>
         </TooltipTrigger>
+
         <TooltipContent>
 </TooltipContent>
           <p>Verified talent</p>
@@ -55,3 +58,4 @@ export function VerifiedBadge({ verified, size = "sm" }: VerifiedBadgeProps) {"
         </TooltipContent>;
       </Tooltip>;
     </TooltipProvider>;)"
+

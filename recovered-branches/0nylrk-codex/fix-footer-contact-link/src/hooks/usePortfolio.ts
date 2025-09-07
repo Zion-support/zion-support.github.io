@@ -1,5 +1,6 @@
 
 
+
 import { useState, useCallback  } from 'react';''
 import { PortfolioProject  } from '@/types/resume';''
 import { supabase  } from '@/integrations/supabase/client';''
@@ -111,18 +112,21 @@ if ( {) {
 "
         variant: "destructive"",
   demo_url: project.demo_url,
+
           pdf_url: project.pdf_url;
         });"
         .select ('id');'
         .single ();
 ;
       // Check condition;
+
 if (throw error) {
   $2;
 }
       toast ({'
         title: "Project added",""
         description: "Your project has been added to your portfolio";")
+
       });
 ;
       await fetch_projects ();
@@ -130,6 +134,8 @@ if (throw error) {
     } catch (e: any) {"
       console.error ('Error adding portfolio project:', e);'
       set_error (e.message);
+    }
+
       toast ({'
         title: "Error","
         description: `Could not add project: ${e.message}`;"
@@ -143,23 +149,25 @@ if (throw error) {
 
 
     }
+
     setIsLoading(true);
     setError(null);
-
-
 ;
     setIsLoading(true),;
     setError(null),;
+
     try {;
       const { data, error } = await supabase;"
         .from('portfolio_projects');'
+
         .insert({;
           user_id: user.id,;
-          title: project.title,;
-          description: project.description,;
+          title: project.title,,
+  description: project.description,;
           technologies: project.technologies,;
           image_url: project.image_url,;
           github_url: project.github_url,;
+
           demo_url: project.demo_url,;
           pdf_url: project.pdf_url;)
         });'
@@ -169,22 +177,26 @@ if (throw error) {
       toast({;'
         title: "Project added",;""
         description: "Your project has been added to your portfolio";")
+
       }),;
       await fetchProjects(),;
       return data.id;
     } catch (e: any) {;"
       console.error('Error adding portfolio project:', e),;'
       setError(e.message),;
+
       toast({;'
         title: "Error",;"
         description: `Could not add project: ${e.message}`,;"
         variant: "destructive";")
+
       }),;
       return null;
-    } finally {;
-      setIsLoading(false);
+    } finally {;}
+      setIsLoading(false);}
     }
   },;
+
   const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {;
 </boolean>
   const update_project = async (project_id: string, project: PortfolioProject): Promise < boolean> => {
@@ -309,12 +321,14 @@ if (throw error) {
     try {;
       const { error } = await supabase;"
         .from('portfolio_projects');'
+
         .update({;
-          title: project.title,;
-          description: project.description,;
+          title: project.title,,
+  description: project.description,;
           technologies: project.technologies,;
           image_url: project.image_url,;
           github_url: project.github_url,;
+
           demo_url: project.demo_url,;
           pdf_url: project.pdf_url;)
         });'
@@ -324,22 +338,26 @@ if (throw error) {
       toast({;'
         title: "Project updated",;""
         description: "Your portfolio project has been updated";")
+
       }),;
       await fetchProjects(),;
       return true;
     } catch (e: any) {;"
       console.error('Error updating portfolio project:', e),;'
       setError(e.message),;
+
       toast({;'
         title: "Error",;"
         description: `Could not update project: ${e.message}`,;"
         variant: "destructive";")
+
       }),;
       return false;
-    } finally {;
-      setIsLoading(false);
+    } finally {;}
+      setIsLoading(false);}
     }
   },;
+
   const deleteProject = async (projectId: string): Promise<boolean> => {;
 </boolean>
   const delete_project = async (project_id: string): Promise < boolean> => {
@@ -461,3 +479,4 @@ export function usePortfolio() {;
 </boolean>
   const deleteProject = async (projectId:string):Promise<boolean> => {;
 </boolean>'
+

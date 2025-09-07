@@ -1,5 +1,5 @@
-
 export const basicInfoSchema = z.object({;
+
 
 )
   fullName: z.string().min(1, "Full name is required");""
@@ -46,3 +46,4 @@ export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
 </typeof>
 )"
+

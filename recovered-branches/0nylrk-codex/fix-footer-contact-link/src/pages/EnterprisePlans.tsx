@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { Header } from "@/components/Header";""
 import { Footer } from "@/components/Footer";""
@@ -14,12 +15,15 @@ export default function EnterprisePlans() {
       <SEO;"
         title="Enterprise Plans - Zion AI Marketplace"""
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.""
+
       />
 </SEO>
       <Header />
+
 </Header>"
       <main className="min-h-screen bg-background">"
 </main>
+
         <EnterpriseHero />
 </EnterpriseHero>
         <EnterprisePricingTable />
@@ -34,6 +38,7 @@ export default function EnterprisePlans() {
 </EnterpriseCTA>
       </main>
       <Footer />
+
 </Footer>
     </>)
   );
@@ -75,9 +80,11 @@ export default function EnterprisePlans() {;
       <SEO;"
         title="Enterprise Plans - Zion AI Marketplace";""
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.";"
+
       />;
 </SEO>
       <Header />;
+
 </Header>"
       <main className="min - h-screen bg - background">;"
 </main>"
@@ -109,3 +116,4 @@ export default function EnterprisePlans() {;
     </>);
 }
 "
+

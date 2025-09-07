@@ -1,6 +1,7 @@
 
 
 
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
 export function ReferralGuide() {
 
@@ -108,11 +109,13 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 </div>"
                 <h4 className="font-medium">{step && step.title}</h4>;""
                 <p className="text-sm text-muted-foreground">{step && step.description}</p>;"
+
               </div>;
             </div>;
         </div>;
       </CardContent>;
     </Card>;
+
     <Card>;
 </Card>
       <CardHeader>;
@@ -157,3 +160,4 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 </div>"
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;"
 </div>"
+

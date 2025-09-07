@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
@@ -337,10 +338,12 @@ const HealthDashboard: React.FC = () => {;
                 </p>;'
                 <p className='text-2xl font-bold'>;'
 </p>
+
                 </p>;
               </div>;
             </div>;
           </CardContent>;
+
         </Card>;
         <Card>;
 </Card>'
@@ -355,10 +358,12 @@ const HealthDashboard: React.FC = () => {;
                 <p className='text-sm font-medium text-gray-600'>Uptime</p>;''
                 <p className='text-2xl font-bold'>;'
 </p>
+
                 </p>;
               </div>;
             </div>;
           </CardContent>;
+
         </Card>;
         <Card>;
 </Card>'
@@ -373,10 +378,12 @@ const HealthDashboard: React.FC = () => {;
                 <p className='text-sm font-medium text-gray-600'>Error Rate</p>;''
                 <p className='text-2xl font-bold'>;'
 </p>
+
                 </p>;
               </div>;
             </div>;
           </CardContent>;
+
         </Card>;
         <Card>;
 </Card>'
@@ -393,11 +400,13 @@ const HealthDashboard: React.FC = () => {;
                 </p>;'
                 <p className='text-2xl font-bold'>;'
 </p>
+
                 </p>;
               </div>;
             </div>;
           </CardContent>;
         </Card>;
+
       </div>;'
       <Tabs defaultValue='overview' className='space-y-4'>;'
 </Tabs>
@@ -446,10 +455,12 @@ const HealthDashboard: React.FC = () => {;
                     <span className='text-sm text-gray-600'>Last Updated:</span>;''
                     <span className='text-sm'>;'
 </span>
+
                     </span>;
                   </div>;
                 </div>;
               </CardContent>;
+
             </Card>;
             <Card>;
 </Card>
@@ -565,10 +576,12 @@ const HealthDashboard: React.FC = () => {;
 </p>
                     </p>;'
                     <p className='text-sm text-gray-600'>Low</p>;'
+
                   </div>;
                 </div>;
               </CardContent>;
             </Card>;
+
             <Card>;
 </Card>
               <CardHeader>;
@@ -678,9 +691,45 @@ const HealthDashboard: React.FC = () => {;
             </CardHeader>
             <CardContent>
 </CardContent>
+
               </CardContent>;
             </Card>;
+            <Card />;
+              <CardHeader className='pb-2' />;
+                <CardTitle className='text-sm' />Critical Errors</CardTitle>;
+              </CardHeader>;
+              <CardContent />;
+                <p className='text-2xl font-bold text-red-600' />;
+                  {healthData.metrics.criticalErrors}
+                </p>;
+                <p className='text-xs text-gray-600' />In last hour</p>;
+              </CardContent>;
+            </Card>;
+            <Card />;
+              <CardHeader className='pb-2' />;
+                <CardTitle className='text-sm' />Avg Response</CardTitle>;
+              </CardHeader>;
+              <CardContent />;
+                <p className='text-2xl font-bold' />;
+                  {healthData.metrics.responseTime.toFixed(0)}ms;
+                </p>;
+                <p className='text-xs text-gray-600' />API response time</p>;
+              </CardContent>;
+            </Card>;
+            <Card />;
+              <CardHeader className='pb-2' />;
+                <CardTitle className='text-sm' />Memory Usage</CardTitle>;
+              </CardHeader>;
+              <CardContent />;
+                <p className='text-2xl font-bold' />;
+                  {formatBytes(healthData.metrics.memoryUsage)}
+                </p>;
+                <p className='text-xs text-gray-600' />JavaScript heap</p>;"
+                ) : (<p className=\"text-gray-600 text-sm\" />No recurring errors</p>;
+                )}</CardContent>;
+            </Card>;
           </div>;
+
         </TabsContent>;"
         <TabsContent value='metrics' className='space-y-4'>;'
 </TabsContent>'
@@ -831,11 +880,13 @@ const HealthDashboard: React.FC = () => {;
                 </p>;'
                 <p className='text - 2xl font - bold'>;'
 </p>
+
                 </p>;
               </div>;
             </div>;
           </CardContent>;
         </Card>;
+
         <Card>;
 </Card>'
           <CardContent className='p - 6'>;'
@@ -849,11 +900,13 @@ const HealthDashboard: React.FC = () => {;
                 <p className='text - sm font - medium text - gray - 600'>Uptime</p>;''
                 <p className='text - 2xl font - bold'>;'
 </p>
+
                 </p>;
               </div>;
             </div>;
           </CardContent>;
         </Card>;
+
         <Card>;
 </Card>'
           <CardContent className='p - 6'>;'
@@ -867,11 +920,13 @@ const HealthDashboard: React.FC = () => {;
                 <p className='text - sm font - medium text - gray - 600'>Error Rate</p>;''
                 <p className='text - 2xl font - bold'>;'
 </p>
+
                 </p>;
               </div>;
             </div>;
           </CardContent>;
         </Card>;
+
         <Card>;
 </Card>'
           <CardContent className='p - 6'>;'
@@ -887,11 +942,13 @@ const HealthDashboard: React.FC = () => {;
                 </p>;'
                 <p className='text - 2xl font - bold'>;'
 </p>
+
                 </p>;
               </div>;
             </div>;
           </CardContent>;
         </Card>;
+
       </div>;'
       <Tabs default_value='overview' className='space - y-4'>;'
 </Tabs>
@@ -940,11 +997,13 @@ const HealthDashboard: React.FC = () => {;
                     <span className='text - sm text - gray - 600'>Last Updated:</span>;''
                     <span className='text - sm'>;'
 </span>
+
                     </span>;
                   </div>;
                 </div>;
               </CardContent>;
             </Card>;
+
             <Card>;
 </Card>
               <CardHeader>;
@@ -1013,10 +1072,12 @@ const HealthDashboard: React.FC = () => {;
 </p>
                     </p>;'
                     <p className='text - sm text - gray - 600'>Low</p>;'
+
                   </div>;
                 </div>;
               </CardContent>;
             </Card>;
+
             <Card>;
 </Card>
               <CardHeader>;
@@ -1132,3 +1193,4 @@ const HealthDashboard: React.FC = () => {;
         </TabsContent>;
       </Tabs>;
     </div>);'
+

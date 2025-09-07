@@ -1,6 +1,8 @@
 
+
 export const real2036ITServices = [
   {
+
     id: 'quantum-cloud-infrastructure-platform'','
   name: 'Quantum Cloud Infrastructure Platform'''
     tagline: 'Next-generation quantum cloud computing'',
@@ -339,6 +341,7 @@ export const real2036ITServices = [
       'Hybrid classical-quantum processing'''
       'Future-proof cloud infrastructure'''
       'Quantum advantage in the cloud'']
+
     ]
     useCases: ['
       'Scientific research computing'''
@@ -347,6 +350,7 @@ export const real2036ITServices = [
       'Climate simulation'']
     ]
   }
+
   {'
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
     ]
@@ -1006,6 +1010,7 @@ export const real2036ITServices = [;
       'Business continuity',']
     ],
 
+
   },;'
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
     ]
@@ -1019,6 +1024,7 @@ export const real2036ITServices = [;
 export const real2036ITServices = [
   {
 
+
 '
       'Data center recovery',''
       'Cloud recovery',''
@@ -1028,10 +1034,12 @@ export const real2036ITServices = [
 
   },;'
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
+
     ]
 
   }
 ];
+
 ;
   },;'
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
@@ -1247,5 +1255,6 @@ export const real2036ITServices = [;
       'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';']
     ];
   }
+
 ];
 '

@@ -3,6 +3,7 @@
 
 
 
+
 import {ContractTemplate} from "@/types/contracts";""
 import {Button} from "@/components/ui/button";""
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";""
@@ -200,11 +201,13 @@ export function TemplateList(): any ({;
               on_click={handleDeleteConfirm}
             >;
 </AlertDialogAction>
+
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
     </div>);
+
     </div>;
   const [templateToDelete, setTemplateToDelete] = useState<string | null> (null);
 </string>"
@@ -234,3 +237,4 @@ export function TemplateList(): any ({;
 </AlertDialogContent>
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) 
     </div>;"
+

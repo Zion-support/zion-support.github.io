@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState } from "react";""
 import {useForm} from "react-hook-form";""
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";""
@@ -177,10 +178,12 @@ export const MetadataManager: React.FC = () => {"
 </ScreenshotManager>"
               <ExportPanel platform="android" metadata={androidForm.getValues()} />"
 </ExportPanel>
+
             </div>
           </div>
         </TabsContent>
       </Tabs>
+
     </div>"
   const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");"
 </AppPlatform>"
@@ -263,8 +266,10 @@ export const MetadataManager: React.FC = () => {"
         </TabsContent>;
       </Tabs>;
     </div>);
+
     </div>);
     </div>);
+
     </div>;"
 return (<div className="bg-zion-blue-dark rounded-lg p-6" > <Tabs defaultValue="ios" className="w-full" > <div className="flex justify-between items-center mb-6" > <TabsList className="bg-zion-blue" > <TabsTrigger value="ios" onClick= {"
 </div>)"
@@ -273,3 +278,4 @@ return (<div className="bg-zion-blue-dark rounded-lg p-6" > <Tabs defaultValue="
 </TabsTrigger>
 }> </div> </div> </TabsContent> </div> </div> </TabsContent> </Tabs> </div>) 
     </div>;"
+

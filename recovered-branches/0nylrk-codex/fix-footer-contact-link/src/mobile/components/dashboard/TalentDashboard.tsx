@@ -1,3 +1,4 @@
+
 import React from "react";"
 import {
   // TODO: Implement
@@ -79,10 +80,12 @@ export function TalentDashboard() {
                 <Button size="sm">Apply Now</Button>""
                 <Button size="sm" variant="outline">"
 </Button>
+
                 </Button>
               </div>
             </CardContent>
           </Card>
+
 
           <Card>
 </Card>"
@@ -121,12 +124,14 @@ export function TalentDashboard() {
                 <Button size="sm">Apply Now</Button>""
                 <Button size="sm" variant="outline">"
 </Button>
+
                 </Button>
               </div>
             </CardContent>
           </Card>
         </div>
       </section>
+
 
       <section>
 </section>"
@@ -149,6 +154,7 @@ export function TalentDashboard() {
                 <div className="text-2xl font-bold text-primary">2</div>""
                 <div className="text-xs text-muted-foreground">"
 </div>
+
                 </div>
               </div>"
               <div className="text-center p-3 bg-primary/5 rounded-lg">"
@@ -161,13 +167,16 @@ export function TalentDashboard() {
                 <div className="text-2xl font-bold text-primary">12</div>""
                 <div className="text-xs text-muted-foreground">Jobs Viewed</div>"
               </div>
+
             </div>"
             <Button variant="outline" className="w-full mt-4">"
 </Button>
+
             </Button>
           </CardContent>
         </Card>
       </section>
+
 
       <section>
 </section>"
@@ -226,10 +235,13 @@ export function TalentDashboard() {
                 <h3 className="font-medium">Improve your profile visibility</h3>""
                 <p className="text-sm text-muted-foreground">"
 </p>
+
                 </p>
               </div>
             </div>
           </CardContent>
         </Card>
       </section>
+
     </div>)"
+

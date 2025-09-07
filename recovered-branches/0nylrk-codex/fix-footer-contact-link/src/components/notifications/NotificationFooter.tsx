@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { Button } from "@/components/ui/button";""
 import { useNavigate } from "react-router-dom";"
@@ -61,3 +62,4 @@ export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }
 },; return (<div className="p-3 text-center border-t border-zion-blue-light" > <Button > View all notifications </Button> </div>)"
       </Button>
     </div>"
+

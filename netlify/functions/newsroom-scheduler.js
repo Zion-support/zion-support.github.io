@@ -2,6 +2,7 @@
 
 function runNode(relPath, args = []) {
 
+
   const abs = path && path.resolve(__dirname, '..', '..', relPath);''
   const res = spawnSync('node', [abs, ...args], {''
     stdio: 'pipe'','
@@ -16,17 +17,18 @@ function runNode(relPath, args = []) {
   };
 '
 exports && exports.config = { schedule: '0 * * * *' };'
-exports && exports.handler = async () => {
-  const logs = [];
-  const step = (name, fn) => {
-    logs && logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
 
-    if (stdout) logs && logs.push(stdout);
-    if (stderr) logs && logs.push(stderr);
-    logs && logs.push(`exit=${status}`);
+exports && exports.handler = async () => {
+ ;
+  const logs = [];
+
+const step = () => {
+  return $3;}
+}
+    logs && logs.push(`\n=== ${name} ===`);
     return status;
   };
+
 '
   step('newsroom:generate', () => runNode('automation/newsroom-generator && generator.cjs'));''
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));'
@@ -44,9 +46,12 @@ exports && exports.handler = async () => {
 }
 '
 exports && exports.config = { schedule: '0 * * * *' },'
+
 exports && exports.handler = async () => {
   const logs = [],
-  const step = (name, fn) => {
+  const step = () => {
+  return $3;}
+}
     logs && logs.push(`\n=== ${name} ===`),
     const { status, stdout, stderr } = fn(),
     if (stdout) logs && logs.push(stdout),
@@ -54,6 +59,7 @@ exports && exports.handler = async () => {
     logs && logs.push(`exit=${status}`),
     return status;
   },
+
 '
   step('newsroom:generate', () => runNode('automation/newsroom-generator && generator.cjs')),''
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),''
@@ -178,3 +184,4 @@ exports.config = { schedule: '0 * * * *';')'
   step ('newsroom:generate', () => run_node ('automation / newsroom - generator.cjs';')'
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';''
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n';')'
+

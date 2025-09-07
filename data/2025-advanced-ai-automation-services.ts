@@ -1,21 +1,34 @@
-  contactInfo: {
-    },
-    realImplementation: boolean, implementationDetails: string,
+
+contactInfo: {    },
+
+realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number;
 }
+
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',''
       address: '364 E Main St STE 1008 Middletown DE 19709',''
       website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'AI - powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.';''
     launch_date: '2024 - 10 - 01';',
   customers: 89;
     rating: 4.8,
+
     reviews: 38;
+};
+    realImplementation: true;
+    implementationDetails: \"implementationDetails\",
+
+launchDate: '2024-09-20',
+  customers: 45;
+rating: 4.8;
+reviews: 28;
   }
+
 ;
     realImplementation: true;,
   implementationDetails:'
@@ -61,10 +74,12 @@
   realService: true;
     technology: ['
       'OpenAI GPT-4, Claude, React, Node.js, Python, PostgreSQL, Redis'']
+
     ]
     integrations: ['
       'Salesforce, HubSpot, Zendesk, Intercom, Slack, Microsoft Teams'']
     ]
+
     useCases: ['
       '24/7 customer support, Ticket automation, Customer satisfaction improvement, Support team efficiency, Multi-language support'']
     ]'
@@ -486,3 +501,4 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
 ];
 ;
 '
+

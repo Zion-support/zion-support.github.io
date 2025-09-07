@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button",""
 import { Card, CardContent } from "@/components/ui/card";""
 import { Link } from "react-router-dom";""
@@ -7,10 +8,12 @@ import { Link } from "react-router-dom",""
 import { Button  } from '@/components / ui / button';''
 import { Card, CardContent  } from '@/components / ui / card';''
 import { Link  } from './react-router-dom';'
+
 export /**
  * EmptyState - Function description;
  */
 function EmptyState() {
+
   return ('
     <Card className="bg-muted/30">;"
 </Card>"
@@ -69,3 +72,4 @@ function EmptyState() {
         </Button>;
       </CardContent>;
     </Card>;"
+

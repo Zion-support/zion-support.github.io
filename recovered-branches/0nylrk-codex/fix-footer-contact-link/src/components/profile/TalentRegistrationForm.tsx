@@ -2,6 +2,7 @@
 
 
 
+
 // Define form schema;
 const talentProfileSchema = z.object({)
   name: z.string().min(2, "Name must be at least 2 characters long"),""
@@ -90,12 +91,12 @@ export function TalentRegistrationForm() {;"
 
 
 
-      }
 
-      if (error) {;
+      }
         throw new Error(error && error.message);
       }
       setGeneratedContent(data as EnhancedProfile);
+
 '
 import React, { useState } from './react';''
 import { use_form } from './react - hook - form';''
@@ -140,20 +141,18 @@ if ( {) {
 }
       setSkillTags ([...skill_tags, skill_input]);"
       form.set_value ("skills", "");"
-    }
 
+    }
             }
           });
         }
-
-
-      if (newSkills && newSkills.length > 0) {;
-        setSkillTags([...skillTags, ...newSkills]);
+      if (newSkills && newSkills.length > 0) {;}
+        setSkillTags([...skillTags, ...newSkills]);}
       }
     }
   };
-
   // Get category color;
+
   const getCategoryColor = (category: CategoryType) => {;
     switch (category) {;
 
@@ -389,13 +388,15 @@ type TalentFormValues = z.infer<typeof talentProfileSchema>,;
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';'
   };
 
+
       }),;
-      if (newSkills.length > 0) {;
-        setSkillTags([...skillTags, ...newSkills]);
+      if (newSkills.length > 0) {;}
+        setSkillTags([...skillTags, ...newSkills]);}
       }
     }
   },;
   // Get category color;
+
   const getCategoryColor = (category: CategoryType) => {;
     switch (category) {;'
       case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500',;''
@@ -942,6 +943,7 @@ if ( {) {
                                       key={skill}"
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">;"
 </Badge>
+
                                     </Badge>;
                                 </div>;
                               </div>;
@@ -949,6 +951,7 @@ if ( {) {
                         </div>;
                     </div>;
                   </div>;
+
               </div>;"
               <Separator className="bg-zion-blue-light/50" />;"
 </Separator>"
@@ -1279,3 +1282,4 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }</div> </div> {"
 }<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>)""
 }/> <div className="pt-2"> <FormLabel className="text-zion-slate-light" >Availability Message</FormLabel> <Textarea placeholder="Describe your availability, working hours, or when you'll be available next..." className="mt-1.5 bg-zion-blue border-zion-blue-light text-white" /> <FormDescription className="text-zion-slate mt-1.5 text-sm"> Let clients know about your working hours, time zone, or availability for calls. </FormDescription> </div> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)""
+

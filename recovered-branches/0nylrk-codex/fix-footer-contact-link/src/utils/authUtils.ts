@@ -1,5 +1,6 @@
 
 
+
 import {supabase} from "@/integrations/supabase/client";""
 import type { UserDetails } from "@/types/auth";""
 import { supabase } from "@/integrations/supabase/client",""
@@ -114,12 +115,14 @@ export const checkNewRegistration = async (user: UserDetails) => {
             email_type: "welcome_series",""
             user_type: user.userType || "unknown",""
             display_name: user.displayName || user.email?.split("@")[0] || "User""
+
   });
 },;
 /**;
  * Utility function to check new user registration and schedule welcome emails;
  */;
 export const checkNewRegistration = async (user: UserDetails) => {;
+
   try {;
     // Check if user has received welcome email already;
     const { data: existingCampaign } = await supabase;"
@@ -127,10 +130,12 @@ export const checkNewRegistration = async (user: UserDetails) => {;
       .select("id");""
       .eq("user_id", user.id);""
       .eq("campaign_type", "welcome_series");"
+
       .maybeSingle(),;
     // If no welcome email sent yet, schedule one;
     if (!existingCampaign) {;
       // Create a scheduled job for the welcome email;
+
       await supabase;"
         .from("scheduled_jobs");"
         .insert({;"
@@ -256,3 +261,4 @@ export const checkNewRegistration = async (user:UserDetails) => {;
   }
 };
 "
+

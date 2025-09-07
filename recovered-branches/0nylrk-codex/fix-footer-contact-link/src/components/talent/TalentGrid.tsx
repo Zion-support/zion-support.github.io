@@ -1,6 +1,8 @@
 
+
 import {TalentCard} from "@/components/talent/TalentCard";""
 import {TalentProfile} from "@/types/talent";"
+
 export interface TalentGridProps {;
   talents: TalentProfile[],;
   isLoading: boolean,;
@@ -8,6 +10,7 @@ export interface TalentGridProps {;
   savedTalentIds: string[],;
   onToggleSave: (id: string, isSaved: boolean) => void,;
   isAuthenticated: boolean,;
+
   viewProfile?: (id: string) => void,;
 
   clearFilters?: () => void;
@@ -27,12 +30,14 @@ import { TalentProfile } from "@/types/talent","
 export interface TalentGridProps {
   // TODO: Implement
 }
+
   talents: TalentProfile[],
   isLoading: boolean,
   onTalentClick: (id: string) => void,
   savedTalentIds: string[],
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean,
+
 
   viewProfile?: (id: string) => void,
   clearFilters?: () => void,
@@ -49,10 +54,16 @@ export interface TalentGridProps {
   handleRequestHire?: (talent: TalentProfile) => void;
   handleRequestHire?: (talent: TalentProfile) => void;
   clearFilters?: () => void;
+
   handleRequestHire?: (talent: TalentProfile) => void;
+clearFilters?: () => void;
+  handleRequestHire?: (talent: TalentProfile) => void;  handleRequestHire?: (talent: TalentProfile) => void;
+clearFilters?: () => void;}
+  handleRequestHire?: (talent: TalentProfile) => void;}
 }
 export function TalentGrid({
   talents;
+
   isLoading;
   onTalentClick;
   savedTalentIds;
@@ -73,10 +84,11 @@ export function TalentGrid({
   viewProfile,
   clearFilters,
   handleRequestHire;)
-}: TalentGridProps) {
 
-  const handleRequestHireInternal = (talent: TalentProfile) => {
+}: TalentGridProps) {
+  const handleRequestHireInternal = (
     if (handleRequestHire) {
+
       handleRequestHire(talent)"
 import { TalentCard } from '@/components / talent / TalentCard';''
 import { TalentProfile } from '@/types / talent';'
@@ -134,6 +146,7 @@ if ( {) {
       // // // console.log("Request to hire:", talent.id)""
 import { TalentCard } from "@/components/talent/TalentCard",;""
 import { TalentProfile } from "@/types/talent",;"
+
 export interface TalentGridProps {;
   talents: TalentProfile[],;
   isLoading: boolean,;
@@ -142,8 +155,8 @@ export interface TalentGridProps {;
   onToggleSave: (id: string, isSaved: boolean) => void,;
   isAuthenticated: boolean,;
   viewProfile?: (id: string) => void,;
-  clearFilters?: () => void,;
-  handleRequestHire?: (talent: TalentProfile) => void;
+  clearFilters?: () => void,;}
+  handleRequestHire?: (talent: TalentProfile) => void;}
 }
 ;
 export function TalentGrid({;
@@ -154,24 +167,33 @@ export function TalentGrid({;
   onToggleSave,;
   isAuthenticated,;
   viewProfile,;
+
   clearFilters,;
   handleRequestHire;)
+
 }: TalentGridProps) {;
-  const handleRequestHireInternal = (talent: TalentProfile) => {;
+  const handleRequestHireInternal = (;
     if (handleRequestHire) {;
-      handleRequestHire(talent);
+      handleRequestHire(talent);) => {
+  return $3;}
+}
     } else {;
+
       // Default implementation;"
       // // // console.log("Request to hire:", talent.id);"
+
     }
   };
-  const handleViewProfile = (id: string) => {;
+  const handleViewProfile = (;
     if (viewProfile) {;
-      viewProfile(id);
-    } else {;
-      onTalentClick(id);
+      viewProfile(id);) => {
+  return $3;}
+}
+    } else {;}
+      onTalentClick(id);}
     }
   },
+
 
 
 
@@ -211,8 +233,10 @@ export function TalentGrid({;
     </div>,;
 </button>
     </div>;
+
         </button>
     </div>
+
     </div>;"
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;"
 </div>
@@ -248,8 +272,10 @@ export function TalentGrid({;
 </div>)"
 }className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors" > Clear Filters </button>)"
 }</div> 
+
 }</div>) 
         <button;
+
           onClick={clearFilters}"
           className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors""
         >
@@ -274,3 +300,4 @@ export function TalentGrid({;
 </TalentCard>
     </div>
     </div>;"
+

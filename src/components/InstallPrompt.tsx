@@ -1,4 +1,6 @@
+
 }
+
 // Augment the WindowEventMap to include 'beforeinstallprompt''
 declare global {
   // TODO: Implement
@@ -192,6 +194,7 @@ if (return, ) {
     },
     const handleAppInstalled = () =>: any {
   // TODO: Implement
+
 }
       // Check condition;
 if (.gtag) {) {
@@ -200,6 +203,7 @@ if (.gtag) {) {
         (window as any).gtag ('eventpwa_install_success'), // More specific event for install success;'
       }
       set_visible (false), // Hide prompt once installed;
+
       setPromptEvent (null);
     },
     // Add typed event listeners;'
@@ -301,3 +305,4 @@ export default InstallPrompt,
 
     </>
   )"
+

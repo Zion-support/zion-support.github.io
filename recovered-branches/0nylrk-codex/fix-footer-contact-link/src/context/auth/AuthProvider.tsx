@@ -1,4 +1,5 @@
 
+
 import React, { useEffect } from "react";""
 import {supabase, getFromProfiles} from "../../integrations/supabase/client";""
 import {useAuthOperations} from "../../hooks/useAuthOperations";""
@@ -56,10 +57,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     onboardingStep, setOnboardingStep;
   } = useAuthState(),
   
+
   const navigate = useNavigate(),
   const location = useLocation(),
   const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep),
-
   const {
   // TODO: Implement
 }
@@ -70,6 +71,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     updateProfile,
     loginWithGoogle,
     loginWithFacebook,
+
     loginWithTwitter,
     loginWithWeb3;
   } = useAuthOperations(setUser, setIsLoading),
@@ -125,10 +127,13 @@ import { useAuthState } from "./useAuthState",;""
 import { useAuthEventHandlers } from "./useAuthEventHandlers",;""
 import { mapProfileToUser } from "./profileMapper",;"
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
+
   const {;
     user, setUser,;
     isLoading, setIsLoading,;
-    onboardingStep, setOnboardingStep;
+    onboardingStep, setOnboardingStep;) => {
+  return $3;}
+}
   } = useAuthState(),;
   const navigate = useNavigate(),;
   const location = useLocation(),;
@@ -141,9 +146,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
     updateProfile,;
     loginWithGoogle,;
     loginWithFacebook,;
-    loginWithTwitter,;
-    loginWithWeb3;
+    loginWithTwitter,;}
+    loginWithWeb3;}
   } = useAuthOperations(setUser, setIsLoading),;
+
 
   // Wrapper for login to match the AuthContextType interface;
   const login = async (email: string, password: string) => {;
@@ -166,11 +172,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
             const { data: profile, error } = await getFromProfiles();"
               .select('*');''
               .eq('id', session && session.user.id);'
-              .single();
 
+              .single();
             if (profile) {;
               const mappedUser = mapProfileToUser(session && session.user, profile);
               setUser(mappedUser);
+
 
               // Show welcome toast when user logs in;'
               if (event === 'SIGNED_IN') {;'
@@ -429,6 +436,7 @@ if ( {) {
     isLoading,;
     isAuthenticated: !!user,;
     login,;
+
     signup,;
     logout,;
     resetPassword,;
@@ -437,6 +445,7 @@ if ( {) {
     loginWithFacebook,;
     loginWithTwitter,;
     loginWithWeb3,;
+
     onboardingStep;
   };
   return (;
@@ -525,3 +534,4 @@ data: {
   );
 };
 '
+

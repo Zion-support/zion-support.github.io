@@ -1,21 +1,23 @@
-
 class ErrorBoundary extends React.Component {
+
   // TODO: Implement
 }
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);'
+
   }
-  
   render() {
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
   const [translations, setTranslations] = useState<Record<string, any>>({});
@@ -336,6 +338,7 @@ if ( {) {
                                     className={`${!translations[lang && lang.code]?.[key] ? 'text-zion-purple italic' : ''}`}''
                                     dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}>;'
 </span>
+
                                   </span>;
                                 </div>;'
                                 <div className="flex items-center gap-2 text-sm text-zion-purple">;"
@@ -343,6 +346,7 @@ if ( {) {
                                   <AlertTriangle className="h-4 w-4" />;"
 </AlertTriangle>
                                 </div>;
+
                             </div>;
                           </div>;"
                         <div className="p-3 flex items-center justify-end">;"
@@ -704,6 +708,7 @@ if ( {) {
 }
                             >;"
                               {t('translation && translation.edit')}'
+
                             </Button>;
                         </div>;
               </div>;
@@ -712,6 +717,7 @@ if ( {) {
         </Card>;
       </main>;
       <Footer />;
+
 </Footer>
 
     </>);
@@ -827,3 +833,4 @@ const {
 }
 ;
 "
+

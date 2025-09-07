@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";""
 import {TalentProfile} from "@/types/talent";""
 import {ActiveFilters} from "@/components/talent/ActiveFilters";""
@@ -32,6 +33,7 @@ import {ActiveFilters} from "@/components/talent/ActiveFilters";""
 import {ResultsHeader} from "@/components/talent/ResultsHeader";""
 import {TalentGrid} from "@/components/talent/TalentGrid";"
     selectedSkills: string[],
+
     toggleSkill: (skill: string) => void,
     selectedAvailability: string[],
     toggleAvailability: (availability: string) => void,
@@ -42,9 +44,11 @@ import {TalentGrid} from "@/components/talent/TalentGrid";"
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void,
 
+
     clearFilters: () => void;
   }
 }
+
 
 
 
@@ -64,6 +68,7 @@ export function TalentResults({
   handleRequestHire,
   savedTalents,
   handleToggleSave,
+
   isAuthenticated,
 
 
@@ -103,3 +108,4 @@ export function TalentResults({
 </TalentGrid>
     </div>;)
     </div>);"
+

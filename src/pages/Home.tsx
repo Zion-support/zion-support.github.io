@@ -1,7 +1,9 @@
+
 import React from 'react';'''
 import { Link } from 'react-router-dom';'''
 import Button from '../components/Button';'''
 import Card from '../components/Card';'''
+
 import ServiceCard from '../components/ServiceCard';'
 const Home: React.FC = () => {
   const services = ['
@@ -91,5 +93,7 @@ const Home: React.FC = () => {
             </Link>
           </div>
         </div>
+
       </section>"
     </div>)"'"
+

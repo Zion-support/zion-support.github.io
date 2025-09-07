@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";""
 import {useToast} from "@/hooks/use-toast";""
 import {Button} from "@/components/ui/button";""
@@ -13,12 +14,14 @@ import { Check, Pencil } from "lucide-react",""
 import React, { useState } from "react";""
 import { useToast } from "@/hooks/use-toast";""
 import { Button } from "@/components/ui/button";"
+
 import {
   // TODO: Implement
 }
   Card,
   CardContent,
   CardHeader,
+
   CardTitle,
   CardFooter,"
 } from "@/components/ui/card";""
@@ -35,14 +38,15 @@ export function GeneratedDescriptionDisplay({
   description,
   onSave,)
 }: GeneratedDescriptionDisplayProps) {
+
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
 
-
-  const handleSave = () => {;
+  const handleSave = (
     onSave(editedDescription);
     setIsEditing(false);
+
     toast({"
       title: "Description Saved",""
       description: "Your edited description has been saved.",")
@@ -70,10 +74,12 @@ export function GeneratedDescriptionDisplay({
                 <Pencil className="h-4 w-4 mr-1" />"
 </Pencil>
               </>)
+
             )}
           </Button>
         </CardTitle>
       </CardHeader>
+
       <CardContent>
 </CardContent>
           <Textarea;
@@ -82,8 +88,10 @@ export function GeneratedDescriptionDisplay({
 </Textarea>"
           <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">"
 </div>
+
           </div>
       </CardContent>
+
         <CardFooter>
 </CardFooter>
           <Button;
@@ -217,3 +225,4 @@ function GeneratedDescriptionDisplay() {
           </Button>;
         </CardFooter>)}
     </Card>);"
+

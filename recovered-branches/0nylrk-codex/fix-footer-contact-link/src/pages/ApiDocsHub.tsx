@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";""
 import {Link} from "react-router-dom";""
 import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";""
@@ -191,10 +192,12 @@ export function ApiDocsHub() {
 </Link>"
             <ArrowRight className="ml - 2 h - 4 w - 4" />;"
 </ArrowRight>
+
           </Link>;
         </div>;
       </div>;
     </ApiDocsLayout>);
+
             <Link;
               key={section && section.path} 
               to={section && section.path}"
@@ -243,18 +246,20 @@ export function ApiDocsHub() {
 </Link>"
             <ArrowRight className="ml-2 h-4 w-4" />;"
 </ArrowRight>
+
           </Link>;
         </div>;
       </div>;
     </ApiDocsLayout>;
+
             <Link;
+
               key={section.path} ;
-
-
   );}
 ;
 export default ApiDocsHub,;
  export function ApiDocsHub () {
+
   const sections = [ {"
   title: "Getting Started";","
   description: "Learn how to authenticate and make your first API request";"
@@ -307,3 +312,4 @@ return (<ApiDocsLayout> <div className="max-w-4xl" > <h1 className="text-4xl fon
             <Link;
               key={section.path} ;
 ]"
+

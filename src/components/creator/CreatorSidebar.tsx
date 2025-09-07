@@ -1,3 +1,4 @@
+
 } from 'lucide-react'; import {'
   // TODO: Implement
 }'
@@ -192,3 +193,4 @@ export function AppSidebar() {
         </SidebarGroup>;
       </SidebarContent>;)
     </Sidebar>);"
+

@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState, useRef, useEffect } from "react";""
 import {Button} from "@/components/ui/button";""
 import {Input} from "@/components/ui/input";""
@@ -108,6 +109,7 @@ export function ChatBotPanel() {;
           suggestEscalation()
       timestamp: new Date ()}]),"
   const [input_value, setInputValue] = useState ("");"
+
   const [is_loading, setIsLoading] = useState (false);
   const [failed_attempts, setFailedAttempts] = useState (0);
   const scrollAreaRef = useRef < HTMLDivElement>(null);
@@ -117,8 +119,10 @@ export function ChatBotPanel() {;
   // Auto - scroll to bottom when messages change;
   useEffect (() => {
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       scrollAreaRef.current.scroll_top = scrollAreaRef.current.scroll_height;
     }
@@ -127,14 +131,17 @@ if ( {) {
   // Focus input when component mounts;
   useEffect (() => {
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       input_ref.current.focus ();
     }
   }, []);
 ;
   const handleSendMessage = async (text: string = input_value) => {
+
     if () return, ) {
   $2;
 }
@@ -145,6 +152,7 @@ if ( {) {
       timestamp: new Date ()},
     set_messages ((prev) => [...prev, user_message]);"
     setInputValue ("");"
+
     setIsLoading (true);
 ;
     try {
@@ -152,23 +160,28 @@ if ( {) {
 }
       // Call the OpenAI - powered support function;
       const response = await sendToAIAssistant (text);
+
 ;
       const bot_message: Message = {,
   id: `bot-${Date.now ()}`,"
         content: response.message || "Sorry, I couldn't process your request. Please try again.";""
         sender: "bot","
+
         timestamp: new Date ()},
       set_messages ((prev) => [...prev, bot_message]);
 ;
       // Check if the request was successful;
       // Check condition;
+
 if ( {) {
   $2;
+
 }
         setFailedAttempts ((prev) => prev + 1);
 ;
         // After 3 failed attempts, suggest escalation;
         // Check condition;
+
 if ( {) {
   $2;
 }
@@ -370,10 +383,12 @@ export function ChatBotPanel() {;
 </Button>"
             <Send className="h-4 w-4" />;"
 </Send>
+
           </Button>;
         </form>;
       </div>;
     </div>;
+
           <Button;"
             type="submit";""
             size="icon";"
@@ -394,3 +409,4 @@ export function ChatBotPanel() {;
 }</div> </div>) "
 }Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>)""
 }h-4 w-4" /> </Button> </form> </div> </div>)"]"
+

@@ -1,4 +1,5 @@
 
+
   Card;
   CardContent;
   CardDescription;
@@ -42,10 +43,12 @@ import { toast } from "@/hooks/use-toast";"
 import {
   // TODO: Implement
 }
+
   Card,
   CardContent,
   CardDescription,
   CardFooter,
+
   CardHeader,
 CardTitle,;
 
@@ -53,9 +56,11 @@ CardTitle,;
 } from "@/components/ui/card";""
 import { Sparkles } from "lucide-react";""
 import { Progress } from "@/components/ui/progress";")
+
 export function UsageStats() {
-  const handleSaveChanges = () => {
+  const handleSaveChanges = (
     toast({
+
 
 import {;
   Card,;
@@ -74,10 +79,12 @@ export function UsageStats() {;
       description: "The new usage limits have been saved successfully.",;""
       title: "Limits updated",""
       description: "The new usage limits have been saved successfully.",;")
+
     });
-  }
+  };
 
   return (
+
 
 
 
@@ -126,10 +133,12 @@ export function UsageStats() {
 </div>"
                   <Input type="number" min="1" defaultValue="50" />"
 </Input>
+
                 </div>
               </div>
             </div>
           </CardContent>
+
           <CardFooter>
 </CardFooter>"
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>"
@@ -180,9 +189,12 @@ export function UsageStats() {
 </CardFooter>"
             <Button size="sm" onClick={handleSaveChanges}>"
 </Button>
+
             </Button>
           </CardFooter>
         </Card>
+
+        <Card />
 
 
         
@@ -222,17 +234,21 @@ export function UsageStats() {
 </div>"
                   <Input type="number" min="1" defaultValue="1000" />"
 </Input>
+
                 </div>
               </div>
             </div>
           </CardContent>
+
           <CardFooter>
 </CardFooter>"
             <Button size="sm" onClick={handleSaveChanges}>"
 </Button>
+
             </Button>
           </CardFooter>
         </Card>
+
 
 
         
@@ -285,19 +301,23 @@ export function UsageStats() {
                     <option value="80">80% of limit</option>""
                     <option value="90">90% of limit</option>""
                     <option value="95">95% of limit</option>"
+
                   </select>
                 </div>
               </div>
             </div>
           </CardContent>
+
           <CardFooter>
 </CardFooter>"
             <Button size="sm" onClick={handleSaveChanges}>"
 </Button>
+
             </Button>
           </CardFooter>
         </Card>
       </div>
+
 
 
       
@@ -325,11 +345,13 @@ export function UsageStats() {
             <h3 className="font-medium">Need higher limits?</h3>""
             <p className="text-sm text-muted-foreground">"
 </p>
+
             </p>
           </div>
         </div>
-        <Button>Contact Us</Button>
+        <Button />Contact Us</Button>
       </div>
+
     </div>"
     <div className="space-y-8">;"
 </div>
@@ -579,3 +601,4 @@ export function UsageStats() {
         <Button>Contact Us</Button>;
       </div>;
     </div>;"
+

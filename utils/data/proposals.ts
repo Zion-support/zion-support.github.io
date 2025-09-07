@@ -22,8 +22,8 @@ export type ProposalMeta = {
     jsonPath?: string;
     pdfPath?: string;
     ipfsCid?: string;
-    ensRecordHash?: string;
-    signature?: string;
+    ensRecordHash?: string;}
+    signature?: string;}
   }
 }
 export type ProposalPayload = {title: string;,
@@ -33,6 +33,7 @@ export type ProposalPayload = {title: string;,
   budgetOrResolution: string;,
   supportingMultiverses: string[];
   contentMarkdown: string;
+
   language?: string;
   metadata?: Record<string, any>;
 </string>
@@ -43,6 +44,7 @@ export type ProposalPayload = {title: string;,
     if (!fs.existsSync(metaPath)) return null;'
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;'
   } catch {return null;
+
   }
 }
 export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
@@ -50,11 +52,13 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
     jsonPath?: string,;
     pdfPath?: string,;
     ipfsCid?: string,;
+
     ensRecordHash?: string,;
     signature?: string;
     } catch (error) {'
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 },;
@@ -66,11 +70,14 @@ export type ProposalPayload = {
   budgetOrResolution: string;,
   supportingMultiverses: string[];
   contentMarkdown: string;
+
   language?: string;
   metadata?: Record<string, any>;
 </string>
+
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
+
 
 
 
@@ -79,6 +86,7 @@ export type ProposalPayload = {
     if (!fs.existsSync(metaPath)) return null;'
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;'
   } catch {return null;
+
   }
 }
 
@@ -94,8 +102,8 @@ export type ProposalPayload = {
     pdfPath?: string,;
     ipfsCid?: string,;
     ensRecordHash?: string,;
-    signature?: string;
-
+    signature?: string;}
+}
   }
 },;
 export type ProposalPayload = {;
@@ -106,34 +114,42 @@ export type ProposalPayload = {;
   budgetOrResolution: string,;
   supportingMultiverses: string[],;
   contentMarkdown: string,;
+
   language?: string,;
   metadata?: Record<string any>;
 </string>
+
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
 ;
 export function getProposal(id: string): ProposalMeta | null {;
+
   try {;'
     const metaPath = path.join(dataDir, id, 'meta.json'),;'
     if (!fs.existsSync(metaPath)) return null,;'
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;'
   } catch {;
     return null;
+
   }
 }
 ;
 export function savePdf(id: string, pdfBytes: Uint8Array): string {;
+
   ensureDirs(),;
   const publicProposalDir = path.join(publicDir, id),;
   fs.mkdirSync(publicProposalDir, { recursive: true }),;'
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf'),;'
+
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
 }
 ;
+
     } catch (error) {'
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 },;
@@ -145,6 +161,7 @@ export type ProposalPayload = {
   budgetOrResolution: string;,
   supportingMultiverses: string[];
   contentMarkdown: string;
+
   language?: string;
   metadata?: Record<string, any>;
 </string>
@@ -152,11 +169,13 @@ export type ProposalPayload = {
   } catch (error) {"
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
 export function getProposal(id: string): ProposalMeta | null {;
   try {
+
   // TODO: Implement
 }"
     const metaPath = path.join(dataDir, id, 'meta.json');'
@@ -172,17 +191,21 @@ export function getProposal(id: string): ProposalMeta | null {;
   } catch (error) {"
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
 export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   ensureDirs(),;
 
+
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });"
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');'
+
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
+
 
 
 
@@ -214,6 +237,7 @@ function ensure_dirs() {
 }
   if () fs.mkdir_sync (public_dir, { recursive: true })) {
   $2;
+
 }
 }
 export function create_proposal (payload: ProposalPayload): ProposalMeta {
@@ -223,8 +247,8 @@ export function create_proposal (payload: ProposalPayload): ProposalMeta {
   const id = uuidv4 (),
   const created_at = new Date ().toISOString (),
   const updated_at = created_at,
-  const proposal_dir = path.join (data_dir, id),
-  const publicProposalDir = path.join (public_dir, id),
+  const proposal_dir = path.join (data_dir, id),}
+  const publicProposalDir = path.join (public_dir, id),}
   fs.mkdir_sync (proposal_dir, { recursive: true }),
   fs.mkdir_sync (publicProposalDir, { recursive: true }),'
   const markdown_path = path.join (publicProposalDir, 'proposal.md'),''
@@ -238,6 +262,7 @@ export function create_proposal (payload: ProposalPayload): ProposalMeta {
     type: payload.type,
     regional_scope: payload.regional_scope,
     budgetOrResolution: payload.budgetOrResolution,
+
     supporting_multiverses: payload.supporting_multiverses || [],'
     languages: payload.language ? [payload.language] : ['en'],''
     status: 'Draft','
@@ -252,6 +277,7 @@ export function create_proposal (payload: ProposalPayload): ProposalMeta {
 }
 export function updateProposalMeta (id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {
   // TODO: Implement
+
 }
   ensure_dirs (),'
   const meta_path = path.join (data_dir, id, 'meta.json'),''
@@ -264,15 +290,18 @@ export function updateProposalMeta (id: string, updater: (meta: ProposalMeta) =>
   return next;
 }
 export function list_proposals (): ProposalMeta[] {
+
   ensure_dirs (),'
   const entries = fs.readdir_sync (data_dir).filter ((f) => fs.exists_sync (path.join (data_dir, f, 'meta.json'))),'
   const metas: ProposalMeta[] = entries.map ((id) => {'
     const meta_path = path.join (data_dir, id, 'meta.json'),''
     return JSON.parse (fs.readFileSync (meta_path, 'utf8')) as ProposalMeta;'
+
   }),
   return metas.sort ((a, b) => (a.created_at < b.created_at ? 1 : -1));
 }
 export function get_proposal (id: string): ProposalMeta | null {
+
   // TODO: Implement
 }
   try {
@@ -296,14 +325,17 @@ export function save_pdf (id: string, pdf_bytes: Uint8Array): string {
   const publicProposalDir = path.join (public_dir, id),
   fs.mkdir_sync (publicProposalDir, { recursive: true }),'
   const pdf_path = path.join (publicProposalDir, 'proposal.pdf'),'
+
   fs.writeFileSync (pdf_path, Buffer.from (pdf_bytes));
   return `/proposals/${id}/proposal.pdf`;
 }'
 export function update_artifacts (id: string, artifacts: Partial < ProposalMeta['artifacts']>): ProposalMeta {'
   // TODO: Implement
 }
+
   return updateProposalMeta (id, (meta) => ({
     ...meta;)
+
     artifacts: { ...meta.artifacts, ...artifacts }}));
 }
 }

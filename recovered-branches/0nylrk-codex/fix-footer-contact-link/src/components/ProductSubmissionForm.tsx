@@ -1,4 +1,5 @@
 
+
 import React from "react";""
 import {useForm} from "react-hook-form";""
 import {zodResolver} from "@hookform/resolvers/zod";""
@@ -461,9 +462,11 @@ if ( {) {
                       accept="image/*""
                       onChange={handleImageChange}"
                       className="cursor-pointer""
+
                     />;
 </Input>
                   </FormControl>;
+
                   <FormDescription>;
 </FormDescription>
                   </FormDescription>;
@@ -480,10 +483,12 @@ if ( {) {
               control={form && form.control}"
               name="image"""
                           className="w-full h-full object-cover""
+
                         />;
 </img>
                       </AspectRatio>;
                     </div>;
+
                 </FormItem>;"
             <div className="flex justify-end">;"
 </div>
@@ -606,3 +611,4 @@ return (<Tabs value= {
 }/> <div className=" flex justify-end"> <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value=" ai" > <AIListingGenerator /> </TabsContent> </Tabs>)"
       </TabsContent>
     </Tabs>"
+

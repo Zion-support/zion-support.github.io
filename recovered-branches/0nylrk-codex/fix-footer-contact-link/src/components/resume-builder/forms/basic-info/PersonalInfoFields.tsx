@@ -1,3 +1,4 @@
+
 import {
   // TODO: Implement
 }
@@ -153,10 +154,12 @@ function PersonalInfoFields() {
 </FormControl>"
               <Input placeholder="Senior Software Engineer" {...field} />"
 </Input>
+
             </FormControl>
             <FormMessage />
 </FormMessage>
           </FormItem>
+
       <FormField;
         control={control}"
         name="email"")
@@ -169,10 +172,12 @@ function PersonalInfoFields() {
 </FormControl>"
               <Input type="email" placeholder="john@example.com" {...field} />"
 </Input>
+
             </FormControl>
             <FormMessage />
 </FormMessage>
           </FormItem>
+
       <FormField;
         control={control}"
         name="phone"")
@@ -185,11 +190,13 @@ function PersonalInfoFields() {
 </FormControl>"
               <Input placeholder="+1 234 567 8900" {...field} />"
 </Input>
+
             </FormControl>
             <FormMessage />
 </FormMessage>
           </FormItem>
     </div>
+
           </FormItem>;
     </div>;
   control: Control<BasicInfoFormData> 
@@ -205,3 +212,4 @@ function PersonalInfoFields() {
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) 
 </FormField>
 }/> </div>) "
+

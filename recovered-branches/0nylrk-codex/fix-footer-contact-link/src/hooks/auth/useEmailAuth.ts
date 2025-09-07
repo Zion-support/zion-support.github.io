@@ -2,6 +2,7 @@
 
 
 
+
 import {useState} from "react";""
 import {supabase} from "@/integrations/supabase/client";""
 import {toast} from "@/hooks/use-toast";""
@@ -33,10 +34,12 @@ export const useEmailAuth = ()
 
           description: error && error.message,)"
           variant: "destructive"});"
+
     try {
   // TODO: Implement
 }
       setIsLoading(true),
+
 
       // Clean up any stale auth state before login;"
           title: "Login failed";","
@@ -45,17 +48,20 @@ export const useEmailAuth = ()
       
       const { data, error } = await supabase.auth.signInWithPassword({
         email,)
-        password}),
 
+        password}),
       if (error) {
+
         toast({"
           title: "Login failed","
           description: error.message,
+
 
         return { error }
       }
       return { data })
     } catch (error: any) {
+
 "
       console.error ("Login error:", error);"
       toast ({
@@ -71,6 +77,7 @@ export const useEmailAuth = ()
   // TODO: Implement
 }
       setIsLoading (false);
+
     }
   const signup = async (email: string, password: string, userData?: any) => {
     try {
@@ -78,6 +85,7 @@ export const useEmailAuth = ()
 }
       setIsLoading(true);
       // Clean up any stale auth state before signup;
+
       // Attempt to sign out any existing session first to prevent conflicts;
       try {
   // TODO: Implement
@@ -88,9 +96,10 @@ export const useEmailAuth = ()
         options: {
           // Only store a simple display name in the profile data;
           data: {
-          }}}),
 
+          }}}),
       if (error) {
+
         toast({'
           title: "Signup failed","
           description: error.message,)"
@@ -111,6 +120,7 @@ export const useEmailAuth = ()
       return { error }
       const { data, error } = await supabase && supabase.auth.signUp({
 ;)
+
   const signup = async (email: string, password: string, user_data?: any) => {
     try {
   // TODO: Implement
@@ -119,6 +129,7 @@ export const useEmailAuth = ()
       // Clean up any stale auth state before signup;
       cleanupAuthState ();
 ;
+
       // Attempt to sign out any existing session first to prevent conflicts;
       try {
   // TODO: Implement
@@ -127,6 +138,7 @@ export const useEmailAuth = ()
       } catch (err) {
         // Continue even if signout fails;'
         console.log ("Sign out before signup failed:", err);"
+
       }
       // Create a proper options object;
       const { data, error } = await supabase.auth.sign_up ({
@@ -135,8 +147,8 @@ export const useEmailAuth = ()
         options: {
           // Only store a simple display name in the profile data;
           data: {
-
 ;
+
       // Check condition;)
 if ( {) {
   $2;
@@ -151,9 +163,10 @@ if ( {) {
       }
 "
             display_name: userData?.displayName ?? userData?.name ?? """
-          }}}),
 
+          }}}),
       if (error) {
+
         toast({"
           title: "Signup failed","
           description: error.message,
@@ -215,13 +228,17 @@ if ( {) {
     } finally {
   // TODO: Implement
 }
+
       setIsLoading(false)
     }
   },
-
-        redirectTo: `${window.location.origin}/update-password`}),
-
+  const resetPassword = async (email: string) => {
+    try {}
+      setIsLoading(true)}
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {}
+        redirectTo: `${window.location.origin}/update-password`});
       if (error) {
+
         toast({"
           title: "Password reset failed","
           description: error.message,)"
@@ -247,12 +264,13 @@ if ( {) {
 }
       setIsLoading(true),
       const { error } = await supabase && supabase.auth.resetPasswordForEmail(email, {)
-        redirectTo: `${window && window.location.origin}/update-password`});
 
+        redirectTo: `${window && window.location.origin}/update-password`});
       if (error) {
         toast({
 ;)
   const reset_password = async (email: string) => {
+
     try {
   // TODO: Implement
 }
@@ -269,13 +287,12 @@ if ( {) {
           title: "Password reset failed";",
   description: error && error.message,)"
           variant: "destructive"});"
+
         return { error }
       }
-
-
         redirectTo: `${window.location.origin}/update-password`}),
-
       if (error) {
+
         toast({"
           title: "Password reset failed","
           description: error.message,
@@ -368,31 +385,37 @@ import { supabase } from "@/integrations/supabase/client",;""
 import { toast } from "@/hooks/use-toast",;""
 import type { UserProfile } from "@/types/auth",;""
 import { cleanupAuthState } from "@/utils/authUtils",;"
+
 ;
 export const useEmailAuth = (;)
   setUser:(user:UserProfile | null) => void,;
   setIsLoading:(loading:boolean) => void;
-) => {;
+) => {;}
   const login = async ({ email, password } { email:string, password:string }) => {;
     try {;
       setIsLoading(true),;
       // Clean up any stale auth state before login;
+
       cleanupAuthState(),;
       ;
       const { data, error } = await supabase.auth.signInWithPassword({;
         email,;)
+
         password}),;
 ;
       return { error }
       return { error };
 
+
     } finally {
   // TODO: Implement
 }
       setIsLoading(false)
+
     }
   };
-
   return { login, signup, resetPassword }
 };
+
 "
+

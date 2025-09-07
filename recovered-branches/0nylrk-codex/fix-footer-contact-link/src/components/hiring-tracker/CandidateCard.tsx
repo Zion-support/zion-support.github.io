@@ -1,4 +1,5 @@
 
+
 import { useState } from "react",""
 import { Draggable } from "react-beautiful-dnd",""
 import { formatDistanceToNow } from "date-fns",""
@@ -96,6 +97,7 @@ import { Card, CardContent  } from '@/components / ui / card';''
 import { Avatar  } from '@/components / ui / avatar';''
 import { Button  } from '@/components / ui / button';''
 import { Textarea  } from '@/components / ui / textarea';'
+
 import {
   // TODO: Implement
 }
@@ -104,12 +106,15 @@ import {
   FileText,
   MoreVertical,
   Calendar,
-  AlertTriangle,
+  AlertTriangle,}
+  BriefcaseIcon,}
+} from \"lucide-react\";
 import {
   // TODO: Implement
 }
   DropdownMenu,
   DropdownMenuContent,
+
   DropdownMenuItem,
 
 
@@ -648,8 +653,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 </span>"
                       <FileText className="h-3 w-3 mr-1" /> No Resume;"
 </FileText>
+
                     </span>
                 </Button>
+
                 <Button;"
                   variant="default"""
                   size="sm""
@@ -661,11 +668,13 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 </Button>"
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;"
 </BriefcaseIcon>
+
                 </Button>
               </div>
             </CardContent>
           </Card>
       </Draggable>
+
       </Draggable>;
       <HireConfirmationModal;
         isOpen={showHireModal}
@@ -673,10 +682,9 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 </HireConfirmationModal>
     </>
 
+
       />
     </>
-      />;
-    </>;
   );
 }
 "

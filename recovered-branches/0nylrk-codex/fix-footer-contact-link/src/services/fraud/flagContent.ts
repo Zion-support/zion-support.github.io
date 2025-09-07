@@ -1,11 +1,13 @@
 
 
+
 import { supabase } from '@/integrations/supabase/client',''
 import { FraudSeverity, FraudFlag } from '@/types/fraud',''
 import { FlagResult } from './types','
 /**
  * Flag content for review;
  */
+
 
 
 // Content flagging functionality;'
@@ -20,6 +22,18 @@ export const flag_content = async (
   user_email: string | undefined;'
   content_type: FraudFlag['content_type'];',
   content_id: string;
+    }
+  }
+}
+};
+    }
+  }
+};
+    }
+  }
+}
+}
+
   content_excerpt: string;,
   severity: FraudSeverity;
 export const flagContent = async (
@@ -44,3 +58,4 @@ export const flagContent = async (
 </FlagResult>
 ): Promise<FlagResult> => {
 </FlagResult>'
+

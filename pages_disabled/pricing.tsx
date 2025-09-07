@@ -1,3 +1,4 @@
+
 import Head from 'next/head'''
 import Link from 'next/link''
 import {
@@ -65,10 +66,12 @@ const plans = [
     ],
     limitations: [],
     popular: false;
+
   }
-]
+];
 
 const addOns = [
+
   {'
     name: 'Additional Storage',''
     price: '$10',''
@@ -117,9 +120,12 @@ export default function Pricing() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">"
 </div>
               <motion.div;
+
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 ,}
+}
                 animate={{ opacity: 1, y: 0 }}
+
                 transition={{ delay: index * 0.1 }}
                 className={`relative bg-white rounded-lg shadow-md p-8 ${"
                   plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : '''
@@ -183,9 +189,12 @@ export default function Pricing() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
 </div>
                 <motion.div;
+
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 ,}
+}
                   animate={{ opacity: 1, y: 0 }}
+
                   transition={{ delay: index * 0.1 }}"
                   className="bg-white rounded-lg shadow-md p-6""
                 >
@@ -278,3 +287,4 @@ export default function Pricing() {
       </section>
     </div>
 "
+

@@ -1,6 +1,7 @@
 
 
 
+
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
@@ -20,3 +21,4 @@ export function useJobSuggestions(talentId?: string) {
 </JobMatch>
   const [jobMatches, setJobMatches] = useState<JobMatch[]> ([]);
 </JobMatch>"
+

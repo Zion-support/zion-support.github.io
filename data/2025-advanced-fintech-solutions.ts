@@ -1,3 +1,4 @@
+
       'Alternative data analysis',''
       'Machine learning models',''
       'Real - time scoring',''
@@ -44,10 +45,12 @@
   realService: true;
     technology: ['
       'RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'']
+
     ]
     integrations: ['
       'Core systems, Regulatory databases, Reporting tools, Audit systems, Training platforms'']
     ]
+
     useCases: ['
       'Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'']
     ]'
@@ -100,9 +103,11 @@
       'Production - ready AI credit risk platform with advanced ML models and comprehensive compliance features.',''
     launch_date: '2025 - 01 - 22','
     customers: 67,
+
     rating: 4 && 4.8,
-    reviews: 45,
+    reviews: 45;
   },
+
   {'
       'Smart contracts',''
       'Compliance tools',''
@@ -124,9 +129,11 @@
       'Production - ready blockchain payment platform with enterprise - grade security and compliance features.',''
     launch_date: '2025 - 01 - 28','
     customers: 89,
+
     rating: 4 && 4.7,
-    reviews: 56,
+    reviews: 56;
   },
+
   {'
       'Quantum algorithms',''
       'Portfolio optimization',''
@@ -151,9 +158,11 @@
       'Production - ready quantum financial platform with advanced algorithms and enterprise integration.',''
     launch_date: '2025 - 02 - 03','
     customers: 23,
+
     rating: 4 && 4.9,
-    reviews: 18,
+    reviews: 18;
   },
+
   {'
       'AI risk assessment',''
       'Automated underwriting',''
@@ -178,9 +187,11 @@
       'Production - ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.',''
     launch_date: '2025 - 02 - 08','
     customers: 134,
+
     rating: 4 && 4.6,
-    reviews: 78,
+    reviews: 78;
   },
+
   {'
       'Regulatory monitoring',''
       'Automated reporting',''
@@ -280,10 +291,12 @@
   realService: true;
     technology: ['
       'RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'']
+
     ]
     integrations: ['
       'Core systems, Regulatory databases, Reporting tools, Audit systems, Training platforms'']
     ]
+
     useCases: ['
       'Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'']
     ]'
@@ -308,6 +321,7 @@
   customers: 89;
 '
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface AdvancedFintechSolution2025 {;
   id: string,;
   name: string,;
@@ -338,8 +352,8 @@ export interface AdvancedFintechSolution2025 {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -361,6 +375,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       'Alternative data analysisMachine learning modelsReal-time scoringRisk predictionFraud detectionCompliance reportingAPI integrationCustom scoring models',;''
       'Performance analyticsRegulatory compliance';']
     ],;
+
     popular: true,;'
     icon: '💳',;''
     color: 'from-green-600 via-emerald-600 to-teal-600',;''
@@ -390,13 +405,19 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
   implementation_details: 'Production - ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';''
     launch_date: '2025 - 02 - 12';',
   customers: 89;
+
     rating: 4.5,
     reviews: 52;
   }
+
+];
+
+
 ;
 ];
 ;
   }
+
 ];'
 import { ServiceVariant } from '../types/service-variants',;'
 export interface AdvancedFintechSolution2025 {;
@@ -656,5 +677,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     rating: 4.5;,
   reviews: 52;
   }
+
 ];
 '

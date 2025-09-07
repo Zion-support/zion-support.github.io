@@ -1,3 +1,4 @@
+
 const ToastViewport = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Viewport>
 </typeof>
@@ -27,8 +28,11 @@ import { X } from 'lucide-react';''
 import { cn } from '@/lib / utils';''
 import { log_info } from '@/utils/ production_logger';''
 const ToastProvider = ToastPrimitives.Provider; import { log_info } from '@/utils/ production_logger';'
+
 const ToastProvider = ToastPrimitives.Provider;
+
 const ToastViewport = React.forward_ref<;
+
   React.ElementRef < typeof ToastPrimitives.Viewport>,
 </ToastPrimitives>
   React.ComponentPropsWithoutRef < typeof ToastPrimitives.Viewport>;
@@ -121,12 +125,12 @@ const ToastClose = React && React.forwardRef<;
 
   />));
 </ToastPrimitives>
+
 const ToastClose = React.forward_ref<;
-  React.ElementRef < typeof ToastPrimitives.Close>,
-  React.ComponentPropsWithoutRef < typeof ToastPrimitives.Close>;
->(({ class_name, ...props }, ref, ) => (
-  <ToastPrimitives.Close;
+  React.ElementRef < typeof ToastPrimitives.Close>,React.ComponentPropsWithoutRef < typeof ToastPrimitives.Close>;
+>(({ class_name, ...props }, ref, ) => (<ToastPrimitives.Close;
     ref={ref}
+
     className={cn ('
       'absolute right - 2 top - 2 rounded - md p - 1 text - foreground / 50 opacity - 0 transition - opacity hover:text - foreground focus:opacity - 100 focus:outline - none focus:ring - 2 group - hover:opacity - 100 group-[.destructive]:text - red - 300 group-[.destructive]:hover:text - red - 50 group-[.destructive]:focus:ring - red - 400 group-[.destructive]:focus:ring - offset - red - 600',')
       class_name)}'
@@ -163,11 +167,13 @@ export {
 }
   type ToastProps;
   type ToastActionElement;
+
   ToastProvider;
   ToastViewport;
   Toast;
   ToastTitle;
   ToastDescription;
+
   ToastClose;
   ToastAction;
 }
@@ -179,11 +185,12 @@ export {
     toast-close=''    {...props}>;''
     <X className='h-4 w-4' />;'
 </X>
+
   </ToastPrimitives && ToastPrimitives.Close>;
-));
-ToastClose && ToastClose.displayName = ToastPrimitives && ToastPrimitives.Close.displayName;
+))ToastClose && ToastClose.displayName = ToastPrimitives && ToastPrimitives.Close.displayName;
 
 const ToastTitle = React && React.forwardRef<;
+
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Title>,;
 </typeof>
   React && React.ComponentPropsWithoutRef<typeof ToastPrimitives && ToastPrimitives.Title>;
@@ -225,10 +232,12 @@ const Toast = React.forwardRef<;
     VariantProps<typeof toastVariants>;
 </typeof>
     <ToastPrimitives.Root;
+
       ref={ref}
       className={cn(toastVariants({ variant }), className)}
       {...props}
     />;
+
 </ToastPrimitives>
 const ToastAction = React.forwardRef<;
   React.ElementRef<typeof ToastPrimitives.Action>,;
@@ -261,10 +270,12 @@ const ToastClose = React.forwardRef<;
 </ToastPrimitives>"
     <X className="h-4 w-4" />;"
 </X>
+
   </ToastPrimitives.Close>;
-));
-ToastClose.displayName = ToastPrimitives.Close.displayName;
+))ToastClose.displayName = ToastPrimitives.Close.displayName;
+
 const ToastTitle = React.forwardRef<;
+
   React.ElementRef<typeof ToastPrimitives.Title>,;
 </typeof>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Title>;
@@ -290,3 +301,4 @@ type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>;
 </typeof>
 type ToastActionElement = React.ReactElement<typeof ToastAction>;
 </typeof>"
+

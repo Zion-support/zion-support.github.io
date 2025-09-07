@@ -1,10 +1,9 @@
-
-
 import {;
   Card,;
   CardContent,;
   CardHeader,;
   CardTitle,;
+
   CardDescription,;
   CardFooter,;
 
@@ -19,6 +18,7 @@ import {
   CardDescription;
   CardFooter;"
 import { useState } from "react";"
+
 import {
   // TODO: Implement
 }
@@ -27,6 +27,7 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
+
   CardFooter,;
 
 
@@ -85,9 +86,10 @@ interface JobMatchCardProps {
 
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
+
   const job = match.job,
-  
   if (!job) return null,
+
   
 
   return ()
@@ -289,9 +291,11 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               className="flex-1""
               onClick={() => onDecline(match && match.id)}
 </Button>
+
             </Button>;
           </div>;
       </CardFooter>;
+
     </Card>;"
     <Card className="overflow - hidden border - l-4 border - l-blue - 500">;"
 </Card>"
@@ -376,3 +380,4 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           </div>)}
       </CardFooter>;
     </Card>);"
+

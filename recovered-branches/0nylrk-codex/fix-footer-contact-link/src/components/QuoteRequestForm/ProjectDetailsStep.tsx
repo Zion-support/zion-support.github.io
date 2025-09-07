@@ -1,3 +1,4 @@
+
 import { QuoteFormData } from "@/types/quotes";""
 import { Input } from "@/components/ui/input";""
 import { Label } from "@/components/ui/label";""
@@ -46,9 +47,11 @@ interface ProjectDetailsStepProps {
               value={formData.projectDescription}
               onChange={(e) =>
 </Textarea>
+
           </div>
         </div>
       </div>
+
 
       <div>
 </div>"
@@ -170,10 +173,12 @@ value={formData.contactInfo.name}
               value={formData.contactInfo.phone}
               onChange={(e) =>
 </Input>
+
           </div>
         </div>
       </div>
     </div>
+
           </div>;
         </div>;
       </div>;
@@ -251,3 +256,4 @@ updateFormData: (data: Partial<QuoteFormData>) => void;
 }className=" bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"/> </div> <div> <Label htmlFor=" phone"className=" text-zion-slate-light" >Phone</Label> <Input;"
 </div>
 }/> </div> </div> </div> </div>) "
+

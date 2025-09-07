@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";""
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";""
 import {Button} from "@/components/ui/button";""
@@ -45,10 +46,11 @@ export function UpcomingInterviewsCard() {
         setIsLoading(false)
       }
 
-    },
 
+    },
     loadInterviews()
   }, []),
+
 
 
   if (isLoading) {
@@ -353,3 +355,4 @@ return (<img src= {
 </img>
 }</div> </div> </div> </div>) "
 }</div> <div className="mt-4 pt-3 border-t border-zion-blue-light/40" > <Button asChild size="sm" variant="outline" className="w-full" > <Link to="/interviews" > View All Interviews </Link> </Button> </div> </CardContent> </Card>)""
+

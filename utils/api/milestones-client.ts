@@ -3,6 +3,7 @@ export interface Milestone {
 }
   id: string;,
   title: string;
+
   description: string;,
   status: 'pending' | 'in-progress' | 'completed';'
   dueDate: string;,
@@ -27,3 +28,4 @@ export async function createMilestone(projectId: string, payload: CreateMileston
 </Milestone>
 ): Promise<Milestone> {
 </Milestone>'
+

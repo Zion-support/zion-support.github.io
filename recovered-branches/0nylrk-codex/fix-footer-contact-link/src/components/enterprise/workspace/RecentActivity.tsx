@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";""
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
 import {Badge} from "@/components/ui/badge";""
@@ -98,10 +99,12 @@ import {Badge} from "@/components/ui/badge";"
                   <div className="flex items-center gap-2 mt-1 sm:mt-0">"
 </div>"
                     <span className="text-xs text-muted-foreground">{activity.timestamp}</span>"
+
                   </div>
                 </div>
               </div>
             </div>
+
         </div>"
         <div className="p-3 text-center border-t border-border">"
 </div>"
@@ -146,10 +149,12 @@ import {Badge} from "@/components/ui/badge";"
 </div>"
               <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;"
 </div>
+
                   </div>;
                 </div>;
               </div>;
             </div>;
+
         </div>;"
         <div className="p-3 text-center border-t border-border">;"
 </div>"
@@ -164,6 +169,9 @@ import {Badge} from "@/components/ui/badge";"
   case "candidate": return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;""
 case "interview": return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;""
 case "comment": return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>;"
+
 }</div> View All Activity </button> </div> </CardContent> </Card>) 
     </Card>;
+
     </Card>);]"
+

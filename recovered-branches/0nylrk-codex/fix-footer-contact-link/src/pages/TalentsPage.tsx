@@ -1,5 +1,6 @@
 
 
+
 import { DynamicListingPage } from "@/components/DynamicListingPage";""
 import { ProductListing } from "@/types/listings";"
 // Sample talent listings;
@@ -373,10 +374,12 @@ const TALENT_LISTINGS: ProductListing[] = [;
       avatarUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100"},;""
     images: ["https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&w=800&h=500"],;""
     createdAt: "2023-10-15T13:45:00.000Z",;"
+
     aiScore: 94,;
     rating: 4.9,;
     reviewCount: 21}],;
 // Filter options specific to talents;
+
 const TALENT_FILTERS = [;"
   { label: 'Engineering', value: 'engineering' },;''
   { label: 'Data Science', value: 'data-science' },;''
@@ -390,17 +393,22 @@ export default function TalentsPage() {;
       title="AI & Tech Talent";""
       description="Connect with highly skilled professionals in AI, software development, data science, and more.";""
       categorySlug="talents";"
+
       listings={TALENT_LISTINGS}
       categoryFilters={TALENT_FILTERS}
       initialPrice={{ min: 100, max: 200 }}
     />;
+
 </DynamicListingPage>
     <DynamicListingPage;"
       title="AI & Tech Talent";""
       description="Connect with highly skilled professionals in AI, software development, data science, and more.";""
       category_slug="talents";"
+
       listings={TALENT_LISTINGS}
       category_filters={TALENT_FILTERS}
       initial_price={{ min: 100, max: 200 }})
     />);
+
 </DynamicListingPage>"
+

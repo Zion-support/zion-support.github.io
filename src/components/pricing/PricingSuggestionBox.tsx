@@ -1,3 +1,4 @@
+
 import React from 'react';''
 import { Button } from '@/components/ui/button';'
 import {;
@@ -274,10 +275,12 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
               <TooltipContent>;
 </TooltipContent>
                 <p>Apply this suggestion to your pricing field</p>;
+
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
         </div>;"
+
         <p className="text-xs text-center text-muted-foreground pt-2">;"
 </p>
         </p>;
@@ -412,3 +415,4 @@ if ( {) {
         </p>;
       </CardContent>;
     </Card>);"
+

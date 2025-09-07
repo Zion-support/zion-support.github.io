@@ -1,4 +1,5 @@
 
+
 import { useState } from "react",""
 import { useForm } from "react-hook-form",""
 import { zodResolver } from "@hookform/resolvers/zod",""
@@ -13,6 +14,7 @@ import { zod_resolver } from '@hookform / resolvers / zod';''
 import { z } from './zod';''
 import { useHireRequest } from '@/hooks / useHireRequest';''
 import { TalentProfile } from '@/types / talent';'
+
 interface UseHireRequestFormProps {
   // TODO: Implement
 }
@@ -20,6 +22,7 @@ interface UseHireRequestFormProps {
   on_close: () => void;
   initialJobTitle?: string;
   user_details?: {
+
     name?: string;
 
 
@@ -44,11 +47,13 @@ export interface FormValues {
   }
 }
 
+
 export interface FormValues {;
   requesterName: string;,
   requesterEmail: string;
   projectOverview: string;,
   timeline: string;
+
   budgetMin: number,
   budgetMax: number;
 }
@@ -59,6 +64,7 @@ import { zodResolver } from "@hookform/resolvers/zod",;""
 import { z } from "zod",;""
 import { useHireRequest } from "@/hooks/useHireRequest",;""
 import { TalentProfile } from "@/types/talent",;"
+
 interface UseHireRequestFormProps {;
   talent: TalentProfile,;
   onClose: () => void,;
@@ -66,15 +72,10 @@ interface UseHireRequestFormProps {;
   userDetails?: {;
     name?: string,;
     email?: string,;
-
-
-
-    email?: string,
-    id?: string;
-
+    email?: string,}
+    id?: string;}
   }
-}
-    id?: string;
+}    id?: string;
   }
 }
 ;
@@ -83,6 +84,7 @@ export interface FormValues {;
   requesterEmail: string,;
   projectOverview: string,;
   timeline: string,;
+
   budgetMin: number,;
   budgetMax: number;
 }
@@ -214,3 +216,4 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   // Initialize the form;
   const form = useForm<FormValues>({;
 </FormValues>)"
+

@@ -1,3 +1,4 @@
+
 import { AppLayout } from "@/layout/AppLayout";""
 import { SEO } from "@/components/SEO";""
 import { ApplicationsTracker } from "@/components/jobs/applications";""
@@ -68,9 +69,11 @@ export default function ApplicationStatusTracker() {
 </ProtectedRoute>
       <AppLayout>
 </AppLayout>
+
         <ApplicationStatusTrackerContent />
 </ApplicationStatusTrackerContent>
       </AppLayout>
+
     </ProtectedRoute>
     <ProtectedRoute>
 </ProtectedRoute>
@@ -108,3 +111,4 @@ Application Status Tracker | Zion AI Marketplace"description=" Track the status 
       </AppLayout>
     </ProtectedRoute>)
     </ProtectedRoute>);'
+

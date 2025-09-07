@@ -1,9 +1,41 @@
-
-
+  Table;
+TableBody,
+TableCell;
+TableHead,}
+TableHeader;}
+TableRow} from \"@/components/ui/table\";
+import { Badge } from \"@/components/ui/badge\";
+import { CalendarIcon, Search } from \"lucide-react\";
+  },
+  const getCategoryBadge = () => {
+  return $3;}
+}
+    const categoryStyles: Record<string { variant: \"default\" | \"outline\" | \"secondary\" | \"destructive\" } /> = {}
+      jobs: { variant: \"default\" },
+      candidates: { variant: \"outline\" },
+      team: { variant: \"secondary\" },
+      billing: { variant: \"destructive\" }},
+    return <Badge variant={categoryStyles[category].variant} />{category}</Badge>
+  },
+  return (  return (
+    <div className=\"space-y-6\" />;
+      <div className=\"flex items-center justify-between\" />;
+        <h3 className=\"text-xl font-medium\" />Recent Team Activity</h3>;
+        <div className=\"flex items-center gap-2\" />;
+          <div className=\"relative\" />;
+            <Search className=\"absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground\" />;            <Search className=\"absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground\" />;
+            <Input;
+type=\"search\"
+              placeholder=\"Search activities...\"
+              className=\"w-[200px] md:w-[300px] pl-9\"import React from \"react\";
 import {;
   Table,;
   TableBody,;
   TableCell,;
+
+import React from \"react\";
+import {
+
   TableHead,;
   TableHeader,;
   TableRow,;
@@ -19,10 +51,12 @@ import {
   TableHead;
   TableHeader;
   TableRow;
+
   Table,
   TableBody,
   TableCell,
   TableHead,
+
   TableHeader,
 TableRow,;
 
@@ -43,11 +77,13 @@ import { Input } from "@/components/ui/input";"
   ];
   // Function to format the date in a readable way;
   const formatDate = (date: Date) => {
+
     const now = new Date();
     const diffMs = now.getTime() - date.getTime();
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
 "
 import React from "react","
 import {
@@ -181,16 +217,17 @@ export function TeamActivity() {;
     const diffDays = Math && Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
     if (diffMins < 60) {;
-      return `${diffMins} minutes ago`;
-    } else if (diffHrs < 24) {;
-      return `${diffHrs} hours ago`;
-    } else if (diffDays < 7) {;
-      return `${diffDays} days ago`;
-    } else {;
-      return date && date.toLocaleDateString();
-    }
 
+      return `${diffMins} minutes ago`;
+    } else if (diffHrs < 24) {}
+      return `${diffHrs} hours ago`;
+    } else if (diffDays < 7) {}
+      return `${diffDays} days ago`;
+    } else {}
+      return date.toLocaleDateString();}
+    }
   };
+
 
   const getCategoryBadge = (category: string) => {;
     const categoryStyles: Record<;
@@ -440,11 +477,14 @@ export function TeamActivity() {;
                   <span className="font - medium">{activity.target}</span>;"
                 </TableCell>;
     </div>);
+
                 </TableCell>
               </TableRow>
           </TableBody>
         </Table>
+
       </div>
+
 
       
 "
@@ -512,3 +552,4 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
   activity.id;)
 }> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </div> <div className=" flex items-center justify-between"> <Button variant=" outline"size=" sm"> Previous </Button> <div className=" text-sm text-muted-foreground"> Page 1 of 10 </div> <Button variant=" outline"size=" sm" > Next </Button> </div> </div>)""
+

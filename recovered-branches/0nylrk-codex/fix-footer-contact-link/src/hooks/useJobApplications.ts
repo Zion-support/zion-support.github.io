@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";""
 import {supabase} from "@/integrations/supabase/client";""
 import {useAuth} from "@/hooks/useAuth";""
@@ -15,14 +16,17 @@ export const useJobApplications = (jobId?: string) => {;
 </JobApplication>
   const [error, setError] = useState<string | null>(null);
 </string>
+
   const [applications, set_applications] = useState < JobApplication[]>([]);
   const [is_loading, setIsLoading] = useState (true);
   const [error, set_error] = useState < string | null>(null);
 ;
   const fetch_applications = async () => {
     // Check condition;
+
 if ( {) {
   $2;
+
 }
       setIsLoading (false);
       return;
@@ -32,11 +36,14 @@ if ( {) {
 }
       setIsLoading (true);
 ;
+
       let query = supabase;"
         .from ("job_applications");"
+
         .select (`;
           *;)
           job: jobs (*),
+
           talent_profile:profiles ! talent_id (id, display_name, avatar_url, bio);
         `);"
         .order ("created_at", { ascending: false });"
@@ -76,43 +83,49 @@ if ( {) {
 }
             const jobIdArray = job_ids.map (job => job.id);"
             query = query.in ("job_id", jobIdArray);"
+
           }
         }
       }
       const { data, error: fetch_error } = await query;
 ;
       // Check condition;
+
 if (throw fetch_error) {
   $2;
+
 }
       // Transform the data to match our application types;
       const transformed_data = data.map ((app: any) => ({
-
         ...app;
-
         talent_profile: app && app.talent_profile ? {
           ...app && app.talent_profile;
+
           full_name: app && app.talent_profile.display_name;,
   profile_picture_url: app && app.talent_profile.avatar_url,
 
         ...app;
           skills: []
         } : undefined;)
+
       }));
       setApplications(transformedData as JobApplication[]);
       setError(null)
     } catch (err: any) {
+
 "
       console && console.error("Error fetching applications:", err);""
       setError("Failed to fetch applications: " + err && err.message),""
       toast && toast.error("Failed to fetch applications")"
           profile_picture_url: app.talent_profile.avatar_url,
           skills: [];
+
         } : undefined;
       }));
 ;
       set_applications (transformed_data as JobApplication[]);
       set_error (null);
+
     } catch (err: any) {"
       console.error ("Error fetching applications:", err);""
       set_error ("Failed to fetch applications: " + err.message),""
@@ -121,14 +134,12 @@ if (throw fetch_error) {
   // TODO: Implement
 }
       setIsLoading (false);
+
     }
   }
-
-
-      
       const { data, error: fetchError } = await query,
-      
       if (fetchError) throw fetchError,
+
       
 
       // Transform the data to match our application types;
@@ -203,3 +214,4 @@ const [applications, setApplications] = useState<JobApplication[]> ([]);
 </JobApplication>
 const [error, setError] = useState<string | null> (null);
 </string>"
+

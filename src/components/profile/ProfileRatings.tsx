@@ -1,3 +1,4 @@
+
 }
 
       })
@@ -301,10 +302,12 @@ if ( {) {
               <ReviewsList;
                 reviews={reviews.filter ((r) => r.rating < 4)}
 </ReviewsList>
+
             </TabsContent>;
           </Tabs>;
         </div>;
       </div>;
+
     </div>);"
 //Fetch reviews when component mounts return (<div className="space - y-6" > <div className="flex flex - col md:flex - row gap - 6" > <div className="md:w - 1/3" > <ReviewStats average_rating= {"
 </div>"
@@ -320,3 +323,4 @@ if ( {) {
 }onReportReview= {
   report_review;
 }/> </TabsContent> </Tabs> </div> </div> </div>);"
+

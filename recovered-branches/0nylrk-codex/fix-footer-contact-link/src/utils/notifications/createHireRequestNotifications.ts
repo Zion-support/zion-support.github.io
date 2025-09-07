@@ -1,4 +1,5 @@
 
+
 import { createNotification  } from './createNotification';''
 import { HireRequestNotificationParams } from './types';''
 import { createNotification } from './createNotification',''
@@ -61,11 +62,17 @@ export async function createHireRequestNotifications({
 
       adminNotification;
   talentId,
+
   adminId,
   requesterName,
-
-  requesterEmail, 
+      success: talentNotification.success && adminNotification.success;
+      talentNotification;
+adminNotification,
+talentId,
+  adminId,
+  requesterName,
   projectType,
+
   projectSummary,
   hireRequestId;
 }: HireRequestNotificationParams) {
@@ -98,16 +105,18 @@ export async function createHireRequestNotifications({
       sendEmail: true,'
       actionUrl: '/admin/hire-requests',''
       actionText: 'Review Request''
+
     }),
-    
     return {
   // TODO: Implement
 }
       success: talentNotification.success && adminNotification.success,
+
       talentNotification,
       adminNotification;'
 import { createNotification } from './createNotification',;''
 import { HireRequestNotificationParams } from './types',;'
+
 /**;
  * Creates a hire request notification for admin and talent;
  */;
@@ -117,6 +126,7 @@ export async function createHireRequestNotifications({;
   requesterName,;
   requesterEmail,;
   projectType,;
+
   projectSummary,;
   hireRequestId;)
 }: HireRequestNotificationParams) {;
@@ -132,6 +142,7 @@ export async function createHireRequestNotifications({;
     title: `New Hire Request from ${requesterName}`,;)
     message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,;"
     type: 'hire_request',;'
+
     relatedId: hireRequestId,;
     sendEmail: true,;'
     actionUrl: '/dashboard',;''
@@ -140,10 +151,12 @@ export async function createHireRequestNotifications({;
   // Create notification for admin if admin ID is provided;
   if (adminId) {;
     const adminNotification = await createNotification({;
+
       userId: adminId,;
       title: `New Hire Request for Talent`,;)
       message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`,;'
       type: 'hire_request',;'
+
       relatedId: hireRequestId,;
       sendEmail: true,;'
       actionUrl: '/admin/hire-requests',;''
@@ -151,6 +164,7 @@ export async function createHireRequestNotifications({;
     }),;
     return {;
       success: talentNotification.success && adminNotification.success,;
+
       talentNotification;
       adminNotification;
 
@@ -227,3 +241,4 @@ if ( {) {
     talentNotification;
   }
 }'
+

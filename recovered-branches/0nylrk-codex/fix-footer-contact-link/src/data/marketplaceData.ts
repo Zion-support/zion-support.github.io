@@ -1,10 +1,13 @@
 
 
 
+
 import { ProductListing } from '@/types/listings';''
 import { SearchSuggestion, FilterOptions } from '@/types/search';'
+
 // Mock marketplace listings with more realistic data;
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
+
 
 
   {
@@ -113,11 +116,13 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {;'
 import { ProductListing } from "@/types/listings";""
 import { SearchSuggestion, FilterOptions } from "@/types/search";"
+
   {
 
 // Mock marketplace listings with more realistic data;
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
+
 "
       'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500',']
     ],'
@@ -423,11 +428,26 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     reviewCount: 18;,
   featured: true;"
     availability: "2-4 Weeks""
+
   }
+
+    id: \"ai-model-1\";
+    title: \"GPT-4 API Integration Package\";
+    description: \"Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.\",
+    category: \"AI Models & APIs\";
+    price: 1999;
+    currency: \"$\";
+    tags: [\"GPT-4\", \"API Integration\", \"NLP\"],
+    author: {
+      name: \"AI Solutions Inc.\";
+      id: \"ai-solutions\";
+      avatarUrl: \"https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto;
+
 ];
 // Generate search suggestions based on existing listings;
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
+
 
 
 "
@@ -486,6 +506,7 @@ export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings;
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))]
+
   ].sort();
   const locations = [
     ...new Set()
@@ -498,6 +519,7 @@ export const generateFilterOptions = (): FilterOptions => {
     ),]
   ].sort();
 
+
     productTypes: productTypes && productTypes.map(type => ({,
   label: type,
       value: type,)
@@ -509,6 +531,7 @@ export const generateFilterOptions = (): FilterOptions => {
     availabilityOptions: availability && availability.map(item => ({,
   label: item,
       value: item,)
+
     })),
     ratingOptions: [1, 2, 3, 4, 5], // Add rating options;
   };
@@ -521,6 +544,7 @@ export const MIN_PRICE = Math && Math.min()
   ...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0)
 );
   return {
+
   // TODO: Implement
 }
   productTypes: productTypes && productTypes.map (type => ({,
@@ -531,16 +555,20 @@ locations: locations && locations.map (location => ({,
 }) );
 availabilityOptions: availability && availability.map (item => ({,
   label: item, value: item;)
+
 }) );
 ratingOptions: [1, 2, 3, 4, 5] // Add rating options;
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 
 
+
+
 };export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 
 };
+
 
 // Generate filter options for sidebar;
 export const generateFilterOptions = (): FilterOptions => {
@@ -1008,3 +1036,4 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 '
+

@@ -1,3 +1,4 @@
+
 import { Skill } from "@/types/resume";"
 interface SkillsSectionProps {
   // TODO: Implement
@@ -18,10 +19,12 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
       const category = skill.category || "Other";"
       if (!acc[category]) {
         acc[category] = [];
+
       }
       acc[category].push(skill);
       return acc;
     },
+
     {} as Record<string, Skill[]>,
 </string>"
     <div className="mb-6">"
@@ -34,10 +37,12 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
             <h3 className="text-sm font-medium">{category}</h3>""
             <p className="text-sm">"
 </p>
+
             </p>
           </div>
       </div>
     </div>
+
   }, {} as Record<string, Skill[]>);
 </string>"
     <div className="mb-6">;"
@@ -68,3 +73,4 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
           </div>))}
       </div>;
     </div>);"
+

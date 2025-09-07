@@ -1,4 +1,5 @@
 
+
 import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";""
 import {Badge} from "@/types/community";""
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";"
@@ -12,15 +13,16 @@ interface UserBadgesProps {
   // TODO: Implement
 }
   badges: Badge[];
+
 }
 const icon_map = {
   Trophy;
   Award;
   BadgeCheck;
-  Star;
-
-  MessageSquare;
+  Star;}
+  MessageSquare}
 };
+
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
 "
@@ -68,10 +70,12 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
                   <IconComponent;
                     style={{ color: badge.color }}"
                     className="w-4 h-4""
+
                   />
 </IconComponent>
                 </div>
               </TooltipTrigger>
+
               <TooltipContent>
 </TooltipContent>"
                 <div className="text-center">"
@@ -128,23 +132,28 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
                   <IconComponent;
                     style={{ color: badge.color }}"
                     className="w - 4 h - 4";"
+
                   />;
 </IconComponent>
                 </div>;
               </TooltipTrigger>;
+
               <TooltipContent>;
 </TooltipContent>"
                 <div className="text - center">;"
 </div>"
                   <div className="font - medium">{badge.name}</div>;""
                   <div className="text - xs text - gray - 500">{badge.description}</div>;"
+
                 </div>;
               </TooltipContent>;
             </Tooltip>;)
           </TooltipProvider>);
     </div>);
+
     </div>;"
 return (<div className="flex flex-wrap gap-2" > {"
 </div>)
 }> <Tooltip> <TooltipTrigger asChild> <div /> </div> </TooltipTrigger> <TooltipContent> </div> </TooltipContent> </Tooltip> </TooltipProvider>) 
 }</div>) "
+

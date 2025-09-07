@@ -1,3 +1,4 @@
+
 import { Search } from 'lucide-react';''
 import { Input } from '@/components/ui/input',;''
 import { Button } from '@/components/ui/button',;'
@@ -145,12 +146,14 @@ export function CountryTabs({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">"
 </div>
               <CountryServiceCard;
+
                 key={country.country}
                 country={country}
                 onSelect={handleCountrySelect}
                 onQuote={onQuote}
                 isPopular={true}
               />;
+
 </CountryServiceCard>
         </div>
       </TabsContent>
@@ -176,10 +179,12 @@ export function CountryTabs({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">"
 </div>
             <CountryServiceCard;
+
               key={country.country}
               country={country}
               onSelect={handleCountrySelect}
               onQuote={onQuote}
+
               isPopular={popularCountries.includes(country.country)}
             />;
 </CountryServiceCard>
@@ -188,12 +193,14 @@ export function CountryTabs({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">"
 </div>
               <CountryServiceCard;
+
                 key={country.country}
                 country={country}
                 onSelect={handleCountrySelect}
                 onQuote={onQuote}
                 isPopular={true}
               />;
+
 </CountryServiceCard>
         </div>
       </TabsContent>
@@ -219,11 +226,13 @@ export function CountryTabs({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">"
 </div>
             <CountryServiceCard;
+
               key={country.country}
               country={country}
               onSelect={handleCountrySelect}
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
+
             />;
 </CountryServiceCard>
         </div>;"
@@ -278,9 +287,11 @@ export function CountryTabs({
                 on_select = {handleCountrySelect, }
                 on_quote = {on_quote, }
                 is_popular = {true, })
+
               />))}
 </CountryServiceCard>
         </div>;
+
       </TabsContent>;'
       <TabsContent value='all' className='mt - 0'>;'
 </TabsContent>'
@@ -356,3 +367,4 @@ export function CountryTabs({
 </PaginationButton>
                   <PaginationNext;
                     href={`?page=${currentPage + 1}`}'
+

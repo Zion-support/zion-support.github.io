@@ -1,9 +1,11 @@
+
 import { ApiDocsSpec } from './types';'
+
   ]
 }
 export default v1;
-
   ];
+
 '
   product: 'Zion OS'','
   versions: ['v1']''
@@ -53,3 +55,4 @@ const v1: ApiDocsSpec = {,'
 </token>'
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },'
 </token>]'
+

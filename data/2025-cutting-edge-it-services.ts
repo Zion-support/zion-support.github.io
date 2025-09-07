@@ -1,9 +1,8 @@
 
 
-
-
 export const cuttingEdgeITServices2025 = [
   {
+
     id: 'quantum-cloud-infrastructure-platform'','
   name: 'Quantum Cloud Infrastructure Platform''
     description:'
@@ -164,6 +163,7 @@ export const cuttingEdgeITServices2025 = [
       'IoT Platforms'''
       'AI Frameworks'''
       'Cloud Platforms'']
+
     ]
     compliance: ['
       'IoT Security Standards'''
@@ -171,6 +171,7 @@ export const cuttingEdgeITServices2025 = [
       'Data Privacy Regulations'']
     ]
   }
+
   {'
     id: 'zero-trust-security-platform'','
   name: 'Zero Trust Security Platform''
@@ -333,6 +334,7 @@ export const cuttingEdgeITServices2025 = [
       'Financial Systems'''
       'Supply Chain Tools'''
       'Legacy Systems'']
+
     ]
     compliance: ['
       'Blockchain Standards'''
@@ -340,6 +342,7 @@ export const cuttingEdgeITServices2025 = [
       'Data Privacy Laws'']
     ]
   }
+
   {'
     id: 'ai-powered-devops-platform'','
   name: 'AI-Powered DevOps Platform''
@@ -406,6 +409,7 @@ export const cuttingEdgeITServices2025 = [
       'Performance monitoring and optimization'''
       'Incident response automation'''
       'Quality assurance automation'']
+
     ]
     integrations: ['
       'GitHub'''
@@ -425,6 +429,7 @@ export const cuttingEdgeITServices2025 = [
   }
 export const cuttingEdgeITServices2025 = [
   {
+
 
 ]'
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'''
@@ -471,6 +476,7 @@ export const cuttingEdgeITServices2025 = [
 ;'
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']','
   compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']'
+
 export const cuttingEdgeITServices2025 = [;
   {;'
     id: 'quantum-cloud-infrastructure-platform',;''
@@ -480,6 +486,7 @@ export const cuttingEdgeITServices2025 = [;
       'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring',;''
       'Quantum-enhanced data processingAutomated infrastructure management';']
     ],;
+
     pricing: {;,
   starter: {;
         price: 399,;'
@@ -512,6 +519,7 @@ export const cuttingEdgeITServices2025 = [;
     ],;'
     integrations: ['AWSAzureGoogle CloudKubernetesDockerTerraform'],;''
     compliance: ['SOC2ISO 27001FedRAMPQuantum Security Standards'];'
+
   },;
   {;'
     id: 'edge-computing-orchestration-platform',;''
@@ -521,6 +529,7 @@ export const cuttingEdgeITServices2025 = [;
       'Distributed edge node managementReal-time resource orchestrationIntelligent workload distributionEdge AI model deploymentDynamic scaling and optimizationEdge security and complianceReal-time monitoring and analyticsAutomated edge deployment',;''
       'Edge-to-cloud synchronizationPerformance optimization algorithms';']
     ],;
+
     pricing: {;,
   starter: {;
         price: 299,;'
@@ -553,6 +562,7 @@ export const cuttingEdgeITServices2025 = [;
     ],;'
     integrations: ['KubernetesDockerIoT PlatformsAI FrameworksCloud Platforms'],;''
     compliance: ['IoT Security StandardsEdge Computing ProtocolsData Privacy Regulations'];'
+
   },;
   {;'
     id: 'zero-trust-security-platform',;''
@@ -562,6 +572,7 @@ export const cuttingEdgeITServices2025 = [;
       'Multi-factor authentication (MFA)Identity and access management (IAM)Continuous security monitoringBehavioral analyticsThreat detection and responseSecure access service edge (SASE)Micro-segmentationReal-time risk assessment',;''
       'Automated security responsesComprehensive audit logging';']
     ],;
+
     pricing: {;,
   starter: {;
         price: 499,;'
@@ -594,6 +605,7 @@ export const cuttingEdgeITServices2025 = [;
     ],;'
     integrations: ['Active DirectoryLDAPSAMLOAuthSIEM SystemsSecurity Tools'],;''
     compliance: ['SOC2ISO 27001FedRAMPHIPAAPCI DSS'];'
+
   },;
   {;'
     id: 'blockchain-enterprise-platform',;''
@@ -603,6 +615,7 @@ export const cuttingEdgeITServices2025 = [;
       'Enterprise blockchain networksSmart contract developmentConsensus mechanism managementBlockchain analytics and monitoringIntegration with legacy systemsScalable blockchain architectureSecurity and compliance toolsReal-time transaction processing',;''
       'Multi-party workflow automationComprehensive reporting and analytics';']
     ],;
+
     pricing: {;,
   starter: {;
         price: 599,;'
@@ -635,6 +648,7 @@ export const cuttingEdgeITServices2025 = [;
     ],;'
     integrations: ['ERP SystemsCRM PlatformsFinancial SystemsSupply Chain ToolsLegacy Systems'],;''
     compliance: ['Blockchain StandardsFinancial RegulationsData Privacy Laws'];'
+
   },;
   {;'
     id: 'ai-powered-devops-platform',;''
@@ -644,6 +658,7 @@ export const cuttingEdgeITServices2025 = [;
       'AI-powered code analysisAutomated testing and quality assuranceIntelligent deployment strategiesPredictive performance monitoringAutomated incident responseContinuous integration/continuous deployment (CI/CD)Infrastructure as code (IaC)Real-time performance optimization',;''
       'Automated security scanningComprehensive analytics and reporting';']
     ],;
+
     pricing: {;,
   starter: {;
         price: 399,;'
@@ -676,6 +691,7 @@ export const cuttingEdgeITServices2025 = [;
     ],;'
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;''
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];'
+
   }
 ];
   },
@@ -685,6 +701,6 @@ export const cuttingEdgeITServices2025 = [;
   }
 ];
 ;
-  }
+
 ];
 '

@@ -1,3 +1,4 @@
+
 import { useForm, ControllerRenderProps } from "react-hook-form",""
 import { zodResolver } from "@hookform/resolvers/zod",""
 import { z } from "zod";""
@@ -140,6 +141,11 @@ type LoginFormValues = z && z.infer<typeof loginSchema>;
           }: {
 
 
+const loginSchema = null;
+          if (firstError) {form.setFocus(firstError)}        })}
+        className='space-y-6'>
+
+
 
   return (
     <Form {...form}>
@@ -184,6 +190,7 @@ type LoginFormValues = z && z.infer<typeof loginSchema>;
                     aria - label='Email address';'
                     aria - invalid={!!form.form_state.errors.email}'
                     className='bg - zion - blue pl - 10 text - white placeholder:text - zion - blue - light border - zion - blue - light focus:border - zion - purple'                    {...field}'
+
                   />;
 </Input>'
                   <User className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;'
@@ -194,6 +201,7 @@ type LoginFormValues = z && z.infer<typeof loginSchema>;
 </FormMessage>)
             </FormItem>)}
         <FormField;
+
           control={form.control}'
           name='password';'
           render={({
@@ -373,8 +381,10 @@ type LoginFormValues = z && z.infer<typeof loginSchema>;
               </FormControl>;'
               <FormMessage className='text - red - 400' />;'
 </FormMessage>
+
             </FormItem>)}
         <FormField;
+
           control={form.control}
 
               <FormControl>
@@ -574,10 +584,12 @@ type LoginFormValues = z && z.infer<typeof loginSchema>;
 }<div className=" flex justify-between mt-4" > <Button > {''
 </div>
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
+
           </Link>;
         </p>;
       </form>;
     </Form>;
+
         <Button;'
           type='submit';''
           className='w - full inline - flex items - center justify - center px - 4 py - 2 border border - transparent rounded - md shadow - sm text - base font - medium text - white bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - zion - purple - light visible';'
@@ -637,3 +649,4 @@ type LoginFormValues = z && z.infer<typeof loginSchema>;
 }<div className=" flex justify - between mt - 4" > <Button > {';'
 </div>
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>);'
+

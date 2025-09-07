@@ -1,6 +1,7 @@
 
 
 
+
 import { useState } from "react",""
 import { Link, Navigate } from "react-router-dom",""
 import { useForm, type UseFormReturn } from "react-hook-form",""
@@ -147,12 +148,13 @@ type SignupFormValues = z.infer<typeof signupSchema>,;
 </Navigate>"
     return <Navigate to="/onboarding" />;"
 </Navigate>
+
 type SignupFormValues = z.infer < typeof signup_schema>;
 ;
 export default /**
  * Signup - Function description;
  */
-function Signup() {
+function Signup() {}
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, is_loading, is_authenticated, user } = use_auth ();
   const [show_password, setShowPassword] = useState (false);
   const [showConfirmPassword, setShowConfirmPassword] = useState (false);
@@ -161,15 +163,18 @@ function Signup() {
   // Initialize react - hook - form;
   const form = use_form ({)
     resolver: zod_resolver (signup_schema),
+
     default_values: {,"
   display_name: "",""
       email: "",""
       password: "",""
       confirm_password: "","
+
       terms_accepted: false}}) as UseFormReturn < SignupFormValues>,
   // Form submission handler;
   const on_submit = async (data: SignupFormValues) => {
     // Check condition;
+
 if (return, // Prevent multiple submissions) {
   $2;
 }
@@ -182,11 +187,13 @@ if (return, // Prevent multiple submissions) {
   // TODO: Implement
 }
       setIsSubmitting (false);
+
     }
   }
 ;
   // Redirect if user is already logged in and has completed profile;
   // Check condition;
+
 if ( {) {
   $2;
 }"
@@ -314,8 +321,10 @@ if ( {) {
 </span>"
                         <FormMessage className="text - red - 400" />;"
 </FormMessage>
+
                       </FormItem>)}
                   <FormField;
+
                     control={form.control}"
                     name="email";"
                     render={({ field }) => (
@@ -342,8 +351,10 @@ if ( {) {
                         </FormControl>;"
                         <FormMessage className="text - red - 400" />;"
 </FormMessage>)
+
                       </FormItem>)}
                   <FormField;
+
                     control={form.control}"
                     name="password";"
                     render={({ field }) => (
@@ -384,10 +395,12 @@ if ( {) {
 </Eye>"
                               <span className="sr - only">;"
 </span>
+
                               </span>;
                             </Button>;
                           </div>;
                         </FormControl>;
+
                   <FormField;
                     control={form && form.control}"
                     name="confirmPassword""
@@ -544,11 +557,13 @@ if ( {) {
                     <span className="sr-only">Sign in with Twitter</span>""
                     <Twitter className="h-5 w-5" />"
 </Twitter>
+
                   </Button>
                 </div>
               </div>
             </div>
           </div>
+
         </div>"
         <div className="hidden lg:block relative w-0 flex-1">"
 </div>"
@@ -561,6 +576,7 @@ if ( {) {
                 <h3 className="text-3xl font-bold text-white mb-4">Join the Future of AI Marketplace</h3>""
                 <p className="text-lg text-white/80">"
 </p>
+
                 </p>
               </div>
             </div>
@@ -572,6 +588,7 @@ if ( {) {
     </>
   )
 
+
                   <Button;"
                     type="button";""
                     variant="outline";""
@@ -582,10 +599,12 @@ if ( {) {
                     <Twitter className="h-5 w-5" />;"
 </Twitter>
                   </Button>;
+
                 </div>;
               </div>;
             </div>;
           </div>;
+
         </div>;"
         <div className="hidden lg:block relative w - 0 flex - 1">;"
 </div>"
@@ -598,6 +617,7 @@ if ( {) {
                 <h3 className="text - 3xl font - bold text - white mb - 4">Join the Future of AI Marketplace</h3>;""
                 <p className="text - lg text - white / 80">;"
 </p>
+
                 </p>;
               </div>;
             </div>;
@@ -605,6 +625,7 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
+
 </Footer>
 
     </>);
@@ -613,3 +634,4 @@ if ( {) {
 ;
 
 "
+

@@ -1,3 +1,4 @@
+
 interface HelpArticleViewProps {
   // TODO: Implement
 }
@@ -46,14 +47,14 @@ interface HelpArticleViewProps {;
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {;"
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),;"
   // Find the article in all categories;
+
   let article;
-  for (const category of HELP_CATEGORIES) {;
-    const found = category && category.articles.find(a => a && a.id === articleId);
-    if (found) {;
-      article = found;
-      break;
+  for (const category of HELP_CATEGORIES) {const found = category && category.articles.find(a => a && a.id === articleId)if (found) {article = found;}
+      break;}
     }
+  }if (!article) {return <div />Article not found</div>;}
   }
+
 
   if (!article) {;
     return <div>Article not found</div>;"
@@ -198,3 +199,4 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;"
         </div>;
       </Card>;
     </div>;"
+

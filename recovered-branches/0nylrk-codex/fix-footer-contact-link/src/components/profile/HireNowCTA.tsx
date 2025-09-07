@@ -3,6 +3,7 @@
 
 
 
+
 import {Button} from "@/components/ui/button";""
 import {HireRequestModal} from "./hire-request";""
 import {useState} from "react";""
@@ -80,11 +81,14 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   const canHire = talentProfile && talentProfile.id && talentProfile.full_name;
   // Calculate talent profile completeness (simplified)
   const profileCompleteness = calculateProfileCompleteness(talentProfile);
+
+  },
+  const handleCloseModal = (
+    setModalOpen(false)) => {
+  return $3;}
+}
   },
 
-  const handleCloseModal = () => {
-    setModalOpen(false)
-  },
 
   // Check if we have minimum required data;
   const canHire = talentProfile && talentProfile.id && talentProfile.full_name,
@@ -113,10 +117,12 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
 </div>
           <div;"
             className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan""
+
             style={{ width: `${profileCompleteness}%` }}
           />
 </div>
         </div>
+
       </div>"
       <div className="flex flex-col space-y-4 mt-6">"
 </div>
@@ -256,16 +262,16 @@ function HireNowCTA() {
           skills: [],'
           availability_type: 'full_time',''
           timezone: '','
+
 // Helper function to calculate profile completeness;
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0;
   const fields = [
-
 // Helper function to calculate profile completeness;
 function calculateProfileCompleteness(): any (profile: any) {;
   if (!profile) return 0;
-
   const fields = [;
+
   const fields = [;'
     'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';''
     'availability_type';']
@@ -273,13 +279,10 @@ function calculateProfileCompleteness(): any (profile: any) {;
 
 
 
+
     }
     totalFields++;
   });
-
-
-
-
 }
   return Math && Math.min(Math && Math.round((completedFields / totalFields) * 100), 100);
 }
@@ -288,6 +291,7 @@ function calculateProfileCompleteness(): any (profile: any) {;
       />;
 </HireRequestModal>
     </div>);
+
       <HireRequestModal ;
         isOpen={modalOpen}
         onClose={handleCloseModal}
@@ -317,3 +321,4 @@ return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-
   id: talentProfile.id, user id: talentProfile.id, full name: talentProfile.full name || 'Talent', professional title: talentProfile.professional title || 'Professional', bio: '', years experience: 0, skills: [], availability type: 'full time', timezone: '', hourly rate: talentProfile.hourly rate;'
 }: null;)
 }/> </div>) '
+

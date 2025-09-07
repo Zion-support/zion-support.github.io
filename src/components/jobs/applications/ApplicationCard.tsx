@@ -1,3 +1,4 @@
+
 application: JobApplication;
 }
 
@@ -140,11 +141,13 @@ function ApplicationCard() {
               })}            </div>            <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>;""
             <div className="text - sm text - muted - foreground mt - 1">;"
 </div>
+
             </div>;
           </div>;
           <StatusBadge status={application.status} />;
 </StatusBadge>
         </div>;
+
       </CardHeader>;"
       <CardContent className='pb - 3'>;'
 </CardContent>'
@@ -192,11 +195,13 @@ function ApplicationCard() {
               })}            </div>            <CardTitle>{application && application.job?.title || "Unknown Job"}</CardTitle>;""
             <div className="text-sm text-muted-foreground mt-1">;"
 </div>
+
             </div>;
           </div>;
           <StatusBadge status={application && application.status} />;
 </StatusBadge>
         </div>;
+
       </CardHeader>;"
       <CardContent className='pb-3'>;'
 </CardContent>'
@@ -249,12 +254,14 @@ function ApplicationCard() {
 </FileText>'
                     <span className='text - sm font - medium'>;'
 </span>
+
                     </span>;
                   </div>;
                   <Button;'
                     variant='ghost';''
                     size='sm';'
                     on_click={handleDownloadResume}
+
                   >;
 </Button>'
                     <Download className='h - 3 w - 3 mr - 1' /> Download                  </Button>;'
@@ -349,12 +356,14 @@ function ApplicationCard() {
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>;""
             <div className="text-sm text-muted-foreground mt-1">;"
 </div>
+
             </div>;
           </div>;
           <StatusBadge status={application.status} />;
 </StatusBadge>
         </div>;
       </CardHeader>;"
+
       <CardContent className="pb-3">;"
 </CardContent>"
         <ApplicationProgress status={application.status} className="my-4" />;"
@@ -375,9 +384,11 @@ function ApplicationCard() {
 </div>
                   </div>;"
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>;"
+
                 </div>;
               </div>;
           </div>;
+
           <Button;"
             variant='ghost'''
             size='sm'')
@@ -517,10 +528,12 @@ function ApplicationCard() {
 </Link>"
                 <ExternalLink className="h - 4 w - 4 mr - 1" /> View Job;"
 </ExternalLink>
+
               </Link>;
             </Button>;
           </div>;
         </div>;
+
           </Link>
         </Button>
       </CardFooter>
@@ -557,3 +570,4 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
 }% </div> <span className="ml - 2 text - xs text - muted - foreground" >Relevance to job requirements</span> </div> </div>);""
 }</div>) ";""
 }</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>);""
+

@@ -1,5 +1,6 @@
 
 
+
 import { useState  } from 'react';''
 import { supabase  } from '@/integrations/supabase/client';''
 import { Certification  } from '@/types/resume';''
@@ -11,11 +12,13 @@ import {supabase} from '@/integrations/supabase/client';''
 import {Certification} from '@/types/resume';''
 import {useAuth} from '@/hooks/useAuth';''
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';'
+
 export function useCertifications() {;
-
-
+}
+}
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+
 
   const [error, setError] = useState<string | null>(null);
 </string>
@@ -37,14 +40,17 @@ export function useCertifications() {;
 </boolean>
   const deleteCertification = async (certId: string): Promise<boolean> => {;
 </boolean>
+
   const [error, set_error] = useState < string | null>(null);
 ;
   const add_certification = async (resume_id: string, cert: Certification): Promise < boolean> => {
     // Check condition;
+
 if ( {) {
   $2;
 }'
       set_error ('You must be logged in to add certifications'),'
+
       return false;
     }
 
@@ -56,11 +62,12 @@ if ( {) {
     updateCertification;
     deleteCertification;
 
-
-
+}
+}
   }
 }
 ;
+
     try {
   // TODO: Implement
 }
@@ -87,20 +94,24 @@ if (throw error) {
   // TODO: Implement
 }
       setIsLoading (false);
+
     }
   }
 ;
   const update_certification = async (cert_id: string, cert: Certification): Promise < boolean> => {
     // Check condition;
+
 if ( {) {
   $2;
 }'
       set_error ('You must be logged in to update certifications'),'
+
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
+
     try {
   // TODO: Implement
 }
@@ -127,20 +138,24 @@ if (throw error) {
   // TODO: Implement
 }
       setIsLoading (false);
+
     }
   }
 ;
   const delete_certification = async (cert_id: string): Promise < boolean> => {
     // Check condition;
+
 if ( {) {
   $2;
 }'
       set_error ('You must be logged in to delete certifications'),'
+
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
+
     try {
   // TODO: Implement
 }
@@ -160,6 +175,7 @@ if (throw error) {
   // TODO: Implement
 }
       setIsLoading (false);
+
     }
   }
 ;
@@ -169,8 +185,8 @@ if (throw error) {
     is_loading;
     error;
     add_certification;
-    update_certification;
-    delete_certification;
+    update_certification;}
+    delete_certification;}
   }
 }
   }

@@ -1,4 +1,5 @@
 
+
 import {useState, useEffect} from 'react';''
 import {Header} from '@/components / Header';''
 import {Footer} from '@/components / Footer';''
@@ -43,16 +44,15 @@ export default function AccountSettings() {;
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);'
   const [didHandle, setDidHandle] = useState('');'
+
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-
-
   useEffect(() => {;
     try {;'
       const saved = localStorage && localStorage.getItem('account_settings');'
       if (saved) {;
         const parsed = JSON && JSON.parse(saved);
+
         setDisplayWeb3(!!parsed && parsed.displayWeb3);'
         setDidHandle(parsed && parsed.didHandle || '');'
         setEnableBackup(!!parsed && parsed.enableBackup);
@@ -104,6 +104,7 @@ import { Switch } from '@/components/ui/switch',;''
 import { Label } from '@/components/ui/label',;''
 import { toast } from 'sonner',;'
 export default function AccountSettings() {;
+
   const { user } = useAuth(),;
   const [displayWeb3, setDisplayWeb3] = useState(false),;'
   const [didHandle, setDidHandle] = useState(''),;'
@@ -114,6 +115,7 @@ export default function AccountSettings() {;
       const saved = localStorage.getItem('account_settings'),;'
       if (saved) {;
         const parsed = JSON.parse(saved),;
+
         setDisplayWeb3(!!parsed.displayWeb3),;'
         setDidHandle(parsed.didHandle || ''),;'
         setEnableBackup(!!parsed.enableBackup);
@@ -121,20 +123,18 @@ export default function AccountSettings() {;
       }
     } catch (e) {;'
       console && console.error('Error loading account settings', e);'
+
     }
-
-
+  const handleSave = (
+    setIsSubmitting(true);) => {
+  return $3;}
+}
   }, []),
+  }, []),  }, []),
   }, []),
-
-
-  const handleSave = () => {
-    setIsSubmitting(true);
-  }, []),
-  }, []),
-
-  const handleSave = () => {
+  const handleSave = (
     setIsSubmitting(true),
+
 
     // Simulate API call;
     setTimeout(() => {
@@ -162,16 +162,10 @@ export default function AccountSettings() {;
         toast && toast.error('Failed to save settings');'
       } finally {;
         setIsSubmitting(false);
+
       }
-
-    }, 1000);
-  };
-
-  const handleConnectWallet = async () => {;
-    try {;
-      // Check if wallet is available;
-
       const ethereum = (window as any).ethereum;
+
       if (!ethereum) {;'
         toast && toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');'
         return;
@@ -261,15 +255,14 @@ export default function AccountSettings() {;
       toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${address && address.slice(-4)}`);
     } catch (error: any) {;'
       toast && toast.error(error && error.message || 'Failed to connect wallet');'
+
     }
   }
   },
-
   };
   },
-
-
   return (
+
 
     <>;'
       <SEO title="Account Settings" description="Manage your account" />;"
@@ -511,12 +504,14 @@ export default function AccountSettings() {;
                     ? 'Restore your profile data from decentralized storage'''
                     : 'Enable backup first to use this feature'}'
                 </p>;
+
               </div>;
             </CardContent>;
           </Card>;
         </div>;
       </main>;
       <Footer />;
+
 </Footer>
 
     </>);
@@ -582,3 +577,4 @@ try {
 }
 ;
 '
+

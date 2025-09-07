@@ -1,3 +1,4 @@
+
 return (
     <div className='space-y-3'>;'
 </div>'
@@ -53,10 +54,11 @@ return (
   const [active_filters, setActiveFilters] = useState < string[]>([]);
   const add_filter = (filter: string) =>: any {    if () {) {
   $2;
+
 }
-      setActiveFilters ([...active_filters, filter]);
-    }
+      setActiveFilters ([...active_filters, filter])}
   }
+
   const remove_filter = (filter: string) =>: any {
   // TODO: Implement
 }
@@ -391,10 +393,12 @@ return (
                 <div className='flex items-center justify-between'>;'
 </div>
                   <Label>Only show verified profiles</Label>;
+
                   <Switch />;
 </Switch>
                 </div>;
               </div>;
+
               <SheetFooter>;
 </SheetFooter>'
                 <Button variant='outline' className='w-full'>;'
@@ -475,10 +479,12 @@ return (
                   className='w - full';''
                   on_click={() => add_filter ('Experience: 3+ years')}'
 </Button>
+
                 </Button>;
               </SheetFooter>;
             </SheetContent>;
           </Sheet>;
+
           <Select>;
 </Select>'
             <SelectTrigger className='w-[120px] h - 8'>;'
@@ -519,7 +525,14 @@ return (
                 className='h - 3 w - 3 cursor - pointer';'
                 on_click={() => remove_filter (filter)}              />;
 </X>
+
             </Badge>))}
         </div>;
+      </div>
+    </div>
+  );
+}</div>;
       </div>;
+
     </div>);'
+

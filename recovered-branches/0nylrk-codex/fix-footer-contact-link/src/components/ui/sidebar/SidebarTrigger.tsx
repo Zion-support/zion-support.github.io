@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { Button } from "@/components/ui/button";""
 import { Menu, X } from "lucide-react";""
@@ -26,3 +27,4 @@ interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {;
 </X>"
       <span className="sr-only">Toggle Sidebar</span>"
     </Button>"
+

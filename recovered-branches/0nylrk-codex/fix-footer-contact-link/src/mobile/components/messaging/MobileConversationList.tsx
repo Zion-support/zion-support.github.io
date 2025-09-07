@@ -3,6 +3,7 @@
 
 
 
+
 import React from "react";""
 import {Card} from "@/components/ui/card";""
 import {Badge} from "@/components/ui/badge";""
@@ -40,14 +41,15 @@ interface Conversation {
   id: string;,
   name: string;
   avatar?: string;
+
   lastMessage: string,;
   timestamp: string,;
-  unreadCount: number,;
-  isTyping?: boolean;
+  unreadCount: number,;}
+  isTyping?: boolean;}
 }
-
 interface MobileConversationListProps {;
   conversations: Conversation[],;
+
 
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
@@ -155,9 +157,11 @@ interface MobileConversationListProps {;
           <Input;"
             placeholder="Search messages..."""
             className="pl-9""
+
           />;
 </Input>
         </div>;
+
       </div>;"
       <div className="px-4 pb-4 space-y-2">;"
 </div>"
@@ -236,9 +240,11 @@ interface MobileConversationListProps {;
                   </p>;"
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;"
 </Badge>
+
                     </Badge>;
                 </div>;
               </div>;
+
             </div>;"
             <div className="border-t border-border ml-12"></div>;"
           </div>;
@@ -336,3 +342,4 @@ interface MobileConversationListProps {;
           </div>
       </div>
     </div>"
+

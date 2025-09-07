@@ -1,9 +1,7 @@
-
-
-
-  loading: boolean,
+loading: boolean,
   error: string | null,
   notifications: Notification[],
+
   onMarkAsRead: (id: string) => Promise<void>,
 </void>
   onDismiss: (id: string) => Promise<void>,
@@ -171,3 +169,4 @@ export const NotificationList: React.FC < NotificationListProps> = ({
     </ScrollArea>
     </ScrollArea>;
     </ScrollArea>;"
+

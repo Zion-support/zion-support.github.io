@@ -1,10 +1,6 @@
 
-
-
-
 export const advancedEmergingTechServices2025 = [
   {
-
 
   {
     features: [
@@ -17,6 +13,7 @@ export const advancedEmergingTechServices2025 = [
       'Custom quantum bio algorithms'''
       '24/7 platform monitoring'']
     ]
+
     pricing: {,
   starter: {
         price: 599;,'
@@ -1316,12 +1313,13 @@ export const advancedEmergingTechServices2025 = [
     market_size: '$6.8B',''
     target_audience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';''
     competitive_advantage: 'Industry - first quantum - enhanced metaverse, advanced AI world generation, and comprehensive VR / AR system integration';'
+
   }
 ];
 ;
   }
 ];
-;
+
 
 export const advancedEmergingTechServices2025 = [;
   {;'
@@ -1554,5 +1552,6 @@ export const advancedEmergingTechServices2025 = [;
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;''
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';'
   }
+
 ];
 '

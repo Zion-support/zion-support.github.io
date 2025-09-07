@@ -1,10 +1,11 @@
-
-
-
-
+import React from \"react\",
+import ApiDocsLayout from \"@/components/developers/ApiDocsLayout\";
+import { CodeBlock } from \"@/components/developers/CodeBlock\";
+import ApiDocsLayout from \"@/components/developers/ApiDocsLayout\",
+import { CodeBlock } from \"@/components/developers/CodeBlock\",
 export function ApiErrorCodes() {
-
   const errorExample = `{
+
 
 import React from "react";""
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";""
@@ -167,11 +168,10 @@ function ApiErrorCodes() {
     }
 
 ]
+
   ],
-
-
-
   const rateLimits = [
+
     {"
       endpoint: "All GET endpoints"","
   limit: "100 requests per minute"""
@@ -447,10 +447,12 @@ function ApiErrorCodes() {
                   <td className="py - 2 px - 4 text - white font - mono">{error.code}</td>;""
                   <td className="py - 2 px - 4 text - zinc - 300">{error.message}</td>;""
                   <td className="py - 2 px - 4 text - zinc - 400 text - sm">{error.details}</td>;"
+
                 </tr>))}
             </tbody>;
           </table>;
         </div>;
+
         <h2 > Handling Errors</h2>;
         <p>;
 </p>
@@ -471,10 +473,12 @@ function ApiErrorCodes() {
                   <td className="py-2 px-4 text-white font-mono">{error.code}</td>;""
                   <td className="py-2 px-4 text-zinc-300">{error.message}</td>;""
                   <td className="py-2 px-4 text-zinc-400 text-sm">{error.details}</td>;"
+
                 </tr>;
             </tbody>;
           </table>;
         </div>;
+
         <h2>Handling Errors</h2>;
         <p>;
 </p>
@@ -561,3 +565,4 @@ function ApiErrorCodes() {
 </p>"
           <a href="#" className="text-zion-cyan"> contact our support team</a>.;"
         </p>;"
+

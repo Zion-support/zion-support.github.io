@@ -1,6 +1,7 @@
 
 
 
+
 import { useState  } from 'react';''
 import { useForm  } from 'react-hook-form';''
 import { Button  } from '@/components/ui/button';''
@@ -223,3 +224,4 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 }<div className="flex justify-between pt-2" > <Button if (editingId) {"
 </div>
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) "
+

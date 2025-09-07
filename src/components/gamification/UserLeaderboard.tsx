@@ -1,3 +1,4 @@
+
 import { Trophy } from 'lucide-react''
   Card,
   CardContent,
@@ -37,19 +38,37 @@ export interface LeaderboardEntry {;
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];,
   entries: LeaderboardEntry[];
+
 }
 
-export interface LeaderboardEntry {;
-  name: string,;
+export interface LeaderboardEntry  {name: string;}
+  points: number;}
+}
+
+interface UserLeaderboardProps {
+  entries: LeaderboardEntry[];}
+}
+}
+
+export function UserLeaderboard() {import {Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card';
+
+export interface LeaderboardEntry {
+  name: string;
   points: number;
+
+interface UserLeaderboardProps  {entries: LeaderboardEntry[];
+  entries: LeaderboardEntry[];}
+}
 }
 
-interface UserLeaderboardProps {;
-  entries: LeaderboardEntry[];
+export interface LeaderboardEntry  {name: string,points: number;}
 }
 
-export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
-  return (
+interface UserLeaderboardProps {
+  entries: LeaderboardEntry[];}
+}
+}
+
 
 '
           <Trophy className="h-5 w-5" /> Leaderboard;"
@@ -99,9 +118,11 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
 </div>"
           <Trophy className="h - 5 w - 5" /> Leaderboard;"
 </Trophy>
+
         </CardTitle>;
-        <CardDescription > Top users by points</CardDescription>;
+        <CardDescription  /> Top users by points</CardDescription>;
       </CardHeader>;
+
       <CardContent>;
 </CardContent>"
         <div className='space - y-2'>;'
@@ -121,3 +142,4 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
         </div>;
       </CardContent>;
     </Card>);"
+

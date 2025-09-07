@@ -1,5 +1,6 @@
 
 
+
 import { useState  } from 'react';''
 import { supabase  } from '@/integrations/supabase/client';''
 import { Education  } from '@/types/resume';''
@@ -11,11 +12,13 @@ import {supabase} from '@/integrations/supabase/client';''
 import {Education} from '@/types/resume';''
 import {useAuth} from '@/hooks/useAuth';''
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';'
+
 export function useEducation() {;
-
-
+}
+}
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+
 
   const [error, setError] = useState<string | null>(null);
 </string>
@@ -37,14 +40,17 @@ export function useEducation() {;
 </boolean>
   const deleteEducation = async (eduId: string): Promise<boolean> => {;
 </boolean>
+
   const [error, set_error] = useState < string | null>(null);
 ;
   const add_education = async (resume_id: string, education: Education): Promise < boolean> => {
     // Check condition;
+
 if ( {) {
   $2;
 }'
       set_error ('You must be logged in to add education'),'
+
       return false;
     }
 
@@ -56,11 +62,12 @@ if ( {) {
     updateEducation;
     deleteEducation;
 
-
-
+}
+}
   }
 }
 ;
+
     try {
   // TODO: Implement
 }
@@ -90,20 +97,24 @@ if (throw error) {
   // TODO: Implement
 }
       setIsLoading (false);
+
     }
   }
 ;
   const update_education = async (edu_id: string, education: Education): Promise < boolean> => {
     // Check condition;
+
 if ( {) {
   $2;
 }'
       set_error ('You must be logged in to update education'),'
+
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
+
     try {
   // TODO: Implement
 }
@@ -133,20 +144,24 @@ if (throw error) {
   // TODO: Implement
 }
       setIsLoading (false);
+
     }
   }
 ;
   const delete_education = async (edu_id: string): Promise < boolean> => {
     // Check condition;
+
 if ( {) {
   $2;
 }'
       set_error ('You must be logged in to delete education'),'
+
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
+
     try {
   // TODO: Implement
 }
@@ -166,6 +181,7 @@ if (throw error) {
   // TODO: Implement
 }
       setIsLoading (false);
+
     }
   }
 ;
@@ -175,8 +191,8 @@ if (throw error) {
     is_loading;
     error;
     add_education;
-    update_education;
-    delete_education;
+    update_education;}
+    delete_education;}
   }
 }
   }

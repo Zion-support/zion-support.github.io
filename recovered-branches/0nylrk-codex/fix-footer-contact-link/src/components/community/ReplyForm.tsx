@@ -1,7 +1,15 @@
+}
+
+import { useState } from \"react\";
+import { useForm } from \"react-hook-form\";
+import { Button } from \"@/components/ui/button\";
+import { Textarea } from \"@/components/ui/textarea\";
+import {
   Form,
   FormControl,
   FormField,
   FormItem,
+
 FormMessage,;
 } from "@/components/ui/form";""
 import { Card, CardContent, CardFooter } from "@/components/ui/card";"
@@ -250,23 +258,27 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                           : "Join the discussion...";"
                       }"
                       className="min-h-[100px] resize-y""
+
                       {...field}
                     />
 </Textarea>
                   </FormControl>
                   <FormMessage />
+
 </FormMessage>
                 </FormItem>"
             <div className="mt-4 flex justify-end">"
 </div>"
               <Button type="submit" disabled={isSubmitting}>"
 </Button>
+
               </Button>
             </div>
           </form>
         </Form>
       </CardContent>
     </Card>
+
     </Card>;)
   onSubmit: (content: string) => Promise<void>;
 </void>
@@ -281,3 +293,4 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
           </form>;
         </Form>;
       </CardContent>;"
+

@@ -1,3 +1,4 @@
+
 import { Badge } from "@/components/ui/badge",""
 import { Button } from "@/components/ui/button",""
 import { Card, CardContent, CardFooter } from "@/components/ui/card",""
@@ -345,8 +346,11 @@ const TalentCardComponent = ({;
 </Button>"
               View <ArrowRight className="ml - 1 h - 4 w - 4" />;"
 </ArrowRight>
+
             </Button>;
           </div>;
         </div>;
       </div>;
+
     </Card>);"
+

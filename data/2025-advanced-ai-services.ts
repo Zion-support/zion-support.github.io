@@ -1,4 +1,5 @@
 
+
 export const advancedAIServices2025 = [
       'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'''
       'Natural language query processing'''
@@ -11,6 +12,7 @@ export const advancedAIServices2025 = [
       'Advanced security and compliance'']
     ]
 export const advancedAIServices2025 = [;
+
   {'
     id: 'ai - powered - business - intelligence - suite',''
     name: 'BusinessIntelligence AI Pro','
@@ -558,5 +560,6 @@ export const advancedAIServices2025 = [;
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',;''
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';'
   }
+
 ];
 '

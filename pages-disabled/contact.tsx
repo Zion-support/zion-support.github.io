@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';''
 import MainLayout from '../components/layout/MainLayout';'
 export default function ContactPage() {
   return (
+
     <MainLayout;'
       title="Contact - Zion Tech Group"""
       description="Get in touch with Zion Tech Group for all your technology needs""
@@ -32,6 +33,7 @@ export default function ContactPage() {
 </div>"
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>""
                 <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>"
+
               </div>
             </div>
           </div>
@@ -39,6 +41,7 @@ export default function ContactPage() {
       </div>
     </MainLayout>
     <>
+
       <Head>
 </Head>
         <title>Contact - Zion Tech Group</title>"
@@ -79,10 +82,12 @@ export default function ContactPage() {
 </p>
                     123 Tech Street<br />
 </br>
+
                   </p>
                 </div>
               </div>
             </div>
+
             "
             <div className="bg-white rounded-lg shadow-lg p-8">"
 </div>"
@@ -108,6 +113,7 @@ export default function ContactPage() {
                 </div>"
                 <button type="submit" className="w-full bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">"
 </button>
+
                 </button>
               </form>
             </div>

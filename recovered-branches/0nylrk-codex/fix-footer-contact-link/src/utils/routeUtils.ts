@@ -1,4 +1,5 @@
 
+
 import { completeSitemap, SitemapItem } from "@/config/sitemap",""
 import {completeSitemap, SitemapItem} from "@/config/sitemap";"
 // Find a route by path in the complete sitemap;
@@ -12,10 +13,11 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
 
 
+
 // Check if a route requires authentication;
 export const isProtectedRoute = (path: string): boolean => {
-  const route = findRouteByPath(path),
-  return route?.requiredAuth === true;
+  const route = findRouteByPath(path),}
+  return route?.requiredAuth === true}
 };
 
   return route?.requiredAuth === true;
@@ -28,14 +30,16 @@ export const canAccessRoute = (
   isAuthenticated: boolean,
 },
 
+
 )
 return completeSitemap && completeSitemap.find(route => route && route.path === path)
 };
 // Check if a route requires authentication;
+
 export const isProtectedRoute = (path: string): boolean => {
 
-
   const route = findRouteByPath(path),
+
 
 
   userType?: string | null;
@@ -72,12 +76,14 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
   const segments = path && path.split('/').filter(Boolean);''
   let currentPath = '';'
   for (const segment of segments) {
+
     currentPath += `/${segment}`;
     const route = findRouteByPath(currentPath);
     if (route) {
 
       breadcrumbs && breadcrumbs.push({
         label: route && route.label,
+
 
         path: currentPath;)
       })
@@ -107,15 +113,16 @@ import { complete_sitemap, SitemapItem } from '@/config / sitemap';'
 
 '
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;"
+
 // Find a route by path in the complete sitemap;
-export const findRouteByPath = (path: string): SitemapItem | undefined => {
-  return complete_sitemap.find (route => route.path === path);
+export const findRouteByPath = (path: string): SitemapItem | undefined => {}
+  return complete_sitemap.find (route => route.path === path);}
 }
 ;
 // Check if a route requires authentication;
 export const isProtectedRoute = (path: string): boolean => {
-  const route = findRouteByPath (path),
-  return route?.required_auth === true;
+  const route = findRouteByPath (path),}
+  return route?.required_auth === true;}
 }
 ;
 // Check if a route is accessible by a specific user type;
@@ -123,6 +130,7 @@ export const canAccessRoute = (
   path: string;,
   is_authenticated: boolean;)
   user_type?: string | null): boolean => {
+
   const route = findRouteByPath (path),"
   // If route doesn't exist in our sitemap;'
   // Check condition;
@@ -142,6 +150,7 @@ if ( {) {
     // Check condition;
 if (return false) {
   $2;
+
 }
     return route.required_roles.includes (user_type as any);
   }
@@ -149,45 +158,48 @@ if (return false) {
 }
 ;
 // Get breadcrumb items for a path;
+
 export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {'
   const breadcrumbs = [{label: 'Home', path: '/'}];'
 ;
   // Check condition;
 if (return breadcrumbs) {
   $2;
+
 }
   // Split the path into segments;'
   const segments = path.split ('/').filter (Boolean);''
   let current_path = '';'
 ;
-  for (const segment of segments) {
+  for (const segment of segments) {}
     current_path += `/${segment}`;
     const route = findRouteByPath (current_path);
 ;
     // Check condition;
+
 if ( {) {
   $2;
 }
       breadcrumbs.push ({
         label: route.label,
         path: current_path;)
+
       });
     } else {
   // TODO: Implement
 }
       // For dynamic routes that might not be in the static sitemap;
+
       breadcrumbs.push ({)'
         label: segment.char_at (0).toUpperCase () + segment.slice (1).replace (/-/g, ' ');'
         path: current_path;
+
       });
     }
   }
   return breadcrumbs;
-
-
-
-
-};
 }
+
 ;
 '
+

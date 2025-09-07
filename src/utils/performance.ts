@@ -1,3 +1,4 @@
+
 // Performance monitoring utilities;
 export class PerformanceMonitor {
   // TODO: Implement
@@ -25,3 +26,4 @@ export const getNavigationTiming = (): Record<string, number> | null => {
   if (value <= threshold.needsImprovement) return 'needsImprovement';''
   return 'poor';'
 };'
+

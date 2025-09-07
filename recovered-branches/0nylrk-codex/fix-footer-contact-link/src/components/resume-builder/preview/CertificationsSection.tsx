@@ -1,4 +1,5 @@
 
+
 }
 
 
@@ -100,10 +101,12 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
                 <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;"
 </a>
                 </a>;)
+
               </p>;            )}
           </div>;
       </div>;
     </div>;
+
     <div>;
 </div>"
       <h2 className="text - lg font - semibold border - b mb - 3">Certifications</h2>;""
@@ -128,18 +131,23 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
           </div>))}
       </div>;
     </div>);
+
 }</span>) 
 }</div> View Credential </Link> </p>) 
 }</div>) ) 
 }</div> </div>) 
+
             </div>"
             <p className="text-sm">{cert.issuing_organization}</p>""
               <p className="text-sm">"
 </p>"
                 <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">"
 </a>
+
                 </Link>
               </p>
           </div>
       </div>
+
     </div>"
+

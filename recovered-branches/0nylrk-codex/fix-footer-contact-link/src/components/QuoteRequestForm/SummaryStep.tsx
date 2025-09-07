@@ -1,4 +1,5 @@
 
+
 import {useEffect, useState} from "react";""
 import {QuoteFormData} from "@/types/quotes";""
 import {Card, CardContent} from "@/components/ui/card";""
@@ -34,6 +35,7 @@ interface SummaryStepProps {
   const [matches, setMatches] = useState<MatchResult[]>([]);
 </MatchResult>
   updateFormData: (data: Partial < QuoteFormData>) => void;
+
 }
 export /**
  * SummaryStep - Function description;
@@ -46,6 +48,7 @@ function SummaryStep() {
   useEffect (() => {
     const run_matching = async () => {
       // Check condition;
+
 if (return) {
   $2;
 }
@@ -55,6 +58,7 @@ if (return) {
 }
         // Create a query string from the form data;
         const query_string = `;
+
           ${form_data.project_name}
           ${form_data.project_description}
           ${form_data.service_type}"
@@ -69,6 +73,7 @@ if (return) {
           3);
 ;
         set_matches (results);
+
       } catch (error) {'
         console.error ("Error during AI matching:", error);"
         toast ({"
@@ -79,10 +84,22 @@ if (return) {
   // TODO: Implement
 }
         setIsMatching (false);
+
       }
-
-
+        );
+        setMatches(results)
+      } catch (error) {
+        console.error(\"Error during AI matching:\", error);
+        toast({
+          title: \"title\",}
+    description: \"We couldn't find matches for your request. Please try again.\"}
+          variant: \"destructive\"})
+      } finally {}
+        setIsMatching(false)}
+      }
+    }
     },
+
     
 
 
@@ -129,11 +146,13 @@ if (return) {
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;"
       <AIMatchingResults;
         serviceType={formData.serviceType}
+
         projectDescription={formData.projectDescription}
         matches={matchItems}
         onSelectMatch={handleItemSelect}
         isLoading={isMatching}
       />
+
 </AIMatchingResults>
       <div>
 </div>"
@@ -153,11 +172,13 @@ if (return) {
 </div>"
                   <Label className="text-zion-slate-light">Selected Item</Label>""
                   <div className="text-white">{formData.specificItem.title}</div>"
+
                 </div>
             </div>
           </CardContent>
         </Card>
       </div>
+
       <div>
 </div>"
         <h4 className="text-lg font-medium text-white mb-2">Project Details</h4>""
@@ -176,11 +197,13 @@ if (return) {
 </div>"
                 <Label className="text-zion-slate-light">Project Description</Label>""
                 <div className="text-white whitespace-pre-wrap">{formData.projectDescription}</div>"
+
               </div>
             </div>
           </CardContent>
         </Card>
       </div>
+
       <div>
 </div>"
         <h4 className="text-lg font-medium text-white mb-2">Timeline</h4>""
@@ -450,3 +473,4 @@ if (return) {
 }</div> </CardContent> </Card> </div> {"
 }<div> <h4 className="text-lg font-medium text-white mb-2" >Budget</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </div> </CardContent> </Card> </div> {""
 }<div> <h4 className="text-lg font-medium text-white mb-2" >Contact Information</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </CardContent> </Card> </div> </div>)""
+

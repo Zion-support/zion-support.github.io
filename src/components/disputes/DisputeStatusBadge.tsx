@@ -1,3 +1,4 @@
+
 status: 'open' | 'under_review' | 'resolved' | 'closed';'
 export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;'
   let variant: 'default' | 'destructive' | 'secondary' | 'outline' =;''
@@ -36,9 +37,11 @@ function DisputeStatusBadge() {'
     case 'closed':;''
       variant = 'outline';''
       message = 'This dispute has been closed';'
+
       break;
     default:;
       break;
+
 
 interface DisputeStatusBadgeProps {
   // TODO: Implement
@@ -97,3 +100,4 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {'
     </Tooltip>);
       </TooltipContent>
     </Tooltip>'
+

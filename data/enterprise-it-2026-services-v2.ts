@@ -1,8 +1,14 @@
+
+;
+export interface EnterpriseIt2026ServiceV2  {export interface EnterpriseIt2026ServiceV2  {export interface EnterpriseIt2026ServiceV2  {export interface EnterpriseIt2026ServiceV2  {export interface EnterpriseIt2026ServiceV2  {export interface EnterpriseIt2026ServiceV2  {export interface EnterpriseIt2026ServiceV2  {export interface EnterpriseIt2026ServiceV2  {ursor/fix-website-loading-errors-and-merge-6662;}
+export interface EnterpriseIt2026ServiceV2  {export interface EnterpriseIt2026ServiceV2  {import { ServiceVariant  } from '../types/service-variants';
+export interface EnterpriseIT2026ServiceV2  {export interface EnterpriseIt2026ServiceV2  {id: string;
+export interface EnterpriseIt2026ServiceV2 {
+
 export interface EnterpriseIt2026ServiceV2 {
   // TODO: Implement
 }
 export interface EnterpriseIt2026ServiceV2 {;
-
 export interface EnterpriseIt2026ServiceV2 {
   // TODO: Implement
 }
@@ -33,10 +39,12 @@ export interface EnterpriseIt2026ServiceV2 {;
   market_size: string;
   growth_rate: string;,
   variant: ServiceVariant;
+
   contact_info: {,
   mobile: string;
     email: string;,
   address: string;
+
 export interface EnterpriseIT2026ServiceV2 {
   // TODO: Implement
 }
@@ -51,15 +59,15 @@ export interface EnterpriseIT2026ServiceV2 {
   category: string, realService: boolean,
   technology: string[], integrations: string[],
   useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-    },
+  competitors: string[], marketSize: string,}
+  growthRate: string, variant: ServiceVariant,}
+  contactInfo: {},
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number;
 }
+
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'''
     launchDate: '2026-05-01'',
   customers: 280;
@@ -83,12 +91,14 @@ export interface EnterpriseIT2026ServiceV2 {
   customers: 280;
     rating: 4.9;,
   reviews: 180;
+
   }
-}
+
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture;
   {
+
 '
     id: 'zero-trust-network-architecture-pro', name: 'Zero Trust Network Architecture Pro',''
     tagline: 'Never trust, always verify - comprehensive zero trust security',''
@@ -115,6 +125,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709','
     reviews: 180;,'
   website: 'https://ziontechgroup.com';'
+
     }
     real_implementation: true,'
     implementation_details: 'Production - ready quantum security platform with post - quantum algorithms, monitoring, and enterprise deployment.';''
@@ -122,8 +133,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   customers: 280;
     rating: 4.9,
     reviews: 180;
+
 ];'
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
   name: string,;
@@ -154,8 +167,8 @@ export interface EnterpriseIT2026ServiceV2 {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -178,6 +191,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Identity verificationDevice trust scoringContinuous monitoringMicro-segmentationLeast privilege accessReal-time threat detectionCompliance frameworksAdvanced analytics',;''
       'API for integrationEnterprise deployment';']
     ],;
+
     popular: true,;'
     icon: '🔒',;''
     color: 'from-red-600 to-orange-700',;''
@@ -202,6 +216,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready zero trust platform with comprehensive security controls, monitoring, and enterprise deployment.',;''
@@ -222,6 +237,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Multi-cloud managementWorkload orchestrationCost optimizationPerformance monitoringSecurity complianceAutomated scalingResource optimizationAdvanced analytics',;''
       'API for integrationEnterprise support';']
     ],;
+
     popular: true,;'
     icon: '☁️',;''
     color: 'from-blue-600 to-cyan-700',;''
@@ -246,6 +262,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready multi-cloud platform with orchestration, monitoring, and optimization capabilities.',;''
@@ -266,6 +283,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'AI-powered monitoringPredictive analyticsAutomated remediationIntelligent alertingPerformance optimizationCapacity planningAdvanced reportingCustom dashboards',;''
       'API for integrationEnterprise deployment';']
     ],;
+
     popular: true,;'
     icon: '🖥️',;''
     color: 'from-purple-600 to-indigo-700',;''
@@ -290,6 +308,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready AI operations platform with intelligent monitoring, automation, and enterprise features.',;''
@@ -310,6 +329,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Quantum-ready architectureHybrid classical-quantumPost-quantum cryptographyQuantum simulationPerformance optimizationSecurity hardeningFuture-proofing toolsAdvanced analytics',;''
       'API for integrationEnterprise deployment';']
     ],;
+
     popular: true,;'
     icon: '⚛️',;''
     color: 'from-cyan-600 to-blue-700',;''
@@ -334,6 +354,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready quantum infrastructure platform with hybrid computing, security features, and enterprise deployment.',;''
@@ -354,6 +375,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Edge deployment managementDistributed orchestrationPerformance optimizationSecurity managementMonitoring and analyticsAutomated scalingEdge AI capabilitiesCustom edge applications',;''
       'API for integrationEnterprise deployment';']
     ],;
+
     popular: true,;'
     icon: '📡',;''
     color: 'from-green-600 to-emerald-700',;''
@@ -378,6 +400,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready edge platform with orchestration, monitoring, and enterprise deployment capabilities.',;''
@@ -398,6 +421,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'AI-powered data discoveryAutomated classificationCompliance monitoringData lineage trackingPrivacy protectionQuality assessmentGovernance automationAdvanced analytics',;''
       'API for integrationEnterprise deployment';']
     ],;
+
     popular: true,;'
     icon: '📊',;''
     color: 'from-indigo-600 to-purple-700',;''
@@ -422,6 +446,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready data governance platform with AI capabilities, compliance monitoring, and enterprise features.',;''
@@ -442,6 +467,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Multi-blockchain supportSmart contract developmentEnterprise securityCompliance frameworksPerformance optimizationIntegration toolsAdvanced analyticsCustom applications',;''
       'API for developersEnterprise support';']
     ],;
+
     popular: true,;'
     icon: '⛓️',;''
     color: 'from-orange-600 to-red-700',;''
@@ -466,6 +492,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready blockchain platform with multi-chain support, smart contracts, and enterprise features.',;''
@@ -486,6 +513,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'AI-powered automationIntelligent monitoringPredictive analyticsPerformance optimizationSecurity scanningDeployment automationAdvanced reportingCustom workflows',;''
       'API for integrationEnterprise deployment';']
     ],;
+
     popular: true,;'
     icon: '🚀',;''
     color: 'from-pink-600 to-rose-700',;''
@@ -510,6 +538,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready DevOps platform with AI automation, monitoring, and enterprise deployment capabilities.',;''
@@ -530,6 +559,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Post-quantum cryptographyQuantum-resistant algorithmsThreat detectionSecurity monitoringCompliance frameworksAdvanced analyticsCustom security policiesAPI for integration',;''
       'Enterprise deployment24/7 monitoring';']
     ],;
+
     popular: true,;'
     icon: '🛡️',;''
     color: 'from-yellow-600 to-orange-700',;''
@@ -554,6 +584,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       email: 'kleber@ziontechgroup.com',;''
       address: '364 E Main St STE 1008 Middletown DE 19709',;''
       website: 'https://ziontechgroup.com';'
+
     },;
     realImplementation: true,;'
     implementationDetails: 'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.',;''
@@ -564,5 +595,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
   }
 ];
   }
+
 ;
 '
+

@@ -1,3 +1,4 @@
+
 import { promises as fs } from "fs";""
 import path from "path";""
 const DATA_DIR = path.join(process.cwd(), "data");"
@@ -6,6 +7,7 @@ const DATA_DIR = path.join(process.cwd(), "data");"
   exists: (path: string) => false;,
   delete: (path: string) => null;,
   read: (path: string) => null,
+
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
   delete: (path: string) => null;
@@ -32,6 +34,7 @@ import { promises as fs } from 'fs';''
 import path from 'path';''
 const DATA_DIR = path.join(process.cwd(), 'data');'
   try {
+
   // TODO: Implement
 }
     const fullPath = path.join(DATA_DIR, filePath);'
@@ -39,8 +42,10 @@ const DATA_DIR = path.join(process.cwd(), 'data');'
     return JSON.parse(data);
   } catch (error) {
     return defaultValue;
+
   }
 }
+
 
 
 
@@ -54,3 +59,4 @@ export async function writeJsonAsync<T>(
 </T>)
 ): Promise<void> {
 </void>"
+

@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 
+
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+
+const FaqSection: React.FC = () => {const [openIndex, setOpenIndex]  =;
+  useState<number | null />(null;
   const faqs = [
+
     {
       question: "What services does Zion Tech Group offer?",
       answer: "We offer a comprehensive range of technology services including web development, mobile app development, cloud solutions, AI/ML implementation, cybersecurity, and digital transformation consulting."
@@ -78,3 +83,4 @@ const FaqSection = () => {
 };
 
 export default FaqSection;
+

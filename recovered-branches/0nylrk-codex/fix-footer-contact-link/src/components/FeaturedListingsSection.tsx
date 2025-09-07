@@ -1,4 +1,5 @@
 
+
 import { ProductListingCard } from '@/components / ProductListingCard';''
 import { GradientHeading } from '@/components / GradientHeading';''
 import { Button } from '@/components / ui / button';''
@@ -7,6 +8,7 @@ interface FeaturedListingsSectionProps {
   // TODO: Implement
 }
   show_title?: boolean;
+
 }
 export /**
  * FeaturedListingsSection - Function description;
@@ -14,6 +16,7 @@ export /**
 function FeaturedListingsSection() {
   const featured_listings = [;
     {
+
 
 '
       id: "advanced-nlp-model",""
@@ -25,10 +28,10 @@ function FeaturedListingsSection() {
   name: "TechAI Labs"""
         id: "tech-ai-labs"","
   avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format""
+
       }
-
-
     },
+
     {"
       id: "image-generation-service",""
       title: "AI Image Generation Service",""
@@ -424,10 +427,12 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
           >
 </Button>"
             <Link to="/marketplace">View All Listings</Link>"
+
           </Button>
         </div>
       </div>
     </section>
+
         </div>;"
         <div className="mt-10 text-center">;"
 </div>
@@ -455,3 +460,4 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
 }</div> <div className="mt-10 text-center" > <Button asChild > <Link to="/marketplace" >View All Listings</Link> </Button> </div> </div> </section>)"
     </section>;
     </section>);"
+

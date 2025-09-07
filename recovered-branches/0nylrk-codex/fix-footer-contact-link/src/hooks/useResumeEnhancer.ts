@@ -1,5 +1,6 @@
 
 
+
 export function useResumeEnhancer() {;
 
 
@@ -38,10 +39,12 @@ export function useResumeEnhancer() {;
       // Check condition;
 if ( {) {
   $2;
+
 }
         throw new Error (error.message);
       }
       return data.enhanced_content;
+
     } catch (err: any) {'
       set_error (err.message || 'Failed to enhance content'),''
       console.error ('Enhancement error:', err);'
@@ -50,6 +53,7 @@ if ( {) {
   // TODO: Implement
 }
       setIsEnhancing (false);
+
     }
   }
 ;
@@ -57,14 +61,11 @@ if ( {) {
   // TODO: Implement
 }
     enhance_content;
-    is_enhancing;
-    error;
-
-
-
-
+    is_enhancing;}
+    error;}
   }
 }
+
 
   }
 }
@@ -82,3 +83,4 @@ export function useResumeEnhancer() {;
 </string>'
 } const enhanceContent = async (content: string, type: EnhancementType = 'general', context?: string) : Promise<string | null> => {'
 </string>'
+

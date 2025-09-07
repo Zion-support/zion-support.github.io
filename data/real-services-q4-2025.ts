@@ -1,3 +1,4 @@
+
     id: 'affiliate-analytics-hub'','
   name: 'Affiliate Analytics Hub'''
     tagline: 'Track referrals, payouts, and ROI with multi-touch attribution'''
@@ -89,10 +90,12 @@
     real_implementation: true,'
     implementation_details: 'Webhook ingestion, cookie - less heuristics',''
     launch_date: '2025 - 11 - 01','
+
     customers: 35,
     rating: 4 && 4.6,
-    reviews: 21,
+    reviews: 21;
   },
+
 '
     color: 'from - emerald - 600 to - teal - 700',''
     text_color: 'text - emerald - 300',''
@@ -141,10 +144,12 @@
     real_implementation: true,'
     implementation_details: 'Carrier APIs and automation rules',''
     launch_date: '2025 - 11 - 20','
+
     customers: 12,
-    rating: 4 && 4.5,
-    reviews: 9,
+    rating: 4 && 4.5,}
+    reviews: 9}
   },
+
   {'
       'Branching logic designer',''
       'Embeddable SDK and JS snippet',''
@@ -165,10 +170,12 @@
     real_implementation: true,'
     implementation_details: 'Client SDK + webhooks',''
     launch_date: '2025 - 10 - 28','
+
     customers: 16,
-    rating: 4 && 4.6,
-    reviews: 10,
+    rating: 4 && 4.6,}
+    reviews: 10}
   },
+
   {'
       'Pageviews, sessions, and cohorts',''
       'Events and conversions',''
@@ -361,15 +368,13 @@
   realImplementation: true;'
 		implementationDetails: 'Lightweight script & edge collection';','
   launchDate: '2025-12-05';'
+
 		customers: 9;
 ];
 ;
-
 	}
 ];
 
-	}
-];
 
 '
   id: 'ai - email - responder - pro';','
@@ -404,9 +409,10 @@
   real_implementation: true,'
   implementation_details: 'OAuth, vector memory, policy guardrails';''
   launch_date: '2025 - 10 - 15';',
+
   customers: 24;
-  rating: 4.8,
-  reviews: 17;
+  rating: 4.8,}
+  reviews: 17;}
 }
 {'
   id: 'affiliate - analytics - hub';','
@@ -418,6 +424,7 @@
   features: [;'
   'Link shortener and branded domainsUTM builder and traffic quality scoring_multi - touch attribution and deduplication_automated payouts and tax forms_fraud and bot detection_partner portal and reports';']
   ];
+
   popular: true;,'
   icon: '🔗';''
   color: 'from - emerald - 600 to - teal - 700';','
@@ -441,9 +448,10 @@
   real_implementation: true,'
   implementation_details: 'Webhook ingestion, cookie - less heuristics';''
   launch_date: '2025 - 11 - 01';',
+
   customers: 35;
-  rating: 4.6,
-  reviews: 21;
+  rating: 4.6,}
+  reviews: 21;}
 }
 {'
   id: 'return - management - saas';','
@@ -455,6 +463,7 @@
   features: [;'
   'Portal and RMA workflows_label generation and tracking_warehousing and disposition updates_refunds and exchanges automation_fraud checks and abuse controls_analytics and cohort reports';']
   ];
+
   popular: false;,'
   icon: '📦';''
   color: 'from - orange - 600 to - red - 600';','
@@ -481,6 +490,7 @@
   customers: 12;,
   rating: 4.5,
   reviews: 9;
+
 }
 {'
   id: 'survey - studio - mobile';','
@@ -492,6 +502,7 @@
   features: [;'
   'Branching logic designer_embeddable SDK and JS snippet_real - time analytics and funnels_webhook exports and CSVEmail / SMS invite campaigns_consent and PII redaction';']
   ];
+
   popular: false;,'
   icon: '📱';''
   color: 'from - purple - 600 to - pink - 600';','
@@ -518,6 +529,7 @@
   customers: 16;,
   rating: 4.6,
   reviews: 10;
+
 }
 {'
   id: 'website - analytics - lite';','
@@ -529,6 +541,9 @@
   features: [;'
   'Pageviews, sessions, and cohorts_events and conversions_source / medium attribution_funnel and retention views_custom dashboardsCSV and webhook export';']
   ];
+	}
+];	}
+
   popular: false;,'
   icon: '📊';''
   color: 'from - indigo - 600 to - blue - 700';','
@@ -947,5 +962,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 		rating: 4.5;,
   reviews: 6;
 	}
+
 ];
 '

@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";""
 import { Badge } from "@/components/ui/badge";""
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";""
@@ -67,3 +68,4 @@ PostCard.display_name = 'PostCard';'
 export default PostCard;
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 </Card>'
+

@@ -1,3 +1,4 @@
+
   customers: number;,
   rating: number;
   reviews: number;,
@@ -1041,12 +1042,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Performance optimization',''
       'Integration APIs',''
       'Migration tools from classical crypto','
+
     ],
     popular: false,
     customers: 23,
-    rating: 4 && 4.9,
-    reviews: 18,
+    rating: 4 && 4.9,}
+    reviews: 18}
   },
+
   {'
       'Autonomous infrastructure management',''
       'Self - healing systems',''
@@ -1057,12 +1060,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Cost optimization',''
       'Security compliance monitoring',''
       'Real - time analytics dashboard','
+
     ],
     popular: true,
     customers: 134,
-    rating: 4 && 4.8,
-    reviews: 92,
+    rating: 4 && 4.8,}
+    reviews: 92}
   },
+
   {'
       'Edge model deployment',''
       'Real - time inference optimization',''
@@ -1091,12 +1096,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Audit trail and transparency',''
       'Multi - chain support',''
       'Integration with DeFi protocols','
+
     ],
     popular: false,
     customers: 45,
-    rating: 4 && 4.7,
-    reviews: 33,
+    rating: 4 && 4.7,}
+    reviews: 33}
   },
+
   {'
       'Predictive churn risk scoring',''
       'Customer health monitoring',''
@@ -1107,12 +1114,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Integration with CRM systems',''
       'Real - time alerts and notifications',''
       'Performance analytics dashboard','
+
     ],
     popular: true,
     customers: 178,
-    rating: 4 && 4.8,
-    reviews: 124,
+    rating: 4 && 4.8,}
+    reviews: 124}
   },
+
   {'
       'Quantum algorithm implementations',''
       'Hybrid quantum - classical ML',''
@@ -1123,12 +1132,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Quantum circuit design',''
       'Performance benchmarking',''
       'Integration with classical ML frameworks','
+
     ],
     popular: false,
     customers: 28,
-    rating: 4 && 4.9,
-    reviews: 22,
+    rating: 4 && 4.9,}
+    reviews: 22}
   },
+
   {'
       'Demand forecasting and planning',''
       'Inventory optimization',''
@@ -1139,12 +1150,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Real - time visibility and tracking',''
       'Compliance monitoring',''
       'Performance analytics and reporting','
+
     ],
     popular: true,
     customers: 89,
-    rating: 4 && 4.7,
-    reviews: 67,
+    rating: 4 && 4.7,}
+    reviews: 67}
   },
+
   {'
       'Threat intelligence sharing',''
       'Automated incident response',''
@@ -1154,12 +1167,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Integration with security tools',''
       'Compliance reporting',''
       '24 / 7 security monitoring','
+
     ],
     popular: true,
     customers: 156,
-    rating: 4 && 4.8,
-    reviews: 118,
+    rating: 4 && 4.8,}
+    reviews: 118}
   },
+
   {'
       'AI content generation',''
       'Multi - channel content optimization',''
@@ -1193,12 +1208,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Audit and reporting',''
       'Integration with data platforms',''
       'Real - time monitoring and alerts','
+
     ],
     popular: false,
     customers: 78,
-    rating: 4 && 4.6,
-    reviews: 56,
+    rating: 4 && 4.6,}
+    reviews: 56}
   },
+
   {'
       'Quantum portfolio optimization',''
       'Risk assessment algorithms',''
@@ -1226,12 +1243,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Compliance and reporting',''
       'Integration with HR systems',''
       'Predictive analytics dashboard','
+
     ],
     popular: true,
     customers: 189,
-    rating: 4 && 4.7,
-    reviews: 134,
+    rating: 4 && 4.7,}
+    reviews: 134}
   },
+
   {'
       'IoT device management',''
       'Real - time data analytics',''
@@ -1242,12 +1261,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Integration with cloud platforms',''
       'Custom dashboard creation',''
       'API and webhook support','
+
     ],
     popular: false,
     customers: 67,
-    rating: 4 && 4.6,
-    reviews: 45,
+    rating: 4 && 4.6,}
+    reviews: 45}
   },
+
   {'
       'Quantum key distribution',''
       'Hybrid encryption systems',''
@@ -1256,12 +1277,14 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Performance optimization',''
       'Integration with security tools',''
       'Migration assistance','
+
     ],
     popular: false,
     customers: 19,
-    rating: 4 && 4.9,
-    reviews: 15,
+    rating: 4 && 4.9,}
+    reviews: 15}
   },
+
   {'
     variant: 'ai-futuristic'',
   contactInfo: contact;
@@ -1315,6 +1338,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 ;
 '
 import { ServiceVariant } from '../types/service-variants',;'
+
 export interface ComprehensiveService {;
   id: string,;
   name: string,;
@@ -1345,8 +1369,8 @@ export interface ComprehensiveService {;
   contactInfo: {;,
   mobile: string,;
     email: string,;
-    address: string,;
-    website: string;
+    address: string,;}
+    website: string;}
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -1356,11 +1380,13 @@ export interface ComprehensiveService {;
   reviews: number;
 }
 ;
+
 const contact = {;'
   mobile: '+1 302 464 0950',;''
   email: 'kleber@ziontechgroup.com',;''
   address: '364 E Main St STE 1008 Middletown DE 19709',;''
   website: 'https://ziontechgroup.com';'
+
 },;
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   {;'
@@ -1398,8 +1424,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'AI-powered analysis engine with custom rule sets and integration APIs.',;''
     launchDate: '2025-01-15',;'
     customers: 156,;
-    rating: 4.8,;
-    reviews: 89;
+    rating: 4.8,;}
+    reviews: 89;}
   },;
   {;'
     id: 'intelligent-incident-response-platform',;''
@@ -1436,8 +1462,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'AI incident detection engine with automated response workflows and team coordination.',;''
     launchDate: '2025-02-01',;'
     customers: 89,;
-    rating: 4.7,;
-    reviews: 67;
+    rating: 4.7,;}
+    reviews: 67;}
   },;
   {;'
     id: 'quantum-resistant-cryptography-suite',;''
@@ -1474,8 +1500,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'Post-quantum algorithm implementations with hybrid encryption and key management.',;''
     launchDate: '2025-01-20',;'
     customers: 23,;
-    rating: 4.9,;
-    reviews: 18;
+    rating: 4.9,;}
+    reviews: 18;}
   },;
   {;'
     id: 'autonomous-devops-orchestrator',;''
@@ -1512,8 +1538,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'AI-powered orchestration engine with autonomous decision-making and self-healing capabilities.',;''
     launchDate: '2025-02-10',;'
     customers: 134,;
-    rating: 4.8,;
-    reviews: 92;
+    rating: 4.8,;}
+    reviews: 92;}
   },;
   {;'
     id: 'edge-ai-inference-platform',;''
@@ -1550,8 +1576,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'Edge deployment framework with model optimization and device management capabilities.',;''
     launchDate: '2025-01-25',;'
     customers: 67,;
-    rating: 4.6,;
-    reviews: 41;
+    rating: 4.6,;}
+    reviews: 41;}
   },;
   {;'
     id: 'blockchain-governance-automation',;''
@@ -1588,8 +1614,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'Multi-chain governance engine with automated compliance and risk management.',;''
     launchDate: '2025-02-05',;'
     customers: 45,;
-    rating: 4.7,;
-    reviews: 33;
+    rating: 4.7,;}
+    reviews: 33;}
   },;
   {;'
     id: 'ai-powered-customer-success-platform',;''
@@ -1626,8 +1652,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'AI-powered predictive analytics engine with automated engagement workflows.',;''
     launchDate: '2025-01-30',;'
     customers: 178,;
-    rating: 4.8,;
-    reviews: 124;
+    rating: 4.8,;}
+    reviews: 124;}
   },;
   {;'
     id: 'quantum-machine-learning-platform',;''
@@ -1664,8 +1690,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'Quantum algorithm library with hybrid classical-quantum optimization capabilities.',;''
     launchDate: '2025-02-15',;'
     customers: 28,;
-    rating: 4.9,;
-    reviews: 22;
+    rating: 4.9,;}
+    reviews: 22;}
   },;
   {;'
     id: 'intelligent-supply-chain-optimizer',;''
@@ -1702,8 +1728,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'AI-powered optimization engine with real-time monitoring and predictive analytics.',;''
     launchDate: '2025-02-20',;'
     customers: 89,;
-    rating: 4.7,;
-    reviews: 67;
+    rating: 4.7,;}
+    reviews: 67;}
   },;
   {;'
     id: 'cybersecurity-threat-intelligence-hub',;''
@@ -1740,8 +1766,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'AI-powered threat detection engine with automated response and intelligence sharing.',;''
     launchDate: '2025-02-25',;'
     customers: 156,;
-    rating: 4.8,;
-    reviews: 118;
+    rating: 4.8,;}
+    reviews: 118;}
   },;
   {;'
     id: 'ai-powered-content-creation-suite',;''
@@ -1778,8 +1804,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'AI content generation engine with optimization and distribution capabilities.',;''
     launchDate: '2025-03-01',;'
     customers: 234,;
-    rating: 4.7,;
-    reviews: 167;
+    rating: 4.7,;}
+    reviews: 167;}
   },;
   {;'
     id: 'intelligent-data-governance-platform',;''
@@ -1816,8 +1842,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'AI-powered data quality engine with automated compliance and governance workflows.',;''
     launchDate: '2025-03-05',;'
     customers: 78,;
-    rating: 4.6,;
-    reviews: 56;
+    rating: 4.6,;}
+    reviews: 56;}
   },;
   {;'
     id: 'quantum-financial-trading-engine',;''
@@ -1854,8 +1880,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'Quantum algorithm implementations for financial optimization and risk management.',;''
     launchDate: '2025-03-10',;'
     customers: 34,;
-    rating: 4.9,;
-    reviews: 28;
+    rating: 4.9,;}
+    reviews: 28;}
   },;
   {;'
     id: 'ai-powered-hr-automation-suite',;''
@@ -1892,8 +1918,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'AI-powered HR automation engine with intelligent workflows and analytics.',;''
     launchDate: '2025-03-15',;'
     customers: 189,;
-    rating: 4.7,;
-    reviews: 134;
+    rating: 4.7,;}
+    reviews: 134;}
   },;
   {;'
     id: 'intelligent-iot-platform',;''
@@ -1930,8 +1956,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'IoT device management platform with AI-powered analytics and automation.',;''
     launchDate: '2025-03-20',;'
     customers: 67,;
-    rating: 4.6,;
-    reviews: 45;
+    rating: 4.6,;}
+    reviews: 45;}
   },;
   {;'
     id: 'quantum-cybersecurity-platform',;''
@@ -1968,8 +1994,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'Quantum-resistant cryptographic implementations with hybrid security systems.',;''
     launchDate: '2025-03-25',;'
     customers: 19,;
-    rating: 4.9,;
-    reviews: 15;
+    rating: 4.9,;}
+    reviews: 15;}
   },;
   {;'
     id: 'ai-powered-sales-intelligence-platform',;''
@@ -2006,18 +2032,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     implementationDetails: 'AI-powered sales analytics engine with predictive insights and automation.',;''
     launchDate: '2025-04-01',;'
     customers: 234,;
+
     rating: 4.8;,
   reviews: 178;
+
   }
 ];
     rating: 4.8,
     reviews: 178;
 
-
-
-
   }
 ];
+
 ;
   }
 ];
@@ -2728,5 +2754,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4.8;,
   reviews: 178;
   }
+
 ];
 '

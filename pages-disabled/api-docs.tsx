@@ -15,6 +15,7 @@ import {
   CheckCircle, 
   ArrowRight,
   Phone,
+
   Mail,
   MapPin;'
 } from 'lucide-react';''
@@ -63,12 +64,14 @@ const apiEndpoints = [
     endpoints: ['
       '/api/analytics/metrics',''
       '/api/analytics/reports'']
+
     ]
 
 ];
 
 export default function APIDocsPage() {
   return (
+
     <MainLayout;'
       title="API Documentation - Zion Tech Group"""
       description="Comprehensive API documentation for Zion Tech Group services. Learn how to integrate with our APIs."""
@@ -119,9 +122,11 @@ export default function APIDocsPage() {
                         } text-white`}
                       >
 </span>
+
                       </span>
                   </div>
                 </div>
+
                 '
                 <div className="mb-6">"
 </div>"
@@ -130,11 +135,13 @@ export default function APIDocsPage() {
 </ul>"
                       <li key={idx} className="text-gray-300 font-mono text-sm">"
 </li>
+
                       </li>
                   </ul>
                 </div>
               </div>
           </div>
+
 "
           <div className="bg-blue-600 rounded-xl p-8 text-center">"
 </div>"
@@ -163,6 +170,7 @@ export default function APIDocsPage() {
                 <MapPin className="h-5 w-5 mr-2" />"
 </MapPin>
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
+
               </div>
             </div>
           </div>

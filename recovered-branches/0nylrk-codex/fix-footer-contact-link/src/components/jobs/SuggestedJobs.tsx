@@ -1,6 +1,7 @@
 
 
 
+
 import { useAuth } from "@/hooks/useAuth",""
 import { Loader2 } from "lucide-react",""
 import { Badge } from "@/components/ui/badge",""
@@ -40,10 +41,9 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
       newMatches, 
       viewedMatches, 
       appliedMatches;
+
     } 
   } = useJobSuggestions(currentTalentId),
-
-
   const currentTalentId = talentId |user?.id;
   const {
   // TODO: Implement
@@ -52,6 +52,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     updateJobMatchStatus;
     categorizedMatches: {
       newMatches;
+
       viewedMatches;
       appliedMatches;
     }
@@ -102,6 +103,7 @@ import {NoJobsCard} from "./NoJobsCard";"
               <JobMatchesCard;
               />
 </JobMatchesCard>
+
           </div>
         </div>
     </div>
@@ -121,6 +123,7 @@ import {NoJobsCard} from "./NoJobsCard";"
                 onApply={handleApply} 
                 onDecline={handleDecline} 
               />;
+
 </JobMatchesCard>
           </div>;
         </div>;
@@ -136,16 +139,16 @@ import {NoJobsCard} from "./NoJobsCard";"
 </div>
               <JobMatchesCard;
                 key={match && match.id} 
+
                 match={match} 
                 onApply={handleApply} 
-
-                onDecline={handleDecline}
-                onDecline={handleDecline}
+                onDecline={handleDecline}                onDecline={handleDecline}
                 showApplied={true}
               />;
 </JobMatchesCard>
           </div>;
         </div>;
+
     </div>;"
       <div className="flex items - center justify - center p - 6">;"
 </div>"
@@ -255,15 +258,20 @@ import {NoJobsCard} from "./NoJobsCard";"
   handleDecline;
 }showApplied= {
   true;)
+
 }/>) ) 
 </JobMatchesCard>
 }</div> </div>) 
 }</div>) 
+
               <JobMatchesCard;
                 key={match.id} 
+
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline}
                 showApplied={true}
               />;
+
 </JobMatchesCard>"
+

@@ -1,3 +1,4 @@
+
 return (
 
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;'
@@ -81,12 +82,15 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 </ChevronDown>
           <Slider;"
             aria-label="Hourly rate range";"
+
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}
             step={5}
+
             onValueChange={handleChange}
 
 
     </div>;
 </Slider>"
+

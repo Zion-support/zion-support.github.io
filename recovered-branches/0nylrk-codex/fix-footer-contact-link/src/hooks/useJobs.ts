@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";""
 import {supabase} from "@/integrations/supabase/client";""
 import {Job, JobStatus} from "@/types/jobs";""
@@ -146,6 +147,7 @@ if (throw fetch_error) {
       console && console.error("Error deleting job:", err);""
       toast && toast.error("Failed to delete job");"
       return false;
+
     }
   }
   return {
@@ -156,9 +158,9 @@ if (throw fetch_error) {
     error;
     refetch: fetch_jobs;
     updateJobStatus;
-
     delete_job;
     create_job;
+
     update_job,
     getJobById;
 
@@ -175,3 +177,4 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 </Job>
   const [error, setError] = useState<string | null>(null),;
 </string>"
+

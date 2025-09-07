@@ -1,3 +1,4 @@
+
 import React from "react",""
 import { Card, CardContent } from "@/components/ui/card",""
 import React from "react"""
@@ -78,3 +79,4 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {"
         </p>;
       </CardContent>;
     </Card>);"
+

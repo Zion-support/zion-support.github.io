@@ -1,3 +1,4 @@
+
 reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;,
@@ -327,3 +328,4 @@ const ErrorContext = createContext<ErrorContextType | null>(null),;
 </ErrorContextType>
   const [retryCount, setRetryCount] = useState<Record<string number>>({}),;
 </Record>'
+

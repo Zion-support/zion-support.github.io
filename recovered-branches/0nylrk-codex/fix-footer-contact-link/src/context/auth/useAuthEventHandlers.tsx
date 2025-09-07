@@ -2,6 +2,7 @@
 
 
 
+
 import {toast} from "@/hooks/use-toast";""
 import type { UserProfile } from "@/types/auth";""
 import {checkNewRegistration} from "@/utils/authUtils";""
@@ -34,3 +35,4 @@ export function useAuthEventHandlers(
 </React>
   setOnboardingStep:React.Dispatch<React.SetStateAction<string | null>>;
 </React>)'
+

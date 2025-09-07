@@ -1,3 +1,4 @@
+
 import { useState } from "react";""
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";""
 import { Input } from "@/components/ui/input";""
@@ -30,10 +31,12 @@ interface ServiceTypeStepProps {
             <h4 className="font-medium text-white">Services</h4>""
             <p className="text-sm text-zion-slate-light">"
 </p>
+
             </p>
           </Card>
 
           <Card;
+
             className={`p-4 cursor-pointer border-2 transition-colors ${"
               formData.serviceType === "talent"""
                 ? "bg-zion-purple/20 border-zion-purple"""
@@ -44,10 +47,12 @@ interface ServiceTypeStepProps {
             <h4 className="font-medium text-white">Talent</h4>""
             <p className="text-sm text-zion-slate-light">"
 </p>
+
             </p>
           </Card>
 
           <Card;
+
             className={`p-4 cursor-pointer border-2 transition-colors ${"
               formData.serviceType === "equipment"""
                 ? "bg-zion-purple/20 border-zion-purple"""
@@ -158,9 +163,11 @@ interface ServiceTypeStepProps {
                   key={item.id}
                   on_click={() => handleItemSelect (item)}
 </div>
+
                   <ListingScoreCard;
-                    title={item.title}
+title={item.title}
                     category={item.category}
+
                     ai_score={Math.floor (Math.random () * 30) + 70}
                     rating={Math.floor (Math.random () * 2) + 3}
                     review_count={Math.floor (Math.random () * 50) + 10}
@@ -178,6 +185,7 @@ interface ServiceTypeStepProps {
                 </div>"
               <div className="text-center py-8 text-zion-slate-light">"
 </div>
+
               </div>
           </div>
         </div>

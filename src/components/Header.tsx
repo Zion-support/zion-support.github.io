@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';'''
 import { Link } from 'react-router-dom';'''
 import { Menu, X } from 'lucide-react';'''
@@ -32,9 +33,11 @@ export function Header() {
             </div>"
             <span className="text-xl font-bold text-foreground">Zion Tech Group</span>
 
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
 '
   return ('"
     <header className="bg-gray-900 text-white shadow-lg fixed w-full top-0 z-40">""
@@ -212,3 +215,4 @@ export function Header() {
   );
 }
 '"
+

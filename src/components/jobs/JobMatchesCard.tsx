@@ -1,3 +1,4 @@
+
 interface JobMatchCardProps {
   // TODO: Implement
 }
@@ -285,3 +286,4 @@ export function JobMatchesCard(): any ({;
           </div>)}
       </CardFooter>;
     </Card>);'
+

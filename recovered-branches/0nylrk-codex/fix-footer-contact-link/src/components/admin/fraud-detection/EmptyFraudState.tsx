@@ -1,4 +1,5 @@
 
+
 import React from './react';''
 import { Button  } from '@/components / ui / button';''
 import { ShieldAlert  } from './lucide-react';'
@@ -70,3 +71,4 @@ export const EmptyFraudState:React.FC<EmptyFraudStateProps> = ({ ;
 </Button>
         </Button>
 </div>)"
+

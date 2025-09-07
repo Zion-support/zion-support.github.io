@@ -1,6 +1,7 @@
 import React from 'react';''
 import MainLayout from '../components/layout/MainLayout';'
 export default function HelpPage() {
+
   return ('
     <MainLayout title="Help & Support">"
 </MainLayout>"
@@ -12,3 +13,4 @@ export default function HelpPage() {
         </p>
       </div>
     </MainLayout>)"
+

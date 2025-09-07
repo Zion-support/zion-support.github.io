@@ -1,3 +1,4 @@
+
 import React from "react";""
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";"
 export default function CreateServiceProfile() {
@@ -13,12 +14,14 @@ export default function CreateServiceProfile() {
           </h1>"
           <p className="text-zion-slate-light max-w-2xl mx-auto">"
 </p>
+
           </p>
         </div>
 
         <ServiceProviderRegistrationForm />
 </ServiceProviderRegistrationForm>
       </div>
+
     </div>"
     <div className="bg - zion - blue min - h-screen py - 8 md: py - 12">;"
 </div>"
@@ -35,3 +38,4 @@ export default function CreateServiceProfile() {
 </ServiceProviderRegistrationForm>
       </div>;)
     </div>);"
+

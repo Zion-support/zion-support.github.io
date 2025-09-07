@@ -1,4 +1,6 @@
+
 key={language.code}
+
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code;
                   ? "border-primary bg-primary/5""
@@ -249,8 +251,11 @@ key={language.code}
               <span > Dark</span>;"
                 <Check className="h - 4 w - 4 text - primary mt - 2" />)}"
 </Check>
+
             </CardContent>;
           </Card>;
         </div>;
       </div>;
+
     </div>);"
+

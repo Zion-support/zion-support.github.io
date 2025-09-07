@@ -1,4 +1,5 @@
 
+
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Advanced AI Agents & Autonomous Systems;
   {
@@ -74,6 +75,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   },
 export interface NextGenerationAIService {;
   id: string;,
+
   name: string;
   tagline: string;,
   price: string;
@@ -83,9 +85,11 @@ export interface NextGenerationAIService {;
   popular: boolean;
   icon: string;,
   color: string;
+
   textColor: string;,
   link: string;
   marketPosition: string;,
+
   targetAudience: string;
   trialDays: number;,
   setupTime: string;
@@ -95,6 +99,7 @@ export interface NextGenerationAIService {;
   integrations: string[];
   useCases: string[];,
   roi: string;
+
   competitors: string[];,
   marketSize: string;
   growthRate: string;,
@@ -3081,3 +3086,4 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [;
   }
 ];
 '
+

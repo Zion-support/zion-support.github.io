@@ -1,3 +1,4 @@
+
 // Performance optimization utilities;
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');'
@@ -102,3 +103,4 @@ export const measurePerformance = (name: string, fn: Function) => {
   console.log(`${name} took ${end - start} milliseconds`);
   return result;
 };'
+
