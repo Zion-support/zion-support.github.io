@@ -12,7 +12,7 @@ function createAdvancedMonitoring() {
   
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
-export class HealthChecker {
+class HealthChecker {
   constructor() {
     this.checks = new Map();
     this.results = new Map();
@@ -46,10 +46,11 @@ export class HealthChecker {
   }
 }
 
-export const healthChecker = new HealthChecker();`,
+const healthChecker = new HealthChecker();
+module.exports = { HealthChecker, healthChecker };`,
     
     'monitoring/performance-tracker.js': `// Performance tracking system
-export class PerformanceTracker {
+class PerformanceTracker {
   constructor() {
     this.metrics = new Map();
     this.thresholds = {
@@ -104,10 +105,11 @@ export class PerformanceTracker {
   }
 }
 
-export const performanceTracker = new PerformanceTracker();`,
+const performanceTracker = new PerformanceTracker();
+module.exports = { PerformanceTracker, performanceTracker };`,
     
     'monitoring/error-tracker.js': `// Error tracking and reporting
-export class ErrorTracker {
+class ErrorTracker {
   constructor() {
     this.errors = [];
     this.errorCounts = new Map();
@@ -149,7 +151,8 @@ export class ErrorTracker {
   }
 }
 
-export const errorTracker = new ErrorTracker();
+const errorTracker = new ErrorTracker();
+module.exports = { ErrorTracker, errorTracker };
 
 // Call the monitoring function
 createAdvancedMonitoring();
@@ -160,7 +163,7 @@ function createAdvancedCaching() {
   
   const cachingFiles = {
     'cache/redis-cache.js': `// Redis-based caching system
-export class RedisCache {
+class RedisCache {
   constructor(redisClient) {
     this.client = redisClient;
     this.defaultTTL = 3600; // 1 hour
@@ -205,10 +208,13 @@ export class RedisCache {
       return false;
     }
   }
-}`,
+}
+
+const redisCache = new RedisCache();
+module.exports = { RedisCache, redisCache };`,
     
     'cache/memory-cache.js': `// In-memory caching system
-export class MemoryCache {
+class MemoryCache {
   constructor(maxSize = 1000) {
     this.cache = new Map();
     this.maxSize = maxSize;
@@ -263,7 +269,8 @@ export class MemoryCache {
   }
 }
 
-export const memoryCache = new MemoryCache();
+const memoryCache = new MemoryCache();
+module.exports = { MemoryCache, memoryCache };
   };
 
   Object.entries(cachingFiles).forEach(([filename, content]) => {
@@ -281,7 +288,7 @@ function createAPIOptimization() {
   
   const apiFiles = {
     'api/rate-limiter.js': `// Rate limiting middleware
-export class RateLimiter {
+class RateLimiter {
   constructor(options = {}) {
     this.windowMs = options.windowMs || 60000; // 1 minute
     this.maxRequests = options.maxRequests || 100;
@@ -320,10 +327,11 @@ export class RateLimiter {
   }
 }
 
-export const rateLimiter = new RateLimiter();`,
+const rateLimiter = new RateLimiter();
+module.exports = { RateLimiter, rateLimiter };`,
     
     'api/response-optimizer.js': `// API response optimization
-export class ResponseOptimizer {
+class ResponseOptimizer {
   constructor() {
     this.compressionThreshold = 1024; // 1KB
   }
@@ -370,7 +378,8 @@ export class ResponseOptimizer {
   }
 }
 
-export const responseOptimizer = new ResponseOptimizer();
+const responseOptimizer = new ResponseOptimizer();
+module.exports = { ResponseOptimizer, responseOptimizer };
   };
 
   Object.entries(apiFiles).forEach(([filename, content]) => {
@@ -388,7 +397,7 @@ function createDatabaseOptimization() {
   
   const dbFiles = {
     'database/query-optimizer.js': `// Database query optimization
-export class QueryOptimizer {
+class QueryOptimizer {
   constructor() {
     this.queryCache = new Map();
     this.slowQueries = [];
@@ -451,10 +460,11 @@ export class QueryOptimizer {
   }
 }
 
-export const queryOptimizer = new QueryOptimizer();`,
+const queryOptimizer = new QueryOptimizer();
+module.exports = { QueryOptimizer, queryOptimizer };`,
     
     'database/connection-pool.js': `// Database connection pooling
-export class ConnectionPool {
+class ConnectionPool {
   constructor(options = {}) {
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
@@ -517,7 +527,8 @@ export class ConnectionPool {
   }
 }
 
-export const connectionPool = new ConnectionPool();
+const connectionPool = new ConnectionPool();
+module.exports = { ConnectionPool, connectionPool };
   };
 
   Object.entries(dbFiles).forEach(([filename, content]) => {
