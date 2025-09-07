@@ -63,7 +63,6 @@ export default function ComprehensivePricingGuide2030() {
   const [sortBy, setSortBy] = useState('price');
   const [priceRange, setPriceRange] = useState([0, 50000]);
 
-  // Get unique categories
   const categories = [
     { id: 'all', name: 'All Categories', icon: '🚀' },
     { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', icon: '🤖' },
@@ -116,6 +115,15 @@ export default function ComprehensivePricingGuide2030() {
       default:
         return 0;
     }
+  });
+
+  const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesPrice = selectedPriceRange === 'all' || 
+      (selectedPriceRange === 'budget' && service.price < 5000) ||
+      (selectedPriceRange === 'mid-range' && service.price >= 5000 && service.price < 10000) ||
+      (selectedPriceRange === 'enterprise' && service.price >= 10000);
+    return matchesCategory && matchesPrice;
   });
 
   const containerVariants = {

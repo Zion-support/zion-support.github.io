@@ -1248,7 +1248,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2030: ProductListing[] = [
     images: ["https://ziontechgroup.com/images/ai-development.jpg"],
     createdAt: "2024-03-10T10:00:00.000Z",
     rating: 4.8,
-    reviewCount: 267,
+    reviewCount: 234,
     featured: true,
     location: "Global",
     availability: "4-6 Weeks",
