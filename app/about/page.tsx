@@ -1,3 +1,93 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react'
+import Link from 'next/link'
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
+export const metadata = {
+  title: 'About Us - Zion Tech Group',
+  description: 'Learn about Zion Tech Group, a leading provider of AI solutions, micro SaaS development, and enterprise IT services.'}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
+=======
+>>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
+import React from 'react';
+import { Metadata } from 'next';
+
+<<<<<<< HEAD
+export const metadata = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  title: 'About | Zion Tech Group',
+  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
+=======
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export const metadata = {;
+  title: "About | Zion Tech Group",;
+  description:;
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  description:
+
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+export const metadata = {
+=======
+export const metadata: Metadata = {
+>>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
+  title: "About | Zion Tech Group",
+<<<<<<< HEAD
+<<<<<<< HEAD
+  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  title: "About | Zion Tech Group",
+<<<<<<< HEAD
+  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  description:
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  title: 'About | Zion Tech Group',
+  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+=======
+export const metadata = {
+  title: 'About | Zion Tech Group',
+  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  description:
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> 215cd63fd3d29bbfbad689c5819bdac4277c002b
 import React from 'react';
 import { Metadata } from 'next';
 
@@ -7,6 +97,7 @@ export const metadata: Metadata = {
   keywords: 'about us, Zion Tech Group, company, mission, values, team, AI services, IT solutions, micro SaaS'
 };
 
+>>>>>>> origin/main
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -99,5 +190,19 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
-  );
+<<<<<<< HEAD
+  )
 }
+=======
+  );
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
+>>>>>>> origin/main
+>>>>>>> 215cd63fd3d29bbfbad689c5819bdac4277c002b

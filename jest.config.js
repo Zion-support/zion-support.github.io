@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -130,6 +132,7 @@ module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/test
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+>>>>>>> origin/main
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -139,6 +142,10 @@ const createJestConfig = nextJest({
 
 // Add any custom config to be passed to Jest
 const customJestConfig = {
+<<<<<<< HEAD
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jest-environment-jsdom',
+=======
 <<<<<<< HEAD
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
@@ -158,11 +165,23 @@ module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/test
 =======
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+>>>>>>> origin/main
   testMatch: [
     '<rootDir>/**/__tests__/**/*.(js|jsx|ts|tsx)',
     '<rootDir>/**/*.(test|spec).(js|jsx|ts|tsx)'
   ],
   collectCoverageFrom: [
+<<<<<<< HEAD
+    'src/**/*.{js,jsx,ts,tsx}',
+    'pages/**/*.{js,jsx,ts,tsx}',
+    'app/**/*.{js,jsx,ts,tsx}',
+    'components/**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+  ],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/$1'
+=======
     '**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
 <<<<<<< HEAD
@@ -199,10 +218,14 @@ module.exports = createJestConfig(customJestConfig)
   ],
   moduleNameMapping: {
     '^@/(.*)$': '<rootDir>/$1',
+>>>>>>> origin/main
   }
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+<<<<<<< HEAD
+module.exports = createJestConfig(customJestConfig)
+=======
 module.exports = createJestConfig(customJestConfig)
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -223,3 +246,4 @@ pr-12325
 =======
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+>>>>>>> origin/main

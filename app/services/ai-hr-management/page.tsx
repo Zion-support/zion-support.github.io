@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+export const metadata = {
+  title: 'AI HR Management | Zion Tech Group',
+  description: 'AI-powered human resources management solutions.',
+  keywords: 'ai-hr-management, services, business, technology'
+}
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI HR Management
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            AI-powered human resources management solutions.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai-hr-management solutions designed for your specific business requirements.
+=======
 export const metadata = { title: 'AI HR Management | Zion Tech Group' };
 
 <<<<<<< HEAD
@@ -77,10 +102,31 @@ export default function AIHRManagementPage() {
             </h3>
             <p className="text-gray-600">
               Predictive analytics prevent turnover
+>>>>>>> origin/main
             </p>
           </div>
 <<<<<<< HEAD
           
+<<<<<<< HEAD
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai-hr-management solutions run smoothly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+=======
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
             <p className="text-gray-300 mb-6">Description of the third key feature.</p>
@@ -535,3 +581,4 @@ function ContactSection() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main

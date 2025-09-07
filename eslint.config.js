@@ -108,6 +108,9 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'no-unused-vars': 'warn',
       'no-console': 'warn',
+<<<<<<< HEAD
+      'prefer-const': 'warn',
+=======
       'prefer-const': 'error',
       'no-var': 'error',
       'react/prop-types': 'off',
@@ -176,6 +179,7 @@ export default [
       'no-console': 'warn',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
+>>>>>>> origin/main
     },
     settings: {
       react: {

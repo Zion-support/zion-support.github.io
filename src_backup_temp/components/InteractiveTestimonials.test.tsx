@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('InteractiveTestimonials', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -45,3 +54,4 @@ import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; expor
 </div>)"
 import React from 'react',',  import {SEO } from '@/components/SEO' export default function InteractiveTestimonials() {return ( <div className="min-h-screen bg-white"> <SEO title="InteractiveTestimonials && InteractiveTestimonials.test - Zion Tech Group" description="Professional InteractiveTestimonials && InteractiveTestimonials.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">InteractiveTestimonials && InteractiveTestimonials.test</h1> <p className="text-gray-300 text-lg"> Professional InteractiveTestimonials && InteractiveTestimonials.test services to help your business grow. </p> </div>'; </div>';'; );';';'}"""
 pr-12325
+>>>>>>> origin/main

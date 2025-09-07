@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+export const metadata = {
+  title: 'AI Analytics Platform | Zion Tech Group',
+  description: 'Professional AI analytics platform services for your business needs.',
+  keywords: 'ai-analytics-platform, services, business, technology'
+}
+export default function ServicePage() {
+  return (
+=======
+<<<<<<< HEAD
 export const metadata = { title: 'AI Analytics Platform | Zion Tech Group' };
 =======
 <<<<<<< HEAD
@@ -18,14 +27,22 @@ export default function ServicePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> origin/main
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+<<<<<<< HEAD
+            AI Analytics Platform
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional AI analytics platform services for your business needs.
+=======
             Ai Analytics Platform
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Professional ai analytics platform services for your business needs.
+>>>>>>> origin/main
           </p>
 =======
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -62,6 +79,21 @@ export default function ServicePage() {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>
         
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai-analytics-platform solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+=======
         <div className="bg-white rounded-lg p-6 shadow-lg">
           <h3 className="text-xl font-semibold text-gray-900 mb-4">Advanced Analytics</h3>
           <ul className="space-y-2">
@@ -127,9 +159,16 @@ export default function ServicePage() {
                 Handles millions of data points with sub-second response times
               </p>
             </div>
+>>>>>>> origin/main
           </div>
 <<<<<<< HEAD
           
+<<<<<<< HEAD
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai-analytics-platform solutions run smoothly.
+=======
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
             <p className="text-gray-300 mb-6">Description of the third key feature.</p>
@@ -235,6 +274,7 @@ export default function ServicePage() {
             </h3>"
             <p className="text-gray-600">
               Process millions of data points in seconds;
+>>>>>>> origin/main
             </p>
           </div>"
           <div className="text-center">"
@@ -286,6 +326,11 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+    </div>
+  )
+}
+=======
       
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -558,3 +603,4 @@ function ContactSection() {}
 =======
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+>>>>>>> origin/main

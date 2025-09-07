@@ -1,8 +1,12 @@
+<<<<<<< HEAD:app/components/FeatureCard.tsx
+}
+=======
 import React from 'react';
 interface FeatureCardProps {
 icon: string | React.ReactNode;
   title: string;
   description: string;}
+>>>>>>> origin/main:temp-disabled/app/components/FeatureCard.tsx
   color?: 'blue' | 'purple' | 'green' | 'red' | 'yellow' | 'indigo';}
 }
 export default function FeatureCard({
@@ -18,6 +22,14 @@ export default function FeatureCard({
     green: 'bg-green-50 text-green-600 border-green-200',
   red: 'bg-red-50 text-red-600 border-red-200',
     yellow: 'bg-yellow-50 text-yellow-600 border-yellow-200',
+<<<<<<< HEAD:app/components/FeatureCard.tsx
+  indigo: 'bg-indigo-50 text-indigo-600 border-indigo-200'}
+  }
+}
+  return (
+    <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+      <div className={`w-12 h-12 rounded-lg ${colorClasses[color]} flex items-center justify-center mb-4`} />
+=======
 
     indigo: 'bg-indigo-50 text-indigo-600 border-indigo-200'
   };
@@ -25,16 +37,22 @@ export default function FeatureCard({
   return (
     <div className=\"bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow\" />
       <div className={`w-12 h-12 rounded-lg ${colorClasses[color]} flex items-center justify-center mb-4`} />"
+>>>>>>> origin/main:temp-disabled/app/components/FeatureCard.tsx
         {typeof icon === 'string' ? (}
-          <span className=\"text-2xl\" />{icon}</span>
+          <span className="text-2xl">{icon}</span>
         ) : (
-          icon;
+          icon
         )}
       </div>
-      <h3 className=\"text-xl font-semibold text-gray-900 mb-3\" />{title}</h3>
-      <p className=\"text-gray-600 leading-relaxed\" />{description}</p>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 leading-relaxed">{description}</p>
     </div>
+<<<<<<< HEAD:app/components/FeatureCard.tsx
+  )
+}
+=======
 
   );
 }
 
+>>>>>>> origin/main:temp-disabled/app/components/FeatureCard.tsx

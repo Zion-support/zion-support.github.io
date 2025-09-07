@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+'use client'
+import React, { useState } from 'react'
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 215cd63fd3d29bbfbad689c5819bdac4277c002b
 'use client';
 
 import React, { useState } from 'react';
@@ -9,6 +20,7 @@ export const metadata: Metadata = {
   keywords: 'contact us, get in touch, Zion Tech Group, AI services, IT solutions, micro SaaS, support'
 };
 
+>>>>>>> origin/main
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -16,6 +28,17 @@ export default function ContactPage() {
     company: '',
     service: '',
     message: ''
+<<<<<<< HEAD
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+=======
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -31,9 +54,115 @@ export default function ContactPage() {
     });
   };
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       <div className="max-w-6xl mx-auto px-4 py-20">
+=======
+>>>>>>> origin/main
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    // Simulate form submission
+<<<<<<< HEAD
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setSubmitStatus('success')
+    setIsSubmitting(false)
+    setFormData({ name: '', email: '', company: '', service: '', message: '' })
+  }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setSubmitStatus('success');
+=======
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+>>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    }, 3000);
+  };
+
+<<<<<<< HEAD
+  return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Contact Us
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
+              Ready to transform your business? Let's discuss your project and find the perfect solution.
+            </p>
+          </div>
+        </div>
+      </div>
+=======
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    setSubmitStatus('success');
+    setIsSubmitting(false);
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      service: '',
+      message: ''
+    });
+  };
+
+  const contactInfo = [
+    {
+      icon: EnvelopeIcon,
+      title: 'Email',
+      details: 'kleber@ziontechgroup.com',
+      description: 'We reply within 1 business day'
+    },
+    {
+      icon: PhoneIcon,
+      title: 'Phone',
+      details: '+1 (302) 464-0950',
+      description: 'Mon-Fri 9AM-6PM EST'
+    },
+    {
+      icon: MapPinIcon,
+      title: 'Address',
+      details: '364 E Main St STE 1008',
+      description: 'Middletown, DE 19709'
+    },
+    {
+      icon: ClockIcon,
+      title: 'Response Time',
+      details: '< 24 hours',
+      description: 'Average response time'
+    }
+  ];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+>>>>>>> origin/main
+  return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
+      <div className="container mx-auto px-4 py-16">
+>>>>>>> 215cd63fd3d29bbfbad689c5819bdac4277c002b
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
             Contact Us
@@ -207,5 +336,18 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  );
+<<<<<<< HEAD
+  )
 }
+=======
+  );
+<<<<<<< HEAD
+}
+=======
+}
+<<<<<<< HEAD
+'"
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main
+>>>>>>> 215cd63fd3d29bbfbad689c5819bdac4277c002b

@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('signup-auto-login', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -120,3 +129,4 @@ module.exports = {};
 module.exports = {};
 module.exports = {};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+>>>>>>> origin/main

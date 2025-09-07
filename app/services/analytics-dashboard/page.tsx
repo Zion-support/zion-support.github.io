@@ -1,5 +1,45 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Analytics Dashboard | Zion Tech Group',
+  description: 'Comprehensive analytics dashboard for business intelligence.',
+  keywords: 'analytics-dashboard, services, business, technology'
+}
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Analytics Dashboard
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive analytics dashboard for business intelligence.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored analytics-dashboard solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your analytics-dashboard solutions run smoothly.
+            </p>
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: 'Analytics Dashboard Platform | Zion Tech Group',
   description: 'Build powerful analytics dashboards with real-time data visualization, custom metrics, and business intelligence. Professional analytics solutions starting at $16k.',
 =======
@@ -133,10 +173,16 @@ export default function AnalyticsDashboardPage() {
                 and push notifications for alerts.
               </p>
             </div>
+>>>>>>> origin/main
           </div>
         </div>
 <<<<<<< HEAD
       </div>
+<<<<<<< HEAD
+    </div>
+  )
+}
+=======
 =======
 export const metadata = {}
   title: "Analytics Dashboard Platform | Zion Tech Group",
@@ -542,3 +588,4 @@ function Plan({
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+>>>>>>> origin/main

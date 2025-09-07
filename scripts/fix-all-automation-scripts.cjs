@@ -1,4 +1,36 @@
 <<<<<<< HEAD
+#!/usr/bin/env node
+/**
+ * Fix All Automation Scripts
+ * Fixes syntax errors and merge conflicts in all automation scripts
+ */
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+
+class ScriptFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.scriptsDir = path.join(this.projectRoot, "scripts");
+    this.fixedCount = 0;
+    this.errorCount = 0;
+  }
+
+  log(message, type = "info") {
+    const timestamp = new Date().toISOString();
+    const prefix = type === "error" ? "❌" : type === "success" ? "✅" : "ℹ️";
+    console.log(`[${timestamp}] ${prefix} ${message}`);
+  }
+
+  fixMergeConflicts(content) {
+    // Remove merge conflict markers
+    return content
+      .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
+      .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '')
+      .replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  }
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -69,9 +101,127 @@ class AutomationScriptFixer {}
 <<<<<<< HEAD
     const scriptFiles = [];
 =======
+>>>>>>> origin/main
 
-    const scriptFiles = [];
+  fixSyntaxErrors(content) {
+    // Fix common syntax errors
+    let fixed = content;
     
+<<<<<<< HEAD
+    // Fix missing semicolons after require statements
+    fixed = fixed.replace(/(const\s+\w+\s*=\s*require\([^)]+\))\s*\n/g, '$1;\n');
+    
+    // Fix missing semicolons after variable declarations
+    fixed = fixed.replace(/(let\s+\w+\s*=\s*[^;]+)\s*\n/g, '$1;\n');
+    
+    // Fix missing semicolons after function calls
+    fixed = fixed.replace(/(\w+\([^)]*\))\s*\n/g, '$1;\n');
+    
+    // Fix missing commas in object literals
+    fixed = fixed.replace(/(\w+:\s*[^,}]+)\s*\n(\s*[a-zA-Z_])/g, '$1,\n$2');
+    
+    // Fix missing closing parentheses
+    fixed = fixed.replace(/(\w+\([^)]*)\s*\n(\s*[a-zA-Z_])/g, '$1)\n$2');
+    
+    // Fix missing closing braces
+    fixed = fixed.replace(/(\{[^}]*)\s*\n(\s*[a-zA-Z_])/g, '$1}\n$2');
+    
+    // Fix invalid characters in strings
+    fixed = fixed.replace(/cursor\/[^;]+;/g, '');
+    
+    // Fix malformed import statements
+    fixed = fixed.replace(/#!/usr\/bin\/env node import/g, '#!/usr/bin/env node\nimport');
+    fixed = fixed.replace(/#!/usr\/bin\/env node;\s*import/g, '#!/usr/bin/env node\nimport');
+    
+    // Fix missing closing parentheses in function calls
+    fixed = fixed.replace(/(fileURLToPath\(import\.meta\.url)\s*$/gm, '$1)');
+    
+    return fixed;
+  }
+
+  fixESModuleSyntax(content) {
+    // Convert ES modules to CommonJS if needed
+    let fixed = content;
+    
+    // Fix import statements
+    fixed = fixed.replace(/import\s+(\w+)\s+from\s+['"]([^'"]+)['"];?/g, 'const $1 = require("$2");');
+    fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'const { $1 } = require("$2");');
+    fixed = fixed.replace(/import\s+\*\s+as\s+(\w+)\s+from\s+['"]([^'"]+)['"];?/g, 'const $1 = require("$2");');
+    
+    // Fix export statements
+    fixed = fixed.replace(/export\s+default\s+/g, 'module.exports = ');
+    fixed = fixed.replace(/export\s+const\s+(\w+)/g, 'const $1');
+    fixed = fixed.replace(/export\s+function\s+(\w+)/g, 'function $1');
+    fixed = fixed.replace(/export\s+class\s+(\w+)/g, 'class $1');
+    
+    // Fix fileURLToPath usage
+    fixed = fixed.replace(/const\s+__filename\s*=\s*fileURLToPath\(import\.meta\.url\);?/g, '');
+    fixed = fixed.replace(/const\s+__dirname\s*=\s*path\.dirname\(__filename\);?/g, 'const __dirname = __dirname || path.dirname(__filename);');
+    
+    return fixed;
+  }
+
+  fixScript(scriptPath) {
+    try {
+      this.log(`Fixing ${path.basename(scriptPath)}...`);
+      
+      let content = fs.readFileSync(scriptPath, 'utf8');
+      const originalContent = content;
+      
+      // Fix merge conflicts
+      content = this.fixMergeConflicts(content);
+      
+      // Fix syntax errors
+      content = this.fixSyntaxErrors(content);
+      
+      // Fix ES module syntax
+      content = this.fixESModuleSyntax(content);
+      
+      // Only write if content changed
+      if (content !== originalContent) {
+        fs.writeFileSync(scriptPath, content, 'utf8');
+        this.fixedCount++;
+        this.log(`Fixed ${path.basename(scriptPath)}`, "success");
+      } else {
+        this.log(`No changes needed for ${path.basename(scriptPath)}`);
+      }
+      
+    } catch (error) {
+      this.errorCount++;
+      this.log(`Failed to fix ${path.basename(scriptPath)}: ${error.message}`, "error");
+    }
+  }
+
+  async fixAllScripts() {
+    this.log("🔧 Starting script fixing process...");
+    
+    if (!fs.existsSync(this.scriptsDir)) {
+      this.log("Scripts directory not found", "error");
+      return;
+    }
+    
+    const files = fs.readdirSync(this.scriptsDir);
+    const scriptFiles = files.filter(file => 
+      file.endsWith('.js') || file.endsWith('.cjs') || file.endsWith('.mjs')
+    );
+    
+    this.log(`Found ${scriptFiles.length} script files to check`);
+    
+    for (const file of scriptFiles) {
+      const scriptPath = path.join(this.scriptsDir, file);
+      this.fixScript(scriptPath);
+    }
+    
+    this.log(`✅ Script fixing completed!`);
+    this.log(`Fixed: ${this.fixedCount} scripts`);
+    this.log(`Errors: ${this.errorCount} scripts`);
+  }
+}
+
+// Run the script fixer
+const fixer = new ScriptFixer();
+fixer.fixAllScripts().catch(console.error);
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
@@ -265,3 +415,4 @@ module.exports = AutomationScriptFixer;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/main

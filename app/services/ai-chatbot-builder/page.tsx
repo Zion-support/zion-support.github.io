@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export const metadata = {
@@ -11,9 +13,16 @@ export const metadata = {
 import Link from "next/link";
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
+>>>>>>> origin/main
 export const metadata = {
 <<<<<<< HEAD
   title: 'AI Chatbot Builder | Zion Tech Group',
+<<<<<<< HEAD
+  description: 'Build custom AI chatbots with our easy-to-use platform.',
+  keywords: 'ai-chatbot-builder, services, business, technology'
+}
+export default function ServicePage() {
+=======
   description: 'Build intelligent chatbots with no-code platform. Custom AI assistants for customer support, sales, and engagement.',
 =======
   title: "AI Chatbot Builder | Zion Tech Group",
@@ -32,6 +41,7 @@ export const metadata = {
 };
 
 export default function AIChatbotBuilderPage() {
+>>>>>>> origin/main
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,6 +53,9 @@ export default function AIChatbotBuilderPage() {
             Ai Chatbot Builder
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
+            Build custom AI chatbots with our easy-to-use platform.
+=======
             Professional ai chatbot builder services for your business needs.
           </p>
 =======
@@ -331,6 +344,7 @@ export default function AiChatbotBuilderPage() {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Professional ai chatbot builder services for your business needs.
+>>>>>>> origin/main
           </p>
         </div>
         
@@ -338,7 +352,25 @@ export default function AiChatbotBuilderPage() {
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
             <p className="text-gray-300">
+<<<<<<< HEAD
+              Tailored ai-chatbot-builder solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai-chatbot-builder solutions run smoothly.
+=======
               Tailored ai chatbot builder solutions designed for your specific business requirements.
+>>>>>>> origin/main
             </p>
           </div>
 <<<<<<< HEAD
@@ -392,6 +424,10 @@ export default function AiChatbotBuilderPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+  )
+}
+=======
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -643,3 +679,4 @@ function PricingPlan({
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+>>>>>>> origin/main

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+interface ErrorProps {
+  error: Error & { digest?: string }
+  reset: () => void
+=======
 'use client';
 
 import React from 'react';
@@ -5,6 +12,7 @@ import React from 'react';
 interface ErrorProps {
   error: Error & { digest?: string };
   reset: () => void;
+>>>>>>> origin/main
 }
 
 export default function Error({ error, reset }: ErrorProps) {
@@ -53,5 +61,5 @@ export default function Error({ error, reset }: ErrorProps) {
         )}
       </div>
     </div>
-  );
+  )
 }

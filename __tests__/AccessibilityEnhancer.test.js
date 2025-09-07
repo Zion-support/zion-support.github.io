@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('AccessibilityEnhancer', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,6 +62,7 @@ describe('AccessibilityEnhancer', () => {
   test('renders without crashing', () => {
     render(<AccessibilityEnhancer />);
     expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument();
+>>>>>>> origin/main
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,6 +78,8 @@ describe('AccessibilityEnhancer', () => {
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 });
+<<<<<<< HEAD
+=======
 
 
 
@@ -222,3 +232,4 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Accessib
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityEnhancer from "./components/AccessibilityEnhancer"; describe('AccessibilityEnhancer', () => { test("renders without crashing",() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId("accessibilityenhancer")).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityEnhancer />)}); test("handles user interactions",() => { render(<AccessibilityEnhancer />)}); test("applies correct styling"
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main
