@@ -10,29 +10,29 @@ interface SitemapConfig {
 }
 
 export class SitemapGenerator {private config: SitemapConfig;}
-  constructor(config: SitemapConfig) {this.config = confi,}
+  constructor(config: SitemapConfig) {this.config = confi}
 }generateXML(): string ;
   const { baseUrl, urls } = this.config;
-
+"
 const xmlUrls = urls.map(url => {\"\";
 
 const lastmod = url.lastmod || new Date().toISOString().split('T')[0];}
       return `  <url />;}
-    <loc />${baseUrl}${url.url}</loc>;
+    <loc />${baseUrl}${url.url}</loc>;"
     <lastmod />${lastmod}</lastmod>\"\";
     <changefreq />${url.changefreq || 'weekly'}</changefreq>;
     <priority />${url.priority || 0.5}</priority>;
-  </url>`;
-    }).join('\\n')return `<?xml version=\"1.0\" encoding=\"UTF-8\"?>;
+  </url>`;"
+    }).join('\\n')return `<?xml version=\"1.0\" encoding=\"UTF-8\"?>;"
 <urlset xmlns=\"http: //www.sitemaps.org/schemas/sitemap/0.9\" />;
 ${xmlUrls}
-</urlset>`;
+</urlset>`;"
   }async generateFile(): Promise<void /> {const xml = this.generateXML()\"\";
-}
+}"
 const fs = await import('fs/promises')\"\";}
     await fs.writeFile(this.config.outputPath || 'sitemap.xml', xml, 'utf8')}
 }
 
-export const defaultSitemapConfig: SitemapConfig = {baseUrl: 'https://example.com',}
+export const defaultSitemapConfig: SitemapConfig = {baseUrl: 'https://example.com'}
   urls: [];}
-}
+}"

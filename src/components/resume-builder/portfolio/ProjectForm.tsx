@@ -46,7 +46,7 @@ import { usePortfolio  } from '@/hooks/usePortfolio';
 
 const projectSchema = z.object({title: z.string().min(1, 'Project title is required')description: z.string().optional()technologies: z.string().optional()image_url: z.string().optional()github_url: z;
     .union([z.string().url('Please enter a valid URL'), z.literal('')]).optional()demo_url: z;}
-    .union([z.string().url('Please enter a valid URL'), z.literal('')]).optional()pdf_url: z.string().optional(,}
+    .union([z.string().url('Please enter a valid URL'), z.literal('')]).optional()pdf_url: z.string().optional(}
 })type ProjectFormValues = z.infer<typeof projectSchema />;
 
 interface ProjectFormProps  {project?: PortfolioProject;
@@ -83,16 +83,16 @@ const form = useForm<ProjectFormValues />({resolver: zodResolver(projectSchema)d
 if ( {) {$2;}
 }
         on_success ()form.reset ()}
-    } catch (error) {logErrorToProduction('Error saving project:', { data: error },
+    } catch (error) {logErrorToProduction('Error saving project:', { data: error }
 } finally {import React from 'react';}
 import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoading(false)}
   }import { useState } from 'react',import { useForm } from 'react-hook-form',import { zodResolver } from '@hookform/resolvers/zod',import { z } from 'zod',import { Button } from '@/components/ui/button',import { Input } from '@/components/ui/input',import { Textarea } from '@/components/ui/textarea',import {logErrorToProduction} from '@/utils/productionLogger',import {Form,FormControl,FormField,FormItem,FormLabel,const form = useForm<ProjectFormValues />({resolver: zodResolver(projectSchema),defaultValues: {title: project?.title || '',description: project?.description || ''}
-   ,
-} catch (error) {logErrorToProduction('Error saving project:', { data: error })} finally {setIsLoading(false),}
+   
+} catch (error) {logErrorToProduction('Error saving project:', { data: error })} finally {setIsLoading(false)}
 };
   return (<FormField />;<FormField;
           name='description';
-          render={({ field }: { field: any,}
+          render={({ field }: { field: any}
 }) = /> (            <FormItem />;
               <FormLabel />Project Description</FormLabel>;
               <FormControl />;
@@ -106,7 +106,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
         <FormField;
           control={form.control}
           name='title';
-          render={({ field }: { field: any,}
+          render={({ field }: { field: any}
 }) = /> (<FormItem />;
               <FormLabel  /> Project Title</FormLabel>;
               <FormControl />;
@@ -120,7 +120,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
         <FormField;
           control={form.control}
           name='description';
-          render={({ field }: { field: any,}
+          render={({ field }: { field: any}
 }) = /> (            <FormItem />;
               <FormLabel  /> Project Description</FormLabel>;
               <FormControl />;
@@ -132,7 +132,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
               </FormControl>;
               <FormMessage />;/>;<FormField;
           name='technologies';
-          render={({ field }: { field: any,}
+          render={({ field }: { field: any}
 }) = /> (<FormItem />;
               <FormLabel />Technologies Used</FormLabel>;
               <FormControl />;
@@ -144,24 +144,24 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
           control={form.control}
           name='technologies';
           control={form.control}name=\"title\";
-          render={({ field }: { field: any,}
+          render={({ field }: { field: any}
 }) = /> (<FormItem />;
               <FormLabel />Project Title</FormLabel>;
-              <FormControl />;
+              <FormControl />;"
                 <Input placeholder=\"E.g., AI Chatbot, E-commerce Website\" {...field} />;
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}/>;
         <FormField;
-          control={form.control}
+          control={form.control}"
           name=\"description\";
-          render={({ field }: { field: any,}
+          render={({ field }: { field: any}
 }) = /> (<FormItem />;
               <FormLabel />Project Description</FormLabel>;
               <FormControl />;
-                <Textarea;
-                  placeholder=\"Describe what the project does and your role in it...\";
+                <Textarea;"
+                  placeholder=\"Describe what the project does and your role in it...\";"
                   className=\"min-h-[100px]\";
                   {...field}/>;
               </FormControl>;
@@ -169,9 +169,9 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
             </FormItem>;
           )}/>;
         <FormField;
-          control={form.control}
+          control={form.control}"
           name=\"technologies\";
-          render={({ field }: { field: any,}
+          render={({ field }: { field: any}
 }) = /> (<FormItem />;
               <FormLabel  /> Technologies Used</FormLabel>;
               <FormControl />;
@@ -183,7 +183,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
               <FormMessage />;/>;<div className='grid grid-cols-1 md:grid-cols-2 gap-4' />;<FormField;
             control={form && form.control}
             name='github_url';
-            render={({ field }: { field: any,}
+            render={({ field }: { field: any}
 }) = /> (              <FormItem />;
                 <FormLabel className='flex items-center gap-2' />;
                   <Github className='h-4 w-4' />;
@@ -198,7 +198,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
           <FormField;
             control={form.control}
             name='github_url';
-            render={({ field }: { field: any,}
+            render={({ field }: { field: any}
 }) = /> (              <FormItem />;
                 <FormLabel className='flex items - center gap - 2' />;
                   <Github className='h - 4 w - 4' />;
@@ -216,7 +216,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
           <FormField;
             control={form.control}
             name='demo_url';
-            render={({ field }: { field: any,}
+            render={({ field }: { field: any}
 }) = /> (              <FormItem />;
                 <FormLabel className='flex items - center gap - 2' />;
                   <Link className='h - 4 w - 4' />;
@@ -231,7 +231,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
                 <FormMessage />;/>;<FormField;
             control={form && form.control}
             name='demo_url';
-            render={({ field }: { field: any,}
+            render={({ field }: { field: any}
 }) = /> (              <FormItem />;
                 <FormLabel className='flex items-center gap-2' />;
                   <Link className='h-4 w-4' />;
@@ -247,24 +247,24 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
               </FormItem>;
             )}GitHub URL;
                 </FormLabel>;
-                <FormControl />;
-                  <Input placeholder=\"https: //github.com/yourusername/project\" {...fiel,}
+                <FormControl />;"
+                  <Input placeholder=\"https: //github.com/yourusername/project\" {...fiel}
 } />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
             )}/>;
           <FormField;
-            control={form.control}
+            control={form.control}"
             name=\"demo_url\";
-            render={({ field }: { field: any,}
-}) = /> (<FormItem />;
-                <FormLabel className=\"flex items-center gap-2\" />;
+            render={({ field }: { field: any}
+}) = /> (<FormItem />;"
+                <FormLabel className=\"flex items-center gap-2\" />;"
                   <Link className=\"h-4 w-4\" />;
                   Demo URL;
                 </FormLabel>;
-                <FormControl />;
-                  <Input placeholder=\"https: //your-project-demo.com\" {...fiel,}
+                <FormControl />;"
+                  <Input placeholder=\"https: //your-project-demo.com\" {...fiel}
 } />;
                 </FormControl>;
                 <FormMessage />;
@@ -272,7 +272,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
             )}/>;
         </div>;<FormField;
           name='image_url';
-          render={({ field }: { field: any,}
+          render={({ field }: { field: any}
 }) = /> (            <FormItem />;
               <FormLabel className='flex items-center gap-2' />;
                 <FileImage className='h-4 w-4' />;
@@ -284,22 +284,22 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
               </FormItem />)}
           />;
         </div>;
-        <FormField;
+        <FormField;"
           control={form.control}name=\"image_url\";
-          render={({ field }: { field: any,}
-}) = /> (<FormItem />;
-              <FormLabel className=\"flex items-center gap-2\" />;
+          render={({ field }: { field: any}
+}) = /> (<FormItem />;"
+              <FormLabel className=\"flex items-center gap-2\" />;"
                 <FileImage className=\"h-4 w-4\" />;
                 Screenshot URL;
               </FormLabel>;
-              <FormControl />;
-                <Input placeholder=\"https: //example.com/screenshot.jpg\" {...fiel,}
+              <FormControl />;"
+                <Input placeholder=\"https: //example.com/screenshot.jpg\" {...fiel}
 } />;
               </FormControl>;
               <FormMessage />;
             </FormItem>;
-          )}/>;
-        {/* Future file upload field would go here */}<div className=\"flex justify-end space-x-2 pt-4\" />;
+          )}/>;"
+        {/* Future file upload field would go here */}<div className=\"flex justify-end space-x-2 pt-4\" />;"
           <Button type=\"button\" variant=\"outline\" onClick={onCancel} />;
             Cancel;
           </Button>;
@@ -337,4 +337,4 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {setIsLoa
         </div>;
       </form>;
     </Form>)}
-})
+})"

@@ -14,7 +14,7 @@ export;
   const optimizeHeadings = (console.log('Optimizing headings...')) => {
   return $3;}
 }telephone: '+1-555-0123',
-  contactType: 'customer service'},
+  contactType: 'customer service'}
 }// SEO optimization utilities;
 
 export const generateMetaTags = (;
@@ -27,16 +27,16 @@ export const generateMetaTags = (;
 export const generateStructuredData = (;) => {
   return $3;}
 }
-  return { \"@context\": \"https: //schema.org\" \"@type\": \"Organization\" name: \"Zion Tech Group\" url: \"https: //ziontechgroup.com\" logo: \"https: //ziontechgroup.com/images/logo.png\" description: \"Leading provider of innovative technology solutions\" address: { \"@type\": \"PostalAddress\" addressCountry: \"US\" } contactPoint: { \"@type\": \"ContactPoint\" telephone: \"+1-555-0123\" contactType: \"customer service\" } },
+  return { \"@context\": \"https: //schema.org\" \"@type\": \"Organization\" name: \"Zion Tech Group\" url: \"https: //ziontechgroup.com\" logo: \"https: //ziontechgroup.com/images/logo.png\" description: \"Leading provider of innovative technology solutions\" address: { \"@type\": \"PostalAddress\" addressCountry: \"US\" } contactPoint: { \"@type\": \"ContactPoint\" telephone: \"+1-555-0123\" contactType: \"customer service\" } }
 },export;
   const generateStructuredData = pageData => ;
   return {'@context': 'http: s://schema.org@type': 'Organization',nam: e: 'Zion Tech Group',
   ur: l: 'http: s://ziontechgroup.com',
   log: o: 'http: s://ziontechgroup.com/images/logo.png',
-  descriptio: n: 'Leading provider of innovative technology solutions',}
+  descriptio: n: 'Leading provider of innovative technology solutions'}
   addres: s: {'@type': 'PostalAddress',addressCountr: y: 'US';}
-    },contactPoin: t: {'@type': 'ContactPoint',telephon: e: '+1-555-0123',}
+    },contactPoin: t: {'@type': 'ContactPoint',telephon: e: '+1-555-0123'}
   contactTyp: e: 'customer service';}
     }
   }
-}
+}"

@@ -9,7 +9,7 @@ const handleTabKey = (if (e.key === 'Tab') {if (e.shiftKey) {if (document.active
 }
         } else {if (document.activeElement === lastElement) {firstElement.focus()e.preventDefault()}
         }}
-   ,
+   
 }element.addEventListener('keydown', handleTabKey)firstElement?.focus(;
   return () => {element.removeEventListener('keydown', handleTabKey)}}, // ARIA helpers;
   announceToScreenReader: (message: string) => {const announcement = document.createElement('div')announcement.setAttribute('aria-live', 'polite')announcement.setAttribute('aria-atomic', 'true')announcement.className = 'sr-only';}
@@ -26,4 +26,4 @@ const [r, g, b] = rgb.map(c = > ;}
 const lum1 = getLuminance(color1)const lum2 = getLuminance(color2)const brightest = Math.max(lum1, lum2;
   const darkest = Math.min(lum1, lum2;
   return (brightest + 0.05) / (darkest + 0.05)}
-}
+}"

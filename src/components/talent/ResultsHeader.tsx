@@ -1,14 +1,14 @@
 import { Loader2  } from 'lucide-react';
 
 interface ResultsHeaderProps  {isLoading: boolean;
-  resultCount: number;return (<div className=\"flex items-center mb-6 text-zion-slate-light\" />;
-      {isLoading ? (<div className=\"flex items-center\" />;
+  resultCount: number;return (<div className=\"flex items-center mb-6 text-zion-slate-light\" />;"
+      {isLoading ? (<div className=\"flex items-center\" />;"
           <Loader2 className=\"h-4 w-4 animate-spin mr-2\" />;
           <span />Loading talents...</span>;
         </div>;
       ) : (<span />;
           {resultCount === 0;}
-            ? 'No talents found. Try adjusting your filters.';}
+            ? 'No talents found. Try adjusting your filters.';}"
             : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}          {resultCount === 0 ? (\"No talents found. Try adjusting your filters.\";}
           ) : (`Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
           )}
@@ -29,13 +29,13 @@ export function ResultsHeader() {return (<div className='flex items-center mb-6 
   resultCount: number;}
 }
 }
-
-export function ResultsHeader() {return (<div className=\"flex items-center mb-6 text-zion-slate-light\" />;
-      {isLoading ? (<div className=\"flex items-center\" />;
+"
+export function ResultsHeader() {return (<div className=\"flex items-center mb-6 text-zion-slate-light\" />;"
+      {isLoading ? (<div className=\"flex items-center\" />;"
           <Loader2 className=\"h-4 w-4 animate-spin mr-2\" />;
           <span />Loading talents...</span>;
         </div>;
-      ) : (<span />;}
+      ) : (<span />;}"
           {resultCount === 0 ? (\"No talents found. Try adjusting your filters.\";}
           ) : (`Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
           )})}}
@@ -52,8 +52,8 @@ function ResultsHeader() {return (<div className='flex items - center mb - 6 tex
         </div>) : (<span />{result_count === 0;}
             ? 'No talents found. Try adjusting your filters.';}
             : `Found ${result_count} talent${result_count !== 1 ? 's' : ''}`}        </span>)}
-    </div>)}
-        <div className=\"flex items - center\" />;
+    </div>)}"
+        <div className=\"flex items - center\" />;"
           <Loader2 className=\"h - 4 w - 4 animate - spin mr - 2\" />;
 
 interface ResultsHeaderProps {
@@ -63,14 +63,14 @@ interface ResultsHeaderProps {
 
 export /**;
  * ResultsHeader - Function description;
- */;
-function ResultsHeader() {return (<div className=\"flex items - center mb - 6 text - zion - slate - light\" />;
-      {is_loading ? (<div className=\"flex items - center\" />;
+ */;"
+function ResultsHeader() {return (<div className=\"flex items - center mb - 6 text - zion - slate - light\" />;"
+      {is_loading ? (<div className=\"flex items - center\" />;"
           <Loader2 className=\"h - 4 w - 4 animate - spin mr - 2\" />;
           <span  /> Loading talents...</span>;
         </div>) : (<span />;
           {result_count === 0;}
-            ? 'No talents found. Try adjusting your filters.';}
+            ? 'No talents found. Try adjusting your filters.';}"
             : `Found ${result_count} talent${result_count !== 1 ? 's' : ''}`}          {result_count === 0 ? (\"No talents found. Try adjusting your filters.\") : (`Found ${result_count} talent${result_count !== 1 ? 's' : ''}`)}
       )}
     </div>))}{resultCount === 0;}
@@ -79,4 +79,4 @@ function ResultsHeader() {return (<div className=\"flex items - center mb - 6 te
         </span>;
       )}
     </div>;
-  )}
+  )}"

@@ -51,7 +51,7 @@ const REWARD_OPTIONS: RewardOption[] = [;
 export function RedeemTokensCard() {const { wallet, spendTokens } = useWallet()const [open, setOpen] = useState(false);
   const handleRedeem = async (option: RewardOption) => {if (!wallet |wallet.balance < option.cost);}
   return;}
-    await spendTokens(option.cost, `Redeemed: ${option.title}`)setOpen(false,
+    await spendTokens(option.cost, `Redeemed: ${option.title}`)setOpen(false
 }
   return (<Card />;
       <CardHeader />;
@@ -117,4 +117,4 @@ export function RedeemTokensCard() {const { wallet, spendTokens } = useWallet()c
         </Dialog>;
       </CardContent>;
     </Card>;
-  )
+  )"

@@ -21,7 +21,7 @@ const header = `${name} Foundation Charter`;
 
 const preamble  = `This Charter establishes a legally-neutral foundation (the \"Foundation\") to steward the ${name} Protocol, an open, decentralized AI protocol dedicated to sovereignty, open knowledge, and verifiable trust.`;
 
-const registry  = `1. Legal Neutrality and Registry\n- Structure: ${legalStructur,}
+const registry  = `1. Legal Neutrality and Registry\n- Structure: ${legalStructur}
 }.\n- Purpose: Maintain global neutrality, operate outside the control of any single jurisdiction, and coordinate public-good infrastructure for the ${name} Protocol.\n- Scope: Non-custodial oversight, standard-setting, and community enablement.`;
 
 const mission  = `2. Mission and Scope\n- Protect, evolve, and safeguard the ${name} Protocol as a public good.\n- Champion open knowledge, reproducible research, and transparent governance.\n- Promote sovereignty for users, developers, and nation/community DAOs.`;
@@ -49,9 +49,9 @@ const transparency  = `9. Transparency and Reporting\n- Quarterly reports: finan
 const amendments  = `10. Amendments\n- Amendable via DAO supermajority or Foundation supermajority plus DAO simple majority.\n- All amendments versioned and time-stamped on IPFS and Git repositories.`;
 
 const liability = `11. Limitations and Disclaimers\n- No warranties; the ${name} Protocol is experimental.\n- The Foundation does not offer securities and does not guarantee token value.\n- Jurisdictional compliance: local obligations remain with individual actors.`;return [;
-      header,'',preamble,'',registry,'',mission,'',neutrality,'',treasury,'',contributors,'',dao,'',grants,'',governance,'',transparency,'',amendments,'',liability,];
+      header,'',preamble,'',registry,'',mission,'',neutrality,'',treasury,'',contributors,'',dao,'',grants,'',governance,'',transparency,'',amendments,'',liability];
       .filter(Boolean).join('\n')}, [;
-    legalStructure,protocolName,tokenSymbol,includeContributorRules,includeGrants,includeDAOIntegration,])return (<div className='space-y-6' />;
+    legalStructure,protocolName,tokenSymbol,includeContributorRules,includeGrants,includeDAOIntegration])return (<div className='space-y-6' />;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6' />;
         <div className='space-y-4 p-4 rounded-lg border border-gray-200 dark:border-gray-800' />;
           <h2 className='text-lg font-semibold' />Charter Settings</h2>;
@@ -126,7 +126,7 @@ const liability = `11. Limitations and Disclaimers\n- No warranties; the ${name}
             <button;
               className='px-3 py-2 rounded bg-cyan-600 text-white hover:bg-cyan-700';
               onClick = {() = /> ;}
-  const blob = new Blob([charterText], {type: 'text/markdown;charset = utf-8',})const url = URL.createObjectURL(blob;
+  const blob = new Blob([charterText], {type: 'text/markdown;charset = utf-8'})const url = URL.createObjectURL(blob;
   const a = document.createElement('a')a.href = url;
                 a.download = `${protocolName || 'zion'}-foundation-charter.md`;
                 a.click()URL.revokeObjectURL(url)}}
@@ -153,4 +153,4 @@ className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700';
         />;
       </div>;
     </div>;
-  )
+  )"

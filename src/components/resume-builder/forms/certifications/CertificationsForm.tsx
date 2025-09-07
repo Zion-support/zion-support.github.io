@@ -46,11 +46,11 @@ const handleEdit = (setEditingId(cert.id!)form.reset({...cert;) => {
 
 const handleEdit = (setEditingId(cert.id!)form.reset({...cert,issue_date: formatDateValue(cert.issue_date),expiration_date: formatDateValue(cert.expiration_date)) => {
   return $3;}
-},
+}
 }
 ;
   const handleDelete = async (id: string) => {if (confirm('Are you sure you want to delete this certification?')) {await deleteCertification(id)}
- ,
+ 
 }
  ;
   return (<div className='space-y-6' />;
@@ -69,7 +69,7 @@ const handleEdit = (setEditingId(cert.id!)form.reset({...cert,issue_date: format
           onDelete={handleDelete}        />;
       )}<CertificationsList;
           certifications={certifications}onEdit={handleEdit}onDelete={handleDelete}/>;
-      )}<div className=\"bg-muted/40 p-6 rounded-lg\" />;
+      )}<div className=\"bg-muted/40 p-6 rounded-lg\" />;"
         <h3 className=\"text-md font-medium mb-4\" />;
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>;
@@ -78,7 +78,7 @@ const handleEdit = (setEditingId(cert.id!)form.reset({...cert,issue_date: format
             onSubmit={form.handleSubmit(handleAddOrUpdate)}
             className='space-y-4' />
 
-            <CertificationFormFields form={form} />;
+            <CertificationFormFields form={form} />;"
             {error && <Alert variant=\"destructive\" /><AlertDescription />{error}</AlertDescription></Alert>}<div className=\"flex justify-between pt-2\" />;
               <Button;
                 type='button';
@@ -87,8 +87,8 @@ const handleEdit = (setEditingId(cert.id!)form.reset({...cert,issue_date: format
   issuing_organization: '',issue_date: '',
   expiration_date: '',credential_id: '',setEditingId(null),setEditingId(null),form.reset({name: '',
   issuing_organization: '',issue_date: '',
-  expiration_date: '',credential_id: '',}
-  credential_url: ',}
+  expiration_date: '',credential_id: ''}
+  credential_url: '}
 })name: '';
                       issuing_organization: '';
                       issue_date: '';
@@ -111,17 +111,17 @@ const handleEdit = (setEditingId(cert.id!)form.reset({...cert,issue_date: format
                 variant='outline';
                 onClick={() = /> {if (editingId) {setEditingId(null)form && form.reset({name: '',
   issuing_organization: '',issue_date: '',
-  expiration_date: '',credential_id: '',}
+  expiration_date: '',credential_id: ''}
   credential_url: ''})} else {onBack()}
-                ,
+                
 }
               >;
-                {editingId ? 'Cancel' : 'Back'}</Button>;
-              <div className=\"flex gap-2\" />;
-                <Button type=\"submit\" disabled={isLoading} />;
+                {editingId ? 'Cancel' : 'Back'}</Button>;"
+              <div className=\"flex gap-2\" />;"
+                <Button type=\"submit\" disabled={isLoading} />;"
                   {isLoading && <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" />}
                   {editingId ? 'Update' : 'Add'} Certification;
-                </Button>;
+                </Button>;"
                 <Button type=\"button\" onClick={onComplete} />;
                   Next;
                 </Button>;
@@ -144,22 +144,22 @@ const handleEdit = (setEditingId(cert.id!)form.reset({...cert,issue_date: format
           </form>;
         </Form>;
       </div>;
-    </div>;)}> {editingId ? 'Cancel' : 'Back' ;}
+    </div>;)}> {editingId ? 'Cancel' : 'Back' ;}"
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)}'\"}// Check condition;
 if ( {) {$2;}
 }
         form.reset ({name: '',
   issuing_organization: '',issue_date: '',
-  expiration_date: '',credential_id: '',}
+  expiration_date: '',credential_id: ''}
   credential_url: ''})setEditingId (null)}
     } catch (err: any) {set_error (err.message || 'An error occurred')}
- ,
+ 
 }
 
 const handle_edit = (cert: Certification) =>: any {setEditingId (cert.id!)form.reset ({...cer;}
 }
 
-const handle_edit = (cert: Certification) =>: any {setEditingId (cert.id!)form.reset ({issue_date: formatDateValue (cert.issue_date),expiration_date: formatDateValue (cert.expiration_date)},
+const handle_edit = (cert: Certification) =>: any {setEditingId (cert.id!)form.reset ({issue_date: formatDateValue (cert.issue_date),expiration_date: formatDateValue (cert.expiration_date)}
 }
 ;
   const handle_delete = async (id: string, ) => {if () {) {$2;}
@@ -202,9 +202,9 @@ if ( {) {$2;}
 }
                     setEditingId (null)form.reset ({name: '',
   issuing_organization: '',issue_date: '',
-  expiration_date: '',credential_id: '',}
+  expiration_date: '',credential_id: ''}
   credential_url: ''})} else {on_back ()}
-                ,
+                
 }
               >;
                 {editing_id ? 'Cancel' : 'Back'}
@@ -224,5 +224,5 @@ if ( {) {$2;}
       </div>
     </div>
   );
-}> {editing_id ? 'Cancel' : 'Back';}
-}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)}'\"}}}'\";
+}> {editing_id ? 'Cancel' : 'Back';}"
+}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)}'\"}}}'\";"

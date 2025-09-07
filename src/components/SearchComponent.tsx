@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Search, X, Clock, TrendingUp, Star    } from 'lucide-react' interface SearchResult { id: string title: string description: string type: 'service' | 'page' | 'feature' url: string icon?: React.ComponentType<>  }
 
 interface SearchComponentProps {}
-  placeholder?: string onSearch?: (query: string) => void className?: string ,}
+  placeholder?: string onSearch?: (query: string) => void className?: string }
 }
 
 const SearchComponent: React.FC<SearchComponentProps /> = ({ placeholder = 'Search services, features, and more...', onSearch, className = ''    }) => {
@@ -13,4 +13,4 @@ const SearchComponent: React.FC<SearchComponentProps /> = ({ placeholder = 'Sear
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement />(null);}
   const resultsRef = useRef<HTMLDivElement />(null)\"\";}
-}
+}"

@@ -17,7 +17,7 @@ interface UltraFuturisticBackground2030Props {
 }
 }
 
-const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props /> = ({ children   ,}
+const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props /> = ({ children   }
 }) => {
 
 
@@ -53,7 +53,7 @@ interface UltraFuturisticBackground2030Props {
 }
 }
 
-const UltraFuturisticBackground2030: React.FC < UltraFuturisticBackground2030Props> = ({ children   ,}
+const UltraFuturisticBackground2030: React.FC < UltraFuturisticBackground2030Props> = ({ children   }
 }) => {
 
 
@@ -166,22 +166,22 @@ className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
           style={{
             clipPath:
 }
-              'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',}
+              'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}
           }}
           animate={{
             rotate: 360,
-            scale: [1, 1.1, 1],}
-            opacity: [0.3, 0.6, 0.3],}
+            scale: [1, 1.1, 1]}
+            opacity: [0.3, 0.6, 0.3]}
           }}
           animate={{
             rotate: 360;}
 scale: [1, 1.1, 1]}
-            opacity: [0.3, 0.6, 0.3],          }}
+            opacity: [0.3, 0.6, 0.3]          }}
 
           transition={{
             duration: 20,
-            repeat: Infinity,}
-ease: 'linear',}
+            repeat: Infinity}
+ease: 'linear'}
           }}
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
           style={{
@@ -192,30 +192,30 @@ ease: 'linear',}
           className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30';
           style={{
             clip_path:;}
-              'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',}
+              'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}
           }}
           animate={{
 
             rotate: -360,
-            scale: [1, 0.9, 1],}
-            opacity: [0.3, 0.6, 0.3],}
+            scale: [1, 0.9, 1]}
+            opacity: [0.3, 0.6, 0.3]}
           }}
           transition={{
             duration: 25,
-            repeat: Infinity,}
-ease: 'linear',}
+            repeat: Infinity}
+ease: 'linear'}
           }}
         />
             duration: 25,
             repeat: Infinity,
-            ease: 'linear',          }}
+            ease: 'linear'          }}
 
-            ease: 'linear',          }}
+            ease: 'linear'          }}
 
           }}
           transition={{
             duration: 25,
-            repeat: Infinity,}
+            repeat: Infinity}
 }
           }}
 
@@ -226,29 +226,29 @@ ease: 'linear',}
         <motion.div;
 className='absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40'
           animate={{
-            y: [0, -20, 0],}
-            opacity: [0.4, 0.8, 0.4],}
+            y: [0, -20, 0]}
+            opacity: [0.4, 0.8, 0.4]}
           }}
           transition={{
             duration: 8,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
         />
         <motion.div;
 className='absolute top-80 right-1/3 w-20 h-20 rounded-full border border-blue-400/40'
           animate={{
-            y: [0, 20, 0],}
-            opacity: [0.4, 0.8, 0.4],}
+            y: [0, 20, 0]}
+            opacity: [0.4, 0.8, 0.4]}
           }}
           transition={{
             duration: 10,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
         />
             duration: 10,
-            repeat: Infinity,
+            repeat: Infinity
 
           }}
 
@@ -258,14 +258,14 @@ ease: 'easeInOut',}
 repeat: Infinity;
 ease: 'easeInOut',
   ease: \"easeInOut\"
-        {/* Animated Lines *,}
+        {/* Animated Lines *}
 }
 
         <motion.div;
 className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
           animate={{
             height: [32, 64, 32],
-            opacity: [0.3, 0.8, 0.3],}
+            opacity: [0.3, 0.8, 0.3]}
 }
           }}
       {/* Gradient Overlays */}
@@ -284,16 +284,16 @@ className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-t
       {/* Floating Particles */}
       <div className='fixed inset-0 pointer-events-none z-15' />;
         {[...Array(20)].map((_, i) => (<motion&& motion.div;
-            ease: 'easeInOut',}
+            ease: 'easeInOut'}"
   ease: \"easeInOut\";}
           }}
         />;
         <motion.div;
-          className='absolute top - 64 right - 1/4 w - 1 h - 24 bg - gradient - to - b from - purple - 400 to - transparent';
+          className='absolute top - 64 right - 1/4 w - 1 h - 24 bg - gradient - to - b from - purple - 400 to - transparent';"
           animate={{height: [24, 48, 24],opacity: [0.3, 0.8, 0.3],          className=\"absolute top - 64 right - 1/4 w - 1 h - 24 bg - gradient - to - b from - purple-400 to-transparent\";
           animate={{height: [24, 48, 24];
             opacity: [0.3, 0.8, 0.3];
-          transition={{duration: 8,repeat: Infinity,ease: 'easeInOut',}
+          transition={{duration: 8,repeat: Infinity,ease: 'easeInOut'}"
   ease: \"easeInOut\";}
           }}
         />;
@@ -318,30 +318,30 @@ className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-t
             className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full';
 
             style={{}
-              left: `${Math.random() * 10,}
+              left: `${Math.random() * 10}
 }%`,
-              top: `${Math.random() * 10,}
-}%`,
+              top: `${Math.random() * 10}
+}%`
             }}
             animate={{
 
               y: [0, -100, 0],
-              opacity: [0, 1, 0],}
-              scale: [0, 1, 0],}
+              opacity: [0, 1, 0]}
+              scale: [0, 1, 0]}
             }}
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
-ease: 'easeInOut',}
+ease: 'easeInOut'}
 }
             }}
             transition={{duration: Math.random() * 10 + 10;
               repeat: Infinity;}
-              delay: Math.random() * 10;}
-              duration: Math && Math.random() * 10 + 10,repeat: Infinity,delay: Math && Math.random() * 10,transition={{ease: 'easeInOut',            }}              ease: \"easeInOut\";
-              y: [0, -100, 0],opacity: [0, 1, 0],scale: [0, 1, 0],}}
-            transition={{duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 10,ease: 'easeInOut',}}
+              delay: Math.random() * 10;}"
+              duration: Math && Math.random() * 10 + 10,repeat: Infinity,delay: Math && Math.random() * 10,transition={{ease: 'easeInOut'            }}              ease: \"easeInOut\";
+              y: [0, -100, 0],opacity: [0, 1, 0],scale: [0, 1, 0]}}
+            transition={{duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 10,ease: 'easeInOut'}}
           />;
         ))}
       {/* Neon Glow Effects */}
@@ -352,15 +352,15 @@ ease: 'easeInOut',}
       </div>;
     </div>;
   )export default UltraFuturisticBackground2030;
-              left: `${Math.random () * 10,}
-}%`,top: `${Math.random () * 10,}
+              left: `${Math.random () * 10}
+}%`,top: `${Math.random () * 10}
 }%`;
             }}
             animate={{coordinate_y: [0, -100, 0];
               opacity: [0, 1, 0];}
               scale: [0, 1, 0];}
-            }}
-            transition={{duration: Math.random () * 10 + 10,repeat: Infinity,delay: Math.random () * 10,ease: 'easeInOut',            }}              ease: \"easeInOut\";
+            }}"
+            transition={{duration: Math.random () * 10 + 10,repeat: Infinity,delay: Math.random () * 10,ease: 'easeInOut'            }}              ease: \"easeInOut\";
             }}
           />))}
       </div>;
@@ -379,7 +379,7 @@ export default UltraFuturisticBackground2030;      </div>
   );
 }
 
-export default UltraFuturisticBackground2030;transition={{duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 10,ease: 'easeInOut',            }}/>;
+export default UltraFuturisticBackground2030;transition={{duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 10,ease: 'easeInOut'            }}/>;
         ))}
       </div>;
       {/* Neon Glow Effects */}
@@ -396,3 +396,4 @@ export default UltraFuturisticBackground2030;transition={{duration: Math.random(
 
 export default UltraFuturisticBackground2030;
 
+"

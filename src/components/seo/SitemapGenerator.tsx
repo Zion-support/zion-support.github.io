@@ -2,7 +2,7 @@
   loc: string;
    lastmod: string;
    changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';\"\";}
-   priority: number,}
+   priority: number}
 }
 
 const SitemapGenerator: React.FC = () => {;}
@@ -18,4 +18,4 @@ interface SitemapUrl {
 }
 
 const SitemapGenerator: React.FC = () => {;}
-  const baseUrl = 'https:''';}
+  const baseUrl = 'https:''';}"

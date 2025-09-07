@@ -15,7 +15,7 @@ Zap,
 Shield;
 Globe,
 Brain;
-Rocket,}
+Rocket}
 CheckCircle;}
 } from 'lucide-react';
 
@@ -26,7 +26,7 @@ interface EnhancedHero2026Props {
     address: string;
 
     website: string}
- ,}
+ }
 },
   serviceStats: {
     totalServices: number;
@@ -36,7 +36,7 @@ interface EnhancedHero2026Props {
     microSaas: number;
 }
     revolutionaryServices: number}
-  },
+  }
 }
 
 export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
@@ -46,10 +46,10 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
 opacity: 1;
 transition: {
 
-        duration: 0.6,}
-ease: 'easeOut' as const,}
-      },
-    },
+        duration: 0.6}
+ease: 'easeOut' as const}
+      }
+    }
   };
 
   return (
@@ -58,9 +58,9 @@ ease: 'easeOut' as const,}
       {/* Enhanced Background Elements */}
       {/* Floating Elements */}
       <div className='absolute inset-0 pointer-events-none' />;
-        {Array && Array.from({ length: 20,}
+        {Array && Array.from({ length: 20}
 }).map((_, i) => (<motion&& motion.div;
-        duration: 0.6,ease: 'ease_out' as const,},},}return (<section className='relative min - h-screen flex items - center justify - center overflow - hidden' />;
+        duration: 0.6,ease: 'ease_out' as const}}}return (<section className='relative min - h-screen flex items - center justify - center overflow - hidden' />;
       {/* Enhanced Background Elements */}
       <div className='absolute inset - 0 bg - gradient - to - br from - slate - 900 via - purple - 900 / 20 to - slate - 900' />;
       <div className='absolute inset - 0 bg-[radial - gradient (circle_at_20%_80%, rgba (120, 119, 198, 0.4), transparent_50%)]' />;
@@ -68,27 +68,27 @@ ease: 'easeOut' as const,}
       {/* Floating Elements */}
       <div className='absolute inset - 0 pointer - events - none' />;
 
-        {Array.from ({ length: 20,}
+        {Array.from ({ length: 20}
 }).map ((_, i) => (
           <motion.div;
             key={i}
 
-              left: `${Math && Math.random() * 10,}
+              left: `${Math && Math.random() * 10}
 }%`,
-              top: `${Math && Math.random() * 10,}
-}%`,
+              top: `${Math && Math.random() * 10}
+}%`
             }}
             animate={{
               y: [0, -30, 0],
 
-              opacity: [0.3, 0.8, 0.3],}
-              scale: [1, 1.5, 1],}
+              opacity: [0.3, 0.8, 0.3]}
+              scale: [1, 1.5, 1]}
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
-ease: 'easeInOut',}
-  delay: Math.random() * 2,}
+ease: 'easeInOut'}
+  delay: Math.random() * 2}
             }}
 
             }}
@@ -105,7 +105,7 @@ ease: 'easeInOut',}
 
 <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center' />
         <motion.div;
-variants={containerVariant,}
+variants={containerVariant}
 }
           initial='hidden';
           animate='visible';
@@ -173,14 +173,14 @@ infrastructure services.
                 icon: Zap;}
                 color: 'from-yellow-500 to-orange-500';}
               }
-              {label: 'Revolutionary',}
-  value: serviceStats.revolutionaryServices,icon: Star,color: 'from-pink-500 to-purple-500',},].map((stat, index) => ({ label: 'Revolutionary',}
-  value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500',}
+              {label: 'Revolutionary'}
+  value: serviceStats.revolutionaryServices,icon: Star,color: 'from-pink-500 to-purple-500'}].map((stat, index) => ({ label: 'Revolutionary'}
+  value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500'}
 }
               <motion.div;
                 key={stat.label}
                 variants={statsVariants}
-                whileHover={{ scale: 1.05, y: -5 ,}
+                whileHover={{ scale: 1.05, y: -5 }
 }
 className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300' />
 
@@ -198,7 +198,7 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
                 </div>
               </motion.div>
 
-            ),
+            )
 }
           </motion.div>;
           {/* Enhanced CTA Section */}
@@ -211,10 +211,10 @@ href='/services'
                 size='xl'
                 className='text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group'
                />              >
-                <span className=\"flex items-center\" />
+                <span className=\"flex items-center\" />"
                   <Rocket className=\"mr-3 w-7 h-7 group-hover:rotate-12 transition-transform\" />
                   Explore All Services;
-                </span>
+                </span>"
                 <ArrowRight className=\"ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform\" />
               </Button>
 
@@ -222,13 +222,13 @@ href='/services'
           {/* Enhanced CTA Section */}
 
               
-              <Button;
+              <Button;"
 href=\"/contact\" 
 
 
-              <Button;
+              <Button;"
 href=\"/contact\" 
-
+"
                 variant=\"secondary\"
                 size=\"xl\"
                 className=\"text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl\"
@@ -246,7 +246,7 @@ href='/contact'
                 </span>
               </Button>
             </div>
-            {/* Trust Indicators *,}
+            {/* Trust Indicators *}
 }
 
 <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400' />
@@ -254,8 +254,8 @@ href='/contact'
                 <CheckCircle className='w-5 h-5 text-green-400' />
                 <span />5000+ Happy Customers</span>
               </div>                <span />5000+ Happy Customers</span>
-              </div>
-              <div className=\"flex items-center space-x-2\" />
+              </div>"
+              <div className=\"flex items-center space-x-2\" />"
                 <CheckCircle className=\"w-5 h-5 text-green-400\" />
                 <span />99.9% Uptime Guarantee</span>
               </div>
@@ -271,8 +271,8 @@ href='/contact'
           </motion.div>
 
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'>;
-                <span className='flex items-center' />;
-                  <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className=\"flex items-center\" />;
+                <span className='flex items-center' />;"
+                  <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className=\"flex items-center\" />;"
                   <Shield className=\"mr-3 w-7 h-7\" />;
                   Get Expert Consultation;
                 </span>;
@@ -283,8 +283,8 @@ href='/contact'
                 <CheckCircle className='w-5 h-5 text-green-400' />;
                 <span />5000+ Happy Customers</span>;
               </div>                <span />5000+ Happy Customers</span>;
-              </div>;
-              <div className=\"flex items-center space-x-2\" />;
+              </div>;"
+              <div className=\"flex items-center space-x-2\" />;"
                 <CheckCircle className=\"w-5 h-5 text-green-400\" />;
                 <span />99 && 99.9% Uptime Guarantee</span>;
               </div>;
@@ -292,8 +292,8 @@ href='/contact'
                 <CheckCircle className='w-5 h-5 text-green-400' />;
                 <span />99 && 99.9% Uptime Guarantee</span>;
               </div>;
-              <div className='flex items-center space-x-2' />;
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span />24/7 Expert Support</span>              <div className=\"flex items-center space-x-2\" />;
+              <div className='flex items-center space-x-2' />;"
+                <CheckCircle className='w-5 h-5 text-green-400' />                <span />24/7 Expert Support</span>              <div className=\"flex items-center space-x-2\" />;"
                 <CheckCircle className=\"w-5 h-5 text-green-400\" />;
                 <span />24/7 Expert Support</span>;
               </div>;
@@ -325,7 +325,7 @@ variants={itemVariants}
               </div>
               <div className='text-center' />
                 <div className='text-cyan-400 font-medium' />Website</div>
-                <div className='text-white' />{contactInfo.websit,}
+                <div className='text-white' />{contactInfo.websit}
 }</div>
               </div>
             </div>
@@ -336,3 +336,4 @@ variants={itemVariants}
 
 );
 
+"

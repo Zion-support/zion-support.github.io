@@ -19,24 +19,24 @@ threshold: number, //token balance threshold;}
 }
 
 const BADGES: Badge[] = [;
-  { id: 'starter',}
-  label: 'Starter', threshold: 50,}
-},{ id: 'rising',}
-  label: 'Rising Star', threshold: 200,}
-},{ id: 'pro',}
-  label: 'Pro', threshold: 500,}
-},{ id: 'elite',}
-  label: 'Elite', threshold: 1000,}
-},];
+  { id: 'starter'}
+  label: 'Starter', threshold: 50}
+},{ id: 'rising'}
+  label: 'Rising Star', threshold: 200}
+},{ id: 'pro'}
+  label: 'Pro', threshold: 500}
+},{ id: 'elite'}
+  label: 'Elite', threshold: 1000}
+}];
 
 export type Badge = {id: string,label: string,threshold: number, // token balance threshold;}
 }
 
-const BADGES: Badge[] = [;
-  { id: \"starter\", label: \"Starter\", threshold: 50,}
-},{ id: \"rising\", label: \"Rising Star\", threshold: 200,}
-},{ id: \"pro\", label: \"Pro\", threshold: 500,}
-},{ id: \"elite\", label: \"Elite\", threshold: 1000,}
+const BADGES: Badge[] = [;"
+  { id: \"starter\", label: \"Starter\", threshold: 50}"
+},{ id: \"rising\", label: \"Rising Star\", threshold: 200}"
+},{ id: \"pro\", label: \"Pro\", threshold: 500}"
+},{ id: \"elite\", label: \"Elite\", threshold: 1000}
 }],export function currentBadge(balance: number): Badge | null {let current: Badge | null  = null,id: string;
 label: string;}
 threshold: number, //token balance threshold;}
@@ -59,7 +59,7 @@ if (current = b) {}
  ;
   return current;
 
-export default function Badges({ balance }: { balance: number,}
+export default function Badges({ balance }: { balance: number}
 }) {
   const active = currentBadge(balance);
   return (
@@ -82,7 +82,7 @@ key={b.id}
 
 <span className='ml-2 text-xs text-green-600' />
 }
-          Current: {active.labe,}
+          Current: {active.labe}
 }
         </span>;
       )}
@@ -90,3 +90,4 @@ key={b.id}
     </div>
   );
 
+"

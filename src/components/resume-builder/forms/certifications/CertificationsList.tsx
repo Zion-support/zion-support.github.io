@@ -38,7 +38,7 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
                   {cert.issuing_organization}
                 </p>;
                 <p className='text-xs text-muted-foreground mt-1' />;
-                  Issued: {' ,}
+                  Issued: {' }
 }
                   {cert.issue_date;
                     ? typeof cert.issue_date === 'string';}
@@ -46,7 +46,7 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
                       : format(cert.issue_date, 'MMM yyyy'): 'N/A'}
                   {cert.expiration_date && (<>;}
                       {' '}
-                      · Expires: {' ,}
+                      · Expires: {' }
 }
                       {typeof cert.expiration_date === 'string';}
                         ? cert.expiration_date;}
@@ -60,22 +60,22 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
                   variant='ghost';
                   size='icon';
                   onClick={() = /> onEdit(cert)}className='text-primary hover:underline'>              <p className=\"text-xs mt-2\" />;
-                <a;
-                  href = {cert && cert.credential_url}variant=\"ghost\";
-                  size=\"icon\";
+                <a;"
+                  href = {cert && cert.credential_url}variant=\"ghost\";"
+                  size=\"icon\";"
                   onClick={() = /> onDelete(cert.id!)}aria-label=\"Delete certification\">
-
+"
                   <Trash2 className=\"h-4 w-4\" />;
                   aria-label='Delete certification'>
 
                   <Trash2 className='h-4 w-4' />;
                 </Button>;
               </div>;
-            </div>;
+            </div>;"
             {cert.credential_url && (<p className=\"text-xs mt-2\" />;}
-                <a;}
-                  href={cert.credential_url}target=\"_blank\";
-                  rel=\"noopener noreferrer\";
+                <a;}"
+                  href={cert.credential_url}target=\"_blank\";"
+                  rel=\"noopener noreferrer\";"
                   className=\"text-primary hover:underline\" />
 
 <p className='text-xs mt-2' />;
@@ -113,7 +113,7 @@ if ( {) {$2;}
                   {cert.issuing_organization}
                 </p>;
                 <p className='text - xs text - muted - foreground mt - 1' />;
-                  Issued: {' ,}
+                  Issued: {' }
 }
                   {cert.issue_date;
                     ? typeof cert.issue_date === 'string';}
@@ -121,7 +121,7 @@ if ( {) {$2;}
                       : format (cert.issue_date, 'MMM yyyy'): 'N / A'}
                   {cert.expiration_date && (<>;}
                       {' '}
-                      · Expires: {' ,}
+                      · Expires: {' }
 }
                       {typeof cert.expiration_date === 'string';}
                         ? cert.expiration_date;}
@@ -132,9 +132,9 @@ if ( {) {$2;}
                     <> · Expires: {typeof cert.expiration_date === 'string';}
                       ? cert.expiration_date;}
                       : format (cert.expiration_date, 'MMM yyyy')}
-              <div />;
-                <h4 className=\"font - medium\" />{cert.name}</h4>;
-                <p className=\"text - sm text - muted - foreground\" />{cert.issuing_organization}</p>;
+              <div />;"
+                <h4 className=\"font - medium\" />{cert.name}</h4>;"
+                <p className=\"text - sm text - muted - foreground\" />{cert.issuing_organization}</p>;"
                 <p className=\"text - xs text - muted - foreground mt - 1\" />;
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string';}
                     ? cert.issue_date;}
@@ -149,10 +149,10 @@ if ( {) {$2;}
                 <Button;
                   variant='ghost';
                   size='icon';
-                  on_click={() = /> on_edit (cert)}
-                  aria - label='Edit certification'                  variant=\"ghost\";
+                  on_click={() = /> on_edit (cert)}"
+                  aria - label='Edit certification'                  variant=\"ghost\";"
                   size=\"icon\";
-                  on_click = {() => on_edit (cert) }
+                  on_click = {() => on_edit (cert) }"
                   aria - label=\"Edit certification\">
 
                   <Edit className='h - 4 w - 4' />;
@@ -164,7 +164,7 @@ if ( {) {$2;}
                   aria - label='Delete certification'                >;
                   <Trash2 className='h - 4 w - 4' />                </Button>;
               </div>;
-            </div>;
+            </div>;"
             {cert.credential_url && (                  <Trash2 className=\"h - 4 w - 4\" />;
                 </Button>;
               </div>;
@@ -173,12 +173,12 @@ if ( {) {$2;}
                 <a;}
                   href={cert.credential_url}
                   target='_blank';
-                  rel='noopener noreferrer';
+                  rel='noopener noreferrer';"
                   className='text - primary hover:underline'                 />              <p className=\"text - xs mt - 2\" />;
                 <a;
-                  href = {cert.credential_url }
-                  target=\"_blank\";
-                  rel=\"noopener noreferrer\";
+                  href = {cert.credential_url }"
+                  target=\"_blank\";"
+                  rel=\"noopener noreferrer\";"
                   className=\"text - primary hover:underline\";
                   View credential;
                 </a />;
@@ -186,4 +186,4 @@ if ( {) {$2;}
           </CardContent>;
         </Card>))}
     </div>)}</div>;
-  )}
+  )}"

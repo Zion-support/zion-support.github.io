@@ -32,9 +32,9 @@ interface Listing  {id: string;
 interface CategoryListingPageProps  {title: string;
   description: string;
   listings: Listing[];}
-  sortOptions?: { label: string; value: string,}
+  sortOptions?: { label: string; value: string}
 }[];
-  filterOptions?: { label: string; value: string,}
+  filterOptions?: { label: string; value: string}
 }[];
 
 export function CategoryListingPage() {const [searchQuery, setSearchQuery] = useState('');
@@ -84,11 +84,11 @@ import { useState, useEffect } from \"react\",import { GradientHeading } from \"
 interface Listing  {id: string,title: string,description: string,category: string,subcategory?: string,image?: string,tags?: string[],author?: string,authorImage?: string,aiScore?: number,rating?: number,reviewCount?: number,price?: number | null,createdAt: string;}
 }
 
-interface CategoryListingPageProps  {title: string,description: string,listings: Listing[],sortOptions?: { label: string, value: string,}
-}[],filterOptions?: { label: string, value: string,}
+interface CategoryListingPageProps  {title: string,description: string,listings: Listing[],sortOptions?: { label: string, value: string}
+}[],filterOptions?: { label: string, value: string}
 }[];
 }
-
+"
 export function CategoryListingPage() {const [searchQuery, setSearchQuery] = useState(\"\"),const [selectedSort, setSelectedSort] = useState(() => safeStorage.getItem('category_selected_sort') || sortOptions[0]?.value || 'newest';
   ),const [selectedFilter, setSelectedFilter] = useState(() => safeStorage.getItem('category_selected_filter') || filterOptions[0]?.value || 'all';}
   ),const [isLoading, setIsLoading] = useState(false),useEffect(() => {}
@@ -130,7 +130,7 @@ const matchesSearch =;
                       {sortOptions && sortOptions.find(option => option && option.value === selectedSort)<div className='min - h-screen bg - zion - blue py - 12 px - 4' />;
         <div className='container mx - auto' />;}
           <div className='text - center mb - 12' />;}
-            <GradientHeading />{title}</GradientHeading>;
+            <GradientHeading />{title}</GradientHeading>;"
             <p className=\"mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto\" />;
               {description}</p>;
           </div>;{/* Filters and Search */}
@@ -152,31 +152,31 @@ const matchesSearch =;
                     {selected_sort === 'a - z' ? (<ArrowDownAZ className='mr - 2 h - 4 w - 4' />) : selected_sort === 'z - a' ? (<ArrowUpZA className='mr - 2 h - 4 w - 4' />) : null}
                     <span />{sort_options.find (option => option.value === selected_sort)?.label || 'Sort By'}
                     </span>;
-                  </div>;
-                </SelectTrigger>;<div className=\"bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light\" />;
-            <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\" />;
-              <div className=\"relative\" />;
+                  </div>;"
+                </SelectTrigger>;<div className=\"bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light\" />;"
+            <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\" />;"
+              <div className=\"relative\" />;"
                 <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate\" />;
-                <Input;
-                  type=\"text\";
+                <Input;"
+                  type=\"text\";"
                   placeholder=\"Search listings...\";
                   value={searchQuery}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement />) => setSearchQuery(e.target.value,}
-}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement />) => setSearchQuery(e.target.value}
+}"
                   className=\"pl-10 bg-zion-blue border border-zion-blue-light text-white\";
                 />;
               </div>;
-              <Select value={selectedSort} onValueChange={setSelectedSort} />;
-                <SelectTrigger className=\"bg-zion-blue border border-zion-blue-light text-white\" />;
-                  <div className=\"flex items-center\" />;
-                    {selectedSort === 'a-z' ? (<ArrowDownAZ className=\"mr-2 h-4 w-4\" />;}
+              <Select value={selectedSort} onValueChange={setSelectedSort} />;"
+                <SelectTrigger className=\"bg-zion-blue border border-zion-blue-light text-white\" />;"
+                  <div className=\"flex items-center\" />;"
+                    {selectedSort === 'a-z' ? (<ArrowDownAZ className=\"mr-2 h-4 w-4\" />;}"
                     ) : selectedSort === 'z-a' ? (<ArrowUpZA className=\"mr-2 h-4 w-4\" />;}
                     ) : null}
                     <span />{sortOptions.find(option => option.value === selectedSort)?.label || 'Sort By'}
                     </span>;
                   </div>;
-                </SelectTrigger>;
-                <SelectContent className=\"bg-zion-blue-dark border border-zion-blue-light\" />;
+                </SelectTrigger>;"
+                <SelectContent className=\"bg-zion-blue-dark border border-zion-blue-light\" />;"
                   {sortOptions.map((option) => (<SelectItem key={option.value} value={option.value} className=\"text-white\" />;
                       {option.label}
                     </SelectItem>;
@@ -220,10 +220,10 @@ const matchesSearch =;
                      />                      {option.label}
                     </SelectItem>))}</SelectContent>;
               </Select>;
-            </div>;
-          </div>;<div className=\"mb-6\" />;
+            </div>;"
+          </div>;<div className=\"mb-6\" />;"
             <p className=\"text-zion-slate-light\" />;
-              Showing {processedListings.length} results;
+              Showing {processedListings.length} results;"
               {searchQuery && ` for \"${searchQuery}\"`}</p>;
           </div>;{/* Listings Grid */}
           <div aria-busy={isLoading} />;
@@ -252,24 +252,24 @@ const matchesSearch =;
             </div>;
           </div>;
           {/* Results Count */}
-              Showing {processedListings.length} results;
+              Showing {processedListings.length} results;"
               {searchQuery && ` for \"${searchQuery}\"`}
             </p>;
           </div>;
                 ))}
-              </div>;
-            ) : (<div className=\"text-center py-20\" />;
-                <h3 className=\"text-xl font-bold text-white mb-2\" />No listings found</h3>;
+              </div>;"
+            ) : (<div className=\"text-center py-20\" />;"
+                <h3 className=\"text-xl font-bold text-white mb-2\" />No listings found</h3>;"
                 <p className=\"text-zion-slate-light mb-6\" />Try adjusting your filters or search query</p>;
-                <Button;
-                  variant=\"outline\";
-                  onClick={() = /> {setSearchQuery(\"\"),setSelectedFilter(filterOptions[0]?.value || 'all')}}
+                <Button;"
+                  variant=\"outline\";"
+                  onClick={() = /> {setSearchQuery(\"\"),setSelectedFilter(filterOptions[0]?.value || 'all')}}"
                   className=\"border-zion-purple text-zion-purple hover:bg-zion-purple/10\";
   title: string;
   description: string;
   listings: Listing[];
-  sortOptions?: { label: string, value: string,}
-}[],filterOptions?: { label: string, value: string,}
+  sortOptions?: { label: string, value: string}
+}[],filterOptions?: { label: string, value: string}
 }[];
 }
 
@@ -277,17 +277,17 @@ export function CategoryListingPage({title;
   description;
   listings: initialListings;}
   sortOptions;}
-                    setSelectedFilter(filterOptions[0]?.value || 'all')}}
+                    setSelectedFilter(filterOptions[0]?.value || 'all')}}"
                   className=\"border-zion-purple text-zion-purple hover:bg-zion-purple/10\">
 
                   Clear all filters;
                 </Button>;
               </div>;
-              </div>;
-            ) : (<div className=\"text-center py-20\" />;
-                <h3 className=\"text-xl font-bold text-white mb-2\" />No listings found</h3>;
+              </div>;"
+            ) : (<div className=\"text-center py-20\" />;"
+                <h3 className=\"text-xl font-bold text-white mb-2\" />No listings found</h3>;"
                 <p className=\"text-zion-slate-light mb-6\" />Try adjusting your filters or search query</p>;
-                <Button;
+                <Button;"
                   variant=\"outline\";onClick={() = /> {setSearchQuery('')setSelectedFilter(filterOptions[0]?.value || 'all')}}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'>
 
@@ -340,48 +340,48 @@ let filtered  = listings;// Filter by search term;
           return b.title.localeCompare(a.title)default:;}
           return 0;}
       }
-    })setFilteredListings(filtered)}, [listings, searchTerm, sortBy, filterBy])const categories = Array.from(new Set(listings.map(listing => listing.category)))if (loading) ;
+    })setFilteredListings(filtered)}, [listings, searchTerm, sortBy, filterBy])const categories = Array.from(new Set(listings.map(listing => listing.category)))if (loading) ;"
   return (<div className=\"container mx-auto px-4 py-8\" />;
         <GradientHeading text={`${category} Listings`} />;
         <ListingGridSkeleton />;
-      </div>;
+      </div>;"
     )}return (<div className=\"container mx-auto px-4 py-8\" />;
       <GradientHeading text={`${category} Listings`} />;
-      {/* Search and Filters */}
-      <div className=\"mb-8 space-y-4\" />;
-        <div className=\"flex flex-col sm:flex-row gap-4\" />;
-          <div className=\"flex-1\" />;
-            <div className=\"relative\" />;
+      {/* Search and Filters */}"
+      <div className=\"mb-8 space-y-4\" />;"
+        <div className=\"flex flex-col sm:flex-row gap-4\" />;"
+          <div className=\"flex-1\" />;"
+            <div className=\"relative\" />;"
               <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4\" />;
-              <Input;
+              <Input;"
                 placeholder=\"Search listings...\";
                 value={searchTerm}
-                onChange={(e) = /> setSearchTerm(e.target.value)}
+                onChange={(e) = /> setSearchTerm(e.target.value)}"
                 className=\"pl-10\";
               />;
             </div>;
           </div>;
-          <Select value={sortBy} onValueChange={setSortBy} />;
-            <SelectTrigger className=\"w-full sm:w-48\" />;
+          <Select value={sortBy} onValueChange={setSortBy} />;"
+            <SelectTrigger className=\"w-full sm:w-48\" />;"
               <ArrowDownAZ className=\"h-4 w-4 mr-2\" />;
               Sort by;
             </SelectTrigger>;
-            <SelectContent />;
-              <SelectItem value=\"newest\" />Newest</SelectItem>;
-              <SelectItem value=\"oldest\" />Oldest</SelectItem>;
-              <SelectItem value=\"price-low\" />Price: Low to High</SelectItem>;
-              <SelectItem value=\"price-high\" />Price: High to Low</SelectItem>;
-              <SelectItem value=\"rating\" />Rating</SelectItem>;
-              <SelectItem value=\"name-asc\" />Name: A-Z</SelectItem>;
+            <SelectContent />;"
+              <SelectItem value=\"newest\" />Newest</SelectItem>;"
+              <SelectItem value=\"oldest\" />Oldest</SelectItem>;"
+              <SelectItem value=\"price-low\" />Price: Low to High</SelectItem>;"
+              <SelectItem value=\"price-high\" />Price: High to Low</SelectItem>;"
+              <SelectItem value=\"rating\" />Rating</SelectItem>;"
+              <SelectItem value=\"name-asc\" />Name: A-Z</SelectItem>;"
               <SelectItem value=\"name-desc\" />Name: Z-A</SelectItem>;
             </SelectContent>;
           </Select>;
-          <Select value={filterBy} onValueChange={setFilterBy} />;
-            <SelectTrigger className=\"w-full sm:w-48\" />;
+          <Select value={filterBy} onValueChange={setFilterBy} />;"
+            <SelectTrigger className=\"w-full sm:w-48\" />;"
               <Filter className=\"h-4 w-4 mr-2\" />;
               Filter by;
             </SelectTrigger>;
-            <SelectContent />;
+            <SelectContent />;"
               <SelectItem value=\"all\" />All Categories</SelectItem>;
               {categories.map(cat => (<SelectItem key={cat} value={cat} />;
                   {cat}
@@ -391,22 +391,22 @@ let filtered  = listings;// Filter by search term;
           </Select>;
         </div>;
       </div>;
-      {/* Results */}
-      <div className=\"mb-4\" />;
+      {/* Results */}"
+      <div className=\"mb-4\" />;"
         <p className=\"text-gray-600\" />;
           Showing {filteredListings.length} of {listings.length} listings;
         </p>;
       </div>;
-      {/* Listings Grid */}
-      {filteredListings.length === 0 ? (<div className=\"text-center py-12\" />;
-          <div className=\"text-gray-400 mb-4\" />;
+      {/* Listings Grid */}"
+      {filteredListings.length === 0 ? (<div className=\"text-center py-12\" />;"
+          <div className=\"text-gray-400 mb-4\" />;"
             <Search className=\"h-12 w-12 mx-auto\" />;
-          </div>;
-          <h3 className=\"text-lg font-medium text-gray-900 mb-2\" />No listings found</h3>;
+          </div>;"
+          <h3 className=\"text-lg font-medium text-gray-900 mb-2\" />No listings found</h3>;"
           <p className=\"text-gray-500\" />;
             Try adjusting your search terms or filters.;
           </p>;
-        </div>;
+        </div>;"
       ) : (<div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />;}
           {filteredListings.map((listing) => (<ListingScoreCard;}
               key={listing.id}
@@ -434,30 +434,30 @@ switch (selectedSort) {';
 case 'oldest': return new Date (a.createdAt) .getTime () - new Date (b.createdAt) .getTime ()';
 case 'rating-high': return (b.rating || 0) - (a.rating || 0)';
 case 'ai-match': return (b.aiScore || 0) - (a.aiScore || 0)';
-case 'a-z': return a.title.localeCompare (b.title)';}
-case 'z-a': return (<> <div className=\"min-h-screen bg-zion-blue py-12 px-4\" /> <div className=\"container mx-auto\" /> <div className=\"text-center mb-12\" /> <GradientHeading /> {title \";}
-}</GradientHeading> <p className=\"mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto\" /> {description ;}
-}</p> </div> {/* Filters and Search */ \";}
-}<div className=\"bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light\" /> <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\" /> <div className=\"relative\" /> <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate\" /> <Input className=\"pl-10 bg-zion-blue border border-zion-blue-light text-white\" /> </div> <Select value= {selectedSort ;}
-}onValueChange= {setSelectedSort \";}
-} /> <SelectTrigger className=\"bg-zion-blue border border-zion-blue-light text-white\" /> <div className=\"flex items-center\" /> {'\";}
+case 'a-z': return a.title.localeCompare (b.title)';}"
+case 'z-a': return (<> <div className=\"min-h-screen bg-zion-blue py-12 px-4\" /> <div className=\"container mx-auto\" /> <div className=\"text-center mb-12\" /> <GradientHeading /> {title \";}"
+}</GradientHeading> <p className=\"mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto\" /> {description ;}"
+}</p> </div> {/* Filters and Search */ \";}"
+}<div className=\"bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light\" /> <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\" /> <div className=\"relative\" /> <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate\" /> <Input className=\"pl-10 bg-zion-blue border border-zion-blue-light text-white\" /> </div> <Select value= {selectedSort ;}"
+}onValueChange= {setSelectedSort \";}"
+} /> <SelectTrigger className=\"bg-zion-blue border border-zion-blue-light text-white\" /> <div className=\"flex items-center\" /> {'\";}"
   selectedSort === 'a-z' ? (<ArrowDownAZ className=\"mr-2 h-4 w-4\" />) : selectedSort === 'z-a' ? (<ArrowUpZA className=\"mr-2 h-4 w-4\" />) : null ;}
-}<span /> {';}
-  sortOptions.find (option => option.value === selectedSort) ?.label || 'Sort By' \";}
-}</span> </div> </SelectTrigger> <SelectContent className=\"bg-zion-blue-dark border border-zion-blue-light\" /> {sortOptions.map ( (option) => (<SelectItem key= {option.value ;}
-}value= {option.value \";}
+}<span /> {';}"
+  sortOptions.find (option => option.value === selectedSort) ?.label || 'Sort By' \";}"
+}</span> </div> </SelectTrigger> <SelectContent className=\"bg-zion-blue-dark border border-zion-blue-light\" /> {sortOptions.map ( (option) => (<SelectItem key= {option.value ;}"
+}value= {option.value \";}"
 }className=\"text-white\" /> {option.label ;}
-}</SelectItem>) )}</SelectContent> </Select> <Select value= {selectedFilter ;}
-}onValueChange= {setSelectedFilter \";}
-} /> <SelectTrigger className=\"bg-zion-blue border border-zion-blue-light text-white\" /> <div className=\"flex items-center\" /> <Filter className=\"mr-2 h-4 w-4\" /> <span /> {';}
-  filterOptions.find (option => option.value === selectedFilter) ?.label || 'Filter' \";}
-}</span> </div> </SelectTrigger> <SelectContent className=\"bg-zion-blue-dark border border-zion-blue-light\" /> {filterOptions.map ( (option) => (<SelectItem key= {option.value ;}
-}value= {option.value \";}
-}className=\"text-white\" /> {option.label ;}
-}</SelectItem>) )}</SelectContent> </Select> </div> </div> {/* Results Count */ \";}
+}</SelectItem>) )}</SelectContent> </Select> <Select value= {selectedFilter ;}"
+}onValueChange= {setSelectedFilter \";}"
+} /> <SelectTrigger className=\"bg-zion-blue border border-zion-blue-light text-white\" /> <div className=\"flex items-center\" /> <Filter className=\"mr-2 h-4 w-4\" /> <span /> {';}"
+  filterOptions.find (option => option.value === selectedFilter) ?.label || 'Filter' \";}"
+}</span> </div> </SelectTrigger> <SelectContent className=\"bg-zion-blue-dark border border-zion-blue-light\" /> {filterOptions.map ( (option) => (<SelectItem key= {option.value ;}"
+}value= {option.value \";}"
+}className=\"text-white\" /> {option.label ;}"
+}</SelectItem>) )}</SelectContent> </Select> </div> </div> {/* Results Count */ \";}"
 }<div className=\"mb-6\" /> </p> </div> {/* Listings Grid */ ;}
-}<div aria-busy= {isLoading ;}
-} /> {\";}
+}<div aria-busy= {isLoading ;}"
+} /> {\";}"
   isLoading ? (<ListingGridSkeleton />) : processedListings.length > 0 ? (<div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" /> {processedListings.map ( (listing) => (<ListingScoreCard key= {listing.id ;}
 }title= {listing.title ;}
 }description= {listing.description ;}
@@ -468,9 +468,9 @@ case 'z-a': return (<> <div className=\"min-h-screen bg-zion-blue py-12 px-4\" /
 }authorImage= {listing.authorImage ;}
 }aiScore= {listing.aiScore ;}
 }rating= {listing.rating ;}
-}reviewCount= {listing.reviewCount ;}
-}/>) ) \";
-}</div>) : (<div className=\"text-center py-20\" /> <h3 className=\"text-xl font-bold text-white mb-2\" />No listings found</h3> <p className=\"text-zion-slate-light mb-6\"  />Try adjusting your filters or search query</p> <Button ;
-}\";
-}className=\"border-zion-purple text-zion-purple hover:bg-zion-purple/10\" ;
-}</div /> </div> </div> </>)}'\";
+}reviewCount= {listing.reviewCount ;}"
+}/>) ) \";"
+}</div>) : (<div className=\"text-center py-20\" /> <h3 className=\"text-xl font-bold text-white mb-2\" />No listings found</h3> <p className=\"text-zion-slate-light mb-6\"  />Try adjusting your filters or search query</p> <Button ;"
+}\";"
+}className=\"border-zion-purple text-zion-purple hover:bg-zion-purple/10\" ;"
+}</div /> </div> </div> </>)}'\";"

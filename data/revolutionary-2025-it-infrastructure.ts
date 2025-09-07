@@ -1,11 +1,6 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface Revolutionary2025ITService  {id: string;
-  id: string;
-=======
+
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: string;
   tagline: string;
   price: string;
@@ -46,16 +41,9 @@ name: string;
     color: 'from-red-600 to-pink-700';
     textColor: 'text-red-400';
     link: 'https://ziontechgroup.com/quantum-cybersecurity-platform';
-<<<<<<< HEAD;}
-website: string;}
-  }marketPosition: 'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.';
-    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors';trialDays: 30;
-    setupTime: '8 hours';category: 'Cybersecurity & Quantum Security';
 
-    marketPosition: 'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.'
-=======
     marketPosition: \"marketPosition\",
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors';
     trialDays: 30;
     setupTime: '8 hours';
@@ -2195,12 +2183,11 @@ export default revolutionary2025ITServices;
     ],
     roi: 'Enterprises see 3000%+ ROI through reduced downtime and automated operations.',
   competitors: ['GitLab', 'Jenkins', 'CircleCI'],
-<<<<<<< HEAD;
-=======
+
     market_size: '$150B DevOps market',
   growth_rate: '600% annual growth',
     contact_info: {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',}
@@ -2234,12 +2221,11 @@ mobile: '+1 302 464 0950',
     ],
     roi: 'Enterprises see 2500%+ ROI through improved data quality and reduced data loss.',
   competitors: ['Informatica', 'Talend', 'Alteryx'],
-<<<<<<< HEAD;
-=======
+
     market_size: '$100B data management market',
   growth_rate: '500% annual growth',
     contact_info: {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',}
@@ -2253,8 +2239,7 @@ mobile: '+1 302 464 0950',
   tagline: 'Intelligent Edge Computing with Zero Latency & Unlimited Scale',
     price: '$499',
   period: '/month',
-<<<<<<< HEAD;
-=======
+
     description:;
       'Revolutionary edge computing platform that orchestrates distributed computing resources, IoT devices, and edge applications with zero latency and unlimited scale.',
     features: [;
@@ -2269,7 +2254,7 @@ mobile: '+1 302 464 0950',
     ],
     popular: true,
     icon: '🌐',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
       'Python',
       'Kubernetes',
       'Edge APIs'
@@ -2285,12 +2270,11 @@ mobile: '+1 302 464 0950',
     ],
     roi: 'IoT companies see 3000%+ ROI through zero latency and unlimited scalability.',
   competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT'],
-<<<<<<< HEAD;
-=======
+
     market_size: '$150B edge computing market',
   growth_rate: '700% annual growth',
     contact_info: {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',}
@@ -2304,12 +2288,11 @@ mobile: '+1 302 464 0950',
   tagline: 'Enterprise Blockchain with Zero Gas Fees & Infinite Scalability',
     price: '$799',
   period: '/month',
-<<<<<<< HEAD;
-=======
+
     description:;
       'Revolutionary blockchain infrastructure platform that provides enterprise - grade blockchain solutions with zero gas fees, infinite scalability, and seamless Web3 integration.',
     features: [;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
       'Zero gas fees',
       'Infinite scalability',
       'Enterprise blockchain',
@@ -2334,8 +2317,7 @@ mobile: '+1 302 464 0950',
       'DeFi applications',
       'NFT marketplaces',
       'Smart contracts',
-<<<<<<< HEAD;
-=======
+
       'Cross - chain applications',
     ],
     roi: 'Enterprises see 4000%+ ROI through zero gas fees and infinite scalability.',
@@ -2343,7 +2325,7 @@ mobile: '+1 302 464 0950',
     market_size: '$100B blockchain market',
   growth_rate: '800% annual growth',
     contact_info: {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',}
@@ -2380,12 +2362,11 @@ mobile: '+1 302 464 0950',
     ],
     roi: 'Enterprises see 2000%+ ROI through zero downtime and improved API performance.',
   competitors: ['Kong', 'Apigee', 'AWS API Gateway'],
-<<<<<<< HEAD;
-=======
+
     market_size: '$50B API management market',
   growth_rate: '400% annual growth',
     contact_info: {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',}
@@ -2422,12 +2403,11 @@ mobile: '+1 302 464 0950',
     ],
     roi: 'Enterprises see 3000%+ ROI through improved decision making and business insights.',
   competitors: ['Tableau', 'Power BI', 'Looker'],
-<<<<<<< HEAD;
-=======
+
     market_size: '$100B business intelligence market',
   growth_rate: '500% annual growth',
     contact_info: {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',}
@@ -2464,12 +2444,11 @@ mobile: '+1 302 464 0950',
     ],
     roi: 'Enterprises see 5000%+ ROI through complete digital transformation and innovation enablement.',
   competitors: ['McKinsey', 'BCG', 'Bain'],
-<<<<<<< HEAD;
-=======
+
     market_size: '$200B digital transformation market',
   growth_rate: '600% annual growth',
     contact_info: {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',}
@@ -2537,12 +2516,9 @@ technology: [
       mobile: '+1 302 464 0950';}
     reviews: 145}
   }
-<<<<<<< HEAD;
-  // ☁️ Quantum Cloud Infrastructure Services;
-    ];
-=======
+
   // ☁️ Quantum Cloud Infrastructure Services    ];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 popular: true, icon: '🔒',
   color: 'from-red-600 to-pink-700', textColor: 'text-red-400',
   link: 'https://ziontechgroup.com/quantum-cybersecurity-platform', marketPosition: 'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.',
@@ -3559,11 +3535,5 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
 ];
 ;
 export default revolutionary2025ITServices;
-<<<<<<< HEAD;
-;
-export default revolutionary2025ITServices;
 
-
-=======
 ;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

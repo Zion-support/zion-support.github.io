@@ -1527,7 +1527,7 @@ const iconMap = {home: LucideHome;
   return <LucideIconComponent size={size} className={className} {...props} />;
 }
 
-const LucideIconComponent = iconMap[name],class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+const LucideIconComponent = iconMap[name],class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }return this.props.children;
@@ -2778,7 +2778,7 @@ export const Icon: React.FC < IconProps> = ({ name,size = 24, // Default size;}
 const LucideIconComponent = icon_map[name];
   // Check condition;}
 if ( {) {$2;}
-}
+}"
     log_warn (`Icon \"${name}\" not found.`)return null;
   }
   // Render the dynamically selected Lucide icon component;
@@ -2811,4 +2811,4 @@ export const Icons = iconMap, // Export the map if you need to refer to availabl
 
 export default Icon, // Default export the Icon component;
 
-export const Icons = iconMap, // Export the map if you need to refer to available icons;
+export const Icons = iconMap, // Export the map if you need to refer to available icons;"

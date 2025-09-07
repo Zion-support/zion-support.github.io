@@ -2,20 +2,20 @@ import React, { createContext, useContext, useState, useEffect } from 'react' in
    reducedMotion: boolean;\"\";
    fontSize: 'small' | 'medium' | 'large';
    focusVisible: boolean;}
-   screenReader: boolea,}
+   screenReader: boolea}
 }
 
 interface AccessibilityContextType {
-  settings: AccessibilitySettings;
+  settings: AccessibilitySettings;"
    updateSettings: (settings: Partial<AccessibilitySettings />) => void\"\";}
-   resetSettings: () => void,}
+   resetSettings: () => void}
 }
-
-const AccessibilityContext = createContext<AccessibilityContextType | undefined\"  />(undefined) const defaultSettings: AccessibilitySettings = { highContrast: false, reducedMotion: false, fontSize: 'medium',}
+"
+const AccessibilityContext = createContext<AccessibilityContextType | undefined\"  />(undefined) const defaultSettings: AccessibilitySettings = { highContrast: false, reducedMotion: false, fontSize: 'medium'}
   focusVisible: true, screenReader: fals;}
 }
 
-export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({ children   ,}
+export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({ children   }
 }) => {
 }
 }
@@ -27,6 +27,6 @@ export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({
   const resetSettings = ( setSettings(defaultSettings) localStorage.removeItem('accessibility-settings') ) => {
   return $3;}
 };
-  useEffect(() => {}
+  useEffect(() => {}"
 ''\";}
-}}
+}}"

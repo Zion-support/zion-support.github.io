@@ -13,7 +13,7 @@ interface TalentCardSaveButtonProps  {profileId: string;
 export function TalentCardSaveButton() {const { toast } = useToast()const router = null;
           localIsSaved ? \"fill-red-500 text-red-500\" : \"text-zion-slate\";
         )}/>;
-    </button>;
+    </button>;"
   )}variant: \"default\";
-})}
-}/> </button>)}\";
+})}"
+}/> </button>)}\";"

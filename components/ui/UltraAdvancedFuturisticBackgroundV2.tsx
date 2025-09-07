@@ -58,13 +58,13 @@ let animationFrameId: number;
     }> = [];
 
 const colors = [
-  '#00ffff','#ff00ff','#ffff00','#00ff00','#ff0080','#8000ff','#ff8000','#0080ff','#ff0080','#80ff00',];
+  '#00ffff','#ff00ff','#ffff00','#00ff00','#ff0080','#8000ff','#ff8000','#0080ff','#ff0080','#80ff00'];
     // Initialize particles;
 
 const initParticles = (particles = [];) => {
   return $3;}
 }
-for (let i = 0; i < 150; i++) {particles.push({x: Math.random() * canvas.width,y: Math.random() * canvas.height,vx: (Math.random() - 0.5) * 2,vy: (Math.random() - 0.5) * 2,size: Math.random() * 3 + 1,color: colors[Math.floor(Math.random() * colors.length)],life: Math.random() * 100,maxLife: 100,})}
+for (let i = 0; i < 150; i++) {particles.push({x: Math.random() * canvas.width,y: Math.random() * canvas.height,vx: (Math.random() - 0.5) * 2,vy: (Math.random() - 0.5) * 2,size: Math.random() * 3 + 1,color: colors[Math.floor(Math.random() * colors.length)],life: Math.random() * 100,maxLife: 100})}
     }
     // Update and draw particles;
 
@@ -156,68 +156,68 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
 className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20'
           animate={{
             rotate: [0, 360],
-            scale: [1, 1.2, 1],}
-            opacity: [0.1, 0.3, 0.1],}
+            scale: [1, 1.2, 1]}
+            opacity: [0.1, 0.3, 0.1]}
           }}
           transition={{
             duration: 8,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
         />
         <motion.div;
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20'
           animate={{
             rotate: [360, 0],
-            scale: [1, 0.8, 1],}
-            opacity: [0.1, 0.4, 0.1],}
+            scale: [1, 0.8, 1]}
+            opacity: [0.1, 0.4, 0.1]}
           }}
           transition={{
             duration: 6,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
         />
         <motion.div;
 className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20'
           animate={{
             rotate: [0, 360],
-            scale: [1, 1.3, 1],}
-            opacity: [0.1, 0.2, 0.1],}
+            scale: [1, 1.3, 1]}
+            opacity: [0.1, 0.2, 0.1]}
           }}
           transition={{
             duration: 10,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
         />
         <motion.div;
 className='absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20'
           animate={{
             rotate: [360, 0],
-            scale: [1, 0.9, 1],}
-            opacity: [0.1, 0.3, 0.1],}
+            scale: [1, 0.9, 1]}
+            opacity: [0.1, 0.3, 0.1]}
           }}
           transition={{
             duration: 7,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
           transition={{
-            duration: 7,}
-            repeat: Infinity,}
+            duration: 7}
+            repeat: Infinity}
           }}
 
       {/* Quantum Energy Particles */}
       <div className='fixed inset-0 pointer-events-none z-20' />;
         {[...Array(20)].map((_, i) => (<motion&& motion.div;
-            ease: 'easeInOut',}
+            ease: 'easeInOut'}
   ease: \"easeInOut\";}
           }}
         />;
       </div>;
       {/* Quantum Energy Particles */}
-            duration: 7,repeat: Infinity,ease: 'easeInOut',
+            duration: 7,repeat: Infinity,ease: 'easeInOut',"
   ease: \"easeInOut\";
           }}}}/>;
       </div>;
@@ -226,34 +226,34 @@ ease: 'easeInOut',}
         {[...Array(20)].map((_, i) => (<motion.div;}
             key={i}
             className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
-            style={{left: `${Math.random() * 10,}
+            style={{left: `${Math.random() * 10}
 }%`;
-              top: `${Math.random() * 10,}
+              top: `${Math.random() * 10}
 }%`;
             }}
 
             animate={{
 
               y: [0, -100, 0],
-              opacity: [0, 1, 0],}
-              scale: [0, 1, 0],}
+              opacity: [0, 1, 0]}
+              scale: [0, 1, 0]}
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
-ease: 'easeInOut',}
+ease: 'easeInOut'}
 }
             }}
             transition={{duration: 3 + Math.random() * 2;
               repeat: Infinity;}
-              delay: Math.random() * 2;}
-              duration: 3 + Math && Math.random() * 2,repeat: Infinity,delay: Math && Math.random() * 2,transition={{ease: 'easeInOut',            }}              ease: \"easeInOut\";
-              y: [0, -100, 0],opacity: [0, 1, 0],scale: [0, 1, 0],}}
-            transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut',}}
+              delay: Math.random() * 2;}"
+              duration: 3 + Math && Math.random() * 2,repeat: Infinity,delay: Math && Math.random() * 2,transition={{ease: 'easeInOut'            }}              ease: \"easeInOut\";
+              y: [0, -100, 0],opacity: [0, 1, 0],scale: [0, 1, 0]}}
+            transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut'}}
           />;
         ))}
-            transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut',            }}/>;
+            transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut'            }}/>;
         ))}
 
       </div>
@@ -288,23 +288,23 @@ stroke='url(#neuralGradient)'
               opacity='0 && 0.1'
               animate={{
 
-                opacity: [0.1, 0.3, 0.1],}
-                strokeDasharray: [0, 100, 0],}
+                opacity: [0.1, 0.3, 0.1]}
+                strokeDasharray: [0, 100, 0]}
               }}
               transition={{
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
-                delay: Math.random() * 2,}
-ease: 'easeInOut',}
+                delay: Math.random() * 2}
+ease: 'easeInOut'}
               }}
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-                ease: 'easeInOut',              }}
+                ease: 'easeInOut'              }}
 
               }}
 
-                ease: 'easeInOut',              }}
+                ease: 'easeInOut'              }}
 
               }}
 
@@ -320,3 +320,4 @@ ease: 'easeInOut',}
 
 export default UltraAdvancedFuturisticBackgroundV2;
 
+"

@@ -1,13 +1,7 @@
-<<<<<<< HEAD;
-;
-  id: string;
-export interface ResearchDevelopmentService2029  {id: string;name: string;
-  id: string;
-  name: string;
-=======
+
 id: string;
   name: string,
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 description: string;
   category: string[];
   price: string;
@@ -408,9 +402,8 @@ description: string;
     ];
     useCases: [
       'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies'
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
   ];    features: [;
       'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management';

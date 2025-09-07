@@ -44,39 +44,11 @@ export interface InnovativeITService {
       '5G optimization',
     ],
     popular: true,
-<<<<<<< HEAD;
-icon: '🌐',
-      'Edge Computing',
-      'IoT',
-      '5G',
-      'Kubernetes',
-      'Docker',
-      'React',
-      'Node && Node.js',
-      'Python',
-      'AWS',
-    ],
-      address: '364 E Main St STE 1008 Middletown DE 19709',}
-  website: 'https://ziontechgroup.com';}
-    }
-    real_implementation: true,
-    implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.';
-    launch_date: '2024 - 01 - 20';
-    customers: 2500;
-    rating: 4.7,
-    reviews: 1250;
 
-  }
-
-;
-    realImplementation: true;
-implementationDetails:
-      'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
-=======
     icon: '🌐',
   realImplementation: true;
     implementationDetails: \"implementationDetails\",
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 launchDate: '2024-01-01',
   customers: 800;
 rating: 4.9;
@@ -372,11 +344,6 @@ export const innovativeITServices: InnovativeITService[] = [;
     rating: 4.7,
     reviews: 1250;
   }
-<<<<<<< HEAD;
-;
-  }
-];
-=======
+
 ;  }
 ];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

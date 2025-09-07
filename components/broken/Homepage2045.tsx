@@ -21,10 +21,10 @@ import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-
 // Loading fallback component;
 const LoadingFallback = null;
     <motion.div;
-initial={{ opacity: 0, scale: 0.5 ,}
+initial={{ opacity: 0, scale: 0.5 }
 }
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 ,}
+      transition={{ duration: 0.5 }
 }
 className='text-center' />
 
@@ -50,27 +50,27 @@ const timer = setTimeout(() => {setIsLoading(false)setIsVisible(true)}, 800;
   return () => clearTimeout(timer)}, [])// Intersection Observer for better performance;
   useEffect(() => {}
 if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {const observer = new (window as any).IntersectionObserver((entries: any[]) => {entries.forEach(entry => {if (entry.isIntersecting) {setActiveSection(entry.target.id)}
-          },
-},{ threshold: 0.3, rootMargin: '-100px',}
+          }
+},{ threshold: 0.3, rootMargin: '-100px'}
 }
       )const sections = document.querySelectorAll('section[id]')sections.forEach(section => observer.observe(section);
   return () => observer.disconnect()}
-  }, [])const fadeInUp = {initial: { opacity: 0, y: 60,}
-},animate: { opacity: 1, y: 0,}
-},transition: { duration: 0.6, ease: 'easeOut',}
-},}
+  }, [])const fadeInUp = {initial: { opacity: 0, y: 60}
+},animate: { opacity: 1, y: 0}
+},transition: { duration: 0.6, ease: 'easeOut'}
+}}
 
-const staggerContainer = {animate: {transition: {staggerChildren: 0.1,delayChildren: 0.2,},},}
+const staggerContainer = {animate: {transition: {staggerChildren: 0.1,delayChildren: 0.2}}}
 
-const backgroundVariants = {initial: { opacity: 0, scale: 0.8,}
-},animate: { opacity: 1, scale: 1,}
-},transition: { duration: 1.2, ease: 'easeOut',}
+const backgroundVariants = {initial: { opacity: 0, scale: 0.8}
+},animate: { opacity: 1, scale: 1}
+},transition: { duration: 1.2, ease: 'easeOut'}
 };
 }
 
 const getColorClasses = (index: number) => ;
   const colors = [
-  'from-cyan-400 to-blue-500','from-purple-400 to-pink-500','from-emerald-400 to-teal-500','from-orange-400 to-red-500','from-indigo-400 to-purple-500','from-yellow-400 to-orange-500',];
+  'from-cyan-400 to-blue-500','from-purple-400 to-pink-500','from-emerald-400 to-teal-500','from-orange-400 to-red-500','from-indigo-400 to-purple-500','from-yellow-400 to-orange-500'];
     return colors[index % colors.length]
 };
 
@@ -108,15 +108,15 @@ return (
               animate={{rotate: [0, 360];}
                 scale: [1, 1.1, 1];}
                 opacity: [0.3, 0.6, 0.3]}}
-              transition={{duration: 8,repeat: Infinity,ease: 'easeInOut',              }}
+              transition={{duration: 8,repeat: Infinity,ease: 'easeInOut'              }}
             />;
             <motion.div;
               className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full';
-              animate = {{rotate: [360, 0],scale: [1, 1.2, 1],opacity: [0.3, 0.7, 0.3],staggerChildren: 0.1,delayChildren: 0.2,},},  }
+              animate = {{rotate: [360, 0],scale: [1, 1.2, 1],opacity: [0.3, 0.7, 0.3],staggerChildren: 0.1,delayChildren: 0.2}}  }
 }
 ;
-  const backgroundVariants = {initial: { opacity: 0, scale: 0.8,}
-},animate: { opacity: 1, scale: 1,}
+  const backgroundVariants = {initial: { opacity: 0, scale: 0.8}
+},animate: { opacity: 1, scale: 1}
 };
   return (}}
               }}duration: 6,animate={{rotate: [45, 405];}
@@ -125,9 +125,9 @@ return (
 
               transition={{
                 duration: 10,
-                repeat: Infinity,
+                repeat: Infinity
 }
-                ease: 'easeInOut',}
+                ease: 'easeInOut'}
               }}
             />
           </div>
@@ -139,20 +139,20 @@ return (
 
 <div className='relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8' />
             <motion.div;
-initial={{ opacity: 0, y: 30 ,}
+initial={{ opacity: 0, y: 30 }
 }
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
+              transition={{ duration: 0.8 }
 }
 
 className='mb-8'
              />
               <motion.h1;
-initial={{ opacity: 0, y: 20 ,}
+initial={{ opacity: 0, y: 20 }
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={{ opacity: 1, y: 0 }
 }
-                transition={{ duration: 0.8, delay: 0.2 ,}
+                transition={{ duration: 0.8, delay: 0.2 }
 }
 
 className='text-5xl md:text-7xl font-bold mb-6'
@@ -162,12 +162,12 @@ className='text-5xl md:text-7xl font-bold mb-6'
                 </span>
               </motion.h1>
               <motion.p;
-initial={{ opacity: 0, y: 20 ,}
+initial={{ opacity: 0, y: 20 }
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={{ opacity: 1, y: 0 }
 }
 
-                transition={{ duration: 0.8, delay: 0.4 ,}
+                transition={{ duration: 0.8, delay: 0.4 }
 }
 className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'
                />
@@ -177,7 +177,7 @@ technologies. Leading the future of technology innovation.
               </motion.p>
             </motion.div>
 
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 ,}
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }
 }
                 className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
                 Transform your business with Zion Tech Group's revolutionary AI;
@@ -188,10 +188,10 @@ technologies. Leading the future of technology innovation.
               </motion && motion.p>;
             </motion && motion.div>;{/* CTA Buttons */}
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 20 ,}
+              initial={{ opacity: 0, y: 20 }
 }
 
-              animate={{ opacity: 1, y: 0 ,}
+              animate={{ opacity: 1, y: 0 }
 }
 
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -211,13 +211,13 @@ href='/services'
               </Link>
             </motion.div>
 
-            {/* Stats *,}
+            {/* Stats *}
 }
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 20 ,}
+              initial={{ opacity: 0, y: 20 }
 }
 
-              animate={{ opacity: 1, y: 0 ,}
+              animate={{ opacity: 1, y: 0 }
 }
 
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -245,13 +245,13 @@ className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'
             </motion.div>
           </div>
         </section>
-        {/* Featured Services Section *,}
+        {/* Featured Services Section *}
 }
 
 <section id='featured-services' className='py-20 relative' />
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />
             <motion.div;
-initial={{ opacity: 0, y: 30 ,}
+initial={{ opacity: 0, y: 30 }
 }
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -271,7 +271,7 @@ technology.
               </p>
             </motion.div>
 
-            {/* Service Categories Grid *,}
+            {/* Service Categories Grid *}
 }
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />;
               {[;
@@ -314,23 +314,23 @@ technology.
                   title: 'Emerging Tech';}
                   description:;}
                     'Cutting-edge technologies that define the future of innovation',color: 'from-yellow-400 to-orange-500',
-  href: '/emerging-tech',},].map((service, index) => (<motion.div;
+  href: '/emerging-tech'}].map((service, index) => (<motion.div;
                   key={service.title}
-                  initial={{ opacity: 0, y: 30 ,}
+                  initial={{ opacity: 0, y: 30 }
 }
-                  whileInView={{ opacity: 1, y: 0 ,}
+                  whileInView={{ opacity: 1, y: 0 }
 }
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 className='group' />
 
-                  <Link href={service.hre,}
+                  <Link href={service.hre}
 } />;
                     <div className='relative p-8 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25' />;
                       <div;
                         className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover: scale-110 transition-transform duration-300`} />
 
-                        {service.ico,}
+                        {service.ico}
 }
                       </div>;
                       <h3 className='text-2xl font-bold text-white mb-4' />;
@@ -358,11 +358,11 @@ id='latest-innovations'
          />
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />
             <motion.div;
-initial={{ opacity: 0, y: 30 ,}
+initial={{ opacity: 0, y: 30 }
 }
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true ,}
+              viewport={{ once: true }
 }
 
 className='text-center mb-16'
@@ -388,12 +388,12 @@ standards in technology innovation.
                 Explore our newest revolutionary services that are setting new;
                 standards in technology innovation.              </p>;
             </motion && motion.div>;
-            {/* Featured New Services */}            >;
-              <h2 className=\"text-4xl md:text-5xl font-bold mb-6\" />;
+            {/* Featured New Services */}            >;"
+              <h2 className=\"text-4xl md:text-5xl font-bold mb-6\" />;"
                 <span className=\"bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent\" />;
                   Latest Innovations;
                 </span>;
-              </h2>;
+              </h2>;"
               <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\" />;
                 Explore our newest revolutionary services that are setting new standards in technology innovation.;
               </p>;
@@ -407,15 +407,15 @@ standards in technology innovation.
                 .map((service, index) => (}
                   <motion.div;}
 key={service.id}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 ,}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }
 }
-                    whileInView={{ opacity: 1, x: 0 ,}
+                    whileInView={{ opacity: 1, x: 0 }
 }
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     className='group' />
 
-                    <Link href={service.lin,}
+                    <Link href={service.lin}
 } />;
                       <div className='relative p-6 bg-black/50 backdrop-blur-sm border border-gray-700/50 rounded-xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105' />;
                         <div className='flex items-start justify-between mb-4' />;
@@ -449,7 +449,7 @@ key={service.id}
             {/* View All Services CTA */}
 
             <motion.div;
-initial={{ opacity: 0, y: 20 ,}
+initial={{ opacity: 0, y: 20 }
 }
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
@@ -467,17 +467,17 @@ href='/services'
             </motion.div>
           </div>
         </section>
-        {/* Contact CTA Section *,}
+        {/* Contact CTA Section *}
 }
 
 <section id='contact-cta' className='py-20 relative' />
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center' />
             <motion.div;
-initial={{ opacity: 0, y: 30 ,}
+initial={{ opacity: 0, y: 30 }
 }
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true ,}
+              viewport={{ once: true }
 }
 
              />
@@ -513,16 +513,16 @@ href='tel:+1 302 464 0950'
 
 );
   animate: {}
-  transition: {,}
+  transition: {}
 };
-  /* CTA Buttons */ 
+  /* CTA Buttons */ "
 }<motion.div  /> <Link href=\"/contact\" className=\"px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105\"  /> Get Started </a> <Link href=\"/services\" className=\"px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105\"  /> Explore Services </a> </motion.div> {}
-  /* Stats */}
-}<motion.div  /> <div className=\"text-center\"  /> <div className=\"text-3xl md:text-4xl font-bold text-cyan-400 mb-2\"  />500+</div> <div className=\"text-gray-400\"  />Innovative Services</div> </div> <div className=\"text-center\"  /> <div className=\"text-3xl md:text-4xl font-bold text-purple-400 mb-2\"  />4.9/5</div> <div className=\"text-gray-400\"  />Customer Rating</div> </div> <div className=\"text-center\"  /> <div className=\"text-3xl md:text-4xl font-bold text-pink-400 mb-2\"  />1000+</div> <div className=\"text-gray-400\"  />Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className=\"text-4xl md:text-5xl font-bold mb-6\"  /> <span className=\"bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent\"  /> Revolutionary Services </span> </h2> <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"  /> Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) )
-}</div> </div> </section> > <h2 className=\"text-4xl md:text-5xl font-bold mb-6\"  /> <span className=\"bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent\"  /> Latest Innovations </span> </h2> <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"  /> Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>)
-}</div> </div> <div className=\"flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors\"  /> <span className=\"mr-2 text-sm\"  />Learn More</span> <ArrowRight className=\"w-4 h-4 group-hover:translate-x-1 transition-transform\" /> </div> </div> </div> </a> </motion.div>) ),
+  /* Stats */}"
+}<motion.div  /> <div className=\"text-center\"  /> <div className=\"text-3xl md:text-4xl font-bold text-cyan-400 mb-2\"  />500+</div> <div className=\"text-gray-400\"  />Innovative Services</div> </div> <div className=\"text-center\"  /> <div className=\"text-3xl md:text-4xl font-bold text-purple-400 mb-2\"  />4.9/5</div> <div className=\"text-gray-400\"  />Customer Rating</div> </div> <div className=\"text-center\"  /> <div className=\"text-3xl md:text-4xl font-bold text-pink-400 mb-2\"  />1000+</div> <div className=\"text-gray-400\"  />Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className=\"text-4xl md:text-5xl font-bold mb-6\"  /> <span className=\"bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent\"  /> Revolutionary Services </span> </h2> <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"  /> Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) )"
+}</div> </div> </section> > <h2 className=\"text-4xl md:text-5xl font-bold mb-6\"  /> <span className=\"bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent\"  /> Latest Innovations </span> </h2> <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"  /> Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>)"
+}</div> </div> <div className=\"flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors\"  /> <span className=\"mr-2 text-sm\"  />Learn More</span> <ArrowRight className=\"w-4 h-4 group-hover:translate-x-1 transition-transform\" /> </div> </div> </div> </a> </motion.div>) )
 }</div> {}
-  /* View All Services CTA */;}
+  /* View All Services CTA */;}"
 }<motion.div  /> <Link href=\"/services\" className=\"inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan-500 / 30 transform hover:scale-105\"  /> View All Services <ArrowRight className=\"ml - 2 w-5 h-5\" /> </a> </motion.div> </div> </section> <motion.div initial= {
   {}
   opacity: 0, coordinate_y: 30;}
@@ -536,9 +536,10 @@ href='tel:+1 302 464 0950'
   {
 
   once: true }
-}
-} /> Ready to Transform? </span> </h2> <p className=\"text-xl text-gray-300 mb-8\"  /> Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className=\"flex flex-col sm:flex-row gap-4 justify-center items-center\"  /> <Link href=\"/contact\" className=\"px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105\"  /> Get Started </a> <a href=\"tel:+1 302 464 0950\" className=\"px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105\"  /> Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) ,
+}"
+} /> Ready to Transform? </span> </h2> <p className=\"text-xl text-gray-300 mb-8\"  /> Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className=\"flex flex-col sm:flex-row gap-4 justify-center items-center\"  /> <Link href=\"/contact\" className=\"px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105\"  /> Get Started </a> <a href=\"tel:+1 302 464 0950\" className=\"px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105\"  /> Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
 };
 
 export default Homepage2045;
 
+"

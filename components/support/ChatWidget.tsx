@@ -30,15 +30,15 @@ sessionIdRef.current = generateSessionId();}
 setMessages([
 {
           role: 'assistant',
-  content: 'Hi! How can I help you?',}
-          timestamp: Date.now(),}
-        },
+  content: 'Hi! How can I help you?'}
+          timestamp: Date.now()}
+        }
       ]);
     }
   }, [isOpen, messages.length]);
   useEffect(() => {
 }
-messagesEndRef.current?.scrollIntoView({ behavior: 'smooth',}
+messagesEndRef.current?.scrollIntoView({ behavior: 'smooth'}
 });
   }, [messages]);
 
@@ -49,14 +49,14 @@ const quickReplies = useMemo(
   async function logEvent(eventType: string, payload: any) {
     try {
       await fetch('/api/support/session', {
-        method: 'POST',}
-  headers: { 'Content-Type': 'application/json',}
+        method: 'POST'}
+  headers: { 'Content-Type': 'application/json'}
 },
 body: JSON.stringify({
           sessionId: sessionIdRef.current,
-          eventType,}
-          payload,}
-        }),
+          eventType}
+          payload}
+        })
       });
     } catch {}
   }
@@ -65,31 +65,31 @@ body: JSON.stringify({
     try {
       await fetch('/api/support/escalate', {
 
-        method: 'POST',}
-  headers: { 'Content-Type': 'application/json',}
+        method: 'POST'}
+  headers: { 'Content-Type': 'application/json'}
 },
 body: JSON.stringify({
           sessionId: sessionIdRef.current,
-          reason,}
-          tag: 'escalate',}
-        }),
+          reason}
+          tag: 'escalate'}
+        })
       });
       setShowEscalation(true);
     } catch {}
   }
 
-      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' },
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' }
 }),
 
       setShowEscalation(true)
       setShowEscalation(true);    } catch {}
 
-      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' },
-}),
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' }
+})
     } catch {}
   }
 
-      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' },
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' }
 }),
 
       setShowEscalation(true)
@@ -104,40 +104,40 @@ body: JSON.stringify({
 
 const newUserMessage: ChatMessage = {
       role: 'user',
-  content: text,}
-      timestamp: Date.now(),}
+  content: text}
+      timestamp: Date.now()}
     };
     setMessages(prev => [...prev, newUserMessage]);
     setInput('');
     setIsLoading(true);
-    await logEvent('message/user', { content: text,}
+    await logEvent('message/user', { content: text}
 });
     try {
       const res = await fetch('/api/support/chat', {
-        method: 'POST',}
-  headers: { 'Content-Type': 'application/json',}
+        method: 'POST'}
+  headers: { 'Content-Type': 'application/json'}
 }
         body: JSON.stringify({}
-          sessionId: sessionIdRef.current,}
+          sessionId: sessionIdRef.current}
 messages: [...messages, newUserMessage].map(({ role, content }) => ({
-            role,}
-            content,}
-          })),
-        }),
+            role}
+            content}
+          }))
+        })
       });
 
 const data = await res.json();
       if (data?.assistantMessage) {
         const assistantMessage: ChatMessage = {
           role: 'assistant',
-  content: data.assistantMessage,}
-timestamp: Date.now(),}
+  content: data.assistantMessage}
+timestamp: Date.now()}
         };
         setMessages(prev => [...prev, assistantMessage]);
         await logEvent('message/assistant', {
           content: assistantMessage.content;
 meta: data.meta}
-       ,}
+       }
 });
       }
       if (data?.meta?.intentMatched = == false) {
@@ -161,7 +161,7 @@ meta: data.meta}
   content:
             'Sorry, something went wrong. Please try again or contact support.'
           timestamp: Date.now()}
-       ,}
+       }
 }
       ]);
     } finally {}
@@ -187,7 +187,7 @@ meta: data.meta}
               aria-label='Close'
               className='p-1 rounded hover: bg-gray-200 dark:hover:bg-gray-700'
             >
-              <X size={1,}
+              <X size={1}
 } />
             </button>
           </div>
@@ -206,7 +206,7 @@ className={
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
 }
-                 ,}
+                 }
 }
                  />;
                   {m.content}
@@ -238,7 +238,7 @@ key={q}
                 ))}
               </div>
             </div>
-          ,
+          
 }
 
 
@@ -297,7 +297,7 @@ href='/contact'
                   </a>
                 </div>
               </div>
-            ,
+            
 }
           </div>;
         </div>;
@@ -307,3 +307,4 @@ href='/contact'
   );
 }
 
+"

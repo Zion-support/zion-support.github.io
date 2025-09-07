@@ -8,44 +8,16 @@ import {
   CertificationsSection,}
 } from \"./preview\";
 
-<<<<<<< HEAD;
-import {Resume} from '@/types/resume';
-import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
 
-import { Resume } from '@/types/resume';
-import {;
-  PreviewHeader,;
-  ResumeBasicInfoSection,;
-  WorkExperienceSection,;
-  EducationSection,;
-  SkillsSection,;}
-  CertificationsSection;}
-} from './preview',;
-interface PreviewResumeProps {;}
-  resume: Resume;}
-  onBack: () => void;import { Resume } from \"@/types/resume\";
-import {
-  PreviewHeader,
-  ResumeBasicInfoSection,
-  WorkExperienceSection,
-  EducationSection,
-  SkillsSection,}
-  CertificationsSection,}
-} from \"./preview\";
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
 interface PreviewResumeProps {
   resume: Resume;}
   onBack: () => void;}
 }
 
-<<<<<<< HEAD;
-}
 
-=======
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+
 return (}
     <div className=\"space-y-6\" />}
       <PreviewHeader resume={resume} onBack={onBack} />
@@ -59,26 +31,6 @@ return (}
         <CertificationsSection certifications={resume.certifications} />
       </div>
     </div>
-<<<<<<< HEAD;
-}  );
-}
-
-    </div>;
-  ),;}
- </div> </div>) 
-}
-  );
-}
-}
-;
 
   );
 }
-  )
-}
-;
-;
-=======
-  );
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;

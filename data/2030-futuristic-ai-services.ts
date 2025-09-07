@@ -1,11 +1,7 @@
-<<<<<<< HEAD;
-  {
 
-    id: 'ai-consciousness-evolution-2030'
-=======
 {
     id: \"id\",
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: 'AI Consciousness Evolution 2030',
   tagline: 'Next-generation AI consciousness development'
     price: '$39,999',

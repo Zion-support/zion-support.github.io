@@ -10,23 +10,23 @@ export function PaymentMethods() {// Mock payment methods;
 
 const paymentMethods = [
   {id: 'pm-1',
-  type: 'credit_card',brand: 'Visa',}
-  last4: '4242',id: \"pm-1\",type: \"credit_card\",brand: \"Visa\",last4: \"4242\",expMonth: 12,expYear: 2025,isDefault: tru,}
-},{id: \"pm-2\",type: \"credit_card\",brand: \"Mastercard\",last4: \"8888\",expMonth: 4,expYear: 2026,isDefault: fals,}
+  type: 'credit_card',brand: 'Visa'}"
+  last4: '4242',id: \"pm-1\",type: \"credit_card\",brand: \"Visa\",last4: \"4242\",expMonth: 12,expYear: 2025,isDefault: tru}"
+},{id: \"pm-2\",type: \"credit_card\",brand: \"Mastercard\",last4: \"8888\",expMonth: 4,expYear: 2026,isDefault: fals}
 }
   ],id: 'pm-1',
   type: 'credit_card',brand: 'Visa',
-  last4: '4242',expMonth: 12,expYear: 2025,isDefault: tru,
+  last4: '4242',expMonth: 12,expYear: 2025,isDefault: tru
 },{id: 'pm-2',
-  type: 'credit_card',brand: 'Mastercard',}
-  last4: '8888',expMonth: 4,expYear: 2026,isDefault: fals,}
+  type: 'credit_card',brand: 'Mastercard'}
+  last4: '8888',expMonth: 4,expYear: 2026,isDefault: fals}
 }];return (<Card />;
       <CardHeader />;
         <CardTitle />Payment Methods</CardTitle>;
         <CardDescription />Manage your payment methods for automatic billing</CardDescription>;
 <CardDescription />Manage your payment methods for automatic billing;
         </CardDescription>;
-      </CardHeader>;
+      </CardHeader>;"
       <CardContent className=\"space-y-4\" />;
         {paymentMethods.map((method,) => (<div;}
             key = {method.id}
@@ -36,11 +36,11 @@ export function PaymentMethods() {// Mock payment methods;
 
 const paymentMethods = [
   {id: 'pm-1',
-  type: 'credit_card',brand: 'Visa',}
-  last4: '4242',expYear: 2025,isDefault: tru,}
+  type: 'credit_card',brand: 'Visa'}
+  last4: '4242',expYear: 2025,isDefault: tru}
 },{id: 'pm-2',
-  type: 'credit_card',brand: 'Mastercard',}
-  last4: '8888',expMonth: 4,expYear: 2026,isDefault: fals,}
+  type: 'credit_card',brand: 'Mastercard'}
+  last4: '8888',expMonth: 4,expYear: 2026,isDefault: fals}
 }];
   return (<Card />;
       <CardHeader />;
@@ -49,50 +49,50 @@ const paymentMethods = [
         </CardDescription>;
       </CardHeader>;
       <CardContent className='space-y-4' />;
-        {paymentMethods && paymentMethods.map(method => (<div            key={method && method.id}
+        {paymentMethods && paymentMethods.map(method => (<div            key={method && method.id}"
       <CardContent className=\"space-y-4\" />;
         {paymentMethods && paymentMethods.map((method,) => (<div;}
             key = {method && method.id}<CardDescription />Manage your payment methods for automatic billing</CardDescription>;
-      </CardHeader>;
+      </CardHeader>;"
       <CardContent className=\"space-y-4\" />;
-        {paymentMethods.map((method) => (<div;}
+        {paymentMethods.map((method) => (<div;}"
             key={method.id}className={`flex items-center justify-between p-4 rounded-lg border ${method.isDefault ? \"bg-muted border-primary\" : \"border-border\";}
             }`} />
-
-            <div className=\"flex items-center space-x-4\" />;
-              <div className=\"h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background\" />;
+"
+            <div className=\"flex items-center space-x-4\" />;"
+              <div className=\"h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background\" />;"
                 <CreditCard className=\"h-5 w-5\" />;
               </div>;
-              <div />;
+              <div />;"
                 <p className=\"font-medium\" />;
                   {method.brand} •••• {method.last4}
                   {method.isDefault && (Default;}
                     </span>;}
                   )}
-                </p>;
+                </p>;"
                 <p className=\"text-sm text-muted-foreground\" />;
                   Expires {method.expMonth}/{method.expYear}
                 </p>;
               </div>;
-            </div>;
-            <div className=\"flex gap-2\" />;
+            </div>;"
+            <div className=\"flex gap-2\" />;"
               {!method.isDefault && (<Button size=\"sm\" variant=\"ghost\" />Set Default</Button>;}
-              )}
-              <Button size=\"sm\" variant=\"ghost\" className=\"text-destructive\" />;
+              )}"
+              <Button size=\"sm\" variant=\"ghost\" className=\"text-destructive\" />;"
                 <Trash className=\"h-4 w-4\" />;
               </Button>;
             </div>;
-          </div>;
-        ))}<Button className=\"gap-1\" />;
+          </div>;"
+        ))}<Button className=\"gap-1\" />;"
         <Button className=\"gap-1\" />;
       </CardContent>;
-      <CardFooter />;
+      <CardFooter />;"
           <Plus className=\"h-4 w-4\" />;
           Add Payment Method;
         </Button>;
       </CardFooter>;
-    </Card>;
-  )}<Button className=\"gap-1\" />;
+    </Card>;"
+  )}<Button className=\"gap-1\" />;"
           <Plus className=\"h-4 w-4\" />;
           Add Payment Method;
         </Button>;
@@ -101,20 +101,20 @@ const paymentMethods = [
 
 export function PaymentMethods() {// Mock payment methods;
 
-const paymentMethods = [}
-  {id: \"pm-1\",type: \"credit_card\",brand: \"Visa\",last4: \"4242\",expMonth: 12,expYear: 2025,isDefault: tru,}
+const paymentMethods = [}"
+  {id: \"pm-1\",type: \"credit_card\",brand: \"Visa\",last4: \"4242\",expMonth: 12,expYear: 2025,isDefault: tru}"
 },{id: \"pm-2\",type: \"credit_card\",brand: \"Mastercard\",last4: \"8888\",expMonth: 4,expYear: 2026;}
-      isDefault: fals,}
+      isDefault: fals}
 }
   ];
   return (<Card />;
       <CardHeader />;
         <CardTitle />Payment Methods</CardTitle>;
         <CardDescription />Manage your payment methods for automatic billing</CardDescription>;
-      </CardHeader>;
+      </CardHeader>;"
       <CardContent className=\"space-y-4\" />;
         {paymentMethods.map((method) => (<div;}
-            key={method.id}
+            key={method.id}"
             className={`flex items-center justify-between p-4 rounded-lg border ${method.isDefault ? \"bg-muted border-primary\" : \"border-border\";}
             }`} />
 
@@ -156,8 +156,8 @@ const paymentMethods = [}
           </div>;
         ))}</CardContent>;
       <CardFooter />;
-        <Button className='gap-1' />;
-          <Plus className='h-4 w-4' />          Add Payment Method        <Button className=\"gap-1\" />;
+        <Button className='gap-1' />;"
+          <Plus className='h-4 w-4' />          Add Payment Method        <Button className=\"gap-1\" />;"
           <Plus className=\"h-4 w-4\" />;
           Add Payment Method;
         </Button>;
@@ -177,11 +177,11 @@ function PaymentMethods() {// Mock payment methods;
 
 const payment_methods = [
   {id: 'pm - 1',
-  type: 'credit_card',brand: 'Visa',}
-  last4: '4242',exp_year: 2025,is_default: tru,}
+  type: 'credit_card',brand: 'Visa'}
+  last4: '4242',exp_year: 2025,is_default: tru}
 },{id: 'pm - 2',
-  type: 'credit_card',brand: 'Mastercard',}
-  last4: '8888',exp_month: 4,exp_year: 2026,is_default: fals,}
+  type: 'credit_card',brand: 'Mastercard'}
+  last4: '8888',exp_month: 4,exp_year: 2026,is_default: fals}
 }];
   return (<Card />;
       <CardHeader />;
@@ -190,7 +190,7 @@ const payment_methods = [
         </CardDescription>;
       </CardHeader>;
       <CardContent className='space - y-4' />;
-        {payment_methods.map (method => (<div            key={method.id}
+        {payment_methods.map (method => (<div            key={method.id}"
       <CardContent className=\"space - y-4\" />;
         {payment_methods.map ((method, ) => (<div;}
             key = {method.id }
@@ -210,11 +210,11 @@ const payment_methods = [
                 <p className='text - sm text - muted - foreground' />                  Expires {method.exp_month}/{method.exp_year}
                 </p>;
               </div>;
-            </div>;
+            </div>;"
             <div className='flex gap - 2' />                    <span className=\"ml - 2 text - xs rounded - full bg - primary / 20 text - primary px - 2 py - 0.5\" />;
                       Default;
                     </span>)}
-                </p>;
+                </p>;"
                 <p className='text - sm text - muted - foreground' />                <p className=\"text - sm text - muted - foreground\" />;
                   Expires {method.exp_month}/{method.exp_year}
                 </p>;
@@ -224,17 +224,17 @@ const payment_methods = [
               {!method.is_default && (<Button size='sm' variant='ghost' />;}
                   Set Default;}
                 </Button>)}
-              <Button size='sm' variant='ghost' className='text - destructive' />;
-                <Trash className='h - 4 w - 4' />              </Button>              {!method.is_default && (<Button size=\"sm\" variant=\"ghost\" />Set Default</Button>)}
-              <Button size=\"sm\" variant=\"ghost\" className=\"text - destructive\" />;
+              <Button size='sm' variant='ghost' className='text - destructive' />;"
+                <Trash className='h - 4 w - 4' />              </Button>              {!method.is_default && (<Button size=\"sm\" variant=\"ghost\" />Set Default</Button>)}"
+              <Button size=\"sm\" variant=\"ghost\" className=\"text - destructive\" />;"
                 <Trash className=\"h - 4 w - 4\" />;
               </Button>;
             </div>;
           </div>))}
       </CardContent>;
       <CardFooter />;
-        <Button className='gap - 1' />;
-          <Plus className='h - 4 w - 4' />          Add Payment Method        <Button className=\"gap - 1\" />;
+        <Button className='gap - 1' />;"
+          <Plus className='h - 4 w - 4' />          Add Payment Method        <Button className=\"gap - 1\" />;"
           <Plus className=\"h - 4 w - 4\" />;
           Add Payment Method;
         </Button>;
@@ -247,4 +247,4 @@ const payment_methods = [
         </Button>;
       </CardFooter>;
     </Card>;
-  )}
+  )}"

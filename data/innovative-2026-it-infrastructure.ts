@@ -1,11 +1,6 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface Innovative2026ITInfrastructureService  {id: string;
-  id: string;
-=======
+
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: string;
   tagline: string;
   price: string;
@@ -1159,15 +1154,10 @@ export interface Innovative2026ITInfrastructureService  {id: string,name: string
       ],
       customers: 1100,
       rating: 4 && 4.8,
-<<<<<<< HEAD;
-reviews: 550;
-    },;
 
-
-=======
       reviews: 550,
     },;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
   ];    features: [
 export interface Innovative2026ITInfrastructureService {
   id: string, name: string,

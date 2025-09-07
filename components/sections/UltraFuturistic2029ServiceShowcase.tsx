@@ -33,7 +33,7 @@ import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
 
 type Service = CuttingEdgeInnovation2029 | any;
-  ChevronDown,Star,TrendingUp,Zap,Brain,Cpu,Shield,Rocket,Globe,Database,Lock,Cloud,Eye,} from 'lucide-react';
+  ChevronDown,Star,TrendingUp,Zap,Brain,Cpu,Shield,Rocket,Globe,Database,Lock,Cloud,Eye} from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui / UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029   } from '../../data / 2029 - cutting - edge - innovations';
 
@@ -43,7 +43,7 @@ interface UltraFuturistic2029ServiceShowcaseProps  {interface UltraFuturistic202
   title?: string;
   subtitle?: string;
 }
-const categoryColors: { [key: string]: string,}
+const categoryColors: { [key: string]: string}
 } = {'AI & Consciousness': 'from-purple-600 to-pink-600';
   'Quantum & Neuroscience': 'from-indigo-600 to-purple-600';
   'Space Colonization': 'from-red-600 to-orange-600';
@@ -73,13 +73,13 @@ const UltraFuturistic2029ServiceShowcase: React.FC<
 title = '2029 Ultra-Futuristic Innovations'
   subtitle = 'Experience the future of technology with our revolutionary services'
   maxServices = 12}
-  ,}
+  }
 }) => {
 
 
 
 ;}
-  const categoryColors: { [key: string]: string,}
+  const categoryColors: { [key: string]: string}
 } = {;
   'AI & Consciousness': 'from-purple-600 to-pink-600',;
   'Quantum & Neuroscience': 'from-indigo-600 to-purple-600',;
@@ -89,11 +89,11 @@ title = '2029 Ultra-Futuristic Innovations'
   'Space Energy': 'from-yellow-500 to-orange-500',;
   'AI & Business': 'from-blue-600 to-cyan-600',;
   'Quantum & Time': 'from-green-600 to-emerald-600',;}
-  'AI & Augmented Reality': 'from-orange-600 to-red-600',}
+  'AI & Augmented Reality': 'from-orange-600 to-red-600'}
 };
 
 
-const categoryIcons: { [key: string]: any,}
+const categoryIcons: { [key: string]: any}
 } = {;
   'AI & Consciousness': Brain,;
   'Quantum & Neuroscience': Cpu,;
@@ -103,7 +103,7 @@ const categoryIcons: { [key: string]: any,}
   'Space Energy': Sparkles,;
   'AI & Business': Database,;
   'Quantum & Time': Timer,;}
-  'AI & Augmented Reality': Eye,}
+  'AI & Augmented Reality': Eye}
 };
 
 
@@ -135,7 +135,7 @@ interface UltraFuturistic2029ServiceShowcaseProps {
 
 const categories = [
   'all',;
-    ...Array && Array.from(new Set(services && services.map(service => service && service.category))),
+    ...Array && Array.from(new Set(services && services.map(service => service && service.category)))
 ];
 
 
@@ -157,8 +157,8 @@ const bLevel = (b as any).innovationLevel || 'Advanced';
 const innovationOrder = {
             Revolutionary: 4,
             Breakthrough: 3,
-            Advanced: 2,}
-            Emerging: 1,}
+            Advanced: 2}
+            Emerging: 1}
           };
           return (
             (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0)
@@ -180,28 +180,28 @@ const innovationOrder = {
     .slice(0, maxServices);
 
 const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: { opacity: 0}
 }
     visible: {
       opacity: 1;
 transition: {}
-staggerChildren: 0.1,}
-      },
-    },
+staggerChildren: 0.1}
+      }
+    }
   };
 
 const itemVariants = {}
-    hidden: { opacity: 0, y: 20,}
+    hidden: { opacity: 0, y: 20}
 }
     visible: {
       opacity: 1;
 y: 0;
 transition: {
 
-        duration: 0.6,}
-ease: 'easeOut' as const,}
-      },
-    },
+        duration: 0.6}
+ease: 'easeOut' as const}
+      }
+    }
   };
 
   return (
@@ -218,42 +218,42 @@ ease: 'easeOut' as const,}
         {/* Header */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />        {/* Header */}
 
-        {/* Header *,}
+        {/* Header *}
 }
 
         <motion.div;
-initial={{ opacity: 0, y: 30 ,}
+initial={{ opacity: 0, y: 30 }
 }
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 ,}
+          transition={{ duration: 0.8 }
 }
 
 className='text-center mb-16'
          />
           <motion.h2;
-initial={{ opacity: 0, y: 20 ,}
+initial={{ opacity: 0, y: 20 }
 }
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={{ opacity: 1, y: 0 }
 }
             transition={{ duration: 0.8, delay: 0.1 }}
 
 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'
            />
 
-            {titl,}
+            {titl}
 }
           </motion.h2>;
           <motion.p;
-            initial={{ opacity: 0, y: 20 ,}
+            initial={{ opacity: 0, y: 20 }
 }
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={{ opacity: 1, y: 0 }
 }
             transition={{ duration: 0.8, delay: 0.2 }}
 
 className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
            />
 
-            {subtitl,}
+            {subtitl}
 }
           </motion.p>;
         </motion.div>;
@@ -265,10 +265,10 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
             {subtitle}
         {/* Filters and Controls */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 ,}
+          initial={{ opacity: 0, y: 20 }
 }
 
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
 
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -283,7 +283,7 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
               {categories.map(category => (}
                 <button;}
 key={category}
-                  onClick={() = /> setSelectedCategory(category,}
+                  onClick={() = /> setSelectedCategory(category}
 }
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${selectedCategory === category;
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg';}
@@ -317,14 +317,14 @@ value={sortBy}
         </motion.div>
 
 
-        {/* Services Grid *,}
+        {/* Services Grid *}
 }
         <motion&& motion.div;
           variants={containerVariants}
 
 initial='hidden'
           whileInView='visible'
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
 
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
@@ -343,13 +343,13 @@ className='group' />
             </motion.div>
 
           ))}
-        {/* Call to Action *,}
+        {/* Call to Action *}
 }
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
 
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
 
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -381,14 +381,14 @@ href='/pricing'
           </div>
         </motion.div>
 
-        {/* Innovation Stats *,}
+        {/* Innovation Stats *}
 }
         <motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
-          transition={{ duration: 0.8, delay: 0.5 ,}
+          transition={{ duration: 0.8, delay: 0.5 }
 }
 className='mt-20' />
 
@@ -416,42 +416,42 @@ className='mt-20' />
                   services.reduce((sum, s) => sum + s.rating, 0) /
                   services.length;
                 ).toFixed(1),
-                icon: TrendingUp,}
-                color: 'from-green-500 to-teal-500',}
-              },
+                icon: TrendingUp}
+                color: 'from-green-500 to-teal-500'}
+              }
             ].map((stat, index) => (
               <motion.div;
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8' />;
             {[;
-              {label: 'Revolutionary Services',}
+              {label: 'Revolutionary Services'}
   value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary';}
-                ).length,icon: Rocket,color: 'from-purple-500 to-pink-500',},{label: 'Patent Pending',}
-  value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length,icon: Shield,color: 'from-blue-500 to-cyan-500',},{label: 'Total Customers',}
-  value: services && services.reduce((sum, s) => sum + s && s.customers, 0),icon: Star,color: 'from-yellow-500 to-orange-500',},{label: 'Average Rating',
+                ).length,icon: Rocket,color: 'from-purple-500 to-pink-500'},{label: 'Patent Pending'}
+  value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length,icon: Shield,color: 'from-blue-500 to-cyan-500'},{label: 'Total Customers'}
+  value: services && services.reduce((sum, s) => sum + s && s.customers, 0),icon: Star,color: 'from-yellow-500 to-orange-500'},{label: 'Average Rating',
   value: (services && services.reduce((sum, s) => sum + s && s.rating, 0) /;}
                   services && services.length;}
-                ).toFixed(1),icon: TrendingUp,color: 'from-green-500 to-teal-500',},            ].map((stat, index) => (              { label: 'Revolutionary Services',}
-  value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500',}
-},{ label: 'Patent Pending',}
-  value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500',}
-},{ label: 'Total Customers',}
-  value: services && services.reduce((sum, s) => sum + s && s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500',}
-},{ label: 'Average Rating',}
-  value: (services && services.reduce((sum, s) => sum + s && s.rating, 0) / services && services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500',}
+                ).toFixed(1),icon: TrendingUp,color: 'from-green-500 to-teal-500'}            ].map((stat, index) => (              { label: 'Revolutionary Services'}
+  value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500'}
+},{ label: 'Patent Pending'}
+  value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500'}
+},{ label: 'Total Customers'}
+  value: services && services.reduce((sum, s) => sum + s && s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500'}
+},{ label: 'Average Rating'}
+  value: (services && services.reduce((sum, s) => sum + s && s.rating, 0) / services && services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500'}
 }
               <motion&& motion.div;
                 key={index}
-                initial={{ opacity: 0, y: 20 ,}
+                initial={{ opacity: 0, y: 20 }
 }
 
-                whileInView={{ opacity: 1, y: 0 ,}
+                whileInView={{ opacity: 1, y: 0 }
 }
 
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 className='text-center'
                />
                 <div;
-className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4,
+className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4
 } />
 
                   <stat.icon className='w-8 h-8 text-white' />;
@@ -474,3 +474,4 @@ className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-cen
 
 export default UltraFuturistic2029ServiceShowcase;
 
+"

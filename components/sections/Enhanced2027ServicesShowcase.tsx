@@ -95,10 +95,10 @@ const getCategoryIcon = (
         <motion.div;
 className='text-center mb-16'
 
-          initial={{ opacity: 0, y: 20 ,}
+          initial={{ opacity: 0, y: 20 }
 }
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 ,}
+          transition={{ duration: 0.6 }
 }
          />;
 <h2 className='text-5xl font-bold mb-6' />;
@@ -116,16 +116,16 @@ className='text-center mb-16'
         {/* Search and Filters */}
 <motion.div;
           className='mb-12';
-          initial={{ opacity: 0, y: 20 ,}
+          initial={{ opacity: 0, y: 20 }
 }
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
           transition={{ duration: 0.6, delay: 0.2 }}
 
          />
 <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6' />
             <div className='flex flex-col lg:flex-row gap-6 items-center justify-between' />
-              {/* Search *,}
+              {/* Search *}
 }
                   <input;
 type='text'
@@ -138,7 +138,7 @@ type='text'
                 </div>
               </div>
 
-              {/* Category Filter *,}
+              {/* Category Filter *}
 }
 <div className='flex items-center space-x-4' />;
                 <div className='relative' />;
@@ -154,7 +154,7 @@ type='text'
 
                       <option key={category} value={category} />
 
-                        {category === 'all' ? 'All Categories' : categor,}
+                        {category === 'all' ? 'All Categories' : categor}
 }
                       </option>;
                     ))}
@@ -182,14 +182,14 @@ type='text'
                         ? 'bg-cyan-500/20 text-cyan-400';}
                         : 'text-gray-400 hover:text-white';}
                     }`}>
-
-                    <option value=\"name\" />Sort by Name</option>;
-                    <option value=\"price\" />Sort by Price</option>;
+"
+                    <option value=\"name\" />Sort by Name</option>;"
+                    <option value=\"price\" />Sort by Price</option>;"
                     <option value=\"roi\" />Sort by ROI</option>;
-                  </select>;
+                  </select>;"
                   <ChevronDown className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none\" />;
                 </div>;
-                {/* View Mode */}
+                {/* View Mode */}"
                 <div className=\"flex bg-gray-700/50 rounded-xl p-1\" />;
                   <button;
                     onClick={() = /> setViewMode('grid')}
@@ -229,14 +229,14 @@ onClick={() = /> setViewMode('list')}
 <motion.div;
 className='mb-8'
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 ,}
+          whileInView={{ opacity: 1 }
 }
           transition={{ duration: 0.6, delay: 0.3 }}
          />
 
 <p className='text-gray-400' />
 
-            Showing{' ,}
+            Showing{' }
 }
             <span className='text-cyan-400 font-semibold' />;
               {filteredServices.length}
@@ -252,12 +252,12 @@ className='mb-8'
 <AnimatePresence mode='wait' />;
           {viewMode === 'grid' ? (<motion.div;
               key='grid';}
-              initial={{ opacity: 0, scale: 0.95 ,}
+              initial={{ opacity: 0, scale: 0.95 }
 }
-              animate={{ opacity: 1, scale: 1 ,}
+              animate={{ opacity: 1, scale: 1 }
 }
               exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 ,}
+              transition={{ duration: 0.3 }
 }
 
 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
@@ -265,9 +265,9 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
               {filteredServices.map((service, index) => (}
                 <motion.div;}
 key={service.id}
-                  initial={{ opacity: 0, y: 20 ,}
+                  initial={{ opacity: 0, y: 20 }
 }
-                  whileInView={{ opacity: 1, y: 0 ,}
+                  whileInView={{ opacity: 1, y: 0 }
 }
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
@@ -275,7 +275,7 @@ className='group'
                  />
                   <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2' />
 
-                    {/* Header *,}
+                    {/* Header *}
 }
                     <div className='flex items-start justify-between mb-4' />;
                       <div;
@@ -288,7 +288,7 @@ className='group'
                           {service.price}
                         </div>;
                         <div className='text-sm text-gray-400' />;
-                          ROI: {service.ro,}
+                          ROI: {service.ro}
 }
                         </div>;
                       </div>;
@@ -320,7 +320,7 @@ className='group'
                     </div>;
                     {/* Tags */}
 <div className='flex flex-wrap gap-2 mb-6' />;
-                      {service.tags.slice(0, 3).map((tag, idx) => (<span;}
+                      {service.tags.slice(0, 3).map((tag, idx) => (<span;}"
                           key={idx}className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                         />                    <div className=\"flex flex-wrap gap-2 mb-6\" />;
                       {service.tags.slice(0, 3).map((tag, idx) => (<span;}
                           key={idx}
@@ -349,12 +349,12 @@ className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-
           ) : (
             <motion.div;
 key='list'
-              initial={{ opacity: 0, scale: 0.95 ,}
+              initial={{ opacity: 0, scale: 0.95 }
 }
-              animate={{ opacity: 1, scale: 1 ,}
+              animate={{ opacity: 1, scale: 1 }
 }
               exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 ,}
+              transition={{ duration: 0.3 }
 }
 
 className='space-y-4'
@@ -362,9 +362,9 @@ className='space-y-4'
               {filteredServices.map((service, index) => (}
                 <motion.div;}
 key={service.id}
-                  initial={{ opacity: 0, x: -20 ,}
+                  initial={{ opacity: 0, x: -20 }
 }
-                  whileInView={{ opacity: 1, x: 0 ,}
+                  whileInView={{ opacity: 1, x: 0 }
 }
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
@@ -373,7 +373,7 @@ className='group'
                   <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300' />
                     <div className='flex flex-col lg:flex-row items-start lg:items-center gap-6' />
 
-                      {/* Icon and Category *,}
+                      {/* Icon and Category *}
 }
                       <div className='flex items-center space-x-4' />;
                         <div;
@@ -398,7 +398,7 @@ className='group'
                         </h3>
                         <p className='text-gray-300 mb-3 leading-relaxed' />
                           {service.description}
-                        </p>;
+                        </p>;"
                         <div className=\"flex flex - wrap gap - 2 mb - 3\" />;
                           {service.tags.slice (0, 4).map ((tag, idx) => (}
                             <span;}
@@ -448,7 +448,7 @@ href={service.link}
             className='text-center py-20';}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 ,}
+            transition={{ duration: 0.6 }
 }
 
            />
@@ -472,22 +472,22 @@ setSelectedCategory('all');}
           </motion.div>
 
         )}
-        {/* CTA Section *,}
+        {/* CTA Section *}
 }
 <motion.div;
 className='mt-20 text-center'
 
-          initial={{ opacity: 0, y: 20 ,}
+          initial={{ opacity: 0, y: 20 }
 }
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.8 ,}
+          transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }
 } />;
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12' />;
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6' />;
               Ready to Transform Your Business?;
             </h3>;
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto' />;
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto' />;"
                               className=\"px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50\">
 
                               {tag}
@@ -509,10 +509,10 @@ className='mt-20 text-center'
                           <span  /> Learn More</span>;
                           <ArrowRight className='w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform' />                        </Link>                        </div>;
                         <Link;
-                          href={service.link}
+                          href={service.link}"
                           className=\"inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25\" />
 
-                          <span  /> Learn More</span>;
+                          <span  /> Learn More</span>;"
                           <ArrowRight className=\"w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform\" />;
                         </Link>;
                       </div>;
@@ -525,13 +525,13 @@ className='mt-20 text-center'
         {filtered_services.length === 0 && (<motion.div;}
             className='text - center py - 20'            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 ,}
+            transition={{ duration: 0.6 }
 }
-           />          <motion.div;
+           />          <motion.div;"
             className=\"text - center py - 20\";
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 ,}
+            transition={{ duration: 0.6 }
 }
            />;
             <div className='text - 6xl mb - 4' />🔍</div>;
@@ -542,15 +542,15 @@ className='mt-20 text-center'
               Try adjusting your search terms or category filter to find what;
               you're looking for.            </p>;
             <button;
-              on_click={() = /> {setSearchTerm ('')setSelectedCategory ('all')}}
-              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'            >            <div className=\"text - 6xl mb - 4\" />🔍</div>;
-            <h3 className=\"text - 2xl font - bold text - white mb - 4\" />No services found</h3>;
+              on_click={() = /> {setSearchTerm ('')setSelectedCategory ('all')}}"
+              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'            >            <div className=\"text - 6xl mb - 4\" />🔍</div>;"
+            <h3 className=\"text - 2xl font - bold text - white mb - 4\" />No services found</h3>;"
             <p className=\"text - gray - 400 mb - 8\" />;
               Try adjusting your search terms or category filter to find what you're looking for.;
             <button;
               on_click={() = /> {setSearchTerm ('')setSelectedCategory ('all')}}
-              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                setSelectedCategory ('all'),
-}
+              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                setSelectedCategory ('all')
+}"
               className=\"px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300\">
 
               Clear Filters;
@@ -558,9 +558,9 @@ className='mt-20 text-center'
           </motion.div>)}
         {/* CTA Section */}
         <motion.div;
-          className='mt - 20 text - center'          initial={{ opacity: 0, coordinate_y: 20 ,}
+          className='mt - 20 text - center'          initial={{ opacity: 0, coordinate_y: 20 }
 }
-          whileInView={{ opacity: 1, coordinate_y: 0 ,}
+          whileInView={{ opacity: 1, coordinate_y: 0 }
 }
 
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -595,7 +595,7 @@ href='/pricing'
         </motion.div>
       </div>
     </section>
-),
+)
 };
 
 
@@ -607,48 +607,48 @@ href='/pricing'
   category}
 } /> {}
   category === 'all' ? 'All Categories' : category}
-}</option>) )
+}</option>) )"
 }</select> <ChevronDown className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none\" /> </div> > <option value=\"name\"  />Sort by Name</option> <option value=\"price\"  />Sort by Price</option> <option value=\"roi\"  />Sort by ROI</option> </select> <ChevronDown className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none\" /> </div> <button onClick= {}
   () = /> setViewMode ('grid')}
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {}
   viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white'}
-}`
+}`"
 }> <Grid className=\"w-5 h-5\" /> </button> <button onClick= {}
   () = /> setViewMode ('list')}
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {}
   viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'}
-}`
+}`"
 }> <List className=\"w-5 h-5\" /> </button> </div> </div> </div> </div> </motion.div> {}
-  /* Results Count */,}
+  /* Results Count */}
 }<motion.div  /> {
   filteredServices.map ( (service, index) => (<motion.div key= {}
   service.id}
 }</li />) )
 }</ul> </div> <span key= {}
-  idx}
+  idx}"
 }className=\"px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50\"  /> {}
   tag}
 }</span>) )
 }</div> {}
-  /* CTA */}
-}<Link  /> <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </motion.div>) ),
+  /* CTA */}"
+}<Link  /> <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </motion.div>) )
 }</motion.div> > {
   filteredServices.map ( (service, index) => (<motion.div key= {}
   service.id}
 }<span key= {}
-  idx}
+  idx}"
 }className=\"px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50\"  /> {}
   tag}
-}</span>) )
+}</span>) )"
 }</div> </div> > <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </div> </div> </motion.div>) )
-}</motion.div>)
-}</AnimatePresence> > <div className=\"text-6xl mb-4\"  />🔍</div> <h3 className=\"text-2xl font-bold text-white mb-4\"  />No services found</h3> <p className=\"text-gray-400 mb-8\"  /> Try adjusting your search terms or category filter to find what you're looking for. </p> <button  /> Clear Filters </button> </motion.div>),
-}{
+}</motion.div>)"
+}</AnimatePresence> > <div className=\"text-6xl mb-4\"  />🔍</div> <h3 className=\"text-2xl font-bold text-white mb-4\"  />No services found</h3> <p className=\"text-gray-400 mb-8\"  /> Try adjusting your search terms or category filter to find what you're looking for. </p> <button  /> Clear Filters </button> </motion.div>)
+}{"
                 className=\"inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50\">;
 
-                <span />View Pricing</span>;
+                <span />View Pricing</span>;"
                 <TrendingUp className=\"w-5 h-5\" />;
               </Link>;
             </div>;
@@ -673,24 +673,24 @@ export default Enhanced2027ServicesShowcase;
 
                 <span  /> View Pricing</span>;
                 <TrendingUp className='w - 5 h - 5' />              </Link>              Ready to Transform Your Business?;
-            </h3>;
+            </h3>;"
             <p className=\"text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto\" />;
               Our team of experts is ready to help you implement these revolutionary services;
               and achieve unprecedented growth. Let's build the future together.;
-            </p>;
+            </p>;"
             <div className=\"flex flex - col sm:flex - row gap - 4 justify - center items - center\" />;
-              <Link;
-                href=\"/contact\";
+              <Link;"
+                href=\"/contact\";"
                 className=\"inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25\" />
 
-                <span  /> Get Started Today</span>;
+                <span  /> Get Started Today</span>;"
                 <ArrowRight className=\"w - 5 h - 5\" />;
               </Link>;
-              <Link;
-                href=\"/pricing\";
+              <Link;"
+                href=\"/pricing\";"
                 className=\"inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50\" />
 
-                <span  /> View Pricing</span>;
+                <span  /> View Pricing</span>;"
                 <TrendingUp className=\"w - 5 h - 5\" />;
               </Link>;
             </div>;
@@ -709,44 +709,44 @@ export default Enhanced2027ServicesShowcase;
   category}
 } /> {}
   category === 'all' ? 'All Categories' : category}
-}</option>) )
+}</option>) )"
 }</select> <ChevronDown className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none\" /> </div> > <option value=\"name\"  />Sort by Name</option> <option value=\"price\"  />Sort by Price</option> <option value=\"roi\"  />Sort by ROI</option> </select> <ChevronDown className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none\" /> </div> <button onClick= {}
   () = /> setViewMode ('grid')}
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {}
   viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white'}
-}`
+}`"
 }> <Grid className=\"w-5 h-5\" /> </button> <button onClick= {}
   () = /> setViewMode ('list')}
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {}
   viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'}
-}`
+}`"
 }> <List className=\"w-5 h-5\" /> </button> </div> </div> </div> </div> </motion.div> {}
-  /* Results Count */,}
+  /* Results Count */}
 }<motion.div  /> {
   filteredServices.map ( (service, index) => (<motion.div key= {}
   service.id}
 }</li />) )
 }</ul> </div> <span key= {}
-  idx}
+  idx}"
 }className=\"px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50\"  /> {}
   tag}
 }</span>) )
 }</div> {}
-  /* CTA */}
-}<Link  /> <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </motion.div>) ),
+  /* CTA */}"
+}<Link  /> <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </motion.div>) )
 }</motion.div> > {
   filteredServices.map ( (service, index) => (<motion.div key= {}
   service.id}
 }<span key= {}
-  idx}
+  idx}"
 }className=\"px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50\"  /> {}
   tag}
-}</span>) )
+}</span>) )"
 }</div> </div> > <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </div> </div> </motion.div>) )
-}</motion.div>)
-}</AnimatePresence> > <div className=\"text-6xl mb-4\"  />🔍</div> <h3 className=\"text-2xl font-bold text-white mb-4\"  />No services found</h3> <p className=\"text-gray-400 mb-8\"  /> Try adjusting your search terms or category filter to find what you're looking for. </p> <button  /> Clear Filters </button> </motion.div>),
+}</motion.div>)"
+}</AnimatePresence> > <div className=\"text-6xl mb-4\"  />🔍</div> <h3 className=\"text-2xl font-bold text-white mb-4\"  />No services found</h3> <p className=\"text-gray-400 mb-8\"  /> Try adjusting your search terms or category filter to find what you're looking for. </p> <button  /> Clear Filters </button> </motion.div>)
 }{;}
 }
 
@@ -756,3 +756,4 @@ export default Enhanced2027ServicesShowcase;  )
 export default Enhanced2027ServicesShowcase;
 
 
+"

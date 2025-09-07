@@ -53,11 +53,8 @@ launchDate: '2025-01-25';
 real_implementation: true;
 implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launch_date: '2025 - 01 - 25';
-<<<<<<< HEAD;
-customers: 156;
 
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 rating: 4 && 4.7;
 reviews: 89;
 };
@@ -575,10 +572,9 @@ reviews: 167;
 }];
 ];
 ;
-<<<<<<< HEAD;
-=======
+
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 export interface InnovativeAIAutomationService {;
   id: string,;
   name: string,;

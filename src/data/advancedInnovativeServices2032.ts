@@ -10,16 +10,16 @@ export interface AdvancedInnovativeService2032  {id: string;
    benefits: string[];
    useCases: string[];
    targetAudience: string[];
-   tags: string[];
+   tags: string[];"
    estimatedDelivery: string;\"\";
    supportLevel: 'basic' | 'premium' | 'enterprise' | 'dedicated';
-   marketPrice: string;
+   marketPrice: string;"
    roi: string;\"\";
    innovationLevel: 'Emerging' | 'Advanced' | 'Revolutionary' | 'Breakthrough';
    contactInfo: {phone: string;
    email: string;}
    website: string;}
-   address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] scalability: string } competitors?: string[] marketSize?: string compliance?: string[],
+   address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] scalability: string } competitors?: string[] marketSize?: string compliance?: string[]
 }
 
-export const ADVANCED_INNOVATIVE_SERVICES_2032: AdvancedInnovativeService2032[] = [';';;
+export const ADVANCED_INNOVATIVE_SERVICES_2032: AdvancedInnovativeService2032[] = [';';;"

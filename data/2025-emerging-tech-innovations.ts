@@ -4,10 +4,9 @@ export interface EmergingTechInnovationService  {export interface EmergingTechIn
 export interface EmergingTechInnovationService  {export interface EmergingTechInnovationService  {import { ServiceVariant  } from '../types/service-variants';
 export interface EmergingTechInnovation  {export interface EmergingTechInnovationService  {id: string;
 export interface EmergingTechInnovationService {
-<<<<<<< HEAD;
-=======
+
 export interface EmergingTechInnovationService {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 export interface EmergingTechInnovationService {;
 export interface EmergingTechInnovationService {
 
@@ -702,29 +701,9 @@ import { ServiceVariant } from '../types/service-variants',export interface Emer
   contact_info: {
     mobile: string;
     email: string;
-<<<<<<< HEAD;
-address: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  benefits: string[];
-  capabilities: string[];
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709',}
-  website: 'https://ziontechgroup.com'}
-}
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com'};  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup && ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com'
-    tagline:
-      'Next-generation quantum internet infrastructure for unbreakable communication'
-=======
+
     address: string;    tagline: \"tagline\",
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 price: '$6,999',
   period: '/month'
     description:
@@ -1168,11 +1147,9 @@ implementationDetails:
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
   }
 ];
-<<<<<<< HEAD;
-      'Only quantum-powered cybersecurity platform with proven AI integration'
-=======
+
       'Only quantum-powered cybersecurity platform with proven AI integration',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
   },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
     ];
@@ -2008,26 +1985,20 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
       '90% faster threat detection70% reduction in false positivesQuantum advantageAI-driven intelligence24/7 monitoring';
     ],capabilities: [;
 ];
-<<<<<<< HEAD;
-    ];
-    market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
 
-      'Only quantum-powered cybersecurity platform with proven AI integration'
-=======
     ];
     market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
       'Only quantum-powered cybersecurity platform with proven AI integration',}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+
   },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
   }
 ];
-<<<<<<< HEAD;
-=======
+
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 export interface EmergingTechInnovation {;
   id: string,;
   name: string,;

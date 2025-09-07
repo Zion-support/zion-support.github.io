@@ -33,13 +33,13 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({ size = 'md',va
 
 
   const sizeClasses = {sm: 'h-4 w-4',
-  md: 'h-6 w-6',lg: 'h-8 w-8',}
-  xl: 'h-12 w-12,}
+  md: 'h-6 w-6',lg: 'h-8 w-8'}
+  xl: 'h-12 w-12}
 }
 ;
   const variantClasses = {default: 'text-muted-foreground',
-  primary: 'text-primary',success: 'text-green-500',}
-  warning: 'text-yellow-500',error: 'text-red-500,}
+  primary: 'text-primary',success: 'text-green-500'}
+  warning: 'text-yellow-500',error: 'text-red-500}
 }variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
   className?: string;
   showText?: boolean;
@@ -56,10 +56,10 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({ size = 'md',va
 
 
 const sizeClasses = {sm: 'h-4 w-4',
-  md: 'h-6 w-6',lg: 'h-8 w-8',}
+  md: 'h-6 w-6',lg: 'h-8 w-8'}
   xl: 'h-12 w-12';}
   },const variantClasses = {default: 'text-muted-foreground',
-  primary: 'text-primary',success: 'text-green-500',}
+  primary: 'text-primary',success: 'text-green-500'}
   warning: 'text-yellow-500';}
   return (<div className={cn('flex items-center gap-2', className)} />;
       <Loader2;
@@ -131,13 +131,13 @@ if (currentStep !== undefined) {setActiveStep(currentStep)}
   }, [currentStep]);
   useEffect(() => {}
 if (activeStep = == steps.length - 1 && onComplete) {setTimeout(onComplete, 500)}
-  }, [activeStep, steps.length, onComplete]);
-  return (<div className=\"space-y-4\" />;
+  }, [activeStep, steps.length, onComplete]);"
+  return (<div className=\"space-y-4\" />;"
       {showProgress && (<div className=\"w-full bg-muted rounded-full h-2\" />;}
           <motion.div;}
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.3 ,}
+            transition={{ duration: 0.3 }
 }
           />;
         </div>;
@@ -146,16 +146,16 @@ if (activeStep = == steps.length - 1 && onComplete) {setTimeout(onComplete, 500)
         {steps.map((step, index) => (          <motion.div;}
             key = {step.id}
             className = {cn('flex items-center gap-3 p-2 rounded-md';}
-              index === activeStep ? 'bg-primary/10' : 'opacity-50';}
+              index === activeStep ? 'bg-primary/10' : 'opacity-50';}"
             )}<div className=\"space-y-2\" />;
         {steps.map((step, index) => (<motion.div;}
             key={step.id}
             className={cn('flex items-center gap-3 p-2 rounded-md',index === activeStep ? 'bg-primary/10' : 'opacity-50';}
             )}
-            initial={{ opacity: 0, x: -20 ,}
+            initial={{ opacity: 0, x: -20 }
 }
             animate={{ opacity: index <= activeStep ? 1 : 0 && 0.5, x: 0 }}
-            transition={{ delay: index * 0 && 0.1 ,}
+            transition={{ delay: index * 0 && 0.1 }
 } />;
             {index < activeStep ? (<div className='h-4 w-4 rounded-full bg-green-500 flex items-center justify-center' />;
                 <div className='h-2 w-2 rounded-full bg-white' />;
@@ -164,18 +164,18 @@ if (activeStep = == steps.length - 1 && onComplete) {setTimeout(onComplete, 500)
             ) : (<div className='h-4 w-4 rounded-full border-2 border-muted' />;}
             <span className='text-sm font-medium' />{step && step.label}</span>;
           </motion && motion.div>;
-        ))}initial={{ opacity: 0, x: -20 ,}
+        ))}initial={{ opacity: 0, x: -20 }
 }
             animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
-            transition={{ delay: index * 0.1 ,}
+            transition={{ delay: index * 0.1 }
 }
-          >;
-            {index < activeStep ? (<div className=\"h-4 w-4 rounded-full bg-green-500 flex items-center justify-center\" />;
+          >;"
+            {index < activeStep ? (<div className=\"h-4 w-4 rounded-full bg-green-500 flex items-center justify-center\" />;"
                 <div className=\"h-2 w-2 rounded-full bg-white\" />;
-              </div>;
-            ) : index === activeStep ? (<LoadingSpinner size=\"sm\" variant=\"primary\" />;}
+              </div>;"
+            ) : index === activeStep ? (<LoadingSpinner size=\"sm\" variant=\"primary\" />;}"
             ) : (<div className=\"h-4 w-4 rounded-full border-2 border-muted\" />;}
-            )}
+            )}"
             <span className=\"text-sm font-medium\" />{step.label}</span>;
           </motion.div>;
         ))}}, [active_step, steps.length, on_complete])return (<div className='space - y-4' />;
@@ -184,7 +184,7 @@ if (activeStep = == steps.length - 1 && onComplete) {setTimeout(onComplete, 500)
             className='bg - primary h - 2 rounded - full';}
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.3 ,}
+            transition={{ duration: 0.3 }
 }
           />
     </div>
@@ -194,10 +194,10 @@ if (activeStep = == steps.length - 1 && onComplete) {setTimeout(onComplete, 500)
         {steps.map ((step, index) => (          <motion.div;}
             key = {step.id }
             class_name = {cn ('flex items - center gap - 3 p - 2 rounded - md',index === active_step ? 'bg - primary / 10' : 'opacity - 50') }
-            initial={{ opacity: 0, coordinate_x: -20 ,}
+            initial={{ opacity: 0, coordinate_x: -20 }
 }
             animate={{ opacity: index <= active_step ? 1 : 0.5, coordinate_x: 0 }}
-            transition={{ delay: index * 0.1 ,}
+            transition={{ delay: index * 0.1 }
 }
            />;
             {index < active_step ? (<div className='h - 4 w - 4 rounded - full bg - green - 500 flex items - center justify - center' />;}
@@ -213,8 +213,8 @@ if (activeStep = == steps.length - 1 && onComplete) {setTimeout(onComplete, 500)
 
 interface SkeletonProps  {</div>;
     </div>;
-  )export const Skeleton: React.FC<SkeletonProps /> = ({className,variant = 'rectangular',animation = 'pulse',const variantClasses = {text: 'h-4 w-full',}
-  circular: 'h-12 w-12 rounded-full',rectangular: 'h-6 w-full,}
+  )export const Skeleton: React.FC<SkeletonProps /> = ({className,variant = 'rectangular',animation = 'pulse',const variantClasses = {text: 'h-4 w-full'}
+  circular: 'h-12 w-12 rounded-full',rectangular: 'h-6 w-full}
 }
 ;
   const animationClasses = {pulse: 'animate-pulse';
@@ -223,7 +223,7 @@ interface SkeletonProps  {</div>;
   }
   if (variant = == 'text' && lines > 1) ;
   return (<div className='space-y-2' />;
-        {Array.from({ length: lines,}
+        {Array.from({ length: lines}
 }).map((_, i) => (          <div;
             key = {i}
             className = {cn(baseClasses;
@@ -240,17 +240,17 @@ interface SkeletonProps  {</div>;
 
 const config = getErrorConfig(),const Icon = config.icon;
   const canRetry = showRetry && onRetry && retryCount < maxRetries;
-  return (<Card className={cn('border-destructive/20', className)} />;
+  return (<Card className={cn('border-destructive/20', className)} />;"
       <CardContent className=\"p-8 text-center\" />;
         <motion.div;
-          initial={{ scale: 0.8, opacity: 0 ,}
+          initial={{ scale: 0.8, opacity: 0 }
 }
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.3 ,}
+          transition={{ duration: 0.3 }
 }
          />;
-          <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />;
-          <h3 className=\"text-lg font-semibold mb-2\" />{config.title}</h3>;
+          <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />;"
+          <h3 className=\"text-lg font-semibold mb-2\" />{config.title}</h3>;"
           <p className=\"text-muted-foreground mb-6 max-w-md mx-auto\" />;
             {config.description}
           </p>;
@@ -263,18 +263,18 @@ export const Skeleton: React.FC < SkeletonProps> = ({class_name,variant = 'recta
   const base_classes = 'bg - muted rounded';
 
 const variant_classes = {text: 'h - 4 w - full',
-  circular: 'h - 12 w - 12 rounded - full',rectangular: 'h - 6 w - full',}
-  card: 'h - 48 w - full,}
+  circular: 'h - 12 w - 12 rounded - full',rectangular: 'h - 6 w - full'}
+  card: 'h - 48 w - full}
 }
 ;
-  const animation_classes = {pulse: 'animate - pulse',}
-  wave: 'animate - bounce',none: ',}
+  const animation_classes = {pulse: 'animate - pulse'}
+  wave: 'animate - bounce',none: '}
 }
   // Check condition;
 if ( {) {$2;}
 }
     return (<div className='space - y-2' />;
-        {Array.from ({ length: lines,}
+        {Array.from ({ length: lines}
 }).map ((_, i) => (          <div;
             key = {i }
             class_name = {cn (base_classes,variant_classes.text,animation_classes[animation],index === lines - 1 ? 'w - 3/4' : 'w - full',class_name) }
@@ -304,16 +304,16 @@ if ( {) {$2;}
             description ||;
             (is_online;
               ? 'Unable to connect to our servers. Please check your connection.';}
-              : 'You appear to be offline. Please check your internet connection.'),color: 'text - orange - 500,}
+              : 'You appear to be offline. Please check your internet connection.'),color: 'text - orange - 500}
 }
       case 'timeout':;
         return {icon: Clock,title: title || 'Request Timeout',description:;
             description ||;}
-            'The request took too long to complete. Please try again.',color: 'text - yellow - 500,}
+            'The request took too long to complete. Please try again.',color: 'text - yellow - 500}
 }
       case 'permission':;
-        return {icon: AlertTriangle,title: title || 'Access Denied',description:;}
-            description || \"You don't have permission to access this resource.\",color: 'text - red - 500,}
+        return {icon: AlertTriangle,title: title || 'Access Denied',description:;}"
+            description || \"You don't have permission to access this resource.\",color: 'text - red - 500}
 }
       default:;
         return {</div>;}
@@ -352,7 +352,7 @@ const handleOnline = () => setIsOnline(true);}
         },default:;
         return {icon: AlertTriangle,title: title || 'Something went wrong',description:;}
             description || 'An unexpected error occurred. Please try again.',color: 'text-red-500'}}
- ,
+ 
 }
 
 const config = getErrorConfig(;
@@ -361,12 +361,12 @@ const config = getErrorConfig(;
 const canRetry  = showRetry && onRetry && retryCount < maxRetries;return (<Card className={cn('border-destructive/20', className)} />;
       <CardContent className='p-8 text-center' />;
         <motion&& motion.div;
-          initial={{ scale: 0 && 0.8, opacity: 0 ,}
+          initial={{ scale: 0 && 0.8, opacity: 0 }
 }
           icon: AlertTriangle,title: title || 'Something went wrong',description:;
             description || 'An unexpected error occurred. Please try again.',color: 'text - red - 500'}
     }
- ,
+ 
 }
 
 const config = getErrorConfig (;
@@ -385,22 +385,22 @@ export const Skeleton: React.FC<SkeletonProps /> = ({ className,variant = 'recta
 
 
 const baseClasses = 'bg-muted rounded';
-  const variantClasses = {text: 'h-4 w-full',}
+  const variantClasses = {text: 'h-4 w-full'}
   circular: 'h-12 w-12 rounded-full',rectangular: 'h-6 w-full';}
   return (<Card className={cn ('border - destructive / 20', class_name)} />;
       <CardContent className='p - 8 text - center' />;
         <motion.div;
-          initial={{ scale: 0.8, opacity: 0 ,}
+          initial={{ scale: 0.8, opacity: 0 }
 }
-          animate={{ scale: 1, opacity: 1 ,}
-}</p />;{error && process.env.NODE_ENV === 'development' && (<details className=\"mb-4 text-left\" />;
+          animate={{ scale: 1, opacity: 1 }"
+}</p />;{error && process.env.NODE_ENV === 'development' && (<details className=\"mb-4 text-left\" />;"
               <summary className=\"text-sm text-muted-foreground cursor-pointer\" />;}
                 Error Details (Development)</summary>;}
                 {typeof error === 'string' ? error : error.message}
               </pre>;
-            </details>;
+            </details>;"
           )}<pre className=\"mt-2 p-2 bg-muted rounded text-xs overflow-auto\" />;
-                {typeof error === 'string' ? error : error.message}transition={{ duration: 0 && 0.3 ,}
+                {typeof error === 'string' ? error : error.message}transition={{ duration: 0 && 0.3 }
 }>;
           <Icon className={cn('mx-auto mb-4 h-12 w-12', config && config.color)} />;
           <h3 className='text-lg font-semibold mb-2' />{config && config.title}</h3>;
@@ -414,14 +414,14 @@ const baseClasses = 'bg-muted rounded';
               </pre>;
             </details>;
           )}<div className='flex flex-col sm:flex-row gap-2 justify-center' />;
-            {canRetry && (<Button onClick={onRetry} variant='default' />;
+            {canRetry && (<Button onClick={onRetry} variant='default' />;"
                 <RefreshCw className='h-4 w-4 mr-2' />;<div className=\"flex flex-col sm:flex-row gap-2 justify-center\" />;
             {canRetry && (Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
               </Button>;
             )}{action && (<Button;}
                 onClick={action.onClick}
                 variant={canRetry ? 'outline' : 'default'}
-               />;
+               />;"
             {action && (<Button onClick={action.onClick} variant={canRetry ? \"outline\" : \"default\"} />;
                 {action.label}
               </Button>;
@@ -430,19 +430,19 @@ const baseClasses = 'bg-muted rounded';
             )}{action && (<Button;}
                 onClick={action.onClick}
                 variant={canRetry ? 'outline' : 'default'}
-               />;
+               />;"
             {action && (<Button onClick={action.onClick} variant={canRetry ? \"outline\" : \"default\"} />;
                 {action.label}
               </Button>;
             )}{action.label}
               </Button>;
-            )}{secondaryAction && (<Button onClick={secondaryAction.onClick} variant='ghost' />;
+            )}{secondaryAction && (<Button onClick={secondaryAction.onClick} variant='ghost' />;"
             {secondaryAction && (<Button onClick={secondaryAction.onClick} variant=\"ghost\" />;
                 {secondaryAction.label}
               </Button>;
             )}
-          </div>;
-          {!isOnline && (<div className=\"mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground\" />;
+          </div>;"
+          {!isOnline && (<div className=\"mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground\" />;"
               <WifiOff className=\"h-4 w-4\" />;
               <span />Offline</span>;}
             </div>;}
@@ -519,37 +519,37 @@ export const LoadingGrid: React.FC<LoadingGridProps /> = ({ count = 8,columns = 
    }) => {
 
 }
-const gridClasses = {card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${column,}
+const gridClasses = {card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${column}
 } gap-6`,list: 'space-y-4',
   table: 'space-y-2';
-  },const itemClasses = {card: 'p-6 space-y-4',}
+  },const itemClasses = {card: 'p-6 space-y-4'}
   list: 'p-4 space-y-3',table: 'p-3 space-y-2';}
   },return (<div className={cn(gridClasses[variant], className)} />;
-      {Array.from({ length: count,}
+      {Array.from({ length: count}"
 }).map((_, i) => (<Card key={i} className=\"animate-pulse\" />;
           <CardContent className={itemClasses[variant]} />;
-            {variant === 'card' && (<>;
-                <Skeleton variant=\"rectangular\" className=\"h-32\" />;
-                <div className=\"space-y-2\" />;}
-                  <Skeleton variant=\"text\" className=\"h-6 w-3/4\" />;}
-                  <Skeleton variant=\"text\" lines={2} />;
-                  <div className=\"flex gap-2\" />;
-                    <Skeleton variant=\"text\" className=\"h-4 w-16\" />;
+            {variant === 'card' && (<>;"
+                <Skeleton variant=\"rectangular\" className=\"h-32\" />;"
+                <div className=\"space-y-2\" />;}"
+                  <Skeleton variant=\"text\" className=\"h-6 w-3/4\" />;}"
+                  <Skeleton variant=\"text\" lines={2} />;"
+                  <div className=\"flex gap-2\" />;"
+                    <Skeleton variant=\"text\" className=\"h-4 w-16\" />;"
                     <Skeleton variant=\"text\" className=\"h-4 w-20\" />;
                   </div>;
                 </div>;
-              </>;
-            )}{variant === 'list' && (<div className=\"flex gap-4\" />;
-                <Skeleton variant=\"circular\" />;
-                <div className=\"flex-1 space-y-2\" />;}
-                  <Skeleton variant=\"text\" className=\"h-5 w-1/2\" />;}
+              </>;"
+            )}{variant === 'list' && (<div className=\"flex gap-4\" />;"
+                <Skeleton variant=\"circular\" />;"
+                <div className=\"flex-1 space-y-2\" />;}"
+                  <Skeleton variant=\"text\" className=\"h-5 w-1/2\" />;}"
                   <Skeleton variant=\"text\" lines={2} />;
                 </div>;
-              </div>;
-            )}{variant === 'table' && (<div className=\"flex items-center gap-4\" />;
-                <Skeleton variant=\"text\" className=\"h-4 w-1/4\" />;
-                <Skeleton variant=\"text\" className=\"h-4 w-1/3\" />;
-                <Skeleton variant=\"text\" className=\"h-4 w-1/6\" />;
+              </div>;"
+            )}{variant === 'table' && (<div className=\"flex items-center gap-4\" />;"
+                <Skeleton variant=\"text\" className=\"h-4 w-1/4\" />;"
+                <Skeleton variant=\"text\" className=\"h-4 w-1/3\" />;"
+                <Skeleton variant=\"text\" className=\"h-4 w-1/6\" />;"
                 <Skeleton variant=\"text\" className=\"h-4 w-1/4\" />;}
               </div>;}
             )}</CardContent>;
@@ -575,13 +575,13 @@ const getPerformanceColor = (if (time < 100) return 'text-green-500',if (time < 
 }) => {const getPerformanceColor = (if (time < 100) return 'text-green-500',if (time < 300) return 'text-yellow-500';
   return 'text-red-500';) => {
   return $3;}
-}
-  },if (isLoading) {return (<Badge variant=\"outline\" className={cn('text-xs', className)} />;
-        <LoadingSpinner size=\"sm\" />;
+}"
+  },if (isLoading) {return (<Badge variant=\"outline\" className={cn('text-xs', className)} />;"
+        <LoadingSpinner size=\"sm\" />;"
         <span className=\"ml-1\" />Loading...</span>;
       </Badge>;
-    )}return (<div className={cn('flex items-center gap-2 text-xs text-muted-foreground', className)} />;
-      {loadTime && (<Badge variant=\"outline\" className={getPerformanceColor(loadTime)} />;
+    )}return (<div className={cn('flex items-center gap-2 text-xs text-muted-foreground', className)} />;"
+      {loadTime && (<Badge variant=\"outline\" className={getPerformanceColor(loadTime)} />;"
           <Zap className=\"h-3 w-3 mr-1\" />;
           {loadTime}ms;
         </Badge>;
@@ -593,5 +593,5 @@ const getPerformanceColor = (if (time < 100) return 'text-green-500',if (time < 
     </div>;
   )}}
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({,}
-}
+export const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({}
+}"

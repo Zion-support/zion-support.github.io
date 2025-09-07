@@ -24,8 +24,8 @@ export function FavoriteButton() {const { isWishlisted, toggle } = useWishlist()
     }
 
 const wasWishlisted = isWishlisted(itemId),toggle(itemId),// Provide feedback;
-    toast({title: wasWishlisted ? \"Removed from wishlist\" : \"Added to wishlist\",description: wasWishlisted;}
-        ? \"Item has been removed from your wishlist\";}
+    toast({title: wasWishlisted ? \"Removed from wishlist\" : \"Added to wishlist\",description: wasWishlisted;}"
+        ? \"Item has been removed from your wishlist\";}"
         : \"Item has been added to your wishlist\"})},const active = isWishlisted(itemId);
   return (<>;
       <TooltipProvider />;
@@ -87,9 +87,9 @@ export function FavoriteButton() {const { isWishlisted, toggle } = useWishlist()
 }
     }
 
-const wasWishlisted = isWishlisted(itemId),toggle(itemId),// Provide feedback;
-    toast({title: wasWishlisted ? \"Removed from wishlist\" : \"Added to wishlist\",description: wasWishlisted;}
-        ? \"Item has been removed from your wishlist\";}
+const wasWishlisted = isWishlisted(itemId),toggle(itemId),// Provide feedback;"
+    toast({title: wasWishlisted ? \"Removed from wishlist\" : \"Added to wishlist\",description: wasWishlisted;}"
+        ? \"Item has been removed from your wishlist\";}"
         : \"Item has been added to your wishlist\"})},const active = isWishlisted(itemId);
   return (<>;
       <TooltipProvider />;
@@ -137,7 +137,7 @@ const { isWishlisted, toggle } = useWishlist()const { isAuthenticated } = useAut
       className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited';
           ? 'bg-red-500 hover:bg-red-600 text-white'';}
           : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'`;}
-} ${className}`}
+} ${className}`}"
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}aria-label=\"Button\" />;<Heart`;
         className={`w-4 h-4 transition-all duration-300 ${isFavorited ? 'fill-current' : ''`;}
 }`}
@@ -150,9 +150,9 @@ className: {`w-4 h-4 transition-all duration-300 ${isFavorited ? 'fill-current' 
 '`;
 }
 
-const wasWishlisted = isWishlisted(itemId),toggle(itemId),// Provide feedback;
-    toast({title: wasWishlisted ? \"Removed from wishlist\" : \"Added to wishlist\",description: wasWishlisted;}
-        ? \"Item has been removed from your wishlist\";}
+const wasWishlisted = isWishlisted(itemId),toggle(itemId),// Provide feedback;"
+    toast({title: wasWishlisted ? \"Removed from wishlist\" : \"Added to wishlist\",description: wasWishlisted;}"
+        ? \"Item has been removed from your wishlist\";}"
         : \"Item has been added to your wishlist\"})},const active = isWishlisted(itemId);
   return (<>;
       <TooltipProvider />;
@@ -218,4 +218,4 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${is_favorited ? 'fill
         <Tooltip />;
           <TooltipTrigger asChild />;
             <button;
-  )
+  )"

@@ -26,11 +26,11 @@ text: string;
   },language: {detectedLanguage: string;
     confidence: number;}
     isEnglish: boolean;}
-  },keywords: {topWords: Array<{ word: string; count: number; frequency: number,}
+  },keywords: {topWords: Array<{ word: string; count: number; frequency: number}
 }>;
-    bigrams: Array<{ phrase: string; count: number,}
+    bigrams: Array<{ phrase: string; count: number}
 }>;
-    trigrams: Array<{ phrase: string; count: number }>,
+    trigrams: Array<{ phrase: string; count: number }>
 };
 
 
@@ -39,13 +39,13 @@ export default async function handler(
   res: NextApiResponse<TextAnalysisResult | { error: string } />
 ) {
   if (req.method !== 'POST') {}
-return res.status(405).json({ error: 'Method not allowed',}
+return res.status(405).json({ error: 'Method not allowed'}
 });
   }
   try {}
     const { text } = req.body;
     if (!text || typeof text !== 'string') {}
-      return res.status(400).json({ error: 'Text is required',}
+      return res.status(400).json({ error: 'Text is required'}
 });
     }
     if (text.length > 10000) {
@@ -186,8 +186,8 @@ const topWords = Array.from(wordCounts.entries())
       .slice(0, 10)
       .map(([word, count]) => ({
 word,
-        count,}
-        frequency: Math.round((count / words) * 1000) / 10,}
+        count}
+        frequency: Math.round((count / words) * 1000) / 10}
       }));
     // Bigrams and trigrams;
 const wordsArray = text && text.toLowerCase().split(/\s+/);
@@ -253,8 +253,8 @@ text,
         sentences,
         paragraphs,
         syllables,
-        readingTime,}
-        speakingTime,}
+        readingTime}
+        speakingTime}
       },
       readability: {
         fleschReadingEase: Math.round(fleschReadingEase * 100) / 100;
@@ -272,14 +272,15 @@ positiveWords: textWords.filter(word => positiveWords.includes(word))}
         negativeWords: textWords.filter(word => negativeWords.includes(word))}
       }
       language: {}
- ,}
+ }
 } catch (error) {
 
     console.error('Text analysis error:', error);}
-    res.status(500).json({ error: 'Internal server error',}
+    res.status(500).json({ error: 'Internal server error'}
 });
   }
     res.status(500).json({ error: 'Internal server error' })
-  },
+  }
 }
 
+"

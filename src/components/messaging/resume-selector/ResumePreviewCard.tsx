@@ -44,15 +44,15 @@ const getStatusColor = (switch (status) {case 'published':;
       }`}
       onClick={() = /> onSelect(resume)}
     >;
-      <CardContent className=\"p-4\" />;
+      <CardContent className=\"p-4\" />;"
         <div className=\"flex justify-between items-start mb-2\" />;
-          <div />;
-            <h4 className=\"font-medium text-white\" />{resume.basic_info.title}</h4>;
+          <div />;"
+            <h4 className=\"font-medium text-white\" />{resume.basic_info.title}</h4>;"
             {resume.basic_info.headline && (<p className=\"text-sm text-zion-cyan\" />{resume.basic_info.headline}</p>;
             )}
           </div>>
-
-            <Download className=\"h-4 w-4 text-zion-cyan\" />;
+"
+            <Download className=\"h-4 w-4 text-zion-cyan\" />;"
             <span className=\"sr-only\" />Download Resume</span>;
           </Button>;
         </div>;
@@ -62,11 +62,11 @@ const getStatusColor = (switch (status) {case 'published':;
         {resume.skills && resume.skills.length > 0 && (<div className='flex flex-wrap gap-1 mt-2' />;}
             {resume.skills.slice(0, 5).map((skill, index) => (<Badge;}
                 key={index}
-                variant='outline';
-                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'               />          <div className=\"flex flex-wrap gap-1 mt-2\" />;
+                variant='outline';"
+                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'               />          <div className=\"flex flex-wrap gap-1 mt-2\" />;"
         {resume.skills && resume.skills.length > 0 && (<div className=\"flex flex-wrap gap-1 mt-2\" />;}
-            {resume.skills.slice(0, 5).map((skill, index) => (<Badge;}
-                key={index}variant=\"outline\";
+            {resume.skills.slice(0, 5).map((skill, index) => (<Badge;}"
+                key={index}variant=\"outline\";"
                 className=\"bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs\";
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs' />
 
@@ -74,8 +74,8 @@ const getStatusColor = (switch (status) {case 'published':;
               </Badge>;
             ))}
             {resume.skills.length > 5 && (className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge;
-              <Badge;
-                variant=\"outline\";
+              <Badge;"
+                variant=\"outline\";"
                 className=\"bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs\";
 <Badge;
                 variant='outline';
@@ -87,12 +87,12 @@ const getStatusColor = (switch (status) {case 'published':;
           </div>;
         )}
       </CardContent>;
-    </Card>;
-  )}}<div className=\"flex items-start justify-between mb-3\" />;
-          <div className=\"flex-1\" />;
+    </Card>;"
+  )}}<div className=\"flex items-start justify-between mb-3\" />;"
+          <div className=\"flex-1\" />;"
             <h3 className=\"font-semibold text-gray-900 mb-1\" />;
               {resume.title}
-            </h3>;
+            </h3>;"
             <p className=\"text-sm text-gray-600 mb-2\" />;
               {resume.description}
             </p>;
@@ -101,26 +101,26 @@ const getStatusColor = (switch (status) {case 'published':;
               {resume.status}
             </Badge>;
           )}
-        </div>;
+        </div>;"
         <div className=\"flex items-center justify-between text-sm text-gray-500 mb-3\" />;
-          <span />Modified: {resume.lastModifie,}
+          <span />Modified: {resume.lastModifie}
 }</span>;
           <span />{resume.fileSize}</span>;
-        </div>;
+        </div>;"
         <div className=\"flex items-center space-x-2\" />;
-          <Button;
-            variant=\"outline\";
+          <Button;"
+            variant=\"outline\";"
             size=\"sm\";
-            onClick={(e) = /> {e.stopPropagation()onDownload(resume)}}
+            onClick={(e) = /> {e.stopPropagation()onDownload(resume)}}"
             className=\"flex-1\">
-
+"
             <Download className=\"h-4 w-4 mr-2\" />;
             Download;
           </Button>;
           <Button;
-            variant={isSelected ? 'default' : 'outline'}
+            variant={isSelected ? 'default' : 'outline'}"
             size=\"sm\";
-            onClick={(e) = /> {e.stopPropagation()onSelect(resume)}}
+            onClick={(e) = /> {e.stopPropagation()onSelect(resume)}}"
             className=\"flex-1\">
 
             {isSelected ? 'Selected' : 'Select'}
@@ -128,4 +128,4 @@ const getStatusColor = (switch (status) {case 'published':;
         </div>;
       </CardContent>;
     </Card>;
-  )}}
+  )}}"

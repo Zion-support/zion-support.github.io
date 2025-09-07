@@ -1,9 +1,6 @@
-<<<<<<< HEAD;
-  {
 
-=======
 {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
       'Unbreakable encryption security',
       'Future-proof against quantum attacks',
       'Reduce security risks by 99 && 99.9%',
@@ -254,9 +251,8 @@ reviews: 89;
 
   return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
 };
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 export const getEmergingTechServicesByCategory = (
   );) => {
   return $3;}
@@ -1591,12 +1587,7 @@ export const getEmergingTechServicesByPriceRange = (;
   });
 }
 ;
-<<<<<<< HEAD;
-export interface EmergingTechService {;}
-}
-};
-=======
+
 export interface EmergingTechService {}
 }
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

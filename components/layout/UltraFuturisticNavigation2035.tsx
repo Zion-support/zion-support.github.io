@@ -30,7 +30,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com'}
   address: '364 E Main St STE 1008 Middletown DE 19709'}
-  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com',
+  website: 'https://ziontechgroup.com'};  website: 'https://ziontechgroup.com'
 }
   featured?: boolean;
 
@@ -38,8 +38,8 @@ const contactInfo = {
 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',}
-  website: 'https://ziontechgroup.com',}
+  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  website: 'https://ziontechgroup.com'}
 };
 
 const navigationItems: NavigationItem[] = [
@@ -50,15 +50,15 @@ const navigationItems: NavigationItem[] = [
 icon: <DollarSign className = 'w-5 h-5' />,
     description: 'Plans and average market prices',
   children: [
-      { name: 'Standard Pricing',}
-  href: '/pricing', description: 'Our plans',}
+      { name: 'Standard Pricing'}
+  href: '/pricing', description: 'Our plans'}
 }
       {
         name: 'Market Pricing',
-  href: '/market-pricing',}
-        description: 'Compare market averages',}
-      },
-    ],
+  href: '/market-pricing'}
+        description: 'Compare market averages'}
+      }
+    ]
   },
   {
     name: 'Resources',
@@ -66,23 +66,23 @@ icon: <DollarSign className = 'w-5 h-5' />,
     icon: <BookOpen className='w-5 h-5' />,
     description: 'Guides, reports and tools',
   children: [
-      { name: 'Blog',}
-  href: '/blog', description: 'Insights and updates',}
+      { name: 'Blog'}
+  href: '/blog', description: 'Insights and updates'}
 },
       {
         name: 'Case Studies',
-  href: '/case-studies',}
-        description: 'Proven results',}
+  href: '/case-studies'}
+        description: 'Proven results'}
       },
-      { name: 'Developer',}
-  href: '/developer', description: 'Docs and SDKs',}
+      { name: 'Developer'}
+  href: '/developer', description: 'Docs and SDKs'}
 },
       {
         name: 'Services Advertising',
-  href: '/services-advertising',}
-        description: 'Features, benefits and market pricing links',}
-      },
-    ],
+  href: '/services-advertising'}
+        description: 'Features, benefits and market pricing links'}
+      }
+    ]
   },
   {
 
@@ -92,13 +92,13 @@ icon: <DollarSign className = 'w-5 h-5' />,
     description: 'Talk to our team',
   featured: true,
     children: [
-      { name: 'Contact Sales',}
-  href: '/contact', description: 'Get a quote',}
+      { name: 'Contact Sales'}
+  href: '/contact', description: 'Get a quote'}
 },
-{ name: 'Support',}
-  href: '/support', description: 'Help center',}
-},
-    ],
+{ name: 'Support'}
+  href: '/support', description: 'Help center'}
+}
+    ]
   },
   {
     name: 'Services',
@@ -109,30 +109,30 @@ icon: <DollarSign className = 'w-5 h-5' />,
     children: [
       {
         name: 'AI & Data',
-  href: '/services?filter=ai-consciousness',}
-        description: 'AI, data, ML services',}
+  href: '/services?filter=ai-consciousness'}
+        description: 'AI, data, ML services'}
       },
       {
         name: 'Enterprise IT',
-  href: '/services?filter=enterprise-it',}
-        description: 'Infra, security, platforms',}
+  href: '/services?filter=enterprise-it'}
+        description: 'Infra, security, platforms'}
       },
       {
         name: 'Quantum & Emerging',
-  href: '/services?filter=quantum-emerging',}
-        description: 'Quantum, space, frontier',}
+  href: '/services?filter=quantum-emerging'}
+        description: 'Quantum, space, frontier'}
       },
       {
         name: 'Micro SAAS',
-  href: '/services?filter=micro-saas',}
-        description: 'Business accelerators',}
+  href: '/services?filter=micro-saas'}
+        description: 'Business accelerators'}
       },
       {
         name: 'Creative & Media',
-  href: '/services?filter=creative-media',}
-        description: 'Content, media, design',}
-      },
-    ],
+  href: '/services?filter=creative-media'}
+        description: 'Content, media, design'}
+      }
+    ]
   },
   {
     name: 'All Services',
@@ -144,19 +144,19 @@ icon: <DollarSign className = 'w-5 h-5' />,
     children: [
 {
         name: 'View All Services',
-  href: '/comprehensive-services-showcase-2025',}
-        description: 'Complete services portfolio',}
+  href: '/comprehensive-services-showcase-2025'}
+        description: 'Complete services portfolio'}
       },
       {
         name: 'Ultimate 2035 Futuristic',
   href: '/ultimate-2035-futuristic-services-showcase'
-        description: 'Revolutionary future technology',}
+        description: 'Revolutionary future technology'}
   featured: true}
       }
       {
         name: 'Ultimate 2025 Micro SAAS',
   href: '/ultimate-2025-micro-saas-showcase'
-        description: 'Latest innovative services',}
+        description: 'Latest innovative services'}
   featured: true}
       }
       {
@@ -210,7 +210,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
         description: 'Business transformation services'}
       }
     ]
- ,
+ 
 }
   {
     name: 'AI & Consciousness',
@@ -223,8 +223,8 @@ icon: <DollarSign className = 'w-5 h-5' />,
 {
         name: 'AI Customer Success Platform',
   href: '/ai-customer-success-platform',
-        description: 'Predict and prevent churn with AI',}
-  featured: true,}
+        description: 'Predict and prevent churn with AI'}
+  featured: true}
       },
       {
 
@@ -296,7 +296,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
         name: 'AI Ethics & Governance',
   href: '/ai-ethics-governance-framework'
         description: 'Ethical AI frameworks'}
-     ,}
+     }
 }
       {
         name: 'Advanced AI Automation',
@@ -317,8 +317,8 @@ icon: <DollarSign className = 'w-5 h-5' />,
 {
         name: 'Customer Success Platform',
   href: '/ai-customer-success-platform',
-        description: 'AI-powered customer retention',}
-  featured: true,}
+        description: 'AI-powered customer retention'}
+  featured: true}
       },
       {
         name: 'Supply Chain Optimization',
@@ -354,7 +354,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
         name: 'Decision Engine',
   href: '/ai-powered-decision-engine'
         description: 'AI-powered business decisions'}
-     ,}
+     }
 }
       {
         name: 'Helpdesk & Support',
@@ -365,7 +365,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
         name: 'Learning Management (LMS)',
   href: '/lms-platform'
         description: 'Adaptive training and certifications'}
-     ,}
+     }
 }
       {
         name: 'E‑commerce Returns',
@@ -382,7 +382,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
         name: 'Keyword Research Engine',
   href: '/keyword-research-engine'
         description: 'Low-competition keywords discovery'}
-     ,}
+     }
 }
       {
         name: 'Privacy Analytics Suite',
@@ -395,7 +395,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
         description: 'Instant branded invoices and payments'}
       }
     ]
- ,
+ 
 }
   {
     name: 'Quantum & Emerging Tech',
@@ -407,8 +407,8 @@ icon: <DollarSign className = 'w-5 h-5' />,
     children: [
 {
         name: 'Quantum-Secure Cloud Infrastructure',
-  href: '/quantum-secure-cloud-infrastructure',}
-        description: 'Unbreakable quantum encryption',}
+  href: '/quantum-secure-cloud-infrastructure'}
+        description: 'Unbreakable quantum encryption'}
       },
       {
         name: 'Quantum Financial Trading Platform',
@@ -486,7 +486,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
         description: 'Revolutionary space AI'}
       }
     ]
- ,
+ 
 }
   {
     name: 'Enterprise IT',
@@ -498,45 +498,45 @@ icon: <DollarSign className = 'w-5 h-5' />,
     children: [
 {
         name: 'Zero Trust Security',
-  href: '/zero-trust-security-platform',}
-        description: 'Next-generation security architecture',}
+  href: '/zero-trust-security-platform'}
+        description: 'Next-generation security architecture'}
       },
       {
         name: 'Quantum Cloud Infrastructure',
-  href: '/quantum-cloud-infrastructure',}
-        description: 'Quantum-enhanced cloud computing',}
+  href: '/quantum-cloud-infrastructure'}
+        description: 'Quantum-enhanced cloud computing'}
       },
       {
         name: 'Autonomous IT Operations',
-  href: '/autonomous-it-operations-center',}
-        description: 'Self-managing IT infrastructure',}
+  href: '/autonomous-it-operations-center'}
+        description: 'Self-managing IT infrastructure'}
       },
       {
         name: 'Edge Computing Orchestration',
-  href: '/edge-computing-orchestration',}
-        description: 'Distributed edge computing',}
+  href: '/edge-computing-orchestration'}
+        description: 'Distributed edge computing'}
       },
       {
         name: 'Blockchain Infrastructure',
-  href: '/blockchain-infrastructure-platform',}
-        description: 'Enterprise blockchain solutions',}
+  href: '/blockchain-infrastructure-platform'}
+        description: 'Enterprise blockchain solutions'}
       },
       {
         name: 'AI-Powered DevOps',
-  href: '/ai-powered-devops-platform',}
-        description: 'Intelligent development operations',}
+  href: '/ai-powered-devops-platform'}
+        description: 'Intelligent development operations'}
       },
       {
         name: 'Quantum Cybersecurity',
-  href: '/quantum-cybersecurity-services',}
-        description: 'Next-gen quantum security',}
+  href: '/quantum-cybersecurity-services'}
+        description: 'Next-gen quantum security'}
       },
       {
         name: 'AI-Powered Cybersecurity',
-  href: '/ai-powered-cybersecurity',}
-        description: 'Intelligent threat detection',}
-      },
-    ],
+  href: '/ai-powered-cybersecurity'}
+        description: 'Intelligent threat detection'}
+      }
+    ]
   },
   {
     name: 'Industry Solutions',
@@ -579,14 +579,14 @@ icon: <DollarSign className = 'w-5 h-5' />,
         name: 'Quantum Cybersecurity',
   href: '/quantum-cybersecurity-services'
         description: 'Next-gen quantum security'}
-     ,}
+     }
 }
       {
         name: 'Biotech AI Research',
-  href: '/biotech-ai',}
-        description: 'AI-driven biotech',}
-      },
-    ],
+  href: '/biotech-ai'}
+        description: 'AI-driven biotech'}
+      }
+    ]
   },
   {
     name: 'Resources',
@@ -601,45 +601,45 @@ icon: <DollarSign className = 'w-5 h-5' />,
     children: [;
       {
         name: 'Zero Trust Security',
-  href: '/zero - trust - security - platform',}
-        description: 'Next - generation security architecture',}
+  href: '/zero - trust - security - platform'}
+        description: 'Next - generation security architecture'}
       },
       {
         name: 'Quantum Cloud Infrastructure',
-  href: '/quantum - cloud - infrastructure',}
-        description: 'Quantum - enhanced cloud computing',}
+  href: '/quantum - cloud - infrastructure'}
+        description: 'Quantum - enhanced cloud computing'}
       },
       {
         name: 'Autonomous IT Operations',
-  href: '/autonomous - it - operations - center',}
-        description: 'Self - managing IT infrastructure',}
+  href: '/autonomous - it - operations - center'}
+        description: 'Self - managing IT infrastructure'}
       },
       {
         name: 'Edge Computing Orchestration',
-  href: '/edge - computing - orchestration',}
-        description: 'Distributed edge computing',}
+  href: '/edge - computing - orchestration'}
+        description: 'Distributed edge computing'}
       },
       {
         name: 'Blockchain Infrastructure',
-  href: '/blockchain - infrastructure - platform',}
-        description: 'Enterprise blockchain solutions',}
+  href: '/blockchain - infrastructure - platform'}
+        description: 'Enterprise blockchain solutions'}
       },
       {
         name: 'AI - Powered DevOps',
-  href: '/ai - powered - devops - platform',}
-        description: 'Intelligent development operations',}
+  href: '/ai - powered - devops - platform'}
+        description: 'Intelligent development operations'}
       },
       {
         name: 'Quantum Cybersecurity',
-  href: '/quantum - cybersecurity - services',}
-        description: 'Next - gen quantum security',}
+  href: '/quantum - cybersecurity - services'}
+        description: 'Next - gen quantum security'}
       },
       {
         name: 'AI - Powered Cybersecurity',
-  href: '/ai - powered - cybersecurity',}
-        description: 'Intelligent threat detection',}
-      },
-    ],
+  href: '/ai - powered - cybersecurity'}
+        description: 'Intelligent threat detection'}
+      }
+    ]
   },
     name: 'Industry Solutions',
   href: '/industry - solutions',
@@ -649,45 +649,45 @@ icon: <DollarSign className = 'w-5 h-5' />,
     children: [;
       {
         name: 'Healthcare AI',
-  href: '/healthcare - ai - solutions',}
-        description: 'AI - powered healthcare',}
+  href: '/healthcare - ai - solutions'}
+        description: 'AI - powered healthcare'}
       },
       {
         name: 'Financial Technology',
-  href: '/fintech - solutions',}
-        description: 'Next - gen fintech',}
+  href: '/fintech - solutions'}
+        description: 'Next - gen fintech'}
       },
       {
         name: 'Manufacturing AI',
-  href: '/manufacturing - ai - solutions',}
-        description: 'Smart manufacturing',}
+  href: '/manufacturing - ai - solutions'}
+        description: 'Smart manufacturing'}
       },
       {
         name: 'Retail Technology',
-  href: '/innovative - business - solutions',}
-        description: 'Digital retail transformation',}
+  href: '/innovative - business - solutions'}
+        description: 'Digital retail transformation'}
       },
       {
         name: 'Education Technology',
-  href: '/training',}
-        description: 'AI - powered learning',}
+  href: '/training'}
+        description: 'AI - powered learning'}
       },
       {
         name: 'Government Solutions',
-  href: '/enterprise - solutions - showcase',}
-        description: 'Public sector innovation',}
+  href: '/enterprise - solutions - showcase'}
+        description: 'Public sector innovation'}
       },
       {
         name: 'Energy & Utilities',
-  href: '/quantum - energy',}
-        description: 'Sustainable energy tech',}
+  href: '/quantum - energy'}
+        description: 'Sustainable energy tech'}
       },
       {
         name: 'Biotech AI Research',
-  href: '/biotech - ai',}
-        description: 'AI - driven biotech',}
-      },
-    ],
+  href: '/biotech - ai'}
+        description: 'AI - driven biotech'}
+      }
+    ]
   },
   {
     name: 'Resources',
@@ -697,85 +697,85 @@ icon: <DollarSign className = 'w-5 h-5' />,
   children: [;
       {
         name: 'Documentation',
-  href: '/docs',}
-        description: 'Technical documentation',}
+  href: '/docs'}
+        description: 'Technical documentation'}
       },
       {
 
         name: 'API Reference',
-  href: '/api-documentation',}
-        description: 'API documentation',}
+  href: '/api-documentation'}
+        description: 'API documentation'}
       },
       {
         name: 'Case Studies',
-  href: '/case-studies',}
-        description: 'Success stories',}
+  href: '/case-studies'}
+        description: 'Success stories'}
       },
-      { name: 'Blog & News',}
-  href: '/blog', description: 'Latest insights',}
+      { name: 'Blog & News'}
+  href: '/blog', description: 'Latest insights'}
 },
       {
         name: 'Support Center',
-  href: '/support',}
-        description: 'Help and support',}
+  href: '/support'}
+        description: 'Help and support'}
       },
       {
         name: 'Training',
-  href: '/training',}
-        description: 'Learning resources',}
+  href: '/training'}
+        description: 'Learning resources'}
       },
-      { name: 'Community',}
-  href: '/community', description: 'User community',}
-},
-    ],
-  },
+      { name: 'Community'}
+  href: '/community', description: 'User community'}
+}
+    ]
+  }
 ];
 
 const quickActions = [
   {
     name: 'Get Started',
   href: '/contact',
-    icon: <ArrowRight className='w-4 h-4' />,}
-    primary: true,}
+    icon: <ArrowRight className='w-4 h-4' />}
+    primary: true}
   },
   {
     name: 'Get a Quote',
-  href: '/quote',}
-    icon: <DollarSign className='w-4 h-4' />,}
+  href: '/quote'}
+    icon: <DollarSign className='w-4 h-4' />}
   },
-  { name: 'Book Demo',}
-  href: '/demo', icon: <Video className='w-4 h-4' />,}
+  { name: 'Book Demo'}
+  href: '/demo', icon: <Video className='w-4 h-4' />}
 },
   {
     name: 'Live Chat',
-  href: '/chat',}
-    icon: <MessageCircle className='w-4 h-4' />,}
+  href: '/chat'}
+    icon: <MessageCircle className='w-4 h-4' />}
   },
   {
     name: 'View Pricing',
-  href: '/pricing',}
-    icon: <DollarSign className='w-4 h-4' />,}
+  href: '/pricing'}
+    icon: <DollarSign className='w-4 h-4' />}
   },
   {
     name: 'Market Pricing',
-  href: '/market-pricing',}
-    icon: <BarChart3 className='w-4 h-4' />,}
+  href: '/market-pricing'}
+    icon: <BarChart3 className='w-4 h-4' />}
   },
   {
     name: 'Services Advertising',
-  href: '/services-advertising',}
-    icon: <Sparkles className='w-4 h-4' />,}
+  href: '/services-advertising'}
+    icon: <Sparkles className='w-4 h-4' />}
   },
   {
     name: 'Documentation',
-  href: '/docs',}
-    icon: <BookOpen className='w-4 h-4' />,}
+  href: '/docs'}
+    icon: <BookOpen className='w-4 h-4' />}
   },
   {
     name: 'Support',
-  href: '/support',}
-    icon: <HelpCircle className='w-4 h-4' />,}
-  },
+  href: '/support'}
+    icon: <HelpCircle className='w-4 h-4' />}
+  }
 ];
 
 const UltraFuturisticNavigation2035: React.FC = () => {
@@ -881,7 +881,7 @@ className={`px-2 py-1 text-xs rounded-full ${
 }
                         }`} />
 
-                        {item.badg,}
+                        {item.badg}
 }
                       </span>;
                     )}
@@ -896,9 +896,9 @@ className={`px-2 py-1 text-xs rounded-full ${
                   <AnimatePresence />
                     {activeDropdown === item.name && (
                       <motion.div;}
-initial={{ opacity: 0, y: 10, scale: 0.95 ,}
+initial={{ opacity: 0, y: 10, scale: 0.95 }
 }
-                        animate={{ opacity: 1, y: 0, scale: 1 ,}
+                        animate={{ opacity: 1, y: 0, scale: 1 }
 }
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
@@ -906,7 +906,7 @@ initial={{ opacity: 0, y: 10, scale: 0.95 ,}
 
 className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
-                        onMouseLeave={closeDropdown,}
+                        onMouseLeave={closeDropdown}
 }
                        />;
                         <div className='p-6' />;
@@ -941,7 +941,7 @@ key={child && child.name}
                                       {child && child.description}
                                     </div>;
                                   )}
-                                </div>;
+                                </div>;"
                                 <ArrowRight className='w-4 h-4 opacity-50' />                              </Link>                                <ArrowRight className=\"w-4 h-4 opacity-50\" />;
                               </Link>;
                             ))}
@@ -961,11 +961,11 @@ key={child && child.name}
               {/* Contact Info */}
               <div className='flex items-center gap-4 text-sm text-gray-400' />;
                 <a;
-                  href={`tel: ${contactInfo && contactInfo.mobile},
+                  href={`tel: ${contactInfo && contactInfo.mobile}
 }
                   className='flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200' />;
                   <Phone className='w-4 h-4' />;
-                  <span className='hidden xl: inline' />{contactInfo && contactInfo.mobil,}
+                  <span className='hidden xl: inline' />{contactInfo && contactInfo.mobil}
 }</span>;
                 </a>;
                 <a;
@@ -981,22 +981,22 @@ key={child && child.name}
                   </Link>))}
               </div>;
               {/* Contact Info */}
-                  href={`mailto: ${contactInfo && contactInfo.email},
+                  href={`mailto: ${contactInfo && contactInfo.email}
 }
                   className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200'>;
                   <Mail className='w-4 h-4' />;
-                  <span className='hidden xl: inline' />{contactInfo && contactInfo.emai,}
+                  <span className='hidden xl: inline' />{contactInfo && contactInfo.emai}"
 }</span>                </a>              <div className=\"flex items-center gap-4 text-sm text-gray-400\" />;
-                <a href={`tel: ${contactInfo && contactInfo.mobile},
-} className=\"flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200\" />;
-                  <Phone className=\"w-4 h-4\" />;
-                  <span className=\"hidden xl: inline\" />{contactInfo && contactInfo.mobil,}
+                <a href={`tel: ${contactInfo && contactInfo.mobile},"
+} className=\"flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200\" />;"
+                  <Phone className=\"w-4 h-4\" />;"
+                  <span className=\"hidden xl: inline\" />{contactInfo && contactInfo.mobil}
 }</span>;
                 </a>;
-                <a href={`mailto: ${contactInfo && contactInfo.email},
-} className=\"flex items-center gap-2 hover:text-purple-400 transition-colors duration-200\" />;
-                  <Mail className=\"w-4 h-4\" />;
-                  <span className=\"hidden xl: inline\" />{contactInfo && contactInfo.emai,}
+                <a href={`mailto: ${contactInfo && contactInfo.email},"
+} className=\"flex items-center gap-2 hover:text-purple-400 transition-colors duration-200\" />;"
+                  <Mail className=\"w-4 h-4\" />;"
+                  <span className=\"hidden xl: inline\" />{contactInfo && contactInfo.emai}
 }</span>;
               </div>;
             </div>;{/* Mobile Menu Button */}
@@ -1006,10 +1006,10 @@ key={child && child.name}
               aria-label='Toggle mobile menu'>
 
               {isOpen ? (<X className='w-6 h-6' />;}
-              ) : (<Menu className='w-6 h-6' />;}
-              )}            </button>              className=\"lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200\";
+              ) : (<Menu className='w-6 h-6' />;}"
+              )}            </button>              className=\"lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200\";"
               aria-label=\"Toggle mobile menu\">
-
+"
               {isOpen ? <X className=\"w-6 h-6\" /> : <Menu className=\"w-6 h-6\" />}
           </div>;
         </div>;
@@ -1020,10 +1020,10 @@ key={child && child.name}
               aria-label='Toggle mobile menu'>
 
               {isOpen ? (<X className='w-6 h-6' />;}
-              ) : (<Menu className='w-6 h-6' />;}
-              )}            </button>              className=\"lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200\";
+              ) : (<Menu className='w-6 h-6' />;}"
+              )}            </button>              className=\"lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200\";"
               aria-label=\"Toggle mobile menu\">
-
+"
               {isOpen ? <X className=\"w-6 h-6\" /> : <Menu className=\"w-6 h-6\" />}
           </div>;
         </div>;
@@ -1040,13 +1040,13 @@ key={child && child.name}
                   {/* Dropdown Menu */}
                   <AnimatePresence />;
                     {activeDropdown === item.name && (<motion.div;}
-                        initial={{ opacity: 0, y: 10, scale: 0.95 ,}
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }
 }
-                        animate={{ opacity: 1, y: 0, scale: 1 ,}
+                        animate={{ opacity: 1, y: 0, scale: 1 }
 }
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        onMouseLeave={closeDropdown,}
+                        onMouseLeave={closeDropdown}
 }
                        />;
                         <div className='p-6' />;
@@ -1080,7 +1080,7 @@ child.featured;
 {child.featured && (
                                   <Star className='w-4 h-4 text-cyan-400' />
 }
-                                ,}
+                                }
 }
                                 <div className='flex-1' />;
                                   <div className='font-medium' />;
@@ -1128,21 +1128,21 @@ key={action.name}
               {/* Contact Info */}
 <div className='flex items-center gap-4 text-sm text-gray-400' />;
                 <a;
-                  href={`tel: ${contactInfo.mobile},
+                  href={`tel: ${contactInfo.mobile}
 }
                   className='flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200' />
 
                   <Phone className='w-4 h-4' />;
-                  <span className='hidden xl: inline' />{contactInfo.mobil,}
+                  <span className='hidden xl: inline' />{contactInfo.mobil}
 }</span>;
                 </a>;
                 <a;
-                  href={`mailto: ${contactInfo.email},
+                  href={`mailto: ${contactInfo.email}
 }
                   className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200' />
 
                   <Mail className='w-4 h-4' />;
-                  <span className='hidden xl: inline' />{contactInfo.emai,}
+                  <span className='hidden xl: inline' />{contactInfo.emai}
 }</span>;
                 </a>;
               </div>;
@@ -1162,9 +1162,9 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors durati
         {/* Mobile Menu */}
         <AnimatePresence />;
           {isOpen && (<motion.div;}
-              initial={{ opacity: 0, height: 0 ,}
+              initial={{ opacity: 0, height: 0 }
 }
-              animate={{ opacity: 1, height: 'auto' ,}
+              animate={{ opacity: 1, height: 'auto' }
 }
 
               exit={{ opacity: 0, height: 0 }}
@@ -1176,7 +1176,7 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
                 <div className='space-y-6' />
 
                   {/* Mobile Navigation Items */}
-                  {navigationItems.map(item => (<div key={item.nam,}
+                  {navigationItems.map(item => (<div key={item.nam}
 } />;
                       <button;
                         onClick={() = /> toggleDropdown(item.name)}
@@ -1216,9 +1216,9 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
                       <AnimatePresence />
                         {activeDropdown === item.name && (
                           <motion.div;}
-initial={{ opacity: 0, height: 0 ,}
+initial={{ opacity: 0, height: 0 }
 }
-                            animate={{ opacity: 1, height: 'auto' ,}
+                            animate={{ opacity: 1, height: 'auto' }
 }
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
@@ -1236,7 +1236,7 @@ child.featured;
                                     : 'text-gray-400 hover:text-white hover:bg-gray-800/50'}
 }
                                 }`}
-                                onClick={closeMobileMen,}
+                                onClick={closeMobileMen}
 }
                                />;
 <div className='font-medium' />{child.name}</div>;
@@ -1307,7 +1307,7 @@ href={`mailto: ${contactInfo.email}`}
         </AnimatePresence>
       </div>
     </nav>
-),
+)
 };
 
 
@@ -1315,7 +1315,7 @@ href={`mailto: ${contactInfo.email}`}
 }, [])
 };
 
-}, []);
+}, []);"
 </div> <div /> <div className=\"text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent\"  /> Zion Tech Group </div> <div className=\"text - xs text - gray - 400\"  />Revolutionary Technology</div> </div> </a> > {}
   item.icon;}
 }<span /> {}
@@ -1334,7 +1334,7 @@ href={`mailto: ${contactInfo.email}`}
 }href= {child.href;}
 }className= {`flex items - center gap - 3 p - 3 rounded - xl transition - all duration - 200 $ {child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';}
 }`;
-}on_click= {close_dropdowns;}
+}on_click= {close_dropdowns;}"
 } />)}</div> <ArrowRight className=\"w - 4 h - 4 opacity - 50\" /> </a>) )}</div> </div> </motion.div>)}</AnimatePresence> </div>) )}</div> <Link key= {action.name;}
 }href= {action.href;}
 }className= {`flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 $ {action.primary ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover:from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';}
@@ -1365,4 +1365,4 @@ export default UltraFuturisticNavigation2035;  )}
 
 export default UltraFuturisticNavigation2035;
 
-export default UltraFuturisticNavigation2035;
+export default UltraFuturisticNavigation2035;"

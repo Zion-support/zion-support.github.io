@@ -1,11 +1,6 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface EmergingTechBreakthroughServiceV2  {id: string;
-  id: string;
-=======
+
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: string;
   tagline: string;
   price: string;
@@ -1413,28 +1408,9 @@ export interface EmergingTechBreakthroughServiceV2 {
     mobile: string, email: string,
     address: string,
     website: string;
-<<<<<<< HEAD}
-  }
-    },
-        'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'
-      launchDate: '2025-06-01',
-  customers: 3;
-rating: 5.0;
-reviews: 2;
-    }
-        'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
-      launchDate: '2025-06-01',
-  customers: 3,
-      rating: 5.0,
-      reviews: 2;
-    },;
-  ];    features: [
-      'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';
-      'Advanced consciousness analyticsExpert consultation and support'
-    ];
-=======
+
     },    ];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 popular: true, icon: '🧠',
   color: 'from-purple-600 via-pink-600 to-rose-600', textColor: 'text-purple-400',
   link: 'https://ziontechgroup.com/brain-computer-interface-enterprise', marketPosition: 'Pioneering brain-computer interface technology. First-to-market solution for enterprise neural computing applications.',

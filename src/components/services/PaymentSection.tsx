@@ -30,4 +30,4 @@ const handlePaymentInitiated = null;
         billed separately.;
       </p>;
     </div>;
-  )}\";
+  )}\";"

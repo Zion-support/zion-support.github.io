@@ -13,7 +13,7 @@ const contactInfo = null;
         name: 'AI Consciousness Evolution',
   href: '/ai-consciousness-evolution-platform'
 }
-     ,}
+     }
 }
       {name: 'AI Emotional Intelligence';}
         href: '/ai-emotion-intelligence-platform';}
@@ -23,187 +23,187 @@ const contactInfo = null;
       }
 
       {
-        name: 'Quantum Cloud Infrastructure',}
-  href: '/quantum-cloud-infrastructure',}
-      },
-    ],
+        name: 'Quantum Cloud Infrastructure'}
+  href: '/quantum-cloud-infrastructure'}
+      }
+    ]
   },
   {
     title: '🧬 Biotech & DNA Computing',
   services: [
       {
-        name: 'DNA Computing Platform',}
-  href: '/biotech-dna-computing-platform',}
+        name: 'DNA Computing Platform'}
+  href: '/biotech-dna-computing-platform'}
       },
       {
-        name: 'Personalized Nutrition',}
-  href: '/biotech-personalized-nutrition',}
+        name: 'Personalized Nutrition'}
+  href: '/biotech-personalized-nutrition'}
       },
       {
-        name: 'Predictive Health Analytics',}
-  href: '/ai-predictive-health-analytics',}
+        name: 'Predictive Health Analytics'}
+  href: '/ai-predictive-health-analytics'}
       },
-        { name: 'Research Automation',}
-  href: '/advanced-research-automation',}
-},
+        { name: 'Research Automation'}
+  href: '/advanced-research-automation'}
+}
 
-    ],
+    ]
   },
   {
     title: '🏙️ Enterprise IT Solutions',
   services: [
-        { name: 'Autonomous DevOps',}
-  href: '/autonomous-devops-platform',}
+        { name: 'Autonomous DevOps'}
+  href: '/autonomous-devops-platform'}
 },
 
 {
-        name: 'Autonomous IT Operations',}
-  href: '/autonomous-it-operations-center',}
+        name: 'Autonomous IT Operations'}
+  href: '/autonomous-it-operations-center'}
       },
       {
-        name: 'AI Enterprise Security',}
-  href: '/ai-powered-enterprise-security',}
+        name: 'AI Enterprise Security'}
+  href: '/ai-powered-enterprise-security'}
       },
       {
-        name: 'Intelligent Data Governance',}
-  href: '/intelligent-data-governance',}
-      },
-    ],
+        name: 'Intelligent Data Governance'}
+  href: '/intelligent-data-governance'}
+      }
+    ]
   },
   {
     title: '🌌 Space & Metaverse Tech',
   services: [
       {
-        name: 'Space Mining Automation',}
-  href: '/space-mining-automation-platform',}
+        name: 'Space Mining Automation'}
+  href: '/space-mining-automation-platform'}
       },
       {
-        name: 'Metaverse Digital Reality',}
-  href: '/metaverse-digital-reality-platform',}
+        name: 'Metaverse Digital Reality'}
+  href: '/metaverse-digital-reality-platform'}
       },
-        { name: 'Quantum Research Platform',}
-  href: '/quantum-research-platform',}
+        { name: 'Quantum Research Platform'}
+  href: '/quantum-research-platform'}
 },
 
-        { name: 'AI Research Assistant',}
-  href: '/ai-research-assistant',}
-},
+        { name: 'AI Research Assistant'}
+  href: '/ai-research-assistant'}
+}
 
-    ],
+    ]
   },
   {
     title: '🎯 2030 Innovative Micro SAAS',
   services: [
       {
-        name: 'AI Business Intelligence Suite 2030',}
-  href: '/ai-business-intelligence-suite-2030',}
+        name: 'AI Business Intelligence Suite 2030'}
+  href: '/ai-business-intelligence-suite-2030'}
       },
       {
 
-        name: 'AI Customer Experience Platform 2030',}
-  href: '/ai-customer-experience-platform-2030',}
+        name: 'AI Customer Experience Platform 2030'}
+  href: '/ai-customer-experience-platform-2030'}
       },
       {
-        name: 'AI Marketing Automation Suite 2030',}
-  href: '/ai-marketing-automation-2030',}
+        name: 'AI Marketing Automation Suite 2030'}
+  href: '/ai-marketing-automation-2030'}
       },
       {
-        name: 'AI HR Management Suite 2030',}
-  href: '/ai-hr-management-suite-2030',}
-      },
-    ],
-  },
+        name: 'AI HR Management Suite 2030'}
+  href: '/ai-hr-management-suite-2030'}
+      }
+    ]
+  }
 ];
 
 const quickLinks = [
-    { name: 'Home',}
-  href: '/',}
+    { name: 'Home'}
+  href: '/'}
 },
 
-    { name: 'Services',}
-  href: '/services',}
+    { name: 'Services'}
+  href: '/services'}
 },
 
-    { name: 'Solutions',}
-  href: '/solutions',}
+    { name: 'Solutions'}
+  href: '/solutions'}
 },
 
-    { name: 'Pricing',}
-  href: '/pricing',}
+    { name: 'Pricing'}
+  href: '/pricing'}
 },
 
-    { name: 'Resources',}
-  href: '/resources',}
+    { name: 'Resources'}
+  href: '/resources'}
 },
 
 
-    { name: 'Case Studies',}
-  href: '/case-studies',}
+    { name: 'Case Studies'}
+  href: '/case-studies'}
 },
 
-    { name: 'Blog',}
-  href: '/blog',}
+    { name: 'Blog'}
+  href: '/blog'}
 },
 
-  { name: 'Contact',}
-  href: '/contact',}
-},
+  { name: 'Contact'}
+  href: '/contact'}
+}
 
 ];
 
 const companyInfo = [
-    { name: 'About Us',}
-  href: '/about',}
+    { name: 'About Us'}
+  href: '/about'}
 },
 
-    { name: 'Careers',}
-  href: '/careers',}
+    { name: 'Careers'}
+  href: '/careers'}
 },
 
-    { name: 'Press',}
-  href: '/press',}
+    { name: 'Press'}
+  href: '/press'}
 },
 
-    { name: 'Partners',}
-  href: '/partners',}
+    { name: 'Partners'}
+  href: '/partners'}
 },
 
-    { name: 'Support',}
-  href: '/support',}
+    { name: 'Support'}
+  href: '/support'}
 },
 
 
-  { name: 'Status',}
-  href: '/status',}
-},
+  { name: 'Status'}
+  href: '/status'}
+}
 
 ];
 
 const socialLinks = [
   {
     name: 'LinkedIn',
-  href: 'https://linkedin.com/company/ziontechgroup',}
-    icon: Linkedin,}
+  href: 'https://linkedin.com/company/ziontechgroup'}
+    icon: Linkedin}
   },
-  { name: 'Twitter',}
-  href: 'https://twitter.com/ziontechgroup', icon: Twitter,}
+  { name: 'Twitter'}
+  href: 'https://twitter.com/ziontechgroup', icon: Twitter}
 },
   {
     name: 'Facebook',
-  href: 'https://facebook.com/ziontechgroup',}
-    icon: Facebook,}
+  href: 'https://facebook.com/ziontechgroup'}
+    icon: Facebook}
   },
   {
     name: 'Instagram',
-  href: 'https://instagram.com/ziontechgroup',}
-    icon: Instagram,}
+  href: 'https://instagram.com/ziontechgroup'}
+    icon: Instagram}
   },
-  { name: 'YouTube',}
-  href: 'https://youtube.com/ziontechgroup', icon: Youtube,}
+  { name: 'YouTube'}
+  href: 'https://youtube.com/ziontechgroup', icon: Youtube}
 },
-  { name: 'GitHub',}
-  href: 'https://github.com/ziontechgroup', icon: Github,}
-},
+  { name: 'GitHub'}
+  href: 'https://github.com/ziontechgroup', icon: Github}
+}
 ];
 
 const certifications = [
@@ -212,7 +212,7 @@ const certifications = [
   'GDPR Compliant',
   'HIPAA Compliant',
   'PCI DSS Level 1',
-  'FedRAMP Authorized',
+  'FedRAMP Authorized'
 ];
 
 export default function UltraFuturisticFooter2030() {
@@ -285,7 +285,7 @@ href={`mailto:${contactInfo.email}`}
                 <div className='flex items-center space-x-3 text-sm text-gray-300' />
                   <Globe className='w-4 h-4 text-purple-400' />
                   <a;
-href={contactInfo.websit,}
+href={contactInfo.websit}
 }
                     className='hover:text-purple-400 transition-colors'
                    />
@@ -320,7 +320,7 @@ className='block text-xs text-gray-400 hover: text-purple-300 transition-colors'
 
                         </Link>
 
-                      ),
+                      )
 }
                     </div>;
                   </div>;
@@ -343,7 +343,7 @@ className='block text-sm text-gray-400 hover: text-cyan-300 transition-colors fl
                     <ArrowRight className='w-3 h-3 group-hover:translate-x-1 transition-transform' />
                     <span />{link.name}</span>
                   </Link>
-                ),
+                )
 }
               </div>
 
@@ -357,7 +357,7 @@ className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors'
                    />
                     {link.name}
                   </Link>
-                ),
+                )
 }
                 <span />Connect & Trust</span>
               </h4>
@@ -370,7 +370,7 @@ className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors'
                     href={link.href}
 className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors' />
 
-                    {link.nam,}
+                    {link.nam}
 }
                   </Link>;
                 ))}
@@ -412,7 +412,7 @@ target='_blank'
                   ))}
                 </div>
               </div>
-              {/* Certifications *,}
+              {/* Certifications *}
 }
 <div className='space-y-3' />
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2' />
@@ -458,11 +458,11 @@ key={index}
                       rel='noopener noreferrer';
                       className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40'>
 
-                      <social.icon className='w - 5 h - 5' />                    </a>                      target=\"_blank\";
-                      rel=\"noopener noreferrer\";
+                      <social.icon className='w - 5 h - 5' />                    </a>                      target=\"_blank\";"
+                      rel=\"noopener noreferrer\";"
                       className=\"w - 10 h - 10 bg - gray - 800 / 50 hover: bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40\">
-
-                      <social.icon className=\"w - 5 h - 5\" />),
+"
+                      <social.icon className=\"w - 5 h - 5\" />)
 }
                 </div>;
               </div>;
@@ -478,9 +478,9 @@ key={index}
                       className='flex items - center space - x-2 text - xs text - gray - 400' />
 
                       <CheckCircle className='w - 3 h - 3 text - green - 400' />                      <span />{cert}</span>                  <span  /> Certifications</span>;
-                </h5>;
-                <div className=\"grid grid - cols - 1 gap - 2\" />;
-                  {certifications.map ((cert, index) => (<div key={index} className=\"flex items - center space - x-2 text - xs text - gray - 400\" />;
+                </h5>;"
+                <div className=\"grid grid - cols - 1 gap - 2\" />;"
+                  {certifications.map ((cert, index) => (<div key={index} className=\"flex items - center space - x-2 text - xs text - gray - 400\" />;"
                       <CheckCircle className=\"w - 3 h - 3 text - green - 400\" />;
                       <span />{cert}</span>;
                     </div>))}</div>;
@@ -535,3 +535,4 @@ href='/terms'
 }
 
 
+"

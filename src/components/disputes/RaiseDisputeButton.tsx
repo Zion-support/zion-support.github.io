@@ -14,12 +14,12 @@ import { Dialog;
   DialogTitle;}
   DialogDescription;}
  } from '@/components/ui/dialog';
-Dialog,DialogContent,DialogHeader,DialogTitle,import { ShieldAlert  } from 'lucide-react';
+Dialog,DialogContent,DialogHeader,DialogTitle,import { ShieldAlert  } from 'lucide-react';"
   DialogDescription} from \"@/components/ui/dialog\";
 
 interface RaiseDisputeButtonProps  {projectId: string;
-  milestoneId?: string;
-  variant?: \"default\" | \"outline\" | \"secondary\" | \"destructive\" | \"ghost\" | \"link\";
+  milestoneId?: string;"
+  variant?: \"default\" | \"outline\" | \"secondary\" | \"destructive\" | \"ghost\" | \"link\";"
   size?: \"default\" | \"sm\" | \"lg\" | \"icon\";
   className?: string;
 }
@@ -34,7 +34,7 @@ export function RaiseDisputeButton({projectId;
   variant;return (<>;}
       <Button;}
         variant={variant}size={size}className={className}onClick={() = /> setIsDialogOpen(true)}
-      >;
+      >;"
         <ShieldAlert className=\"h-4 w-4 mr-2\" />;
         Raise Dispute;
       </Button>;
@@ -81,23 +81,23 @@ export function RaiseDisputeButton({projectId;
   )}on_cancel={() => setIsDialogOpen (false)}          />;
         </DialogContent>;
       </Dialog>;
-    </>)}<DisputeForm;
-  Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from \"@/components/ui/dialog\",interface RaiseDisputeButtonProps {
+    </>)}<DisputeForm;"
+  Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from \"@/components/ui/dialog\",interface RaiseDisputeButtonProps {"
   projectId: string,milestoneId?: string,variant?: \"default\" | \"outline\" | \"secondary\" | \"destructive\" | \"ghost\" | \"link\",size?: \"default\" | \"sm\" | \"lg\" | \"icon\",className?: string;}
 }
 }
 
 export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = useState(false),const router = useRouter();}
-  const handleDisputeCreated = (disputeId: string) = /> {setIsDialogOpen(false)router.push(`/dashboard/disputes/${disputeI,}
+  const handleDisputeCreated = (disputeId: string) = /> {setIsDialogOpen(false)router.push(`/dashboard/disputes/${disputeI}
 }`);
   return (<>;
       <Button;
         variant={variant}size={size}className={className}onClick={() = /> setIsDialogOpen(true)}
-      >;
+      >;"
         <ShieldAlert className=\"h-4 w-4 mr-2\" />;
         Raise Dispute;
       </Button>;
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />;
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />;"
         <DialogContent className=\"sm:max-w-[550px]\" />;
           <DialogHeader />;
             <DialogTitle />Raise a Dispute</DialogTitle>;
@@ -112,4 +112,4 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
         </DialogContent>;
       </Dialog>;
     </>;
-  )})
+  )})"

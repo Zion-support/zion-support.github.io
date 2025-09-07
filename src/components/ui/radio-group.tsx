@@ -23,8 +23,8 @@ const RadioGroup = React.forward_ref<;
       ref={ref}className;
       )}
       {...props}
-     />;
-      <RadioGroupPrimitive.Indicator className=\"flex items-center justify-center\" />;
+     />;"
+      <RadioGroupPrimitive.Indicator className=\"flex items-center justify-center\" />;"
         <Circle className=\"h-2.5 w-2.5 fill-current text-current\" />;
       </RadioGroupPrimitive.Indicator>;
     </RadioGroupPrimitive.Item>;
@@ -53,4 +53,4 @@ export { RadioGroup, RadioGroupItem }
 
 export { RadioGroup, RadioGroupItem }
 
-export { RadioGroup, RadioGroupItem }
+export { RadioGroup, RadioGroupItem }"

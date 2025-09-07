@@ -244,14 +244,10 @@ export interface ContentGenerationResponse {
 export interface ContentTemplate {
   suggestions: string[];
   metadata: {
-<<<<<<< HEAD;
-title: string;
 
-    description: string;
-=======
     title: string,
   description: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;}
+
 tags: string[]}
   }
 }
@@ -642,18 +638,8 @@ export const AI_CONTENT_PRICING = {
 
 
     period: '/month',
-<<<<<<< HEAD;
-;
-// Pricing tiers for the AI Content Generator;
-export const AI_CONTENT_PRICING = {;
-  starter: {;
-    name: 'Starter',;
-    price: 29,;
-    period: '/month',;
 
 
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 features: [;
       '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality';
     ];}
@@ -675,81 +661,10 @@ features: [;
     features: [;
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
     ];
-<<<<<<< HEAD;
-}
-}
-  }
-}
-;
-}
-}
-}
-}// Pricing tiers for the AI Content Generator;
-  }
-};
-  }
-};
-  }
-};
 
-  }
-  professional: {name: 'Professional';
-    price: 99;period: '/month',
-  features: [;
-      '500 content generations per month_premium templates_advanced SEO analysis_priority support_high quality output_custom brandingAPI access';
-    ];period: '/month';
-    features: [;
-      '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access';}
-    ];}
-  }
-  enterprise: {name: 'Enterprise';
-    price: 299;period: '/month',
-  period: '/month',// Pricing tiers for the AI Content Generator;
-export const AI_CONTENT_PRICING = {starter: {name: 'Starter',
-  price: 29,period: '/month',
-  period: '/month',period: '/month',
-  features: [;
-      'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee';
-    ];;
-// Pricing tiers for the AI Content Generator;
-export const AI_CONTENT_PRICING = {starter:{name: 'Starter',
-  price:29,period: '/month',
-  features:[;
-      '100 content generations per monthBasic templates','SEO analysisEmail support','Standard quality';}
-    ];}
-  },professional:{name: 'Professional',
-  price:99,period: '/month',
-  features:[;
-      '500 content generations per monthPremium templates','Advanced SEO analysisPriority support','High quality outputCustom branding','API access';}
-    ];}
-  },enterprise:{name: 'Enterprise',
-  price:299,period: '/month',
-  features:[;}
-      'Unlimited content generationsCustom templates','Advanced analyticsDedicated support','Highest qualityWhite-label options','Custom integrationsSLA guarantee';}
-    ];},features: [;
-      '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality';
-    ];},professional: {name: 'Professional',
-  price: 99,period: '/month',
-  features: [;
-      '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access';}
-    ];}
-  },enterprise: {name: 'Enterprise',
-  price: 299,period: '/month',
-  features: [;}
-      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';}
-    ];}
-}
-}
-}// Pricing tiers for the AI Content Generator;
-  }
-}}
-}}
-  }
-}}
-=======
   },
 };
   }
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 }

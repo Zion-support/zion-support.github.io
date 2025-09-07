@@ -88,13 +88,13 @@ export function SearchBar() {const router = useRouter()const [suggestions, setSu
 if (!debounced) {setSuggestions([])setHighlightedIndex(-1)return;}
     }
 
-const controller = new AbortController()fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal }).then(res => {if (!res.ok) throw new Error('Failed to fetch suggestions')return res.json(,}
+const controller = new AbortController()fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal }).then(res => {if (!res.ok) throw new Error('Failed to fetch suggestions')return res.json(}
 }).then(data => {if (Array.isArray(data)) {setSuggestions(data.slice(0, 5))setSuggestions(data.slice(0, 5))} else {setSuggestions([])}
         setHighlightedIndex(-1)}).catch(() => setSuggestions([]);
   return () => controller.abort()}, [debounced])useOnClickOutside(containerRef, () => {setFocused(false)setHighlightedIndex(-1)})const handleSelect = (onChange(suggestion.text)if (onSelectSuggestion) onSelectSuggestion(suggestion;) => {
   return $3;}
 }
-  const searchQuery = encodeURIComponent(suggestion.text)router.push(`/search?q=${searchQuery}`)fireEvent('search', { search_term: suggestion.text })setFocused(false)setHighlightedIndex(-1)inputRef.current?.blur()}aria-expanded={focused && suggestions.length > ,}
+  const searchQuery = encodeURIComponent(suggestion.text)router.push(`/search?q=${searchQuery}`)fireEvent('search', { search_term: suggestion.text })setFocused(false)setHighlightedIndex(-1)inputRef.current?.blur()}aria-expanded={focused && suggestions.length > }
 }
       aria-haspopup='listbox';
       aria-controls={listId}
@@ -166,7 +166,7 @@ const debounced = useDebounce(value, 150);
   useEffect((,) => {if (!debounced) {setSuggestions([])setHighlightedIndex(-1)return;}
     }
 
-const controller = new AbortController()fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {signal: controller && controller.signa,}
+const controller = new AbortController()fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {signal: controller && controller.signa}
 }).then(res => {if (!res && res.ok) throw new Error('Failed to fetch suggestions';}
   return res && res.json()}).then(data => {if (Array && Array.isArray(data)) {setSuggestions(data && data.slice(0, 5))} else {  const debounced = useDebounce(value, 150)const inputRef = useRef<HTMLInputElement />(null)const containerRef  =;
   useRef<HTMLDivElement />(null;
@@ -174,13 +174,13 @@ const controller = new AbortController()fetch(`/api/search/suggest?q=${encodeURI
 if (!debounced) {setSuggestions([])setHighlightedIndex(-1;}
 }
 
-const controller = new AbortController()fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller && controller.signal,}
+const controller = new AbortController()fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller && controller.signal}
 }).then(res => {if (!res && res.ok) throw new Error('Failed to fetch suggestions';}
   return res && res.json()}).then(data => {if (Array && Array.isArray(data)) {setSuggestions(data && data.slice(0, 5))} else {setSuggestions([])}
         setHighlightedIndex(-1)}).catch(() => setSuggestions([]))}, [debounced])useOnClickOutside(containerRef, () => {setFocused(false)})const handleSelect = (onChange(suggestion && suggestion.text)if (onSelectSuggestion) onSelectSuggestion(suggestion;) => {
   return $3;}
 }
-  const searchQuery = encodeURIComponent(suggestion && suggestion.text)router && router.push(`/search?q=${searchQuery}`)fireEvent('search', { search_term: suggestion && suggestion.text })setFocused(false)setHighlightedIndex(-1)aria-controls={listI,}
+  const searchQuery = encodeURIComponent(suggestion && suggestion.text)router && router.push(`/search?q=${searchQuery}`)fireEvent('search', { search_term: suggestion && suggestion.text })setFocused(false)setHighlightedIndex(-1)aria-controls={listI}
 }
       data-testid='search-bar'    >;
       <div className='relative' />;
@@ -199,30 +199,30 @@ const controller = new AbortController()fetch(`/api/search/suggest?q=${encodeURI
 const relatedTarget = e && e.relatedTarget as HTMLElement;}
             if (!relatedTarget ||;}
               !containerRef && containerRef.current?.contains(relatedTarget)) {setFocused(false)setHighlightedIndex(-1)}
-          }}
+          }}"
           className=\"pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate\";
             }          }}
           className='pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate';
           aria-autocomplete='list';
           aria-activedescendant={highlightedIndex !== -1;}
               ? `suggestion-item-${highlightedIndex}`;
-              : undefined;
+              : undefined;"
           }aria-autocomplete=\"list\";
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}"
           autoComplete=\"search\";
-          onKeyDown={(e) => {autoComplete='search';
-          onKeyDown={e => {            if (!focused || suggestions && suggestions.length === 0) {className=\"pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate\";}
+          onKeyDown={(e) => {autoComplete='search';"
+          onKeyDown={e => {            if (!focused || suggestions && suggestions.length === 0) {className=\"pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate\";}"
           aria-autocomplete=\"list\";}
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}"
           autoComplete=\"search\";
           onKeyDown={(e) => {if (!focused || suggestions && suggestions.length === 0) {if (e && e.key === 'Escape') {e && e.preventDefault()setFocused(false)setHighlightedIndex(-1)inputRef && inputRef.current?.blur()}
               // If Enter is pressed and there's a value, navigate with query parameter;
-              if (e && e.key === 'Enter' && value && value.trim()) {                e && e.preventDefault()// Prevent form submission if SearchBar is in a form;fireEvent('search', { search_term: value })router && router.push(`/search?q = ${encodeURIComponent(value)}`)setFocused(false)inputRef && inputRef.current?.blur(,
+              if (e && e.key === 'Enter' && value && value.trim()) {                e && e.preventDefault()// Prevent form submission if SearchBar is in a form;fireEvent('search', { search_term: value })router && router.push(`/search?q = ${encodeURIComponent(value)}`)setFocused(false)inputRef && inputRef.current?.blur(
 }
              ;
   return;            }              // If Enter is pressed and there's a value, navigate with query parameter;
               if (e && e.key === 'Enter' && value && value.trim()) {e && e.preventDefault(), // Prevent form submission if SearchBar is in a form;}
-                fireEvent('search', { search_term: value,}
+                fireEvent('search', { search_term: value}
 }),router && router.push(`/search?q = ${encodeURIComponent(value)}`)setFocused(false)inputRef && inputRef.current?.blur()}
              ;
   return;onKeyDown={e => {if (!focused || suggestions.length === 0) {if (e.key === 'Escape') {e.preventDefault()setFocused(false)setHighlightedIndex(-1)inputRef.current?.blur()}
@@ -230,7 +230,7 @@ const relatedTarget = e && e.relatedTarget as HTMLElement;}
               if (e.key = == 'Enter' && value.trim()) {inputRef.current?.blur()}
               // If Enter is pressed and there's a value, navigate with query parameter;
               if (e.key === 'Enter' && value.trim()) {e.preventDefault()// Prevent form submission if SearchBar is in a form;}
-                fireEvent('search', { search_term: value })router.push(`/search?q = ${encodeURIComponent(value)}`)setFocused(false)inputRef.current?.blur()inputRef.current?.blur(,
+                fireEvent('search', { search_term: value })router.push(`/search?q = ${encodeURIComponent(value)}`)setFocused(false)inputRef.current?.blur()inputRef.current?.blur(
 }
              ;
   return;
@@ -241,7 +241,7 @@ const relatedTarget = e && e.relatedTarget as HTMLElement;}
                 )break;}
               case 'Enter':;}
                 if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {e.preventDefault()handleSelect(suggestions[highlightedIndex])} else if (value.trim()) {// This case should ideally be handled by the form's onSubmit,// but if SearchBar is used standalone, this provides a fallback.;}
-                  e.preventDefault()fireEvent('search', { search_term: value })router.push(`/search?q=${encodeURIComponent(value)}`)setFocused(false)inputRef.current?.blur(,
+                  e.preventDefault()fireEvent('search', { search_term: value })router.push(`/search?q=${encodeURIComponent(value)}`)setFocused(false)inputRef.current?.blur(
 }
                 break;
               case 'Escape':;
@@ -251,7 +251,7 @@ const relatedTarget = e && e.relatedTarget as HTMLElement;}
                 e.preventDefault(),setFocused(false),setHighlightedIndex(-1),inputRef.current?.blur()}
               // If Enter is pressed and there's a value, navigate with query parameter;
               if (e.key === 'Enter' && value.trim()) {e.preventDefault(), // Prevent form submission if SearchBar is in a form;}
-                fireEvent('search', { search_term: value,}
+                fireEvent('search', { search_term: value}
 }),router.push(`/search?q = ${encodeURIComponent(value)}`),setFocused(false),inputRef.current?.blur()}
              ;
   return;
@@ -259,10 +259,10 @@ const relatedTarget = e && e.relatedTarget as HTMLElement;}
                 e.preventDefault(),setHighlightedIndex((prev) => (prev + 1) % suggestions.length),break,case 'ArrowUp':;}
                 e.preventDefault(),setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length),break,case 'Enter':;}
                 if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {e.preventDefault(),handleSelect(suggestions[highlightedIndex])} else if (value.trim()) {// This case should ideally be handled by the form's onSubmit,// but if SearchBar is used standalone, this provides a fallback.;}
-                  fireEvent('search', { search_term: value })router.push(`/search?q=${encodeURIComponent(value)}`)setFocused(false)inputRef.current?.blur(,
+                  fireEvent('search', { search_term: value })router.push(`/search?q=${encodeURIComponent(value)}`)setFocused(false)inputRef.current?.blur(
 }
                 break;
-                  e.preventDefault(),fireEvent('search', { search_term: value,}
+                  e.preventDefault(),fireEvent('search', { search_term: value}
 }),router.push(`/search?q=${encodeURIComponent(value)}`),setFocused(false),inputRef.current?.blur()}
                 break,case 'Escape':;
                 e.preventDefault(),setFocused(false),setHighlightedIndex(-1),inputRef.current?.blur()break;
@@ -284,7 +284,7 @@ const relatedTarget = e && e.relatedTarget as HTMLElement;}
               case 'Enter':;}
                 if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {e && e.preventDefault()handleSelect(suggestions[highlightedIndex])} else if (value && value.trim()) {// This case should ideally be handled by the form's onSubmit,                  handleSelect(suggestions[highlightedIndex])} else if (value && value.trim()) {// This case should ideally be handled by the form's onSubmit;}
                   // but if SearchBar is used standalone, this provides a fallback.;}
-                  e && e.preventDefault()fireEvent('search', { search_term: value })router && router.push(`/search?q=${encodeURIComponent(value,}
+                  e && e.preventDefault()fireEvent('search', { search_term: value })router && router.push(`/search?q=${encodeURIComponent(value}
 }`)setFocused(false)inputRef && inputRef.current?.blur()break;
               case 'Escape':;
                 e && e.preventDefault()setFocused(false)setHighlightedIndex(-1)inputRef && inputRef.current?.blur()break;
@@ -292,7 +292,7 @@ const relatedTarget = e && e.relatedTarget as HTMLElement;}
                 break;            }              default: break;}
           }}
         />;
-        {value && (<button;
+        {value && (<button;"
             aria-label=\"Clear search\";}
 className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white';}
             onClick={() = /> onChange('')}
@@ -312,14 +312,14 @@ className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-
         highlightedIndex={highlightedIndex}
         listId={listId}/>;
     </div>;
-  )}/> onClick={';}
-  () => onChange ('') \";}
+  )}/> onClick={';}"
+  () => onChange ('') \";}"
 }aria-label=\"Clear search\" > <X className=\"h-4 w-4\" /> </button>)}</div> <AutocompleteSuggestionssuggestions= {suggestions;}
 }searchTerm= {value;}
 }onSelectSuggestion= {handleSelect;}
 }visible= {focused;}
 }highlightedIndex= {highlightedIndex;}
-}listId= {listId;}
+}listId= {listId;}"
 }/> </div>)}'\"  )}}import { use_router  } from 'next / router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components / ui / input'; import { Search, X  } from 'lucide-react';
 import { Input  } from '@/components / ui / input';
@@ -382,7 +382,7 @@ if ( {) {$2;}
       set_suggestions ([])setHighlightedIndex (-1)return;
     }
 
-const controller = new AbortController ()fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, {signal: controller.signa,}
+const controller = new AbortController ()fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, {signal: controller.signa}
 }).then (res => {if (throw new Error ('Failed to fetch suggestions')) {$2;}
 }
         return res.json ()}).then (data => {if () {) {$2;}
@@ -395,7 +395,7 @@ if ( {) {$2;}
 }
       set_suggestions ([])setHighlightedIndex (-1)}
 
-const controller = new AbortController ()fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, { signal: controller.signal,}
+const controller = new AbortController ()fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, { signal: controller.signal}
 }).then (res => {if (throw new Error ('Failed to fetch suggestions')) {$2;}
 }
         return res.json ()}).then (data => {if () {) {$2;}
@@ -404,7 +404,7 @@ const controller = new AbortController ()fetch (`/api / search / suggest?q=${enc
         setHighlightedIndex (-1)}).catch (() => set_suggestions ([]))return () => controller.abort () }, [debounced])useOnClickOutside (container_ref, () => {set_focused (false)setHighlightedIndex (-1) })return () => controller.abort ()}, [debounced])useOnClickOutside (container_ref, () => {set_focused (false)setHighlightedIndex (-1)setHighlightedIndex (-1)setHighlightedIndex (-1)})const handle_select = (suggestion: SearchSuggestion) =>: any {on_change (suggestion.text)if (onSelectSuggestion (suggestion)) {$2;}
 }
 
-const search_query = encodeURIComponent (suggestion.text)router.push (`/search?q=${search_query}`)fire_event ('search', { search_term: suggestion.text })set_focused (false)setHighlightedIndex (-1)input_ref.current?.blur ()aria - expanded={focused && suggestions.length > ,}
+const search_query = encodeURIComponent (suggestion.text)router.push (`/search?q=${search_query}`)fire_event ('search', { search_term: suggestion.text })set_focused (false)setHighlightedIndex (-1)input_ref.current?.blur ()aria - expanded={focused && suggestions.length > }
 }
       aria - haspopup='listbox';
       aria - controls={list_id}
@@ -436,10 +436,10 @@ if () {) {$2;}
           auto_complete='search';
           onKeyDown={e => {            // Check condition;}
 if ( {) {$2;}
-}
-          className=\"pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder: text - zion - slate\";
+}"
+          className=\"pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder: text - zion - slate\";"
           aria - autocomplete=\"list\";
-          aria - activedescendant={highlighted_index !== -1 ? `suggestion - item-${highlighted_index}` : undefined}
+          aria - activedescendant={highlighted_index !== -1 ? `suggestion - item-${highlighted_index}` : undefined}"
           auto_complete=\"search\";
           onKeyDown={(e) => {// Check condition;}
 if ( {) {$2;}
@@ -451,14 +451,14 @@ if ( {) {$2;}
               // If Enter is pressed and there's a value, navigate with query parameter;
               if () {                e.prevent_default ()) {$2;}
 } // Prevent form submission if SearchBar is in a form;
-                fire_event ('search', { search_term: value })router.push (`/search?q = ${encodeURIComponent (value)}`)set_focused (false)input_ref.current?.blur (,
+                fire_event ('search', { search_term: value })router.push (`/search?q = ${encodeURIComponent (value)}`)set_focused (false)input_ref.current?.blur (
 }
              ;
   return }              // If Enter is pressed and there's a value, navigate with query parameter;
               if () {) {$2;}
 }
                 e.prevent_default (), // Prevent form submission if SearchBar is in a form;
-                fire_event ('search', { search_term: value,}
+                fire_event ('search', { search_term: value}
 }),router.push (`/search?q = ${encodeURIComponent (value)}`)set_focused (false)input_ref.current?.blur ()}
              ;
   return;
@@ -488,7 +488,7 @@ if ( {) {$2;}
 }
                   // This case should ideally be handled by the form's on_submit;
                   // but if SearchBar is used standalone, this provides a fallback.;
-                  e.prevent_default ()fire_event ('search', { search_term: value })router.push (`/search?q=${encodeURIComponent (value,}
+                  e.prevent_default ()fire_event ('search', { search_term: value })router.push (`/search?q=${encodeURIComponent (value}
 }`)set_focused (false)input_ref.current?.blur ()break;
               case 'Escape':;
                 e.prevent_default ()set_focused (false)setHighlightedIndex (-1)input_ref.current?.blur ()break;
@@ -501,11 +501,11 @@ if ( {) {$2;}
             className='absolute right - 3 top - 1/2 -translate - y-1 / 2 text - zion - slate hover:text - white';}
             on_click={() = /> on_change ('')}
             aria - label='Clear search'          >;
-            <X className='h - 4 w - 4' />          </button>;
+            <X className='h - 4 w - 4' />          </button>;"
             <X className=\"h - 4 w - 4\" />;
-            on_click={() => on_change ('')}
+            on_click={() => on_change ('')}"
             aria - label=\"Clear search\">
-
+"
             <X className=\"h - 4 w - 4\" />;
           </button>)}
       </div>;
@@ -519,14 +519,14 @@ if ( {) {$2;}
       />
     </div>
   );
-}/> on_click={';}
-  () => on_change ('') \";}
+}/> on_click={';}"
+  () => on_change ('') \";}"
 }aria - label=\"Clear search\" > <X className=\"h - 4 w - 4\" /> </button>)}</div> <AutocompleteSuggestions suggestions= {suggestions;}
 }search_term= {value;}
 }onSelectSuggestion= {handle_select;}
 }visible= {focused;}
 }highlighted_index= {highlighted_index;}
-}list_id= {list_id;}
+}list_id= {list_id;}"
 }/> </div>)}'\"  )}</div>;
       <AutocompleteSuggestions;
         suggestions = {suggestions}
@@ -537,12 +537,12 @@ if ( {) {$2;}
         listId = {listId}
       />;
     </div>;
-)}/> onClick={';}
-  () => onChange ('') \";}
+)}/> onClick={';}"
+  () => onChange ('') \";}"
 }aria-label=\"Clear search\" > <X className=\"h-4 w-4\" /> </button>)}</div> <AutocompleteSuggestions suggestions= {suggestions ;}
 }searchTerm= {value ;}
 }onSelectSuggestion= {handleSelect ;}
 }visible= {focused ;}
 }highlightedIndex= {highlightedIndex ;}
-}listId= {listId ;}
-}/> </div>)}'\";
+}listId= {listId ;}"
+}/> </div>)}'\";"

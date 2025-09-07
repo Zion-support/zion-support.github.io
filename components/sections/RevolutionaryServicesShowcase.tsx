@@ -11,27 +11,27 @@ import { enterpriseIT2025Services  } from '../../data/enterprise-it-2025-service
 const RevolutionaryServicesShowcase: React.FC;
 
 const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: { opacity: 0}
 }
     visible: {
       opacity: 1;
 transition: {}
-staggerChildren: 0.1,}
-      },
-    },
+staggerChildren: 0.1}
+      }
+    }
   };
 
 const itemVariants = {}
-    hidden: { opacity: 0, y: 20,}
+    hidden: { opacity: 0, y: 20}
 }
     visible: {
       opacity: 1;
 y: 0;
 transition: {
 }
-duration: 0.5,}
-      },
-    },
+duration: 0.5}
+      }
+    }
   };
 
   return (
@@ -42,11 +42,11 @@ duration: 0.5,}
         <motion.div;
 className='text-center mb-16'
 
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
 
          />
@@ -68,7 +68,7 @@ services that were once science fiction.
 <motion.div;
 className='flex flex-wrap justify-center gap-4 mb-12'
 
-          initial={{ opacity: 0, y: 20 ,}
+          initial={{ opacity: 0, y: 20 }
 }
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -78,7 +78,7 @@ className='flex flex-wrap justify-center gap-4 mb-12'
 
 {categories.map(category => (
             <button;}
-key={category.i,}
+key={category.i}
 }
               onClick={() = /> {
                 setActiveCategory(category.id);
@@ -105,11 +105,11 @@ setVisibleServices(12);}
         <motion.div;
 className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
 
-          variants={containerVariant,}
+          variants={containerVariant}
 }
           initial='hidden';
           whileInView='visible';
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
          />;
           {filteredServices.slice(0, visibleServices).map((service, index) => (<motion.div;}
@@ -118,12 +118,12 @@ className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
 
 className='group relative cursor-pointer'
 
-              style={{ perspective: '1000px' ,}
+              style={{ perspective: '1000px' }
 }
              />;
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75' /></div>;
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full' />;
-              style={{ perspective: '1000px' ,}
+              style={{ perspective: '1000px' }
 }>;
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75' /></div>;
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full' />;
@@ -140,7 +140,7 @@ className='group relative cursor-pointer'
                     <Star className='w-3 h-3 inline mr-1' />
                     POPULAR;
                   </div>}
-                ,}
+                }
 }
 
 
@@ -154,17 +154,17 @@ className='group relative cursor-pointer'
           className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12';
           variants={container_variants}
           initial='hidden';
-          whileInView='visible'          viewport={{ once: true ,}
+          whileInView='visible'          viewport={{ once: true }
 }          className=\"grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12\";
-          variants={container_variants}
-          initial=\"hidden\";
+          variants={container_variants}"
+          initial=\"hidden\";"
           whileInView=\"visible\" />
 
           {filtered_services.slice (0, visible_services).map ((service, index) => (<motion.div;}
               key={service.id}
               variants={item_variants}
               className='group relative cursor - pointer';
-              style={{ perspective: '1000px' ,}
+              style={{ perspective: '1000px' }
 }
              />;
               <div className='absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75' /></div>;
@@ -175,19 +175,19 @@ className='group relative cursor-pointer'
                   <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700' /></div>                </div>;
                 {/* Popular Badge */}
                 {service.popular && (<div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300' />;}
-                    <Star className='w - 3 h - 3 inline mr - 1' />                    POPULAR              style={{ perspective: '1000px' ,}
+                    <Star className='w - 3 h - 3 inline mr - 1' />                    POPULAR              style={{ perspective: '1000px' }
 }
-            >;
-              <div className=\"absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75\" /></div>;
+            >;"
+              <div className=\"absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75\" /></div>;"
               <div className=\"relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow - hidden h - full\" />;
-                {/* Background Effects */}
-                <div className=\"absolute inset - 0 rounded - 2xl overflow - hidden\" />;
-                  <div className=\"absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500\" /></div>;
+                {/* Background Effects */}"
+                <div className=\"absolute inset - 0 rounded - 2xl overflow - hidden\" />;"
+                  <div className=\"absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500\" /></div>;"
                   <div className=\"absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700\" /></div>;
                 </div>;
                 {/* Popular Badge */}
-                {service.popular && (<div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300' />;
-                    <Star className='w - 3 h - 3 inline mr - 1' />                  <div className=\"absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300\" />;
+                {service.popular && (<div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300' />;"
+                    <Star className='w - 3 h - 3 inline mr - 1' />                  <div className=\"absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300\" />;"
                     <Star className=\"w - 3 h - 3 inline mr - 1\" />;
                     POPULAR;
     </div>}
@@ -207,8 +207,8 @@ className='group relative cursor-pointer'
                       <div />;
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300' />;
                 {/* Popular Badge */}
-                {service && service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300' />;
-                    <Star className='w-3 h-3 inline mr-1' />                  <div className=\"absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300\" />;
+                {service && service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300' />;"
+                    <Star className='w-3 h-3 inline mr-1' />                  <div className=\"absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300\" />;"
                     <Star className=\"w-3 h-3 inline mr-1\" />;
                     POPULAR;}
                   </div>;}
@@ -283,32 +283,32 @@ className='group relative cursor-pointer'
 <div className='absolute inset-0 pointer-events-none overflow-hidden' />;
                   <div;
                     className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60';
-                    style={{ left: '20%',}
-  top: '30%' ,}
+                    style={{ left: '20%'}
+  top: '30%' }
 }
                    /></div>;
                   <div;
                     className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60';
-                    style={{ left: '35%',}
-  top: '40%' ,}
+                    style={{ left: '35%'}
+  top: '40%' }
 }
                    /></div>;
                   <div;
                     className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60';
-                    style={{ left: '50%',}
-  top: '50%' ,}
+                    style={{ left: '50%'}
+  top: '50%' }
 }
                    /></div>;
                   <div;
                     className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60';
-                    style={{ left: '65%',}
-  top: '60%' ,}
+                    style={{ left: '65%'}
+  top: '60%' }
 }
                    /></div>;
                   <div;
                     className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60';
-                    style={{ left: '80%',}
-  top: '70%' ,}
+                    style={{ left: '80%'}
+  top: '70%' }
 }
                    /></div>;
                 </div>;
@@ -325,7 +325,7 @@ className='text-center'}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
-            viewport={{ once: true ,}
+            viewport={{ once: true }
 } />;
 
             <button;
@@ -338,16 +338,16 @@ className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white fon
           </motion.div>
         )}
 
-        {/* Call to Action *,}
+        {/* Call to Action *}
 }
 <motion.div;
 className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'
 
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
 
          />
@@ -377,9 +377,10 @@ href='/pricing'
       </div>
     </section>
 
-),
+)
 };
 
 
 export default RevolutionaryServicesShowcase;
 
+"

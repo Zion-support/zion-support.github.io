@@ -1,11 +1,6 @@
-<<<<<<< HEAD;
-;
-  id: string;
-export interface Ultimate2026Service  {id: string;name: string;
-  id: string;
-=======
+
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: string;
   tagline: string;
   price: string;
@@ -108,9 +103,8 @@ export const ultimate2026Services: Ultimate2026Service[] = [
     }
   }
 ];      mobile: \"+1 302 464 0950\";
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 email: \"kleber@ziontechgroup.com\";
       address: \"364 E Main St STE 1008 Middletown DE 19709\"
     }

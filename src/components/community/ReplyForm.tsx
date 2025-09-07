@@ -11,7 +11,7 @@ import { useState } from \"react\",import { useForm, ControllerRenderProps } fro
   FormControl;
   FormField;
   FormItem;}
-  FormMessage;}
+  FormMessage;}"
 } from \"@/components/ui/form\",interface ReplyFormProps  {onSubmit: (content: string) => Promise<void />;
   parentId?: string;
 
@@ -19,7 +19,7 @@ interface ReplyFormValues  {content: string;
 
 interface ReplyFormProps  {onSubmit: (content: string) => Promise<void />;
   parentId?: string;}
-      content: '',}
+      content: ''}
 })const handleSubmit  = async (values: ReplyFormValues) => {interface ReplyFormProps  {onSubmit: (content: string) => Promise<void />;}
   parentId?: string;}
     setIsSubmitting(true)try {await onSubmit(values.content)form.reset()} finally {setIsSubmitting(false)parentId?: string;
@@ -32,7 +32,7 @@ export const ReplyForm = (const [isSubmitting, setIsSubmitting] =;
   return $3;}
 }
 };
-  const handleSubmit = async (values: ReplyFormValues) => {setIsSubmitting(true)try {await onSubmit(values && values.content)form && form.reset(,}
+  const handleSubmit = async (values: ReplyFormValues) => {setIsSubmitting(true)try {await onSubmit(values && values.content)form && form.reset(}
 } finally {setIsSubmitting(false)import { use_form, ControllerRenderProps  } from 'react - hook - form';
 import { Button  } from '@/components / ui / button';
 import { Textarea  } from '@/components / ui / textarea';
@@ -45,10 +45,10 @@ interface ReplyFormProps  {on_submit: (content: string) => Promise < void>;
 interface ReplyFormValues  {content: string;}
 }
 export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {const [is_submitting, setIsSubmitting] =;}
-  useState (false)const form = use_form < ReplyFormValues>({default_values: {content: '',}
+  useState (false)const form = use_form < ReplyFormValues>({default_values: {content: ''}
 };
   const handle_submit = async (values: ReplyFormValues) => {setIsSubmitting (true)try {await on_submit (values.content)form.reset ()} finally {setIsSubmitting (false)}
- ,
+ 
 }
  ;
   return (<Card />;<CardContent className='pt - 6' />;
@@ -60,26 +60,26 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {con
               }: {field: ControllerRenderProps<ReplyFormValues, 'content' />;}
               }) => (                <FormItem />;
     }
-  },return (<Card />;
+  },return (<Card />;"
       <CardContent className=\"pt-6\" />;
         <Form {...form} />;
           <form onSubmit={form.handleSubmit(handleSubmit)} />;
             <FormField;
-              control={form.control}
-              name=\"content\";
-              render={({ field }: { field: ControllerRenderProps<ReplyFormValues \"content\" />,}
+              control={form.control}"
+              name=\"content\";"
+              render={({ field }: { field: ControllerRenderProps<ReplyFormValues \"content\" />}
 }) => (<FormItem />;
                   <FormControl />;
-                    <Textarea;
+                    <Textarea;"
                       className=\"min-h-[100px] resize-y\";
-  },return (<Card />;
+  },return (<Card />;"
       <CardContent className=\"pt-6\" />;
         <Form {...form} />;
           <form onSubmit={form.handleSubmit(handleSubmit)} />;
             <FormField;
-              control={form.control}
-              name=\"content\";
-              render={({ field }: { field: ControllerRenderProps<ReplyFormValues \"content\" />,}
+              control={form.control}"
+              name=\"content\";"
+              render={({ field }: { field: ControllerRenderProps<ReplyFormValues \"content\" />}
 }) => (<FormItem />;
                   <FormControl />;
                     <Textarea className='min-h-[100px] resize-y' {...field} />;
@@ -112,9 +112,9 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {con
         </Form>;
       </CardContent>;
     </Card>))}
-            />;
-            <div className=\"mt-4 flex justify-end\" />;
-              <Button type=\"submit\" disabled={isSubmitting} />;
+            />;"
+            <div className=\"mt-4 flex justify-end\" />;"
+              <Button type=\"submit\" disabled={isSubmitting} />;"
                 {isSubmitting ? \"Submitting...\" : \"Post Reply\"}
               </Button>;
             </div>;
@@ -129,4 +129,4 @@ export default ReplyForm;}
 
 export default ReplyForm;)}
 
-export default ReplyForm;
+export default ReplyForm;"

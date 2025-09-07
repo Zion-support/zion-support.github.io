@@ -7,7 +7,7 @@ import React, { useEffect, useRef, useState, useCallback } from 'react' import {
    increasedSpacing: boolean;
    cursorEnhancement: boolean;
    keyboardNavigation: boolean;}
-   colorBlindnessSupport: boolea,}
+   colorBlindnessSupport: boolea}
 }
 
 interface FocusTrapConfig  {containerRef: React.RefObject<HTMLElement />;}
@@ -21,8 +21,8 @@ interface AccessibilityAnnouncement {
    timestamp: number}
 }
 
-export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { showAccessibilityPanel?: boolean,}
-}) { const [features, setFeatures] = useState<AccessibilityFeatures />({ highContrast: false, reducedMotion: false, largeText: false, focusHighlight: true, screenReaderMode: false, highContrastText: false, increasedSpacing: false, cursorEnhancement: false, keyboardNavigation: false, colorBlindnessSupport: false,}
+export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { showAccessibilityPanel?: boolean}
+}) { const [features, setFeatures] = useState<AccessibilityFeatures />({ highContrast: false, reducedMotion: false, largeText: false, focusHighlight: true, screenReaderMode: false, highContrastText: false, increasedSpacing: false, cursorEnhancement: false, keyboardNavigation: false, colorBlindnessSupport: false}
 })  const [announcements, setAnnouncements] = useState<AccessibilityAnnouncement[] />([]) const [currentAnnouncement, setCurrentAnnouncement] = useState<string />('') const [isMenuOpen, setIsMenuOpen] =;
   useState(false);
   const [activeTab, setActiveTab] = useState<'visual' | 'navigation' | 'audio' | 'advanced'>('visual') const [fontSize, setFontSize] = useState(16);
@@ -30,4 +30,4 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
   const [letterSpacing, setLetterSpacing] = useState(0);
   const menuRef = useRef<HTMLDivElement />(null) const buttonRef =;
   useRef<HTMLButtonElement />(null);
-  const focusableElementsRef = useRef<HTMLElement[] />([]) ';';
+  const focusableElementsRef = useRef<HTMLElement[] />([]) ';';"

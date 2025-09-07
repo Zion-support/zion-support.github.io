@@ -10,7 +10,8 @@ className = \"\"}
   children: React.ReactNode;}
   className?: string;}
 }) {}
-  return (}
+  return (}"
     <div className={[\"card-base p-4\", className].join(\" \")} />{children}</div>
   );
 
+"

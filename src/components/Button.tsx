@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps /> = ({ children,
   disabled = false,
   onClick,
   className = '',
-  type = 'button',}
+  type = 'button'}
   ...props}
    }) => {
 
@@ -35,14 +35,14 @@ const variantClasses = {
   secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',
     outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
   ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500'}
- ,}
+ }
 };
 
 const sizeClasses = {
     sm: 'h-8 px-3 text-sm',
   md: 'h-10 px-4 py-2',
     lg: 'h-12 px-6 text-lg'}
- ,}
+ }
 };
 
 const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
@@ -63,8 +63,8 @@ type={type}
         children}
       )}
     </motion.button>
-  ),
+  )
 };
 
 
-export default Button;
+export default Button;"

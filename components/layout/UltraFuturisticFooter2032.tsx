@@ -26,227 +26,227 @@ const contactInfo = null;
       }
 
       {
-        name: 'Quantum Financial Trading',}
-  href: '/quantum-financial-trading-platform',}
+        name: 'Quantum Financial Trading'}
+  href: '/quantum-financial-trading-platform'}
       },
-        { name: 'Quantum Creativity Studio',}
-  href: '/quantum-creativity-studio',}
-},
+        { name: 'Quantum Creativity Studio'}
+  href: '/quantum-creativity-studio'}
+}
 
-    ],
+    ]
   },
   {
     title: '🏙️ 2032 Enterprise IT Solutions',
   services: [
-        { name: 'Autonomous DevOps',}
-  href: '/autonomous-devops-platform',}
+        { name: 'Autonomous DevOps'}
+  href: '/autonomous-devops-platform'}
 },
 
 {
-        name: 'Zero Trust Architecture',}
-  href: '/zero-trust-network-architecture',}
+        name: 'Zero Trust Architecture'}
+  href: '/zero-trust-network-architecture'}
       },
       {
-        name: 'Edge Computing Orchestration',}
-  href: '/edge-computing-orchestration',}
+        name: 'Edge Computing Orchestration'}
+  href: '/edge-computing-orchestration'}
       },
       {
 
-        name: 'AI IT Operations Center',}
-  href: '/ai-powered-it-operations-center',}
-      },
-    ],
+        name: 'AI IT Operations Center'}
+  href: '/ai-powered-it-operations-center'}
+      }
+    ]
   },
   {
     title: '🌌 2032 Space & Metaverse Tech',
   services: [
       {
-        name: 'Space Mining Automation',}
-  href: '/space-mining-automation-platform',}
+        name: 'Space Mining Automation'}
+  href: '/space-mining-automation-platform'}
       },
       {
-        name: 'Metaverse Development',}
-  href: '/metaverse-development-platform',}
+        name: 'Metaverse Development'}
+  href: '/metaverse-development-platform'}
       },
-        { name: 'AI Predictive Health',}
-  href: '/ai-predictive-health-analytics',}
+        { name: 'AI Predictive Health'}
+  href: '/ai-predictive-health-analytics'}
 },
 
       {
-        name: 'AI Autonomous Business',}
-  href: '/ai-autonomous-business-manager',}
-      },
-    ],
+        name: 'AI Autonomous Business'}
+  href: '/ai-autonomous-business-manager'}
+      }
+    ]
   },
   {
     title: '🎯 2032 Innovative Micro SAAS',
   services: [
       {
-        name: 'AI Business Intelligence',}
-  href: '/ai-business-intelligence-suite',}
+        name: 'AI Business Intelligence'}
+  href: '/ai-business-intelligence-suite'}
       },
       {
-        name: 'Quantum-Secure Communication',}
-  href: '/quantum-secure-communication-platform',}
+        name: 'Quantum-Secure Communication'}
+  href: '/quantum-secure-communication-platform'}
       },
-        { name: 'AI Customer Success',}
-  href: '/ai-customer-success-automation',}
+        { name: 'AI Customer Success'}
+  href: '/ai-customer-success-automation'}
 },
 
       {
-        name: 'Blockchain Supply Chain',}
-  href: '/blockchain-supply-chain-transparency',}
-      },
-    ],
+        name: 'Blockchain Supply Chain'}
+  href: '/blockchain-supply-chain-transparency'}
+      }
+    ]
   },
   {
     title: '🔬 2032 Research & Development',
   services: [
       {
-        name: 'Neuromorphic Computing',}
-  href: '/neuromorphic-computing-platform',}
+        name: 'Neuromorphic Computing'}
+  href: '/neuromorphic-computing-platform'}
       },
-        { name: 'DNA Computing Platform',}
-  href: '/dna-computing-platform',}
+        { name: 'DNA Computing Platform'}
+  href: '/dna-computing-platform'}
 },
 
       {
-        name: 'Photonic Computing',}
-  href: '/photonic-computing-infrastructure',}
+        name: 'Photonic Computing'}
+  href: '/photonic-computing-infrastructure'}
       },
-        { name: 'Swarm Robotics',}
-  href: '/swarm-robotics-orchestration',}
-},
+        { name: 'Swarm Robotics'}
+  href: '/swarm-robotics-orchestration'}
+}
 
-    ],
-  },
+    ]
+  }
 ];
 
 const quickLinks = [
   {
     name: '2032 Services',
   href: '/2032-futuristic-services-showcase',
-    icon: Star,}
-    description: 'Revolutionary 2032 services',}
+    icon: Star}
+    description: 'Revolutionary 2032 services'}
   },
   {
     name: 'Enhanced Pricing',
   href: '/enhanced-market-pricing-2032',
-    icon: DollarSign,}
-    description: 'Comprehensive pricing analysis',}
+    icon: DollarSign}
+    description: 'Comprehensive pricing analysis'}
   },
   {
     name: 'Market Pricing',
   href: '/market-pricing',
-    icon: DollarSign,}
-    description: 'Competitive pricing references',}
+    icon: DollarSign}
+    description: 'Competitive pricing references'}
   },
   {
     name: 'Enhanced Services',
   href: '/enhanced-services-showcase',
-    icon: Star,}
-    description: 'Premium service showcase',}
+    icon: Star}
+    description: 'Premium service showcase'}
   },
   {
     name: 'Revolutionary 2026',
   href: '/revolutionary-2026-services',
-    icon: TrendingUp,}
-    description: '2026 breakthrough services',}
+    icon: TrendingUp}
+    description: '2026 breakthrough services'}
   },
   {
 
     name: 'Ultimate 2026',
   href: '/ultimate-2026-services-showcase',
-    icon: Target,}
-    description: 'Ultimate service portfolio',}
+    icon: Target}
+    description: 'Ultimate service portfolio'}
   },
   {
     name: 'News & Updates',
   href: '/news',
-    icon: MessageCircle,}
-    description: 'Latest company news',}
+    icon: MessageCircle}
+    description: 'Latest company news'}
   },
   {
 
     name: 'Support',
   href: '/support',
-    icon: Users,}
-    description: 'Technical support and help',}
-  },
+    icon: Users}
+    description: 'Technical support and help'}
+  }
 ];
 
 const companyInfo = [
-    { name: 'About Us',}
-  href: '/about',}
+    { name: 'About Us'}
+  href: '/about'}
 },
 
-    { name: 'Careers',}
-  href: '/careers',}
+    { name: 'Careers'}
+  href: '/careers'}
 },
 
-    { name: 'Press',}
-  href: '/press',}
+    { name: 'Press'}
+  href: '/press'}
 },
 
-    { name: 'Partners',}
-  href: '/partners',}
+    { name: 'Partners'}
+  href: '/partners'}
 },
 
-    { name: 'Support',}
-  href: '/support',}
+    { name: 'Support'}
+  href: '/support'}
 },
 
-  { name: 'Status',}
-  href: '/status',}
-},
+  { name: 'Status'}
+  href: '/status'}
+}
 
 ];
 
 const socialLinks = [
   {
     name: 'LinkedIn',
-  href: 'https://linkedin.com/company/ziontechgroup',}
-    icon: Linkedin,}
+  href: 'https://linkedin.com/company/ziontechgroup'}
+    icon: Linkedin}
   },
-  { name: 'Twitter',}
-  href: 'https://twitter.com/ziontechgroup', icon: Twitter,}
+  { name: 'Twitter'}
+  href: 'https://twitter.com/ziontechgroup', icon: Twitter}
 },
   {
     name: 'Facebook',
-  href: 'https://facebook.com/ziontechgroup',}
-    icon: Facebook,}
+  href: 'https://facebook.com/ziontechgroup'}
+    icon: Facebook}
   },
   {
     name: 'Instagram',
-  href: 'https://instagram.com/ziontechgroup',}
-    icon: Instagram,}
+  href: 'https://instagram.com/ziontechgroup'}
+    icon: Instagram}
   },
-  { name: 'YouTube',}
-  href: 'https://youtube.com/ziontechgroup', icon: Youtube,}
+  { name: 'YouTube'}
+  href: 'https://youtube.com/ziontechgroup', icon: Youtube}
 },
-  { name: 'GitHub',}
-  href: 'https://github.com/Zion-Holdings', icon: Github,}
-},
+  { name: 'GitHub'}
+  href: 'https://github.com/Zion-Holdings', icon: Github}
+}
 ];
 
 const footerVariants = {}
-  hidden: { opacity: 0, y: 50,}
+  hidden: { opacity: 0, y: 50}
 }
   visible: {
     opacity: 1;
 y: 0;
 transition: {
-      duration: 0.8,}
-staggerChildren: 0.1,}
-    },
-  },
+      duration: 0.8}
+staggerChildren: 0.1}
+    }
+  }
 };
 
 const itemVariants = {}
-  hidden: { opacity: 0, y: 20,}
+  hidden: { opacity: 0, y: 20}
 },
-visible: { opacity: 1, y: 0,}
-},
+visible: { opacity: 1, y: 0}
+}
 };
 
 export default function UltraFuturisticFooter2032() {
@@ -257,7 +257,7 @@ export default function UltraFuturisticFooter2032() {
           variants={footerVariants}
           initial='hidden';
           whileInView='visible';
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
           className='space-y-16'>;
           {/* Main Footer Content */}
@@ -294,7 +294,7 @@ challenges.
                     href={`tel: ${contactInfo.mobile}`}
                     className='hover:text-cyan-300 transition-colors' />
 
-                    {contactInfo.mobil,}
+                    {contactInfo.mobil}
 }
                   </a>;
                 </div>;
@@ -304,7 +304,7 @@ challenges.
                     href={`mailto: ${contactInfo.email}`}
                     className='hover:text-cyan-300 transition-colors' />
 
-                    {contactInfo.emai,}
+                    {contactInfo.emai}
 }
                   </a>;
                 </div>;
@@ -332,7 +332,7 @@ challenges.
             </motion.div>
 
             {/* Service Categories */}
-<motion.div variants={itemVariant,}
+<motion.div variants={itemVariant}
 } className='lg:col-span-2' />
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent' />
                 Our Revolutionary Services;
@@ -353,7 +353,7 @@ href={service.href}
 className='text-slate-300 hover: text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'
                            />
 
-                            {service.nam,}
+                            {service.nam}
 }
                           </Link>;
                         </li>;
@@ -399,7 +399,7 @@ className='flex items-center space-x-2 text-slate-300 hover: text-purple-300 tra
                   ))}
                 </ul>
               </div>
-              {/* Company Info *,}
+              {/* Company Info *}
 }
 <div className='mb-8' />
                 <h4 className='text-lg font-medium text-white mb-4' />Company</h4>
@@ -413,7 +413,7 @@ href={item.href}
 className='text-slate-300 hover: text-purple-300 transition-colors duration-200 text-sm'
                        />
 
-                        {item.nam,}
+                        {item.nam}
 }
                       </Link>;
                     </li>;
@@ -441,7 +441,7 @@ target='_blank'
                       <social.icon className='w-5 h-5' />
                     </a>
 
-                  ),
+                  )
 }
                 </div>;
               </div>;
@@ -474,18 +474,18 @@ type='email'
 
                 />;
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105' />                  Subscribe                Stay Ahead with Future Technology;
-              </h3>;
+              </h3>;"
               <p className=\"text-slate-300 mb-8 max-w-2xl mx-auto\" />;
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.;
-              </p>;
+              </p>;"
               <div className=\"flex flex-col sm:flex-row gap-4 max-w-md mx-auto\" />;
 
-                <input;
+                <input;"
 type=\"email\"
                   placeholder=\"Enter your email address\"
                   className=\"flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300\"
 
-                />
+                />"
                 <button className=\"px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105\" />
                   Subscribe;
                 </button>
@@ -493,7 +493,7 @@ type=\"email\"
             </div>
           </motion.div>
 
-          {/* Bottom Bar *,}
+          {/* Bottom Bar *}
 }
 <motion.div;
             variants={itemVariants}
@@ -532,15 +532,15 @@ href='/cookies'
         </motion.div>
       </div>
 
-      {/* Floating Action Button *,}
+      {/* Floating Action Button *}
 }
 <div className='fixed bottom-8 right-8 z-50' />;
         <motion.button;
           whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 ,}
+          whileTap={{ scale: 0.9 }
 }
           className='w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white';
-          onClick={() = /> window.scrollTo({ top: 0, behavior: 'smooth' },
+          onClick={() = /> window.scrollTo({ top: 0, behavior: 'smooth' }
 }
 
         >
@@ -551,3 +551,4 @@ href='/cookies'
   );
 }
 
+"

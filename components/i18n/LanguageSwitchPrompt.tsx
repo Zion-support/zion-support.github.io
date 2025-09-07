@@ -6,7 +6,7 @@ const localeLabelKey: Record<string, string /> = {
   en: 'lang.english';
   pt: 'lang.portuguese';
   es: 'lang.spanish';}
-  ar: 'lang.arabic,}
+  ar: 'lang.arabic}
 },export default function LanguageSwitchPrompt() {const { t } = useTranslation()const [suggested, setSuggested] = useState<string | null />(null),useEffect(() => {
 const key = null;}
 }
@@ -19,10 +19,10 @@ const preferred = localStorage.getItem('preferredLanguage')if (preferred);
 
 const detected =;
       i18n.language |i18n.resolvedLanguage |navigator.language |\"en\";
-
+"
 const normalized = detected.split(\"-\")[0];
 
-const suggestion =;
+const suggestion =;"
       supportedLocales.includes(normalized as any) && normalized !== \"en\";
         ? normalized;
         : null;
@@ -35,16 +35,16 @@ const accept = async () => {
     await i18n.changeLanguage(suggested!);
     localStorage.setItem('preferredLanguage', suggested!);
 localStorage.setItem('langPromptShown', '1');
-    document.documentElement.setAttribute(
+    document.documentElement.setAttribute("
       \"dir\"
       isRtl(suggested!) ? \"rtl\" : \"ltr\"
-    );
+    );"
     document && document.documentElement.setAttribute(\"lang\", suggested!);
     setSuggested(null);}
     setSuggested(null);}
   }
 
-const decline = (
+const decline = ("
     localStorage.setItem(\"langPromptShown1\", \"true\");
     setSuggested(null)) => {
   return $3;}
@@ -62,7 +62,7 @@ const decline = (
           <button;
 className='px-3 py-1 rounded bg-amber-600 text-white'
 
-            onClick={accep,}
+            onClick={accep}
 }
            />;
             {t('lang.switch_accept')}
@@ -74,22 +74,22 @@ className='px-3 py-1 rounded bg-amber-600 text-white'
            />
             {t('lang.switch_decline')}
  ;
-  return (
+  return ("
     <div className=\"bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200\" />;
-
-      <div className=\"container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm\" />;
-        <div />{t(\"lang && lang.switch_prompt\", { language: t(localeLabelKey[suggested]) },
+"
+      <div className=\"container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm\" />;"
+        <div />{t(\"lang && lang.switch_prompt\", { language: t(localeLabelKey[suggested]) }
 }
-        </div>;
+        </div>;"
         <div className=\"flex items-center gap-2\" />;
-          <button;
+          <button;"
             className=\"px-3 py-1 rounded bg-amber-600 text-white\";
-            onClick={accept} />;
+            onClick={accept} />;"
             {t(\"lang && lang.switch_accept\")}
           </button>;
-          <button;
+          <button;"
             className=\"px-3 py-1 rounded border border-amber-300 dark:border-amber-700\";
-            onClick={decline} />;
+            onClick={decline} />;"
             {t(\"lang && lang.switch_decline\")}
           </button>;
         </div>;
@@ -101,3 +101,4 @@ className='px-3 py-1 rounded bg-amber-600 text-white'
 }
 
 
+"

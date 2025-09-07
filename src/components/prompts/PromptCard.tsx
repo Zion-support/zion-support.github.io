@@ -78,7 +78,7 @@ const handle_send = () =>: any ;
       </div>
     </div>
   );
-}        <Button variant=\"secondary\" size=\"sm\" on_click={handle_send} aria - label=\"Send to ZionGPT\" />;
+}        <Button variant=\"secondary\" size=\"sm\" on_click={handle_send} aria - label=\"Send to ZionGPT\" />;"
           <Send className=\"w - 4 h - 4\" />;
         </Button>;
       </div>
@@ -95,4 +95,4 @@ const handle_send = () =>: any ;
         </Button>;
       </div>;
     </div>;
-  )}
+  )}"

@@ -1,11 +1,6 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-export interface SpecializedEmergingTechService  {id: string;
-  id: string;
-=======
+
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: string;
   tagline: string;
   price: string;
@@ -220,104 +215,12 @@ const contact = {mobile: '+1 302 464 0950',
     ];
     technology: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms'];
     integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];
-<<<<<<< HEAD;
-useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities',
-  competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];
-  }
-];
-;
-    marketSize: '$2.1B neuromorphic computing market',
-  growthRate: '450% annual growth'
-    variant: 'ai-futuristic',
-  contactInfo: contact;
-realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities',
-  launchDate: '2024-02-15', customers: 45;
-rating: 4.8, reviews: 34;
-benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
-    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-  }
-];
-
-import { ServiceVariant } from '../types/service-variants',;
-export interface SpecializedEmergingTechService {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;}
-    website: string;}
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number,;
-  benefits: string[],;
-  capabilities: string[],;
-  marketAdvantage: string;
 }
-;
-    marketSize: '$2.1B neuromorphic computing market',
-  growthRate: '450% annual growth'
-    variant: 'ai-futuristic',
-  contactInfo: contact;
-realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities',
-  launchDate: '2024-02-15', customers: 45;
-rating: 4.8, reviews: 34;
-benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
-    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-const contact = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;}
-  website: 'https://ziontechgroup.com';}
-},;
-export const specializedEmergingTechServices: SpecializedEmergingTechService[] = [;
-  // AR/VR & Metaverse Services;
-  {;
-    id: 'ar-vr-metaverse-platform',;
-    name: 'AR/VR Metaverse Platform',;
-    tagline: 'Revolutionary AR/VR platform for immersive experiences and metaverse development',;
-    price: '$399',;
-    period: '/month',;
-    description: 'Advanced AR/VR platform that enables businesses to create immersive experiences, develop metaverse applications, and engage customers in virtual environments.',;
-    features: [;
-    ];
-
-    popular: true, icon: '🧠'
-
-=======}
     useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: \"roi\",}
     competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];  }
 ];
 ;    ];
     popular: true, icon: '🧠',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
   }
 ];

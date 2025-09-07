@@ -129,13 +129,13 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
 className='absolute top-20 left-20 w-32 h-32 border border-purple-500/15 rounded-full'
           animate={{
             scale: [1, 1.15, 1],
-            rotate: [0, 180, 360],}
-            opacity: [0.22, 0.45, 0.22],}
+            rotate: [0, 180, 360]}
+            opacity: [0.22, 0.45, 0.22]}
           }}
           transition={{
             duration: 8,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
         />
 
@@ -143,27 +143,27 @@ ease: 'easeInOut',}
 className='absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45'
           animate={{
             scale: [1, 1.3, 1],
-            rotate: [45, 225, 405],}
-            opacity: [0.2, 0.5, 0.2],}
+            rotate: [45, 225, 405]}
+            opacity: [0.2, 0.5, 0.2]}
           }}
           transition={{
 
             duration: 10,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
         />
         <motion.div;
 className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full'
           animate={{
             scale: [1, 1.4, 1],
-            y: [0, -20, 0],}
-            opacity: [0.4, 0.7, 0.4],}
+            y: [0, -20, 0]}
+            opacity: [0.4, 0.7, 0.4]}
           }}
           transition={{
             duration: 12,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
         />
         {/* Neon Glow Effects */}
@@ -185,7 +185,7 @@ className='absolute inset-0'
           />
         </div>
 
-          ,
+          
 } />;
         </div>;
 
@@ -200,22 +200,22 @@ className='absolute w-1 h-1 bg-purple-400 rounded-full'
           <motion.div;}
             key={i}
               top: `${Math.random() * 100}%`
-              left: `${Math && Math.random() * 10,}
+              left: `${Math && Math.random() * 10}
 }%`,
-              top: `${Math && Math.random() * 10,}
-}%`,
+              top: `${Math && Math.random() * 10}
+}%`
             }}
             animate={{
 
               y: [0, -30, 0],
-              opacity: [0, 1, 0],}
-              scale: [0, 1, 0],}
+              opacity: [0, 1, 0]}
+              scale: [0, 1, 0]}
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
-              delay: Math.random() * 2,}
-ease: 'easeInOut',}
+              delay: Math.random() * 2}
+ease: 'easeInOut'}
             }}
             transition={{
               duration: 3 + Math.random() * 2,
@@ -231,53 +231,53 @@ ease: 'easeInOut',}
         <motion.div;
 className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent'
           animate={{
-            scaleX: [0, 1, 0],}
-            opacity: [0, 1, 0],}
+            scaleX: [0, 1, 0]}
+            opacity: [0, 1, 0]}
           }}
           transition={{
             duration: 4,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
         />
         <motion.div;
 className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent'
           animate={{
-            scaleX: [0, 1, 0],}
-            opacity: [0, 1, 0],}
+            scaleX: [0, 1, 0]}
+            opacity: [0, 1, 0]}
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
-            delay: 2,}
-ease: 'easeInOut',}
-          }}
-            ease: 'easeInOut',          }}            ease: \"easeInOut\"
-          ,
+            delay: 2}
+ease: 'easeInOut'}
+          }}"
+            ease: 'easeInOut'          }}            ease: \"easeInOut\"
+          
 }
         />
-            ease: 'easeInOut',          }}
+            ease: 'easeInOut'          }}
 
 
         />;
         <motion.div;
 className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent';
-          animate={{scaleX: [0, 1, 0],opacity: [0, 1, 0],}}transition={{duration: 4,repeat: Infinity,delay: 2,ease: 'easeInOut',}}
-            ease: 'easeInOut',          }}            ease: \"easeInOut\";
+          animate={{scaleX: [0, 1, 0],opacity: [0, 1, 0]}}transition={{duration: 4,repeat: Infinity,delay: 2,ease: 'easeInOut'}}"
+            ease: 'easeInOut'          }}            ease: \"easeInOut\";
           }}
         />;
-            ease: 'easeInOut',          }}/>;{/* Quantum Dots */}
+            ease: 'easeInOut'          }}/>;{/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (<motion&& motion.div;}
             key={`quantum-${i}`}
 className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full';
             style={{{/* Quantum Dots */}
         {[...Array (15)].map ((_, i) = /> (<motion.div;}
             key={`quantum-${i}`}
-              left: `${Math && Math.random() * 10,}
-}%`,top: `${Math && Math.random() * 10,}
-}%`,}}
-            animate={{scale: [0, 1, 0],opacity: [0, 0 && 0.8, 0],rotate: [0, 360],            }}            style={{left: `${Math && Math.random() * 10,}
-}%`,top: `${Math && Math.random() * 10,}
+              left: `${Math && Math.random() * 10}
+}%`,top: `${Math && Math.random() * 10}
+}%`}}
+            animate={{scale: [0, 1, 0],opacity: [0, 0 && 0.8, 0],rotate: [0, 360]            }}            style={{left: `${Math && Math.random() * 10}
+}%`,top: `${Math && Math.random() * 10}
 }%`;
             }}
             animate={{scale: [0, 1, 0];
@@ -288,14 +288,14 @@ className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded
             animate={{
 
               scale: [0, 1, 0],
-              opacity: [0, 0.8, 0],}
-              rotate: [0, 360],}
+              opacity: [0, 0.8, 0]}
+              rotate: [0, 360]}
             }}
             transition={{
               duration: 5 + Math.random() * 3,
               repeat: Infinity,
-              delay: Math.random() * 5,}
-ease: 'easeInOut',}
+              delay: Math.random() * 5}
+ease: 'easeInOut'}
             }}
           />
         ))}
@@ -317,14 +317,14 @@ id='neuralGradient'
 
               animate={{
 
-                r: [3, 6, 3],}
-                opacity: [0.3, 0.8, 0.3],}
+                r: [3, 6, 3]}
+                opacity: [0.3, 0.8, 0.3]}
               }}
               transition={{
                 duration: 4,
                 repeat: Infinity,
-                delay: i * 0.5,}
-ease: 'easeInOut',}
+                delay: i * 0.5}
+ease: 'easeInOut'}
               }}
 
             />;
@@ -332,7 +332,7 @@ ease: 'easeInOut',}
         {/* Holographic Effects */}
         <div className='absolute inset-0' />;
           <motion&& motion.div;
-                ease: 'easeInOut',              }}}}/>;
+                ease: 'easeInOut'              }}}}/>;
           ))}
 
         </svg>
@@ -342,8 +342,8 @@ ease: 'easeInOut',}
 <div className='absolute inset-0' />
           <motion.div;
 className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
-                delay: i * 0.5,
-                ease: 'easeInOut',              }}                ease: \"easeInOut\";
+                delay: i * 0.5,"
+                ease: 'easeInOut'              }}                ease: \"easeInOut\";
 
               }}
             />))}
@@ -356,26 +356,26 @@ className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded
             animate={{
 
               scale: [1, 1.1, 1],
-              rotate: [0, 90, 180, 270, 360],}
-              opacity: [0.1, 0.3, 0.1],}
+              rotate: [0, 90, 180, 270, 360]}
+              opacity: [0.1, 0.3, 0.1]}
             }}
             transition={{
               duration: 20,
-              repeat: Infinity,}
-ease: 'linear',}
+              repeat: Infinity}
+ease: 'linear'}
             }}
           />
           <motion.div;
 className='absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full'
             animate={{
               scale: [1, 1.2, 1],
-              rotate: [360, 270, 180, 90, 0],}
-              opacity: [0.1, 0.4, 0.1],}
+              rotate: [360, 270, 180, 90, 0]}
+              opacity: [0.1, 0.4, 0.1]}
             }}
             transition={{
               duration: 15,
-              repeat: Infinity,}
-ease: 'linear',}
+              repeat: Infinity}
+ease: 'linear'}
             }}
 
             }}
@@ -393,11 +393,11 @@ ease: 'linear',}
                 right: `${Math.random() * 32}px`
                 top: `${i * 5}%`
 
-              ,
+              
 }
               animate={{
-                height: [8, 32, 8],}
-                opacity: [0.3, 1, 0.3],}
+                height: [8, 32, 8]}
+                opacity: [0.3, 1, 0.3]}
               }}
               animate={{
 
@@ -405,9 +405,9 @@ ease: 'linear',}
               transition={{
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
-                delay: Math.random() * 2,
+                delay: Math.random() * 2
 }
-ease: 'easeInOut',}
+ease: 'easeInOut'}
               }}
 
 
@@ -424,3 +424,4 @@ ease: 'easeInOut',}
 
 );
 
+"

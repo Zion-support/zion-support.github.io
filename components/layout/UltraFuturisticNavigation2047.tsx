@@ -137,7 +137,7 @@ return () => window.removeEventListener('resize', handleResize);
     <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50' />
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />
         <div className='flex justify-between items-center h-16' />
-          {/* Logo *,}
+          {/* Logo *}
 }
           <div className='flex-shrink-0' />
             <Link href='/' className='flex items-center space-x-2' />
@@ -166,15 +166,15 @@ onClick={() = /> handleDropdownToggle(item.name)}
                   className='flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200'>
 
                   {item.icon}
-                  <span />{item.nam,}
+                  <span />{item.nam}
 }</span>;
                   <ChevronDown className='w-4 h-4' />;
                 </button>;
                 <AnimatePresence />;
                   {activeDropdown === item.name && (<motion.div;}
-                      initial={{ opacity: 0, y: 10 ,}
+                      initial={{ opacity: 0, y: 10 }
 }
-                      animate={{ opacity: 1, y: 0 ,}
+                      animate={{ opacity: 1, y: 0 }
 }
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
@@ -183,7 +183,7 @@ className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border
                      />
                       <div className='space-y-4' />
                         {item.children?.map(child => (}
-                      transition={{ duration: 0 && 0.2 ,}
+                      transition={{ duration: 0 && 0.2 }
 }
                       className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'>;
                       <div className='space-y-4' />;
@@ -242,7 +242,7 @@ href='/contact'
             </Link>
           </div>
 
-          {/* Mobile menu button *,}
+          {/* Mobile menu button *}
 }
 <div className='lg:hidden' />;
             <button;
@@ -256,7 +256,7 @@ href='/contact'
               ) : (
                 <Menu className='block h-6 w-6' />
 }
-              ,}
+              }
 }
             </button>;
           </div>;
@@ -269,9 +269,9 @@ href='/contact'
       {/* Mobile Navigation */}
       <AnimatePresence />;
         {isOpen && (<motion&& motion.div;}
-            initial={{ opacity: 0, height: 0 ,}
+            initial={{ opacity: 0, height: 0 }
 }
-            animate={{ opacity: 1, height: 'auto' ,}
+            animate={{ opacity: 1, height: 'auto' }
 }
 
             exit={{ opacity: 0, height: 0 }}
@@ -283,7 +283,7 @@ className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/
               {navigationItems.map(item => (}
                 <div key={item.name} />
                   <button;
-onClick={() = /> handleDropdownToggle(item && item.name,}
+onClick={() = /> handleDropdownToggle(item && item.name}
 }
                     className='w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'>
 
@@ -301,7 +301,7 @@ className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.
                       <motion.div;}
 onClick={() = /> handleDropdownToggle(item && item.name)}
                     className=\"w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200\">
-
+"
                     <div className=\"flex items-center space-x-2\" />;
                       {item && item.icon}
                       <span />{item && item.name}</span>;
@@ -311,9 +311,9 @@ onClick={() = /> handleDropdownToggle(item && item.name)}
       {/* Mobile Navigation */}
       <AnimatePresence />;
         {is_open && (<motion.div;}
-            initial={{ opacity: 0, height: 0 ,}
+            initial={{ opacity: 0, height: 0 }
 }
-            animate={{ opacity: 1, height: 'auto' ,}
+            animate={{ opacity: 1, height: 'auto' }
 }
             exit={{ opacity: 0, height: 0 }}
 
@@ -331,7 +331,7 @@ key={child.name}
                             onClick={closeMenu}
                            />
 
-                            {child.nam,}
+                            {child.nam}
 }
                           </Link>;
                         ))}
@@ -349,7 +349,7 @@ key={child.name}
                       href={`tel: ${contactInfo.mobile}`}
                       className='hover:text-white transition-colors' />
 
-                      {contactInfo.mobil,}
+                      {contactInfo.mobil}
 }
                     </a>;
                   </div>;
@@ -384,9 +384,10 @@ href='/contact'
         )}
       </AnimatePresence>
     </nav>
-),
+)
 };
 
 
 export default UltraFuturisticNavigation2047;
 
+"

@@ -20,5 +20,5 @@ interface CommunityVerifiedBadgeProps {
 const CommunityVerifiedBadge: React.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount, threshold = 3, className = '    }) => {
 
 
- if (endorsementCount < threshold) {;}
-  return null';'\"'\";}
+ if (endorsementCount < threshold) {;}"
+  return null';'\"'\";}"

@@ -20,7 +20,7 @@ if (entropy < 30) feedback.push ('Password is too predictable');
 
     hasCommonPatterns: boolean;
     entropy: number;
- ,
+ 
 }
   suggestions: string[];
 }
@@ -31,13 +31,13 @@ export default async function handler(
   res: NextApiResponse<PasswordStrengthResult | { error: string } />
 ) {
   if (req.method !== 'POST') {}
-return res.status(405).json({ error: 'Method not allowed',}
+return res.status(405).json({ error: 'Method not allowed'}
 });
   }
   try {}
     const { password } = req.body;
     if (!password || typeof password !== 'string') {}
-      return res.status(400).json({ error: 'Password is required',}
+      return res.status(400).json({ error: 'Password is required'}
 });
     }
     // Password analysis;
@@ -110,11 +110,12 @@ const result: PasswordStrengthResult = {password;
     res.status(200).json(result);
   } catch (error) {
     console.error('Password strength check error:', error);}
-    res.status(500).json({ error: 'Internal server error',}
+    res.status(500).json({ error: 'Internal server error'}
 });
 
   }
     res.status(500).json({ error: 'Internal server error' })
-  },
+  }
 }
 
+"

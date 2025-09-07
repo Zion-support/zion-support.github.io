@@ -15,10 +15,10 @@ import {FormField;
   setValue: UseFormSetValue<any />;
   skills: string[];
   yearsExperience: number;
-  location?: string;
+  location?: string;"
   rateType: \"hourly\" | \"fixed\";}
 }
 }
 
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps /> = ({,}
-}\";
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps /> = ({}"
+}\";"

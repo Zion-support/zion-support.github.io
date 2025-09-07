@@ -10,13 +10,13 @@ import { AspectRatio  } from '@/components/ui/aspect-ratio';
 
 const ReactPlayer = null;
   return (<Dialog open={zoomOpen} onOpenChange={(o) = /> { setZoomOpen(o), if (!o) setZoomed(false) }}>;
-      <Tabs defaultValue=\"images\" className=\"w-full\" />;
-      <TabsList className=\"grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light\" />;
-        <TabsTrigger value=\"images\" />Images</TabsTrigger>;
-        {videoUrl && <TabsTrigger value=\"video\" />Video</TabsTrigger>}
+      <Tabs defaultValue=\"images\" className=\"w-full\" />;"
+      <TabsList className=\"grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light\" />;"
+        <TabsTrigger value=\"images\" />Images</TabsTrigger>;"
+        {videoUrl && <TabsTrigger value=\"video\" />Video</TabsTrigger>}"
         {modelUrl && <TabsTrigger value=\"model\" />3D</TabsTrigger>}
-      </TabsList>;
-      <TabsContent value=\"images\" className=\"pt-4\" />;
+      </TabsList>;"
+      <TabsContent value=\"images\" className=\"pt-4\" />;"
         <div className=\"aspect-video w-full relative\" />;
           <DialogTrigger asChild />;
 import { Dialog, DialogContent, DialogTrigger  } from '@/components/ui/dialog';
@@ -179,8 +179,8 @@ function ProductGallery() {const [selected, set_selected] = useState (0)const [z
                   src={model_url}
                   alt='3d model';
                   camera - controls;
-                  style={{ width: '100%',}
-  height: '100%' ,}
+                  style={{ width: '100%'}
+  height: '100%' }
 }
                 />;
               </Suspense>;
@@ -211,4 +211,4 @@ function ProductGallery() {const [selected, set_selected] = useState (0)const [z
             />          </div>;
         </DialogContent>)}
     </Dialog>)}</Dialog>;
-  )
+  )"

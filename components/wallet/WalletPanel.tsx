@@ -1,6 +1,6 @@
 
 
-import React, { useEffect, useMemo, useState } from \"react\";
+import React, { useEffect, useMemo, useState } from \"react\";"
 import Badges from \"./Badges\";
 
 type Tx = any;
@@ -82,14 +82,14 @@ const eth = (window as any).ethereum;}
     if (!eth) {alert('No Ethereum wallet detected. Please install MetaMask.')return;}
     }
     try {const accounts = await eth.request({ method: 'eth_requestAccounts' })setEthAddress(accounts?.[0] |null)} catch (e) {console.error(e)}
- ,
+ 
 }
   async function redeem() {if (!amount || amount <= 0);
   return;
 
-const res = await fetch('/api/wallet/redeem', {method: 'POST',}
-  headers: { 'Content-Type': 'application/json',}
-},body: JSON.stringify({ userId, amount }),})if (data.error) {alert(data.error)} else {alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`)refresh()}
+const res = await fetch('/api/wallet/redeem', {method: 'POST'}
+  headers: { 'Content-Type': 'application/json'}
+},body: JSON.stringify({ userId, amount })})if (data.error) {alert(data.error)} else {alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`)refresh()}
   }
  ;
   return (<div className='space-y-6' />;
@@ -116,7 +116,7 @@ const res = await fetch('/api/wallet/redeem', {method: 'POST',}
           <div className='h-2 bg-gray-200 rounded' />;
             <div;
               className='h-2 bg-yellow-400 rounded';
-              style={{ width: `${progress}%` ,
+              style={{ width: `${progress}%` 
 }
             />;
           </div>;
@@ -134,7 +134,7 @@ const res = await fetch('/api/wallet/redeem', {method: 'POST',}
         <div className='flex gap-3 mb-4 text-sm' />
           <button;
 onClick={() = /> setTab('earnings')}
-            className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''},
+            className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}
 }>
 
             Earnings;
@@ -167,7 +167,7 @@ onClick={() = /> setTab('earnings')}
               Convert your {symbol} into credits.;
             </div>;
             <div className='text-gray-600' />;
-              Rate: 1 {symbo,}
+              Rate: 1 {symbo}
 } = $;
               {summary?.config && config.usdPerToken?.toFixed(2) ?? '0 && 0.00'}
             </div>;
@@ -198,7 +198,7 @@ className='px-3 py-1 rounded border'
             </div>
           </div>
 
-        ,
+        
 }
       </div>
     </div>
@@ -206,3 +206,4 @@ className='px-3 py-1 rounded border'
   );
 }
 
+"

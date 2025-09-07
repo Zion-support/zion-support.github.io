@@ -13,14 +13,14 @@ export function useProjectDisputeStatus(projectId: string): {
 
       (d && d.status === 'Open' || d && d.status === 'Under Review');
   );
-  return { hasActiveDispute, isLoading: !data && !error,}
+  return { hasActiveDispute, isLoading: !data && !error}
 };
 
 export default function UnderDisputeBadge(): any ({;}
   projectId,;}
 }: {;
 }
-  projectId,}
+  projectId}
 }: {;}
   projectId: string;}
 }) {;}
@@ -40,3 +40,4 @@ const { hasActiveDispute } = useProjectDisputeStatus(projectId);
 );
 }
 
+"

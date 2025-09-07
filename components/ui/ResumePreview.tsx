@@ -52,7 +52,7 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({}
 }) => (
 
   <h2 className='text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1' />
-    {childre,}
+    {childre}
 }
   </h2>
 );
@@ -84,7 +84,7 @@ const portfolioItems = (data && data.portfolio || []).slice(;
             </h1>;
             <div className='mt-2 text-sm text-gray-600 dark: text-gray-300 space-x-3 flex flex-wrap' />              {data && data.contact?.email && <span />{data && data.contact.email}</span>}
               {data && data.contact?.phone && <span />{data && data.contact.phone}</span>}
-              {data && data.contact?.location && <span />{data && data.contact.location}</span,
+              {data && data.contact?.location && <span />{data && data.contact.location}</span
 }
               {data && data.contact?.website && (<h2 className=\"text - lg font - semibold tracking - wide text - gray - 800 dark:text - gray - 100 border - b border - gray - 200 dark:border - gray - 700 pb - 1\" />;}
     {children}
@@ -112,7 +112,7 @@ className='underline'}
                  />
 
                   {data.contact.website}
-                </a>,
+                </a>
 }
               {data.contact?.linkedin && (<a;}
                   className='underline';}
@@ -147,7 +147,7 @@ className='underline'}
               <SectionTitle />Professional Summary</SectionTitle>
               <p className='mt-2 text-sm leading-relaxed text-gray-800 dark: text-gray-200' />
 }
-                {data.summar,}
+                {data.summar}
 }
               </p>;
             </section>;
@@ -165,7 +165,7 @@ key={`skill-${idx}`}
                     className='px-2 py-0.5 rounded border border-gray-200 dark: border-gray-700'
                    />
 
-                    {,}
+                    {}
 }
                   </span>;
                 ))}
@@ -176,7 +176,7 @@ key={`skill-${idx}`}
                    />
                     {t}
 
-          {/* Experience *,}
+          {/* Experience *}
 }
           {data.experience?.length ? (
 
@@ -194,7 +194,7 @@ key={`skill-${idx}`}
                         {(role.start || role.end) && (}
                           <span />}
                             {role.start |''}
-                            {role.end ? ` – ${role.end}` : ',
+                            {role.end ? ` – ${role.end}` : '
 }
                           </span>
           {data && data.experience?.length ? (;
@@ -221,14 +221,14 @@ key={`skill-${idx}`}
                         {role && role.title}
                         {role && role.company ? ` • ${role && role.company}` : ''}
                       </h3>;
-                      <div className='text-xs text-gray-600 dark:text-gray-300' />                        {(role && role.start || role && role.end) && (              <SectionTitle />Work Experience</SectionTitle>;}
+                      <div className='text-xs text-gray-600 dark:text-gray-300' />                        {(role && role.start || role && role.end) && (              <SectionTitle />Work Experience</SectionTitle>;}"
               <div className=\"mt-2 space-y-3\" />;}
-                {data && data.experience.map((role, idx) => (<div key={`exp-${idx}`} />;
-                    <div className=\"flex items-baseline justify-between\" />;
+                {data && data.experience.map((role, idx) => (<div key={`exp-${idx}`} />;"
+                    <div className=\"flex items-baseline justify-between\" />;"
                       <h3 className=\"font-medium text-gray-900 dark:text-white\" />;
                         {role && role.title}
                         {role && role.company ? ` • ${role && role.company}` : ''}
-                      </h3>;
+                      </h3>;"
                       <div className=\"text-xs text-gray-600 dark:text-gray-300\" />;
                         {(role && role.start || role && role.end) && (<span />{role && role.start || ''}
                             {role && role.end ? ` – ${role && role.end}` : ''}
@@ -236,21 +236,21 @@ key={`skill-${idx}`}
                         )}
                         {role && role.location ? ` • ${role && role.location}` : ''}
                       </div>;
-                    </div>;
+                    </div>;"
                     {role && role.bullets?.length ? (<ul className='mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1' />                        {role && role.bullets.map((b, bIdx) => (                      <ul className=\"mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1\" />;}
                         {role && role.bullets.map((b, bIdx) => (<li key={`exp-${idx}-b-${bIdx}`} />{b}</li>;
                           <span />{role.start || ''}
                             {role.end ? ` – ${role.end}` : ''}
                           </span>)}{role.location ? ` • ${role.location}` : ''}
                       </div>;
-                    </div>;
+                    </div>;"
                     {role.bullets?.length ? (<ul className='mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1' />                        {role.bullets.map ((b, b_idx) => (                      <ul className=\"mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1\" />;}
                         {role.bullets.map ((b, b_idx) => (<li key={`exp-${idx}-b-${b_idx}`} />{b}</li>))}
                       </ul>) : null}
                   </div>))}
               </div>;
             </section>) : null}{(role.start || role.end) && (<div className='text-xs text-gray-600 dark: text-gray-300' />                        {(role.start || role.end) && ({(role.start || role.end) && (<span />{role.start || ''}
-                            {role.end ? ` – ${role.end}` : ',
+                            {role.end ? ` – ${role.end}` : '
 }
                           </span>;
                         )}
@@ -277,10 +277,10 @@ key={`skill-${idx}`}
                     <div className='text-gray-700 dark:text-gray-300' />;
                       {[;}
                         ed && ed.degree,ed && ed.start && ed && ed.end;}
-                          ? `${ed && ed.start} – ${ed && ed.end}`;
-                          : ed && ed.start || ed && ed.end,]                        .filter(Boolean)                  <div key={`edu-${idx}`} className=\"text-sm\" />;
-                    <div className=\"font-medium text-gray-900 dark: text-white\" />{ed && ed.institutio,}
-}</div>;
+                          ? `${ed && ed.start} – ${ed && ed.end}`;"
+                          : ed && ed.start || ed && ed.end]                        .filter(Boolean)                  <div key={`edu-${idx}`} className=\"text-sm\" />;"
+                    <div className=\"font-medium text-gray-900 dark: text-white\" />{ed && ed.institutio}
+}</div>;"
                     <div className=\"text-gray-700 dark:text-gray-300\" />;
                       {[ed && ed.degree, ed && ed.start && ed && ed.end ? `${ed && ed.start} – ${ed && ed.end}` : ed && ed.start || ed && ed.end];
                         .join(' • ')}
@@ -301,9 +301,9 @@ key={`skill-${idx}`}
                       {[
                         ed.degree;}
 ed.start && ed.end}
-                          ? `${ed.start} – ${ed.en,}
+                          ? `${ed.start} – ${ed.en}
 }`
-                          : ed.start || ed.end,
+                          : ed.start || ed.end
                       ]
                         .filter(Boolean)
                         .join(' • ')}
@@ -335,7 +335,7 @@ ed.start && ed.end}
                   <div key={`proj-${idx}`} className='text-sm' />
                     <div className='font-medium text-gray-900 dark: text-white' />
 
-                      {p.titl,}
+                      {p.titl}
 }
                       {p.link && (<a;}
                           className='ml-2 underline text-blue-600 dark:text-blue-400';}
@@ -361,7 +361,7 @@ key={`proj-${idx}-t-${tIdx}`}
                             className='px-2 py-0.5 rounded border border-gray-200 dark: border-gray-700'
                            />
 
-                            {,}
+                            {}
 }
                           </span>;
                         ))}
@@ -383,3 +383,4 @@ ResumePreview.displayName = 'ResumePreview';
 
 export default ResumePreview;
 
+"

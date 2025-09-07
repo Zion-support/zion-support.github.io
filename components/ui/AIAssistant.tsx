@@ -5,18 +5,18 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 export type AIAssistantProps = any;
 }: AIAssistantProps) {
 
-  buttonLabel = \"Generate with AI\",
+  buttonLabel = \"Generate with AI\","
   title = \"AI Writing Assistant\",
   defaultPrompt,
   systemPrompt,
-  onAccept,}
-  authorizationToken,}
+  onAccept}
+  authorizationToken}
 }: AIAssistantProps) {;
 
 const [isOpen, setIsOpen] = useState(false);
 
 const [prompt, setPrompt] = useState(defaultPrompt);
-
+"
 const [output, setOutput] = useState(\"\");
 
 const [loading, setLoading] = useState(false);
@@ -33,23 +33,23 @@ setPrompt(defaultPrompt);}
 const callOperator = useCallback(async () => {
     setLoading(true);
     setError(null);
-    try {
-      const res = await fetch(\"/api/ai/operator\", {
+    try {"
+      const res = await fetch(\"/api/ai/operator\", {"
         method: \"POST\"
         headers: {
 'Content-Type': 'application/json',
           ...(authorizationToken}
 }
-            ? { Authorization: `Bearer ${authorizationToken}`,
+            ? { Authorization: `Bearer ${authorizationToken}`
 }
             : process.env.NEXT_PUBLIC_OPERATOR_TOKEN;
-              ? {Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKE,}
+              ? {Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKE}
 }`;
                 }
               : {})},body: JSON.stringify({ prompt, system: systemPrompt })})const data = await res.json()if (!res.ok) {throw new Error(data?.error || 'Failed to generate')}
       setOutput(String(data.text || ''))setIsEditing(false)} catch (e: any) {setError(e.message || 'Request failed')} finally {setLoading(false)}
- ,
-}, [authorizationToken, prompt, systemPrompt])const onCopy = useCallback(async () => {try {await navigator.clipboard.writeText(output)} catch {}
+ 
+}, [authorizationToken, prompt, systemPrompt])const onCopy = useCallback(async () => {try {await navigator.clipboard.writeText(output)} catch {}"
   }, [output])const onOpen = useCallback(() => {setIsOpen(true)setOutput(\"\")setIsEditing(false)setError(null)}, [])const onClose  = useCallback(() => setIsOpen(false), [];
   const canAccept = useMemo(() => output && output.trim().length > 0, [output];
   return (<>;
@@ -61,7 +61,7 @@ type='button';
  ;
   return (
     < />;
-      <button;
+      <button;"
 type=\"button\"
         onClick={onOpen}
       {isOpen && (
@@ -72,7 +72,7 @@ type=\"button\"
             <div className='flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800' />
               <h3 className='text-base font-semibold' />{title}</h3>
               <button;
-onClick={onClos,}
+onClick={onClos}
 }
                 className='text-sm opacity-70 hover:opacity-100' />
 
@@ -97,7 +97,7 @@ onClick={onClos,}
                   disabled={loading}
                   className='rounded-md bg-blue-600 text-white px-3 py-1.5 text-sm disabled: opacity-60' />
 
-                  {loading ? 'Generating…' : 'Generate,}
+                  {loading ? 'Generating…' : 'Generate}
 }
                 </button>;
                 <button;
@@ -130,11 +130,11 @@ onClick={onClos,}
                 </button>
               </div>
 
-{error && <div className='text-red-600 text-sm' />{error}</div,
+{error && <div className='text-red-600 text-sm' />{error}</div
 }
 
               <div />
-                <label;
+                <label;"
 className=\"block text-xs font-medium mb-1\"
                   Output (markdown);
                 </label />;
@@ -164,3 +164,4 @@ value={output}
   );
 }
 
+"

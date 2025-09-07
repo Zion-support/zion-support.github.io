@@ -17,32 +17,32 @@ export /**;
 function RoleManagement() {// Mock team members data;
 
 const team_members = [}
-  {view_candidates: true,edit_candidates: true,create_jobs: true,manage_team: true,view_billing: true,manage_billing: true,}
+  {view_candidates: true,edit_candidates: true,create_jobs: true,manage_team: true,view_billing: true,manage_billing: true}
 },const roleDescriptions: Record<string string /> = {\"Admin\": \"Full access to all features and settings\",\"Recruiter\": \"Can manage candidates and job postings\",\"Manager\": \"Can view candidates and create jobs\",\"Viewer\": \"Read-only access to candidates\"},{id: 2;
       name: 'Jamie Smith';
       email: 'jamie@example.com';
       role: 'Recruiter';}
-      permissions: {view_candidates: true,edit_candidates: true,create_jobs: true,manage_team: false,view_billing: false,manage_billing: false,}
+      permissions: {view_candidates: true,edit_candidates: true,create_jobs: true,manage_team: false,view_billing: false,manage_billing: false}
 },{id: 3;
       name: 'Sam Williams';
       email: 'sam@example.com';
       role: 'Manager';}
-      permissions: {view_candidates: true,edit_candidates: false,create_jobs: true,manage_team: false,view_billing: true,manage_billing: false,}
+      permissions: {view_candidates: true,edit_candidates: false,create_jobs: true,manage_team: false,view_billing: true,manage_billing: false}
 },{id: 4;
       name: 'Taylor Brown';
       email: 'taylor@example.com';
       role: 'Viewer';}
-      permissions: {view_candidates: true,edit_candidates: false,create_jobs: false,manage_team: false,view_billing: false,manage_billing: false,}
+      permissions: {view_candidates: true,edit_candidates: false,create_jobs: false,manage_team: false,view_billing: false,manage_billing: false}
 }];
 
 const handlePermissionChange = (_memberId: number,permission: string,value: boolean) =>: any {    // In a real app, this would make an API call to update permissions;}
-    toast ({title: 'Permission updated',}
-  description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`},
+    toast ({title: 'Permission updated'}
+  description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`}
 }
 
 const role_descriptions: Record < string, string> = {Admin: 'Full access to all features and settings',
-  Recruiter: 'Can manage candidates and job postings',Manager: 'Can view candidates and create jobs',}
-  Viewer: 'Read - only access to candidates,}
+  Recruiter: 'Can manage candidates and job postings',Manager: 'Can view candidates and create jobs'}
+  Viewer: 'Read - only access to candidates}
 }
 import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
 import { Badge  } from '@/components/ui/badge';
@@ -54,29 +54,29 @@ export function RoleManagement() {// Mock team members data;
 
 const teamMembers = [
   {id: 1,name: 'Alex Johnson',
-  email: 'alex@example && example.com',role: 'Admin',}
-  permissions: {viewCandidates: true,editCandidates: true,createJobs: true,manageTeam: true,viewBilling: true,manageBilling: true,}
+  email: 'alex@example && example.com',role: 'Admin'}
+  permissions: {viewCandidates: true,editCandidates: true,createJobs: true,manageTeam: true,viewBilling: true,manageBilling: true}
 },{id: 2,name: 'Jamie Smith',
-  email: 'jamie@example && example.com',role: 'Recruiter',}
-  permissions: {viewCandidates: true,editCandidates: true,createJobs: true,manageTeam: false,viewBilling: false,manageBilling: false,}
+  email: 'jamie@example && example.com',role: 'Recruiter'}
+  permissions: {viewCandidates: true,editCandidates: true,createJobs: true,manageTeam: false,viewBilling: false,manageBilling: false}
 },{id: 3,name: 'Sam Williams',
-  email: 'sam@example && example.com',role: 'Manager',}
-  permissions: {viewCandidates: true,editCandidates: false,createJobs: true,manageTeam: false,viewBilling: true,manageBilling: false,}
+  email: 'sam@example && example.com',role: 'Manager'}
+  permissions: {viewCandidates: true,editCandidates: false,createJobs: true,manageTeam: false,viewBilling: true,manageBilling: false}
 },{id: 4,name: 'Taylor Brown',
-  email: 'taylor@example && example.com',role: 'Viewer',}
-  permissions: {viewCandidates: true,editCandidates: false,createJobs: false,manageTeam: false,viewBilling: false,manageBilling: false,}
+  email: 'taylor@example && example.com',role: 'Viewer'}
+  permissions: {viewCandidates: true,editCandidates: false,createJobs: false,manageTeam: false,viewBilling: false,manageBilling: false}
 }];
 
 const handlePermissionChange = (    // In a real app, this would make an API call to update permissions;) => {
   return $3;}
 }
-    toast({title: 'Permission updated',}
-  description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`},
+    toast({title: 'Permission updated'}
+  description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`}
 }
 
 const roleDescriptions: Record<string, string /> = {Admin: 'Full access to all features and settings',
-  Recruiter: 'Can manage candidates and job postings',Manager: 'Can view candidates and create jobs',}
-  Viewer: 'Read-only access to candidates'}import { toast ,}
+  Recruiter: 'Can manage candidates and job postings',Manager: 'Can view candidates and create jobs'}
+  Viewer: 'Read-only access to candidates'}import { toast }
 } from '@/hooks/use-toast';
 import { InfoIcon  } from 'lucide-react';
 import { Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components/ui/tooltip';
@@ -84,15 +84,15 @@ import {Table;
   TableBody;
   TableCell;
   TableHead;}
-  TableHeader;}
+  TableHeader;}"
   TableRow} from \"@/components/ui/table\",import { Badge } from \"@/components/ui/badge\",Tooltip;
   TooltipContent;
-  TooltipProvider;
+  TooltipProvider;"
   TooltipTrigger} from \"@/components/ui/tooltip\",export function RoleManagement() {// Mock team members data;
-}
-const teamMembers  = null;return (id: 1,name: \"Alex Johnson\",email: \"alex@example.com\",role: \"Admin\",permissions: {viewCandidates: true,editCandidates: true,createJobs: true,manageTeam: true,viewBilling: true,manageBilling: true,}
-},{id: 2,name: \"Jamie Smith\",email: \"jamie@example.com\",role: \"Recruiter\",permissions: {viewCandidates: true,editCandidates: true,createJobs: true,manageTeam: false,viewBilling: false,manageBilling: false,}
-},{id: 3,name: \"Sam Williams\",email: \"sam@example.com\",role: \"Manager\",permissions: {viewCandidates: true,editCandidates: false,createJobs: true,manageTeam: false,viewBilling: true,manageBilling: false,}
+}"
+const teamMembers  = null;return (id: 1,name: \"Alex Johnson\",email: \"alex@example.com\",role: \"Admin\",permissions: {viewCandidates: true,editCandidates: true,createJobs: true,manageTeam: true,viewBilling: true,manageBilling: true}"
+},{id: 2,name: \"Jamie Smith\",email: \"jamie@example.com\",role: \"Recruiter\",permissions: {viewCandidates: true,editCandidates: true,createJobs: true,manageTeam: false,viewBilling: false,manageBilling: false}"
+},{id: 3,name: \"Sam Williams\",email: \"sam@example.com\",role: \"Manager\",permissions: {viewCandidates: true,editCandidates: false,createJobs: true,manageTeam: false,viewBilling: true,manageBilling: false}"
 },{id: 4,name: \"Taylor Brown\",email: \"taylor@example.com\",role: \"Viewer\",permissions: {viewCandidates: true,editCandidates: false,createJobs: false,manageTeam: false,viewBilling: false,return (<div className=\"space-y-6\" />;
       <div />;
         <h3 className='text-xl font-medium mb-4' />Role Permissions</h3>;
@@ -105,28 +105,28 @@ const teamMembers  = null;return (id: 1,name: \"Alex Johnson\",email: \"alex@exa
                 <Badge variant={role === 'Admin' ? 'default' : 'outline'} />;
                   {role}
                 </Badge>              </div>;
-              <p className='text-sm text-muted-foreground' />{description}</p>;
-        <h3 className=\"text-xl font-medium mb-4\" />Role Permissions</h3>;
-        <div className=\"grid grid-cols-1 md:grid-cols-4 gap-4 mb-6\" />;
-          {Object.entries(roleDescriptions).map(([role, description]) => (<div key={role} className=\"bg-card rounded-lg p-4 border border-border\" />;
-              <div className=\"flex items-center gap-2 mb-2\" />;
+              <p className='text-sm text-muted-foreground' />{description}</p>;"
+        <h3 className=\"text-xl font-medium mb-4\" />Role Permissions</h3>;"
+        <div className=\"grid grid-cols-1 md:grid-cols-4 gap-4 mb-6\" />;"
+          {Object.entries(roleDescriptions).map(([role, description]) => (<div key={role} className=\"bg-card rounded-lg p-4 border border-border\" />;"
+              <div className=\"flex items-center gap-2 mb-2\" />;"
                 <Badge variant={role === \"Admin\" ? \"default\" : \"outline\"} />{role}</Badge>;
-              </div>;
-              <p className=\"text-sm text-muted-foreground\" />{description}</p>;
+              </div>;"
+              <p className=\"text-sm text-muted-foreground\" />{description}</p>;"
 import React from \"react\",Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from \"@/components/ui/table\",import { Switch } from \"@/components/ui/switch\",import { toast } from \"@/hooks/use-toast\",Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from \"@/components/ui/tooltip\",export function RoleManagement() {// Mock team members data;
 
 const teamMembers = [}
-  {manageBilling: false,}
+  {manageBilling: false}
 }],const handlePermissionChange = (// In a real app, this would make an API call to update permissions;) => {
   return $3;}
-}
-    toast({title: \"Permission updated\",description: `Permission ${permission} has been ${value ? \"granted\" : \"revoked\"}.`},
+}"
+    toast({title: \"Permission updated\",description: `Permission ${permission} has been ${value ? \"granted\" : \"revoked\"}.`},"
 },const roleDescriptions: Record<string string /> = {\"Admin\": \"Full access to all features and settings\",\"Recruiter\": \"Can manage candidates and job postings\",\"Manager\": \"Can view candidates and create jobs\",\"Viewer\": \"Read-only access to candidates\"},return (<div className=\"space-y-6\" />;
       <div /></div>;
           ))}
         </div>;
       </div>;
-            </div>;
+            </div>;"
           ))}<div className=\"rounded-md border\" />;
         <Table />;
           <TableHeader />;
@@ -214,73 +214,73 @@ const teamMembers = [}
                   </div>;
                 </TableCell>;
                 <TableCell />;
-                  <select;
+                  <select;"
                     className=\"w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring\";
                     defaultValue={member.role}
-                   />;
-                    <option value=\"Admin\" />Admin</option>;
-                    <option value=\"Recruiter\" />Recruiter</option>;
-                    <option value=\"Manager\" />Manager</option>;
+                   />;"
+                    <option value=\"Admin\" />Admin</option>;"
+                    <option value=\"Recruiter\" />Recruiter</option>;"
+                    <option value=\"Manager\" />Manager</option>;"
                     <option value=\"Viewer\" />Viewer</option>;
                   </select>;
-                </TableCell>;
+                </TableCell>;"
                 <TableCell className=\"text-center\" />;
-                  <Switch;
+                  <Switch;"
                     aria-label=\"View candidates\";
                     checked={member.permissions.viewCandidates}
-                    onCheckedChange={(checked) = />;}
+                    onCheckedChange={(checked) = />;}"
                       handlePermissionChange(member.id, \"viewCandidates\", checked)}
                   />;
-                </TableCell>;
+                </TableCell>;"
                 <TableCell className=\"text-center\" />;
-                  <Switch;
+                  <Switch;"
                     aria-label=\"Edit candidates\";
                     checked={member.permissions.editCandidates}
-                    onCheckedChange={(checked) = />;}
+                    onCheckedChange={(checked) = />;}"
                       handlePermissionChange(member.id, \"editCandidates\", checked)}
                   />;
-                </TableCell>;
+                </TableCell>;"
                 <TableCell className=\"text-center\" />;
-                  <Switch;
+                  <Switch;"
                     aria-label=\"Create jobs\";
                     checked={member.permissions.createJobs}
-                    onCheckedChange={(checked) = />;}
+                    onCheckedChange={(checked) = />;}"
                       handlePermissionChange(member.id, \"createJobs\", checked)}
                   />;
-                </TableCell>;
+                </TableCell>;"
                 <TableCell className=\"text-center\" />;
-                  <Switch;
+                  <Switch;"
                     aria-label=\"Manage team\";
                     checked={member.permissions.manageTeam}
-                    onCheckedChange={(checked) = />;}
+                    onCheckedChange={(checked) = />;}"
                       handlePermissionChange(member.id, \"manageTeam\", checked)}
                   />;
-                </TableCell>;
+                </TableCell>;"
                 <TableCell className=\"text-center\" />;
-                  <Switch;
+                  <Switch;"
                     aria-label=\"View billing\";
                     checked={member.permissions.viewBilling}
-                    onCheckedChange={(checked) = />;}
+                    onCheckedChange={(checked) = />;}"
                       handlePermissionChange(member.id, \"viewBilling\", checked)Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from \"@/components/ui/table\",Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from \"@/components/ui/tooltip\",export function RoleManagement() {// Mock team members data;
 
-const teamMembers = [}
-  {id: 1,name: \"Alex Johnson\",email: \"alex@example.com\",role: \"Admin\",permissions: {viewCandidates: true,editCandidates: true,createJobs: true,manageTeam: true,viewBilling: true,manageBilling: true,}
-},{id: 2,name: \"Jamie Smith\",email: \"jamie@example.com\",role: \"Recruiter\",permissions: {viewCandidates: true,editCandidates: true,createJobs: true,manageTeam: false,viewBilling: false,manageBilling: false,}
-},{id: 3,name: \"Sam Williams\",email: \"sam@example.com\",role: \"Manager\",permissions: {viewCandidates: true,editCandidates: false,createJobs: true,manageTeam: false,viewBilling: true,manageBilling: false,}
-},{id: 4,name: \"Taylor Brown\",email: \"taylor@example.com\",role: \"Viewer\",permissions: {viewCandidates: true,editCandidates: false,createJobs: false,manageTeam: false,viewBilling: false,manageBilling: false,}
+const teamMembers = [}"
+  {id: 1,name: \"Alex Johnson\",email: \"alex@example.com\",role: \"Admin\",permissions: {viewCandidates: true,editCandidates: true,createJobs: true,manageTeam: true,viewBilling: true,manageBilling: true}"
+},{id: 2,name: \"Jamie Smith\",email: \"jamie@example.com\",role: \"Recruiter\",permissions: {viewCandidates: true,editCandidates: true,createJobs: true,manageTeam: false,viewBilling: false,manageBilling: false}"
+},{id: 3,name: \"Sam Williams\",email: \"sam@example.com\",role: \"Manager\",permissions: {viewCandidates: true,editCandidates: false,createJobs: true,manageTeam: false,viewBilling: true,manageBilling: false}"
+},{id: 4,name: \"Taylor Brown\",email: \"taylor@example.com\",role: \"Viewer\",permissions: {viewCandidates: true,editCandidates: false,createJobs: false,manageTeam: false,viewBilling: false,manageBilling: false}
 }],const handlePermissionChange = (// In a real app, this would make an API call to update permissions;) => {
   return $3;}
-}
-    toast({title: \"Permission updated\",description: `Permission ${permission} has been ${value ? \"granted\" : \"revoked\"}.`},
-},const roleDescriptions: Record<string string /> = {\"Admin\": \"Full access to all features and settings\",\"Recruiter\": \"Can manage candidates and job postings\",\"Manager\": \"Can view candidates and create jobs\";}
+}"
+    toast({title: \"Permission updated\",description: `Permission ${permission} has been ${value ? \"granted\" : \"revoked\"}.`},"
+},const roleDescriptions: Record<string string /> = {\"Admin\": \"Full access to all features and settings\",\"Recruiter\": \"Can manage candidates and job postings\",\"Manager\": \"Can view candidates and create jobs\";}"
     \"Viewer\": \"Read-only access to candidates\"}return (<div className=\"space-y-6\" />;
-      <div />;
-        <h3 className=\"text-xl font-medium mb-4\" />Role Permissions</h3>;
-        <div className=\"grid grid-cols-1 md:grid-cols-4 gap-4 mb-6\" />;
-          {Object.entries(roleDescriptions).map(([role, description]) => (<div key={role} className=\"bg-card rounded-lg p-4 border border-border\" />;
-              <div className=\"flex items-center gap-2 mb-2\" />;
+      <div />;"
+        <h3 className=\"text-xl font-medium mb-4\" />Role Permissions</h3>;"
+        <div className=\"grid grid-cols-1 md:grid-cols-4 gap-4 mb-6\" />;"
+          {Object.entries(roleDescriptions).map(([role, description]) => (<div key={role} className=\"bg-card rounded-lg p-4 border border-border\" />;"
+              <div className=\"flex items-center gap-2 mb-2\" />;"
                 <Badge variant={role === \"Admin\" ? \"default\" : \"outline\"} />{role}</Badge>;
-              </div>;
+              </div>;"
               <p className=\"text-sm text-muted-foreground\" />{description}</p>;
             </div>;
           ))}
@@ -465,9 +465,9 @@ const teamMembers = [}
                     <option value='Recruiter' />Recruiter</option>;
                     <option value='Manager' />Manager</option>;
                     <option value='Viewer' />Viewer</option>;
-                  </select>;
+                  </select>;"
                 </TableCell>;<TableCell className=\"text-center\" />;
-                  <Switch;
+                  <Switch;"
                     aria-label=\"View candidates\";checked={member.permissions.viewCandidates}
                     onCheckedChange={checked = />;
                       handlePermissionChange(member.id;
@@ -534,7 +534,7 @@ const teamMembers = [}
                     aria-label='View billing';
                     checked={member.permissions.viewBilling}</div />;
     </div>;
-  )}checked={member.permissions.viewBilling}onCheckedChange={(checked) =>;}
+  )}checked={member.permissions.viewBilling}onCheckedChange={(checked) =>;}"
                       handlePermissionChange(member.id, \"viewBilling\", checked)}
                   />;
                 </TableCell>;
@@ -588,4 +588,4 @@ const teamMembers = [}
         </Table>;
       </div>;
     </div>;
-  )
+  )"

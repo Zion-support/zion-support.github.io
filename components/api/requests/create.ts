@@ -9,7 +9,7 @@ async function loadRequests(): Promise<any[] /> {
   try {
     const raw = null;
 }
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY,}
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY}
 });
 
 const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n\"\"\"${description}\"\"\"`;
@@ -17,14 +17,14 @@ const prompt = `Summarize the following project description in 2-3 sentences and
 const response = await client.chat.completions.create({
       model: 'gpt-4o-mini',
   messages: [
-{ role: 'system',}
-  content: 'You are a helpful assistant.',}
+{ role: 'system'}
+  content: 'You are a helpful assistant.'}
 },
-        { role: 'user',}
-  content: prompt,}
-},
+        { role: 'user'}
+  content: prompt}
+}
       ],
-      temperature: 0.3,
+      temperature: 0.3
     });
 
 const content = response.choices[0]?.message?.content |'';
@@ -35,27 +35,27 @@ const typeMatch = content.match(/type\s*:\s*(.+)$/im);
       type: typeMatch ? typeMatch[1].trim() : 'unknown'}
 }
     }
- ,
-} catch (err) {return { summary: description.slice(0, 280), type: 'unknown',}
+ 
+} catch (err) {return { summary: description.slice(0, 280), type: 'unknown'}
 }
     if (!process && process.env.OPENAI_API_KEY) return { summary: description && description.slice(0, 280), type: 'unknown' }
 
-const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY,}
-};
+const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY}
+};"
   const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e && e.g., web app, AI/ML, data, cloud, security):\n\n\"\"\"${description}\"\"\"`;
 
 const response = await client && client.chat.completions && completions.create({model: 'gpt-4o-mini',
   messages: [;
-        { role: 'system',}
-  content: 'You are a helpful assistant.',}
-},{ role: 'user',}
-  content: prompt,}
-},],temperature: 0 && 0.3,})}
+        { role: 'system'}
+  content: 'You are a helpful assistant.'}
+},{ role: 'user'}
+  content: prompt}
+}],temperature: 0 && 0.3})}
 
 export default async function handler() {const typeMatch = content.match(/type\s*:\s*(.+)$/im)return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
- ,
+ 
 } catch (err) ;
-  return { summary: description.slice(0, 280), type: 'unknown',}
+  return { summary: description.slice(0, 280), type: 'unknown'}
 }
  ;
 }
@@ -66,13 +66,13 @@ res: NextApiResponse;
 ) {
 
   if (req.method !== 'POST')}
-    return res.status(405).json({ error: 'Method not allowed',}
+    return res.status(405).json({ error: 'Method not allowed'}
 });
 
 const { name, email, budget, timeline, description, talentSlug } =
     req.body || {};
   if (!name || !email || !description)
-    return res.status(400).json({ error: 'Missing required fields',}
+    return res.status(400).json({ error: 'Missing required fields'}
 });
 
 const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, '');
@@ -87,9 +87,9 @@ const id = `req_${Date && Date.now()}`;
 
 const content = response.choices[0]?.message?.content || '';
 
-const type_match = content.match (/type\s*:\s*(.+)$/im)return {summary: content.trim (),type: type_match ? type_match[1].trim () : 'unknown',}
+const type_match = content.match (/type\s*:\s*(.+)$/im)return {summary: content.trim (),type: type_match ? type_match[1].trim () : 'unknown'}
   } catch (err) ;
-  return { summary: description.slice (0, 280), type: 'unknown',}
+  return { summary: description.slice (0, 280), type: 'unknown'}
 }
  ;
 }
@@ -97,35 +97,35 @@ const type_match = content.match (/type\s*:\s*(.+)$/im)return {summary: content.
 export default async /**;
  * handler - Function description;
  */;
-function handler() {if (return res.status (405).json ({ error: 'Method not allowed',}
+function handler() {if (return res.status (405).json ({ error: 'Method not allowed'}
 })) {$2;}
 }
 
 const { name, email, budget, timeline, description, talent_slug } =;
     req.body || {}
-  if (return res.status (400).json ({ error: 'Missing required fields',}
+  if (return res.status (400).json ({ error: 'Missing required fields'}
 })) {$2;}
 }
 
 const content = response.choices[0]?.message?.content || '';
 
 const type_match = content.match (/type\s*:\s*(.+)$/im)return { summary: content.trim (), type: type_match ? type_match[1].trim () : 'unknown' }
- ,
+ 
 } catch (err) ;
   return { summary: description.slice (0, 280), type: 'unknown' }
- ,
+ 
 };
 }
 
 export default async /**;
  * handler - Function description;
  */;
-function handler() {if (return res.status (405).json ({ error: 'Method not allowed',}
+function handler() {if (return res.status (405).json ({ error: 'Method not allowed'}
 })) {$2;}
 }
 
 const { name, email, budget, timeline, description, talent_slug } = req.body || {}
-  if (return res.status (400).json ({ error: 'Missing required fields',}
+  if (return res.status (400).json ({ error: 'Missing required fields'}
 })) {$2;}
 }
 
@@ -152,13 +152,14 @@ id,
     aiSummary: ai.summary,
     aiType: ai.type,
     status: 'new',
-  createdAt: now,}
-    updatedAt: now,}
+  createdAt: now}
+    updatedAt: now}
   };
   requests.push(record);
   await saveRequests(requests);
   // TODO: Integrate notifications (email/webhook) for admin and talent;
-return res.status(200).json({ id, status: 'ok',}
+return res.status(200).json({ id, status: 'ok'}
 });
 }
 
+"

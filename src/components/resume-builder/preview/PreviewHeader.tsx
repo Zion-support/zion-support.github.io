@@ -7,7 +7,7 @@ import { useIsMobile  } from '@/hooks/use-mobile';
           left: 0;
           top: 0;
           width: 100%;}.no - print {.no-print {display: none !important }
-      ,
+      
 }.print - section, .print - section * {visibility: visible;.print-section, .print-section * {visibility: visible;}
         }.print-section {position: absolute,left: 0,top: 0,width: 100%;}`;
     document && document.head.appendChild(style)window && window.print()// Remove the temporary style element after printing;
@@ -25,9 +25,9 @@ const [isPrinting, setIsPrinting] = useState(false);
   return (<div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`} />
 
       <Button;
-        variant=\"outline\";
+        variant=\"outline\";"
         onClick={onBack}className=\"gap-2 no-print\" />
-
+"
         <ArrowLeft className=\"h-4 w-4\" />;
         Back;
       </Button>;
@@ -37,8 +37,8 @@ const [isPrinting, setIsPrinting] = useState(false);
         <PdfExportButton resume={resume} />;
         <Button;
           variant='outline';
-          onClick={handleBrowserPrint}
-          disabled={isPrinting}<Button variant=\"outline\" className=\"gap-2\" />;
+          onClick={handleBrowserPrint}"
+          disabled={isPrinting}<Button variant=\"outline\" className=\"gap-2\" />;"
           <Link className=\"h-4 w-4\" />;
           className='gap-2'>
 
@@ -54,8 +54,8 @@ const [isPrinting, setIsPrinting] = useState(false);
           <FileText className='h-4 w-4' />;
           Print;
         </Button>;<Button variant='outline' className='gap-2' />;
-          <Link className='h-4 w-4' />          Add to Profile        ;
-        <Button variant=\"outline\" className=\"gap-2\" />;
+          <Link className='h-4 w-4' />          Add to Profile        ;"
+        <Button variant=\"outline\" className=\"gap-2\" />;"
           <Link className=\"h-4 w-4\" />;
           Add to Profile;
         </Button>;
@@ -88,8 +88,8 @@ const [isPrinting, setIsPrinting] = useState(false);
           Print;
         </Button>;
         <Button variant='outline' className='gap - 2' />;
-          <Link className='h - 4 w - 4' />          Add to Profile;
-        <Button variant=\"outline\" className=\"gap - 2\" />;
+          <Link className='h - 4 w - 4' />          Add to Profile;"
+        <Button variant=\"outline\" className=\"gap - 2\" />;"
           <Link className=\"h - 4 w - 4\" />;
           Add to Profile;
         </Button>;
@@ -97,4 +97,4 @@ const [isPrinting, setIsPrinting] = useState(false);
     </div>
   );
 }</div>;
-  ))}
+  ))}"

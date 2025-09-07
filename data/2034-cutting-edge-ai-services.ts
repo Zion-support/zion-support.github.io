@@ -83,11 +83,8 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		| 'AI Quantum Computing';
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   {
-<<<<<<< HEAD;
-  {
 
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 id: 'ai - product - spec - writer',
   name: 'AI Product Spec Writer',
     description:;
@@ -103,11 +100,9 @@ id: 'ai - product - spec - writer',
     integrations: ['Jira', 'Linear'],
     use_cases: ['Faster planning', 'Better alignment'],
     link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
-<<<<<<< HEAD;
-real_service: true;
-=======
+
     real_service: true,
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
   },
   {
     id: 'ai - creative - studio',
@@ -196,17 +191,12 @@ realService?: boolean;
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 	{
 		id: 'ai-emotional-support-agent';
-<<<<<<< HEAD;
-name: 'AI Emotional Support Agent';
-		description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.';}
-		category: 'AI Emotional Intelligence'}
-		pricing: { starter: '$99/mo' }
-=======
+
 		name: 'AI Emotional Support Agent',
   description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.';
 		category: \"category\",
     pricing: { starter: '$99/mo' }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'];
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
@@ -237,13 +227,10 @@ features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes
 
 	}
 ];
-<<<<<<< HEAD;
-name: string;
-description: string;
-=======
+
 name: string,
   description: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 category:;
   | 'AI Consciousness';
   | 'AI Emotional Intelligence';

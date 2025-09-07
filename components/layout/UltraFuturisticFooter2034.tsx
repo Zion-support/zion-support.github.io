@@ -22,8 +22,8 @@ const serviceCategories = [
   {title: '🧠 Revolutionary AI Services';
     icon: Brain;}
     services: [;}
-{name: 'AI Business Intelligence Pro',}
-  href: '/ai-business-intelligence-pro',price: '$299/month',},{name: 'AI Video Generation Platform';
+{name: 'AI Business Intelligence Pro'}
+  href: '/ai-business-intelligence-pro',price: '$299/month'},{name: 'AI Video Generation Platform';
         href: '/ai-video-generation-platform';}
         price: '$499/month';}
       }
@@ -31,11 +31,11 @@ const serviceCategories = [
         href: '/ai-cybersecurity-platform';}
         price: '$799/month';}
       }
-      {name: 'AI Drug Discovery Platform',}
-  href: '/ai-drug-discovery-platform',price: '$3,999/month',},],},{title: '⚛️ Quantum & Emerging Tech',}
+      {name: 'AI Drug Discovery Platform'}
+  href: '/ai-drug-discovery-platform',price: '$3,999/month'}]},{title: '⚛️ Quantum & Emerging Tech'}
   icon: Atom,services: [;}
-{name: 'Quantum Machine Learning',}
-  href: '/quantum-machine-learning-platform',price: '$1,999/month',},{name: 'Blockchain AI Platform';
+{name: 'Quantum Machine Learning'}
+  href: '/quantum-machine-learning-platform',price: '$1,999/month'},{name: 'Blockchain AI Platform';
         href: '/blockchain-ai-platform';}
         price: '$899/month';}
       }
@@ -43,11 +43,11 @@ const serviceCategories = [
         href: '/edge-ai-computing-platform';}
         price: '$599/month';}
       }
-      {name: 'AI Climate Modeling',}
-  href: '/ai-climate-modeling-platform',price: '$1,299/month',},],},{title: '🏙️ Enterprise IT Solutions',}
+      {name: 'AI Climate Modeling'}
+  href: '/ai-climate-modeling-platform',price: '$1,299/month'}]},{title: '🏙️ Enterprise IT Solutions'}
   icon: Cpu,services: [;}
-{name: 'API Security & Monitoring',}
-  href: '/api-security-monitoring-suite',price: '$399/month',},{name: 'Customer Success Automation';
+{name: 'API Security & Monitoring'}
+  href: '/api-security-monitoring-suite',price: '$399/month'},{name: 'Customer Success Automation';
         href: '/customer-success-automation';}
         price: '$199/month';}
       }
@@ -55,11 +55,11 @@ const serviceCategories = [
         href: '/hr-automation-suite';}
         price: '$179/month';}
       }
-      {name: 'Project Management AI',}
-  href: '/project-management-ai-platform',price: '$199/month',},],},{title: '🛒 Business Automation',}
+      {name: 'Project Management AI'}
+  href: '/project-management-ai-platform',price: '$199/month'}]},{title: '🛒 Business Automation'}
   icon: ShoppingCart,services: [;}
-{name: 'E-commerce Automation',}
-  href: '/ecommerce-automation-platform',price: '$249/month',},{name: 'Marketing Automation Suite';
+{name: 'E-commerce Automation'}
+  href: '/ecommerce-automation-platform',price: '$249/month'},{name: 'Marketing Automation Suite';
         href: '/marketing-automation-suite';}
         price: '$279/month';}
       }
@@ -70,83 +70,83 @@ const serviceCategories = [
 
       {
         name: 'Legal Document Automation',
-  href: '/legal-document-automation',}
-        price: '$399/month',}
-      },
-    ],
-  },
+  href: '/legal-document-automation'}
+        price: '$399/month'}
+      }
+    ]
+  }
 ];
 
 const quickLinks = [
-  { name: 'Home',}
-  href: '/', icon: Home,}
+  { name: 'Home'}
+  href: '/', icon: Home}
 },
-  { name: 'Services',}
-  href: '/services', icon: Briefcase,}
+  { name: 'Services'}
+  href: '/services', icon: Briefcase}
 },
-  { name: 'Solutions',}
-  href: '/solutions', icon: Target,}
+  { name: 'Solutions'}
+  href: '/solutions', icon: Target}
 },
-  { name: 'Pricing',}
-  href: '/pricing-2034', icon: DollarSign,}
+  { name: 'Pricing'}
+  href: '/pricing-2034', icon: DollarSign}
 },
-  { name: 'Resources',}
-  href: '/resources', icon: BookOpen,}
+  { name: 'Resources'}
+  href: '/resources', icon: BookOpen}
 },
-  { name: 'Case Studies',}
-  href: '/case-studies', icon: FileText,}
+  { name: 'Case Studies'}
+  href: '/case-studies', icon: FileText}
 },
-  { name: 'Blog',}
-  href: '/blog', icon: MessageSquare,}
+  { name: 'Blog'}
+  href: '/blog', icon: MessageSquare}
 },
-{ name: 'Contact',}
-  href: '/contact', icon: MessageCircle,}
-},
+{ name: 'Contact'}
+  href: '/contact', icon: MessageCircle}
+}
 ];
 
 const companyLinks = [
-  { name: 'About Us',}
-  href: '/about', icon: Users,}
+  { name: 'About Us'}
+  href: '/about', icon: Users}
 },
-  { name: 'Careers',}
-  href: '/careers', icon: Briefcase,}
+  { name: 'Careers'}
+  href: '/careers', icon: Briefcase}
 },
-  { name: 'News',}
-  href: '/news', icon: Newspaper,}
+  { name: 'News'}
+  href: '/news', icon: Newspaper}
 },
-  { name: 'Partners',}
-  href: '/partners', icon: Handshake,}
+  { name: 'Partners'}
+  href: '/partners', icon: Handshake}
 },
-  { name: 'Support',}
-  href: '/support', icon: LifeBuoy,}
+  { name: 'Support'}
+  href: '/support', icon: LifeBuoy}
 },
-{ name: 'Status',}
-  href: '/status', icon: Activity,}
-},
+{ name: 'Status'}
+  href: '/status', icon: Activity}
+}
 ];
 
 const socialLinks = [
   {
     name: 'LinkedIn',
-  href: 'https://linkedin.com/company/ziontechgroup',}
-    icon: Linkedin,}
+  href: 'https://linkedin.com/company/ziontechgroup'}
+    icon: Linkedin}
   },
-  { name: 'GitHub',}
-  href: 'https://github.com/Zion-Holdings', icon: Github,}
+  { name: 'GitHub'}
+  href: 'https://github.com/Zion-Holdings', icon: Github}
 },
   {
     name: 'Instagram',
-  href: 'https://instagram.com/ziontechgroup',}
-    icon: Instagram,}
+  href: 'https://instagram.com/ziontechgroup'}
+    icon: Instagram}
   },
   {
     name: 'YouTube',
-  href: 'https://youtube.com/@ziontechgroup',}
-    icon: Youtube,}
+  href: 'https://youtube.com/@ziontechgroup'}
+    icon: Youtube}
   },
-  { name: 'Twitter',}
-  href: 'https://twitter.com/ziontechgroup', icon: Twitter,}
-},
+  { name: 'Twitter'}
+  href: 'https://twitter.com/ziontechgroup', icon: Twitter}
+}
 ];
 
 const certifications = [
@@ -157,22 +157,22 @@ const certifications = [
   'PCI DSS Level 1',
   'FedRAMP Authorized',
   'Quantum Security Certified',
-  'AI Ethics Compliant',
+  'AI Ethics Compliant'
 ];
 
 const stats = [
-  { label: 'Happy Customers',}
-  value: '50K+', icon: Users,}
+  { label: 'Happy Customers'}
+  value: '50K+', icon: Users}
 },
-  { label: 'Services Delivered',}
-  value: '200+', icon: Rocket,}
+  { label: 'Services Delivered'}
+  value: '200+', icon: Rocket}
 },
-  { label: 'Countries Served',}
-  value: '45+', icon: Globe,}
+  { label: 'Countries Served'}
+  value: '45+', icon: Globe}
 },
-{ label: 'Success Rate',}
-  value: '99.9%', icon: CheckCircle,}
-},
+{ label: 'Success Rate'}
+  value: '99.9%', icon: CheckCircle}
+}
 ];
 
 export default function UltraFuturisticFooter2034() {
@@ -192,11 +192,11 @@ export default function UltraFuturisticFooter2034() {
 
             <div className='lg:col-span-1' />
               <motion.div;
-initial={{ opacity: 0, y: 20 ,}
+initial={{ opacity: 0, y: 20 }
 }
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
-                viewport={{ once: true ,}
+                viewport={{ once: true }
 }
 
 className='space-y-6'
@@ -228,12 +228,12 @@ innovative tools for the future.
                   {stats.map((stat, index) => (}
                     <motion.div;}
 key={stat.label}
-                      initial={{ opacity: 0, scale: 0.8 ,}
+                      initial={{ opacity: 0, scale: 0.8 }
 }
-                      whileInView={{ opacity: 1, scale: 1 ,}
+                      whileInView={{ opacity: 1, scale: 1 }
 }
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true ,}
+                      viewport={{ once: true }
 }
 className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10' />
 
@@ -266,20 +266,20 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
             </div>
 
 
-            {/* Services *,}
+            {/* Services *}
 }
             <div className=\"lg:col-span-2\" />;
               <motion.div;
             {/* Services */}
 <div className='lg:col-span-2' />;
               <motion.div;
-                initial={{ opacity: 0, y: 20 ,}
+                initial={{ opacity: 0, y: 20 }
 }
-                whileInView={{ opacity: 1, y: 0 ,}
+                whileInView={{ opacity: 1, y: 0 }
 }
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
 
-                viewport={{ once: true ,}
+                viewport={{ once: true }
 }
 
 className='space-y-8'
@@ -291,9 +291,9 @@ className='space-y-8'
                   {serviceCategories.map((category, index) => (}
                     <motion.div;}
 key={category.title}
-                      initial={{ opacity: 0, x: -20 ,}
+                      initial={{ opacity: 0, x: -20 }
 }
-                      whileInView={{ opacity: 1, x: 0 ,}
+                      whileInView={{ opacity: 1, x: 0 }
 }
                       transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                       viewport={{ once: true }}
@@ -304,7 +304,7 @@ className='space-y-4'
                         <category.icon className='w-5 h-5 text-cyan-400' />
                         <h4 className='font-semibold text-white' />
 
-                          {category.titl,}
+                          {category.titl}
 }
                         </h4>;
                       </div>;
@@ -319,7 +319,7 @@ className='space-y-4'
                             </span>;
                             <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors' />;
                               {service.price}
-                            <span className='text-xs text-gray-500 group-hover: text-cyan-400 transition-colors' />                              {service.price}{service.pric,}
+                            <span className='text-xs text-gray-500 group-hover: text-cyan-400 transition-colors' />                              {service.price}{service.pric}
 }</span>;
                           </Link>;
                       className='space-y-4'>;
@@ -337,31 +337,31 @@ className='space-y-4'
                             <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm' />;
                               {service && service.name}
                             </span>;
-                            <span className='text-xs text-gray-500 group-hover: text-cyan-400 transition-colors' />                              {service && service.pric,}
-}                    >;
-                      <div className=\"flex items-center space-x-2\" />;
-                        <category && category.icon className=\"w-5 h-5 text-cyan-400\" />;
+                            <span className='text-xs text-gray-500 group-hover: text-cyan-400 transition-colors' />                              {service && service.pric}
+}                    >;"
+                      <div className=\"flex items-center space-x-2\" />;"
+                        <category && category.icon className=\"w-5 h-5 text-cyan-400\" />;"
                         <h4 className=\"font-semibold text-white\" />{category && category.title}</h4>;
-                      </div>;
+                      </div>;"
                       <div className=\"space-y-2\" />;
                         {category && category.services.map((service) => (<Link;}
                             key={service && service.name}
-                            href={service && service.href}
-                            className=\"flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200\" />;
+                            href={service && service.href}"
+                            className=\"flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200\" />;"
                             <span className=\"text-gray-300 group-hover:text-cyan-400 transition-colors text-sm\" />;
                               {service && service.name}
-                            </span>;
+                            </span>;"
                             <span className=\"text-xs text-gray-500 group-hover:text-cyan-400 transition-colors\" />;
                               {service && service.price}
                             </span>;
                           </Link>;
                             key={service.name}
-                            href={service.href}
+                            href={service.href}"
                             className=\"flex items - center justify - between group hover:bg - white / 5 rounded - lg p - 2 transition - all duration - 200\">
-
+"
                             <span className=\"text - gray - 300 group - hover:text - cyan - 400 transition - colors text - sm\" />;
                               {service.name}
-                            </span>;
+                            </span>;"
                             <span className=\"text - xs text - gray - 500 group - hover:text - cyan - 400 transition - colors\" />;
                               {service.price}
                         ))}
@@ -376,13 +376,13 @@ className='space-y-4'
               <motion.div;
             <div className='lg:col-span-1' />              <motion.div;
               <motion.div;
-            {/* Quick Links & Social *,}
-}
+            {/* Quick Links & Social *}
+}"
             <div className='lg:col-span-1' />              <motion && motion.div            <div className=\"lg:col-span-1\" />;
               <motion&& motion.div;
-                initial={{ opacity: 0, y: 20 ,}
+                initial={{ opacity: 0, y: 20 }
 }
-                whileInView={{ opacity: 1, y: 0 ,}
+                whileInView={{ opacity: 1, y: 0 }
 }
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
 
@@ -391,10 +391,10 @@ className='space-y-4'
 className='space-y-8'
                />
 
-                {/* Quick Links *,}
+                {/* Quick Links *}
 }
-                <div />;
-                  <h4 className=\"text-lg font-semibold text-white mb-4\" />Quick Links</h4>;
+                <div />;"
+                  <h4 className=\"text-lg font-semibold text-white mb-4\" />Quick Links</h4>;"
                   <div className=\"space-y-2\" />;
 
                     {quickLinks && quickLinks.map((link) => (;}
@@ -454,7 +454,7 @@ key={social.name}
                       </Link>
 
 
-                    ),
+                    )
 }
                   </div>;
                 </div>;
@@ -473,9 +473,9 @@ key={social.name}
                         <link && link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />;
                         <span className='text-sm' />{link && link.name}</span>                      </Link>                      <Link;
                         key={link && link.name}
-                        href={link && link.href}
-                        className=\"flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group\" />;
-                        <link && link.icon className=\"w-4 h-4 group-hover:scale-110 transition-transform\" />;
+                        href={link && link.href}"
+                        className=\"flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group\" />;"
+                        <link && link.icon className=\"w-4 h-4 group-hover:scale-110 transition-transform\" />;"
                         <span className=\"text-sm\" />{link && link.name}</span>;
                       </Link>;
                     ))}
@@ -493,22 +493,22 @@ key={social.name}
                         className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110' />;
                         <social && social.icon className='w-5 h-5' />                      </Link>                      <Link;
                         key={social && social.name}
-                        href={social && social.href}
-                        target=\"_blank\";
-                        rel=\"noopener noreferrer\";
-                        className=\"w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110\" />;
+                        href={social && social.href}"
+                        target=\"_blank\";"
+                        rel=\"noopener noreferrer\";"
+                        className=\"w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110\" />;"
                         <social && social.icon className=\"w-5 h-5\" />;
                       </Link>;
                     ))}
           {/* Certifications */}
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 ,}
+            initial={{ opacity: 0, y: 20 }
 }
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={{ opacity: 1, y: 0 }
 }
             transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
 
-            viewport={{ once: true ,}
+            viewport={{ once: true }
 }
 
 className='mt-16 pt-8 border-t border-white/10'
@@ -520,9 +520,9 @@ className='mt-16 pt-8 border-t border-white/10'
               {certifications.map((cert, index) => (}
                 <motion.div;}
 key={cert}
-                  initial={{ opacity: 0, scale: 0 && 0.8 ,}
+                  initial={{ opacity: 0, scale: 0 && 0.8 }
 }
-                  whileInView={{ opacity: 1, scale: 1 ,}
+                  whileInView={{ opacity: 1, scale: 1 }
 }
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
@@ -536,7 +536,7 @@ className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-b
                   </span>
                 </motion.div>
 
-              ),
+              )
 }
             </div>;
           </motion.div>;
@@ -583,3 +583,4 @@ href='/terms'
   );
 }
 
+"

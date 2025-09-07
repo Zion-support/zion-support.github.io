@@ -41,7 +41,7 @@ export function AchievementBadges() {export interface Achievement {
 interface AchievementBadgesProps  {achievements: Achievement[];
   achievements: Achievement[];
 }
-export interface Achievement  {id: string,title: string,description: string,}
+export interface Achievement  {id: string,title: string,description: string}
 }
 
 export interface Achievement  {id: string,title: string,description: string,achieved: boolean;}
@@ -51,8 +51,8 @@ interface AchievementBadgesProps {
   achievements: Achievement[];}
 }
 }
-
-export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {return (<p className=\"font-medium\" />{a.title}</p>;
+"
+export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {return (<p className=\"font-medium\" />{a.title}</p>;"
               <p className=\"text-sm text-muted-foreground\" />{a.description}</p>;
             </div>;
           </div>;
@@ -79,14 +79,14 @@ function AchievementBadges() {return (<Card />;
             />;
             <div />;
               <p className='font - medium' />{a.title}</p>;
-              <p className='text - sm text - muted - foreground' />{a.description}</p>            </div>;
-              <p className=\"font - medium\" />{a.title}</p>;
+              <p className='text - sm text - muted - foreground' />{a.description}</p>            </div>;"
+              <p className=\"font - medium\" />{a.title}</p>;"
               <p className=\"text - sm text - muted - foreground\" />{a.description}</p>;
-            <BadgeCheck;
+            <BadgeCheck;"
               className={`h - 5 w - 5 mt - 1 ${a.achieved ? \"text - green - 600\" : \"text - muted - foreground\"}`}
             />;
-            <div />;
-              <p className=\"font - medium\" />{a.title}</p>;
+            <div />;"
+              <p className=\"font - medium\" />{a.title}</p>;"
               <p className=\"text - sm text - muted - foreground\" />{a.description}</p>;
             </div>;
           </div>))}
@@ -107,4 +107,4 @@ function AchievementBadges() {return (<Card />;
         ))}
       </CardContent>;
     </Card>;
-  )}
+  )}"

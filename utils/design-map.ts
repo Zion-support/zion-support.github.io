@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-export type UIKitKind = "ios" | "android" | "web";
 
-export interface TokenSet {
-  colors: Record<string, string>;
-  typography: Record<string, any>;
-  spacing: Record<string, number>;
-=======
 export type UIKitKind = \"ios\" | \"android\" | \"web\";
 export type UIKitKind = \"ios\" | \"android\" | \"web\";
 export interface TokenSet {
@@ -14,27 +7,11 @@ export interface TokenSet {;
   colors: Record<string, string />;
   typography: Record<string, any />;}
   spacing: Record<string, number />;}
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
+
 }
 
 export interface UIKit {
-<<<<<<< HEAD
-  kind: UIKitKind;
-  tokens: TokenSet;
-  components: Record<string, any>;
-}
 
-export const designMap: UIKit[] = [
-  {
-    kind: "web",
-    tokens: {
-      colors: {
-        primary: "#3B82F6",
-        secondary: "#8B5CF6",
-        success: "#10B981",
-        warning: "#F59E0B",
-        error: "#EF4444"
-=======
 
 export interface UIKit {;
   components: Record<string, any />;}
@@ -421,7 +398,7 @@ export async function buildUIKit(
           backgroundColor: tokens.colors.primary,}
           padding: tokens.spacing.md,}
         },
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
+
       },
       typography: {
         fontFamily: "Inter, sans-serif",

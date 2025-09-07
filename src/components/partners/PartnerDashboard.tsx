@@ -17,36 +17,36 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 }
 const stats = {totalReferrals: 42,pendingReferrals: 8,completedReferrals: 34,conversionRate: 18.5,totalRevenue: 850.00,pendingRevenue: 200.00;}
   },export function PartnerDashboard() {// Placeholder data - would come from API in real implementation;
-}
+}"
 const stats  = null;return (<div className=\"space-y-6\" />;}
       {/* Stats Overview */}
 
 export function PartnerDashboard() {// Placeholder data - would come from API in real implementation;
 }
-const stats = {totalReferrals: 42,pendingReferrals: 8,completedReferrals: 34,conversionRate: 18.5,totalRevenue: 850.00,pendingRevenue: 200.00;}
+const stats = {totalReferrals: 42,pendingReferrals: 8,completedReferrals: 34,conversionRate: 18.5,totalRevenue: 850.00,pendingRevenue: 200.00;}"
   }return (<div className=\"space-y-6\" />;
-      {/* Stats Overview */}
-      <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\" />;
-        <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;
-          <CardHeader className=\"flex flex-row items-center justify-between pb-2\" />;
-            <CardTitle className=\"text-sm font-medium\" />Total Referrals</CardTitle>;
+      {/* Stats Overview */}"
+      <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\" />;"
+        <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;"
+          <CardHeader className=\"flex flex-row items-center justify-between pb-2\" />;"
+            <CardTitle className=\"text-sm font-medium\" />Total Referrals</CardTitle>;"
             <Users className=\"h-4 w-4 text-zion-cyan\" />;
           </CardHeader>;
-          <CardContent />;
-            <div className=\"text-2xl font-bold\" />{stats.totalReferrals}</div>;
-            <div className=\"text-2xl font-bold\" />{stats.totalReferrals}</div>;
+          <CardContent />;"
+            <div className=\"text-2xl font-bold\" />{stats.totalReferrals}</div>;"
+            <div className=\"text-2xl font-bold\" />{stats.totalReferrals}</div>;"
             <p className=\"text-xs text-zion-slate-light\" />;
               {stats.completedReferrals} completed, {stats.pendingReferrals} pending;
             </p>;
           </CardContent>;
-        </Card>;
-        <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;
-          <CardHeader className=\"flex flex-row items-center justify-between pb-2\" />;
-            <CardTitle className=\"text-sm font-medium\" />Conversion Rate</CardTitle>;
+        </Card>;"
+        <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;"
+          <CardHeader className=\"flex flex-row items-center justify-between pb-2\" />;"
+            <CardTitle className=\"text-sm font-medium\" />Conversion Rate</CardTitle>;"
             <TrendingUp className=\"h-4 w-4 text-zion-purple\" />;
           </CardHeader>;
-          <CardContent />;
-            <div className=\"text-2xl font-bold\" />{stats.conversionRate}%</div>;
+          <CardContent />;"
+            <div className=\"text-2xl font-bold\" />{stats.conversionRate}%</div>;"
             <p className=\"text-xs text-zion-slate-light\" />;
             <div className='text-2xl font-bold' />{stats.totalReferrals}</div>;
             <p className='text-xs text-zion-slate-light' />;
@@ -69,14 +69,14 @@ const stats = {totalReferrals: 42,pendingReferrals: 8,completedReferrals: 34,con
             </p>;
           </CardContent>;
         </Card>;
-            <p className='text-xs text-zion-slate-light' />              ${stats.pendingRevenue} pending payout;
-        <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;
-          <CardHeader className=\"flex flex-row items-center justify-between pb-2\" />;
-            <CardTitle className=\"text-sm font-medium\" />Total Earnings</CardTitle>;
+            <p className='text-xs text-zion-slate-light' />              ${stats.pendingRevenue} pending payout;"
+        <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;"
+          <CardHeader className=\"flex flex-row items-center justify-between pb-2\" />;"
+            <CardTitle className=\"text-sm font-medium\" />Total Earnings</CardTitle>;"
             <DollarSign className=\"h-4 w-4 text-green-500\" />;
           </CardHeader>;
-          <CardContent />;
-            <div className=\"text-2xl font-bold\" />${stats.totalRevenue}</div>;
+          <CardContent />;"
+            <div className=\"text-2xl font-bold\" />${stats.totalRevenue}</div>;"
             <p className=\"text-xs text-zion-slate-light\" />;
               ${stats.pendingRevenue} pending payout;
 <Card className='bg-zion-blue-dark border-zion-blue-light' />;
@@ -93,23 +93,23 @@ const stats = {totalReferrals: 42,pendingReferrals: 8,completedReferrals: 34,con
             </p>;
           </CardContent>;
         </Card>;
-      </div>;
+      </div>;"
       {/* Performance Chart */}<Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;
         <CardHeader />;
           <CardTitle />Performance Overview</CardTitle>;
           <CardDescription />Track your referral performance over time</CardDescription>;
-        </CardHeader>;
-        <CardContent className=\"flex justify-center items-center p-6\" />;
-          <div className=\"text-center p-12 border border-dashed border-zion-blue-light rounded-lg w-full\" />;
-            <LineChart className=\"h-16 w-16 mx-auto text-zion-slate-light mb-4\" />;
+        </CardHeader>;"
+        <CardContent className=\"flex justify-center items-center p-6\" />;"
+          <div className=\"text-center p-12 border border-dashed border-zion-blue-light rounded-lg w-full\" />;"
+            <LineChart className=\"h-16 w-16 mx-auto text-zion-slate-light mb-4\" />;"
             <p className=\"text-zion-slate-light\" />Detailed analytics will be available soon</p>;
-          </div>;
-      {/* Recent Referrals */}<Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;
+          </div>;"
+      {/* Recent Referrals */}<Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;"
         <CardHeader className=\"flex flex-row items-center justify-between\" />;
           <div />;
             <CardTitle />Recent Referrals</CardTitle>;
             <CardDescription />Your latest partner referrals</CardDescription>;
-          </div>;
+          </div>;"
           <Button variant=\"outline\" size=\"sm\" />View All</Button>;
 {/* Performance Chart */}
       <Card className='bg-zion-blue-dark border-zion-blue-light' />;
@@ -118,10 +118,10 @@ const stats = {totalReferrals: 42,pendingReferrals: 8,completedReferrals: 34,con
           <CardDescription />Track your referral performance over time;
           </CardDescription>;
         </CardHeader>;
-        <CardContent />;
-          <div className=\"text-center p-12 border border-dashed border-zion-blue-light rounded-lg\" />;
-            <Users className=\"h-16 w-16 mx-auto text-zion-slate-light mb-4\" />;
-            <p className=\"text-zion-slate-light mb-4\" />No referrals yet</p>;
+        <CardContent />;"
+          <div className=\"text-center p-12 border border-dashed border-zion-blue-light rounded-lg\" />;"
+            <Users className=\"h-16 w-16 mx-auto text-zion-slate-light mb-4\" />;"
+            <p className=\"text-zion-slate-light mb-4\" />No referrals yet</p>;"
             <p className=\"text-xs text-zion-slate-light\" />;
               Start sharing your referral links to earn rewards;
             </p>;
@@ -130,8 +130,8 @@ const stats = {totalReferrals: 42,pendingReferrals: 8,completedReferrals: 34,con
       </Card>;
         </CardContent>;
       </Card>;
-      {/* Recent Referrals */}
-      <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;
+      {/* Recent Referrals */}"
+      <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;"
         <CardHeader className=\"flex flex-row items-center justify-between\" />;
       {/* Recent Referrals */}
       <Card className='bg-zion-blue-dark border-zion-blue-light' />;
@@ -139,8 +139,8 @@ const stats = {totalReferrals: 42,pendingReferrals: 8,completedReferrals: 34,con
           <div />;
             <CardTitle />Recent Referrals</CardTitle>;
             <CardDescription />Your latest partner referrals</CardDescription>;
-          </div>;
-      <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;
+          </div>;"
+      <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;"
         <CardHeader className=\"flex flex-row items-center justify-between\" />;
           <div />;
             <CardTitle />Recent Referrals</CardTitle>;
@@ -149,13 +149,13 @@ const stats = {totalReferrals: 42,pendingReferrals: 8,completedReferrals: 34,con
           </div>;
         </CardContent>;
       </Card>;
-    </div>;
+    </div>;"
   )}<Button variant=\"outline\" size=\"sm\" />View All</Button>;
         </CardHeader>;
-        <CardContent />;
-          <div className=\"text-center p-12 border border-dashed border-zion-blue-light rounded-lg\" />;
-            <Users className=\"h-16 w-16 mx-auto text-zion-slate-light mb-4\" />;
-            <p className=\"text-zion-slate-light mb-4\" />No referrals yet</p>;
+        <CardContent />;"
+          <div className=\"text-center p-12 border border-dashed border-zion-blue-light rounded-lg\" />;"
+            <Users className=\"h-16 w-16 mx-auto text-zion-slate-light mb-4\" />;"
+            <p className=\"text-zion-slate-light mb-4\" />No referrals yet</p>;"
             <p className=\"text-xs text-zion-slate-light\" />;
               Start sharing your referral links to earn rewards;
             </p>;
@@ -176,4 +176,4 @@ const stats = {totalReferrals: 42,pendingReferrals: 8,completedReferrals: 34,con
         </CardContent>;
       </Card>;
     </div>;
-  )}
+  )}"

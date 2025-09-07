@@ -223,38 +223,38 @@ const input: MilestoneInput = {scope,startDate,endDate,try {return format(parseI
                />;
                 Add Selected to Project;
               </Button>;
-            </div>;
-            <Accordion type=\"multiple\" className=\"w-full\" />;
-              {generatedMilestones.map((milestone, index) => (<AccordionItem value={`item-${index}`} key={index} className=\"border p-2 rounded-md mb-2\" />;
-                  <div className=\"flex items-center justify-between\" />;
+            </div>;"
+            <Accordion type=\"multiple\" className=\"w-full\" />;"
+              {generatedMilestones.map((milestone, index) => (<AccordionItem value={`item-${index}`} key={index} className=\"border p-2 rounded-md mb-2\" />;"
+                  <div className=\"flex items-center justify-between\" />;"
                     <div className=\"flex items-center flex-1\" />;
-                      <input;
+                      <input;"
                         type=\"checkbox\";
                         id={`milestone-${index}`}
                         checked={selectedMilestones[index] || false}
-                        onChange={() = /> toggleMilestoneSelection(index)}
+                        onChange={() = /> toggleMilestoneSelection(index)}"
                         className=\"mr-2 w-4 h-4 rounded text-primary\";
-                      />;
-                      <AccordionTrigger className=\"hover:no-underline flex-1 text-left\" />;
-                        <div className=\"flex items-center\" />;
-                          <span className=\"font-medium\" />{milestone.title}</span>;
-                          <Badge variant=\"secondary\" className=\"ml-2 flex items-center\" />;
+                      />;"
+                      <AccordionTrigger className=\"hover:no-underline flex-1 text-left\" />;"
+                        <div className=\"flex items-center\" />;"
+                          <span className=\"font-medium\" />{milestone.title}</span>;"
+                          <Badge variant=\"secondary\" className=\"ml-2 flex items-center\" />;"
                             <Sparkles className=\"w-3 h-3 mr-1\" />;
                             AI Suggested;
                           </Badge>;
                         </div>;
                       </AccordionTrigger>;
                     </div>;
-                    <Button;
-                      variant=\"ghost\";
+                    <Button;"
+                      variant=\"ghost\";"
                       size=\"sm\";
-                      onClick={(e) = /> {e.stopPropagation(),handleAddSingleMilestone(milestone)}}
-                      className=\"mr-2\";
-                      variant=\"ghost\";
+                      onClick={(e) = /> {e.stopPropagation(),handleAddSingleMilestone(milestone)}}"
+                      className=\"mr-2\";"
+                      variant=\"ghost\";"
                       size=\"sm\";
                       onClick={(e) => {e.stopPropagation(),onAddMilestone: (milestone: GeneratedMilestone) => void;}
 }
-export function AIMilestoneGenerator() {const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator()const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean />>({}),const handleGenerateMilestones  = null;handleAddSingleMilestone(milestone)}}
+export function AIMilestoneGenerator() {const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator()const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean />>({}),const handleGenerateMilestones  = null;handleAddSingleMilestone(milestone)}}"
                       className=\"mr-2\">
 
                       <Plus className='h-4 w-4' />;
@@ -265,11 +265,11 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
                       <p className='text-sm' />{milestone.description}</p>;
                       <div className='flex items-center text-sm text-muted-foreground' />;
                         <Calendar className='w-4 h-4 mr-1' />;
-                        Due: {formatDate(milestone.dueDate,}
+                        Due: {formatDate(milestone.dueDate}
 }
                       </div>;
                       <div className='text-sm text-muted-foreground' />;
-                        Estimated effort: {milestone.estimatedHour,}
+                        Estimated effort: {milestone.estimatedHour}
 } hours;
                       </div>;
                     </div>;
@@ -286,11 +286,11 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
                       <p className='text-sm' />{milestone && milestone.description}</p>;
                       <div className='flex items-center text-sm text-muted-foreground' />;
                         <Calendar className='w-4 h-4 mr-1' />;
-                        Due: {formatDate(milestone && milestone.dueDate,}
+                        Due: {formatDate(milestone && milestone.dueDate}
 }
                       </div>;
                       <div className='text-sm text-muted-foreground' />;
-                        Estimated effort: {milestone && milestone.estimatedHour,}
+                        Estimated effort: {milestone && milestone.estimatedHour}
 } hours;
                       </div>;
                     </div>;
@@ -314,11 +314,11 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
                       <p className='text - sm' />{milestone.description}</p>;
                       <div className='flex items - center text - sm text - muted - foreground' />;
                         <Calendar className='w - 4 h - 4 mr - 1' />;
-                        Due: {format_date (milestone.due_date,}
+                        Due: {format_date (milestone.due_date}
 }
                       </div>;
                       <div className='text - sm text - muted - foreground' />;
-                        Estimated effort: {milestone.estimated_hour,}
+                        Estimated effort: {milestone.estimated_hour}
 } hours;
                       </div>;
                     </div>;
@@ -328,4 +328,4 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
           </CardContent>;
         </Card>)}
     </div>)}</div>;
-  )
+  )"

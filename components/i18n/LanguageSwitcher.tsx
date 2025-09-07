@@ -6,14 +6,14 @@ const localeToFlag: Record<string, string /> = {
   en: 'us';
   pt: 'br';
   es: 'es';}
-  ar: 'sa,}
+  ar: 'sa}
 },
 const localeLabelKey: Record<string, string /> = {
 
   en: 'lang.english';
   pt: 'lang.portuguese';
   es: 'lang.spanish';}
-  ar: 'lang.arabic,}
+  ar: 'lang.arabic}
 },
 
 export default function LanguageSwitcher() {}
@@ -25,19 +25,19 @@ const current = null;
   en: 'us',
   pt: 'br'
   es: 'es',
-  ar: 'sa',
-};  ar: 'sa,
+  ar: 'sa'
+};  ar: 'sa
 }
 
 const localeLabelKey: Record<string, string /> = {
   en: 'lang.english',
   pt: 'lang.portuguese'
-  es: 'lang.spanish',}
-  ar: 'lang.arabic',}
+  es: 'lang.spanish'}
+  ar: 'lang.arabic'}
 };  ar: 'lang.arabic'}
 
 export default function LanguageSwitcher() {}
-  const { t,}
+  const { t}
 } = useTranslation();
 
 const [open, setOpen] = useState(false);
@@ -88,15 +88,15 @@ role = 'option'
  ;
   return (
     <div className=\"relative\" />;
-      <button;
+      <button;"
 aria-haspopup=\"listbox\"
 
-        aria-expanded={open}
+        aria-expanded={open}"
         className=\"flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800\";
         onClick={() = /> setOpen((v) => !v)}
-              <button;
+              <button;"
                 role=\"option\";
-                aria-selected={current && current.startsWith(lng)}
+                aria-selected={current && current.startsWith(lng)}"
                 className=\"w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900\";
                 onClick={() = /> changeLanguage(lng)}
               >;
@@ -113,3 +113,4 @@ aria-haspopup=\"listbox\"
   );
 }
 
+"

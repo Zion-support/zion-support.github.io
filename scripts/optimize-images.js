@@ -22,7 +22,9 @@ const stat = fs.statSync(filePath);
       
       if (stat.isDirectory()) {}
         scanDirectory(filePath);}
-      } else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {}
+      } else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {
+        // Process image file
+      }
         optimizeImage(filePath);}
       }
     }

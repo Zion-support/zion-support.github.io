@@ -1,11 +1,6 @@
-<<<<<<< HEAD;
-;
-  id: string;
-export interface RealMicroSaasService  {id: string;name: string;
-  id: string;
-=======
+
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: string;
   tagline: string;
   price: string;
@@ -1347,9 +1342,8 @@ export const getServicesByCategory = (return realMicroSaasServices.filter(servic
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+}
+
   }
 }
 export const realMicroSaasServices: RealMicroSaasService[] = [
@@ -2660,18 +2654,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     launchDate: '2025-02-08',
   customers: 19,
     rating: 4.6,
-<<<<<<< HEAD;
-reviews: 6;
-  }];
 
-
-
-    id: 'ai-legal-document-generator'
-=======
     reviews: 6,
   },];
     id: \"id\",
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: 'AI Legal Document Generator',
   tagline: 'Generate legally compliant documents in seconds with AI'
     price: '$89',
@@ -6373,9 +6360,8 @@ export const serviceCategories = [
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT';
 ];
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 ;
 export interface RealMicroSaasService {;
   id: string,;

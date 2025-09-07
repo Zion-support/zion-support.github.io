@@ -44,15 +44,15 @@ import { supabase  } from '@/integrations/supabase/client';
 import { logErrorToProduction } from '@/utils/productionLogger';
   Form, FormControl, FormField, FormItem, FormLabel, FormMessage;
 } from \"@/components/ui/form\";
-  Select, SelectContent, SelectItem, SelectTrigger, SelectValue;
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue;"
 } from \"@/components/ui/select\";
-import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2  } from 'lucide-react';
+import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2  } from 'lucide-react';"
 import { useAuth } from \"@/hooks/useAuth\",// Define the form schema with validation;
 
 const talentSchema = null;
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
-  return null;//Step 1: Basic Info basicInfo: z.object ({) .optional () .default ([])cv: z.any () .optional ()},
+  return null;//Step 1: Basic Info basicInfo: z.object ({) .optional () .default ([])cv: z.any () .optional ()}
 })type TalentFormValues = z.infer<typeof talentSchema />;
 
 const form = useForm<TalentFormValues /> ({resolver: zodResolver (talentSchema), defaultValues: {basicInfo: {cv: undefined ;}//Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement />) => ;
@@ -61,4 +61,4 @@ if (!file) return;
 //Preview the image const reader = new FileReader ()reader.onloadend = () => {setProfilePictureUrl (reader.result as string)}reader.readAsDataURL (file)}//Get the public window.URL;
   const {data: {publicUrl ;}= supabase.storage.from ('resumes') .getPublicUrl (fileName)return publicUrl;
 }//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
-}';
+}';"

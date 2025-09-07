@@ -1,10 +1,6 @@
-<<<<<<< HEAD;
-;
-import { ServiceVariant  } from '../types/service-variants';
-  id: string;
-=======
+
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: string;
   tagline: string;
   price: string;

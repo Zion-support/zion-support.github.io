@@ -25,114 +25,114 @@ const contactInfo = null;
       }
 
       {
-        name: 'Autonomous Manufacturing AI',}
-  href: '/autonomous-manufacturing-ai',}
-      },
-    ],
+        name: 'Autonomous Manufacturing AI'}
+  href: '/autonomous-manufacturing-ai'}
+      }
+    ]
   },
   {
     title: '⚛️ Quantum & Advanced Tech',
   services: [
       {
-        name: 'Quantum Financial Trading Platform',}
-  href: '/quantum-financial-trading-platform',}
+        name: 'Quantum Financial Trading Platform'}
+  href: '/quantum-financial-trading-platform'}
       },
       {
-        name: 'Quantum Machine Learning Platform',}
-  href: '/quantum-machine-learning-platform',}
+        name: 'Quantum Machine Learning Platform'}
+  href: '/quantum-machine-learning-platform'}
       },
       {
-        name: 'Quantum Internet Security Gateway',}
-  href: '/quantum-internet-security-gateway',}
+        name: 'Quantum Internet Security Gateway'}
+  href: '/quantum-internet-security-gateway'}
       },
-        { name: 'Quantum Internet Protocol',}
-  href: '/quantum-internet-protocol',}
-},
+        { name: 'Quantum Internet Protocol'}
+  href: '/quantum-internet-protocol'}
+}
 
-    ],
+    ]
   },
   {
     title: '🤖 AI & Machine Learning',
   services: [
       {
-        name: 'AI Customer Service Automation',}
-  href: '/ai-customer-service-automation',}
+        name: 'AI Customer Service Automation'}
+  href: '/ai-customer-service-automation'}
       },
-        { name: 'AI Education Platform',}
-  href: '/ai-education-platform',}
+        { name: 'AI Education Platform'}
+  href: '/ai-education-platform'}
 },
 
-        { name: 'AI Content Creation Suite',}
-  href: '/ai-content-creation-suite',}
+        { name: 'AI Content Creation Suite'}
+  href: '/ai-content-creation-suite'}
 },
 
       {
-        name: 'AI Legal Research Platform',}
-  href: '/ai-legal-research-platform',}
-      },
-    ],
-  },
+        name: 'AI Legal Research Platform'}
+  href: '/ai-legal-research-platform'}
+      }
+    ]
+  }
 ];
 
 const companyLinks = [
-  { name: 'About Us',}
-  href: '/about', icon: Users,}
+  { name: 'About Us'}
+  href: '/about', icon: Users}
 },
-  { name: 'Case Studies',}
-  href: '/case-studies', icon: Briefcase,}
+  { name: 'Case Studies'}
+  href: '/case-studies', icon: Briefcase}
 },
-  { name: 'Blog & Resources',}
-  href: '/blog', icon: BookOpen,}
+  { name: 'Blog & Resources'}
+  href: '/blog', icon: BookOpen}
 },
-  { name: 'Careers',}
-  href: '/careers', icon: TrendingUp,}
+  { name: 'Careers'}
+  href: '/careers', icon: TrendingUp}
 },
-  { name: 'Contact',}
-  href: '/contact', icon: MessageCircle,}
+  { name: 'Contact'}
+  href: '/contact', icon: MessageCircle}
 },
-{ name: 'Support',}
-  href: '/support', icon: ShieldCheck,}
-},
+{ name: 'Support'}
+  href: '/support', icon: ShieldCheck}
+}
 ];
 
 const resourceLinks = [
-  { name: 'Documentation',}
-  href: '/docs', icon: BookOpen,}
+  { name: 'Documentation'}
+  href: '/docs', icon: BookOpen}
 },
-  { name: 'API Reference',}
-  href: '/api', icon: Cpu,}
+  { name: 'API Reference'}
+  href: '/api', icon: Cpu}
 },
-  { name: 'Developer Tools',}
-  href: '/dev-tools', icon: Database,}
+  { name: 'Developer Tools'}
+  href: '/dev-tools', icon: Database}
 },
-  { name: 'Mobile Apps',}
-  href: '/mobile', icon: Globe,}
+  { name: 'Mobile Apps'}
+  href: '/mobile', icon: Globe}
 },
-  { name: 'Cloud Services',}
-  href: '/cloud', icon: Cloud,}
+  { name: 'Cloud Services'}
+  href: '/cloud', icon: Cloud}
 },
-{ name: 'Security Center',}
-  href: '/security', icon: Shield,}
-},
+{ name: 'Security Center'}
+  href: '/security', icon: Shield}
+}
 ];
 
 const socialLinks = [
   {
     name: 'LinkedIn',
-  href: 'https://linkedin.com/company/ziontechgroup',}
-    icon: Users,}
+  href: 'https://linkedin.com/company/ziontechgroup'}
+    icon: Users}
   },
   {
     name: 'Twitter',
-  href: 'https://twitter.com/ziontechgroup',}
-    icon: MessageCircle,}
+  href: 'https://twitter.com/ziontechgroup'}
+    icon: MessageCircle}
   },
-  { name: 'YouTube',}
-  href: 'https://youtube.com/@ziontechgroup', icon: Video,}
+  { name: 'YouTube'}
+  href: 'https://youtube.com/@ziontechgroup', icon: Video}
 },
-  { name: 'GitHub',}
-  href: 'https://github.com/ziontechgroup', icon: Code,}
-},
+  { name: 'GitHub'}
+  href: 'https://github.com/ziontechgroup', icon: Code}
+}
 ];
 
 export default function UltraFuturisticFooter2028() {
@@ -214,7 +214,7 @@ key={social && social.name}
               {socialLinks.map(social => (}
                 <a;}
 key={social.name}
-                  href={social.hre,}
+                  href={social.hre}
 }
                   target='_blank'
                   rel='noopener noreferrer'
@@ -231,7 +231,7 @@ key={social.name}
                   href={contactInfo.website}
                   className='text-sm hover: text-white transition-colors' />
 
-                  {contactInfo.website}{contactInfo.websit,}
+                  {contactInfo.website}{contactInfo.websit}
 }</a>;
               </div>;
             </div>;
@@ -261,9 +261,9 @@ key={social.name}
                 <Globe className='w-4 h-4 text-purple-400' />;
                 <a;
                   href={contactInfo && contactInfo.website}
-                  className='text-sm hover: text-white transition-colors' />                  {contactInfo && contactInfo.website}      {/* Main Footer Content *,}
+                  className='text-sm hover: text-white transition-colors' />                  {contactInfo && contactInfo.website}      {/* Main Footer Content *}
 }
-      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />;
+      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />;"
         <div className=\"grid grid-cols-1 lg:grid-cols-4 gap-12\" />;
           {/* Company Info */}
             {/* Social Links */}
@@ -309,7 +309,7 @@ href={service.href}
                         </Link>
                       </li>
 
-                    ),
+                    )
 }
                   </ul>;
                 </div>;
@@ -341,14 +341,14 @@ href={service.href}
               <ul className='space-y-2' />;
                 {companyLinks && companyLinks.map(link => (<li key={link && link.name} />;
                     <Link;
-            {/* Company Links */}
-            <div className=\"mb-6\" />;
-              <h4 className=\"font-medium text-purple-300 mb-3\" />Company</h4>;
+            {/* Company Links */}"
+            <div className=\"mb-6\" />;"
+              <h4 className=\"font-medium text-purple-300 mb-3\" />Company</h4>;"
               <ul className=\"space-y-2\" />;
                 {companyLinks && companyLinks.map((link) => (<li key={link && link.name} />;
                     <Link;
-                      href={link && link.href}
-                      className=\"text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2\" />;
+                      href={link && link.href}"
+                      className=\"text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2\" />;"
                       <link && link.icon className=\"w-4 h-4\" />;
                       <span />{link && link.name}</span>;
                     </Link>;
@@ -370,7 +370,7 @@ href={service.href}
                     </Link>
                   </li>
 
-                ),
+                )
 }
               </ul>;
             </div>;
@@ -408,8 +408,8 @@ href={service.href}
                       className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2' />;
                       <link && link.icon className='w-4 h-4' />                      <span />{link && link.name}</span>                  <li key={link && link.name} />;
                     <Link;
-                      href={link && link.href}
-                      className=\"text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2\" />;
+                      href={link && link.href}"
+                      className=\"text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2\" />;"
                       <link && link.icon className=\"w-4 h-4\" />;
                       <span />{link && link.name}</span>;
                     </Link>;
@@ -438,7 +438,7 @@ type='email'
         </div>
       </div>
 
-      {/* Bottom Bar *,}
+      {/* Bottom Bar *}
 }
 <div className='border-t border-purple-500/20' />;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6' />;
@@ -489,7 +489,7 @@ href='/contact'
           <MessageCircle className='w-8 h-8 group-hover:rotate-12 transition-transform duration-300' />
         </Link>
       </div>
-      {/* Background Effects *,}
+      {/* Background Effects *}
 }
 <div className='absolute inset-0 pointer-events-none' />
         <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl' /></div>
@@ -499,3 +499,4 @@ href='/contact'
     </footer>
   );
 
+"

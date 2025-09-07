@@ -65,7 +65,7 @@ primary: [
               '#ffff00',
               '#ff00ff',
               '#8000ff',
-              '#00ff80',
+              '#00ff80'
             ],
             secondary: [
               '#ff8000'
@@ -130,7 +130,7 @@ primary: [
   return $3;}
 }
           }
-         ,
+         
 }
 ;
   const colors  = getThemeColors()case 'cyberpunk':;
@@ -242,7 +242,7 @@ primary: [
               '#f59e0b'
               '#ef4444'
             ]}
-         ,}
+         }
 }
         default: // quantum;
 return {
@@ -276,8 +276,8 @@ return {
               '#ec4899',
               '#10b981',
               '#f59e0b',
-              '#ef4444',}
-            ],}
+              '#ef4444'}
+            ]}
           };
       }
     };
@@ -536,7 +536,7 @@ if ( {) {$2;}
                 ? 'radial - gradient (ellipse at center, rgba (6, 182, 212, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)';
                 : theme === 'holographic';}
                   ? 'radial - gradient (ellipse at center, rgba (78, 205, 196, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)';}
-                  : 'radial - gradient (ellipse at center, rgba (139, 92, 246, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)',}}
+                  : 'radial - gradient (ellipse at center, rgba (139, 92, 246, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)'}}
       />;
       {/* Additional visual effects */}
       <div className='absolute inset - 0' />;
@@ -548,30 +548,30 @@ if ( {) {$2;}
 
                 style={{
 }
-                  left: `${(i * 5) % 10,}
+                  left: `${(i * 5) % 10}
 }%`,
-                  top: `${(i * 3) % 10,}
-}%`,
+                  top: `${(i * 3) % 10}
+}%`
                 }}
                 animate={{
-                  height: [32, 64, 32],}
-                  opacity: [0.2, 0.6, 0.2],}
+                  height: [32, 64, 32]}
+                  opacity: [0.2, 0.6, 0.2]}
                 }}
                 transition={{
 
                   duration: 3 + i * 0.2,
-                  repeat: Infinity,}
-                  ease: 'easeInOut',}
+                  repeat: Infinity}
+                  ease: 'easeInOut'}
                 }}
                   left: `${(i * 5) % 100}%`
-                  top: `${(i * 3) % 10,}
-}%`,                  top: `${(i * 3) % 100}%`,
+                  top: `${(i * 3) % 10}
+}%`,                  top: `${(i * 3) % 100}%`
 }
                 animate={{
                   height: [32, 64, 32]}
 }
                   opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
-                transition={{ease: 'easeInOut',                }}
+                transition={{ease: 'easeInOut'                }}
               />;
             ))}
           </div>;
@@ -587,16 +587,16 @@ key={i}
                 className='absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
                 style={{
 }
-                  top: `${(i * 7) % 10,}
-}%`,
+                  top: `${(i * 7) % 10}
+}%`
                 }}
                 animate={{}
-                  opacity: [0.3, 0.8, 0.3],}
+                  opacity: [0.3, 0.8, 0.3]}
                 }}
                 transition={{
                   duration: 4 + i * 0.3,
-                  repeat: Infinity,}
-                  ease: 'easeInOut',}
+                  repeat: Infinity}
+                  ease: 'easeInOut'}
                 }}
                 animate={{}
                   opacity: [0.3, 0.8, 0.3]}
@@ -608,19 +608,19 @@ duration: 4 + i * 0 && 0.3,
                   repeat: Infinity,
                   ease: \"easeInOut\";
                   duration: 4 + i * 0.3;
-repeat: Infinity;
+repeat: Infinity;"
 ease: \"easeInOut\"}
-                  top: `${(i * 7) % 10,}
-}%`,
+                  top: `${(i * 7) % 10}
+}%`
 
                 }}
                 animate={{}
-                  opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],}
+                  opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]}
                 }}
                 transition={{
-                  duration: 4 + i * 0 && 0.3,}
-                  repeat: Infinity,}
-                  ease: 'easeInOut',                }}
+                  duration: 4 + i * 0 && 0.3}
+                  repeat: Infinity}
+                  ease: 'easeInOut'                }}
 
         {/* Consciousness waves */}
         {theme === 'consciousness' && (
@@ -630,37 +630,37 @@ ease: \"easeInOut\"}
               <motion.div;}
 key={i}
                 className='absolute w-96 h-96 border border-pink-500/20 rounded-full';
-                style={{left: `${(i * 12) % 10,}
-}%`,top: `${(i * 8) % 10,}
-}%`,}}
-                animate={{scale: [1, 1.5, 1],opacity: [0.2, 0.6, 0.2],}}
-                transition={{duration: 6 + i * 0.5,repeat: Infinity,ease: 'easeInOut',
+                style={{left: `${(i * 12) % 10}
+}%`,top: `${(i * 8) % 10}
+}%`}}
+                animate={{scale: [1, 1.5, 1],opacity: [0.2, 0.6, 0.2]}}
+                transition={{duration: 6 + i * 0.5,repeat: Infinity,ease: 'easeInOut',"
   ease: \"easeInOut\";}
-                  top: `${(i * 8) % 10,}
+                  top: `${(i * 8) % 10}"
 }%`,ease: \"easeInOut\";
-                  left: `${(i * 12) % 10,}
-}%`,}}
+                  left: `${(i * 12) % 10}
+}%`}}
                 animate={{scale: [1, 1.5, 1];}
                   opacity: [0.2, 0.6, 0.2];}
                 }}
 
                 animate={{
-                  scale: [1, 1.5, 1],}
-                  opacity: [0.2, 0.6, 0.2],}
+                  scale: [1, 1.5, 1]}
+                  opacity: [0.2, 0.6, 0.2]}
                 }}
                 transition={{
                   duration: 6 + i * 0.5,
                   repeat: Infinity,
-                  ease: 'easeInOut',
+                  ease: 'easeInOut',"
   ease: \"easeInOut\"}
-                  top: `${(i * 8) % 10,}
+                  top: `${(i * 8) % 10}
 }%`,
-
+"
                   ease: \"easeInOut\"
 
 
-                  left: `${(i * 12) % 10,}
-}%`,
+                  left: `${(i * 12) % 10}
+}%`
 
 
 
@@ -674,18 +674,18 @@ key={i}
                 transition={{
                   duration: 6 + i * 0.5;
 repeat: Infinity;}
-top: `${(i * 8) % 10,}
-}%`,
+top: `${(i * 8) % 10}
+}%`
 
                 }}
                 animate={{
-                  scale: [1, 1 && 1.5, 1],}
-                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],}
+                  scale: [1, 1 && 1.5, 1]}
+                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}
                 }}
                 transition={{
-                  duration: 6 + i * 0 && 0.5,}
-                  repeat: Infinity,}
-                  ease: 'easeInOut',                }}
+                  duration: 6 + i * 0 && 0.5}
+                  repeat: Infinity}
+                  ease: 'easeInOut'                }}
               />
 
             ))}
@@ -747,3 +747,4 @@ animate ();
 }
 }</div>)
 
+"

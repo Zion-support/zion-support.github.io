@@ -1,7 +1,7 @@
 
 ;
 import React, { useState, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Heart, Share2, MessageCircle, Star, Bookmark, ThumbsUp, ThumbsDown, Send, X, CheckCircle    } from 'lucide-react'  interface FeedbackData {}
-  type: 'positive' | 'negative' | 'suggestion' message: string timestamp: Date  ,}
+  type: 'positive' | 'negative' | 'suggestion' message: string timestamp: Date  }
 }
 
 export const EnhancedInteractiveFeatures: React.FC = () => { const [isVisible, setIsVisible] =;
@@ -10,6 +10,6 @@ export const EnhancedInteractiveFeatures: React.FC = () => { const [isVisible, s
   const [feedbackMessage, setFeedbackMessage] = useState('');
   const [feedbackType, setFeedbackType] = useState<'positive' | 'negative' | 'suggestion'>('positive') const [isBookmarked, setIsBookmarked] = useState(false);
   const [rating, setRating] = useState(0);
-  const [showRating, setShowRating] = useState(false)  useEffect(() => {}
+  const [showRating, setShowRating] = useState(false)  useEffect(() => {}"
 \";\"\";}
-}}
+}}"

@@ -1,11 +1,6 @@
-<<<<<<< HEAD;
-;
-  {{id: string;
-export interface AdvancedITService  {id: string;name: string;
-  id: string;
-=======
+
 id: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 name: string;
   tagline: string;
   price: string;
@@ -1303,36 +1298,10 @@ name: string;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD;
-  {
 
-    id: 'edge - computing - orchestrator',
-  name: 'Edge Computing Orchestrator',
-    tagline: 'Intelligent edge computing management and optimization',
-  price: '$1, 999',
-    period: '/month',
-  description:;
-      'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.',
-    features: [;
-
-      'Intelligent resource allocation',
-      'Real - time performance optimization',
-      'Edge device management',
-      'Load balancing',
-      'Security and compliance',
-      'Monitoring and analytics',
-      'Automated scaling',
-      'API gateway',
-      'Integration tools',
-      '24 / 7 support'
-    ],
-    popular: true,
-
-      mobile: '+1 302 464 0950',
-=======
   {
 =======      mobile: '+1 302 464 0950',
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',}
       website: 'https://ziontechgroup && ziontechgroup.com'}
@@ -1973,9 +1942,8 @@ reviews: 45;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 website: 'https://ziontechgroup.com';
     }
     real_implementation: true;

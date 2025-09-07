@@ -5,19 +5,12 @@ slug: \"ai-trends-2025\",
     slug: \"ai-trends-2025\",
     excerpt: \"From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.\";
     content: `<p />As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
-<<<<<<< HEAD;
-id: 'ai-trends-2025',
-  title: '10 Emerging AI Trends to Watch in 2025'
-    slug: 'ai-trends-2025',
-  excerpt:
 
-
-=======
     id: \"id\",
     title: '10 Emerging AI Trends to Watch in 2025',
   slug: 'ai-trends-2025'
     excerpt:
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
 import { BlogPost } from '@/types/blog';
 // Sample blog data - in a real app this would come from an API or CMS;
 export const BLOG_POSTS: BlogPost[] = [
@@ -26,17 +19,14 @@ export const BLOG_POSTS: BlogPost[] = [
   title: '10 Emerging AI Trends to Watch in 2025',
     slug: 'ai-trends-2025',
   excerpt:;
-<<<<<<< HEAD;
-      'From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.',    content: `<p />As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>    id: \"ai-trends-2025\";
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 title: \"10 Emerging AI Trends to Watch in 2025\";
     slug: \"ai-trends-2025\"
     excerpt: \"From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.\";
     content: `<p />As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
-<<<<<<< HEAD;
-=======}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38}
+}
+
     },
     published_date: 'Apr 15, 2025',
   read_time: '5 min read',
@@ -198,21 +188,15 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: \"green-it\",
     title: \"Green IT: Reducing Your Data Center's Carbon Footprint\",
-<<<<<<< HEAD;
-slug: 'green-it',
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 excerpt: 'Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.',
   content: `<p />As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
     slug: \"green-it\",
     excerpt: \"Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.\",
     content: `<p />As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
-<<<<<<< HEAD;
-}
-}
-    },
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+
+
 published_date: 'Apr 5, 2025',
   read_time: '6 min read',
     category: 'Sustainability',
@@ -374,28 +358,8 @@ published_date: 'Apr 5, 2025',
     title: \"AI Compute Optimization: Balancing Performance and Cost\";
     slug: \"ai-compute-optimization\";
     excerpt: \"Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.\";}
-<<<<<<< HEAD}
-  },
-  {
-      name: 'Michael Wong',
-  title: 'ML Infrastructure Architect'
-      name: 'Michael Wong',
-  title: 'ML Infrastructure Architect',
-      avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200',
-  author: {
-      name: \"Michael Wong\";
-      title: \"ML Infrastructure Architect\"}
-      avatarUrl: \"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200\"}
-    }
 
-    id: 'ai - compute - optimization',
-  title: 'AI Compute Optimization: Balancing Performance and Cost',
-    slug: 'ai - compute - optimization',
-  excerpt:;
-      'Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.',    content: `<p  /> As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>    id: \"ai - compute - optimization\";
 
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
 title: \"AI Compute Optimization: Balancing Performance and Cost\";
     slug: \"ai - compute - optimization\";
     excerpt: \"Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.\";
@@ -440,42 +404,10 @@ title: \"AI Compute Optimization: Balancing Performance and Cost\";
     ],
     featured_image:;
       'https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=1200 & h=630',
-<<<<<<< HEAD;
-  },
-];
 
-}];
-
-
-
-
-  },
-];
-
-}];
-
-
-
-
-
-
-
-
-;
-
-
-
-    featuredImage:
-      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630',
-  },
-];
-}];
-
-=======
   },
 ];
 }];
   },
 ];
 }];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

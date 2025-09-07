@@ -11,7 +11,7 @@ interface UltraFuturisticBackground2034Props {
 
 const UltraFuturisticBackground2034: React.FC<
   UltraFuturisticBackground2034Props;
-> = ({ intensity = 1   ,}
+> = ({ intensity = 1   }
 }) => {
 
 
@@ -21,7 +21,7 @@ const UltraFuturisticBackground2034: React.FC<
 
 const animationRef = useRef<number | undefined />(undefined);
 }
-const [mousePosition, setMousePosition] = useState({ x: 0, y: 0,}
+const [mousePosition, setMousePosition] = useState({ x: 0, y: 0}
 });
   intensity;
   useEffect(() => {
@@ -84,7 +84,7 @@ x: number;
 const initParticles = (for (let i = 0; i < 100 * intensity; i++) {particles.push({x: Math.random() * canvas.width,y: Math.random() * canvas.height,vx: (Math.random() - 0.5) * 2,vy: (Math.random() - 0.5) * 2,size: Math.random() * 3 + 1,life: Math.random() * 100,maxLife: 100,type: ['quantum', 'neural', 'holographic'][;) => {
   return $3;}
 }
-            Math.floor(Math.random() * 3)] as ParticleType,})}
+            Math.floor(Math.random() * 3)] as ParticleType})}
     }
 
     // Initialize neural network;
@@ -274,7 +274,7 @@ if (particles.length < 100 * intensity) {
           maxLife: 100,
 type: ['quantum', 'neural', 'holographic'][
             Math.floor(Math.random() * 3)}
-          ] as ParticleType,}
+          ] as ParticleType}
         });
       }
       // Add new entanglement lines;
@@ -292,8 +292,8 @@ entanglementLines.push({
           y1,
           x2,
           y2,
-          strength: Math.random(),}
-          life: 100,}
+          strength: Math.random()}
+          life: 100}
         });
       }
 
@@ -317,7 +317,7 @@ useEffect(() => {
     const handleMouseMove = () => {
   return $3;}
 }
-setMousePosition({ x: e.clientX, y: e.clientY }),
+setMousePosition({ x: e.clientX, y: e.clientY })
 };
 
 
@@ -333,7 +333,7 @@ setMousePosition({ x: e.clientX, y: e.clientY }),
 const handleMouseMove = (;) => {
   return $3;}
 }
-      setMousePosition({ x: e && e.clientX, y: e && e.clientY }),
+      setMousePosition({ x: e && e.clientX, y: e && e.clientY })
 };
 
 
@@ -356,26 +356,26 @@ className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
 
           animate={{
             rotate: 360,
-            scale: [1, 1.2, 1],}
-            opacity: [0.3, 0.6, 0.3],}
+            scale: [1, 1.2, 1]}
+            opacity: [0.3, 0.6, 0.3]}
           }}
           transition={{
             duration: 8,
-            repeat: -1,}
-ease: 'linear',}
+            repeat: -1}
+ease: 'linear'}
           }}
         />
         <motion.div;
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
           animate={{
             y: [0, -20, 0],
-            opacity: [0.4, 0.8, 0.4],}
-            scale: [1, 1.1, 1],}
+            opacity: [0.4, 0.8, 0.4]}
+            scale: [1, 1.1, 1]}
           }}
           transition={{
             duration: 6,
-            repeat: -1,}
-ease: 'easeInOut',}
+            repeat: -1}
+ease: 'easeInOut'}
           }}
         />
         <motion.div;
@@ -383,13 +383,13 @@ className='absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30'
           style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
           animate={{
 
-            rotate: [0, 180, 360],}
-            opacity: [0.2, 0.5, 0.2],}
+            rotate: [0, 180, 360]}
+            opacity: [0.2, 0.5, 0.2]}
           }}
           transition={{
             duration: 12,
-            repeat: -1,}
-ease: 'linear',}
+            repeat: -1}
+ease: 'linear'}
           }}
         />
       </div>
@@ -399,23 +399,23 @@ ease: 'linear',}
         <motion.div;
 className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
           animate={{}
-            x: ['-100%', '100%'],}
+            x: ['-100%', '100%']}
           }}
           transition={{
             duration: 15,
-            repeat: -1,}
-ease: 'linear',}
+            repeat: -1}
+ease: 'linear'}
           }}
         />
         <motion.div;
 className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent'
           animate={{}
-            y: ['-100%', '100%'],}
+            y: ['-100%', '100%']}
           }}
           transition={{
             duration: 20,
-            repeat: -1,}
-ease: 'linear',}
+            repeat: -1}
+ease: 'linear'}
           }}
             duration: 20,
             repeat: -1,
@@ -425,8 +425,8 @@ ease: 'linear',}
         />;
         <motion.div;
           className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent';
-          animate={{y: ['-100%', '100%'],}}
-          transition={{duration: 20,repeat: -1,ease: 'linear',}}
+          animate={{y: ['-100%', '100%']}}
+          transition={{duration: 20,repeat: -1,ease: 'linear'}}
             duration: 20,repeat: -1,/>;
       </div>;
 
@@ -434,23 +434,23 @@ ease: 'linear',}
       {/* Holographic matrix effect */}
 
 <div className='absolute inset-0' />
-        {Array.from({ length: 20,}
+        {Array.from({ length: 20}
 }).map((_, i) => (
           <motion.div;
 key={i}
             className='absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent';
-            style={{ left: `${(i * 5) % 100}%` ,
+            style={{ left: `${(i * 5) % 100}%` 
 }
             animate={{
 
-              opacity: [0, 1, 0],}
-              scaleY: [0, 1, 0],}
+              opacity: [0, 1, 0]}
+              scaleY: [0, 1, 0]}
             }}
             transition={{
               duration: 3,
               delay: i * 0.1,
-              repeat: -1,}
-ease: 'easeInOut',}
+              repeat: -1}
+ease: 'easeInOut'}
             }}
           />
         ))}
@@ -460,8 +460,8 @@ ease: 'easeInOut',}
 <div className='absolute inset-0' />
         <motion.div;
 className=\"absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]\"
-
-              ease: 'easeInOut',            }}              ease: \"easeInOut\";
+"
+              ease: 'easeInOut'            }}              ease: \"easeInOut\";
             }}
           />))}
       </div>;
@@ -471,26 +471,26 @@ className=\"absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transpa
           className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]';
 
           style={{}
-            background_size: '50px 50px',}
+            background_size: '50px 50px'}
           }}
           animate={{
 }
-            opacity: [0.3, 0.6, 0.3],}
+            opacity: [0.3, 0.6, 0.3]}
           }}
           transition={{
             duration: 4,
             repeat: -1,
-ease: 'easeInOut',}
+ease: 'easeInOut'}
 }
           }}
           transition={{duration: 4;
             repeat: -1;}
 }
 export default UltraFuturisticBackground2034;}}
-          transition={{duration: 4,repeat: -1,ease: 'easeInOut',}
+          transition={{duration: 4,repeat: -1,ease: 'easeInOut'}"
   ease: \"easeInOut\";}
-            opacity: [0.3, 0.6, 0.3],}}
-          transition={{duration: 4,repeat: -1,ease: 'easeInOut',}}
+            opacity: [0.3, 0.6, 0.3]}}
+          transition={{duration: 4,repeat: -1,ease: 'easeInOut'}}
         />;
       </div>;
     </div>;
@@ -503,7 +503,7 @@ export default UltraFuturisticBackground2034;}}
           }}
           transition={{
             duration: 4,
-            repeat: -1,}
+            repeat: -1}
 }
           }}
         />
@@ -516,3 +516,4 @@ export default UltraFuturisticBackground2034;}}
 
 export default UltraFuturisticBackground2034;
 
+"

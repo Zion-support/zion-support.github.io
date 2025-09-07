@@ -35,67 +35,67 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
       title: 'Cybersecurity & Security',
   icon: Shield,
       services: advancedCybersecurity2025,
-      gradient: 'from-red-600 via-orange-600 to-yellow-600',}
-  description: 'Advanced security solutions for the digital age',}
+      gradient: 'from-red-600 via-orange-600 to-yellow-600'}
+  description: 'Advanced security solutions for the digital age'}
     },
     {
       title: 'Blockchain & Web3',
   icon: Globe,
       services: blockchainWeb32025,
-      gradient: 'from-green-600 via-teal-600 to-cyan-600',}
-  description: 'Next-generation blockchain and decentralized solutions',}
+      gradient: 'from-green-600 via-teal-600 to-cyan-600'}
+  description: 'Next-generation blockchain and decentralized solutions'}
     },
     {
       title: 'IoT & Edge Computing',
   icon: Cloud,
       services: iotEdgeComputing2025,
-      gradient: 'from-blue-600 via-indigo-600 to-purple-600',}
-  description: 'Smart connected solutions for the Internet of Things',}
+      gradient: 'from-blue-600 via-indigo-600 to-purple-600'}
+  description: 'Smart connected solutions for the Internet of Things'}
     },
     {
       title: 'Healthcare & Biotechnology',
   icon: Target,
       services: healthcareBiotech2025,
-      gradient: 'from-pink-600 via-rose-600 to-red-600',}
-  description: 'Innovative healthcare and biotech solutions',}
+      gradient: 'from-pink-600 via-rose-600 to-red-600'}
+  description: 'Innovative healthcare and biotech solutions'}
     },
     {
       title: 'Fintech & Financial',
   icon: DollarSign,
       services: fintechFinancial2025,
-      gradient: 'from-emerald-600 via-green-600 to-teal-600',}
-  description: 'Revolutionary financial technology solutions',}
+      gradient: 'from-emerald-600 via-green-600 to-teal-600'}
+  description: 'Revolutionary financial technology solutions'}
     },
     {
       title: 'Education & E-Learning',
   icon: Award,
       services: educationElearning2025,
-      gradient: 'from-amber-600 via-yellow-600 to-orange-600',}
-  description: 'Advanced learning and educational technology',}
-    },
+      gradient: 'from-amber-600 via-yellow-600 to-orange-600'}
+  description: 'Advanced learning and educational technology'}
+    }
   ];
 
 const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: { opacity: 0}
 }
     visible: {
       opacity: 1;
 transition: {}
-staggerChildren: 0.1,}
-      },
-    },
+staggerChildren: 0.1}
+      }
+    }
   };
 
 const itemVariants = {}
-    hidden: { y: 20, opacity: 0,}
+    hidden: { y: 20, opacity: 0}
 }
     visible: {
       y: 0;
 opacity: 1;
 transition: {}
-duration: 0.5,}
-      },
-    },
+duration: 0.5}
+      }
+    }
   };
 
   return (
@@ -112,14 +112,14 @@ duration: 0.5,}
         {/* Header */}
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />        {/* Header */}
 
-        {/* Header *,}
+        {/* Header *}
 }
 
         <motion.div;
-initial={{ opacity: 0, y: 30 ,}
+initial={{ opacity: 0, y: 30 }
 }
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 ,}
+          transition={{ duration: 0.8 }
 }
 
 className='text-center mb-16'
@@ -134,7 +134,7 @@ your business and drive success in the digital age.
           </p>
         </motion.div>
 
-          transition={{ duration: 0 && 0.8 ,}
+          transition={{ duration: 0 && 0.8 }
 }
           className='text-center mb-16'>;
           <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6' />;
@@ -143,10 +143,10 @@ your business and drive success in the digital age.
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed' />;
             Discover our comprehensive suite of cutting-edge micro SAAS;
             services, IT solutions, and AI innovations designed to transform;
-            your business and drive success in the digital age.          </p>        >;
+            your business and drive success in the digital age.          </p>        >;"
           <h2 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6\" />;
             Revolutionary 2025 Services;
-          </h2>;
+          </h2>;"
           <p className=\"text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed\" />;
             Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.;
           </p>;
@@ -156,7 +156,7 @@ your business and drive success in the digital age.
 
 initial='hidden'
           whileInView='visible'
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
 
           className='space-y-16'
@@ -177,16 +177,16 @@ className='relative'
                     {category.description}
                   <p className='text-gray-400 text-lg' />                    {category.description}{category.description}</p>;
                 </div>;
-              </div>;
+              </div>;"
               <div className=\"flex items-center mb-8\" />;
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${category && category.gradient} mr-4`} />
-
+"
                   <category && category.icon className=\"w-8 h-8 text-white\" />;
                 </div>;
-                <div />;
+                <div />;"
                   <h3 className=\"text-3xl font-bold text-white mb-2\" />;
                     {category && category.title}
-                  </h3>;
+                  </h3>;"
                   <p className=\"text-gray-400 text-lg\" />;
                     {category && category.description}
                   </p>;
@@ -200,16 +200,16 @@ className='relative'
                 {category.services.map((service, serviceIndex) => (}
                   <motion.div;}
 key={service.id}
-                    initial={{ opacity: 0, scale: 0.9 ,}
+                    initial={{ opacity: 0, scale: 0.9 }
 }
-                    whileInView={{ opacity: 1, scale: 1 ,}
+                    whileInView={{ opacity: 1, scale: 1 }
 }
                     transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
 
 className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30'
                    />
 
-                    {/* Service Header *,}
+                    {/* Service Header *}
 }
                     <div className='mb-4' />;
                       <h4 className='text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors' />;
@@ -222,11 +222,11 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
 
                       </p>
                     </div>
-
-                    <div className=\"mb-4\" />;
+"
+                    <div className=\"mb-4\" />;"
                       <h4 className=\"text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors\" />;
                         {service && service.name}
-                      </h4>;
+                      </h4>;"
                       <p className=\"text-gray-400 text-sm leading-relaxed\" />;
                         {service && service.description}
                       </p>;
@@ -282,12 +282,12 @@ key={featureIndex}
                         <span className='text-lg font-bold text-green-400' />
 
                           {service.price}
-                          {service.perio,}
+                          {service.perio}
 }
                         </span>;
                       </div>;
                       <div className='text-xs text-gray-500 mt-1' />;
-                        Market position: {service.marketPositio,}
+                        Market position: {service.marketPositio}
 }
                       </div>;
                     </div>;
@@ -302,7 +302,7 @@ key={featureIndex}
                           {service.roi}
                         </div>;
                         <div className='text-xs text-gray-500' />;
-                          Setup time: {service.setupTim,}
+                          Setup time: {service.setupTim}
 }
                         </div>;
                       </div>;
@@ -335,7 +335,7 @@ key={featureIndex}
                       </a>
                     </div>
 
-                    {/* Hover Effect Overlay *,}
+                    {/* Hover Effect Overlay *}
 }
 <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />;
                   </motion.div>;
@@ -345,12 +345,12 @@ key={featureIndex}
                         <ArrowRight className='w-4 h-4 ml-2' />                      </a>;
                     </div>;{/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  </motion && motion.div>                      <a;
-                        href={service && service.link}
+                        href={service && service.link}"
                         className=\"inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30\" />;
-                        Learn More;
+                        Learn More;"
                         <ArrowRight className=\"w-4 h-4 ml-2\" />;
                       </a>;
-                    </div>;{/* Hover Effect Overlay */}
+                    </div>;{/* Hover Effect Overlay */}"
                     <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                    <div className=\"absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none\" />;
                   </motion && motion.div>;
                 ))}
@@ -359,13 +359,13 @@ key={featureIndex}
           ))}
         {/* Call to Action */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
 
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
 
-          transition={{ duration: 0.8, delay: 0.5 ,}
+          transition={{ duration: 0.8, delay: 0.5 }
 }
 className='text-center mt-20'
          />
@@ -399,9 +399,10 @@ href='tel: +13024640950'
         </motion.div>
       </div>
     </section>
-),
+)
 };
 
 
 export default ComprehensiveServicesShowcase2025;
 
+"

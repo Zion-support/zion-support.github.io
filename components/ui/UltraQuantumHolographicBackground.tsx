@@ -46,13 +46,13 @@ className = '') => {
   intensity = 'high',
   colorScheme = 'quantum',
   particleCount = 300,
-  animationSpeed = 1.5,}
-  className = '',}
+  animationSpeed = 1.5}
+  className = ''}
 }: UltraQuantumHolographicBackgroundProps) {;
 
 const canvasRef = useRef<HTMLCanvasElement />(null);
 }
-const [dimensions, setDimensions] = useState({ width: 0, height: 0,}
+const [dimensions, setDimensions] = useState({ width: 0, height: 0}
 });
 
 const [isVisible, setIsVisible] = useState(false);
@@ -64,38 +64,38 @@ const colorSchemes = {
   secondary: '#ff00ff',
       tertiary: '#ffff00',
   accent: '#00ff00',
-      background: 'rgba(0, 0, 0, 0.95)',}
-  overlay: 'rgba(0, 0, 0, 0.3)',}
+      background: 'rgba(0, 0, 0, 0.95)'}
+  overlay: 'rgba(0, 0, 0, 0.3)'}
     },
     holographic: {
       primary: '#ff0080',
   secondary: '#8000ff',
       tertiary: '#00ffff',
   accent: '#ffff00',
-      background: 'rgba(0, 0, 0, 0.92)',}
-  overlay: 'rgba(0, 0, 0, 0.25)',}
+      background: 'rgba(0, 0, 0, 0.92)'}
+  overlay: 'rgba(0, 0, 0, 0.25)'}
     },
     cyberpunk: {
       primary: '#ff0040',
   secondary: '#00ffff',
       tertiary: '#ffff00',
   accent: '#ff00ff',
-      background: 'rgba(0, 0, 0, 0.94)',}
-  overlay: 'rgba(0, 0, 0, 0.35)',}
+      background: 'rgba(0, 0, 0, 0.94)'}
+  overlay: 'rgba(0, 0, 0, 0.35)'}
     },
     neon: {
       primary: '#00ff00',
   secondary: '#ff00ff',
       tertiary: '#ffff00',
   accent: '#00ffff',
-      background: 'rgba(0, 0, 0, 0.93)',}
-  overlay: 'rgba(0, 0, 0, 0.28)',}
-    },
+      background: 'rgba(0, 0, 0, 0.93)'}
+  overlay: 'rgba(0, 0, 0, 0.28)'}
+    }
   };
 
 const colors = colorSchemes[colorScheme];
 
-const intensityMultiplier = { low: 0.5, medium: 1, high: 1.5, ultra: 2.5,}
+const intensityMultiplier = { low: 0.5, medium: 1, high: 1.5, ultra: 2.5}
 }[
     intensity;
   ];
@@ -133,7 +133,7 @@ x: number;
         this.vy = (Math.random() - 0.5) * 2 * animationSpeed;
         this.size = Math.random() * 3 * intensityMultiplier + 1;
 this.color = [;
-          colors.primary,colors.secondary,colors.tertiary,colors.accent,][Math.floor(Math.random() * 4)];
+          colors.primary,colors.secondary,colors.tertiary,colors.accent][Math.floor(Math.random() * 4)];
         this.life = Math.random() * 100;
         this.maxLife = 100;
 
@@ -327,9 +327,9 @@ ref={canvasRef}
 
 className='fixed inset-0 w-full h-full pointer-events-none z-0'
         style={{
-          background: colors.background,}
-          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px,}
-})`,
+          background: colors.background}
+          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px}
+})`
         }}
       />
       {/* Holographic Overlay Effects */}
@@ -343,19 +343,19 @@ className='absolute inset-0'
               `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`,
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`,
-              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`,
-            ],
+              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
+            ]
           }}
           transition={{
             duration: 8,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
         />;
         {/* Holographic Scan Lines */}
 
 <div className='absolute inset-0 opacity-20' />
-          {Array.from({ length: Math.ceil(dimensions.height / 4),}
+          {Array.from({ length: Math.ceil(dimensions.height / 4)}
 }).map(
             (_, i) => (
               <motion.div;
@@ -381,17 +381,17 @@ key={i}
 className='absolute inset-0'
           animate={{
             boxShadow: [}
-              `inset 0 0 100px ${colors.primar,}
+              `inset 0 0 100px ${colors.primar}
 }20`,
               `inset 0 0 200px ${colors.secondary}20`,
               `inset 0 0 150px ${colors.tertiary}20`,
-              `inset 0 0 100px ${colors.primary}20`,
-            ],
+              `inset 0 0 100px ${colors.primary}20`
+            ]
           }}
           transition={{
             duration: 6,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
 
 
@@ -413,15 +413,15 @@ ease: 'easeInOut',}
 
           animate={{
 
-            background: [
-              `url(\"data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E\")`,
-              `url(\"data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E\")`,}
-            ],}
+            background: ["
+              `url(\"data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E\")`,"
+              `url(\"data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E\")`}
+            ]}
           }}
           transition={{
             duration: 4,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
         />
       </div>
@@ -429,3 +429,4 @@ ease: 'easeInOut',}
 
 );
 
+"

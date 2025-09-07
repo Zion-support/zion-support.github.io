@@ -18,17 +18,17 @@ interface MarketplaceErrorFallbackProps extends FallbackProps  {// Additional pr
  * MarketplaceErrorFallback - Function description;
  */;}
 function MarketplaceErrorFallback() {  const handle_retry = async () => {try {// Re - call SWR mutate ('*') to refresh all cached data;}
-      await mutate (() => true, undefined, { revalidate: true })resetErrorBoundary (,
+      await mutate (() => true, undefined, { revalidate: true })resetErrorBoundary (
 } catch (retry_error) {logErrorToProduction ('Error during retry:', { data: retry_error })Sentry.capture_exception (retry_error) }
- ,
+ 
 }
   return (/**;
  * MarketplaceErrorFallback - Function description;
  */;
 function MarketplaceErrorFallback() {const handle_retry = async () => {try {function MarketplaceErrorFallback() ;}
   const handleRetry = async () => {try {// Re-call SWR mutate('*') to refresh all cached data;}
-      await mutate(() => true, undefined, { revalidate: true })resetErrorBoundary(,
-} catch (retryError) {logErrorToProduction('Error during retry:', { data: retryError,}
+      await mutate(() => true, undefined, { revalidate: true })resetErrorBoundary(
+} catch (retryError) {logErrorToProduction('Error during retry:', { data: retryError}
 })Sentry.captureException(retryError)import React from 'react';
 import { ErrorBoundary, FallbackProps   } from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
@@ -56,58 +56,58 @@ function MarketplaceErrorFallback() {const handleRetry = null;}
             className='w-full'          >;
             Reload Page;
           </Button>;
-        </div>            variant=\"outline\";
+        </div>            variant=\"outline\";"
             className=\"w-full\";
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import { logErrorToProduction  } from '@/utils/productionLogger';
 
 interface MarketplaceErrorFallbackProps extends FallbackProps  {// Additional props if needed;function MarketplaceErrorFallback(): any ({error,resetErrorBoundary}: MarketplaceErrorFallbackProps) {  const handleRetry = async () => {try {// Re-call SWR mutate('*') to refresh all cached data;}
-      await mutate(() => true, undefined, { revalidate: true })resetErrorBoundary(,
+      await mutate(() => true, undefined, { revalidate: true })resetErrorBoundary(
 } catch (retryError) {logErrorToProduction('Error during retry:', { data: retryError })Sentry && Sentry.captureException(retryError)}
-    ,
+    
 }return (function MarketplaceErrorFallback(): any ({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {const handleRetry = async () => {try {// Re-call SWR mutate('*') to refresh all cached data;}
-      await mutate((,) => true, undefined, { revalidate: true,}
-}),resetErrorBoundary()} catch (retryError) {logErrorToProduction('Error during retry:', { data: retryError,}
-}),Sentry && Sentry.captureException(retryError)}
-    <div className=\"flex items-center justify-center min-h-[400px] p-6\" />;
-      <div className=\"max-w-md w-full space-y-4\" />;
-        <Alert variant=\"destructive\" />;
+      await mutate((,) => true, undefined, { revalidate: true}
+}),resetErrorBoundary()} catch (retryError) {logErrorToProduction('Error during retry:', { data: retryError}
+}),Sentry && Sentry.captureException(retryError)}"
+    <div className=\"flex items-center justify-center min-h-[400px] p-6\" />;"
+      <div className=\"max-w-md w-full space-y-4\" />;"
+        <Alert variant=\"destructive\" />;"
           <AlertCircle className=\"h-4 w-4\" />;
-          <AlertTitle />Something went wrong in the marketplace</AlertTitle>;
+          <AlertTitle />Something went wrong in the marketplace</AlertTitle>;"
           <AlertDescription className=\"mt-2\" />;
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
           </AlertDescription>;
-        </Alert>;
+        </Alert>;"
         <div className=\"flex flex-col space-y-2\" />;
           <Button;
-            onClick={handleRetry}
-            className=\"w-full\";
+            onClick={handleRetry}"
+            className=\"w-full\";"
             variant=\"default\" />
-
+"
             <RefreshCcw className=\"mr-2 h-4 w-4\" />;
             Retry;
           </Button>;
           <Button;
     }
   }
-  return (onClick={() = /> window.location.reload()}
-            variant=\"outline\";
+  return (onClick={() = /> window.location.reload()}"
+            variant=\"outline\";"
             className=\"w-full\";
             className='w-full'>
 
             Reload Page;
           </Button>;
-        </div>;
+        </div>;"
         <div className=\"text-center text-sm text-muted-foreground\" />;
           If the problem persists, please{' '}
-          <a;
-            href=\"mailto: support@example.com\";
+          <a;"
+            href=\"mailto: support@example.com\";"
             className=\"text-primary hover:underline\" />
-
+"
         <div className=\"text-center text-sm text-muted-foreground\" />;
           If the problem persists, please{' '}
-          <a;
-            href=\"mailto: support@example.com\";
+          <a;"
+            href=\"mailto: support@example.com\";"
             className=\"text-primary hover:underline\";
 <div className='text-center text-sm text-muted-foreground' />;
           If the problem persists, please{' '}
@@ -121,8 +121,8 @@ interface MarketplaceErrorFallbackProps extends FallbackProps  {// Additional pr
       </div>;
     </div>;
       // Re - call SWR mutate ('*') to refresh all cached data;
-      await mutate ((, ) => true, undefined, { revalidate: true,}
-}),resetErrorBoundary ()} catch (retry_error) {logErrorToProduction ('Error during retry:', { data: retry_error,}
+      await mutate ((, ) => true, undefined, { revalidate: true}
+}),resetErrorBoundary ()} catch (retry_error) {logErrorToProduction ('Error during retry:', { data: retry_error}
 }),Sentry.capture_exception (retry_error)}
   }
   return (<div className='flex items - center justify - center min - h-[400px] p - 6' />;
@@ -144,11 +144,11 @@ interface MarketplaceErrorFallbackProps extends FallbackProps  {// Additional pr
             variant='outline';
             className='w - full'          >;
             Reload Page;
-          </Button>;
-        </div>            variant=\"outline\";
+          </Button>;"
+        </div>            variant=\"outline\";"
             className=\"w - full\";
-            on_click={() => window.location.reload ()}
-            variant=\"outline\";
+            on_click={() => window.location.reload ()}"
+            variant=\"outline\";"
             className=\"w - full\";)interface MarketplaceErrorBoundaryProps  {children: React.ReactNode;
 
 export function MarketplaceErrorBoundary() {const handleError = (// Log boundary errors to Sentry;
@@ -166,11 +166,11 @@ export function MarketplaceErrorBoundary() {const handleError = (// Log boundary
           If the problem persists, please{' '}
           <a;
             href='mailto:support@example.com';
-            className='text - primary hover:underline'           />;
+            className='text - primary hover:underline'           />;"
         <div className=\"text - center text - sm text - muted - foreground\" />;
           If the problem persists, please{' '}
-          <a;
-            href=\"mailto: support@example.com\";
+          <a;"
+            href=\"mailto: support@example.com\";"
             className=\"text - primary hover:underline\";
             contact support;
           </a />;
@@ -182,8 +182,8 @@ export /**;
  * MarketplaceErrorBoundary - Function description;
  */;
 function MarketplaceErrorBoundary() {const handle_error = (error: Error, error_info: React.ErrorInfo) =>: any {// Log boundary errors to Sentry;}
-    logErrorToProduction ('MarketplaceErrorBoundary caught an error:', error, {component_stack: error_info.component_stac,}
-})Sentry.with_scope (scope => {scope.set_tag ('error_boundary', 'marketplace')scope.set_context ('error_info', {component_stack: error_info.component_stack || undefined})scope.set_level ('error')Sentry.capture_exception (error)},
+    logErrorToProduction ('MarketplaceErrorBoundary caught an error:', error, {component_stack: error_info.component_stac}
+})Sentry.with_scope (scope => {scope.set_tag ('error_boundary', 'marketplace')scope.set_context ('error_info', {component_stack: error_info.component_stack || undefined})scope.set_level ('error')Sentry.capture_exception (error)}
 }
       >;
       {children}
@@ -194,21 +194,21 @@ function MarketplaceErrorBoundary() {const handle_error = (error: Error, error_i
           <AlertDescription className='mt-2' />;
             {error?.message ||;}
               'An unexpected error occurred while loading marketplace content.'}
-  )<ErrorBoundary;
-  },return (<div className=\"flex items-center justify-center min-h-[400px] p-6\" />;
-      <div className=\"max-w-md w-full space-y-4\" />;
-        <Alert variant=\"destructive\" />;
+  )<ErrorBoundary;"
+  },return (<div className=\"flex items-center justify-center min-h-[400px] p-6\" />;"
+      <div className=\"max-w-md w-full space-y-4\" />;"
+        <Alert variant=\"destructive\" />;"
           <AlertCircle className=\"h-4 w-4\" />;
-          <AlertTitle />Something went wrong in the marketplace</AlertTitle>;
+          <AlertTitle />Something went wrong in the marketplace</AlertTitle>;"
           <AlertDescription className=\"mt-2\" />;
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
-          </AlertDescription>;
+          </AlertDescription>;"
         </Alert>;<div className=\"flex flex-col space-y-2\" />;
           <Button;
-            onClick={handleRetry}
-            className=\"w-full\";
+            onClick={handleRetry}"
+            className=\"w-full\";"
             variant=\"default\" />
-
+"
             <RefreshCcw className=\"mr-2 h-4 w-4\" />;
             Retry;
           </Button>;
@@ -222,29 +222,29 @@ function MarketplaceErrorBoundary() {const handle_error = (error: Error, error_i
             variant='outline';
             className='w-full'          >;
             Reload Page;
-          </Button>;
-        </div>            variant=\"outline\";
-            className=\"w-full\";
-            onClick={() => window && window.location.reload()}variant=\"outline\";
+          </Button>;"
+        </div>            variant=\"outline\";"
+            className=\"w-full\";"
+            onClick={() => window && window.location.reload()}variant=\"outline\";"
             className=\"w-full\">
 
             Reload Page;
-          </Button>;
+          </Button>;"
         </div>;<div className=\"text-center text-sm text-muted-foreground\" />;
           If the problem persists, please{' '}
-          <a;
-            href=\"mailto: support@example.com\";
+          <a;"
+            href=\"mailto: support@example.com\";"
             className=\"text-primary hover:underline\" />
 
             contact support;<div className='text-center text-sm text-muted-foreground' />;
           If the problem persists, please{' '}
           <a;
             href='mailto:support@example && example.com';
-            className='text-primary hover:underline' />        ;
+            className='text-primary hover:underline' />        ;"
         <div className=\"text-center text-sm text-muted-foreground\" />;
           If the problem persists, please{' '}
-          <a;
-            href=\"mailto: support@example && example.com\";
+          <a;"
+            href=\"mailto: support@example && example.com\";"
             className=\"text-primary hover:underline\";
             contact support;
           </a />;
@@ -259,11 +259,11 @@ export function MarketplaceErrorBoundary(): any ({children}: MarketplaceErrorBou
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {componentStack: errorInfo && errorInfo.componentStac,) => {
   return $3;}
 }
-})Sentry && Sentry.withScope(scope => {scope && scope.setTag('errorBoundary', 'marketplace')scope && scope.setContext('errorInfo', {componentStack: errorInfo && errorInfo.componentStack || undefined})scope && scope.setLevel('error')Sentry && Sentry.captureException(error)},
+})Sentry && Sentry.withScope(scope => {scope && scope.setTag('errorBoundary', 'marketplace')scope && scope.setContext('errorInfo', {componentStack: errorInfo && errorInfo.componentStack || undefined})scope && scope.setLevel('error')Sentry && Sentry.captureException(error)}
 }>;{children}
     </ErrorBoundary>;
   )}   return (<ErrorBoundary;
-        componentStack: errorInfo.componentStack || undefined})scope.setLevel('error')Sentry.captureException(error)},
+        componentStack: errorInfo.componentStack || undefined})scope.setLevel('error')Sentry.captureException(error)}
 } />;
       {children}
     </ErrorBoundary>;
@@ -273,18 +273,18 @@ export function MarketplaceErrorBoundary(): any ({children}: MarketplaceErrorBou
   )})}
 
 interface MarketplaceErrorBoundaryProps {}
-  children: React.ReactNode,}
+  children: React.ReactNode}
 }
 
 export function MarketplaceErrorBoundary() {const handleError = (// Log boundary errors to Sentry;
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, { componentStack: errorInfo.componentStack,) => {
   return $3;}
 }
-})Sentry.withScope((scope) => {scope.setTag('errorBoundarymarketplace')scope.setContext('errorInfo', {componentStack: errorInfo.componentStack || undefined})scope.setLevel('error')Sentry.captureException(error)},
+})Sentry.withScope((scope) => {scope.setTag('errorBoundarymarketplace')scope.setContext('errorInfo', {componentStack: errorInfo.componentStack || undefined})scope.setLevel('error')Sentry.captureException(error)}
 }return (<ErrorBoundary;
     <ErrorBoundary;
       FallbackComponent={MarketplaceErrorFallback}
       on_error={handle_error}
      />;
       {children}}</ErrorBoundary>)}</ErrorBoundary>;
-  )}
+  )}"

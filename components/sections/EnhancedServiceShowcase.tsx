@@ -70,7 +70,7 @@ interface Service {;
   customers: number;
   rating: number;
 
-  reviews: number,
+  reviews: number
 }
 
 interface EnhancedServiceShowcaseProps {
@@ -96,60 +96,60 @@ const [sortBy, setSortBy] = useState<string />('popular');
 
 const categories = [
 
-    { id: 'all',}
-  name: 'All Services', icon: '🚀',}
+    { id: 'all'}
+  name: 'All Services', icon: '🚀'}
 },
-    { id: 'ai',}
-  name: 'AI & ML', icon: '🧠',}
+    { id: 'ai'}
+  name: 'AI & ML', icon: '🧠'}
 },
-    { id: 'quantum',}
-  name: 'Quantum', icon: '⚛️',}
+    { id: 'quantum'}
+  name: 'Quantum', icon: '⚛️'}
 },
-    { id: 'blockchain',}
-  name: 'Blockchain', icon: '⛓️',}
+    { id: 'blockchain'}
+  name: 'Blockchain', icon: '⛓️'}
 },
-    { id: 'enterprise',}
-  name: 'Enterprise', icon: '🏢',}
+    { id: 'enterprise'}
+  name: 'Enterprise', icon: '🏢'}
 },
-{ id: 'emerging',}
-  name: 'Emerging Tech', icon: '🌟',}
-},
+{ id: 'emerging'}
+  name: 'Emerging Tech', icon: '🌟'}
+}
   ];
 
 const priceRanges = [
-    { id: 'all',}
-  name: 'All Prices',}
+    { id: 'all'}
+  name: 'All Prices'}
 },
-    { id: 'low',}
-  name: 'Under $1K/month',}
+    { id: 'low'}
+  name: 'Under $1K/month'}
 },
-    { id: 'medium',}
-  name: '$1K - $5K/month',}
+    { id: 'medium'}
+  name: '$1K - $5K/month'}
 },
-    { id: 'high',}
-  name: '$5K - $20K/month',}
+    { id: 'high'}
+  name: '$5K - $20K/month'}
 },
-{ id: 'premium',}
-  name: '$20K+/month',}
-},
+{ id: 'premium'}
+  name: '$20K+/month'}
+}
   ];
 
 const sortOptions = [
-    { id: 'popular',}
-  name: 'Most Popular',}
+    { id: 'popular'}
+  name: 'Most Popular'}
 },
-    { id: 'rating',}
-  name: 'Highest Rated',}
+    { id: 'rating'}
+  name: 'Highest Rated'}
 },
-    { id: 'roi',}
-  name: 'Best ROI',}
+    { id: 'roi'}
+  name: 'Best ROI'}
 },
-    { id: 'price-low',}
-  name: 'Price Low to High',}
+    { id: 'price-low'}
+  name: 'Price Low to High'}
 },
-{ id: 'price-high',}
-  name: 'Price High to Low',}
-},
+{ id: 'price-high'}
+  name: 'Price High to Low'}
+}
   ];
 
 const filteredServices = useMemo(() => {
@@ -217,33 +217,33 @@ return bROI - aROI;}
         filtered && filtered.sort((a, b) =>;
             parseFloat(b && b.price.replace(/[$]/g, '')) -;
             parseFloat(a && a.price.replace(/[$]/g, '')))const price_ranges = [
-  { id: 'all',}
-  name: 'All Prices',}
-},{ id: 'low',}
-  name: 'Under $1K / month',}
-},{ id: 'medium',}
-  name: '$1K - $5K / month',}
-},{ id: 'high',}
-  name: '$5K - $20K / month',}
-},{ id: 'premium',}
-  name: '$20K+/month',}
-},  ];    { id: 'premium',}
-  name: '$20K+/month',}
+  { id: 'all'}
+  name: 'All Prices'}
+},{ id: 'low'}
+  name: 'Under $1K / month'}
+},{ id: 'medium'}
+  name: '$1K - $5K / month'}
+},{ id: 'high'}
+  name: '$5K - $20K / month'}
+},{ id: 'premium'}
+  name: '$20K+/month'}
+}  ];    { id: 'premium'}
+  name: '$20K+/month'}
 }
   ];
 
 const sort_options = [
-  { id: 'popular',}
-  name: 'Most Popular',}
-},{ id: 'rating',}
-  name: 'Highest Rated',}
-},{ id: 'roi',}
-  name: 'Best ROI',}
-},{ id: 'price - low',}
-  name: 'Price Low to High',}
-},{ id: 'price - high',}
-  name: 'Price High to Low',}
-},];
+  { id: 'popular'}
+  name: 'Most Popular'}
+},{ id: 'rating'}
+  name: 'Highest Rated'}
+},{ id: 'roi'}
+  name: 'Best ROI'}
+},{ id: 'price - low'}
+  name: 'Price Low to High'}
+},{ id: 'price - high'}
+  name: 'Price High to Low'}
+}];
 
 const filtered_services = useMemo (() => {let filtered = services.filter (service => ;
   const matches_category =;
@@ -318,37 +318,37 @@ const filtered_services = useMemo (() => {const filtered = services.filter (serv
       case 'price - high':;
         filtered.sort ((a, b) => parse_float (b.price.replace (/[$]/g, '')) - parse_float (a.price.replace (/[$]/g, '')))break;
     return filtered && filtered.slice(0, maxServices)}, [services, selectedCategory, selectedPriceRange, sortBy, maxServices])const stats = [
-  {label: 'Total Services',}
-  value: services && services.length,icon: Rocket,color: 'text-blue-400',},{label: 'Active Customers',}
-  value: services && services.reduce((sum, s) => sum + (s && s.customers || 0), 0),icon: Users,color: 'text-green-400',},{label: 'Average Rating',}
+  {label: 'Total Services'}
+  value: services && services.length,icon: Rocket,color: 'text-blue-400'},{label: 'Active Customers'}
+  value: services && services.reduce((sum, s) => sum + (s && s.customers || 0), 0),icon: Users,color: 'text-green-400'},{label: 'Average Rating'}
   value: (services && services.reduce((sum, s) => sum + (s && s.rating || 0), 0) / services && services.length;}
-      ).toFixed(1),icon: Star,color: 'text-yellow-400',},{label: 'Market Growth',}
-  value: '300%+',icon: TrendingUp,color: 'text-purple-400',},return (<section className='py-20 px-4 sm:px-6 lg:px-8' />;
+      ).toFixed(1),icon: Star,color: 'text-yellow-400'},{label: 'Market Growth'}
+  value: '300%+',icon: TrendingUp,color: 'text-purple-400'},return (<section className='py-20 px-4 sm:px-6 lg:px-8' />;
       <div className='max-w-7xl mx-auto' />;
 
         {/* Header */}
 
         <div className='text-center mb-16' />
           <motion.h2;
-initial={{ opacity: 0, y: 30 ,}
+initial={{ opacity: 0, y: 30 }
 }
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'
            />
 
-            {titl,}
+            {titl}
 }
           </motion && motion.h2>;
           <motion&& motion.p;
-            initial={{ opacity: 0, y: 30 ,}
+            initial={{ opacity: 0, y: 30 }
 }
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={{ opacity: 1, y: 0 }
 }
             transition={{ duration: 0.8, delay: 0.2 }}
 className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto' />
 
-            {subtitl,}
+            {subtitl}
 }
           </motion.p>;
             className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >>
@@ -358,25 +358,25 @@ className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto' />
             {subtitle}
           {/* Stats */}
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 30 ,}
+            initial={{ opacity: 0, y: 30 }
 }
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={{ opacity: 1, y: 0 }
 } />;
             {stats.map((stat, index) => (</motion.h2>;
           <motion.p;}
-            initial={{ opacity: 0, y: 30 ,}
+            initial={{ opacity: 0, y: 30 }
 }
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={{ opacity: 1, y: 0 }
 }
             transition={{ duration: 0.8, delay: 0.2 }}
-          {/* Stats *,}
+          {/* Stats *}
 }
           <motion.div;
-            initial={{ opacity: 0, y: 30 ,}
+            initial={{ opacity: 0, y: 30 }
 }
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={{ opacity: 1, y: 0 }
 }
-            transition={{ duration: 0.8, delay: 0.4 ,}
+            transition={{ duration: 0.8, delay: 0.4 }
 }
 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto' />
 
@@ -396,10 +396,10 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto' />
             ))}
         {/* Filters */}
         {showFilters && (<motion&& motion.div;}
-            initial={{ opacity: 0, y: 30 ,}
+            initial={{ opacity: 0, y: 30 }
 }
 
-            whileInView={{ opacity: 1, y: 0 ,}
+            whileInView={{ opacity: 1, y: 0 }
 }
 
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -421,7 +421,7 @@ value={selectedCategory}
                     {categories.map(category => (}
                       <option key={category.id} value={category.id} />
 
-                        {category.icon} {category.nam,}
+                        {category.icon} {category.nam}
 }
                       </option>;
                     ))}
@@ -438,7 +438,7 @@ value={selectedCategory}
                     onChange={e = /> setSelectedPriceRange(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus: ring-2 focus:ring-cyan-500 focus:border-transparent'>
 
-                    {priceRanges.map(range => (<option key={range.id} value={range.i,}
+                    {priceRanges.map(range => (<option key={range.id} value={range.i}
 } />;
                     {priceRanges.map(range => (                      <option key={range.id} value={range.id} />;
                         {range.name}
@@ -457,7 +457,7 @@ value={selectedCategory}
                     onChange={e = /> setSortBy(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus: ring-2 focus:ring-cyan-500 focus:border-transparent'>
 
-                    {sortOptions.map(option => (<option key={option.id} value={option.i,}
+                    {sortOptions.map(option => (<option key={option.id} value={option.i}
 } />;
                     {sortOptions.map(option => (                      <option key={option.id} value={option.id} />;
                         {option.name}
@@ -473,21 +473,21 @@ value={selectedCategory}
                     onChange={e = /> setSelectedPriceRange(e && e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus: ring-2 focus:ring-cyan-500 focus:border-transparent'>
 
-                    {priceRanges && priceRanges.map(range => (                      <option key={range && range.id} value={range && range.i,}
+                    {priceRanges && priceRanges.map(range => (                      <option key={range && range.id} value={range && range.i}
 } />                  <select;
                     value={selectedPriceRange}
                     onChange={(e) = /> setSelectedPriceRange(e && e.target.value)}
                     className=\"w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus: ring-2 focus:ring-cyan-500 focus:border-transparent\">
 
-                    {priceRanges && priceRanges.map((range) => (<option key={range && range.id} value={range && range.i,}
+                    {priceRanges && priceRanges.map((range) => (<option key={range && range.id} value={range && range.i}
 } />;
                         {range && range.name}
                       </option>;
                     value={selectedPriceRange}
-                    on_change={(e) => setSelectedPriceRange (e.target.value)}
+                    on_change={(e) => setSelectedPriceRange (e.target.value)}"
                     className=\"w - full bg - gray - 800 / 50 border border - gray - 600 rounded - lg px - 4 py - 2 text - white focus: ring - 2 focus:ring - cyan - 500 focus:border - transparent\">
 
-                    {price_ranges.map ((range) => (<option key={range.id} value={range.i,}
+                    {price_ranges.map ((range) => (<option key={range.id} value={range.i}
 } />;
                         {range.name}
                     ))}
@@ -504,13 +504,13 @@ value={selectedCategory}
             </div>;
         {/* Services Grid */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
 
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
 
-          transition={{ duration: 0.8, delay: 0.8 ,}
+          transition={{ duration: 0.8, delay: 0.8 }
 }
 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
          />
@@ -521,23 +521,23 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
           </motion.div />)}
         {/* Services Grid */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 ,}
+          initial={{ opacity: 0, coordinate_y: 30 }
 }
-          whileInView={{ opacity: 1, coordinate_y: 0 ,}
+          whileInView={{ opacity: 1, coordinate_y: 0 }
 }
-          transition={{ duration: 0.8, delay: 0.8 ,}
-}
+          transition={{ duration: 0.8, delay: 0.8 }
+}"
           className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'         />          className=\"grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8\">
 
           <AnimatePresence />;
             {filtered_services.map ((service, index) => (<motion.div;}
                 key={service.id}
-                initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 ,}
+                initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }
 }
-                whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 ,}
+                whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 }
 }
 
-                transition={{ duration: 0.6, delay: index * 0.1 ,}
+                transition={{ duration: 0.6, delay: index * 0.1 }
 }
 
                 whileHover={{ y: -5, scale: 1.02 }}
@@ -561,17 +561,17 @@ className='group'
                       <div className='text-right' />
                         <div className='text-2xl font-bold text-white' />
 
-                          {service.pric,}
+                          {service.pric}
 }
                         </div>;
                         <div className='text - sm text - gray - 400' />;
                           {service.period}
                     </h3>;
                     <p className='text - gray - 300 text - sm leading - relaxed' />                      {service.tagline}                      </div>;
-                    </div>;
+                    </div>;"
                     <h3 className=\"text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors\" />;
                       {service.name}
-                    </h3>;
+                    </h3>;"
                     <p className=\"text - gray - 300 text - sm leading - relaxed\" />;
                       {service.tagline}</div>;
                     </div>;
@@ -597,8 +597,8 @@ className='group'
                           key={idx}
                           className='text-sm text-gray-400 flex items-start' />;
                           <span className='text-cyan-400 mr-2' />•</span>                          {feature}                      Key Features;
-                    </h4>;
-                    <ul className=\"space-y-2\" />;
+                    </h4>;"
+                    <ul className=\"space-y-2\" />;"
                       {service && service.features.slice(0, 4).map((feature, idx) => (<li key={idx} className=\"text-sm text-gray-400 flex items-start\" />;
                     </p>;
                   </div>;
@@ -683,7 +683,7 @@ key={idx}
 <div className='mt-4 text-center' />
                     <div className='text-xs text-gray-500' />
 
-                      Contact: {' ,}
+                      Contact: {' }
 }
                       <span className='text-cyan-400' />;
                         {service && service.contactInfo.mobile}
@@ -695,7 +695,7 @@ key={idx}
 
                       <span className='text-cyan-400' />
 
-                        {service.contactInfo.emai,}
+                        {service.contactInfo.emai}
 }
                       </span>;
                     </div>;
@@ -709,13 +709,13 @@ key={idx}
 
         {/* Call to Action */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
 
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
 
-          transition={{ duration: 0.8, delay: 1.0 ,}
+          transition={{ duration: 0.8, delay: 1.0 }
 }
 className='text-center mt-16'
          />
@@ -747,12 +747,12 @@ href='/contact'
             </div>;
             <div className='mt-6 text-sm text-gray-400' />;
               <p />;
-                📞 Call us: {' ,}
+                📞 Call us: {' }
 }
                 <span className='text-cyan-400' />+1 302 464 0950</span>;
               </p>;
               <p />;
-                📧 Email: {' ,}
+                📧 Email: {' }
 }
                 <span className='text-cyan-400' />kleber@ziontechgroup && ziontechgroup.com</span>;
               </p>;
@@ -767,9 +767,10 @@ href='/contact'
         </motion.div>
       </div>
     </section>
-),
+)
 };
 
 
 export default EnhancedServiceShowcase;
 
+"

@@ -25,15 +25,15 @@ interface ApplyFormProps {
   onApplySuccess?: (jobId: string) => Promise<void />;}
 }
 }
-
+"
 export function ApplyForm() {const [message, setMessage] = useState(`Hi, I'm interested in your job \"${job.title}\" and would like to apply. I believe my skills and experience are a great match for this role.`;
   ),const [proposalLink, setProposalLink] = useState(''),const [isSubmitting, setIsSubmitting] = useState(false),)const [proposalLink, setProposalLink] = useState('');
-  const [isSubmitting, setIsSubmitting]  = useState(false);
+  const [isSubmitting, setIsSubmitting]  = useState(false);"
   const [activeTab, setActiveTab] = useState<string />(\"message\"),const [selectedResume, setSelectedResume] = useState<ResumeOption | null />(null),const [selectedResumeId, setSelectedResumeId] = useState<string | null />(null),const handleResumeSelected = (setSelectedResume(resume),setSelectedResumeId(resume.id)) => {
   return $3;}
-};
-  const handleApply = async () => {if (!message.trim()) {toast({title: \"Message required\";
-        description: \"Please enter a message before applying.\";}
+};"
+  const handleApply = async () => {if (!message.trim()) {toast({title: \"Message required\";"
+        description: \"Please enter a message before applying.\";}"
         variant: \"destructive\";}
     }
     try {setIsSubmitting(true)// First submit the application to the job applications table;
@@ -45,15 +45,15 @@ const applicationSuccess = await applyToJob(job.id;
           : undefined;
         selectedResume && selectedResume.type === 'custom_upload';
           ? selectedResume.file;}
-          : undefined;}
+          : undefined;}"
       )if (!applicationSuccess) {throw new Error(\"Failed to submit application\")}
       // Format message with proposal link if provided;
       let fullMessage = message;
-      if (proposalLink) {fullMessage += `\n\nHere's a link to my proposal: ${proposalLin,}
+      if (proposalLink) {fullMessage += `\n\nHere's a link to my proposal: ${proposalLin}
 }`;
       }
       // Add info about attached resume if available;
-      if (selectedResume) {fullMessage += `\n\nI've attached my resume: ${selectedResume.titl,}
+      if (selectedResume) {fullMessage += `\n\nI've attached my resume: ${selectedResume.titl}
 }`;
       }
       // Create context data for the conversation;
@@ -79,18 +79,18 @@ export const ApplyForm: React.FC<ApplyFormProps /> = ({ job, onClose    }) => {
 const [activeTab, setActiveTab] = useState('message');
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null />(null)const [message, setMessage] = useState('');}
   const [isSubmitting, setIsSubmitting]  = useState(false);}
-  const { applyToJob } = useJobApplications()const { sendMessage }  = useMessaging()const handleSubmit = async () => {if (!selectedResume) {toast({title: 'Resume required',}
-  description: 'Please select a resume before applying.',variant: 'destructive,}
+  const { applyToJob } = useJobApplications()const { sendMessage }  = useMessaging()const handleSubmit = async () => {if (!selectedResume) {toast({title: 'Resume required'}
+  description: 'Please select a resume before applying.',variant: 'destructive}
 };
   return;
     }
 
-const handleResumeSelected  = null;return (<>;
-      <Tabs value={activeTab} onValueChange={setActiveTab} className=\"w-full\" />;
-        <TabsList className=\"w-full mb-4 bg-zion-blue-dark/30\" />;
+const handleResumeSelected  = null;return (<>;"
+      <Tabs value={activeTab} onValueChange={setActiveTab} className=\"w-full\" />;"
+        <TabsList className=\"w-full mb-4 bg-zion-blue-dark/30\" />;"
           <TabsTrigger value=\"message\" className=\"flex-1\" />;
             Message;
-          </TabsTrigger>;
+          </TabsTrigger>;"
           <TabsTrigger value=\"resume\" className=\"flex-1\" />;
             Resume;
           </TabsTrigger>;
@@ -100,76 +100,76 @@ const handleResumeSelected  = null;return (<>;
             proposalLink = {proposalLink}
             setProposalLink = {setProposalLink}
           />;
-        </TabsContent>;
-        <TabsContent value=\"message\" />;
-          <MessageTab;toast({title: \"Application sent\",description: `Your application for \"${job.title}\" has been sent.,
-}),onClose()} catch (error) {logErrorToProduction('Failed to send application:', { data: error,}
-}),toast({title: \"Application failed\",description: \"There was an error sending your application. Please try again.\";}
+        </TabsContent>;"
+        <TabsContent value=\"message\" />;"
+          <MessageTab;toast({title: \"Application sent\",description: `Your application for \"${job.title}\" has been sent.
+}),onClose()} catch (error) {logErrorToProduction('Failed to send application:', { data: error}"
+}),toast({title: \"Application failed\",description: \"There was an error sending your application. Please try again.\";}"
         variant: \"destructive\";}
       })} finally {setIsSubmitting(false)}
-  }return (< />;
-      <Tabs value={activeTab} onValueChange={setActiveTab} className=\"w-full\" />;
-        <TabsList className=\"w-full mb-4 bg-zion-blue-dark/30\" />;
+  }return (< />;"
+      <Tabs value={activeTab} onValueChange={setActiveTab} className=\"w-full\" />;"
+        <TabsList className=\"w-full mb-4 bg-zion-blue-dark/30\" />;"
           <TabsTrigger value=\"message\" className=\"flex-1\" />;
             Message;
-          </TabsTrigger>;
+          </TabsTrigger>;"
           <TabsTrigger value=\"resume\" className=\"flex-1\" />;
             Resume;
           </TabsTrigger>;
-        </TabsList>;
+        </TabsList>;"
         <TabsContent value=\"message\" />;<MessageTab;setIsSubmitting(true)try {await applyToJob(job.id, {resumeId: selectedResume.id,message})// Send a message to the job poster;
-      await sendMessage({content: `I'm interested in the ${job.title} position. ${messag,}
-}`,recipientId: job.posterId,jobId: job.i,
-})toast({title: 'Application submitted',}
-  description: 'Your application has been sent successfully.'})onClose(,
-} catch (error) {logErrorToProduction('Job application failed', error)toast({title: 'Application failed',}
+      await sendMessage({content: `I'm interested in the ${job.title} position. ${messag}
+}`,recipientId: job.posterId,jobId: job.i
+})toast({title: 'Application submitted'}
+  description: 'Your application has been sent successfully.'})onClose(
+} catch (error) {logErrorToProduction('Job application failed', error)toast({title: 'Application failed'}
   description: 'There was an error submitting your application.',variant: 'destructive'})} finally {setIsSubmitting(false)}
- ,
-}return (<div className=\"space-y-6\" />;
-      <div className=\"flex items-center justify-between\" />;
-        <h2 className=\"text-xl font-semibold\" />Apply to {job.title}</h2>;
+ ,"
+}return (<div className=\"space-y-6\" />;"
+      <div className=\"flex items-center justify-between\" />;"
+        <h2 className=\"text-xl font-semibold\" />Apply to {job.title}</h2>;"
         <Button variant=\"outline\" onClick={onClose} />;
           Close;
         </Button>;
       </div>;
-      <Tabs value={activeTab} onValueChange={setActiveTab} />;
-        <TabsList className=\"grid w-full grid-cols-2\" />;
-          <TabsTrigger value=\"message\" />Message</TabsTrigger>;
+      <Tabs value={activeTab} onValueChange={setActiveTab} />;"
+        <TabsList className=\"grid w-full grid-cols-2\" />;"
+          <TabsTrigger value=\"message\" />Message</TabsTrigger>;"
           <TabsTrigger value=\"resume\" />Resume</TabsTrigger>;
-        </TabsList>;
+        </TabsList>;"
         <TabsContent value=\"message\" className=\"space-y-4\" />;
           <MessageTab;
             message={message}
             onMessageChange={setMessage}
             job={job}
           />;
-        </TabsContent>;
+        </TabsContent>;"
         <TabsContent value=\"resume\" className=\"space-y-4\" />;
           <ResumeTab;
             selectedResume={selectedResume}
             onResumeSelect={setSelectedResume}
           />;
         </TabsContent>;
-      </Tabs>;
+      </Tabs>;"
       <div className=\"flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4\" />;
-        <Button;
-          type=\"button\";
+        <Button;"
+          type=\"button\";"
           variant=\"outline\";
-          onClick={onClose}
+          onClick={onClose}"
           className=\"border-zion-purple/30 text-white\" />
 
           Cancel;
         </Button>;
-        <Button;
-          className=\"bg-zion-purple hover:bg-zion-purple-dark text-white\";
-      <div className=\"flex justify-end space-x-2\" />;
+        <Button;"
+          className=\"bg-zion-purple hover:bg-zion-purple-dark text-white\";"
+      <div className=\"flex justify-end space-x-2\" />;"
         <Button variant=\"outline\" onClick={onClose} />;
           Cancel;
         </Button>;
         <Button;
           onClick={handleSubmit}
           disabled={isSubmitting || !selectedResume} />;
-          {isSubmitting ? (<>;
+          {isSubmitting ? (<>;"
               <Loader2 className=\"h-4 w-4 mr-2 animate-spin\" />;
               Submitting...;
             </>;}
@@ -194,15 +194,15 @@ job.id;
 contextData)//Call onApplySuccess to update job status in the UI onClose ()}catch (error) {';}
   logErrorToProduction ('Failed to send application:', {data: error;}
 })toast ({}finally {setIsSubmitting (false)}
-return (<> <Tabs value= {activeTab;}
-}onValueChange= {setActiveTab \";}
+return (<> <Tabs value= {activeTab;}"
+}onValueChange= {setActiveTab \";}"
 }className=\"w-full\"  /> <TabsList className=\"w-full mb-4 bg-zion-blue-dark/30\"  /> <TabsTrigger value=\"message\" className=\"flex-1\"  /> resume\"className=\" flex-1\"> Resume </TabsTrigger> </TabsList> <TabsContent value=\" message\" /> <MessageTab message= {message;}
 }setMessage= {setMessage;}
-}proposalLink= {proposalLink;}
-}setProposalLink= {setProposalLink \";}
-}/> </TabsContent> <TabsContent value=\" resume\" /> <ResumeTab onResumeSelected= {handleResumeSelected;}
-}selectedResumeId= {selectedResumeId \";}
-}/> </TabsContent> </Tabs> <div className=\" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4\" /> <Button  /> Cancel </Button> <Button  /> {'\";}
+}proposalLink= {proposalLink;}"
+}setProposalLink= {setProposalLink \";}"
+}/> </TabsContent> <TabsContent value=\" resume\" /> <ResumeTab onResumeSelected= {handleResumeSelected;}"
+}selectedResumeId= {selectedResumeId \";}"
+}/> </TabsContent> </Tabs> <div className=\" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4\" /> <Button  /> Cancel </Button> <Button  /> {'\";}"
   isSubmitting ? (<> <Loader2 className=\" h-4 w-4 mr-2 animate-spin\" /> Submitting... </>) : ('Submit Application')}</Button> </div> </>)}'\"}
         </Button>;
       </div>;
@@ -232,13 +232,13 @@ type: selectedResume.type ;}
 job.id;
 contextData)//Call onApplySuccess to update job status in the UI onClose ()}catch (error) {';}
   logErrorToProduction ('Failed to send application:', {data: error ;}
-})toast ({}finally {setIsSubmitting (false)}return (<> <Tabs value= {activeTab ;}
-}onValueChange= {setActiveTab \";}
+})toast ({}finally {setIsSubmitting (false)}return (<> <Tabs value= {activeTab ;}"
+}onValueChange= {setActiveTab \";}"
 }className=\"w-full\"  /> <TabsList className=\"w-full mb-4 bg-zion-blue-dark/30\"  /> <TabsTrigger value=\"message\" className=\"flex-1\"  /> resume\"className=\" flex-1\"> Resume </TabsTrigger> </TabsList> <TabsContent value=\" message\" /> <MessageTab message= {message ;}
 }setMessage= {setMessage ;}
-}proposalLink= {proposalLink ;}
-}setProposalLink= {setProposalLink \";}
-}/> </TabsContent> <TabsContent value=\" resume\" /> <ResumeTab onResumeSelected= {handleResumeSelected ;}
-}selectedResumeId= {selectedResumeId \";}
-}/> </TabsContent> </Tabs> <div className=\" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4\" /> <Button  /> Cancel </Button> <Button  /> {'\";}
-  isSubmitting ? (<> <Loader2 className=\" h-4 w-4 mr-2 animate-spin\" /> Submitting... </>) : ('Submit Application')}</Button> </div> </>)}'\";
+}proposalLink= {proposalLink ;}"
+}setProposalLink= {setProposalLink \";}"
+}/> </TabsContent> <TabsContent value=\" resume\" /> <ResumeTab onResumeSelected= {handleResumeSelected ;}"
+}selectedResumeId= {selectedResumeId \";}"
+}/> </TabsContent> </Tabs> <div className=\" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4\" /> <Button  /> Cancel </Button> <Button  /> {'\";}"
+  isSubmitting ? (<> <Loader2 className=\" h-4 w-4 mr-2 animate-spin\" /> Submitting... </>) : ('Submit Application')}</Button> </div> </>)}'\";"
