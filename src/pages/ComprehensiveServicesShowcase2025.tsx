@@ -646,6 +646,32 @@ export default function ComprehensiveServicesShowcase2025() {
             ))}
           </div>
         </div>
+        
+        {/* Floating elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-60"
+              animate={{
+                x: [0, 100, 0],
+                y: [0, -100, 0],
+                opacity: [0.3, 1, 0.3],
+                scale: [0.5, 1.5, 0.5],
+              }}
+              transition={{
+                duration: 8 + i * 0.4,
+                repeat: Infinity,
+                delay: i * 0.2,
+                ease: "easeInOut"
+              }}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+            />
+          ))}
+        </div>
       </section>
 
       {/* All Services Grid */}
@@ -859,6 +885,4 @@ export default function ComprehensiveServicesShowcase2025() {
       </section>
     </div>
   );
-};
-
-export default ComprehensiveServicesShowcase2025;
+}

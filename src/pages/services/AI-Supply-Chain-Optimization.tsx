@@ -53,6 +53,7 @@ import {
   Ship,
   Plane
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 export default function AISupplyChainOptimization() {
   const features = [
@@ -345,7 +346,42 @@ export default function AISupplyChainOptimization() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Optimization Metrics */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-blue-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Proven Optimization Results
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Real-world results from AI-powered supply chain optimization
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {optimizationMetrics.map((metric, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center"
+              >
+                <div className="text-4xl font-bold text-blue-400 mb-4">{metric.value}</div>
+                <h3 className="text-xl font-bold text-white mb-2">{metric.metric}</h3>
+                <p className="text-gray-300 text-sm">{metric.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Technologies */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -389,6 +425,7 @@ export default function AISupplyChainOptimization() {
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
                 
                 <ul className="space-y-4 mb-8">
@@ -483,6 +520,9 @@ export default function AISupplyChainOptimization() {
                 Schedule Demo
               </motion.button>
             </div>
+            <p className="text-sm text-gray-400 mt-4">
+              Free trial includes full platform access for 30 days
+            </p>
           </motion.div>
         </div>
       </section>

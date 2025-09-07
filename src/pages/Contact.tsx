@@ -80,9 +80,9 @@ import {
 const Contact: React.FC = () => {
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
-    company: '',
     phone: '',
   const [isSubmitted, setIsSubmitted] = useState(false);
     subject: '',
@@ -214,9 +214,9 @@ const Contact = () => {
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-        name: '',
+        firstName: '',
+        lastName: '',
         email: '',
-        company: '',
         phone: '',
         service: '',
         message: '',
@@ -466,6 +466,7 @@ const Contact = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -830,7 +831,7 @@ const Contact = () => {
                     className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
                     {isSubmitting ? (
-                      <>
+                      <div className="flex items-center justify-center">
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                         Sending Message...
                       </>
@@ -1817,6 +1818,7 @@ export default Contact;
               Don't wait to transform your business. Contact us today and let's discuss how our 
               revolutionary technology solutions can help you achieve your goals.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"

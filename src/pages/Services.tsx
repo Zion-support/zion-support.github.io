@@ -19,6 +19,7 @@ import {
   Smartphone,
   Leaf
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 const services = [
   {
