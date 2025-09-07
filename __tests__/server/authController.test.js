@@ -4,7 +4,7 @@ import { send } from '@sendgrid/mail';
 import authController from '../../server/controllers/authController';
 
 vi.mock('@sendgrid/mail', () => ({
-  send: vi.fn()
+  send: vi.fn(),
 }));
 
 describe('authController.forgotPassword', () => {
@@ -15,7 +15,7 @@ describe('authController.forgotPassword', () => {
   it('should send password reset email', async () => {
     const { req, res } = createMocks({
       method: 'POST',
-      body: { email: 'test@example.com' }
+      body: { email: 'test@example.com' },
     });
 
     await authController.forgotPassword(req, res);

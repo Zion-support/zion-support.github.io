@@ -5,19 +5,19 @@ import { Calendar, User, ArrowRight } from 'lucide-react';
 export const metadata = {
   title: 'Blog | Zion Tech Group',
   description: 'Latest insights, trends, and updates from the world of AI, technology, and business innovation.',
-  keywords: 'blog, technology, AI, business, innovation, insights'
+  keywords: 'blog, technology, AI, business, innovation, insights',
 };
 
 const blogPosts = [
   {
     id: 1,
     title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',
-    excerpt: 'Explore the latest trends in artificial intelligence and how they\'re transforming enterprise operations.',
+    excerpt: "Explore the latest trends in artificial intelligence and how they're transforming enterprise operations.",
     author: 'Dr. Sarah Chen',
     date: '2024-01-15',
     readTime: '5 min read',
     category: 'AI & Machine Learning',
-    image: '/blog/ai-trends-2024.jpg'
+    image: '/blog/ai-trends-2024.jpg',
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const blogPosts = [
     date: '2024-01-10',
     readTime: '8 min read',
     category: 'Cloud Computing',
-    image: '/blog/cloud-migration-guide.jpg'
+    image: '/blog/cloud-migration-guide.jpg',
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const blogPosts = [
     date: '2024-01-05',
     readTime: '6 min read',
     category: 'Cybersecurity',
-    image: '/blog/ai-cybersecurity.jpg'
+    image: '/blog/ai-cybersecurity.jpg',
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const blogPosts = [
     date: '2024-01-01',
     readTime: '7 min read',
     category: 'Software Development',
-    image: '/blog/micro-saas-guide.jpg'
+    image: '/blog/micro-saas-guide.jpg',
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const blogPosts = [
     date: '2023-12-28',
     readTime: '4 min read',
     category: 'Data Analytics',
-    image: '/blog/data-analytics-insights.jpg'
+    image: '/blog/data-analytics-insights.jpg',
   },
   {
     id: 6,
@@ -67,8 +67,8 @@ const blogPosts = [
     date: '2023-12-20',
     readTime: '9 min read',
     category: 'Emerging Technologies',
-    image: '/blog/quantum-computing.jpg'
-  }
+    image: '/blog/quantum-computing.jpg',
+  },
 ];
 
 const categories = [
@@ -78,7 +78,7 @@ const categories = [
   'Cybersecurity',
   'Software Development',
   'Data Analytics',
-  'Emerging Technologies'
+  'Emerging Technologies',
 ];
 
 export default function BlogPage() {
@@ -88,9 +88,7 @@ export default function BlogPage() {
       <section className="bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our Blog
-            </h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Blog</h1>
             <p className="text-xl text-blue-100 mb-8">
               Latest insights, trends, and updates from the world of AI, technology, and business innovation.
             </p>
@@ -108,9 +106,7 @@ export default function BlogPage() {
                 <button
                   key={category}
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-colors duration-200 ${
-                    category === 'All'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    category === 'All' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
                   {category}
@@ -121,7 +117,10 @@ export default function BlogPage() {
             {/* Blog Posts Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
-                <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <article
+                  key={post.id}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                >
                   <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                     <div className="text-4xl text-gray-400">📝</div>
                   </div>
@@ -131,12 +130,8 @@ export default function BlogPage() {
                         {post.category}
                       </span>
                     </div>
-                    <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                      {post.title}
-                    </h2>
-                    <p className="text-gray-600 mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
+                    <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{post.title}</h2>
+                    <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <div className="flex items-center">
                         <User className="h-4 w-4 mr-1" />
@@ -176,9 +171,7 @@ export default function BlogPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Stay Updated
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Stay Updated</h2>
             <p className="text-xl text-gray-600 mb-8">
               Subscribe to our newsletter for the latest insights and updates from the world of technology.
             </p>

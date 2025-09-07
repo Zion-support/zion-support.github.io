@@ -6,24 +6,22 @@ jest.mock('@prisma/client', () => {
   const mPrismaClient = {
     product: {
       findMany: jest.fn(),
-      aggregate: jest.fn()
+      aggregate: jest.fn(),
     },
     productReview: {
-      aggregate: jest.fn()
+      aggregate: jest.fn(),
     },
     $queryRawUnsafe: jest.fn(),
-    $disconnect: jest.fn()
+    $disconnect: jest.fn(),
   };
   return { PrismaClient: jest.fn(() => mPrismaClient) };
 });
 
 let prisma: PrismaClient;
 
-
 describe('/api/products API Endpoint', () => {
   let req: ReturnType<typeof createRequest>;
   let res: ReturnType<typeof createResponse>;
-
 
   describe('GET /api/products with fuzzy search', () => {
     it('should return products matching search query', async () => {
@@ -34,15 +32,15 @@ describe('/api/products API Endpoint', () => {
           description: 'AI-powered product',
           price: 100,
           currency: 'USD',
-          tags: ['ai', 'gpt']
-        }
+          tags: ['ai', 'gpt'],
+        },
       ];
 
       (prisma.product.findMany as jest.Mock).mockResolvedValue(mockProducts);
 
       req = createRequest({
         method: 'GET',
-        query: { search: 'gpt' }
+        query: { search: 'gpt' },
       });
       res = createResponse();
 

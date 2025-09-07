@@ -15,7 +15,7 @@ function mockReq(method: string, body?: unknown): NextApiRequest {
     body,
     headers: {},
     query: {},
-    cookies: {}
+    cookies: {},
   } as NextApiRequest;
 }
 
@@ -36,7 +36,7 @@ test('GET returns profile', () => {
   expect(res.json).toHaveBeenCalledWith(
     expect.objectContaining({
       email: 'jane@example.com',
-      points: expect.any(Number)
+      points: expect.any(Number),
     })
   );
 });
@@ -47,7 +47,7 @@ test('PUT updates profile', () => {
   handler(req, res);
   expect(res.json).toHaveBeenCalledWith(
     expect.objectContaining({
-      name: 'New Name'
+      name: 'New Name',
     })
   );
 });

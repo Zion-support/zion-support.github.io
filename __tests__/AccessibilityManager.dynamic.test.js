@@ -5,9 +5,7 @@ import AccessibilityManagerdynamic from '../components/AccessibilityManager.dyna
 describe('AccessibilityManagerdynamic', () => {
   test('renders without crashing', () => {
     render(<AccessibilityManagerdynamic />);
-    expect(
-      screen.getByTestId('accessibilitymanager.dynamic')
-    ).toBeInTheDocument();
+    expect(screen.getByTestId('accessibilitymanager.dynamic')).toBeInTheDocument();
   });
   test('displays correct content', () => {
     render(<AccessibilityManagerdynamic />);

@@ -13,7 +13,7 @@ test.describe('Performance Tests', () => {
     const metrics = await page.evaluate(() => {
       return {
         jsHeapSizeLimit: performance.memory?.jsHeapSizeLimit || 0,
-        usedJSHeapSize: performance.memory?.usedJSHeapSize || 0
+        usedJSHeapSize: performance.memory?.usedJSHeapSize || 0,
       };
     });
     expect(metrics.usedJSHeapSize).toBeLessThan(50000000);

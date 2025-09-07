@@ -1,20 +1,18 @@
-import React from 'react'
-import { Metadata } from 'next'
+import React from 'react';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Cloud Optimization | Zion Tech Group',
   description: 'Professional cloud optimization services for your business needs.',
-  keywords: 'cloud optimization, services, business, technology'
-}
+  keywords: 'cloud optimization, services, business, technology',
+};
 
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cloud Optimization
-          </h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Cloud Optimization</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Professional cloud optimization services for your business needs.
           </p>
@@ -24,25 +22,19 @@ export default function ServicePage() {
           <div className="bg-gray-800 rounded-lg p-6">
             <div className="text-4xl mb-4">🚀</div>
             <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
-            <p className="text-gray-300">
-              High-performance solutions that deliver results quickly and consistently.
-            </p>
+            <p className="text-gray-300">High-performance solutions that deliver results quickly and consistently.</p>
           </div>
-          
+
           <div className="bg-gray-800 rounded-lg p-6">
             <div className="text-4xl mb-4">🔧</div>
             <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
-            <p className="text-gray-300">
-              Seamlessly integrate with your existing systems and workflows.
-            </p>
+            <p className="text-gray-300">Seamlessly integrate with your existing systems and workflows.</p>
           </div>
-          
+
           <div className="bg-gray-800 rounded-lg p-6">
             <div className="text-4xl mb-4">📈</div>
             <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
-            <p className="text-gray-300">
-              Grow with your business with our flexible and scalable platform.
-            </p>
+            <p className="text-gray-300">Grow with your business with our flexible and scalable platform.</p>
           </div>
         </div>
 
@@ -57,5 +49,5 @@ export default function ServicePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

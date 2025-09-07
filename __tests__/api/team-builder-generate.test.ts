@@ -7,18 +7,17 @@ import { ProjectBrief, TeamRecommendation } from '@/types';
 jest.mock('@/integrations/supabase/client', () => ({
   supabase: {
     functions: {
-      invoke: jest.fn()
-    }
-  }
+      invoke: jest.fn(),
+    },
+  },
 }));
 
 describe('/api/team-builder/generate API Endpoint', () => {
   const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
 
-
   it('should return 405 if method is not POST', async () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
-      method: 'GET' as RequestMethod
+      method: 'GET' as RequestMethod,
     });
 
     await generateHandler(req, res);
@@ -30,7 +29,7 @@ describe('/api/team-builder/generate API Endpoint', () => {
   it('should return 400 if required fields are missing', async () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
-      body: { projectName: 'Test' }
+      body: { projectName: 'Test' },
     });
 
     await generateHandler(req, res);
@@ -45,17 +44,17 @@ describe('/api/team-builder/generate API Endpoint', () => {
       goals: 'Test Goals',
       timeline: '3 months',
       budget: '$10k',
-      techStack: ['React']
+      techStack: ['React'],
     };
 
     mockSupabaseInvoke.mockResolvedValueOnce({
       error: { message: 'Supabase error' },
-      data: null
+      data: null,
     });
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
-      body: mockBrief
+      body: mockBrief,
     });
 
     await generateHandler(req, res);
@@ -70,22 +69,22 @@ describe('/api/team-builder/generate API Endpoint', () => {
       goals: 'Test Goals',
       timeline: '3 months',
       budget: '$10k',
-      techStack: ['React']
+      techStack: ['React'],
     };
 
     const mockRecommendation: Partial<TeamRecommendation> = {
       recommendationSummary: '1 PM, 2 Devs',
-      roles: []
+      roles: [],
     };
 
     mockSupabaseInvoke.mockResolvedValueOnce({
       data: mockRecommendation,
-      error: null
+      error: null,
     });
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
-      body: mockBrief
+      body: mockBrief,
     });
 
     await generateHandler(req, res);
