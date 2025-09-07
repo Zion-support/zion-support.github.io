@@ -2,16 +2,6 @@
   const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-ursor/fix-lint-push-and-merge-to-main-28da
-    ) {
-      console.log(`Fixing merge conflicts: in: ${filePath}`);
-
-      // Remove merge conflict markers and keep the content after 
-ursor/fix-lint-push-and-merge-to-main-28da
-      const lines = content.split('\n');
-      const fixedLines = [];
-      let inConflict = false;
-      let keepContent = false;
 class MergeConflictResolver {
   constructor() {
     this.projectRoot = process.cwd();
@@ -47,25 +37,6 @@ class MergeConflictResolver {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
-
-    ) {
-      console.log(`Fixing merge conflicts: in: ${filePath}`);
-
-
-          inConflict = true;
-          keepContent = false;
-          continue;
-        }
-
-          inConflict = false;
-          keepContent = false;
-          continue;
-        }
-
-        if (!inConflict || keepContent) {
-          fixedLines.push(line);
-      // Remove merge conflict markers and keep HEAD version
-      content = content.replace(
       // Remove merge conflict markers and keep HEAD version,
   content = content.replace(
         /\n(.*?)\n        '$1'

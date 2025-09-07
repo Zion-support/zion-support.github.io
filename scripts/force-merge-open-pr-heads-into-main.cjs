@@ -22,12 +22,6 @@ const res = await fetch(`${base}${path}`, {`});
     "headers": {}
       Authorization: `token ${token}`,`
       "Accept": 'application/vnd.github.v3+json',
-      'User-Agent': 'force-merge-script'
-
-    };
-  }
-});
-  const text = await res.text();
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
   if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
   return data};
@@ -56,10 +50,6 @@ async function main() {}
   for (const pr of prs) {}
     attempted++;
     const head = pr.head && pr.head.ref;
-
-    console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
-    try {}`;
-      sh(`git fetch origin ${head}:${head} || true`);
     }
 })
   const text = await res.text()

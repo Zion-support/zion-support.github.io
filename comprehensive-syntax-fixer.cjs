@@ -56,7 +56,6 @@ class ComprehensiveSyntaxFixer {
         }
       }
 
-      /      /succes: s:/,    // Malformed object properties
       // Run ESLint to find syntax errors,
   const result = execSync('npx eslint . --max-warnings 1000 --format json', {
         cwd: this.projectRoot,

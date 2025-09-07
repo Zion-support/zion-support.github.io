@@ -1,4 +1,3 @@
-import React from 'react'
 interface OptimizedImageProps {
   src: string,
   alt: string,
@@ -102,13 +101,6 @@ src={src}
       alt={alt}
       width={width}
       height={height}
-      priority={priority}
-      sizes={sizes}
-      quality={quality} />
-  );
-};
-
-export default OptimizedImage;
       priority={priority}
       className={className}
       sizes={sizes}

@@ -15,6 +15,9 @@
 - Operation
 
 - scripts/auto-fixer.js
+- scripts/advanced-build-optimizer.js
+- scripts/performance-monitor-enhanced.js
+- scripts/auto-fixer.js
 ## Errors
 - scripts/comprehensive-error-fixer.cjs: Command failed: node scripts/comprehensive-error-fixer.cjs,
   Error fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/media/docu-script/requirements.txt'
@@ -33,60 +36,6 @@
   syscall: 'stat',
   path: '/workspace/media/docu-script/requirements.txt'
 }
-file:///workspace/scripts/auto-fixer.js:3
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';
-^
-
-SyntaxError: Invalid or unexpected token
-    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
-    at Module._compile (node:internal/modules/cjs/loader:1704:20)
-    at Object..js (node:internal/modules/cjs/loader:1895:10)
-    at Module.load (node:internal/modules/cjs/loader:1465:32)
-    at Function._load (node:internal/modules/cjs/loader:1282:12)
-    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-    at node:internal/main/run_main_module:36:49
-
-Node.js v22.16.0
-
-- scripts/advanced-build-optimizer.js: Command failed: node scripts/advanced-build-optimizer.js
-file:///workspace/scripts/advanced-build-optimizer.js:3
-ursor/integrate-build-improve-and-re-verify-8f7d;
-                                            ^
-
-SyntaxError: Invalid or unexpected token
-    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
-    at Module._compile (node:internal/modules/cjs/loader:1704:20)
-    at Object..js (node:internal/modules/cjs/loader:1895:10)
-    at Module.load (node:internal/modules/cjs/loader:1465:32)
-    at Function._load (node:internal/modules/cjs/loader:1282:12)
-    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-    at node:internal/main/run_main_module:36:49
-
-Node.js v22.16.0
-
-- scripts/performance-monitor-enhanced.js: Command failed: node scripts/performance-monitor-enhanced.js
-file:///workspace/scripts/performance-monitor-enhanced.js:3
-ursor/fix-syntax-push-and-merge-to-main-40de;
-                                        ^^
-
-SyntaxError: Invalid or unexpected token
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
-
-Node.js v22.16.0
-
-
-Node.js v22.16.0
-
-- ESLint: Command failed: npm run lint
-
 - ESLint: Command failed: npm run lint,
   npm warn config optional Use `--omit=optional` to exclude optional dependencies, or,
   npm warn config `--include=optional` to include them.
@@ -271,8 +220,6 @@ Caused by:
 ./app/layout.tsx
 > Build failed because of webpack errors
 ## Warnings
-
-
 ## Recommendations
 - Address all errors before deployment
 - Review and address warnings for better code quality

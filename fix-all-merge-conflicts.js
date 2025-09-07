@@ -92,7 +92,6 @@ console.log('Starting comprehensive merge conflict resolution...');
         }
       }
     } catch (error) {
-function findConflictedFiles(dir) {
       // Skip directories that can't be read,
   function findConflictedFiles(dir) {
   const conflictedFiles = [];

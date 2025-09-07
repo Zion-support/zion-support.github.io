@@ -1,12 +1,4 @@
 ')
-      }
-    }
-    // Clean up the content,
-backupContent = backupContent.trim()
-
-    // Ensure it has proper structure,
-if (!backupContent.includes('export default')) {'
-     ;
 const fs = require($2);
 const path = require($2);
 // List of specific pages that were identified as corrupted,

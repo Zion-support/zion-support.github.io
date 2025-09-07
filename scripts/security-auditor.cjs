@@ -1,15 +1,3 @@
-    this.projectRoot = process.cwd();
-
-    this.ensureDirectories()}
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}"
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-
 #!/usr/bin/env node,
   const fs = require('fs');
 const path = require('path');
@@ -207,104 +195,17 @@ const vulnerablePackages = ['lodash',;
     console.log('🔒 Starting Security Audit');
     await this.auditDependencies();
     await this.generateReport();
-    // Generate recommendations
-    // Generate recommendations
-    report.recommendations = this.generateRecommendations(report.analysis);
-
-    const reportFile = path.join(this.reportsDir, `security-report-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
-    this.log(`📄 Security report "generated": ${reportFile}`);
-    
-    
-    this.log(`📄 Security report "generated": ${reportFile}`);
-    
-    return report}
-
-  generateRecommendations(analysis) {
-    const recommendations = [];
-
-    if (analysis.npmAudit && analysis.npmAudit.count > 0) {
-      recommendations.push({
-        "type": 'npm_audit',
-        "priority": 'high',
-        "message": `Found ${analysis.npmAudit.count} vulnerabilities. Run 'npm audit fix' to resolve.`,
-        "impact": 'Reduces security risks'
-      })}
-
-    if (analysis.environmentVariables && analysis.environmentVariables.sensitiveVars.length > 0) {
-      recommendations.push({
-        "type": 'environment_variables',
-        "priority": 'high',
-        "message": 'Found potentially sensitive environment variables. Review and secure them.',
-        "impact": 'Prevents credential exposure'
-      })}
-
-    if (analysis.dependencies && analysis.dependencies.vulnerablePackages.length > 0) {
-      recommendations.push({
-        "type": 'dependencies',
-        "priority": 'medium',
-        "message": 'Found potentially vulnerable packages. Consider updating or replacing them.',
-        "impact": 'Reduces security risks'
-      })}
-
-    if (analysis.codeSecurity && analysis.codeSecurity.issues.length > 0) {
-      recommendations.push({
-        "type": 'code_security',
-        "priority": 'medium',
-        "message": 'Found potential security issues in code. Review and fix them.',
-        "impact": 'Improves code security'
-      })}
-
-    return recommendations}
-
-  async run() {
-    this.log('🔒 Starting Security Auditor...');
-    
-    try {
-      const report = await this.generateSecurityReport();
-      
-      this.log('🎉 Security audit completed!');
-      this.log(`🔍 "Vulnerabilities": ${report.analysis.npmAudit.count || 0}`);
-      this.log(`🔐 Sensitive "variables": ${report.analysis.environmentVariables.sensitiveVars.length || 0}`);
-      this.log(`📦 Vulnerable "packages": ${report.analysis.dependencies.vulnerablePackages.length || 0}`);
-      this.log(`🔍 Code security "issues": ${report.analysis.codeSecurity.issues.length || 0}`);
-      this.log(`💡 "Recommendations": ${report.recommendations.length}`);
-      
-      return report} catch (error) {
-      this.log(`💥 Security audit "failed": ${error.message}`);
-      throw error}
-  }
-}
-
   }
 }
 if (require.main === module) {
   const auditor = new SecurityAuditor();
   auditor.run()
     .then((report) => {
-      
-      
-      
-      
-      
-      
       process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Security Auditor "failed": ', error.message);
       process.exit(1)})}
 module.exports = SecurityAuditor;
-
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
