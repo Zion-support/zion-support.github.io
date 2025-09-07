@@ -1,30 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Content Generator Script;
  * Generates meaningful content for placeholder pages;
  */
-<<<<<<< HEAD
 const fs = require("child_process")
 const path = require("path")
     this.projectRoot = path.resolve(__dirname, "..")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(" Starting Content Generation...")
       const reportPath = path.join(this.projectRoot, "website-analysis-report.json")
         const report = JSON.parse(fs.readFileSync(reportPath, "utf8")
@@ -36,13 +20,7 @@ const path = require("path")
         "
       "it-services": {"title": "IT Services","description": "Complete IT solutions for digital transformation"}
         content: "
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "
     console.log(" Generating solution page content...")
       "enterprise": {"title": "Enterprise Solutions","description": "Scalable solutions for large organizations"}
@@ -57,9 +35,12 @@ const path = require("path")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
     console.log(`� Report saved "to"`)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -79,3 +60,6 @@ const path = require("path")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

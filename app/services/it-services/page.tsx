@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata = { 
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, SRE, cybersecurity, and infrastructure management. Enterprise-grade solutions for modern businesses.'
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 import React from 'react';
 import Link from 'next/link';
 
@@ -10,7 +13,10 @@ export const metadata = {
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.',
   keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise IT, cloud consulting, SRE'
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 };
 
 interface FeatureCardProps {
@@ -72,6 +78,7 @@ const ContactSection: React.FC = () => (
 
 export default function ITServicesPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="animate-fade-in">
       <section className="text-center py-12">
@@ -170,6 +177,8 @@ export default function ITServicesPage() {
               "Penetration testing & audits"
             ]} 
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -201,6 +210,12 @@ export default function ITServicesPage() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We follow a structured approach to deliver reliable and efficient IT solutions.
           </p>
+          <a
+            href="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+          >
+            Contact Us
+          </a>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ProcessStep
@@ -217,11 +232,15 @@ export default function ITServicesPage() {
             step={3}
             title="Optimization & Support"
             description="Continuous monitoring, performance optimization, and ongoing technical support."
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
           />
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Industry Solutions */}
       <section className="py-12">
@@ -433,6 +452,8 @@ function ContactCTA() {
 }
 
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Key IT Service Areas</h2>
@@ -478,4 +499,7 @@ function ContactCTA() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

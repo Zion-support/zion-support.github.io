@@ -1,8 +1,11 @@
 @tailwind base;
 @tailwind components;
 <<<<<<< HEAD
+<<<<<<< HEAD
 @tailwind utilities;
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 @tailwind utilities;
 
 @layer base {
@@ -68,8 +71,6 @@
   background: #a8a8a8;
 }
 
-=======
->>>>>>> a37d0146a279e87fedd9d69d2a332111065044d5
 @layer utilities {
   .focus-visible:focus {
     @apply outline-none ring-2 ring-blue-500 ring-offset-2;
@@ -238,4 +239,8 @@
     transform: rotateZ(0);
   }
 }
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+@tailwind utilities;
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -24,6 +18,9 @@ const { execSync } = require('child_process');
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class QualityAssuranceMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -32,14 +29,7 @@ class QualityAssuranceMonitor {}
     this.startTime = Date.now()};
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
   async runCommand(command, options = {}) {}
     try {}
@@ -57,12 +47,16 @@ class QualityAssuranceMonitor {}
     this.log('Running quality assurance checks...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Check TypeScript errors;
     const tsResult = await this.runCommand('npx tsc --noEmit', { "silent": true }
 });
@@ -99,13 +93,17 @@ class QualityAssuranceMonitor {}
     this.log('Starting Quality Assurance Monitor...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     try {}
       const issues = await this.checkCodeQuality();
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     
     try {}
       const issues = await this.checkCodeQuality();
       
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     
@@ -113,6 +111,8 @@ class QualityAssuranceMonitor {}
       const issues = await this.checkCodeQuality();
       
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       if (issues.length > 0) {}
         this.log(`Found ${issues.length} quality issues that need attention`, 'warn');
         for (const issue of issues) {}
@@ -124,7 +124,6 @@ class QualityAssuranceMonitor {}
       return { "success": false, "error": error.message }};
   };
 };
-=======
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})};
   async runCommand(command, options = {}) {}
     try {}
@@ -140,7 +139,6 @@ class QualityAssuranceMonitor {}
   async run() {}"
 
       return { "success": false, "error": error.message }};"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (require.main === module) {}
   const monitor = new QualityAssuranceMonitor();
   monitor.run().catch(console.error)};
@@ -148,9 +146,12 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 module.exports = QualityAssuranceMonitor;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -168,3 +169,6 @@ module.exports = QualityAssuranceMonitor;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

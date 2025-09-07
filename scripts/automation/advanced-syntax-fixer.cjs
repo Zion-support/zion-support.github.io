@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
-=======
 #!/usr/bin/env
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("fs")
 const path = require("path")
 console.log([INFO]  Starting advanced syntax error fix automation...")
@@ -17,7 +8,6 @@ console.log([INFO]  Starting advanced syntax error fix automation...")
     const scriptTagRegex = /<script type="application\/ld\+json \/\/ "TODO"
     content = content.replace(scriptTagRegex, "<script type=application/ld+json dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
     const scriptTagRegex = /<script type=application\/ld\+json" \/\/ "TODO"
-<<<<<<< HEAD
     content = content.replace(scriptTagRegex, "<script type=""application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
   return match.replace(/<script[^>]*><\/script>\s*/, ")
     const duplicateCommentsRegex = /\/\/ "TODO": Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if ""needed/g""
@@ -57,9 +47,12 @@ const logsDir = path.join(process.cwd(), "logs"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -75,6 +68,8 @@ console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     content = content.replace(scriptTagRegex, "<script type=application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
   return match.replace(/<script[^>]*><\/script>\s*/, ")"
 </script>"
@@ -82,7 +77,4 @@ console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
 function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]"
   console.log(`[INFO]  Fixed advanced syntax errors in ${path.basename(filePath)}`;
 });`)}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -7,23 +7,16 @@ function fixMergeConflicts(filePath) {
     let originalContent = content;
     
     // Remove all merge conflict markers and keep the better version (after =======)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> [^\n]*/g, '$1');
-    
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)    
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    
     // Clean up any remaining markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    content = content.replace(/=======[\s\S]*?    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
     
     // Remove any orphaned conflict markers
     content = content.replace(/<<<<<<< HEAD[\s\S]*$/g, '');
     content = content.replace(/=======[\s\S]*$/g, '');
-    content = content.replace(/>>>>>>> [^\n]*/g, '');
-    
+    content = content.replace(/    
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);

@@ -1,11 +1,5 @@
 <<<<<<< HEAD:backup-problematic-files/scripts/intelligent/smart-resource-manager.cjs
 
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/smart-resource-manager.cjs
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/smart-resource-manager.cjs
 #!/usr/bin/env node;
 /**
  * Smart Resource Manager;
@@ -13,12 +7,7 @@
  */
 
 <<<<<<< HEAD:backup-problematic-files/scripts/intelligent/smart-resource-manager.cjs
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/smart-resource-manager.cjs
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/smart-resource-manager.cjs
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -71,10 +60,6 @@ const os = require('os')
         "action"
       console.error(' Error compressing "files")
 <<<<<<< HEAD:backup-problematic-files/scripts/intelligent/smart-resource-manager.cjs
-=======
 <<<<<<< HEAD:scripts/intelligent/smart-resource-manager.cjs
     console.error(' Smart Resource Manager "failed")
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
     console.error(' Smart Resource Manager "failed")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/smart-resource-manager.cjs

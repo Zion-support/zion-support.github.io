@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Working Automation Suite
@@ -308,23 +309,23 @@ suite.run().catch(console.error);
 
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-#!/usr/bin/env node;
 =======
 
 
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+#!/usr/bin/env node;
 
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Zion Tech Group - Working Automation Suite')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/main
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 console.log('====')
   log(message, type = 'info')
     const prefix = type === 'error' ? '' : type === 'success' ? '' : 'ℹ'
@@ -335,4 +336,7 @@ console.log('====')
       "recommendations"
     this.log(`Report saved "to"`)
       this.log(` Automation suite "failed"`)
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

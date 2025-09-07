@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, analytics platforms, and automation solutions. From MVP to scale.'
@@ -104,6 +105,8 @@ export default function MicroSaaSPage() {
               "Backup & disaster recovery"
             ]} 
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 import React from 'react';
 import Link from 'next/link';
 
@@ -219,11 +222,15 @@ export default function MicroSaaSPage() {
             step={3}
             title="Growth & Optimization"
             description="User feedback integration, feature expansion, and continuous performance optimization."
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
           />
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Pricing Plans */}
       <section className="py-12">
@@ -271,6 +278,8 @@ export default function MicroSaaSPage() {
             ]}
             popular={false}
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Types of Micro SaaS We Build</h2>
@@ -308,11 +317,15 @@ export default function MicroSaaSPage() {
             title="Integration Tools"
             description="Connecting disparate systems and automating data flow between applications."
             icon="🔗"
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
           />
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Contact CTA */}
       <ContactCTA />
@@ -440,4 +453,9 @@ function ContactCTA() {
     </div>
   );
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      <ContactSection />
+    </div>
+  );
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Comprehensive Automation Orchestrator
@@ -297,27 +296,12 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n")}
 // Run the orchestrator
 const orchestrator = new AutomationOrchestrator();
 orchestrator.orchestrate().catch(console.error);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 /**;
  * Comprehensive Automation Orchestrator;
  * Orchestrates all automation scripts for maximum efficiency;
  */;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require("$1")
 const path = require("$1")
 const { execSync, spawn } = require("child_process")
@@ -471,9 +455,12 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n"`)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
       this.log(")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -494,3 +481,6 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n"`)
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/main
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

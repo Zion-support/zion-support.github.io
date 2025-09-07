@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Console Error Fixer Automation;
  * Identifies and fixes console errors and warnings;
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -30,12 +22,17 @@ const { execSync } = require('child_process');
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class ConsoleErrorFixer {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -50,17 +47,14 @@ class ConsoleErrorFixer {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         console.log(message)};
     findConsoleStatements() {}
         this.log('Finding console statements...');
         
         const files = this.findSourceFiles(;);
         const consoleStatements = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         console.log(message)};
@@ -76,6 +70,9 @@ class ConsoleErrorFixer {}
 =======
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         for (const file of files) {}
             try {}
 
@@ -83,15 +80,19 @@ class ConsoleErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 for (let i = ;0; i < lines.length i++) {}
                     const line = lines[i];
                     const consoleMatch = line.match(/console\.(log|warn|error|info|debug)\s*\(/;g;);
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                 
                 for (let i = ;0; i < lines.length i++) {}
                     const line = lines[i];
                     const consoleMatch = line.match(/console\.(log|warn|error|info|debug)\s*\(/;g;);
                     
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
                 for (let i = ;0; i < lines.length i++) {}
@@ -105,6 +106,8 @@ class ConsoleErrorFixer {}
                     const consoleMatch = line.match(/console\.(log|warn|error|info|debug)\s*\(/;g;);
                     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                     if ( {})
                         consoleStatements.push({})
 
@@ -112,15 +115,19 @@ class ConsoleErrorFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
             
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         const scanDirectory = (dir) => {}
@@ -134,10 +141,13 @@ class ConsoleErrorFixer {}
     ) retu}r;n;
             
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,6 +157,9 @@ class ConsoleErrorFixer {}
 =======
                 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
@@ -156,26 +169,27 @@ class ConsoleErrorFixer {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
             };
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }};
         scanDirectory(this.projectRoot);
         return files};
     removeConsoleStatements() {}
-<<<<<<< HEAD
         this.log('Removing console statements...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         const files = this.findSourceFiles(;);
         let removedCount = ;0;
         const removals = [];
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         
         const files = this.findSourceFiles(;);
         let removedCount = ;0;
         const removals = [];
         
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         
@@ -184,20 +198,27 @@ class ConsoleErrorFixer {}
         const removals = [];
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         for (const file of files) {}
             try {}
                 let content = fs.readFileSync(file, 'utf8';);
                 let originalContent = conte;n;t;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                 // Remove console statements;
                 content = content.replace(/console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?\s*/g, '');
                 
                 // Remove empty lines that might be left behind;
                 content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 
@@ -215,15 +236,14 @@ class ConsoleErrorFixer {}
 =======
                 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-                if ( {})
 =======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+                if ( {})
                     fs.writeFileSync(file, content)) {}
                     fs.writeFileSync(file, content)};
                     removedCount++;
                     removals.push({})
-<<<<<<< HEAD
                         "file": file,
                         "action": 'removed_console_statements'
                     })};
@@ -236,15 +256,19 @@ class ConsoleErrorFixer {}
         this.log('Replacing console statements with logger...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         const files = this.findSourceFiles(;);
         let replacedCount = ;0;
         const replacements = [];
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         
         const files = this.findSourceFiles(;);
         let replacedCount = ;0;
         const replacements = [];
         
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         
@@ -253,18 +277,24 @@ class ConsoleErrorFixer {}
         const replacements = [];
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         for (const file of files) {}
             try {}
                 let content = fs.readFileSync(file, 'utf8';);
                 let originalContent = conte;n;t;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
                 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                 // Replace console.log with logger.info;
                 content = content.replace(/console\.log\s*\(/g, 'logger.info(');
                 content = content.replace(/console\.warn\s*\(/g, 'logger.warn(');
@@ -273,12 +303,16 @@ class ConsoleErrorFixer {}
                 content = content.replace(/console\.debug\s*\(/g, 'logger.debug(');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
                 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                 if ( {})
                     // Add logger import if not present;
                     if (!content.includes('import') || !content.includes('logger')) {}
@@ -303,13 +337,17 @@ class ConsoleErrorFixer {}
         this.log('Creating logger utility...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         const loggerPath = path.join(this.projectRoot, 'utils', 'logger.js';);
         const loggerDir = path.dirname(loggerPath;);
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         
         const loggerPath = path.join(this.projectRoot, 'utils', 'logger.js';);
         const loggerDir = path.dirname(loggerPath;);
         
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         
@@ -317,12 +355,15 @@ class ConsoleErrorFixer {}
         const loggerDir = path.dirname(loggerPath;);
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         if () {}
             fs.mkdirSync(loggerDir, { "recursive": true })};
         const loggerContent = "/**
  * Logger Utility;
  * Centralized logging for the application;
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -342,6 +383,9 @@ class ConsoleErrorFixer {}
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class Logger {}
     constructor() {}"
 
@@ -349,7 +393,6 @@ class Logger {}
         if (this.isDevelopment) {}
             console[level](message, ...args)};
         // In production, you might want to send logs to a service;
-<<<<<<< HEAD
     };
     info(message, ...args) {}
         this.log('info', message, ...args)};
@@ -369,12 +412,16 @@ export const logger = new Logger) {}
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class Logger {}
     constructor() {}
         this.isDevelopment = process.env.NODE_ENV === 'development'};
@@ -396,6 +443,7 @@ export const logger = new Logger}(;);
 ";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -407,6 +455,8 @@ export const logger = new Logger}(;);
         this.log('Generating console error fix report...');
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
         fs.writeFileSync(loggerPath, loggerContent);
         this.log('Logger utility created');
@@ -415,6 +465,7 @@ export const logger = new Logger}(;);
     generateErrorReport() {}
         this.log('Generating console error fix report...');
         
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
@@ -427,10 +478,13 @@ export const logger = new Logger}(;);
 =======
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         const consoleStatements = this.findConsoleStatements(;);
         const removals = this.removeConsoleStatements(;);
         const replacements = this.replaceWithLogger(;);
         const loggerCreation = this.createLoggerUtility(;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -442,26 +496,32 @@ export const logger = new Logger}(;);
 =======
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         const report = {}
 
             "fixes": {}"
                 consoleStatements: consoleStatements,"
                 "removals": removals,
                 "replacements": replacements,
-<<<<<<< HEAD
                 "loggerCreation": loggerCreation;
             },
             "recommendations": this.generateErrorRecommendations();
        };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Console error fix report saved to ${this.reportFile}");
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Console error fix report saved to ${this.reportFile}");
         
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
@@ -469,6 +529,8 @@ export const logger = new Logger}(;);
         this.log("Console error fix report saved to ${this.reportFile}");
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         return report};
     generateErrorRecommendations() {}
         return [;]
@@ -484,18 +546,21 @@ export const logger = new Logger}(;);
         this.log('Console Error Fixer started');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         try {}
             const report = this.generateErrorReport(;);
             this.log('Console Error Fixer completed successfully');
             return report} catch (error) {}
             this.log("Console Error Fixer "failed": ${error.message}`);
-=======
                 "loggerCreation": loggerCreation;"
             },"
             "recommendations": this.generateErrorRecommendations();"
@@ -506,7 +571,6 @@ export const logger = new Logger}(;);
     generateErrorRecommendations() {}
         return [;]"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
 // Run the fixer if this script is executed directly;
     const fixer = new ConsoleErrorFixer) {}
@@ -516,9 +580,12 @@ export const logger = new Logger}(;);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 module.exports = ConsoleErrorFixer;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -536,3 +603,6 @@ module.exports = ConsoleErrorFixer;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

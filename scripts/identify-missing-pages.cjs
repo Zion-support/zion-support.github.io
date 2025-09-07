@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require("fs")
 const path = require("path")
     const appContent = await fs.readFile("src/App.tsx", "utf8")
     const routeMatches = appContent.match(/path=")
       ? routeMatches.map(match => match.replace("path= ").replace(", ")
     const pagesDir = "src/pages"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // console.log("=== ROUTES FROM APP.TSX ===")
     console.log("\n=== EXISTING PAGE FILES ===")
 const fs = require("fs").promises;const path = require("path")"
@@ -36,6 +23,7 @@ const fs = require("fs").promises;const path = require("path")"
           .replace("/", ")
           .replace(/-/g, " ")
           .replace(/\s+/g, ")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,3 +55,8 @@ const fs = require("fs").promises;const path = require("path")"
         console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
     console.error("Error identifying missing "pages")
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
+    console.error("Error identifying missing "pages")
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

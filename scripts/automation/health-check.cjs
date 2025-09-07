@@ -1,33 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Health Check Automation Script;
  * Monitors system health and reports status;
  */
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-=======
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class HealthChecker {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -40,50 +20,26 @@ class HealthChecker {}
     };
     log(message) {}
         const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const logMessage = `[${timestamp}] ${message}\n`;`
         console.log(logMessage.trim());
         fs.appendFileSync(this.logFile, logMessage)};
-<<<<<<< HEAD
     async checkSystemHealth() {}
         this.log('Starting health check...');
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const healthReport = {}
             "timestamp": new Date().toISOString(),
             "status": 'healthy',
             "checks": {};
         };
-<<<<<<< HEAD
-=======
-=======
-    async checkSystemHealth() {}"
 
-            "checks": {};"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         try {}
             // Check Node.js version;
             const nodeVersion = process.version;
-<<<<<<< HEAD
             healthReport.checks.nodeVersion = {}
                 "status": 'pass',
                 "value": nodeVersion;
             };
             this.log(`Node.js "version": ${nodeVersion}`);
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             // Check available memory;
             const memUsage = process.memoryUsage();
             healthReport.checks.memory = {}
@@ -95,19 +51,12 @@ class HealthChecker {}
                 };
             };
             this.log(`Memory "usage": ${healthReport.checks.memory.value.rss}`);
-<<<<<<< HEAD
-=======
-=======
-            healthReport.checks.nodeVersion = {}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             // Check disk space;
             try {}"
                 const diskUsage = execSync('df -h ., { "encoding": utf8})
 });
                 healthReport.checks.diskSpace = {}
-<<<<<<< HEAD
                     "status": 'pass',
                     "value": diskUsage.split('\n')[1] || 'Unknown'
                 };
@@ -165,18 +114,12 @@ class HealthChecker {}
             healthReport.error = error.message};
         // Save report;
         fs.writeFileSync(this.reportFile, JSON.stringify(healthReport, null, 2));
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         this.log(`Health check completed. "Status": ${healthReport.status}`);
-=======
 
                     "value": `${onlineProcesses} processes online;"
                 this.log(`PM2 "processes": ${onlineProcesses} online`)} catch (error) {`}"
                 healthReport.checks.pm2Processes = {}"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         return healthReport};
     async run() {}
             await this.checkSystemHealth();
@@ -192,9 +135,12 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 module.exports = HealthChecker;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -212,3 +158,6 @@ module.exports = HealthChecker;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

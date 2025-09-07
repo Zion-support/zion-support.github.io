@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -176,13 +169,7 @@ npm run dev\"\"\"
     this.improvementsList.push("Enhanced Jest configuration")
     // Add test utilitiesconst testUtils = "
 import React from "react";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import { render, RenderOptions  } from "@testing-";library/react""
 import { Provider  } from "react-redux"
 import { store  } from "../store"
@@ -235,9 +222,12 @@ export * from "@testing-"library/react""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
     fs.writeFileSync(path.join(this.projectRoot, ")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -253,6 +243,8 @@ export * from "@testing-"library/react""
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 </p>"
         <div className="min-h-screen flex items-center justify-center bg-gray-50"
@@ -262,9 +254,7 @@ export * from "@testing-"library/react""
   "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"]"
 </rootDir>"
   "moduleNameMapping": {^@/(.*)$": "<rootDir>/src/$1",\\.(css|less|scss|sass)$": "identity-obj-proxy"}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 ) => render(ui, { "wrapper"})"
 "`;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

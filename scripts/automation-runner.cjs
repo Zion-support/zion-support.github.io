@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -51,6 +52,8 @@ class AutomationRunner {
   }
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   async runAllScripts() {
     this.log('Starting automation runner...');
@@ -87,11 +90,14 @@ class AutomationRunner {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (require.main === module) {
   const runner = new AutomationRunner();
   runner.runAllScripts().catch(console.error);
 }
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 	// Security;
 	ok = run('npm run "security": audit') && ok;
 
@@ -103,6 +109,9 @@ if (require.main === module) {
 
 	if (!ok) {}
 		console.error('\nAutomation runner encountered failures. See logs above.');
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = AutomationRunner;

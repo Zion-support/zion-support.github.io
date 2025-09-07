@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -223,6 +224,8 @@ if (require.main === module) {
 
 module.exports = AppImprovementAutomation;
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -350,4 +353,7 @@ if (document.readyState === "loading")
     console.log(" "Report": ")
 
     console.error(" App improvement automation "failed": ")
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

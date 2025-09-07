@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -122,14 +123,11 @@ module.exports = EnhancedErrorFixingAutomation;
 =======
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-
-#!/usr/bin/env node;
-#!/usr/bin/env node;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-#!/usr/bin/env node;
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+#!/usr/bin/env node;
+
 const fs = require("fs")
 const path = require("path")
 console.log( Starting Enhanced Error Fixing Automation System...")
@@ -299,12 +297,9 @@ export default function"
       "summary"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
@@ -330,3 +325,6 @@ export default function"
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

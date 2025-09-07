@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 const path = require('path');
 function getAllFiles(dir) {}
@@ -20,22 +11,13 @@ function getAllFiles(dir) {}
     if (entry.isDirectory()) return getAllFiles(fullPath);
     return [fullPath]}
   return files};
-<<<<<<< HEAD
 function resolveConflictsKeepIncoming(filePath) {}
   const text = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   if (!text.includes('')) return false;
-=======
 function resolveConflictsKeepIncoming(filePath) {}"
 
   if (!text.includes()) return false;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const lines = text.split('\n');
   const out = [];
   let i = 0;
@@ -61,31 +43,25 @@ function resolveConflictsKeepIncoming(filePath) {}"
     try {}
       if (resolveConflictsKeepIncoming(f)) {}
         count++;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         console.log(`Resolved conflicts "in": ${f}`)};
     } catch (e) {}
       console.error(`Failed to process ${f}: ${e.message}`)};
   };
   console.log(`Done. Files "updated": ${count}`)};
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -103,3 +79,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

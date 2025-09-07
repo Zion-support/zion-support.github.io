@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync, spawn } = require("child_process")
     this.logDir = path.join(this.projectRoot, "logs")
     this.reportsDir = path.join(this.projectRoot, "reports")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       "timestamp"
       "overallStatus": "pending"
         fs.mkdirSync(dir, { "recursive"})
@@ -80,13 +67,7 @@ const { execSync, spawn } = require("child_process")
       this.buildResults.warnings.push({"type": "security","message": "Security vulnerabilities found"})
     this.log("Generating build report...")
       this.buildResults.overallStatus = "failed"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.buildResults.overallStatus = "warning"
       this.buildResults.overallStatus = "success"
     this.buildResults.summary = {"totalSteps": this.buildResults.steps.length,"successfulSteps": this.buildResults.steps.filter(s => s.status === "success").length,"failedSteps": this.buildResults.steps.filter(s => s.status === "failed"})
@@ -120,9 +101,12 @@ const { execSync, spawn } = require("child_process")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
       console.error("\n Build automation "failed": ")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -142,3 +126,6 @@ const { execSync, spawn } = require("child_process")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

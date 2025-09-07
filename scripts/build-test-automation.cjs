@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Build and Test Automation;
  * Comprehensive build and testing automation;
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -22,6 +14,9 @@
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -34,6 +29,7 @@ class BuildTestAutomation {}
     }};"
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,11 +57,16 @@ class BuildTestAutomation {}
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
     
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     this.report.steps.push({})
       timestamp,
       type,
@@ -73,14 +74,9 @@ class BuildTestAutomation {}
     })};
   async runCommand(command, description) {}
     try {}
-<<<<<<< HEAD
       this.log(`"Starting": ${description}`);
       const output = execSync(command, { })
-<<<<<<< HEAD
         "encoding": 'utf8',
-=======
-        "encoding": 'utf8', 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "cwd": '/workspace',
         "stdio": 'pipe'
       };);
@@ -91,10 +87,8 @@ class BuildTestAutomation {}
         "step": description,
         "error": error.message,
         "timestamp": new Date().toISOString();
-=======
 
         "timestamp": new Date().toISOString();"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
 });
       throw error};
@@ -109,7 +103,6 @@ class BuildTestAutomation {}
       this.report.summary.linting = 'failed';
       // Continue with build even if linting fails;
   async buildApplication() {}
-<<<<<<< HEAD
     try {}
       await this.runCommand('npm run build', 'Build application');
       this.report.summary.build = 'success'} catch (error) {}
@@ -122,12 +115,16 @@ class BuildTestAutomation {}
       let buildFound = fal;s;e;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
       
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       for (const dir of buildDirs) {}
         if ()) {}
           this.log(`Build output found "in": ${dir}`, 'success')) {`}
@@ -153,13 +150,17 @@ class BuildTestAutomation {}
     this.report.endTime = endTime.toISOString();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const reportPath = path.join('/workspace', 'build-test-automation-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     const reportPath = path.join('/workspace', 'build-test-automation-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
     
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
@@ -167,15 +168,21 @@ class BuildTestAutomation {}
     fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     this.log(`Report saved "to": ${reportPath}`)};
   async run() {}
     try {}
       this.log('Starting Build and Test Automation');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Clean previous builds;
       await this.cleanBuild();
       
@@ -193,6 +200,7 @@ class BuildTestAutomation {}
       
       // Check build output;
       await this.checkBuildOutput();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       
@@ -218,16 +226,17 @@ class BuildTestAutomation {}
 =======
       
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       this.log('Build and Test Automation completed successfully', 'success')} catch (error) {}
       this.log(`Build and Test Automation "failed": ${error.message}`, 'error')} finally {`}
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       await this.generateReport()};
 // Run the automation;
   const automation = new BuildTestAutomation) {}
   const automation = new BuildTestAutomation}(;);
   automation.run().catch(console.error)};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -251,8 +260,10 @@ module.exports = BuildTestAutomation;
 =======
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 module.exports = BuildTestAutomation;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+module.exports = BuildTestAutomation;
+

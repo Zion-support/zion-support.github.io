@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 console.log(' Fixing react-router-dom imports...')
 const pagesDir = path.join(__dirname, '..', 'pages')
 const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
@@ -24,9 +17,12 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
         "
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -46,3 +42,6 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

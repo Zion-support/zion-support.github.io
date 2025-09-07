@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -41,6 +42,8 @@ export default function ServicePage() {
             This service page is under development. Please contact us for more information.
           </p>
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 import Link from 'next/link';
 
 export const metadata = {
@@ -114,7 +117,10 @@ export default function DataAnalyticsPage() {
           real-time dashboards, and AI-powered business intelligence solutions.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
           <a
             href="/contact"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
@@ -124,7 +130,10 @@ export default function DataAnalyticsPage() {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
       <section className="py-12">
         <div className="text-center mb-12">
@@ -180,7 +189,10 @@ export default function DataAnalyticsPage() {
       </div>
 
       <ContactSection />
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     </div>
   );
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata = { 
   title: 'AI Services | Zion Tech Group',
   description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps. Transform your business with cutting-edge AI solutions.'
@@ -15,6 +16,8 @@ export default function AIPage() {
           Ship AI features with confidence: Custom LLM development, RAG systems, intelligent agents, 
           computer vision, and comprehensive MLOps. We help you harness the power of AI to transform your business.
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 import React from 'react';
 import Link from 'next/link';
 
@@ -97,173 +100,46 @@ export default function ServicePage() {
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
           Transform your business with cutting-edge artificial intelligence solutions.
           From custom LLM development to computer vision, we deliver enterprise-grade AI that drives real results.
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         </p>
-      </section>
-
-      {/* AI Solutions Showcase */}
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our AI Solutions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AISolution
-            title="Custom LLM Development"
-            description="Build and fine-tune large language models tailored to your specific use cases and domain knowledge"
-            features={["Custom model training", "Domain-specific fine-tuning", "Performance optimization", "Cost-effective inference", "API integration"]}
-            pricing="$25k-150k"
-            icon="🧠"
-          />
-          <AISolution
-            title="RAG Systems"
-            description="Retrieval-Augmented Generation systems that combine your data with LLM capabilities for accurate, contextual responses"
-            features={["Vector database setup", "Document processing", "Semantic search", "Context-aware responses", "Real-time updates"]}
-            pricing="$15k-80k"
-            icon="🔍"
-          />
-          <AISolution
-            title="AI Agents & Automation"
-            description="Intelligent agents that can perform complex tasks, make decisions, and interact with multiple systems autonomously"
-            features={["Multi-step reasoning", "Tool integration", "Decision making", "Workflow automation", "Human-in-the-loop"]}
-            pricing="$20k-100k"
-            icon="🤖"
-          />
-          <AISolution
-            title="Computer Vision"
-            description="Advanced image and video analysis solutions for object detection, classification, and real-time processing"
-            features={["Object detection", "Image classification", "Video analysis", "Real-time processing", "Custom model training"]}
-            pricing="$18k-90k"
-            icon="👁️"
-          />
-          <AISolution
-            title="Natural Language Processing"
-            description="Text analysis, sentiment analysis, language translation, and content generation solutions"
-            features={["Sentiment analysis", "Language translation", "Text summarization", "Named entity recognition", "Content generation"]}
-            pricing="$12k-60k"
-            icon="💬"
-          />
-          <AISolution
-            title="Predictive Analytics"
-            description="Machine learning models for forecasting, trend analysis, and data-driven decision making"
-            features={["Time series forecasting", "Predictive modeling", "Anomaly detection", "Risk assessment", "Real-time predictions"]}
-            pricing="$15k-75k"
-            icon="📊"
-          />
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI Services Inquiry"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get AI Consultation
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
         </div>
       </section>
 
-      {/* Core AI Services */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Core AI Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <AIServiceItem 
-            title="Applied AI Development" 
-            details={[
-              "RAG over private data & documents",
-              "Task-specific AI agents & workflows",
-              "Computer vision & image processing",
-              "Natural language understanding",
-              "Personalization & recommendation engines",
-              "Real-time AI decision making"
-            ]} 
-          />
-          <AIServiceItem 
-            title="Model Operations & MLOps" 
-            details={[
-              "Model training & fine-tuning",
-              "A/B testing & model evaluation",
-              "Safety & bias detection",
-              "Batch & real-time inference",
-              "Cost optimization & monitoring",
-              "Model versioning & deployment"
-            ]} 
-          />
-          <AIServiceItem 
-            title="Data & Infrastructure" 
-            details={[
-              "Data pipeline development",
-              "Feature store implementation",
-              "Vector database setup",
-              "Model monitoring & drift detection",
-              "Scalable inference infrastructure",
-              "Security & compliance"
-            ]} 
-          />
-        </div>
-      </section>
-
-      {/* AI Use Cases */}
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">AI Use Cases We Solve</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <UseCaseCard
-            title="Customer Service"
-            description="AI chatbots, ticket routing, and automated support"
-            icon="🎧"
-          />
-          <UseCaseCard
-            title="Content Creation"
-            description="Automated content generation, translation, and optimization"
-            icon="✍️"
-          />
-          <UseCaseCard
-            title="Data Analysis"
-            description="Intelligent insights, pattern recognition, and forecasting"
-            icon="📈"
-          />
-          <UseCaseCard
-            title="Process Automation"
-            description="Workflow automation, document processing, and decision support"
-            icon="⚙️"
-          />
-        </div>
-      </section>
-
-      {/* Pricing Plans */}
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <AIPricingPlan 
-            name="AI Discovery" 
-            price="$5k–$12k" 
-            duration="2–3 weeks"
-            features={[
-              "AI use case analysis",
-              "Technology stack selection",
-              "Proof of concept development",
-              "Implementation roadmap",
-              "ROI projections"
-            ]}
-            popular={false}
-          />
-          <AIPricingPlan 
-            name="AI Pilot" 
-            price="$15k–$45k" 
-            duration="4–8 weeks"
-            features={[
-              "MVP AI solution development",
-              "RAG or agent implementation",
-              "Evaluation & safety testing",
-              "Performance dashboards",
-              "3 months support"
-            ]}
-            popular={true}
-          />
-          <AIPricingPlan 
-            name="Production AI" 
-            price="$50k+" 
-            duration="Custom timeline"
-            features={[
-              "Production-ready AI system",
-              "Advanced monitoring & alerting",
-              "SLA guarantees",
-              "Cost optimization",
-              "Dedicated AI team"
-            ]}
-            popular={false}
-          />
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Coming Soon
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            This service page is under development. Please contact us for more information.
+          </p>
+          <a
+            href="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+          >
+            Contact Us
+          </a>
         </div>
       </section>
 
       {/* Contact CTA */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <ContactCTA />
     </div>
@@ -404,4 +280,9 @@ function ContactCTA() {
     </div>
   );
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      <CTA />
+    </div>
+  );
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 }

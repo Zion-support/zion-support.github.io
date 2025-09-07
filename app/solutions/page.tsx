@@ -172,5 +172,6 @@ export default function SolutionsPage() {
         </div>
       </section>
     </div>
+
   );
 }

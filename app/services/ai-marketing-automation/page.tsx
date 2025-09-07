@@ -2,6 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata: Metadata = {
   title: 'Service | Zion Tech Group',
   description: 'Professional services for your business needs.',
@@ -15,11 +16,16 @@ export const metadata: Metadata = {
     siteName: 'Zion Tech Group',
   },
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 export const metadata = {
   title: 'AI Marketing Automation | Zion Tech Group',
   description: 'Intelligent marketing automation with AI-powered personalization, predictive analytics, and automated campaign optimization.',
   keywords: 'AI marketing automation, marketing personalization, predictive analytics, campaign optimization, marketing AI'
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 };
 
 interface FeatureCardProps {
@@ -66,6 +72,7 @@ const ContactSection: React.FC = () => (
 export default function ServicePage() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,6 +107,8 @@ export default function ServicePage() {
   );
 
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -153,5 +162,8 @@ export default function ServicePage() {
       <ContactSection />
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 }

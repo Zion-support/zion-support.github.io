@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require('fs')
 const path = require('path')
 
@@ -12,7 +6,6 @@ const path = require('path')
     const lines = content.split('\n')
     const importLines = lines.filter(line => line.startsWith('import')
     const otherLines = lines.filter(line => !line.startsWith('import')
-<<<<<<< HEAD
     if (otherLines.length > 0 && otherLines[0].includes('{'})
       const componentName = file.replace('.tsx', '').replace(/-/g, '')
       content = importLines.join('\n') + '\n\n'
@@ -22,9 +15,12 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
     if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -44,3 +40,6 @@ const path = require('path')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

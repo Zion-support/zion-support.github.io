@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Simple Script Fixer
@@ -29,10 +28,7 @@ class SimpleScriptFixer {
       const originalContent = content;
       
       // Remove merge conflict markers
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-      content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      
+      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?      content = content.replace(/<<<<<<< HEAD[\s\S]*?      content = content.replace(/=======[\s\S]*?      
       // Remove cursor branch references
       content = content.replace(/cursor\/[^;]+;/g, '');
       
@@ -105,19 +101,8 @@ class SimpleScriptFixer {
 // Run the script fixer
 const fixer = new SimpleScriptFixer();
 fixer.fixAllScripts().catch(console.error);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs').promises;
 const path = require('path');
 const { exec } = require('child_process');
@@ -125,6 +110,7 @@ const util = require('util');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const execAsync = util.promisify(exec);
 =======
 
@@ -138,28 +124,25 @@ const execAsync = util.promisify(exec);
 const execAsync = util.promisify(exec);
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+const execAsync = util.promisify(exec);
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class SimpleScriptFixer {}
   constructor() {}
-<<<<<<< HEAD
     this.projectRoot = path.join(__dirname, '..');
     this.fixedCount = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.errorCount = 0};
   async log(message) {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
   async findScriptFiles() {}
     const scriptDirs = [path.join(this.projectRoot, 'scripts'),]
       path.join(this.projectRoot, 'scripts/automation');
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     const scriptFiles = [];
@@ -176,6 +159,11 @@ class SimpleScriptFixer {}
     const scriptFiles = [];
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+    const scriptFiles = [];
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     for (const dir of scriptDirs) {}
       try {}
         const files = await fs.readdir(dir);
@@ -187,15 +175,18 @@ class SimpleScriptFixer {}
       let fixedContent = content;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Fix common issues;
       const fixes = [// Fix malformed require statements;]
-<<<<<<< HEAD
         { "from": 'require("child_process")', "to": 'require("child_process")' },
         { "from": "require('child_process')", "to": "require('child_process')" },
         // Fix malformed shebang;
@@ -211,6 +202,7 @@ class SimpleScriptFixer {}
       ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -220,6 +212,9 @@ class SimpleScriptFixer {}
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       let hasChanges = false;
       for (const fix of fixes) {}
         if (fixedContent.includes(fix.from)) {}
@@ -227,7 +222,6 @@ class SimpleScriptFixer {}
       this.errorCount++;
       return false};
   async testScript(filePath) {}
-<<<<<<< HEAD
     try {}
       const { stdout, stderr } = await execAsync(`node -c "${filePath}"`, { "timeout": 5000 }
 });
@@ -238,9 +232,13 @@ class SimpleScriptFixer {}
     await this.log('Starting automation script fixing process...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     const scriptFiles = await this.findScriptFiles();
     await this.log(`Found ${scriptFiles.length} script files to check`);
 
@@ -254,6 +252,7 @@ class SimpleScriptFixer {}
       // Test the script;
       const testResult = await this.testScript(scriptFile);
       testedCount++;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -278,6 +277,9 @@ class SimpleScriptFixer {}
 =======
       
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       if (testResult.success) {}
         await this.log(`✓ Syntax "OK": ${path.basename(scriptFile)}`)} else {`}
         await this.log(`✗ Syntax "Error": ${path.basename(scriptFile)} - ${testResult.error}`)};
@@ -285,11 +287,6 @@ class SimpleScriptFixer {}
     await this.log(`Script fixing completed. Fixed ${this.fixedCount} scripts, found ${this.errorCount} errors`);
     return { "fixed": this.fixedCount, "errors": this.errorCount, "total": scriptFiles.length }};
 };
-=======
-
-    await this.log(`Script fixing completed. Fixed ${this.fixedCount} scripts, found ${this.errorCount} errors`);"
-    return { "fixed": this.fixedCount, "errors": this.errorCount, "total": scriptFiles.length }};"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Run the fixer;
 if (require.main === module) {}
   const fixer = new SimpleScriptFixer();
@@ -298,9 +295,12 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 module.exports = SimpleScriptFixer;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -319,3 +319,6 @@ module.exports = SimpleScriptFixer;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/main
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

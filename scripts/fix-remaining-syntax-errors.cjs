@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 =======
@@ -21,6 +22,16 @@ function fixSyntaxErrors(filePath) {
 // Function to fix hover syntax errors
 function fixHoverSyntax(filePath) {
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+
+#!/usr/bin/env node
+
+console.log('🔧 Fixing remaining syntax errors...');
+
+// Function to fix hover syntax errors
+function fixHoverSyntax(filePath) {
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
@@ -71,6 +82,7 @@ function fixHoverSyntax(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.log(`✅ Fixed: ${filePath}`);
 =======
 
@@ -82,6 +94,10 @@ function fixHoverSyntax(filePath) {
 
       console.log(`✅ Fixed syntax errors in ${filePath}`);
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+      console.log(`✅ Fixed syntax errors in ${filePath}`);
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       return true;
     }
     
@@ -92,6 +108,7 @@ function fixHoverSyntax(filePath) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Function to find all service page files
 function findServicePages(dir) {
@@ -116,6 +133,8 @@ function findServicePages(dir) {
           files.push(fullPath);
         }
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 // Function to find and fix all TypeScript/JSX files
 function fixAllFiles() {
   const filesToCheck = [
@@ -140,27 +159,30 @@ function fixAllFiles() {
     if (fs.existsSync(filePath)) {
       if (fixHoverSyntax(filePath)) {
         totalFixed++;
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       }
     } catch (error) {
       // Skip directories that can't be read
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 });
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+});
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   
   scanDirectory(dir);
   return files;
 }
 
-
-
-
-
-
 // Main execution
+<<<<<<< HEAD
 <<<<<<< HEAD
 async function main() {
   console.log('🚀 Starting syntax error resolution...');
@@ -169,6 +191,11 @@ try {
   console.log('🔍 Scanning for syntax errors...');
   const fixedCount = fixAllFiles();
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+try {
+  console.log('🔍 Scanning for syntax errors...');
+  const fixedCount = fixAllFiles();
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   
   // Find all service page files
   const servicePages = findServicePages('/workspace/app/services');
@@ -182,6 +209,7 @@ try {
     }
   }
   
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Also fix the research page
   const researchPage = '/workspace/app/research/page.tsx';
@@ -197,6 +225,8 @@ try {
 
 main().catch(console.error);
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 } catch (error) {
   console.error('❌ Error:', error.message);
   process.exit(1);
@@ -204,7 +234,9 @@ main().catch(console.error);
 
 }
 
-
 }}
 
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

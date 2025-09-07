@@ -1,7 +1,10 @@
 {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "warnings": []
     },
     "accessibilityImprovement": {
@@ -33,7 +36,10 @@
   "duration": "46s",
   "timestamp": "2025-09-06T20:40:15.907Z",
   "duration": "124s",
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   "timestamp": "2025-09-06T17:31:43.872Z",
   "duration": "46s",
   "results": {
@@ -76,14 +82,20 @@
     "totalErrors": 5
   "timestamp": "2025-09-06T10:42:27.266Z",
   "totalDuration": 60241,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   "successfulTasks": 6,
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
       "duration": 7037,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "duration": 22421,
 ursor/automate-test-improve-and-merge-code-e883
   "timestamp": "2025-09-06T08:34:04.724Z",
@@ -92,30 +104,45 @@ ursor/automate-test-improve-and-merge-code-e883
     "dependencyFix": {
       "success": true,
       "duration": 84429,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
       "duration": 27333,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "duration": 27631,
 ursor/automate-test-improve-and-merge-code-e883
       "success": true,
       "duration": 56422,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "errors": [],
       "warnings": []
     },
     "securityAudit": {
       "success": true,
       "duration": 1719,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       "duration": 1683,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 1450,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      "duration": 1683,
+ursor/automate-test-improve-and-merge-code-e883
+      "duration": 1450,
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "duration": 1719,
       "errors": [],
       "warnings": []
@@ -123,11 +150,17 @@ ursor/automate-test-improve-and-merge-code-e883
     "buildOptimization": {
       "success": true,
       "duration": 6250,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       "duration": 6198,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 11039,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      "duration": 6198,
+ursor/automate-test-improve-and-merge-code-e883
+      "duration": 11039,
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "duration": 6250,
       "errors": [],
       "warnings": []
@@ -136,7 +169,10 @@ ursor/automate-test-improve-and-merge-code-e883
       "success": false,
       "duration": 39,
 "errors": [],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "success": true,
       "duration": 46,
       "errors": [],
@@ -144,17 +180,26 @@ ursor/automate-test-improve-and-merge-code-e883
       "success": false,
       "duration": 0,
       "errors": [],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "warnings": []
     },
-    "accessibilityImprovement": {
+    "accessibilityImprovements": {
       "success": false,
       "duration": 9508,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       "duration": 9692,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 0,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      "duration": 9692,
+ursor/automate-test-improve-and-merge-code-e883
+      "duration": 0,
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "duration": 9508,
       "errors": [],
       "warnings": []
@@ -162,12 +207,18 @@ ursor/automate-test-improve-and-merge-code-e883
     "performanceOptimization": {
       "success": true,
       "duration": 6736,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "duration": 7154,
 ursor/automate-test-improve-and-merge-code-e883
       "success": false,
       "duration": 0,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "errors": [],
       "warnings": []
     },
@@ -177,6 +228,7 @@ ursor/automate-test-improve-and-merge-code-e883
       "errors": [],
       "warnings": []
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "totalErrors": 6
 ursor/automate-test-improve-and-merge-code-646c
@@ -185,6 +237,13 @@ ursor/automate-test-improve-and-merge-code-646c
       "warnings": []
     }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+=======
+    "totalErrors": 6
+ursor/automate-test-improve-and-merge-code-646c
+      "errors": [],
+      "warnings": []
+    }
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   }
 }
       "success": false,
@@ -199,7 +258,10 @@ ursor/automate-test-improve-and-merge-code-646c
     "failedTasks": 4
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   }
   "timestamp": "2025-09-06T22:31:53.549Z",
   "totalDuration": 106111,
@@ -217,4 +279,8 @@ ursor/automate-test-improve-and-merge-code-646c
     "Fixed ESLint configuration",
     "Added comprehensive error handling"
   ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

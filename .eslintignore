@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 pages.broken/**
 pages.corrupted.*/**
 pages.disabled/**
@@ -12,6 +13,8 @@ services/**
 *.cjs
 *.mjs
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 <<<<<<< HEAD
 src
 src.disabled
@@ -184,4 +187,21 @@ automated-merge-conflict-resolver.cjs
 automation/**
 backup-problematic-files/**
 >>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+=======
+pages.broken/**
+pages.corrupted.*/**
+pages.disabled/**
+pages.disabled_auto/**
+pages.old/**
+pages_disabled/**
+pages_minimal/**
+pm2-automation/**
+services/**
+*.js
+*.cjs
+*.mjs
+>>>>>>> cursor/integrate-build-improve-and-re-verify-3ee7
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

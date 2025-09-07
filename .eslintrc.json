@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "extends": ["next/core-web-vitals"],
   "rules": {
     "no-unused-vars": "warn",
@@ -8,8 +9,9 @@
   }
 }
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-<<<<<<< HEAD
 
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
@@ -20,8 +22,11 @@
   ],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 >>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
@@ -30,14 +35,20 @@ origin/automation-improvements-final
     "es6": true,
     "jest": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     "jest": true
     "es6": true,
     "jest": true
     "es6": true,
     "jest": true
+<<<<<<< HEAD
 =======
 >>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     "es2021": true
   },
   "globals": {
@@ -48,7 +59,10 @@ origin/automation-improvements-final
     "HTMLImageElement": "readonly",
     "alert": "readonly"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     "es6": true,
     "jest": true
@@ -58,8 +72,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 >>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
@@ -67,6 +84,9 @@ origin/automation-improvements-final
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     "no-console": "warn"
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
@@ -89,11 +109,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
     "no-console": "warn",
     "react/react-in-jsx-scope": "off",
     "no-undef": "error"
+<<<<<<< HEAD
 >>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   },
   "ignorePatterns": [
     "node_modules/",
@@ -167,11 +189,17 @@ origin/automation-improvements-final
     "pages.__backup/",
     "pages-disabled/",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     "pages.disabled_auto/"
 
 =======
 >>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
+=======
+
+    "pages.disabled_auto/"
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     "pages.disabled_auto/",
     "zion_academy/",
     "pm2-automation/",
@@ -297,6 +325,9 @@ origin/automation-improvements-final
     "automation/**",
     "backup-problematic-files/**"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     "pages.disabled_auto/"
 
     "pages.disabled_auto/"
@@ -430,8 +461,11 @@ origin/automation-improvements-final
     "pages.disabled_auto/"
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 >>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   ]
 }
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

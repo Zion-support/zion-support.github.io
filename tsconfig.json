@@ -47,12 +47,15 @@
   "exclude": [
     "node_modules",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "src_backup",
     "temp_backup",
     "recovered-branches",
     "api.disabled",
     "lib"
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     ".next",
     "out",
     "dist",
@@ -78,6 +81,9 @@
     "components.disabled",
     "src.disabled",
     "src.pages.disabled"
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   ]
 }

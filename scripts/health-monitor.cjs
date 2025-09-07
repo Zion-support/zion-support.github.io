@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process');
 const fs = require('fs')
 class HealthMonitor {
@@ -19,19 +10,12 @@ class HealthMonitor {
 
     ]}
   async runChecks() {
-<<<<<<< HEAD
-<<<<<<< HEAD
     for (const check of this.checks) {
       try {
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     
     for (const check of this.checks) {
       try {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const result = execSync(check.command, { "encoding": 'utf8' };);
         const result = execSync(check.command, { encoding: 'utf8' });
         console.log(`✅ ${check.name}:\n${result}`)} catch (error) {
@@ -43,9 +27,12 @@ class HealthMonitor {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 new HealthMonitor().runChecks();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -61,12 +48,11 @@ new HealthMonitor().runChecks();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     for (const check of this.checks) {
       try {
   // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 
 `;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

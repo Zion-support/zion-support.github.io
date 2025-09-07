@@ -12,7 +12,10 @@ export default {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -153,7 +156,10 @@ export default {
       borderRadius: {
         '4xl': '2rem',
         '5xl': '2.5rem',
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       },
     },
   },
@@ -163,7 +169,11 @@ export default {
     require('@tailwindcss/aspect-ratio'),
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 };
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+};
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -18,14 +12,15 @@ const path = require("path");
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);
 =======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const fs = require("fs");
 const path = require("path");
 const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**;
  * Returns true if the file should be processed;
  */;
@@ -47,25 +42,27 @@ function cleanContent(content) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  let out = lines.join("\n");
 =======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+  let out = lines.join("\n");
 "
   let out = lines.join("\n");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // In-line fixes across the whole file;
   out = out;"
     // Comma followed by stray apostrophe (e.g., "Shield,");
-<<<<<<< HEAD
     .replace(/,\s*"/g, ",");
     // Remove apostrophe after closing tokens if followed by punctuation or end;
     .replace(/([)}>])\s*"\s*(?=\s*["", ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -80,13 +77,16 @@ function cleanContent(content) {}
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // In-line fixes across the whole file;
 
     // Remove apostrophe after closing tokens if followed by punctuation or end;"
     .replace(/([)}>])\s*"\s*(?=\s*[", ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;
-<<<<<<< HEAD
     .replace(/>\s*"\s*</g, "><");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -98,6 +98,9 @@ function cleanContent(content) {}
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   return out};
 function walk(dir, files = []) {}"
   for (const entry of fs.readdirSync(dir, { "withFileTypes": true })) {}
@@ -125,9 +128,12 @@ function $1() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
   
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -146,9 +152,9 @@ function $1() {}
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-} catch (e) {}
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+} catch (e) {}
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
   console.log(`Cleaned ${changed} files.`)};
@@ -157,9 +163,12 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
   main()};
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -177,3 +186,6 @@ if (require.main === module) {}
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

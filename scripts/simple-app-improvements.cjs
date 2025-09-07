@@ -1,84 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/simple-app-improvements.cjs
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/simple-app-improvements.cjs
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/simple-app-improvements.cjs
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:scripts/simple-app-improvements.cjs
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
 :scripts/simple-app-improvements.cjs
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
-=======
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -130,7 +56,6 @@ export default function PerformanceMonitor() {
         <p className="text-2xl font-bold text-purple-600">{metrics.cpuUsage.toFixed(1)}%</p>;"
       </div>;
   const [issues, setIssues] = useState<SecurityIssue[]>([]);
-<<<<<<< HEAD
   useEffect(() => {;
     const "auditIssues": SecurityIssue[] = [;
       {;
@@ -317,15 +242,8 @@ improvements.runImprovements().then(() => {;
   }).catch(error => {;
   console.error('Improvements "failed": ', error.message);
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/simple-app-improvements.cjs
   process.exit(1)})
-<<<<<<< HEAD
 :scripts/simple-app-improvements.cjs
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 "
     <div className="space-y-4">;"
 
@@ -337,4 +255,3 @@ improvements.runImprovements().then(() => {;
 
           <p className="text-2xl font-bold text-blue-600">{Math.floor(health.uptime / 3600000)}h</p>;"
     </div>;"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

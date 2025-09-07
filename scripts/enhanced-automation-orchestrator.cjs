@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -60,13 +53,7 @@ const { execSync } = require("child_process")
       "duration"
       "results"
       "status": this.results.errors.length === 0 ? "SUCCESS" : "PARTIAL_SUCCESS"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const reportFile = path.join(this.projectRoot, "enhanced-automation-report.json")
     this.log(` Report "generated"`)
 // console.log("\n=== ENHANCED AUTOMATION REPORT ===")
@@ -84,9 +71,12 @@ const { execSync } = require("child_process")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
       this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -103,6 +93,8 @@ const { execSync } = require("child_process")
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
       const duration = Date.now() - startTime;
       const scriptResult = {
@@ -122,11 +114,7 @@ const { execSync } = require("child_process")
       return scriptResult;
         error: error.message
 
-
-
-
         this.log(`✅ NPM script completed successfully: ${scriptName} (${duration}ms)`);
-
 
   async runAllAutomations() {
     this.log('🚀 Starting Enhanced Automation Orchestrator...);
@@ -139,14 +127,12 @@ const { execSync } = require("child_process")
     if (fs.existsSync(this.logFile)) {
       fs.writeFileSync(this.logFile, );
 
-
     this.results.totalScripts = automationScripts.length + npmScripts.length;
 
     // Run automation scripts
     for (const script of automationScripts) {
       if (fs.existsSync(script)) {
         await this.runScript(script);
-
 
     // Run npm scripts
     for (const script of npmScripts) {
@@ -169,11 +155,9 @@ const { execSync } = require("child_process")
         failedScripts: this.results.failedScripts,
         successRate: this.results.totalScripts > 0 ? 
 
-
     const reportFile = path.join(this.projectRoot,enhanced-automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     const summary = `
 Enhanced Automation Orchestrator Report
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

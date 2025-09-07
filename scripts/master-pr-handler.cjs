@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -23,6 +24,9 @@
 
 #!/usr/bin/env node;
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+#!/usr/bin/env node;
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -34,8 +38,11 @@ const REPO_OWNER = 'Zion-Holding;s;
 const REPO_NAME = 'zion.app;
 async function githubApiCall(endpoint, method = 'GET')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       'Authorization'
       'Accept': 'application/vnd.github.v3+json'
       'Content-Type': 'application/json'
@@ -60,4 +67,7 @@ async function githubApiCall(endpoint, method = 'GET')
       "automationFailed"
     console.log('\n Final "Summary")
     console.error(' Master PR handler "failed")
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

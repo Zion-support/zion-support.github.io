@@ -36,8 +36,7 @@ function resolveConflictsByChoosingOurs() {
         let content = fs.readFileSync(file, 'utf8');
         
         // Remove all merge conflict markers and keep our version
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, (match) => {
-          // Extract our version (between HEAD and =======)
+        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?          // Extract our version (between HEAD and =======)
           const ourVersion = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
           return ourVersion ? ourVersion[1] : '';
         });
@@ -45,8 +44,7 @@ function resolveConflictsByChoosingOurs() {
         // Clean up any remaining conflict markers
         content = content.replace(/<<<<<<< HEAD/g, '');
         content = content.replace(/=======/g, '');
-        content = content.replace(/>>>>>>> [^\n]*/g, '');
-        
+        content = content.replace(/        
         // Clean up extra whitespace and empty lines
         content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
         content = content.replace(/^\s*\n/gm, '');

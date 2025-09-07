@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 console.log(' Comprehensive syntax fix...')
   '/workspace/pages/about.tsx'
   '/workspace/pages/ai-services.tsx'
@@ -23,9 +16,12 @@ console.log(' Comprehensive syntax fix...')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
     content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -42,6 +38,8 @@ console.log(' Comprehensive syntax fix...')
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 </div>"
     content = content.replace(/>\s*<h2 className="([^"]*)\n\s*([^"]*)"/g,>\n            <h2 className="$1 $2
@@ -51,4 +49,3 @@ console.log(' Comprehensive syntax fix...')
     content = content.replace(/<p className="([^"]*)\n\s*([^"]*)\s*>/g,<p className="$1 $2
 </p>"
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

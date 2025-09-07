@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+;
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 import Head from 'next/head';
 export default function Contact() {return (<>;
       <Head>;
@@ -44,8 +49,13 @@ export default function Contact() {
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 =======
   );
 }
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+  );
+}
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
