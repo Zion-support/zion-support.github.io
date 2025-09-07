@@ -1,23 +1,11 @@
-<<<<<<< HEAD
+import React from 'react';
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
-export const metadata = {
-  title: 'Data Analytics - Zion Tech Group',
-  description: 'Professional data analytics solutions for your business needs.',
-
-
-import Link from "next/link";
-=======
 import type { Metadata } from 'next';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Data Analytics & BI | Zion Tech Group",
   description: "Advanced data analytics, business intelligence, and machine learning solutions to transform raw data into actionable insights.",
-
-
-import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const metadata = {

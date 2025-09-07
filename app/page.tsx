@@ -1,7 +1,6 @@
 
+import React from 'react';
 import Link from 'next/link';
-import React from "react";
-import Link from "next/link";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -453,7 +452,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* CTA Section */}
       <section className="text-center py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-lg relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
@@ -466,16 +464,20 @@ export default function Home() {
         
         <div className="relative z-10">
           <h2 id="cta-heading" className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Let's discuss how our solutions can drive your success.
+          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Let&apos;s discuss your project and create a custom solution that drives real business value. 
             Our team has delivered 1000+ successful projects across various industries.
           </p>
-
+          <Link
+            href="/contact"
+            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today
+          </Link>
+        </div>
+      </section>
 
       {/* Contact Information Section */}
       <section className="py-16 bg-gray-50 rounded-lg" aria-labelledby="contact-heading">
@@ -511,18 +513,6 @@ export default function Home() {
           />
         </div>
       </section>
-
-          <Link
-            href="/contact"
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get Started Today
-          </Link>
-        </div>
-      </div>
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
     </div>
   );
 }

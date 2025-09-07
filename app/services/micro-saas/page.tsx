@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
 import React from "react";
 import Link from "next/link";
-import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
-import React from "react";
-=======
-import Link from "next/link";
 
 export const metadata = {
   title: "Micro SaaS Development | Zion Tech Group",
@@ -25,8 +16,9 @@ const ServiceCard = ({ title, description, icon }) => (
     <p className="text-gray-600">{description}</p>
   </div>
 );
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 
+export default function MicroSaaSPage() {
+  return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -737,4 +729,3 @@ function CTA() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
