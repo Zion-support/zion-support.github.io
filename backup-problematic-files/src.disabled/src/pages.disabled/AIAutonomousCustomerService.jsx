@@ -1,21 +1,9 @@
-import React from 'react';
-const AIAutonomousCustomerService = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />AIAutonomousCustomerService</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const AIAutonomousCustomerService = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />AIAutonomousCustomerService</h1>
-      <p />This component is under development.</p>
+const AIAutonomousCustomerService = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>AIAutonomousCustomerService</h1>
+      <p>This component is under development.</p>
     </div>
   )
-}
-}
-
+};

@@ -1,111 +1,199 @@
 
-import React from 'react';
-import FocusLock from 'react-focus-lock';
-import {Dialog,DialogContent,DialogHeader,DialogTitle;} from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input  } from '@/components/ui/input';
-import { Textarea  } from '@/components/ui/textarea';
+import React from 'react'''
+import FocusLock from 'react-focus-lock''
+import {
+  // TODO: Implement
+}
+  Dialog,
+  DialogContent,
+  DialogHeader,;
+  DialogTitle;
+
+'
+} from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'''
+import { Textarea } from '@/components/ui/textarea''
   Dialog;
   DialogContent;
-  DialogHeader;
-  DialogTitle} from '@/components/ui/dialog';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
+  DialogHeader;'
+  DialogTitle} from '@/components/ui/dialog'''
+import { Button } from '@/components/ui/button'''
+import { Input } from '@/components/ui/input''
+
   Form;
   FormField;
   FormItem;
   FormLabel;
   FormControl;
-  FormMessage;
-} from '@/components/ui/form';
-import { useForm, type Resolver  } from 'react-hook-form';
-import { yupResolver  } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { SendIcon, Mail } from 'lucide-react'; import api from '@/services/apiClient';
-import { toast  } from '@/hooks/use-toast';
-import { useAuth  } from '@/hooks/useAuth';
-import { LoginModal  } from '@/components/auth/LoginModal';
+
+  FormMessage;'
+} from '@/components/ui/form'''
+import { useForm, type Resolver } from 'react-hook-form'''
+import { yupResolver } from '@hookform/resolvers/yup';''
+import * as yup from 'yup';''
+import { SendIcon, Mail } from 'lucide-react'; import api from '@/services/apiClient'''
+import { toast } from '@/hooks/use-toast'''
+import { useAuth } from '@/hooks/useAuth'''
+import { LoginModal } from '@/components/auth/LoginModal''
+
   Form;
   FormField;
   FormItem;
   FormLabel;
-  FormControl;
-  FormMessage} from '@/components/ui/form';
-import { useForm, type, Resolver } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { SendIcon, Mail  } from 'lucide-react';
-import api from '@/services/apiClient';
-  isOpen: boolean;
+
+  FormControl;'
+  FormMessage} from '@/components/ui/form'''
+import {useForm, type, Resolver} from 'react-hook-form'''
+import {yupResolver} from '@hookform/resolvers/yup'''
+import { SendIcon, Mail } from 'lucide-react'''
+import api from '@/services/apiClient''
+  isOpen: boolean;,
   onClose: () => void;
   publisherName: string;
   publisherEmail?: string;
-  productId?: string;
-import FocusLock from 'react - focus - lock';
-  Dialog,DialogContent,DialogHeader,DialogTitle} from '@/components / ui / dialog'; import { Button } from '@/components / ui / button'; import { Input  } from '@/components / ui / input';
-import { Textarea  } from '@/components / ui / textarea';
+  productId?: string;'
+import React from 'react';''
+import FocusLock from 'react - focus - lock';'
+import {
+  // TODO: Implement
+}
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,'
+} from '@/components/ui/ dialog'; import { Button, Input } from 'lucide-react';''
+import { Textarea } from '@/components/ui/ textarea';'
   Dialog;
   DialogContent;
-  DialogHeader;
-  DialogTitle} from '@/components / ui / dialog';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { Dialog,DialogContent,DialogHeader,DialogTitle} from '@/components/ui/dialog';
-import { Form,FormField,FormItem,FormLabel,FormControl,FormMessage} from '@/components / ui / form';
-import { use_form, type Resolver  } from 'react - hook - form';
-import { yup_resolver  } from '@hookform / resolvers / yup';
-import { SendIcon, Mail } from 'lucide-react'; import api from '@/services / api_client';
-import { toast  } from '@/hooks / use - toast';
-import { use_auth  } from '@/hooks / use_auth';
-import { LoginModal  } from '@/components / auth / LoginModal';
+  DialogHeader;'
+  DialogTitle} from '@/components/ui/ dialog';''
+import { Button } from '@/components/ui/ button';''
+import { Input } from '@/components/ui/ input';'
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,'
+} from '@/components/ui/ form';''
+import { use_form, type Resolver } from 'react - hook - form';''
+import { yup_resolver } from '@hookform / resolvers / yup';''
+import * as yup from 'yup';''
+import { SendIcon, Mail } from 'lucide-react'; import api from '@/services / api_client';''
+import { toast } from '@/hooks/ use - toast';''
+import { use_auth } from '@/hooks/ use_auth';''
+import { LoginModal } from '@/components/ auth / LoginModal';'
+
   Form;
   FormField;
   FormItem;
   FormLabel;
-  FormControl;
-  FormMessage} from '@/components / ui / form';
-import { use_form, type, Resolver } from 'react - hook - form';
-import { yup_resolver } from '@hookform / resolvers / yup';
-import api from '@/services / api_client';
-  is_open: boolean;
+
+  FormControl;'
+  FormMessage} from '@/components/ui/ form';''
+import {use_form, type, Resolver} from 'react - hook - form';''
+import {yup_resolver} from '@hookform / resolvers / yup';''
+import { SendIcon, Mail } from 'lucide-react';''
+import api from '@/services / api_client';'
+  is_open: boolean;,
+
   on_close: () => void;
   publisher_name: string;
   publisher_email?: string;
   product_id?: string;
 
-type FormValues = {subject: string;}
-  message: string}
-}subject: string,message: string;
+type FormValues = {
+  subject: string;,
+  message: string }
 
-interface ContactPublisherModalProps  {is_open: boolean,on_close: () => void,publisher_name: string,publisher_email?: string;}
-  product_id?: string;}
+  subject: string,
+  message: string;
+interface ContactPublisherModalProps {
+  // TODO: Implement
+}
+  is_open: boolean,
+  on_close: () => void,
+  publisher_name: string,
+  publisher_email?: string;
+  product_id?: string;
+
 }
 
 type FormValues = {subject: string,message: string;}
 }
 
 const schema: yup.ObjectSchema < FormValues> = yup;
-  .object ({subject: yup;}
-      .string ().min (5, 'Subject must be at least 5 characters').required ('Subject is required'),.string ().min (20, 'Message must be at least 20 characters').required ('Message is required')}).required ()export /**;
- * ContactPublisherModal - Function description;
- */;
-function ContactPublisherModal() {const [is_submitting, setIsSubmitting] = React.useState (false)const [error, set_error] = React.useState < string | null>(null)const [login_open, setLoginOpen] = React.useState (false)const form = use_form < FormValues>({resolver: yup_resolver (schema) as Resolver < FormValues>,mode: 'on_change',
-  default_values: { subject: ''}
-  message: '' }
-};
-  const handle_send = async () => {// Check condition;}
-if ( {) {$2;}
-}
-      setLoginOpen (true)return }    default_values: { subject: ''}
-  message: '' }
-}),const handle_send = async () => {// Check condition;}
-if ( {) {$2;}
-}
-      setLoginOpen (true)return;FormMessage} from '@/components/ui/form';
-import { toast   } from '@/hooks/use-toast';
-import { useAuth   } from '@/hooks/useAuth';
 
-interface ContactPublisherModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  publisherName: string;
+  .object ({
+    subject: yup;)
+      .string ();'
+      .min (5, 'Subject must be at least 5 characters');''
+      .required ('Subject is required'),'
+      .string ();'
+      .min (20, 'Message must be at least 20 characters');''
+      .required ('Message is required'),'
+  });
+  .required ();
+export /**
+ * ContactPublisherModal - Function description;
+ */
+function ContactPublisherModal() {
+  const [is_submitting, setIsSubmitting] = React.useState (false);
+  const [error, set_error] = React.useState < string | null>(null);
+  const [login_open, setLoginOpen] = React.useState (false);
+  const form = use_form < FormValues>({)
+    resolver: yup_resolver (schema) as Resolver < FormValues>,'
+    mode: 'on_change',''
+    default_values: { subject: '', message: '' },'
+  });
+  const handle_send = async () => {
+    // Check condition;
+if ( {) {
+  $2;
+}
+      setLoginOpen (true);'
+      return }    default_values: { subject: '', message: '' }}),'
+  const handle_send = async () => {
+    // Check condition;
+if ( {) {
+  $2;
+}
+      setLoginOpen (true);
+      return;
+
+    }
+    const values = form.getValues()
+    setIsSubmitting(true)
+    setError(null)
+    try {
+  // TODO: Implement
+}'
+      await api.post ('/api / messages', {'
+        product_id,
+        body: values.message,
+        from_user: user.id,)
+      });'
+      toast.success ('Message sent');'
+      form.reset ();
+      on_close () } finally {      on_close ();
+
+    } finally {
+  // TODO: Implement
+}
+      setIsSubmitting(false)
+    }
+  }
+  const handleKeyDown = (e: React.KeyboardEvent,) => {'
+    if (e.key === 'Escape') {'
+      e.stopPropagation()
+      onClose()
+  }'
+import React from 'react';''
+import FocusLock from 'react-focus-lock';''
+import api from '@/services/apiClient';''
+import { toast } from '@/hooks/use-toast';''
+import { useAuth } from '@/hooks/useAuth';''
+import { LoginModal } from '@/components/auth/LoginModal';'
+
   publisherEmail?: string;
   productId?: string;
 
@@ -138,82 +226,116 @@ const values = form.getValues()setIsSubmitting(true)setError(null)try {await api
   productId?: string;
 }}
 
-const values = form && form.getValues()setIsSubmitting(true)setError(null)setIsSubmitting(false)}
-  ;
-  return (<>;disabled={!form && form.formState.isValid || isSubmitting}>;
-                  <SendIcon className='mr-2' />;{isSubmitting ? 'Sending...' : 'Send Message'}
-      <Dialog open={is_open} onOpenChange={on_close} />;
-        <FocusLock disabled = {!is_open};
-  return_focus />;
-          <DialogContent;
-            className='bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md';
-            onKeyDown={handleKeyDown}
-            aria - modal='true';
-            aria - labelledby='contact - publisher - title' />
 
-            <DialogHeader />;
-              <DialogTitle;
-                id='contact - publisher - title';
-                className='text - xl font - bold text - white flex items - center gap - 2' />
+    }
+    const values = form && form.getValues();
+    setIsSubmitting(true);
+    setError(null);
 
-                <Mail className='h - 5 w - 5 text - zion - cyan' />;
-                Contact Publisher;
+
+      setIsSubmitting(false);
+    }
+  };
+
+
+
+
+  return (
+    <>;
+
+                  disabled={!form && form.formState.isValid || isSubmitting}>;'
+                  <SendIcon className='mr-2' />;'
+</SendIcon>
+      <Dialog open={is_open} onOpenChange={on_close}>;
+</Dialog>
+        <FocusLock disabled={!is_open} return_focus>;
+</FocusLock>
+          <DialogContent;'
+            className='bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md';'
+            onKeyDown={handleKeyDown}'
+            aria - modal='true';''
+            aria - labelledby='contact - publisher - title';'
+          >;
+</DialogContent>
+            <DialogHeader>;
+</DialogHeader>
+              <DialogTitle;'
+                id='contact - publisher - title';''
+                className='text - xl font - bold text - white flex items - center gap - 2';'
+              >;
+</DialogTitle>'
+                <Mail className='h - 5 w - 5 text - zion - cyan' />;'
+</Mail>
               </DialogTitle>;
-            </DialogHeader>;
-            {error && <p className='text - red - 500 mb - 2' />{error}</p>}
-            {publisher_email && (<div className='mb - 4 text - zion - slate - light' />;
-                <span className='block' />Email:</span>;}
-                <a;}
-                  href={`mailto: ${publisher_email}`}
-                  className='text - zion - cyan hover:underline truncate block' />
+            </DialogHeader>;'
+            {error && <p className='text - red - 500 mb - 2'>{error}</p>}''
+              <div className='mb - 4 text - zion - slate - light'>;'
+</div>'
+                <span className='block'>Email:</span>;'
+                <a;
+                  href={`mailto:${publisher_email}`}'
+                  className='text - zion - cyan hover:underline truncate block';'
+                >;
+</a>
+                </a>;)
+              </div>)}
+            <Form {...form}>;
+</Form>'
+              <form on_submit={e => e.prevent_default ()} className='space - y-4'>;'
+</form>
+                <FormField;
+                  control={form.control}'
+                  name='subject';'
+                  render={({ field }: { field: any }) => (
+</FormField>
+                    <FormItem>;
+</FormItem>
+                      <FormLabel > Subject</FormLabel>;
+                      <FormControl>;
+</FormControl>
+                        <Input;'
+                          placeholder='Subject';''
+                          className='bg - zion - blue border - zion - blue - light text - white';'
 
-                  {publisher_emai}
-}
-                </a>
-    </div>
-  );
-}
-            <Form {...form} />;
-              <form on_submit={e = /> e.prevent_default ()} className='space - y-4'>;
-                <FormField;
-                  control={form.control}
-                  name='subject';
-                  render={({ field }: { field: any}
-}) = /> (<FormItem />;
-                      <FormLabel  /> Subject</FormLabel>;
-                      <FormControl />;
-                        <Input;
-                          placeholder='Subject';
-                          className='bg - zion - blue border - zion - blue - light text - white';
                           {...field}
                         />;
-                      </FormControl>;
-                      <FormMessage className='text - red - 500' />;
+</Input>
+                      </FormControl>;'
+                      <FormMessage className='text - red - 500' />;'
+</FormMessage>)
                     </FormItem>)}
-                />;
                 <FormField;
-                  control={form.control}
-                  name='message';
-                  render={({ field }: { field: any}
-}) = /> (<FormItem />;
-                      <FormLabel  /> Message</FormLabel>;
-                      <FormControl />;
+
+                  control={form.control}'
+                  name='message';'
+                  render={({ field }: { field: any }) => (
+</FormField>
+                    <FormItem>;
+</FormItem>
+                      <FormLabel > Message</FormLabel>;
+                      <FormControl>;
+</FormControl>
+
                         <Textarea;
-                          placeholder={`Message to ${publisher_name}...`}
-                          className='bg - zion - blue border - zion - blue - light text - white min - h-[120px]';
+                          placeholder={`Message to ${publisher_name}...`}'
+                          className='bg - zion - blue border - zion - blue - light text - white min - h-[120px]';'
                           {...field}
                         />;
-                      </FormControl>;
-                      <FormMessage className='text - red - 500' />;
+</Textarea>
+                      </FormControl>;'
+                      <FormMessage className='text - red - 500' />;'
+</FormMessage>)
                     </FormItem>)}
-                />;
                 <Button;
-                  on_click={handle_send}
-                  className='w - full';
+                  on_click={handle_send}'
+                  className='w - full';'
                   disabled={!form.form_state.is_valid || is_submitting}
-                 />;
-                  <SendIcon className='mr - 2' />;
-                  {is_submitting ? 'Sending...' : 'Send Message'}
+
+                >;
+</Button>'
+                  <SendIcon className='mr - 2' />;'
+</SendIcon>
+
                 </Button>;
               </form>;
             </Form>;
@@ -221,223 +343,179 @@ const values = form && form.getValues()setIsSubmitting(true)setError(null)setIsS
         </FocusLock>;
       </Dialog>;
 
-const handleKeyDown = (if (e.key === 'Escape') {e.stopPropagation()onClose(,) => {
-  return $3;}
-}
-}
-  ;
-  return (<>;
-    <Dialog open={isOpen} onOpenChange={onClose} />;
-      <FocusLock disabled = {!isOpen};
-  returnFocus />;
-        <DialogContent;
-          className=\"bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md\";
-          onKeyDown={handleKeyDown}"
-          aria-modal=\"true\";"
-          aria-labelledby=\"contact-publisher-title\" />
+    <>
+    <Dialog open={isOpen} onOpenChange={onClose}>
+</Dialog>
+      <FocusLock disabled={!isOpen} returnFocus>
+</FocusLock>
 
-          <DialogHeader />;"
-            <DialogTitle id=\"contact-publisher-title\" className=\"text-xl font-bold text-white flex items-center gap-2\" />;"
-              <Mail className=\"h-5 w-5 text-zion-cyan\" />;
-              Contact Publisher;
-            </DialogTitle>;
-          </DialogHeader>;"
-          {error && <p className=\"text-red-500 mb-2\" />{error}</p>}"
-          {publisherEmail && (<div className=\"mb-4 text-zion-slate-light\" />;}"
-            <span className=\"block\" />Email:</span>;}
-            <a href={`mailto: ${publisherEmail},"
-} className=\"text-zion-cyan hover:underline truncate block\" />;
-              {publisherEmail}</Link>;
-          </div>;
-        )}
-        <Form {...form} />;"
-          <form onSubmit={(e) = /> e.preventDefault()} className=\"space-y-4\">;
+        <DialogContent;'
+          className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md""
+          onKeyDown={handleKeyDown}"
+          aria-modal="true"""
+          aria-labelledby="contact-publisher-title""
+        >
+</DialogContent>
+          <DialogHeader>
+</DialogHeader>"
+            <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2">"
+</DialogTitle>"
+              <Mail className="h-5 w-5 text-zion-cyan" />"
+</Mail>
+            </DialogTitle>
+          </DialogHeader>"
+          {error && <p className="text-red-500 mb-2">{error}</p>}""
+            <div className="mb-4 text-zion-slate-light">"
+</div>"
+            <span className="block">Email:</span>""
+            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">"
+</a>
+            </Link>
+          </div>
+        <Form {...form}>
+</Form>"
+          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">"
+</form>
             <FormField;
               control={form.control}"
-              name=\"subject\";
-              render={({ field }: { field: any}
-}) = /> (<FormItem />;
-                  <FormLabel />Subject</FormLabel>;
-                  <FormControl />;
+              name="subject""
+              render={({ field }: { field: any }) => (
+</FormField>
+                <FormItem>
+</FormItem>
+
+
+                  <FormLabel>Subject</FormLabel>
+                  <FormControl>
+</FormControl>
                     <Input;"
-                      placeholder=\"Subject\";"
-                      className=\"bg-zion-blue border-zion-blue-light text-white\";
+                      placeholder="Subject"""
+                      className="bg-zion-blue border-zion-blue-light text-white""
                       {...field}
-                    />;
-                  </FormControl>;"
-                  <FormMessage className=\"text-red-500\" />;
-                </FormItem>;
-              )}/>;
+                    />
+</Input>
+                  </FormControl>"
+                  <FormMessage className="text-red-500" />"
+</FormMessage>
+                </FormItem>
             <FormField;
-              control = {form.control}"
-              name=\"message\";
-              render={({ field }: { field: any}
-}) = /> (<FormItem />;
-                  <FormLabel />Message</FormLabel>;
-                  <FormControl />;
+              control = {form.control,}"
+              name="message"")
+              render={({ field }: { field: any }) => (
+</FormField>
+                <FormItem>
+</FormItem>
+
+
+                  <FormLabel>Message</FormLabel>
+                  <FormControl>
+</FormControl>
                     <Textarea;
                       placeholder={`Message to ${publisherName}...`}"
-                      className=\"bg-zion-blue border-zion-blue-light text-white min-h-[120px]\";
+                      className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]""
                       {...field}
-                    />;
-                  </FormControl>;"
-                  <FormMessage className=\"text-red-500\" />;
-                </FormItem>;
-              )}disabled = {!form && form.formState.isValid || isSubmitting}>;"
-              <SendIcon className=\"mr-2\" />;
-              {isSubmitting ? 'Sending...' : 'Send Message'}</>;
+                    />
+</Textarea>
+                  </FormControl>"
+                  <FormMessage className="text-red-500" />"
+</FormMessage>
+                </FormItem>"
+              <SendIcon className="mr-2" />;"
+</SendIcon>
+    </>;)
   ) </>;
-  )}<LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close} />;
-      <FocusLock disabled = {!is_open};
-  return_focus />;
-        <DialogContent;"
-          className=\"bg - zion - blue - dark border border - zion - blue - light text - white sm:max-w-md\";"
-          onKeyDown = {handleKeyDown }          aria - modal=\"true\";"
-          aria - labelledby=\"contact - publisher - title\" />
+  );
+};
 
-          <DialogHeader />;"
-            <DialogTitle id=\"contact - publisher - title\" className=\"text - xl font - bold text - white flex items - center gap-2\" />;"
-              <Mail className=\"h - 5 w - 5 text - zion-cyan\" />;
-              Contact Publisher;
+
+      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;
+</LoginModal>
+      <FocusLock disabled={!is_open} return_focus>;
+</FocusLock>
+        <DialogContent;"
+          className="bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md";""
+          onKeyDown = {handleKeyDown, }          aria - modal="true";""
+          aria - labelledby="contact - publisher - title";"
+        >;
+</DialogContent>
+          <DialogHeader>;
+</DialogHeader>"
+            <DialogTitle id="contact - publisher - title" className="text - xl font - bold text - white flex items - center gap - 2">;"
+</DialogTitle>"
+              <Mail className="h - 5 w - 5 text - zion - cyan" />;"
+</Mail>
             </DialogTitle>;
           </DialogHeader>;"
-          {error && <p className=\"text - red - 500 mb-2\" />{error}</p>}"
-          {publisher_email && (<div className=\"mb - 4 text - zion - slate-light\" />;}"
-            <span className=\"block\" />Email:</span>;}
-            <a href={`mailto: ${publisher_email},"
-} className=\"text - zion-cyan hover:underline truncate block\" />;
-              {publisher_email}
-            </a>
-    </div>
-  );
-}
-        <Form {...form} />;"
-          <form on_submit={(e, ) = /> e.prevent_default ()} className=\"space-y-4\">;
+          {error && <p className="text - red - 500 mb - 2">{error}</p>}""
+            <div className="mb - 4 text - zion - slate - light">;"
+</div>"
+            <span className="block">Email:</span>;""
+            <a href={`mailto:${publisher_email}`} className="text - zion - cyan hover:underline truncate block">;"
+</a>
+            </a>;
+          </div>)}
+        <Form {...form}>;
+</Form>"
+          <form on_submit={(e, ) => e.prevent_default ()} className="space - y-4">;"
+</form>
             <FormField;
-              control = {form.control }"
-              name=\"subject\";
-              render={({ field }: { field: any}
-}, ) = /> (                <FormItem />;
-                  <FormLabel  /> Subject</FormLabel>;
-                  <FormControl />;
+              control = {form.control, }"
+              name="subject";"
+              render={({ field }: { field: any }, ) => (                <FormItem>;
+</FormField>
+                  <FormLabel > Subject</FormLabel>;
+                  <FormControl>;
+</FormControl>
                     <Input;"
-                      placeholder=\"Subject\";"
-                      className=\"bg - zion - blue border - zion - blue - light text-white\";
+                      placeholder="Subject";""
+                      className="bg - zion - blue border - zion - blue - light text - white";"
                       {...field}
                     />;
+</Input>
                   </FormControl>;"
-                  <FormMessage className=\"text - red-500\" />;
+                  <FormMessage className="text - red - 500" />;"
+</FormMessage>)
+
                 </FormItem>)}
-            />;
             <FormField;
-              control = {form.control }"
-              name=\"message\";
-              render={({ field }: { field: any}
-}, ) = /> (                <FormItem />;
-                  <FormLabel  /> Message</FormLabel>;
-                  <FormControl />;
+
+              control = {form.control, }"
+              name="message";"
+              render={({ field }: { field: any }, ) => (                <FormItem>;
+</FormField>
+                  <FormLabel > Message</FormLabel>;
+                  <FormControl>;
+</FormControl>
                     <Textarea;
                       placeholder={`Message to ${publisher_name}...`}"
-                      className=\"bg - zion - blue border - zion - blue - light text - white min-h-[120px]\";
+                      className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";"
                       {...field}
                     />;
+</Textarea>
                   </FormControl>;"
-                  <FormMessage className=\"text - red-500\" />;
+                  <FormMessage className="text - red - 500" />;"
+</FormMessage>)
+
                 </FormItem>)}
-            />;
             <Button;
-              on_click = {handle_send }"
-              className=\"w-full\";
-              disabled = {!form.form_state.is_valid || is_submitting }             />;"
-              <SendIcon className=\"mr-2\" />;
-              {is_submitting ? 'Sending...' : 'Send Message'}
+
+              on_click = {handle_send, }"
+              className="w - full";"
+              disabled = {!form.form_state.is_valid || is_submitting, }            >;
+</Button>"
+              <SendIcon className="mr - 2" />;"
+</SendIcon>
+
             </Button>;
           </form>;
         </Form>;
         </DialogContent>;
       </FocusLock>;
-    </Dialog>;<LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>) </>)}e.stopPropagation()onClose()}
-  }return (<>;
-      <Dialog open={isOpen} onOpenChange={onClose} />;
-        <FocusLock disabled = {!isOpen};
-  returnFocus />;
-          <DialogContent;
-            className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md';
-            onKeyDown={handleKeyDown}
-            aria-modal='true';
-            aria-labelledby='contact-publisher-title' />
 
-            <DialogHeader />;
-              <DialogTitle;
-                id='contact-publisher-title';
-                className='text-xl font-bold text-white flex items-center gap-2' />
-
-                <Mail className='h-5 w-5 text-zion-cyan' />;
-                Contact Publisher;
-              </DialogTitle>;
-            </DialogHeader>;
-            {error && <p className='text-red-500 mb-2' />{error}</p>}
-            {publisherEmail && (<div className='mb-4 text-zion-slate-light' />;
-                <span className='block' />Email:</span>;}
-                <a;}
-                  href={`mailto: ${publisherEmail}`}
-                  className='text-zion-cyan hover:underline truncate block' />
-
-                  {publisherEmai}
+    </Dialog>;
+    <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+</LoginModal>
+    </>) </>);
 }
-                </a>;
-              </div>;
-            )}
-            <Form {...form} />;
-              <form onSubmit={e = /> e.preventDefault()} className='space-y-4'>;
-                <FormField;
-                  control={form.control}
-                  name='subject';
-                  render={({ field }: { field: any}
-}) = /> (<FormItem />;
-                      <FormLabel />Subject</FormLabel>;
-                      <FormControl />;
-                        <Input;
-                          placeholder='Subject';
-                          className='bg-zion-blue border-zion-blue-light text-white';
-                          {...field}
-                        />;
-                      </FormControl>;
-                      <FormMessage className='text-red-500' />;
-                    </FormItem>;
-                  )}
-                />;
-                <FormField;
-                  control={form.control}
-                  name='message';
-                  render={({ field }: { field: any}
-}) = /> (<FormItem />;
-                      <FormLabel />Message</FormLabel>;
-                      <FormControl />;
-                        <Textarea;
-                          placeholder={`Message to ${publisherName}...`}
-                          className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]';
-                          {...field}
-                        />;
-                      </FormControl>;
-                      <FormMessage className='text-red-500' />;
-                    </FormItem>;
-                  )}
-                />;
-                <Button;
-                  onClick={handleSend}
-                  className='w-full';
-                  disabled={!form.formState.isValid |isSubmitting}
-                 />;
-                  <SendIcon className='mr-2' />;
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </Button>;
-              </form>;
-            </Form>;
-          </DialogContent>;
-        </FocusLock>;
-      </Dialog>;
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
-    </>;
-  )"
+;"
+

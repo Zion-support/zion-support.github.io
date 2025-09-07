@@ -103,6 +103,11 @@ class DatabaseOptimizer {
 
     return dbKeywords.some(keyword => 
       content.toLowerCase().includes(keyword.toLowerCase())
+<<<<<<< HEAD
+    )
+  analyzeQueryFile($2) {
+    const lines = content.split('\n')
+=======
     );
   }
 
@@ -110,6 +115,7 @@ class DatabaseOptimizer {
     const issues = [];
     const lines = content.split('\n');
 
+>>>>>>> origin/chore/fix-lint-and-merge
     lines.forEach((line, index) => {
       const lineNumber = index + 1;
       const trimmedLine = line.trim();
@@ -173,7 +179,10 @@ class DatabaseOptimizer {
 
       for (const file of configFiles) {
         if (fs.existsSync(file)) {
+<<<<<<< HEAD
+=======
           const content = fs.readFileSync(file, 'utf8');
+>>>>>>> origin/chore/fix-lint-and-merge
           if (content.includes('pool') || content.includes('connectionLimit')) {
             poolingConfigured = true;
             break;

@@ -32,7 +32,10 @@ export class PerformanceMonitor {
 
       // First Input Delay
       new PerformanceObserver((list) => {
+<<<<<<< HEAD
+=======
         const entries = list.getEntries();
+>>>>>>> origin/chore/fix-lint-and-merge
         entries.forEach((entry) => {
           console.log('FID:', entry.processingStart - entry.startTime);
         });
@@ -40,7 +43,10 @@ export class PerformanceMonitor {
 
       // Cumulative Layout Shift
       new PerformanceObserver((list) => {
+<<<<<<< HEAD
+=======
         const entries = list.getEntries();
+>>>>>>> origin/chore/fix-lint-and-merge
         entries.forEach((entry) => {
           if (!entry.hadRecentInput) {
             console.log('CLS:', entry.value);
@@ -122,6 +128,12 @@ export class SEOEnhancer {
         { url: '/about', priority: 0.8, changefreq: 'monthly' },
         { url: '/contact', priority: 0.7, changefreq: 'monthly' }
       ]
+<<<<<<< HEAD
+    }
+    return sitemap
+  optimizeImages($2) {
+  if($2) {
+=======
     };
     
     return sitemap;
@@ -130,6 +142,7 @@ export class SEOEnhancer {
   optimizeImages() {
     if (typeof document !== 'undefined') {
       const images = document.querySelectorAll('img');
+>>>>>>> origin/chore/fix-lint-and-merge
       images.forEach(img => {
         if (!img.alt) {
           img.alt = 'Image description needed';
@@ -219,6 +232,18 @@ export class SecurityEnhancer {
     if (!this.securityChecks.csp) {
       recommendations.push('Implement Content Security Policy');
     }
+<<<<<<< HEAD
+  getSecurityRecommendations($2) {
+  if($2) {
+      recommendations.push('Implement Content Security Policy')
+  if($2) {
+      recommendations.push('Enforce HTTPS')
+    return recommendations
+export default SecurityEnhancer
+`
+  fs.writeFileSync('/workspace/lib/security-enhancer.js', securityScript)
+  console.log('✅ Created Enhanced Security Monitor')
+=======
     
     if (!this.securityChecks.https) {
       recommendations.push('Enforce HTTPS');
@@ -235,6 +260,7 @@ export default SecurityEnhancer;
   console.log('✅ Created Enhanced Security Monitor');
 }
 
+>>>>>>> origin/chore/fix-lint-and-merge
 // Accessibility Enhancement Script
 function createAccessibilityEnhancer() {
   const a11yScript = `
@@ -256,6 +282,17 @@ export class AccessibilityEnhancer {
       this.checkKeyboardNavigation();
       this.checkColorContrast();
     }
+<<<<<<< HEAD
+  performA11yAudit($2) {
+  if($2) {
+      this.checkAltTexts()
+      this.checkAriaLabels()
+      this.checkKeyboardNavigation()
+      this.checkColorContrast()
+    return this.generateA11yReport()
+  checkAltTexts($2) {
+    let altCount = 0
+=======
     
     return this.generateA11yReport();
   }
@@ -263,6 +300,7 @@ export class AccessibilityEnhancer {
   checkAltTexts() {
     const images = document.querySelectorAll('img');
     let altCount = 0;
+>>>>>>> origin/chore/fix-lint-and-merge
     images.forEach(img => {
       if (img.alt && img.alt.trim() !== '') {
         altCount++;
@@ -294,12 +332,17 @@ export class AccessibilityEnhancer {
       timestamp: new Date().toISOString(),
       checks: this.a11yChecks,
       recommendations: this.getA11yRecommendations()
+<<<<<<< HEAD
+    }
+  getA11yRecommendations($2) {
+=======
     };
   }
 
   getA11yRecommendations() {
     const recommendations = [];
     
+>>>>>>> origin/chore/fix-lint-and-merge
     if (this.a11yChecks.altTexts.includes('0/')) {
       recommendations.push('Add alt text to all images');
     }

@@ -1,65 +1,129 @@
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
+<<<<<<< HEAD
 
-console.log('⚡ Performance Optimizer Starting...');
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require(path')
 
-class PerformanceOptimizer {
-  constructor() {
-    this.optimizations = [];
-  }
+const { execSync } = require('child_process')
+      "status
+        status"
+        "message
+        status"
+      return { "status}
+      return { status": skipped', "message}
+      return { status: 'skipped, message"}
+      return { "status: skipped', message"}
+      return { status: 'skipped, "message}
+      status"
+        "stdio
+            status"
+      return { "status: success', message"}
+      return { "status}
+      return { status": 'skipped, "message}
+      return { status: skipped', message"}
+      "status
+      return { status": 'skipped, "message}
+      return { status": skipped', "message}
+      status"
+      "message
+      return { status": 'skipped, "message}
+      return { status: skipped', message"}
+          "missing
+          missing"
+      "status
+    console.log('\n Performance Optimization Summary")
 
-  async optimizeImages() {
-    try {
-      console.log('🖼️  Optimizing images...');
-      const publicDir = path.join(process.cwd(), 'public');
-      if (fs.existsSync(publicDir)) {
-        const files = fs.readdirSync(publicDir, { recursive: true });
-        const imageFiles = files.filter(file => 
-          /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
-        );
-        console.log(`Found ${imageFiles.length} images to optimize`);
-        this.optimizations.push({
-          type: 'images',
-          count: imageFiles.length,
-          status: 'completed'
-        });
-      }
-    } catch (error) {
-      console.error('❌ Image optimization failed:', error.message);
-    }
-  }
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      optimizations: this.optimizations,
-      summary: {
-        totalOptimizations: this.optimizations.length,
-        completed: this.optimizations.filter(opt => opt.status === 'completed').length
-      }
-    };
+    console.error(Performance optimization "failed)
 
-    const reportPath = path.join(process.cwd(), 'performance-reports', 'optimization-report.json');
-    fs.mkdirSync(path.dirname(reportPath), { recursive: true });
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    console.log('📊 Optimization report generated:', reportPath);
-    return report;
-  }
+    console.error(Performance optimization failed")
 
-  async run() {
-    console.log('🚀 Starting performance optimization...');
-    await this.optimizeImages();
-    const report = await this.generateReport();
-    
-    console.log('\n⚡ Optimization Summary:');
-    console.log('  - Total Optimizations:', report.summary.totalOptimizations);
-    console.log('  - Completed:', report.summary.completed);
-    
-    return report;
-  }
-}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-const optimizer = new PerformanceOptimizer();
-optimizer.run().catch(console.error);
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+const { execSync } = require('child_process')
+<<<<<<< HEAD
+      "status"
+        "status"
+        "message"
+        "status"
+      return { "status"}
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
+      "status"
+        "stdio"
+            "status"
+      return { "status": 'success', "message"}
+      return { "status"}
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
+      "status"
+      return { "status": 'skipped', "message"}
+      return { "status": 'skipped', "message"}
+      "status"
+      "message"
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
+          "missing"
+          "missing"
+      "status"
+    console.log('\n Performance Optimization "Summary")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    console.error('Performance optimization "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+    console.error('Performance optimization "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+    console.error('Performance optimization "failed")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

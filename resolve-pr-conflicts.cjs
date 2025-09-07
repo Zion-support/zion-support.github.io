@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -6,12 +8,24 @@ console.log('🔧 Starting PR Conflict Resolution Script');
 // Function to run git commands
 function runGitCommand(command) {
   try {
-    const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-    return result.trim();
+    console.log(`Resolving conflicts in: ${file}`);
+    
+    // Check if file exists
+    if (!fs.existsSync(file)) {
+      console.log(`  ⚠️  File ${file} doesn't exist, skipping...`);
+      continue;
+    }
+    
+    // Read the file content
+    let content = fs.readFileSync(file, 'utf8');
+    
+    // Remove conflict markers and keep our changes (HEAD)
+    content = content.replace(/    // Write the resolved content
+    fs.writeFileSync(file, content);
+    console.log(`  ✅ Resolved: ${file}`);
+    
   } catch (error) {
-    console.error(`Error running command: ${command}`);
-    console.error(error.message);
-    return null;
+    console.log(`  ❌ Error resolving ${file}: ${error.message}`);
   }
 }
 // Function to resolve conflicts by accepting the incoming changes for deleted files
@@ -31,5 +45,35 @@ function resolveConflicts() {
       // Check if file exists
       if (fs.existsSync(file)) {
         // Read the file content
-        let content = fs.readFileSync(file, 'utf8');
         // Check if it's a modify/delete conflict
+        if (conflictMarkers) {
+          console.log(`  - Resolving modify/delete conflict in ${file}`);
+          // For modify/delete conflicts, we'll keep the incoming version
+          // Remove conflict markers and keep the incoming content
+          // Write the resolved content
+          fs.writeFileSync(file, content);
+          console.log(`  ✅ Resolved ${file}`);
+        } else {
+          // For content conflicts, try to resolve automatically
+          console.log(`  - Resolving content conflict in ${file}`);
+          // Remove conflict markers and keep both versions where possible
+            // For most cases, prefer the incoming content
+            return incomingContent;
+          });
+          fs.writeFileSync(file, content);
+          console.log(`  ✅ Resolved ${file}`);
+        }
+      } else {
+        console.log(`  - File ${file} doesn't exist, skipping`);
+      }
+    }
+    return true;
+  } catch (error) {
+    console.error('Error resolving conflicts:', error.message);
+    return false;
+  }
+}
+
+console.log('🎉 PR conflict resolution complete!');
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

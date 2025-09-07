@@ -1,7 +1,14 @@
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+console.log(🚀 Starting comprehensive merge conflict resolution...');
+
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
+
+=======
 console.log('Starting comprehensive merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
@@ -11,28 +18,61 @@ function resolveMergeConflicts(filePath) {
     
     // Check if file has merge conflict markers
       return false; // No conflicts in this file
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     
     console.log(`Resolving conflicts in: ${filePath}`);
     
     // Split content by conflict markers
-    const lines = content.split('\n');
+    const lines = content.split(\n');
     const resolvedLines = [];
     let inConflict = false;
     let conflictBuffer = [];
+<<<<<<< HEAD
+
+=======
     let conflictType = null; // 'ours' or 'theirs'
+>>>>>>> origin/chore/fix-lint-and-merge
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.startsWith('')) {
+      if (line.startsWith(')) {
         inConflict = true;
-        conflictType = 'ours';
+        conflictType = ours';
         conflictBuffer = [];
         continue;
-      } else if (line.startsWith('')) {
-        conflictType = 'theirs';
+      } else if (line.startsWith(')) {
+        conflictType = theirs';
         continue;
+<<<<<<< HEAD
+      } else if (line.startsWith('>>>>>>>)) {
+        inConflict = false;
+    try {
+        console.log(`🔧 Processing: ${filePath}`);
+        let content = fs.readFileSync(filePath, utf8');
+        
+
+        }
+        
+        // Strategy: Keep HEAD version (current branch) for most conflicts
+        // Remove merge conflict markers and keep the HEAD version
+        content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)        
+        // Remove any remaining conflict markers
+        content = content.replace(/\n/g, ');
+        content = content.replace(/\n/g, ');
+        content = content.replace(/        
+        // Clean up any duplicate content
+        content = content.replace(/\n\n\n+/g, \n\n');
+        
+        // Write the resolved content back
+        fs.writeFileSync(filePath, content, 'utf8);
+        console.log(`✅ Resolved conflicts in: ${filePath}`);
+        return true;
+    } catch (error) {
+        console.error(`❌ Error processing ${filePath}:`, error.message);
+        return false;
+=======
         inConflict = true;
         conflictType = 'ours';
         conflictBuffer = [];
@@ -71,6 +111,7 @@ function resolveMergeConflicts(filePath) {
       } else {
         resolvedLines.push(line);
       }
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     
     // Write resolved content
@@ -84,17 +125,9 @@ function resolveMergeConflicts(filePath) {
   }
 }
 
-// Function to find all files with merge conflicts
-function findConflictedFiles() {
-  try {
-    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(file => file.length > 0);
-  } catch (error) {
-    console.log('No conflicted files found or git diff failed');
-    return [];
-  }
-}
 
+<<<<<<< HEAD
+=======
 // Function to handle special file types
 function handleSpecialFiles() {
   const specialFiles = [
@@ -113,12 +146,16 @@ function handleSpecialFiles() {
       } catch (error) {
         console.log(`⚠ Could not resolve special file ${file}: ${error.message}`);
       }
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   });
 }
 
 // Function to remove deleted files
 function handleDeletedFiles() {
+<<<<<<< HEAD
+
+=======
   const deletedFiles = [
     'temp_exclude/pages-disabled/api.tsx',
     'temp_exclude/pages.disabled_full/services.tsx',
@@ -136,10 +173,64 @@ function handleDeletedFiles() {
       } catch (error) {
         console.log(`⚠ Could not remove file ${file}: ${error.message}`);
       }
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   });
 }
 
+<<<<<<< HEAD
+// Main execution
+async function main() {
+    try {
+        // Check if we're in a git repository
+        execSync(git rev-parse --git-dir, { stdio: 'pipe' });
+        console.log(✅ Git repository detected);
+    } catch (error) {
+        console.error('❌ Not in a git repository');
+        process.exit(1);
+    }
+
+    // Get current branch
+    const currentBranch = execSync(git branch --show-current, { encoding: 'utf8' }).trim();
+    console.log(`📍 Current branch: ${currentBranch}`);
+
+    // Handle deleted files conflicts first
+    handleDeletedFiles();
+
+    // Get files with conflicts
+    const conflictFiles = getConflictFiles();
+    
+    if (conflictFiles.length === 0) {
+        console.log(✅ No merge conflicts found);
+        return;
+    }
+
+    console.log(`🔍 Found ${conflictFiles.length} files with merge conflicts`);
+
+    // Resolve conflicts in each file
+    let resolvedCount = 0;
+    for (const file of conflictFiles) {
+        if (fs.existsSync(file)) {
+            if (resolveMergeConflicts(file)) {
+                resolvedCount++;
+            }
+        }
+    }
+
+    console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
+
+    // Add resolved files to staging
+    if (resolvedCount > 0) {
+        console.log('📝 Adding resolved files to staging...');
+        execSync(git add .);
+        
+        // Commit the resolved conflicts
+        console.log('💾 Committing resolved conflicts...');
+        execSync(git commit -m "fix: resolve comprehensive merge conflicts\n\n- Resolved conflicts in  + resolvedCount + ' files\n- Kept HEAD version for consistency\n- Cleaned up duplicate content\n- Removed deleted files"');
+    }
+
+    console.log('🎉 Comprehensive merge conflict resolution completed!');
+=======
 // Main resolution process
 function resolveAllConflicts() {
   console.log('Finding files with merge conflicts...');
@@ -179,6 +270,7 @@ function resolveAllConflicts() {
   console.log(`  - Failed: ${failedCount} files`);
   
   return failedCount === 0;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 // Execute the resolution

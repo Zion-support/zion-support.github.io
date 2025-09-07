@@ -1,49 +1,121 @@
-import { toast } from \"@/hooks/use-toast\",
-import type { UserProfile } from \"@/types/auth\";
-import { checkNewRegistration } from \"@/utils/authUtils\";
+import {toast} from "@/hooks/use-toast";
+import type { UserProfile } from "@/types/auth";
+import {checkNewRegistration} from "@/utils/authUtils";
+import {useNavigate} from 'react-router-dom';
+
+import { toast } from "@/hooks/use-toast",
+import type { UserProfile } from "@/types/auth";
+import { checkNewRegistration } from "@/utils/authUtils";
 import { useNavigate } from 'react-router-dom';
-import type { UserProfile } from \"@/types/auth\",
-import { checkNewRegistration } from \"@/utils/authUtils\",
-import { useNavigate } from 'react-router-dom',      }
+import type { UserProfile } from "@/types/auth",
+import { checkNewRegistration } from "@/utils/authUtils",
+
+/**
+ * Custom hook for auth event handling
+
+ */
+export function useAuthEventHandlers(
+
+  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
+  setOnboardingStep: React.Dispatch<React.SetStateAction<string | null>>
+
+      }
+
+      }
+
     }, 0);
     }, 0),
-    // Check if user needs to complete onboarding;
-if (!mappedUser.profileComplete && navigate) {}
-      setOnboardingStep('profile'),      description: `You're now signed in as ${mappedUser && mappedUser.displayName || mappedUser && mappedUser.email}`,;
-      variant: \"default\"}),;
+
+      setOnboardingStep('profile'),
+
+      toast({"
+        title: "Complete your profile""
+        description: "Please complete your profile information to get started""
+        variant: "default"})'
+      navigate('/onboarding')
+    }
+
+  },
+
+  const handleSignedOut = () => {
+    toast({
+      title: "Signed out"
+      description: "You have been successfully logged out"
+
+      variant: "default"})
+"
+import {checkNewRegistration} from "@/utils/authUtils";'
+
+import {useNavigate} from 'react-router-dom';
+/**;
+ * Custom hook for auth event handling;
+ */;
+export function useAuthEventHandlers(): any (;
+  setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,;
+  setOnboardingStep: React && React.Dispatch<React && React.SetStateAction<string | null>>;
+
+import { toast } from "@/hooks/use-toast",;
+import type { UserProfile } from "@/types/auth",;
+import { checkNewRegistration } from "@/utils/authUtils",;
+import { useNavigate } from 'react-router-dom',;
+
+) {;
+  const navigate = useNavigate(),;
+
+  const handleSignedIn = (mappedUser: UserProfile) => {;
+
+      variant: "default"}),;
+
     // Check for new registration and send welcome email if needed;
     setTimeout(() => {;
-      if (mappedUser) {;}
-        checkNewRegistration(mappedUser);}
+      if (mappedUser) {;
+        checkNewRegistration(mappedUser);
       }
+
       toast({;
-        title: \"Complete your profile\",,}
-  description: \"Please complete your profile information to get started\",;}
-        variant: \"default\"}),;
+        title: "Complete your profile",
+        description: "Please complete your profile information to get started",;
+        variant: "default"}),;
       navigate('/onboarding');
     }
-  };import { toast } from '@/hooks / use - toast';
-import type { UserProfile } from \"@/types / auth\";
+  };
+
+  };
+
+  const handleSignedOut = () => {;
+    toast({;
+      title: "Signed out",
+      description: "You have been successfully logged out",;
+      variant: "default"});
+  };
+
+  return {;
+    handleSignedIn;
+    handleSignedOut;
+
+import { toast } from '@/hooks / use - toast';
+import type { UserProfile } from "@/types / auth";
 import { checkNewRegistration } from '@/utils / auth_utils';
+
 import {use_navigate} from 'react-router-dom';
 /**;
 * Custom hook for auth event handling;
 */;
-export /**
+export /**;
  * useAuthEventHandlers - Function description;
  */
-function useAuthEventHandlers() {
+function useAuthEventHandlers() {}
   const navigate = use_navigate (),
-  const handleSignedIn = (mapped_user: UserProfile) =>: any {
-    toast ({}
-      title: \"Welcome back!\",}
-      description: `You're now signed in as ${mapped_user.display_name || mapped_user.email}`,
-      variant: \"default\"}),
+  const handleSignedIn = (mapped_user: UserProfile) =>: any {}
+    toast ({"
+      title: "Welcome back!",'`
+      description: `You're now signed in as ${mapped_user.display_name || mapped_user.email}`,"
+      variant: "default"}),
     // Check for new registration and send welcome email if needed;
-    set_timeout (() => {
+    set_timeout (() => {}
       // Check condition;
 if ( {) {}
-  $2}
+  $2;
 }
         checkNewRegistration (mapped_user);
       }
@@ -52,110 +124,125 @@ if ( {) {}
     // Check if user needs to complete onboarding;
     // Check condition;
 if ( {) {}
-  $2}
-}
+  $2;
+}'
       setOnboardingStep ('profile');
-      toast ({
-        title: \"Complete your profile\",}
-        description: \"Please complete your profile information to get started\",}
-        variant: \"default\"}),
+      toast ({"
+        title: "Complete your profile","
+        description: "Please complete your profile information to get started","
+        variant: "default"}),'
       navigate ('/onboarding');
     }
   }
 ;
-  const handleSignedOut = () =>: any {
-    toast ({
-      title: \"Signed out\",}
-      description: \"You have been successfully logged out\",}
-      variant: \"default\"});
+  const handleSignedOut = () =>: any {}
+    toast ({"
+      title: "Signed out","
+      description: "You have been successfully logged out","
+      variant: "default"});
   }
 ;
-  return {
+  return {}
     handleSignedIn;
-    handleSignedOut;}
-    handleSignedOut}
+    handleSignedOut;
+
+    handleSignedOut;
   },
-  return {
-    handleSignedIn,}
-    handleSignedOut;}
-import { toast } from \"@/hooks/use-toast\";
-import type { UserProfile } from \"@/types/auth\";
-import { checkNewRegistration } from \"@/utils/authUtils\",;
+
+  return {}
+    handleSignedIn,
+<<<<<<< HEAD
+    handleSignedOut,
+import { toast } from "@/hooks/use-toast";"
+import { checkNewRegistration } from "@/utils/authUtils",;"
+import { useNavigate } from 'react-router-dom',;'
+=======
+    handleSignedOut"
+import { toast } from "@/hooks/use-toast",;"
+import type { UserProfile } from "@/types/auth",;"
+import { checkNewRegistration } from "@/utils/authUtils",;'
 import { useNavigate } from 'react-router-dom',;
+>>>>>>> origin/chore/fix-lint-and-merge
 /**;
  * Custom hook for auth event handling;
  */;
 export function useAuthEventHandlers(): any (;
-  setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null />>,;
-  setOnboardingStep: React && React.Dispatch<React && React.SetStateAction<string | null />>;
-) {;}
-  const navigate = useNavigate(),;}
+  setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,;
+  setOnboardingStep: React && React.Dispatch<React && React.SetStateAction<string | null>>;
+) {;
+  const navigate = useNavigate(),;
+
+  }
+}
+
   }
 }  }
 }
-import { toast } from \"@/hooks/use-toast\",;
-import type { UserProfile } from \"@/types/auth\",;
-import { checkNewRegistration } from \"@/utils/authUtils\",;
+
+  }
+}
+"
+import { toast } from "@/hooks/use-toast",;"
+import type { UserProfile } from "@/types/auth",;"
+<<<<<<< HEAD
+=======
+import { checkNewRegistration } from "@/utils/authUtils",;'
 import { useNavigate } from 'react-router-dom',;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 /**;
  * Custom hook for auth event handling;
  */;
-export function useAuthEventHandlers(;
-  setUser:React.Dispatch<React.SetStateAction<UserProfile | null />>,;
-  setOnboardingStep:React.Dispatch<React.SetStateAction<string | null />>;
-) {;
-  const navigate = useNavigate(),;
+<<<<<<< HEAD
+export function useAuthEventHandlers() {;
+  }
 ;
-  const handleSignedIn = (;
+  const handleSignedIn = ("mappedUser":UserProfile) => {;
+    }
     toast({;
-      title:\"Welcome back!\",,) => {
-  return $3;}
-}
-  description:`You're now signed in as ${mappedUser.displayName || mappedUser.email}`,;
-      variant:\"default\"}),;
+      }
+      "title":"Welcome back!",,"
+  "description":`You're now signed in as ${mappedUser.displayName || mappedUser.email}`,;`
+      "variant":"default"}),;"
+=======
+
+      variant:"default"}),;
+>>>>>>> origin/chore/fix-lint-and-merge
     ;
     // Check for new registration and send welcome email if needed;
     setTimeout(() => {;
-      if (mappedUser) {;}
-        checkNewRegistration(mappedUser),;}
+      if (mappedUser) {;
+        checkNewRegistration(mappedUser),;
       }
     }, 0),;
 ;
     // Check if user needs to complete onboarding;
-    if (!mappedUser.profileComplete && navigate) {;
+    if (!mappedUser.profileComplete && navigate) {;'
       setOnboardingStep('profile'),;
-      toast({;
-        title:\"Complete your profile\",,}
-  description:\"Please complete your profile information to get started\",;}
-        variant:\"default\"}),;
+
       navigate('/onboarding'),;
     }
   },;
 ;
-  const handleSignedOut = (;
-    toast({;
-      title:\"Signed out\",,
-  description:\"You have been successfully logged out\",;) => {
-  return $3;}
-}
-      variant:\"default\"}),;
+  const handleSignedOut = () => {;
+
+      variant:"default"}),;
   },;
 ;
   return {;
-    handleSignedIn,;}
-    handleSignedOut;}
+    handleSignedIn,;
+    handleSignedOut;
   },;
-}   toast ({
-  //Check for new registration and send welcome email if needed setTimeout ( () => {
+}   toast ({}
+  //Check for new registration and send welcome email if needed setTimeout ( () => {}
   if (mappedUser) {}
-  checkNewRegistration (mappedUser) }
+  checkNewRegistration (mappedUser) 
 }
 }, 0);
-//Check if user needs to complete onboarding if (!mappedUser.profileComplete && navigate) {
+//Check if user needs to complete onboarding if (!mappedUser.profileComplete && navigate) {'
   setOnboardingStep ('profile');
-toast ({}
-  navigate ('/onboarding');}
+toast ({'
+  navigate ('/onboarding');
 }
 }
 };

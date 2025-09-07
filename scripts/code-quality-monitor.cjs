@@ -1,148 +1,135 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-const { execSync } = require('child_process');
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+#!/usr/bin/env node
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+
 const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-console.log('📝 Code Quality Monitor Starting...');
+console.log('🔍 Code Quality Monitor Starting...');
 
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+console.log(' Starting code quality monitoring...')
+<<<<<<< HEAD
+    "name"
+    "message"
+    "name"
+    "message"
+    "name"
+    "message"
+    "name"
+    "message"
+// console.log('\n Code Quality "Report")
+  console.log('\n⚠  Quality "Issues")
+// console.log('\n "Recommendations")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.log('\n "Recommendations")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.log('\n "Recommendations")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.log('\n "Recommendations")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  console.log('\n "Recommendations")
+=======
+    "name"""
+    "message"""
+// console.log('\n Code Quality "Report")""');
+  console.log('\n⚠  Quality "Issues")""');
+// console.log('\n "Recommendations")""');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
 const qualityChecks = [
   {
-    name: 'ESLint check',
-    check: () => {
-      try {
-        console.log('🔍 Running ESLint...');
-        execSync('npm run lint', { stdio: 'pipe' });
-        console.log('✅ No ESLint errors found');
-        return true;
-      } catch (error) {
-        console.log('⚠️  ESLint errors detected. Run "npm run lint:fix" to fix automatically.');
-        return false;
-      }
-    }
+    name: 'ESLint Check',
+    command: 'npm run lint',
+    critical: true
   },
   {
-    name: 'TypeScript check',
-    check: () => {
-      try {
-        console.log('🔍 Running TypeScript check...');
-        execSync('npm run type-check', { stdio: 'pipe' });
-        console.log('✅ No TypeScript errors found');
-        return true;
-      } catch (error) {
-        console.log('⚠️  TypeScript errors detected. Please fix type issues.');
-        return false;
-      }
-    }
+    name: 'TypeScript Check',
+    command: 'npm run type-check',
+    critical: true
   },
   {
-    name: 'Test coverage check',
-    check: () => {
-      try {
-        console.log('🔍 Running tests...');
-        execSync('npm run test:smoke', { stdio: 'pipe' });
-        console.log('✅ Tests passing');
-        return true;
-      } catch (error) {
-        console.log('⚠️  Tests failing. Please fix test issues.');
-        return false;
-      }
-    }
+    name: 'Build Check',
+    command: 'npm run build',
+    critical: true
   },
   {
-    name: 'File structure check',
-    check: () => {
-      const requiredFiles = [
-        'package.json',
-        'tsconfig.json',
-        'next.config.ts',
-        'App.tsx'
-      ];
-      
-      const missingFiles = requiredFiles.filter(file => !fs.existsSync(file));
-      
-      if (missingFiles.length > 0) {
-        console.log(`⚠️  Missing required files: ${missingFiles.join(', ')}`);
-        return false;
-      }
-      
-      console.log('✅ All required files present');
-      return true;
-    }
-  },
-  {
-    name: 'Import/Export consistency check',
-    check: () => {
-      const srcFiles = [];
-      
-      function findTsxFiles(dir) {
-        if (!fs.existsSync(dir)) return;
-        
-        const files = fs.readdirSync(dir);
-        files.forEach(file => {
-          const filePath = `${dir}/${file}`;
-          const stat = fs.statSync(filePath);
-          
-          if (stat.isDirectory()) {
-            findTsxFiles(filePath);
-          } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-            srcFiles.push(filePath);
-          }
-        });
-      }
-      
-      findTsxFiles('src');
-      findTsxFiles('components');
-      findTsxFiles('.');
-      
-      let hasIssues = false;
-      
-      srcFiles.forEach(file => {
-        const content = fs.readFileSync(file, 'utf8');
-        const lines = content.split('\n');
-        
-        lines.forEach((line, index) => {
-          // Check for unused imports
-          if (line.trim().startsWith('import ') && !line.includes('//')) {
-            const importName = line.match(/import\s+.*?\s+from/);
-            if (importName) {
-              const name = importName[0].replace(/import\s+/, '').replace(/\s+from/, '');
-              const isUsed = content.includes(name.replace(/\{|\}/g, '').split(',')[0].trim());
-              if (!isUsed && !name.includes('*')) {
-                console.log(`⚠️  Potentially unused import in ${file}:${index + 1} - ${name}`);
-                hasIssues = true;
-              }
-            }
-          }
-        });
-      });
-      
-      return !hasIssues;
-    }
+    name: 'Test Check',
+    command: 'npm run test:smoke',
+    critical: false
   }
 ];
 
 let passed = 0;
 let failed = 0;
+let criticalFailed = 0;
 
 qualityChecks.forEach(check => {
   try {
-    if (check.check()) {
-      console.log(`✅ ${check.name}`);
-      passed++;
-    } else {
-      console.log(`❌ ${check.name}`);
-      failed++;
-    }
+    console.log(`\n🔄 Running ${check.name}...`);
+    execSync(check.command, { stdio: 'pipe' });
+    console.log(`✅ ${check.name} passed`);
+    passed++;
   } catch (error) {
-    console.log(`❌ ${check.name} - Error: ${error.message}`);
+    console.log(`❌ ${check.name} failed`);
     failed++;
+    if (check.critical) {
+      criticalFailed++;
+    }
   }
 });
 
-console.log(`\n📝 Code Quality Results: ${passed} passed, ${failed} failed`);
+console.log(`\n📊 Code Quality Results:`);
+console.log(`✅ Passed: ${passed}`);
+console.log(`❌ Failed: ${failed}`);
+console.log(`🚨 Critical Failed: ${criticalFailed}`);
 
-if (failed === 0) {
-  console.log('🎉 All code quality checks passed!');
+if (criticalFailed > 0) {
+  console.log('\n⚠️  Critical quality checks failed. Please fix issues before proceeding.');
+  process.exit(1);
+} else if (failed > 0) {
+  console.log('\n⚠️  Some quality checks failed, but none are critical.');
+  process.exit(0);
 } else {
-  console.log('⚠️  Code quality issues detected. Please review and fix.');
+  console.log('\n🎉 All code quality checks passed!');
+  process.exit(0);
 }
-
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

@@ -1,12 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
   const appeal: TrustAppeal = {
     userId;
-    message;}
-    contactEmail;}
+    message;
+    contactEmail;
     createdAt: new Date().toISOString()}
-  try {}
-    await supabase && supabase.from('trust_appeals').insert(appeal);}
+  try {
+  // TODO: Implement
+}
+    await supabase && supabase.from('trust_appeals').insert(appeal);
   } catch {}
   return res && res.status(200).json({ ok: true, appeal });
 
@@ -19,44 +20,54 @@ export default async /**
 function handler() {
   // Check condition;
 if ( {) {
-  $2;}
-res.set_header ('Allow', 'POST');}
-    return res.status (405).json ({ error: 'Method not allowed' });
-  
-const { user_id, message, contact_email } = req.body || {}
-  if (
-    return res.status (400).json ({ error: 'Missing user_id or message' })) {
   $2;
-const appeal: TrustAppeal = {
+    res.set_header ('Allow', 'POST');
+    return res.status (405).json ({ error: 'Method not allowed' });
+const { user_id, message, contact_email } = req.body || {}
+<<<<<<< HEAD
+  if (
+    return res.status (400).json ({ "error": 'Missing user_id or message' })) {'
+  $2
+}
+    }
+=======
+  if ()
+    return res.status (400).json ({ error: 'Missing user_id or message' })) {
+>>>>>>> origin/chore/fix-lint-and-merge
     user_id,
     message,
     contact_email,
     created_at: new Date ().toISOString (),
 
+<<<<<<< HEAD
 ;
-  try {}
-    await supabase.from ('trust_appeals').insert (appeal);}
+  try {
+    }
+    await supabase.from ('trust_appeals').insert (appeal);'
   } catch {}
-  return res.status (200).json ({ ok: true, appeal });  // Check condition;
+return res.status (200).json ({ "ok": true, appeal });  // Check condition;
 if ( {) {
-  $2;}
-res.set_header ('AllowPOST');}
-    return res.status (405).json ({ error: 'Method not allowed' });
+  $2
+}
+res.set_header ('AllowPOST');'
+    return res.status (405).json ({ "error": 'Method not allowed' });'
   
-const { user_id, message, contact_email } = req.body || {}
+  if (return res.status (400).json ({ "error": 'Missing user_id or message' })) {'
+  $2
+}
+    }
+=======
+  // TODO: Implement
+    await supabase.from ('trust_appeals').insert (appeal);
+  return res.status (200).json ({ ok: true, appeal });  // Check condition;
+    res.set_header ('AllowPOST');
   if (return res.status (400).json ({ error: 'Missing user_id or message' })) {
-  $2;
-const appeal: TrustAppeal = {
+>>>>>>> origin/chore/fix-lint-and-merge
     user_id;
-    message;}
-    contact_email;}
+    contact_email;
     created_at: new Date ().toISOString ()}
-;
-  try {}
-    await supabase.from ('trust_appeals').insert (appeal);}
-  } catch {}
+  // TODO: Implement
 return res.status (200).json ({ ok: true, appeal });
 
 return res.status(200).json({ ok: true, appeal });
 
-  return res.status(200).json({ ok: true, appeal });

@@ -1,45 +1,38 @@
-
 import React from 'react';
-interface ModernNavigationProps  {// Add props here as needed;}
-}
-export default function ModernNavigation() {return (<div />;
-      <h1 />ModernNavigation</h1>;
-      <p />This component is currently under development.</p>;}
-    </div>;}
-  )}
-interface LoginProps {}
-  // Add props here as needed}
-}
-export default function Login({ }: LoginProps) {
-  return (
-    <div />
-      <h1 />Login</h1>
-      <p />This component is currently under development.</p>
-    </div>}
-  );}
-}
-}
-}
-}
-interface ModernNavigationProps  {// Add props here as needed;}
-}
-export default function ModernNavigation() {return (<div />;
-      <h1 />ModernNavigation</h1>;
-      <p />This component is currently under development.</p>;}
-    </div>;}
-  )}
-interface LoginProps {}
-  // Add props here as needed}
-}
-export default function Login({ }: LoginProps) {
-  return (
-    <div />
-      <h1 />Login</h1>
-      <p />This component is currently under development.</p>
-    </div>}
-  );}
-}
-}
-}
-}
 
+<<<<<<< HEAD
+
+========
+=======
+interface LoginProps  {// Add props here as needed;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  return (
+    <div>
+      <h1>Login</h1>
+      <p>This component is currently under development.</p>
+    </div>;
+  );
+
+>>>>>>> origin/chore/fix-lint-and-merge
+}
+}}
+}
+<<<<<<< HEAD
+
+=======
+interface LoginProps  {// Add props here as needed;
+}
+export default function Login() {return (<div>;
+      <h1>Login</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )}
+}}
+}
+}
+}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge

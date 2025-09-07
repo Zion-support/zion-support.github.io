@@ -63,13 +63,11 @@ const allServices = [
                            service.category.toLowerCase().includes(searchTerm.toLowerCase())const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory;
   return matchesSearch && matchesCategory;
 
-const allServices = null;
                 emerging technologies, and comprehensive IT solutions;
 ];
 
   // Filter and sort services;
 
-const filteredServices = allServices;
     .filter(service = > ;
   const matchesSearch =;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;

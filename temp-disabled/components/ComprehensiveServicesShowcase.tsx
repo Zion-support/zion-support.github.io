@@ -245,7 +245,6 @@ const categories = [
 }
   // Filter and sort services;
 
-const filteredServices = allServices;
     .filter(service = > ;
   const matchesCategory =;
         selectedCategory === 'all' || service.category === selectedCategory;

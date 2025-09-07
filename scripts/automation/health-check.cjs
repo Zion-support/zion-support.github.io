@@ -1,64 +1,155 @@
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Health Check Automation Script;
  * Monitors system health and reports status;
  */
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+const fs = require('fs');
+const path = require(path');
+const { execSync } = require('child_process');
+=======
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class HealthChecker {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'health-check.log');
-        this.reportFile = path.join(this.projectRoot, 'health-check-report.json');
-        this.ensureLogsDir()};
+
+        this.ensureLogsDir()}
     ensureLogsDir() {}
         const logsDir = path.dirname(this.logFile);
         if (!fs.existsSync(logsDir)) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
+            fs.mkdirSync(logsDir, { "recursive: true })}
+    }
     log(message) {}
         const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+
+        const healthReport = {}
+            "timestamp": new Date().toISOString(),
+            status: healthy',
+            "checks": {}
+        }
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const logMessage = `[${timestamp}] ${message}\n`;`
         console.log(logMessage.trim());
         fs.appendFileSync(this.logFile, logMessage)};
+<<<<<<< HEAD
     async checkSystemHealth() {}
         this.log('Starting health check...');
+<<<<<<< HEAD
+=======
         
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const healthReport = {}
             "timestamp": new Date().toISOString(),
             "status": 'healthy',
             "checks": {};
         };
+<<<<<<< HEAD
+=======
+=======
+    async checkSystemHealth() {}"
 
+            "checks": {};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         try {}
             // Check Node.js version;
             const nodeVersion = process.version;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
             healthReport.checks.nodeVersion = {}
                 "status": 'pass',
                 "value": nodeVersion;
             };
             this.log(`Node.js "version": ${nodeVersion}`);
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
             // Check available memory;
             const memUsage = process.memoryUsage();
             healthReport.checks.memory = {}
-                "status": 'pass',
+                status: 'pass,
                 "value": {}
+<<<<<<< HEAD
+                    rss: Math.round(memUsage.rss / 1024 / 1024) + MB',
+                    heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024) + 'MB,
+                    "heapTotal": Math.round(memUsage.heapTotal / 1024 / 1024) + MB'
+                }
+            }
+            this.log(`Memory usage: ${healthReport.checks.memory.value.rss}`);
+
+=======
                     rss: Math.round(memUsage.rss / 1024 / 1024) + 'MB',
                     "heapUsed": Math.round(memUsage.heapUsed / 1024 / 1024) + 'MB',
                     "heapTotal": Math.round(memUsage.heapTotal / 1024 / 1024) + 'MB'
                 };
             };
             this.log(`Memory "usage": ${healthReport.checks.memory.value.rss}`);
+<<<<<<< HEAD
+=======
+=======
+            healthReport.checks.nodeVersion = {}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             // Check disk space;
-            try {}
-                const diskUsage = execSync('df -h .', { "encoding": 'utf8' }
+            try {}"
+                const diskUsage = execSync('df -h ., { "encoding: utf8})
 });
                 healthReport.checks.diskSpace = {}
+<<<<<<< HEAD
+
+        this.log(`Health check completed. Status": ${healthReport.status}`);
+
+                    "value: `${onlineProcesses} processes online;
+                this.log(`PM2 "processes": ${onlineProcesses} online`)} catch (error) {`}
+                healthReport.checks.pm2Processes = {}
+
+        return healthReport}
+=======
+<<<<<<< HEAD
                     "status": 'pass',
                     "value": diskUsage.split('\n')[1] || 'Unknown'
                 };
@@ -116,23 +207,60 @@ class HealthChecker {}
             healthReport.error = error.message};
         // Save report;
         fs.writeFileSync(this.reportFile, JSON.stringify(healthReport, null, 2));
+<<<<<<< HEAD
+=======
         
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         this.log(`Health check completed. "Status": ${healthReport.status}`);
+=======
+
+                    "value": `${onlineProcesses} processes online;"
+                this.log(`PM2 "processes": ${onlineProcesses} online`)} catch (error) {`}"
+                healthReport.checks.pm2Processes = {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         return healthReport};
+>>>>>>> origin/chore/fix-lint-and-merge
     async run() {}
-        try {}
             await this.checkSystemHealth();
             // Exit after successful completion;
-            setTimeout(() => {}
-                this.log('Health check completed successfully, exiting...');
-                process.exit(0)}, 1000)} catch (error) {}
-            this.log(`Fatal "error": ${error.message}`);
-            process.exit(1)};
-    };
-};
+            setTimeout(() => {}"
+
+            process.exit(1)}
 // Run if called directly;
 if (require.main === module) {}
     const healthChecker = new HealthChecker();
-    healthChecker.run()};
+<<<<<<< HEAD
+    healthChecker.run()}
 
+=======
+    healthChecker.run()};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+
+=======
 module.exports = HealthChecker;
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+module.exports = HealthChecker;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = HealthChecker;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -7,18 +7,67 @@ const QualityAssuranceTestingChat: NextPage = () => ;
   return (<div />;
 
 ;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
+<<<<<<< HEAD
+  return (<div>;
+import type { NextPage } from "next";"
+import Head from "next/head";"
+import Link from "next/link";"
+=======
 const QualityAssuranceTestingChat: NextPage = () => ;
   return (<div />;
 import type { NextPage } from \"next\";
 import Head from \"next/head\";
 import Link from \"next/link\";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const QualityAssuranceTestingChat: NextPage = () => {;
   return (
+    <div>;
+</div>
+      <Head>;
+
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+        <meta;"
+          name="description"""
+          content="QualityAssuranceTestingChat service"""
+        />{" "}"
+</meta>
+      <main>
+</main>
+        <h1>QualityAssuranceTestingChat</h1>
+        <p>Service details coming soon...</p>"
+        <a href="/services">Back to Services</a>"
+      ;
+      <main>;
+        <h1>QualityAssuranceTestingChat</h1>;
+        <p>Service details coming soon...</p>;"
+        <a href="/services">Back to Services</a>;"
+      </main>;
+    </div>;
+    <div>
+      <Head>
+
+
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
+
+
+        <title > QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+          name="description";""
+          content="QualityAssuranceTestingChat service";""
+        <h1 > QualityAssuranceTestingChat</h1>;
+        <p > Service details coming soon...</p>;"
+      </main>;)
+    </div>);
+
+        <meta name=&quot;description&quot; content=&quot;QualityAssuranceTestingChat service&quot; />
+      
+      
+        <p>Service details coming soon...</p>
+        <a href=&quot;/services&quot;>Back to Services</a>
+
+      
+"
     <div />;
       <Head />;
         <title />QualityAssuranceTestingChat - Zion Tech Solutions</title>;
@@ -50,6 +99,14 @@ name=\"description\"}
 
 export default QualityAssuranceTestingChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+=======
 const QualityAssuranceTestingChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -57,33 +114,20 @@ const QualityAssuranceTestingChat: NextPage = () => ;
         <title />QualityAssuranceTestingChat - Zion Tech Solutions</title>;
         <title />QualityAssuranceTestingChat - Zion Tech Solutions</title>;
         <title />QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
   );
 
 export default QualityAssuranceTestingChat;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+<<<<<<< HEAD
+const "QualityAssuranceTestingChat": NextPage = () => {
+=======
 const QualityAssuranceTestingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -96,6 +140,14 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+  return (<div>;
+}
+return (;
+    <div>;
+      <Head>;
+        <title > QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+=======
 const QualityAssuranceTestingChat: NextPage = () => ;
   return (<div />;
 const QualityAssuranceTestingChat: NextPage = () => {
@@ -103,6 +155,7 @@ const QualityAssuranceTestingChat: NextPage = () => {
     <div />;
       <Head />;
         <title  /> QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
           name=\"description\";}
           content=\"QualityAssuranceTestingChat service\";}
@@ -130,10 +183,16 @@ export default QualityAssuranceTestingChat;<div />;
     </div>;
   )},export default QualityAssuranceTestingChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+=======
 const QualityAssuranceTestingChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
           name=\"description\";
           content=\"QualityAssuranceTestingChat service\";
@@ -157,7 +216,10 @@ export default QualityAssuranceTestingChat;<title />QualityAssuranceTestingChat 
 
 ;
 export default QualityAssuranceTestingChat;
+<<<<<<< HEAD
+=======
 const QualityAssuranceTestingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -179,7 +241,10 @@ name=\"description\"}
 
 export default QualityAssuranceTestingChat;
 export default QualityAssuranceTestingChat;
+<<<<<<< HEAD
+=======
 const QualityAssuranceTestingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -204,7 +269,10 @@ export default QualityAssuranceTestingChat;
         <title />QualityAssuranceTestingChat - Zion Tech Solutions</title>
         <title />QualityAssuranceTestingChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
 const QualityAssuranceTestingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />

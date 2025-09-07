@@ -345,7 +345,6 @@ Autonomous Systems, Space Technology;
     }
   };
 
-const itemVariants = {}
   hidden: { y: 20, opacity: 0,}
 },;
     visible: {;

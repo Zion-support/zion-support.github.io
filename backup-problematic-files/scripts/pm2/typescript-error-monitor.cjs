@@ -1,5 +1,9 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 import { execSync, spawn } from;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
   'child_process'
   'fs'
   'path'
@@ -20,21 +24,41 @@ import { execSync, spawn } from;
           type:';typescript'
       const content = fs.readFileSync(file, ';utf8')
       const lines = content.split(')
+>>>>>>> origin/chore/fix-lint-and-merge
       '\\n'
-        case';TS2304': // Cannot: find name'
-        case';TS2307': // Cannot: find module'
-        case';TS2339': // Property: does not exist'
-        case';TS2345': // Argument: type not assignable'
-        case';TS2322': // Type: not assignable'
-  TS7006': // Parameter: implicitly has', ',any: type'
-        fs.writeFileSync(file +';.backup', originalContent)'
-  '\\n')'
-      console.error(')
+        case;TS2304: // Cannot: find name'
+        case';TS2307: // Cannot: find module
+        case';TS2339': // Property: does not exist
+        case;TS2345': // Argument: type not assignable'
+        case;TS2322: // Type: not assignable'
+  TS7006': // Parameter: implicitly has;;any: type'
+        fs.writeFileSync(file +';.backup, originalContent)
+  '\\n')
+      console.error()
   '\\n'
-    const nameMatch = message.match(/Cannot find name '(.+?)'
-        React: "React",
-    useEffect: "
+<<<<<<< HEAD
+
         useRef: "
         FC: "
+
+=======
+    const nameMatch = message.match(/Cannot find name '(.+?)'
+        React: "
+        useState: "
+        useEffect: "
+        useRef: "
+        FC: "
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
         ReactNode: "
         ReactNode: "
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

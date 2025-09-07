@@ -1,41 +1,40 @@
-import { render, screen } from '@testing-library/react';
 <<<<<<< HEAD
-import App from './App';
 =======
-import '@testing-library/jest-dom';
-import HomePage from './app/page';
->>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import App from './App';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 describe('App', () => {
   it('renders without crashing', () => {
-<<<<<<< HEAD
     render(<App />);
-=======
-    render(<HomePage />);
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
   it('displays correct content', () => {
-<<<<<<< HEAD
     render(<App />);
-=======
-    render(<HomePage />);
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+<<<<<<< HEAD
     expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
+=======
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
+>>>>>>> origin/chore/fix-lint-and-merge
   });
 
   it('handles user interactions', () => {
-<<<<<<< HEAD
     render(<App />);
-<<<<<<< HEAD
-    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
-=======
-    // Add interaction tests here
-=======
-    render(<HomePage />);
-    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
->>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
+    expect(screen.getByText('Get Started Today')).toBeInTheDocument();
   });
 });
+  });
+});
+  it('displays correct content, () => {
+    render(<App />);
+    // Add specific content assertions here
+  });
+  it(handles user interactions', () => {
+    render(<App />);
+    // Add interaction tests here
+  });
+});
+

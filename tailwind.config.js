@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+/** @type {import('tailwindcss).Config} */
+module.exports = {
+  content: [
+
+=======
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -5,6 +11,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
+>>>>>>> origin/chore/fix-lint-and-merge
   ],
   theme: {
     extend: {
@@ -55,6 +62,15 @@ module.exports = {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
+<<<<<<< HEAD
+      fontFamily: {
+        sans: [Inter', 'system-ui, sans-serif'],
+        mono: ['JetBrains Mono, monospace']}}},
+  plugins: [
+    require('@tailwindcss/forms),
+    require(@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio')]}
+=======
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
@@ -79,19 +95,19 @@ module.exports = {
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0px)', opacity: '1' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         slideDown: {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0px)', opacity: '1' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         slideLeft: {
           '0%': { transform: 'translateX(20px)', opacity: '0' },
-          '100%': { transform: 'translateX(0px)', opacity: '1' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         slideRight: {
           '0%': { transform: 'translateX(-20px)', opacity: '0' },
-          '100%': { transform: 'translateX(0px)', opacity: '1' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         scaleIn: {
           '0%': { transform: 'scale(0)' },
@@ -132,6 +148,18 @@ module.exports = {
             'background-size': '400% 400%',
             'background-position': 'right center',
           },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        glow: {
+          '0%': { boxShadow: '0 0 5px rgba(59, 130, 246, 0.5)' },
+          '100%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.8)' },
         },
       },
       backgroundImage: {

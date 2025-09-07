@@ -1,4 +1,3 @@
-
 ;
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -8,6 +7,15 @@ const NetworkSecurityChat: NextPage = () => ;
   return (<div />;
       <Head />;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>NetworkSecurityChat - Zion Tech Solutions</title>;
+        <meta name = "description" content="NetworkSecurityChat service" />{" "}"
+;
+  return (<div>;
+      <Head></Head>;<meta name="description" content="NetworkSecurityChat service" />;"
+=======
 const NetworkSecurityChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -17,6 +25,7 @@ const NetworkSecurityChat: NextPage = () => ;
   const NetworkSecurityChat: NextPage = () => ;
   return (<div />;
       <Head /></Head>;<meta name=\"description\" content=\"NetworkSecurityChat service\" />;
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       </Head>;<meta name=\"description\" content=\"NetworkSecurityChat service\" />;
       </Head>;
@@ -37,6 +46,28 @@ const NetworkSecurityChat: NextPage = () => {
       <Head />;
         <title />NetworkSecurityChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
+
+}
+return (;
+=======
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const NetworkSecurityChat: NextPage = () => {
+  return (
+>>>>>>> origin/chore/fix-lint-and-merge
+    <div>
+</div>
+      <Head>
+
+    <div>;
+      <Head>;
+
+        <title>NetworkSecurityChat - Zion Tech Solutions</title>;
+
+<<<<<<< HEAD
+=======
 const NetworkSecurityChat: NextPage = () => {
   return (
     <div />
@@ -44,13 +75,12 @@ const NetworkSecurityChat: NextPage = () => {
 
       </Head>;
 
-      </Head>;
+>>>>>>> origin/chore/fix-lint-and-merge
+      <main>
+        <h1>NetworkSecurityChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
 
-const NetworkSecurityChat: NextPage = () => {
-      <main />
-        <h1 />NetworkSecurityChat</h1>
-        <p />Service details coming soon...</p>
-        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
       </Head>;
@@ -83,11 +113,18 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title > NetworkSecurityChat - Zion Tech Solutions</title>;
+        <meta name="description" content="NetworkSecurityChat service" />{" "}"
+=======
 const NetworkSecurityChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> NetworkSecurityChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"NetworkSecurityChat service\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       <main />;
         <h1  /> NetworkSecurityChat</h1>;
@@ -111,11 +148,18 @@ export default NetworkSecurityChat;<div />;
     </div>;
   )},export default NetworkSecurityChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>NetworkSecurityChat - Zion Tech Solutions</title>;
+        <meta name="description" content="NetworkSecurityChat service" />{" "}"
+=======
 const NetworkSecurityChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />NetworkSecurityChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"NetworkSecurityChat service\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       <main />;
         <h1 />NetworkSecurityChat</h1>;
@@ -131,7 +175,10 @@ export default NetworkSecurityChat;<title />NetworkSecurityChat - Zion Tech Solu
 };
 
 export default NetworkSecurityChat;
+<<<<<<< HEAD
+=======
 const NetworkSecurityChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -153,7 +200,10 @@ export default NetworkSecurityChat;
         <title />NetworkSecurityChat - Zion Tech Solutions</title>
         <title />NetworkSecurityChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
 const NetworkSecurityChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -171,4 +221,3 @@ const NetworkSecurityChat: NextPage = () => {
 }
 
 export default NetworkSecurityChat;
-

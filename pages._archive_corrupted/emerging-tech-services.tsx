@@ -1,5 +1,75 @@
 
 ;
+<<<<<<< HEAD
+'use client';
+'';
+'';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+;
+
+'use client;
+';
+';
+import React, { Component, ErrorInfo, ReactNode } from react';
+interface Props  {children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}interface State  {hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+}export class ErrorBoundary extends Component<Props, State> {public state: State = {hasError: false}constructor(props: Props) {super(props)this.state = { hasError: false, error: null, errorInfo: null }}public componentDidCatch(error: Error, errorInfo: ErrorInfo) {console.error('ErrorBoundary caught an error:', error, errorInfo)// Log error to monitoring service;
+    if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'exception', {description: error.message,fatal: false})}
+  }render() {if (this.state.hasError) {return (this.props.fallback || (<div className="min-h-screen flex items-center justify-center bg-gray-50">;
+            <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">;
+              <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">;
+                <svg;
+                  className="w-6 h-6 text-red-600";
+                  fill="none";
+                  stroke="currentColor";
+                  viewBox="0 0 24 24";
+                >;
+                  <path;
+                    strokeLinecap="round";
+                    strokeLinejoin="round";
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z";
+                  />;
+                </svg>;
+              </div>;
+              <div className="mt-4 text-center">;
+                <h3 className="text-lg font-medium text-gray-900">;
+                  Something went wrong;
+                </h3>;
+                <p className="mt-2 text-sm text-gray-500">;
+                  We're sorry, but something unexpected happened. Please try;
+                  refreshing the page.;
+                </p>;
+                <div className="mt-6">;
+                  <button;
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500";
+                  >;
+                    Refresh Page;
+                  </button>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        ))}return this.props.children;
+  }
+}
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+
+
+}
+
+=======
 import type { NextPage } from \'next\'; import { Helmet } from \'react-helmet-async\'; import { useState } from \'react\'; import { EMERGING_TECH_SERVICES_2027 } from \"../src/data/emergingTechServices2027\"; const \"EmergingTechServices\": NextPag e = () => { const [selectedCategory,setSelectedCategory] = useState<string />(\'all\')const [searchTerm,setSearchTerm] = useState(\'')const [sortBy,setSortBy] = useState<string />(\'name\')const categories = [{ \"id\": \'all\',\"name\": \'All Technologies\',\"color\": \'from-blue-500 to-purple-600\' },{ \"id\": \'Quantum Computing\',\"name\": \'Quantum Computing\',\"color\": \'from-purple-500 to-pink-600\' },{ \"id\": \'Autonomous Systems\',\"name\": \'Autonomous Systems\',\"color\": \'from-indigo-500 to-blue-600\' },{ \"id\": \'Web3 & Blockchain\',\"name\": \'Web3 & Blockchain\',\"color\": \'from-green-500 to-teal-600\' },{ \"id\": \'Metaverse & VR/AR\',\"name\": \'Metaverse & VR/AR\',\"color\": \'from-orange-500 to-red-600\' },{ \"id\": \'Edge Computing\',\"name\": \'Edge Computing\',\"color\": \'from-yellow-500 to-orange-600\' },{ \"id\": \'Biotech & Health\',\"name\": \'Biotech & Health\',\"color\": \'from-teal-500 to-green-600\' },{ \"id\": \'Green Tech\',\"name\": \'Green Tech\',\"color\": \'from-green-500 to-blue-600\' },{ \"id\": \'Space Technology\',\"name\": \'Space Technology\',\"color\": \'from-indigo-500 to-purple-600\' } ]; const filteredServices = EMERGING_TECH_SERVICES_2027.filter(service => { const matchesCategory = selectedCategory === \'all\' || service.category === selectedCategory; const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) || service.description.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesSearch})const sortedServices = [...filteredServices].sort((a,b) => { switch (sortBy) { case \'price\': return a.price.localeCompare(b.price)case \'rating\': return b.rating - a.rating; case \'popular\': return b.popular ? 1 : -1; \"default\": return a.name.localeCompare(b.name)} })const getCategoryColor = ( const category = categories.find(cat => cat.id === categoryId)return category ? category.color : \'from-gray-500 to-gray-600\') => {
   return $3;}
 }const getCategoryBgColor = ( const category = categories.find(cat => cat.id === categoryId)return category ? `bg-gradient-to-r ${category.color) => {
@@ -23,3 +93,4 @@ export default function Emergingtechservices(): any ({ }: EmergingtechservicesPr
       <p />This component is currently under development.</p>;}
     </div>;}
   )}
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
@@ -17,24 +29,55 @@ const glob = require("glob")
       this.log(" Running TypeScript compiler check...")
   const result = await this.runCommand("npm", { "args": ["run", "type-check"})]
         this.log("No TypeScript errors detected")
+>>>>>>> origin/chore/fix-lint-and-merge
   this.log(⚠  TypeScript compilation still has issues, but fixes were applied")
-      this.log(" Generating TypeScript error fixer report...")
+      this.log( Generating TypeScript error fixer report...)
   "timestamp"
-        "fixesApplied"
-        "summary": "TypeScript error fixer completed"
-        "status": "completed"
+        fixesApplied
+        "summary": TypeScript error fixer completed
+        "status": completed
         process.cwd(),typescript-error-fixer-report.json"
       this.log( TypeScript error fixer completed successfully. Applied ${fixesApplied} fixes.")
-  this.log(" TypeScript error fixer "failed": ${error.message  }")
-  this.log(⚠  TypeScript compilation still has issues, but fixes were applied")
-      this.log(" Generating TypeScript error fixer report...")
-  "timestamp"
-        "fixesApplied"
-        "summary": "TypeScript error fixer completed"
-        "status": "completed"
+  this.log( TypeScript error fixer failed": ${error.message  }")
+  this.log(⚠  TypeScript compilation still has issues, but fixes were applied)
+      this.log( Generating TypeScript error fixer report...")
+  "timestamp
+        fixesApplied"
+        "summary: TypeScript error fixer completed"
+        "status: completed"
         process.cwd(),typescript-error-fixer-report.json"
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(" TypeScript error fixer report saved to ${reportPath}")
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log( TypeScript error fixer report saved to ${reportPath})
       this.log( TypeScript error fixer completed successfully. Applied ${fixesApplied} fixes.")
+<<<<<<< HEAD
+
+            /loginWithGoogle:\s*any\(\)\s*=>\s*Promise<any>;/g,"loginWithGoogle"
+            loginWithFacebook"
+            /loginWithTwitter:\s*any\(\)\s*=>\s*Promise<any>;/g,"loginWithTwitter
+            "loginWithWeb3"
+            /setUser:\s*any\(user:\s*User\s*\|\s*null\)\s*=>\s*void/g"",setUser: (user: User | null) => void"
+            /setOnboardingStep:\s*any\(step:\s*number\)\s*=>\s*"void/g
+            "setOnboardingStep": (step: number) => void
+            /onClearAll:\s*any\(\)\s*=>\s*void;/g,onClearAll": () => void;"
+            /onClearAll:\s*any\(\)\s*=>\s*void;/g,onClearAll
+            ""onClearFilters
+            /removeNotification:\s*any\(id:\s*string\)\s*=>\s*void;/g,removeNotification"
+            "clearAll
+            /transition=\{\{\s*duration:\s*any(\d+\.?\d*),\s*"delay": \s*(\d+\.?\d*)\s*\}\}/g,transition={{ duration: $1, "delay": $2 }}
+          content = content.replace(/color": \s*any"([^]+)/g, ""color: $1"
+          content = content.replace(/icon:\s*any"([^]+)/g, "icon": $1
+          content = content.replace(/id:\s*any"([^"]+)/g, id": "$1
+            /property:\s*any([^"]+)"/g,property: "$1"
+          content = content.replace(/rel:\s*any([^]+)"/g, "rel: "$1"
+            /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $1": React.FC = () => {"}
+          content = content.replace(/rel:\s*any([^]+)"/g, "rel: "$1"
+            /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $1: React.FC = () => {"}
+      this.log(`TypeScript Error Fixer "failed`)
+
+
+  console.error( Failed to start TypeScript error "fixer")
+
+  console.error( Failed to start TypeScript error fixer")
+=======
   this.log(` TypeScript error fixer "failed": ${error.message}"`)
     const filesToFix = [`""src/components/MobileExperienceEnhancer.tsx"""", """src/components/ModernUIEnhancer.tsx""", """src/components/NotificationSystem.tsx"""", """src/components/PerformanceOptimizedLoader.tsx""", """src/components/ProjectManagementTimeline.tsx"""", """src/components/ResourceManagementSystem.tsx""", """src/components/ServicesOverview.tsx"""", """src/components/UltimateServicesShowcase.tsx""", """src/components/UltimateServicesShowcase2025.tsx"""", """src/context/auth/AuthContext.tsx""", """src/context/auth/profileMapper.ts"""", """src/context/auth/useAuthEventHandlers.ts""", """src/context/auth/useAuthState.ts"""", """src/hooks/usePerformanceOptimization.ts""", """src/layout/AppHeader.tsx"""", """src/layout/AppLayout.tsx""", """src/layout/MainNavigation.tsx"""", """src/layout/PrimaryNav.tsx""", """src/legal/TermsOfService.tsx"""", """src/pages/AIServicesPage.tsx""", """src/pages/ForgotPassword.tsx"""", """src/pages/admin/SupportRequests.tsx""", ""`]
   let content = fs.readFileSync(filePath, "utf8")
@@ -83,5 +126,30 @@ const glob = require("glob")
           content = content.replace(/rel:\s*any"([^"]+)"/g, ""rel": "$1"
             /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $"1": React.FC = () => {"}
       this.log(`TypeScript Error Fixer "failed"`)
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
   console.error(" Failed to start TypeScript error "fixer")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" Failed to start TypeScript error "fixer")
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Failed to start TypeScript error "fixer")
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -7,18 +7,67 @@ const MobileAppDevelopmentChat: NextPage = () => ;
   return (<div />;
 
 ;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
+<<<<<<< HEAD
+  return (<div>;
+import type { NextPage } from "next";"
+import Head from "next/head";"
+import Link from "next/link";"
+=======
 const MobileAppDevelopmentChat: NextPage = () => ;
   return (<div />;
 import type { NextPage } from \"next\";
 import Head from \"next/head\";
 import Link from \"next/link\";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const MobileAppDevelopmentChat: NextPage = () => {;
   return (
+    <div>;
+</div>
+      <Head>;
+
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>;
+        <meta;"
+          name="description"""
+          content="MobileAppDevelopmentChat service"""
+        />{" "}"
+</meta>
+      <main>
+</main>
+        <h1>MobileAppDevelopmentChat</h1>
+        <p>Service details coming soon...</p>"
+        <a href="/services">Back to Services</a>"
+      ;
+      <main>;
+        <h1>MobileAppDevelopmentChat</h1>;
+        <p>Service details coming soon...</p>;"
+        <a href="/services">Back to Services</a>;"
+      </main>;
+    </div>;
+    <div>
+      <Head>
+
+
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
+
+
+        <title > MobileAppDevelopmentChat - Zion Tech Solutions</title>;
+          name="description";""
+          content="MobileAppDevelopmentChat service";""
+        <h1 > MobileAppDevelopmentChat</h1>;
+        <p > Service details coming soon...</p>;"
+      </main>;)
+    </div>);
+
+        <meta name=&quot;description&quot; content=&quot;MobileAppDevelopmentChat service&quot; />
+      
+      
+        <p>Service details coming soon...</p>
+        <a href=&quot;/services&quot;>Back to Services</a>
+
+      
+"
     <div />;
       <Head />;
         <title />MobileAppDevelopmentChat - Zion Tech Solutions</title>;
@@ -50,6 +99,14 @@ name=\"description\"}
 
 export default MobileAppDevelopmentChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>;
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>;
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>;
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>;
+=======
 const MobileAppDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -57,33 +114,20 @@ const MobileAppDevelopmentChat: NextPage = () => ;
         <title />MobileAppDevelopmentChat - Zion Tech Solutions</title>;
         <title />MobileAppDevelopmentChat - Zion Tech Solutions</title>;
         <title />MobileAppDevelopmentChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
   );
 
 export default MobileAppDevelopmentChat;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+<<<<<<< HEAD
+const "MobileAppDevelopmentChat": NextPage = () => {
+=======
 const MobileAppDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -96,6 +140,14 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+  return (<div>;
+}
+return (;
+    <div>;
+      <Head>;
+        <title > MobileAppDevelopmentChat - Zion Tech Solutions</title>;
+=======
 const MobileAppDevelopmentChat: NextPage = () => ;
   return (<div />;
 const MobileAppDevelopmentChat: NextPage = () => {
@@ -103,6 +155,7 @@ const MobileAppDevelopmentChat: NextPage = () => {
     <div />;
       <Head />;
         <title  /> MobileAppDevelopmentChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
           name=\"description\";}
           content=\"MobileAppDevelopmentChat service\";}
@@ -130,10 +183,16 @@ export default MobileAppDevelopmentChat;<div />;
     </div>;
   )},export default MobileAppDevelopmentChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>;
+=======
 const MobileAppDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />MobileAppDevelopmentChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
           name=\"description\";
           content=\"MobileAppDevelopmentChat service\";
@@ -157,7 +216,10 @@ export default MobileAppDevelopmentChat;<title />MobileAppDevelopmentChat - Zion
 
 ;
 export default MobileAppDevelopmentChat;
+<<<<<<< HEAD
+=======
 const MobileAppDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -179,7 +241,10 @@ name=\"description\"}
 
 export default MobileAppDevelopmentChat;
 export default MobileAppDevelopmentChat;
+<<<<<<< HEAD
+=======
 const MobileAppDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -204,7 +269,10 @@ export default MobileAppDevelopmentChat;
         <title />MobileAppDevelopmentChat - Zion Tech Solutions</title>
         <title />MobileAppDevelopmentChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
 const MobileAppDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />

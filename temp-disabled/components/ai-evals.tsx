@@ -1,9 +1,9 @@
 
 
-import React from 'react';,
+import React from 'react';,;
 import Head from 'next/head';
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';,
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';,;
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
@@ -27,8 +27,6 @@ Mail,
 MapPin;}
 ExternalLink;}
 } from 'lucide-react';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
 
 export default function AIEvalsPage() {
   const contactInfo = {

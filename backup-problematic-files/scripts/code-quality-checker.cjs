@@ -1,6 +1,11 @@
+<<<<<<< HEAD
+
+
+=======
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
+<<<<<<< HEAD
       'INFO': 'ℹ'
       'SUCCESS': ''
       'ERROR': ''
@@ -13,8 +18,8 @@ const path = require('path')
       this.log(`Found ${fileIssues} issues in ${path.relative(this.projectRoot, filePath)}`, 'WARNING'
     const lines = content.split('\n')
       if (line.includes('console.log') && !line.includes('//')
-          type: "type",
-    message: 'Console.log statement found'
+          type: 'console.log'
+          message: 'Console.log statement found'
           severity: 'warning'
       if (line.includes('TODO') || line.includes('FIXME')
           type: 'todo'
@@ -47,8 +52,17 @@ const path = require('path')
       this.log(`\n⚠  ${this.stats.issuesFound} issues remain (some may require manual attention)`, 'WARNING'
     this.log(' Starting Code Quality Check', 'INFO')
         this.log('� No code quality issues found!', 'SUCCESS')
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
       this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
-      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

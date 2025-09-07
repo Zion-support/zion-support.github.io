@@ -7,7 +7,61 @@ import { useEducation  } from './useEducation';
 import { useSkills  } from './useSkills';
 import { useCertifications  } from './useCertifications';
 import { useResumeList  } from './useResumeList';
-export function useResume() {  const [resume, setResume] = useState<Resume | null />(null);
+
+import {useState} from 'react';
+import {Resume} from '@/types/resume';
+import {useFetchResume} from './useFetchResume';
+import {useResumeActions} from './useResumeActions';
+import {useWorkExperience} from './useWorkExperience';
+import {useEducation} from './useEducation';
+import {useSkills} from './useSkills';
+import {useCertifications} from './useCertifications';
+import {useResumeList} from './useResumeList';
+export function useResume() {;
+
+  const [resume, setResume] = useState<Resume | null>(null);
+
+;
+  const fetchResumeOperations = useFetchResume ();
+  const resume_actions = useResumeActions ();
+  const work_operations = useWorkExperience ();
+  const education_operations = use_education ();
+  const skills_operations = use_skills ();
+  const cert_operations = use_certifications ();
+  const resumeListOperations = useResumeList ();
+;
+  // Determine overall loading state;
+  const is_loading =;
+    fetchResumeOperations.is_loading ||;
+    resume_actions.is_loading ||;
+    work_operations.is_loading ||;
+    education_operations.is_loading ||;
+    skills_operations.is_loading ||;
+    cert_operations.is_loading ||;
+    resumeListOperations.is_loading;
+;
+  // Determine overall error state (use first non - null error);
+  const error =;
+    fetchResumeOperations.error ||;
+    resume_actions.error ||;
+    work_operations.error ||;
+    education_operations.error ||;
+    skills_operations.is_loading ||;
+    cert_operations.error ||;
+    resumeListOperations.error;
+;
+  // Override the fetch resume function to update local state;
+  const fetch_resume = async (resume_id?: string) => {
+    const result = await fetchResumeOperations.fetch_resume (resume_id);
+    // Check condition
+if ( {) {
+  $2
+}
+      set_resume (result);
+    }
+    return result;
+  }
+<<<<<<< HEAD
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
   const workOperations = useWorkExperience();
@@ -15,64 +69,140 @@ export function useResume() {  const [resume, setResume] = useState<Resume | nul
   const skillsOperations = useSkills();
   const certOperations = useCertifications();
   const resumeListOperations = useResumeList();
-  // Determine overall loading state  // Override the fetch resume function to update local state;
+  // Determine overall loading state  // Override the fetch resume function to update local state,
 const fetchResume = async (resumeId?: string) => {
-    const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);  // Override the fetch resume function to update local state;
-const fetchResume = async (resumeId?: string) => {
-    const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
-    if (result) {}
-      setResume(result)}
     }
-    return result;
-  }export * from './useResumeActions';
+    const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);  // Override the fetch resume function to update local state,
+    }
+    const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
+import { useState } from 'react';
+import { Resume } from '@/types/resume';
+import { useFetchResume } from './useFetchResume';
+import { useResumeActions } from './useResumeActions';
+import { useWorkExperience } from './useWorkExperience';
+import { useEducation } from './useEducation';
+import { useSkills } from './useSkills';
+import { useCertifications } from './useCertifications';
+import { useResumeList } from './useResumeList';
+export function useResume() {
+  const [resume, setResume] = useState<Resume | null>(null),
+  
+  const fetchResumeOperations = useFetchResume($2);
+  const resumeActions = useResumeActions($2);
+  const workOperations = useWorkExperience($2);
+  const educationOperations = useEducation($2);
+  const skillsOperations = useSkills($2);
+  const certOperations = useCertifications($2);
+  const resumeListOperations = useResumeList($2);
+  // Determine overall loading state
+  const isLoading = $2;
+  // Determine overall error state (use first non-null error)
+  const error = $2;
+  // Override the fetch resume function to update local state
+    const result = await fetchResumeOperations.fetchResume($2);
+    if (result) {
+      }
+      setResume(result)
+    }
+return result;
+  }export * from './useResumeActions';'
+=======
+;
+
+  return {
+
+    // State;
+    is_loading;
+    error;
+
+    resume: resume || fetchResumeOperations && fetchResumeOperations.resume;
+    resumes: resumeListOperations && resumeListOperations.resumes;
+    
+    // Basic resume operations;
+    fetchResume;
+    createResume: resumeActions && resumeActions.createResume;
+    updateBasicInfo: resumeActions && resumeActions.updateBasicInfo;
+    setActiveResume: resumeActions && resumeActions.setActiveResume;
+    
+    // Work experience operations;
+    addWorkExperience: workOperations && workOperations.addWorkExperience;
+    updateWorkExperience: workOperations && workOperations.updateWorkExperience;
+    deleteWorkExperience: workOperations && workOperations.deleteWorkExperience;
+    
+    // Education operations;
+    addEducation: educationOperations && educationOperations.addEducation;
+    updateEducation: educationOperations && educationOperations.updateEducation;
+    deleteEducation: educationOperations && educationOperations.deleteEducation;
+    
+    // Skills operations;
+    addSkill: skillsOperations && skillsOperations.addSkill;
+    deleteSkill: skillsOperations && skillsOperations.deleteSkill;
+    
+    // Certifications operations;
+    addCertification: certOperations && certOperations.addCertification;
+    updateCertification: certOperations && certOperations.updateCertification,
+    deleteCertification: certOperations && certOperations.deleteCertification;
+  }
+}
+
+;
+    // Basic resume operations;
+    fetch_resume;
+    create_resume: resume_actions.create_resume;
+    updateBasicInfo: resume_actions.updateBasicInfo;
+    setActiveResume: resume_actions.setActiveResume;
+;
+    // Work experience operations;
+    addWorkExperience: work_operations.addWorkExperience;
+    updateWorkExperience: work_operations.updateWorkExperience;
+    deleteWorkExperience: work_operations.deleteWorkExperience;
+;
+    // Education operations;
+    add_education: education_operations.add_education;
+    update_education: education_operations.update_education;
+    delete_education: education_operations.delete_education;
+;
+    // Skills operations;
+    add_skill: skills_operations.add_skill;
+    delete_skill: skills_operations.delete_skill;
+;
+    // Certifications operations;
+    add_certification: cert_operations.add_certification;
+    update_certification: cert_operations.update_certification,
+    delete_certification: cert_operations.delete_certification;
+  }
+}
+
+export * from './useResumeActions';
+
 export * from './useWorkExperience';
 export * from './use_education';
 export * from './use_skills';
 export * from './use_certifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
-;
-import { useState } from 'react';
-import { Resume } from '@/types/resume';
+
+'
+export * from './useResumeActions';'
+>>>>>>> origin/chore/fix-lint-and-merge
+export * from './useWorkExperience';'
+export * from './use_education';'
+export * from './use_skills';'
+export * from './use_certifications';'
+export * from './useResumeList';'
+export * from './useResumeUtils';
+
+import { useState } from 'react',;
+import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
 import { useWorkExperience } from './useWorkExperience',;
 import { useEducation } from './useEducation',;
 import { useSkills } from './useSkills',;
 import { useCertifications } from './useCertifications',;
+
 import { useResumeList } from './useResumeList',;
-export function useResume() {;
-  const [resume, setResume] = useState<Resume | null />(null),;
-  const fetchResumeOperations = useFetchResume(),;
-  const resumeActions = useResumeActions(),;
-  const workOperations = useWorkExperience(),;
-  const educationOperations = useEducation(),;
-  const skillsOperations = useSkills(),;
-  const certOperations = useCertifications(),;
-  const resumeListOperations = useResumeList(),;
-  // Determine overall loading state;
-  const isLoading =;
-    fetchResumeOperations.isLoading ||;
-    resumeActions.isLoading ||;
-    workOperations.isLoading ||;
-    educationOperations.isLoading ||;
-    skillsOperations.isLoading ||;
-    certOperations.isLoading ||;
-    resumeListOperations.isLoading,;
-  // Determine overall error state (use first non-null error);
-  const error =;
-    fetchResumeOperations.error ||;
-    resumeActions.error ||;
-    workOperations.error ||;
-    educationOperations.error ||;
-    skillsOperations.isLoading ||;
-    certOperations.error ||;
-    resumeListOperations.error,;
-  // Override the fetch resume function to update local state;
-  const fetchResume = async (resumeId?: string) => {;
-    const result = await fetchResumeOperations.fetchResume(resumeId),;
-    if (result) {;}
-      setResume(result);}
+export function useResume() { return null; }
     }
     return result;
   },;
@@ -100,17 +230,14 @@ export function useResume() {;
     deleteSkill: skillsOperations.deleteSkill,;
     // Certifications operations;
     addCertification: certOperations.addCertification,;
-    updateCertification: certOperations.updateCertification,;}
-    deleteCertification: certOperations.deleteCertification;}
+    updateCertification: certOperations.updateCertification,;
+    deleteCertification: certOperations.deleteCertification;
   }
 }
 ;
-// Export all hooks;
-export * from './useFetchResume',;
-export * from './useResumeActions',;
-export * from './useWorkExperience',;
-export * from './useEducation',;
-export * from './useSkills',;
-export * from './useCertifications',;
-export * from './useResumeList';
+
 export * from './useResumeUtils';
+
+export * from './useResumeUtils';
+
+;

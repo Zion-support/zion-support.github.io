@@ -88,7 +88,6 @@ const sizeClasses = {sm: 'w-4 h-4',}
   }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({size = 'md', text,className = '' }) => ;
-  const sizeClasses = {sm: 'w-4 h-4',}
   md: 'w-8 h-8',lg: 'w-12 h-12',}
 }sm: 'h-4 w-4',
   md: 'h-8 w-8',lg: 'h-12 w-12';
@@ -144,7 +143,6 @@ const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({size = 'md',text = 'Lo
   const size_classes = {sm: 'w - 4 h - 4',}
   md: 'w - 8 h - 8',lg: 'w - 12 h - 12';}
   class_name = '' }) => ;
-  const size_classes = {sm: 'w - 4 h - 4',}
   md: 'w - 8 h - 8',lg: 'w - 12 h - 12';}
   }
 
@@ -170,8 +168,6 @@ if ( {) {$2;}
 }
 
 export default LoadingSpinner;
-import React from 'react;
-import { Loader2 } from ';lucide-react;
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg;

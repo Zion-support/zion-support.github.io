@@ -1,5 +1,4 @@
-import { MetadataRoute } from 'next';
-
+import { MetadataRoute } from 'next'
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
@@ -16,9 +15,8 @@ export default function robots(): MetadataRoute.Robots {
         '/scripts/',
         '/automation/',
         '/backup/',
-        '/temp/'
-      ]
+
     },
     sitemap: 'https://ziontechgroup.com/sitemap.xml'
-  };
+  }
 }

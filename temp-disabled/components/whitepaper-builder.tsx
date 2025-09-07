@@ -1,6 +1,6 @@
 
 
-import React, { useMemo, useState } from 'react',
+import React, { useMemo, useState } from 'react',;
 import Link from 'next/link';
 import { getWhitepaperSections, OPERATOR_PROMPT  } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
@@ -11,7 +11,6 @@ export default function WhitepaperBuilderPage() {
 const sections = null;
 
 export default function WhitepaperBuilderPage() {
-  const [edition, setEdition] = useState<WhitepaperEdition />('full');
 
 const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
 

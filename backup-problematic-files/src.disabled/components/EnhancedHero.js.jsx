@@ -1,17 +1,9 @@
-import React from 'react';
-const EnhancedHero.js = ({ className }) => {return (<div className={className || ''} />;
-      <h1 />EnhancedHero.js</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
-
-const EnhancedHero.js = ({ className }) => {}
-  return (}
-    <div className={className || ''} />
-      <h1 />EnhancedHero.js</h1>
-      <p />This component is under development.</p>
+const EnhancedHero.js = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>EnhancedHero.js</h1>
+      <p>This component is under development.</p>
     </div>
   )
-}
-}
-
+};

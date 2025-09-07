@@ -1,8 +1,38 @@
-
 ;
   return (<div className='container mx-auto px-4 py-10' />;
 
   return (
+    <div className='container mx-auto px-4 py-10'>;
+</div>
+      <h1 className='text-2xl font-semibold'>Emerging Technology Trends</h1>;
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>;
+</p>
+      </p>;
+    </div>;
+
+  );
+
+import React from 'react';
+
+export default function EmergingTechnologyTrendsPage() {
+  return (
+
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Emerging Technology Trends</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+    <div className="container mx-auto px-4 py-10">"
+      <h1 className="text-2xl font-semibold">Emerging Technology Trends</h1>""
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>""
+    <div className='container mx - auto px - 4 py - 10'>;
+      <h1 className='text - 2xl font - semibold'>Emerging Technology Trends</h1>;
+      <p className='mt - 2 text - gray - 600 dark:text - gray - 300'>;
+      </p>;)
+    </div>);export default /**
+    <div className="container mx - auto px - 4 py - 10">;"
+      <h1 className="text - 2xl font - semibold">Emerging Technology Trends</h1>;""
+      <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Article coming soon.</p>;"
+    </div>);"
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>"
 return (
     <div className='container mx-auto px-4 py-10' />;
       <h1 className='text-2xl font-semibold' />Emerging Technology Trends</h1>;
@@ -19,7 +49,15 @@ return (
 import React from 'react';
 
   );
-import React from 'react';
+<<<<<<< HEAD
+}
+import React from 'react';'
+
+
+
+  );
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function EmergingTechnologyTrendsPage() {
   return (
     <div className='container mx-auto px-4 py-10' />
@@ -28,38 +66,32 @@ export default function EmergingTechnologyTrendsPage() {
         Article coming soon.
       </p>
     </div>;
-  )export default function EmergingTechnologyTrendsPage() {return (<div className=\"container mx-auto px-4 py-10\" />;
-      <h1 className=\"text-2xl font-semibold\" />Emerging Technology Trends</h1>;
-      <p className=\"mt-2 text-gray-600 dark: text-gray-300\" />Article coming soon.</p>;
 
-export default /**;
- * EmergingTechnologyTrendsPage - Function description;
- */;
-function EmergingTechnologyTrendsPage() {return (<div className='container mx - auto px - 4 py - 10' />;
   );export default function EmergingTechnologyTrendsPage() {
   return (
-    <div className=\"container mx-auto px-4 py-10\" />
-      <h1 className=\"text-2xl font-semibold\" />Emerging Technology Trends</h1>
-      <p className=\"mt-2 text-gray-600 dark: text-gray-300\" />Article coming soon.</p>
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">Emerging Technology Trends</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
+
 export default /**
  * EmergingTechnologyTrendsPage - Function description;
  */
 function EmergingTechnologyTrendsPage() {
   return (
-    <div className='container mx - auto px - 4 py - 10' />;
-      <h1 className='text - 2xl font - semibold' />Emerging Technology Trends</h1>;
-      <p className='mt - 2 text - gray - 600 dark:text - gray - 300' />;
+
+      <h1 className='text - 2xl font - semibold'>Emerging Technology Trends</h1>;
+      <p className='mt - 2 text - gray - 600 dark:text - gray - 300'>;
         Article coming soon.;
       </p>;
-    </div>)export default /**;
- * EmergingTechnologyTrendsPage - Function description;
- */;
-function EmergingTechnologyTrendsPage() {return (<div className=\"container mx - auto px - 4 py - 10\" />;
-      <h1 className=\"text - 2xl font - semibold\" />Emerging Technology Trends</h1>;
-      <p className=\"mt - 2 text - gray - 600 dark: text - gray - 300\" />Article coming soon.</p>
-    </div>}
-  );}
-})}
+    </div>);export default /**
+ * EmergingTechnologyTrendsPage - Function description
+ */
+function EmergingTechnologyTrendsPage() {
+  return (
+    <div className="container mx - auto px - 4 py - 10">;
+      <h1 className="text - 2xl font - semibold">Emerging Technology Trends</h1>;
+      <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Article coming soon.</p>;
+    </div>);
 
 export default function EmergingTechnologyTrendsPage() {return (<div className='container mx-auto px-4 py-10' />;
       <h1 className='text-2xl font-semibold' />Emerging Technology Trends</h1>;
@@ -104,14 +136,9 @@ export default function EmergingTechnologyTrendsPage() {
     </div>
   );
 
-    </div>;}
-  );}
+    </div>;});}
 }
 
 }
     </div>
   );
-}
-}
-      <p className=\"mt-2 text-gray-600 dark: text-gray-300\" />Article coming soon.</p>
-

@@ -7,18 +7,67 @@ const CloudArchitectureChat: NextPage = () => ;
   return (<div />;
 
 ;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
+<<<<<<< HEAD
+  return (<div>;
+import type { NextPage } from "next";"
+import Head from "next/head";"
+import Link from "next/link";"
+=======
 const CloudArchitectureChat: NextPage = () => ;
   return (<div />;
 import type { NextPage } from \"next\";
 import Head from \"next/head\";
 import Link from \"next/link\";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const CloudArchitectureChat: NextPage = () => {;
   return (
+    <div>;
+</div>
+      <Head>;
+
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>;
+        <meta;"
+          name="description"""
+          content="CloudArchitectureChat blog post"""
+        />{" "}"
+</meta>
+      <main>
+</main>
+        <h1>CloudArchitectureChat</h1>
+        <p>Blog content coming soon...</p>"
+        <a href="/blog">Back to Blog</a>"
+      ;
+      <main>;
+        <h1>CloudArchitectureChat</h1>;
+        <p>Blog content coming soon...</p>;"
+        <a href="/blog">Back to Blog</a>;"
+      </main>;
+    </div>;
+    <div>
+      <Head>
+
+
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>
+
+
+        <title > CloudArchitectureChat - Zion Tech Solutions</title>;
+          name="description";""
+          content="CloudArchitectureChat blog post";""
+        <h1 > CloudArchitectureChat</h1>;
+        <p > Blog content coming soon...</p>;"
+      </main>;)
+    </div>);
+
+        <meta name=&quot;description&quot; content=&quot;CloudArchitectureChat blog post&quot; />
+      
+      
+        <p>Blog content coming soon...</p>
+        <a href=&quot;/blog&quot;>Back to Blog</a>
+
+      
+"
     <div />;
       <Head />;
         <title />CloudArchitectureChat - Zion Tech Solutions</title>;
@@ -50,6 +99,14 @@ name=\"description\"}
 
 export default CloudArchitectureChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>;
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>;
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>;
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>;
+=======
 const CloudArchitectureChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -57,33 +114,20 @@ const CloudArchitectureChat: NextPage = () => ;
         <title />CloudArchitectureChat - Zion Tech Solutions</title>;
         <title />CloudArchitectureChat - Zion Tech Solutions</title>;
         <title />CloudArchitectureChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
   );
 
 export default CloudArchitectureChat;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+<<<<<<< HEAD
+const "CloudArchitectureChat": NextPage = () => {
+=======
 const CloudArchitectureChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -96,6 +140,14 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+  return (<div>;
+}
+return (;
+    <div>;
+      <Head>;
+        <title > CloudArchitectureChat - Zion Tech Solutions</title>;
+=======
 const CloudArchitectureChat: NextPage = () => ;
   return (<div />;
 const CloudArchitectureChat: NextPage = () => {
@@ -103,6 +155,7 @@ const CloudArchitectureChat: NextPage = () => {
     <div />;
       <Head />;
         <title  /> CloudArchitectureChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
           name=\"description\";}
           content=\"CloudArchitectureChat blog post\";}
@@ -130,10 +183,16 @@ export default CloudArchitectureChat;<div />;
     </div>;
   )},export default CloudArchitectureChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>;
+=======
 const CloudArchitectureChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />CloudArchitectureChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
           name=\"description\";
           content=\"CloudArchitectureChat blog post\";
@@ -157,7 +216,10 @@ export default CloudArchitectureChat;<title />CloudArchitectureChat - Zion Tech 
 
 ;
 export default CloudArchitectureChat;
+<<<<<<< HEAD
+=======
 const CloudArchitectureChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -179,7 +241,10 @@ name=\"description\"}
 
 export default CloudArchitectureChat;
 export default CloudArchitectureChat;
+<<<<<<< HEAD
+=======
 const CloudArchitectureChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -204,7 +269,10 @@ export default CloudArchitectureChat;
         <title />CloudArchitectureChat - Zion Tech Solutions</title>
         <title />CloudArchitectureChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
 const CloudArchitectureChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
