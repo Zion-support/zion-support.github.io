@@ -197,17 +197,13 @@ class PerformanceMonitor {
   }
 }
 
-if (require.main === module) {
-  const monitor = new PerformanceMonitor();
-  monitor.measureBundleSize();
-  monitor.measureMemoryUsage();
-  const report = monitor.generateReport();
-  const reportPath = path.join(process.cwd(), 'performance-report.json');
-  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  console.log('Performance report generated:', reportPath);
-}
-
-module.exports = PerformanceMonitor;
+const monitor = new PerformanceMonitor();
+monitor.measureBundleSize();
+monitor.measureMemoryUsage();
+const report = monitor.generateReport();
+const reportPath = path.join(process.cwd(), 'performance-report.json');
+fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+console.log('Performance report generated:', reportPath);
 `;
 
     const scriptPath = path.join(process.cwd(), 'performance-monitor.js');

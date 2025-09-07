@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 
 interface LazyComponentProps {
@@ -26,3 +27,7 @@ export default LazyComponent;
 import React from 'react';
 };
 >>>>>>> pr-11992
+=======
+import React from 'react';
+},
+>>>>>>> origin/merge-automation-changes
