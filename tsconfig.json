@@ -15,11 +15,10 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "ESNext",
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -33,31 +32,24 @@
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
-      "@/lib/*": ["./lib/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/styles/*": ["./styles/*"],
       "@/utils/*": ["./utils/*"],
-      "@/hooks/*": ["./hooks/*"],
       "@/types/*": ["./types/*"]
-    },
-    "allowSyntheticDefaultImports": true
+    }
   },
   "include": [
     "next-env.d.ts",
-    "types/global.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "apps/**",
-    "apps.backup/**",
-    "api-backup/**",
-    "backup-merge-conflicts/**",
-    "browserstack.config.ts",
-    "cypress.config.ts",
-    "jest.config.*",
-    "*.config.ts",
-    "netlify/**",
-    "temp_exclude/**"
+    "src_backup",
+    "temp_backup",
+    "recovered-branches",
+    "api.disabled",
+    "lib"
   ]
 }

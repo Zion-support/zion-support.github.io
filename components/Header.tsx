@@ -1,221 +1,86 @@
-"use client";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Menu, X, Phone } from 'lucide-react';
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Code,
-  Smartphone,
-  Cloud,
-  Database,
-  Shield,
-  Zap,
-  Building,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Factory,
-  Truck,
-  CreditCard,
-} from "lucide-react";
-
-export default function Header() {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const closeMenu = () => setIsMenuOpen(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const servicesDropdown = [
-    {
-      title: "Web Development",
-      description: "Custom websites and web applications",
-      href: "/services/web-development",
-      icon: Code,
-    },
-    {
-      title: "Mobile Development",
-      description: "iOS and Android applications",
-      href: "/services/mobile-development",
-      icon: Smartphone,
-    },
-    {
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure",
-      href: "/services/cloud-solutions",
-      icon: Cloud,
-    },
-    {
-      title: "Database Management",
-      description: "Database design and optimization",
-      href: "/services/database-management",
-      icon: Database,
-    },
-    {
-      title: "Security Services",
-      description: "Cybersecurity and data protection",
-      href: "/services/security",
-      icon: Shield,
-    },
-    {
-title: "Performance Optimization",
-      description: "Speed and efficiency improvements",
-      href: "/services/performance",
-      icon: Zap,
-    },
-  ];
-
-  const solutionsDropdown = [
-    {
-      title: "Enterprise Solutions",
-      description: "Comprehensive business technology solutions",
-      href: "/solutions/enterprise",
-      icon: Building,
-    },
-    {
-      title: "E-commerce Platforms",
-      description: "Online store development and management",
-      href: "/solutions/ecommerce",
-      icon: ShoppingCart,
-    },
-    {
-      title: "Healthcare Technology",
-      description: "Specialized healthcare IT solutions",
-      href: "/solutions/healthcare",
-      icon: Heart,
-    },
-    {
-title: "Educational Platforms",
-      description: "Learning management systems",
-      href: "/solutions/education",
-      icon: GraduationCap,
-    },
-  ];
-
-  const industriesDropdown = [
-    { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },
-    { name: "Logistics", href: "/industries/logistics", icon: Truck },
-    { name: "Finance", href: "/industries/finance", icon: CreditCard },
-    { name: "Healthcare", href: "/industries/healthcare", icon: Heart },
-    { name: "Education", href: "/industries/education", icon: GraduationCap },
-    { name: "Retail", href: "/industries/retail", icon: ShoppingCart },
-  ];
 
   const navigation = [
-    { name: "Home", href: "/" },
-    {
-      name: "Services",
-      href: "/services",
-      submenu: [
-        { name: "AI Services", href: "/ai-services", icon: Brain },
-        { name: "IT Services", href: "/it-services", icon: Network },
-        { name: "Micro SAAS", href: "/micro-saas", icon: Cloud },
-      ],
-    },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Solutions", href: "/solutions" },
-    { name: "Industries", href: "/industries" },
-    { name: "Contact", href: "/contact" },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Contact', href: '/contact' },
   ];
 
-  const handleServiceClick = (href: string) => {
-    closeMenu();
-    window.location.href = href;
-  };
-
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-blue-600">
+        <div className="flex justify-between items-center py-6">
+          <div className="flex items-center">
+            <Link href="/" className="text-2xl font-bold text-gray-900">
               Zion Tech Group
             </Link>
           </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
+          
+          <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="text-gray-700 hover:text-blue-600 font-medium"
               >
                 {item.name}
               </Link>
             ))}
           </nav>
-
-          {/* Desktop CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          
+          <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+              className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
-              Get Started
+              <Phone className="h-4 w-4 mr-2" />
+              Contact Us
             </Link>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden p-2 rounded-lg transition-colors duration-200 text-gray-700 hover:bg-gray-100"
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white shadow-lg"
+          
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-700 hover:text-blue-600"
             >
-              <div className="px-4 py-6 space-y-4">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    onClick={closeMenu}
-                    className="block text-gray-700 hover:text-blue-600 font-medium"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+        
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              {navigation.map((item) => (
                 <Link
-                  href="/contact"
-                  onClick={closeMenu}
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                  key={item.name}
+                  href={item.href}
+                  className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium"
+                  onClick={() => setIsMenuOpen(false)}
                 >
-                  Get Started
+                  {item.name}
                 </Link>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              ))}
+              <Link
+                href="/contact"
+                className="block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
-}
+};
+
+export default Header;

@@ -1,281 +1,169 @@
-#!/usr/bin/env node;
-/**
- * Intelligent Test Orchestrator;
- * AI-powered test management and execution system;
- */
+#!/usr/bin/env node
 
-const fs = require('fs')
-const path = require('path')
-const { execSync, spawn } = require('child_process')
-    this.logFile = path.join(this.projectRoot, 'logs', 'intelligent-test.log')
-    this.reportFile = path.join(this.projectRoot, 'logs', 'test-intelligence-report.json')
-      await fs.mkdir(path.join(this.projectRoot, 'logs')
-      console.log('Logs directory already exists')
-  log(message, level = 'INFO')
-    fs.appendFile(this.logFile, logMessage + '\n')
-    this.log(' Discovering test files...')
-        '**/*.test.js'
-        '**/*.test.ts'
-        '**/*.test.jsx'
-        '**/*.test.tsx'
-        '**/*.spec.js'
-        '**/*.spec.ts'
-        '**/*.spec.jsx'
-        '**/*.spec.tsx'
-          const result = execSync(`find . -name "${pattern.replace('**/', '')}'
-      const coverageResult = execSync('npm run test:coverage 2>/dev/null || npm test -- --coverage 2>/dev/null || echo "No coverage data")
-      const testResult = execSync('npm test 2>&1 || echo "Test execution failed")
-          const result = execSync(`grep -r "${pattern}"`)
-          const result = execSync(`grep -r "${pattern}"`)
-          const result = execSync(`grep -r "${pattern}"`)
-        const documentedTests = execSync(`grep -r "describe\\|it\\|test" src/ | grep -c "//" 2>/dev/null || echo "0"`)
-          const result = execSync(`grep -r "${pattern}"`)
-      const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🧪 Starting Intelligent Test Orchestrator...');
-
 class IntelligentTestOrchestrator {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation-reports', 'intelligent-test.log');
-    this.reportFile = path.join(this.projectRoot, 'automation-reports', 'intelligent-test-report.json');
-    this.ensureLogDir();
+    this.workspaceRoot = '/workspace';
+    this.reportFile = path.join(this.workspaceRoot,automation_logs,test-orchestrator-report.json');
+    this.ensureLogDirectory();
   }
 
-  ensureLogsDir() {
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursiv: true });
-    }
-  }
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.reportFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
 
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
+  log(message) {
 
-  async runCommand(command, description) {
-    try {
-      this.log(`Runnin: ${description}`);
-      const output = execSync(command, {
-        encodin: 'utf8',
-        cw: '/workspace',
-        stdi: 'pipe',
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return { succes: true, output };
-    } catch (error) {
-      this.log(`❌ ${description} faile: ${error.message}`, 'error');
-      return { succes: false, erro: error.message };
-    }
 
-    return [...new Set(testFiles)]; // Remove duplicates
-  }
-
-  async runTestSuite() {
-    this.log('🧪 Running test suite...');
+  async runComprehensiveTests() {
+    this.log('Starting intelligent test orchestration...);
+    const testResults = {
+      timestamp: new Date().toISOString(),
+      suites: {},
+      coverage: {},
+      issues: [],
+      recommendations: [],
+      overallScore: 0
+    };
 
     try {
-      // Try to run tests with coverage
-      const coverageResult = execSync('npm run test:coverage 2>/dev/null || npm test -- --coverage 2>/dev/null || echo "No coverage data"', { encoding: 'utf8' });
-      const testResult = execSync('npm test 2>&1 || echo "Test execution failed"', { encoding: 'utf8' });
-      
-      return {
-        success: true,
-        coverage: coverageResult,
-        output: testResult,
-      };
+      // Run different test suites
+      await this.runSmokeTests(testResults);
+      await this.runUnitTests(testResults);
+      await this.runIntegrationTests(testResults);
+      await this.runAccessibilityTests(testResults);
+      await this.runPerformanceTests(testResults);
+      // Generate coverage report
+      await this.generateCoverageReport(testResults);
+      // Analyze test quality
+      this.analyzeTestQuality(testResults);
+      // Calculate overall score
+      testResults.overallScore = this.calculateTestScore(testResults);
+      // Generate recommendations
+      this.generateTestRecommendations(testResults);
+      // Save report
+      fs.writeFileSync(this.reportFile, JSON.stringify(testResults, null, 2));
+
+      testResults.error = error.message;
+
+  async runSmokeTests(testResults) {
+    this.log('Running smoke tests...);
+
+      testResults.suites.smoke = {
+        status: passed,
+        output: result,
+        timestamp: new Date().toISOString()
     } catch (error) {
-      this.log(`Test execution failed: ${error.message}`);
-      return {
-        success: false,
+
         error: error.message,
-        coverage: 'No coverage data',
-        output: 'Test execution failed',
-      };
-    }
-  }
+        output: error.stdout || error.stderr,
+      testResults.issues.push({
+        type: smoke,
+        severity: high,
+        message: Smoke tests failed,
+        details: error.message
 
-  async analyzeTestQuality() {
-    this.log('📊 Analyzing test quality...');
+  async runUnitTests(testResults) {
+    this.log('Running unit tests...);
 
-    const patterns = [
-      'describe\\(',
-      'it\\(',
-      'test\\(',
-      'expect\\(',
-    ];
 
-    let totalTests = 0;
-    let documentedTests = 0;
+  async runIntegrationTests(testResults) {
+    this.log('Running integration tests...);
 
-    for (const pattern of patterns) {
-      try {
-        const result = execSync(`grep -r "${pattern}" . --exclude-dir=node_modules --exclude-dir=.git 2>/dev/null || true`, { encoding: 'utf8' });
-        const matches = result.split('\n').filter(line => line.trim());
-        totalTests += matches.length;
-      } catch (error) {
-        this.log(`Warning: Could not analyze pattern ${pattern}: ${error.message}`);
-      }
-    }
 
-    try {
-      const documentedTestsResult = execSync(`grep -r "describe\\|it\\|test" . --exclude-dir=node_modules --exclude-dir=.git | grep -c "//" 2>/dev/null || echo "0"`, { encoding: 'utf8' });
-      documentedTests = parseInt(documentedTestsResult.trim()) || 0;
-    } catch (error) {
-      this.log(`Warning: Could not count documented tests: ${error.message}`);
-    }
+  async runAccessibilityTests(testResults) {
+    this.log('Running accessibility tests...);
 
-    return {
-      totalTests,
-      documentedTests,
-      documentationRate: totalTests > 0 ? (documentedTests / totalTests) * 100 : 0,
-    };
-  }
 
-  async analyzeTestCoverage() {
-    this.log('📈 Analyzing test coverage...');
+  async runPerformanceTests(testResults) {
+    this.log('Running performance tests...);
 
-    try {
-      const sourceFiles = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx" 2>/dev/null || echo ""', { encoding: 'utf8' });
-      const sourceCount = sourceFiles.split('\n').filter(f => f.trim()).length;
-      
-      const testFiles = await this.discoverTestFiles();
-      const testCount = testFiles.length;
 
-      return {
-        sourceFiles: sourceCount,
-        testFiles: testCount,
-        coverageRatio: sourceCount > 0 ? (testCount / sourceCount) * 100 : 0,
-        recommendations: [
-          'Add more unit tests for utility functions',
-          'Increase integration test coverage',
-          'Add E2E tests for critical user flows',
-          'Implement test coverage reporting',
-        ],
-      };
-    } catch (error) {
-      this.log(`Warning: Could not analyze test coverage: ${error.message}`);
-      return {
-        sourceFiles: 0,
-        testFiles: 0,
-        coverageRatio: 0,
-        recommendations: ['Set up test coverage reporting'],
-      };
-    }
-  }
+  async generateCoverageReport(testResults) {
+    this.log('Generating coverage report...);
 
-  async generateTestRecommendations() {
-    this.log('💡 Generating test recommendations...');
+      // Try to parse coverage data from output
+      const coverageMatch = result.match(/All files\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)/);
+      if (coverageMatch) {
+        testResults.coverage = {
+          statements: parseFloat(coverageMatch[1]),
+          branches: parseFloat(coverageMatch[2]),
+          functions: parseFloat(coverageMatch[3]),
+          lines: parseFloat(coverageMatch[4])
+      } else {
+          statements: 0,
+          branches: 0,
+          functions: 0,
+          lines: 0
+      this.log('Coverage report generation failed');
 
-    return [
-      'Implement automated test execution in CI/CD',
-      'Set up test coverage reporting',
-      'Add performance testing',
-      'Implement visual regression testing',
-      'Add accessibility testing',
-      'Set up test data management',
-      'Implement test parallelization',
-      'Add test result notifications',
-      'Create test documentation',
-      'Implement test maintenance strategies',
-    ];
-  }
+  analyzeTestQuality(testResults) {
+    this.log('Analyzing test quality...);
+    // Check if test files exist
+    const testFiles = this.findTestFiles();
+    testResults.metrics = {
+      totalTestFiles: testFiles.length,
+      testSuites: Object.keys(testResults.suites).length,
 
-  async runIntelligentTests() {
-    this.log('🧪 Starting intelligent test orchestration...');
+    // Analyze test file quality
+    let qualityIssues = 0;
+    testFiles.forEach(file => {
+      const content = fs.readFileSync(file,utf8);
+      if (!content.includes('describe') && !content.includes('test') && !content.includes('it')) {
+        qualityIssues++;
 
-    const tests = [
-      { comman: 'npm run: test:smoke', descriptio: 'Smoke tests' },
-      { comman: 'npm run: test:unit', descriptio: 'Unit tests' },
-      { comman: 'npm run: test:integration', descriptio: 'Integration tests' },
-      { comman: 'npm run: test:coverage', descriptio: 'Test coverage' },
-    ];
+    testResults.metrics.qualityIssues = qualityIssues;
 
-    const results = [];
-    for (const test of tests) {
-      const result = await this.runCommand(test.command, test.description);
-      results.push({ ...test, result });
-    }
+  findTestFiles() {
+    const testDirs = [src,tests,__tests__,test];
+    let testFiles = [];
+    testDirs.forEach(dir => {
+      const fullPath = path.join(this.workspaceRoot, dir);
+      if (fs.existsSync(fullPath)) {
 
-    this.log('✅ Intelligent test orchestration completed');
-    return { succes: true, results };
-  }
+    return testFiles;
 
-  generateReport(analysis) {
-    this.log('📊 Generating intelligent test report...');
+  findFiles(dir, extensions) {
+    let files = [];
+    const items = fs.readdirSync(dir);
+    items.forEach(item => {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        files = files.concat(this.findFiles(fullPath, extensions));
+      } else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+    return files;
 
-    const report = {
-      timestam: new Date().toISOString(),
-      test: await this.runIntelligentTests(),
-      summar: {
-        testsRu: 4,
-        successfulTest: 0,
-        failedTest: 0,
-      },
-    };
+  calculateTestScore(testResults) {
+    let score = 0;
+    // Base score for having tests
+    if (testResults.metrics?.totalTestFiles > 0) {
+      score += 20;
+    // Score for passed test suites
+    const passedSuites = testResults.metrics?.passedSuites || 0;
+    const totalSuites = testResults.metrics?.testSuites || 1;
+    score += (passedSuites / totalSuites) * 40;
+    // Score for coverage
+    if (testResults.coverage?.lines > 0) {
+      score += Math.min(30, testResults.coverage.lines * 0.3);
+    // Deduct for issues
+    const issueCount = testResults.issues.length;
+    score -= Math.min(20, issueCount * 2);
+    return Math.max(0, Math.min(100, score));
 
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${this.reportFile}`);
+  generateTestRecommendations(testResults) {
+    if (testResults.metrics?.totalTestFiles === 0) {
+      testResults.recommendations.push({
 
-    return report;
-  }
 
-  calculateOverallScore(analysis) {
-    const weights = {
-      testExecution: 0.4,
-      testQuality: 0.3,
-      testCoverage: 0.3,
-    };
+// CLI interface
+if (require.main === module) {
+  const orchestrator = new IntelligentTestOrchestrator();
+  orchestrator.runComprehensiveTests().catch(console.error);
 
-    const executionScore = analysis.testSuite.success ? 100 : 0;
-    const qualityScore = analysis.testQuality.documentationRate;
-    const coverageScore = analysis.testCoverage.coverageRatio;
-
-    return Math.round(
-      executionScore * weights.testExecution +
-      qualityScore * weights.testQuality +
-      coverageScore * weights.testCoverage
-    );
-  }
-
-  getTestStatus(analysis) {
-    const overallScore = this.calculateOverallScore(analysis);
-    if (overallScore >= 90) return 'excellent';
-    if (overallScore >= 80) return 'good';
-    if (overallScore >= 70) return 'fair';
-    return 'needs-improvement';
-  }
-
-  getTestPriority(analysis) {
-    if (!analysis.testSuite.success) return 'critical';
-    if (analysis.testCoverage.coverageRatio < 50) return 'high';
-    if (analysis.testQuality.documentationRate < 30) return 'high';
-    return 'medium';
-  }
-
-  async run() {
-    try {
-      this.log('🎯 Starting intelligent test orchestration...');
-
-      const analysis = await this.runIntelligentTests();
-      const report = this.generateReport(analysis);
-
-      this.log(`🎉 Intelligent test orchestration completed! Overall Score: ${report.summary.overallScore}/100`);
-      this.log(`📊 Status: ${report.summary.status} | Priority: ${report.summary.priority}`);
-      this.log(`📈 Test Files: ${report.summary.totalTestFiles} | Coverage: ${report.summary.coverageRatio}%`);
-    } catch (error) {
-      this.log(`❌ Intelligent test orchestration failed: ${error.message}`);
-      process.exit(1);
-    }
-  }
-}
-
-module.exports = IntelligentTestOrchestrator;
-// Run the orchestrator
-const orchestrator = new IntelligentTestOrchestrator();
-orchestrator.run().catch(console.error);
+module.exports = IntelligentTestOrchestrator;`;

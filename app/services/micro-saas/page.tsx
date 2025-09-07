@@ -1,1 +1,77 @@
-export const metadata = { title: 'Micro SaaS Development | Zion Tech Group' }; export default function MicroSaaSPage() { return ( <section> <h1 style={{fontSize: 26,fontWeight: 800}}>Micro SaaS Development</h1> <p style={{marginTop: 8,color: '#374151'}}>We design,build,launch and operate revenue-generating micro SaaS products end-to-end.</p> <div style={{display: 'grid',gap: 12,marginTop: 16}}> <Item title="Core features" details={["Multi-tenant architecture","Auth (email,OAuth)","Billing (Stripe)","Admin + analytics","In-app onboarding"]} /> <Item title="Growth stack" details={["SEO-ready marketing site","Blog + docs","Email campaigns","Referral + affiliates"]} /> <Item title="Ops & reliability" details={["CI/CD","Observability","Error budgets","SLOs","On-call setup"]} /> </div> <Pricing /> </section> )} function Item({ title,details }: { title: string; details: string[] }) { return ( <div style={{border: '1px solid #e5e7eb',borderRadius: 12,padding: 16}}> <h3 style={{fontWeight: 700}}>{title}</h3> <ul style={{paddingLeft: 18,color: '#4b5563'}}>{details.map(d => (<li key={d} style={{listStyle: 'disc'}}>{d}</li>))}</ul> </div> )} function Pricing() { return ( <div style={{marginTop: 20,display: 'grid',gap: 12,gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))'}}> <Plan name="MVP Sprint" price="$8k–$20k" features={["2–4 weeks","MVP scope","Stripe billing","Basic analytics"]} /> <Plan name="Growth" price="$20k–$60k" features={["6–10 weeks","SEO + content","CRM + email","Observability"]} /> <Plan name="Scale" price="$60k+" features={["Custom roadmap","SRE + security","Multi-region","SLAs"]} /> </div> )} function Plan({ name,price,features }: { name: string; price: string; features: string[] }) { return ( <div style={{border: '1px solid #e5e7eb',borderRadius: 12,padding: 16}}> <h4 style={{fontWeight: 700}}>{name}</h4> <div style={{color: '#111827',fontWeight: 800,marginTop: 4}}>{price}</div> <ul style={{paddingLeft: 18,color: '#4b5563',marginTop: 8}}>{features.map(f => (<li key={f} style={{listStyle: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Micro SaaS Solutions | Zion Tech Group',
+  description: 'Professional micro SaaS solutions for your business needs.',
+  keywords: 'micro saas, software as a service, business solutions, technology',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Micro SaaS Solutions | Zion Tech Group',
+    description: 'Professional micro SaaS solutions for your business needs.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Zion Tech Group',
+  },
+};
+
+export default function MicroSaaSPage() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6">Micro SaaS Solutions</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Innovative micro SaaS products designed to solve specific business challenges 
+            with powerful, focused solutions.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-3">AI-Powered Tools</h3>
+            <p className="text-gray-600 mb-4">
+              Intelligent automation tools that streamline your workflows.
+            </p>
+            <a href="/contact" className="text-blue-600 hover:text-blue-800">
+              Learn More →
+            </a>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-3">Business Analytics</h3>
+            <p className="text-gray-600 mb-4">
+              Data-driven insights to help you make better decisions.
+            </p>
+            <a href="/contact" className="text-blue-600 hover:text-blue-800">
+              Learn More →
+            </a>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-3">Process Automation</h3>
+            <p className="text-gray-600 mb-4">
+              Automate repetitive tasks and boost productivity.
+            </p>
+            <a href="/contact" className="text-blue-600 hover:text-blue-800">
+              Learn More →
+            </a>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-8">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Contact us to discuss your micro SaaS needs and discover how we can help.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
