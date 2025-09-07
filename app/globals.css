@@ -18,19 +18,19 @@
   .container {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
-  
+
   .btn-primary {
     @apply bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors;
   }
-  
+
   .btn-secondary {
     @apply bg-gray-200 text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-300 transition-colors;
   }
-  
+
   .card {
     @apply bg-white rounded-lg shadow-md p-6;
   }
-  
+
   .gradient-bg {
     @apply bg-gradient-to-br from-blue-50 to-indigo-100;
   }
@@ -40,52 +40,52 @@
   .focus-visible:focus {
     @apply outline-none ring-2 ring-blue-500 ring-offset-2;
   }
-  
+
   .text-balance {
     text-wrap: balance;
   }
-  
+
   /* Animation utilities */
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
   }
-  
+
   .animate-slide-up {
     animation: slideUp 0.8s ease-out forwards;
   }
-  
+
   .animate-slide-in-left {
     animation: slideInLeft 0.8s ease-out forwards;
   }
-  
+
   .animate-slide-in-right {
     animation: slideInRight 0.8s ease-out forwards;
   }
-  
+
   .animate-bounce-in {
     animation: bounceIn 0.8s ease-out forwards;
   }
-  
+
   .animate-scale-in {
     animation: scaleIn 0.6s ease-out forwards;
   }
-  
+
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-  
+
   .animate-pulse-slow {
     animation: pulse 3s ease-in-out infinite;
   }
-  
+
   .animate-spin-slow {
     animation: spin 8s linear infinite;
   }
-  
+
   .animate-wiggle {
     animation: wiggle 1s ease-in-out infinite;
   }
-  
+
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate;
   }
@@ -164,7 +164,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -177,12 +178,15 @@
     box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
   }
   to {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6);
+    box-shadow:
+      0 0 20px rgba(59, 130, 246, 0.8),
+      0 0 30px rgba(59, 130, 246, 0.6);
   }
 }
 
 @keyframes wiggle {
-  0%, 7% {
+  0%,
+  7% {
     transform: rotateZ(0);
   }
   15% {
@@ -200,7 +204,8 @@
   35% {
     transform: rotateZ(-4deg);
   }
-  40%, 100% {
+  40%,
+  100% {
     transform: rotateZ(0);
   }
 }
