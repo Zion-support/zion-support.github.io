@@ -1,131 +1,107 @@
-import type { NextApiRequest, NextApiResponse } from 'next';'
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+import { createServerClient } from '../../../utils/supabase/server';
 
-import { createServerClient } from '../../../utils/supabase/server';'
-
-export default async function handler() {
-  }
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    }
-    const supabase = null;
-  try {
-    }
     const supabase = createServerClient();
 
-const clientId = (req.query.clientId as string) |null;
-   ;
-const [jobsR, quotesR] = await Promise.allSettled([;
-supabase
-        .from('jobs')'
-        .select('id, client_id, status, posted_at, hired_at')'
-        .eq('client_id', clientId)'
+    const clientId = (req.query.clientId as string) || null;
+    
+    const [jobsR, quotesR] = await Promise.allSettled([
       supabase
-        .from('quotes')'
-        .select('id, job_id, status, created_at')'
-        .eq('client_id', clientId)'
+        .from('jobs')
+        .select('id, client_id, status, posted_at, hired_at')
+        .eq('client_id', clientId),
+      supabase
+        .from('quotes')
+        .select('id, job_id, status, created_at')
+        .eq('client_id', clientId)
     ]);
 
-const jobs =;
-      jobsR.status === 'fulfilled' && jobsR.value.data'
-        ? (jobsR.value.data as any[])
-        : [];
+    const jobs = jobsR.status === 'fulfilled' && jobsR.value.data
+      ? (jobsR.value.data as any[])
+      : [];
 
-const quotes =;
-      quotesR.status === 'fulfilled' && quotesR.value.data'
-        ? (quotesR.value.data as any[])
-        : [];
+    const quotes = quotesR.status === 'fulfilled' && quotesR.value.data
+      ? (quotesR.value.data as any[])
+      : [];
 
-const jobsData = jobs.length;
+    const jobsData = jobs.length > 0
       ? jobs
       : [
           {
-            }
-            "id": 11,
-"client_id": 'c1''
-            "status": 'posted''
-            "posted_at": '2025-01-01''
-
-         
-}
-          {"id": 12;
-            }
-            "client_id": 'c1';'
-            "status": 'filled';'
-            "posted_at": '2025-01-02';'
-            "hired_at": '2025-01-05';'
-          }
-          {"id": 13;
-            }
-            "client_id": 'c1';'
-            "status": 'filled';'
-            "posted_at": '2025-01-03';'
-            "hired_at": '2025-01-06';'
+            id: 11,
+            client_id: 'c1',
+            status: 'posted',
+            posted_at: '2025-01-01'
+          },
+          {
+            id: 12,
+            client_id: 'c1',
+            status: 'filled',
+            posted_at: '2025-01-02',
+            hired_at: '2025-01-05'
+          },
+          {
+            id: 13,
+            client_id: 'c1',
+            status: 'filled',
+            posted_at: '2025-01-03',
+            hired_at: '2025-01-06'
           }
         ];
-    const quotesData = quotes.length;
-      ? quotes;
-      : [;
-          { "id": 21, "job_id": 12, "status": 'received', "created_at": '2025-01-02','
-}
-          { "id": 22, "job_id": 13, "status": 'received', "created_at": '2025-01-03','
-}
+
+    const quotesData = quotes.length > 0
+      ? quotes
+      : [
+          { id: 21, job_id: 12, status: 'received', created_at: '2025-01-02' },
+          { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }
         ];
 
-const jobsPosted = jobsData.length;
+    const jobsPosted = jobsData.length;
+    const quotesReceived = quotesData.length;
+    const filled = jobsData.filter(j => j.status === 'filled');
 
-const quotesReceived = quotesData.length;
-
-const filled = jobsData.filter(j => { return j.status === 'filled'); }'
-
-const timeToHireDays = filled.length;
-? filled.reduce(
+    const timeToHireDays = filled.length > 0
+      ? filled.reduce(
           (acc, j) =>
             acc +
             (new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime()) /
-              (1000 * 60 * 60 * 24)
+              (1000 * 60 * 60 * 24),
           0
         ) / filled.length
-   ;
-const talentViewed = 12; // Placeholder;
-const shortlisted = 5; // Placeholder;
-const funnel = [;
-      },
-      { "label": 'Hire', "value": filled && filled.length,'
-}
+      : 0;
+
+    const talentViewed = 12; // Placeholder
+    const shortlisted = 5; // Placeholder
+
+    const funnel = [
+      { label: 'Post', value: jobsPosted },
+      { label: 'Invite', value: quotesReceived },
+      { label: 'Hire', value: filled.length }
     ];
+
+    res.status(200).json({
+      jobsPosted,
+      quotesReceived,
       timeToHireDays,
-      talentViewed,
+      talent_viewed: talentViewed,
       shortlisted,
-      funnel
+      funnel,
     });
   } catch (e) {
-      }
-      "funnel": [
-        { "label": 'Post', "value": 3,'
-}
-        { "label": 'Invite', "value": 2,'
-}
-
-        { "label": 'Hire', "value": 2 }'
+    res.status(200).json({
+      jobsPosted: 3,
+      quotesReceived: 2,
+      timeToHireDays: 3.5,
+      talent_viewed: 12,
+      shortlisted: 5,
+      funnel: [
+        { label: 'Post', value: 3 },
+        { label: 'Invite', value: 2 },
+        { label: 'Hire', value: 2 }
       ]
-   
-});
+    });
   }
-        { "label": 'Hire', "value": 2 }]})'
-  }
-
-        { label: 'Hire', value: 2 }]})
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
-        { label: 'Post',}
-  value: 3,}
-}
-'
-
-
-        { label: 'Hire', value: 2 }]})
-  }
-        { label: 'Hire',}
-  value: 2 }]})
-  },
 }

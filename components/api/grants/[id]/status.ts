@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-import { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
+import { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
@@ -52,28 +52,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
-  if (req.method === 'GET') {
-    const existing = readGrant(id);
-    if (!existing) {
-      return res.status(404).json({ error: 'Not found' });
-    }
-    return res.status(200).json({ milestones: existing.milestones || [] });
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    res.status(405).end('Method Not Allowed');
+    return;
   }
 
-  if (req.method === 'POST') {
-    const existing = readGrant(id);
-    if (!existing) {
-      return res.status(404).json({ error: 'Not found' });
-    }
-
-    const payload = req.body as MilestonesUpdatePayload;
-    existing.milestones = payload.milestones || [];
-    existing.updatedAt = new Date().toISOString();
-
-    writeGrant(existing);
-    return res.status(200).json({ record: existing });
+  const existing = readGrant(id);
+  if (!existing) {
+    res.status(404).json({ error: 'Not found' });
+    return;
   }
 
-  res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');
+  const payload = req.body as StatusUpdatePayload;
+  existing.status = payload.status;
+  existing.updatedAt = new Date().toISOString();
+
+  writeGrant(existing);
+  res.status(200).json({ record: existing });
 }
