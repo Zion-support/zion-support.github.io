@@ -76,11 +76,7 @@ export default {
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
-<<<<<<< HEAD
-          '100%': { transform: 'translateY(0px)', opacity: '1' }
-=======
           '100%': { transform: 'translateY(0)', opacity: '1' },
->>>>>>> a37d0146a279e87fedd9d69d2a332111065044d5
         },
         slideDown: {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
@@ -158,14 +154,9 @@ export default {
       },
     },
   },
-<<<<<<< HEAD
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
 };
-=======
-  plugins: [],
-};
->>>>>>> a37d0146a279e87fedd9d69d2a332111065044d5
