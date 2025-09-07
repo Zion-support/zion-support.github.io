@@ -3,7 +3,7 @@ export interface InnovativeMicroSaasService {
   title: string;
   description: string;
   category: string;
-  subcategory: string;
+  subcategory?: string;
   price: number;
   currency: string;
   pricingModel: string;
@@ -11,16 +11,25 @@ export interface InnovativeMicroSaasService {
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
+  integration: string[];
+  support: string[];
+  link: string;
+  badge?: string;
+  icon: string;
   marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
+  contactEmail: string;
+  tags: string[];
+  aiScore: number;
+  rating: number;
+  reviewCount: number;
+  featured: boolean;
+  location: string;
+  availability: string;
+  author: {
+    name: string;
+    id: string;
+    avatarUrl?: string;
+    verified: boolean;
   };
   technicalSpecs?: {
     technology: string[];
@@ -34,59 +43,60 @@ export interface InnovativeMicroSaasService {
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] = [
-  // AI-Powered Business Intelligence & Analytics
+  // AI-Powered Business Intelligence
   {
     id: "ai-business-intelligence-platform",
     title: "AI Business Intelligence Platform",
-    description: "Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports for business decision-making.",
+    description: "Transform your data into actionable insights with AI-powered analytics, predictive modeling, and automated reporting. Real-time dashboards and intelligent recommendations.",
     category: "AI & Analytics",
     subcategory: "Business Intelligence",
-    price: 2999,
+    price: 299,
     currency: "$",
     pricingModel: "monthly",
     features: [
       "AI-powered data analysis",
-      "Automated insight generation",
-      "Natural language queries",
       "Predictive analytics",
-      "Custom dashboard creation",
-      "Real-time data processing",
-      "Multi-source data integration",
-      "Advanced visualization tools",
+      "Real-time dashboards",
       "Automated reporting",
-      "Mobile app access"
+      "Natural language queries",
+      "Data visualization",
+      "Custom AI models",
+      "API integrations"
     ],
     benefits: [
-      "Reduce analysis time by 80%",
-      "Improve decision accuracy by 60%",
-      "Automated insight discovery",
-      "Real-time business monitoring",
-      "Scalable analytics infrastructure"
+      "30% faster decision making",
+      "Predictive insights for growth",
+      "Automated reporting saves 15 hours/week",
+      "Real-time business visibility",
+      "AI-driven recommendations"
     ],
     useCases: [
       "Sales performance analysis",
       "Customer behavior insights",
-      "Financial reporting automation",
-      "Operational efficiency tracking",
+      "Financial forecasting",
+      "Operational efficiency",
       "Market trend analysis"
     ],
-    targetAudience: [
-      "Business analysts",
-      "Data scientists",
-      "Executives",
-      "Marketing teams",
-      "Sales teams"
-    ],
-    tags: ["AI", "Analytics", "Business Intelligence", "Data Science", "Reporting"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,999 - $8,999/month",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    targetAudience: ["Business analysts", "Data scientists", "Executives", "Marketing teams", "Sales teams"],
+    integration: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify", "Zapier"],
+    support: ["24/7 chat support", "Email support", "Video tutorials", "Live training", "API documentation"],
+    link: "https://ziontechgroup.com/services/ai-business-intelligence",
+    badge: "Most Popular",
+    icon: "📊",
+    marketPrice: "$500-2000/month",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["AI", "Business Intelligence", "Analytics", "Predictive Modeling", "Data Visualization"],
+    aiScore: 95,
+    rating: 4.9,
+    reviewCount: 234,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
     },
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],

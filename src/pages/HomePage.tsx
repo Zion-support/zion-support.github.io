@@ -73,34 +73,34 @@ export function HomePage() {
 
   const services = [
     {
-      title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence',
+      title: 'AI Business Intelligence',
+      description: 'Transform your data into actionable insights with AI-powered analytics',
       icon: Brain,
-      href: '/services/ai-solutions',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      href: '/innovative-services-2025',
+      features: ['Predictive Analytics', 'Real-time Dashboards', 'AI-powered Insights', 'Automated Reporting'],
       color: 'from-cyan-500 to-blue-600'
     },
     {
-      title: 'Quantum Computing',
-      description: 'Harness the power of quantum mechanics for unprecedented computational capabilities',
+      title: 'Quantum AI Trading',
+      description: 'Revolutionary trading platform combining quantum computing with AI',
       icon: Atom,
-      href: '/services/quantum-computing',
-      features: ['Quantum Algorithms', 'Quantum AI Hybrid', 'Quantum Security', 'Quantum Optimization'],
+      href: '/innovative-services-2025',
+      features: ['Quantum Algorithms', 'AI Market Prediction', 'Risk Management', 'Portfolio Optimization'],
       color: 'from-purple-500 to-pink-600'
     },
     {
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets with AI-powered security solutions',
+      title: 'AI Cybersecurity Suite',
+      description: 'Comprehensive AI-powered security with threat detection and response',
       icon: Shield,
-      href: '/services/cybersecurity',
-      features: ['Zero Trust Security', 'AI Threat Detection', 'Security Headers', 'Compliance Management'],
+      href: '/innovative-services-2025',
+      features: ['AI Threat Detection', 'Zero-day Prevention', 'Incident Response', 'Compliance Management'],
       color: 'from-green-500 to-emerald-600'
     },
     {
-      title: 'Digital Transformation',
-      description: 'Modernize your infrastructure and processes for the digital age',
-      icon: Rocket,
-      href: '/services/digital-transformation',
+      title: 'Digital Twin Platform',
+      description: 'Create virtual replicas for real-time monitoring and optimization',
+      icon: Eye,
+      href: '/innovative-services-2025',
       features: ['Cloud Migration', 'DevOps Automation', 'API Development', 'Data Analytics'],
       color: 'from-orange-500 to-red-600'
     }
