@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 export const metadata = {
   title: "Micro SaaS Development | Zion Tech Group",
@@ -158,7 +157,7 @@ function CTA() {
         Ready to Build Your Micro SaaS?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Contact us today for a free consultation and let's turn your micro SaaS idea into a profitable reality.
+        Contact us today for a free consultation and let&apos;s turn your micro SaaS idea into a profitable reality.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a

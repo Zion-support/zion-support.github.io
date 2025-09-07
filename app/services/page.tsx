@@ -209,7 +209,7 @@ function CTA() {
         Ready to Get Started?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Talk to our experts about your project. We'll help you choose the right
+        Talk to our experts about your project. We&apos;ll help you choose the right
         service and create a custom solution for your business needs.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
