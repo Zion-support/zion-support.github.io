@@ -37,11 +37,7 @@ print_error() {
 }
 
 print_header() {
-    echo -e "${PURPLE}================================${NC}"
-    echo -e "${PURPLE}🧠 Intelligent Automation System${NC}"
-    echo -e "${PURPLE}================================${NC}"
-    echo ""
-}
+    echo -e "${PURPLE}}
 
 # Function to check if PM2 is installed
 check_pm2() {
