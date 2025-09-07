@@ -1,49 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import ServicesGrid from './components/ServicesGrid';
 import HeroSection from './components/HeroSection';
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Leading the future of AI, autonomous systems, and innovative technology solutions. We empower businesses with cutting-edge technology to drive growth and transformation.',
-  keywords: ['AI', 'artificial intelligence', 'blockchain', 'technology', 'innovation', 'automation'],
-  openGraph: {
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
-    type: 'website',
-  },
-};
-
-export default function HomePage() {
-  return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <HeroSection />
-
-        {/* Services Grid */}
-        <ServicesGrid />
-
-        {/* Research Section */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-8">Research & Innovation</h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Stay ahead with our cutting-edge research in AI, quantum computing, and emerging technologies.
-          </p>
-          <Link 
-            href="/research" 
-            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300"
-          >
-            Explore Research
-          </Link>
-        </div>
-      </div>
-    </main>
-=======
-import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Enterprise AI & IT Solutions | Micro SaaS Development',
@@ -127,129 +86,30 @@ function ServiceCard({
   );
 }
 
-export default function Home() {
-  const services = [
-    {
-      title: 'AI Solutions',
-      href: '/services/ai-solutions',
-      description: 'Transform your business with cutting-edge AI technologies including machine learning, natural language processing, and computer vision.',
-      bullets: [
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
-        'AI Chatbots & Virtual Assistants'
-      ],
-      icon: '🤖',
-      pricing: 'Starting at $5K'
-    },
-    {
-      title: 'Micro SaaS Development',
-      href: '/services/micro-saas',
-      description: 'Build and launch your own micro SaaS products with our full-stack development expertise and proven business models.',
-      bullets: [
-        'Full-Stack Development',
-        'API Integration',
-        'Payment Processing',
-        'User Management',
-        'Analytics & Reporting'
-      ],
-      icon: '💼',
-      pricing: 'Starting at $10K'
-    },
-    {
-      title: 'IT Services',
-      href: '/services/it-solutions',
-      description: 'Comprehensive IT solutions including cloud migration, cybersecurity, infrastructure management, and technical support.',
-      bullets: [
-        'Cloud Migration',
-        'Cybersecurity',
-        'Infrastructure Management',
-        'Technical Support',
-        'System Integration'
-      ],
-      icon: '⚙️',
-      pricing: 'Starting at $3K'
-    },
-    {
-      title: 'Blockchain Solutions',
-      href: '/services/blockchain',
-      description: 'Leverage blockchain technology for secure, transparent, and decentralized applications across various industries.',
-      bullets: [
-        'Smart Contracts',
-        'DeFi Applications',
-        'NFT Marketplaces',
-        'Blockchain Integration',
-        'Cryptocurrency Development'
-      ],
-      icon: '⛓️',
-      pricing: 'Starting at $15K'
-    }
-  ];
-
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg" role="banner">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-          Zion Tech Group
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services.
-          Empowering businesses with cutting-edge technology that drives innovation and transforms operations.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get Started Today
-          </Link>
-          <Link
-            href="/services"
-            className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-          >
-            View All Services
-          </Link>
-        </div>
-      </section>
+    <main className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <HeroSection />
 
-      {/* Services Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from our comprehensive range of technology services designed to meet your specific business needs.
-            </p>
-          </div>
+        {/* Services Grid */}
+        <ServicesGrid />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <ServiceCard key={index} {...service} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-12">
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Let's discuss how we can help you achieve your technology goals
+        {/* Research Section */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold text-white mb-8">Research & Innovation</h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Stay ahead with our cutting-edge research in AI, quantum computing, and emerging technologies.
           </p>
-          <Link
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          <Link 
+            href="/research" 
+            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300"
           >
-            Get in Touch
+            Explore Research
           </Link>
         </div>
-      </section>
-    </div>
->>>>>>> main
+      </div>
+    </main>
   );
 }
