@@ -162,8 +162,4 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 11a2e442cb3c873385c291bfea0ae0320d3fdf30
