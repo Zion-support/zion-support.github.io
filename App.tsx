@@ -208,7 +208,6 @@ export default function App(): JSX.Element {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-<<<<<<< HEAD
                 <h2 className="text-4xl md:text-5xl font-bold mb-8">
                   Ready to Transform Your Business?
                 </h2>
@@ -217,13 +216,15 @@ export default function App(): JSX.Element {
                   how our innovative solutions can drive your business forward.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Link 
+                  <a 
                     href="/contact" 
                     className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
                   >
                     Get Started Today
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
                   <a 
                     href="tel:+13024640950" 
                     className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
@@ -275,7 +276,6 @@ import {
 } from 'lucide-react';
 
 import Header from './components/Header';
-import Footer from './components/Footer';
 import ContactForm from './components/ContactForm';
 import LoadingSpinner from './components/LoadingSpinner';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -501,9 +501,6 @@ interface Testimonial {
                 transition={{ duration: 0.8 }}
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-8">
-=======
-                <h2 className="text-4xl md: text-5xl font-bold mb-8">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6efb
                   Ready to Transform Your Business?
                 </h2>
                 <p className="text-xl text-slate-400 mb-12">

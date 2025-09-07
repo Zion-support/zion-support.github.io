@@ -1,22 +1,32 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
-interface ModernNavigationProps {
-  // Add props here as needed
-}
-export default function ModernNavigation({ }: ModernNavigationProps) {
+import Link from 'next/link';
+
+const ModernNavigation: React.FC = () => {
   return (
-    <div>
-      <h1>ModernNavigation</h1>
-      <p>This component is currently under development.</p>
-    </div>
+    <nav className="bg-white shadow-lg">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          <Link href="/" className="text-xl font-bold text-gray-800">
+            Zion Tech Group
+          </Link>
+          <div className="flex items-center space-x-8">
+            <Link href="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Services
+            </Link>
+            <Link href="/products" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Products
+            </Link>
+            <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
+              About
+            </Link>
+            <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Contact
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+};
+
+export default ModernNavigation;

@@ -1,9 +1,8 @@
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
-;
+
 const noop = () => {};
 const noopReturn = () => null;
-const noopPromise = () => Promise.resolve();
 
 // Mock Sentry instance with all common methods
 const mockSentry = {
@@ -14,7 +13,7 @@ const mockSentry = {
   captureEvent: noop,
   addBreadcrumb: noop,
   configureScope: noop,
-  withScope: (callback: (...args: any[],) => any) => callback(mockScope),
+  withScope: (callback: (...args: any[]) => any) => callback(mockScope),
   setUser: noop,
   setTag: noop,
   setTags: noop,
@@ -26,9 +25,11 @@ const mockSentry = {
 
   // Transaction and performance monitoring
   startTransaction: () => mockTransaction,
-  finishTransaction: noop,  // Error boundary and React integration
-  ErrorBoundary: ({ children }: any,) => children,
-  withErrorBoundary: (component: any,) => component,
+  finishTransaction: noop,
+  
+  // Error boundary and React integration
+  ErrorBoundary: ({ children }: any) => children,
+  withErrorBoundary: (component: any) => component,
   showReportDialog: noop,
 
   // Browser-specific methods
@@ -37,25 +38,13 @@ const mockSentry = {
 
   // Server-specific methods (Node.js)
   Handlers: {
-    requestHandler:
-      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
-        next(),
-    errorHandler:
-      () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) =>
-        next(),
-    tracingHandler:
-      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
-        next(),
+    requestHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next(),
+    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) => next(),
+    tracingHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next(),
   },
   
-  // Server-specific methods (Node.js)
-  Handlers: {
-    requestHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next(),
-    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[],) => any) => next(),
-    tracingHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next()},
-  
   // Next.js specific
-  withSentryConfig: (config: any,) => config,
+  withSentryConfig: (config: any) => config,
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -147,6 +136,7 @@ const mockHub = {
   withScope: (callback: (...args: any[]) => any) => callback(mockScope),
   startTransaction: () => mockTransaction,
 };
+
 // Export default mock that covers all Sentry packages
 export default mockSentry;
 
@@ -177,8 +167,7 @@ export const withSentryConfig = mockSentry.withSentryConfig;
 export const SentryWebpackPlugin = mockSentry.SentryWebpackPlugin;
 export const Tracing = mockSentry.Tracing;
 export const Integrations = mockSentry.Integrations;
-export const makeBrowserOfflineTransport =
-  mockSentry.makeBrowserOfflineTransport;
+export const makeBrowserOfflineTransport = mockSentry.makeBrowserOfflineTransport;
 export const makeFetchTransport = mockSentry.makeFetchTransport;
 export const createTransport = mockSentry.createTransport;
 export const SDK_VERSION = mockSentry.SDK_VERSION;
@@ -186,5 +175,3 @@ export const Severity = mockSentry.Severity;
 
 // Additional exports for compatibility
 export { mockSentry as Sentry };
-
-// All exports are already defined above
