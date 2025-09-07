@@ -1,135 +1,119 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
-import SearchModal from './SearchModal';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
-const Header: React.FC = () => {
- 
+export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-const [isSearchOpen, setIsSearchOpen] = useState(false);
-
-const toggleMenu = (
-    setIsMenuOpen(!isMenuOpen)) => {
-  return $3;}
-}
-};
-
-
-const toggleSearch = (
-    setIsSearchOpen(!isSearchOpen)) => {
-  return $3;}
-}
-};
-
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   return (
-    <header className=\"bg-white dark: bg-gray-900 shadow-lg sticky top-0 z-50\" />
-      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />
-        <div className=\"flex justify-between items-center h-16\" />
-          <div className=\"flex items-center\" />
-            <Link to=\"/\" className=\"flex-shrink-0\" />
-              <h1 className=\"text-2xl font-bold text-gray-900 dark:text-white\" />
-                Zion Tech Group;
-              </h1>
-            </Link>
-          </div>
-
-          <div className=\"hidden md:block\" />
-            <div className=\"ml-10 flex items-baseline space-x-4\" />
-              <Link;
-to=\"/services\"
-                className=\"text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors\"
-               />
-                Services;
-              </Link>
-              <Link;
-to=\"/about\"
-                className=\"text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors\"
-               />
-                About;
-              </Link>
-              <Link;
-to=\"/blog\"
-                className=\"text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors\"
-               />
-                Blog;
-              </Link>
-              <Link;
-to=\"/contact\"
-                className=\"text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors\"
-               />
-                Contact;
-              </Link>
+    <header className="bg-slate-900/95 backdrop-blur-sm text-white shadow-xl sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <span className="text-white font-bold text-xl">Z</span>
             </div>
-          </div>
+            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Zion Tech Group
+            </span>
+          </Link>
+          
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors duration-300 font-medium">
+              Home
+            </Link>
+            <div className="relative group">
+              <button 
+                className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-300 font-medium"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              {isServicesOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-xl py-2 z-50"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  <Link to="/services/ai" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors">
+                    AI Solutions
+                  </Link>
+                  <Link to="/services/cloud" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors">
+                    Cloud Services
+                  </Link>
+                  <Link to="/services/cybersecurity" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors">
+                    Cybersecurity
+                  </Link>
+                  <Link to="/services/micro-saas" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors">
+                    Micro SaaS
+                  </Link>
+                </div>
+              )}
+            </div>
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-300 font-medium">
+              About
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors duration-300 font-medium">
+              Contact
+            </Link>
+            <Link to="/pricing" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-medium">
+              Pricing
+            </Link>
+          </nav>
 
-          <div className=\"flex items-center space-x-4\" />
-            <button;
-onClick={toggleSearch}
-              className=\"text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 p-2 rounded-md transition-colors\"
-             />
-              <Search className=\"w-5 h-5\" />
-            </button>
-            <ThemeToggle />
-            <button;
-className=\"bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors\"
-             />
-              Get Started;
-            </button>
-          </div>
-
-          <div className=\"md:hidden\" />
-            <button;
-onClick={toggleMenu}
-              className=\"text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 p-2 rounded-md transition-colors\"
-             />
-              {isMenuOpen ? <X className=\"w-6 h-6\" /> : <Menu className=\"w-6 h-6\" />}
-            </button>
-          </div>
+          {/* Mobile menu button */}
+          <button
+            className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
 
+        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className=\"md:hidden\" />
-            <div className=\"px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700\" />
-              <Link;
-to=\"/services\"}
-                className=\"text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors\"}
-                onClick={() = /> setIsMenuOpen(false)}
-              >
-                Services;
+          <div className="lg:hidden py-4 border-t border-slate-700">
+            <nav className="flex flex-col space-y-4">
+              <Link to="/" className="text-gray-300 hover:text-white transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>
+                Home
               </Link>
-              <Link;
-to=\"/about\"
-                className=\"text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors\"
-                onClick={() = /> setIsMenuOpen(false)}
-              >
-                About;
+              <div className="space-y-2">
+                <div className="text-gray-300 font-medium">Services</div>
+                <div className="ml-4 space-y-2">
+                  <Link to="/services/ai" className="block text-gray-400 hover:text-white transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    AI Solutions
+                  </Link>
+                  <Link to="/services/cloud" className="block text-gray-400 hover:text-white transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Cloud Services
+                  </Link>
+                  <Link to="/services/cybersecurity" className="block text-gray-400 hover:text-white transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Cybersecurity
+                  </Link>
+                  <Link to="/services/micro-saas" className="block text-gray-400 hover:text-white transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    Micro SaaS
+                  </Link>
+                </div>
+              </div>
+              <Link to="/about" className="text-gray-300 hover:text-white transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>
+                About
               </Link>
-              <Link;
-to=\"/blog\"
-                className=\"text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors\"
-                onClick={() = /> setIsMenuOpen(false)}
-              >
-                Blog;
+              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>
+                Contact
               </Link>
-              <Link;
-to=\"/contact\"
-                className=\"text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors\"
-                onClick={() = /> setIsMenuOpen(false)}
-              >
-                Contact;
+              <Link to="/pricing" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-medium text-center" onClick={() => setIsMenuOpen(false)}>
+                Pricing
               </Link>
-            </div>
+            </nav>
           </div>
         )}
       </div>
-
-      <SearchModal isOpen={isSearchOpen} onClose={() = /> setIsSearchOpen(false)} />
     </header>
   );
-};
-
+}
 
 export default Header;

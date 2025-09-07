@@ -1,247 +1,523 @@
-
-;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
-:src/components/profile/HireNowCTA.jsx;
+<<<<<<< HEAD
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+:src/components/profile/HireNowCTA.jsx
 import React, {useState} from 'react';
-import { Button } from '../ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
-import { Input } from '../ui/Input';
-import { Textarea } from '../ui/Textarea';
-import { DollarSign, MessageSquare } from 'lucide-react';
-export function HireNowCTA() {const [isFormOpen\", setIsFormOpen] = useState(false)const [formData, setFormData] = useState({\"projectDescription\": '',\"budget\": '',\"startDate\": '',\"message\": '';}
-    })const handleSubmit = (e.preventDefault()if (onHire) {onHire(formData)\") => {
-  return $3;}
-}
+import {Button} from "../ui/Button";
+import {Card, CardContent, CardHeader, CardTitle} from "../ui/Card";
+import {Input} from "../ui/Input";
+import {Textarea} from "../ui/Textarea";
+import {DollarSign, MessageSquare} from 'lucide-react';
+export function HireNowCTA("props": "any) {;
+    const [isFormOpen", setIsFormOpen] = useState(false);
+    const [formData, setFormData] = useState({;
+        "projectDescription": '',;
+        "budget": '',;
+        "startDate": '',;
+        "message": '';
+    });
+    const handleSubmit = ("props": "any) => {;
+<<<<<<< HEAD
+        e.preventDefault();
+        if (onHire) {;
+            onHire(formData)"}
         // Reset form and close;
-        setFormData({\"projectDescription\": '',\"budget\": '',\"startDate\": '',\"message\": ''})setIsFormOpen(false)}const handleChange = (setFormData(prev => ({...prev\",[e.target.name]: \"e.target.value;) => {
-  return $3;}
-}
-        \"}))}return (<Card className=\"bg-zion-blue-light border-zion-blue-lighter\" />;
-      <CardHeader />;
-        <CardTitle className=\"text-white flex items-center gap-2\" />;
-          <MessageSquare className=\"h-5 w-5 text-zion-cyan\" />;
+        setFormData({"projectDescription": '',;
+            "budget": '',;
+            "startDate": '',;
+            "message": ''});
+        setIsFormOpen(false)};
+    const handleChange = ("props": "any) => {;
+        setFormData(prev => ({;
+            ...prev",;
+            [e.target.name]: "e.target.value;
+        "}))};
+    return (<Card className="bg-zion-blue-light border-zion-blue-lighter">;
+      <CardHeader>;
+        <CardTitle className="text-white flex items-center gap-2">;
+          <MessageSquare className="h-5 w-5 text-zion-cyan" />;
           Hire {talentName}
         </CardTitle>;
       </CardHeader>;
-      <CardContent />;
-        {!isFormOpen ? (<div className=\"space-y-4\" />;
-            {hourlyRate && (<div className=\"flex items-center gap-2 text-zion-slate-light\" />;}
-                <DollarSign className=\"h-4 w-4\" />;}
-                <span />Starting at ${hourlyRate}/hour</span>;
+      <CardContent>;
+        {!isFormOpen ? (<div className="space-y-4">;
+            {hourlyRate && (<div className="flex items-center gap-2 text-zion-slate-light">;
+                <DollarSign className="h-4 w-4" />;
+                <span>Starting at ${hourlyRate}/hour</span>;
               </div>)}
-            <p className=\"text-zion-slate-light text-sm\" />;
+            <p className="text-zion-slate-light text-sm">;
               Ready to start your project? Send a message to discuss details and get started.;
             </p>;
-            <Button onClick={() = /> setIsFormOpen(true)} className=\"w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark \"hover\": \"from-zion-purple-light \"hover\":to-zion-purple\">;
+            <Button onClick={() => setIsFormOpen(true)} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover": "from-zion-purple-light "hover":to-zion-purple">;
               Start Project Discussion;
             </Button>;
-          </div>) : (<form onSubmit={handleSubmit\"} className=\"space-y-4\" />;
-            <div />;
-              <label htmlFor=\"projectDescription\" className=\"block text-sm font-medium text-white mb-2\" />;
+          </div>) : (<form onSubmit={handleSubmit"} className="space-y-4">;
+            <div>;
+              <label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">;
                 Project Description;
               </label>;
-              <Textarea id=\"projectDescription\" name=\"projectDescription\" value={formData.projectDescription} onChange={handleChange} placeholder=\"Describe your project requirements...\" className=\"bg-zion-blue border-zion-blue-light text-white \"placeholder\": \"text-zion-slate-light \"focus\":border-zion-cyan\" required />;
+              <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white "placeholder": "text-zion-slate-light "focus":border-zion-cyan" required />;
             </div>;
-            <div className=\"grid grid-cols-2 gap-4\" />;
-              <div />;
-                <label htmlFor=\"budget\" className=\"block text-sm font-medium text-white mb-2\" />;
+            <div className="grid grid-cols-2 gap-4">;
+              <div>;
+                <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">;
                   Budget Range;
                 </label>;
-                <Input id=\"budget\" name=\"budget\" value={formData.budget\"} onChange={handleChange} placeholder=\"e.g., $1000-5000\" className=\"bg-zion-blue border-zion-blue-light text-white \"placeholder\": \"text-zion-slate-light \"focus\":border-zion-cyan\" required  />;
+                <Input id="budget" name="budget" value={formData.budget"} onChange={handleChange} placeholder="e.g., $1000-5000" className="bg-zion-blue border-zion-blue-light text-white "placeholder": "text-zion-slate-light "focus":border-zion-cyan" required  />;
               </div>;
-              <div />;
-                <label htmlFor=\"startDate\" className=\"block text-sm font-medium text-white mb-2\" />;
+              <div>;
+                <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">;
                   Start Date;
                 </label>;
-                <Input id=\"startDate\" name=\"startDate\" type=\"date\" value={formData.startDate\"} onChange={handleChange} className=\"bg-zion-blue border-zion-blue-light text-white \"focus\": \"border-zion-cyan\" required  />;
+                <Input id="startDate" name="startDate" type="date" value={formData.startDate"} onChange={handleChange} className="bg-zion-blue border-zion-blue-light text-white "focus": "border-zion-cyan" required  />;
               </div>;
             </div>;
-            <div />;
-              <label htmlFor=\"message\" className=\"block text-sm font-medium text-white mb-2\" />;
+            <div>;
+              <label htmlFor="message" className="block text-sm font-medium text-white mb-2">;
                 Additional Message;
               </label>;
-              <Textarea id=\"message\" name=\"message\" value={formData.message\"} onChange={handleChange} placeholder=\"Any additional details or questions...\" className=\"bg-zion-blue border-zion-blue-light text-white \"placeholder\": \"text-zion-slate-light \"focus\":border-zion-cyan\" rows={3\"} />;
+              <Textarea id="message" name="message" value={formData.message"} onChange={handleChange} placeholder="Any additional details or questions..." className="bg-zion-blue border-zion-blue-light text-white "placeholder": "text-zion-slate-light "focus":border-zion-cyan" rows={3"} />;
             </div>;
-            <div className=\"flex gap-3\" />;
-              <Button type=\"submit\" className=\"flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark \"hover\": \"from-zion-purple-light \"hover\":to-zion-purple\" />;
+            <div className="flex gap-3">;
+              <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover": "from-zion-purple-light "hover":to-zion-purple">;
                 Send Message;
               </Button>;
-              <Button type=\"button\" variant=\"outline\" onClick={() = /> setIsFormOpen(false)\"} className=\"border-zion-blue-light text-zion-slate-light \"hover\": \"bg-zion-blue-light \"hover\":text-white\">;
+              <Button type="button" variant="outline" onClick={() => setIsFormOpen(false)"} className="border-zion-blue-light text-zion-slate-light "hover": "bg-zion-blue-light "hover":text-white">;
                 Cancel;
               </Button>;
             </div>;
-          </form>)\"}
+          </form>)"}
       </CardContent>;
-    </Card>)}export default HireNowCTA;import React, { useState } from 'react';
-export function HireNowCTA() {const [isFormOpen, setIsFormOpen] = useState(false)const [formData, setFormData] = useState({projectDescription: '',
-  budget: '',startDate: '',
-  message: '';}
-        e.preventDefault():src/components/profile/HireNowCTA.jsx;}
-    }
-    )const handleSubmit = () => {
-  return $3;}
-})const handleSubmit = (        e.preventDefault()if (onHire) {onHire(formData)) => {
-  return $3;}
-}
+    </Card>)}
+;
+export default HireNowCTA;import React, { useState } from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+export function HireNowCTA({ talentName, hourlyRate, onHire }) {
+=======
+
+import React, { useState } from 'react';
+export function HireNowCTA({ talentName, hourlyRate, onHire }) {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    const [isFormOpen, setIsFormOpen] = useState(false);
+    const [formData, setFormData] = useState({'
+        projectDescription: '','
+        budget: '','
+        startDate: '','
+        message: ''
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        e.preventDefault();
+        if (onHire) {;
+            onHire(formData)"}
         // Reset form and close;
-        setFormData({projectDescription: '',
-  budget: '',startDate: '',const handleChange = (setFormData(prev => ({...prev,[e.target.name]: e.target.value;) => {
-  return $3;}
-}
-        }))}:src/components/profile/HireNowCTA.jsx;
-            message: ''}
-    )setIsFormOpen(false)}message: '';
-        })setIsFormOpen(false)}const handleChange = (setFormData(prev => ({...prev,[e.target.name]: e.target.value;) => {
-  return $3;}
-}
-        }))}return (<Card className=\"bg-zion-blue-light border-zion-blue-lighter\" />;
-      <CardHeader />;
-        <CardTitle className=\"text-white flex items-center gap-2\" />;
-          <MessageSquare className=\"h-5 w-5 text-zion-cyan\"/>;
+        setFormData({"projectDescription": '',;
+            "budget": '',;
+            "startDate": '',;
+            "message": ''});
+        setIsFormOpen(false)};
+    const handleChange = ("props": "any) => {;
+        setFormData(prev => ({;
+            ...prev",;
+            [e.target.name]: "e.target.value;
+        "}))};
+    return (<Card className="bg-zion-blue-light border-zion-blue-lighter">;
+      <CardHeader>;
+        <CardTitle className="text-white flex items-center gap-2">;
+          <MessageSquare className="h-5 w-5 text-zion-cyan" />;
+          Hire {talentName}
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        {!isFormOpen ? (<div className="space-y-4">;
+            {hourlyRate && (<div className="flex items-center gap-2 text-zion-slate-light">;
+                <DollarSign className="h-4 w-4" />;
+                <span>Starting at ${hourlyRate}/hour</span>;
+              </div>)}
+            <p className="text-zion-slate-light text-sm">;
+              Ready to start your project? Send a message to discuss details and get started.;
+            </p>;
+            <Button onClick={() => setIsFormOpen(true)} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover": "from-zion-purple-light "hover":to-zion-purple">;
+              Start Project Discussion;
+            </Button>;
+          </div>) : (<form onSubmit={handleSubmit"} className="space-y-4">;
+            <div>;
+              <label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">;
+                Project Description;
+              </label>;
+              <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white "placeholder": "text-zion-slate-light "focus":border-zion-cyan" required />;
+            </div>;
+            <div className="grid grid-cols-2 gap-4">;
+              <div>;
+                <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">;
+                  Budget Range;
+                </label>;
+                <Input id="budget" name="budget" value={formData.budget"} onChange={handleChange} placeholder="e.g., $1000-5000" className="bg-zion-blue border-zion-blue-light text-white "placeholder": "text-zion-slate-light "focus":border-zion-cyan" required  />;
+              </div>;
+              <div>;
+                <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">;
+                  Start Date;
+                </label>;
+                <Input id="startDate" name="startDate" type="date" value={formData.startDate"} onChange={handleChange} className="bg-zion-blue border-zion-blue-light text-white "focus": "border-zion-cyan" required  />;
+              </div>;
+            </div>;
+            <div>;
+              <label htmlFor="message" className="block text-sm font-medium text-white mb-2">;
+                Additional Message;
+              </label>;
+              <Textarea id="message" name="message" value={formData.message"} onChange={handleChange} placeholder="Any additional details or questions..." className="bg-zion-blue border-zion-blue-light text-white "placeholder": "text-zion-slate-light "focus":border-zion-cyan" rows={3"} />;
+            </div>;
+            <div className="flex gap-3">;
+              <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover": "from-zion-purple-light "hover":to-zion-purple">;
+                Send Message;
+              </Button>;
+              <Button type="button" variant="outline" onClick={() => setIsFormOpen(false)"} className="border-zion-blue-light text-zion-slate-light "hover": "bg-zion-blue-light "hover":text-white">;
+                Cancel;
+              </Button>;
+            </div>;
+          </form>)"}
+      </CardContent>;
+    </Card>)}
+;
+export default HireNowCTA;import React, { useState } from 'react';
+=======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [formData, setFormData] = useState({
         projectDescription: '',
-  budget: '',
+        budget: '',
         startDate: '',
-  message: ''
+        message: ''
+        e.preventDefault();
+<<<<<<< HEAD
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+:src/components/profile/HireNowCTA.jsx
+    }
+    );
+    const handleSubmit = (props: any) => {
+    });
+    const handleSubmit = (e) => {        e.preventDefault();
+<<<<<<< HEAD
+=======
+        e.preventDefault();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+        if (onHire) {
+=======
+
         e.preventDefault();
         if (onHire) {}
-            onHire(formData);}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            onHire(formData);
         }
         // Reset form and close;
-setFormData({
-            projectDescription: '',
-  budget: '',
+        setFormData({'
+            projectDescription: '','
+            budget: '','
             startDate: '',
-<<<<<<< HEAD;
-const handleChange = (
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+:src/components/profile/HireNowCTA.jsx
+            message: ''}
 =======
-:src/components/profile/HireNowCTA.jsx;) => {
-  return $3;}
-}
+    const handleChange = (e) => {
+=======
+:src/components/profile/HireNowCTA.jsx;
     message: ''}
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     );
         setIsFormOpen(false)};
             message: ''
         });
         setIsFormOpen(false)
-};    const handleChange = (
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
-setFormData(prev => ({
+};    const handleChange = (e) => {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+        setFormData(prev => ({
             ...prev,
-            [e.target.name]: e.target.value) => {
-  return $3;}
-}
+            [e.target.name]: e.target.value
+<<<<<<< HEAD
+        }))
+};
+=======
+
+    const handleChange = (e) => {}
+        setFormData(prev => ({}
+            ...prev,
+            [e.target.name]: e.target.value;
         }));
     };
-    return (<Card className=\"bg-zion-blue-light border-zion-blue-lighter\" />
-      <CardHeader />
-        <CardTitle className=\"text-white flex items-center gap-2\" />
-          <MessageSquare className=\"h-5 w-5 text-zion-cyan\"/>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    const handleChange = (e) => {
+:src/components/profile/HireNowCTA.jsx
+            message: ''}
+    );
+        setIsFormOpen(false)};
+            message: ''
+        });
+        setIsFormOpen(false)
+};    const handleChange = (e) => {
+        setFormData(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value
+<<<<<<< HEAD
+        }));
+    };
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        }))
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        }));
+    };
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+    return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
+      <CardHeader>"
+        <CardTitle className="text-white flex items-center gap-2">"
+          <MessageSquare className="h-5 w-5 text-zion-cyan"/>
           Hire {talentName}
-        </CardTitle>;
-      </CardHeader>;
-      <CardContent />;
-        {!isFormOpen ? (<div className=\"space-y-4\" />;
-            {hourlyRate && (<div className=\"flex items-center gap-2 text-zion-slate-light\" />;}
-                <DollarSign className=\"h-4 w-4\"/>;}
-                <span />Starting at ${hourlyRate}/hour</span>;
+        </CardTitle>
+      </CardHeader>
+      <CardContent>"
+        {!isFormOpen ? (<div className="space-y-4">"
+            {hourlyRate && (<div className="flex items-center gap-2 text-zion-slate-light">"
+                <DollarSign className="h-4 w-4"/>
+                <span>Starting at ${hourlyRate}/hour</span>
+<<<<<<< HEAD
+              </div>)}"
+=======
               </div>)}
-<<<<<<< HEAD;
-            <p className=\"text-zion-slate-light text-sm\" />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <p className="text-zion-slate-light text-sm">;
               Ready to start your project? Send a message to discuss details and get started.;
             </p>;
-            <Button onClick={() = /> setIsFormOpen(true)} className=\"w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple\">;
+            <Button onClick={() => setIsFormOpen(true)} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
               Start Project Discussion;
             </Button>;
-          </div>) : (<form onSubmit={handleSubmit} className=\"space-y-4\" />;
-            <div />;
-              <label htmlFor=\"projectDescription\" className=\"block text-sm font-medium text-white mb-2\" />;
+          </div>) : (<form onSubmit={handleSubmit} className="space-y-4">;
+            <div>;
+              <label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">;
                 Project Description;
               </label>;
-              <Textarea id=\"projectDescription\" name=\"projectDescription\" value={formData.projectDescription} onChange={handleChange} placeholder=\"Describe your project requirements...\" className=\"bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan\" required/>;
+              <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>;
             </div>;
-            <div className=\"grid grid-cols-2 gap-4\" />;
-              <div />;
-                <label htmlFor=\"budget\" className=\"block text-sm font-medium text-white mb-2\" />;
+            <div className="grid grid-cols-2 gap-4">;
+              <div>;
+                <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">;
                   Budget Range;
                 </label>;
-                <Input id=\"budget\" name=\"budget\" value={formData.budget} onChange={handleChange} placeholder=\"e.g., $1000-5000\" className=\"bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan\" required/>;
+                <Input id="budget" name="budget" value={formData.budget} onChange={handleChange} placeholder="e.g., $1000-5000" className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>;
               </div>;
-              <div />;
-                <label htmlFor=\"startDate\" className=\"block text-sm font-medium text-white mb-2\" />;
+              <div>;
+                <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">;
                   Start Date;
                 </label>;
-                <Input id=\"startDate\" name=\"startDate\" type=\"date\" value={formData.startDate} onChange={handleChange} className=\"bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan\" required/>;
+                <Input id="startDate" name="startDate" type="date" value={formData.startDate} onChange={handleChange} className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan" required/>;
               </div>;
             </div>;
-            <div />;
-              <label htmlFor=\"message\" className=\"block text-sm font-medium text-white mb-2\" />;
+            <div>;
+              <label htmlFor="message" className="block text-sm font-medium text-white mb-2">;
                 Additional Message;
               </label>;
-              <Textarea id=\"message\" name=\"message\" value={formData.message} onChange={handleChange} placeholder=\"Any additional details or questions...\" className=\"bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan\" rows={3}/>;
+              <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Any additional details or questions..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" rows={3}/>;
             </div>;
-            <div className=\"flex gap-3\" />;
-              <Button type=\"submit\" className=\"flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple\" />;
+            <div className="flex gap-3">;
+              <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
                 Send Message;
               </Button>;
-              <Button type=\"button\" variant=\"outline\" onClick={() = /> setIsFormOpen(false)} className=\"border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white\">;
+              <Button type="button" variant="outline" onClick={() => setIsFormOpen(false)} className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">;
                 Cancel;
               </Button>;
             </div>;
 =======
-            <p className=\"text-zion-slate-light text-sm\" />
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+            <p className="text-zion-slate-light text-sm">
               Ready to start your project? Send a message to discuss details and get started.
-            </p>
-            <Button onClick={() = /> setIsFormOpen(true)} className=\"w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple\">
+            </p>"
+            <Button onClick={() => setIsFormOpen(true)} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
               Start Project Discussion;
-            </Button>
-          </div>) : (<form onSubmit={handleSubmit} className=\"space-y-4\" />
-            <div />
-              <label htmlFor=\"projectDescription\" className=\"block text-sm font-medium text-white mb-2\" />
+            </Button>"
+          </div>) : (<form onSubmit={handleSubmit} className="space-y-4">
+            <div>"
+              <label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">
                 Project Description;
-              </label>
-              <Textarea id=\"projectDescription\" name=\"projectDescription\" value={formData.projectDescription} onChange={handleChange} placeholder=\"Describe your project requirements...\" className=\"bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan\" required/>
+              </label>"
+              <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
             </div>
-            <div className=\"grid grid-cols-2 gap-4\" />
-              <div />
-                <label htmlFor=\"budget\" className=\"block text-sm font-medium text-white mb-2\" />
+<<<<<<< HEAD
+"
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+            <div className="grid grid-cols-2 gap-4">
+              <div>"
+                <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
                   Budget Range;
-                </label>
-                <Input id=\"budget\" name=\"budget\" value={formData.budget} onChange={handleChange} placeholder=\"e.g., $1000-5000\" className=\"bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan\" required/>
+                </label>"
+                <Input id="budget" name="budget" value={formData.budget} onChange={handleChange} placeholder="e.g., $1000-5000" className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
               </div>
-              <div />
-                <label htmlFor=\"startDate\" className=\"block text-sm font-medium text-white mb-2\" />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+              <div>"
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+              <div>
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+                <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">
                   Start Date;
-                </label>
-                <Input id=\"startDate\" name=\"startDate\" type=\"date\" value={formData.startDate} onChange={handleChange} className=\"bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan\" required/>
+                </label>"
+                <Input id="startDate" name="startDate" type="date" value={formData.startDate} onChange={handleChange} className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan" required/>
               </div>
             </div>
-            <div />
-              <label htmlFor=\"message\" className=\"block text-sm font-medium text-white mb-2\" />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+            <div>"
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+            <div>
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+              <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                 Additional Message;
-              </label>
-              <Textarea id=\"message\" name=\"message\" value={formData.message} onChange={handleChange} placeholder=\"Any additional details or questions...\" className=\"bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan\" rows={3}/>
+              </label>"
+              <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Any additional details or questions..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" rows={3}/>
             </div>
-            <div className=\"flex gap-3\" />
-              <Button type=\"submit\" className=\"flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple\" />
+<<<<<<< HEAD
+"
+            <div className="flex gap-3">"
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+            <div className="flex gap-3">
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+              <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                 Send Message;
-              </Button>
-              <Button type=\"button\" variant=\"outline\" onClick={() = /> setIsFormOpen(false)} className=\"border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white\">
+              </Button>"
+              <Button type="button" variant="outline" onClick={() => setIsFormOpen(false)} className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
                 Cancel;
               </Button>
             </div>
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
           </form>)}
-      </CardContent>;
-    </Card>)}}
-}
       </CardContent>
     </Card>);
-<<<<<<< HEAD;
+<<<<<<< HEAD
 }
-}
+<<<<<<< HEAD
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React, { useState } from 'react';
+export function HireNowCTA({ talentName, hourlyRate, onHire }) {
+    const [isFormOpen, setIsFormOpen] = useState(false);
+    const [formData, setFormData] = useState({
+        projectDescription: ,
+        budget: ,
+        startDate: ,
+        message: ')
+        e.preventDefault();
+        if (onHire) {
+            onHire(formData);
+        }
+        // Reset form and close;
+        setFormData({
+            startDate: ,')
+    const handleChange = (e) => {
+        setFormData(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value;)
+        }));
+    };
+    return (<Card className="bg-zion-blue-light border-zion-blue-lighter">"
+
+      <CardHeader>
+"
+        <CardTitle className="text-white flex items-center gap-2">"
+          <MessageSquare className="h-5 w-5 text-zion-cyan"/>"
+
+        
+      
+      <CardContent>
+        {!isFormOpen ? (<div className="space-y-4">"
+</div>"
+            {hourlyRate && (<div className="flex items-center gap-2 text-zion-slate-light">"
+                <DollarSign className="h-4 w-4"/>"
+
+                <span>Starting at ${hourlyRate}/hour</span>)
+              </div>)}"
+            <p className="text-zion-slate-light text-sm">"
+</p>
+            </p>"
+            <Button onClick={() => setIsFormOpen(true)} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">"
+
+          </div>) : (<form onSubmit={handleSubmit} className="space-y-4">"
+</form>
+            <div>
+              <label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">"
+</label>
+              </label>"
+              <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>"
+
+            </div>
+            <div className="grid grid-cols-2 gap-4">"
+                <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">"
+                <Input id="budget" name="budget" value={formData.budget} onChange={handleChange} placeholder="e.g., $1000-5000" className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>"
+
+
+                <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">"
+                <Input id="startDate" name="startDate" type="date" value={formData.startDate} onChange={handleChange} className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan" required/>"
+
+
+              <label htmlFor="message" className="block text-sm font-medium text-white mb-2">"
+              <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Any additional details or questions..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" rows={3}/>"
+
+            <div className="flex gap-3">"
+              <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">"
+
+              )"
+              <Button type="button" variant="outline" onClick={() => setIsFormOpen(false)} className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">"
+
+              
+          </form>)}
+      
+    );"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

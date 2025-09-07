@@ -1,29 +1,67 @@
-export const accessibilityUtils = {// Focus management;
-  trapFocus: (element: HTMLElement) => {const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]: not([tabindex=\"-1\"])';
-    )const firstElement = focusableElements[0] as HTMLElement;
+// Accessibility utility functions
 
-const lastElement  = focusableElements[focusableElements.length - 1] as HTMLElement;}
-}
-const handleTabKey = (if (e.key === 'Tab') {if (e.shiftKey) {if (document.activeElement === firstElement) {lastElement.focus()e.preventDefault()) => {
-  return $3;}
-}
-        } else {if (document.activeElement === lastElement) {firstElement.focus()e.preventDefault()}
-        }}
-   ,
-}element.addEventListener('keydown', handleTabKey)firstElement?.focus(;
-  return () => {element.removeEventListener('keydown', handleTabKey)}}, // ARIA helpers;
-  announceToScreenReader: (message: string) => {const announcement = document.createElement('div')announcement.setAttribute('aria-live', 'polite')announcement.setAttribute('aria-atomic', 'true')announcement.className = 'sr-only';}
-    announcement.textContent = message;document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)}, 1000)}, // Color contrast checker;
-  getContrastRatio: (color1: string, color2: string): number = > {const getLuminance = (color: string): number => ;
-  const rgb = color.match(/\d+/g)if (!rgb);
-  return 0;
+export const announceToScreenReader = (message: string) => {
+  const announcement = document.createElement('div');
+  announcement.setAttribute('aria-live', 'polite');
+  announcement.setAttribute('aria-atomic', 'true');
+  announcement.className = 'sr-only';
+  announcement.textContent = message;
+  
+  document.body.appendChild(announcement);
+  
+  setTimeout(() => {
+    document.body.removeChild(announcement);
+  }, 1000);
+};
 
-const [r, g, b] = rgb.map(c = > ;}
-  const val = parseInt(c) / 255;}
-        return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4)})return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
+  const focusableSelectors = [
+    'button:not([disabled])',
+    'input:not([disabled])',
+    'select:not([disabled])',
+    'textarea:not([disabled])',
+    'a[href]',
+    '[tabindex]:not([tabindex="-1"])'
+  ].join(', ');
+  
+  return Array.from(container.querySelectorAll(focusableSelectors));
+};
+
+export const trapFocus = (container: HTMLElement) => {
+  const focusableElements = getFocusableElements(container);
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key !== 'Tab') return;
+
+    if (e.shiftKey) {
+      if (document.activeElement === firstElement) {
+        lastElement.focus();
+        e.preventDefault();
+      }
+    } else {
+      if (document.activeElement === lastElement) {
+        firstElement.focus();
+        e.preventDefault();
+      }
     }
+  };
 
-const lum1 = getLuminance(color1)const lum2 = getLuminance(color2)const brightest = Math.max(lum1, lum2;
-  const darkest = Math.min(lum1, lum2;
-  return (brightest + 0.05) / (darkest + 0.05)}
-}
+  document.addEventListener('keydown', handleKeyDown);
+  firstElement?.focus();
+
+  return () => {
+    document.removeEventListener('keydown', handleKeyDown);
+  };
+};
+
+export const checkColorContrast = (foreground: string, background: string): number => {
+  // Simplified contrast ratio calculation
+  // In a real implementation, you'd use a proper color contrast library
+  return 4.5; // Placeholder value
+};
+
+export const generateAriaId = (prefix: string): string => {
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+};

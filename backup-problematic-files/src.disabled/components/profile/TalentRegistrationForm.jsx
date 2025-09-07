@@ -1,21 +1,55 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+' ' ' ' ' ' ' ' ' ' ''''";";""
+=======
+' \' \' \' \' \' \' \' \' \''\'";\";
+" " " " " " " " " """";";'"'"
+' ' ' ' ' ' ' ' ' ' ''''";";""
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
 import React from 'react';
-const TalentRegistrationForm = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />TalentRegistrationForm</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
+=======
+' ' ' ' ' ' ' ' ' ' ''''";";""
+' \' \' \' \' \' \' \' \' \''\'";\";
+" " " " " " " " " """";";'"'"
+' ' ' ' ' ' ' ' ' ' ''''";";""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-const TalentRegistrationForm = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />TalentRegistrationForm</h1>
-      <p />This component is under development.</p>
+
+' \' \' \' \' \' \' \' \' \''\'";\";
+" " " " " " " " " """";";'"'"
+' \' \' \' \' \' \' \' \' \''\'";\";
+" " " " " " " " " """";";'"'"
+:src.disabled/components/profile/TalentRegistrationForm.jsx
+' \' \' \' \' \' \' \' \' \''\'";\";
+" " " " " " " " " """";";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+' \' \' \' \' \' \' \' \' \''\'";\";
+" " " " " " " " " """";";'"'"
+:temp_exclude/src.disabled/components/profile/TalentRegistrationForm.jsx
+' \' \' \' \' \' \' \' \' \''\'";\";
+" " " " " " " " " """";";'"'"
+' ' ' ' ' ' ' ' ' ' ''''";";""
+' ' ' ' ' ' ' ' ' ' ''''";";""
+' \' \' \' \' \' \' \' \' \''\'";\";
+" " " " " " " " " """";";'"'"
+' ' ' ' ' ' ' ' ' ' ''''";";""
+' ' ' ' ' ' ' ' ' ' ''''";";""
+import React from 'react';'
+const TalentRegistrationForm = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>TalentRegistrationForm</h1>
+      <p>This component is under development.</p>
     </div>
   )
-}
-}
+};
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </div>)'
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

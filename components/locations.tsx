@@ -1,47 +1,156 @@
 
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
-  return <div />Something went wrong.</div>;}
-    }return this.props.children;
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {}
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {}
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {}
+    if (this.state.hasError) {}
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
   }
 }
-import React from 'react';
-import Head from 'next/head';
+import React from "react";"
+import Head from "next/head";
 
-export default function LocationsPage() {return (<div className=\"min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8\" />;
-      <Head />;
-        <title />Locations | Zion Tech Group</title>;
-        <meta;
-          name=\"description\";
-          content=\"Our office locations and contact information.\";
+export default function LocationsPage() { return null; }
+          Call{" "}"
+          <a className="text-cyan-400" href="tel:+13024640950">;
+            +1 302 464 0950;"
+          </a>{" "}"
+          or email{" "}'
+import React from './react';'
+=======
+
+  return (
+    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
+      <Head>;
+        <title>Locations | Zion Tech Group</title>;
+        <meta
+          name="description"
+          content="Our office locations and contact information."
         />;
-        <link rel=\"canonical\" href=\"https://ziontechgroup && ziontechgroup.com/locations\" />;
+        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/locations" />;
       </Head>;
-      <div className=\"max-w-4xl mx-auto space-y-6\" />;
-        <h1 className=\"text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\" />;
+      <div className="max-w-4xl mx-auto space-y-6">;
+        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
           Locations;
         </h1>;
-        <div className=\"p-6 rounded-2xl bg-black/40 border border-cyan-500/20\" />;
-          <h2 className=\"text-white text-xl font-semibold mb-2\" />;
-            Middletown, DE (HQ)</h2>;
-          <p className=\"text-slate-300\" />;
+        <div className="p-6 rounded-2xl bg-black/40 border border-cyan-500/20">;
+          <h2 className="text-white text-xl font-semibold mb-2">;
+            Middletown, DE (HQ);
+          </h2>;
+          <p className="text-slate-300">;
             364 E Main St STE 1008 Middletown DE 19709;
           </p>;
-        </div>;}
-        <p className=\"text-slate-300\" />;}
-          Call{\" \"}
-          <a className=\"text-cyan-400\" href=\"tel:+13024640950\" />;
+        </div>;
+        <p className="text-slate-300">;
+          Call{" "}
+          <a className="text-cyan-400" href="tel:+13024640950">;
             +1 302 464 0950;
-          </a>{\" \"}
-
-          or email{\" \"}
-
-          <a className=\"text-cyan-400\" href=\"mailto:kleber@ziontechgroup.com\" />
+          </a>{" "}
+          or email{" "}
+import React from './react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import Head from './next / head';
+export default /**;
+ * LocationsPage - Function description;
+ */
+<<<<<<< HEAD
+function LocationsPage() {
+  return (
+    <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
+=======
+function LocationsPage() {}
+  return ("
+    <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      <Head>;
+        <title > Locations | Zion Tech Group</title>;
+        <meta;"
+          name="description";"
+          content="Our office locations and contact information.";
+        />;"
+        <link rel="canonical" href="https://ziontechgroup.com / locations" />;
+<<<<<<< HEAD
+      </Head>;
+      <div className="max - w-4xl mx-auto space-y-6">;
+        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">;
+          Locations;
+        </h1>;
+        <div className="p - 6 rounded - 2xl bg - black / 40 border border-cyan-500 / 20">;
+          <h2 className="text - white text - xl font-semibold mb-2">;
+            Middletown, DE (HQ);
+          </h2>;
+          <p className="text-slate-300">;
+            364 E Main St STE 1008 Middletown DE 19709;
+          </p>;
+        </div>;
+        <p className="text-slate-300">;
+          Call{" "}
+          <a className="text-cyan-400" href="tel:+13024640950">;
+            +1 302 464 0950;
+          </a>{" "}
+          or email{" "}
+          <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">;
+=======
+      </Head>;"
+      <div className="max - w-4xl mx - auto space - y-6">;"
+        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
+          Locations;
+        </h1>;"
+        <div className="p - 6 rounded - 2xl bg - black / 40 border border - cyan - 500 / 20">;"
+          <h2 className="text - white text - xl font - semibold mb - 2">;
+            Middletown, DE (HQ);
+          </h2>;"
+          <p className="text - slate - 300">;
+            364 E Main St STE 1008 Middletown DE 19709;
+          </p>;
+        </div>;"
+        <p className="text - slate - 300">;"
+          Call{" "}"
+          <a className="text - cyan - 400" href="tel:+13024640950">;
+            +1 302 464 0950;"
+          </a>{" "}"
+          or email{" "}"
+          <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             kleber@ziontechgroup.com;
+          </a>;
+          .;
+        </p>;
+      </div>;
+          </a>;
+          .;
+        </p>;
+      </div>;
+    </div>);
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+          <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">
+            kleber@ziontechgroup.com
           </a>
           .
         </p>
       </div>
     </div>
   );
-
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,53 +1,162 @@
-import Layout from '../components/layout/Layout';
-
+<<<<<<< HEAD
+import Layout from '../components/layout/Layout';'
 import { motion } from 'framer-motion';
 
-import { Code, Database, Shield, Zap, Globe, Cpu;}
-  BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain}
+<<<<<<< HEAD
+import { Code, Database, Shield, Zap, Globe, Cpu;
+  BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
  } from 'lucide-react';
-import {}
+origin/cursor/automate-test-improve-and-merge-code-2533
+import {
 } from 'lucide-react';
 
+export default function APIDocumentation() {;
 export default function APIDocumentation() {
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-    <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8' />;
-
-      <Head />;
-        <title />API Documentation | Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content='Explore API docs, references, and code generators.';
+    <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
+      <Head>;
+        <title>API Documentation | Zion Tech Group</title>;
+        <meta
+          name='description'
+          content='Explore API docs, references, and code generators.'
         />;
+        <link
+          rel='canonical'
+          href='https://ziontechgroup && ziontechgroup.com/api-documentation'
+        />;
+      </Head>;
+      <div className='max-w-5xl mx-auto space-y-6'>;
+        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+          API Documentation;
+        </h1>;
+        <ul className='list-disc list-inside text-slate-300 space-y-2'>;
+          <li>;
+            <a className='text-cyan-400' href='/api-docs'>;
+  Code,
+  Database,
+  Shield,
+  Zap,
+  Globe,
+  Cpu,
+  BookOpen,
+  CheckCircle,
+  ArrowRight,
+  BarChart3,
+              API Reference;
+            </a>;
+          </li>;
+          <li>;
+              API Documentation Generator;
+            </a>;
+          </li>;
+          <li>;
+              Developer Docs;
+            </a>;
+          </li>;
+        </ul>;
+      </div>;
 
-        <link;
-rel='canonical'
+=======
+import {';
+} from 'lucide-react';
+=======
 
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+
+import { Code, Database, Shield, Zap, Globe, Cpu;
+  BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
+ } from 'lucide-react';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+export default function APIDocumentation() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+} from 'lucide-react';
+
+export default function APIDocumentation() {}
+	return (
+		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+			<Head>
+				<title>API Documentation | Zion Tech Group</title>"
+				<meta name="description" content="Explore API docs, references, and code generators." />"
+				<link rel="canonical" href="https: //ziontechgroup.com/api-documentation" />
+			</Head>"
+			<div className="max-w-5xl mx-auto space-y-6">"
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">API Documentation</h1>"
+				<ul className="list-disc list-inside text-slate-300 space-y-2">"
+					<li><a className="text-cyan-400" href="/api-docs">API Reference</a></li>"
+					<li><a className="text-cyan-400" href="/api-documentation-generator">API Documentation Generator</a></li>"
+					<li><a className="text-cyan-400" href="/docs">Developer Docs</a></li>
+				</ul>
+			</div>
+<<<<<<< HEAD
+		</div>
+    </div>);	return (
+  <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
+=======
+		</div>;
+    </div>);	return ("
+  <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  <Head>;
+    <title > API Documentation | Zion Tech Group</title>;"
+    <meta name="description" content="Explore API docs, references, and code generators." />;"
+    <link rel="canonical" href="https: //ziontechgroup.com / api - documentation" />;
+<<<<<<< HEAD
+  </Head>;
+  <div className="max - w-5xl mx-auto space-y-6">;
+    <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">API Documentation</h1>;
+    <ul className="list - disc list - inside text - slate-300 space-y-2">;
+    <li><a className="text-cyan-400" href="/api - docs">API Reference</a></li>;
+    <li><a className="text-cyan-400" href="/api - documentation - generator">API Documentation Generator</a></li>;
+    <li><a className="text-cyan-400" href="/docs">Developer Docs</a></li>;
+=======
+  </Head>;"
+  <div className="max - w-5xl mx - auto space - y-6">;"
+    <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">API Documentation</h1>;"
+    <ul className="list - disc list - inside text - slate - 300 space - y-2">;"
+    <li><a className="text - cyan - 400" href="/api - docs">API Reference</a></li>;"
+    <li><a className="text - cyan - 400" href="/api - documentation - generator">API Documentation Generator</a></li>;"
+    <li><a className="text - cyan - 400" href="/docs">Developer Docs</a></li>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    </ul>;
+  </div>;
+  </div>),
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           href='https://ziontechgroup.com/api-documentation'
         />
       </Head>
-      <div className='max-w-5xl mx-auto space-y-6' />
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent' />
-          API Documentation;
+      <div className='max-w-5xl mx-auto space-y-6'>
+        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+          API Documentation
         </h1>
-        <ul className='list-disc list-inside text-slate-300 space-y-2' />
-          <li />
-            <a className='text-cyan-400' href='/api-docs' />
-              API Reference;
+        <ul className='list-disc list-inside text-slate-300 space-y-2'>
+          <li>
+            <a className='text-cyan-400' href='/api-docs'>
+              API Reference
             </a>
           </li>
-          <li />
-            <a className='text-cyan-400' href='/api-documentation-generator' />
-              API Documentation Generator;
+          <li>
+            <a className='text-cyan-400' href='/api-documentation-generator'>
+              API Documentation Generator
             </a>
           </li>
-          <li />
-            <a className='text-cyan-400' href='/docs' />
-              Developer Docs;
+          <li>
+            <a className='text-cyan-400' href='/docs'>
+              Developer Docs
             </a>
           </li>
         </ul>
       </div>
     </div>
   );
-}
-}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

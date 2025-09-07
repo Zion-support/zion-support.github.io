@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { Metadata } from 'next'
 import './globals.css'
 
@@ -23,15 +24,37 @@ export const metadata: Metadata = {
   },
 }
 
+=======
+import { Inter } from 'next/font/google';
+import React from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
+
+>>>>>>> origin/main
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
+<<<<<<< HEAD
     <html lang="en">
       <body>
         {children}
+=======
+    <html lang="en" className={inter.className}>
+      <body className="antialiased">
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </div>
+>>>>>>> origin/main
       </body>
     </html>
   )

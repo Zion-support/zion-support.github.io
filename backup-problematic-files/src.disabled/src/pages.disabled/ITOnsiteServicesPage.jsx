@@ -1,21 +1,31 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
+=======
+import React from \'react\'; export default function ITOnsiteServicesPage () {}; return null} }
+const React from "react"; export default function ITOnsiteServicesPage() { return; }; return null} }''"
+import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
 import React from 'react';
-const ITOnsiteServicesPage = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />ITOnsiteServicesPage</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
 
-const ITOnsiteServicesPage = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />ITOnsiteServicesPage</h1>
-      <p />This component is under development.</p>
+=======
+import React from 'react';'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const ITOnsiteServicesPage = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>ITOnsiteServicesPage</h1>
+      <p>This component is under development.</p>
     </div>
   )
-}
-}
+};
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </div>)'
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

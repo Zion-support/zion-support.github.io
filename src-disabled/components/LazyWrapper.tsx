@@ -1,17 +1,10 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
-import LoadingSpinner from './LoadingSpinner';
-
+import React, { Suspense } from 'react';
+import Loading from './Loading';
 interface LazyWrapperProps {
-  fallback?: React.ReactNode;}
+  children: React.ReactNode;
 }
-}
-
-const LazyWrapper = <P extends object />(importFunc: () => Promise<{ default: ComponentType<P />,}
-}>,fallback?: React.ReactNode;
-) => {const LazyComponent = lazy(importFunc;}
-  return React.forwardRef<any, P & LazyWrapperProps />((props, ref) => (<Suspense fallback={fallback || <LoadingSpinner />}>;
-      <LazyComponent {...props} ref={ref} />;
-    </Suspense>;
-  ))}
+const LazyWrapper: React.FC<LazyWrapperProps> = ({ children }) => {
+  return <Suspense fallback={<Loading />}>{children}</Suspense>;
+};
 
 export default LazyWrapper;

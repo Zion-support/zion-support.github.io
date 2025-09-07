@@ -1,137 +1,672 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+import {
+<<<<<<< HEAD
+=======
+=======
+import {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  LightBulbIcon
+  CpuChipIcon
+  GlobeAltIcon
+  ShieldCheckIcon
+  ChartBarIcon
+<<<<<<< HEAD
+  UserGroupIcon
+<<<<<<< HEAD
+} from '@heroicons/react/24/outline';
+=======
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
-import { LightBulbIcon,CpuChipIcon,GlobeAltIcon,ShieldCheckIcon,ChartBarIcon,UserGroupIcon;}
- } from '@heroicons/react/24/outline';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from 'react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+import { 
+=======
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React from 'react';
+import { 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  LightBulbIcon,
+  CpuChipIcon, 
+  GlobeAltIcon, 
+  ShieldCheckIcon,
+  ChartBarIcon,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  UserGroupIcon;
+} from '@heroicons/react/24/outline';
+<<<<<<< HEAD
+import React from 'react';
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+import React from 'react';
+
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const features = [
-  {name: 'AI-Powered Research',}
-  description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',icon: LightBulbIcon;}
-  },{name: 'Quantum Computing',}
-  description: 'Next-generation quantum neural networks for solving complex computational problems.',icon: CpuChipIcon;}
-  },{name: 'Global Solutions',}
-  description: 'Worldwide deployment of autonomous business operations and digital transformation.',icon: GlobeAltIcon;}
-  },{name: 'Security First',}
-  description: 'Advanced cybersecurity and data protection for enterprise-grade applications.',icon: ShieldCheckIcon;}
-  },{name: 'Analytics & Insights',}
-  description: 'Real-time data analysis and predictive modeling for informed decision making.',icon: ChartBarIcon;}
-  },{name: 'Team Collaboration',}
-  description: 'Seamless integration tools for distributed teams and remote work environments.',icon: UserGroupIcon;}
+  {
+<<<<<<< HEAD
+    name: 'AI-Powered Research',
+    description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
+    icon: LightBulbIcon},
+=======
+    name: 'AI-Powered Research'
+    description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.'
+    icon: LightBulbIcon
+  }
+  {
+    name: 'Quantum Computing'
+    description: 'Next-generation quantum neural networks for solving complex computational problems.'
+    icon: CpuChipIcon
+  }
+  {
+    name: 'Global Solutions'
+    description: 'Worldwide deployment of autonomous business operations and digital transformation.'
+    icon: GlobeAltIcon
+  }
+  {
+    name: 'Enterprise Security'
+    description: 'Military-grade security protocols protecting your most valuable digital assets.'
+    icon: ShieldCheckIcon
+  }
+  {
+    name: 'Data Analytics'
+    description: 'Advanced analytics and insights driving informed decision-making.'
+    icon: ChartBarIcon
+  }
+  {
+    name: 'Expert Team'
+    description: 'World-class researchers and engineers pushing the boundaries of technology.'
+    icon: UserGroupIcon
   }
 ];
-
-export default function HomePage() {return (<div className=\"min-h-screen bg-white\" />;}
-      {/* Hero Section */}
-      <div className=\"relative bg-gradient-to-r from-blue-600 to-purple-700\" />;
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24\" />;
-          <div className=\"text-center\" />;
-            <h1 className=\"text-4xl md:text-6xl font-bold text-white mb-6\" />;
-              Zion Tech Group;
-            </h1>;
-            <p className=\"text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto\" />;
-              Leading the future of AI, quantum computing, and autonomous business solutions;
-            </p>;
-            <div className=\"flex flex-col sm:flex-row gap-4 justify-center\" />;
-              <button className=\"bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors\" />;
-                Get Started;
-  LightBulbIcon;
-  CpuChipIcon;
-  GlobeAltIcon;
-  ShieldCheckIcon;
-  ChartBarIcon;
+const stats = [
+  { name: 'Research Papers Published', value: '150+' }
+  { name: 'AI Models Deployed', value: '500+' }
+  { name: 'Global Clients', value: '1000+' }
+  { name: 'Patents Filed', value: '25+' }
+];
+const solutions = [
+  {
+    name: 'AI Research Assistant'
+    description: 'Autonomous research platform that accelerates scientific discovery.'
+    href: '/solutions/ai-autonomous-research'
+  }
+  {
+    name: 'Quantum Neural Networks'
+    description: 'Next-generation computing for complex problem solving.'
+    href: '/solutions/quantum-neural-networks'
+  }
+  {
+    name: 'Autonomous Business Operations'
+    description: 'AI-powered automation for enterprise efficiency.'
+    href: '/solutions/autonomous-business'
+  }
+  {
+    name: 'IT Asset Management'
+    description: 'Intelligent management of digital infrastructure.'
+    href: '/solutions/it-asset-management'
+  }
+];
+export default function HomePage() {
+<<<<<<< HEAD
+=======
+=======
+  LightBulbIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  ShieldCheckIcon,
+  ChartBarIcon,
   UserGroupIcon;
-} from '@heroicons/react/24/outline';            </p>;
-            <div className=\"flex flex-col sm:flex-row gap-4 justify-center\" />;
-              <button className=\"bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors\" />;
+} from '@heroicons / react / 24 / outline';
+;
+const features = [;
+=======
+  LightBulbIcon
+  CpuChipIcon
+  GlobeAltIcon
+  ShieldCheckIcon
+  ChartBarIcon
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+  UserGroupIcon
+=======
+  UserGroupIcon';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+} from '@heroicons/react/24/outline';
+
+const features = []
+  {'
+    name: 'AI-Powered Research','
+    description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
+    icon: LightBulbIcon,
+  },
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  {
+    name: 'Quantum Computing',
+=======
+  {'
+    name: 'Quantum Computing','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    description: 'Next-generation quantum neural networks for solving complex computational problems.',
+<<<<<<< HEAD
+    icon: CpuChipIcon},
+  {
+    name: 'Global Solutions',
+    description: 'Worldwide deployment of autonomous business operations and digital transformation.',
+    icon: GlobeAltIcon},
+  {
+    name: 'Enterprise Security',
+    description: 'Military-grade security protocols protecting your most valuable digital assets.',
+    icon: ShieldCheckIcon},
+  {
+    name: 'Data Analytics',
+    description: 'Advanced analytics and insights driving informed decision-making.',
+    icon: ChartBarIcon},
+  {
+    name: 'Expert Team',
+    description: 'World-class researchers and engineers pushing the boundaries of technology.',
+    icon: UserGroupIcon}]
+
+const stats = [
+  { name: 'Research Papers Published', value: '150+' },
+  { name: 'AI Models Deployed', value: '500+' },
+  { name: 'Global Clients', value: '1000+' },
+  { name: 'Patents Filed', value: '25+' }]
+
+const solutions = [
+  {
+    name: 'AI Research Assistant',
+    description: 'Autonomous research platform that accelerates scientific discovery.',
+    href: '/solutions/ai-autonomous-research'},
+  {
+    name: 'Quantum Neural Networks',
+    description: 'Next-generation computing for complex problem solving.',
+    href: '/solutions/quantum-neural-networks'},
+  {
+    name: 'Autonomous Business Operations',
+    description: 'AI-powered automation for enterprise efficiency.',
+    href: '/solutions/autonomous-business'},
+  {
+    name: 'IT Asset Management',
+    description: 'Intelligent management of digital infrastructure.',
+    href: '/solutions/it-asset-management'}]
+
+export default function HomePage() {
+  return (
+    <div className="bg - black">;
+      {/* Hero section */}
+      <div className="relative isolate px - 6 pt - 14 lg:px - 8">;
+        <div className="mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56">;
+          <div className="text - center">;
+            <h1 className="text - 4xl font - bold tracking - tight text - white sm:text - 6xl">;
+              Leading the Future of{' '}
+<<<<<<< HEAD
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                AI & Technology
+              </span>
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+              Join the revolution that's reshaping industries worldwide.
+=======
+    icon: CpuChipIcon,
+  },
+  {'
+    name: 'Global Solutions','
+    description: 'Worldwide deployment of autonomous business operations and digital transformation.',
+    icon: GlobeAltIcon,
+  },
+  {'
+    name: 'Security First','
+    description: 'Advanced cybersecurity and data protection for enterprise-grade applications.',
+    icon: ShieldCheckIcon,
+  },
+  {'
+    name: 'Analytics & Insights','
+    description: 'Real-time data analysis and predictive modeling for informed decision making.',
+    icon: ChartBarIcon,
+  },
+  {'
+    name: 'Team Collaboration','
+    description: 'Seamless integration tools for distributed teams and remote work environments.',
+    icon: UserGroupIcon,
+  },
+];
+
+export default function HomePage() {}
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}"
+      <div className="relative bg-gradient-to-r from-blue-600 to-purple-700">"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">"
+          <div className="text-center">"
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
+              Zion Tech Group;
+            </h1>"
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
+              Leading the future of AI, quantum computing, and autonomous business solutions
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+            </p>
+=======
+  UserGroupIcon
+} from '@heroicons/react/24/outline';            </p>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+} from '@heroicons/react/24/outline';            </p>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  UserGroupIcon
+} from '@heroicons/react/24/outline';
+
+const features = [
+  {
+    name: 'AI-Powered Research',
+    description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
+    icon: LightBulbIcon,
+  },
+  {
+    name: 'Quantum Computing',
+    description: 'Next-generation quantum neural networks for solving complex computational problems.',
+    icon: CpuChipIcon,
+  },
+  {
+    name: 'Global Solutions',
+    description: 'Worldwide deployment of autonomous business operations and digital transformation.',
+    icon: GlobeAltIcon,
+  },
+  {
+    name: 'Security First',
+    description: 'Advanced cybersecurity and data protection for enterprise-grade applications.',
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: 'Analytics & Insights',
+    description: 'Real-time data analysis and predictive modeling for informed decision making.',
+    icon: ChartBarIcon,
+  },
+  {
+    name: 'Team Collaboration',
+    description: 'Seamless integration tools for distributed teams and remote work environments.',
+    icon: UserGroupIcon,
+  },
+];
+    icon: LightBulbIcon},
+  {
+    name: 'Quantum Computing',
+    description: 'Next-generation quantum neural networks for solving complex computational problems.',
+    icon: CpuChipIcon},
+  {
+    name: 'Global Solutions',
+    description: 'Worldwide deployment of autonomous business operations and digital transformation.',
+    icon: GlobeAltIcon},
+  {
+    name: 'Enterprise Security',
+    description: 'Military-grade security protocols protecting your most valuable digital assets.',
+    icon: ShieldCheckIcon},
+  {
+    name: 'Data Analytics',
+    description: 'Advanced analytics and insights driving informed decision-making.',
+    icon: ChartBarIcon},
+  {
+    name: 'Expert Team',
+    description: 'World-class researchers and engineers pushing the boundaries of technology.',
+    icon: UserGroupIcon}]
+
+const stats = [
+  { name: 'Research Papers Published', value: '150+' },
+  { name: 'AI Models Deployed', value: '500+' },
+  { name: 'Global Clients', value: '1000+' },
+  { name: 'Patents Filed', value: '25+' }]
+
+const solutions = [
+  {
+    name: 'AI Research Assistant',
+    description: 'Autonomous research platform that accelerates scientific discovery.',
+    href: '/solutions/ai-autonomous-research'},
+  {
+    name: 'Quantum Neural Networks',
+    description: 'Next-generation computing for complex problem solving.',
+    href: '/solutions/quantum-neural-networks'},
+  {
+    name: 'Autonomous Business Operations',
+    description: 'AI-powered automation for enterprise efficiency.',
+    href: '/solutions/autonomous-business'},
+  {
+    name: 'IT Asset Management',
+    description: 'Intelligent management of digital infrastructure.',
+    href: '/solutions/it-asset-management'}]
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-r from-blue-600 to-purple-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Zion Tech Group
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Leading the future of AI, quantum computing, and autonomous business solutions
+            </p>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                Get Started
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+              </Link>
+              <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+                Learn More <span aria-hidden="true">→</span>
+              </Link>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              </button>
+=======
+              Leading the future of AI, quantum computing, and autonomous business solutions;
+            </p>"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
                 Get Started;
-              </button>;
-              <button className=\"border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors\" />;
+              </button>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Learn More;
-              </button>;
-            </div>;
-          </div>;
+              </button>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              Leading the Future of{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                AI & Technology
+              </span>
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
+              Join the revolution that's reshaping industries worldwide.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <a
+                href="/contact"
+                className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
+              >
+                Get Started
+              </Link>
+              <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+                Learn More <span aria-hidden="true">→</span>
+              </Link>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            </div>
+          </div>
+        </div>
+      </div>
+<<<<<<< HEAD
+      {/* Features section */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Advanced Technology</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Everything you need to accelerate innovation
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
+            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+            and maintain competitive advantage in the digital age.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            {features.map((feature) => (
+              <div key={feature.name} className="flex flex-col group">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                  <feature.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+                  {feature.name}
+                </dt>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                  <p className="flex-auto">{feature.description}</p>
+                  <p className="mt-6">
+                    <a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
+<<<<<<< HEAD
+                      Learn more <span aria-hidden="true">→</span>
+                    </Link>
+=======
+<<<<<<< HEAD
+=======
+                      Learn more <span aria-hidden="true">→</span>
+
+
+                    </Link>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+                  </p>
+                </dd>
+              </div>
+            ))}
+<<<<<<< HEAD
+          </dl>;
         </div>;
       </div>;
-      {/* Features Section */}
-      <div className=\"py-24 bg-gray-50\" />;
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
-          <div className=\"text-center mb-16\" />;
-            <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\" />;
+=======
+<<<<<<< HEAD
+=======
+
+
+          </dl>;
+        </div>;
+      </div>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      {/* Stats section */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:max-w-none">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Trusted by leading organizations worldwide
+=======
+
+      {/* Features Section */}"
+      <div className="py-24 bg-gray-50">"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+          <div className="text-center mb-16">"
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+<<<<<<< HEAD
+              Our Core Technologies
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+            </h2>
+=======
               Our Core Technologies;
-            </h2>;
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\" />;
-              We leverage cutting-edge technology to deliver innovative solutions that transform businesses and drive growth.;
-            </p>;
-          </div>;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\" />;
-            {features.map((feature) => (<div key={feature.name} className=\"bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow\" />;
-                <div className=\"flex items-center mb-4\" />;
-                  <feature.icon className=\"h-8 w-8 text-blue-600 mr-3\" />;
-                  <h3 className=\"text-xl font-semibold text-gray-900\" />{feature.name}</h3>;
-                </div>;
-                <p className=\"text-gray-600\" />{feature.description}</p>;
-              </div>;
-            ))}</div>;
+            </h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We leverage cutting-edge technology to deliver innovative solutions that transform businesses and drive growth.
+            </p>
+          </div>
+          "
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature) => ("
+              <div key={feature.name} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">"
+                <div className="flex items-center mb-4">"
+                  <feature.icon className="h-8 w-8 text-blue-600 mr-3" />"
+                  <h3 className="text-xl font-semibold text-gray-900">{feature.name}</h3>
+                </div>"
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+          </dl>;
         </div>;
       </div>;
-      {/* CTA Section */}
-      <div className=\"bg-blue-600 py-16\" />;
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center\" />;
-          <h2 className=\"text-3xl md:text-4xl font-bold text-white mb-4\" />;
-            Ready to Transform Your Business?;
-          </h2>;
-          <p className=\"text-xl text-blue-100 mb-8 max-w-2xl mx-auto\" />;
-            Join thousands of companies already using our AI-powered solutions to drive innovation and growth.;
-          </p>;
-          <button className=\"bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors\" />;
-            Contact Us Today;
-          </button>;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      {/* Solutions showcase */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Solutions</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Flagship AI and Technology Platforms
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Discover how our innovative solutions are transforming industries and driving unprecedented growth.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+            {solutions.map((solution) => (
+              <article
+                key={solution.name}
+                className="flex flex-col items-start group bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105"
+              >
+                <div className="flex items-center gap-x-4 text-xs">
+                  <time dateTime="2024" className="text-gray-400">
+                    2024
+                  </time>
+                  <span className="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-700 transition-colors duration-200">
+                    AI Platform
+                  </span>
+                </div>
+                <div className="group relative">
+                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
+                    <a href={solution.href}>
+                      <span className="absolute inset-0" />
+                      {solution.name}
+                    </Link>
+                  </h3>
+                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{solution.description}</p>
+                </div>
+                <div className="relative mt-8 flex items-center gap-x-4">
+                  <div className="text-sm leading-6">
+                    <p className="font-semibold text-white">
+                      <a href={solution.href} className="hover:text-blue-400 transition-colors duration-200">
+                        <span className="absolute inset-0" />
+                        Learn more
+                      </Link>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>;
         </div>;
-              <span className=\"bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text-transparent\" />;
+      </div>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+              <span className="bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent">;
+=======
+          </div>
+        </div>
+      </div>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <span className="bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text-transparent">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 AI & Technology;
               </span>;
             </h1>;
-            <p className=\"mt - 6 text - lg leading - 8 text - gray-300\" />;
+            <p className="mt - 6 text - lg leading - 8 text - gray-300">;
               Transform your business with cutting - edge artificial intelligence, quantum computing, and autonomous solutions.;
               Join the revolution that's reshaping industries worldwide.;
             </p>;
-            <div className=\"mt - 10 flex items - center justify - center gap-x-6\" />;
+            <div className="mt - 10 flex items - center justify - center gap-x-6">;
               <a;
-                href=\"/contact\";
-                className=\"rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale-105\" />
-
+                href="/contact";
+                className="rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale-105";
+              >;
                 Get Started;
               </a>;
-              <a href=\"/about\" className=\"text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration-200\" />;
-                Learn More <span aria - hidden=\"true\" />→</span>;
+              <a href="/about" className="text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration-200">;
+                Learn More <span aria - hidden="true">→</span>;
               </a>;
             </div>;
           </div>;
         </div>;
       </div>;
       {/* Features section */}
-      <div className=\"mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px-8\" />;
-        <div className=\"mx - auto max - w-2xl lg:text-center\" />;
-          <h2 className=\"text - base font - semibold leading - 7 text - blue-400\" />Advanced Technology</h2>;
-          <p className=\"mt - 2 text - 3xl font - bold tracking - tight text - white sm:text-4xl\" />;
+      <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px-8">;
+        <div className="mx - auto max - w-2xl lg:text-center">;
+          <h2 className="text - base font - semibold leading - 7 text - blue-400">Advanced Technology</h2>;
+          <p className="mt - 2 text - 3xl font - bold tracking - tight text - white sm:text-4xl">;
             Everything you need to accelerate innovation;
           </p>;
-          <p className=\"mt - 6 text - lg leading - 8 text - gray-300\" />;
+          <p className="mt - 6 text - lg leading - 8 text - gray-300">;
             Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results;
             and maintain competitive advantage in the digital age.;
           </p>;
         </div>;
-        <div className=\"mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max-w-none\" />;
-          <dl className=\"grid max - w-xl grid - cols - 1 gap - x-8 gap - y-16 lg:max - w-none lg:grid - cols-3\" />;
-            {features.map ((feature) => (<div key={feature.name} className=\"flex flex-col group\" />;
-                <dt className=\"flex items - center gap - x-3 text - base font - semibold leading - 7 text-white\" />;
-                  <feature.icon className=\"h - 5 w - 5 flex - none text - blue-400\" aria - hidden=\"true\" />;
+        <div className="mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max-w-none">;
+          <dl className="grid max - w-xl grid - cols - 1 gap - x-8 gap - y-16 lg:max - w-none lg:grid - cols-3">;
+            {features.map ((feature) => (
+              <div key={feature.name} className="flex flex-col group">;
+                <dt className="flex items - center gap - x-3 text - base font - semibold leading - 7 text-white">;
+                  <feature.icon className="h - 5 w - 5 flex - none text - blue-400" aria - hidden="true" />;
                   {feature.name}
                 </dt>;
-                <dd className=\"mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray-300\" />;
-                  <p className=\"flex-auto\" />{feature.description}</p>;
-                  <p className=\"mt-6\" />;
-                    <a href=\"/solutions\" className=\"text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration-200\" />;
-                      Learn more <span aria - hidden=\"true\" />→</span>;
+                <dd className="mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray-300">;
+                  <p className="flex-auto">{feature.description}</p>;
+                  <p className="mt-6">;
+                    <a href="/solutions" className="text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration-200">;
+                      Learn more <span aria - hidden="true">→</span>;
                     </a>;
                   </p>;
                 </dd>;
@@ -140,79 +675,264 @@ export default function HomePage() {return (<div className=\"min-h-screen bg-whi
         </div>;
       </div>;
       {/* Stats section */}
-      <div className=\"mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px-8\" />;
-        <div className=\"mx - auto max - w-2xl lg:max-w-none\" />;
-          <div className=\"text-center\" />;
-            <h2 className=\"text - 3xl font - bold tracking - tight text - white sm:text-4xl\" />;
+      <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px-8">;
+        <div className="mx - auto max - w-2xl lg:max-w-none">;
+          <div className="text-center">;
+            <h2 className="text - 3xl font - bold tracking - tight text - white sm:text-4xl">;
               Trusted by leading organizations worldwide;
             </h2>;
-            <p className=\"mt - 4 text - lg leading - 8 text - gray-300\" />;
+            <p className="mt - 4 text - lg leading - 8 text - gray-300">;
               Our track record speaks for itself;
             </p>;
           </div>;
-          <dl className=\"mt - 16 grid grid - cols - 1 gap - 0.5 overflow - hidden rounded - 2xl text - center sm:grid - cols - 2 lg:grid - cols-4\" />;
-            {stats.map ((stat) => (<div key={stat.name} className=\"flex flex - col bg - white / 5 p - 8 backdrop - blur-sm\" />;
-                <dt className=\"text - sm font - semibold leading - 6 text - gray-300\" />{stat.name}</dt>;
-                <dd className=\"order - first text - 3xl font - bold tracking - tight text-white\" />{stat.value}</dd>;
+          <dl className="mt - 16 grid grid - cols - 1 gap - 0.5 overflow - hidden rounded - 2xl text - center sm:grid - cols - 2 lg:grid - cols-4">;
+            {stats.map ((stat) => (
+              <div key={stat.name} className="flex flex - col bg - white / 5 p - 8 backdrop - blur-sm">;
+                <dt className="text - sm font - semibold leading - 6 text - gray-300">{stat.name}</dt>;
+                <dd className="order - first text - 3xl font - bold tracking - tight text-white">{stat.value}</dd>;
               </div>))}
           </dl>;
         </div>;
-      </div>;</dl>;
+      </div>;
+
+          </dl>;
         </div>;
-      </div>;{/* Solutions showcase */}
-      <div className=\"mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px-8\" />;
-        <div className=\"mx - auto max - w-2xl lg:text-center\" />;
-          <h2 className=\"text - base font - semibold leading - 7 text - blue-400\" />Our Solutions</h2>;
-          <p className=\"mt - 2 text - 3xl font - bold tracking - tight text - white sm:text-4xl\" />;
+      </div>;
+
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      {/* Solutions showcase */}
+      <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px-8">;
+        <div className="mx - auto max - w-2xl lg:text-center">;
+          <h2 className="text - base font - semibold leading - 7 text - blue-400">Our Solutions</h2>;
+          <p className="mt - 2 text - 3xl font - bold tracking - tight text - white sm:text-4xl">;
             Flagship AI and Technology Platforms;
           </p>;
-          <p className=\"mt - 6 text - lg leading - 8 text - gray-300\" />;
+          <p className="mt - 6 text - lg leading - 8 text - gray-300">;
             Discover how our innovative solutions are transforming industries and driving unprecedented growth.;
           </p>;
         </div>;
-        <div className=\"mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max-w-none\" />;
-          <div className=\"grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols-2\" />;
-            {solutions.map ((solution) => (<article;}
+        <div className="mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max-w-none">;
+          <div className="grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols-2">;
+            {solutions.map ((solution) => (
+              <article;
                 key={solution.name}
-                className=\"flex flex - col items - start group bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale-105\" />
-
-                <div className=\"flex items - center gap - x-4 text-xs\" />;
-                  <time date_time=\"2024\" className=\"text - gray-400\" />;
+                className="flex flex - col items - start group bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale-105";
+              >;
+                <div className="flex items - center gap - x-4 text-xs">;
+                  <time date_time="2024" className="text - gray-400">;
                     2024;
                   </time>;
-                  <span className=\"relative z - 10 rounded - full bg - gray - 800 px - 3 py - 1.5 font - medium text - gray - 300 hover:bg - gray - 700 transition - colors duration-200\" />;
+                  <span className="relative z - 10 rounded - full bg - gray - 800 px - 3 py - 1.5 font - medium text - gray - 300 hover:bg - gray - 700 transition - colors duration-200">;
                     AI Platform;
                   </span>;
                 </div>;
-                <div className=\"group relative\" />;
-                  <h3 className=\"mt - 3 text - lg font - semibold leading - 6 text - white group - hover:text - blue - 400 transition - colors duration-200\" />;
-                    <a href={solution.href} />;
-                      <span className=\"absolute inset-0\" />;
-      {/* CTA section */}
-      <div className=\"mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8\" />;
-        <div className=\"mx-auto max-w-2xl text-center\" />;
-          <h2 className=\"text-3xl font-bold tracking-tight text-white sm:text-4xl\" />;
-            Ready to transform your business?          </h2>;
-          <p className=\"text-xl text-blue-100 mb-8 max-w-2xl mx-auto\" />;
-            Join thousands of companies already using our AI-powered solutions to drive innovation and growth.;
-          </p>;
-          <div className=\"mt-10 flex items-center justify-center gap-x-6\" />;
-            <a;
-              href=\"/contact\";
-              className=\"rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105\" />
+                <div className="group relative">;
+                  <h3 className="mt - 3 text - lg font - semibold leading - 6 text - white group - hover:text - blue - 400 transition - colors duration-200">;
+                    <a href={solution.href}>;
+<<<<<<< HEAD
+                      <span className="absolute inset - 0" />;
+<<<<<<< HEAD
+=======
+                      {solution.name}
 
-              Get Started;
-            </a>;
-            <a href=\"/solutions\" className=\"text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200\" />;
-  )</a>;
+
+          </div>;
+        </div>;
+      </div>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                      <span className="absolute inset-0" />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+      {/* CTA section */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+            Ready to transform your business?
+=======
+          </div>
+        </div>
+      </div>
+
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      {/* CTA Section */}
+      <div className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of companies already using our AI-powered solutions to drive innovation and growth.
+          </p>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <span className="bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text-transparent">;
+                AI & Technology;
+              </span>;
+            </h1>;
+            <p className="mt - 6 text - lg leading - 8 text - gray-300">;
+              Transform your business with cutting - edge artificial intelligence, quantum computing, and autonomous solutions.;
+              Join the revolution that's reshaping industries worldwide.;
+            </p>;
+            <div className="mt - 10 flex items - center justify - center gap-x-6">;
+              <a;
+                href="/contact";
+                className="rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale-105";
+              >;
+                Get Started;
+              </a>;
+              <a href="/about" className="text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration-200">;
+                Learn More <span aria - hidden="true">→</span>;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+=======
+          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            Contact Us Today
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      {/* Features section */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Advanced Technology</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Everything you need to accelerate innovation
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results 
+            and maintain competitive advantage in the digital age.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            {features.map((feature) => (
+              <div key={feature.name} className="flex flex-col group">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                  <feature.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+                  {feature.name}
+                </dt>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                  <p className="flex-auto">{feature.description}</p>
+                  <p className="mt-6">
+                    <a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                      Learn more <span aria-hidden="true">→</span>
+                    </Link>
+                  </p>
+                </dd>
+              </div>
+            ))}
+          </dl>;
+        </div>;
+      </div>;
+      {/* Stats section */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:max-w-none">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Trusted by leading organizations worldwide
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-gray-300">
+              Our track record speaks for itself
+            </p>
+          </div>
+          <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.name} className="flex flex-col bg-white/5 p-8 backdrop-blur-sm">
+                <dt className="text-sm font-semibold leading-6 text-gray-300">{stat.name}</dt>
+                <dd className="order-first text-3xl font-bold tracking-tight text-white">{stat.value}</dd>
+              </div>
+            ))}
+          </dl>;
+        </div>;
+      </div>;
+      {/* Solutions showcase */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Solutions</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Flagship AI and Technology Platforms
+          </p>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            Ready to transform your business?          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of companies already using our AI-powered solutions to drive innovation and growth.
+          </p>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="/contact"
+              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105"
+            >
+              Get Started
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            </a>
+=======
+
+
+            </Link>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+  );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                    </a>;
                   </h3>;
-                  <p className=\"mt - 5 line - clamp - 3 text - sm leading - 6 text - gray-300\" />{solution.description}</p>;
+                  <p className="mt - 5 line - clamp - 3 text - sm leading - 6 text - gray-300">{solution.description}</p>;
                 </div>;
-                <div className=\"relative mt - 8 flex items - center gap-x-4\" />;
-                  <div className=\"text - sm leading-6\" />;
-                    <p className=\"font - semibold text-white\" />;
-                      <a href={solution.href} className=\"hover:text - blue - 400 transition - colors duration-200\" />;
-                        <span className=\"absolute inset-0\" />;
+<<<<<<< HEAD
+                <div className="relative mt - 8 flex items - center gap - x-4">;
+                  <div className="text - sm leading - 6">;
+                    <p className="font - semibold text - white">;
+                      <a href={solution.href} className="hover:text - blue - 400 transition - colors duration - 200">;
+                        <span className="absolute inset - 0" />;
+=======
+            </a>
+            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+  );
+                    </a>;
+                  </h3>;
+                  <p className="mt - 5 line - clamp - 3 text - sm leading - 6 text - gray-300">{solution.description}</p>;
+                </div>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+                <div className="relative mt - 8 flex items - center gap-x-4">;
+                  <div className="text - sm leading-6">;
+                    <p className="font - semibold text-white">;
+                      <a href={solution.href} className="hover:text - blue - 400 transition - colors duration-200">;
+                        <span className="absolute inset-0" />;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         Learn more;
                       </a>;
                     </p>;
@@ -223,62 +943,240 @@ export default function HomePage() {return (<div className=\"min-h-screen bg-whi
         </div>;
       </div>;
       {/* CTA section */}
-      <div className=\"mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px-8\" />;
-        <div className=\"mx - auto max - w-2xl text-center\" />;
-          <h2 className=\"text - 3xl font - bold tracking - tight text - white sm:text-4xl\" />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8">;
+        <div className="mx - auto max - w-2xl text - center">;
+          <h2 className="text - 3xl font - bold tracking - tight text - white sm:text - 4xl">;
+=======
+      <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px-8">;
+        <div className="mx - auto max - w-2xl text-center">;
+          <h2 className="text - 3xl font - bold tracking - tight text - white sm:text-4xl">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Ready to transform your business?;
           </h2>;
-          <p className=\"mx - auto mt - 6 max - w-xl text - lg leading - 8 text - gray-300\" />;
+          <p className="mx - auto mt - 6 max - w-xl text - lg leading - 8 text - gray-300">;
             Join the AI revolution and discover how our cutting - edge technology can accelerate your growth and innovation.;
           </p>;
-          <div className=\"mt - 10 flex items - center justify - center gap-x-6\" />;
+          <div className="mt - 10 flex items - center justify - center gap-x-6">;
             <a;
-              href=\"/contact\";
-              className=\"rounded - md bg - white px - 3.5 py - 2.5 text - sm font - semibold text - gray - 900 shadow - sm hover:bg - gray - 100 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - white transition - all duration - 200 hover:scale-105\" />
-
+              href="/contact";
+              className="rounded - md bg - white px - 3.5 py - 2.5 text - sm font - semibold text - gray - 900 shadow - sm hover:bg - gray - 100 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - white transition - all duration - 200 hover:scale-105";
+            >;
               Get Started;
             </a>;
-            <a href=\"/solutions\" className=\"text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration-200\" />;
-              View Solutions <span aria - hidden=\"true\" />→</span>;
+<<<<<<< HEAD
+            <a href="/solutions" className="text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration - 200">;
+=======
+      <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px-8">;
+        <div className="mx - auto max - w-2xl text-center">;
+          <h2 className="text - 3xl font - bold tracking - tight text - white sm:text-4xl">;
+            Ready to transform your business?;
+          </h2>;
+          <p className="mx - auto mt - 6 max - w-xl text - lg leading - 8 text - gray-300">;
+            Join the AI revolution and discover how our cutting - edge technology can accelerate your growth and innovation.;
+          </p>;
+          <div className="mt - 10 flex items - center justify - center gap-x-6">;
+            <a;
+              href="/contact";
+              className="rounded - md bg - white px - 3.5 py - 2.5 text - sm font - semibold text - gray - 900 shadow - sm hover:bg - gray - 100 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - white transition - all duration - 200 hover:scale-105";
+            >;
+              Get Started;
+            </a>;
+            <a href="/solutions" className="text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration-200">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            <a href="/solutions" className="text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration-200">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+              View Solutions <span aria - hidden="true">→</span>;
             </a>;
           </div>;
         </div>;
+      </div>;
+    </div>);
+}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                    </a>
+=======
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Discover how our innovative solutions are transforming industries and driving unprecedented growth.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+            {solutions.map((solution) => (
+              <article
+                key={solution.name}
+                className="flex flex-col items-start group bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105"
+              >
+                <div className="flex items-center gap-x-4 text-xs">
+                  <time dateTime="2024" className="text-gray-400">
+                    2024
+                  </time>
+                  <span className="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-700 transition-colors duration-200">
+                    AI Platform
+                  </span>
+                </div>
+                <div className="group relative">
+                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
+                    <a href={solution.href}>
+                      <span className="absolute inset-0" />
+                      {solution.name}
+                    </Link>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                  </h3>
+                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{solution.description}</p>
+                </div>
+                <div className="relative mt-8 flex items-center gap-x-4">
+                  <div className="text-sm leading-6">
+                    <p className="font-semibold text-white">
+                      <a href={solution.href} className="hover:text-blue-400 transition-colors duration-200">
+                        <span className="absolute inset-0" />
+                        Learn more
+                      </Link>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          </div>
+        </div>
+      </div>
+=======
+          </div>;
+        </div>;
+      </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          </div>;
+        </div>;
+      </div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      {/* CTA section */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Ready to transform your business?
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+            Join the AI revolution and discover how our cutting-edge technology can accelerate your growth and innovation.
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="/contact"
+              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105"
+            >
+              Get Started
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            </a>
+            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              View Solutions <span aria-hidden="true">→</span>
+            </a>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            </Link>
+            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              View Solutions <span aria-hidden="true">→</span>
+            </Link>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          </div>
+        </div>
+      </div>
+    </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          </div>
+        </div>
+      </div>
+    </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          </div>        </div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  );
+}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  )
+}
+<<<<<<< HEAD
+;
+=======
+=======
+      {/* CTA Section */}"
+      <div className="bg-blue-600 py-16">"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>"
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of companies already using our AI-powered solutions to drive innovation and growth.
+          </p>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            Contact Us Today;
+          </button>
+        </div>
+=======
+          </div>        </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
-                    </a>;
-                  </h3>;
-                  <p className=\"mt-5 line-clamp-3 text-sm leading-6 text-gray-300\" />{solution.description}</p>;
-                </div>;
-                <div className=\"relative mt-8 flex items-center gap-x-4\" />;
-                  <div className=\"text-sm leading-6\" />;
-                    <p className=\"font-semibold text-white\" />;
-                      <a href={solution.href} className=\"hover:text-blue-400 transition-colors duration-200\" />;
-                        <span className=\"absolute inset-0\" />;
-                        Learn more;
-                      </a>;
-                    </p>;
-                  </div>;
-                </div>;
-              </article>;
-            ))}
-      {/* CTA section */}
-      <div className=\"mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8\" />;
-        <div className=\"mx-auto max-w-2xl text-center\" />;
-          <h2 className=\"text-3xl font-bold tracking-tight text-white sm:text-4xl\" />;
-            Ready to transform your business?;
-          </h2>;
-          <p className=\"mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300\" />;
-            Join the AI revolution and discover how our cutting-edge technology can accelerate your growth and innovation.;
-          </p>;
-          <div className=\"mt-10 flex items-center justify-center gap-x-6\" />;
-            <a;
-              href=\"/contact\";
-              className=\"rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105\" />
-
-              Get Started;
-          </div>        </div>;
-      </div>;
-    </div>;
-  )})}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  )
+}
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

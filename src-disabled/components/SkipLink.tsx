@@ -1,15 +1,40 @@
-import Link from 'next/link';
+import React from 'react';
 
-export default function SkipLink() {return (<Link;
-      href=\"#main-content\";
-      className=\"sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded focus:shadow-lg\" />
+interface SkipLinkProps {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+}
 
-      Skip to main content;}
-    </Link>;}
-  )}
+const SkipLink: React.FC<SkipLinkProps> = ({ href, children, className = '' }) => {
+  return (
+    <a
+      href={href}
+      className={`skip-link ${className}`}
+      style={{
+        position: 'absolute',
+        top: '-40px',
+        left: '6px',
+        background: '#000',
+        color: '#fff',
+        padding: '8px',
+        textDecoration: 'none',
+        zIndex: 1000,
+        transition: 'top 0.3s',
+        '&:focus': {
+          top: '6px'
+        }
+      }}
+      onFocus={(e) => {
+        e.currentTarget.style.top = '6px';
+      }}
+      onBlur={(e) => {
+        e.currentTarget.style.top = '-40px';
+      }}
+    >
+      {children}
+    </a>
+  );
+};
 
-export const SkipLink: React.FC = () => {;}
-  return ( <a href=\"#main - content\"';\" className=\"skip - link\" data - skip - link  />\" Skip to main content'; </a>';) ';\" }';\"';\"\"\"\";
-
-export const SkipLink: React.FC = () => {;}
-  return ( <a href='#main - content'';' className='skip - link' data - skip - link  />' Skip to main content'; </a>';) ';' }';'';''\"\";
+export default SkipLink;
