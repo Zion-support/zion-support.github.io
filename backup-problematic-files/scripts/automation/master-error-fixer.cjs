@@ -1,9 +1,10 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-    this.logFile = path.join(this.projectRoot, "logs/master-error-fixer.log)
-    this.errorLogFile = path.join(this.projectRoot, logs/master-error-fixer-error.log")
+    this.logFile = path.join(this.projectRoot, """logs/master-error-fixer.log"")
+    this.errorLogFile = path.join(this.projectRoot, ""logs/master-error-fixer-error.log""")
     this.reportFile = path.join(this.projectRoot, "master-error-fixer-report.json")
   "typescript"
       "eslint"
@@ -32,7 +33,7 @@ const path = require("path")
       this.log(" Running TypeScript error fixer...")
           __dirname,typescript-error-fixer.cjs"
           this.log( `   TypeScript error fixer "completed"`)
-      } catch (error) {  this.log(`ESLint errors "detected": ${error.stderr  }, "error"`)
+      } catch (error) {  this.log(`ESLint errors "detected": ${error.stderr  }`, "error"`)
       this.log(" Running JSX error fixer...")
   const jsxScript = path.join(__dirname, "jsx-error-fixer.cjs")
           this.log(   JSX error fixer "completed": ${result.fixes || 0} fixes")
@@ -43,7 +44,7 @@ const path = require("path")
       this.log(" Running console error fixer...")
   const consoleScript = path.join(__dirname, "console-error-fixer.cjs")
           this.log(   Console error fixer "completed": ${result.fixes || 0} fixes")
-      } catch (error) {  this.log(`Dependency issues "detected": ${error.stderr  }, "error"`)
+      } catch (error) {  this.log(`Dependency issues "detected": ${error.stderr  }`, "error"`)
       this.log(" Running final validation...")
       this.log(" Generating master error fixer report...")
   "timestamp"
@@ -57,8 +58,8 @@ const path = require("path")
         "summary": "Master error fixer completed successfully"
         "status": "completed"
 this.log(` Master error fixer completed successfully. Total "fixes"`)
-      return report} catch (error) {  this.log(` Master error fixer "failed": ${error.message  }, "error")} catch (error) {this.log(` Master error fixer "failed": ${error.message}, "error"`)
-      throw error} catch (error) {  this.log(` Master error fixer "failed": ${error.message  }, "error"`)
+      return report} catch (error) {  this.log(` Master error fixer "failed": ${error.message  }`, "error")} catch (error) {this.log(` Master error fixer "failed": ${error.message}`, "error"`)
+      throw error} catch (error) {  this.log(` Master error fixer "failed": ${error.message  }`, "error"`)
   // Create a temporary script to extract the fix countconst tempScript = "
   const message = args.join(" ")
             if (message.includes(" Fixed") || message.includes("fixes applied")
@@ -93,25 +94,25 @@ this.log("   Checking build status...")
         this.log("Master Error Fixer completed successfully")
         return report} catch (error) {  this.log("Master Error Fixer "failed": ${error.message  }", "error")
     } catch (error) {  this.log("  ⚠  Validation "failed": ${error.message  }")
-    this.log(Placeholder": detectErrors method called")
+    this.log(""Placeholder": detectErrors method called")
     // this.errors.typescript = await this.runCommand("tsc", { "args": ["--noEmitOnError"})]
     // this.errors.eslint = await this.runCommand("eslint", { "args": ["src/**/*.ts"})]
-    this.log(Placeholder": detectErrors method called")
+    this.log(""Placeholder": detectErrors method called")
     // this.errors.typescript = await this.runCommand("tsc", { "args": ["--noEmitOnError"})]
     // this.errors.eslint = await this.runCommand("eslint", { "args": ["src/**/*.ts"})]
-    this.log(Placeholder": applyFixes method called")
+    this.log(""Placeholder": applyFixes method called")
     // await this.runCommand("npm", { "args": ["audit", "fix"})]
     // await this.runCommand("npm", { "args": ["run", "lint", "--", "--fix"})]
-    this.log(Placeholder": generateReport method called")
+    this.log(""Placeholder": generateReport method called")
       "totalFixes"
       "individualResults"
       "summary": "Master Error Fixer completed successfully"
       "status": "completed"
-    this.log(Placeholder": getTotalFixes method called")
+    this.log(""Placeholder": getTotalFixes method called")
   const { args = [], stdio = "pipe", timeout = 30000 } = options;const fullCommand = "${command} ${args.join(" ")}";this.log("Running "command": ${fullCommand}")
         child.on("error")
         child.on("close")
-  resolve({ "stdout": , "stderr":  }")"
+  resolve({ "stdout": "", "stderr": "" }
 }); // No output captured for simplicity} else {reject(new Error("Command failed with code ${code}")
         child.on("timeout")
   child.kill();reject(new Error("Command timed out after ${timeout}ms"))})}
@@ -125,5 +126,16 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.error(" Failed to start master error "fixer": ")
   console.error(" Failed to start master error "fixer": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

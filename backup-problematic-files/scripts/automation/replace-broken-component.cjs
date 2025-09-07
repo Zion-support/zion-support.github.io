@@ -1,17 +1,26 @@
-#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 class ComponentReplacer {}
   constructor() {}
     this.projectRoot = process.cwd();
-    this.filePath = path.join(this.projectRoot,src/components/AIChatbotSystem.tsx')};
-  log(message) {}
-    console.log(`[${new Date().toISOString()}] ${message})};
-  replaceComponent() {}
-    this.log('Replacing broken AIChatbotSystem component with working version...);
+
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
+<<<<<<< HEAD
+  Bot,
+  User,
+  Send,
+  Paperclip,
+  Mic,
+  MicOff,
+  Settings,
+  X,
+  ThumbsUp,
+  ThumbsDown,
+  Sparkles,
+=======
   Bot, 
   User, 
   Send, 
@@ -23,16 +32,14 @@ import { }
   ThumbsUp, 
   ThumbsDown, 
   Sparkles, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Clock,
   MessageCircle,
   HelpCircle,
   Star;
 } from 'lucide-react';
 interface ChatMessage {}
-  "id": string;
-  content: string, sender: user' | 'bot,
-  timestamp: Date, type: text' | 'file,
-  status: sending' | 'sent' | 'error,
+
   metadata?: {}
     confidence?: number;
     suggestions?: string[];
@@ -44,23 +51,153 @@ interface AIChatbotSystemProps {}
   maxMessages?: number;
   autoScroll?: boolean};
 export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
-</AIChatbotSystemProps>
+
   const [messages, setMessages] = useState<ChatMessage[]>([]);
-</ChatMessage>
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
-</HTMLDivElement>"
+"
   const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}"
-</HTMLInputElement>
+
+<<<<<<< HEAD
+  // Sample welcome message;
+  useEffect(() => {}
+    if (isOpen && messages.length === 0) {}
+      const "welcomeMessage": ChatMessage = {}
+        id: 'welcome',
+        "content": "Hello! I'm Zion AI, your intelligent assistant. I can help you "with": \\n\\n• Information about our services\\n• Technical support and guidance\\n• Project inquiries and quotes\\n• General questions about Zion Tech Group\\n\\nHow can I assist you today?",
+        "sender": 'bot',
+        "timestamp": new Date(),
+        "type": 'text',
+        "status": 'sent',
+        "metadata": {}
+          confidence: 0.95,
+          "suggestions": ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
+          "relatedServices": ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
+          "estimatedResponseTime": 2;
+        };
+      };
+      setMessages([welcomeMessage])};
+  }, [isOpen, messages.length]);
+
+  // Auto-scroll to bottom;
+  useEffect(() => {}
+    if (autoScroll && messagesEndRef.current) {}
+      messagesEndRef.current.scrollIntoView({ "behavior": 'smooth' })};
+  }, [messages, autoScroll]);
+
+  // Simulate AI response;
+  const simulateAIResponse = useCallback(async ("userInput": string) => {}
+    setIsTyping(true);
+    
+    // Simulate processing delay;
+    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+    
+    const responses = [{}]
+        "content": "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
+        "suggestions": ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
+        "relatedServices": ['AI Solutions', 'Cloud Services', 'Digital Transformation'];
+      },
+      {}
+        "content": "That's a great question! Let me provide you with detailed information about our services.",
+        "suggestions": ['Learn more', 'Schedule demo', 'Request quote', 'View portfolio'],
+        "relatedServices": ['Consulting', 'Implementation', 'Support'];
+      },
+      {}
+        "content": "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences.",
+        "suggestions": ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
+        "relatedServices": ['Digital Transformation', 'Process Optimization', 'Change Management'];
+      };
+    ];
+
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+
+    const "botMessage": ChatMessage = {}
+      id: Date.now().toString(),
+      "content": randomResponse.content,
+      "sender": 'bot',
+      "timestamp": new Date(),
+      "type": 'text',
+      "status": 'sent',
+      "metadata": {}
+        confidence: 0.85 + Math.random() * 0.1,
+        "suggestions": randomResponse.suggestions,
+        "relatedServices": randomResponse.relatedServices,
+        "estimatedResponseTime": 1 + Math.random() * 2;
+      };
+    };
+
+    setMessages(prev => [...prev, botMessage]);
+    setIsTyping(false)}, []);
+
+  // Handle message submission;
+  const handleSubmit = useCallback(async ("e": React.FormEvent) => {}
+    e.preventDefault();
+    if (!inputValue.trim() || isTyping) return;
+
+    const userMessage: ChatMessage = {}
+      id: Date.now().toString(),
+      "content": inputValue.trim(),
+      "sender": 'user',
+      "timestamp": new Date(),
+      "type": 'text',
+      "status": 'sent'
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setInputValue('');
+    
+    await simulateAIResponse(inputValue.trim())}, [inputValue, isTyping, simulateAIResponse]);
+
+  // Handle suggestion clicks;
+  const handleSuggestionClick = useCallback(("suggestion": string) => {}
+    setInputValue(suggestion)}, []);
+
+  // Handle file upload;
+  const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}
+    const file = e.target.files?.[0];
+    if (file) {}
+      const fileMessage: ChatMessage = {}
+        id: Date.now().toString(),
+        "content": \"Uploaded: \${file.name}\",
+        "sender": 'user',
+        "timestamp": new Date(),
+        "type": 'file',
+        "status": 'sent'
+      };
+      setMessages(prev => [...prev, fileMessage])};
+  }, []);
+
+  // Toggle voice input;
+  const toggleVoiceInput = useCallback(() => {}
+    setIsListening(!isListening)}, [isListening]);
+<<<<<<< HEAD
+  // Rate response;
+  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
+    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+  // Rate response;
+  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
+    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  return ()
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>
       {/* Chat Toggle Button */};
       <button;
         onClick={() => setIsOpen(!isOpen)};
 </button>"
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};"
-</X>
+
       </button>
       <AnimatePresence>
-</AnimatePresence>
+
           <motion.div;"
             initial={{ "opacity": 0, "y": 20, "scale": 0.95 }};
             animate={{ "opacity": 1, "y": 0, "scale": 1 }};
@@ -71,138 +208,60 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
               <div className="p-4 border-b border-zinc-700 bg-zinc-800/50 rounded-t-2xl">"
 </div>"
                 <div className="flex items-center justify-between">"
-</div>"
                   <div className="flex items-center gap-3">"
-</div>"
                     <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-blue-600 rounded-full flex items-center justify-center">"
-</div>"
                       <Bot className="w-5 h-5 text-white" />"
-</Bot>
+
                     </div>
                     <div>
-</div>"
-                      <h3 className="font-semibold text-white">Zion AI Assistant</h3>
+
                       <p className="text-xs text-zinc-400">Powered by AI</p>"
-                    </div>
-                  </div>"
                   <div className="flex items-center gap-2">"
-</div>
-                      <button;
                         onClick={() => setShowSettingsPanel(!showSettingsPanel)};
-</button>"
                         <Settings className="w-4 h-4" />"
-</Settings>
-                      </button>
-                    <button;
+
                       onClick={() => setIsOpen(false)};
-</button>"
                       <X className="w-4 h-4" />"
-</X>
-                    </button>
-                  </div>
-                </div>
-              </div>"
+
             <div className="flex-1 overflow-y-auto p-4 space-y-4">"
-</div>
                 <motion.div;
                   key={message.id};"
-                  initial={{ "opacity": 0, "y": 10 }};
-                  animate={{ "opacity": 1, "y": 0 }};
-                  className={\"flex gap-3 \${message.sender ===user' ? 'justify-end: justify-start}\"};"
-                >
-</motion>"
-                  <div className={\"w-8 h-8 rounded-full flex items-center justify-center \${message.sender ===user' ? 'order-1 ml-2: order-2 mr-2}\"}>"
-</div>"
+
                       <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">"
-</div>"
                         <User className="w-4 h-4 text-zinc-300" />"
-</User>
-                      </div>"
+
                       <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">"
-</div>"
                         <Bot className="w-4 h-4 text-white" />"
-</Bot>
-                      </div>
-                  </div>"
-                  <div className={\"max-w-[80%] \${message.sender ===user' ? 'text-right: text-left}\"}>"
-</div>"
-                    <div className={\"p-3 rounded-lg \${message.sender ===user' ? 'bg-zion-cyan text-white: bg-zinc-800 text-zinc-100}\"}>"
-</div>"
-                      <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+
                         <div className="mt-2 space-y-2">"
-</div>"
                             <div className="flex flex-wrap gap-1">"
-</div>
-                                <button;
                                   key={index};
                                   onClick={() => handleSuggestionClick(suggestion)};
-</button>
-                                </button>
-                            </div>"
-                            <div className="flex flex-wrap gap-1">"
-</div>
                                 <span;
                                   key={index};"
-                                  className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full
-                                >
-</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>"
-                    <div className={\"flex items-center gap-2 mt-2 \${message.sender ===user' ? 'justify-end: justify-start}\"}>"
-</div>"
+
                       <span className="text-xs text-zinc-500">"
-</span>
                       </span>"
                         <div className="flex items-center gap-1">"
-</div>
                           <button;"
-                            onClick={() => rateResponse(message.id,positive')};
-</button>'
-                            <ThumbsUp className="w-3 h-3" />"
-</ThumbsUp>
-                          </button>
-                          <button;"
-                            onClick={() => rateResponse(message.id,negative')};
-</button>'
+
                             <ThumbsDown className="w-3 h-3" />"
-</ThumbsDown>
-                          </button>
-                        </div>
-                    </div>
-                  </div>
+
                 </motion.div>
               ))};
               {/* Typing Indicator */};
               {isTyping && (})
-                <motion.div;"
-                  initial={{ "opacity": 0 }};
-                  animate={{ "opacity": 1 }};
-                  className="flex justify-start
-                >
-</motion>"
+
                   <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">"
-</div>"
                     <div className="flex space-x-1">"
-</div>"
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ "animationDelay": 0.1s}}></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ "animationDelay": 0.2s}}></div>'
-                    </div>'
+
                     <span className="text-sm text-zinc-400">Zion AI is typing...</span>"
-                  </div>
-                </motion.div>
               )};
               <div ref={messagesEndRef} />
-</div>
-            </div>"
             <div className="p-4 border-t border-zinc-700/50">"
-</div>"
               <form onSubmit={handleSubmit} className="flex items-center gap-2">"
 </form>"
                 <div className="flex-1 relative">"
-</div>
                   <input;"
                     type="text
                     value={inputValue};
@@ -210,82 +269,56 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 </input>"
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">"
 </label>
-                    <input;"
-                      type="file
+
                       onChange={handleFileUpload};"
                       className="hidden"
                       accept="image/*,.pdf,.doc,.docx,.txt
                     />
-</input>"
                     <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />"
-</Paperclip>
-                  </label>
-                </div>
-                  <button;"
-                    type="button
-                    onClick={toggleVoiceInput};"
-                    className={\"p-3 rounded-lg transition-colors \${isListening ? 'bg-red-500 text-white: bg-zinc-700 text-zinc-400 "hover": bg-zinc-600}\"};
-                    aria-label="Voice input
-                  >
-</button>"
-                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />};"
-</MicOff>
-                  </button>
-                <button;"
-                  type="submit
-                  disabled={!inputValue.trim() || isTyping};"
-                  className="p-3 bg-zion-cyan text-white rounded-lg "hover": bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  aria-label="Send message
-                >
-</button>"
+
                   <Send className="w-4 h-4" />"
-</Send>
-                </button>
-              </form>"
+
               <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">"
-</div>"
-                <div className="flex items-center gap-2">"
-</div>"
                   <Sparkles className="w-3 h-3" />"
-</Sparkles>
+
                   <span>Powered by Zion AI</span>
-                </div>"
-                <div className="flex items-center gap-1">"
-</div>"
                   <Clock className="w-3 h-3" />"
-</Clock>
+
                   <span>24/7 Available</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )};
-      </AnimatePresence>
     </>
   )};"
 ";"
     fs.writeFileSync(this.filePath, workingComponent);"
-    this.log('AIChatbotSystem component replaced successfully!)};
-  async run() {}
-    this.log('Starting Component Replacer...);
-    try {}
-      this.replaceComponent();
-      this.log('Component Replacer completed successfully!)} catch (error) {}
-      this.log(`Error in Component "Replacer": ${error.message});"
+
       throw error};
   };
-};
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new ComponentReplacer();
   automation.run();
-    .then(() => {}"
-      console.log('Component Replacer completed successfully!);
+<<<<<<< HEAD
+    .then(() => {}
+      console.log('Component Replacer completed successfully!');
       process.exit(0)}
 });
     .catch(error => {})
-      console.error('Component Replacer "failed": , error);
+      console.error('Component Replacer "failed": ', error);
+      process.exit(1)})};
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ComponentReplacer;
+module.exports = ComponentReplacer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    .then(() => {}"
+
       process.exit(1)})};
 module.exports = ComponentReplacer;
-module.exports = ComponentReplacer;
-'
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

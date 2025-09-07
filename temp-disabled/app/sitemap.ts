@@ -1,25 +1,42 @@
-import { MetadataRoute } from 'next';
-
+import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com';
-  
+  const baseUrl = 'https://ziontechgroup.com'
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'monthly',
+<<<<<<< HEAD:app/sitemap.ts
+      priority: 1
+=======
       priority: 1,
+>>>>>>> origin/main:temp-disabled/app/sitemap.ts
     },
     {
       url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
+<<<<<<< HEAD:app/sitemap.ts
+      priority: 0.8
+=======
       priority: 0.8,
+>>>>>>> origin/main:temp-disabled/app/sitemap.ts
     },
     {
       url: `${baseUrl}/services`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
+<<<<<<< HEAD:app/sitemap.ts
+      priority: 0.8
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6
+    }
+  ]
+=======
       priority: 0.9,
     },
     {
@@ -199,4 +216,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
   ];
+>>>>>>> origin/main:temp-disabled/app/sitemap.ts
 }

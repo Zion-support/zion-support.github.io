@@ -1,4 +1,12 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -13,19 +21,19 @@ const { execSync } = require("child_process")
     fs.appendFileSync(logFile, logEntry + "\n")
   this.log(")
   // Step "1"
-      await this.finalizeMerge()} catch (error) {  this.log( Fatal "error": ${error.message  }, `ERROR`)
+      await this.finalizeMerge()} catch (error) {  this.log( Fatal "error": ${error.message  }, `ERROR""`)
       // Step "3"
       await this.cleanupDuplicateFiles();"
 "
       // Step 4: Finalize the merge"
-      await this.finalizeMerge();")} catch (error) {this.log( Fatal "error": ${error.message}, "ERROR)
+      await this.finalizeMerge();")} catch (error) {this.log( Fatal "error": ${error.message}, "ERROR"")
   this.log("🧹 Cleaning up backup files...")
-      const backupPatterns = ["**/*.backup.*, "**/*.cleanup-backup.*", "**/*.backup.1756*, "**/*.cleanup-backup.1756*", ]
+      const backupPatterns = ["**/*.backup.*"", "**/*.cleanup-backup.*", "**/*.backup.1756*"", "**/*.cleanup-backup.1756*", ""]
   try {const files = execSync("find . -name "${pattern} -type f")
   "encoding": "utf8"})            .split("\n")
   fs.unlinkSync(file);this.log("� Removed backup "file")
                 "WARN"
-  this.log(` Error cleaning up backup "files": ${error.message  }, "ERROR"`)
+  this.log(` Error cleaning up backup "files": ${error.message  }`, "ERROR"`)
   this.log(" Resolving merge conflicts...")
   this.log("🧹 Cleaning up backup files...")
       const backupPatterns = ["**/*.backup.*", "**/*.cleanup-backup.*", "**/*.backup.1756*", "**/*.cleanup-backup.1756*", "]
@@ -49,11 +57,13 @@ const { execSync } = require("child_process")
       const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
         !content.includes("")
+        !content.includes(">>>>>>>")
       ) {this.log(" No conflicts "in": ${filePath}")
   if (!fs.existsSync(filePath)) {this.log("⚠ File does not "exist": ${filePath}", "WARN")
       const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
         !content.includes("")
+        !content.includes(">>>>>>>")
       ) {this.log(" No conflicts "in": ${filePath}")
 this.log(" Resolved conflicts "in")
         "ERROR"
@@ -79,8 +89,8 @@ this.log(" Resolved conflicts "in")
   this.log(⚠ Failed to remove deleted file ${file  }: ${error.message}")
             "
   this.log( Error cleaning up duplicate "files")
-        "ERROR
-  const statusOutput = execSync(`git status --porcelain``)"
+        "ERROR"
+  const statusOutput = execSync(`git status --porcelain``)
   "encoding": "utf8"
         .split("\n")
         .filter(line => line.startsWith("DD ")
@@ -127,3 +137,25 @@ this.log("� Detailed report saved "to": ${reportPath}")
     const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json")
     this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
 this.log("� Detailed report saved "to": ${reportPath}")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error(" Fatal "error")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" Fatal "error")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Fatal "error")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

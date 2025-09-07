@@ -1,7 +1,11 @@
 # Zion Tech Group - Advanced Technology Solutions
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 A modern, responsive website built with React, TypeScript, and Vite, showcasing Zion Tech Group's comprehensive technology solutions.
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ## 🌟 Overview
 Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, cloud infrastructure, and digital transformation services. We provide comprehensive technology solutions for enterprises, startups, and government organizations.
 
@@ -14,6 +18,18 @@ Zion Tech Group is a cutting-edge technology company specializing in AI-powered 
 
 ## 🛠️ Technology Stack
 
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, Custom CSS
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **SEO**: React Helmet Async
+- **Animations**: Framer Motion
+- **Build Tool**: Vite with ESBuild
+- **Package Manager**: npm
+
+## 📦 Installation
 A modern, responsive website built with Next.js showcasing comprehensive technology services including AI, IT solutions, micro SaaS development, and more.
 
 ## 🚀 Features
@@ -98,6 +114,9 @@ A modern, responsive website built with React, TypeScript, and Vite, showcasing 
 ## 📦 Installation
 
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 1. Clone the repository:
 ```bash
@@ -106,8 +125,12 @@ cd zion.app
 ```
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 - Node.js 18+
 - npm or yarn
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 2. Install dependencies:
 ```bash
 npm install
@@ -115,13 +138,24 @@ npm install
 
 - Node.js 18+
 - npm or yarn
+<<<<<<< HEAD
+main
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 3. Start the development server:
 ```bash
 npm run dev
 ```
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 4. Open your browser and navigate to `http://localhost:3000`
 
 ## 🏗️ Build for Production
@@ -160,11 +194,18 @@ npm start
 ```
 
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ## 📁 Project Structure
 
 ```
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 4. Open your browser and navigate to `http://localhost:3000`
 
 ## 🏗️ Build for Production
@@ -210,6 +251,19 @@ The built files will be in the `dist` directory, ready for deployment.
 └── package.json         # Dependencies and scripts
 ```
 
+4. Open your browser and navigate to `http://localhost:3000`
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory, ready for deployment.
+
+## 📁 Project Structure
+
+```
 src/
 ├── components/          # Reusable UI components
 │   ├── Button.tsx      # Enhanced button component
@@ -258,14 +312,36 @@ Interactive service display cards with:
 - Icon support
 - Responsive design
 
+├── pages/                 # Next.js pages
+│   ├── index.tsx         # Homepage
+│   ├── about.tsx         # About page
+│   ├── services.tsx      # Services overview
+│   ├── ai-services.tsx   # AI services page
+│   ├── blockchain.tsx    # Blockchain services
+│   ├── micro-saas.tsx    # Micro SaaS services
+│   ├── pricing.tsx       # Pricing page
+│   └── contact.tsx       # Contact page
+├── components/           # Reusable components
+├── styles/              # Global styles
+├── public/              # Static assets
+├── ecosystem.config.cjs # PM2 configuration
+└── package.json         # Dependencies and scripts
+```
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ## 🔧 Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ### Frontend
 - **React 18.2.0** - Modern React with concurrent features
 - **TypeScript 5.6.3** - Type-safe JavaScript development
@@ -1674,14 +1750,75 @@ The project uses a consistent design system with:
 - Lazy loading
 - Bundle analysis
 - Performance monitoring
+<<<<<<< HEAD
+main
+
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 ## 🤝 Contributing
 
 1. Fork the repository
+<<<<<<< HEAD
+<<<<<<< HEAD
+2. Create feature branch
+3. Make changes with tests
+4. Submit pull request
+5. Code review and approval
+origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
+### Development Workflow
+
+1. Create a feature branch
+2. Make your changes
+3. Test thoroughly
+4. Submit a pull request
+5. Code review and approval
+
+### Code Standards
+
+- Follow React best practices
+- Use TypeScript for type safety
+- Maintain consistent styling with Tailwind CSS
+- Write meaningful component names and props
+
+## 📞 Support and Contact
+
+For technical support or questions about the website:
+
+- **Email**: contact@ziontechgroup.com
+- **Documentation**: Check the `/docs` section
+- **Issues**: Use the GitHub issues page
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
 - All contributors and supporters
 
 ---
 
+Built with ❤️ by the Zion Tech Group team
 2. Create a feature branch
 3. Make your changes
 4. Add tests if applicable
@@ -2030,6 +2167,70 @@ ursor/automate-test-improve-and-merge-code-646c
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- React team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+- All contributors and supporters
+
+---
+
+<<<<<<< HEAD
+Built with ❤️ by the Zion Tech Group team
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## 📄 License
+
+This project is proprietary software owned by Zion Tech Group.
+
+## 📞 Contact
+
+- **Email**: kleber@ziontechgroup.com
+- **Phone**: +1 302 464 0950
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+
+## 🏢 About Zion Tech Group
+
+Zion Tech Group is a leading technology company specializing in:
+- AI & Machine Learning Solutions
+- Micro SaaS Development
+- Cybersecurity Services
+- Cloud Infrastructure
+- Blockchain Technology
+- Data Analytics
+
+We provide comprehensive technology solutions to help businesses transform and scale in the digital age.
+
+---
+
+Built with ❤️ by the Zion Tech Group team
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ## 📞 Contact
 
 - **Website**: [Zion Tech Group](https://zion.app)
@@ -2046,6 +2247,25 @@ ursor/automate-test-improve-and-merge-code-646c
 ---
 
 Built with ❤️ by the Zion Tech Group team
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+**Built with ❤️ by the Zion Tech Group team**
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
 **Built with ❤️ by the Zion Tech Group team**
 # Zion Tech Group - AI-Powered Technology Solutions
 
@@ -2082,3 +2302,4 @@ Zion Tech Group is a cutting-edge technology company specializing in AI-powered 
 - Tailwind CSS for the utility-first CSS framework
 - Lucide React for the beautiful icons
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

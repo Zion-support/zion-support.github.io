@@ -1,4 +1,5 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -26,7 +27,7 @@ const crypto = require("crypto")
         const content = fs.readFileSync(file, "utf8")
       const tsFiles = this.findFilesByExtension(".ts", ".tsx")
         const content = fs.readFileSync(file, "utf8")
-    } catch (error) {  this.log(`TypeScript analysis "failed": ${error.message  }, "ERROR"`)
+    } catch (error) {  this.log(`TypeScript analysis "failed": ${error.message  }`, "ERROR"`)
     const lines = content.split("\n")
       if (line.includes(": any") && !line.includes("// eslint-disable")
   "type": "TYPESCRIPT_ANTI_PATTERN"
@@ -67,7 +68,7 @@ const crypto = require("crypto")
   const content = fs.readFileSync(file, "utf8")
   const reactFiles = this.findFilesByExtension(".tsx", ".jsx")
   const content = fs.readFileSync(file, "utf8")
-    } catch (error) {  this.log(`React analysis "failed": ${error.message  }, "ERROR"`)
+    } catch (error) {  this.log(`React analysis "failed": ${error.message  }`, "ERROR"`)
     if (content.includes("useState") && content.includes("useEffect")
   "type": "REACT_BEST_PRACTICE"
           "severity": "MEDIUM"
@@ -85,7 +86,7 @@ const crypto = require("crypto")
       "memoryUsage"
       if (fs.existsSync("dist")
       if (fs.existsSync("dist")
-      performance.renderOptimization = perfIssues} catch (error) {  this.log(`Performance analysis "failed": ${error.message  }, "ERROR"`)
+      performance.renderOptimization = perfIssues} catch (error) {  this.log(`Performance analysis "failed": ${error.message  }`, "ERROR"`)
   const distPath = path.join(this.projectRoot, "dist")
           stats.warning =Bundle size is large - consider code splitting and optimization"
           stats.warning =Bundle size is large - consider code splitting and optimization"
@@ -97,7 +98,7 @@ const crypto = require("crypto")
             "message": Multiple array operations in render - consider memoization"
             "file"
             "suggestion": "Use useMemo or useCallback to optimize expensive calculations"
-    } catch (error) {  this.log(`Performance issue detection "failed": ${error.message  }, "ERROR"`)
+    } catch (error) {  this.log(`Performance issue detection "failed": ${error.message  }`, "ERROR"`)
   const tsFiles = this.findFilesByExtension(".ts", ".tsx")
   const content = fs.readFileSync(file, "utf8")
         if (content.includes("dangerouslySetInnerHTML")
@@ -130,7 +131,7 @@ const crypto = require("crypto")
             "message": "Consider using environment variables for sensitive data"
             "file"
             "suggestion": "Move sensitive data to environment variables"
-    } catch (error) {  this.log(`Security analysis "failed": ${error.message  }, "ERROR"`)
+    } catch (error) {  this.log(`Security analysis "failed": ${error.message  }`, "ERROR"`)
   "type": "AI_SUGGESTION"
         "severity": "MEDIUM"
         "message": "High number of TypeScript anti-patterns detected"
@@ -195,6 +196,17 @@ this.log(" AI Review Report "generated": ${reportPath}")
           item !== "node_modules"
   this.log(" AI Code Reviewer starting...")
 this.log(")
-  this.log(` AI Code Review "failed": ${error.message  }, "ERROR"`)
-  this.log(` AI Code Review "failed": ${error.message}, "ERROR"`)
-  this.log(` AI Code Review "failed": ${error.message}, "ERROR"`)
+  this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

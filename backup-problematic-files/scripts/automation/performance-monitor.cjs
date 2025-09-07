@@ -1,10 +1,11 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 console.log(" Starting continuous performance monitoring automation...")
 // Get automation interval from environment variable ("default")
-    console.log(� Building project for performance analysis...")
+    console.log(""� Building project for performance analysis...")
     execSync("npm run build", { "stdio": "inherit"})
 "
     // Build the project first"
@@ -65,12 +66,23 @@ console.log(" Running Lighthouse performance tests...")
             "size"
   // Skip directories that can"
   // Skip directories that can"
-process.on("SIGINT")"
-// console.log(`� Received SIGINT, shutting down gracefully...``)"
+process.on("SIGINT")
+// console.log(`� Received SIGINT, shutting down gracefully...``)
   console.log( Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.error(" Failed to start continuous performance "monitoring")
   console.error(" Failed to start continuous performance "monitoring")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,23 +1,24 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log( Starting continuous quality checks automation...")
+console.log("" Starting continuous quality checks automation...")
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log( Starting continuous quality checks automation...")
+console.log("" Starting continuous quality checks automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Running ESLint..."`)
   execSync("npm run lint", { "stdio": "inherit"})
-// console.log(" ESLint completed successfully)
-  console.log(⚠  ESLint issues found but continuing...")
+// console.log(" ESLint completed successfully"")
+  console.log(""⚠  ESLint issues found but continuing...")
 console.log(" Starting continuous quality checks automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Running ESLint..."`)
   execSync("npm run lint", { "stdio": "inherit"})
-// console.log(" ESLint completed successfully)
-  console.log(⚠  ESLint issues found but continuing...")
+// console.log(" ESLint completed successfully"")
+  console.log(""⚠  ESLint issues found but continuing...")
 // console.log("⚠  ESLint issues found but continuing...")
     console.log(" Running TypeScript type checking...")
   execSync("npm run type-check", { "stdio": "inherit"})
@@ -71,5 +72,16 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.error(" Failed to start continuous quality "checks": ")
   console.error(" Failed to start continuous quality "checks": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

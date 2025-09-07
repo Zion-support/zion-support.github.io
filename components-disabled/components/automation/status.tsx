@@ -8,6 +8,39 @@ export default function AutomationStatusPage() {;}
   useEffect, useState } from 'react';
 
 }</div>) import { useEffect, useState } from 'react';
+<<<<<<< HEAD
+
+<<<<<<< HEAD:components/automation/status.tsx
+
+=======
+}</div>) import { useEffect, useState } from 'react';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/automation/status.tsx
+</div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
+}</div>) import { useEffect, useState } from 'react';
+export default function AutomationStatusPage() {;
+ </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
+}</div>) import { useEffect, useState } from 'react';
+ </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) ;
+}</div>) import { useEffect, useState } from 'react';
+export default function AutomationStatusPage() {;
+=======
+</div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)""
+ </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) ;""
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+  const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
+
+<<<<<<< HEAD
+<<<<<<< HEAD:components/automation/status.tsx
+
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/automation/status.tsx
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+  useEffect(() => {;
 </div>) : (<div className=\"text-sm text-gray-500\"  />No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;}
@@ -58,10 +91,30 @@ export default /**;
  */;
 function AutomationStatusPage() {const [status, set_status]  = useState<{ run_at?: string, ok?: boolean } | null>(null)useEffect (() => {fetch ('/automation / status.json').then ((r) => r.json ()).then ((j) => set_status (j)).catch (() => set_status (null))}, [])return (<div className=\"space - y-4\" />;
   );
+<<<<<<< HEAD
+<<<<<<< HEAD:components/automation/status.tsx
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/automation/status.tsx
+=======
+}
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
   }, []);
   return (
+
+    <div className="space-y-4">;"
+</div>"
+      <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;""
+        <div className="rounded-lg border p-4 text-sm">;"
+</div>)"
+          <div>Last Run: {new Date(status && status.runAt || ).toLocaleString() || '—'}</div>;
+          <div>Health: {status && status.ok ? 'OK' : 'Unknown'}</div>;
+          <div className="mt-2"><a className="underline" href="/metrics/latest && latest.json">View latest metrics JSON</a></div>;"
+        </div>;"
+        <div className="text-sm text-gray-500">No status available yet.</div>;"
+</div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);""
 </div>) : (<div className=\"text - sm text - gray - 500\"  />No status available yet.</div>);
 }</div>) import { useEffect, useState } from 'react';
 
@@ -74,6 +127,17 @@ function AutomationStatusPage() {}
   useEffect (() => {
     fetch ('/automation / status.json');
       .then ((r) => r.json ());
+      .then ((j) => set_status (j));
+      .catch (() => set_status (null));
+    <div className="space - y-4">;"
+      <h1 className="text - xl font - semibold">Autonomous Automation Status</h1>;""
+        <div className="rounded - lg border p - 4 text - sm">;"
+          <div > Last Run: {new Date (status.run_at || ).toLocaleString () || '—'}</div>;
+          <div > Health: {status.ok ? 'OK' : 'Unknown'}</div>;
+          <div className="mt - 2"><a className="underline" href="/metrics / latest.json">View latest metrics JSON</a></div>;"
+        </div>) : ()"
+        <div className="text - sm text - gray - 500">No status available yet.</div>)}"
+    </div>);"
       .then ((j) => set_status (j));}
       .catch (() => set_status (null));}
   }, []);
@@ -94,9 +158,21 @@ function AutomationStatusPage() {}
         </div>) : (
         <div className=\"text - sm text - gray - 500\" />No status available yet.</div>)}
     </div>);
+<<<<<<< HEAD
+<<<<<<< HEAD:components/automation/status.tsx
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 }
   );
 }
 
 }
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
 
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/automation/status.tsx
+=======
+
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

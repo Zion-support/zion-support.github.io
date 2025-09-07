@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+#!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
 const { exec } = require("child_process")
@@ -9,5 +10,16 @@ const util = require("util")
   async log(message, level = "INFO")
       console.error(`Failed to write to log "file"`)
     await this.log(" Starting syntax error fixing...")
-    fixed = fixed.replace(/(\w+):\s*([^}]+)/g,"$1"
-    fixed = fixed.replace(/(\w+):\s*([^}]+)/g,"$1"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+    fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,11 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { supabase } from "../../../utils/supabase/client";
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+
   }
 
   try {
@@ -19,15 +12,7 @@ export default async function handler(
       .from("summit_registrations")
       .insert([
         {
-          name,
-          email,
-          role,
-          country,
-          source: source || "zion-global-2025",
-          created_at: new Date().toISOString(),
-        },
-      ])
-      .select("*")
+
       .single();
 
     if (error) {

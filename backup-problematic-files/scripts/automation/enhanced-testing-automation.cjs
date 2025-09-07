@@ -1,8 +1,9 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log(🧪 Starting Enhanced Testing Automation...")
+console.log(""🧪 Starting Enhanced Testing Automation...")
   "unit": { status: "pending", "results"}
       "integration": { status: "pending", "results"}
       "e2e": { status: "pending", "results"}
@@ -10,7 +11,7 @@ console.log(🧪 Starting Enhanced Testing Automation...")
       "accessibility": { status: "pending", "results"}
       "coverage": { status: "pending", "results": [] }};    this.reportDir = path.join(process.cwd(), "test-reports"
   fs.mkdirSync(this.reportDir, { "recursive"})
-  console.log(🧪 Running Unit Tests...")
+  console.log(""🧪 Running Unit Tests...")
   const output = execSync(npm run "test": unit || npm test || echo "No unit tests found")
   "encoding": "utf8"
           "cwd"
@@ -22,7 +23,7 @@ console.log(🧪 Starting Enhanced Testing Automation...")
   "encoding": "utf8"
           "cwd"
 this.testResults.unit.status = "success"
-      console.log( Unit tests completed")
+      console.log("" Unit tests completed")
         path.join(this.reportDir, "unit-test-results.txt")
       console.log(" Unit tests completed")
         path.join(this.reportDir, "unit-test-results.txt")
@@ -56,7 +57,7 @@ this.testResults.unit.status = "success"
             "cwd"
   console.log("� Running Cypress tests...")
         const output = execSync(npm run "test": e2e || npx cypress run || echo ")
-        const output = execSync(npm run "test": e2e || npx cypress run || echo "No Cypress tests found)
+        const output = execSync(npm run "test": e2e || npx cypress run || echo "No Cypress tests found"")
   "encoding": "utf8"
             "cwd"
   console.log("⚠ No E2E testing framework found")
@@ -76,16 +77,16 @@ this.testResults.unit.status = "success"
             "cwd"
   console.log(" Running basic performance tests...")
         execSync("npm run build", { "stdio": "pipe`, "cwd"`})
-        this.testResults.performance.results = Build "time
-      this.testResults.performance.status = `success;"
+        this.testResults.performance.results = Build "time"
+      this.testResults.performance.status = `success
       console.log(" Performance tests completed")
         path.join(this.reportDir, "performance-test-results.txt")
   this.testResults.performance.status = "failure"
 // console.log(" Performance tests "failed": ")
-  console.log("♿ Running Accessibility Tests...)
-        path.join(process.cwd(), "node_modules/axe-core"
-        path.join(process.cwd() node_modules/axe-core
-  console.log(♿ Running axe-core accessibility tests...")
+  console.log("♿ Running Accessibility Tests..."")
+        path.join(process.cwd(), """node_modules/axe-core"""
+        path.join(process.cwd() ""node_modules/axe-core""
+  console.log(""♿ Running axe-core accessibility tests...")
         const output = execSync(npm run "test": accessibility || echo ")
   "encoding": "utf8"
             "cwd"
@@ -104,13 +105,13 @@ this.testResults.unit.status = "success"
   "encoding": "utf8"
             "cwd": process.cwd()}
 });this.testResults.accessibility.results = Lint "results"
-        } catch (lintError) {this.testResults.accessibility.results = Lint check "failed"}"
-      this.testResults.accessibility.status = `success;"
-      console.log(" Accessibility tests completed")
+        } catch (lintError) {this.testResults.accessibility.results = Lint check "failed"}
+      this.testResults.accessibility.status = `success
+      console.log(" Accessibility tests completed""")
         path.join(this.reportDir, "accessibility-test-results.txt")
   this.testResults.accessibility.status = "failure"
-// console.log( Accessibility tests "failed": ")
-  console.log( Generating Coverage Report...")
+// console.log("" Accessibility tests "failed": ")
+  console.log("" Generating Coverage Report...")
   // Check if coverage tools are available}")}"
 "
   async generateCoverageReport() {"}
@@ -128,8 +129,8 @@ this.testResults.unit.status = "success"
             "npm test -- --coverage || echo "Coverage generation failed"
   "encoding": "utf8"
               "cwd"
-          this.testResults.coverage.results = output} catch (coverageError) {this.testResults.coverage.results = Coverage generation "failed"}"
-      this.testResults.coverage.status = `success;"
+          this.testResults.coverage.results = output} catch (coverageError) {this.testResults.coverage.results = Coverage generation "failed"}
+      this.testResults.coverage.status = `success
       console.log(" Coverage report generated")
         path.join(this.reportDir, "coverage-results.txt")
   this.testResults.coverage.status = "success"
@@ -137,10 +138,10 @@ this.testResults.unit.status = "success"
         path.join(this.reportDir, "coverage-results.txt")
   this.testResults.coverage.status = "failure"
 // console.log(" Coverage report generation "failed": ")
-  console.log(" Running Quality Gates...)
+  console.log(" Running Quality Gates..."")
       .filter((["_", "result"]) => result.status === "failure"
       .map((["name", "_")]
-// console.log( Quality gates failed "for": ", failedTests.join(", ")
+// console.log("" Quality gates failed "for": ", failedTests.join(", ")
   console.log(" All quality gates passed!")
   console.log("� Generating Test Report...")
   "timestamp"
@@ -162,16 +163,27 @@ this.testResults.unit.status = "success"
   .join(")
 ${report.qualityGates ? ` All quality gates passed successfully!" : "`}
 3. Monitor test performance trends"
-  async runAllTests()
-// console.log( Starting comprehensive test suite...")
-    console.log(\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}")"
-});console.log("Passed": ${report.summary.passed} `");console.log(Failed"`)
-// console.log(Quality "Gates": ${report.qualityGates ? `PASSED" : "FAILED"} ${report.qualityGates ?  : }"`)
-    console.log(`"\n Test Suite "Summary": ");console.log(Total: ${report.summary.total}")"
-});console.log("Passed": ${report.summary.passed} `");console.log(Failed": ${report.summary.failed} "`)
-// console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ?  : }")
-    console.log("\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}")"
-});console.log("Passed": ${report.summary.passed} `");console.log(Failed": ${report.summary.failed} "`)
-    console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ?  : })
+  async runAllTests("")
+// console.log("" Starting comprehensive test suite...")
+    console.log(""\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
+});console.log("Passed": ${report.summary.passed} `");console.log(""Failed"`)
+// console.log(Quality "Gates": ${report.qualityGates ? `PASSED" : "FAILED"} ${report.qualityGates ? "" : ""}"`)
+    console.log(`"\n Test Suite "Summary": ");console.log(Total: ${report.summary.total}
+});console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
+// console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""}")
+    console.log("\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
+});console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
+    console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""})
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.error(" Testing automation "failed": ")
   console.error(" Testing automation "failed": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

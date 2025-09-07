@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+#!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync, spawn } = require("child_process")
@@ -18,7 +19,7 @@ const { execSync, spawn } = require("child_process")
       this.buildResults.steps.push({name,"status": "failed"})
         "error"
       this.buildResults.errors.push({"step": name,"error"})
-      this.log(`Failed "step": ${name} - ${errorMessage}, "ERROR"`)
+      this.log(`Failed "step": ${name} - ${errorMessage}`, "ERROR"`)
     this.log("Checking dependencies...")
         "Check Node.js version"
         "node --version"
@@ -31,12 +32,12 @@ const { execSync, spawn } = require("child_process")
           { "silent": true, "continueOnError"}
         this.buildResults.metrics.yarnVersion = yarnVersion ? yarnVersion.trim() : "Not installed"
         this.buildResults.metrics.yarnVersion = "Not installed"
-      this.log(`Dependency check "failed": ${error.message}, "ERROR"`)
+      this.log(`Dependency check "failed": ${error.message}`, "ERROR"`)
     this.log("Installing dependencies...")
       if (fs.existsSync(path.join(this.projectRoot, "yarn.lock")
         await this.runStep("Install dependencies with yarn", "yarn install --frozen-lockfile")
         await this.runStep("Install dependencies with npm", "npm ci")
-      this.log(`Dependency installation "failed": ${error.message}, "ERROR"`)
+      this.log(`Dependency installation "failed": ${error.message}`, "ERROR"`)
     this.log("Running linting...")
         "ESLint check"
         "npm run lint"
@@ -57,7 +58,7 @@ const { execSync, spawn } = require("child_process")
     this.log("Running build...")
       await this.runStep("Build application", "npm run build")
       const buildDir = path.join(this.projectRoot, ".next")
-      this.log(`Build "failed": ${error.message}, "ERROR"`)
+      this.log(`Build "failed": ${error.message}`, "ERROR"`)
     this.log("Running security audit...")
         "Security audit"
         "npm audit --audit-level=moderate"
@@ -90,9 +91,20 @@ const { execSync, spawn } = require("child_process")
       this.log(`"Warnings"`)
       this.log(`Total "Duration"`)
       this.log(`"Report"`)
-      this.log(`Build automation "failed": ${error.message}, "ERROR"`)
+      this.log(`Build automation "failed": ${error.message}`, "ERROR"`)
       this.buildResults.overallStatus = "failed"
       console.log("\n Build automation completed")
       process.exit(results.overallStatus === "success")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       console.error("\n Build automation "failed": ")
       console.error("\n Build automation "failed": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

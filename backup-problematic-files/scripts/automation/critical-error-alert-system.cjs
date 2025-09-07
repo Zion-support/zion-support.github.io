@@ -1,4 +1,5 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -34,7 +35,7 @@ this.log(Found ${criticalErrors.length} critical error conditions")
         "critical"
         "message": "Build successful"
         "severity": "low"
-  const errorCount = this.countBuildErrors(error.stdout || )
+  const errorCount = this.countBuildErrors(error.stdout || "")
   "type": "build"
         "critical": errorCount >= this.criticalThresholds.buildFailures,"message": "Build failed with ${errorCount  } errors"
         "severity"
@@ -49,7 +50,7 @@ this.log(Found ${criticalErrors.length} critical error conditions")
         "critical"
         "message": "TypeScript check passed"
         "severity": "low"
-  const errorCount = this.countTypeScriptErrors(error.stdout || )
+  const errorCount = this.countTypeScriptErrors(error.stdout || "")
   "type": "typescript"
         "critical": errorCount >= this.criticalThresholds.typeErrors,"message": "TypeScript check failed with ${errorCount  } errors"
         "severity"
@@ -64,7 +65,7 @@ this.log(Found ${criticalErrors.length} critical error conditions")
         "critical"
         "message": "ESLint check passed"
         "severity": "low"
-  const errorCount = this.countLintErrors(error.stdout || )
+  const errorCount = this.countLintErrors(error.stdout || "")
   "type": "lint"
         "critical": errorCount >= this.criticalThresholds.lintErrors,"message": "ESLint check failed with ${errorCount  } errors"
         "severity"
@@ -79,7 +80,7 @@ this.log(Found ${criticalErrors.length} critical error conditions")
         "critical"
         "message": "Dependencies check passed"
         "severity": "low"
-  const issueCount = this.countDependencyIssues(error.stdout || )
+  const issueCount = this.countDependencyIssues(error.stdout || "")
   "type": "dependencies"
         "critical": issueCount >= this.criticalThresholds.dependencyIssues,"message": "Dependency check failed with ${issueCount  } issues"
         "severity"
@@ -141,13 +142,13 @@ this.log(Found ${criticalErrors.length} critical error conditions")
       "actionRequired"
     console.error("\n" + "=")
     console.error("� CRITICAL ERROR ALERT �")
-    console.error("=".repeat(80));console.error(Type": ${error.type.toUpperCase()}");console.error(Message": ${error.message}");console.error(Severity": ${error.severity.toUpperCase()}");console.error(Timestamp": ${new Date().toISOString()}"
+    console.error("=".repeat(80));console.error(""Type": ${error.type.toUpperCase()}");console.error(""Message": ${error.message}");console.error(""Severity": ${error.severity.toUpperCase()}");console.error(""Timestamp": ${new Date().toISOString()}"
     console.error("=")
     console.error("IMMEDIATE ACTION REQUIRED!")
     console.error("=".repeat(80) + "\n"
     console.error("\n" + "=")
     console.error("� CRITICAL ERROR ALERT �")
-    console.error("=".repeat(80));console.error(Type": ${error.type.toUpperCase()}");console.error(Message": ${error.message}");console.error(Severity": ${error.severity.toUpperCase()}");console.error(Timestamp": ${new Date().toISOString()}"
+    console.error("=".repeat(80));console.error(""Type": ${error.type.toUpperCase()}");console.error(""Message": ${error.message}");console.error(""Severity": ${error.severity.toUpperCase()}");console.error(""Timestamp": ${new Date().toISOString()}"
     console.error("=")
     console.error("IMMEDIATE ACTION REQUIRED!")
     console.error("=".repeat(80) + "\n"
@@ -160,7 +161,7 @@ this.log(Found ${criticalErrors.length} critical error conditions")
                   e.severity === "critical" ? 3 : e.severity === "high"
       "criticalErrors"
       "alertHistory"
-      "recommendations": ["Address critical errors immediately, "Review error patterns and implement preventive measures", "Consider rolling back to last stable version, "Implement automated error recovery systems", ]
+      "recommendations": ["Address critical errors immediately"", "Review error patterns and implement preventive measures", "Consider rolling back to last stable version"", "Implement automated error recovery systems", ""]
       this.reportsPath,critical-error-alert-report.json"
 this.log(`� Report "generated"`)
   this.log(" Starting Critical Error Alert System...")
@@ -176,5 +177,16 @@ this.log(`� Report "generated"`)
         "criticalErrors"
         "alerts"
   this.log(� Critical Error Alert System "failed")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
         "ERROR"
         "ERROR"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

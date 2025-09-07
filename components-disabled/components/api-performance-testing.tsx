@@ -1,7 +1,12 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD:components/api-performance-testing.tsx
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     }return this.props.children;
   }
 }import React from 'react';
@@ -31,10 +36,28 @@ import React from 'react';,export default function ApiPerformanceTestingPage() {
 ];
 return (<>;
   
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/api-performance-testing.tsx
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 class ErrorBoundary extends React.Component {
   constructor(props) {}
     super(props);}
     this.state = { hasError: false };
+<<<<<<< HEAD
+<<<<<<< HEAD:components/api-performance-testing.tsx
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
   }
   static getDerivedStateFromError(error) {}
     return { hasError: true,}
@@ -50,10 +73,32 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/api-performance-testing.tsx
+
+=======
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
 
 import React from \"react\";
 import SEO from \"../components/SEO\";
 import { Check, ExternalLink } from \"lucide-react\";
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default function ApiPerformanceTestingPage() {
   const features = [
     \"k6/Gatling-compatible test runner\"
@@ -75,6 +120,49 @@ export default function ApiPerformanceTestingPage() {
   return (
     <>;
       <SEO;
+        title="API Performance Testing";""
+        description="Load, latency and regression testing - as - a-service with CI and SLOs.";"
+      />;
+"
+      <main id="main" className="container mx - auto px - 4 py - 24">;"
+</main>"
+        <section className="max - w-5xl mx - auto">;"
+</section>"
+          <h1 className="text - 4xl font - extrabold tracking - tight">;"
+</h1>
+          </h1>;"
+          <p className="mt - 4 text - lg text - gray - 300">;"
+</p>
+          </p>;"
+          <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;"
+</div>
+              <div;
+                key={f}"
+                className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10";"
+              >;
+</div>"
+                <Check className="w - 5 h - 5 text - cyan - 400 mt - 1" />;"
+                <p className="text - gray - 200">{f}</p>;"
+              </div>))}
+          </div>;"
+          <div className="mt - 8 flex flex - wrap items - center gap - 4">;"
+            <a;"
+              href="/contact";""
+              className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover:bg - gray - 200";"
+</a>
+            </a>;
+              href="/market - pricing";""
+              className="px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10";"
+              href="https://grafana.com / docs / k6/";""
+              target="_blank";""
+              rel="noreferrer";""
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";"
+</a>"
+              <ExternalLink className="w - 4 h - 4" /> k6 Docs;"
+
+              href="https://gatling.io / open - source/";""
+              <ExternalLink className="w - 4 h - 4" /> Gatling OSS;"
+
         title=\"API Performance Testing\";
         description=\"Load, latency and regression testing - as - a-service with CI and SLOs.\";
       />;
@@ -206,6 +294,41 @@ key={f}
 
     </>);
   return (
+      <SEO;"
+    <>
+        title="API Performance Testing"""
+        description="Load, latency and regression testing-as-a-service with CI and SLOs.""
+      />
+      <main id="main" className="container mx-auto px-4 py-24">"
+        <section className="max-w-5xl mx-auto">"
+          <h1 className="text-4xl font-extrabold tracking-tight">"
+          </h1>"
+          <p className="mt-4 text-lg text-gray-300">"
+          </p>"
+          <div className="mt-8 grid sm:grid-cols-2 gap-6">"
+                <p className="text - gray - 200">{f}</p>;")
+              className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover: bg - gray - 200";"
+
+
+
+const features = ["
+		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging]
+	];
+			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />"
+					<h1 className="text-4xl font-extrabold tracking-tight">API Performance Testing</h1>""
+					<p className="mt-4 text-lg text-gray-300">Ship with confidence using automated performance tests and guardrails integrated into your pipeline.</p>""
+							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">"
+								<Check className="w-5 h-5 text-cyan-400 mt-1" />"
+<p className="text-gray-200">{f}</p>"
+					<div className="mt-8 flex flex-wrap items-center gap-4">"
+						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $129/mo</a>""
+						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>""
+						<a href="https://grafana.com/docs/k6/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">"
+							<ExternalLink className="w-4 h-4" /> k6 Docs;"
+
+<a href="https://gatling.io/open-source/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">"
+							<ExternalLink className="w-4 h-4" /> Gatling OSS;"
+
     <>;
       <SEO;
         title=\"API Performance Testing\";
@@ -395,13 +518,32 @@ const features = [
 			</main>
 		</>
 );
+
+
 }
     </>);
 }
   return (
 
-  return (
 
+                className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10""
+              >
+              href="/contact"""
+              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200""
+              href="/market-pricing"""
+              className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10""
+              href="https://grafana.com/docs/k6/"""
+              target="_blank"""
+              rel="noreferrer"""
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300""
+
+              href="https://gatling.io/open-source/"""
+
+              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200""
+
+
+
+      </main>;"
 return (
   return (
     <>
@@ -576,6 +718,10 @@ href=\"https://gatling.io/open-source/\"
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+<<<<<<< HEAD:components/api-performance-testing.tsx
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     </>;
   )return (<>;
       <SEO;
@@ -642,4 +788,10 @@ href=\"https://gatling.io/open-source/\"
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/api-performance-testing.tsx
+=======
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

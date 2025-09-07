@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+#!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
@@ -12,11 +13,11 @@ const { execSync } = require("child_process")
       if (content.includes("import") && content.includes(";")
         issues.push({"type": "error","message": "Malformed import statement"})
           line: this.findLineNumber(content, "import")
-      const stringRegex = /([])([^)]
+      const stringRegex = /([""])([^"")]
         if (match[2].length < 100 && !match[2].includes("${"})
           issues.push({"type": "warning","message": "Possible unterminated string"})
       const lines = content.split("\n")
-        if (trimmed && !trimmed.endsWith() && !trimmed.endsWith("{"})
+        if (trimmed && !trimmed.endsWith("") && !trimmed.endsWith("{"})
             !trimmed.endsWith("}") && !trimmed.startsWith("//")
             !trimmed.startsWith("*") && !trimmed.startsWith("/*")
           if (trimmed.includes("=") || trimmed.includes("return")
@@ -24,10 +25,10 @@ const { execSync } = require("child_process")
               trimmed.includes("var")
             issues.push({"type": "suggestion","message": "Consider adding semicolon"})
         this.errors.push({"file": relativePath,"issues"})
-      this.log(`Error scanning ${filePath}: ${error.message}, "ERROR"`)
+      this.log(`Error scanning ${filePath}: ${error.message}`, "ERROR"`)
     const lines = content.split("\n")
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules"
-      this.log(`Error scanning directory ${dirPath}: ${error.message}, "ERROR"`)
+      this.log(`Error scanning directory ${dirPath}: ${error.message}`, "ERROR"`)
     const extensions = [".js", ".jsx", ".ts", ".tsx", ".cjs", ".mjs"]
     this.log(" Running ESLint...", "INFO")
       const result = execSync("npm run lint", {"cwd": this.projectRoot,"encoding": "utf8"})
@@ -47,24 +48,35 @@ const { execSync } = require("child_process")
       summary: {totalErrors: this.errors.length,"totalWarnings"}
       "errors"
     const reportPath = path.join(this.reportsDir, "intelligent-error-detector-report.json")
-    this.log(`� Report saved "to": ${reportPath}, "SUCCESS"`)
+    this.log(`� Report saved "to": ${reportPath}`, "SUCCESS"`)
       recommendations.push("Fix all syntax errors before proceeding")
       recommendations.push("Review and address warnings")
       recommendations.push("Consider implementing suggested improvements")
       recommendations.push("Code quality looks good!")
     this.log("\n Error Detection "Summary": ", "INFO")
     this.log("=".repeat(50), "INFO"
-    this.log(` "Errors": ${this.errors.length}, "INFO"`)
-    this.log(`⚠  "Warnings": ${this.warnings.length}, "INFO"`)
-    this.log(` "Suggestions": ${this.suggestions.length}, "INFO"`)
+    this.log(` "Errors": ${this.errors.length}`, "INFO"`)
+    this.log(`⚠  "Warnings": ${this.warnings.length}`, "INFO"`)
+    this.log(` "Suggestions": ${this.suggestions.length}`, "INFO"`)
       this.log("\n Error "Details": ", "INFO")
         this.log(`  � ${error.file}:`, "INFO"`)
-          this.log(`    Line ${issue.line}: ${issue.message}, "ERROR"`)
+          this.log(`    Line ${issue.line}: ${issue.message}`, "ERROR"`)
     this.log(" Starting Intelligent Error Detection", "INFO")
     this.log("=".repeat(60), "INFO"
     this.log(" Scanning source code...", "INFO")
     this.scanDirectory(path.join(this.projectRoot, "src")
     this.scanDirectory(path.join(this.projectRoot, "pages")
     this.scanDirectory(path.join(this.projectRoot, "components")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
     this.log("� Error detection completed!", "SUCCESS")
     this.log("� Error detection completed!", "SUCCESS")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

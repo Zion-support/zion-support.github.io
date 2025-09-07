@@ -1,23 +1,31 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log( Starting continuous quality checks automation...")
+console.log("" Starting continuous quality checks automation...")
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log( Starting continuous quality checks automation...")
+console.log("" Starting continuous quality checks automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Running ESLint..."`)
   execSync("npm run lint", { "stdio": "inherit"})
-// console.log(" ESLint completed successfully)
-  console.log(⚠  ESLint issues found but continuing...")
+// console.log(" ESLint completed successfully"")
+  console.log(""⚠  ESLint issues found but continuing...")
 console.log(" Starting continuous quality checks automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Running ESLint..."`)
   execSync("npm run lint", { "stdio": "inherit"})
-// console.log(" ESLint completed successfully)
-  console.log(⚠  ESLint issues found but continuing...")
+// console.log(" ESLint completed successfully"")
+  console.log(""⚠  ESLint issues found but continuing...")
 // console.log("⚠  ESLint issues found but continuing...")
     console.log(" Running TypeScript type checking...")
   execSync("npm run type-check", { "stdio": "inherit"})
@@ -71,3 +79,25 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error(" Failed to start continuous quality "checks": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" Failed to start continuous quality "checks": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Failed to start continuous quality "checks": ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

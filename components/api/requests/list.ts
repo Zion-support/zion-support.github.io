@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -10,10 +8,10 @@ export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
 ) {
+origin/cursor/automate-test-improve-and-merge-code-2533
   try {
-    const raw = null;}
-}
-    res.status(200).json({ items })
+    const raw = null;
+
   } catch {
     const raw = fs && fs.readFileSync(REQUESTS_PATH, \"utf-8\");
 }
@@ -35,9 +33,14 @@ const raw = fs.readFileSync (REQUESTS_PATH, \"utf - 8\");
 const items = JSON.parse (raw);
     res.status (200).json ({ items });
   } catch {
+    res.status (200).json ({ items: [] });
+    res.status(200).json({ items: [] });
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
     res.status(200).json({ items: []}
 });
   }
 
 "
+

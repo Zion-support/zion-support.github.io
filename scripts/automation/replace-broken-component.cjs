@@ -1,14 +1,56 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 class ComponentReplacer {}
   constructor() {}
     this.projectRoot = process.cwd();
-    this.filePath = path.join(this.projectRoot,src/components/AIChatbotSystem.tsx')};
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+#!/usr/bin/env node;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const fs = require('fs');
+const path = require('path');
+class ComponentReplacer {}
+  constructor() {}
+    this.projectRoot = process.cwd();
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    this.filePath = path.join(this.projectRoot, 'src/components/AIChatbotSystem.tsx')};
   log(message) {}
-    console.log(`[${new Date().toISOString()}] ${message})};
+    console.log(`[${new Date().toISOString()}] ${message}`)};
   replaceComponent() {}
-    this.log('Replacing broken AIChatbotSystem component with working version...);
+    this.log('Replacing broken AIChatbotSystem component with working version...');
+<<<<<<< HEAD
+    const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { }
+  Bot,
+  User,
+  Send,
+  Paperclip,
+  Mic,
+  MicOff,
+  Settings,
+  X,
+  ThumbsUp,
+  ThumbsDown,
+  Sparkles,
+=======
+    
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
@@ -23,18 +65,23 @@ import { }
   ThumbsUp, 
   ThumbsDown, 
   Sparkles, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   Clock,
   MessageCircle,
   HelpCircle,
   Star;
 } from 'lucide-react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ChatMessage {}
   "id": string;"
   content: string;,"
-  sender: user' | 'bot';
-  timestamp: Date;,
-  type: text' | 'file';
-  status: sending' | 'sent' | 'error';
+
   metadata?: {}
     confidence?: number;
     suggestions?: string[];
@@ -46,23 +93,217 @@ interface AIChatbotSystemProps {}
   maxMessages?: number;
   autoScroll?: boolean};
 export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
-</AIChatbotSystemProps>
+
   const [messages, setMessages] = useState<ChatMessage[]>([]);
-</ChatMessage>
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
-</HTMLDivElement>"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  // Sample welcome message;
+  useEffect(() => {}
+    if (isOpen && messages.length === 0) {}
+      const "welcomeMessage": ChatMessage = {}
+        id: 'welcome',
+        "content": "Hello! I'm Zion AI, your intelligent assistant. I can help you "with": \\n\\n• Information about our services\\n• Technical support and guidance\\n• Project inquiries and quotes\\n• General questions about Zion Tech Group\\n\\nHow can I assist you today?",
+        "sender": 'bot',
+        "timestamp": new Date(),
+        "type": 'text',
+        "status": 'sent',
+        "metadata": {}
+          confidence: 0.95,
+          "suggestions": ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
+          "relatedServices": ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
+          "estimatedResponseTime": 2;
+        };
+      };
+      setMessages([welcomeMessage])};
+  }, [isOpen, messages.length]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  // Auto-scroll to bottom;
+  useEffect(() => {}
+    if (autoScroll && messagesEndRef.current) {}
+      messagesEndRef.current.scrollIntoView({ "behavior": 'smooth' })};
+  }, [messages, autoScroll]);
+<<<<<<< HEAD
+  // Simulate AI response;
+  const simulateAIResponse = useCallback(async ("userInput": string) => {}
+    setIsTyping(true);
+    // Simulate processing delay;
+    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+=======
+
+  // Simulate AI response;
+  const simulateAIResponse = useCallback(async ("userInput": string) => {}
+    setIsTyping(true);
+    
+    // Simulate processing delay;
+    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    const responses = [{}]
+        "content": "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
+        "suggestions": ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
+        "relatedServices": ['AI Solutions', 'Cloud Services', 'Digital Transformation'];
+      },
+      {}
+        "content": "That's a great question! Let me provide you with detailed information about our services.",
+        "suggestions": ['Learn more', 'Schedule demo', 'Request quote', 'View portfolio'],
+        "relatedServices": ['Consulting', 'Implementation', 'Support'];
+      },
+      {}
+        "content": "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences.",
+        "suggestions": ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
+        "relatedServices": ['Digital Transformation', 'Process Optimization', 'Change Management'];
+      };
+    ];
+<<<<<<< HEAD
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+=======
+
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    const "botMessage": ChatMessage = {}
+      id: Date.now().toString(),
+      "content": randomResponse.content,
+      "sender": 'bot',
+      "timestamp": new Date(),
+      "type": 'text',
+      "status": 'sent',
+      "metadata": {}
+        confidence: 0.85 + Math.random() * 0.1,
+        "suggestions": randomResponse.suggestions,
+        "relatedServices": randomResponse.relatedServices,
+        "estimatedResponseTime": 1 + Math.random() * 2;
+      };
+    };
+<<<<<<< HEAD
+    setMessages(prev => [...prev, botMessage]);
+    setIsTyping(false)}, []);
+=======
+
+    setMessages(prev => [...prev, botMessage]);
+    setIsTyping(false)}, []);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  // Handle message submission;
+  const handleSubmit = useCallback(async ("e": React.FormEvent) => {}
+    e.preventDefault();
+    if (!inputValue.trim() || isTyping) return;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    const userMessage: ChatMessage = {}
+      id: Date.now().toString(),
+      "content": inputValue.trim(),
+      "sender": 'user',
+      "timestamp": new Date(),
+      "type": 'text',
+      "status": 'sent'
+    };
+<<<<<<< HEAD
+    setMessages(prev => [...prev, userMessage]);
+    setInputValue('');
+    await simulateAIResponse(inputValue.trim())}, [inputValue, isTyping, simulateAIResponse]);
+  // Handle suggestion clicks;
+  const handleSuggestionClick = useCallback(("suggestion": string) => {}
+    setInputValue(suggestion)}, []);
+=======
+
+    setMessages(prev => [...prev, userMessage]);
+    setInputValue('');
+    
+    await simulateAIResponse(inputValue.trim())}, [inputValue, isTyping, simulateAIResponse]);
+
+  // Handle suggestion clicks;
+  const handleSuggestionClick = useCallback(("suggestion": string) => {}
+    setInputValue(suggestion)}, []);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  // Handle file upload;
+  const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}
+    const file = e.target.files?.[0];
+    if (file) {}
+      const fileMessage: ChatMessage = {}
+        id: Date.now().toString(),
+        "content": \"Uploaded: \${file.name}\",
+        "sender": 'user',
+        "timestamp": new Date(),
+        "type": 'file',
+        "status": 'sent'
+      };
+      setMessages(prev => [...prev, fileMessage])};
+  }, []);
+<<<<<<< HEAD
+  // Toggle voice input;
+  const toggleVoiceInput = useCallback(() => {}
+    setIsListening(!isListening)}, [isListening]);
+
+<<<<<<< HEAD
+=======
+=======
+
+  // Toggle voice input;
+  const toggleVoiceInput = useCallback(() => {}
+    setIsListening(!isListening)}, [isListening]);
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  // Rate response;
+  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
+    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  return ()
+=======
+"
   const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}"
-</HTMLInputElement>
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>
       {/* Chat Toggle Button */};
       <button;
         onClick={() => setIsOpen(!isOpen)};
+<<<<<<< HEAD
+        className="fixed bottom-6 right-6 w-14 h-14 bg-zion-cyan text-white rounded-full shadow-lg "hover": bg-zion-cyan/80 transition-all duration-300 z-50 flex items-center justify-center"
+        aria-label="Toggle AI Chat"
+      >
+        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};
+      </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      {/* Chat Interface */};
+=======
 </button>"
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};"
-</X>
+
       </button>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <AnimatePresence>
-</AnimatePresence>
+
           <motion.div;"
             initial={{ "opacity": 0, "y": 20, "scale": 0.95 }};
             animate={{ "opacity": 1, "y": 0, "scale": 1 }};
@@ -73,138 +314,203 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
               <div className="p-4 border-b border-zinc-700 bg-zinc-800/50 rounded-t-2xl">"
 </div>"
                 <div className="flex items-center justify-between">"
-</div>"
                   <div className="flex items-center gap-3">"
-</div>"
                     <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-blue-600 rounded-full flex items-center justify-center">"
-</div>"
                       <Bot className="w-5 h-5 text-white" />"
-</Bot>
+
                     </div>
                     <div>
-</div>"
+<<<<<<< HEAD
                       <h3 className="font-semibold text-white">Zion AI Assistant</h3>
-                      <p className="text-xs text-zinc-400">Powered by AI</p>"
+                      <p className="text-xs text-zinc-400">Powered by AI</p>
                     </div>
-                  </div>"
-                  <div className="flex items-center gap-2">"
-</div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {showSettings && (})
                       <button;
                         onClick={() => setShowSettingsPanel(!showSettingsPanel)};
-</button>"
-                        <Settings className="w-4 h-4" />"
-</Settings>
+                        className="p-2 text-zinc-400 "hover": text-white transition-colors"
+                        aria-label="Settings"
+                      >
+                        <Settings className="w-4 h-4" />
                       </button>
+                    )};
                     <button;
                       onClick={() => setIsOpen(false)};
-</button>"
-                      <X className="w-4 h-4" />"
-</X>
+                      className="p-2 text-zinc-400 "hover": text-white transition-colors"
+                      aria-label="Close chat"
+                    >
+                      <X className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
-              </div>"
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">"
-</div>
+              </div>
+            )};
+            {/* Messages */};
+            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+              {messages.map((message) => (})
                 <motion.div;
-                  key={message.id};"
+                  key={message.id};
                   initial={{ "opacity": 0, "y": 10 }};
                   animate={{ "opacity": 1, "y": 0 }};
-                  className={\"flex gap-3 \${message.sender ===user' ? 'justify-end: justify-start}\"};"
+                  className={\"flex gap-3 \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\"};
                 >
-</motion>"
-                  <div className={\"w-8 h-8 rounded-full flex items-center justify-center \${message.sender ===user' ? 'order-1 ml-2: order-2 mr-2}\"}>"
-</div>"
-                      <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">"
-</div>"
-                        <User className="w-4 h-4 text-zinc-300" />"
-</User>
-                      </div>"
-                      <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">"
-</div>"
-                        <Bot className="w-4 h-4 text-white" />"
-</Bot>
+                  {/* Avatar */};
+                  <div className={\"w-8 h-8 rounded-full flex items-center justify-center \${message.sender === 'user' ? 'order-1 ml-2' : 'order-2 mr-2'}\"}>
+                    {message.sender === 'user' ? (})
+                      <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
+                        <User className="w-4 h-4 text-zinc-300" />
                       </div>
-                  </div>"
-                  <div className={\"max-w-[80%] \${message.sender ===user' ? 'text-right: text-left}\"}>"
-</div>"
-                    <div className={\"p-3 rounded-lg \${message.sender ===user' ? 'bg-zion-cyan text-white: bg-zinc-800 text-zinc-100}\"}>"
-</div>"
+                    ) : ()
+                      <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
+                        <Bot className="w-4 h-4 text-white" />
+                      </div>
+                    )};
+                  </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+                  {/* Message Content */};
+                  <div className={\"max-w-[80%] \${message.sender === 'user' ? 'text-right' : 'text-left'}\"}>
+                    <div className={\"p-3 rounded-lg \${message.sender === 'user' ? 'bg-zion-cyan text-white' : 'bg-zinc-800 text-zinc-100'}\"}>
                       <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-                        <div className="mt-2 space-y-2">"
-</div>"
-                            <div className="flex flex-wrap gap-1">"
-</div>
+<<<<<<< HEAD
+=======
+                      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+                      {/* Message Metadata */};
+                      {message.metadata && (})
+                        <div className="mt-2 space-y-2">
+                          {message.metadata.suggestions && (})
+                            <div className="flex flex-wrap gap-1">
+                              {message.metadata.suggestions.map((suggestion, index) => (})
                                 <button;
+=======
+
+                      <p className="text-xs text-zinc-400">Powered by AI</p>"
+                  <div className="flex items-center gap-2">"
+                        onClick={() => setShowSettingsPanel(!showSettingsPanel)};
+                        <Settings className="w-4 h-4" />"
+
+                      onClick={() => setIsOpen(false)};
+                      <X className="w-4 h-4" />"
+
+            <div className="flex-1 overflow-y-auto p-4 space-y-4">"
+                <motion.div;
+                  key={message.id};"
+
+                      <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">"
+                        <User className="w-4 h-4 text-zinc-300" />"
+
+                      <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">"
+                        <Bot className="w-4 h-4 text-white" />"
+
+                        <div className="mt-2 space-y-2">"
+                            <div className="flex flex-wrap gap-1">"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                                   key={index};
                                   onClick={() => handleSuggestionClick(suggestion)};
-</button>
-                                </button>
-                            </div>"
-                            <div className="flex flex-wrap gap-1">"
-</div>
                                 <span;
-                                  key={index};"
-                                  className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full
+<<<<<<< HEAD
+                                  key={index};
+                                  className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"
                                 >
-</span>
+                                  {service};
                                 </span>
+                              ))};
                             </div>
+                          )};
                         </div>
-                    </div>"
-                    <div className={\"flex items-center gap-2 mt-2 \${message.sender ===user' ? 'justify-end: justify-start}\"}>"
-</div>"
-                      <span className="text-xs text-zinc-500">"
-</span>
-                      </span>"
-                        <div className="flex items-center gap-1">"
-</div>
-                          <button;"
-                            onClick={() => rateResponse(message.id,positive')};
-</button>'
-                            <ThumbsUp className="w-3 h-3" />"
-</ThumbsUp>
+                      )};
+                    </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+                    {/* Message Actions */};
+                    <div className={\"flex items-center gap-2 mt-2 \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\"}>
+                      <span className="text-xs text-zinc-500">
+                        {message.timestamp.toLocaleTimeString()};
+                      </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+                      {message.sender === 'bot' && (})
+                        <div className="flex items-center gap-1">
+                          <button;
+                            onClick={() => rateResponse(message.id, 'positive')};
+                            className="p-1 text-zinc-400 "hover": text-green-400 transition-colors"
+                            aria-label="Rate response positively"
+                          >
+                            <ThumbsUp className="w-3 h-3" />
                           </button>
-                          <button;"
-                            onClick={() => rateResponse(message.id,negative')};
-</button>'
-                            <ThumbsDown className="w-3 h-3" />"
-</ThumbsDown>
+                          <button;
+                            onClick={() => rateResponse(message.id, 'negative')};
+                            className="p-1 text-zinc-400 "hover": text-red-400 transition-colors"
+                            aria-label="Rate response negatively"
+                          >
+                            <ThumbsDown className="w-3 h-3" />
                           </button>
                         </div>
+                      )};
                     </div>
                   </div>
+=======
+                                  key={index};"
+
+                      <span className="text-xs text-zinc-500">"
+                      </span>"
+                        <div className="flex items-center gap-1">"
+                          <button;"
+
+                            <ThumbsDown className="w-3 h-3" />"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </motion.div>
               ))};
               {/* Typing Indicator */};
               {isTyping && (})
-                <motion.div;"
-                  initial={{ "opacity": 0 }};
-                  animate={{ "opacity": 1 }};
-                  className="flex justify-start
-                >
-</motion>"
+
                   <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">"
-</div>"
                     <div className="flex space-x-1">"
-</div>"
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ "animationDelay": 0.1s}}></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ "animationDelay": 0.2s}}></div>'
-                    </div>'
+
                     <span className="text-sm text-zinc-400">Zion AI is typing...</span>"
-                  </div>
-                </motion.div>
               )};
               <div ref={messagesEndRef} />
-</div>
-            </div>"
+<<<<<<< HEAD
+            </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+            {/* Input Area */};
+            <div className="p-4 border-t border-zinc-700/50">
+              <form onSubmit={handleSubmit} className="flex items-center gap-2">
+                <div className="flex-1 relative">
+                  <input;
+                    type="text"
+                    value={inputValue};
+                    onChange={(e) => setInputValue(e.target.value)};
+                    placeholder="Ask me anything about Zion Tech Group..."
+                    className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 "focus": outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
+                    disabled={isTyping};
+                  />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+                  {/* File Upload */};
+                  <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
+                    <input;
+                      type="file"
+                      onChange={handleFileUpload};
+=======
             <div className="p-4 border-t border-zinc-700/50">"
-</div>"
               <form onSubmit={handleSubmit} className="flex items-center gap-2">"
 </form>"
                 <div className="flex-1 relative">"
-</div>
                   <input;"
                     type="text
                     value={inputValue};
@@ -212,81 +518,121 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 </input>"
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">"
 </label>
-                    <input;"
-                      type="file
+
                       onChange={handleFileUpload};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       className="hidden"
                       accept="image/*,.pdf,.doc,.docx,.txt
                     />
-</input>"
-                    <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />"
-</Paperclip>
+<<<<<<< HEAD
+                    <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />
                   </label>
                 </div>
-                  <button;"
-                    type="button
-                    onClick={toggleVoiceInput};"
-                    className={\"p-3 rounded-lg transition-colors \${isListening ? 'bg-red-500 text-white: bg-zinc-700 text-zinc-400 "hover": bg-zinc-600}\"};
-                    aria-label="Voice input
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+                {/* Voice Input */};
+                {settings.voiceEnabled && (})
+                  <button;
+                    type="button"
+                    onClick={toggleVoiceInput};
+                    className={\"p-3 rounded-lg transition-colors \${isListening ? 'bg-red-500 text-white' : 'bg-zinc-700 text-zinc-400 "hover": bg-zinc-600'}\"};
+                    aria-label="Voice input"
                   >
-</button>"
-                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />};"
-</MicOff>
+                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />};
                   </button>
-                <button;"
-                  type="submit
-                  disabled={!inputValue.trim() || isTyping};"
+                )};
+                {/* Send Button */};
+                <button;
+                  type="submit"
+                  disabled={!inputValue.trim() || isTyping};
                   className="p-3 bg-zion-cyan text-white rounded-lg "hover": bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  aria-label="Send message
+                  aria-label="Send message"
                 >
-</button>"
-                  <Send className="w-4 h-4" />"
-</Send>
+                  <Send className="w-4 h-4" />
                 </button>
-              </form>"
+              </form>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+              {/* Quick Actions */};
+              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-3 h-3" />
+=======
+                    <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />"
+
+                  <Send className="w-4 h-4" />"
+
               <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">"
-</div>"
-                <div className="flex items-center gap-2">"
-</div>"
                   <Sparkles className="w-3 h-3" />"
-</Sparkles>
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <span>Powered by Zion AI</span>
-                </div>"
-                <div className="flex items-center gap-1">"
-</div>"
                   <Clock className="w-3 h-3" />"
-</Clock>
+
                   <span>24/7 Available</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )};
-      </AnimatePresence>
     </>
+<<<<<<< HEAD
+  )};
+";
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    fs.writeFileSync(this.filePath, workingComponent);
+    this.log('AIChatbotSystem component replaced successfully!')};
+  async run() {}
+    this.log('Starting Component Replacer...');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    try {}
+      this.replaceComponent();
+      this.log('Component Replacer completed successfully!')} catch (error) {}
+      this.log(`Error in Component "Replacer": ${error.message}`);
+=======
   )};"
 ";"
     fs.writeFileSync(this.filePath, workingComponent);"
-    this.log('AIChatbotSystem component replaced successfully!)};
-  async run() {}
-    this.log('Starting Component Replacer...);
-    try {}
-      this.replaceComponent();
-      this.log('Component Replacer completed successfully!)} catch (error) {}
-      this.log(`Error in Component "Replacer": ${error.message});"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       throw error};
   };
-};
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new ComponentReplacer();
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   automation.run();
     .then(() => {}"
-      console.log('Component Replacer completed successfully!);
-      process.exit(0)}
-});
-    .catch(error => {})
-      console.error('Component Replacer "failed": , error);
-      process.exit(1)})};
 
-'
+      process.exit(1)})};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+module.exports = ComponentReplacer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+module.exports = ComponentReplacer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = ComponentReplacer;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

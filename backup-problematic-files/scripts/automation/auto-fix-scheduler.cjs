@@ -1,4 +1,5 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -8,7 +9,7 @@ const { execSync } = require("child_process")
   "daily"
       "weekly"
       "monthly"
-  console.log(⏰ Starting Auto-Fix Scheduler...")
+  console.log(""⏰ Starting Auto-Fix Scheduler...")
     // Create logs directory if it doesn"
   console.log("⏰ Starting Auto-Fix Scheduler...")
     // Create logs directory if it doesn"
@@ -17,11 +18,11 @@ const { execSync } = require("child_process")
   fs.mkdirSync(logsDir, { "recursive"})
   const historyFile = path.join(this.projectRoot, "logs", "fix-history.json")
   const history = JSON.parse(fs.readFileSync(historyFile, "utf8")
-  console.log(⚠  Could not load fix history, starting fresh")
+  console.log(""⚠  Could not load fix history, starting fresh")
   const historyFile = path.join(this.projectRoot, "logs", "fix-history.json")
   "lastRun"
       "fixHistory"
-// console.log(� Setting up fix schedules...")
+// console.log(""� Setting up fix schedules...")
   console.log("� Running daily fixes...")
       this.recordFixRun("daily", startTime, "success")
       console.log(" Daily fixes completed successfully")
@@ -49,24 +50,24 @@ const { execSync } = require("child_process")
   console.log("� Fixing import issues...")
         const fs = require("fs")
         const path = require("path")
-            .replace(/from\\s+[]([^"]+)\\.ts["]/g, from "$1"
-            .replace(/require\\s*\\(\\s*["]([^"]+)\\.ts[]\\s*\\)/g, "require("child_process")"
+            .replace(/from\\s+[""]([^"]+)\\.ts["]/g, from "$1"
+            .replace(/require\\s*\\(\\s*["]([^"]+)\\.ts[""]\\s*\\)/g, "require("child_process")"
         const srcDir = path.join(process.cwd(), "src"
   if (filePath.endsWith(".tsx") || filePath.endsWith(".ts")
   const content = fs.readFileSync(filePath, "utf8")
-  fs.writeFileSync(filePath, fixedContent, ")"
-            if (stat.isDirectory() && !item.startsWith(`.``)"
+  fs.writeFileSync(filePath, fixedContent, ")
+            if (stat.isDirectory() && !item.startsWith(`.``)
   if (stat.isDirectory() && !item.startsWith(".")
-        console.log(" Import fixes completed)
+        console.log(" Import fixes completed"")
       const tempFile = path.join(this.projectRoot, "temp-import-fixer.js")
 execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }")
   console.error(" Import fixes "failed": ")
-        console.log(" Import fixes completed)
+        console.log(" Import fixes completed"")
       const tempFile = path.join(this.projectRoot, "temp-import-fixer.js")
 execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
   console.error(" Import fixes "failed": ")
   console.log(" Fixing syntax issues...")
-      execSync("node scripts/automation/comprehensive-error-fixer.cjs")
+      execSync("node ""scripts/automation/comprehensive-error-fixer.cjs""")
   "cwd"
         "stdio": "inherit"
   console.error(" Syntax fixes "failed": ")
@@ -77,7 +78,7 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
 // console.log(" Quick TypeScript check passed")
   console.log("⚠  Quick TypeScript check found issues")
   console.log(" Running comprehensive error fixer...")
-      execSync("node "scripts/automation/comprehensive-error-fixer.cjs)
+      execSync("node "scripts/automation/comprehensive-error-fixer.cjs"")
   "cwd"
         "stdio": "inherit"
   console.error(" Comprehensive error fixer "failed": ")
@@ -133,5 +134,16 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.log(")
   console.log(")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

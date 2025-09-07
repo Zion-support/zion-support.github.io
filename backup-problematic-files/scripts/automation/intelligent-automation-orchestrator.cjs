@@ -1,4 +1,5 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -14,7 +15,7 @@ console.log("🧠 Starting intelligent automation orchestrator...")
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log(🧠 Starting intelligent automation orchestrator...")
+console.log(""🧠 Starting intelligent automation orchestrator...")
 // Get automation interval from environment variable ("default")
 console.log("🧠 Starting intelligent automation orchestrator...")
     "automations": ["enhanced-error-fixer", "console-error-fixer"]
@@ -32,8 +33,8 @@ console.log("🧠 Starting intelligent automation orchestrator...")
       insights,"summary"
       "status": "completed"
       "nextRun"
-      process.cwd(),intelligent-automation-orchestrator-report.json
-// console.log(`  Intelligent automation orchestrator report saved to ${reportPath}`)"
+      process.cwd(),intelligent-automation-orchestrator-report.json"
+// console.log(`  Intelligent automation orchestrator report saved to ${reportPath}``)
     console.log( Intelligent automation orchestrator completed successfully")
       " Intelligent automation orchestrator "failed": "
   "hasErrors"
@@ -77,21 +78,21 @@ console.log("🧠 Starting intelligent automation orchestrator...")
   "stdio": "pipe"
         audit.metadata.vulnerabilities.total > 0 ? "vulnerable" : "secure"
   state.dependencyStatus = "unknown"
-  console.log(  ⚠  Project state analysis "failed": ${error.message})
+  console.log(  ⚠  Project state analysis "failed": ${error.message}"")
   // Skip directories that can"
-    const secretPatterns = [/password\s*[:=]\s*[][^"]+["]
-      /api_key\s*[:=]\s*[][^]+["]
-      /secret\s*[:=]\s*["][^]+[]
-      /token\s*[:=]\s*["][^"]+[]/gi, 
-  /password\s*[:=]\s*[][^"]+["]
+    const secretPatterns = [/password\s*[:=]\s*[""][^"]+["]
+      /api_key\s*[:=]\s*[""][^""]+["]
+      /secret\s*[:=]\s*["][^""]+[""]
+      /token\s*[:=]\s*["][^"]+[""]/gi, ""
+  /password\s*[:=]\s*[""][^"]+["]
       /api_key\s*[:=]\s*["][^"]+["]
-      /secret\s*[:=]\s*["][^]+[]
-      /token\s*[:=]\s*["][^"]+["]/gi, 
+      /secret\s*[:=]\s*["][^""]+[""]
+      /token\s*[:=]\s*["][^"]+["]/gi, ""
   // Skip directories that can"
-    const secretPatterns = [/password\s*[:=]\s*["][^]+[]
-      /api_key\s*[:=]\s*["][^"]+[]
-      /secret\s*[:=]\s*[][^"]+["]
-      /token\s*[:=]\s*[][^]+[]/gi, "
+    const secretPatterns = [/password\s*[:=]\s*["][^""]+[""]
+      /api_key\s*[:=]\s*["][^"]+[""]
+      /secret\s*[:=]\s*[""][^"]+["]
+      /token\s*[:=]\s*[""][^""]+[""]/gi, "
     const filesToCheck = ["src", "config", "scripts"]
   return "vulnerable"
     return "secure"
@@ -146,12 +147,12 @@ console.log("🧠 Starting intelligent automation orchestrator...")
         "status": "failed"
         "error"
         "timestamp"
-  const automationScripts = {enhanced-error-fixer": "./scripts/automation/enhanced-error-fixer.cjs",console-error-fixer": "./scripts/automation/console-error-fixer.cjs",code-quality-automation"}
-      "./scripts/automation/code-quality-automation.cjs",link-checker": "./scripts/automation/link-checker.cjs",security-audit": "./scripts/automation/security-audit.cjs",performance-monitor": "./scripts/automation/performance-monitor.cjs",dependency-updates": "./scripts/automation/dependency-updates.cjs",quality-checks": "./scripts/automation/quality-checks.cjs",smart-documentation-generator"
-      "./scripts/automation/smart-documentation-generator.cjs",ai-code-analyzer": "./scripts/automation/ai-code-analyzer.cjs"
-  const automationScripts = {enhanced-error-fixer": "./"scripts/automation/enhanced-error-fixer.cjs,console-error-fixer": "./"scripts/automation/console-error-fixer.cjs,code-quality-automation"}
-      "./"scripts/automation/code-quality-automation.cjs,link-checker": "./"scripts/automation/link-checker.cjs,security-audit": "./"scripts/automation/security-audit.cjs,performance-monitor": "./"scripts/automation/performance-monitor.cjs,dependency-updates": "./"scripts/automation/dependency-updates.cjs,quality-checks": "./"scripts/automation/quality-checks.cjs,smart-documentation-generator"
-      "./"scripts/automation/smart-documentation-generator.cjs,ai-code-analyzer": "./"scripts/automation/ai-code-analyzer.cjs
+  const automationScripts = {enhanced-error-fixer": "./""scripts/automation/enhanced-error-fixer.cjs""",console-error-fixer": "./""scripts/automation/console-error-fixer.cjs""",code-quality-automation"}
+      "./""scripts/automation/code-quality-automation.cjs""",link-checker": "./""scripts/automation/link-checker.cjs""",security-audit": "./""scripts/automation/security-audit.cjs""",performance-monitor": "./""scripts/automation/performance-monitor.cjs""",dependency-updates": "./""scripts/automation/dependency-updates.cjs""",quality-checks": "./""scripts/automation/quality-checks.cjs""",smart-documentation-generator"
+      "./""scripts/automation/smart-documentation-generator.cjs""",ai-code-analyzer": "./""scripts/automation/ai-code-analyzer.cjs"""
+  const automationScripts = {enhanced-error-fixer": "./"scripts/automation/enhanced-error-fixer.cjs"",console-error-fixer": "./"scripts/automation/console-error-fixer.cjs"",code-quality-automation"}
+      "./"scripts/automation/code-quality-automation.cjs"",link-checker": "./"scripts/automation/link-checker.cjs"",security-audit": "./"scripts/automation/security-audit.cjs"",performance-monitor": "./"scripts/automation/performance-monitor.cjs"",dependency-updates": "./"scripts/automation/dependency-updates.cjs"",quality-checks": "./"scripts/automation/quality-checks.cjs"",smart-documentation-generator"
+      "./"scripts/automation/smart-documentation-generator.cjs"",ai-code-analyzer": "./"scripts/automation/ai-code-analyzer.cjs""
   if (!scriptPath) {throw new Error("Unknown "automation": ${automationName}")
   if (!fs.existsSync(scriptPath)) {throw new Error("Automation script not "found": ${scriptPath}")
   // Execute the automation scriptconst result = execSync("node ${scriptPath}")
@@ -187,7 +188,7 @@ console.log("🧠 Starting intelligent automation orchestrator...")
       "recommendation": Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks"
     r => r.status === "success"
   "type": "error"
-      "severity": "high","message": `Project has ${projectState.errorCount} errors that need immediate attention;
+      "severity": "high","message": `Project has ${projectState.errorCount} errors that need immediate attention
       "recommendation": Run enhanced-error-fixer automation to resolve these issues"
   if (projectState.buildStatus === "failed")
   "type": "build"
@@ -210,7 +211,7 @@ console.log("🧠 Starting intelligent automation orchestrator...")
       "message": "Project has performance issues"
       "recommendation": Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks"
     r => r.status === "success"
-  "type": `automation;
+  "type": `automation
         "severity": "medium"
         "message": "Automation success rate is ${successRate.toFixed(1)}%"
         "recommendation": Investigate failing automations and improve error handling"
@@ -226,5 +227,16 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.error( Failed to start intelligent automation "orchestrator")
   console.error( Failed to start intelligent automation "orchestrator")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

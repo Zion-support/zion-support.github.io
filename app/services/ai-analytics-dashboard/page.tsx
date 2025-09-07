@@ -1,225 +1,351 @@
-// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
-  title: 'AI Analytics Dashboard | Zion Tech Group',
-  description: 'Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time business intelligence, predictive analytics, and custom reporting.',
-  keywords: 'ai-analytics, business-intelligence, data-visualization, predictive-analytics, dashboard, reporting'
+  title: 'AI-Powered Analytics Dashboard | Zion Tech Group',
+  description: 'Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and automated reporting.',
+};
+
+  title: "AI-Powered Analytics Dashboard | Zion Tech Group",
+  description:
+    "Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and automated reporting.",
+
+  title: 'Ai Analytics Dashboard - Zion Tech Group',
+  description: 'Advanced ai analytics dashboard solutions for modern businesses.',
+
 };
 
 export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI-Powered Analytics Dashboard
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transform your raw data into actionable business insights with our intelligent analytics platform. 
-            Get real-time dashboards, predictive analytics, and automated reporting that drives decision-making.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Request Demo
-            </a>
-          </div>
+    <section className="max-w-6xl mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">AI-Powered Analytics Dashboard</h1>
+      <p className="text-xl text-gray-600 mb-12">Transform your data into actionable insights with intelligent analytics, real-time visualization, and predictive modeling.</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <FeatureCard
+          title="Real-Time Analytics"
+          features={[
+            'Live data streaming',
+            'Interactive dashboards',
+            'Custom KPI tracking',
+            'Automated alerts',
+          ]}
+        />
+        <FeatureCard
+          title="AI-Powered Insights"
+          features={[
+            'Predictive modeling',
+            'Anomaly detection',
+            'Trend analysis',
+            'Smart recommendations',
+          ]}
+        />
+        <FeatureCard
+          title="Advanced Visualization"
+          features={[
+            'Custom charts & graphs',
+            'Drill-down capabilities',
+            'Mobile-responsive design',
+            'Export & sharing options',
+          ]}
+        />
         </div>
         
-        {/* Key Features */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <div className="text-4xl mb-4">📊</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Real-time Dashboards</h3>
-            <p className="text-gray-300 mb-6">Interactive dashboards that update in real-time with customizable widgets and KPI tracking.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Live data streaming and updates</li>
-              <li>• Customizable widget library</li>
-              <li>• Drag-and-drop dashboard builder</li>
-              <li>• Mobile-responsive design</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <div className="text-4xl mb-4">🔮</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Predictive Analytics</h3>
-            <p className="text-gray-300 mb-6">AI-powered forecasting and trend analysis to predict future outcomes and identify opportunities.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Machine learning forecasting models</li>
-              <li>• Trend analysis and pattern recognition</li>
-              <li>• Anomaly detection and alerts</li>
-              <li>• What-if scenario planning</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <div className="text-4xl mb-4">🤖</div>
-            <h3 className="text-2xl font-bold text-white mb-4">AI Insights Engine</h3>
-            <p className="text-gray-300 mb-6">Automated insights generation that explains data patterns and suggests actionable recommendations.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Natural language insights</li>
-              <li>• Automated report generation</li>
-              <li>• Smart recommendations</li>
-              <li>• Voice-activated queries</li>
-            </ul>
-          </div>
+        <div className="bg-white rounded-lg p-6 shadow-lg">
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">AI-Powered Insights</h3>
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              <span className="text-gray-600">Predictive modeling</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              <span className="text-gray-600">Anomaly detection</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              <span className="text-gray-600">Trend analysis</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              <span className="text-gray-600">Smart recommendations</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div className="bg-white rounded-lg p-6 shadow-lg">
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">Advanced Visualization</h3>
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              <span className="text-gray-600">Interactive charts</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              <span className="text-gray-600">Custom reports</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              <span className="text-gray-600">Data export</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              <span className="text-gray-600">Mobile responsive</span>
+            </li>
+          </ul>
         </div>
 
-        {/* Industry Solutions */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">Industry-Specific Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-              <div className="text-3xl mb-4">🛒</div>
-              <h3 className="text-xl font-bold text-white mb-3">E-commerce</h3>
-              <p className="text-gray-300 text-sm">Customer behavior analysis, conversion tracking, inventory optimization</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-              <div className="text-3xl mb-4">🏥</div>
-              <h3 className="text-xl font-bold text-white mb-3">Healthcare</h3>
-              <p className="text-gray-300 text-sm">Patient outcomes, resource utilization, clinical decision support</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-              <div className="text-3xl mb-4">🏦</div>
-              <h3 className="text-xl font-bold text-white mb-3">Finance</h3>
-              <p className="text-gray-300 text-sm">Risk assessment, fraud detection, portfolio optimization</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-              <div className="text-3xl mb-4">🏭</div>
-              <h3 className="text-xl font-bold text-white mb-3">Manufacturing</h3>
-              <p className="text-gray-300 text-sm">Quality control, predictive maintenance, supply chain optimization</p>
-            </div>
-          </div>
-        </div>
+      </div>
 
-        {/* Pricing Section */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">Flexible Pricing Plans</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-blue-400 mb-6">$499<span className="text-lg text-gray-300">/month</span></div>
-              <ul className="space-y-3 text-gray-300 mb-8">
-                <li>• Up to 5 data sources</li>
-                <li>• 3 custom dashboards</li>
-                <li>• Basic AI insights</li>
-                <li>• Email support</li>
-                <li>• Standard integrations</li>
-                <li>• 1GB data storage</li>
-              </ul>
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Analytics Starter Plan"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors block text-center"
-              >
-                Get Started
-              </a>
-            </div>
-
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-8 border-2 border-blue-400">
-              <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-                Most Popular
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-blue-400 mb-6">$1,299<span className="text-lg text-gray-300">/month</span></div>
-              <ul className="space-y-3 text-gray-300 mb-8">
-                <li>• Up to 20 data sources</li>
-                <li>• Unlimited dashboards</li>
-                <li>• Advanced AI insights</li>
-                <li>• Priority support</li>
-                <li>• Custom integrations</li>
-                <li>• 10GB data storage</li>
-                <li>• Predictive analytics</li>
-                <li>• API access</li>
-              </ul>
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Analytics Professional Plan"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors block text-center"
-              >
-                Get Started
-              </a>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-blue-400 mb-6">Custom<span className="text-lg text-gray-300"> pricing</span></div>
-              <ul className="space-y-3 text-gray-300 mb-8">
-                <li>• Unlimited data sources</li>
-                <li>• White-label solution</li>
-                <li>• Custom AI models</li>
-                <li>• Dedicated support</li>
-                <li>• On-premise deployment</li>
-                <li>• Unlimited storage</li>
-                <li>• Advanced security</li>
-                <li>• SLA guarantees</li>
-              </ul>
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Analytics Enterprise Plan"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors block text-center"
-              >
-                Contact Sales
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* ROI Section */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Proven Business Impact</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Benefits</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex items-start">
+            <span className="text-green-500 mr-3 text-xl">✓</span>
             <div>
-              <div className="text-4xl font-bold text-green-400 mb-2">35%</div>
-              <div className="text-gray-300">Faster decision making</div>
+              <h3 className="font-semibold text-gray-900">Data-Driven Decisions</h3>
+              <p className="text-gray-600">
+                Make informed business decisions with real-time data and AI insights
+              </p>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-green-400 mb-2">50%</div>
-              <div className="text-gray-300">Reduction in reporting time</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-green-400 mb-2">25%</div>
-              <div className="text-gray-300">Increase in operational efficiency</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime guarantee</div>
-            </div>
-          </div>
-        </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Unlock Your Data's Potential?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join 200+ companies using our AI analytics platform to make data-driven decisions. 
-            Schedule a free demo and see your data in action.
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Ai Analytics Dashboard
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your business with our advanced ai analytics dashboard solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Email kleber@ziontechgroup.com
-            </a>
-          </div>
-          <div className="mt-8 text-gray-400">
-            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <Link href="/contact" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
+              Get Started
+              <ArrowRightIcon className="h-5 w-5 ml-2" />
+            </Link>
+            <Link href="/services" className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors">
+              View All Services
+            </Link>
+
           </div>
         </div>
+      </div>
+
+    <section className="max-w-6xl mx-auto px-4 py-16">"
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">;
+        AI-Powered Analytics Dashboard;
+      </h1>"
+      <p className="text-xl text-gray-600 mb-12">
+        Transform your data into actionable insights with intelligent analytics,
+        real-time visualization, and predictive modeling.
+      </p>
+"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <FeatureCard"
+          title="Real-Time Analytics"
+          features={["
+            "Live data streaming","
+            "Interactive dashboards","
+            "Custom KPI tracking","
+            "Automated alerts",
+          ]}
+        />
+        <FeatureCard"
+          title="AI-Powered Insights"
+          features={["
+            "Predictive modeling","
+            "Anomaly detection","
+            "Trend analysis","
+            "Smart recommendations",
+          ]}
+        />
+        <FeatureCard"
+          title="Advanced Visualization"
+          features={["
+            "Custom charts & graphs","
+            "Drill-down capabilities","
+            "Mobile-responsive design","
+            "Export & sharing options",
+          ]}
+        />
+      </div>
+"
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">"
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Benefits</h2>"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+          <div className="flex items-start">"
+            <span className="text-green-500 mr-3 text-xl">✓</span>
+            <div>"
+              <h3 className="font-semibold text-gray-900">
+                Data-Driven Decisions;
+              </h3>"
+              <p className="text-gray-600">
+                Make informed business decisions with real-time data and AI;
+                insights;
+              </p>
+            </div>
+          </div>"
+          <div className="flex items-start">"
+            <span className="text-green-500 mr-3 text-xl">✓</span>
+            <div>"
+              <h3 className="font-semibold text-gray-900">Cost Reduction</h3>"
+              <p className="text-gray-600">
+                Identify inefficiencies and optimize operations to reduce costs;
+                by up to 30%
+              </p>
+            </div>
+          </div>"
+          <div className="flex items-start">"
+            <span className="text-green-500 mr-3 text-xl">✓</span>
+            <div>"
+              <h3 className="font-semibold text-gray-900">Scalable Solution</h3>"
+              <p className="text-gray-600">
+                Grows with your business from startup to enterprise scale;
+              </p>
+            </div>
+          </div>"
+          <div className="flex items-start">"
+            <span className="text-green-500 mr-3 text-xl">✓</span>
+            <div>"
+              <h3 className="font-semibold text-gray-900">Easy Integration</h3>"
+              <p className="text-gray-600">
+                Connect with 100+ data sources and existing business tools;
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Pricing />
+
+      <div className="mt-16 text-center">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Data?</h2>
+        <p className="text-gray-600 mb-6">Get started with a free consultation and see how AI analytics can boost your business performance.</p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a"
+            href="tel:+13024640950""
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Call +1 302 464 0950;
+          </a>
+          <a"
+            href="mailto:kleber@ziontechgroup.com""
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Email Us;
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FeatureCard({}
+  title,
+  features,
+}: {}
+  title: string;
+  features: string[];
+}) {}
+  return ("
+    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">"
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>"
+      <ul className="space-y-2 text-gray-600">
+        {features.map((f) => ("
+          <li key={f} className="flex items-center">"
+            <span className="text-blue-500 mr-2">•</span> {f}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function Pricing() {}
+  return ("
+    <div className="mt-16">"
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Pricing Plans;
+      </h2>"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <Plan
+          name="Starter"
+          price="$299/mo"
+          features={[
+            'Up to 5 data sources',
+            'Basic dashboards',
+            'Email reports',
+            'Standard support',
+          ]}
+        />
+        <Plan
+          name="Professional"
+          price="$799/mo"
+          features={[
+            'Up to 20 data sources',
+            'Advanced AI insights',
+            'Real-time alerts',
+            'Priority support',
+            'Custom visualizations',
+          ]}
+          popular={true}
+        />
+        <Plan
+          name="Enterprise"
+          price="$1,999/mo"
+          features={[
+            'Unlimited data sources',
+            'Custom AI models',
+            'White-label solution',
+            'Dedicated support',
+            'On-premise deployment',
+          ]}
+        />
       </div>
     </div>
   );
 }
+
+function Plan({}
+  name,
+  price,
+  features,
+  popular = false,
+}: {}
+  name: string;
+  price: string;
+  features: string[];
+  popular?: boolean;
+}) {}
+  return (
+    <div"
+      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-blue-500 ring-2 ring-blue-200" : "border-gray-200"}`}
+    >
+      {popular && ("
+        <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+          Most Popular;
+        </div>
+      )}"
+      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>"
+      <div className="text-3xl font-bold text-blue-600 mb-4">{price}</div>"
+      <ul className="space-y-2 text-gray-600 mb-6">
+        {features.map((f) => ("
+          <li key={f} className="flex items-center">"
+            <span className="text-green-500 mr-2">✓</span> {f}
+          </li>
+        ))}
+      </ul>
+      <a
+        href="tel:+13024640950"
+        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
+          popular
+            ? 'bg-blue-600 text-white hover:bg-blue-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+        }`}
+      >
+        Get Started;
+      </a>
+
+    </div>
+  );
+}
+
+"`

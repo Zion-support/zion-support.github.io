@@ -52,12 +52,9 @@ class AggressiveCleanupV2 {
 
     // Check if file contains any parsing errors
     const hasParsingError = parsingErrors.some(error => content.includes(error));
-    
     // Check for problematic patterns
     const problematicPatterns = [
-      /<<<<<<< HEAD/,
-      /=======/,
-      />>>>>>> .*/,
+      /
       /Error: Parsing error/,
       /Declaration or statement expected/,
       /Property assignment expected/,
@@ -78,7 +75,6 @@ class AggressiveCleanupV2 {
     ];
 
     const hasProblematicPattern = problematicPatterns.some(pattern => pattern.test(content));
-    
     // Check if file is in disabled directories
     const isDisabled = filePath.includes('src.disabled') || 
                       filePath.includes('components.disabled') || 
@@ -95,7 +91,6 @@ class AggressiveCleanupV2 {
   async processFile(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
-      
       // Skip if file is empty
       if (content.trim().length === 0) {
         this.log(`Skipping empty file: ${filePath}`, 'WARNING');
@@ -114,9 +109,9 @@ class AggressiveCleanupV2 {
       try {
         // Remove merge conflict markers
         let fixedContent = content
-          .replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> .*\n/g, '$1')
-          .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> .*\n/g, '')
-          .replace(/=======[\s\S]*?>>>>>>> .*\n/g, '');
+          .replace(/
+          .replace(/
+          .replace(/
 
         // Basic syntax fixes
         fixedContent = fixedContent
@@ -181,7 +176,6 @@ class AggressiveCleanupV2 {
       });
 
       this.log(`Processing ${files.length} files matching pattern: ${pattern}`, 'INFO');
-      
       for (const file of files) {
         await this.processFile(file);
       }
@@ -194,7 +188,6 @@ class AggressiveCleanupV2 {
     const duration = Date.now() - this.startTime;
     const totalProcessed = this.filesProcessed + this.filesDeleted;
     const successRate = totalProcessed > 0 ? ((this.filesFixed + this.filesDeleted) / totalProcessed) * 100 : 0;
-    
     const report = {
       timestamp: new Date().toISOString(),
       duration: `${Math.round(duration / 1000)}s`,
@@ -208,7 +201,6 @@ class AggressiveCleanupV2 {
 
     const reportPath = path.join(this.projectRoot, 'aggressive-cleanup-v2-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
     this.log('📊 Aggressive Cleanup V2 Report Generated', 'SUCCESS');
     this.log(`✅ Files Processed: ${report.filesProcessed}`);
     this.log(`🔧 Files Fixed: ${report.filesFixed}`);

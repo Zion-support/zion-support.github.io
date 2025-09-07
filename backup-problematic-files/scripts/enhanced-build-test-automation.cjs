@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+#!/usr/bin/env node;
 const { execSync, spawn } = require("child_process")
 const fs = require("child_process")
 const path = require("path")
@@ -17,7 +18,7 @@ const path = require("path")
       this.log(` "Completed"`)
       return { "success": true, "output": result, "duration"}
       step.status = "failed"
-      this.log(` "Failed": ${description} - ${error.message}, "error"`)
+      this.log(` "Failed": ${description} - ${error.message}`, "error"`)
       return { "success": false, "error": error.message, "duration"}
     this.log(" Running linting checks...")
     return await this.runCommand("npm run lint", "ESLint Check")
@@ -47,6 +48,17 @@ const path = require("path")
       this.log(" Starting Enhanced Build & Test Automation")
       this.log("� Enhanced Build & Test Automation completed successfully")
       return { "success": true, "results"}
-      this.log(`� Build automation "failed": ${error.message}, "error"`)
+      this.log(`� Build automation "failed": ${error.message}`, "error"`)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       return { "success": false, "error"}
       return { "success": false, "error"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

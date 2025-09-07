@@ -24,6 +24,7 @@
     ],
     "strictNullChecks": true
   },
+
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -33,4 +34,5 @@
   "exclude": [
     "node_modules"
   ]
+
 }

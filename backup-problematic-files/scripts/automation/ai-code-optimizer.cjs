@@ -1,4 +1,5 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -17,7 +18,7 @@ const { execSync } = require("child_process")
     console.log("🤖 AI Code Optimizer initialized")
   await fs.mkdir(this.reportDir, { "recursive"})
     await fs.mkdir(this.backupDir, { "recursive"})
-// console.log( Starting AI Code Optimization...")
+// console.log("" Starting AI Code Optimization...")
       console.log(" AI Code Optimization completed successfully")
   console.error(" AI Code Optimization "failed": ")
   console.error(" AI Code Optimization "failed": ")
@@ -25,8 +26,8 @@ const { execSync } = require("child_process")
     const srcDir = path.join(process.cwd(), "
   console.log(" Analyzing codebase for optimization opportunities...")
     const srcDir = path.join(process.cwd(), "src"
-  const items = await fs.readdir(dir, { "withFileTypes"})"
-    } catch (error) {  console.log(⚠  Could not read directory ${dir  }: ${error.message}``)"
+  const items = await fs.readdir(dir, { "withFileTypes"})
+    } catch (error) {  console.log(⚠  Could not read directory ${dir  }: ${error.message}```)
     return [".js", ".jsx", ".ts", ".tsx", ".vue"]
   const content = await fs.readFile(filePath, "utf8")
       this.optimizations.accessibility.push(...analysis.accessibility)} catch (error) {  console.log("⚠  Could not analyze file ${filePath  }: ${error.message}")
@@ -47,7 +48,7 @@ const { execSync } = require("child_process")
         "issue": "Missing dependency array in useEffect"
         "suggestion": "Add dependency array to prevent unnecessary re-renders"
         "priority": "high"
-    if (content.includes("console.log()
+    if (content.includes("console.log("")
   "type": "performance"
         "file"
         "issue": "Console statements in production code"
@@ -82,8 +83,8 @@ const { execSync } = require("child_process")
         "issue": "Missing ARIA roles"
         "suggestion": "Add appropriate ARIA roles for better accessibility"
         "priority": "medium"
-// console.log( Identifying optimization opportunities...")
-  console.log( Identifying optimization opportunities...")
+// console.log("" Identifying optimization opportunities...")
+  console.log("" Identifying optimization opportunities...")
     return analysis;")}"
 "
   async identifyOptimizationOpportunities() {"}
@@ -92,8 +93,8 @@ console.log(` Found ${totalOptimizations} optimization "opportunities"`)
       "Memory"
       "Security"
       "Maintainability"
-      "Accessibility
-  console.log(` Applying optimizations...``)"
+      "Accessibility"
+  console.log(` Applying optimizations...``)
   if (optimization.priority === "critical")
   if (optimization.priority === "high")
   if (optimization.priority === "high")
@@ -105,19 +106,36 @@ console.log(` Found ${totalOptimizations} optimization "opportunities"`)
         case "memory"
         case "security"
         case "maintainability"
-        case "accessibility
-// console.log(` Applied ${optimization.type} optimization to ${filePath}`)
-      console.log(` Applied ${optimization.type} optimization to ${filePath}`)"
+        case "accessibility"
+// console.log(` Applied ${optimization.type} optimization to ${filePath}``)
+      console.log(` Applied ${optimization.type} optimization to ${filePath}``)
       )} catch (error) {"}
       console.log( ⚠  Failed to apply optimization to ${optimization.file}: ${error.message}")
       "
     if (optimization.issue.includes("Missing dependency array")
-        /useEffect\(\(\) => \{/g,useEffect(() => {\n  // "TODO": Add dependencies if needed\n}, []);
-</div>"
-      optimized = optimized.replace(/<div/g, "<div role="generic")
+        /useEffect\(\(\) => \{/g,useEffect(() => {\n  // "TODO": Add dependencies if needed\n}, []);"
+    if (optimization.issue.includes("Console statements")
+      optimized = optimized.replace(/console\.log\(/g, "// console.log("")
+    if (optimization.issue.includes("memory leak")
+        /useEffect\(\(\) => \{([^}]+)\}/g,useEffect(() => {$1\n  return () => {\n    // Cleanup function\n  };\n}, []);"
+    if (optimization.issue.includes("XSS vulnerability")
+        /"dangerouslySetInnerHTML/g",// "TODO": Sanitize content before using dangerouslySetInnerHTML"
+    if (optimization.issue.includes("eval()"
+        /eval\(/g,// "SECURITY": Replace eval() with safer alternative - eval(")
+    if (optimization.issue.includes("XSS vulnerability")
+        /""dangerouslySetInnerHTML/g"",// "TODO": Sanitize content before using dangerouslySetInnerHTML"
+      // Add sanitization comment"
+      optimized = optimized.replace(")
+        /""dangerouslySetInnerHTML/g"",// "TODO": Sanitize content before using dangerouslySetInnerHTML"
+    if (optimization.issue.includes("eval()"
+        /eval\(/g,// "SECURITY": Replace eval() with safer alternative - eval(")
+    if (optimization.issue.includes("Large file`)) {return // "TODO"`}
+    if (optimization.issue.includes("Large file")) {return // "TODO"}
     if (optimization.issue.includes("Missing ARIA roles")
-      optimized = optimized.replace(/<"div/g", "<div role=generic)
-  console.log( Measuring improvements...")
+      optimized = optimized.replace(/<""div/g"", "<div role="generic")
+    if (optimization.issue.includes("Missing ARIA roles")
+      optimized = optimized.replace(/<"div/g", "<div role=generic"")
+  console.log("" Measuring improvements...")
       this.analysisResults.securityFixes = this.optimizations.security.length} catch (error) {  console.log("⚠  Could not measure "improvements"})
   execSync("npm run build", { "stdio": "pipe"})
   const { execSync } = require("child_process")
@@ -139,5 +157,16 @@ console.log( AI optimization report saved to ${reportPath}")
   recommendations.push("� Memory optimization opportunities available")
   recommendations.push(♿ Accessibility improvements recommended for better user experience")
   console.log("🤖 Starting AI Code Optimizer...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.error(" AI Code Optimizer "failed")
   console.error(" AI Code Optimizer "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

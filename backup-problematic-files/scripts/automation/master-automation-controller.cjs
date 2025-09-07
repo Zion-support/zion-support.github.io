@@ -1,4 +1,5 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -22,14 +23,14 @@ const { execSync } = require("child_process")
       this.automations.set("merge-conflict-resolver")
       this.log(" Merge Conflict Resolver initialized")
   this.log( Failed to initialize Merge Conflict "Resolver": ${error.message  }")
-    const automationScripts = ["comprehensive-error-fixer.cjs", "typescript-error-fixer.cjs, "console-error-fixer.cjs", "performance-monitor.cjs, "health-checker.cjs", "git-operations-manager.cjs, "dependency-manager.cjs", "build-optimizer.cjs, ]
+    const automationScripts = ["comprehensive-error-fixer.cjs", "typescript-error-fixer.cjs"", "console-error-fixer.cjs", "performance-monitor.cjs"", "health-checker.cjs", "git-operations-manager.cjs"", "dependency-manager.cjs", "build-optimizer.cjs"", ""]
   const MergeConflictResolver = require("./merge-conflict-resolver.cjs")
       this.automations.set("merge-conflict-resolver")
       this.log(" Merge Conflict Resolver initialized")
   this.log( Failed to initialize Merge Conflict "Resolver": ${error.message}")
     const automationScripts = ["comprehensive-error-fixer.cjs", "typescript-error-fixer.cjs", "console-error-fixer.cjs", "performance-monitor.cjs", "health-checker.cjs", "git-operations-manager.cjs", "dependency-manager.cjs", "build-optimizer.cjs", "]
           if (AutomationClass && typeof AutomationClass === "function")
-            const name = script.replace(".cjs", )
+            const name = script.replace(".cjs", "")
   this.log(" Monitoring automation status...")
   this.log(" Monitoring automation status...")
       await this.generateHealthReport()} catch (error) {  this.log(` Error during "monitoring"`})
@@ -40,10 +41,10 @@ const { execSync } = require("child_process")
             "⚠ ${app.name} using high CPU (${app.monit.cpu}%), monitoring..."
         if (app.pm2_env && app.pm2_env.status === "errored") {this.log("⚠ ${app.name} is in error state, attempting restart...")
           this.log(⚠ ${app.name} using high memory (${Math.round(app.monit.memory / 1024 / 1024)}MB), restarting..."
-  try {this.log(`� Restarting ${name}...`);execSync(`pm2 restart ${name}, { "stdio": "pipe"`})
+  try {this.log(`� Restarting ${name}...`);execSync(`pm2 restart ${name}`, { "stdio": "pipe"`})
   "stdio": "pipe"
-  try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}, { "stdio": "pipe"`})
-  try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}, { "stdio": "pipe"`})
+  try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": "pipe"`})
+  try {this.log(`� Stopping ${name}...`);execSync(`pm2 stop ${name}`, { "stdio": "pipe"`})
   "timestamp"
         "controllerStatus"
           "automationsCount"
@@ -114,5 +115,16 @@ const { execSync } = require("child_process")
         "default"
     } catch (error) {  this.log(` Command "failed"`})
   process.on("SIGINT")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   process.on("SIGTERM")
   process.on("SIGTERM")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

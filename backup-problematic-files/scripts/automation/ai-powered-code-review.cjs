@@ -1,4 +1,5 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -6,7 +7,7 @@ const { execSync, spawn } = require("child_process")
       "ai-code-review.log"
       this.projectRoot,logs"
       "code-review-history.json"
-  console.log(🤖 AI-Powered Code Review System Initialized")
+  console.log(""🤖 AI-Powered Code Review System Initialized")
   fs.mkdirSync(logDir, { "recursive"})
   const data = fs.readFileSync(this.reviewHistory, "utf8")
   "totalReviews"
@@ -29,7 +30,7 @@ const { execSync, spawn } = require("child_process")
         "totalAutoFixes"
         "lastReview"
         "reviewStats"
-// console.log( Starting continuous code review...")
+// console.log("" Starting continuous code review...")
   console.log("� Performing comprehensive code review...")
   "timestamp"
       "duration"
@@ -38,13 +39,13 @@ const { execSync, spawn } = require("child_process")
       "improvements"
       "autoFixes"
       "summary"
-  // Review TypeScript/JavaScript
+  // Review ""TypeScript/JavaScript""
   // Review "TypeScript/JavaScript"
-      console.log( Code review completed in ${reviewResults.duration}ms);console.log( Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements)
+      console.log( Code review completed in ${reviewResults.duration}ms);console.log( Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements"")
   console.error(" Error during code "review": ")
   console.error(" Error during code "review": ")
 this.logError("Code review failed")
-  console.log( Reviewing TypeScript/JavaScript files...")
+  console.log("" Reviewing ""TypeScript/JavaScript"" files...")
     const tsFiles = this.findFiles(["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx")]
   const content = fs.readFileSync(file, ")
         results.filesReviewed++;"
@@ -59,7 +60,7 @@ this.logError("Code review failed")
         "message": "Usage of "any type detected. Consider using proper TypeScript types."
         "line": this.findLineNumber(content, "any")
         "suggestion": "Replace with specific interface or union type"
-    const importMatches = content.match(/import\s+.*\s+from\s+["][^]+[)]
+    const importMatches = content.match(/import\s+.*\s+from\s+["][^""]+["")]
   "file"
             "type": "typescript"
             "severity": "info","message": "Unused import ${importedItem}"
@@ -73,10 +74,10 @@ this.logError("Code review failed")
   "file"
         "type": "react"
         "severity": "info"
-        "message": "Consider adding dependencies to useEffect or using useCallback/useMemo"
+        "message": "Consider adding dependencies to useEffect or using ""useCallback/useMemo"""
         "line": this.findLineNumber(content, "useEffect")
         "suggestion": "Review useEffect dependencies for optimization"
-// console.log(⚛ Reviewing React components...")
+// console.log(""⚛ Reviewing React components...")
   console.log("⚛ Reviewing React components...")
     const reactFiles = this.findFiles(["**/*.tsx", "**/*.jsx")]
   const content = fs.readFileSync(file, "utf8")
@@ -111,7 +112,7 @@ this.logError("Code review failed")
         "message": "Button missing accessibility attributes"
         "line": this.findLineNumber(content, "<button")
         "suggestion": "Add aria-label or aria-labelledby for screen readers"
-  console.log(⚙ Reviewing configuration files...")
+  console.log(""⚙ Reviewing configuration files...")
     const configFiles = ["package.json", "tsconfig.json", "next.config.js", "tailwind.config.js", "eslint.config.js"]
   const content = fs.readFileSync(configFile, "utf8")
   const results = { "issues": [], "improvements"}
@@ -139,7 +140,7 @@ this.logError("Code review failed")
             "suggestion": "Remove --inspect flag from production scripts"
   console.error("Error parsing package."json": ")
   console.error("Error parsing package."json": ")
-  console.log(� Reviewing package dependencies...")
+  console.log(""� Reviewing package dependencies...")
       const outdatedCheck = execSync("npm outdated --json")
   "cwd"
         "encoding": "utf8"
@@ -168,10 +169,10 @@ this.logError("Code review failed")
               "type": "security"
               "severity": "high","message"
               "line": 0,"suggestion": `Run "npm audit fix"
-// console.log(No dependency issues found")
-  console.log(🧠 Generating AI-powered suggestions...")
-// console.log(No dependency issues found")
-  console.log(🧠 Generating AI-powered suggestions...")
+// console.log(""No dependency issues found")
+  console.log(""🧠 Generating AI-powered suggestions...")
+// console.log(""No dependency issues found")
+  console.log(""🧠 Generating AI-powered suggestions...")
   "file": "AI Analysis"
         "type": "ai-suggestion"
         "severity": "info"
@@ -191,10 +192,10 @@ this.logError("Code review failed")
         "suggestion": "Consider implementing stricter TypeScript configuration and linting rules"
   "message": "Security vulnerabilities detected"
         "suggestion": "Prioritize security fixes and implement automated security scanning"
-  console.log( Applying automatic fixes...")
+  console.log("" Applying automatic fixes...")
   if (issue.severity === "info" && issue.type === ")
-  if (issue.severity === "info" && issue.type === "typescript")"
-  if (issue.message.includes(`Unused import``)"
+  if (issue.severity === "info" && issue.type === "typescript")
+  if (issue.message.includes(`Unused import``)
         const content = fs.readFileSync(issue.file, "utf8")
         const lines = content.split("\n")
         if (importLine.includes("import")
@@ -234,18 +235,34 @@ this.logError("Code review failed")
   fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n"
   console.error("Error logging "error": ")
   console.error("Error logging "error": ")
-  console.log(� Setting up file change monitoring...")
+  console.log(""� Setting up file change monitoring...")
     // In production, you"
   console.log("� Setting up file change monitoring...")
     // In production, you"
   const gitStatus = execSync("git status --porcelain")
   "cwd"
         "encoding": "utf8"
-  console.log(� Changes detected, performing quick review...")
+  console.log(""� Changes detected, performing quick review...")
   if (file.endsWith(".ts") || file.endsWith(".tsx")
   const gitStatus = execSync("git status --porcelain")
   "cwd"
         "encoding": "utf8"
         .split("\n")
+        .map(line => line.split(" ")
+        .filter(file => file && !file.startsWith(".")
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  const content = fs.readFileSync(filePath, ")
+  const content = fs.readFileSync(filePath, ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
         .map(line => line.split(" ")"
-</button>"
+</button>"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,8 @@
+:types/reviews.ts
+export type ProjectStatus = 'InProgress' | 'Completed';
 
 export type ProjectStatus = 'InProgress' | 'Completed';'
+:temp-disabled/types/reviews.ts
 export type Project = {
   id: string;,
 
@@ -10,28 +13,24 @@ export type Project = {
   createdAt: Date;
 
   updatedAt: Date;
-}'
-export type ReviewRole = 'client' | 'talent';'
+}
+export type ReviewRole = 'client' | 'talent';
 export type ReviewCategoryScores = {
   communication?: number; // 1-5 optional;
   qualityOfWork?: number; // 1-5 optional;
   timeliness?: number; // 1-5 optional;
   wouldWorkWithAgain?: boolean; // optional;
-}
   clientId: string, // slug for client/user;
   talentSlug: string, // slug from TALENT_PROFILES;
   title: string;,
   status: ProjectStatus,;
   completedAt?: string, // ISO string;
-};'
-export type ReviewRole = 'client' | 'talent';'
-export type ReviewCategoryScores = {
+};
   communication?: number, // 1-5 optional;
   qualityOfWork?: number, // 1-5 optional;
   timeliness?: number, // 1-5 optional;
   wouldWorkWithAgain?: boolean, // optional;
 export type Review = {
-  id: string;,
   projectId: string;
   fromRole: ReviewRole;,
   fromId: string, // clientId or talentSlug depending on fromRole;
@@ -55,24 +54,28 @@ export type ReviewsSummary = {
   totalReviews: number;
   totalCompletedProjects: number;,
   mostRecent: PublicReview[];
-'
-export type ProjectStatus = 'InProgress' | 'Completed','
-export type Project = {
+
+export type ProjectStatus = 'InProgress' | 'Completed',
   id: string,
   client_id: string, // slug for client / user;
   talent_slug: string, // slug from TALENT_PROFILES;
   title: string,
   status: ProjectStatus,
   completed_at?: string, // ISO string;
-},'
-export type ReviewRole = 'client' | 'talent','
-export type ReviewCategoryScores = {
+},
+export type ReviewRole = 'client' | 'talent',
   communication?: number, // 1 - 5 optional;
 
   qualityOfWork?: number, // 1 - 5 optional;
+:types/reviews.ts
+  timeliness?: number, // 1 - 5 optional;
+  project_id: string,
+  from_role: ReviewRole,
+  from_id: string, // client_id or talent_slug depending on from_role;
   timeliness?: number, // 1 - 5 optional;}
   wouldWorkWithAgain?: boolean, // optional;}
 },export type Review = {id: string,project_id: string,from_role: ReviewRole,from_id: string, // client_id or talent_slug depending on from_role;
+:temp-disabled/types/reviews.ts
   to_role: ReviewRole, // opposite of from_role;
 
   to_id: string, // target id (talent_slug or client_id);
@@ -80,20 +83,19 @@ export type ReviewCategoryScores = {
   text: string,
   categories?: ReviewCategoryScores,
   anonymous?: boolean,
-  approved: boolean, // admin moderated visibility;
   reported: boolean,
   reports?: { reason: string, reported_at: string }[],
   removed?: boolean,
   created_at: string, // ISO;
-},'
-export type PublicReview = Omit < Review 'from_id'> & { author_name: string },'
-export type ReviewsSummary = {
+export type PublicReview = Omit < Review 'from_id'> & { author_name: string },
   average_rating: number,
   total_reviews: number,
   totalCompletedProjects: number,
   most_recent: PublicReview[];
 
+:types/reviews.ts
 }
 };
 '
 
+:temp-disabled/types/reviews.ts

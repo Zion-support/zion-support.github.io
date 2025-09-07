@@ -1,4 +1,53 @@
+:src/components/talent/SortDropdown.tsx
+import {
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 
+interface SortDropdownProps {
+  sortOption: string;
+  setSortOption: (option: string) => void
+}
+export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+<Button
+          variant='outline'
+          className='w-full justify-between border-zion-blue-light text-white'
+        >
+          <div className='flex items-center gap-2'>
+            <SortDesc className='h-4 w-4 text-zion-purple' />
+            {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label |
+              'Sort by'}
+          </div>
+          <ChevronDown className='h-4 w-4 ml-2 opacity-50' />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent
+        align='start'
+        className='w-[200px] bg-zion-blue-dark border-zion-blue-light'
+      >
+        {SORT_OPTIONS.map(option => (
+          <DropdownMenuItem
+            key={option.value}
+            onClick={() => setSortOption(option.value)}
+            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+sortOption === option.value
+                ? 'bg-zion-purple/20 text-zion-purple'
+                : ''
+            }`}
+          >
+            {option.label}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+:temp-disabled/src/components/talent/SortDropdown.tsx
 DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
@@ -12,8 +61,6 @@ DropdownMenu;
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
 interface SortDropdownProps {;
   sortOption: string,;
-  setSortOption: (option: string) => void;
-}
 
 export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdownProps) {;
   return (
@@ -21,94 +68,73 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
 
           </div>"
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />"
-</ChevronDown>
-        </Button>
-      </DropdownMenuTrigger>
+
+        
+      
       <DropdownMenuContent;"
         align="start"""
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light""
       >
-</DropdownMenuContent>
+
           <DropdownMenuItem;
             key={option.value})
             onClick={() => setSortOption(option.value)}
-</DropdownMenuItem>
+
     <DropdownMenu>;
-</DropdownMenu>
+
       <DropdownMenuTrigger asChild>;
-</DropdownMenuTrigger>
+
         <Button;"
           variant="outline";""
           className="w-full justify-between border-zion-blue-light text-white";"
         >;
-</Button>"
+"
           <div className="flex items-center gap-2">;"
-</div>"
             <SortDesc className="h-4 w-4 text-zion-purple" />;"
-</SortDesc>
+
           </div>;"
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />;"
-</ChevronDown>
-        </Button>;
-      </DropdownMenuTrigger>;
-          </DropdownMenuItem>
-      </DropdownMenuContent>;
-    </DropdownMenu>;
-    <DropdownMenu>;
-</DropdownMenu>
+
+        ;
+          
+
       <DropdownMenuTrigger as_child>;
-</DropdownMenuTrigger>
-        <Button;"
-          variant='outline';''
-          className='w - full justify - between border - zion - blue - light text - white';'
-        >;
-</Button>'
-          <div className='flex items - center gap - 2'>;'
-</div>'
-            <SortDesc className='h - 4 w - 4 text - zion - purple' />;'
-</SortDesc>
-          </div>;'
-          <ChevronDown className='h - 4 w - 4 ml - 2 opacity - 50' />;'
-</ChevronDown>
-        </Button>;
-      </DropdownMenuTrigger>;
-      <DropdownMenuContent;'
-        align='start';''
-        className='w-[200px] bg - zion - blue - dark border - zion - blue - light';'
-      >;
-</DropdownMenuContent>
+
+          variant='outline';
+          className='w - full justify - between border - zion - blue - light text - white';
+
+          <div className='flex items - center gap - 2'>;
+</div>
+            <SortDesc className='h - 4 w - 4 text - zion - purple' />;
+
+          </div>;
+          <ChevronDown className='h - 4 w - 4 ml - 2 opacity - 50' />;
+
+      <DropdownMenuContent;
+        align='start';
+        className='w-[200px] bg - zion - blue - dark border - zion - blue - light';
+
         {SORT_OPTIONS.map (option => (          <DropdownMenuItem;
-            key={option.value})
             on_click={() => setSortOption (option.value)}
-</DropdownMenuItem>
-          <DropdownMenuItem;
+
             key = {option.value, }
             on_click = {(, ) => setSortOption (option.value), }
-</DropdownMenuItem>'
+
           <div className="flex items - center gap - 2">;"
-</div>"
             <SortDesc className="h - 4 w - 4 text - zion - purple" />;"
-</SortDesc>
-          </div>;"
+
           <ChevronDown className="h - 4 w - 4 ml - 2 opacity - 50" />;"
-</ChevronDown>
-        </Button>;
-      </DropdownMenuTrigger>;
-      <DropdownMenuContent;"
+
         align="start";""
         className="w-[200px] bg - zion - blue - dark border - zion - blue - light";"
-      >;
-</DropdownMenuContent>
-          <DropdownMenuItem;
+
             key={option.value}
-            on_click={() => setSortOption (option.value)}
-</DropdownMenuItem>
-          </DropdownMenuItem>))}
-      </DropdownMenuContent>;
-    </DropdownMenu>);
-      <DropdownMenuContent;"
-        align="start";""
+
+          ))}
+    );
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light";"
+:src/components/talent/SortDropdown.tsx
+pr-12325
       >;
 </DropdownMenuContent>
           <DropdownMenuItem;
@@ -116,3 +142,4 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
             onClick={() => setSortOption(option.value)}
 </DropdownMenuItem>"
 
+:temp-disabled/src/components/talent/SortDropdown.tsx

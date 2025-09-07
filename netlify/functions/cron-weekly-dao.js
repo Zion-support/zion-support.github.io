@@ -1,99 +1,243 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+    const data = await resp && resp.json();
+<<<<<<< HEAD
+=======
 
-    const resp = await fetch(`${baseUrl}/api/dao/metrics`)const data  = await resp && resp.json()const resp = await fetch(`${baseUrl}/api/dao/metrics`)const data  = await resp && resp.json()const resp = await fetch(`${baseUrl}/api/dao/metrics`)const data  = await resp && resp.json(;
-  const owner = process && process.env.GITHUB_OWNER;
+=======
+<<<<<<< HEAD
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+    const data = await resp && resp.json();
 
-const repo = process && process.env.GITHUB_REPO;
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-const token = process && process.env.GITHUB_TOKEN;
 
-const cachePath = path && path.join(process && process.cwd(), 'data', 'dao', 'metrics && metrics.json')const content = fs && fs.readFileSync(cachePath, 'utf-8')if (owner && repo && token) {await upsertFile({owner,repo,path: 'data/dao/metrics && metrics.json',const fs = require ('fs')const path = require ('path')const { upsert_file }  = require ('./_lib / github')exports.handler = async function () {try ;
-  const base_url = process.env.URL || process.env.DEPLOY_URL || '';}
-}
-const resp = await fetch (`${base_url}/api / dao / metrics`)const data  = await resp.json (;
-  const owner = process.env.GITHUB_OWNER;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`);
 
-const repo = process.env.GITHUB_REPO;
+<<<<<<< HEAD
 
-const token  = process.env.GITHUB_TOKEN;
-
-const cache_path = path.join (process.cwd (), 'data', 'dao', 'metrics.json';
-  const content  = fs.readFileSync (cache_path, 'utf - 8')// Check condition;
-if ( {) {$2;}
-}
-      await upsert_file ({owner,repo,path: 'data / dao / metrics.json',content,message: 'chore (automation): weekly DAO metrics update',token;}
-      })}
-    return {content,message: 'chore (automation): weekly DAO metrics update',token;}
-      })}
-    return {exports.handler = async function() {try {const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',const resp = await fetch(`${baseUrl}/api/dao/metrics`),const data = await resp.json(),const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,const token = process.env.GITHUB_TOKEN,const cachePath = path.join(process.cwd(), 'datadaometrics.json');
-  const content = fs.readFileSync(cachePath, 'utf-8'),if (owner && repo && token) {await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })}
-      status_code: 200,body: JSON.stringify ({ ok: true, updated_at: data.updated_at,}
-})content,message: 'chore (automation): weekly DAO metrics update',token;
-      })}
-    return {}
-      status_code: 200,body: JSON.stringify ({ ok: true, updated_at: data.updated_at,}
-})const baseUrl = process.env.URL |process.env.DEPLOY_URL |'';
-
-const resp = await fetch(`${baseUrl}/api/dao/metrics`)const data = await resp.json()const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,const token = process.env.GITHUB_TOKEN,const cachePath = path.join(process.cwd(), 'datadaometrics.json')const content  = fs.readFileSync(cachePath, 'utf-8')if (owner && repo && token) {await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })}
-      status_code: 200,body: JSON.stringify ({ ok: true, updated_at: data.updated_at })}
- ,
-} catch (e) ;
-  return { status_code: 500, body: JSON.stringify ({ error: e.message }),
-}
+    const owner = process && process.env.GITHUB_OWNER;
+    const repo = process && process.env.GITHUB_REPO;
+    const token = process && process.env.GITHUB_TOKEN;
+    const cachePath = path && path.join(process && process.cwd(), 'data', 'dao', 'metrics && metrics.json');
+    const content = fs && fs.readFileSync(cachePath, 'utf-8');
+    if (owner && repo && token) {
+      await upsertFile({
+        owner,
+        repo,
+        path: 'data/dao/metrics && metrics.json',
+const fs = require ('fs');
+const path = require ('path');
+const { upsert_file } = require ('./_lib / github');
 ;
-  const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+exports.handler = async function () {
+  try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const base_url = process.env.URL || process.env.DEPLOY_URL || '';
+    const resp = await fetch (`${base_url}/api / dao / metrics`);
+    const data = await resp.json ();
+;
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+;
+    const cache_path = path.join (process.cwd (), 'data', 'dao', 'metrics.json');
+    const content = fs.readFileSync (cache_path, 'utf - 8');
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      await upsert_file ({
+        owner,
+        repo,
+        path: 'data / dao / metrics.json',
 
-const data = await resp && resp.json();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        content,
+        message: 'chore (automation): weekly DAO metrics update',
+        token,
+      });
+    }
+<<<<<<< HEAD
+    return {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+exports.handler = async function() {
+  try {
+    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`),
+    const data = await resp.json(),
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+    const cachePath = path.join(process.cwd(), 'datadaometrics.json'),
+    const content = fs.readFileSync(cachePath, 'utf-8'),
+    const baseUrl = process.env.URL |process.env.DEPLOY_URL |'';
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+    const data = await resp.json();
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+
+    const cachePath = path.join(process.cwd(), 'datadaometrics.json');
+    const content = fs.readFileSync(cachePath, 'utf-8');
+origin/cursor/automate-test-improve-and-merge-code-2533
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+    return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+    const data = await resp && resp.json();
 
         content,
-
-        message: 'chore (automation): weekly DAO metrics update','
+        message: 'chore (automation): weekly DAO metrics update',
         token,
       });
     }
     return {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
   // TODO: Implement
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
 
       status_code: 200,
       body: JSON.stringify ({ ok: true, updated_at: data.updated_at })
     }
+<<<<<<< HEAD
+  } catch (e) {}
+=======
  ,
 } catch (e) {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
 
   }
-}  try {
-  // TODO: Implement
-}'
-    const base_url = process.env.URL || process.env.DEPLOY_URL || '','
+<<<<<<< HEAD
+}  try {'
+    const base_url = process.env.URL || process.env.DEPLOY_URL || '',
     const resp = await fetch (`${base_url}/api / dao / metrics`),
     const data = await resp.json (),
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,'
-    const cache_path = path.join (process.cwd (), 'datadaometrics.json'),''
-    const content = fs.readFileSync (cache_path, 'utf - 8'),'
+    const cache_path = path.join (process.cwd (), 'datadaometrics.json'),'
+    const content = fs.readFileSync (cache_path, 'utf - 8'),
     // Check condition;
-if ( {) {
+if ( {) {}
   $2;
 }'
-      await upsert_file ({ owner, repo, path: 'data / dao / metrics.json', content, message: 'chore (automation): weekly DAO metrics update', token });'
+      await upsert_file ({ owner, repo, path: 'data / dao / metrics.json', content, message: 'chore (automation): weekly DAO metrics update', token });
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, updated_at: data.updated_at }) }
+  } catch (e) {}
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+      statusCode: 200,
+      body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }),
+    };
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
+  }
+};  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`),
+    const data = await resp && resp.json(),
+    const owner = process && process.env.GITHUB_OWNER,
+    const repo = process && process.env.GITHUB_REPO,
+    const token = process && process.env.GITHUB_TOKEN,
+    const cachePath = path && path.join(process && process.cwd(), 'datadaometrics && datadaometrics.json'),
+    const content = fs && fs.readFileSync(cachePath, 'utf-8'),
+
+
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/dao/metrics && metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
     }
 
-    return { status_code: 200, body: JSON.stringify ({ ok: true, updated_at: data.updated_at }) }
- ,
-} catch (e) {return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
- ,
-}statusCode: 200,body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt,}
-})statusCode: 200,body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }),
-} catch (e) {return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }},
-}try {const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',const resp = await fetch(`${baseUrl}/api/dao/metrics`),const data = await resp && resp.json(),const owner = process && process.env.GITHUB_OWNER,const repo = process && process.env.GITHUB_REPO,const token = process && process.env.GITHUB_TOKEN,const cachePath = path && path.join(process && process.cwd(), 'datadaometrics && datadaometrics.json');
-  const content = fs && fs.readFileSync(cachePath, 'utf-8'),if (owner && repo && token) {await upsertFile({ owner, repo, path: 'data/dao/metrics && metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })}return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }) ,
-} catch (e) ;
-  return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }) }
+
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-}}}
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 },
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+
 },
-'
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+},
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,166 +1,102 @@
-#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-const glob = require('glob');
+<<<<<<< HEAD
+<<<<<<< HEAD
+    .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?[^\n]+/g, '')
+    .replace(/^<<<<<<< [^\n]+$/gm, '')
+    .replace(/^=======$/gm, '')
+    .replace(/^[^\n]+$/gm, '');
+=======
+    .replace(/<<<<<<< [^\n]+[\s\S]*?
+    .replace(/^<<<<<<< [^\n]+$/gm, '')
+    .replace(/^
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-class FinalCleanup {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.filesDeleted = 0;
-    this.errors = [];
-    this.startTime = Date.now();
-  }
+// Function to clean common syntax errors;)
+function cleanSyntaxErrors(content) {
+  return content;
+    // Remove invalid characters at start of files;
+    .replace(/^[^\w\s<]/gm, )
+    // Fix common parsing issues;
+    .replace(/export\s+default\s+export\s+default/g, 'export default')
+    .replace(/import\s+import/g, 'import')
+    .replace(/const\s+const/g, 'const')
+    .replace(/let\s+let/g, 'let')
+    .replace(/var\s+var/g, 'var')
+    // Fix unterminated strings;
+    .replace(/"[^"]*$/gm, '"')
+    .replace(/'[^']*$/gm, "'")"
+    // Fix unterminated regex;"
+    .replace(/\/[^\/]*$/gm, '/')
+    // Remove invalid characters;
+    .replace(/[^\x20-\x7E\n\r\t]/g, )
+    // Fix common JSX issues;
+    .replace(/<[^>]*$/gm, )
+    // Fix common TypeScript issues;
+    .replace(/:\s*[^=,;{}()[\]]*$/gm, ': any')
+    // Remove empty lines with only special characters;
+    .replace(/^[^\w\s]*$/gm, );
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄'
-    }[type] || 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
-
-  isProblematicFile(filePath, content) {
-    // Check for any parsing errors or problematic patterns
-    const problematicPatterns = [
-      /Error: Parsing error/i,
-      /Declaration or statement expected/i,
-      /Property assignment expected/i,
-      /Property or signature expected/i,
-      /Identifier expected/i,
-      /Expression expected/i,
-      /Unterminated string literal/i,
-      /Unterminated regular expression literal/i,
-      /JSX expressions must have one parent element/i,
-      /Expected corresponding JSX closing tag/i,
-      /Merge conflict marker encountered/i,
-      /Unexpected keyword or identifier/i,
-      /Unexpected token/i,
-      /Property destructuring pattern expected/i,
-      /Expression or comma expected/i,
-      /catch or finally expected/i,
-      /case or default expected/i,
-      /<<<<<<< HEAD/,
-      /=======/,
-      />>>>>>> .*/
-    ];
-
-    // Check if file contains any problematic patterns
-    const hasProblematicPattern = problematicPatterns.some(pattern => pattern.test(content));
+// Function to process a file;
+function processFile(filePath) {
+  try {
+  // TODO: Implement
+    const content = fs.readFileSync(filePath, 'utf8');
+    let cleaned = cleanMergeConflicts(content);
+    cleaned = cleanSyntaxErrors(cleaned);
+<<<<<<< HEAD
+<<<<<<< HEAD
     
-    // Check if file is in disabled directories or is likely generated/corrupted
-    const isProblematicLocation = 
-      filePath.includes('src.disabled') || 
-      filePath.includes('components.disabled') || 
-      filePath.includes('pages.disabled') ||
-      filePath.includes('components/reports/') ||
-      filePath.includes('src/reports/') ||
-      filePath.includes('components/broken/');
-
-    // Check if file is very large (likely generated or corrupted)
-    const isLarge = content.length > 100000;
-
-    // Check if file is empty or nearly empty
-    const isEmpty = content.trim().length < 50;
-
-    return hasProblematicPattern || isProblematicLocation || isLarge || isEmpty;
-  }
-
-  async deleteFile(filePath) {
-    try {
-      fs.unlinkSync(filePath);
-      this.filesDeleted++;
-      this.log(`Deleted: ${filePath}`, 'WARNING');
-    } catch (error) {
-      this.log(`Failed to delete ${filePath}: ${error.message}`, 'ERROR');
-      this.errors.push(filePath);
+    if (cleaned !== content) {
+      fs.writeFileSync(filePath, cleaned);
+      return true;
     }
+    return false;
+  } catch (error) {
+    console.log(`Error processing ${filePath}: ${error.message}`);
+    return false;
   }
+}
 
-  async processFile(filePath) {
-    try {
+// Function to recursively process directory
+function processDirectory(dirPath) {
+  let processedCount = 0;
+// Function to recursively find all files with merge conflicts
+function findConflictedFiles(dir, conflictedFiles = []) {
+  const files = fs.readdirSync(dir);
+
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findConflictedFiles(filePath, conflictedFiles);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
       const content = fs.readFileSync(filePath, 'utf8');
-      
-      if (this.isProblematicFile(filePath, content)) {
-        await this.deleteFile(filePath);
-      }
-    } catch (error) {
-      this.log(`Error processing ${filePath}: ${error.message}`, 'ERROR');
-      this.errors.push(filePath);
-    }
-  }
+  content = content.replace(/[a-f0-9]+\n?/g, '');
+  content = content.replace(/origin\/[^\n]+\n?/g, '');
+  content = content.replace(/ursor\/[^\n]+\n?/g, '');
+=======
+=======
 
-  async run() {
-    this.log('🚀 Starting Final Cleanup', 'PROGRESS');
-    this.log('='.repeat(60));
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-    const globPatterns = [
-      'src/**/*.tsx',
-      'src/**/*.ts',
-      'src/**/*.jsx',
-      'src/**/*.js',
-      'components/**/*.tsx',
-      'components/**/*.ts',
-      'components/**/*.jsx',
-      'components/**/*.js',
-      'pages/**/*.tsx',
-      'pages/**/*.ts',
-      'pages/**/*.jsx',
-      'pages/**/*.js'
-    ];
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
 
-    for (const pattern of globPatterns) {
-      const files = glob.sync(pattern, { 
-        cwd: this.projectRoot, 
-        absolute: true, 
-        ignore: [
-          'node_modules/**',
-          'dist/**',
-          '.next/**',
-          'build/**',
-          'coverage/**'
-        ]
-      });
+  content = content.replace(/
+<<<<<<< HEAD
+  content = content.replace(/
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+  
+  // Clean up any remaining artifacts
+=======
+  // Clean up any remaining artifacts;)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  // Remove any remaining conflict markers;
 
-      this.log(`Processing ${files.length} files matching pattern: ${pattern}`, 'INFO');
-      
-      for (const file of files) {
-        await this.processFile(file);
-      }
-    }
-
-    this.generateReport();
-  }
-
-  generateReport() {
-    const duration = Date.now() - this.startTime;
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${Math.round(duration / 1000)}s`,
-      filesDeleted: this.filesDeleted,
-      errors: this.errors.length,
-      failedFiles: this.errors
-    };
-
-    const reportPath = path.join(this.projectRoot, 'final-cleanup-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log('📊 Final Cleanup Report Generated', 'SUCCESS');
-    this.log(`🗑️ Files Deleted: ${report.filesDeleted}`);
-    this.log(`❌ Errors: ${report.errors}`);
-    this.log(`📄 Report saved to: ${reportPath}`);
-  }
-}
-
-if (require.main === module) {
-  const cleaner = new FinalCleanup();
-  cleaner.run().catch(console.error);
-}
-
-module.exports = FinalCleanup;

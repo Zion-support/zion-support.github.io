@@ -1,4 +1,5 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -20,10 +21,10 @@ const { execSync } = require("child_process")
         const batch = allBranches.slice(i, i + batchSize);"
       // Step "4"
   // Step "4"
-  this.log( Fatal "error": ${error.message  }, "ERROR`)
+  this.log( Fatal "error": ${error.message  }`, "ERROR""`)
       // Step "4"
       await this.finalizeMerges();"
-      this.log( Fatal "error": ${error.message}, "ERROR`)
+      this.log( Fatal "error": ${error.message}`, "ERROR""`)
   this.log("� Ensuring we are on main branch...")
   const currentBranch = execSync("git branch --show-current")
   "encoding": "utf8"
@@ -36,7 +37,7 @@ const { execSync } = require("child_process")
       const branchesOutput = execSync("git branch -r", { "encoding": "utf8"})
         .split("\n")
           line => line && !line.includes("HEAD") && !line.includes("main")
-        .map(line => line.replace("origin/", )
+        .map(line => line.replace("origin/", "")
   this.log(" Getting all remaining branches...")
       execSync("git fetch --all", { "stdio": "inherit"})
       const branchesOutput = execSync("git branch -r", { "encoding": "utf8"})
@@ -48,8 +49,8 @@ const { execSync } = require("child_process")
   this.log( Error processing branch ${branchName  }: ${error.message}")
         "
   this.log( Error processing branch ${branchName}: ${error.message}")
-        "ERROR
-  this.log(`� Attempting to merge ${branchName} into main...``)"
+        "ERROR"
+  this.log(`� Attempting to merge ${branchName} into main...``)
       // Try to merge the branchexecSync("git merge origin/${branchName} --no-edit")
   "stdio": "
         "timeout"
@@ -81,7 +82,7 @@ const { execSync } = require("child_process")
   async resolveFileConflicts(filePath) {this.log(" Resolving conflicts "in": ${filePath}")
   const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
-        !content.includes()
+        !content.includes("")
         !content.includes(">>>>>>>")
 this.log(" Resolved conflicts "in")
         "ERROR"
@@ -95,17 +96,28 @@ this.log(" Resolved conflicts "in")
           { "stdio": "pipe"}
       execSync("git push origin main", { "stdio": "inherit"})
       this.log(" Successfully pushed all merged changes to remote")
-  this.log(` Failed to push "changes": ${error.message  } "ERROR"`)
+  this.log(` Failed to push "changes": ${error.message  }` "ERROR"`)
   execSync(git commit -m "Final merge of all remaining PRs and branches")
           { "stdio": "pipe"}
       execSync("git push origin main", { "stdio": "inherit"})
       this.log(" Successfully pushed all merged changes to remote")
-  this.log(` Failed to push "changes": ${error.message}, "ERROR"`)
+  this.log(` Failed to push "changes": ${error.message}`, "ERROR"`)
   this.log(" Generating final merge report...")
   "timestamp"
       "summary"
         "mergesSuccessful"
         "conflictsResolved"
         "errors"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       "successRate"
       "successRate"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

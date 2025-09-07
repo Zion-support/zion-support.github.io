@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -89,8 +90,8 @@ if (document.readyState === "loading")
     return { "success": true, "file": "public/analytics.js"}
     this.log(" Creating error handling system...")
     const errorHandlingScript = "
-  "handleError": (error, context = )
-    console.error("Error "occurred": ", error, Context": ")
+  "handleError": (error, context = "")
+    console.error("Error "occurred": ", error, ""Context": ")
     if (typeof Sentry !== "undefined")
       Sentry.captureException(error, { "extra"})
     this.showErrorMessage("Something went wrong. Please try again.")
@@ -123,5 +124,16 @@ if (document.readyState === "loading")
       this.log(` App Improvement Automation "failed"`)
 // console.log(" App improvement automation completed successfully")
     console.log(" "Report": ")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
     console.error(" App improvement automation "failed": ")
     console.error(" App improvement automation "failed": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

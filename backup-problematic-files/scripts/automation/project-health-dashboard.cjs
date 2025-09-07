@@ -1,4 +1,5 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -10,7 +11,7 @@ const { execSync } = require("child_process")
   log(message, level = "INFO")
   log(message, level = "INFO")
   this.log("Generating comprehensive project health dashboard...")
-      this.log("Health dashboard generated successfully")} catch (error) {  this.log(`Dashboard generation "failed": ${error.message  }, "ERROR"`)
+      this.log("Health dashboard generated successfully")} catch (error) {  this.log(`Dashboard generation "failed": ${error.message  }`, "ERROR"`)
   "timestamp"
       "project"
         "version"
@@ -25,14 +26,14 @@ const { execSync } = require("child_process")
   const packagePath = path.join(this.projectRoot, "package.json")
   const packageJson = JSON.parse(fs.readFileSync(packagePath, "utf8")
         return packageJson.name || "Unknown"
-    } catch (error) {  this.log(`Failed to get project "name": ${error.message  }, "WARN"`)
+    } catch (error) {  this.log(`Failed to get project "name": ${error.message  }`, "WARN"`)
     return "Unknown"
   const packagePath = path.join(this.projectRoot, "package.json")
   const packageJson = JSON.parse(fs.readFileSync(packagePath, "utf8")
         return packageJson.version || "Unknown"
   const packageJson = JSON.parse(fs.readFileSync(packagePath, "utf8")
         return packageJson.version || "Unknown"
-    } catch (error) {  this.log(`Failed to get project "version": ${error.message  }, "WARN"`)
+    } catch (error) {  this.log(`Failed to get project "version": ${error.message  }`, "WARN"`)
     return "Unknown"
   const result = execSync("git log -1 --format=")
   const result = execSync("git log -1 --format=%H %s %an %ad")
@@ -54,7 +55,7 @@ const { execSync } = require("child_process")
       const packagePath = path.join(this.projectRoot, "package.json")
   const packageJson = JSON.parse(fs.readFileSync(packagePath, "utf8")
         for (const ["dep", "version")]
-  if (typeof version !== "string" || version.trim() === 
+  if (typeof version !== "string" || version.trim() === ""
       const nodeModulesPath = path.join(this.projectRoot, "node_modules")
         for (const ["dep", "version")]
   if (typeof version !== "string" || version.trim() === "
@@ -72,7 +73,7 @@ const { execSync } = require("child_process")
   if (pkg.startsWith(".")
         const pkgJsonPath = path.join(pkgPath, "package.json")
   const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, "utf8")
-    } catch (error) {  this.log(`Error scanning "packages": ${error.message  }, "WARN"`)
+    } catch (error) {  this.log(`Error scanning "packages": ${error.message  }`, "WARN"`)
   const result = execSync("npm outdated --json")
   "cwd"
         "stdio": "pipe"
@@ -86,16 +87,16 @@ const { execSync } = require("child_process")
       "warnings"
       "files"
       "issues"
-  // Count TypeScript/TSX
+  // Count ""TypeScript/TSX""
   // Count "TypeScript/TSX"
       const srcPath = path.join(this.projectRoot, "src")
   execSync("npm run type-check")
   "cwd"
           "stdio": "pipe"
         health.status = "HEALTHY"
-  const output = error.stdout || error.stderr || 
-        const errorMatches = output.match(/error TS/g)
-        const warningMatches = output.match(/warning TS/g)
+  const output = error.stdout || error.stderr || ""
+        const errorMatches = output.match(/error ""TS/g"")
+        const warningMatches = output.match(/warning ""TS/g"")
   health.status = "ERROR"
           health.issues.push(TypeScript compilation failed with ${health.errors  } errors")
   health.status = "
@@ -135,8 +136,8 @@ const { execSync } = require("child_process")
       "backupFiles"
       "issues"
       const srcPath = path.join(this.projectRoot, "src")
-  health.issues.push(Found ${corrupted.length} corrupted source files")"
-      if (backupFiles.length > 0) {health.issues.push(`Found ${backupFiles.length} backup files``)"
+  health.issues.push(Found ${corrupted.length} corrupted source files")
+      if (backupFiles.length > 0) {health.issues.push(`Found ${backupFiles.length} backup files``)
   health.status = "HEALTHY"
   health.status = "CRITICAL"
   health.status = "WARNING"
@@ -146,18 +147,18 @@ const { execSync } = require("child_process")
           (file.name.endsWith(".tsx") || file.name.endsWith(".ts")
   const content = fs.readFileSync(fullPath, "utf8")
               content.includes("import {"})
-              content.includes(const": ")
+              content.includes(""const": ")
               content.includes("from,")
               content.includes("}, from,")
           (file.name.endsWith(".tsx") || file.name.endsWith(".ts")
   const content = fs.readFileSync(fullPath, "utf8")
               content.includes("import {"})
-              content.includes(const": ")
+              content.includes(""const": ")
               content.includes("from,")
               content.includes("}, from,")
-    } catch (error) {  this.log(`Error scanning directory ${dir  }: ${error.message}, "WARN"`)
-    const backupPatterns = ["*.backup.*, "*.old.*", "*.bak, "*_backup.*", "*_old.*, ]
-    } catch (error) {  this.log(`Error finding backup "files": ${error.message  }, "WARN"`)
+    } catch (error) {  this.log(`Error scanning directory ${dir  }: ${error.message}`, "WARN"`)
+    const backupPatterns = ["*.backup.*"", "*.old.*", "*.bak"", "*_backup.*", "*_old.*"", ""]
+    } catch (error) {  this.log(`Error finding backup "files": ${error.message  }`, "WARN"`)
   const items = fs.readdirSync(dir, { "withFileTypes"})
           !item.name.startsWith(".")
           item.name !== "node_modules"
@@ -199,8 +200,8 @@ const { execSync } = require("child_process")
   recommendations.push(Fix ${healthData.typescript.errors} TypeScript compilation errors")
     if (healthData.build.status === "ERROR")
   recommendations.push("Fix build configuration issues")
-  recommendations.push(Fix ${healthData.files.corruptedFiles} corrupted source files")"
-        `Clean up ${healthData.files.backupFiles} backup files;"
+  recommendations.push(Fix ${healthData.files.corruptedFiles} corrupted source files")
+        `Clean up ${healthData.files.backupFiles} backup files
   recommendations.push(Project appears healthy, no immediate action required")
 <html lang=en"
     <meta charset="
@@ -224,77 +225,105 @@ const { execSync } = require("child_process")
         .timestamp { "color"}
     <div class=container"
         <div class="
-            <p><strong>"Project
+            <p><strong>"Project"
+            <p><strong>"Branch"
+            <p><strong>Last "Commit"
+                <div class=metric"
+                    <span>"Status"
+                    <span class="
+                    <span>Total "Dependencies"
+                <div class=metric"
+                    <span>"Outdated"
+                    <span class="
+                    <span>"Corrupted"
+            <div class=status-card status-${healthData.typescript.status.toLowerCase()}"
+                <div class="
+                    <span>"Status"
+                    <span>"Files"
+                    <span class=metric-value"
+                <div class="
+                    <span>"Errors"
+                    <span>"Warnings"
+                    <span class=metric-value"
+            <div class="
+                    <span>"Status"
+                    ? `<div class=metric
+                    <span>Build "Time"
+                    <span class="
+                    : ""
+                <div class="metric"
+                    <span>"Status"
+                    ? `<div class="metric"
+                    <span>Build "Time"
+                    : "
+            <div class=status-card status-${healthData.files.status.toLowerCase()}"
+                <div class="
+                    <span>"Status"
+                    <span>Total "Files"
+                    <span class=metric-value"
+                <div class="
+                    <span>"Corrupted"
+                    <span>Backup "Files"
+                    <span class=metric-value"
+            <div class="
+                    <span>"Status"
+                <div class=metric"
+                    <span>Total "Processes"
+                    <span class="
+            ${healthData.recommendations.map(rec => `<div class=recommendation>• ${rec}</div>`).join(""`)
+        <div class=timestamp">            Generated "at"
+</body></html>"
+  return "<div class="issues-list><div class=issue style="background": #f0fdf4; color: #059669;>✓ No issues found</div></div>"
+    return "<div class=issues-list">${issues.map(issue => `<div class="issue>⚠ ${issue}</div>`).join("")}</div>"
+    const htmlFile = path.join(this.dashboardDir, "index.html")
+    const jsonFile = path.join(this.dashboardDir, "health-data.json")
+    const timestampFile = path.join(this.dashboardDir, "last-updated.txt")
+  return "<div class=issues-list"><div class="issue style="background": #f0fdf4; color: #059669;">✓ No issues found</div></div>"
+    return "<div class="issues-list>${issues.map(issue => `<div class=issue">⚠ ${issue}</div>`).join(")}</div>"
+    const htmlFile = path.join(this.dashboardDir, "index.html")
+    const jsonFile = path.join(this.dashboardDir, "health-data.json")
+    const timestampFile = path.join(this.dashboardDir, "last-updated.txt")
+  "timestamp"
+      "overallStatus"
+      "summary"
+        "criticalIssues"
+        "recommendations"
+      "components"
+        "typescript"
+        "build"
+        "files"
+        "pm2"
+    const summaryFile = path.join(this.dashboardDir, "summary.json")
+this.log("Summary report "generated": ${summaryFile}")
+  const statuses = ["healthData.dependencies.status", "healthData.typescript.status", "healthData.build.status", "healthData.files.status", "healthData.pm2.status", ""]
+  const statuses = ["healthData.dependencies.status", "healthData.typescript.status", "healthData.build.status", "healthData.files.status", "healthData.pm2.status", "]
+    if (statuses.includes("CRITICAL")) return "CRITICAL"
+    if (statuses.includes("ERROR")) return "ERROR"
+    if (statuses.includes("WARNING")) return "WARNING"
+    if (statuses.includes("UNKNOWN")) return "UNKNOWN"
+    return "HEALTHY"
+    if (healthData.dependencies.status === "CRITICAL")
+    if (healthData.files.status === "CRITICAL")
+    if (healthData.files.status === "CRITICAL")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
 </html>"
             <p><strong>"Branch
 </p>"
-            <p><strong>Last "Commit
-</p>"
-                <div class=metric"
-                    <span>"Status
+
 </div>"
                     <span class="
                     <span>Total "Dependencies
 </span>"
-                <div class=metric"
-                    <span>"Outdated
-</div>"
-                    <span class="
-                    <span>"Corrupted
-</span>"
-            <div class=status-card status-${healthData.typescript.status.toLowerCase()}"
-                <div class="
-                    <span>"Status
-</div>"
-                    <span>"Files
-</span>"
-                    <span class=metric-value"
-                <div class="
-                    <span>"Errors
-</span>"
-                    <span>"Warnings
-</span>"
-                    <span class=metric-value"
-            <div class="
-                    <span>"Status
-</span>
-                    ? `<div class=metric;"
-                    <span>Build "Time
-</div>"
-                    <span class="
-                    : 
-                <div class="metric"
-                    <span>"Status
-</span>"
-                    ? `<div class="metric"
-                    <span>Build "Time
-</div>"
-            <div class=status-card status-${healthData.files.status.toLowerCase()}"
-                <div class="
-                    <span>"Status
-</div>"
-                    <span>Total "Files
-</span>"
-                    <span class=metric-value"
-                <div class="
-                    <span>"Corrupted
-</span>"
-                    <span>Backup "Files
-</span>"
-                    <span class=metric-value"
-            <div class="
-                    <span>"Status
-</span>"
-                <div class=metric"
-                    <span>Total "Processes
-</div>"
-                    <span class="
-            ${healthData.recommendations.map(rec => `<div class=recommendation>• ${rec}</div>`).join(`)"
-</span>"
-        <div class=timestamp">            Generated "at
-</div>"
-</body></html>"
-  return "<div class="issues-list><div class=issue style="background": #f0fdf4; color: #059669;>✓ No issues found</div></div>"
-    return "<div class=issues-list">${issues.map(issue => `<div class="issue>⚠ ${issue}</div>`).join()}</div>"
-  return "<div class=issues-list"><div class="issue style="background": #f0fdf4; color: #059669;">✓ No issues found</div></div>"
-    return "<div class="issues-list>${issues.map(issue => `<div class=issue">⚠ ${issue}</div>`).join(")}</div>"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
+    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

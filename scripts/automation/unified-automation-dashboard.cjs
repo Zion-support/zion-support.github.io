@@ -1,4 +1,12 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -13,20 +21,20 @@ const { execSync } = require("child_process")
     if (level === "ERROR")
   fs.appendFileSync(this.errorFile, logMessage + "\n")
   const output = execSync("pm2 jlist", { "encoding": "})
-      return JSON.parse(output)} catch (error) {  this.log(Failed to get PM2 "status": ${error.message  }, `ERROR`)
+      return JSON.parse(output)} catch (error) {  this.log(Failed to get PM2 "status": ${error.message  }, `ERROR""`)
     fs.appendFileSync(this.logFile, logMessage + "\n")
     if (level === "ERROR")
   fs.appendFileSync(this.errorFile, logMessage + "\n")
   const output = execSync("pm2 jlist", { "encoding": "utf8"})
   async getPM2Status() {"}
     try {"}
-      const output = execSync("pm2 jlist", { "encoding": "utf8" }")"
+      const output = execSync("pm2 jlist", { "encoding": "utf8" }
 });"
-      return JSON.parse(output);")} catch (error) {this.log(Failed to get PM2 "status": ${error.message}, "ERROR)
-    const reportFiles = ["console-error-fixer-report.json, "performance-report.json", "comprehensive-error-fixer-report.json, "ai-improvements.json", "performance-optimizations.json, "test-results.json", ]
+      return JSON.parse(output);")} catch (error) {this.log(Failed to get PM2 "status": ${error.message}, "ERROR"")
+    const reportFiles = ["console-error-fixer-report.json"", "performance-report.json", "comprehensive-error-fixer-report.json"", "ai-improvements.json", "performance-optimizations.json"", "test-results.json", ""]
   const filePath = path.join(this.projectRoot, ")
   const content = fs.readFileSync(filePath", "utf8")
-          reports["file.replace(".json, )] = JSON.parse(content)} catch (error) {  this.log("Failed to read report ${file  }: ${error.message}", "WARN")
+          reports["file.replace(".json"", "")] = JSON.parse(content)} catch (error) {  this.log("Failed to read report ${file  }: ${error.message}", "WARN")
           reports["file.replace(".json", ")] = JSON.parse(content)} catch (error) {this.log("Failed to read report ${file}: ${error.message}", "WARN")
   "timestamp"
       "metrics"
@@ -86,7 +94,7 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   generateHTMLDashboard(dashboard) {return "}
 <html lang="
     <meta name=viewport content=width=device-width, initial-scale=1.0"
-    <script src=https": //cdn.tailwindcss.com"
+    <script src=""https": //cdn.tailwindcss.com"
   colors: {neon-blue": "#00d4ff",neon-purple": "#8b5cf6",neon-pink": "#ec4899"}
     <meta charset="UTF-8"
     <meta name=viewport content="width=device-width, initial-scale=1.0"
@@ -94,8 +102,7 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   colors: {neon-blue": "#00d4ff",neon-purple": "#8b5cf6",neon-pink": "#ec4899"}
     <div class=container mx-auto px-4 py-8"
             <h1 class="
-            <p class=text-sm text-gray-500 mt-1">Last "updated
-</html>"
+            <p class=text-sm text-gray-500 mt-1">Last "updated"
         <div class=grid grid-cols-1 "md"
             <div class="
                     <div class=p-2 bg-green-500 rounded-lg"
@@ -117,8 +124,7 @@ this.log("Dashboard generated successfully at ${htmlPath}")
                         <svg class=w-6 h-6 text-white fill=none" stroke=currentColor viewBox="
                             <path stroke-linecap=round stroke-linejoin=round" stroke-width=2 d="
                         <p class=text-sm font-medium text-gray-400"
-                        <p class=text-2xl font-bold text-blue-400>${dashboard.codeQuality.metrics.bundleSize ? dashboard.codeQuality.metrics.bundleSize.totalSize : N/A}"
-</div>"
+                        <p class=text-2xl font-bold text-blue-400>${dashboard.codeQuality.metrics.bundleSize ? dashboard.codeQuality.metrics.bundleSize.totalSize : ""N/A""}
         <div class="
             <div class=overflow-x-auto"
                         <tr class="
@@ -131,8 +137,8 @@ this.log("Dashboard generated successfully at ${htmlPath}")
                                         : process.status === "errored"
                                           ? "bg-red-500 text-white"
                                           : "bg-yellow-500 text-black"}"
-                                <td class=
-                          .join(```)"
+                                <td class="
+                          .join(```)
         <div class="
             <h2 class=text-2xl font-bold mb-4 text-neon-purple"
             <div class=grid grid-cols-1 "md"
@@ -149,15 +155,14 @@ this.log("Dashboard generated successfully at ${htmlPath}")
                             : "bg-red-500 text-white"
                         <span class=ml-2 text-gray-400"
             <div class="
-                  .map(action => ")"
-</div>"
+                  .map(action => ")
                     <div class=flex items-start"
                         <p class=text-gray-300"
-                  .join()
+                  .join("")
             <div class=bg-red-900/20 border border-red-500 rounded-lg p-6 mb-8"
                 <div class="
-                            <div class=w-2 h-2 bg-red-500 rounded-full mt-2 mr-3
-                      .join(```)"
+                            <div class=w-2 h-2 bg-red-500 rounded-full mt-2 mr-3"
+                      .join(```)
             : "
         <div class="
             <h2 class=text-2xl font-bold mb-4 text-neon-blue"
@@ -215,12 +220,34 @@ this.log("Dashboard generated successfully at ${htmlPath}")
             <p class="
             <p class=text-sm mt-1"
   this.log("Starting unified automation dashboard...")
-  await this.generateDashboard()} catch (error) {  this.log(`Dashboard update "failed": ${error.message  }, "ERROR"`)
+  await this.generateDashboard()} catch (error) {  this.log(`Dashboard update "failed": ${error.message  }`, "ERROR"`)
       this.log("Unified automation dashboard started successfully")
-  this.log("Dashboard heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start "dashboard": ${error.message  }, "ERROR"`)
+  this.log("Dashboard heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start "dashboard": ${error.message  }`, "ERROR"`)
       this.log("Unified automation dashboard started successfully")
-  this.log("Dashboard heartbeat...")}, 60000); // Every minute} catch (error) {this.log(`Failed to start "dashboard": ${error.message}, "ERROR"`)
+  this.log("Dashboard heartbeat...")}, 60000); // Every minute} catch (error) {this.log(`Failed to start "dashboard": ${error.message}`, "ERROR"`)
   process.on("SIGINT")
   dashboard.log("Shutting down gracefully...")
   process.on("SIGTERM")
   dashboard.log("Shutting down gracefully...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

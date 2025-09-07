@@ -1,9 +1,17 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const glob = require("glob")
-      this.projectRoot,"automation/logs/enhanced-error-fixer.log
+      this.projectRoot,"automation/logs/enhanced-error-fixer.log""
       "enhanced-error-fixer-report.json"
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
@@ -11,8 +19,8 @@ const glob = require("glob")
     fs.appendFileSync(this.logFile, logMessage + "\n")
   this.log(" Starting Enhanced Project Error Fixer`);this.log(� Project "root"`)
   // Step "1"
-      // Step 5: Fix common React/JSX
-      // Step 6: Fix import/export
+      // Step 5: Fix common ""React/JSX""
+      // Step 6: Fix ""import/export""
       this.log(" Enhanced Project Error Fixer completed successfully")
   this.log( Error in Enhanced Project Error "Fixer": ${error.message  }")
         "ERROR"
@@ -41,11 +49,11 @@ const glob = require("glob")
   this.log("TypeScript not found, installing...")
         execSync("npm install --save-dev typescript")
   "cwd"
-          "stdio": `inherit;
+          "stdio": `inherit
         this.fixesApplied.push(")
   this.log("Warning")
-        "WARN
-  this.log(` Fixing TypeScript configuration...``)"
+        "WARN"
+  this.log(` Fixing TypeScript configuration...``)
   execSync("npx tsc --version", { "cwd": this.projectRoot, "stdio": "pipe"})
   this.log("TypeScript not found, installing...")
         execSync("npm install --save-dev typescript")
@@ -71,10 +79,10 @@ const glob = require("glob")
             "jsx": "preserve"
             "incremental"
             "plugins": ["]
-  name: "next, "}", 
-          "include": ["next-env.d.ts, "**/*.ts", "**/*.tsx, "**/*.js", "**/*.jsx, ]
-          "exclude": ["node_modules", ".next", "out", "dist"]"
-        this.fixesApplied.push(`FIXED_TYPESCRIPT_CONFIG``)"
+  name: "next"", "}", ""
+          "include": ["next-env.d.ts"", "**/*.ts", "**/*.tsx"", "**/*.js", "**/*.jsx"", ""]
+          "exclude": ["node_modules", ".next", "out", "dist"]
+        this.fixesApplied.push(`FIXED_TYPESCRIPT_CONFIG``)
         this.log(")
   this.log("Warning")
           "WARN"
@@ -85,8 +93,8 @@ const glob = require("glob")
   this.log(" Fixing ESLint configuration...")
     const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js")
   try {const eslintConfig = "}
-  "extends": [next/core-web-vitals, next/typescript]
-  "rules": {@typescript-"eslint/no-unused-vars: "warn",@typescript-"eslint/no-explicit-any: "warn","react/react-in-jsx-scope: "off","react/prop-types: "off",no-console": "warn"}
+  "extends": [""next/core-web-vitals"", ""next/typescript""]
+  "rules": {@typescript-"eslint/no-unused-vars"": "warn",@typescript-"eslint/no-explicit-any"": "warn","react/react-in-jsx-scope"": "off","react/prop-types"": "off",no-console": "warn"}
   "ignorePatterns": ["node_modules/", ".next/", "out/", "dist/"]};"
         this.fixesApplied.push("FIXED_ESLINT_CONFIG")
         this.log(")
@@ -97,7 +105,7 @@ const glob = require("glob")
   this.log("Warning": Could not fix ESLint config: ${error.message}")
           "WARN"
   this.log(" Fixing common TypeScript errors...")
-    const patterns = ["src/**/*.ts, "src/**/*.tsx", "pages/**/*.ts, "pages/**/*.tsx", "components/**/*.ts, "components/**/*.tsx", ]
+    const patterns = ["src/**/*.ts"", "src/**/*.tsx", "pages/**/*.ts"", "pages/**/*.tsx", "components/**/*.ts"", "components/**/*.tsx", ""]
   const files = glob.sync(pattern, { "cwd"})
   const filePath = path.join(this.projectRoot, ")
   let content = fs.readFileSync(filePath", "utf8")
@@ -112,7 +120,7 @@ const glob = require("glob")
             content.includes(">")
   const newPath = file.replace(".ts", ".tsx")
             const newFilePath = path.join(this.projectRoot, ")
-  fs.renameSync(filePath", newFilePath);this.fixesApplied.push(RENAMED_TS_TO_TSX": ${file}");this.log(" Renamed ${file} to ${newPath}")
+  fs.renameSync(filePath", newFilePath);this.fixesApplied.push(""RENAMED_TS_TO_TSX": ${file}");this.log(" Renamed ${file} to ${newPath}")
           content = content.replace(/:\s*any\s*=\s*\[\]/g, ": any[] = []")
           content = content.replace(/:\s*any\s*=\s*\{\}/g, ": any = {}")
             /const\s+(\w+)\s*=\s*\(\)\s*=>\s*\{/g,const $1 = (): JSX.Element => {"}
@@ -141,34 +149,56 @@ const glob = require("glob")
             !content.includes("import React")
             !content.includes("import * as React")
   content = import React from "react";
-            /<>\s*<\/>/g,<React.Fragment></React.Fragment>
-</React>"
+            /<>\s*<\/>/g,<React.Fragment></React.Fragment>"
+            "className={$1}"
+            this.fixesApplied.push(""FIXED_REACT")
+  this.log("Warning")
+            "WARN"
+  this.log("Warning": Could not process ${file}: ${error.message}")
+            "WARN"
+  this.log(" Fixing "import/export" issues...")
+    const patterns = ["src/**/*.{js", "jsx", "ts", "tsx}", "pages/**/*.{js, "jsx", "ts", "tsx}", "components/**/*.{js", "jsx", "ts", "tsx}", "]
+  const files = glob.sync(pattern, { "cwd"})
+  const filePath = path.join(this.projectRoot, ")
+  let content = fs.readFileSync(filePath", "utf8")
+            /from\s+[""]\.\.\/\.\.\/\.\.\/\.\.\//g,from "
+            /from\s+["]([^""]+)[""]
+  if (importPath.startsWith(".") && !importPath.includes(".")) {return "from `${importPath}.js
+  fs.writeFileSync(filePath, content);this.fixesApplied.push(""FIXED_IMPORTS")
+  this.log("Warning")
+            "WARN"
+  fs.writeFileSync(filePath, content);this.fixesApplied.push(`"FIXED_IMPORTS": ${file}"`)
+  this.log("Warning": Could not process ${file}: ${error.message}")
+            "WARN"
+  this.log(` Fixing file extension issues...``)
+      .sync("**/*.js", { "cwd"})
+          path.join(this.projectRoot, "file)", utf8"
           content.includes("<")
           content.includes(">")
           content.includes("return")
   const oldPath = path.join(this.projectRoot, ")
           this.projectRoot", file.replace(".js", ".jsx")
           this.projectRoot", file.replace(".js", ".jsx")
-          this.fixesApplied.push(`"RENAMED_JS_TO_JSX": ${file});this.log(` Renamed ${file} to ${file.replace(".js", ".jsx"`})
-      } catch (error) {  this.log(`"Warning": Could not rename ${file  }: ${error.message}, "WARN"`)
+          this.fixesApplied.push(`"RENAMED_JS_TO_JSX": ${file}`);this.log(` Renamed ${file} to ${file.replace(".js", ".jsx"`})
+      } catch (error) {  this.log(`"Warning": Could not rename ${file  }: ${error.message}`, "WARN"`)
   this.log(" Running comprehensive fixes...")
   execSync("npx tsc --noEmit", { "cwd": this.projectRoot, "stdio": "pipe"})
-        this.log(" TypeScript compilation successful")} catch (error) {  this.log(`TypeScript errors "remain": ${error.message  }, "WARN"`)
+        this.log(" TypeScript compilation successful")} catch (error) {  this.log(`TypeScript errors "remain": ${error.message  }`, "WARN"`)
   "type": "TYPESCRIPT_ERRORS"
           "message"
   execSync("npx eslint . --ext .js,.jsx,.ts,.tsx --fix")
   "cwd"
           "stdio": "pipe"
         this.log(" ESLint fixes applied")
-        this.fixesApplied.push("ESLINT_FIXES_APPLIED")} catch (error) {  this.log(`ESLint issues "remain": ${error.message  }, "WARN"`)
+        this.fixesApplied.push("ESLINT_FIXES_APPLIED")} catch (error) {  this.log(`ESLint issues "remain": ${error.message  }`, "WARN"`)
   "type": "ESLINT_ERRORS"
           "message"
   execSync("npx prettier --write .")
   "cwd"
           "stdio": "pipe"
         this.log(" Prettier formatting applied")
-        this.fixesApplied.push("PRETTIER_FORMATTING_APPLIED")} catch (error) {  this.log(`Prettier "issues": ${error.message  }, "WARN"`)
-    } catch (error) {  this.log(`Error in comprehensive "fixes": ${error.message  }, "ERROR"`)
+        this.fixesApplied.push("PRETTIER_FORMATTING_APPLIED")} catch (error) {  this.log(`Prettier "issues": ${error.message  }`, "WARN"`)
+    } catch (error) {  this.log(`Error in comprehensive "fixes": ${error.message  }`, "ERROR"`)
   "timestamp": new Date().toISOString(),"duration"
       "fixesApplied"
       "errorsFound"
@@ -176,3 +206,25 @@ const glob = require("glob")
         "totalErrors"
         "success"
     this.log(" Report generated")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  this.log("Remaining "errors": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  this.log("Remaining "errors": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  this.log("Remaining "errors": ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

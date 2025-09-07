@@ -28,19 +28,14 @@ class CriticalFixAutomation {
 
     // Fix Jest config
     await this.fixJestConfig();
-    
     // Fix ESLint config
     await this.fixESLintConfig();
-    
     // Fix package.json scripts
     await this.fixPackageJsonScripts();
-    
     // Fix critical syntax errors
     await this.fixCriticalSyntaxErrors();
-    
     // Run basic tests
     await this.runBasicTests();
-    
     this.generateReport();
   }
 
@@ -116,7 +111,6 @@ class CriticalFixAutomation {
     try {
       const packageJsonPath = path.join(this.projectRoot, 'package.json');
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-      
       packageJson.scripts = {
         ...packageJson.scripts,
         'type-check': 'tsc --noEmit --skipLibCheck',
@@ -133,7 +127,6 @@ class CriticalFixAutomation {
         'precommit': 'npm run check',
         'prepare': 'echo "Husky prepare script disabled"'
       };
-      
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
       this.log('Package.json scripts fixed', 'SUCCESS');
     } catch (error) {
@@ -155,25 +148,18 @@ class CriticalFixAutomation {
       for (const file of filesToFix) {
         if (fs.existsSync(file)) {
           let content = fs.readFileSync(file, 'utf8');
-          
           // Fix merge conflict markers
-          content = content.replace(/<<<<<<< HEAD\n/g, '');
-          content = content.replace(/=======\n/g, '');
-          content = content.replace(/>>>>>>> [^\n]+\n/g, '');
-          
+          content = content.replace(/
           // Fix unterminated strings
           content = content.replace(/'([^']*)$/gm, "'$1'");
           content = content.replace(/"([^"]*)$/gm, '"$1"');
-          
           // Fix common syntax issues
           content = content.replace(/;\s*$/gm, ';');
           content = content.replace(/,\s*$/gm, ',');
-          
           fs.writeFileSync(file, content);
           this.fixedFiles.push(file);
         }
       }
-      
       this.log(`Fixed ${this.fixedFiles.length} files`, 'SUCCESS');
     } catch (error) {
       this.log(`Failed to fix syntax errors: ${error.message}`, 'ERROR');
@@ -206,12 +192,10 @@ class CriticalFixAutomation {
     };
 
     fs.writeFileSync('critical-fix-report.json', JSON.stringify(report, null, 2));
-    
     this.log('\n📊 CRITICAL FIX REPORT');
     this.log('='.repeat(60));
     this.log(`Fixed files: ${this.fixedFiles.length}`);
     this.log(`Errors: ${this.errors.length}`);
-    
     if (this.fixedFiles.length > 0) {
       this.log('\n✅ Fixed files:');
       this.fixedFiles.forEach(file => this.log(`  - ${file}`));

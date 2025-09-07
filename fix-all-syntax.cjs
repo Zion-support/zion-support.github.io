@@ -4,7 +4,7 @@ function fixFile(filePath) {
   try {
   // TODO: Implement
 }
-    let content = fs.readFileSync(filePath,utf8);
+
     let originalContent = content;
 
     // Fix common patterns;
@@ -12,47 +12,43 @@ function fixFile(filePath) {
       // Fix files that are just closing braces or malformed;
       {]
         pattern: /^[\s\n]*\}[\s\S]*$/,
-        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: API endpoint});\n}`},
-      // Fix merge conflict markers;
+<<<<<<< HEAD
+        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
+      },
+      // Fix merge conflict markers
+      {
+<<<<<<< HEAD
+=======
+        pattern: /
+        replacement: ''
+      },
+      // Fix malformed function calls and syntax
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {
         pattern: /,
   replacement: },
+
       // Fix malformed function calls and syntax;
-      {
         pattern: /^[\s\n]*[^i][^m][^p][^o][^r][^t][\s\S]*$/,
         replacement: (match) => {
           if (match.includes('import') || match.includes('export')) {
             return match; // Don't replace if it already has imports/exports;
-          }
-          return `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: API endpoint});\n}`;
-        }
-      }
-    ];
 
-    for (const fix of fixes) {
-      if (typeof fix.replacement ===function') {
         content = content.replace(fix.pattern, fix.replacement);
       } else {
   // TODO: Implement
-}
-        content = content.replace(fix.pattern, fix.replacement);
-      }
-    }
 
     // If the file is very short and malformed, replace entirely;
-    if (content.length < 200 && (content.includes(}) || content.includes('return'))) {
-      content = `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: API endpoint});\n}`;
-    }
+
 
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       return true;
-    }
-  } catch (error) {
+  } catch (error) {`;
     console.error(`Error fixing ${filePath}:`, error.message);
-  }
   return false;
-}
 
 function processDirectory(dir) {
   let fixedCount = 0;
@@ -66,16 +62,19 @@ function processDirectory(dir) {
       fixedCount += processDirectory(filePath);
     } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
       if (fixFile(filePath)) {
-        fixedCount++;
-        console.log(`Fixed: ${filePath});
-      }
-    }
-  }
 
+<<<<<<< HEAD
   return fixedCount;
 }
-'
-console.log('Starting comprehensive syntax fixes...);
+
+console.log('Starting comprehensive syntax fixes...');
 const apiDir = '/workspace/pages/api';
 const fixedCount = processDirectory(apiDir);
 console.log(`Fixed ${fixedCount} files`);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

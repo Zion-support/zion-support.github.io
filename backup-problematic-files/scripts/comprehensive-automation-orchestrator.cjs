@@ -3,6 +3,7 @@
  * Comprehensive Automation Orchestrator;
  * Orchestrates all automation scripts for maximum efficiency;
  */;
+<<<<<<< HEAD
 const fs = require("$1")
 const path = require("$1")
 const { execSync, spawn } = require("child_process")
@@ -19,12 +20,12 @@ const { execSync, spawn } = require("child_process")
       "performance-optimizer.js"
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, type = "info")
-    const prefix = type === "error" ?  : type === "success" ?  : "ℹ"
+    const prefix = type === "error" ? "" : type === "success" ? "" : "ℹ"
     this.log("� Starting Comprehensive Automation Orchestration...")
     this.log(" Zion Tech Group - Advanced Automation System")
       this.log("� Comprehensive automation completed successfully!", "success")
       this.log(`⏱ Total orchestration "time"`)
-      this.log(`Orchestration "failed": ${error.message}, "error"`)
+      this.log(`Orchestration "failed": ${error.message}`, "error"`)
     this.log(" Running pre-automation checks...")
     // Check if we"
     if (!fs.existsSync("package.json")
@@ -55,10 +56,10 @@ const { execSync, spawn } = require("child_process")
         this.results.warnings.push(`${name} had "issues"`)
         this.log(`${name} had issues`, "error"`)
     const scriptPath = path.join("scripts")
-      execSync(`node ${scriptPath}, { "stdio": "pipe"`})
+      execSync(`node ${scriptPath}`, { "stdio": "pipe"`})
       this.log(`${scriptName} completed successfully`, "success"`)
       this.results.errors.push(`${scriptName} "failed"`)
-      this.log(`${scriptName} "failed": ${error.message}, "error"`)
+      this.log(`${scriptName} "failed": ${error.message}`, "error"`)
     this.log(" Generating comprehensive automation report...")
       "timestamp"
       "duration"
@@ -70,15 +71,15 @@ const { execSync, spawn } = require("child_process")
       "recommendations"
       "nextSteps"
     const reportPath = path.join(process.cwd(), "comprehensive-automation-report.json"
-    this.log(`� Comprehensive report saved to ${reportPath}, "success"`)
-${report.results.success.map(item => `- ${item}).join("\n"`)
-${report.results.errors.map(item => `- ${item}).join("\n"`)
-${report.results.warnings.map(item => `- ${item}).join("\n"`)
-${report.recommendations.map(item => `- ${item}).join("\n"`)
-${report.nextSteps.map(item => `- ${item}).join("\n"`)
+    this.log(`� Comprehensive report saved to ${reportPath}`, "success"`)
+${report.results.success.map(item => `- ${item}`).join("\n"`)
+${report.results.errors.map(item => `- ${item}`).join("\n"`)
+${report.results.warnings.map(item => `- ${item}`).join("\n"`)
+${report.recommendations.map(item => `- ${item}`).join("\n"`)
+${report.nextSteps.map(item => `- ${item}`).join("\n"`)
 *"Timestamp"
     const markdownPath = path.join(process.cwd(), "AUTOMATION_REPORT.md"
-    this.log(`� Markdown summary saved to ${markdownPath}, "success"`)
+    this.log(`� Markdown summary saved to ${markdownPath}`, "success"`)
       recommendations.push("Address all errors before deployment")
       recommendations.push("Review and address warnings for better code quality")
     recommendations.push("Implement continuous integration for automated testing")
@@ -152,5 +153,16 @@ ${report.nextSteps.map(item => `- ${item}).join("\n"`)
         "Monitor application performance"
     const reportPath = path.join(this.reportsDir, "comprehensive-automation-report.json")
     this.log(" Starting Comprehensive Automation Orchestrator")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       this.log(")
       this.log(")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

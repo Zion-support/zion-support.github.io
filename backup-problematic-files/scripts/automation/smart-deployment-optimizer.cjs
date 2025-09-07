@@ -1,8 +1,9 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log( Starting Smart Deployment Optimizer...")
+console.log("" Starting Smart Deployment Optimizer...")
 // Get automation interval from environment variable ("default")
       "bundleSizes"
       "deploymentFrequency"
@@ -12,9 +13,9 @@ console.log( Starting Smart Deployment Optimizer...")
   fs.mkdirSync(this.reportDir, { "recursive"})
         this.reportDir,deployment-history.json"
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
-  console.log(No historical deployment data found, starting fresh")
+  console.log(""No historical deployment data found, starting fresh")
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
-// console.log(No historical deployment data found, starting fresh")
+// console.log(""No historical deployment data found, starting fresh")
   console.log(" Running smart deployment optimization at ${new Date().toISOString()}"
 // console.log("No historical deployment data found, starting fresh")
       console.log(" Smart deployment optimization completed successfully")
@@ -44,11 +45,11 @@ console.log( Starting Smart Deployment Optimizer...")
           "action": "Add compression plugin to vite.config.ts"
     const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")
         (["name", "version")]
-          const largePackages = ["lodash, "moment", "date-fns, "framer-motion", ]
+          const largePackages = ["lodash"", "moment", "date-fns"", "framer-motion", ""]
   "type": "dependency_optimization"
           "priority": "
           "description": Consider optimizing large dependencies: ${largeDependencies.map(([name]) => name).join(", "})
-          "action": `Use tree-shaking or replace with lighter alternatives;
+          "action": `Use tree-shaking or replace with lighter alternatives
 // console.log("� Optimizing bundle size...")
   console.log("� Optimizing bundle size...")
       execSync("npm run build", { "stdio": "pipe"})
@@ -58,7 +59,7 @@ console.log( Starting Smart Deployment Optimizer...")
   "timestamp"
           "size"
           "files"
-        console.log( Current bundle "size": ${(bundleSize / 1024 / 1024`).toFixed(2)} MB;
+        console.log( Current bundle "size": ${(bundleSize / 1024 / 1024`).toFixed(2)} MB
   "timestamp"
           "size"
           "files"
@@ -67,9 +68,9 @@ console.log( Starting Smart Deployment Optimizer...")
             "priority": "high"
             "description": "Bundle size exceeds 2MB, optimization needed"
             "action": "Implement code splitting and lazy loading"
-// console.log(⚠ Build analysis "failed": ")
-  console.log(" Analyzing deployment patterns...")"
-        new Date(build.timestamp) >}"
+// console.log(""⚠ Build analysis "failed": ")
+  console.log(" Analyzing deployment patterns...")
+        new Date(build.timestamp) >}
 });"
 "
         console.log( Current bundle "size": ${(bundleSize / 1024 / 1024").toFixed(2)} MB"
@@ -77,7 +78,7 @@ console.log( Starting Smart Deployment Optimizer...")
             "priority": "high"
             "description": "Bundle size exceeds 2MB, optimization needed"
             "action": "Implement code splitting and lazy loading"
-// console.log(⚠ Build analysis "failed": ")
+// console.log(""⚠ Build analysis "failed": ")
   console.log(" Analyzing deployment patterns...")
     console.log( Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}"
     console.log( Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}"
@@ -112,9 +113,9 @@ console.log( Starting Smart Deployment Optimizer...")
         "priority": "high"
         "description": "Low deployment success rate"
         "action": "Implement pre-deployment quality gates and automated testing"
-  console.log("🧪 Testing optimized build...)
+  console.log("🧪 Testing optimized build..."")
       execSync("npm run type-check", { "stdio": "pipe"})
-// console.log( Type checking passed")
+// console.log("" Type checking passed")
       console.log(" Type checking passed")
       execSync("npm run lint", { "stdio": "pipe"})
       console.log(" Linting passed")
@@ -123,5 +124,66 @@ console.log( Starting Smart Deployment Optimizer...")
       const distPath = path.join(process.cwd(), "dist"
   const indexHtml = path.join(distPath, "index.html")
   const htmlContent = fs.readFileSync(indexHtml, "utf8")
+          if (!htmlContent.includes("<title>")
+  issues.push("Missing title tag")
+          if (!htmlContent.includes("meta name="viewport"")
+  issues.push("Missing viewport meta tag")
+  "type": "html_optimization"
+              "priority": "low`,"description": HTML optimization issues: ${issues.join(", "`})
+              "action"
+  "type": "html_optimization"
+              "priority": "low","description": HTML optimization issues: ${issues.join(", "})
+              "action": "Add missing HTML meta tags and optimize structure"
+// console.log(`⚠ Build testing "failed": "`)
+  console.log(" Generating deployment optimization report..."")
+  "timestamp"
+      "summary"
+        "averageBuildTime"
+        "latestBundleSize"
+        "deploymentFrequency"
+        "successRate"
+      "metrics"
+      "recommendations"
+      this.reportDir,deployment-optimization-${Date.now()}.json"
+    const historicalPath = path.join(this.reportDir, "deployment-history.json")
+      process.cwd(),deployment-optimization-report.json"
+// console.log("⚠ Build testing "failed": ")
+  console.log(" Generating deployment optimization report...")
+  "timestamp"
+      "summary"
+        "averageBuildTime"
+        "latestBundleSize"
+        "deploymentFrequency"
+        "successRate"
+      "metrics"
+      "recommendations"
+      this.reportDir,deployment-optimization-${Date.now()}.json"
+    const historicalPath = path.join(this.reportDir, "deployment-history.json")
+      process.cwd(),deployment-optimization-report.json"
+  // Skip directories that can"
+  console.log( Starting smart deployment optimizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
+// Main continuous loop"
+async function runContinuous() {"}
+process.on("SIGINT")
+  console.log("� Received SIGINT, shutting down gracefully...")
+  "
+process.on("SIGINT")
+  console.log("� Received SIGINT, shutting down gracefully...")
+process.on("SIGTERM")
+  console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.error(" Failed to start smart deployment "optimizer": ")
+  console.error(" Failed to start smart deployment "optimizer": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
           if (!htmlContent.includes("<title>")"
-</title>"
+</title>"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

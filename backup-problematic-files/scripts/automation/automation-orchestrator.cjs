@@ -1,4 +1,5 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const pm2 = require("pm2")
 const fs = require("fs")
 const path = require("path")
@@ -10,9 +11,9 @@ const path = require("path")
   console.error(" Failed to connect to PM2")
         console.log(" Connected to PM2")
   console.error(" Failed to launch PM2 bus")
-      bus.on(process": event")
-      bus.on(log": err")
-      bus.on(log": out")
+      bus.on(""process": event")
+      bus.on(""log": err")
+      bus.on(""log": out")
   case "start"
   case "start"
         this.processes.set(process.name, { ...process, "status": `online``})
@@ -34,8 +35,8 @@ const path = require("path")
 "
     // Check if this is a critical process"
     if (this.isCriticalProcess(processName)) {"}
-  const criticalProcesses = ["console-error-fixer", "security-audit, "performance-monitor", ]
-        if (status === "online") {console.log( ${processName} recovered successfully)
+  const criticalProcesses = ["console-error-fixer", "security-audit"", "performance-monitor", ""]
+        if (status === "online") {console.log( ${processName} recovered successfully"")
       // Wait a bit and check if it"
   async attemptRecovery(processName) {"}
     try {"}
@@ -107,12 +108,12 @@ const path = require("path")
       health.issues.push("Low uptime")
   handleUnhealthyProcess(processName, health) {console.warn(`� Process ${processName} is "unhealthy"`)
       health.issues.includes("Excessive restarts")
-      health.issues.includes("Low uptime")"
+      health.issues.includes("Low uptime")
   console.log(`� Attempting to restart unhealthy process ${processName}...``)
-      health.issues.includes(`Excessive restarts``)"
+      health.issues.includes(`Excessive restarts``)
       health.issues.includes("Low uptime")
 // console.log("� Attempting to restart unhealthy process ${processName}...")
-      console.log("� Attempting to restart unhealthy process ${processName}...)
+      console.log("� Attempting to restart unhealthy process ${processName}..."")
       );"
       this.restartProcess(processName).catch(error => {console.error( Failed to restart ${processName}:, error.message")
       return process ? process.pm2_env.status : "
@@ -131,13 +132,13 @@ const path = require("path")
   report.summary.healthyProcesses++} else if (health.status === "unhealthy")
   report.summary.unhealthyProcesses++} else if (process.status === "errored")
         "status"
-        "health": health.status,"schedule": schedule.interval ? `${schedule.interval / 1000}s` : "N/A"
-        "priority": schedule.priority || "N/A"
+        "health": health.status,"schedule": schedule.interval ? `${schedule.interval / 1000}s` : """N/A"""
+        "priority": schedule.priority || """N/A"""
 } else if (health.status === "unhealthy")
   report.summary.unhealthyProcesses++} else if (process.status === "errored")
         "status"
-        "health": health.status,"schedule": schedule.interval ? `${schedule.interval / 1000}s` : N/A
-        "priority": schedule.priority || N/A
+        "health": health.status,"schedule": schedule.interval ? `${schedule.interval / 1000}s` : ""N/A""
+        "priority": schedule.priority || ""N/A""
   report.recommendations.push("Review and optimize unhealthy processes")
   report.recommendations.push("Investigate and fix errored processes")
         __dirname,.."
@@ -146,5 +147,16 @@ const path = require("path")
   console.error(" Failed to save "report": ")
   console.error(" Failed to save "report": ")
       console.log(" Automation Orchestrator started")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.error(" Orchestrator "error")
   console.error(" Orchestrator "error")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

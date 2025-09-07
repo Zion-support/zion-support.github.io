@@ -7,9 +7,6 @@ const SystemAdministrationChat: NextPage = () => ;
   return (<div />;
 
 ;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 const SystemAdministrationChat: NextPage = () => ;
   return (<div />;
@@ -19,6 +16,51 @@ import Link from \"next/link\";
 
 const SystemAdministrationChat: NextPage = () => {;
   return (
+    <div>;
+</div>
+      <Head>;
+
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <meta;"
+          name="description"""
+          content="SystemAdministrationChat service"""
+        />{" "}"
+</meta>
+      <main>
+</main>
+        <h1>SystemAdministrationChat</h1>
+        <p>Service details coming soon...</p>"
+        <a href="/services">Back to Services</a>"
+      ;
+      <main>;
+        <h1>SystemAdministrationChat</h1>;
+        <p>Service details coming soon...</p>;"
+        <a href="/services">Back to Services</a>;"
+      </main>;
+    </div>;
+    <div>
+      <Head>
+
+
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>
+
+
+        <title > SystemAdministrationChat - Zion Tech Solutions</title>;
+          name="description";""
+          content="SystemAdministrationChat service";""
+        <h1 > SystemAdministrationChat</h1>;
+        <p > Service details coming soon...</p>;"
+      </main>;)
+    </div>);
+
+        <meta name=&quot;description&quot; content=&quot;SystemAdministrationChat service&quot; />
+      
+      
+        <p>Service details coming soon...</p>
+        <a href=&quot;/services&quot;>Back to Services</a>
+
+      
+"
     <div />;
       <Head />;
         <title />SystemAdministrationChat - Zion Tech Solutions</title>;
@@ -63,26 +105,8 @@ ursor/fix-website-loading-errors-and-merge-6662;
   );
 
 export default SystemAdministrationChat;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 const SystemAdministrationChat: NextPage = () => {
  ;
   return (

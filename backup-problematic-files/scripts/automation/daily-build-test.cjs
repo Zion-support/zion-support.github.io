@@ -1,23 +1,24 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
-console.log(� Starting continuous build and test automation...")
+console.log(""� Starting continuous build and test automation...")
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
-console.log(� Starting continuous build and test automation...")
+console.log(""� Starting continuous build and test automation...")
 // Get automation interval from environment variable ("default")
     console.log(`"� Installing dependencies..."`)
   execSync("npm ci", { "stdio": "inherit"})
-// console.log(" Dependencies installed)
-  console.log(⚠  Dependency installation failed but continuing...")
+// console.log(" Dependencies installed"")
+  console.log(""⚠  Dependency installation failed but continuing...")
 console.log("� Starting continuous build and test automation...")
 // Get automation interval from environment variable ("default")
     console.log(`"� Installing dependencies..."`)
   execSync("npm ci", { "stdio": "inherit"})
-// console.log(" Dependencies installed)
-  console.log(⚠  Dependency installation failed but continuing...")
+// console.log(" Dependencies installed"")
+  console.log(""⚠  Dependency installation failed but continuing...")
 // console.log("⚠  Dependency installation failed but continuing...")
     console.log(" Running linting...")
   execSync("npm run lint", { "stdio": "inherit"})
@@ -69,5 +70,16 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.error(" Failed to start continuous build and "test": ")
   console.error(" Failed to start continuous build and "test": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

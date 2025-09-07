@@ -3,6 +3,7 @@
  * Automation Enhancer Script;
  * Enhances existing automation scripts and creates new ones;
  */;
+<<<<<<< HEAD
 const fs = require("$1")
 const path = require("path")
     this.projectRoot = path.resolve(__dirname, "..")
@@ -13,7 +14,7 @@ const path = require("path")
     const ecosystemPath = path.join(this.projectRoot, "ecosystem.config.cjs")
       const ecosystem = fs.readFileSync(ecosystemPath, "utf8")
         /"pmx"
-        pmx"
+        ""pmx"
       "health_check_grace_period"
       "health_check_fatal_exceptions"
       "kill_timeout"
@@ -87,5 +88,16 @@ const path = require("path")
       "timestamp"
       "enhancements"
       "totalEnhancements"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
     const reportPath = path.join(this.projectRoot, ")
     const reportPath = path.join(this.projectRoot, ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

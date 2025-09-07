@@ -1,4 +1,44 @@
 {
+<<<<<<< HEAD
+  "timestamp": "2025-09-07T02:36:05.893Z",
+  "duration": "8552ms",
+  "summary": {
+    "successful": 5,
+    "errors": 0,
+    "warnings": 4
+  },
+  "results": {
+    "success": [
+      "Pre-automation checks passed",
+      "Dependency Installation completed",
+      "Found 0 image files",
+      "Sitemap generated",
+      "Security Audit completed"
+    ],
+    "errors": [],
+    "warnings": [
+      "ESLint Fix had issues: Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nTypeError: Key \"rules\": Key \"@typescript-eslint/no-unused-vars\": Could not find plugin \"@typescript-eslint\".\n    at throwRuleNotFoundError (/workspace/node_modules/eslint/lib/config/rule-validator.js:66:11)\n    at RuleValidator.validate (/workspace/node_modules/eslint/lib/config/rule-validator.js:128:17)\n    at [finalizeConfig] (/workspace/node_modules/eslint/lib/config/flat-config-array.js:337:23)\n    at FlatConfigArray.getConfig (/workspace/node_modules/@humanwhocodes/config-array/api.js:1036:55)\n    at FlatConfigArray.isFileIgnored (/workspace/node_modules/@humanwhocodes/config-array/api.js:1060:15)\n    at /workspace/node_modules/eslint/lib/eslint/eslint-helpers.js:336:57\n    at Array.reduce (<anonymous>)\n    at /workspace/node_modules/eslint/lib/eslint/eslint-helpers.js:323:36\n    at /workspace/node_modules/eslint/lib/eslint/eslint-helpers.js:286:32\n    at Object.isAppliedFilter (/workspace/node_modules/@nodelib/fs.walk/out/readers/common.js:12:31)\n",
+      "TypeScript Check had issues: spawnSync /bin/sh ENOBUFS",
+      "Smoke Tests had issues: Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nError [ERR_MODULE_NOT_FOUND]: Cannot find package '@next/bundle-analyzer' imported from /workspace/next.config.js\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:256:9)\n    at packageResolve (node:internal/modules/esm/resolve:768:81)\n    at moduleResolve (node:internal/modules/esm/resolve:854:18)\n    at defaultResolve (node:internal/modules/esm/resolve:984:11)\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)\n    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)\n    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)\n    at ModuleJob._link (node:internal/modules/esm/module_job:137:49)\n",
+      "Build had issues: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n ⚠ Mismatching @next/swc version, detected: 15.5.2 while Next.js is on 14.2.32. Please ensure these match\n\n> Build error occurred\nError [ERR_MODULE_NOT_FOUND]: Cannot find package '@next/bundle-analyzer' imported from /workspace/next.config.js\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:256:9)\n    at packageResolve (node:internal/modules/esm/resolve:768:81)\n    at moduleResolve (node:internal/modules/esm/resolve:854:18)\n    at defaultResolve (node:internal/modules/esm/resolve:984:11)\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)\n    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)\n    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)\n    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {\n  code: 'ERR_MODULE_NOT_FOUND'\n}\n"
+    ],
+    "metrics": {}
+  },
+  "recommendations": [
+    "Review and address warnings for better code quality",
+    "Implement continuous integration for automated testing",
+    "Set up automated deployment pipeline",
+    "Monitor performance metrics in production",
+    "Regular security audits and dependency updates"
+  ],
+  "nextSteps": [
+    "Review the working automation report",
+    "Address any critical errors identified",
+    "Implement recommended optimizations",
+    "Set up monitoring for production environment",
+    "Schedule regular automation runs",
+    "Document any custom automation workflows"
+=======
   "timestamp": "2025-09-07T06:09:50.606Z",
   "duration": "67s",
   "summary": {
@@ -62,5 +102,6 @@
       "description": "System Monitor",
       "error": "Command failed: node system-monitor.cjs\n/workspace/system-monitor.cjs:7\n  constructor() {\n                ^\n\nSyntaxError: Unexpected token '{'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
     }
+>>>>>>> origin/main
   ]
 }

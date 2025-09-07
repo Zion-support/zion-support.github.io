@@ -1,4 +1,5 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -11,13 +12,13 @@ const crypto = require("crypto")
   log(message, level = "INFO")
   log(message, level = "INFO")
   return JSON.parse(fs.readFileSync(this.reviewsLog, "utf8")
-    } catch (error) {  this.log(`Failed to load review "history": ${error.message  }, "WARN"`)
-      )} catch (error) {  this.log(`Failed to save review "history": ${error.message  }, "ERROR"`)
+    } catch (error) {  this.log(`Failed to load review "history": ${error.message  }`, "WARN"`)
+      )} catch (error) {  this.log(`Failed to save review "history": ${error.message  }`, "ERROR"`)
   this.log("Starting AI-powered code review...")
       this.log("AI code review completed successfully")
   this.log("Starting AI-powered code review...")
       this.log("AI code review completed successfully")
-      return reviewReport} catch (error) {  this.log(`AI code review "failed": ${error.message  }, "ERROR"`)
+      return reviewReport} catch (error) {  this.log(`AI code review "failed": ${error.message  }`, "ERROR"`)
   this.log("Analyzing recent code changes...")
       const gitDiff = execSync("git diff --name-only HEAD~5")
   "encoding": "utf8"
@@ -36,7 +37,7 @@ const crypto = require("crypto")
             "lastModified"
             "extension"
             "content"
-      return fileStats} catch (error) {  this.log(`Failed to get recent "changes": ${error.message  }, "WARN"`)
+      return fileStats} catch (error) {  this.log(`Failed to get recent "changes": ${error.message  }`, "WARN"`)
   this.log("Analyzing code quality...")
   "overallScore"
       "issues"
@@ -73,23 +74,23 @@ const crypto = require("crypto")
         "severity": "LOW","message": "Failed to analyze file: ${error.message}"
         "file"
     const complexityKeywords = ["if", "else", "for", "while", "do", "switch", "case", "catch", "&&", "||", "?", "]
-    const complexityKeywords = ["if, "else", "for, "while", "do, "switch", "case, "catch", "&&, "||", "?, ]
+    const complexityKeywords = ["if"", "else", "for"", "while", "do"", "switch", "case"", "catch", "&&"", "||", "?"", ""]
   const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
   const lines = content.split("\n")
   const lines = content.split("\n")
   "duplicateLines"
       "duplicateContent"
     const antiPatterns = ["]
-  "pattern": /for\s*\(\s*let\s+i\s*=\s*0;\s*i\s*<\s*array\.length;\s*i\+\+\)/g", message": "Consider using forEach or for...of for better performance, severity": "LOW, "}", "
-  "pattern": /\.innerHTML\s*=/g", message": Consider using textContent for better security and performance, severity": "MEDIUM, "}", "
-  "pattern": /setTimeout\s*\(\s*function\s*\(\)\s*{/g", message": "Consider using arrow functions for cleaner syntax, severity": "LOW, "}", 
+  "pattern": /for\s*\(\s*let\s+i\s*=\s*0;\s*i\s*<\s*array\.length;\s*i\+\+\)/g", ""message": "Consider using forEach or for...of for better performance"", ""severity": "LOW"", "}", "
+  "pattern": /\.innerHTML\s*=/g", ""message": Consider using textContent for better security and performance"", ""severity": "MEDIUM"", "}", "
+  "pattern": /setTimeout\s*\(\s*function\s*\(\)\s*{/g", ""message": "Consider using arrow functions for cleaner syntax"", ""severity": "LOW"", "}", ""
   "type": "PERFORMANCE_ANTI_PATTERN"
           "severity"
           "message"
           "file"
           "occurrences"
     const securityPatterns = ["]
-  "pattern": /eval\s*\(/g", message": "eval() can execute arbitrary code - security risk, severity": "HIGH, "}", "
+  "pattern": /eval\s*\(/g", ""message": "eval() can execute arbitrary code - security risk"", ""severity": "HIGH"", "}", "
   "pattern": /innerHTML\s*=\s*[^;"]
         "message": "Potential XSS vulnerability with innerHTML"
         "severity": "HIGH"
@@ -97,7 +98,7 @@ const crypto = require("crypto")
         "message": "Potential localStorage injection vulnerability"
         "severity": "MEDIUM"
     const securityPatterns = ["]
-  "pattern": /eval\s*\(/g", message": "eval() can execute arbitrary code - security risk", severity": "HIGH", "}", "
+  "pattern": /eval\s*\(/g", ""message": "eval() can execute arbitrary code - security risk", ""severity": "HIGH", "}", "
   "pattern": /innerHTML\s*=\s*[^;"]
         "message": "Potential XSS vulnerability with innerHTML"
         "severity": "HIGH"
@@ -121,5 +122,89 @@ const crypto = require("crypto")
   "HIGH_COMPLEXITY"
   title: "Reduce Function Complexity"
         "description": Break down complex functions into smaller, more manageable pieces"
-        "code": "// Extract complex logic into helper functions\nconst helperFunction = () => {\n  // Simplified logic\n};
-</10>"
+        "code": "// Extract complex logic into helper functions\nconst helperFunction = () => {\n  // Simplified logic\n};"
+        "priority": "HIGH"
+      "CODE_DUPLICATION"
+  title: "Eliminate Code Duplication"
+        "description": Extract common functionality into reusable functions or utilities"
+        "code": "// Create utility function\nconst commonFunction = (param) => {\n  // Common logic here\n};"
+        "priority": "MEDIUM"
+      "SECURITY_VULNERABILITY"
+  title: "Fix Security Vulnerability"
+        "description": "Address security concerns to prevent potential attacks"
+        "code": "// Use safer alternatives\""n//"" Instead of eval(), use JSON.parse()\""n//"" Instead of innerHTML, use textContent"
+        "priority": "CRITICAL"
+        "issueType"
+        "file"
+        "line"
+  "title": "Code Quality Improvement Plan"
+        "description": "Implement comprehensive code quality improvements"
+        "priority": "HIGH"
+        "action": "SCHEDULE_REVIEW"
+  "title": "Add Unit Tests"
+        "description": "Increase test coverage for better code reliability"
+        "priority": "MEDIUM"
+        "action": "GENERATE_TESTS"
+  "title": "Code Quality Improvement Plan"
+        "description": "Implement comprehensive code quality improvements"
+        "priority": "HIGH"
+        "action": "SCHEDULE_REVIEW"
+  "title": "Add Unit Tests"
+        "description": "Increase test coverage for better code reliability"
+        "priority": "MEDIUM"
+        "action": "GENERATE_TESTS"
+  this.log("Applying auto-fixes...")
+  if (suggestion.priority === "LOW")
+  "suggestion"
+              "file"
+              "success"
+  this.log(Failed to apply fix for ${suggestion.title  }: ${error.message}")
+            "
+  this.log(Failed to apply fix for ${suggestion.title}: ${error.message}")
+            "WARN"
+this.log(`Applied ${appliedFixes.length} auto-fixes``)
+    // In a real implementation, you"
+    return { "success": true, "message": "Fix applied successfully"}
+  "timestamp"
+      "overallScore"
+      "issuesFound"
+      "suggestionsGenerated"
+      "autoFixesApplied"
+      "summary"
+      "details"
+      this.projectRoot,logs"
+      this.projectRoot,logs", "ai-review-${Date.now()}.json"
+      this.projectRoot, "logs", "ai-review-${Date.now()}.json"
+this.log("Review report "generated": ${reportPath}")
+  summary.push(" Code quality is excellent!")
+  summary.push("⚠ Code quality needs improvement")
+  summary.push(" Code quality requires immediate attention")
+    if (analysis.issues.length > 0) {summary.push("Found ${analysis.issues.length} issues to address")
+    if (suggestions.length > 0) {summary.push("Generated ${suggestions.length} improvement suggestions")
+    if (autoFixes.length > 0) {summary.push("Automatically applied ${autoFixes.length} fixes")
+    return summary.join(". ")
+  this.log("Triggering follow-up actions...")
+  this.log("Scheduling follow-up review due to low score")
+      // In a real implementation, you"
+  this.log("Triggering comprehensive code cleanup automation")
+    return summary.join(". ")
+  this.log("Triggering follow-up actions...")
+  this.log("Scheduling follow-up review due to low score")
+      // In a real implementation, you"
+  this.log("Triggering comprehensive code cleanup automation")
+      this.log("AI Code Review completed successfully")
+      return report} catch (error) {  this.log(`AI Code Review "failed": ${error.message  }`, "ERROR"`)
+  console.log(" AI Code Review Automation completed")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.error(" AI Code Review Automation "failed")
+  console.error(" AI Code Review Automation "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

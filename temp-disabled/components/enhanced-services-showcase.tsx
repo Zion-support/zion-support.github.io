@@ -1,6 +1,6 @@
 
 
-import React, { useState } from 'react',
+import React, { useState } from 'react',;
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -11,7 +11,7 @@ import { Star, TrendingUp, Zap, Brain, Rocket, Shield;
 }
   Crown, Award, Target, Globe, Cpu, Database}
  } from 'lucide-react';
-import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground';,
+import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground';,;
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { nextGenerationAIServices  } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices  } from '../data/cutting-edge-it-services';

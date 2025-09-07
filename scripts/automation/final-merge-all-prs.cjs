@@ -1,4 +1,12 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -20,10 +28,10 @@ const { execSync } = require("child_process")
         const batch = allBranches.slice(i, i + batchSize);"
       // Step "4"
   // Step "4"
-  this.log( Fatal "error": ${error.message  }, "ERROR`)
+  this.log( Fatal "error": ${error.message  }`, "ERROR""`)
       // Step "4"
       await this.finalizeMerges();"
-      this.log( Fatal "error": ${error.message}, "ERROR`)
+      this.log( Fatal "error": ${error.message}`, "ERROR""`)
   this.log("� Ensuring we are on main branch...")
   const currentBranch = execSync("git branch --show-current")
   "encoding": "utf8"
@@ -36,7 +44,7 @@ const { execSync } = require("child_process")
       const branchesOutput = execSync("git branch -r", { "encoding": "utf8"})
         .split("\n")
           line => line && !line.includes("HEAD") && !line.includes("main")
-        .map(line => line.replace("origin/", )
+        .map(line => line.replace("origin/", "")
   this.log(" Getting all remaining branches...")
       execSync("git fetch --all", { "stdio": "inherit"})
       const branchesOutput = execSync("git branch -r", { "encoding": "utf8"})
@@ -48,8 +56,8 @@ const { execSync } = require("child_process")
   this.log( Error processing branch ${branchName  }: ${error.message}")
         "
   this.log( Error processing branch ${branchName}: ${error.message}")
-        "ERROR
-  this.log(`� Attempting to merge ${branchName} into main...``)"
+        "ERROR"
+  this.log(`� Attempting to merge ${branchName} into main...``)
       // Try to merge the branchexecSync("git merge origin/${branchName} --no-edit")
   "stdio": "
         "timeout"
@@ -82,6 +90,7 @@ const { execSync } = require("child_process")
   const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
         !content.includes("")
+        !content.includes(">>>>>>>")
 this.log(" Resolved conflicts "in")
         "ERROR"
     // "Strategy"
@@ -94,15 +103,37 @@ this.log(" Resolved conflicts "in")
           { "stdio": "pipe"}
       execSync("git push origin main", { "stdio": "inherit"})
       this.log(" Successfully pushed all merged changes to remote")
-  this.log(` Failed to push "changes": ${error.message  } "ERROR"`)
+  this.log(` Failed to push "changes": ${error.message  }` "ERROR"`)
   execSync(git commit -m "Final merge of all remaining PRs and branches")
           { "stdio": "pipe"}
       execSync("git push origin main", { "stdio": "inherit"})
       this.log(" Successfully pushed all merged changes to remote")
-  this.log(` Failed to push "changes": ${error.message}, "ERROR"`)
+  this.log(` Failed to push "changes": ${error.message}`, "ERROR"`)
   this.log(" Generating final merge report...")
   "timestamp"
       "summary"
         "mergesSuccessful"
         "conflictsResolved"
         "errors"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      "successRate"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      "successRate"
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      "successRate"
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,4 +1,5 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -60,7 +61,7 @@ const crypto = require("crypto")
       "cpuUsage"
       this.log(Performance "analysis")
       this.log(Performance "analysis": Build=${performance.buildTime}ms, Bundle=${performance.bundleSize}bytes, Install=${performance.installTime}ms")
-      )} catch (error) {  this.log(`Performance analysis "failed": ${error.message  }, "WARN"`)
+      )} catch (error) {  this.log(`Performance analysis "failed": ${error.message  }`, "WARN"`)
   const build = spawn("npm", ["run", "build")]
   "cwd"
         "stdio": "pipe"
@@ -84,7 +85,7 @@ const crypto = require("crypto")
   const distPath = path.join(this.projectRoot, "dist")
       rebuild.on("error")
   const distPath = path.join(this.projectRoot, "dist")
-      return totalSize} catch (error) {  this.log(`Bundle size measurement "failed": ${error.message  }, "WARN"`)
+      return totalSize} catch (error) {  this.log(`Bundle size measurement "failed": ${error.message  }`, "WARN"`)
   const fullPath = path.join(dir, ")
   this.getAllFilesRecursive(fullPath")
   "type": "BUILD_TIME"
@@ -129,7 +130,7 @@ const crypto = require("crypto")
         "config": "tsconfig.json"
             "applied"
             "result"
-      } catch (error) {  this.log(`Failed to apply "optimization": ${error.message  }, "WARN"`)
+      } catch (error) {  this.log(`Failed to apply "optimization": ${error.message  }`, "WARN"`)
   case "BUILD_TIME"
       case "BUNDLE_SIZE"
       case "INSTALL_TIME"
@@ -153,7 +154,7 @@ const crypto = require("crypto")
       const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
   const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
           "incremental"
-          "tsBuildInfoFile": "./"node_modules/.cache/.tsbuildinfo
+          "tsBuildInfoFile": "./"node_modules/.cache/.tsbuildinfo""
           "skipLibCheck"
           "removeComments"
   "success"
@@ -163,7 +164,7 @@ const crypto = require("crypto")
   return { "success": false, "message"}
 const packagePath = path.join(this.projectRoot, "package.json")
   const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8")
-        if (!pkg.scripts[install": fast")]
+        if (!pkg.scripts[""install": fast")]
   pkg.scripts["install:fast"] = "npm ci --prefer-offline --no-audit"
           pkg.scripts["install:clean"] =rm -rf node_modules package-lock.json && npm install"
           return { "success": true, "message": "Fast install scripts added"}
@@ -173,7 +174,7 @@ const packagePath = path.join(this.projectRoot, "package.json")
       const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
   const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
           "incremental"
-          "tsBuildInfoFile": "./"node_modules/.cache/.tsbuildinfo
+          "tsBuildInfoFile": "./"node_modules/.cache/.tsbuildinfo""
         return { "success": true, "message": "Incremental compilation enabled"}
       return { "success": true, "message": "Rebuild time optimization applied"}
   return { "success": false, "message"}
@@ -188,7 +189,7 @@ const packagePath = path.join(this.projectRoot, "package.json")
   "category": "WORKFLOW"
       "priority": "MEDIUM"
       "suggestion": "Use npm ci for faster, reliable installs"
-      "action": "Run npm ci instead of npm install in CI/CD environments"
+      "action": "Run npm ci instead of npm install in ""CI/CD"" environments"
   "category": "PERFORMANCE"
         "priority": "HIGH"
         "suggestion": "Consider using esbuild for faster builds"
@@ -206,5 +207,16 @@ const packagePath = path.join(this.projectRoot, "package.json")
         "ERROR"
   this.log(")
   console.log("Smart Build Optimization completed successfully")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.error("Smart Build Optimization "failed")
   console.error("Smart Build Optimization "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

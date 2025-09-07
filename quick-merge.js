@@ -23,7 +23,7 @@ try {
     mainFiles.forEach(file => {
         if (fs.existsSync(file)) {
             const content = fs.readFileSync(file, 'utf8');
-            if (content.includes('<<<<<<< HEAD')) {
+            if (content.includes('')) {
                 console.log(`⚠️  Found conflicts in ${file}`);
                 hasConflicts = true;
             }

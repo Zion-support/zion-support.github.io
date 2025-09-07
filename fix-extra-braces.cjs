@@ -5,28 +5,21 @@ function fixExtraBraces(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    
     // Remove extra closing parentheses and braces at the end
     // Pattern: } followed by ); followed by }
     content = content.replace(/\s*\);\s*}\s*$/g, '');
-    
     // Remove any stray commit hashes
     content = content.replace(/[a-f0-9]{40}/g, '');
-    
     // Remove any remaining merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>>/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>>/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>>/g, '');
-    
+    content = content.replace(/[\s\S]*?>>>>>>>/g, '');
+    content = content.replace(/[\s\S]*?>>>>>>>/g, '');
     // Clean up any extra whitespace at the end
     content = content.trim() + '\n';
-    
     const originalContent = fs.readFileSync(filePath, 'utf8');
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       modified = true;
     }
-    
     return modified;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -37,11 +30,9 @@ function fixExtraBraces(filePath) {
 function findAndFixFiles(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
-  
   files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
     if (stat.isDirectory()) {
       fixedCount += findAndFixFiles(filePath);
     } else if (file.endsWith('.tsx')) {
@@ -51,7 +42,6 @@ function findAndFixFiles(dir) {
       }
     }
   });
-  
   return fixedCount;
 }
 

@@ -1,9 +1,9 @@
 
 
-import React from 'react';,
-import Head from 'next/head';,
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';,
-import Card from '../components/ui/Card';,
+import React from 'react';,;
+import Head from 'next/head';,;
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';,;
+import Card from '../components/ui/Card';,;
 import Button from '../components/ui/Button';
 import { Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain } from 'lucide-react';
 

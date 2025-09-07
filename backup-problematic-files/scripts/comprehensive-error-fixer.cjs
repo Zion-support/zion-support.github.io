@@ -24,8 +24,7 @@ class ComprehensiveErrorFixer {}
       const sourceFiles = this.findSourceFiles();
       for (const file of sourceFiles) {}
         try {}
-          await this.fixFileErrors(file)} catch (error) {}"
-          this.log(`Failed to fix ${file}: ${error.message}, "error")};"
+
       };"
       this.log("Common syntax errors fixed", "success");
       this.fixes.push("syntax_errors")} catch (error) {}
@@ -38,7 +37,6 @@ class ComprehensiveErrorFixer {}
     for (const dir of sourceDirs) {}
       if (fs.existsSync(dir)) {}
         this.findFilesRecursively(dir, extensions, files)};
-    };
     return files};
   findFilesRecursively(dir, extensions, files) {}
     const items = fs.readdirSync(dir);
@@ -50,11 +48,7 @@ class ComprehensiveErrorFixer {}
         const ext = path.extname(item);
         if (extensions.includes(ext)) {}
           files.push(fullPath)};
-      };
-    };
-  };
   async fixFileErrors(filePath) {}
-    try {}"
       let content = fs.readFileSync(filePath, "utf8");"
       let modified = false;
       // Fix common syntax errors;
@@ -74,7 +68,6 @@ class ComprehensiveErrorFixer {}
         if (newContent !== content) {}
           content = newContent;
           modified = true};
-      };
       if (modified) {}
         fs.writeFileSync(filePath, content);"
         this.log("Fixed syntax errors in ${filePath}", "success");
@@ -82,27 +75,17 @@ class ComprehensiveErrorFixer {}
     } catch (error) {}"
       this.log("Error fixing ${filePath}: ${error.message}", "error");
       this.errors.push({ "file": filePath, "error": error.message })};"
-  };
   async runTypeScriptCheck() {}
-    try {}"
-      this.log("Running TypeScript check...");
+
       execSync("npx tsc --noEmit", { "cwd": this.projectRoot, "stdio": "pipe" }")
 });"
       this.log("TypeScript check passed", "success");
       this.fixes.push("typescript_check")} catch (error) {}
       this.log("TypeScript check failed", "error");
       this.errors.push({ "check": "typescript", "error": error.message })};"
-  };
   async runLinting() {}
-    try {}"
-      this.log("Running ESLint...");
-      execSync("npx eslint . --fix", { "cwd": this.projectRoot, "stdio": "pipe" }")
-});"
-      this.log("ESLint passed", "success");
-      this.fixes.push("eslint_fix")} catch (error) {}
-      this.log("ESLint failed", "error");
+
       this.errors.push({ "check": "eslint", "error": error.message })};"
-  };
   async generateReport() {}
     const report = {}"
       "timestamp": new Date().toISOString();
@@ -117,22 +100,29 @@ class ComprehensiveErrorFixer {}
     return report};
   async run() {}"
     this.log("Starting Comprehensive Error Fixer");"
-    try {}
       await this.fixCommonSyntaxErrors();
       await this.runTypeScriptCheck();
       await this.runLinting();
       const report = await this.generateReport();"
-      this.log("Comprehensive Error Fixer completed");
-      this.log(Summary": ${report.summary.totalFixes} fixes applied, ${report.summary.totalErrors} errors found");"
-      return report} catch (error) {}"
-      this.log("Error fixer "failed": ${error.message}, "error");"
+
       throw error};
-  };
-};
 // Run the error fixer;
 if (require.main === module) {}
   const fixer = new ComprehensiveErrorFixer();
   fixer.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
 module.exports = ComprehensiveErrorFixer;
 module.exports = ComprehensiveErrorFixer;
-"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = ComprehensiveErrorFixer;
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

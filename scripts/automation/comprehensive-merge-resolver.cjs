@@ -1,4 +1,12 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -45,7 +53,7 @@ const { execSync, spawn } = require("child_process")
       const branchesOutput = execSync("git branch -r", { "encoding": "utf8"})
         .split("\n")
           line => line && !line.includes("HEAD") && !line.includes("main")
-        .map(line => line.replace("origin/", )
+        .map(line => line.replace("origin/", "")
   this.log(" Fetching all remote branches...")
       execSync("git fetch --all", { "stdio": "inherit"})
       const branchesOutput = execSync("git branch -r", { "encoding": "utf8"})
@@ -57,10 +65,10 @@ const { execSync, spawn } = require("child_process")
   this.log( Error processing branch ${branchName  }: ${error.message}")
         "
   this.log( Error processing branch ${branchName}: ${error.message}")
-        "ERROR
-  const backupName = `backup-${branchName}-${Date.now()}"
+        "ERROR"
+  const backupName = `backup-${branchName}-${Date.now()}
     const backupPath = path.join(this.backupsDir, ")
-  // Create backup of current working directoryexecSync(`cp -r . ${backupPath}", { "stdio": "pipe" }")"
+  // Create backup of current working directoryexecSync(`cp -r . ${backupPath}`", { "stdio": "pipe" }
 });this.log("� Created "backup"`)
         "WARN"
   "stdio": "pipe"
@@ -87,11 +95,13 @@ const { execSync, spawn } = require("child_process")
   const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
         !content.includes("")
+        !content.includes(">>>>>>>")
 this.log(" Resolved conflicts "in")
         "ERROR"
   const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
         !content.includes("")
+        !content.includes(">>>>>>>")
 this.log(` Resolved conflicts "in": ${filePath}"`)
   this.log( Failed to resolve conflicts in ${filePath}: ${error.message}")
         "ERROR"
@@ -125,3 +135,25 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
         "mergesSuccessful"
         "errors"
       "successRate"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    const reportPath = path.join(this.logsDir, ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+    const reportPath = path.join(this.logsDir, ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    const reportPath = path.join(this.logsDir, ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

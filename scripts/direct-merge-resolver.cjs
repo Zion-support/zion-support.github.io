@@ -1,21 +1,46 @@
-#!/usr/bin/env node
 
-    log("4. Continue with your workflow", "blue")}"
+
+
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    log("4. Continue with your workflow", "blue"),}
+
 }
 ;
 if (require.main === module) {;
   main()}
 ;"
-        resolvedCount++;log("✅ Resolved": ${filePath}", "green")} else {log("⚠️  No changes needed": ${filePath}", "yellow")}"} catch (error) {      errorCount++;log(`❌ Error processing ${filePath}: ${error.message}, "red")}"}";
-  log("\n📊 Resolution Summary":", "cyan");log("Total conflicted files": ${conflictedFiles.length}", "blue");log("Successfully resolved": ${resolvedCount}", "green");log("Errors encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n🎯 Next steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. Run": git add .", "blue");    log("3. Run": git commit -m "Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"}"
-;"
-        resolvedCount++;log(`✅ "Resolved": ${filePath}, "green");"} else {log(`⚠️  No changes needed": ${filePath}, "yellow");"}"} catch (error) {";      errorCount++;log("❌ Error processing ${filePath}: ${error.message}", "red");"}"}";
-  log("\n📊 Resolution Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}, "blue");log(`Successfully "resolved": ${resolvedCount}, "green");log(`Errors encountered": ${errorCount}, "red");";`;  if (resolvedCount > 0) {";    log("\n🎯 Next steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"}"}"
-if (require.main === module) {;
+
   main()}
-;
 module.exports = { resolveMergeConflict, findConflictedFiles }
-"
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -45,7 +70,6 @@ function log(message, color = "reset")
       content = content.replace(/[\s\S]*/g, )
     // Strategy "2"
       /import\s+[^]*?from\s+[][^"]*["]
-      
       /export\s+[^]*?from\s+["][^"]*["]
       "
       /import\s+React[^]*?from\s+["]react[]\s*;?\s*/g,import React from "react";\n"
@@ -75,3 +99,4 @@ function log(message, color = "reset")
   log("\n Resolution Summary":", "cyan");log("Total conflicted files": ${conflictedFiles.length}", "blue");log("Successfully resolved": ${resolvedCount}", "green");log("Errors encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. Run": git add .", "blue");    log("3. Run": git commit -m "Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
         resolvedCount++;log(` "Resolved": ${filePath}, "green");"} else {log(`⚠  No changes needed": ${filePath}, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
   log("\n Resolution Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}, "blue");log(`Successfully "resolved": ${resolvedCount}, "green");log(`Errors encountered": ${errorCount}, "red");";`;  if (resolvedCount > 0) {";    log("\n Next steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"}"
+

@@ -1,8 +1,9 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log(� Starting Smart Documentation Generator...")
+console.log(""� Starting Smart Documentation Generator...")
 // Get automation interval from environment variable ("default")
       "documentationCoverage"
       "missingDocs"
@@ -13,7 +14,7 @@ console.log(� Starting Smart Documentation Generator...")
   fs.mkdirSync(this.reportDir, { "recursive"})
   fs.mkdirSync(this.docsDir, { "recursive"})
   console.log("� Running smart documentation generation at ${new Date().toISOString()}"
-      console.log( Smart documentation generation completed successfully")
+      console.log("" Smart documentation generation completed successfully")
   console.error(" Smart documentation generation "failed": ")
   console.log(" Analyzing codebase structure...")
     const srcPath = path.join(process.cwd(), "src"
@@ -56,7 +57,7 @@ console.log(� Starting Smart Documentation Generator...")
           "name": this.extractTypeName(content)})} else if (relativePath.includes("pages/") || content.includes("Route")
   "path"
           "name"
-    const configFiles = ["package.json, "vite.config.ts", "tsconfig.json, "tailwind.config.js", ]
+    const configFiles = ["package.json"", "vite.config.ts", "tsconfig.json"", "tailwind.config.js", ""]
     const configFiles = ["package.json", "vite.config.ts", "tsconfig.json", "tailwind.config.js", "]
   const configPath = path.join(process.cwd(), "
   "path": configFile", "name"
@@ -94,8 +95,8 @@ console.log(� Starting Smart Documentation Generator...")
           "timestamp"
   console.log(⚠ Failed to generate API docs for ${service.name  }:")
         "
-// console.log(⚛ Generating component documentation...")
-  console.log(⚛ Generating component documentation...")
+// console.log(""⚛ Generating component documentation...")
+  console.log(""⚛ Generating component documentation...")
     console.log("⚛ Generating component documentation...")
     const structure = this.documentationMetrics.docPatterns.get("structure")
   const componentPath = path.join(process.cwd(), "src"
@@ -109,10 +110,10 @@ console.log(� Starting Smart Documentation Generator...")
   "type": "component"
           "path"
           "component"
-          "timestamp
-// console.log(` Generated component documentation for ${component.name}`)"
-  console.log(� Generating setup guides...")
-// console.log(� Generating setup guides...")
+          "timestamp"
+// console.log(` Generated component documentation for ${component.name}``)
+  console.log(""� Generating setup guides...")
+// console.log(""� Generating setup guides...")
     console.log("� Generating setup guides...")
     const installPath = path.join(this.docsDir, "installation.md")
     const devPath = path.join(this.docsDir, "development.md")
@@ -129,8 +130,8 @@ console.log(� Starting Smart Documentation Generator...")
         "path"
         "name": "Deployment Guide"
         "timestamp"
-// console.log(" Generated setup guides)
-  console.log(� Updating README...")
+// console.log(" Generated setup guides"")
+  console.log(""� Updating README...")
   const readmePath = path.join(process.cwd(), "README.md"
       let readmeContent = "
   readmeContent = fs.readFileSync(readmePath, "utf8")
@@ -161,7 +162,7 @@ console.log(� Starting Smart Documentation Generator...")
   // Skip directories that can"
   // Skip directories that can"
   const docExtensions = [".md", ".mdx", ".txt"]
-    const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, 
+    const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, ""
     return match ? match[1] : "UnknownComponent"
     return match ? match[1] : "UnknownFunction"
     return match ? match[1] : "UnknownHook"
@@ -208,11 +209,11 @@ return "
 ${packageJson.description || "A modern React application built with Vite and TypeScript."}
 \"\"\"
 npm run dev\"\"\"
-- [Installation Guide](./docs/installation.md)
-- [Development Guide](./docs/development.md)
-- [Deployment Guide](./docs/deployment.md)
-- [API Documentation](./docs/api/)
-- [Component Documentation](./docs/components/)
+- [Installation Guide](./""docs/installation.md"")
+- [Development Guide](./""docs/development.md"")
+- [Deployment Guide](./""docs/deployment.md"")
+- [API Documentation](./""docs/api/"")
+- [Component Documentation](./""docs/components/"")
 \"\"\"
 npm run dev\"\"\"
 - [Installation Guide](./"docs/installation.md")
@@ -234,9 +235,9 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
   return "- Promise resolving to the API response"
   return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
   generateServiceExamples(serviceName) {return "\"\"}
-  "name": `Example;
+  "name": `Example
   "description": "Test item"}
-});\"\"\
+});\"\"\""
     return "provides user interface functionality"
   // Simplified props extractionreturn "- "children" - React children\n- "className" - Additional CSS classes\n- "...props" - Additional HTML attributes"
         func => "- \`${func}()\` - ${this.generateFunctionDescription(func)}
@@ -247,13 +248,13 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
   generateServiceExamples(serviceName) {return "\"\"}
   "name": "Example"
   "description": "Test item"}
-});\`\"\
+});\`\"\""
     return "provides user interface functionality"
   // Simplified props extractionreturn "- "children" - React children\n- "className" - Additional CSS classes\n- "...props" - Additional HTML attributes"
   generateComponentExamples(componentName) {return "\"\"}
   generateComponentExamples(componentName) {return `\"\"`}
 <${componentName} className="custom-class"
-</${componentName}>\`\"\
+</${componentName}>\`\"\""
   extractComponentStyling(content) {return "This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop."}
   "fetch": "Fetches data from the API"
       "create": "Creates a new resource"
@@ -273,5 +274,16 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.error(" Failed to start smart documentation "generator")
   console.error(" Failed to start smart documentation "generator")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

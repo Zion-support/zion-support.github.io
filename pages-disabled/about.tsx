@@ -3,11 +3,11 @@
 
 import React from "react";""
 import Layout from "../components/Layout";""
-import React from 'react';''
-import { motion } from 'framer-motion';''
-import Head from 'next/head';''
-import Link from 'next/link';''
-import MainLayout from '../components/layout/MainLayout';'
+import React from 'react';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+import MainLayout from '../components/layout/MainLayout';
 import {
   // TODO: Implement
 }
@@ -34,81 +34,63 @@ import {
   Phone,
 
   Mail,
-  MapPin;'
-} from 'lucide-react';'
+  MapPin;
+} from 'lucide-react';
 const values = [
   {
-    icon: Lightbulb,'
-    title: 'Innovation',''
-    description: 'We constantly push the boundaries of technology to create cutting-edge solutions that drive real business value.''
+    icon: Lightbulb,
+    title: 'Innovation',
+    description: 'We constantly push the boundaries of technology to create cutting-edge solutions that drive real business value.
   },
-  {
-    icon: Shield,'
-    title: 'Security',''
-    description: 'Security is at the core of everything we do, ensuring your data and systems are protected with enterprise-grade security.''
-  },
-  {
-    icon: Users,'
-    title: 'Collaboration',''
-    description: 'We work closely with our clients as partners, understanding their unique challenges and delivering tailored solutions.''
-  },
-  {
-    icon: Target,'
-    title: 'Excellence',''
-    description: '$1'']
+    icon: Shield,
+    title: 'Security',
+    description: 'Security is at the core of everything we do, ensuring your data and systems are protected with enterprise-grade security.
+    icon: Users,
+    title: 'Collaboration',
+    description: 'We work closely with our clients as partners, understanding their unique challenges and delivering tailored solutions.
+    icon: Target,
+    title: 'Excellence',
+    description: '$1]
   }];
 const team = [
-  {'
-    name: 'John Smith',''
-    role: 'CEO & Founder',''
-    expertise: 'Strategic Leadership',''
-    experience: '15+ years in technology leadership''
-  },
-  {'
-    name: 'Sarah Johnson',''
-    role: 'CTO',''
-    expertise: 'Technical Innovation',''
-    experience: '12+ years in AI and cloud technologies''
-  },
-  {'
-    name: 'Mike Chen',''
-    role: 'Lead Developer',''
-    expertise: 'Full-Stack Development',''
-    experience: '10+ years in modern web technologies'']
+    name: 'John Smith',
+    role: 'CEO & Founder',
+    expertise: 'Strategic Leadership',
+    experience: '15+ years in technology leadership
+    name: 'Sarah Johnson',
+    role: 'CTO',
+    expertise: 'Technical Innovation',
+    experience: '12+ years in AI and cloud technologies
+    name: 'Mike Chen',
+    role: 'Lead Developer',
+    expertise: 'Full-Stack Development',
+    experience: '10+ years in modern web technologies]
 ];
 const achievements = [
-  {'
-    stat: '500+',''
-    title: 'Projects Completed',''
-    description: 'Successfully delivered projects across various industries','
+    stat: '500+',
+    title: 'Projects Completed',
+    description: 'Successfully delivered projects across various industries',
     icon: CheckCircle;
-  },
-  {'
-    stat: '99.9%',''
-    title: 'Client Satisfaction',''
-    description: 'Consistently high client satisfaction ratings','
+    stat: '99.9%',
+    title: 'Client Satisfaction',
+    description: 'Consistently high client satisfaction ratings',
     icon: Star;
-  },
-  {'
-    stat: '24/7',''
-    title: 'Support Available',''
-    description: 'Round-the-clock support for all our clients','
+    stat: '24/7',
+    title: 'Support Available',
+    description: 'Round-the-clock support for all our clients',
     icon: Clock;
-  },
-  {'
-    stat: '50+',''
-    title: 'Team Members',''
-    description: 'Expert professionals dedicated to your success','
+    stat: '50+',
+    title: 'Team Members',
+    description: 'Expert professionals dedicated to your success',
     icon: Users;]
-];
 export default function AboutPage() {
   return (
-    <MainLayout;'
+    <MainLayout;
       title="About Us - Zion Tech Group"""
       description="Learn about Zion Tech Group's mission, values, and team. We're dedicated to delivering cutting-edge technology solutions."""
       keywords="about us, company, team, mission, values, technology solutions""
     >
-</MainLayout>"
+"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
 </div>"
         <div className="container mx-auto px-4 py-16">"
@@ -118,50 +100,30 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16""
-          >
 </motion>"
             <h1 className="text-5xl font-bold text-white mb-6">"
 </h1>
             </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
 </p>
-            </p>
           </motion.div>
-"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">"
-</div>
-              <motion.div;
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="text-center""
-              >
-</motion>"
                 <div className="text-4xl font-bold text-blue-400 mb-2">{achievement.stat}</div>""
                 <div className="text-white font-semibold mb-2">{achievement.title}</div>""
                 <div className="text-gray-300 text-sm">{achievement.description}</div>"
               </motion.div>)
             ))}
-          </div>
-"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">"
-</div>
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20""
-              >
-</motion>"
                 <div className="flex items-center mb-4">"
-</div>"
                   <value.icon className="h-8 w-8 text-blue-400 mr-3" />"
 </value>"
                   <h3 className="text-2xl font-bold text-white">{value.title}</h3>"
-                </div>"
                 <p className="text-gray-300">{value.description}</p>"
+
 
               </motion.div>
             ))}
@@ -173,32 +135,21 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}"
             className="bg-blue-600 rounded-xl p-8 text-center""
-          >
-</motion>"
             <h2 className="text-3xl font-bold text-white mb-4">"
 </h2>
             </h2>"
             <p className="text-xl text-blue-100 mb-8">"
-</p>
             </p>"
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">"
-</div>"
               <div className="flex items-center text-white">"
-</div>"
                 <Phone className="h-5 w-5 mr-2" />"
-</Phone>
+
                 <span>+1 302 464 0950</span>
-              </div>"
-              <div className="flex items-center text-white">"
-</div>"
                 <Mail className="h-5 w-5 mr-2" />"
-</Mail>
+
                 <span>kleber@ziontechgroup.com</span>
-              </div>"
-              <div className="flex items-center text-white">"
-</div>"
                 <MapPin className="h-5 w-5 mr-2" />"
-</MapPin>
+
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
 
               </div>
@@ -209,49 +160,32 @@ export default function AboutPage() {
 
     </MainLayout>"
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
-</div>
       <Head>
-</Head>
+
         <title>About | Zion Tech Group</title>"
         <meta name="description" content="About Zion Tech Group: AI, micro SaaS, and enterprise IT innovators." />"
 </meta>"
         <link rel="canonical" href="https://ziontechgroup.com/about" />"
 </link>
-      </Head>
-"
+      
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">"
-</div>"
         <div className="max-w-6xl mx-auto space-y-10">"
-</div>"
           <header className="text-center">"
 </header>"
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">About Zion Tech Group</h1>""
             <p className="text-gray-300 text-lg">We build real, outcome-oriented AI, micro SaaS, and enterprise IT solutions.</p>"
           </header>
-"
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">"
 </section>"
             <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">"
-</div>"
               <div className="text-sm text-gray-400 mb-2">What we do</div>""
               <div className="text-gray-200">200+ production-ready services across AI, DevOps, Security, Cloud, and Data.</div>"
-            </div>"
-            <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">"
-</div>"
               <div className="text-sm text-gray-400 mb-2">How we deliver</div>""
               <div className="text-gray-200">Template-driven deployments, SLAs, clear pricing, and measurable ROI.</div>"
-            </div>"
-            <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">"
-</div>"
               <div className="text-sm text-gray-400 mb-2">Who we serve</div>""
               <div className="text-gray-200">Startups to enterprises across healthcare, fintech, manufacturing, media, and public sector.</div>"
-            </div>
           </section>
-"
           <section className="grid grid-cols-1 md: grid-cols-2 gap-6">"
-</section>"
-            <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">"
-</div>"
               <h2 className="text-2xl font-semibold mb-3">Contact</h2>""
               <ul className="text-gray-300 space-y-2">"
 </ul>"
@@ -260,12 +194,11 @@ export default function AboutPage() {
                 <li>Address: <span className="text-gray-200">364 E Main St STE 1008 Middletown DE 19709</span></li>""
                 <li>Website: <a className="text-cyan-300" href="https://ziontechgroup.com">ziontechgroup.com</a></li>"
               </ul>
-            </div>"
-            <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">"
-</div>"
               <h2 className="text-2xl font-semibold mb-3">Get Started</h2>""
               <p className="text-gray-300 mb-4">Book a consultation to map your roadmap to shipped outcomes.</p>""
               <div className="flex gap-3">"
+                <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales""
+                <Button href="/pricing" variant="outline" className="border border-gray-600 text-gray-200">Pricing"
 </div>"
                 <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>""
                 <Button href="/pricing" variant="outline" className="border border-gray-600 text-gray-200">Pricing</Button>"
@@ -280,7 +213,7 @@ export default function AboutPage() {
 
 
 export default AboutPage;"
-import React from './react';''
+import React from './react';
 import Layout from "../components / Layout";;"
 
 export default /**
@@ -293,25 +226,18 @@ function About() {
       title="About Us - Zion Tech Group";""
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting - edge technology solutions.";"
     >;
-</Layout>"
       <div className="min - h-screen bg - gray - 50 py - 20">;"
-</div>"
         <div className="container mx - auto px - 4">;"
-</div>"
           <div className="text - center mb - 12">;"
-</div>"
             <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;"
-</h1>
             </h1>;"
             <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;"
-</p>
             </p>;
           </div>;"
           <div className="text - center">;"
-</div>"
             <p className="text - gray - 600">About page is under construction.</p>;"
           </div>;
-        </div>;
       </div>;)
+    );"
     </Layout>);"
 

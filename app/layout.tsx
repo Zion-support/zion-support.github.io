@@ -1,53 +1,38 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import './globals.css';
+import type { Metadata } from 'next'
+import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] });
-
-// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
-  keywords: 'AI, artificial intelligence, technology solutions, cloud computing, cybersecurity, data analytics, digital transformation',
+  keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
   authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
   robots: 'index, follow',
   openGraph: {
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
     type: 'website',
     locale: 'en_US',
+    siteName: 'Zion Tech Group',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
   },
-};
-
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body className="antialiased">
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
+    <html lang="en">
+      <body>
+        {children}
       </body>
     </html>
-  );
+  )
 }

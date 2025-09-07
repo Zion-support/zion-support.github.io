@@ -1,4 +1,6 @@
-#!/usr/bin/env node
+
+<<<<<<< HEAD
+
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -46,14 +48,12 @@ const { execSync } = require("child_process")
           this.errorsFixed.push({ file, "type": "import_export"})
   const files = this.findFiles(".tsx,.jsx")
   let content = fs.readFileSync(file, "utf8")
-          "<React.Fragment>$1</React.Fragment>
-</React>"
+          "<React.Fragment>$1</React.Fragment>"
         content = content.replace(/<([^>]+)\/>/g, "<$1 />"
         if (content !== fs.readFileSync(file, "utf8")
   const files = this.findFiles(".tsx,.jsx")
   let content = fs.readFileSync(file, "utf8")
-          "<React.Fragment>$1</React.Fragment>
-</React>"
+          "<React.Fragment>$1</React.Fragment>"
         content = content.replace(/<([^>]+)\/>/g, "<$1 />"
         if (content !== fs.readFileSync(file, "utf8")
           this.errorsFixed.push({ file, "type": "jsx_syntax"})
@@ -64,9 +64,9 @@ const { execSync } = require("child_process")
   this.log(` ESLint check "failed"`)
     const files = this.findFiles(".ts,.tsx,.js,.jsx")
   let content = fs.readFileSync(file, "utf8")
-        content = content.replace(/[\t]+$/gm, )
+        content = content.replace(/[\t]+$/gm, "")
         content = content.replace(/([^])\n/g, "$1;\n"
-        content = content.replace(/([^]*)/g, $1
+        content = content.replace(/([^]*)/g, ""$1""
         if (content !== fs.readFileSync(file, "utf8")
   this.log(" Checking ESLint errors...")
   execSync("npm run lint -- --fix", { "stdio": "pipe"})
@@ -77,7 +77,7 @@ const { execSync } = require("child_process")
   let content = fs.readFileSync(file, "utf8")
         content = content.replace(/[\t]+$/gm, ")
         content = content.replace(/([^])\n/g, "$1;\n"
-        content = content.replace(/([^]*)"/g, $1
+        content = content.replace(/([^]*)"/g, ""$1""
         if (content !== fs.readFileSync(file, "utf8")
         if (content !== fs.readFileSync(file, "utf8")
           this.errorsFixed.push({ file, "type": "eslint"})
@@ -151,5 +151,16 @@ const { execSync } = require("child_process")
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   process.on(")
   process.on(")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

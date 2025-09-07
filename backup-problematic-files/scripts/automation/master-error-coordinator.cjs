@@ -1,19 +1,20 @@
-#!/usr/bin/env
+<<<<<<< HEAD
+#!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-    this.logFile = path.join(this.projectRoot, "automation/logs/master-error-coordinator.log)
-    this.coordinationReportFile = path.join(this.projectRoot, automation/reports/coordination-report.json")
+    this.logFile = path.join(this.projectRoot, """automation/logs/master-error-coordinator.log"")
+    this.coordinationReportFile = path.join(this.projectRoot, ""automation/reports/coordination-report.json""")
     console.log(")
     await fs.appendFile(this.logFile, logMessage + "\n")
-  const dirs = ["automation/logs, "automation/reports", "automation/backups]
+  const dirs = ["""automation/logs"""", """automation/reports""", """automation/backups""""]
   await fs.mkdir(path.join(this.projectRoot, "dir)", { "recursive"}
   "cwd"
         "encoding": "utf8"
         "stdio": options.silent ? "pipe" : "inherit"
       return { "success": true, "output"}
   return { "success": false, "output"}
-  const dirs = [automation/logs, automation/reports, automation/backups]
+  const dirs = [""automation/logs"", ""automation/reports"", ""automation/backups""]
   await fs.mkdir(path.join(this.projectRoot, "dir)", { "recursive"}
   "cwd"
         "encoding": "utf8"
@@ -26,8 +27,8 @@ const path = require("path")
   await this.log("⚠  PM2 not running, starting...")
       const startResult = await this.runCommand("pm2 start ecosystem.error-automation.config.cjs")
   await this.log(" Coordinating error fixing processes...")
-    const processes = ["{ "name": "quick-error-checker, script": "./scripts/automation/quick-error-checker.cjs" }", "{ "name": "typescript-error-fixer, script": "./scripts/automation/typescript-error-fixer.cjs" }", "{ "name": "linting-error-fixer, script": "./scripts/automation/linting-error-fixer.cjs" }", "{ "name": "syntax-error-fixer, script": "./scripts/automation/syntax-error-fixer.cjs"}]
-  try {await this.log(� Running ${process.name}...`);const result = await this.runCommand(`node ${process.script}, { "silent"`})
+    const processes = ["{ "name": "quick-error-checker"", ""script": "./""scripts/automation/quick-error-checker.cjs""" }", "{ "name": "typescript-error-fixer"", ""script": "./""scripts/automation/typescript-error-fixer.cjs""" }", "{ "name": "linting-error-fixer"", ""script": "./""scripts/automation/linting-error-fixer.cjs""" }", "{ "name": "syntax-error-fixer"", ""script": "./""scripts/automation/syntax-error-fixer.cjs"""}]
+  try {await this.log(� Running ${process.name}...`);const result = await this.runCommand(`node ${process.script}`, { "silent"`})
   "name"
           "success"
           "timestamp"
@@ -48,7 +49,7 @@ const path = require("path")
           "error"
           "timestamp"
   await this.log("� Checking project health...")
-    const healthChecks = ["{ "name": "TypeScript Check, command": "npm run type-check" }", "{ "name": "Linting Check, command": "npm run lint" }", "{ "name": "Build Check, command": "npm run build" }", "{ "name": "Dependencies Check, command": "npm ls --depth=0" }"]
+    const healthChecks = ["{ "name": "TypeScript Check"", ""command": "npm run type-check" }", "{ "name": "Linting Check"", ""command": "npm run lint" }", "{ "name": "Build Check"", ""command": "npm run build" }", "{ "name": "Dependencies Check"", ""command": "npm ls --depth=0" }"]
   "timestamp"
       "checks"
   try {await this.log(" Running ${check.name}...")
@@ -65,7 +66,7 @@ const path = require("path")
           "success"
           "error"
           "timestamp"
-    const healthReportFile = path.join(this.projectRoot, automation/reports/health-report.json)} catch (error) {await this.log(" Error in ${check.name}: ${error.message}")
+    const healthReportFile = path.join(this.projectRoot, ""automation/reports/health-report.json"")} catch (error) {await this.log(" Error in ${check.name}: ${error.message}")
   "name"
           "success"
           "error"
@@ -73,17 +74,17 @@ const path = require("path")
     const healthReportFile = path.join(this.projectRoot, "automation/reports/health-report.json")
   await this.log("� Applying emergency fixes...")
     const emergencyFixes = ["]
-  "name": "Fix ESLint Config", action"
+  "name": "Fix ESLint Config", ""action"
   const eslintPath = path.join(this.projectRoot", ".eslintrc.js");const fixedConfig = "
-  "extends": [next/core-web-vitals, next/typescript]
-  "rules": {@typescript-"eslint/no-unused-vars: "warn",@typescript-"eslint/no-explicit-any: "warn","react/react-in-jsx-scope: "off","react/prop-types: "off",no-console": "warn"}
+  "extends": [""next/core-web-vitals"", ""next/typescript""]
+  "rules": {@typescript-"eslint/no-unused-vars"": "warn",@typescript-"eslint/no-explicit-any"": "warn","react/react-in-jsx-scope"": "off","react/prop-types"": "off",no-console": "warn"}
   "ignorePatterns": ["node_modules/", ".next/", "out/", "dist/"]};"
           await fs.writeFile(eslintPath, ")
       }", "
-  "name": "Fix Dependencies", action"
+  "name": "Fix Dependencies", ""action"
   await this.runCommand("npm install --legacy-peer-deps")
       }", "
-  "name": "Fix TypeScript Config", action"
+  "name": "Fix TypeScript Config", ""action"
   const tsConfigPath = path.join(this.projectRoot", "tsconfig.json")
           const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, "utf8")
           tsConfig.compilerOptions.moduleResolution = "node"
@@ -127,5 +128,16 @@ const path = require("path")
       return report} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")} catch (error) {await this.log(" Master Error Coordinator "failed": ${error.message}")
       throw error} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")
   console.log("Master error coordinator completed successfully")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.error("Master error coordinator "failed")
   console.error("Master error coordinator "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

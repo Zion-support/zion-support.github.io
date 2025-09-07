@@ -15,9 +15,7 @@ class FileRestorer {}
       // Fix common corruption patterns;
       let fixedContent = content;
         // Remove extra semicolons and quotes at end of lines;"
-        .replace(/;"$/gm, );
-        .replace(/;"$/gm, );
-        .replace(/;$/gm, );"
+
         // Fix unterminated strings;"
         .replace(/from "([^"]*);$/gm, "from "$1);
         .replace(/from "([^"]*);$/gm, "from "$1);"
@@ -47,13 +45,7 @@ class FileRestorer {}
       // Only write if content actually changed;
       if (fixedContent !== content) {}"
         fs.writeFileSync(filePath, fixedContent, "utf8");"
-        this.fixedFiles.push(filePath);"
-        this.log(`[SUCCESS] Restored corrupted "file": ${filePath});"
-        return true};
-      return false} catch (error) {}"
-      this.errors.push({ "file": filePath, "error": error.message }")
-});
-      this.log(`[ERROR] Failed to restore ${filePath}: ${error.message});
+
       return false};
   };
   async findCorruptedFiles(dir) {}
@@ -65,7 +57,6 @@ class FileRestorer {}
         const stat = fs.statSync(fullPath);"
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {}
           scanDir(fullPath)} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".jsx") || item.endsWith(".ts") || item.endsWith(".js"))) {}"
-          try {}"
             const content = fs.readFileSync(fullPath, "utf8");"
             // Check for corruption patterns;"
             if (content.includes(";) ||
@@ -76,15 +67,12 @@ class FileRestorer {}
               corruptedFiles.push(fullPath)};
           } catch (error) {}"
             // Skip files that can"t be read};"
-        };
-      };
-    };
     scanDir(dir);
     return corruptedFiles};
   async restoreCorruptedFiles() {}"
     this.log("[INFO] Starting file restoration process");"
     // Find corrupted files;
-    const corruptedFiles = await this.findCorruptedFiles(this.projectRoot);
+    const corruptedFiles = await this.findCorruptedFiles(this.projectRoot);`;
     this.log(`[INFO] Found ${corruptedFiles.length} potentially corrupted files`);
     if (corruptedFiles.length === 0) {}"
       this.log("[INFO] No corrupted files found");"
@@ -101,14 +89,24 @@ class FileRestorer {}
       errors: this.errors};"
     const reportPath = path.join(this.projectRoot, "file-restoration-report.json");"
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));"
-    this.log("[SUCCESS] File restoration completed");
-    this.log(`[INFO] "Summary": ${this.fixedFiles.length} files restored, ${this.errors.length} errors`);"
-    this.log(`[INFO] Report saved to ${reportPath})};
-};
+
 // Main execution;
 if (require.main === module) {}
   const restorer = new FileRestorer();
   restorer.restoreCorruptedFiles().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
 module.exports = FileRestorer;
 module.exports = FileRestorer;
-"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = FileRestorer;
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

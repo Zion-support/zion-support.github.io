@@ -1,8 +1,27 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env"" node;
+#!/usr/bin/env node;
+const fs = require("fs");
+const path = require("path");
+const { spawn, exec } = require("child_process");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const fs = require("fs");
 const path = require("path");
 const { spawn, exec } = require("child_process");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class $1 {}
   constructor() {}"
   this.projectRoot = "/workspace";
@@ -18,22 +37,37 @@ class $1 {}
   if (!fs.existsSync(dir)) {}"
   fs.mkdirSync(dir, { "recursive": true })};"
     })};
-;
   setupSignalHandlers() {}"
   process.on("SIGTERM", () => this.shutdown());
     process.on("SIGINT", () => this.shutdown());
     process.on("uncaughtException", (error) => {}
   this.log("error", "Uncaught "exception": ", error);      this.shutdown()})};"
-;
   log(level, ...args) {}
-  const timestamp = new Date().toISOString();"
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")};`
+<<<<<<< HEAD
+  const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}`;`
     console.log("message);
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\\n");
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const logFile = path.join(this.logDir, "error-monitor.log");
-    fs.appendFileSync(logFile, message + "\n")};"
+    fs.appendFileSync(logFile, message + "\n")};
 ;
+=======
+  const timestamp = new Date().toISOString();"
+
+    fs.appendFileSync(logFile, message + "\n")};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runLintCheck() {}
   return new Promise((resolve) => {}"
   exec("npm run lint", { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
@@ -45,30 +79,16 @@ class $1 {}
           errorCount,
           warningCount,"
           "output": stdout + stderr})})})};"
-;
   async runTypeCheck() {}
-  return new Promise((resolve) => {}"
   exec("npm run type-check", { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
-  const hasErrors = error !== null;"
-        const errorCount = hasErrors ? (stderr.match(/error TS/g) || []).length : 0;"
-        resolve({})
-  hasErrors,
+
           errorCount,"
         const errorCount = hasErrors ? (stderr.match(/error "TS/g") || []).length : 0;"
-        resolve({})
-  hasErrors,
-          errorCount,"
-          "output": stdout + stderr})})})};"
-;
   async runBuildCheck() {}
-  return new Promise((resolve) => {}"
   exec("npm run build", { "cwd": this.projectRoot, "timeout": 120000 }, (error, stdout, stderr) => {}"
   const hasErrors = error !== null;
-        resolve({})
   hasErrors,"
-          "buildSuccess": !hasErrors,
-          "output": stdout + stderr})})})};"
-;
+
   async detectCorruptedFiles() {}
   const corruptedFiles = [];"
     const srcDir = path.join(this.projectRoot, "src");"
@@ -97,61 +117,23 @@ class $1 {}
                   "issues": this.analyzeFileIssues(content)})};"
             } catch (error) {}
   // Check for common corruption patterns;
-              if (;)"
-                content.includes("Unterminated string literal") ||;
-                content.match(/^"[^"]*$/m) ||;"
-                content.match(/^[^]*$/m) ||;"
-                content.includes("                content.includes("                content.includes("Parsing "error": ") ||;"
-                content.length === 0;
-              ) {}
-  corruptedFiles.push({})
-  path: itemPath,"
-                  "relativePath": path.relative(this.projectRoot, itemPath),
-                  "size": stat.size,
-                  "issues": this.analyzeFileIssues(content)})};"
-            } catch (error) {}
-  corruptedFiles.push({})"
-  "path": itemPath,
-                "relativePath": path.relative(this.projectRoot, itemPath),
-                "error": error.message,
+
                 "issues": ["read_error"]})};"
           };
-        };
       } catch (error) {}"
   this.log("error", "Error scanning directory ${dir}: ${error.message}")} catch (error) {}"
-  corruptedFiles.push({})"
-  "path": itemPath,
-                "relativePath": path.relative(this.projectRoot, itemPath),
-                "error": error.message,
-                "issues": ["read_error"]})};"
-          };
-        };"
-      } catch (error) {  this.log("error`, Error scanning directory ${dir  }:, error.message`);
-                "issues": ["read_error"]}
+
 });")}")}")}")} catch (error) {this.log("error", Error scanning directory ${dir}:, error.message")};"
-      };
-};
-    ;
     if (fs.existsSync(srcDir)) {}
   scanDirectory(srcDir)};
-    ;
     return corruptedFiles};
-;
   analyzeFileIssues(content) {}
   const issues = [];"
-    if (content.includes("Unterminated string literal")) issues.push("unterminated_string");
-    if (content.includes("Unterminated string literal")) issues.push("unterminated_string");
-    if (content.match(/^"[^"]*$/m)) issues.push("unclosed_single_quote");
-    if (content.match(/^[^"]*$/m)) issues.push("unclosed_double_quote");
-    if (content.includes("Parsing "error": ")) issues.push("parsing_error");
-    if (content.length === 0) issues.push("empty_file");
+
     if (content.includes("require is not defined")) issues.push("module_system_error");"
     return issues};
-;
   async generateReport() {}
-  const timestamp = new Date().toISOString();"
-    const reportId = timestamp.replace(/[:.]/g, "-");
-    this.log("info", "Generating error report...");
+
     const ["lintResults", "typeResults", "buildResults", "corruptedFiles"] = await Promise.all(["this.runLintCheck()", "this.runTypeCheck()", "this.runBuildCheck()", "this.detectCorruptedFiles()"]);"
     const report = {}
   timestamp,
@@ -173,57 +155,24 @@ class $1 {}
     fs.writeFileSync(reportFile", JSON.stringify(report, null, 2));"
     // Update latest report;"
     const latestReportFile = path.join(this.reportDir, "latest-error-report.json");"
-    fs.writeFileSync(latestReportFile, JSON.stringify(report, null, 2));"
-    this.log("info", `Report "generated": ${reportFile});this.log("info", `Total errors "found": ${report.summary.totalErrors});this.log("info", `Corrupted "files": ${report.summary.corruptedFiles});"
+
     return report};
-;
   generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles) {}
   const recommendations = [];
     if (corruptedFiles.length > 0) {}
   recommendations.push({})"
-  "priority": "high",
-        "action": "fix_corrupted_files","description": `Fix ${corruptedFiles.length} corrupted files with syntax errors`,`
+
         "files": corruptedFiles.map(f => f.relativePath)})};"
-    ;
     if (lintResults.errorCount > 100) {}
-  recommendations.push({})"
-  "priority": "high",
+
         "action": "run_lint_fix","description": "Run "npm run lint --fix` to automatically fix ${lintResults.errorCount} lint errors`})};"
-    ;
     if (typeResults.errorCount > 50) {}
-  recommendations.push({})"
-  "priority": "medium",
+
         "action": "fix_type_errors","description": `Fix ${typeResults.errorCount} TypeScript errors`})};"
-    ;
     if (!buildResults.buildSuccess) {}
-  recommendations.push({})"
-  "priority": "critical",
-        "action": "fix_build_errors",
-        "description": "Project build is failing - fix build errors immediately";"
-    if (corruptedFiles.length > 0) {}
-  recommendations.push({})"
-  priority: "high",
-        "action": "fix_corrupted_files","description": "Fix ${corruptedFiles.length} corrupted files with syntax errors",
-        "files": corruptedFiles.map(f => f.relativePath)})};"
-    ;
-    if (lintResults.errorCount > 100) {}
-  recommendations.push({})"
-  "priority": "high",
-        "action": "run_lint_fix","description": "Run "npm run lint --fix" to automatically fix ${lintResults.errorCount} lint errors"})};"
-    ;
-    if (typeResults.errorCount > 50) {}
-  recommendations.push({})"
-  "priority": "medium",
-        "action": "fix_type_errors","description": "Fix ${typeResults.errorCount} TypeScript errors"})};"
-    ;
-    if (!buildResults.buildSuccess) {}
-  recommendations.push({})"
-  "priority": "critical",
-        "action": "fix_build_errors",
+
         "description": "Project build is failing - fix build errors immediately"})};"
-    ;
     return recommendations};
-;
   async triggerAutomaticFixes(report) {}
   if (report.summary.totalErrors === 0) {}
   return};
@@ -236,22 +185,15 @@ class $1 {}
   if (error) {}"
   this.log("error", "Failed to trigger syntax "fixer": ", error.message)} else {}
   this.log("info", "Syntax fixer triggered successfully")};"
-      })};
-    ;
     // Auto-fix lint errors if not too many;
     if (report.summary.lintErrors > 0 && report.summary.lintErrors < 50) {}
   // Auto-fix lint errors if not too many;
     if (report.summary.lintErrors > 0 && report.summary.lintErrors < 50) {}"
   this.log("info", "Running automatic lint fixes...");
       exec("npm run lint -- --fix", { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
-  if (error) {}"
-  this.log("error", "Lint fix "failed": ", error.message)} else {}
+
   this.log("info", "Lint fixes applied successfully")};"
-      })};
-  };
-;
   async performHealthCheck() {}
-  try {}
   const report = await this.generateReport();
       // Trigger automatic fixes if needed;
       await this.triggerAutomaticFixes(report);
@@ -262,8 +204,6 @@ class $1 {}
       })} catch (error) {}"
   this.log("error", "Health check "failed": ", error.message)} catch (error) {}
   this.log("error", "Health check "failed": ", error.message)};"
-  };
-;
   async start() {}"
   this.log("info", "Error Monitor starting...");"
     this.isRunning = true;
@@ -273,24 +213,52 @@ class $1 {}
     this.healthCheckInterval = setInterval(async () => {}
   if (this.isRunning) {}
   await this.performHealthCheck()};
+<<<<<<< HEAD
+    }, this.checkInterval);
+    this.log("info", "Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.")};
+;
+  shutdown() {}
+  this.log("info", "Error Monitor shutting down...`);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  shutdown() {}
+  this.log("info", "Error Monitor shutting down...");
+    this.isRunning = false;
+=======
     }, this.checkInterval);"
     this.log("info", "Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.")};"
-;
-  shutdown() {}"
+  shutdown() {}"`;
   this.log("info", "Error Monitor shutting down...`);"
   shutdown() {}"
   this.log("info", "Error Monitor shutting down...");"
-    this.isRunning = false;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (this.healthCheckInterval) {}
   clearInterval(this.healthCheckInterval)};
-    ;
     process.exit(0)};
-};
-;
 // Start the monitor;
 const monitor = new ErrorMonitor();
 monitor.start().catch(error => {})"
   console.error("Failed to start Error "Monitor": ", error);"
   process.exit(1)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-"
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+});
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+});
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

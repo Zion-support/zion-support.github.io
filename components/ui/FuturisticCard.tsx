@@ -1,8 +1,15 @@
-import { ReactNode } from 'react';
 
-interface FuturisticCardProps {
-  children: ReactNode;
-  className?: string;
+
+  description: string;
+
+  cta?: React && React.ReactNode;
+};
+
+export default function FuturisticCard(): any ({ title, description, cta }: Props) {;
+  return (
+
+  );
+
 }
 
 type Props = {title: string,description: string;
@@ -18,3 +25,4 @@ function FuturisticCard() {return (<div className=\"futuristic-card\" />;"
         {cta && <div className=\"mt-3\" />{cta}</div>}
       </div>;
     </div>)"
+
