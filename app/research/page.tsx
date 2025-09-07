@@ -1,5 +1,6 @@
 import React from 'react';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: "Research | Zion Tech Group",
   description: "Explore our cutting-edge research in AI, quantum computing, and autonomous systems."
