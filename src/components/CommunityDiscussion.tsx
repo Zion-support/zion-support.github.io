@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body: string,
 import React, { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
@@ -204,7 +203,6 @@ export const CommunityDiscussion: React.FC = () => {;,
             <Textarea
               placeholder="What's on your mind?""
               className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]"",
-=======
 import React, { useState } from "react",
 import { MessageCircle } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -291,7 +289,6 @@ export const CommunityDiscussion: React.FC = () => {
             <Textarea
               placeholder="What's on your mind?"
               className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState } from "react",;
 import { MessageCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
@@ -309,11 +306,8 @@ interface DiscussionPost {;
   body: string;
 }
 ;
-<<<<<<< HEAD
 const initialPosts: DiscussionPost[] = [;,
-=======
 const initialPosts: DiscussionPost[] = [;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   {;
     id: 1,;
     author: "Anna Zhou",;
@@ -326,7 +320,6 @@ const initialPosts: DiscussionPost[] = [;
     time: "50m ago",;
     title: "Quick tip: How to rank your Zion listing higher",;
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],;
-<<<<<<< HEAD
 export const CommunityDiscussion: React.FC = () => {;,
   const [posts, setPosts] = useState(initialPosts),;,
   const [showNew, setShowNew] = useState(false),;,
@@ -334,7 +327,6 @@ export const CommunityDiscussion: React.FC = () => {;,
   const [newBody, setNewBody] = useState(""),;
   const handleAddPost = () => {;
     if (!newTitle.trim() || !newBody.trim()) return,;,
-=======
 export const CommunityDiscussion: React.FC = () => {;
   const [posts, setPosts] = useState(initialPosts),;
   const [showNew, setShowNew] = useState(false),;
@@ -342,7 +334,6 @@ export const CommunityDiscussion: React.FC = () => {;
   const [newBody, setNewBody] = useState(""),;
   const handleAddPost = () => {;
     if (!newTitle.trim() || !newBody.trim()) return,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     setPosts([;
       {;
         id: Date.now(),;
@@ -362,37 +353,30 @@ export const CommunityDiscussion: React.FC = () => {;
         <span className="font-bold text-2xl text-white tracking-tight">;
           Community Discussion;
         </span>;
-<<<<<<< HEAD
         <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0 && 0.5">;
           {posts && posts.length} posts;
-=======
         <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">;
           {posts.length} posts;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </span>;
       </div>;
       <Separator className="mb-6" />;
       <div className="mb-4 flex justify-end">;
         <Button;
-<<<<<<< HEAD
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";",
           size="sm";
           onClick={() => setShowNew((v) => !v)}
         >;
           {showNew ? "Cancel" : "New Post"}"
-=======
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
           size="sm";
           onClick={() => setShowNew((v) => !v)}
         >;
           {showNew ? "Cancel" : "New Post"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </Button>;
       </div>;
       {showNew && (;
         <Card className="mb-6 animate-scale-in">;
           <CardContent className="py-5">;
-<<<<<<< HEAD
             <Input
               placeholder="Title (e && e.g., Share an AI tool, Ask for help...)""
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"",
@@ -401,7 +385,6 @@ export const CommunityDiscussion: React.FC = () => {;
             />;
             <Textarea
               placeholder="What's on your mind?""
-=======
             <Input;
               placeholder="Title (e.g., Share an AI tool, Ask for help...)";
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate";
@@ -423,12 +406,10 @@ export const CommunityDiscussion: React.FC = () => {;
                 size="sm"
                 className="bg-zion-blue text-white hover:bg-zion-blue-dark"
                 onClick={() => setShowNew(false)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >
                 Cancel
               </Button>
               <Button
-<<<<<<< HEAD
                 size="sm""
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"",
                 onClick={handleAddPost}
@@ -494,18 +475,15 @@ export const CommunityDiscussion: React.FC = () => {;
                 disabled={!new_title.trim () || !new_body.trim ()}
                 on_click = {handleAddPost, }
                 disabled = {!new_title.trim () || !new_body.trim (), }
-=======
                 size="sm"
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
                 disabled={!newTitle.trim() || !newBody.trim()}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >;
                 Post;
               </Button>;
             </div>;
           </CardContent>;
-<<<<<<< HEAD
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.
       </div>
     </div>
@@ -620,7 +598,6 @@ export const CommunityDiscussion: React.FC = () => {;
       </div>;
     </div>);
 }]
-=======
         </Card>;
       )}
       <div className="flex flex-col gap-6">
@@ -655,4 +632,3 @@ export const CommunityDiscussion: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

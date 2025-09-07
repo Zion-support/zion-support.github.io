@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Trash2 } from 'lucide-react''
 import { SkillItemProps } from './types''
 export const SkillItem = ({ skill, category, onDelete }:,  SkillItemProps) => {
@@ -80,7 +79,6 @@ export const SkillItem = ({ skill, category, onDelete }:,  SkillItemProps) => {;
         <Trash2 className="h-3 w-3" />"
       </Button>
 }}}}))
-=======
 
 import { Badge } from '@/components/ui/badge',
 import { Button } from '@/components/ui/button',
@@ -109,4 +107,3 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
     </Badge>
   )
 },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

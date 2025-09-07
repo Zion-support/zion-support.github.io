@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <Card>;
       <CardHeader>;
@@ -53,7 +52,6 @@ return (
       <CardHeader>
         <CardTitle className="flex items-center gap-2">"
           <Gift className="h-5 w-5" /> Redeem Rewards"
-=======
 
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
@@ -116,25 +114,19 @@ export function RedeemTokensCard() {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Gift className="h-5 w-5" /> Redeem Rewards
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </CardTitle>
         <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>
       </CardHeader>
       <CardContent>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-<<<<<<< HEAD
             <Button className="w-full">View Available Rewards</Button>"
-=======
             <Button className="w-full">View Available Rewards</Button>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
-<<<<<<< HEAD
-=======
                 Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
               </DialogDescription>
             </DialogHeader>
@@ -154,34 +146,28 @@ export function RedeemTokensCard() {
                       onClick={() => handleRedeem(option)}
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </Button>
                   </div>
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
             <div className="flex justify-between">"
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>"
               <Button variant="ghost" size="sm">"
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />"
-=======
             <div className="flex justify-between">
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
               <Button variant="ghost" size="sm">
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </Button>
             </div>
           </DialogContent>
         </Dialog>
       </CardContent>
     </Card>
-<<<<<<< HEAD
         <Dialog open={open} onOpenChange={set_open}>;
           <DialogTrigger as_child>;
             <Button className='w - full'>View Available Rewards</Button>;
-=======
   )
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -245,7 +231,6 @@ export function RedeemTokensCard() {;
         <Dialog open={open} onOpenChange={setOpen}>;
           <DialogTrigger asChild>;
             <Button className="w-full">View Available Rewards</Button>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
@@ -265,11 +250,8 @@ export function RedeemTokensCard() {;
                     <span className="text-sm font-bold">{option.cost} ZION$</span>;
                     <Button;
                       size="sm";
-<<<<<<< HEAD
                       variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}"
-=======
                       variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       disabled={!wallet || wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}
                     >;
@@ -279,7 +261,6 @@ export function RedeemTokensCard() {;
                 </div>;
               ))}
             </div>;
-<<<<<<< HEAD
             <div className='flex justify - between'>;
               <Button;
                 variant='outline';
@@ -290,24 +271,19 @@ export function RedeemTokensCard() {;
               </Button>;
               <Button variant='ghost' size='sm'>;
                 Learn More <ExternalLink className='ml - 1 h - 3 w - 3' />;
-=======
             <div className="flex justify-between">;
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>;
               <Button variant="ghost" size="sm">;
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </Button>;
             </div>;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
-<<<<<<< HEAD
     </Card>);
 }
   )
-=======
     </Card>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

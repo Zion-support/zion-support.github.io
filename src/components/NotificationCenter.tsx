@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 unreadCount, ;
     markAsRead, ;
   const handleFilterChange = (newFilter: FilterType,) => {;
@@ -24,7 +23,6 @@ export const NotificationCenter: React.FC = () => {,
     markAsRead,
     markAllAsRead,
     dismissNotification,
-=======
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
@@ -47,28 +45,22 @@ export const NotificationCenter: React.FC = () => {
     markAsRead, 
     markAllAsRead,
     dismissNotification, 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     loading,
     filter,
     setFilter,
     fetchNotifications
   } = useNotifications(),
-<<<<<<< HEAD
   ,
-=======
   
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [open, setOpen] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const [loadedOnce, setLoadedOnce] = useState(false),
   const enqueueSnackbar = useEnqueueSnackbar(),
-<<<<<<< HEAD
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">"
           <Bell className="h-5 w-5 text-zion-slate-light" />"
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">",
-=======
 
   // Refresh notifications when popover opens, but avoid duplicate
   useEffect(() => {
@@ -154,7 +146,6 @@ export const NotificationCenter: React.FC = () => {;
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   }, [open, loadedOnce, fetchNotifications]),;
   const handleMarkAllAsRead = async () => {;
     try {;
@@ -162,7 +153,6 @@ export const NotificationCenter: React.FC = () => {;
       enqueueSnackbar("All notifications marked as read", { variant: 'success' });
     } catch (err) {;
       logErrorToProduction('Failed to mark notifications as read:', { data: err }),;
-<<<<<<< HEAD
       enqueueSnackbar((err as,  any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' });
     }
   },;
@@ -189,7 +179,6 @@ export const NotificationCenter: React.FC = () => {;
           onMarkAsRead = {markAsRead,}
           onDismiss = {dismissNotification,}
           onRetry = {fetchNotifications,}
-=======
       enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' });
     }
   },;
@@ -226,13 +215,11 @@ export const NotificationCenter: React.FC = () => {;
           onMarkAsRead={markAsRead}
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         />;
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
-<<<<<<< HEAD
 },;
     <Popover open={open} onOpenChange={(v, ) => set_open (v ??,  false)}>;
       <PopoverTrigger as_child>;
@@ -267,6 +254,4 @@ export const NotificationCenter: React.FC = () => {;
 },
 ;
         <NotificationHeader
-=======
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

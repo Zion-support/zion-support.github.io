@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const slugify = (text:,  string): string => {,
   return text
     .toString()
@@ -569,7 +568,6 @@ interface WhitepaperSection {;
   title: string,;
   content: string;
 }
-=======
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
@@ -599,13 +597,11 @@ interface WhitepaperSection {;
   title: string,;
   content: string;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 interface DistributionItem {;
   id: string,;
   name: string,;
   percentage: string;
-<<<<<<< HEAD
 }
 ;
 interface DistributionChartItem {;
@@ -1239,17 +1235,13 @@ const WhitepaperGeneratorPage: React.FC = () => {;,
       {/* Right Column: Preview Panel - Pass ref here */}
 '";
 ;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 interface DistributionChartItem {;
     name: string,;
     value: number;
 }
-<<<<<<< HEAD
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">"
-=======
 ;
 const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#AA00FF#FF00AA#00AAAA#AAAA00'],;
 // Helper for slugifying filenames;
@@ -2054,7 +2046,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
       </div>;
       {/* Right Column: Preview Panel - Pass ref here */}
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <WhitepaperPreviewPanel
             sections={sections}
             distributionChartData={distributionChartData}
@@ -2065,7 +2056,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     </div>;
   );
 },;
-<<<<<<< HEAD
 export default WhitepaperGeneratorPage;
         className='md:w - 1/2 lg:w - 3/5 xl:w - 2/3 p - 1';
       >;
@@ -2079,6 +2069,4 @@ export default WhitepaperGeneratorPage;
 }
 export default WhitepaperGeneratorPage;
 '";
-=======
 export default WhitepaperGeneratorPage;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   LucideIcon,
   BadgeCheck,
@@ -53,7 +52,6 @@ export type BadgeKey =
   | "featured_creator""
   | "first_action""
   | "monetized","
-=======
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
 
@@ -65,7 +63,6 @@ export type BadgeKey =
   | "first_action"
   | "monetized",
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export interface BadgeMeta {
   key: BadgeKey,
   name: string,
@@ -74,7 +71,6 @@ export interface BadgeMeta {
   color: string,
   bg: string
 }
-<<<<<<< HEAD
 export const badgeList: BadgeMeta[] = [,
   {
     key: "first_listing","
@@ -126,7 +122,6 @@ export const getBadgeMeta = (key:,  BadgeKey) =>: any;,
 export const getBadgeMeta = (key:,  BadgeKey) =>: any;,
   badge_list.find ((b) => b.key === key);
 }}]]
-=======
 
 export const badgeList: BadgeMeta[] = [
   {
@@ -249,4 +244,3 @@ export const badgeList: BadgeMeta[] = [;
   }];
 export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

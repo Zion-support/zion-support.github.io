@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 status: 'open' | 'under_review' | 'resolved' | 'closed';',
 export function DisputeStatusBadge(): any ({ status }:,  DisputeStatusBadgeProps) {;
   let variant: 'default' | 'destructive' | 'secondary' | 'outline' =;
@@ -53,7 +52,6 @@ export function DisputeStatusBadge({ status }:,  DisputeStatusBadgeProps) {
     case 'closed':'
       variant = "outline","
       message = "This dispute has been closed","
-=======
 
 import { Badge } from "@/components/ui/badge",
 import { ShieldAlert } from 'lucide-react'
@@ -79,12 +77,10 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
     case 'closed':
       variant = "outline",
       message = "This dispute has been closed",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       break,
     default:
       break
   }
-<<<<<<< HEAD
   return (
     <Tooltip>;
       <TooltipTrigger asChild>;
@@ -98,7 +94,6 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
         <Badge variant={variant} className='flex items - center gap - 1'>;
           <ShieldAlert className='h - 3 w - 3' />;
           <span > Under Dispute</span>;
-=======
   
   return (
     <Tooltip>
@@ -146,22 +141,18 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
           <span>Under Dispute</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </Badge>;
       </TooltipTrigger>;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
-<<<<<<< HEAD
     </Tooltip>);
 }
       </TooltipContent>
     </Tooltip>
   )
 }}}
-=======
     </Tooltip>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

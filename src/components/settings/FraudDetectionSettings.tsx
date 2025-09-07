@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 return (
     <Card className="mb-8">"
       <CardHeader className="space-y-1">"
         <div className="flex items-center gap-2">"
           <ShieldAlert className="h-5 w-5 text-amber-500" />"
           <CardTitle className="text-xl">Fraud & Abuse Protection</CardTitle>"
-=======
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
@@ -57,14 +55,12 @@ export function FraudDetectionSettings() {
         <div className="flex items-center gap-2">
           <ShieldAlert className="h-5 w-5 text-amber-500" />
           <CardTitle className="text-xl">Fraud & Abuse Protection</CardTitle>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>
         <CardDescription>
           Configure privacy settings related to fraud detection and abuse prevention on the platform
         </CardDescription>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD
         <div className="space-y-6">"
           <div className="space-y-4">"
             <div className="flex items-center justify-between">"
@@ -73,7 +69,6 @@ export function FraudDetectionSettings() {
                   Message Content Scanning
                 </Label>
                 <p className="text-sm text-muted-foreground">"
-=======
         <div className="space-y-6">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
@@ -82,30 +77,24 @@ export function FraudDetectionSettings() {
                   Message Content Scanning
                 </Label>
                 <p className="text-sm text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Scan message content for potentially harmful or abusive material
                 </p>
               </div>
               <Switch
-<<<<<<< HEAD
                 id="message-scanning""
                 aria-label="Message scanning""
-=======
                 id="message-scanning"
                 aria-label="Message scanning"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 checked={messageScanningEnabled}
                 onCheckedChange={setMessageScanningEnabled}
               />
             </div>
-<<<<<<< HEAD
             <div className="flex items-center justify-between">"
               <div>
                 <Label className="font-medium" htmlFor="activity-monitoring">"
                   Activity Monitoring
                 </Label>
                 <p className="text-sm text-muted-foreground">"
-=======
             
             <div className="flex items-center justify-between">
               <div>
@@ -113,30 +102,24 @@ export function FraudDetectionSettings() {
                   Activity Monitoring
                 </Label>
                 <p className="text-sm text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Monitor account activity for suspicious patterns
                 </p>
               </div>
               <Switch
-<<<<<<< HEAD
                 id="activity-monitoring""
                 aria-label="Activity monitoring""
-=======
                 id="activity-monitoring"
                 aria-label="Activity monitoring"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 checked={activityMonitoringEnabled}
                 onCheckedChange={setActivityMonitoringEnabled}
               />
             </div>
-<<<<<<< HEAD
             <div className="flex items-center justify-between">"
               <div>
                 <Label className="font-medium" htmlFor="ai-analysis">"
                   AI-powered Analysis
                 </Label>
                 <p className="text-sm text-muted-foreground">"
-=======
             
             <div className="flex items-center justify-between">
               <div>
@@ -144,24 +127,19 @@ export function FraudDetectionSettings() {
                   AI-powered Analysis
                 </Label>
                 <p className="text-sm text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Use AI to analyze content and behavior for potential fraud
                 </p>
               </div>
               <Switch
-<<<<<<< HEAD
                 id="ai-analysis""
                 aria-label="AI analysis""
-=======
                 id="ai-analysis"
                 aria-label="AI analysis"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 checked={aiAnalysisEnabled}
                 onCheckedChange={setAiAnalysisEnabled}
               />
             </div>
           </div>
-<<<<<<< HEAD
           <Accordion type="single" collapsible className="w-full">"
             <AccordionItem value="item-1">"
               <AccordionTrigger className="text-sm font-medium">"
@@ -175,7 +153,6 @@ export function FraudDetectionSettings() {
                   The Zion AI Marketplace uses automated fraud detection systems to protect our community. This includes:
                 </p>
                 <ul className="list-disc pl-5 space-y-1 mb-2">"
-=======
           
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
@@ -190,23 +167,18 @@ export function FraudDetectionSettings() {
                   The Zion AI Marketplace uses automated fraud detection systems to protect our community. This includes:
                 </p>
                 <ul className="list-disc pl-5 space-y-1 mb-2">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>Pattern detection in messages and job postings</li>
                   <li>AI-powered content analysis</li>
                   <li>Monitoring for suspicious account activities</li>
                 </ul>
                 <p>
-<<<<<<< HEAD
                   You can opt out of some of these protections, but this may limit your ability to use certain platform features.
-=======
                   You can opt out of some of these protections, but this may limit your ability to use certain platform features. 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   We prioritize keeping our marketplace safe while respecting your privacy.
                 </p>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-<<<<<<< HEAD
           <div className="pt-2">"
             <Button
               onClick={handleSavePreferences}
@@ -214,7 +186,6 @@ export function FraudDetectionSettings() {
               className="bg-zion-purple hover:bg-zion-purple-light""
             >
               {isSaving ? "Saving..." : "Save Preferences"}"
-=======
           
           <div className="pt-2">
             <Button 
@@ -223,14 +194,12 @@ export function FraudDetectionSettings() {
               className="bg-zion-purple hover:bg-zion-purple-light"
             >
               {isSaving ? "Saving..." : "Save Preferences"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>
           </div>
         </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 }
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -375,7 +344,6 @@ export function FraudDetectionSettings() {;
   );
 }
 ;
-=======
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
@@ -519,4 +487,3 @@ export function FraudDetectionSettings() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

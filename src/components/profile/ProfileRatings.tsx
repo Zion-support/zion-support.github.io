@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
       })
 import { useState, useEffect } from "react";
@@ -326,7 +325,6 @@ if ( {) {
 }"}"
 }
 ;)))
-=======
 
 import { useState, useEffect } from "react",
 import { Star } from 'lucide-react'
@@ -423,4 +421,3 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

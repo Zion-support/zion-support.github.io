@@ -1,4 +1,3 @@
-<<<<<<< HEAD:data/specialized-emerging-tech-services-2025.ts
 
 
   id: string;
@@ -83,9 +82,7 @@ const contact = {
 ];
 
 import { ServiceVariant } from '../types/service-variants',;
-=======
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/specialized-emerging-tech-services-2025.ts
 export interface SpecializedEmergingTechService {;
   id: string;
   name: string;
@@ -153,15 +150,12 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     period: '/month';
     description: 'Advanced AR/VR platform that enables businesses to create immersive experiences, develop metaverse applications, and engage customers in virtual environments.';
     features: [;
-<<<<<<< HEAD:data/specialized-emerging-tech-services-2025.ts
     ];
 
     popular: true, icon: '🧠',
 
       'AR/VR content creation and managementMetaverse development tools and SDKs3D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR, web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware',;
-=======
       'AR/VR content creation and managementMetaverse development tools and SDKs3D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR, web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/specialized-emerging-tech-services-2025.ts
       'Custom avatar and environment creationE-commerce integration for virtual stores';
     ];
     popular: true;

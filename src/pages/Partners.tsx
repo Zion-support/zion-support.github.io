@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Card,
   CardContent,
   CardDescription,
@@ -66,7 +65,6 @@ import { PartnerResources } from "@/components/partners/PartnerResources","
 export default function Partners() {
   logInfo('PartnersPage rendering'),',
   const [activeTab, setActiveTab] = useState("overview"),"
-=======
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -88,14 +86,11 @@ export default function Partners() {
 
   logInfo('PartnersPage rendering'),
   const [activeTab, setActiveTab] = useState("overview"),
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const { t } = useTranslation(),
   const { user, isAuthenticated } = useAuth(),
   const router = useRouter(),
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
-<<<<<<< HEAD
 }
-=======
 
   useEffect(() => {
     async function checkHealth() {
@@ -461,4 +456,3 @@ export default function Partners() {;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

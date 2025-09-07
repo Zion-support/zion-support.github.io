@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(
@@ -23,7 +22,6 @@
         setUpcomingInterviews(upcoming)
       } catch (error) {
         logErrorToProduction('Error loading upcoming interviews:', { data: error })'
-=======
 
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -61,12 +59,10 @@ export function UpcomingInterviewsCard() {
         setUpcomingInterviews(upcoming)
       } catch (error) {
         logErrorToProduction('Error loading upcoming interviews:', { data: error })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       } finally {
         setIsLoading(false)
       }
     },
-<<<<<<< HEAD
     loadInterviews()
   }, []),
   if (isLoading) {
@@ -75,7 +71,6 @@ export function UpcomingInterviewsCard() {
         <CardHeader>
           <CardTitle className="text-lg flex items-center">"
             <Video className="h-5 w-5 mr-2 text-zion-purple" />"
-=======
 
     loadInterviews()
   }, []),
@@ -86,12 +81,10 @@ export function UpcomingInterviewsCard() {
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
             <Video className="h-5 w-5 mr-2 text-zion-purple" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Upcoming Interviews
           </CardTitle>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
           <div className="space-y-4">",
             {[1, 2].map(i => (
               <div key={i} className="flex items-center gap-3 animate-pulse">"
@@ -99,7 +92,6 @@ export function UpcomingInterviewsCard() {
                 <div className="flex-1">"
                   <div className="h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2"></div>"
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>"
-=======
           <div className="space-y-4">
             {[1, 2].map(i => (
               <div key={i} className="flex items-center gap-3 animate-pulse">
@@ -107,7 +99,6 @@ export function UpcomingInterviewsCard() {
                 <div className="flex-1">
                   <div className="h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2"></div>
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </div>
               </div>
 import React, { useEffect, useState } from "react",;
@@ -118,7 +109,6 @@ import { Interview } from "@/types/interview",;
 import { format, isPast, parseISO } from "date-fns",;
 import Link from "next/link",;
 import { Calendar, Clock, Video } from 'lucide-react';
-<<<<<<< HEAD
 import { Avatar } from '@/components / ui / avatar';
 import { logErrorToProduction } from '@/utils / production_logger';
 export /**
@@ -210,7 +200,6 @@ if ( {) {
         <CardHeader>;
           <CardTitle className='text - lg flex items - center'>;
             <Video className='h - 5 w - 5 mr - 2 text - zion - purple' />;
-=======
 import { Avatar } from "@/components/ui/avatar",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 export function UpcomingInterviewsCard() {;
@@ -247,13 +236,10 @@ export function UpcomingInterviewsCard() {;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
             <Video className="h-5 w-5 mr-2 text-zion-purple" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Upcoming Interviews;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-=======
           <div className="space-y-4">;
             {[1, 2].map(i => (;
               <div key={i} className="flex items-center gap-3 animate-pulse">;
@@ -264,20 +250,17 @@ export function UpcomingInterviewsCard() {;
                 </div>;
               </div>;
             ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>;
         </CardContent>;
       </Card>;
     );
   }
-<<<<<<< HEAD
   if (upcomingInterviews.length === 0) {
     return (
       <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>'
         <CardHeader>
           <CardTitle className='text-lg flex items-center'>'
             <Video className='h-5 w-5 mr-2 text-zion-purple' />'
-=======
 
   if (upcomingInterviews.length === 0) {
     return (
@@ -285,12 +268,10 @@ export function UpcomingInterviewsCard() {;
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
             <Video className="h-5 w-5 mr-2 text-zion-purple" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Upcoming Interviews
           </CardTitle>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
           <div className='text-center py-6'>'
             <Calendar className='h-10 w-10 mx-auto mb-2 text-muted-foreground' />'
             <p className='text-sm text-muted-foreground'>'
@@ -298,19 +279,16 @@ export function UpcomingInterviewsCard() {;
             </p>
             <Button asChild className='mt-4' variant='outline' size='sm'>'
               <Link href='/interviews' />Schedule Interview</Link>'
-=======
           <div className="text-center py-6">
             <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />
             <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>
             <Button asChild className="mt-4" variant="outline" size="sm">
               <Link href="/interviews">Schedule Interview</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>
           </div>
         </CardContent>
       </Card>
     )
-<<<<<<< HEAD
           </div>;
         </CardContent>;
       </Card>;
@@ -351,7 +329,6 @@ export function UpcomingInterviewsCard() {;
             return (
               <div key={interview.id} className="flex items-center gap-3">"
                 <Avatar className="h-10 w-10 bg-zion-purple/10">"
-=======
   }
 
   return (
@@ -378,12 +355,10 @@ export function UpcomingInterviewsCard() {;
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   {interview.client_avatar || interview.talent_avatar ? (
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
-<<<<<<< HEAD
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">"
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}"
                     </div>
@@ -459,7 +434,6 @@ export function UpcomingInterviewsCard() {;
                   </div>
                   <div className="flex items-center text-sm text-muted-foreground">"
                     <Clock className="h-3 w-3 mr-1" />"
-=======
                       loading="lazy"
                     />
                   ) : (
@@ -481,7 +455,6 @@ export function UpcomingInterviewsCard() {;
                   </div>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Clock className="h-3 w-3 mr-1" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     {formattedDate} at {formattedTime}
                   </div>;
                 </div>;
@@ -489,16 +462,13 @@ export function UpcomingInterviewsCard() {;
             );
           })}
         </div>
-<<<<<<< HEAD
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">"
           <Button asChild size="sm" variant="outline" className="w-full">"
             <Link href="/interviews" />"
-=======
         
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
           <Button asChild size="sm" variant="outline" className="w-full">
             <Link href="/interviews">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               View All Interviews
             </Link>
           </Button>
@@ -506,7 +476,6 @@ export function UpcomingInterviewsCard() {;
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
                   </div>;
                 </div>;
               </div>;
@@ -627,7 +596,5 @@ if ( {) {
 }
 }
 ;)))))
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

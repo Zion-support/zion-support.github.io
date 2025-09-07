@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Sparkles, Search } from 'lucide-react''
 import React from 'react';
 import { useState } from 'react';
@@ -178,7 +177,6 @@ export function AIMatchmaker(): any ({;
         variant: 'destructive',;
       });
       // Set empty matches to show no results found UI;,
-=======
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -291,28 +289,23 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         description: "We couldn't find matches for your request. Please try again.",;
         variant: "destructive"}),;
       // Set empty matches to show no results found UI;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       setMatches([]);
     } finally {;
       setIsMatchmaking(false);
     }
-<<<<<<< HEAD
   };
   const handleItemSelect = (item:,  any) => {    if (onMatchSelect) {;
       // Find the original MatchResult that contains this item;
       const matchResult = matches && matches.find(match => match && match.item.id === item && item.id),;
-=======
   },;
   const handleItemSelect = (item: any) => {;
     if (onMatchSelect) {;
       // Find the original MatchResult that contains this item;
       const matchResult = matches.find(match => match.item.id === item.id),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       if (matchResult) {;
         onMatchSelect(matchResult);
       }
     }
-<<<<<<< HEAD
   const handleItemSelect = (item:,  any) =>: any {    // Check condition,
 if ( {) {
   $2
@@ -367,7 +360,6 @@ if ( {) {
               className='min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white';
             />;
             <Button
-=======
   },
   
   // Extract just the items from each MatchResult
@@ -394,7 +386,6 @@ if ( {) {
               className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
             />;
             <Button;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               onClick={handleSearch}
               disabled={isMatchmaking}
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
@@ -403,30 +394,21 @@ if ( {) {
                 <>Analyzing your needs...</>;
               ) : (;
                 <>;
-<<<<<<< HEAD
                   <Search className='h-4 w-4 mr-2' />;
-=======
                   <Search className="h-4 w-4 mr-2" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Find Matches;
                 </>;
               )}
             </Button>;
           </div>;
           {hasSearched && (;
-<<<<<<< HEAD
-=======
             <AIMatchingResults;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
-<<<<<<< HEAD
 }
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               projectDescription={query}
             />;
           )}
@@ -434,7 +416,6 @@ if ( {) {
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
 }
         <div className='space - y-4'>;
           <div className='space - y-2'>;
@@ -470,6 +451,4 @@ if ( {) {
     </Card>);
 }
 }}}}}}}}}
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

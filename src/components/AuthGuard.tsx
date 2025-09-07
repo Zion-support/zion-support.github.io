@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const redirectTo = options?.redirectTo |'/login''
       const returnUrl = options?.returnUrl |router.asPath
           if (!requireAuth({ showToast: false })) return false,
@@ -36,7 +35,6 @@ const redirectTo = options?.redirectTo |'/login''
     is_loading}
 }
 ;
-=======
 import React, { useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -300,4 +298,3 @@ export function useAuthGuard() {;
     isLoading}
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

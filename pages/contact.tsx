@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 
@@ -245,6 +244,4 @@ return (
     </>
   );
 }
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

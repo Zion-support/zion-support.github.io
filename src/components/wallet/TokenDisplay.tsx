@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const { wallet, loading } = useWallet();
   return (
   return (
@@ -24,7 +23,6 @@ const { wallet, loading } = useWallet();
             </p>
             <div className="mt-2">"
               <Button variant="outline" size="sm">"
-=======
 
 import React from "react",
 import { BadgeDollarSign } from 'lucide-react'
@@ -58,7 +56,6 @@ export function TokenDisplay() {
             </p>
             <div className="mt-2">
               <Button variant="outline" size="sm">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 View Wallet
               </Button>
             </div>
@@ -92,7 +89,6 @@ export function TokenDisplay() {;
             <p className="text-sm text-muted-foreground">;
               Use your tokens to boost visibility, access premium features, or convert to credits.;
             </p>;
-<<<<<<< HEAD
             <div className='mt-2'>;
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt-2">;
 import React from 'react';
@@ -135,18 +131,14 @@ function TokenDisplay() {
             </p>;
             <div className='mt - 2'>;
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt - 2">;
-=======
             <div className="mt-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <Button variant="outline" size="sm">;
                 View Wallet;
               </Button>;
             </div>;
-<<<<<<< HEAD
 }
 ;
 }}}})))))))
-=======
           </div>;
         )}
       </CardContent>;
@@ -154,4 +146,3 @@ function TokenDisplay() {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

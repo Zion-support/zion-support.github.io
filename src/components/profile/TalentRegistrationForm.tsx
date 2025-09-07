@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
   }
   // Handle removing skill tags
@@ -239,7 +238,6 @@ export function TalentRegistrationForm() {;
             if (true) {}
             ) {
               newSkills.push(skill)
-=======
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -298,7 +296,6 @@ import { Switch } from "@/components/ui/switch",;
 import { Badge } from "@/components/ui/badge",;
 import { Separator } from "@/components/ui/separator",;
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger',;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {;
   Form,;
   FormControl,;
@@ -306,7 +303,6 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
-<<<<<<< HEAD
   FormMessage,;
 } from '@/components/ui/form';
 import {;
@@ -2260,7 +2256,6 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }/> </div> </div> </CardContent> <CardFooter className="border - t border - zion - blue - light pt - 6"> <div className="flex flex - col sm:flex - row gap - 4 w - full sm:justify - between" > <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
 }'"}
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}
-=======
   FormMessage} from "@/components/ui/form",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react';
@@ -3187,4 +3182,3 @@ export function TalentRegistrationForm() {;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 
 
@@ -193,7 +192,6 @@ if ( {) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 const WINDOW_MS = 5 * 60 * 1000, // 5 minutes;
 const MAX_REQUESTS = 30, // per IP per endpoint per window;
@@ -214,4 +212,3 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {;
 ;
   return true;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

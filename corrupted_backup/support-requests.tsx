@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/admin/support-requests.tsx
 import { GetServerSideProps } from 'next',;
 import { useState } from 'react',;
 import { readJson } from '../../utils/fsDb',;
@@ -11,7 +10,6 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
   async function resolve(id: string) {;
     await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) });
     setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)));
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
@@ -31,7 +29,6 @@ interface SupportRequest {
   response?: string;
 }
 
-<<<<<<< HEAD
 export default function SupportRequests({
   initialRequests,
 }: {
@@ -50,7 +47,6 @@ export default function SupportRequests({
         r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r
       )
     );
-=======
 const mockSupportRequests: SupportRequest[] = [
   {
     id: '1',
@@ -93,12 +89,9 @@ const mockSupportRequests: SupportRequest[] = [
     updatedAt: '2025-01-14T16:45:00Z',
     assignedTo: 'support_agent_2',
     response: 'Thank you for your suggestion! We have added dark mode to our roadmap and will implement it in the next update.'
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/support-requests.tsx
   }
 
   return (
-<<<<<<< HEAD:pages/admin/support-requests.tsx
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Support Requests</h1>
       <div className="grid gap-3">
@@ -111,8 +104,6 @@ const mockSupportRequests: SupportRequest[] = [
               <div className="opacity-80">Tag: {r.tag}</div>
               <div className="opacity-80">Reason: {r.reason}</div>
               <div className="opacity-80">Status: {r.status}</div>
-=======
-<<<<<<< HEAD
     <div className='space-y-6'>
       <h1 className='text-2xl font-semibold'>Support Requests</h1>
       <div className='grid gap-3'>
@@ -139,7 +130,6 @@ const mockSupportRequests: SupportRequest[] = [
                 Mark Resolved
               </button>
             )}
-=======
     <>
       <Head>
         <title>Admin Support Requests - Zion Tech Group</title>
@@ -153,7 +143,6 @@ const mockSupportRequests: SupportRequest[] = [
           <div className="bg-white rounded-lg shadow p-4">
             <h3 className="text-sm font-medium text-gray-500">Total Requests</h3>
             <p className="text-2xl font-bold">{requests.length}</p>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
           <div className="bg-white rounded-lg shadow p-4">
             <h3 className="text-sm font-medium text-gray-500">Open</h3>
@@ -185,7 +174,6 @@ const mockSupportRequests: SupportRequest[] = [
                 <option value="resolved">Resolved</option>
                 <option value="closed">Closed</option>
               </select>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/support-requests.tsx
             </div>
             {r.status !== 'resolved' && (
               <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
@@ -195,14 +183,8 @@ const mockSupportRequests: SupportRequest[] = [
       </div>;
     </div>;
   );
-<<<<<<< HEAD:pages/admin/support-requests.tsx
 }
-=======
-<<<<<<< HEAD
 }
-=======
 };
 
 export default AdminSupportRequestsPage;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/support-requests.tsx

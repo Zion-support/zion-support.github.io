@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">"
@@ -45,7 +44,6 @@ export function ClientDashboard() {
                   </div>
                 </div>
                 <Button size="sm" variant="outline">View Details</Button>"
-=======
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -103,13 +101,11 @@ export function ClientDashboard() {
                   </div>
                 </div>
                 <Button size="sm" variant="outline">View Details</Button>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>
             </div>
           </CardContent>
         </Card>
       </section>
-<<<<<<< HEAD
       <section>
         <div className="flex items-center justify-between mb-4">"
           <h2 className="text-lg font-medium">Suggested Talents</h2>"
@@ -171,7 +167,6 @@ export function ClientDashboard() {
               <div className="flex gap-2 mt-3">"
                 <Button size="sm">View Profile</Button>"
                 <Button size="sm" variant="outline">Message</Button>"
-=======
       
       <section>
         <div className="flex items-center justify-between mb-4">
@@ -236,13 +231,11 @@ export function ClientDashboard() {
               <div className="flex gap-2 mt-3">
                 <Button size="sm">View Profile</Button>
                 <Button size="sm" variant="outline">Message</Button>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>
             </CardContent>
           </Card>
         </div>
       </section>
-<<<<<<< HEAD
       <section>
         <div className="flex items-center justify-between mb-4">"
           <h2 className="text-lg font-medium">Recent Updates</h2>"
@@ -300,7 +293,6 @@ export function ClientDashboard() {
               </div>
             </div>
             <Button variant="outline" className="w-full">View All Notifications</Button>"
-=======
       
       <section>
         <div className="flex items-center justify-between mb-4">
@@ -334,19 +326,15 @@ export function ClientDashboard() {
             </div>
             
             <Button variant="outline" className="w-full">View All Notifications</Button>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </CardContent>
         </Card>
       </section>
     </div>
-<<<<<<< HEAD
-=======
   )
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 import Link from "next/link";
 export function ClientDashboard() {;
@@ -360,11 +348,8 @@ export function ClientDashboard() {;
       <section>;
         <div className="flex items-center justify-between mb-4">;
           <h2 className="text-lg font-medium">Active Projects</h2>;
-<<<<<<< HEAD
           <Link href="/mobile/projects" />;
-=======
           <Link href="/mobile/projects">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <Button variant="ghost" size="sm" className="h-8 gap-1">;
               View all <ChevronRight className="h-4 w-4" />;
             </Button>;
@@ -396,7 +381,6 @@ export function ClientDashboard() {;
                   </div>;
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">;
                     <UserCheck className="h-4 w-4" />;
-<<<<<<< HEAD
 import React from 'react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -510,8 +494,6 @@ function ClientDashboard() {
                   </div>;
                   <div className="w - 7 h - 7 rounded - full bg - secondary / 20 border - 2 border - background flex items - center justify - center">;
                     <UserCheck className="h - 4 w - 4" />;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </div>;
                 </div>;
                 <Button size="sm" variant="outline">View Details</Button>;
@@ -521,7 +503,6 @@ function ClientDashboard() {
         </Card>;
       </section>;
       <section>;
-<<<<<<< HEAD
         <div className='flex items - center justify - between mb - 4'>;
           <h2 className='text - lg font - medium'>Suggested Talents</h2>;
           <Link href='/mobile / marketplace' />;
@@ -608,7 +589,6 @@ function ClientDashboard() {
                 <Button size='sm' variant='outline'>;
                   Message;
                 </Button>              </div>;
-=======
         <div className="flex items-center justify-between mb-4">;
           <h2 className="text-lg font-medium">Suggested Talents</h2>;
           <Link href="/mobile/marketplace">;
@@ -670,12 +650,10 @@ function ClientDashboard() {
                 <Button size="sm">View Profile</Button>;
                 <Button size="sm" variant="outline">Message</Button>;
               </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </CardContent>;
           </Card>;
         </div>;
       </section>;
-<<<<<<< HEAD
   );
 }
       <section>;
@@ -745,7 +723,6 @@ function ClientDashboard() {
     </div>);
 }
 }}))
-=======
       <section>;
         <div className="flex items-center justify-between mb-4">;
           <h2 className="text-lg font-medium">Recent Updates</h2>;
@@ -782,4 +759,3 @@ function ClientDashboard() {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

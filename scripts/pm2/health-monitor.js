@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -224,9 +223,6 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 module.exports = HealthMonitor;
 ursor/add-new-services-and-deploy-updates-0462
 origin/automation-improvements-final
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }};
 ; async checkSystemResources() {; try {; this.log('💻 Checking system resources...');
 ; const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
@@ -2586,9 +2582,7 @@ healthMonitor.run().catch(error => {,;
       } else {,;
         this.log('\n✨ All systems are healthy!');
       }
-<<<<<<< HEAD
 
-=======
 ;
     } catch (error) {,;
       this.log(`❌ Error running health: monitor: ${error.message}`),;
@@ -2602,12 +2596,7 @@ const healthMonitor = new HealthMonitor(),;
 healthMonitor.run().catch(error => {,;
   process.exit(1);
 }),;
-=======
     
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
     } catch (error) {}
@@ -2736,7 +2725,6 @@ healthMonitor.run().catch(error => {,;
       } catch (error) {}
         this.log(`Failed to get system processes: ${error.message}`, 'WARNING');',
       }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       return processes;
     } catch (error) {}
       this.error(`Failed to get process info: ${error.message}`);,
@@ -2905,7 +2893,6 @@ if (require.main === module) {}
   });
 }
 
-<<<<<<< HEAD
 healthMonitor.run().catch(error = > {process.exit(1)});
 
 healthMonitor.run().catch(error = > {process.exit(1)});
@@ -3130,8 +3117,4 @@ healthMonitor.run().catch(error => {,;
 
 
 
-=======
 module.exports = HealthMonitor;
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

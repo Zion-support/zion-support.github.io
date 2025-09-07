@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 interface LoadingSpinnerProps {;
   size?: 'sm' | 'md' | 'lg',;
@@ -88,7 +87,6 @@ function LoadingSpinner() {
         className={`animate-spin ${sizeClasses[size]} text-current`} ;
         viewBox=&quot;0 0 24 24&quot;
         fill=&quot;none&quot;
-=======
 interface LoadingSpinnerProps {;
   size?: 'sm' | 'md' | 'lg',;
   text?: string,;
@@ -105,7 +103,6 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <svg 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         className={`animate-spin ${sizeClasses[size]} text-current`} 
         viewBox="0 0 24 24"
         fill="none"
@@ -127,8 +124,5 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
       {text && <span className="text-sm">{text}</span>}
     </div>
   )
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

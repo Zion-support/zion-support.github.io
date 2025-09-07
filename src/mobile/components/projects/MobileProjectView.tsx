@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 id: string;,
     title: string;,
     client: {,
@@ -36,7 +35,6 @@ import { Progress } from "@/components/ui/progress","
 import { SeverityIndicator } from "../common/SeverityIndicator","
 import { useRouter } from 'next/router','
 import { toast } from "sonner","
-=======
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -48,20 +46,16 @@ import { Progress } from "@/components/ui/progress",
 import { SeverityIndicator } from "../common/SeverityIndicator",
 import { useRouter } from 'next/router',
 import { toast } from "sonner",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface Milestone {
   id: string,
   title: string,
   dueDate: string,
-<<<<<<< HEAD
   status: "completed" | "in_progress" | "pending","
   paymentStatus: "paid" | "pending" | "overdue","
   amount: string,
-=======
   status: "completed" | "in_progress" | "pending",
   paymentStatus: "paid" | "pending" | "overdue",
   amount: string
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -82,17 +76,14 @@ interface Milestone {;
 }
 ;
 interface ProjectViewProps {;
-<<<<<<< HEAD
   project: {;,
     id: string,;
     title: string,;
     client: {;,
-=======
   project: {;
     id: string,;
     title: string,;
     client: {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       name: string,;
       avatar?: string;
     },;
@@ -102,7 +93,6 @@ interface ProjectViewProps {;
     totalAmount: string,;
     progress: number,;
     description: string;
-<<<<<<< HEAD
   },;,
   milestones: Milestone[];,
     description: string;
@@ -240,7 +230,6 @@ export function MobileProjectView({ project, milestones }:,  ProjectViewProps) {
                 onClick={startProjectCall}
               >
                 <Video className="h-4 w-4" /> Call"
-=======
   },;
   milestones: Milestone[];
 }
@@ -333,13 +322,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 onClick={startProjectCall}
               >
                 <Video className="h-4 w-4" /> Call
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </Button>
             </div>
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>"
         <div className="space-y-3">"
@@ -425,7 +412,6 @@ export function MobileProjectView({ project, milestones }:,  ProjectViewProps) {
   const messageClient = () => {;
     toast.info("Opening message thread with client", {;
       description: `Messaging ${project.client.name}...`;`
-=======
       
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
@@ -459,7 +445,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
   const messageClient = () => {;
     toast.info("Opening message thread with client", {;
       description: `Messaging ${project.client.name}...`;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     });
     // Navigate to messaging with this client;
   };
@@ -474,11 +459,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 <div className="flex items-center gap-2 mt-1">;
                   <Avatar className="h-6 w-6">;
                     <AvatarImage src={project.client.avatar} alt={project.client.name} />;
-<<<<<<< HEAD
                     <AvatarFallback>{project.client.name[0]}</AvatarFallback>;,
-=======
                     <AvatarFallback>{project.client.name[0]}</AvatarFallback>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </Avatar>;
                   <span className="text-sm">{project.client.name}</span>;
                 </div>;
@@ -528,11 +510,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
               </Button>;
               <Button;
                 size="sm";
-<<<<<<< HEAD
                 className="gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light";",
-=======
                 className="gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 onClick={startProjectCall}
               >;
                 <Video className="h-4 w-4" /> Call;
@@ -565,7 +544,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     {milestone.paymentStatus}
                   </Badge>
                 </div>
-<<<<<<< HEAD
                 <div className="pl-7">"
                   <div className="flex justify-between text-sm">"
                     <span className="text-muted-foreground">Due Date:</span>"
@@ -585,7 +563,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     className="w-full mt-3 gap-1""
                   >
                     View Details <ChevronRight className="h-4 w-4" />"
-=======
                 
                 <div className="pl-7">
                   <div className="flex justify-between text-sm">
@@ -606,7 +583,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     className="w-full mt-3 gap-1"
                   >
                     View Details <ChevronRight className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </Button>
                 </div>
               </CardContent>
@@ -641,12 +617,9 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
 };
 }
 ;
 }})))
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

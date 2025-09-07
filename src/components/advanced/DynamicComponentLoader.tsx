@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, {;
   Suspense,;
   lazy,;
@@ -7,15 +6,12 @@ import React, {;
   useEffect,;
   ComponentType,;
 } from 'react';
-=======
 import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LoadingState {;
   isLoading: boolean;,
@@ -719,7 +715,6 @@ export default DynamicComponentLoader; export default DynamicComponentLoader;
 // );
 export default DynamicComponentLoader;
 }}}}
-=======
 import {logErrorToProduction} from '@/utils/productionLogger',;
 interface LoadingState {;
   isLoading: boolean;
@@ -1038,4 +1033,3 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 //   }
 // );
 export default DynamicComponentLoader;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

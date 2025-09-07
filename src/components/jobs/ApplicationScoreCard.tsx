@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
@@ -76,7 +75,6 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }:,  
       const maxAttempts = 10;
   // Get suggestion color;
   const getSuggestionColor = (suggestion: string | undefined,) => {;
-=======
 
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
@@ -135,18 +133,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     : null,;
   // Get suggestion color;
   const getSuggestionColor = (suggestion: string | undefined) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     switch (suggestion) {;
       case "Strongly Recommended": return "bg-green-100 text-green-800",;
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800",;
       case "Low Match":;
         return "bg-orange-100 text-orange-800",;
-<<<<<<< HEAD
       default:;,
-=======
       default:;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         return "bg-gray-100 text-gray-800";
     }
   },;
@@ -155,14 +149,12 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     try {;
       setIsScoring(true),;
       // Call the trigger_resume_scoring function;
-<<<<<<< HEAD
       const { error } = await supabase && supabase.rpc(;
         'trigger_resume_scoring',;
         { application_id: application && application.id }
       ),;
       if (error) throw error,;
       toast && toast.success("Resume scoring has been initiated"),;
-=======
       const { error } = await supabase.rpc(;
         'trigger_resume_scoring',;
         { application_id: application.id }
@@ -206,7 +198,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       ),;
       if (error) throw error,;
       toast.success("Resume scoring has been initiated"),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       // Poll for results every 3 seconds for up to 30 seconds;
       let attempts = 0,;
       const maxAttempts = 10,;
@@ -215,7 +206,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         const { data, error } = await supabase;
           .from("job_applications");
           .select("*");
-<<<<<<< HEAD
           .eq("id", application && application.id);
           .single(),;
         if (error) {;
@@ -304,7 +294,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                 </Badge>;
                 {scoredDate && (;
                   <div className="text-xs text-muted-foreground mt-1">;
-=======
           .eq("id", application.id);
           .single(),;
         if (error) {;
@@ -383,14 +372,12 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                 </Badge>
                 {scoredDate && (
                   <div className="text-xs text-muted-foreground mt-1">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     Scored on {scoredDate}
                   </div>;
                 )}
               </div>;
             </div>;
             {/* Breakdown (Collapsible) */}
-<<<<<<< HEAD
             {application && application.match_breakdown && (;
               <div className="mt-4 pt-4 border-t">;
                 <details className="text-sm">;
@@ -616,7 +603,6 @@ if ( {) {
                         <p className="font-medium">Education Match: {application && application.match_breakdown.education_match && education_match.score}/100</p>;
                         <p>{application && application.match_breakdown.education_match && education_match.analysis}</p>;
                       </div>;
-=======
             {application.match_breakdown && (
               <div className="mt-4 pt-4 border-t">
                 <details className="text-sm">
@@ -660,13 +646,11 @@ if ( {) {
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     )}
                   </div>;
                 </details>;
               </div>;
             )}
-<<<<<<< HEAD
           </div>;
         ) : (;
           <div className="text-center py-4">;
@@ -699,7 +683,6 @@ if ( {) {
                 </>
               ) : (
                 "Score Resume""
-=======
           </div>
         ) : (
           <div className="text-center py-4">
@@ -718,7 +701,6 @@ if ( {) {
                 </>
               ) : (
                 "Score Resume"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               )}
             </Button>;
           </div>;
@@ -727,7 +709,6 @@ if ( {) {
     </Card>;
   );
 }
-<<<<<<< HEAD
                           <p > Missing certs: {application.match_breakdown.certifications_match.missing.join (", ")}</p>)}"
                       </div>)}
                     {application.match_breakdown.education_match && (
@@ -761,6 +742,4 @@ if ( {) {
 }
 }
 }}}}
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

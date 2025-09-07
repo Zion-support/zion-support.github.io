@@ -15,13 +15,10 @@ export const: LazyLoadWrapper: React.FC<{,;
   childre: n: React.ReactNode,;
   fallback?: React.ReactNode,;
   threshold?: number,;
-<<<<<<< HEAD:src/components/PerformanceOptimized.tsx
   rootMargin?: string;
 }> = ({ children, fallback = null, threshold = 0.1, rootMargin = '50px' }) => {,;
-=======
   rootMargin?: string';'
 }> = ({ children, fallback = null,  threshold = 0.1, rootMargin = '50px' }) => {,;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/PerformanceOptimized.tsx
   const [isVisible, setIsVisible] = React.useState(false),;
   const [hasLoaded, setHasLoaded] = React.useState(false),;
   const ref = React.useRef<HTMLDivElement>(null),;
@@ -120,17 +117,14 @@ export const: OptimizedImage: React.FC<{,;
   al: t: string,;
   width?: number,;
   height?: number,;
-<<<<<<< HEAD:src/components/PerformanceOptimized.tsx
   className?: string,;
   loading?: 'lazy' | 'eager',;
   placeholder?: string;
 }> = ({ src, alt, width, height, className, loading = 'lazy', placeholder }) => {,;
-=======
   className?: string, ';'
   loading?: 'lazy' | 'eager',;
   placeholder?: string';'
 }> = ({ src, alt, width, height, className,  loading = 'lazy', placeholder }) => {,;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/PerformanceOptimized.tsx
   const [isLoaded, setIsLoaded] = React.useState(false),;
   const [hasError, setHasError] = React.useState(false),;
 ,;
@@ -150,7 +144,6 @@ export const: OptimizedImage: React.FC<{,;
           style={{ width, height }},;
         />)},;
       <img,;
-<<<<<<< HEAD:src/components/PerformanceOptimized.tsx
         src={src},;
         alt={alt},;
         width={width},;
@@ -164,7 +157,6 @@ export const: OptimizedImage: React.FC<{,;
       />,;
       {hasError && (,;
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">,;
-=======
         src={src};
         alt={alt};
         width={width};
@@ -178,7 +170,6 @@ export const: OptimizedImage: React.FC<{,;
       />,;
       {hasError && (,";"
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">, ;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/PerformanceOptimized.tsx
           Failed to load image,;
         </div>)},;
     </div>,;
@@ -218,13 +209,10 @@ export const usePerformanceMetrics = () => {,;
       averageRenderTim: e: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1);
     }));
   }, []),;
-<<<<<<< HEAD:src/components/PerformanceOptimized.tsx
 ;
   return { metrics, recordRender }
 },
 
-=======
 ,;
   return { metrics, recordRender };
 };'""'
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/PerformanceOptimized.tsx

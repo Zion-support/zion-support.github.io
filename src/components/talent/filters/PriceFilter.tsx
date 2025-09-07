@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
       <button;
@@ -73,7 +72,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     setPriceRange([values[0] || 0, values[1] || 500]);,
   };
   return (
-=======
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Slider } from "@/components/ui/slider",
@@ -113,7 +111,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     setPriceRange([values[0] || 0, values[1] || 500]);
   };
   return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button;
         onClick={toggleSection}
@@ -125,11 +122,9 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-<<<<<<< HEAD
           <Slider;
             aria-label="Hourly rate range";
             value={[priceRange[0], priceRange[1]]},
-=======
       </button>;
       {expanded && (;
         <div className="mt-6">;
@@ -140,18 +135,15 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           <Slider;
             aria-label="Hourly rate range";
             value={[priceRange[0], priceRange[1]]}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             min={50}
             max={200}
             step={5}
             onValueChange={handleChange}
-<<<<<<< HEAD
     </div>;
   );
 };
 }
 }}}})))))
-=======
             className="mt-6"
           />
         </div>
@@ -160,4 +152,3 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

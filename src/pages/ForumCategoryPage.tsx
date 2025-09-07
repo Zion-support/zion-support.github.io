@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "feedback": {"
     id: "feedback"",
     name: "Feedback & Feature Requests"",
@@ -31,7 +30,6 @@ const iconMap = {
   "FileText": FileText,"
   "Megaphone": Megaphone"
 },
-=======
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -99,7 +97,6 @@ const iconMap = {
   "Megaphone": Megaphone
 },
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 function CategoryContent({
   categoryId,
   category,
@@ -110,7 +107,6 @@ function CategoryContent({
   IconComponent: React.ComponentType<any>,
   user: any
 }) {
-<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState(""),"
   const { featuredPosts, recentPosts } = useCommunity(),
   // Filter posts by category from context data,
@@ -142,7 +138,6 @@ import React from 'react';
 import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 import { logInfo } from '@/utils/productionLogger';
-=======
   const [searchQuery, setSearchQuery] = useState(""),
   const { featuredPosts, recentPosts } = useCommunity(),
 
@@ -172,7 +167,6 @@ import { logInfo } from '@/utils/productionLogger';
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
       return
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -246,7 +240,6 @@ function CategoryContent({;
   category: ForumCategoryInfo,;
   IconComponent: React.ComponentType<any>,;
   user: any;
-<<<<<<< HEAD
 }) {;,
   const [searchQuery, setSearchQuery] = useState(""),;
   const { featuredPosts, recentPosts } = useCommunity(),;
@@ -254,7 +247,6 @@ function CategoryContent({;
   const categoryPosts = [;,
     ...featuredPosts.filter(post => post.categoryId ===,  categoryId),;
     ...recentPosts.filter(post => post.categoryId ===,  categoryId);
-=======
 }) {;
   const [searchQuery, setSearchQuery] = useState(""),;
   const { featuredPosts, recentPosts } = useCommunity(),;
@@ -262,7 +254,6 @@ function CategoryContent({;
   const categoryPosts = [;
     ...featuredPosts.filter(post => post.categoryId === categoryId),;
     ...recentPosts.filter(post => post.categoryId === categoryId);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   ].filter((post, index, self) =>;
     // Remove duplicates by id;
     index === self.findIndex(p => p.id === post.id);
@@ -283,7 +274,6 @@ function CategoryContent({;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
       return;
     }
-<<<<<<< HEAD
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
     } else {
@@ -299,7 +289,6 @@ function CategoryContent({;
   );
 }
 }}}}}
-=======
     if (isFollowed(categoryId)) {;
       unfollow(categoryId);
     } else {;
@@ -446,4 +435,3 @@ export default function ForumCategoryPage() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

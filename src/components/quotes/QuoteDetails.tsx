@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from "react",
 import { 
@@ -16,12 +14,10 @@ import { Separator } from "@/components/ui/separator",
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface QuoteDetailsProps {
   quote: QuoteRequest | null,
   isOpen: boolean,
   onClose: () => void
-<<<<<<< HEAD
 };
 import React from 'react';
 import { ;
@@ -37,7 +33,6 @@ import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
 import {format} from "date-fns";
-=======
 import React from "react",;
 import {;
   Dialog,;
@@ -53,29 +48,24 @@ import { Separator } from "@/components/ui/separator",;
 import { QuoteStatusBadge } from "./QuoteStatusBadge",;
 import type { QuoteRequest } from "@/types/quotes",;
 import { format } from "date-fns",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
   onClose: () => void;
 }
 ;
-<<<<<<< HEAD
 export const QuoteDetails = ({ quote, isOpen, onClose }:,  QuoteDetailsProps) => {;
   if (!quote) return null,;
   const formatDate = (dateString?:,  string) => {;
-=======
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null,;
   const formatDate = (dateString?: string) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     if (!dateString) return 'Not specified',;
     try {;
       return format(new Date(dateString), 'PPP');
     } catch (e) {;
       return dateString;
     }
-<<<<<<< HEAD
   }
   return (
         <Separator className="my-4" />"
@@ -90,7 +80,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
                 </div>
                 <div className="flex items-center gap-2">"
                   <Mail className="h-4 w-4 text-gray-500" />"
-=======
   },
 
   return (
@@ -119,13 +108,11 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 text-gray-500" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <span>{quote.requester_email}</span>
                 </div>
               </div>
             </CardContent>
           </Card>
-<<<<<<< HEAD
           <Card>
             <CardContent className="pt-6">"
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>"
@@ -136,7 +123,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
                 </div>
                 <div className="flex items-center gap-2">"
                   <Clock className="h-4 w-4 text-gray-500" />"
-=======
           
           <Card>
             <CardContent className="pt-6">
@@ -148,14 +134,12 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4 text-gray-500" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <span>Timeline: {quote.timeline}</span>
                 </div>
               </div>
             </CardContent>
           </Card>
         </div>
-<<<<<<< HEAD
         <Card className="mt-6">"
           <CardContent className="pt-6">"
             <h3 className="text-lg font-medium mb-3">Project Details</h3>"
@@ -179,7 +163,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           </CardContent>
         </Card>
         <div className="mt-6 flex justify-end">"
-=======
         
         <Card className="mt-6">
           <CardContent className="pt-6">
@@ -207,13 +190,11 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </Card>
         
         <div className="mt-6 flex justify-end">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <Button onClick={onClose}>Close</Button>
         </div>
       </DialogContent>
     </Dialog>
   )
-<<<<<<< HEAD
     <Dialog open={isOpen} onOpenChange={(open,) => !open && onClose()}>;,
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
@@ -432,6 +413,4 @@ if (return 'Not specified') {'
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>);
 }
 '";
-=======
 },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

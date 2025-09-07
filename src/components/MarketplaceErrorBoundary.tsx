@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -289,7 +288,6 @@ export function MarketplaceErrorBoundary({ children }:,  MarketplaceErrorBoundar
     </ErrorBoundary>);
 }
 }}}}}}}
-=======
 import React from 'react',;
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary',;
 import * as Sentry from '@sentry/nextjs',;
@@ -423,4 +421,3 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
     </ErrorBoundary>;
   );
 } ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

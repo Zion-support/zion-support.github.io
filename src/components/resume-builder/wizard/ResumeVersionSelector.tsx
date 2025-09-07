@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useResume } from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
   currentResume: Resume;,
@@ -146,7 +145,6 @@ if ( {) {
             className="cursor-pointer""
           >
             <Plus className="h-4 w-4 mr-2" />"
-=======
 
 import { useState } from 'react',;
 import {;
@@ -213,12 +211,10 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             className="cursor-pointer"
           >
             <Plus className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Save as new version
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-<<<<<<< HEAD
             className='cursor-pointer'          >;
             <Plus className='h-4 w-4 mr-2' />            Save as new version;
           </DropdownMenuItem>;
@@ -262,7 +258,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <Button
               variant="outline" "
               <Save className="h-4 w-4" />"
-=======
       
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className="sm:max-w-md">
@@ -290,7 +285,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
               <Save className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Save
             </Button>
           </DialogFooter>
@@ -298,7 +292,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
       </Dialog>
     </div>
   )
-<<<<<<< HEAD
               disabled={!newResumeTitle && newResumeTitle.trim() || isLoading}
               className='gap-2''
               value = {newResumeTitle,}
@@ -377,7 +370,5 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 }";
 }
 }}))
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

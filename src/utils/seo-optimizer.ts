@@ -11,14 +11,10 @@ export const optimize_headings = () =>: any {
 export const generateMetaTags = () => {;
   console.log('Generating meta tags...');
 };
-<<<<<<< HEAD:src/utils/seo-optimizer.ts
 };
 export const optimizeHeadings = () => {;
-=======
-<<<<<<< HEAD:src/utils/seo-optimizer.ts
 
 export const optimizeHeadings = () => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/seo-optimizer.ts
   console.log('Optimizing headings...');
 };
       telephone: '+1-555-0123','
@@ -45,12 +41,7 @@ export const generateStructuredData = pageData => {;
     }
   }
 };
-<<<<<<< HEAD:src/utils/seo-optimizer.ts
-=======
-=======
 ;
 export const optimizeHeadings = () => {';'
   console.log('Optimizing headings...');
 };''
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/seo-optimizer.ts
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/seo-optimizer.ts

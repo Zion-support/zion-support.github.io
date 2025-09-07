@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -138,7 +137,6 @@ if ( {) {
 
 
       return () => {observer.disconnect();
-=======
 "use client",;
 import { useEffect } from "react",;
 interface FirstInputEntry extends PerformanceEntry {;
@@ -157,7 +155,6 @@ export function Analytics() {;
           if (entry.entryType === "largest-contentful-paint") {;
             // // // console.log("LCP:", entry.startTime);
           }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           if (entry.entryType === "first-input") {;
             const firstInputEntry = entry as FirstInputEntry,;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
@@ -184,7 +181,6 @@ export function Analytics() {;
       return () => {;
         observer.disconnect();
         observer2.disconnect();
-<<<<<<< HEAD
 
 
 
@@ -192,8 +188,6 @@ export function Analytics() {;
 
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       }
     }
   }, []);

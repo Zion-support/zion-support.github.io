@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 } from 'lucide-react'; import {'
 } from "@/components/ui/sidebar";
-=======
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
 import {
@@ -15,12 +13,10 @@ import {
   // SidebarGroupContent, // Not needed
 } from "@/components/ui/sidebar",
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
-<<<<<<< HEAD
         <SidebarGroup title="Dashboard">"
           <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>"
             <span>Home</span>
@@ -45,7 +41,6 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>"
-=======
         <SidebarGroup title="Dashboard">
           <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
             <span>Home</span>
@@ -72,12 +67,10 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <span>Settings</span>
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
-<<<<<<< HEAD
 import {;
   Bell,;
   FileText,;
@@ -87,12 +80,10 @@ import {;
   Settings,;
   Users,;
 } from 'lucide-react';import {;
-=======
     </Sidebar>
   )
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react';
 import {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   Sidebar,;
   SidebarContent,;
   SidebarGroup,;
@@ -101,7 +92,6 @@ import {;
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
-<<<<<<< HEAD
 } from '@/components/ui/sidebar';
   // SidebarGroupContent, // Not needed;
 } from "@/components/ui/sidebar";
@@ -144,7 +134,6 @@ export function AppSidebar() {;
           </SidebarMenuItem>;
           <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>            <span>Settings</span>            <span>Home</span>;
           </SidebarMenuItem>;
-=======
 } from "@/components/ui/sidebar";
 export function AppSidebar() {;
   return (;
@@ -154,7 +143,6 @@ export function AppSidebar() {;
           <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>;
             <span>Home</span>;
           </SidebarMenuItem>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>;
             <span>Messages</span>;
           </SidebarMenuItem>;
@@ -179,7 +167,6 @@ export function AppSidebar() {;
           </SidebarMenuItem>;
         </SidebarGroup>;
       </SidebarContent>;
-<<<<<<< HEAD
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react''
     </Sidebar>;
   );
@@ -264,9 +251,7 @@ function AppSidebar() {
       </SidebarContent>;
     </Sidebar>);
 }
-=======
     </Sidebar>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <div className='space-y-3'>;
       <div className='flex justify-between items-center px-4'>;
@@ -226,7 +225,6 @@ interface BrowseFiltersProps {
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>"
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>"
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Senior</Badge>"
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
@@ -300,13 +298,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Senior</Badge>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </div>
                     </div>
                   </>
                 ) : (
                   <>
-<<<<<<< HEAD
                     <div className="space-y-2">"
                       <Label>Specialization</Label>
                       <div className="flex gap-2 flex-wrap">"
@@ -326,7 +322,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         className="my-4""
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">"
-=======
                     <div className="space-y-2">
                       <Label>Specialization</Label>
                       <div className="flex gap-2 flex-wrap">
@@ -347,14 +342,12 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         className="my-4"
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         <span>0+ years</span>
                         <span>20+ years</span>
                       </div>
                     </div>
                   </>
                 )}
-<<<<<<< HEAD
                 <div className="space-y-2">"
                   <Label>Location</Label>
                   <Select>
@@ -411,7 +404,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                   </Select>;
                 </div>;
                 <div className="flex items-center justify-between">"
-=======
                 
                 <div className="space-y-2">
                   <Label>Location</Label>
@@ -450,12 +442,10 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 </div>
                 
                 <div className="flex items-center justify-between">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
-<<<<<<< HEAD
               <SheetFooter>
                 <Button variant="outline" className="w-full">Reset</Button>"
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>"
@@ -580,7 +570,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               <X
                 className="h-3 w-3 cursor-pointer" "
                 onClick={() => removeFilter(filter)}
-=======
               
               <SheetFooter>
                 <Button variant="outline" className="w-full">Reset</Button>
@@ -610,7 +599,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               <X 
                 className="h-3 w-3 cursor-pointer" 
                 onClick={() => removeFilter(filter)} 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               />
             </Badge>
           ))}
@@ -619,7 +607,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
           {active_filters.map (filter => (
             <Badge;
               key={filter}
@@ -636,6 +623,4 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
     </div>);
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

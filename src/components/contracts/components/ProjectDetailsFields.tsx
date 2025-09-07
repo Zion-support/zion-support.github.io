@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { format } from "date-fns";
 import { CalendarIcon } from 'lucide-react';
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
@@ -53,7 +52,6 @@ import { Calendar } from "@/components/ui/calendar","
 import { ContractFormValues } from "./ContractForm","
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>,
-=======
 
 import { format } from "date-fns",
 import { CalendarIcon } from 'lucide-react'
@@ -74,7 +72,6 @@ import { Calendar } from "@/components/ui/calendar",
 import { ContractFormValues } from "./ContractForm",
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { format } from "date-fns",;
 import { CalendarIcon } from 'lucide-react';
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form",;
@@ -96,16 +93,12 @@ interface ProjectDetailsFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
 ;
-<<<<<<< HEAD
 export function ProjectDetailsFields({ form }:,  ProjectDetailsFieldsProps) {;
-=======
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (;
     <>;
       <FormField;
         control={form.control}
-<<<<<<< HEAD
         name="projectName""
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName"> }) => ("
           <FormItem>
@@ -126,14 +119,12 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> },) => (;
         name="projectName";
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (;
-=======
         name="projectName"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName"> }) => (
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
               <Input placeholder="AI Website Development" {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -148,7 +139,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           </FormItem>;
         )}
       />;
-<<<<<<< HEAD
           field: ControllerRenderProps < ContractFormValues, 'project_name'>;
         }) => (
           <FormItem>;
@@ -252,17 +242,14 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
         control={form.control}
         name="scopeSummary""
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => ("
-=======
       <FormField;
         control={form.control}
         name="scopeSummary"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <FormItem>
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
-<<<<<<< HEAD
           field: ControllerRenderProps < ContractFormValues, 'scope_summary'>;
         }) => (          <FormItem>;
             <FormLabel > Scope Summary</FormLabel>;
@@ -281,7 +268,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                 placeholder='Describe the project scope, deliverables, and expectations...';,
                 className='min - h-[120px]'                placeholder="Describe the project scope, deliverables, and expectations...";,
                 className="min - h-[120px]";
-=======
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
         name="scopeSummary";
@@ -292,7 +278,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
               <Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min-h-[120px]";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 {...field}
               />;
             </FormControl>;
@@ -303,11 +288,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           </FormItem>;
         )}
       />
-<<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
         <FormField
           control={form.control}
-=======
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
@@ -316,12 +299,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> }) => (
             <FormItem className="flex flex-col">
               <FormLabel>Start Date</FormLabel>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-<<<<<<< HEAD
                       variant={"outline"}"
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}`
                     >
@@ -381,7 +362,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           control = {form && form.control,}
           name="endDate""
           render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (;
-=======
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
@@ -412,13 +392,11 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       {field.value ? (;
                         format(field.value, "PPP");
                       ) : (;
                         <span>Pick a date</span>;
                       )}
-<<<<<<< HEAD
                       <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />'
                     </Button>
                   </FormControl>
@@ -432,7 +410,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
               <FormMessage />
             </FormItem>
           )}
-=======
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                     </Button>;
                   </FormControl>;
@@ -457,12 +434,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (
             <FormItem className="flex flex-col">
               <FormLabel>End Date (Optional)</FormLabel>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-<<<<<<< HEAD
                       variant={"outline"}"
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}`
                     >
@@ -481,7 +456,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                     selected={field.value || undefined}
                     onSelect={field.onChange}
                     disabled={(date) => date < form.getValues("startDate")}"
-=======
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
@@ -500,7 +474,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                     selected={field.value || undefined}
                     onSelect={field.onChange}
                     disabled={(date) => date < form.getValues("startDate")}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     initialFocus
                   />
                 </PopoverContent>
@@ -513,7 +486,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           name="endDate";
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (;
             <FormItem className="flex flex-col">;
-<<<<<<< HEAD
               <Popover>;
                 <PopoverTrigger asChild>;
                   <FormControl>;
@@ -566,7 +538,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                     >;
                       {field && field.value ? (;
                         format(field && field.value, "PPP");
-=======
               <FormLabel>End Date (Optional)</FormLabel>;
               <Popover>;
                 <PopoverTrigger asChild>;
@@ -577,7 +548,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                     >;
                       {field.value ? (;
                         format(field.value, "PPP");
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       ) : (;
                         <span>Pick a date</span>;
                       )}
@@ -586,17 +556,14 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w-auto p-0" align="start">;
-<<<<<<< HEAD
                   <Calendar
                     mode="single""
-=======
                   <Calendar;
                     mode="single";
                     selected={field.value || undefined}
                     onSelect={field.onChange}
                     disabled={(date) => date < form.getValues("startDate")}
                     initialFocus;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   />;
                 </PopoverContent>;
               </Popover>;
@@ -604,10 +571,8 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                 Leave empty if the end date is flexible;
               </FormDescription>;
               <FormMessage />;
-<<<<<<< HEAD
 ;
 }}}}}}}}}}}}}}}}}}}})))))))))))))))))))
-=======
             </FormItem>;
           )}
         />;
@@ -616,4 +581,3 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

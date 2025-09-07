@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -61,10 +60,7 @@ class SecurityScanner {}
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { recursive: true });,
 
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -621,7 +617,6 @@ class SecurityScanner {,;
 
     }
   }
-<<<<<<< HEAD
   log(message, level = 'INFO') {'}
     const timestamp = new Date().toISOString();,
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
@@ -633,7 +628,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
-=======
 },;
 ,;
 // Run the security scanner,;
@@ -641,8 +635,6 @@ const scanner = new SecurityScanner(),;
 scanner.run().catch(error => {,;
   process.exit(1);
 }),),;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     
 
 
@@ -934,7 +926,6 @@ module.exports = SecurityScanner;
 
 
 module.exports = SecurityScanner;
-<<<<<<< HEAD
 
 module.exports = SecurityScanner;
 
@@ -2410,7 +2401,3 @@ module.exports = SecurityScanner;
 
 module.exports = SecurityScanner;
 
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

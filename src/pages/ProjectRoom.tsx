@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 }
 ;
@@ -108,7 +107,6 @@ export default function ProjectRoom() {;
   )
 }
 ;
-=======
 import React, { useState } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams;
 import { Header } from '@/components/Header',;
@@ -364,4 +362,3 @@ export default function ProjectRoom() {;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

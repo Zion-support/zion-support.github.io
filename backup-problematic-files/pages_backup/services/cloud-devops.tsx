@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -12,9 +11,7 @@ const features = [;
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
-=======
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -24,7 +21,6 @@ const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
   {}
@@ -162,8 +158,6 @@ export default function CloudDevOpsPage() {
     description: 'Automated infrastructure provisioning and management'
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
   },
@@ -198,7 +192,6 @@ export default function CloudDevOpsPage() {
     benefits: ['Real-time monitoring', 'Custom dashboards', 'Automated alerts', 'Performance metrics']
   }
 ];
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -208,8 +201,6 @@ const benefits = [
   'Faster time-to-market for applications'
 ];
 export default function CloudDevOpsServices() {
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -262,12 +253,9 @@ export default function CloudDevOpsPage() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Comprehensive cloud and DevOps solutions to modernize your infrastructure.
               </p>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
             </div>
             </div>
             </motion.div>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -296,7 +284,6 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -329,8 +316,6 @@ export default function CloudDevOpsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
 
         {/* Tools Section */}
         <section className="py-16 bg-white">
@@ -435,12 +420,9 @@ export default function CloudDevOpsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
     </Layout>
     </Layout>
     </>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
     </>
   );
 }

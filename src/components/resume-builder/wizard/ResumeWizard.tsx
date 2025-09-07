@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">;
@@ -29,7 +28,6 @@ if (isLoading) {
         isLoading = {isLoading,}
       />;
     );
-=======
 
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -113,7 +111,6 @@ export function ResumeWizard() {;
         <AlertDescription>{error}</AlertDescription>
       </Alert>
     )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   }
 ;
   if (!resume && !showNewResumeForm) {;
@@ -129,7 +126,6 @@ export function ResumeWizard() {;
       />;
     );
   }
-<<<<<<< HEAD
   return (
     <div className="space-y-6">"
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">"
@@ -143,7 +139,6 @@ export function ResumeWizard() {;
             className="gap-2""
           >
             <FilePlus className="h-4 w-4" />"
-=======
   
   return (
     <div className="space-y-6">
@@ -158,12 +153,10 @@ export function ResumeWizard() {;
             className="gap-2"
           >
             <FilePlus className="h-4 w-4" /> 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Create New
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
       <Card>
         <CardContent className="pt-6">"
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">"
@@ -325,7 +318,6 @@ if ( {) {
 }/>);
 }</Tabs> </CardContent> </Card> </div>);
 }'"}
-=======
       
       <Card>
         <CardContent className="pt-6">
@@ -356,4 +348,3 @@ if ( {) {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

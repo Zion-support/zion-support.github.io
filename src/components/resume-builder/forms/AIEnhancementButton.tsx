@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -14,13 +12,11 @@ interface AIEnhancementButtonProps {;
   className?: string;
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function AIEnhancementButton({
   currentContent,
   enhancementType,
   context,
   onEnhanced,
-<<<<<<< HEAD
   buttonText = "Enhance with AI","
   className
 }:,  AIEnhancementButtonProps) {
@@ -100,7 +96,6 @@ if ( {) {
       on_enhanced (enhanced_content);
     }
 }}}}}}}
-=======
   buttonText = "Enhance with AI",
   className
 }: AIEnhancementButtonProps) {
@@ -143,4 +138,3 @@ if ( {) {
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

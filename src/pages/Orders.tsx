@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next / link'; // Changed from react-router-dom;
 import { use_auth } from '@/hooks / use_auth';
@@ -40,7 +39,6 @@ export default function OrdersPage() {;
         return status;
     }
 }}}
-=======
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth',
@@ -154,4 +152,3 @@ export default function OrdersPage() {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

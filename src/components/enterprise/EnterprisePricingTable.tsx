@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Check, X } from 'lucide-react''
 TableBody,
   TableCell,
@@ -7,19 +6,16 @@ TableBody,
 import React from "react","
 import { Button } from "@/components/ui/button","
 import { Check, X } from 'lucide-react''
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Check, X } from 'lucide-react'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
   TableRow} from "@/components/ui/table","
 import { Badge } from "@/components/ui/badge","
 export function EnterprisePricingTable() {
@@ -74,7 +70,6 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check, X } from 'lucide-react';
 import {  Table,  Table,;
-=======
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 export function EnterprisePricingTable() {
@@ -156,12 +151,10 @@ import { Button } from "@/components/ui/button",;
 import { Check, X } from 'lucide-react';
 import {;
   Table,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   TableBody,;
   TableCell,;
   TableHead,;
   TableHeader,;
-<<<<<<< HEAD
   TableRow,;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
@@ -239,7 +232,6 @@ export function EnterprisePricingTable() {;,
         </div>;
         <div className='overflow-x-auto'>;
           <Table className='border rounded-lg'>    <section id="pricing" className="py-20 px-4 md:px-6">;
-=======
   TableRow} from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
 export function EnterprisePricingTable() {;
@@ -297,12 +289,10 @@ export function EnterprisePricingTable() {;
         { name: "Dedicated success manager", included: true }]}];
   return (;
     <section id="pricing" className="py-20 px-4 md:px-6">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <div className="container mx-auto max-w-7xl">;
         <div className="text-center mb-12">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>;
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">;
-<<<<<<< HEAD
           </p>;
         </div>;
         <div className='overflow-x-auto'>;
@@ -359,7 +349,6 @@ export function EnterprisePricingTable() {;
                     <div className="flex flex-col items-center">"
                       {plan.popular && (
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>"
-=======
             Choose the perfect plan for your team size and requirements;
           </p>;
         </div>;
@@ -373,37 +362,30 @@ export function EnterprisePricingTable() {;
                     <div className="flex flex-col items-center">;
                       {plan.popular && (;
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       )}
                       <span className="font-bold text-xl">{plan.name}</span>;
                       <div className="flex items-baseline mt-1">;
                         <span className="text-2xl font-bold">{plan.price}</span>;
                         <span className="text-sm text-muted-foreground ml-1">;
                           {plan.billing}
-<<<<<<< HEAD
                         </span>
                       </div>
                       <p className="text-sm text-muted-foreground mt-1">"
-=======
                         </span>;
                       </div>;
                       <p className="text-sm text-muted-foreground mt-1">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         {plan.description}
                       </p>;
                       <p className="text-sm font-medium mt-2">{plan.users}</p>;
                       <Button;
-<<<<<<< HEAD
                         className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}`
                         variant={plan.popular ? 'default' : 'outline'}'
                       >
                         {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}"
-=======
                         className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
                         variant={plan.popular ? 'default' : 'outline'}
                       >
                         {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </Button>
                     </div>
                   </TableHead>
@@ -411,7 +393,6 @@ export function EnterprisePricingTable() {;
               </TableRow>;
             </TableHeader>;
             <TableBody>;
-<<<<<<< HEAD
               {(plans[0]?.features || []).map((feature, index,) => (;
                 <TableRow key={feature && feature.name}>;
                   <TableCell className='font-medium'>{feature && feature.name}</TableCell>;
@@ -451,17 +432,12 @@ export function EnterprisePricingTable() {;
               </TableRow>;
             </TableHeader>;
             <TableBody>;,
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               {(plans[0]?.features || []).map((feature, index) => (;
                 <TableRow key={feature.name}>;
                   <TableCell className="font-medium">{feature.name}</TableCell>;
                   {plans.map((plan) => (;
-<<<<<<< HEAD
                     <TableCell key={`${plan.name}-${feature.name}`} className="text-center">;,
-=======
                     <TableCell key={`${plan.name}-${feature.name}`} className="text-center">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       {plan.features[index]?.included ? (;
                         <Check className="h-5 w-5 text-green-500 mx-auto" />;
                       ) : (;
@@ -469,16 +445,12 @@ export function EnterprisePricingTable() {;
                       )}
                     </TableCell>;
                   ))}
-<<<<<<< HEAD
                 </TableRow>
-=======
                 </TableRow>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               ))}
             </TableBody>;
           </Table>;
         </div>;
-<<<<<<< HEAD
         <div className='mt-8 text-center text-sm text-muted-foreground'>;
           All plans include SSL security, 99 && 99.9% uptime SLA, and dedicated;
           support        </div>;
@@ -664,7 +636,6 @@ function EnterprisePricingTable() {
     </section>);
 }
 ;)))]]
-=======
         <div className="mt-8 text-center text-sm text-muted-foreground">;
           All plans include SSL security, 99.9% uptime SLA, and dedicated support;
         </div>;
@@ -673,4 +644,3 @@ function EnterprisePricingTable() {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface MilestoneSuggestionsProps {
   projectName: string;,
   scopeSummary: string;,
@@ -83,7 +82,6 @@ export function MilestoneSuggestions(): any ({;
     }
   };
 }
-=======
 
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -101,7 +99,6 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function MilestoneSuggestions({
   projectName,
   scopeSummary,
@@ -109,7 +106,6 @@ export function MilestoneSuggestions({
   endDate,
   projectType,
   onMilestonesGenerated
-<<<<<<< HEAD
 }:,  MilestoneSuggestionsProps) {
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {,
@@ -128,7 +124,6 @@ export function MilestoneSuggestions({
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />"
-=======
 }: MilestoneSuggestionsProps) {
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
   const [showSuggestions, setShowSuggestions] = useState(false),
@@ -193,12 +188,10 @@ export function MilestoneSuggestions({;
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Generating milestones...
             </>
           ) : (
             <>
-<<<<<<< HEAD
               <Sparkles className="mr-2 h-4 w-4" />"
               Suggest Project Milestones with AI
             </>
@@ -233,7 +226,6 @@ export function MilestoneSuggestions({;
           <CardHeader className="pb-3">"
             <CardTitle className="text-lg flex items-center">"
               <Sparkles className="h-5 w-5 mr-2 text-primary" />"
-=======
               <Sparkles className="mr-2 h-4 w-4" />
               Suggest Project Milestones with AI
             </>
@@ -246,12 +238,10 @@ export function MilestoneSuggestions({;
           <CardHeader className="pb-3">
             <CardTitle className="text-lg flex items-center">
               <Sparkles className="h-5 w-5 mr-2 text-primary" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               AI-Suggested Milestones
             </CardTitle>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
             <div className="space-y-3">"
               {generatedMilestones.map((milestone, index) => (
                 <div key={index} className="p-3 border rounded-lg bg-muted/10">"
@@ -282,7 +272,6 @@ export function MilestoneSuggestions({;
                   </div>
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>"
                   <div className="flex justify-between items-center mt-2 text-sm">"
-=======
             <div className="space-y-3">
               {generatedMilestones.map((milestone, index) => (
                 <div key={index} className="p-3 border rounded-lg bg-muted/10">
@@ -299,26 +288,21 @@ export function MilestoneSuggestions({;
                   </div>
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
                   <div className="flex justify-between items-center mt-2 text-sm">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     <span>Estimated: {milestone.estimatedHours} hours</span>
                   </div>
                 </div>
               ))}
-<<<<<<< HEAD
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">"
                 <Check className="h-4 w-4 mr-1 text-green-500" />"
-=======
 
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
                 <Check className="h-4 w-4 mr-1 text-green-500" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 These milestones will be added to your contract
               </div>
             </div>
           </CardContent>
         </Card>
       )}
-<<<<<<< HEAD
       {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
         <Card>;
           <CardHeader className='pb-3'>;
@@ -491,9 +475,7 @@ export function MilestoneSuggestions({;
   );
 }
 ;)
-=======
     </div>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

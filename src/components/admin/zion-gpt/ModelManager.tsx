@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // If activating, deactivate all other models with the same purpose;
       // Check condition
 if ( {) {
@@ -21,7 +20,6 @@ if ( {) {
     }
         .order('createdAt', { ascending: false }),;
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {;
-=======
 import { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -114,7 +112,6 @@ export function ZionGPTModelManager() {;
     }
   },;
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     try {;
       // If activating, deactivate all other models with the same purpose;
       if (!currentActive) {;
@@ -123,25 +120,18 @@ export function ZionGPTModelManager() {;
           .update({ active: false });
           .eq('purpose', purpose);
       }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       // Update this model;
       await supabase;
         .from('model_versions');
         .update({ active: !currentActive });
-<<<<<<< HEAD
         .eq('id', modelId),;
-=======
         .eq('id', modelId);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       // Refresh the model list;
       fetchModels();
     } catch (error) {;
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
-<<<<<<< HEAD
   },;
   },
   return (
@@ -223,7 +213,6 @@ export function ZionGPTModelManager() {;
                       <Button
                         variant={model.active ? "outline" : "default"}"
                         size="sm""
-=======
   },
 
   return (
@@ -296,12 +285,10 @@ export function ZionGPTModelManager() {;
                       <Button
                         variant={model.active ? "outline" : "default"}
                         size="sm"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
                       >
                         {model.active ? (
                           <>
-<<<<<<< HEAD
                             <CheckCircle className="h-4 w-4 mr-1" /> Active"
                           </>
                         ) : (
@@ -326,7 +313,6 @@ export function ZionGPTModelManager() {;
                         title={model.errorMessage || "Training failed"}"
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error"
-=======
                             <CheckCircle className="h-4 w-4 mr-1" /> Active
                           </>
                         ) : (
@@ -343,7 +329,6 @@ export function ZionGPTModelManager() {;
                         title={model.errorMessage || "Training failed"}
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </Button>
                     )}
                   </TableCell>;
@@ -356,7 +341,6 @@ export function ZionGPTModelManager() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
 }
   },
   return (
@@ -447,6 +431,4 @@ export function ZionGPTModelManager() {;
     </Card>);
 }
 })
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

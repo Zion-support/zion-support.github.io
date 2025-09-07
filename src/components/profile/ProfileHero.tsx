@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 avatarUrl?: string;
   coverImageUrl?: string;
   location?: string;
@@ -63,7 +62,6 @@ export function ProfileHero({
   rating;
   reviewCount;
   aiScore;
-=======
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
@@ -82,7 +80,6 @@ interface ProfileHeroProps {
   profileType: 'service' | 'talent'
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function ProfileHero({
   name,
   title,
@@ -93,7 +90,6 @@ export function ProfileHero({
   reviewCount,
   aiScore,
   profileType
-<<<<<<< HEAD
 }:,  ProfileHeroProps) {
   return (
     <div className="w-full overflow-hidden">"
@@ -117,7 +113,6 @@ export function ProfileHero({
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">"
-=======
 }: ProfileHeroProps) {
   return (
     <div className="w-full overflow-hidden">
@@ -184,7 +179,6 @@ export function ProfileHero({;
           ) : (;
             <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
           )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </AspectRatio>;
         <div className="container px-4 md:px-6">;
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">;
@@ -193,7 +187,6 @@ export function ProfileHero({;
                 <AvatarImage src={avatarUrl} alt={name} />;
               ) : (;
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
-<<<<<<< HEAD
                   {name && name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>;
               )}
@@ -261,7 +254,6 @@ export function ProfileHero({;
                 )}
 ;
 }}}}}}}}))))))))))
-=======
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>;
               )}
@@ -312,4 +304,3 @@ export function ProfileHero({;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

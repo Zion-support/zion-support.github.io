@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const AUTO_SERVICE_TITLES = [,
   "AI-Powered Customer Support""
   "Cloud Infrastructure Management""
@@ -611,7 +610,6 @@ function generateInnovationListing(): any (index:,  number): ProductListing {;,
 }
 ;
 ;)))]
-=======
 import { GradientHeading } from "@/components/GradientHeading",
 import { ProductListingCard } from "@/components/ProductListingCard",
 import { useState, useEffect, useRef, Suspense } from "react",
@@ -1138,4 +1136,3 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

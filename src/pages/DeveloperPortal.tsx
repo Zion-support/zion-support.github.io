@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const [activeTab, setActiveTab] = useState<string>("documentation"),"
   // Define the tabs
   const tabs: TabDefinition[] = [,
@@ -25,7 +24,6 @@ import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
 import { WebhooksManager } from "@/components/developers/WebhooksManager";
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
 import { ApiLogs } from "@/components/developers/ApiLogs";
-=======
 
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -36,13 +34,11 @@ import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
 import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
 import { ApiLogs } from "@/components/developers/ApiLogs",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface TabDefinition {
   id: string,
   label: string,
   icon: LucideIcon
 }
-<<<<<<< HEAD
 export function DeveloperPortal() { const { user  } = useAuth(),
   const [ activeTab, setActiveTab ] = useState<string>("documentation"),"
   // Define the tabs
@@ -65,7 +61,6 @@ export function DeveloperPortal() { const { user  } = useAuth(),
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">"
         <div className="flex flex-wrap -mb-px">"
-=======
 
 export function DeveloperPortal() {
   const { user } = useAuth(),
@@ -93,13 +88,11 @@ export function DeveloperPortal() {
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {tabs.map((tab) => {
             const Icon = tab.icon,
             return (
               <button
                 key={tab.id}
-<<<<<<< HEAD
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${`
                   activeTab === tab.id
                     ? "text-white border-zion-purple""
@@ -202,7 +195,6 @@ export function DeveloperPortal() {;
           Developer Portal;
         </h1>;
         <p className='text-zinc-400 mt-2'>;
-=======
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
                   activeTab === tab.id
                     ? "text-white border-zion-purple"
@@ -242,12 +234,10 @@ export function DeveloperPortal() {;
           Developer Portal;
         </h1>;
         <p className="text-zinc-400 mt-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Access the Zion API, manage your API keys, and set up webhooks.;
         </p>;
       </div>;
       {/* Tabs */}
-<<<<<<< HEAD
       <div className='border-b border-zinc-800 mb-8'>;
         <div className='flex flex-wrap -mb-px'>;
           {tabs && tabs.map(tab => {;
@@ -287,7 +277,6 @@ export function DeveloperPortal() {;
     </div>;
   );
                 onClick={() => setActiveTab(tab && tab.id)}
-=======
       <div className="border-b border-zinc-800 mb-8">;
         <div className="flex flex-wrap -mb-px">;
           {tabs.map((tab) => {;
@@ -301,7 +290,6 @@ export function DeveloperPortal() {;
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700";
                 }`}
                 onClick={() => setActiveTab(tab.id)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >;
                 <Icon size={16} className="mr-2" />;
                 {tab.label}
@@ -311,7 +299,6 @@ export function DeveloperPortal() {;
         </div>;
       </div>;
       {/* Tab content */}
-<<<<<<< HEAD
       <div>;
       <div>
         {activeTab === "documentation" && <ApiDocumentation />}"
@@ -332,7 +319,6 @@ export default function ProtectedDeveloperPortal() {
 };
   );
 };
-=======
       <div>
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
@@ -342,7 +328,6 @@ export default function ProtectedDeveloperPortal() {
     </div>
   )
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 export default function ProtectedDeveloperPortal() {;
   return (;
@@ -351,7 +336,6 @@ export default function ProtectedDeveloperPortal() {;
     </ProtectedRoute>;
   );
 }
-<<<<<<< HEAD
 }
   )
 }
@@ -381,6 +365,4 @@ function ProtectedDeveloperPortal() {
   );
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

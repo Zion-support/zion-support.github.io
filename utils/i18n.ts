@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const supportedLocales = ["en", "pt", "es", "ar"] as const;
 
 language: 'en',
@@ -51,7 +50,6 @@ export const i18n = {
 
 
 
-=======
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -85,4 +83,3 @@ if (!i18n.isInitialized) {;
 }
 ;
 export default i18n;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

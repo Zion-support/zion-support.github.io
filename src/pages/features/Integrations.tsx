@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <>;
       <SEO
@@ -28,7 +27,6 @@ return (
               className='object-cover''
             <Button size="lg" className="bg-zion-purple text-white" asChild>"
               <Link href="/developers" />Learn More</Link>"
-=======
 import React, { useEffect } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -98,17 +96,13 @@ export default function IntegrationsFeature() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>
           </div>
         </div>
       </main>
     </>
-<<<<<<< HEAD
 ;
-=======
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -127,11 +121,8 @@ export default function IntegrationsFeature() {;
   const { markSlackConnected } = useAdvancedOnboardingStatus();
   useEffect(() => {;
     markSlackConnected();
-<<<<<<< HEAD
   }, [markSlackConnected]);,
-=======
   }, [markSlackConnected]);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (;
     <>;
       <SEO;
@@ -154,16 +145,12 @@ export default function IntegrationsFeature() {;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
             <img;
-<<<<<<< HEAD
               src="https://placehold.co/800x400";",
-=======
               src="https://placehold.co/800x400";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               alt="Screenshot showing integrations";
               className="object-cover";
             />;
           </div>;
-<<<<<<< HEAD
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>;
           <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>;
             <li>Trigger Slack notifications for new orders or messages.</li>;
@@ -238,7 +225,6 @@ function IntegrationsFeature() {
             </div>;
           </div>;
               <Link href="/developers" />Learn More</Link>;
-=======
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;
             <li>Trigger Slack notifications for new orders or messages.</li>;
@@ -259,17 +245,13 @@ function IntegrationsFeature() {
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
               <Link href="/developers">Learn More</Link>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
 ;
 }})))
-=======
     </>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

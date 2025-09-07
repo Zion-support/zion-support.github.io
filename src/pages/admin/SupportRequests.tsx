@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Mock data for support requests,
 const MOCK_SUPPORT_REQUESTS = [
   {
@@ -122,7 +121,6 @@ export default function SupportRequests() {,
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
     if (searchQuery &&
-=======
 
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -225,7 +223,6 @@ export default function SupportRequests() {
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
     if (searchQuery && 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
@@ -241,11 +238,8 @@ import { Badge } from "@/components/ui/badge",;
 import { Search, Filter } from 'lucide-react';
 import { SEO } from "@/components/SEO",;
 // Mock data for support requests;
-<<<<<<< HEAD
 const MOCK_SUPPORT_REQUESTS = [;,
-=======
 const MOCK_SUPPORT_REQUESTS = [;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   {;
     id: "SR-1001",;
     user: "john.doe@example.com",;
@@ -325,15 +319,12 @@ const MOCK_SUPPORT_REQUESTS = [;
   }
 ],;
 export default function SupportRequests() {;
-<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState(""),;,
   const [statusFilter, setStatusFilter] = useState<string | null>(null),;,
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null),;,
-=======
   const [searchQuery, setSearchQuery] = useState(""),;
   const [statusFilter, setStatusFilter] = useState<string | null>(null),;
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null),;
   // Apply filters to the request data;
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {;
@@ -346,25 +337,18 @@ export default function SupportRequests() {;
     }
 ;
     // Apply status filter;
-<<<<<<< HEAD
     if (statusFilter && request.status !==,  statusFilter) {;
-=======
     if (statusFilter && request.status !== statusFilter) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       return false;
     }
 ;
     // Apply priority filter;
-<<<<<<< HEAD
     if (priorityFilter && request.priority !==,  priorityFilter) {;
-=======
     if (priorityFilter && request.priority !== priorityFilter) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       return false;
     }
 ;
     // Apply category filter;
-<<<<<<< HEAD
     if (categoryFilter && request.category !==,  categoryFilter) {;
       return false;
     }
@@ -391,7 +375,6 @@ export default function SupportRequests() {;
     <>;
           <div className="mt-4 md:mt-0">"
             <Button className="bg-zion-purple hover:bg-zion-purple-light">",
-=======
     if (categoryFilter && request.category !== categoryFilter) {;
       return false;
     }
@@ -431,12 +414,10 @@ export default function SupportRequests() {;
           
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               New Support Case
             </Button>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">"
           <Card>
@@ -460,7 +441,6 @@ export default function SupportRequests() {;
           <Card>
             <CardHeader className="pb-2">"
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>"
-=======
         
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -488,12 +468,10 @@ export default function SupportRequests() {;
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <CardDescription>Total Requests</CardDescription>
             </CardHeader>
           </Card>
         </div>
-<<<<<<< HEAD
         <Tabs defaultValue="all" className="mb-8">"
           <TabsList>
             <TabsTrigger value="all">All Requests</TabsTrigger>"
@@ -632,7 +610,6 @@ export default function SupportRequests() {;
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">"
-=======
         
         <Tabs defaultValue="all" className="mb-8">
           <TabsList>
@@ -702,7 +679,6 @@ export default function SupportRequests() {;
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <Table>
                   <TableHeader>
                     <TableRow>
@@ -720,7 +696,6 @@ export default function SupportRequests() {;
                   <TableBody>
                     {filteredRequests.map((request) => (
                       <TableRow key={request.id}>
-<<<<<<< HEAD
                         <TableCell className="font-medium">{request.id}</TableCell>"
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>"
@@ -731,7 +706,6 @@ export default function SupportRequests() {;
                               : request.status === 'in-progress' '
                               ? 'secondary' '
                               : 'outline''
-=======
                         <TableCell className="font-medium">{request.id}</TableCell>
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
@@ -742,7 +716,6 @@ export default function SupportRequests() {;
                               : request.status === 'in-progress' 
                               ? 'secondary' 
                               : 'outline'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                           }>
 ;
     return true;
@@ -775,11 +748,8 @@ export default function SupportRequests() {;
             </p>;
           </div>;
           <div className="mt-4 md:mt-0">;
-<<<<<<< HEAD
             <Button className="bg-zion-purple hover:bg-zion-purple-light">;",
-=======
             <Button className="bg-zion-purple hover:bg-zion-purple-light">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               New Support Case;
             </Button>;
           </div>;
@@ -823,7 +793,6 @@ export default function SupportRequests() {;
             <div className="flex flex-col md:flex-row gap-4 mb-6">;
               <div className="relative flex-1">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
-<<<<<<< HEAD
                 <Input ;
                   placeholder="Search by ID, user or issue...";
                   value={searchQuery}
@@ -851,7 +820,6 @@ export default function SupportRequests() {;
               >;
                 <SelectTrigger className='w-[180px]'>;,
                   <SelectValue placeholder='Priority' />;
-=======
                 <Input;
                   placeholder="Search by ID, user or issue...";
                   value={searchQuery}
@@ -873,7 +841,6 @@ export default function SupportRequests() {;
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>;
                 <SelectTrigger className="w-[180px]">;
                   <SelectValue placeholder="Priority" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </SelectTrigger>;
                 <SelectContent>;
                   <SelectItem value="">All Priorities</SelectItem>;
@@ -882,18 +849,15 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>;
                 </SelectContent>;
               </Select>;
-<<<<<<< HEAD
               <Select;
                 value={category_filter || ''}'
                 onValueChange={value => setCategoryFilter (value ||,  null)}
               >;
                 <SelectTrigger className='w-[180px]'>;,
                   <SelectValue placeholder='Category' />;
-=======
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>;
                 <SelectTrigger className="w-[180px]">;
                   <SelectValue placeholder="Category" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </SelectTrigger>;
                 <SelectContent>;
                   <SelectItem value="">All Categories</SelectItem>;
@@ -905,22 +869,18 @@ export default function SupportRequests() {;
                   <SelectItem value="profile">Profile</SelectItem>;
                 </SelectContent>;
               </Select>;
-<<<<<<< HEAD
               <Button;
                 variant='outline';
                 on_click={reset_filters}
                 className='md:w - auto';
               >;
                 <Filter className='h - 4 w - 4 mr - 2' /> Reset Filters;
-=======
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">;
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </Button>;
             </div>;
             {/* Support Requests Table */}
             <Card>;
-<<<<<<< HEAD
               <CardContent className='p - 0'>;
                 <Table>;
                   <TableHeader>;
@@ -941,7 +901,6 @@ export default function SupportRequests() {;
                         <TableCell className='font - medium'>;
                           {request.id}
                         </TableCell>;
-=======
               <CardContent className="p-0">;
                 <Table>;
                   <TableHeader>;
@@ -961,7 +920,6 @@ export default function SupportRequests() {;
                     {filteredRequests.map((request) => (;
                       <TableRow key={request.id}>;
                         <TableCell className="font-medium">{request.id}</TableCell>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         <TableCell>{request.user}</TableCell>;
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>;
                         <TableCell>;
@@ -976,7 +934,6 @@ export default function SupportRequests() {;
                           </Badge>;
                         </TableCell>;
                         <TableCell>;
-<<<<<<< HEAD
                             {request.priority}
                           </Badge>;
                         </TableCell>;
@@ -999,7 +956,6 @@ export default function SupportRequests() {;
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">"
               <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>"
               <p className="text-zion-slate-light">"
-=======
                           <Badge variant={;
                             request.priority === 'high';
                               ? 'destructive';
@@ -1029,39 +985,32 @@ export default function SupportRequests() {;
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>
               <p className="text-zion-slate-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 This tab will show support requests that have been escalated by agents or the system.
               </p>
             </div>
           </TabsContent>
-<<<<<<< HEAD
           <TabsContent value="ai-flagged" className="mt-6">"
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">"
               <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>"
               <p className="text-zion-slate-light">"
-=======
           
           <TabsContent value="ai-flagged" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>
               <p className="text-zion-slate-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 This tab shows issues that our AI system has identified as requiring human attention.
               </p>
             </div>
           </TabsContent>
-<<<<<<< HEAD
           <TabsContent value="need-response" className="mt-6">"
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">"
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>"
               <p className="text-zion-slate-light">"
-=======
           
           <TabsContent value="need-response" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
               <p className="text-zion-slate-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 These support requests have been waiting for an agent response for over 24 hours.
               </p>
             </div>
@@ -1070,7 +1019,6 @@ export default function SupportRequests() {;
       </div>
     </>
   )
-<<<<<<< HEAD
                   </TableBody>;
                 </Table>;
               </CardContent>;
@@ -1193,7 +1141,5 @@ export default function SupportRequests() {;
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Escalated Requests</h3> <p className=" text - zion - slate - light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai - flagged"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">AI Flagged Issues</h3> <p className=" text - zion - slate - light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need - response"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Awaiting Response</h3> <p className=" text - zion - slate - light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>);
 }'"}]
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

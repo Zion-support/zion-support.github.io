@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
       icon: <Star className="h-8 w-8 text-zion-purple" />",
       title: "AI-Match Instantly"",
@@ -107,7 +106,6 @@ import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react';
 export const MobileFeatureShowcase: React.FC = () => {;,
   const features = [;,
-=======
 
 import React from "react",
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
@@ -169,7 +167,6 @@ import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react';
 export const MobileFeatureShowcase: React.FC = () => {;
   const features = [;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       icon: <Users className="h-8 w-8 text-zion-cyan" />,;
       title: "Hire from Anywhere",;
@@ -200,11 +197,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
     <section id="features" className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;",
-=======
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Everything You Need On The Go;
           </h2>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
@@ -228,10 +222,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
 };
 '"},"
 })))))
-=======
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

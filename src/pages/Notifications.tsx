@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface NotificationProps {
   type: 'message' | 'order' | 'default';
 }
@@ -36,8 +35,6 @@ interface Notification {
   read: boolean;,
   actionUrl?: string;
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState } from 'react',;
 import { useNotifications } from '@/context/notifications/NotificationContext',;
 import {;
@@ -54,7 +51,6 @@ import { useRouter } from 'next/router',;
 import { cn } from '@/lib/utils',;
 const getNotificationIcon = (;
   type: NotificationType,;
-<<<<<<< HEAD
   className: string = 'h-5 w-5') => {;',
   switch (type) {;
     case 'message':;
@@ -130,7 +126,6 @@ const getNotificationTypeBadge = (type:,  NotificationType) => {,
 const getNotificationTypeBadge = (type:,  NotificationType) => {;,
   switch (type) {;
     case 'message':;
-=======
   className: string = 'h-5 w-5') => {;
   switch (type) {;
     case 'message':;
@@ -182,7 +177,6 @@ const getNotificationTypeBadge = (type: NotificationType) => {
 const getNotificationTypeBadge = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       return <Badge className="bg-blue-500">Message</Badge>,;
     case 'quote_request':;
       return <Badge className="bg-purple-500">Quote Request</Badge>,;
@@ -200,14 +194,12 @@ const getNotificationTypeBadge = (type: NotificationType) => {;
       return <Badge className="bg-green-500">Milestone</Badge>,;
     case 'order_status':;
       return <Badge className="bg-orange-500">Order</Badge>,;
-<<<<<<< HEAD
     default:;,
       return <Badge variant="outline">Notification</Badge>;
   }
 }
 ;
 }
-=======
     default:;
       return <Badge variant="outline">Notification</Badge>;
   }
@@ -405,4 +397,3 @@ export default function NotificationsPage() {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

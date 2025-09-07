@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useEffect, useState  } from './react';
@@ -25,7 +24,6 @@ function BackToTopButton() {,
       <ArrowUp className='h - 5 w - 5' />;
     </button>);
 }"}"
-=======
 import { ArrowUp } from 'lucide-react'
 import { useEffect, useState } from "react",
 
@@ -59,7 +57,6 @@ export function BackToTopButton() {
       <ArrowUp className="h-5 w-5" />
     </button>
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from "react",;
 export function BackToTopButton() {;
@@ -67,7 +64,6 @@ export function BackToTopButton() {;
   useEffect(() => {;
     const updateVisibility = () => {;
       setVisible(window.scrollY > 400);
-<<<<<<< HEAD
     };
     updateVisibility();
     window.addEventListener('scroll', updateVisibility);
@@ -86,7 +82,6 @@ export function BackToTopButton() {;
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${`,
         visible ? "opacity-100" : "opacity-0 pointer-events-none""
       }`}`
-=======
     },;
     updateVisibility(),;
     window.addEventListener("scroll", updateVisibility),;
@@ -105,14 +100,10 @@ export function BackToTopButton() {;
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${;
         visible ? "opacity-100" : "opacity-0 pointer-events-none";
       }`}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     >;
       <ArrowUp className="h-5 w-5" />;
     </button>;
   );
 }
-<<<<<<< HEAD
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

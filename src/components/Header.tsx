@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -58,7 +57,6 @@ export default Header;
 
 
 
-=======
 import React from 'react';
 
 export default function Header() {
@@ -433,4 +431,3 @@ export default Header,
 },;
 ,;
 export default Header;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

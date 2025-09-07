@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -99,7 +98,6 @@ interface QuickAction {;
   category: 'performance' | 'development' | 'maintenance',;
   dangerous?: boolean;
 }
-=======
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -116,7 +114,6 @@ interface QuickAction {;
   category: 'performance' | 'development' | 'maintenance',;
   dangerous?: boolean;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 export function QuickActions() {;
   const { user } = useAuth(),;
@@ -125,31 +122,24 @@ export function QuickActions() {;
   if (!isAllowed) {;
     return null;
   }
-<<<<<<< HEAD
 ;,
   const [isVisible, setIsVisible] = useState(false),;,
   const [isProcessing, setIsProcessing] = useState<string | null>(null),;
   const executeAction = async (actionId: string, action: () => void) => {;,
-=======
 ;
   const [isVisible, setIsVisible] = useState(false),;
   const [isProcessing, setIsProcessing] = useState<string | null>(null),;
   const executeAction = async (actionId: string, action: () => void) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     setIsProcessing(actionId),;
     try {;
       await action();
     } catch (error) {;
-<<<<<<< HEAD
       logErrorToProduction(`Failed to execute action ${actionId}:`, { data: error });`
-=======
       logErrorToProduction(`Failed to execute action ${actionId}:`, { data: error });
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     } finally {;
       setIsProcessing(null);
     }
   },
-<<<<<<< HEAD
   const actions: QuickAction[] = [,
     // Performance Actions
     {
@@ -175,7 +165,6 @@ export function QuickActions() {;
       dangerous: true,
       action: () => {,
         if ('caches' in,  window) {'
-=======
 
   const actions: QuickAction[] = [
     // Performance Actions
@@ -208,22 +197,17 @@ export function QuickActions() {;
       dangerous: true,
       action: () => {
         if ('caches' in window) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           caches.keys().then(names => {
             names.forEach(name => caches.delete(name))
           })
         }
-<<<<<<< HEAD
       },
     },
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         localStorage.clear(),
         sessionStorage.clear(),
         window.location.reload()
       }},
     {
-<<<<<<< HEAD
       id: 'preload-critical-resources'',
       label: 'Preload Critical Resources'',
       description: 'Preload fonts, images, and critical assets''
@@ -241,7 +225,6 @@ export function QuickActions() {;
           const link = document.createElement('link'),'
           link.rel = 'preload','
           link.as = 'image','
-=======
       id: 'preload-critical-resources',
       label: 'Preload Critical Resources',
       description: 'Preload fonts, images, and critical assets',
@@ -272,13 +255,11 @@ export function QuickActions() {;
           const link = document.createElement('link'),
           link.rel = 'preload',
           link.as = 'image',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           link.href = img,
           document.head.appendChild(link)
         })
       }},
     {
-<<<<<<< HEAD
       id: 'download-performance-report','
       label: 'Download Performance Report','
       description: 'Export current performance metrics','
@@ -292,7 +273,6 @@ export function QuickActions() {;
           memory: (performance as,  any).memory || {},
           userAgent: navigator.userAgent,
           screen: {,
-=======
       id: 'download-performance-report',
       label: 'Download Performance Report',
       description: 'Export current performance metrics',
@@ -306,13 +286,11 @@ export function QuickActions() {;
           memory: (performance as any).memory || {},
           userAgent: navigator.userAgent,
           screen: {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             width: screen.width,
             height: screen.height,
             colorDepth: screen.colorDepth
           }
         },
-<<<<<<< HEAD
         const blob = new Blob([JSON.stringify(metrics, null, 2)], {
           type: 'application/json''
         }),
@@ -320,7 +298,6 @@ export function QuickActions() {;
         const a = document.createElement('a'),'
         a.href = url,
         a.download = `performance-report-${Date.now()}.json`,`
-=======
 
         const blob = new Blob([JSON.stringify(metrics, null, 2)], {
           type: 'application/json'
@@ -330,14 +307,12 @@ export function QuickActions() {;
         const a = document.createElement('a'),
         a.href = url,
         a.download = `performance-report-${Date.now()}.json`,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         document.body.appendChild(a),
         a.click(),
         document.body.removeChild(a),
         URL.revokeObjectURL(url)
       }},
     {
-<<<<<<< HEAD
       id: 'test-error-boundary','
       label: 'Test Error Boundary','
       description: 'Trigger an error to test Sentry integration','
@@ -457,7 +432,6 @@ export function QuickActions() {;
           className="bg-background/80 backdrop-blur-sm""
         >
           <Settings className="w-4 h-4 mr-2" />"
-=======
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
       description: 'Trigger an error to test Sentry integration',
@@ -497,12 +471,10 @@ export function QuickActions() {;
           className="bg-background/80 backdrop-blur-sm"
         >
           <Settings className="w-4 h-4 mr-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Quick Actions
         </Button>
       </div>
     )
-<<<<<<< HEAD
           className='bg-background/80 backdrop-blur-sm'        >;
           <Settings className='w-4 h-4 mr-2' />;
           Quick Actions;
@@ -524,7 +496,6 @@ export function QuickActions() {;
               size="sm""
               onClick={() => setIsVisible(false)}
               className="h-6 w-6 p-0""
-=======
   }
 
   return (
@@ -541,13 +512,11 @@ export function QuickActions() {;
               size="sm"
               onClick={() => setIsVisible(false)}
               className="h-6 w-6 p-0"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             >
               ✕
             </Button>
           </div>
         </CardHeader>
-<<<<<<< HEAD
         <CardContent className="pt-0 space-y-4">"
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -570,7 +539,6 @@ export function QuickActions() {;
                         <div className="mt-0.5">"
                           {isProcessing === action.id ? (
                             <RefreshCw className="w-4 h-4 animate-spin" />"
-=======
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -593,20 +561,16 @@ export function QuickActions() {;
                         <div className="mt-0.5">
                           {isProcessing === action.id ? (
                             <RefreshCw className="w-4 h-4 animate-spin" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                           ) : (
                             action.icon
                           )}
                         </div>
-<<<<<<< HEAD
                         <div className="flex-1 text-left">"
                           <div className="font-medium text-sm">{action.label}</div>"
                           <div className="text-xs opacity-70 mt-1">"
-=======
                         <div className="flex-1 text-left">
                           <div className="font-medium text-sm">{action.label}</div>
                           <div className="text-xs opacity-70 mt-1">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                             {action.description}
                           </div>;
                         </div>;
@@ -621,7 +585,6 @@ export function QuickActions() {;
       </Card>;
     </div>;
   );
-<<<<<<< HEAD
 } ;
         local_storage.clear ();
         session_storage.clear ();
@@ -811,6 +774,4 @@ if ( {) {
 }
 }
 }}}}}}}}}
-=======
 } ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

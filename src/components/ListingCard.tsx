@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 id?: string,;
   title: string,;
   description: string,;,
   images?: string[],;
   category: string,;,
-=======
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
@@ -31,13 +29,11 @@ interface ListingCardProps {;
   description: string,;
   images?: string[],;
   category: string,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   tags?: string[],;
   author?: { name: string, id?: string, avatarUrl?: string, email?: string },;
   className?: string,;
   profileType?: 'service' | 'talent';
 }
-<<<<<<< HEAD
 interface ListingCardProps {;
   id?: string;
   title: string;,
@@ -49,10 +45,8 @@ interface ListingCardProps {;
   className?: string;
   profileType?: 'service' | 'talent';
 export function ListingCard(): any ({;
-=======
 ;
 export function ListingCard({;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   id,;
   title,;
   description,;
@@ -61,7 +55,6 @@ export function ListingCard({;
   tags,;
   author,;
   className,;
-<<<<<<< HEAD
   profileType = 'service',;
 }:,  ListingCardProps) {;
   // Generate a profile ID based on the listing data;
@@ -130,7 +123,6 @@ export function ListingCard({;
           <div className="flex flex-wrap gap-2 mb-4">"
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">"
-=======
   profileType = 'service';
 }: ListingCardProps) {;
   // Generate a profile ID based on the listing data;
@@ -168,13 +160,11 @@ export function ListingCard({;
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 {tag}
               </Badge>;
             ))}
           </div>;
         )}
-<<<<<<< HEAD
               <Image
                 src={author && author.avatarUrl}
                 alt={author && author.name}
@@ -203,7 +193,6 @@ export function ListingCard({;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />"
             )}
             <span className="text-sm text-zion-slate-light">{author.name}</span>"
-=======
         
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
@@ -213,14 +202,12 @@ export function ListingCard({;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
             <span className="text-sm text-zion-slate-light">{author.name}</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>
         )}
       </div>;
     </Link>;
   );
 }
-<<<<<<< HEAD
 ;"}) })""
   );
 }
@@ -317,6 +304,4 @@ function ListingCard() {
 }"}) })";
 ;
 }))
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

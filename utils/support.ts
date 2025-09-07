@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   logEvent: (event: any) => null
   getArticles: () => []
   getArticleById: (id: string) => null
@@ -91,7 +90,6 @@ export const logSupportEventToOperator = (event: any) => {
 
 
 
-=======
 export type HelpArticle = {;
   id: string;
   slug: string;
@@ -143,4 +141,3 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentResul
   const matchedIds = Array.from(matched);
   return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

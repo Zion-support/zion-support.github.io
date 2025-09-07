@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 appStoreUrl?: string;
   googlePlayUrl?: string;
   onAppStoreClick?: () => void;
@@ -25,7 +24,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;,
   appStoreUrl = "#";
   googlePlayUrl = "#";
 };  className,;
-=======
 
 import React from "react",
 import { Apple, GithubIcon } from 'lucide-react'
@@ -121,27 +119,22 @@ interface AppStoreButtonsProps {;
 ;
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
   className,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   appStoreUrl = "#",;
   googlePlayUrl = "#",;
   onAppStoreClick,;
   onGooglePlayClick;
-<<<<<<< HEAD
 },) => {;
   const handleAppStoreClick = (e: React && React.MouseEvent<HTMLAnchorElement>,) => {;
     if (!appStoreUrl || appStoreUrl === "#") {;
       e && e.preventDefault(),;
-=======
 }) => {;
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;
     if (!appStoreUrl || appStoreUrl === "#") {;
       e.preventDefault(),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       logInfo("App Store download clicked"),;
       onAppStoreClick?.();
     }
   },;
-<<<<<<< HEAD
   const handleGooglePlayClick = (e: React && React.MouseEvent<HTMLAnchorElement>,) => {;
     if (!googlePlayUrl || googlePlayUrl === "#") {;
       e && e.preventDefault(),;
@@ -158,7 +151,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
         target="_blank""
         rel="noopener noreferrer""
         aria-label="Download on the App Store">;
-=======
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;
     if (!googlePlayUrl || googlePlayUrl === "#") {;
       e.preventDefault(),;
@@ -176,14 +168,12 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
         rel="noopener noreferrer";
         aria-label="Download on the App Store";
       >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <Apple className="h-8 w-8 mr-3" aria-hidden="true" />;
         <div>;
           <div className="text-xs">Download on the</div>;
           <div className="text-xl font-semibold">App Store</div>;
         </div>;
       </a>;
-<<<<<<< HEAD
       <a
         href={googlePlayUrl}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"",
@@ -362,7 +352,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;,
 },
 ;
 };)
-=======
       <a;
         href={googlePlayUrl}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors";
@@ -391,4 +380,3 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;,
     </div>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

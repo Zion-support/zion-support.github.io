@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;`
   // definitions, so avoid passing a type argument to prevent TS2347.;
@@ -17,7 +16,6 @@ export default function ProfileDetail() {;
         if (!profileId) {;
           setError("Profile ID is missing.");
           return;
-=======
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -39,14 +37,12 @@ export default function ProfileDetail() {
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   useEffect(() => {
     const fetchProfile = async () => {
       setIsLoading(true),
       setError(null),
       try {
         if (!profileId) {
-<<<<<<< HEAD
           setError("Profile ID is missing."),"
           return
         }
@@ -95,7 +91,6 @@ export default function ProfileDetail() {
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">"
-=======
           setError("Profile ID is missing."),
           return
         }
@@ -133,26 +128,21 @@ export default function ProfileDetail() {
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <p>Loading profile...</p>
       </div>
     )
   }
-<<<<<<< HEAD
   if (error) {
     return (
       <div className="min-h-screen flex items-center justify-center">"
-=======
 
   if (error) {
     return (
       <div className="min-h-screen flex items-center justify-center">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <p>Error: {error}</p>
       </div>
     )
   }
-<<<<<<< HEAD
   if (!profileData) {
     return (
       <div className="min-h-screen flex items-center justify-center">"
@@ -161,7 +151,6 @@ export default function ProfileDetail() {
   }, [profileId]);,
     )
         description = {profileData.bio || "Check out this talent's profile on Zion!",}"
-=======
 
   if (!profileData) {
     return (
@@ -169,7 +158,6 @@ export default function ProfileDetail() {
         <p>Profile not found.</p>
       </div>
     )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { useState, useEffect } from "react",;
 import { useRouter } from "next/router",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -183,21 +171,18 @@ import { Badge } from "@/components/ui/badge",;
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react';
 import { HireNowCTA } from "@/components/profile/HireNowCTA",;
 export default function ProfileDetail() {;
-<<<<<<< HEAD
   // useParams is typed as `any` in this environment due to missing type;`
   // definitions, so avoid passing a type argument to prevent TS2347.;
   const router = useRouter(),;
   const profileId = router.query.profileId as string,;,
   const [profileData, setProfileData] = useState<any>(null),;,
   const [isLoading, setIsLoading] = useState(true),;,
-=======
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
   const router = useRouter(),;
   const profileId = router.query.profileId as string,;
   const [profileData, setProfileData] = useState<any>(null),;
   const [isLoading, setIsLoading] = useState(true),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [error, setError] = useState<string | null>(null),;
   useEffect(() => {;
     const fetchProfile = async () => {;
@@ -224,11 +209,8 @@ export default function ProfileDetail() {;
         }
 ;
         setProfileData(data);
-<<<<<<< HEAD
       } catch (err:,  any) {;,
-=======
       } catch (err: any) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         setError(err.message || "Failed to fetch profile."),;
         toast({;
           title: "Error",;
@@ -266,7 +248,6 @@ export default function ProfileDetail() {;
 ;
   return (;
     <>;
-<<<<<<< HEAD
         description = {profileData.bio |"Check out this talent's profile on Zion!",}"
       <SEO;
         title={`${profileData.full_name} | Zion AI Marketplace`}`
@@ -288,7 +269,6 @@ export default function ProfileDetail() {;
               <CardHeader>
                 <div className="flex items-center space-x-4">"
                   <Avatar className="w-20 h-20">"
-=======
       <SEO;
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
@@ -303,7 +283,6 @@ export default function ProfileDetail() {;
               <CardHeader>
                 <div className="flex items-center space-x-4">
                   <Avatar className="w-20 h-20">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     {profileData.profile_picture_url ? (
                       <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
                     ) : (
@@ -311,7 +290,6 @@ export default function ProfileDetail() {;
                     )}
                   </Avatar>
                   <div>
-<<<<<<< HEAD
                     <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">"
                       {profileData.full_name}
                       {profileData.is_verified && (
@@ -840,7 +818,6 @@ if ( {) {
   );
 }
 ;
-=======
                     <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">
                       {profileData.full_name}
                       {profileData.is_verified && (
@@ -1033,4 +1010,3 @@ if ( {) {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Export a safe environment accessor
 export const safeEnv = {
   NODE_ENV:
@@ -178,7 +177,6 @@ export default safe_env;
 export default safe_env;
 export default safe_env;
 }
-=======
 /**
  * Environment Polyfill for Browser
  * 
@@ -268,4 +266,3 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''};
 // // // console.log('✅ Environment polyfill loaded successfully');
 export default safeEnv;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

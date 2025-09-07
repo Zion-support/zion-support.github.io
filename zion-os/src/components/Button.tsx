@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 'use client',;
 import React, { forwardRef } from 'react',;
 import Link from 'next/link',;
@@ -60,10 +57,7 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
   },;
   const widthClasses = fullWidth ? 'w-full' : '',;
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${widthClasses} ${className}`,;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const content = (;
     <>;
       {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
@@ -71,7 +65,6 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
-<<<<<<< HEAD
 
 'use client',
 import React, { forward_ref } from 'react',
@@ -172,7 +165,6 @@ if ( {) {
   return (;
   return (
   return (
-=======
   ),;
   if (href) {;
     return (;
@@ -181,14 +173,12 @@ if ( {) {
       </Link>;
     );
   }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
   return (;
     <button;
       ref={ref}
       type={type}
       className={classes}
-<<<<<<< HEAD
 
       on_click={on_click}
       disabled={disabled || loading}
@@ -231,7 +221,6 @@ function GhostButton() {
 }
 // Icon button variant;
 
-=======
       onClick={onClick}
       disabled={disabled || loading}
       aria-label={typeof children === 'string' ? children : undefined}
@@ -260,14 +249,12 @@ export function GhostButton(props: Omit<ButtonProps 'variant'>) {;
 }
 ;
 // Icon button variant;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function IconButton({;
   icon,;
   children,;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
-<<<<<<< HEAD
 
     <Button {...props} icon={icon} iconPosition="left" size="sm">;
 
@@ -281,13 +268,11 @@ export /**
 function FloatingActionButton() {
   return (
 
-=======
     <Button {...props} icon={icon} iconPosition="left" size="sm">;
       {children}
     </Button>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 // Floating action button;
 export function FloatingActionButton({;
@@ -297,7 +282,6 @@ export function FloatingActionButton({;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
-<<<<<<< HEAD
 
     <Button;
       {...props}
@@ -308,7 +292,6 @@ export function FloatingActionButton({;
       rounded="full";
     />);
 }
-=======
     <Button;
       {...props}
       icon={icon}
@@ -319,4 +302,3 @@ export function FloatingActionButton({;
     />;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

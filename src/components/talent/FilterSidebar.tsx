@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Filter } from 'lucide-react''
 import { SearchFilter } from "./filters/SearchFilter","
 import { SortFilter } from "./filters/SortFilter","
@@ -91,7 +90,6 @@ export function FilterSidebar({
   clearFilters,
 import { PriceFilter } from "./filters/PriceFilter","
 import { FilterSidebarProps } from "@/types/filters","
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -104,7 +102,6 @@ import { RegionFilter } from "./filters/RegionFilter",
 import { ExperienceFilter } from "./filters/ExperienceFilter",
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -124,7 +121,6 @@ export function FilterSidebar({
   setSortOption,
   clearFilters,
   isMobileFilterOpen
-<<<<<<< HEAD
 }:,  FilterSidebarProps) {
   return (
     <>
@@ -139,7 +135,6 @@ export function FilterSidebar({
           size="sm" "
           onClick={clearFilters}
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent""
-=======
 }: FilterSidebarProps) {
   return (
     <>
@@ -154,15 +149,11 @@ export function FilterSidebar({
           size="sm" 
           onClick={clearFilters}
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         >
           Clear All
         </Button>
       </div>
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Filter } from 'lucide-react';
@@ -193,11 +184,8 @@ export function FilterSidebar({;
   setSortOption;
   clearFilters;
   isMobileFilterOpen;
-<<<<<<< HEAD
 }:,  FilterSidebarProps) {;
-=======
 }: FilterSidebarProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (;
     <>;
       {/* Filter header */}
@@ -216,7 +204,6 @@ export function FilterSidebar({;
         </Button>;
       </div>;
       {/* Search */}
-<<<<<<< HEAD
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
@@ -236,13 +223,10 @@ export function FilterSidebar({;
         </Button>;
       </div>;
       {/* Search */}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
       {/* Skills */}
-<<<<<<< HEAD
       <SkillsFilter
         selectedSkills={selectedSkills}
         toggleSkill={toggleSkill}
@@ -407,7 +391,6 @@ function FilterSidebar() {
         toggle_skill={toggle_skill}
         expanded={expanded_sections.skills}
         toggle_section={() => toggle_section ('skills')}'
-=======
       <SkillsFilter;
         selectedSkills={selectedSkills} ;
         toggleSkill={toggleSkill} ;
@@ -445,23 +428,18 @@ function FilterSidebar() {
         setPriceRange={setPriceRange} ;
         expanded={expandedSections.price} ;
         toggleSection={() => toggleSection('price')}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         isMobileFilterOpen={isMobileFilterOpen}
       />;
       {isMobileFilterOpen && (;
         <Button;
-<<<<<<< HEAD
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}'
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4""
-=======
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         >
           Apply Filters
         </Button>
       )}
-<<<<<<< HEAD
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
         <Button
           onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter')),}'
@@ -521,9 +499,7 @@ function FilterSidebar() {
     </>;
   );
 }}}}}}}))))))))
-=======
     </>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

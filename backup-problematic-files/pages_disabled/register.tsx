@@ -243,7 +243,6 @@ export default function RegisterPage() {
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD:pages/register.tsx
     </div>
 
     </>

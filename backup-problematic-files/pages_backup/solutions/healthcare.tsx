@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/healthcare.tsx
 import Layout from '../../components/Layout';
 import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
 import React from 'react';
@@ -32,9 +31,7 @@ const features = [;
 import Layout from '../../components/Layout';
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
-=======
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/healthcare.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -69,7 +66,6 @@ const features = [
   },
   {
     icon: Users,
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/healthcare.tsx
     title: 'Provider Portal',
     description: 'Streamlined workflows for healthcare providers and staff'
   },
@@ -160,8 +156,6 @@ const benefits = [
   'Real-time health monitoring and alerts'
 ];
 export default function HealthcareSolutions() {
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/healthcare.tsx
     title: 'Provider Management',
     description: 'Comprehensive provider and staff management solutions',
     benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking']
@@ -208,15 +202,12 @@ export default function HealthcareSolutionsPage() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our healthcare solutions are built with security and compliance in mind.
               </p>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/healthcare.tsx
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/healthcare.tsx
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -230,7 +221,6 @@ export default function HealthcareSolutionsPage() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/healthcare.tsx
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -355,8 +345,6 @@ export default function HealthcareSolutionsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/healthcare.tsx
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -406,12 +394,9 @@ export default function HealthcareSolutionsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/healthcare.tsx
     </Layout>
     </Layout>
     </>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/healthcare.tsx
     </>
   );
 }

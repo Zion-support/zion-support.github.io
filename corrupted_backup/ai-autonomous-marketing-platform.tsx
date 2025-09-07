@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/ai-autonomous-marketing-platform.tsx
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export async function getStaticProps() {;
 	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } });
@@ -8,8 +7,6 @@ export default function AIAutonomousMarketingPlatform(props: any) {;
 	return <ServicePage {...props} />;
 }
 ;
-=======
-<<<<<<< HEAD
 import ServicePage, {
   getStaticProps as getSlugStaticProps,
 } from './services/[slug]';
@@ -23,7 +20,6 @@ export async function getStaticProps() {
 export default function AIAutonomousMarketingPlatform(props: any) {
   return <ServicePage {...props} />;
 }
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -104,5 +100,3 @@ const AIAutonomousMarketingPlatform: React.FC = () => {
 };
 
 export default AIAutonomousMarketingPlatform;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-autonomous-marketing-platform.tsx

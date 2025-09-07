@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Categories for filtering,
 const CATEGORIES = [
   "All Categories","
@@ -16,7 +15,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }:,  BlogProps) 
   logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),',
   const [searchQuery, setSearchQuery] = useState(""),",
   const [selectedCategory, setSelectedCategory] = useState("All Categories"),",
-=======
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -54,12 +52,10 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
   const [searchQuery, setSearchQuery] = useState(""),
   const [selectedCategory, setSelectedCategory] = useState("All Categories"),
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]),
   const query = useDebounce(searchQuery, 300),
   const [isLoading, setIsLoading] = useState(false),
   const router = useRouter(),
-<<<<<<< HEAD
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
     return () => {
@@ -68,7 +64,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       setPosts([...initialPosts])
     }
   }, [router.asPath, initialPosts]),
-=======
 
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
@@ -79,14 +74,12 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
     }
   }, [router.asPath, initialPosts]),
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setPosts(prev => [...prev, generateRandomBlogPost()]),
   //   }, 120000), // every 2 minutes
   //   return () => clearInterval(interval),
   // }, []),
-<<<<<<< HEAD
   useEffect(() => {
     const fetchPosts = async () => {
       setIsLoading(true),
@@ -103,7 +96,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
     },
     fetchPosts()
   }, [query]),
-=======
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -123,12 +115,10 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
     fetchPosts()
   }, [query]),
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-<<<<<<< HEAD
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
@@ -173,7 +163,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit""
                   >
                     <Link href={`/blog/${featuredPost.slug}`} />`
-=======
       selectedCategory === "All Categories" || post.category === selectedCategory,
 
     return matchesCategory
@@ -254,7 +243,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"
                   >
                     <Link href={`/blog/${featuredPost.slug}`}>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       Read Article
                     </Link>
                   </Button>
@@ -276,7 +264,6 @@ import { BlogPost } from "@/types/blog",;
 import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",;
 import { BLOG_POSTS } from "@/data/blog-posts",;
 import { Search } from 'lucide-react';
-<<<<<<< HEAD
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import { useState, useEffect } from "react";
@@ -336,7 +323,6 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }:,  Blo
         const data: BlogPost[] = await fetchWithRetry(;,
           `/api/blog?query=${encodeURIComponent(query)}`;`
         );
-=======
 import { fetchWithRetry } from '@/utils/fetchWithRetry',;
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
 // Categories for filtering;
@@ -382,14 +368,12 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
         const data: BlogPost[] = await fetchWithRetry(;
           `/api/blog?query=${encodeURIComponent(query)}`;
         ),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         setPosts(data);
       } catch (err) {;
         logErrorToProduction('Failed to fetch blog posts', { data: err });
       } finally {;
         setIsLoading(false);
       }
-<<<<<<< HEAD
     };
     fetchPosts();
   }, [query]);,
@@ -604,7 +588,6 @@ if (return,  null) {
               <div className='text-center py-4 text-white'>;
                 Loading articles...;
               </div>;
-=======
     },;
     fetchPosts();
   }, [query]),;
@@ -726,21 +709,16 @@ if (return,  null) {
               <div className="text-center py-4 text-white">
                 Loading articles...
               </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             )}
           </div>;
           {/* Blog Posts Grid */}
           {!isLoading && filteredPosts.length > 0 ? (
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               {filteredPosts.map((post) => (
                 <Card
                   key={post.id}
                   asChild
-<<<<<<< HEAD
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg""
                 >
                   <Link href={`/blog/${post.slug}`} className="block group" />",
@@ -944,7 +922,6 @@ if (return,  null) {
                   </CardContent>
                   <CardFooter className="p-6 pt-0">"
                     <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>"
-=======
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
                 >
                   <Link href={`/blog/${post.slug}`} className="block group">
@@ -989,7 +966,6 @@ if (return,  null) {
                   </CardContent>
                   <CardFooter className="p-6 pt-0">
                     <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </CardFooter>
                   </Link>
                 </Card>
@@ -1001,21 +977,18 @@ if (return,  null) {
                   asChild;
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg";
                 >;
-<<<<<<< HEAD
                   <Link href={`/blog/${post.slug}`} className="block group" />;
                   <div className="aspect-[16/9] relative overflow-hidden">;,
                     <img;
                       src={post.featuredImage}
                       alt={post.featuredImageAlt || post.title}
                       className="object-cover w-full h-full hover: scale-105 transition-transform duration-300";",
-=======
                   <Link href={`/blog/${post.slug}`} className="block group">;
                   <div className="aspect-[16/9] relative overflow-hidden">;
                     <img;
                       src={post.featuredImage}
                       alt={post.featuredImageAlt || post.title}
                       className="object-cover w-full h-full hover: scale-105 transition-transform duration-300";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       onError={(e) => {;
                         const target = e.currentTarget as HTMLImageElement,;
                         target.src = "/images/blog-placeholder.svg";
@@ -1056,7 +1029,6 @@ if (return,  null) {
                   </Link>;
                 </Card>;
               ))}
-<<<<<<< HEAD
             </div>
           ) : null}
           {/* No Results Message - Show only if not loading and no posts */}
@@ -2249,7 +2221,6 @@ key = "{post.id}"
                 onClick={() => {
                   setSearchQuery(""),"
                   setSelectedCategory("All Categories")"
-=======
             </div>;
           ) : null}
 ;
@@ -2263,7 +2234,6 @@ key = "{post.id}"
                 onClick={() => {
                   setSearchQuery(""),
                   setSelectedCategory("All Categories")
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {!isLoading && filteredPosts.length === 0 && (;
             <div className="text-center py-16">;
               <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>;
@@ -2285,8 +2255,5 @@ key = "{post.id}"
     </>;
   );
 }
-<<<<<<< HEAD
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 // import { prisma } from "@/lib/prisma",;
@@ -85,8 +84,6 @@ interface InstanceWithCounts {id: string;
 }
 export default function InstancesPage() {const instances: any[] = [], // Temporary empty array;
   const error: string | null = null;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 // import { prisma } from "@/lib/prisma",;
 interface InstanceWithCounts {;
   id: string,;
@@ -117,20 +114,16 @@ export default function InstancesPage() {;
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
-<<<<<<< HEAD
         <div className="text - center mb - 12">;
           <h1 className="text - 4xl font - bold mb - 4">📊 Manage Your Instances</h1>;
           <p className="text - xl text - white / 70 max - w-2xl mx - auto">;
-=======
         <div className="text-center mb-12">;
           <h1 className="text-4xl font-bold mb-4">📊 Manage Your Instances</h1>;
           <p className="text-xl text-white/70 max-w-2xl mx-auto">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Monitor and manage your deployed digital economies, track performance, and access configuration settings.;
           </p>;
         </div>;
         {/* Error State */}
-<<<<<<< HEAD
         {error && (
           <div className="mb - 8 p - 6 bg - red - 900 / 20 border border - red - 500 / 20 rounded - xl text - center">;
             <div className="text - red - 400 mb - 2">⚠️ Database Connection Error</div>;
@@ -218,7 +211,6 @@ export default function InstancesPage() {;
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
                     <span className="w - 4 h - 4">🔧</span>;
                     <span > Token: {getTokenSystemLabel (inst.token_system)}</span>;
-=======
         {error && (;
           <div className="mb-8 p-6 bg-red-900/20 border border-red-500/20 rounded-xl text-center">;
             <div className="text-red-400 mb-2">⚠️ Database Connection Error</div>;
@@ -287,7 +279,6 @@ export default function InstancesPage() {;
                     <div className="flex items-center gap-2 text-sm text-white/70">;
                       <span className="w-4 h-4">📍</span>;
                       <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </div>;
                   )}
 ;
@@ -296,7 +287,6 @@ export default function InstancesPage() {;
                     <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
                 <div className="flex items - center justify - between text - xs text - white / 60">;
                   <div className="flex items - center gap - 4">;
                     <span>🚀 {inst._count.deployments} deployments</span>;
@@ -316,7 +306,6 @@ export default function InstancesPage() {;
                       href={`/admin / instances/${inst.id}`}
                       className="flex - 1 text - center py - 2 px - 3 text - sm bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg transition - colors";
                       href={`/admin/instances/${inst.id}`}
-=======
                 <div className="flex items-center justify-between text-xs text-white/60">;
                   <div className="flex items-center gap-4">;
                     <span>🚀 {inst._count.deployments} deployments</span>;
@@ -329,14 +318,12 @@ export default function InstancesPage() {;
                 <div className="mt-4 pt-4 border-t border-white/10">;
                   <div className="flex gap-2">;
                     <a;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       href={`/admin/instances/${inst.id}`} ;
                       className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";
                     >;
                       Manage;
                     </a>;
                     <a;
-<<<<<<< HEAD
 
                       href={`/admin/instances/${inst.id}/deployments`} ;
 
@@ -344,8 +331,6 @@ export default function InstancesPage() {;
                       href={`/admin / instances/${inst.id}/deployments`}
                       className="flex - 1 text - center py - 2 px - 3 text - sm border border - white / 20 hover:border - white / 40 text - white rounded - lg transition - colors";
                       href={`/admin/instances/${inst.id}/deployments`}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       href={`/admin/instances/${inst.id}/deployments`} ;
                       className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
                     >;
@@ -353,7 +338,6 @@ export default function InstancesPage() {;
                     </a>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
 
               </div>))}
           </div>)}
@@ -434,7 +418,6 @@ export default function InstancesPage() {;
                       inst.vertical === 'EDUCATION' ? 'bg - purple - 500 / 20 text - purple - 400' :;
                       inst.vertical === 'LAW' ? 'bg - yellow - 500 / 20 text - yellow - 400' :;
                       'bg - gray - 500 / 20 text - gray - 400';
-=======
               </div>;
             ))}
           </div>;
@@ -498,15 +481,11 @@ export default function InstancesPage() {;
           {instances.map((inst) => (;
             <div key={inst.id} className="card card-hover">;
               {/* Instance Header */}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <div className="flex items-start justify-between mb-4">;
                 <div className="flex-1">;
                   <h3 className="text-xl font-semibold text-white mb-1">{inst.name}</h3>;
                   <div className="flex items-center space-x-2 mb-2">;
-<<<<<<< HEAD
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${;
                       inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
                       inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
@@ -516,7 +495,6 @@ export default function InstancesPage() {;
                     }`}>;
                       {inst.vertical}
                     </span>;
-<<<<<<< HEAD
                     {inst.is_public && (
                       <span className="px - 2 py - 1 rounded - full text - xs font - medium bg - green - 500 / 20 text - green - 400">;
                         Public;
@@ -549,7 +527,6 @@ export default function InstancesPage() {;
                 <div className="flex items-center space-x-2 text-sm text-white/70">;
                   </div>)}
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
-=======
                     {inst.isPublic && (;
                       <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">;
                         Public;
@@ -575,13 +552,11 @@ export default function InstancesPage() {;
                   <div className="flex items-center space-x-2 text-sm text-white/70">;
                     <span>📍</span>;
                     <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </div>;
                 )}
 ;
                 <div className="flex items-center space-x-2 text-sm text-white/70">;
                   <span>💎</span>;
-<<<<<<< HEAD
                   <span > Token: {inst.token_system}</span>;
                 </div>;
               </div>;
@@ -606,7 +581,6 @@ export default function InstancesPage() {;
                   href={`/admin / instances/${inst.id}`}
                   className="flex - 1 btn - secondary text - center text - sm py - 2";
                   href={`/admin/instances/${inst.id}`}
-=======
                   <span>Token: {inst.tokenSystem}</span>;
                 </div>;
               </div>;
@@ -624,14 +598,12 @@ export default function InstancesPage() {;
               {/* Actions */}
               <div className="flex space-x-2">;
                 <a;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   href={`/admin/instances/${inst.id}`} ;
                   className="flex-1 btn-secondary text-center text-sm py-2";
                 >;
                   Manage;
                 </a>;
                 <a;
-<<<<<<< HEAD
 
                   href={`/admin/instances/${inst.id}/deployments`} ;
 
@@ -639,8 +611,6 @@ export default function InstancesPage() {;
                   href={`/admin / instances/${inst.id}/deployments`}
                   className="flex - 1 btn - secondary text - center text - sm py - 2";
                   href={`/admin/instances/${inst.id}/deployments`}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   href={`/admin/instances/${inst.id}/deployments`} ;
                   className="flex-1 btn-secondary text-center text-sm py-2";
                 >;
@@ -648,7 +618,6 @@ export default function InstancesPage() {;
                 </a>;
               </div>;
               {/* Created Date */}
-<<<<<<< HEAD
               <div className="text - xs text - white / 40 mt - 3 pt - 3 border - t border - white / 10">;
                 Created: {new Date (inst.created_at).toLocaleDateString ()}
               </div>;
@@ -666,7 +635,6 @@ export default function InstancesPage() {;
             🚀 Launch New Instance;
           </a>;
           <a href="/admin / os - deploy" className="btn - secondary">;
-=======
               <div className="text-xs text-white/40 mt-3 pt-3 border-t border-white/10">;
                 Created: {new Date(inst.createdAt).toLocaleDateString()}
               </div>;
@@ -683,13 +651,11 @@ export default function InstancesPage() {;
             🚀 Launch New Instance;
           </a>;
           <a href="/admin/os-deploy" className="btn-secondary">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             ⚙️ Advanced Deployment;
           </a>;
         </div>;
       </div>;
       {/* Admin Navigation */}
-<<<<<<< HEAD
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 mb - 20">;
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
           <div className="bg - gradient - to - br from - blue - 900 / 20 to - purple - 900 / 20 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -774,7 +740,6 @@ export default function InstancesPage() {;
               Configure system parameters and customize your AI platform settings.;
             </p>;
             <Link href="/admin / settings" className="text - indigo - 400 hover:text - indigo - 300 font - medium">;
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">;
@@ -859,14 +824,12 @@ export default function InstancesPage() {;
               Configure system parameters and customize your AI platform settings.;
             </p>;
             <Link href="/admin/settings" className="text-indigo-400 hover:text-indigo-300 font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               System Settings →;
             </Link>;
           </div>;
         </div>;
       </div>;
       {/* Quick Stats */}
-<<<<<<< HEAD
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 mb - 20">;
         <h2 className="text - 3xl font - bold text - white mb - 8 text - center">System Overview</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6">;
@@ -889,7 +852,6 @@ export default function InstancesPage() {;
             <div className="text - 3xl font - bold text - orange - 400 mb - 2">5</div>;
             <div className="text - lg font - semibold text - white mb - 2">Quantum Nodes</div>;
             <p className="text - gray - 300 text - sm">Processing power</p>;
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">;
         <h2 className="text-3xl font-bold text-white mb-8 text-center">System Overview</h2>;
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">;
@@ -912,12 +874,10 @@ export default function InstancesPage() {;
             <div className="text-3xl font-bold text-orange-400 mb-2">5</div>;
             <div className="text-lg font-semibold text-white mb-2">Quantum Nodes</div>;
             <p className="text-gray-300 text-sm">Processing power</p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>;
         </div>;
       </div>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
         <div className="bg - gradient - to - r from - blue - 900 / 20 to - purple - 900 / 20 border border - white / 10 rounded - xl p - 12">;
           <h2 className="text - 3xl font - bold text - white mb - 6">;
@@ -931,7 +891,6 @@ export default function InstancesPage() {;
               Contact Support;
             </Link>;
             <Link href="/services" className="border border - white / 20 hover:border - white / 40 text - white px - 8 py - 4 rounded - lg text - lg font - semibold transition - all duration - 200 hover:bg - white / 10">;
-=======
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
         <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-12">;
           <h2 className="text-3xl font-bold text-white mb-6">;
@@ -945,14 +904,12 @@ export default function InstancesPage() {;
               Contact Support;
             </Link>;
             <Link href="/services" className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 hover:bg-white/10">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               View Services;
             </Link>;
           </div>;
         </div>;
       </div>;
       {/* Empty State */}
-<<<<<<< HEAD
       {instances.length === 0 && (
         <div className="text - center py - 16">;
           <div className="w - 16 h - 16 mx - auto mb - 4 p - 4 bg - white / 10 rounded - full">;
@@ -988,7 +945,6 @@ function getGovernanceLabel() {
 function getTokenSystemLabel() {
   switch (type) {
 
-=======
       {instances.length === 0 && (;
         <div className="text-center py-16">;
           <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">;
@@ -1008,7 +964,6 @@ function getTokenSystemLabel() {
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 function getGovernanceLabel(type: string) {;
   switch (type) {;
@@ -1021,16 +976,10 @@ function getGovernanceLabel(type: string) {;
 ;
 function getTokenSystemLabel(type: string) {;
   switch (type) {;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     case "SHARED": return "ZION$ Shared";
     case "LOCAL": return "Local Token";
     default: return type;
   }
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }

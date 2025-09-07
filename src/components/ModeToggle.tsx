@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button""
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip""
 import { toast } from "@/hooks/use-toast""
@@ -433,7 +432,6 @@ if ( {") {"
 }'"}"
 }
 ;
-=======
 import { Moon, Sun } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -657,4 +655,3 @@ export function ModeToggle() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

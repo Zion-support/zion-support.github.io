@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 import React, { forwardRef } from 'react';
 import { ChevronDown } from 'lucide-react';
@@ -32,7 +31,6 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
             className='flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:bg-secondary/30'',
             onClick={() => setExpanded(!expanded)}          >;
             <div className='flex items-center gap-2'>;
-=======
 
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
@@ -70,13 +68,11 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
             onClick={() => setExpanded(!expanded)}
           >
             <div className="flex items-center gap-2">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               {icon}
               <span>{title}</span>
             </div>
             {showChevron && (
               <ChevronDown
-<<<<<<< HEAD
                 className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}"
               />
             )}
@@ -88,7 +84,6 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
   }
 )
 }}
-=======
                 className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
               />
             )}
@@ -109,4 +104,3 @@ export { SidebarGroup },
 ),;
 SidebarGroup.displayName = "SidebarGroup",;
 export { SidebarGroup };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import { Check, ArrowDown, X } from 'lucide-react''
 import { useDisputeCheck  } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge  } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
-=======
 
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -14,12 +12,10 @@ import { Check, ArrowDown, X } from 'lucide-react'
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface MilestoneCardProps {
   id: string,
   projectId: string,
   title: string,
-<<<<<<< HEAD
   description?: string
   amount: number,
   status: string,
@@ -60,7 +56,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { format } from 'date-fns';
-=======
   description?: string,
   amount: number,
   status: string,
@@ -72,7 +67,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { format } from 'date-fns',;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { Check, ArrowDown, X } from 'lucide-react';
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
@@ -85,13 +79,10 @@ interface MilestoneCardProps {;
   amount: number,;
   status: string,;
   dueDate?: string,;
-<<<<<<< HEAD
   onApprove?: (id:,  string) => Promise<void>,;
   onReject?: (id:,  string) => Promise<void>;
-=======
   onApprove?: (id: string) => Promise<void>,;
   onReject?: (id: string) => Promise<void>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export function MilestoneCard({;
@@ -104,25 +95,21 @@ export function MilestoneCard({;
   dueDate,;
   onApprove,;
   onReject;
-<<<<<<< HEAD
 }:,  MilestoneCardProps) {;
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
         return 'bg-green-500';
-=======
 }: MilestoneCardProps) {;
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id),;
   function getStatusBadgeColor() {;
     switch (status) {;
       case 'completed':;
         return 'bg-green-500',;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       case 'in_progress':;
         return 'bg-blue-500',;
       case 'pending':;
         return 'bg-yellow-500';
       case 'rejected':;
         return 'bg-red-500';
-<<<<<<< HEAD
 import React from 'react';
 import {
   Card,
@@ -210,7 +197,6 @@ interface MilestoneCardProps {
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>`
               {status.replace('_ ')}'
             </Badge>
-=======
       default: return 'bg-gray-500';
     }
   }
@@ -232,14 +218,12 @@ interface MilestoneCardProps {
               {status.replace('_ ')}
             </Badge>
             
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             {isUnderDispute && disputeStatus && (
               <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
         </div>
       </CardHeader>
-<<<<<<< HEAD
       <CardContent className="pb-2">"
         {description && (
           <p className="text-muted-foreground">{description}</p>"
@@ -297,7 +281,6 @@ interface MilestoneCardProps {
           {status === 'pending' && onApprove && !isUnderDispute && ('
           )}
           {isUnderDispute && (
-=======
       
       <CardContent className="pb-2">
         {description && (
@@ -346,7 +329,6 @@ interface MilestoneCardProps {
               <DisputeStatusBadge status={disputeStatus} />;
             )}
           </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>;
       </CardHeader>;
       <CardContent className="pb-2">;
@@ -391,7 +373,6 @@ interface MilestoneCardProps {
     </Card>;
   );
 }
-<<<<<<< HEAD
   );
 }
       <CardHeader className='pb - 2'>;
@@ -464,6 +445,4 @@ interface MilestoneCardProps {
     </Card>);
 }
 }}}))
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

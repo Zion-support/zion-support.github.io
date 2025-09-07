@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 appStoreUrl = {appStoreUrl,}
                 googlePlayUrl = {googlePlayUrl,}
                 onAppStoreClick = {(,) => logInfo("App Store button clicked"),}"
@@ -11,7 +10,6 @@ appStoreUrl = {appStoreUrl,}
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}"
               />
               <div className="text-sm text-gray-400">"
-=======
 
 import React from "react",
 import { QrCodeIcon } from 'lucide-react'
@@ -43,12 +41,10 @@ export const DownloadSection: React.FC = () => {
               />
               
               <div className="text-sm text-gray-400">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
-<<<<<<< HEAD
   // These would typically come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
@@ -60,7 +56,6 @@ export const DownloadSection: React.FC = () => {
             <div className="flex - 1">;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">Get The App Today</h2>;
               <p className="text - lg text - gray - 300 mb - 8">;
-=======
             
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
@@ -91,14 +86,12 @@ export const DownloadSection: React.FC = () => {;
             <div className="flex-1">;
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Get The App Today</h2>;
               <p className="text-lg text-gray-300 mb-8">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
               </p>;
               <AppStoreButtons;
                 className="mb-8";
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
-<<<<<<< HEAD
                 onAppStoreClick={() => logInfo("App Store button clicked")}"
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}"
               />;
@@ -119,10 +112,8 @@ export const DownloadSection: React.FC = () => {;
       </div>;
     </section>);
 }
-=======
                 onAppStoreClick={() => logInfo("App Store button clicked")}
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               />;
               <div className="text-sm text-gray-400">;
                 <p>Compatible with iOS 14+ and Android 8.0+</p>;
@@ -142,7 +133,6 @@ export const DownloadSection: React.FC = () => {;
     </section>;
   );
 };
-<<<<<<< HEAD
 ";
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">"
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">"
@@ -156,5 +146,3 @@ export const DownloadSection: React.FC = () => {;
       </div>
     </section>
   )
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

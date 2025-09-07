@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import Link from "next/link",;
@@ -26,8 +25,6 @@ export const metadata = {title: "Events - Zion Tech Group | Conferences, Webinar
   description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.";
   keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"}
 export default function EventsPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import Link from "next/link",;
 export const metadata = {;
   title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",;
@@ -37,7 +34,6 @@ export default function EventsPage() {;
   return (;
     <div className="min-h-screen">;
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
@@ -45,7 +41,6 @@ export default function EventsPage() {;
           </h1>;
           <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
             Join us at industry - leading events, conferences, and workshops to discover;
-=======
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
           <h1 className="text-5xl md:text-6xl font-bold mb-6">;
@@ -53,13 +48,11 @@ export default function EventsPage() {;
           </h1>;
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
             Join us at industry-leading events, conferences, and workshops to discover;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             the future of technology and connect with innovation leaders;
           </p>;
         </div>;
       </section>;
       {/* Featured Event */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30">;
@@ -116,7 +109,6 @@ export default function EventsPage() {;
                     Register Now;
                   </Link>;
                   <Link href="/events / zion - tech - summit - 2025 / agenda" className="btn - secondary">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">;
@@ -167,21 +159,17 @@ export default function EventsPage() {;
                     Register Now;
                   </Link>;
                   <Link href="/events/zion-tech-summit-2025/agenda" className="btn-secondary">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     View Agenda;
                   </Link>;
                 </div>;
               </div>;
               <div className="relative">;
-<<<<<<< HEAD
                 <div className="w - full h - 64 lg:h - 80 bg - gradient - to - br from - blue - 500 / 20 to - purple - 500 / 20 rounded - xl flex items - center justify - center">;
                   <svg className="w - 24 h - 24 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                     <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
-=======
                 <div className="w-full h-64 lg:h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">;
                   <svg className="w-24 h-24 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </svg>;
                 </div>;
               </div>;
@@ -190,7 +178,6 @@ export default function EventsPage() {;
         </div>;
       </section>;
       {/* Event Categories */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -252,7 +239,6 @@ export default function EventsPage() {;
                 for practical skill development;
               </p>;
               <Link href="/events / category / workshops" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -306,7 +292,6 @@ export default function EventsPage() {;
                 for practical skill development;
               </p>;
               <Link href="/events/category/workshops" className="text-green-400 hover:text-green-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 View Workshops →;
               </Link>;
             </div>;
@@ -314,7 +299,6 @@ export default function EventsPage() {;
         </div>;
       </section>;
       {/* Upcoming Events */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -353,7 +337,6 @@ export default function EventsPage() {;
                 60 minutes;
               </div>;
               <Link href="/events / ai - enterprise - implementation - webinar" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -392,13 +375,11 @@ export default function EventsPage() {;
                 60 minutes;
               </div>;
               <Link href="/events/ai-enterprise-implementation-webinar" className="text-blue-400 hover:text-blue-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Register Now →;
               </Link>;
             </div>;
             {/* Event 2 */}
             <div className="card group">;
-<<<<<<< HEAD
               <div className="w - full h - 48 bg - gradient - to - br from - purple - 500 / 20 to - blue - 500 / 20 rounded - xl mb - 6 flex items - center justify - center">;
                 <svg className="w - 16 h - 16 text - purple - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M13 10V3L4 14h7v7l9 - 11h - 7z" />;
@@ -430,7 +411,6 @@ export default function EventsPage() {;
                 4 hours;
               </div>;
               <Link href="/events / quantum - computing - fundamentals - workshop" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-=======
               <div className="w-full h-48 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl mb-6 flex items-center justify-center">;
                 <svg className="w-16 h-16 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />;
@@ -456,13 +436,11 @@ export default function EventsPage() {;
                 4 hours;
               </div>;
               <Link href="/events/quantum-computing-fundamentals-workshop" className="text-purple-400 hover:text-purple-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Register Now →;
               </Link>;
             </div>;
             {/* Event 3 */}
             <div className="card group">;
-<<<<<<< HEAD
               <div className="w - full h - 48 bg - gradient - to - br from - green - 500 / 20 to - blue - 500 / 20 rounded - xl mb - 6 flex items - center justify - center">;
                 <svg className="w - 16 h - 16 text - green - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 12l2 2 4 - 4m5.618 - 4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01 - 8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176 - 1.332 9 - 6.03 9 - 11.622 0 - 1.042-.133 - 2.052-.382 - 3.016z" />;
@@ -489,7 +467,6 @@ export default function EventsPage() {;
                 New York, NY;
               </div>;
               <Link href="/events / cybersecurity - innovation - summit - 2025" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-=======
               <div className="w-full h-48 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-xl mb-6 flex items-center justify-center">;
                 <svg className="w-16 h-16 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />;
@@ -516,13 +493,11 @@ export default function EventsPage() {;
                 New York, NY;
               </div>;
               <Link href="/events/cybersecurity-innovation-summit-2025" className="text-green-400 hover:text-green-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Register Now →;
               </Link>;
             </div>;
             {/* Event 4 */}
             <div className="card group">;
-<<<<<<< HEAD
               <div className="w - full h - 48 bg - gradient - to - br from - red - 500 / 20 to - yellow - 500 / 20 rounded - xl mb - 6 flex items - center justify - center">;
                 <svg className="w - 16 h - 16 text - red - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M12 19l9 2 - 9-18 - 9 18 9 - 2zm0 0v - 8" />;
@@ -548,7 +523,6 @@ export default function EventsPage() {;
                 6 hours;
               </div>;
               <Link href="/events / space - technology - applications - workshop" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-=======
               <div className="w-full h-48 bg-gradient-to-br from-red-500/20 to-yellow-500/20 rounded-xl mb-6 flex items-center justify-center">;
                 <svg className="w-16 h-16 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />;
@@ -574,13 +548,11 @@ export default function EventsPage() {;
                 6 hours;
               </div>;
               <Link href="/events/space-technology-applications-workshop" className="text-red-400 hover:text-red-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Register Now →;
               </Link>;
             </div>;
             {/* Event 5 */}
             <div className="card group">;
-<<<<<<< HEAD
               <div className="w - full h - 48 bg - gradient - to - br from - indigo - 500 / 20 to - purple - 500 / 20 rounded - xl mb - 6 flex items - center justify - center">;
                 <svg className="w - 16 h - 16 text - indigo - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M11 5H6a2 2 0 00 - 2 2v11a2 2 0 002 2h11a2 2 0 002 - 2v - 5m - 1.414 - 9.414a2 2 0 112.828 2.828L11.828 15H9v - 2.828l8.586 - 8.586z" />;
@@ -606,7 +578,6 @@ export default function EventsPage() {;
                 90 minutes;
               </div>;
               <Link href="/events / ai - content - generation - best - practices" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-=======
               <div className="w-full h-48 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl mb-6 flex items-center justify-center">;
                 <svg className="w-16 h-16 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />;
@@ -632,13 +603,11 @@ export default function EventsPage() {;
                 90 minutes;
               </div>;
               <Link href="/events/ai-content-generation-best-practices" className="text-indigo-400 hover:text-indigo-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Register Now →;
               </Link>;
             </div>;
             {/* Event 6 */}
             <div className="card group">;
-<<<<<<< HEAD
               <div className="w - full h - 48 bg - gradient - to - br from - yellow - 500 / 20 to - orange - 500 / 20 rounded - xl mb - 6 flex items - center justify - center">;
                 <svg className="w - 16 h - 16 text - yellow - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01 - 2 2H5a2 2 0 01 - 2-2v - 6a2 2 0 012 - 2m14 0V9a2 2 0 00 - 2-2M5 11V9a2 2 0 012 - 2m0 0V5a2 2 0 012 - 2h6a2 2 0 012 2v2M7 7h10" />;
@@ -665,7 +634,6 @@ export default function EventsPage() {;
                 Austin, TX;
               </div>;
               <Link href="/events / enterprise - it - transformation - 2025" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-=======
               <div className="w-full h-48 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-xl mb-6 flex items-center justify-center">;
                 <svg className="w-16 h-16 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />;
@@ -692,7 +660,6 @@ export default function EventsPage() {;
                 Austin, TX;
               </div>;
               <Link href="/events/enterprise-it-transformation-2025" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Register Now →;
               </Link>;
             </div>;
@@ -700,7 +667,6 @@ export default function EventsPage() {;
         </div>;
       </section>;
       {/* Past Events */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - gray - 800 / 20 to - gray - 900 / 20">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -721,7 +687,6 @@ export default function EventsPage() {;
               <h3 className="text - lg font - semibold mb - 2">AI Ethics Workshop</h3>;
               <p className="text - gray - 400 text - sm mb - 3">December 10, 2024</p>;
               <Link href="/events / past / ai - ethics - workshop - december - 2024" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-800/20 to-gray-900/20">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -742,12 +707,10 @@ export default function EventsPage() {;
               <h3 className="text-lg font-semibold mb-2">AI Ethics Workshop</h3>;
               <p className="text-gray-400 text-sm mb-3">December 10, 2024</p>;
               <Link href="/events/past/ai-ethics-workshop-december-2024" className="text-blue-400 hover:text-blue-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 View Recording →;
               </Link>;
             </div>;
             <div className="card">;
-<<<<<<< HEAD
               <div className="w - full h - 32 bg - gradient - to - br from - gray - 600 / 20 to - gray - 700 / 20 rounded - xl mb - 4 flex items - center justify - center">;
                 <svg className="w - 12 h - 12 text - gray - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
@@ -756,7 +719,6 @@ export default function EventsPage() {;
               <h3 className="text - lg font - semibold mb - 2">Quantum Computing Summit</h3>;
               <p className="text - gray - 400 text - sm mb - 3">November 15 - 17, 2024</p>;
               <Link href="/events / past / quantum - computing - summit - november - 2024" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-=======
               <div className="w-full h-32 bg-gradient-to-br from-gray-600/20 to-gray-700/20 rounded-xl mb-4 flex items-center justify-center">;
                 <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />;
@@ -765,12 +727,10 @@ export default function EventsPage() {;
               <h3 className="text-lg font-semibold mb-2">Quantum Computing Summit</h3>;
               <p className="text-gray-400 text-sm mb-3">November 15-17, 2024</p>;
               <Link href="/events/past/quantum-computing-summit-november-2024" className="text-blue-400 hover:text-blue-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 View Highlights →;
               </Link>;
             </div>;
             <div className="card">;
-<<<<<<< HEAD
               <div className="w - full h - 32 bg - gradient - to - br from - gray - 600 / 20 to - gray - 700 / 20 rounded - xl mb - 4 flex items - center justify - center">;
                 <svg className="w - 12 h - 12 text - gray - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 12l2 2 4 - 4m5.618 - 4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01 - 8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176 - 1.332 9 - 6.03 9 - 11.622 0 - 1.042-.133 - 2.052-.382 - 3.016z" />;
@@ -779,7 +739,6 @@ export default function EventsPage() {;
               <h3 className="text - lg font - semibold mb - 2">Cybersecurity Conference</h3>;
               <p className="text - gray - 400 text - sm mb - 3">October 20 - 22, 2024</p>;
               <Link href="/events / past / cybersecurity - conference - october - 2024" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-=======
               <div className="w-full h-32 bg-gradient-to-br from-gray-600/20 to-gray-700/20 rounded-xl mb-4 flex items-center justify-center">;
                 <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />;
@@ -788,7 +747,6 @@ export default function EventsPage() {;
               <h3 className="text-lg font-semibold mb-2">Cybersecurity Conference</h3>;
               <p className="text-gray-400 text-sm mb-3">October 20-22, 2024</p>;
               <Link href="/events/past/cybersecurity-conference-october-2024" className="text-blue-400 hover:text-blue-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 View Highlights →;
               </Link>;
             </div>;
@@ -796,7 +754,6 @@ export default function EventsPage() {;
         </div>;
       </section>;
       {/* Event Registration CTA */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm: px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto text - center">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30">;
@@ -812,7 +769,6 @@ export default function EventsPage() {;
                 Contact Us;
               </Link>;
               <Link href="/events / custom" className="btn - secondary text - lg px - 8 py - 4">;
-=======
       <section className="py-20 px-4 sm: px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">;
@@ -828,18 +784,14 @@ export default function EventsPage() {;
                 Contact Us;
               </Link>;
               <Link href="/events/custom" className="btn-secondary text-lg px-8 py-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Request Custom Event;
               </Link>;
             </div>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
     </div>);
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -14,7 +11,6 @@ interface FeatureCardProps {;
   href: string,;
   isActive: boolean,;
   onClick: () => void;
-<<<<<<< HEAD
 }
 ;
 export function FeatureCard({;
@@ -166,7 +162,6 @@ export function FeatureCard({;
       </div>;
     </div>);
 }
-=======
 }
 ;
 export function FeatureCard({;
@@ -224,4 +219,3 @@ export function FeatureCard({;
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

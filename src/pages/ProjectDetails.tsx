@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -1392,7 +1391,6 @@ const ProjectDetails = () => {
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors" />",
                 Contact Us
               </Link>
-=======
 import React, { useState, useEffect } from "react",
 import Link from 'next/link',
 import { useRouter } from 'next/router',
@@ -2607,4 +2605,3 @@ export default function ProjectDetails() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

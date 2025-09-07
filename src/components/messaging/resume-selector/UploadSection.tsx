@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Upload, FileText } from 'lucide-react';
@@ -74,7 +73,6 @@ export function UploadSection({
     </div>
   );
 }
-=======
 
 import React from 'react',
 import { Button } from "@/components/ui/button",
@@ -155,4 +153,3 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

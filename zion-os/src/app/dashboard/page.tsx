@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 "use client",;
@@ -61,8 +60,6 @@ export default function DashboardPage() {const { user, isAuthenticated, isLoadin
     }
   }, [isAuthenticated, isLoading, router]);
   if (isLoading) {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import { useAuth } from "@/contexts/AuthContext",;
 import { useRouter } from "next/navigation",;
@@ -86,27 +83,20 @@ export default function DashboardPage() {;
       </div>;
     );
   }
-<<<<<<< HEAD
   if (!isAuthenticated) {return null;
   }
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
   if (!isAuthenticated) {;
     return null;
   }
 ;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (;
     <div className="space-y-8">;
       {/* Welcome Header */}
       <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/20">;
         <h1 className="text-3xl font-bold text-white mb-2">;
-<<<<<<< HEAD
 
   // Check condition
 if ( {) {
@@ -125,16 +115,13 @@ if ( {) {
 
         </h1>;
         <p className="text - zinc - 300 text - lg">;
-=======
           Welcome back, {user?.name || "User"}! 👋;
         </h1>;
         <p className="text-zinc-300 text-lg">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Ready to continue building your digital economy? Here's what you can do next.;
         </p>;
       </div>;
       {/* Quick Actions */}
-<<<<<<< HEAD
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
         <Link;
           href="/multiverse / launch";
@@ -146,7 +133,6 @@ if ( {) {
             </div>;
             <h3 className="font - semibold text - white text - lg">Launch New Instance</h3>;
             <p className="text - zinc - 400 text - sm">;
-=======
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
         <Link;
           href="/multiverse/launch";
@@ -158,13 +144,11 @@ if ( {) {
             </div>;
             <h3 className="font-semibold text-white text-lg">Launch New Instance</h3>;
             <p className="text-zinc-400 text-sm">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Create a new digital economy with marketplace and governance tools;
             </p>;
           </div>;
         </Link>;
         <Link;
-<<<<<<< HEAD
           href="/admin / instances";
           className="group p - 6 bg - zinc - 800 / 50 rounded - xl border border - zinc - 700 / 50 hover:border - purple - 500 / 50 hover:bg - zinc - 800 / 70 transition - all duration - 200";
         >;
@@ -174,7 +158,6 @@ if ( {) {
             </div>;
             <h3 className="font - semibold text - white text - lg">Manage Instances</h3>;
             <p className="text - zinc - 400 text - sm">;
-=======
           href="/admin/instances";
           className="group p-6 bg-zinc-800/50 rounded-xl border border-zinc-700/50 hover:border-purple-500/50 hover:bg-zinc-800/70 transition-all duration-200";
         >;
@@ -184,14 +167,12 @@ if ( {) {
             </div>;
             <h3 className="font-semibold text-white text-lg">Manage Instances</h3>;
             <p className="text-zinc-400 text-sm">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Monitor and configure your deployed instances and settings;
             </p>;
           </div>;
         </Link>;
         <Link;
           href="/docs";
-<<<<<<< HEAD
           className="group p - 6 bg - zinc - 800 / 50 rounded - xl border border - zinc - 700 / 50 hover:border - green - 500 / 50 hover:bg - zinc - 800 / 70 transition - all duration - 200";
         >;
           <div className="text - center space - y-3">;
@@ -200,7 +181,6 @@ if ( {) {
             </div>;
             <h3 className="font - semibold text - white text - lg">Documentation</h3>;
             <p className="text - zinc - 400 text - sm">;
-=======
           className="group p-6 bg-zinc-800/50 rounded-xl border border-zinc-700/50 hover:border-green-500/50 hover:bg-zinc-800/70 transition-all duration-200";
         >;
           <div className="text-center space-y-3">;
@@ -209,14 +189,12 @@ if ( {) {
             </div>;
             <h3 className="font-semibold text-white text-lg">Documentation</h3>;
             <p className="text-zinc-400 text-sm">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Learn more about features and best practices;
             </p>;
           </div>;
         </Link>;
       </div>;
       {/* Recent Activity */}
-<<<<<<< HEAD
       <div className="bg - zinc - 800 / 30 rounded - xl p - 6 border border - zinc - 700 / 30">;
         <h2 className="text - xl font - semibold text - white mb - 4">Recent Activity</h2>;
         <div className="space - y-3">;
@@ -229,7 +207,6 @@ if ( {) {
             <div className="w - 2 h - 2 bg - green - 500 rounded - full"></div>;
             <span > Onboarding completed. You're ready to start building!</span>;
             <span className="text - zinc - 500">Just now</span>;
-=======
       <div className="bg-zinc-800/30 rounded-xl p-6 border border-zinc-700/30">;
         <h2 className="text-xl font-semibold text-white mb-4">Recent Activity</h2>;
         <div className="space-y-3">;
@@ -242,12 +219,10 @@ if ( {) {
             <div className="w-2 h-2 bg-green-500 rounded-full"></div>;
             <span>Onboarding completed. You're ready to start building!</span>;
             <span className="text-zinc-500">Just now</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>;
         </div>;
       </div>;
       {/* Account Info */}
-<<<<<<< HEAD
       <div className="bg - zinc - 800 / 30 rounded - xl p - 6 border border - zinc - 700 / 30">;
         <h2 className="text - xl font - semibold text - white mb - 4">Account Information</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
@@ -277,7 +252,6 @@ if ( {) {
       </div>;
     </div>);
 }
-=======
       <div className="bg-zinc-800/30 rounded-xl p-6 border border-zinc-700/30">;
         <h2 className="text-xl font-semibold text-white mb-4">Account Information</h2>;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -302,4 +276,3 @@ if ( {) {
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

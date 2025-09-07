@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 jobs: { variant: "default" },"
       candidates: { variant: "outline" },"
       team: { variant: "secondary" },"
@@ -105,7 +104,6 @@ export function TeamActivity() {;
       <div className="flex items - center justify - between">;
         <h3 className="text - xl font - medium">Recent Team Activity</h3>;
         <div className="flex items - center gap - 2">;
-=======
 
 import React from "react",
 import {
@@ -235,7 +233,6 @@ export function TeamActivity() {
                 </TableCell>
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>
                 <TableCell className="text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from "react",;
 import {;
   Table,;
@@ -249,11 +246,8 @@ import { CalendarIcon, Search } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 export function TeamActivity() {;
-<<<<<<< HEAD
   // Mock activity data;,
-=======
   // Mock activity data;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const activities = [;
     {;
       id: 1,;
@@ -298,48 +292,36 @@ export function TeamActivity() {;
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),;
       category: "billing"}],;
   // Function to format the date in a readable way;
-<<<<<<< HEAD
   const formatDate = (date:,  Date) => {;,
-=======
   const formatDate = (date: Date) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     const now = new Date(),;
     const diffMs = now.getTime() - date.getTime(),;
     const diffMins = Math.floor(diffMs / (1000 * 60)),;
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),;
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),;
     if (diffMins < 60) {;
-<<<<<<< HEAD
       return `${diffMins} minutes ago`;`
     } else if (diffHrs < 24) {;
       return `${diffHrs} hours ago`;`
     } else if (diffDays < 7) {;
       return `${diffDays} days ago`;`
-=======
       return `${diffMins} minutes ago`;
     } else if (diffHrs < 24) {;
       return `${diffHrs} hours ago`;
     } else if (diffDays < 7) {;
       return `${diffDays} days ago`;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     } else {;
       return date.toLocaleDateString();
     }
   },;
-<<<<<<< HEAD
   const getCategoryBadge = (category:,  string) => {;,
-=======
   const getCategoryBadge = (category: string) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {;
       jobs: { variant: "default" },;
       candidates: { variant: "outline" },;
       team: { variant: "secondary" },;
-<<<<<<< HEAD
       billing: { variant: "destructive" }},;,
-=======
       billing: { variant: "destructive" }},;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     const style = categoryStyles[category] || { variant: "default" as const };
     return <Badge variant={style.variant}>{category}</Badge>;
   };
@@ -349,7 +331,6 @@ export function TeamActivity() {;
         <h3 className="text-xl font-medium">Recent Team Activity</h3>;
         <div className="flex items-center gap-2">;
           <div className="relative">;
-<<<<<<< HEAD
             <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted - foreground" />;
             <Input;
               type="search";
@@ -455,7 +436,6 @@ const getCategoryBadge = (category:,  string) =>: any {
           Next
         </Button>
       </div>
-=======
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />;
             <Input;
               type="search";
@@ -512,4 +492,3 @@ const getCategoryBadge = (category:,  string) =>: any {
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

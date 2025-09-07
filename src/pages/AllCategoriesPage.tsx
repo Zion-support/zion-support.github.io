@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react''
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API,
@@ -80,7 +79,6 @@ const categories = [;
     color: undefined, // Let CategoryCard use default color;
   },;
   {;
-=======
 import { CategoryCard } from "@/components/CategoryCard",
 import { GradientHeading } from "@/components/GradientHeading",
 import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
@@ -151,7 +149,6 @@ const categories = [;
     color: undefined, // Let CategoryCard use default color;
   },;
   {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     title: "Talents",;
     description: "Connect with AI experts, developers, and tech specialists",;
     icon: <Users className="w-10 h-10" />,;
@@ -177,11 +174,8 @@ export default function AllCategoriesPage() {;
     <div className="min-h-screen bg-zion-blue">;
       <div className="container mx-auto px-4 py-12">;
         <div className="text-center mb-12">;
-<<<<<<< HEAD
           <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">;",
-=======
           <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             All Categories;
           </GradientHeading>;
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;
@@ -190,20 +184,14 @@ export default function AllCategoriesPage() {;
           </p>;
         </div>;
         <ErrorBoundary>;
-<<<<<<< HEAD
-=======
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
             {categories.map((category) => (;
               <CategoryCard;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 key={category.title}
                 title={category.title}
                 description={category.description}
                 icon={category.icon}
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 // The CategoryCard itself is a Link to its specific category page;
                 // So we don't pass the category.link to a 'to' prop here directly;
                 // The 'link' in the categories array above is used by CategoryCard's internal Link;
@@ -215,7 +203,6 @@ export default function AllCategoriesPage() {;
     </div>;
   );
 }
-<<<<<<< HEAD
         <ErrorBoundary>;
           <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
             {categories.map (category => (
@@ -253,6 +240,4 @@ export default function AllCategoriesPage() {;
 }
 ;
 }))]
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

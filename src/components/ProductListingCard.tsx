@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -744,7 +743,6 @@ ProductListingCard.displayName = 'ProductListingCard';
                 variant="outline" "
                 onClick={handleRequestQuote}
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground""
-=======
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
@@ -1084,7 +1082,6 @@ const ProductListingCardComponent = ({;
                 variant="outline" 
                 onClick={handleRequestQuote}
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >
                 Request Quote
               </Button>
@@ -1092,11 +1089,8 @@ const ProductListingCardComponent = ({;
           <div className="flex gap-2">;
             <Button;
               size="sm";
-<<<<<<< HEAD
               className="bg-primary hover: bg-primary/80 text-primary-foreground";",
-=======
               className="bg-primary hover: bg-primary/80 text-primary-foreground";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               onClick={(e) => {;
                 e.stopPropagation(), // Prevent card click event;
                 addToCart();
@@ -1118,11 +1112,8 @@ const ProductListingCardComponent = ({;
             <Button;
               size="sm";
               variant="default";
-<<<<<<< HEAD
               className="bg-green-600 hover: bg-green-700 text-white";",
-=======
               className="bg-green-600 hover: bg-green-700 text-white";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               onClick={(e) => {;
                 e.stopPropagation(), // Prevent card click event;
                 // Add to cart first, then redirect to checkout;
@@ -1150,7 +1141,6 @@ const ProductListingCardComponent = ({;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
           </div>;
         </div>;
       </div>;
@@ -1170,8 +1160,6 @@ ProductListingCard.display_name = 'ProductListingCard';
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
 }}}}}}}}
-=======
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

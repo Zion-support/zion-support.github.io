@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
   },
   return (
@@ -120,7 +119,6 @@ if ( {) {
                 Technical Details
               </summary>
               <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">"
-=======
 import React from 'react',;
 import Link from 'next/link',;
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary',;
@@ -185,12 +183,10 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
                 Technical Details
               </summary>
               <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 {error.message}
               </pre>;
             </details>;
           )}
-<<<<<<< HEAD
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6">"
             <button
@@ -323,7 +319,6 @@ function PageErrorBoundary() {
               className='text-blue-400 hover:underline'>;',
               support@zion && zion.tech;
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)`
-=======
 ;
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -382,7 +377,6 @@ function PageErrorBoundary() {
       </div>
     </div>
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             <button;
               onClick={handleRefresh}
@@ -391,16 +385,13 @@ function PageErrorBoundary() {
               <RefreshCw className="w-4 h-4 mr-2" />;
               Try Again;
             </button>;
-<<<<<<< HEAD
             <Link ;
               href="/";
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors";" />;
-=======
             <Link;
               href="/";
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors";
             >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <Home className="w-4 h-4 mr-2" />;
               Go Home;
             </Link>;
@@ -409,7 +400,6 @@ function PageErrorBoundary() {
           <div className="border-t pt-6">;
             <h3 className="font-semibold text-gray-900 mb-3">You can also visit:</h3>;
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">;
-<<<<<<< HEAD
               <Link href="/marketplace" className="text-blue-600 hover:underline" />;",
                 Marketplace;
               </Link>;
@@ -420,7 +410,6 @@ function PageErrorBoundary() {
                 Services;
               </Link>;
               <Link href="/about" className="text-blue-600 hover:underline" />;",
-=======
               <Link href="/marketplace" className="text-blue-600 hover:underline">;
                 Marketplace;
               </Link>;
@@ -431,7 +420,6 @@ function PageErrorBoundary() {
                 Services;
               </Link>;
               <Link href="/about" className="text-blue-600 hover:underline">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 About;
               </Link>;
             </div>;
@@ -442,20 +430,14 @@ function PageErrorBoundary() {
           <p className="mb-3">Need help? Contact our support team</p>;
           <div className="flex flex-col sm: flex-row gap-3 justify-center">;
             <a;
-<<<<<<< HEAD
               href="mailto:support@zion.tech";",
-=======
               href="mailto:support@zion.tech";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               className="text-blue-400 hover:underline";
             >;
               support@zion.tech;
             </a>;
-<<<<<<< HEAD
             <Link href='/status' className='text-blue-400 hover:underline' />;',
-=======
             <Link href="/status" className="text-blue-400 hover:underline">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Service Status;
             </Link>;
           </div>;
@@ -463,7 +445,6 @@ function PageErrorBoundary() {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 interface PageErrorBoundaryProps {;
   children: React && React.ReactNode;,
   pageName?: string;
@@ -519,7 +500,6 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
 }
 }
 }
-=======
 }
 ;
 interface PageErrorBoundaryProps {;
@@ -558,4 +538,3 @@ export default function PageErrorBoundary({;
     </ErrorBoundary>;
   );
 } ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

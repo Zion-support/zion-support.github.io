@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { TalentProfile } from "@/components/profile/TalentProfile","
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState","
 import { ProfileErrorState } from "@/components/profile/ProfileErrorState","
@@ -60,7 +59,6 @@ function TalentProfilePage() {
     ? {
 import { toast } from "@/hooks/use-toast","
 import { SEO } from "@/components/SEO","
-=======
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { TalentProfile } from "@/components/profile/TalentProfile",
@@ -78,7 +76,6 @@ import { useAuth } from "@/hooks/useAuth",
 import { UserProfile } from "@/types/auth",
 import { toast } from "@/hooks/use-toast",
 import { SEO } from "@/components/SEO",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default function TalentProfilePage() {
   const router = useRouter(),
   // Get id from Next.js router query params
@@ -88,25 +85,21 @@ export default function TalentProfilePage() {
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
   const { userDetails } = useAuthStatus(),
   const { isAuthenticated, user } = useAuth(),
-<<<<<<< HEAD
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user ? {,
     id: user.id || '','
     displayName: user.displayName || '','
     email: user.email || '', // Ensure email is always a string'
-=======
 
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user ? {
     id: user.id || '',
     displayName: user.displayName || '',
     email: user.email || '', // Ensure email is always a string
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     userType: user.userType || null,
     profileComplete: user.profileComplete || false,
     created_at: user.created_at || new Date().toISOString(),
     updated_at: user.updatedAt || new Date().toISOString(),
-<<<<<<< HEAD
     role: user.role || '','
     name: user.name || '','
     points: user.points || 0
@@ -121,7 +114,6 @@ export default function TalentProfilePage() {
     role: '', // Default empty string since userDetails doesn't have this property'
     name: '','
     points: 0
-=======
     role: user.role || '',
     name: user.name || '',
     points: user.points || 0
@@ -138,12 +130,10 @@ export default function TalentProfilePage() {
     points: 0
   },
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   // Handle loading error gracefully
   useEffect(() => {
     if (error) {
       toast({
-<<<<<<< HEAD
         title: 'Error loading profile','
         description:
           'There was a problem loading this talent profile. Please try again.'',
@@ -693,7 +683,6 @@ export default function TalentProfilePage() {;
     </>);
 }
 ;
-=======
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"})
@@ -862,4 +851,3 @@ export default function TalentProfilePage() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

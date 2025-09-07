@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -287,7 +286,6 @@ if ( {) {
 }
 ;
 export default ApiDocsLayout;]
-=======
 
 import { SearchSuggestion } from "@/types/search",
 import React, { useState } from "react",
@@ -412,4 +410,3 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
 }
 ;
 export default ApiDocsLayout;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

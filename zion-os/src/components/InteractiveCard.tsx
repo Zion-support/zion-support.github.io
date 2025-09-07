@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   children?: React.ReactNode;
 }
 export default function InteractiveCard({title;
@@ -38,8 +37,6 @@ function InteractiveCard() {
 >;
       <div className=&quot;relative & quot;>;
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 'use client',;
 import React, { useState } from 'react',;
 import Link from 'next/link',;
@@ -51,7 +48,6 @@ interface InteractiveCardProps {;
   color?: string,;
   className?: string,;
   children?: React.ReactNode;
-<<<<<<< HEAD
 }
 ;
 export default function InteractiveCard({;
@@ -262,7 +258,6 @@ export function TestimonialCard({;
   )
 }
 }
-=======
 }
 ;
 export default function InteractiveCard({;
@@ -403,4 +398,3 @@ export function TestimonialCard({;
     </div>
   )
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

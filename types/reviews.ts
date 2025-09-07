@@ -13,7 +13,6 @@ export type ReviewCategoryScores = {;
 
 
 export type ProjectStatus = 'InProgress' | 'Completed';
-<<<<<<< HEAD
 export type Project = {
 
 export interface Review {
@@ -32,7 +31,6 @@ export interface Review {
 
 
 
-=======
 export type Project = {;
   id: string;
   clientId: string, // slug for client/user;
@@ -43,12 +41,10 @@ export type Project = {;
 };
 export type ReviewRole = 'client' | 'talent';
 export type ReviewCategoryScores = {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   communication?: number, // 1-5 optional;
   qualityOfWork?: number, // 1-5 optional;
   timeliness?: number, // 1-5 optional;
   wouldWorkWithAgain?: boolean, // optional;
-<<<<<<< HEAD
 
 },;
 export type Review = {;
@@ -95,18 +91,15 @@ export type PublicReview = Omit<Review, 'fromId'> & { authorName: string }
 
 
 
-=======
 };
 export type Review = {;
   id: string;
   projectId: string;
   fromRole: ReviewRole;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   fromId: string, // clientId or talentSlug depending on fromRole;
   toRole: ReviewRole, // opposite of fromRole;
   toId: string, // target id (talentSlug or clientId);
   rating: number, // 1-5;
-<<<<<<< HEAD
 
 
   text: string;
@@ -230,7 +223,6 @@ export interface ReviewSummary {
   };
 }
 
-=======
   text: string;
   categories?: ReviewCategoryScores;
   anonymous?: boolean;
@@ -247,4 +239,3 @@ export type ReviewsSummary = {;
   totalCompletedProjects: number;
   mostRecent: PublicReview[];
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

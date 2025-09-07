@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Header } from '@/components / Header';
 import { NextSeo } from '@/components / NextSeo';
@@ -68,8 +67,6 @@ interface FeedItem {;
     const y = ((90 -,  lat) / 180) * height
     return { x, y }
   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { NextSeo } from '@/components/NextSeo',;
@@ -87,11 +84,8 @@ interface Instance {;
   region: string;
 }
 ;
-<<<<<<< HEAD
 const INSTANCES: Instance[] = [;,
-=======
 const INSTANCES: Instance[] = [;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   {;
     id: 1,;
     name: 'Zion LATAM',;
@@ -127,7 +121,6 @@ interface FeedItem {;
   text: string;
 }
 ;
-<<<<<<< HEAD
 export default function GlobalMapPage() {;,
   const [feed, setFeed] = useState<FeedItem[]>([]),;
   useEffect(() => {;
@@ -136,7 +129,6 @@ export default function GlobalMapPage() {;,
         'ZionGPT upgraded to v1.7 in EgyptProposal #121 passed in Zion DevOpsNew franchise deployed: Zion Indonesia'],;
       const id = Date.now(),;,
       const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress',;,
-=======
 export default function GlobalMapPage() {;
   const [feed, setFeed] = useState<FeedItem[]>([]),;
   useEffect(() => {;
@@ -145,14 +137,12 @@ export default function GlobalMapPage() {;
         'ZionGPT upgraded to v1.7 in EgyptProposal #121 passed in Zion DevOpsNew franchise deployed: Zion Indonesia'],;
       const id = Date.now(),;
       const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress',;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       setFeed((f) => [{ id, text }, ...f].slice(0, 5));
     }, 5000),;
     return () => clearInterval(interval);
   }, []),;
   const width = 800,;
   const height = 400,;
-<<<<<<< HEAD
   function project(lat: number, lng:,  number) {;,
     const x = ((lng + 180) / 360) * width,;
     const y = ((90 -,  lat) / 180) * height,;
@@ -180,7 +170,6 @@ export default function GlobalMapPage() {;
             {INSTANCES.map((i) => {
               const { x, y } = project(i.lat, i.lng),
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500','
-=======
   function project(lat: number, lng: number) {;
     const x = ((lng + 180) / 360) * width,;
     const y = ((90 - lat) / 180) * height,;
@@ -201,13 +190,11 @@ export default function GlobalMapPage() {;
             {INSTANCES.map((i) => {
               const { x, y } = project(i.lat, i.lng),
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               return (
                 <TooltipProvider key={i.id}>
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <div
-<<<<<<< HEAD
                         className={`absolute ${color} rounded-full p-1`}`
                         style={{ left: x, top: y }}
                       >
@@ -217,7 +204,6 @@ export default function GlobalMapPage() {;
                     <TooltipContent>
                       <div className="text-sm space-y-1">"
                         <div className="font-semibold">{i.name}</div>"
-=======
                         className={`absolute ${color} rounded-full p-1`}
                         style={{ left: x, top: y }}
                       >
@@ -227,7 +213,6 @@ export default function GlobalMapPage() {;
                     <TooltipContent>
                       <div className="text-sm space-y-1">
                         <div className="font-semibold">{i.name}</div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         <div>Talent: {i.talent}</div>
                         <div>Governance: {i.governance}</div>
                         <div>Passed Votes: {i.votesPassed}</div>
@@ -237,7 +222,6 @@ export default function GlobalMapPage() {;
                   </Tooltip>
                 </TooltipProvider>
               )
-<<<<<<< HEAD
       />;
       <Header />;
       <main className='py-10 container mx-auto space-y-8'>;
@@ -282,7 +266,6 @@ export default function GlobalMapPage() {;
               <ul className="space-y-1">"
                 {topRegions.map((r) => (
                   <li key={r.id} className="flex justify-between border-b pb-1">"
-=======
             })}
           </div>
           <div className="flex-1 space-y-6">
@@ -291,7 +274,6 @@ export default function GlobalMapPage() {;
               <ul className="space-y-1">
                 {topRegions.map((r) => (
                   <li key={r.id} className="flex justify-between border-b pb-1">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     <span>{r.region}</span>
                     <span>{r.talent}</span>
                   </li>
@@ -299,19 +281,16 @@ export default function GlobalMapPage() {;
               </ul>
             </section>
             <section>
-<<<<<<< HEAD
 ;
 }
               <h2 className="text-xl font-semibold mb-2">Live Feed</h2>"
               <ul className="space-y-1">"
                 {feed.map((f) => (
                   <li key={f.id} className="text-sm">{f.text}</li>"
-=======
               <h2 className="text-xl font-semibold mb-2">Live Feed</h2>
               <ul className="space-y-1">
                 {feed.map((f) => (
                   <li key={f.id} className="text-sm">{f.text}</li>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 ))}
               </ul>;
             </section>;
@@ -321,7 +300,6 @@ export default function GlobalMapPage() {;
     </div>;
   );
 }
-<<<<<<< HEAD
   votes_passed: number;,
   votes_pending: number;,
   region: string;,
@@ -467,6 +445,4 @@ function project() {
 ;
 ;
 }}})
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

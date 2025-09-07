@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Spinner.displayName = 'Spinner''
 export default Spinner; import React from 'react''
 import { Loader2 } from 'lucide-react''
@@ -26,15 +25,12 @@ import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from 'react',;
 import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {;
   size?: number | string;
 }
-<<<<<<< HEAD
 const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
   ({ className, size = 24, ...props }, ref,) => (
     <Loader2
@@ -65,7 +61,6 @@ Spinner.display_name = 'Spinner','
 export default Spinner,
 ;
 }
-=======
 ;
 const Spinner = React.forwardRef<SVGSVGElement SpinnerProps>(;
   ({ className, size = 24, ...props }, ref) => (;
@@ -80,4 +75,3 @@ const Spinner = React.forwardRef<SVGSVGElement SpinnerProps>(;
 ),;
 Spinner.displayName = 'Spinner';
 export default Spinner;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 export interface Version {
@@ -74,10 +73,8 @@ export interface Version {
 };
 
 }
-=======
 import { MultiverseState } from "./types";
 export function nextVersionFor(state: MultiverseState, entityKey: string): number {;
   const current = state.latestVersionByEntityId[entityKey] || 0;
   return current + 1;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

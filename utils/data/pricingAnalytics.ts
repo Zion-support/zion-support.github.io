@@ -1,5 +1,4 @@
 // Stub pricing analytics utility - placeholder for missing functionality;
-<<<<<<< HEAD
 
 
 
@@ -90,7 +89,6 @@ export const trackPricingRequest = async (data: any) => {;
 };
 
 
-=======
 export const trackPricingRequest = async (data: any) => {;
   // Placeholder implementation;
   return { success: true }
@@ -99,4 +97,3 @@ export const getPricingMetrics = async () => {;
   // Placeholder implementation;
   return { metrics: {}, success: true }
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

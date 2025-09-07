@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Fraud detection types
 export type AdminActionType =
   | "ban_user"
@@ -134,7 +133,6 @@ threshold: number,
 
 }
 }
-=======
 export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'review';
 export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
 export interface FraudEvent {;
@@ -202,4 +200,3 @@ export interface MonthlyReport {;
   falsePositives: number, // count of IGNORED actions;
   topReasons: Array<{ reason: string, count: number }>;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

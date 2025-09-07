@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <div className='relative'>;
       <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
@@ -111,7 +110,6 @@ export function StepProgress({ currentStep }:,  StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" : "
                   status === "current" ? "text-white" : "
                   "text-zion-slate-light""
-=======
 
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from 'lucide-react'
@@ -174,7 +172,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
                   "text-zion-slate-light"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { QuoteRequestSteps } from "../QuoteRequestForm",;
 import { CheckIcon } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -182,18 +179,14 @@ interface StepProgressProps {;
   currentStep: QuoteRequestSteps;
 }
 ;
-<<<<<<< HEAD
 export function StepProgress({ currentStep }:,  StepProgressProps) {;
   const steps: { id: QuoteRequestSteps, label: string }[] = [;,
-=======
 export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps, label: string }[] = [;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     { id: "service", label: "Service" },;
     { id: "details", label: "Details" },;
     { id: "timeline", label: "Timeline" },;
     { id: "budget", label: "Budget" },;
-<<<<<<< HEAD
     { id: "summary", label: "Summary" }"
   ],;
   const getStepStatus = (stepId:,  QuoteRequestSteps) => {;,
@@ -201,7 +194,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     const currentStepOrder = steps.findIndex(s => s.id ===,  currentStep),;
     if (stepOrder <,  currentStepOrder) return "complete",;
     if (stepOrder ===,  currentStepOrder) return "current",;
-=======
     { id: "summary", label: "Summary" }
   ],;
   const getStepStatus = (stepId: QuoteRequestSteps) => {;
@@ -209,7 +201,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),;
     if (stepOrder < currentStepOrder) return "complete",;
     if (stepOrder === currentStepOrder) return "current",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     return "upcoming";
   },;
   return (;
@@ -218,11 +209,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
         <div;
           className="absolute h-full bg-zion-purple transition-all duration-500";
           style={{;
-<<<<<<< HEAD
             width: `${(steps.findIndex(s => s.id ===,  currentStep) / (steps.length - 1)) * 100}%`;`
-=======
             width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           }}
         />;
       </div>;
@@ -261,7 +249,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
   (steps && steps.findIndex (s => s && s.id ===,  currentStep) / (steps && steps.length - 1) ) * 100 ;
 }%` ;`
 }/> </div> ;
@@ -376,7 +363,5 @@ if (return "current", ) {"
     </div>);
 }
 ;]
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

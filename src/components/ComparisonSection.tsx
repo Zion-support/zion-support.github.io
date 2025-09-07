@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export function ComparisonSection() {
   return (
     <section className='py-20 bg-zion-blue-dark'>'
@@ -188,7 +187,6 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>"
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>"
                   </TableRow>
-=======
 
 import { GradientHeading } from "./GradientHeading",
 import { Button } from "./ui/button",
@@ -229,13 +227,11 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </TableRow>
                 ))}
               </TableBody>
             </Table>
           </div>
-<<<<<<< HEAD
           <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">"
             <div className="flex items-start">"
               <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />"
@@ -247,7 +243,6 @@ export function ComparisonSection() {
             </div>
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">",
               Calculate Your Savings
-=======
 
           <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">
             <div className="flex items-start">
@@ -260,14 +255,12 @@ export function ComparisonSection() {
             </div>
             
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Calculate Your Savings
             </Button>
           </div>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
 import { Button } from './ui/button';
 import { CheckCircle2 } from 'lucide-react';
@@ -308,7 +301,6 @@ export function ComparisonSection() {;
               </TableHeader>;
               <TableBody>;
                 {[                <TableRow className="border-b border-zion-purple/20">;,
-=======
   )
 import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button",;
@@ -329,12 +321,10 @@ export function ComparisonSection() {;
             <Table>;
               <TableHeader>;
                 <TableRow className="border-b border-zion-purple/20">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <TableHead className="text-white">Service</TableHead>;
                   <TableHead className="text-white text-center">Traditional Providers</TableHead>;
                   <TableHead className="text-white text-center">With Zion</TableHead>;
                   <TableHead className="text-white text-center">Savings</TableHead>;
-<<<<<<< HEAD
               </TableHeader>;
               <TableBody>;,
                 {[;
@@ -388,7 +378,6 @@ export function ComparisonSection() {;
                     <TableCell className="text-center text-zion-slate-light">{item && item.traditional}</TableCell>;
                     <TableCell className="text-center text-zion-cyan font-semibold">{item && item.zion}</TableCell>;
                     <TableCell className="text-center text-green-400 font-bold">{item && item.savings}</TableCell>;
-=======
                 </TableRow>;
               </TableHeader>;
               <TableBody>;
@@ -404,12 +393,10 @@ export function ComparisonSection() {;
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>;
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>;
                   </TableRow>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 ))}
               </TableBody>;
             </Table>;
           </div>;
-<<<<<<< HEAD
           <div className='mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20'>;
             <div className='flex items-start'>;
               <CheckCircle2 className='mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1' />;
@@ -453,7 +440,6 @@ export function ComparisonSection() {;
               </p>;
             </div>;
             <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white whitespace - nowrap">;
-=======
           <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">;
             <div className="flex items-start">;
               <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />;
@@ -465,20 +451,16 @@ export function ComparisonSection() {;
             </div>;
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">;
               Calculate Your Savings;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
   );
 }
     </section>);
 }
 }}}}}})))))))))))
-=======
     </section>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Card from '../components/Card';
 const About: React.FC = () => {,
@@ -35,7 +34,6 @@ const About: React.FC = () => {,
   );
 };
 export default About;
-=======
 
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -505,4 +503,3 @@ export default function About() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

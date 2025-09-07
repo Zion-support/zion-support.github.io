@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <>;
       <SEO
@@ -28,7 +27,6 @@ return (
               className='object-cover''
             <Button size="lg" className="bg-zion-purple text-white" asChild>"
               <Link href="/open-app" />Try ZionGPT Now</Link>"
-=======
 import React, { useEffect } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -100,18 +98,14 @@ export default function AIPoweredContent() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Try ZionGPT Now</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>
           </div>
         </div>
       </main>
     </>
-<<<<<<< HEAD
 ;
 }
-=======
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -132,11 +126,8 @@ export default function AIPoweredContent() {;
   const { markAiExplored } = useAdvancedOnboardingStatus();
   useEffect(() => {;
     markAiExplored();
-<<<<<<< HEAD
   }, [markAiExplored]);,
-=======
   }, [markAiExplored]);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (;
     <>;
       <SEO;
@@ -159,16 +150,12 @@ export default function AIPoweredContent() {;
           </p>;
           <div className="relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden">;
             <img;
-<<<<<<< HEAD
               src="https: //placehold.co/800x400";",
-=======
               src="https: //placehold.co/800x400";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               alt="Screenshot of ZionGPT content tool";
               className="object-cover";
             />;
           </div>;
-<<<<<<< HEAD
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>;
           <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>;
 import React, { useEffect } from 'react';
@@ -248,7 +235,6 @@ function AIPoweredContent() {
               </p>;
             </div>;
           </div>;
-=======
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;
             <li>Save time drafting marketing content for your products or services.</li>;
@@ -269,17 +255,13 @@ function AIPoweredContent() {
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
               <Link href="/open-app">Try ZionGPT Now</Link>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
 ;
 }})))
-=======
     </>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

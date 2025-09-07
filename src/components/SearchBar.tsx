@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react''
 import { Input } from '@/components/ui/input''
@@ -106,7 +105,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           setSuggestions(data.slice(0, 5))
         } else {
           setSuggestions([]),
-=======
 import React, { useState, useEffect, useRef } from 'react',;
 import { useRouter } from 'next/router',;
 import { Search, X } from 'lucide-react';
@@ -170,12 +168,10 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           setSuggestions(data.slice(0, 5));
         } else {;
           setSuggestions([]);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         }
         setHighlightedIndex(-1)
       })
       .catch(() => setSuggestions([])),
-<<<<<<< HEAD
     return () => controller.abort() }, [debounced]),
   useOnClickOutside(containerRef, () => {
     setFocused(false)
@@ -813,7 +809,6 @@ if ( {) {
 }
 ;
 }}}}}}}}}}}}}}}
-=======
     return () => controller.abort()
   }, [debounced]),
 
@@ -944,4 +939,3 @@ if ( {) {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

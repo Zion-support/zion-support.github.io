@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface Speaker {
   name: string,
   title: string,
@@ -14,11 +13,9 @@ interface Speaker {
   twitter?: string
 import Image from "next/image","
 import { Twitter, Linkedin } from 'lucide-react''
-=======
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface Speaker {
   name: string,
   title: string,
@@ -26,7 +23,6 @@ interface Speaker {
   twitter?: string,
   linkedin?: string
 }
-<<<<<<< HEAD
   name: string,
   title: string,
   avatar: string,
@@ -49,7 +45,6 @@ interface Speaker {
 const speakers: Speaker[] = [,
   {
 }]
-=======
 
 const speakers: Speaker[] = [
   {
@@ -137,4 +132,3 @@ export function SpeakersSection() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

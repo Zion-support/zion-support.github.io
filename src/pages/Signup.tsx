@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
@@ -1097,7 +1096,6 @@ const Signup = () => {;
   );
 }
 ;
-=======
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from react-router-dom;
 import { useFormik } from 'formik',;
@@ -1553,4 +1551,3 @@ export default function Signup() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

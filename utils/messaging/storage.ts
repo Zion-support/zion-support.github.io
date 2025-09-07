@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   conversation_id: string;  sender_id: string;
   recipient_id: string;
@@ -1233,7 +1232,6 @@ if ( { // 7 days) {
 
   }
 
-=======
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -1407,4 +1405,3 @@ export function sendMessage(input: NewMessageInput): { conversation: Conversatio
   writeJson(CONVERSATIONS_FILE, conversations);
   return { conversation, message }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

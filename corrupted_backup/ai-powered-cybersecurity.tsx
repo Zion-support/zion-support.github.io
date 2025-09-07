@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/ai-powered-cybersecurity.tsx
 import React from 'react',
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
@@ -35,12 +34,10 @@ export default function AIPoweredCybersecurityPage() {
 		</>;
 	);
 }
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-<<<<<<< HEAD
 export default function AIPoweredCybersecurityPage() {
   return (
     <>
@@ -82,7 +79,6 @@ export default function AIPoweredCybersecurityPage() {
     </>
   );
 }
-=======
 const AIPoweredCybersecurity: React.FC = () => {
   return (
     <Layout>
@@ -159,5 +155,3 @@ const AIPoweredCybersecurity: React.FC = () => {
 };
 
 export default AIPoweredCybersecurity;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-powered-cybersecurity.tsx

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -53,7 +52,6 @@ function SignUpForm() {
           name: formData.name})
         if (result?.error) {
           throw new Error(result.error as,  any), // Cast to any if type is AuthError
-=======
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
@@ -153,7 +151,6 @@ export function SignUpForm() {;
     } else if (!strongPasswordRegex.test(formData.password)) {;
       errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.';
     }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
     if (Object.keys(errors).length > 0) {;
       setFieldErrors(errors),;
@@ -167,23 +164,17 @@ export function SignUpForm() {;
         const result = await signUp(formData.email, formData.password, {;
           name: formData.name}),;
         if (result?.error) {;
-<<<<<<< HEAD
           throw new Error(result.error as,  any), // Cast to any if type is AuthError;
         }
-=======
           throw new Error(result.error as any), // Cast to any if type is AuthError;
         }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         if (result?.emailVerificationRequired) {
           setShowVerificationMessage(true)
         } else {
           // Only navigate if email verification is not required
-<<<<<<< HEAD
           router.push("/mobile")"
-=======
           router.push("/mobile")
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
         if (result?.emailVerificationRequired) {;
           setShowVerificationMessage(true);
@@ -196,7 +187,6 @@ export function SignUpForm() {;
         if (error) {;
           throw new Error(error);
         }
-<<<<<<< HEAD
         router.push("/mobile")"
 ;
         router.push("/mobile");
@@ -206,7 +196,6 @@ export function SignUpForm() {;
       setError(err.message |'An unexpected error occurred. Please try again.')'
     } finally {
       setIsLoading(false)
-=======
         
         router.push("/mobile")
 ;
@@ -217,13 +206,11 @@ export function SignUpForm() {;
       setError(err.message || 'An unexpected error occurred. Please try again.');
     } finally {;
       setIsLoading(false);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     }
   };
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
-<<<<<<< HEAD
     } catch (err:,  any) {;,
       setError(err.message);
     }
@@ -249,7 +236,6 @@ export function SignUpForm() {;
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">"
             <path d="M24 12.073c0-5.8-4.85-10.5-10.826-10.5-6.02 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.041h2.696V9.898c0-2.586 1.581-4.016 4.003-4.016 1.159 0 2.37.204 2.37.204v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.04h-2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />"
-=======
     } catch (err: any) {;
       setError(err.message);
     }
@@ -282,12 +268,10 @@ export function SignUpForm() {;
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <path d="M24 12.073c0-5.8-4.85-10.5-10.826-10.5-6.02 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.041h2.696V9.898c0-2.586 1.581-4.016 4.003-4.016 1.159 0 2.37.204 2.37.204v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.04h-2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </svg>
           Continue with Facebook
         </Button>
       </div>
-<<<<<<< HEAD
       <div className="relative flex items-center">"
         <div className="flex-grow border-t border-border"></div>"
         <span className="mx-2 text-xs text-muted-foreground">OR</span>"
@@ -359,7 +343,6 @@ export function SignUpForm() {;
             <Input
               id="name""
               name="name""
-=======
 
       <div className="relative flex items-center">
         <div className="flex-grow border-t border-border"></div>
@@ -392,12 +375,10 @@ export function SignUpForm() {;
             <Input
               id="name"
               name="name"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               value={formData.name}
               onChange={handleInputChange}
               required;
               aria-invalid={!!fieldErrors.name}
-<<<<<<< HEAD
               placeholder="Enter your full name""
             />
             {fieldErrors.name && (
@@ -413,7 +394,6 @@ export function SignUpForm() {;
             id="email""
             name="email""
             type="email""
-=======
               placeholder="Enter your full name"
             />
             {fieldErrors.name && (
@@ -428,12 +408,10 @@ export function SignUpForm() {;
             id="email"
             name="email"
             type="email"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             value={formData.email}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.email}
-<<<<<<< HEAD
             placeholder="Enter your email""
           />;
           {fieldErrors && fieldErrors.email && (;
@@ -446,7 +424,6 @@ export function SignUpForm() {;
             id="password""
             name="password""
             type="password""
-=======
             placeholder="Enter your email"
           />
           {fieldErrors.email && (
@@ -460,12 +437,10 @@ export function SignUpForm() {;
             id="password"
             name="password"
             type="password"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             value={formData.password}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.password}
-<<<<<<< HEAD
             placeholder="Create a password""
           />;
           <PasswordStrengthMeter password={formData && formData.password} />;
@@ -585,7 +560,6 @@ export function SignUpForm() {;
         <Link ;
           href="/login";
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer";" />;,
-=======
             placeholder="Create a password"
           />
           <PasswordStrengthMeter password={formData.password} />
@@ -619,13 +593,11 @@ export function SignUpForm() {;
           href="/login";
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer";
         >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Sign In;
         </Link>;
       </p>;
     </div>;
   );
-<<<<<<< HEAD
   error;
 }= await login (form_data.email, form_data.password);
 // Check condition
@@ -660,7 +632,5 @@ if ( {) {
 }"}"
 }
 ;
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

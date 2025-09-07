@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 return (
     <Card className="bg-zion-blue border-zion-purple/30">"
       <CardHeader>
         <CardTitle className="text-lg">App Screenshots</CardTitle>"
       </CardHeader>
       <CardContent>
-=======
 
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -25,12 +23,10 @@ interface ScreenshotManagerProps {;
   platform: AppPlatform;
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 type Screenshot = {;
   id: string,;
   url: string,;
   file: File;
-<<<<<<< HEAD
 };
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);,
@@ -77,7 +73,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   },;
   const handleDragOver = (e: React && React.DragEvent,) => {;
     e && e.preventDefault(),;
-=======
 },;
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]),;
@@ -147,13 +142,11 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   },;
   const handleDragOver = (e: React.DragEvent) => {;
     e.preventDefault(),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     setIsDragging(true);
   },;
   const handleDragLeave = () => {;
     setIsDragging(false);
   },;
-<<<<<<< HEAD
   const handleDrop = (e: React && React.DragEvent,) => {;
     e && e.preventDefault(),;
     setIsDragging(false),;
@@ -182,7 +175,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               ? "border-zion-cyan bg-zion-cyan/10" "
               : "border-zion-purple/30""
           }`}`
-=======
   const handleDrop = (e: React.DragEvent) => {;
     e.preventDefault(),;
     setIsDragging(false),;
@@ -203,16 +195,13 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               ? "border-zion-cyan bg-zion-cyan/10" 
               : "border-zion-purple/30"
           }`}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
         >
-<<<<<<< HEAD
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />"
           <p className="text-sm mb-2">Drag & drop screenshots here</p>"
           <input))
-=======
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
           <input
@@ -263,4 +252,3 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     </Card>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from "react""
 import * as DialogPrimitive from "@radix-ui/react-dialog""
 import { X } from 'lucide-react''
@@ -42,7 +41,6 @@ const DialogContent = React && React.forwardRef<;
       className={cn(
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg'',
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0","
-=======
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { X } from 'lucide-react'
@@ -65,7 +63,6 @@ const DialogOverlay = React.forwardRef<
     ref={ref}
     className={cn(
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
@@ -81,7 +78,6 @@ const DialogContent = React.forwardRef<;
     <DialogPrimitive.Content;
       ref={ref}
       className={cn(
-<<<<<<< HEAD
         "fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg","
         className
       )}
@@ -91,7 +87,6 @@ const DialogContent = React.forwardRef<;
       <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">",
         <X className="h-4 w-4" />"
         <span className="sr-only">Close</span>"
-=======
         "fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg",
         className
       )}
@@ -101,25 +96,20 @@ const DialogContent = React.forwardRef<;
       <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>
 ))
-<<<<<<< HEAD
 const DialogHeader = ({
   className
-=======
 DialogContent.displayName = DialogPrimitive.Content.displayName
 
 const DialogHeader = ({
   className,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-<<<<<<< HEAD
       "flex flex-col space-y-1.5 text-center sm:text-left",",
       className
     )}
@@ -167,7 +157,6 @@ const DialogHeader = ({;
     {...props}
 DialogFooter.displayName = "DialogFooter""
 DialogFooter.displayName = "DialogFooter""
-=======
       "flex flex-col space-y-1.5 text-center sm:text-left",
       className
     )}
@@ -190,13 +179,11 @@ const DialogFooter = ({
 )
 DialogFooter.displayName = "DialogFooter"
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Title
-<<<<<<< HEAD
   />;
 );
 DialogFooter && DialogFooter.displayName = 'DialogFooter';
@@ -238,7 +225,6 @@ const DialogTitle = React.forward_ref<;
   DialogTitle,;
   DialogDescription;
 };
-=======
     ref={ref}
     className={cn(
       "text-lg font-semibold leading-none tracking-tight",
@@ -256,7 +242,6 @@ const DialogDescription = React.forwardRef<;
     ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
     {...props}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   />;
 ));
 DialogDescription.displayName = DialogPrimitive.Description.displayName;
@@ -268,7 +253,6 @@ export {;
   DialogTrigger,;
   DialogContent,;
   DialogHeader,;
-<<<<<<< HEAD
   Dialog,
   DialogPortal,
   DialogOverlay,
@@ -285,9 +269,7 @@ export {;
   DialogDescription}
 ;
 })))))))))
-=======
   DialogFooter;
   DialogTitle;
   DialogDescription}
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

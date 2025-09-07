@@ -996,7 +996,6 @@ switch (command) {}
 }
 module.exports = FileIntegrityMonitor;
 
-=======;
 
 
 

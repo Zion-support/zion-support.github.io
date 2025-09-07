@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     await fetch('/api/referrals/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' };
@@ -60,7 +59,6 @@ export async function triggerReferralEvent(event: ReferralEvent, code?: string) 
       body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
 
 }
-=======
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire';
 export async function triggerReferralEvent(event: ReferralEvent, code?: string) {;
   try {;
@@ -72,4 +70,3 @@ export async function triggerReferralEvent(event: ReferralEvent, code?: string) 
       body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
   } catch {}
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

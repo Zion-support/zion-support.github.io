@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import Link from "next/link",;
@@ -26,8 +25,6 @@ export const metadata = {title: "Zion OS - Sovereign AI-Powered Digital Economie
   description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.";
   keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"}
 export default function ZionOSPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import Link from "next/link",;
 export const metadata = {;
   title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group",;
@@ -37,7 +34,6 @@ export default function ZionOSPage() {;
   return (;
     <div className="min-h-screen">;
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
@@ -52,7 +48,6 @@ export default function ZionOSPage() {;
               Launch Your Economy;
             </Link>;
             <Link href="/docs" className="btn - secondary text - lg px - 8 py - 4">;
-=======
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
           <h1 className="text-5xl md:text-6xl font-bold mb-6">;
@@ -67,13 +62,11 @@ export default function ZionOSPage() {;
               Launch Your Economy;
             </Link>;
             <Link href="/docs" className="btn-secondary text-lg px-8 py-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               View Documentation;
             </Link>;
           </div>;
         </div>;
         {/* Background Elements */}
-<<<<<<< HEAD
         <div className="absolute inset - 0 -z - 10 overflow - hidden">;
           <div className="absolute top - 1/2 left - 1/2 -translate - x-1 / 2 -translate - y-1 / 2 w-[800px] h-[800px] bg - gradient - to - r from - blue - 500 / 20 to - purple - 600 / 20 rounded - full blur - 3xl animate - pulse - slow"></div>;
         </div>;
@@ -94,7 +87,6 @@ export default function ZionOSPage() {;
 
                 Zion OS is a revolutionary platform that enables anyone to create, deploy,;
 
-=======
         <div className="absolute inset-0 -z-10 overflow-hidden">;
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-full blur-3xl animate-pulse-slow"></div>;
         </div>;
@@ -109,12 +101,10 @@ export default function ZionOSPage() {;
               </h2>;
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">;
                 Zion OS is a revolutionary platform that enables anyone to create, deploy,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 and manage sovereign digital economies powered by artificial intelligence.;
                 Our unified deployment protocol makes it possible to launch complex;
                 economic systems in minutes, not months.;
               </p>;
-<<<<<<< HEAD
 
               <p className="text - lg text - gray - 300 leading - relaxed">;
                 Whether you're building a decentralized marketplace, launching a DAO,
@@ -123,15 +113,12 @@ export default function ZionOSPage() {;
 
                 Whether you're building a decentralized marketplace, launching a DAO,;
 
-=======
               <p className="text-lg text-gray-300 leading-relaxed">;
                 Whether you're building a decentralized marketplace, launching a DAO,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 or creating a new token ecosystem, Zion OS provides all the tools you need;
                 to succeed in the digital economy revolution.;
               </p>;
             </div>;
-<<<<<<< HEAD
             <div className="card bg - gradient - to - br from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30 p - 8">;
               <h3 className="text - 2xl font - bold mb - 4">Key Benefits</h3>;
               <ul className="space - y-3 text - gray - 300">;
@@ -156,7 +143,6 @@ export default function ZionOSPage() {;
                 <li className="flex items - center">;
                   <svg className="w - 5 h - 5 text - green - 400 mr - 3" fill="none" stroke="current_color" view_box="0 0 24 24">;
                     <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M5 13l4 4L19 7" />;
-=======
             <div className="card bg-gradient-to-br from-blue-600/20 to-purple-600/20 border-blue-500/30 p-8">;
               <h3 className="text-2xl font-bold mb-4">Key Benefits</h3>;
               <ul className="space-y-3 text-gray-300">;
@@ -181,7 +167,6 @@ export default function ZionOSPage() {;
                 <li className="flex items-center">;
                   <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </svg>;
                   Scalable infrastructure;
                 </li>;
@@ -191,7 +176,6 @@ export default function ZionOSPage() {;
         </div>;
       </section>;
       {/* Core Features */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - blue - 600 / 10 to - purple - 600 / 10">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -211,7 +195,6 @@ export default function ZionOSPage() {;
               </div>;
               <h3 className="text - xl font - semibold mb - 2">Marketplace & Jobs</h3>;
               <p className="text - gray - 400">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -231,12 +214,10 @@ export default function ZionOSPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-2">Marketplace & Jobs</h3>;
               <p className="text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Complete marketplace infrastructure with job posting, talent matching, and project management.;
               </p>;
             </div>;
             <div className="card group">;
-<<<<<<< HEAD
               <div className="w - 12 h - 12 bg - purple - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - purple - 500 / 30 transition - colors">;
                 <svg className="w - 6 h - 6 text - purple - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h - 1M4 12H3m3.343 - 5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11 - 4 0v-.531c0-.895-.356 - 1.754-.988 - 2.386l-.548-.547z" />;
@@ -277,7 +258,6 @@ export default function ZionOSPage() {;
               </div>;
               <h3 className="text - xl font - semibold mb - 2">AI - Powered Tools</h3>;
               <p className="text - gray - 400">;
-=======
               <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">;
                 <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />;
@@ -318,12 +298,10 @@ export default function ZionOSPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-2">AI-Powered Tools</h3>;
               <p className="text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 ZionGPT integration, resume builders, and AI moderation systems for enhanced user experience.;
               </p>;
             </div>;
             <div className="card group">;
-<<<<<<< HEAD
               <div className="w - 12 h - 12 bg - indigo - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - indigo - 500 / 30 transition - colors">;
                 <svg className="w - 6 h - 6 text - indigo - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M4 6a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2H6a2 2 0 01 - 2-2V6zM14 6a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2V6zM4 16a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2H6a2 2 0 01 - 2-2v - 2zM14 16a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2v - 2z" />;
@@ -331,7 +309,6 @@ export default function ZionOSPage() {;
               </div>;
               <h3 className="text - xl font - semibold mb - 2">Modular Architecture</h3>;
               <p className="text - gray - 400">;
-=======
               <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-500/30 transition-colors">;
                 <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />;
@@ -339,7 +316,6 @@ export default function ZionOSPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-2">Modular Architecture</h3>;
               <p className="text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Pick and choose the features you need. Deploy only what matters for your specific use case.;
               </p>;
             </div>;
@@ -347,7 +323,6 @@ export default function ZionOSPage() {;
         </div>;
       </section>;
       {/* How It Works */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -398,7 +373,6 @@ export default function ZionOSPage() {;
 
                 Your economy is ready to go! Start inviting users, launching projects,;
 
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -437,7 +411,6 @@ export default function ZionOSPage() {;
               <h3 className="text-xl font-semibold mb-3">Launch</h3>;
               <p className="text-gray-400">;
                 Your economy is ready to go! Start inviting users, launching projects,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 and building your digital community.;
               </p>;
             </div>;
@@ -445,7 +418,6 @@ export default function ZionOSPage() {;
         </div>;
       </section>;
       {/* Use Cases */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - blue - 600 / 10 to - purple - 600 / 10">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -461,7 +433,6 @@ export default function ZionOSPage() {;
               <h3 className="text - xl font - semibold mb - 3">Startups & Entrepreneurs</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Launch innovative business models with built - in governance;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -477,25 +448,20 @@ export default function ZionOSPage() {;
               <h3 className="text-xl font-semibold mb-3">Startups & Entrepreneurs</h3>;
               <p className="text-gray-400 mb-4">;
                 Launch innovative business models with built-in governance;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 token economics, and marketplace infrastructure.;
               </p>;
             </div>;
             <div className="card">;
-<<<<<<< HEAD
               <h3 className="text - xl font - semibold mb - 3">Enterprises</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Transform traditional business models with AI - powered governance;
-=======
               <h3 className="text-xl font-semibold mb-3">Enterprises</h3>;
               <p className="text-gray-400 mb-4">;
                 Transform traditional business models with AI-powered governance;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 and decentralized marketplace capabilities.;
               </p>;
             </div>;
             <div className="card">;
-<<<<<<< HEAD
               <h3 className="text - xl font - semibold mb - 3">Communities & DAOs</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Build thriving communities with transparent governance;
@@ -512,7 +478,6 @@ export default function ZionOSPage() {;
             <div className="card">;
               <h3 className="text - xl font - semibold mb - 3">Investors & Traders</h3>;
               <p className="text - gray - 400 mb - 4">;
-=======
               <h3 className="text-xl font-semibold mb-3">Communities & DAOs</h3>;
               <p className="text-gray-400 mb-4">;
                 Build thriving communities with transparent governance;
@@ -529,19 +494,15 @@ export default function ZionOSPage() {;
             <div className="card">;
               <h3 className="text-xl font-semibold mb-3">Investors & Traders</h3>;
               <p className="text-gray-400 mb-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Participate in emerging digital economies with transparent;
                 governance and liquid token markets.;
               </p>;
             </div>;
             <div className="card">;
-<<<<<<< HEAD
               <h3 className="text - xl font - semibold mb - 3">Researchers & Academics</h3>;
               <p className="text - gray - 400 mb - 4">;
-=======
               <h3 className="text-xl font-semibold mb-3">Researchers & Academics</h3>;
               <p className="text-gray-400 mb-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Study and experiment with new economic models in a;
                 controlled, scalable environment.;
               </p>;
@@ -550,7 +511,6 @@ export default function ZionOSPage() {;
         </div>;
       </section>;
       {/* Technology Stack */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -595,7 +555,6 @@ export default function ZionOSPage() {;
               </div>;
               <h3 className="text - lg font - semibold mb - 2">AI - Powered</h3>;
               <p className="text - gray - 400 text - sm">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -640,7 +599,6 @@ export default function ZionOSPage() {;
               </div>;
               <h3 className="text-lg font-semibold mb-2">AI-Powered</h3>;
               <p className="text-gray-400 text-sm">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Intelligent governance and automation;
               </p>;
             </div>;
@@ -648,7 +606,6 @@ export default function ZionOSPage() {;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto text - center">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30">;
@@ -664,7 +621,6 @@ export default function ZionOSPage() {;
                 Start Deployment;
               </Link>;
               <Link href="/admin / instances" className="btn - secondary text - lg px - 8 py - 4">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">;
@@ -680,18 +636,14 @@ export default function ZionOSPage() {;
                 Start Deployment;
               </Link>;
               <Link href="/admin/instances" className="btn-secondary text-lg px-8 py-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 View Examples;
               </Link>;
             </div>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
     </div>);
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

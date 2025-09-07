@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/api/whitepaper/share.ts
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
 // In-memory store for demo purposes. Replace with persistent storage in production.
@@ -12,7 +11,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview },
   const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`,
   res.status(200).json({ id, url })
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 // In-memory store for demo purposes. Replace with persistent storage in production.;
@@ -25,7 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview };
   const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;
   res.status(200).json({ id, url });
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/share.ts
 }
 export function getShared(id: string) {
   return store[id]

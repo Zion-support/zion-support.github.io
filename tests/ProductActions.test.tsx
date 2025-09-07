@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-<<<<<<< HEAD
 import { render, screen, fireEvent, waitFor } from '@testing-library/react',;
 import '@testing-library/jest-dom',;
 import { describe, it, expect, vi } from 'vitest',;
@@ -11,7 +8,6 @@ function setup() {;
   render(<ProductActions productId="1" addToCart={addToCart} />),;
   const button = screen.getByRole('button', { name: /add to cart/i }),;
   return { addToCart, button }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 
 
@@ -49,13 +45,9 @@ describe('ProductActions', () => {
     vi.useRealTimers();
   });
 });
-<<<<<<< HEAD
 
 
-=======
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface ProductActions.testProps {
   // Add props here as needed
 }
@@ -68,9 +60,4 @@ export default function ProductActions.test({ }: ProductActions.testProps) {
   );
 }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 'use client',
 import { useState, useEffect } from 'react',
@@ -134,8 +133,6 @@ export default function Header() {;
                     </Link>))}
 role=&quot;banner&quot;
       aria-label=&quot;Main navigation&quot;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 'use client',;
 import { useState, useEffect } from 'react',;
 import Link from 'next/link',;
@@ -175,13 +172,10 @@ export default function Header() {;
       }`}
       role="banner"
       aria-label="Main navigation"
-<<<<<<< HEAD
 role=&quot;banner&quot;
       aria-label=&quot;Main navigation&quot;
       role="banner"
       aria-label="Main navigation"
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -196,10 +190,7 @@ role=&quot;banner&quot;
               </span>
             </Link>
           </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main menu">
             {navigation.map((item) => (
@@ -210,7 +201,6 @@ role=&quot;banner&quot;
                 aria-label={`Navigate to ${item.name} page`}
               >;
                 {item.name}
-<<<<<<< HEAD
 <span className=&quot;absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full&quot;></span>
               </Link>
             ))}
@@ -222,19 +212,14 @@ role=&quot;banner&quot;
                 aria-haspopup=&quot;true&quot;
                 aria-label=&quot;Services menu&quot;
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
 ;
             {/* Services Dropdown */}
             <div className="relative group">
-<<<<<<< HEAD
 <div className=&quot;relative group&quot;>
             <div className="relative group">
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <button 
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
                 aria-expanded="false"
@@ -268,7 +253,6 @@ role=&quot;banner&quot;
             </div>;
           </nav>;
           {/* CTA Button */}
-<<<<<<< HEAD
 
           <div className="hidden lg:flex items-center space-x-4">
 
@@ -295,8 +279,6 @@ role=&quot;banner&quot;
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
 <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
@@ -306,17 +288,14 @@ role=&quot;banner&quot;
               Get Started
             </Link>
           </div>
-<<<<<<< HEAD
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
 className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
-=======
 
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -324,7 +303,6 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               {isMenuOpen ? (
-<<<<<<< HEAD
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
             <Link
@@ -344,8 +322,6 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               {isMenuOpen ? (
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -354,17 +330,13 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
           </button>;
         </div>;
         {/* Mobile Navigation */}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         {isMenuOpen && (
           <div 
             id="mobile-menu"
             className="lg:hidden border-t border-white/10 animate-fade-in"
             role="navigation"
             aria-label="Mobile menu"
-<<<<<<< HEAD
 
           >
             <div className=&quot;px-2 pt-2 pb-3 space-y-1&quot;>
@@ -393,7 +365,6 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
               <div className="px-3 py-2">
                 <div className="text-gray-400 text-sm font-medium mb-2">Services</div>
 
-=======
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
@@ -409,12 +380,10 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
               ))}
               <div className="px-3 py-2">
                 <div className="text-gray-400 text-sm font-medium mb-2">Services</div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 {services.map((service) => (
                   <Link
                     key={service.name}
                     href={service.href}
-<<<<<<< HEAD
                     className=&quot;block px - 3 py - 2 text - gray - 300 hover:text - white hover:bg - white / 5 rounded - lg transition - all duration - 200 & quot;
                     on_click={() => setIsMenuOpen (false)}
                     aria - label={`Navigate to ${service.name} service page`}
@@ -427,7 +396,6 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
               </div>
               <div className="pt-4">
 
-=======
                     className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
                     onClick={() => setIsMenuOpen(false)}
                     aria-label={`Navigate to ${service.name} service page`}
@@ -437,7 +405,6 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                 ))}
               </div>
               <div className="pt-4">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <Link
                   href="/contact"
                   className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
@@ -451,11 +418,8 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
           </div>
         )}
       </div>;
-<<<<<<< HEAD
     </header>);
 }
-=======
     </header>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

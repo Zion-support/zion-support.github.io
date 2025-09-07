@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Loader2 } from 'lucide-react';
 import { ContractFormValues } from '@/components/contracts/components/ContractForm';
 import { ContractTemplate } from '@/types/contracts';
@@ -190,7 +189,6 @@ if ( {) {
                   aria-label='Default template''
                   checked={field && field.value}
                   onCheckedChange={field && field.onChange}                />;
-=======
 
 import { useState } from "react",
 import { useForm, type ControllerRenderProps } from "react-hook-form",
@@ -291,7 +289,6 @@ export function TemplateSaveForm({;
               </FormControl>
               <FormMessage />
             </FormItem>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   };
   return (;
     <Form {...form}>;
@@ -311,7 +308,6 @@ export function TemplateSaveForm({;
         />;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
           name="isDefault""
           render={({ field }: { field: ControllerRenderProps<FormValues "isDefault"> }) => ("
             <FormItem className="flex items-center justify-between">"
@@ -319,7 +315,6 @@ export function TemplateSaveForm({;
               <FormControl>
                 <Switch
                   aria-label="Default template""
-=======
           name="isDefault"
           render={({ field }: { field: ControllerRenderProps<FormValues "isDefault"> }) => (
             <FormItem className="flex items-center justify-between">
@@ -327,7 +322,6 @@ export function TemplateSaveForm({;
               <FormControl>
                 <Switch
                   aria-label="Default template"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           name="isDefault";
           render={({ field }: { field: ControllerRenderProps<FormValues "isDefault"> }) => (;
             <FormItem className="flex items-center justify-between">;
@@ -343,7 +337,6 @@ export function TemplateSaveForm({;
             </FormItem>;
           )}
         />
-<<<<<<< HEAD
         <div className="flex gap-2 justify-end">"
           <Button type="button" variant="outline" onClick={onCancel}>"
             Cancel
@@ -393,7 +386,6 @@ export function TemplateSaveForm({;
 }</Button> </div> </form> </Form>) ;
 }"};
               `${editTemplate ? "Update" : "Save"} Template``
-=======
         
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
@@ -407,14 +399,12 @@ export function TemplateSaveForm({;
               </>
             ) : (
               `${editTemplate ? "Update" : "Save"} Template`
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             )}
           </Button>;
         </div>;
       </form>;
     </Form>;
   );
-<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -431,7 +421,5 @@ if ( {) {
 }"}"
 }
 ;)
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

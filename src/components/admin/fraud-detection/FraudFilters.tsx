@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 resetFilters: () => void
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({,
@@ -246,7 +245,6 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({,
 }
 '"},"
 })
-=======
 
 import React from "react",
 import { Input } from "@/components/ui/input",
@@ -413,4 +411,3 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
     </div>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

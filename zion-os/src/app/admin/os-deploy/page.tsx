@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -792,8 +791,6 @@ className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:bor
 
                 }`}
               >
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import { useState } from "react",;
 import { FeatureKeys } from "@/lib/zod",;
@@ -1184,13 +1181,11 @@ export default function AdminDeployPage() {;
                 {message}
               </div>;
             )}
-<<<<<<< HEAD
           </div>
         </form>
       </div>
     </div>
   );
-=======
           </div>;
         </form>;
       </div>;
@@ -1236,7 +1231,6 @@ function getFeatureDescription(key: string) {;
     case "multi_currency": return "Multi-currency support";
     default: return "Core platform feature";
   }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 }`}>;
                 {message}

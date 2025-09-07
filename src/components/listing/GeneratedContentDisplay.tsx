@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <Badge
                 key={index}
                 className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'>                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
@@ -19,7 +18,6 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[],
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -35,33 +33,28 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 interface GeneratedContent {;
-<<<<<<< HEAD
   description: string,;,
   tags: string[],;
   suggestedPrice: {;,
     min: number,;
     max: number;
   },;,
-=======
   description: string,;
   tags: string[],;
   suggestedPrice: {;
     min: number,;
     max: number;
   },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   keyPoints: string[];
 }
 ;
 interface GeneratedContentDisplayProps {;
-<<<<<<< HEAD
   content: GeneratedContent;,
   onApply: () => void;
 }
@@ -211,7 +204,6 @@ function GeneratedContentDisplay() {
             {content.key_points.map ((point, index) => (
             {content.key_points.map ((point, index, ) => (
               <li key={index}>{point}</li>))}
-=======
   content: GeneratedContent;
   onApply: () => void;
 }
@@ -252,24 +244,20 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </ul>;
         </div>;
       </CardContent>;
       <CardFooter>;
-<<<<<<< HEAD
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white""
         >
           Apply to My Listing
           <ArrowRight className="ml-2 h-4 w-4" />"
-=======
         <Button;
           onClick={onApply}
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
           <ArrowRight className="ml-2 h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </Button>
       </CardFooter>
     </Card>
@@ -283,7 +271,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
     </Card>;
   );
 }
-<<<<<<< HEAD
         <Button;
           on_click={on_apply}
           className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white';
@@ -301,6 +288,4 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 }
 ;
 }}}}}}}}}))))))))))))))
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

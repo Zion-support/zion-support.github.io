@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
     const success = await resolve_dispute (dispute_id, {
       summary: resolution.summary,
@@ -1485,7 +1484,6 @@ const handleResolveDispute = async () => {
 ;
 ;
 }}}}}}})))
-=======
 
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
@@ -2210,4 +2208,3 @@ export function DisputeDetail() {;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

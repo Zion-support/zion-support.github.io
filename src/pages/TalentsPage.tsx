@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let filteredTalents = allTalents
     };
 };
@@ -44,7 +43,6 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         <div className="text-center">"
           <div className="text-2xl font-bold text-orange-400">{stats.totalTalents}</div>"
           <div className="text-sm text-muted-foreground">Total Talents</div>"
-=======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -86,13 +84,11 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         <div className="text-center">
           <div className="text-2xl font-bold text-orange-400">{stats.totalTalents}</div>
           <div className="text-sm text-muted-foreground">Total Talents</div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>
       </div>
     </CardContent>
   </Card>
 ),
-<<<<<<< HEAD
 // Filter and sort controls for talents
 const TalentFilterControls: React.FC<{,
   sortBy: string,
@@ -104,7 +100,6 @@ const TalentFilterControls: React.FC<{,
   specializations: string[],
   showRecommended: boolean,
   setShowRecommended: (show:,  boolean) => void,
-=======
 
 // Filter and sort controls for talents
 const TalentFilterControls: React.FC<{
@@ -117,7 +112,6 @@ const TalentFilterControls: React.FC<{
   specializations: string[],
   showRecommended: boolean,
   setShowRecommended: (show: boolean) => void,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   loading: boolean
 }> = ({
   sortBy,
@@ -131,7 +125,6 @@ const TalentFilterControls: React.FC<{
   setShowRecommended,
   loading
 }) => (
-<<<<<<< HEAD
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">"
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}"
     <div className="flex items-center gap-2">"
@@ -142,7 +135,6 @@ const TalentFilterControls: React.FC<{
         className="bg-background border border-border px-3 py-2 rounded""
       >
         <option value="">All Specializations</option>"
-=======
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
     <div className="flex items-center gap-2">
@@ -153,7 +145,6 @@ const TalentFilterControls: React.FC<{
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">All Specializations</option>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         {specializations.map(spec => (
           <option key={spec} value={spec}>{spec}</option>
         ))}
@@ -164,7 +155,6 @@ const TalentFilterControls: React.FC<{
       <select;
         value={filterAvailability}
         onChange={(e) => setFilterAvailability(e.target.value)}
-<<<<<<< HEAD
         className="bg-background border border-border px-3 py-2 rounded""
       >
         <option value="">All Availability</option>"
@@ -229,7 +219,6 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
         <div className="text-right flex-shrink-0">"
           <div className="text-lg font-bold text-green-600">${talent.hourly_rate}/hr</div>"
           <div className="text-xs text-muted-foreground">"
-=======
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">All Availability</option>
@@ -297,13 +286,11 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
         <div className="text-right flex-shrink-0">
           <div className="text-lg font-bold text-green-600">${talent.hourly_rate}/hr</div>
           <div className="text-xs text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             ~${talent.hourly_rate ? Math.round(talent.hourly_rate * 160 / 1000) : 0}k/month
           </div>
         </div>
       </div>
     </CardHeader>
-<<<<<<< HEAD
     <CardContent className="pt-0">"
       <div className="flex items-center gap-4 mb-3">"
         <div className="flex items-center gap-1">"
@@ -321,7 +308,6 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
       <div className="flex flex-wrap gap-1 mb-4">"
         {talent.skills?.slice(0, 4).map((skill, index) => (
           <Badge key={index} variant="secondary" className="text-xs">"
-=======
     
     <CardContent className="pt-0">
       <div className="flex items-center gap-4 mb-3">
@@ -342,7 +328,6 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
       <div className="flex flex-wrap gap-1 mb-4">
         {talent.skills?.slice(0, 4).map((skill, index) => (
           <Badge key={index} variant="secondary" className="text-xs">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         className="bg-background border border-border px-3 py-2 rounded";
       >;
         <option value="">All Availability</option>;
@@ -368,21 +353,15 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
       </select>;
     </div>;
     <Button;
-<<<<<<< HEAD
       variant={showRecommended ? "default" : "outline"}"
-=======
       variant={showRecommended ? "default" : "outline"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       size="sm";
       onClick={() => setShowRecommended(!showRecommended)}
       className="flex items-center gap-2";
     >;
       <Star className="h-4 w-4" />;
-<<<<<<< HEAD
       {showRecommended ? "All Talents" : "Recommended"}"
-=======
       {showRecommended ? "All Talents" : "Recommended"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     </Button>;
   </div>;
 ),;
@@ -393,11 +372,8 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
       <div className="flex items-start justify-between">;
         <div className="flex items-start gap-3">;
           <img;
-<<<<<<< HEAD
             src={talent.profile_picture_url || `https://api.dicebear.com/6.x/initials/svg?seed=${talent.full_name}`}`
-=======
             src={talent.profile_picture_url || `https://api.dicebear.com/6.x/initials/svg?seed=${talent.full_name}`}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             alt={talent.full_name}
             className="w-12 h-12 rounded-full object-cover";
             loading="lazy";
@@ -429,11 +405,8 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
         <div className="flex items-center gap-1">;
           <Star className="h-4 w-4 text-yellow-500 fill-current" />;
           <span className="text-sm font-medium">{talent.average_rating?.toFixed(1)}</span>;
-<<<<<<< HEAD
           <span className="text-xs text-muted-foreground">({talent.rating_count},  reviews)</span>;
-=======
           <span className="text-xs text-muted-foreground">({talent.rating_count} reviews)</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>;
         <div className="text-sm text-muted-foreground">;
           {talent.years_experience} years experience;
@@ -449,45 +422,36 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
           </Badge>;
         ))}
         {talent.skills && talent.skills.length > 4 && (
-<<<<<<< HEAD
           <Badge variant="outline" className="text-xs">"
-=======
           <Badge variant="outline" className="text-xs">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             +{talent.skills.length - 4} more
           </Badge>
         )}
       </div>
-<<<<<<< HEAD
       <div className="flex items-center justify-between">"
         <Badge variant={talent.availability_type === 'full_time' ? 'default' : 'outline'} className="text-xs">"
           {talent.availability_type?.replace('_ ').toUpperCase()}'
         </Badge>
         <Button size="sm" onClick={onHire}>"
-=======
 
       <div className="flex items-center justify-between">
         <Badge variant={talent.availability_type === 'full_time' ? 'default' : 'outline'} className="text-xs">
           {talent.availability_type?.replace('_ ').toUpperCase()}
         </Badge>
         <Button size="sm" onClick={onHire}>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Hire Talent
         </Button>
       </div>
     </CardContent>
   </Card>
 ),
-<<<<<<< HEAD
 // Loading skeleton for talent grid
 const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">"
-=======
 
 // Loading skeleton for talent grid
 const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {Array.from({ length: count }).map((_, i) => (
       <SkeletonCard key={i} />
         {talent.skills && talent.skills.length > 4 && (;
@@ -498,11 +462,8 @@ const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
       </div>;
       <div className="flex items-center justify-between">;
         <Badge variant={talent.availability_type === 'full_time' ? 'default' : 'outline'} className="text-xs">;
-<<<<<<< HEAD
           {talent.availability_type?.replace('_ ').toUpperCase()}'
-=======
           {talent.availability_type?.replace('_ ').toUpperCase()}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </Badge>;
         <Button size="sm" onClick={onHire}>;
           Hire Talent;
@@ -521,7 +482,6 @@ const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (;
 ),;
 // Main enhanced talents page with infinite scroll;
 export default function TalentsPage() {;
-<<<<<<< HEAD
   const router = useRouter(),;,
   const [sortBy, setSortBy] = useState('newest'),;,
   const [filterSpecialization, setFilterSpecialization] = useState(''),;,
@@ -535,7 +495,6 @@ export default function TalentsPage() {;
     let allTalents: TalentProfile[] = [],;
     // Start with existing talent profiles;
     if (page === 1) {;,
-=======
   const router = useRouter(),;
   const [sortBy, setSortBy] = useState('newest'),;
   const [filterSpecialization, setFilterSpecialization] = useState(''),;
@@ -549,18 +508,14 @@ export default function TalentsPage() {;
     let allTalents: TalentProfile[] = [],;
     // Start with existing talent profiles;
     if (page === 1) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       allTalents = [...TALENT_PROFILES];
     }
 ;
     // Generate new AI/IT talents using the auto-feed algorithm;
     const startId = TALENT_PROFILES.length + (page - 1) * limit + totalGenerated,;
     const newTalents = generateAITalents(limit, startId),;
-<<<<<<< HEAD
     setTotalGenerated(prev => prev + newTalents.length),;,
-=======
     setTotalGenerated(prev => prev + newTalents.length),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     allTalents = [...allTalents, ...newTalents],;
     // Apply filters;
     let filteredTalents = allTalents,;
@@ -571,11 +526,8 @@ export default function TalentsPage() {;
     }
 ;
     if (filterAvailability) {;
-<<<<<<< HEAD
       filteredTalents = filteredTalents.filter(t => t.availability_type ===,  filterAvailability);
-=======
       filteredTalents = filteredTalents.filter(t => t.availability_type === filterAvailability);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     }
 ;
     if (showRecommended) {;
@@ -609,10 +561,7 @@ export default function TalentsPage() {;
       total: filteredTalents.length;
     }
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]),
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   // Use infinite scroll hook
   const {
     items: talents,
@@ -626,31 +575,23 @@ export default function TalentsPage() {;
     scrollToTop,
     loadMore
   } = useInfiniteScrollPagination(fetchTalents, 16),
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   // Refresh when filters change
   useEffect(() => {
     refresh(),
     setTotalGenerated(0)
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended]),
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   // Calculate market stats
   const marketStats = useMemo(() => {
     if (talents.length === 0) return null,
     return getTalentMarketStats(talents)
   }, [talents]),
-<<<<<<< HEAD
   // Get unique specializations
   const specializations = useMemo(() => {
     return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean)))',
   }, [talents]),
   // Show scroll to top button,
-=======
 
   // Get unique specializations
   const specializations = useMemo(() => {
@@ -658,13 +599,11 @@ export default function TalentsPage() {;
   }, [talents]),
 
   // Show scroll to top button
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 800)
     },
-<<<<<<< HEAD
     window.addEventListener('scroll', handleScroll),'
     return () => window.removeEventListener('scroll', handleScroll)'
   }, []),
@@ -681,7 +620,6 @@ export default function TalentsPage() {;
             AI & IT Talent Directory
           </h1>
           <p className="text-muted-foreground text-lg">"
-=======
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
@@ -699,7 +637,6 @@ export default function TalentsPage() {;
             AI & IT Talent Directory
           </h1>
           <p className="text-muted-foreground text-lg">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Connect with world-class AI and technology professionals
           </p>
         </motion.div>
@@ -707,7 +644,6 @@ export default function TalentsPage() {;
       </div>
     )
   }
-<<<<<<< HEAD
     }
 }
 ;
@@ -961,7 +897,6 @@ export default function TalentsPage() {;
   );
 }
 ;)))
-=======
 
   // Error state
   if (error) {
@@ -1111,4 +1046,3 @@ export default function TalentsPage() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

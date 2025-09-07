@@ -1,5 +1,4 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
 
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -7,13 +6,10 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import globals from 'globals';
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 export default [
   js.configs.recommended,
   {
-<<<<<<< HEAD
 
     ignores: [
       'node_modules/**',
@@ -102,9 +98,7 @@ ecmaVersion: 2020,
         afterAll: 'readonly',
       },
       parser: tsparser,
-=======
     languageOptions: {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -113,7 +107,6 @@ ecmaVersion: 2020,
         },
       },
     },
-<<<<<<< HEAD
 "plugins": {
       react,
       'react-hooks': reactHooks
@@ -389,7 +382,6 @@ screen: 'readonly',
     },
   },
 ];
-=======
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
@@ -446,4 +438,3 @@ screen: 'readonly',
     ],
   },
 ];
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

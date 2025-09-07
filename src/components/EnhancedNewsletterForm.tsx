@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -68,7 +67,6 @@ const res = await fetch("/api/newsletter", {"
       setIsSubmitting (false);
     }
   }
-=======
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useState, useRef } from "react",
@@ -104,12 +102,10 @@ export function EnhancedNewsletterForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: trimmed })}),
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       const data = await res.json().catch(() => ({})),
 
       if (res.ok) {
         // Handle different success statuses
-<<<<<<< HEAD
         if (data.status === "already_subscribed") {"
           toast.success(data.message || "You're already subscribed!");
         } else {
@@ -130,12 +126,10 @@ export function EnhancedNewsletterForm() {
     }
   }
 toast.success(data.message || "Thanks for subscribing!")"
-=======
         if (data.status === 'already_subscribed') {
           toast.success(data.message || "You're already subscribed!")
         } else {
           toast.success(data.message || "Thanks for subscribing!")
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         }
         setIsSubmitted(true),;
         setEmail("");
@@ -144,22 +138,18 @@ toast.success(data.message || "Thanks for subscribing!")"
         logErrorToProduction('Newsletter subscription failed:', { data: data }),;
         toast.error(data.error || "Subscription failed. Please try again.");
       }
-<<<<<<< HEAD
     } catch (err:,  any) {,
       logErrorToProduction('Newsletter subscription error:', { data: err }),'
       toast.error("Unable to subscribe right now. Please try again later.")"
-=======
     } catch (err: any) {
       logErrorToProduction('Newsletter subscription error:', { data: err }),
       toast.error("Unable to subscribe right now. Please try again later.")
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     } finally {
       setIsSubmitting(false)
     }
   },
 
   return (
-<<<<<<< HEAD
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">"
       <div className="flex items-center mb-4">"
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">"
@@ -264,7 +254,6 @@ type="email""
           {[...Array(3)].map((_, i) => (
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">"
     } catch (err:,  any) {;,
-=======
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">
@@ -312,7 +301,6 @@ type="email""
           {[...Array(3)].map((_, i) => (
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
     } catch (err: any) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       logErrorToProduction('Newsletter subscription error:', { data: err });
       toast.error("Unable to subscribe right now. Please try again later.");
     } finally {;
@@ -340,24 +328,18 @@ type="email""
           <label htmlFor="enhanced-newsletter-email" className="sr-only">;
             Email address for newsletter subscription;
           </label>;
-<<<<<<< HEAD
           <Input ;
-=======
           <Input;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             type="email";
             id="enhanced-newsletter-email";
             name="email";
             placeholder="Enter your email";
-<<<<<<< HEAD
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";",
             value={email}
             onChange={(e: React.ChangeEvent<HTMLInputElement />) => setEmail(e.target.value)}
-=======
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";
             value={email}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             autoComplete="email";
             required;
           />;
@@ -366,36 +348,29 @@ type="email""
             disabled={isSubmitting}
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
           >;
-<<<<<<< HEAD
             {isSubmitting ? "Subscribing..." : "Subscribe"}"
-=======
             {isSubmitting ? "Subscribing..." : "Subscribe"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>;
         </form>;
       )}
 ;
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">;
-<<<<<<< HEAD
         <div className="flex -space-x-1 mr-2">;,
           {[...Array(3)].map((_, i) => (;
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">;
               {String.fromCharCode(65 +,  i)}
             </div>
-=======
         <div className="flex -space-x-1 mr-2">;
           {[...Array(3)].map((_, i) => (;
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">;
               {String.fromCharCode(65 + i)}
             </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           ))}
         </div>;
         <span>Join 10,000+ tech professionals who already subscribe</span>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 }
 
       {is_submitted ? (
@@ -566,6 +541,4 @@ const res = await fetch('/api/newsletter', {
 }
 )
 
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

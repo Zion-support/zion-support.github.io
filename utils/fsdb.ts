@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 }
   }
@@ -343,7 +342,6 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
   await mkdir (dir, { recursive: true });
   return dir;
 }
-=======
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -422,4 +420,3 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
   await mkdir(dir, { recursive: true });
   return dir;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

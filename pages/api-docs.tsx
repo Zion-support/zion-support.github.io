@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -90,16 +89,13 @@ import React from 'react';
 import Head from 'next/head';
 
 export default function APIDocsPage() {
-=======
 import React from 'react';
 import Head from 'next/head';
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default function ApiDocsPage() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
@@ -677,7 +673,6 @@ export default function APIDocsPage() {;
         </p>
       </div>
     </Layout>
-=======
         <title>API Documentation - Zion Tech Group</title>
         <meta name="description" content="API documentation and reference" />
       </Head>
@@ -688,7 +683,6 @@ export default function APIDocsPage() {;
         </div>
       </div>
     </>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   );
 }
 import Layout from '../components/Layout';

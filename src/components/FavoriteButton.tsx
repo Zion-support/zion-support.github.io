@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 return (
     <>;
       <TooltipProvider>;
         <Tooltip>;
                 )}              />;
-=======
 import React from 'react',;
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils',;
@@ -85,7 +83,6 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
                   active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate';
                 )}
               />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </button>;
           </TooltipTrigger>;
           {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
@@ -95,7 +92,6 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
     </>;
   );
 }
-<<<<<<< HEAD
       // Add to favorites`;`
       // console && console.log(`Added ${itemType} ${itemId} to favorites`)}  };`
   return ();
@@ -172,6 +168,4 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${`,
         <Tooltip>
           <TooltipTrigger asChild>
             <button
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

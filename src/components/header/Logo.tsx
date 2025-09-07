@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
       <Link href="/" className="flex items - center" />;
         <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
@@ -82,7 +81,6 @@ if ( {) {
     </Link>);
 }
 }
-=======
 
 import React from 'react',;
 import Link from 'next/link',;
@@ -114,4 +112,3 @@ export function Logo({ customLogo }: LogoProps) {
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

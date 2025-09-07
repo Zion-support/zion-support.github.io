@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -666,7 +665,6 @@ py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient 
 }
 }
 ;)))))))
-=======
 import React, { useState } from "react",
 import Image from "next/image",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -960,4 +958,3 @@ export function ITServiceRequestHero() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

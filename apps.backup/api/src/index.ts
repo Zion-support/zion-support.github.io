@@ -2,7 +2,6 @@ import Fastify from 'fastify';
 import cors from '@fastify / cors';
 import rate_limit from '@fastify / rate - limit';
 import dotenv from 'dotenv';
-<<<<<<< HEAD
 import { get_pool, with_user } from './pg.js';
 dotenv.config ();
 ;
@@ -11,10 +10,8 @@ await app.register (cors, {
   origin: (origin, cb) => {
     const allowed = (process.env.CORS_ORIGINS || '').split ().map ((s) => s.trim ());
     if (|| allowed.includes (origin)) {) {
-=======
 import { createOpenAIClient, generateJobPost } from './openai.js';
 import { getPool, withUser } from './pg.js';
-<<<<<<< HEAD
 ;
 dotenv.config();
 ;
@@ -102,8 +99,6 @@ app.get('/notifications', async (req, reply) => {;
     const res = await client.query(;
       `SELECT id, channel, title, body, data, read, created_at FROM notification;
        WHERE read = false ORDER BY created_at DESC LIMIT 20`;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 import { createOpenAIClient, generateJobPost } from './openai ;
 import { getPool, withUser } from './pg ;
@@ -233,10 +228,6 @@ app.post ('/jobs / generate', async (req, reply) => {
     const res = await client && client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     );
     return res && res.rows
   });
@@ -270,10 +261,6 @@ app.get ('/talent / search', async (req, reply) => {
   });
   return { results: rows }
 });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 app.get ('/projects/:name / track', async (req, reply) => {
   const name = (req.params as any).name as string;
@@ -309,15 +296,10 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
   app.log.error (err);
   process.exit (1);
 });
-<<<<<<< HEAD
 });
-=======
-=======
 
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch(err => {
   app.log.error(err);
   process.exit(1);
 });
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
@@ -3271,5 +3270,3 @@ const Page = () => {
 
 export default Page;
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

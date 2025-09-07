@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const [formData, setFormData] = useState({
     brand_name: """,
     subdomain: """,
@@ -46,7 +45,6 @@ const [formData, setFormData] = useState({
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')'
-=======
 
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
@@ -117,7 +115,6 @@ export default function TenantOnboarding() {
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         .insert({
           brand_name: formData.brand_name,
           subdomain: subdomain,
@@ -131,7 +128,6 @@ export default function TenantOnboarding() {
           dns_verified: false,
           email_template_override: null
         })
-<<<<<<< HEAD
         .select('id, brand_name, subdomain')'
         .single(),
       if (error) throw error,
@@ -153,7 +149,6 @@ export default function TenantOnboarding() {
     } catch (error:,  any) {,
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error creating tenant' }),'
       toast.error("Failed to create tenant", {"
-=======
         .select('id, brand_name, subdomain')
         .single(),
       
@@ -179,14 +174,12 @@ export default function TenantOnboarding() {
     } catch (error: any) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error creating tenant' }),
       toast.error("Failed to create tenant", {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         description: error.message
       })
     } finally {
       setIsSubmitting(false)
     }
   },
-<<<<<<< HEAD
   return (
     <>
       <SEO
@@ -202,7 +195,6 @@ export default function TenantOnboarding() {
               Create a new white-label instance of Zion Hire AI for a company.
             </p>
           </div>
-=======
 
   return (
     <>
@@ -220,7 +212,6 @@ export default function TenantOnboarding() {
             </p>
           </div>
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <Card>
             <CardHeader>
               <CardTitle>New Tenant Setup</CardTitle>
@@ -229,7 +220,6 @@ export default function TenantOnboarding() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-<<<<<<< HEAD
               <form onSubmit={handleSubmit} className="space-y-6">"
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">"
                   <TabsList className="mb-4 grid grid-cols-3 w-full">"
@@ -288,7 +278,6 @@ export default function TenantOnboarding() {
                           <SelectItem value="201-500">201-500 employees</SelectItem>"
                           <SelectItem value="501-1000">501-1000 employees</SelectItem>"
                           <SelectItem value="1000+">1000+ employees</SelectItem>"
-=======
               <form onSubmit={handleSubmit} className="space-y-6">
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                   <TabsList className="mb-4 grid grid-cols-3 w-full">
@@ -350,12 +339,10 @@ export default function TenantOnboarding() {
                           <SelectItem value="201-500">201-500 employees</SelectItem>
                           <SelectItem value="501-1000">501-1000 employees</SelectItem>
                           <SelectItem value="1000+">1000+ employees</SelectItem>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         </SelectContent>
                       </Select>
                     </div>
                   </TabsContent>
-<<<<<<< HEAD
                   <TabsContent value="branding" className="space-y-4">"
                     <div className="space-y-2">"
                       <Label htmlFor="logo_url">Logo URL</Label>"
@@ -452,7 +439,6 @@ export default function TenantOnboarding() {
                       />
                       <p className="text-xs text-muted-foreground">"
                         If you want to use your own domain, enter it here. You'll need to configure DNS records.'
-=======
                   
                   <TabsContent value="branding" className="space-y-4">
                     <div className="space-y-2">
@@ -555,19 +541,16 @@ export default function TenantOnboarding() {
                       />
                       <p className="text-xs text-muted-foreground">
                         If you want to use your own domain, enter it here. You'll need to configure DNS records.
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </p>
                     </div>
                   </TabsContent>
                 </Tabs>
-<<<<<<< HEAD
                 <div className="flex justify-end space-x-2">"
                   <Button type="button" variant="outline" onClick={() => window.history.back()}>"
                     Cancel
                   </Button>
                   <Button type="submit" disabled={isSubmitting}>"
                     {isSubmitting ? "Creating..." : "Create Tenant"}"
-=======
                 
                 <div className="flex justify-end space-x-2">
                   <Button type="button" variant="outline" onClick={() => window.history.back()}>
@@ -575,7 +558,6 @@ export default function TenantOnboarding() {
                   </Button>
                   <Button type="submit" disabled={isSubmitting}>
                     {isSubmitting ? "Creating..." : "Create Tenant"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </Button>
                 </div>
               </form>
@@ -585,7 +567,6 @@ export default function TenantOnboarding() {
       </main>
     </>
   )
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -960,7 +941,6 @@ function TenantOnboarding() {
   );
 }
 ;
-=======
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -1264,4 +1244,3 @@ export default function TenantOnboarding() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

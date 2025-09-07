@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import { Calendar, Clock, Check } from 'lucide-react''
 import { Calendar } from 'lucide-react''
 interface ProfileAvailabilityProps {
   availability: Availability
 }
-=======
 
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge",
@@ -81,4 +79,3 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

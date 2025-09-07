@@ -1,7 +1,6 @@
 import React from "react";
 
 
-<<<<<<< HEAD:pages/industries.tsx
 import React from 'react';
 
 import { motion } from 'framer-motion';
@@ -18,7 +17,6 @@ import {
   Heart, 
   Building, 
   ShoppingCart, 
-<<<<<<< HEAD:pages/industries.tsx
   GraduationCap, 
   Car, 
   Users, 
@@ -441,7 +439,6 @@ const technologies = [
 ];
 export default function IndustriesPage() {
   return (
-<<<<<<< HEAD:pages/industries.tsx
     <Layout
       title="Industries We Serve - Zion Tech Group"
       description="We provide AI and technology solutions across multiple industries including healthcare, finance, e-commerce, education, and more. Industry-specific expertise and solutions."

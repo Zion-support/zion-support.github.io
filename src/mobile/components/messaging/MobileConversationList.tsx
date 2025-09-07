@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from "react",
 import { Card } from "@/components/ui/card",
@@ -39,12 +37,10 @@ interface MobileConversationListProps {;
   onSelectConversation: (id: string) => void;
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function MobileConversationList({
   conversations,
   activeConversation,
   onSelectConversation
-<<<<<<< HEAD
 }:,  MobileConversationListProps) {
   return (
     <div className="space-y-4">"
@@ -155,7 +151,6 @@ function MobileConversationList() {
             <div className='flex items-center gap-3 py-3 cursor-pointer'>'
               <Avatar>
                 <AvatarImage
-=======
 }: MobileConversationListProps) {
   return (
     <div className="space-y-4">
@@ -191,12 +186,10 @@ function MobileConversationList() {
             <div className="flex items-center gap-3 py-3 cursor-pointer">
               <Avatar>
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
-<<<<<<< HEAD
                   src={conversation && conversation.avatar}
                   alt={conversation && conversation.name}
                 />                <AvatarFallback>;
@@ -246,7 +239,6 @@ function MobileConversationList() {
                   </p>
                   {conversation.unreadCount > 0 && (
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">"
-=======
               
               <div className="flex-1 min-w-0">
                 <div className="flex justify-between items-baseline">
@@ -265,25 +257,20 @@ function MobileConversationList() {
                   
                   {conversation.unreadCount > 0 && (
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       {conversation.unreadCount}
                     </Badge>;
                   )}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             <div className="border-t border-border ml-12"></div>"
-=======
             <div className="border-t border-border ml-12"></div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>
         ))}
       </div>;
     </div>;
   );
 }
-<<<<<<< HEAD
       <div className='space - y-2 pb - 24'>;
         {conversations.map (conversation => (
           <div;
@@ -331,6 +318,4 @@ function MobileConversationList() {
 }
 ;
 }
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

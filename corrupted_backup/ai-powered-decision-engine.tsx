@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/ai-powered-decision-engine.tsx
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AiPoweredDecisionEngine() {
@@ -28,12 +27,10 @@ export default function AiPoweredDecisionEngine() {
 		/>;
 	);
 }
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-<<<<<<< HEAD
 export default function AiPoweredDecisionEngine() {
   return (
     <ServiceLanding
@@ -58,7 +55,6 @@ export default function AiPoweredDecisionEngine() {
     />
   );
 }
-=======
 const AIPoweredDecisionEngine: React.FC = () => {
   return (
     <Layout>
@@ -135,5 +131,3 @@ const AIPoweredDecisionEngine: React.FC = () => {
 };
 
 export default AIPoweredDecisionEngine;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-powered-decision-engine.tsx

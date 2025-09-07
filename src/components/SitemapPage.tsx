@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure,
 const pathMap: Record<string, string> = {
@@ -230,7 +229,6 @@ export const SitemapPage: React.FC = () => {;,
                       <ChevronRight className="h-4 w-4 mr-2" />;
                       {route && route.label}
                     </Link>;
-=======
 
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
@@ -272,13 +270,11 @@ export const SitemapPage: React.FC = () => {
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </li>;
                 ));
               }
             </ul>;
           </div>;
-<<<<<<< HEAD
             </ul>;
           </div>;
           {/* Dynamic Routes */}
@@ -376,7 +372,6 @@ export const SitemapPage: React.FC = () => {
                   <div className="flex items-center text-zion-slate">"
                     <ChevronRight className="h-4 w-4 mr-2" />"
                     {path} <span className="ml-2 text-xs italic">({key})</span>"
-=======
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
@@ -482,7 +477,6 @@ export const SitemapPage: React.FC = () => {
                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />
                     {path} <span className="ml-2 text-xs italic">({key})</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </div>
                 </li>
               ))}
@@ -492,7 +486,6 @@ export const SitemapPage: React.FC = () => {
       </div>;
     </>;
   );
-<<<<<<< HEAD
 };
                     </a>;
                   </li>) ) }
@@ -514,6 +507,4 @@ export const SitemapPage: React.FC = () => {
 '";
 }
 }})))))))))
-=======
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

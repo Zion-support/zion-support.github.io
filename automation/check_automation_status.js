@@ -20,7 +20,6 @@ const { execSync } = // // require('child_process');
 async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...');const statusReport = {
     timestamp: new Date().toISOStrin,g(;,;);
     pm2Processes: [];
-<<<<<<< HEAD:automation/check_automation_status.js
 
 
 
@@ -32,7 +31,6 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
 
 
 
-<<<<<<< HEAD:automation/check_automation_status.js
 
 
 
@@ -77,7 +75,6 @@ async function checkAutomationStatus() { const statusReport = {
     _console.log('📋 Checking PM2 processes...');',
     try {
       const pm2List = execSync('pm2 list --json', { encoding: 'ut,f8', ;};);
-<<<<<<< HEAD:automation/check_automation_status.js
 
 :automation/check_automation_status.js
 
@@ -91,7 +88,6 @@ async function checkAutomationStatus() { const statusReport = {
 
 
 
-<<<<<<< HEAD:automation/check_automation_status.js
 
 
 
@@ -162,7 +158,6 @@ async function checkAutomationStatus() { const statusReport = {
     statusReport.overallStatus = 'error';';
     return statusReport;
   }
-<<<<<<< HEAD:automation/check_automation_status.js
 
 :automation/check_automation_status.js
 
@@ -191,7 +186,6 @@ module.exports = { checkAutomationStatus };,
 ;
 ;
 
-=======;
 
 // Run if called directly;
 if (require.main === module) {}
@@ -248,9 +242,7 @@ async function checkAutomationStatus() {
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);} catch(error) { console.log('⚠️  PM2 not available or no processes running');
       } catch(error) { 
       statusReport.pm2Processes = [] }
-<<<<<<< HEAD:automation/check_automation_status.js
 
-<<<<<<< HEAD:automation/check_automation_status.js
 
 
 :automation/check_automation_status.js
@@ -339,7 +331,6 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     });
     statusReport.recentReports = recentReports
     // Determine overall status;
-<<<<<<< HEAD:automation/check_automation_status.js
 
 
 
@@ -351,7 +342,6 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
 
 
 
-<<<<<<< HEAD:automation/check_automation_status.js
 
 
 
@@ -416,7 +406,6 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
 
 
 
-<<<<<<< HEAD:automation/check_automation_status.js
 
 
 

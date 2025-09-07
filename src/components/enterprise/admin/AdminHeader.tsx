@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react","
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from 'lucide-react''
@@ -29,7 +28,6 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           </Button>
           <Button variant="outline" size="sm" className="gap-2">"
             <Download className="h-4 w-4" />"
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -55,12 +53,10 @@ export function AdminHeader() {
           </Button>
           <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Export Data
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
         <div className="bg-card rounded-lg p-4 border border-border">"
           <div className="text-sm text-muted-foreground">Subscription Plan</div>"
@@ -114,7 +110,6 @@ export function AdminHeader() {
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>"
             <p className="text-sm text-muted-foreground">"
               Workspace URL: {company?.workspaceUrl || "loading..."}"
-=======
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
@@ -145,20 +140,16 @@ export function AdminHeader() {
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </p>
           </div>
         </div>
         <Button>Customize Workspace</Button>
       </div>
     </div>
-<<<<<<< HEAD
     <div className='space-y-4'>;
       <div className='flex items-center justify-between'>;
 ;
-=======
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Download, Settings } from 'lucide-react';
@@ -170,7 +161,6 @@ export function AdminHeader() {;
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <div>;
-<<<<<<< HEAD
           <h1 className='text-3xl font-bold tracking-tight'>;
             Enterprise Admin Dashboard;
           </h1>;
@@ -188,21 +178,18 @@ export function AdminHeader() {;
           </Button>;
         </div>;
       </div>        <div className="flex items-center gap-2">;
-=======
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;
           <p className="text-muted-foreground mt-1">;
             Manage your company's account, team members, and subscription;
           </p>;
         </div>;
         <div className="flex items-center gap-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <Button variant="outline" size="sm" className="gap-2">;
             <Settings className="h-4 w-4" />;
             Settings;
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
             <Download className="h-4 w-4" />;
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Download, Settings } from 'lucide-react';
@@ -240,13 +227,10 @@ function AdminHeader() {
           </Button>;
           <Button variant="outline" size="sm" className="gap - 2">;
             <Download className="h - 4 w - 4" />;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Export Data;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
   );
 }
       <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4'>;
@@ -302,7 +286,6 @@ function AdminHeader() {
               src={company?.logo_url || "/placeholder.svg"}"
               alt={company?.name || "Company"}"
               className="max - h-10 max - w-10";
-=======
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Subscription Plan</div>;
@@ -324,12 +307,10 @@ function AdminHeader() {
               src={company?.logoUrl || "/placeholder.svg"}
               alt={company?.name || "Company"}
               className="max-h-10 max-w-10";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               loading="lazy";
             />;
           </div>;
           <div>;
-<<<<<<< HEAD
             <h2 className="font - medium">{company?.name || "Company Name"}</h2>;
             <p className="text - sm text - muted - foreground">;
               Workspace URL: {company?.workspace_url || "loading..."}"
@@ -342,7 +323,6 @@ function AdminHeader() {
 }
 ;
 }}))
-=======
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>;
             <p className="text-sm text-muted-foreground">;
               Workspace URL: {company?.workspaceUrl || "loading..."}
@@ -355,4 +335,3 @@ function AdminHeader() {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

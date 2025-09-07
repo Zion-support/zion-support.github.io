@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -241,7 +240,6 @@ export function set_config (
 }
 
 
-=======
 import { randomUUID } from "crypto";
 import { tokenStore } from "./storage";
 import { TokenTransaction, WalletSummary } from "./types";
@@ -351,4 +349,3 @@ export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void 
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

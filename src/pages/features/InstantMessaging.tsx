@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -103,7 +102,6 @@ export default function InstantMessaging() {
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>"
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">"
-=======
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -148,12 +146,10 @@ export default function InstantMessaging() {
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <li>Real-time notifications keep everyone updated.</li>
             <li>Chat rooms scoped to each order or project for focused discussions.</li>
             <li>Share files and links directly within the conversation.</li>
           </ul>
-<<<<<<< HEAD
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>"
           <div className="space-y-4 mb-12">"
             <div>
@@ -168,7 +164,6 @@ export default function InstantMessaging() {
           <div className="text-center">"
             <Button size="lg" className="bg-zion-purple text-white" asChild>"
               <Link href="/open-app" />Start Chatting</Link>"
-=======
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
             <div>
@@ -183,17 +178,13 @@ export default function InstantMessaging() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Start Chatting</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>
           </div>
         </div>
       </main>
     </>
   )
-<<<<<<< HEAD
 ;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -229,12 +220,10 @@ export default function InstantMessaging() {;
             Communicate with partners and support staff instantly from any device.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
-<<<<<<< HEAD
             <img
               src="https://placehold && placehold.co/800x400"",
               alt="Screenshot of chat interface""
               className="object-cover""
-=======
             <img;
               src="https://placehold.co/800x400";
               alt="Screenshot of chat interface";
@@ -261,17 +250,13 @@ export default function InstantMessaging() {;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
               <Link href="/open-app">Start Chatting</Link>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
 ;
 }}})
-=======
     </>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

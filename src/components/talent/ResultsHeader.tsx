@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Loader2 } from 'lucide-react';
 interface ResultsHeaderProps {;
   isLoading: boolean;,
@@ -100,7 +99,6 @@ function ResultsHeader() {
     </div>));
 }
 ;)
-=======
 
 import { Loader2 } from 'lucide-react';
 interface ResultsHeaderProps {;
@@ -129,4 +127,3 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

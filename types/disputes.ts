@@ -9,7 +9,6 @@ export type DisputeReason =
   | 'Other';
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',;
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
-<<<<<<< HEAD
 
 
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
@@ -18,50 +17,38 @@ export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
-<<<<<<< HEAD
 
 
   | 'Other',;
 
 export type DisputeAttachment = {
-=======
   | 'Other';
 export type DisputeAttachment = {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   id: string;
   fileName: string;
   fileSize: number;
   mimeType: string;
-<<<<<<< HEAD
   path: string; // server-side storage path
   uploadedAt: string;
   uploadedByUserId: string;
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   path: string, // server-side storage path;
   uploadedAt: string;
   uploadedByUserId: string;
 };
-<<<<<<< HEAD
 export type DisputeMessage = {
-=======
 export type DisputeMessage = {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   id: string;
   authorUserId: string;
   authorRole: 'client' | 'talent' | 'admin';
   body: string;
   createdAt: string;
-<<<<<<< HEAD
 }
 export type DisputeCase = {
   id: string; // case id like DSP-YYYYMMDD-XXXX
@@ -74,19 +61,16 @@ export type DisputeCase = {
   projectId: string;
   entityType?: 'milestone' | 'contract' | 'thread',;
   entityId?: string,;
-=======
 };
 export type DisputeCase = {;
   id: string, // case id like DSP-YYYYMMDD-XXXX;
   projectId: string;
   entityType?: 'milestone' | 'contract' | 'thread';
   entityId?: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   clientUserId: string;
   talentUserId: string;
   createdAt: string;
   updatedAt: string;
-<<<<<<< HEAD
 | 'Other',;
 
 
@@ -131,7 +115,6 @@ export interface DisputeResolution {
   refundAmount?: number;
 }
 
-=======
   status: DisputeStatus;
   reason: DisputeReason;
   reasonDetails?: string;
@@ -155,4 +138,3 @@ export type UserSummary = {;
   name: string;
   role: 'admin' | 'client' | 'talent';
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

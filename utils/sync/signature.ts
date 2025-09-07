@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import crypto from "crypto";
 
@@ -73,7 +72,6 @@ export function hashData(data: string): string {
 };
 
 }
-=======
 import crypto from "crypto";
 export function getSyncSecret(): string | null {;
   const raw = process.env.ZION_SYNC_SECRET || "";
@@ -100,4 +98,3 @@ export function verifySignature(payload: unknown, signature?: string | null): bo
     return false;
   }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

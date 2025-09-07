@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useJobApplications } from "@/hooks/useJobApplications","
 import { useResume } from "@/hooks/useResume","
 import { useAuth } from "@/hooks/useAuth","
@@ -11,7 +10,6 @@ import { AlertCircle, FileText, Loader2 } from 'lucide-react''
 import { formatDistanceToNow } from "date-fns","
 import { Job } from "@/types/jobs","
 import { toast } from "sonner","
-=======
 import { useState } from "react",
 import { useRouter } from 'next/router',
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -26,12 +24,10 @@ import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface ApplyToJobFormProps {
   job: Job,
   onSuccess?: () => void
 }
-<<<<<<< HEAD
 export function ApplyToJobForm({ job, onSuccess }:,  ApplyToJobFormProps) {
   const { user } = useAuth()
   const { applyToJob } = useJobApplications()
@@ -64,15 +60,12 @@ export function ApplyToJobForm({ job, onSuccess }:,  ApplyToJobFormProps) {
       )
       if (success) {
         toast.success("Your application has been submitted!")"
-=======
 
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const { user } = useAuth(),
   const { applyToJob } = useJobApplications(),
   const { resumes, isLoading: isResumesLoading } = useResume(),
   const router = useRouter(),
-<<<<<<< HEAD
   ,
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),`,
   const [selectedResumeId, setSelectedResumeId] = useState<string>(""),",
@@ -92,7 +85,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     }
     setIsSubmitting(true),
     setError(null),
-=======
   
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),
   const [selectedResumeId, setSelectedResumeId] = useState<string>(""),
@@ -117,29 +109,24 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     setIsSubmitting(true),
     setError(null),
     
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     try {
       const success = await applyToJob(
         job.id,
         coverLetter,
         selectedResumeId || undefined,
-<<<<<<< HEAD
         resumeFile ||,  undefined
       ),
       if (success) {
         toast.success("Your application has been submitted!"),"
-=======
         resumeFile || undefined
       ),
       
       if (success) {
         toast.success("Your application has been submitted!"),
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         if (onSuccess) {
           onSuccess()
         }
       }
-<<<<<<< HEAD
     } catch (err:,  any) {,
       setError(err.message |"Failed to submit application")"
       toast.error("Failed to submit application")"
@@ -313,7 +300,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }:,  ApplyToJobFormProps
           {isResumesLoading ? (
             <div className="flex items-center gap-2 mt-2">"
               <Loader2 className="h-4 w-4 animate-spin" />"
-=======
     } catch (err: any) {
       setError(err.message || "Failed to submit application"),
       toast.error("Failed to submit application")
@@ -359,7 +345,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }:,  ApplyToJobFormProps
           {isResumesLoading ? (
             <div className="flex items-center gap-2 mt-2">
               <Loader2 className="h-4 w-4 animate-spin" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <span>Loading your resumes...</span>
             </div>
           ) : resumes && resumes.length > 0 ? (
@@ -367,28 +352,22 @@ export function ApplyToJobForm(): any ({ job, onSuccess }:,  ApplyToJobFormProps
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
             >
-<<<<<<< HEAD
               <SelectTrigger className="mt-1">"
                 <SelectValue placeholder="Select a resume" />"
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="">No resume</SelectItem>"
-=======
               <SelectTrigger className="mt-1">
                 <SelectValue placeholder="Select a resume" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="">No resume</SelectItem>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 {resumes.map((resume) => {
                   if (resume.id) {
                     return (
                       <SelectItem key={resume.id} value={resume.id}>
-<<<<<<< HEAD
                         {resume.basic_info.title |"Untitled Resume"}"
-=======
                         {resume.basic_info.title || "Untitled Resume"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </SelectItem>
                     )
 import { useState } from "react",;
@@ -410,7 +389,6 @@ interface ApplyToJobFormProps {;
   onSuccess?: () => void;
 }
 ;
-<<<<<<< HEAD
 export function ApplyToJobForm({ job, onSuccess }:,  ApplyToJobFormProps) {;
   const { user } = useAuth(),;
   const { applyToJob } = useJobApplications(),;
@@ -426,7 +404,6 @@ export function ApplyToJobForm({ job, onSuccess }:,  ApplyToJobFormProps) {;
     if (!user) {;
       toast.error("You must be logged in to apply"),;
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`),;`
-=======
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   const { user } = useAuth(),;
   const { applyToJob } = useJobApplications(),;
@@ -442,7 +419,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
     if (!user) {;
       toast.error("You must be logged in to apply"),;
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       return;
     }
 ;
@@ -466,11 +442,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           onSuccess();
         }
       }
-<<<<<<< HEAD
     } catch (err:,  any) {;,
-=======
     } catch (err: any) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       setError(err.message || "Failed to submit application");
       toast.error("Failed to submit application");
     } finally {;
@@ -515,7 +488,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
               <span>Loading your resumes...</span>;
             </div>;
           ) : resumes && resumes.length > 0 ? (;
-<<<<<<< HEAD
             <Select
               value = {selectedResumeId,}
               onValueChange = {setSelectedResumeId,}>;
@@ -559,33 +531,27 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
               onValueChange = {setSelectedResumeId, }
             >;
               <SelectTrigger className="mt - 1">;
-=======
             <Select;
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
             >;
               <SelectTrigger className="mt-1">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <SelectValue placeholder="Select a resume" />;
               </SelectTrigger>;
               <SelectContent>;
                 <SelectItem value="">No resume</SelectItem>;
-<<<<<<< HEAD
                       <SelectItem key={resume && resume.id} value={resume && resume.id}>;
                         {resume && resume.basic_info.title || "Untitled Resume"}"
-=======
                 {resumes.map((resume) => {;
                   if (resume.id) {;
                     return (;
                       <SelectItem key={resume.id} value={resume.id}>;
                         {resume.basic_info.title || "Untitled Resume"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </SelectItem>;
                     );
                   }
                   return null;
                 })}
-<<<<<<< HEAD
               </SelectContent>;
             </Select>;
           ) : (;
@@ -627,7 +593,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           variant="outline""
           onClick={() => {;
             if (onSuccess) onSuccess();
-=======
               </SelectContent>
             </Select>
           ) : (
@@ -664,12 +629,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
         <Button
           type="button"
           variant="outline"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
           }}
-<<<<<<< HEAD
         >;
           Cancel;
         </Button>;
@@ -685,7 +648,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"};
-=======
         >
           Cancel
         </Button>
@@ -698,12 +660,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           ) : (
             "Submit Application"
           )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </Button>;
       </div>;
     </form>;
   );
-<<<<<<< HEAD
                 {resumes.map ((resume, ) => {
                   // Check condition
 if ( {) {
@@ -796,7 +756,5 @@ handle_submit;
 }"}"
 }
 ;
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

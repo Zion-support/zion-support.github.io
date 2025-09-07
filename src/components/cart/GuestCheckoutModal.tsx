@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 try {
       on_submit ({ email, address });
     } finally {
@@ -26,20 +25,17 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Label } from '@/components/ui/label',;
 import { Textarea } from '@/components/ui/textarea',;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {;
   Dialog,;
   DialogContent,;
   DialogDescription,;
   DialogFooter,;
   DialogHeader,;
-<<<<<<< HEAD
   DialogTitle,;
 } from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard } from 'lucide-react';
@@ -62,7 +58,6 @@ export default function GuestCheckoutModal(): any ({;
       alert('Please fill in all required fields');
       return;
     }
-=======
   DialogTitle} from '@/components/ui/dialog',;
 import { User, Mail, MapPin, CreditCard } from 'lucide-react';
 import { isProdDomain } from '@/utils/getStripe',;
@@ -86,14 +81,12 @@ export default function GuestCheckoutModal({;
       return;
     }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     setIsSubmitting(true);
     try {;
       onSubmit({ email, address });
     } finally {;
       setIsSubmitting(false);
     }
-<<<<<<< HEAD
   }
     }
   },
@@ -248,7 +241,6 @@ export default function GuestCheckoutModal({;
                   <CreditCard className='h - 4 w - 4 mr - 2' />;
                   Continue to Payment;
                 </>)}
-=======
   },
 
   return (
@@ -330,20 +322,16 @@ export default function GuestCheckoutModal({;
                   Continue to Payment
                 </>
               )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
-<<<<<<< HEAD
 }
     </Dialog>);
 }
 }
 ;
-=======
     </Dialog>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

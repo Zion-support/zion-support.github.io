@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -58,7 +57,6 @@ function TalentDashboardContent() {;
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">"
                           {user?.displayName?.charAt(0) || "U"}"
-=======
 
 import { useState, useEffect } from "react",
 import { Button } from "@/components/ui/button",
@@ -130,12 +128,10 @@ function TalentDashboardContent() {
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
                           {user?.displayName?.charAt(0) || "U"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         </div>
                       )}
                     </Avatar>
                     <div>
-<<<<<<< HEAD
                       <CardTitle>{user?.displayName || "User"}</CardTitle>"
                       <CardDescription>{user?.headline || "AI Professional"}</CardDescription>"
                     </div>
@@ -161,7 +157,6 @@ function TalentDashboardContent() {
                   <Button className="w-full" asChild>"
                     <Link href="/messages" />"
                       <MessageSquare className="h-4 w-4 mr-2" />"
-=======
                       <CardTitle>{user?.displayName || "User"}</CardTitle>
                       <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
                     </div>
@@ -188,25 +183,21 @@ function TalentDashboardContent() {
                   <Button className="w-full" asChild>
                     <Link href="/messages">
                       <MessageSquare className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       Messages
                     </Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
-<<<<<<< HEAD
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {showAdvanced && (
               <div className="mt-6">"
-=======
             
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {showAdvanced && (
               <div className="mt-6">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <AdvancedOnboardingSteps />
               </div>
 import { useState, useEffect } from "react",;
@@ -228,11 +219,8 @@ import { MyApplications } from "@/components/jobs/MyApplications",;
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",;
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",;
 function TalentDashboardContent() {;
-<<<<<<< HEAD
   const { user } = useAuth(),;,
-=======
   const { user } = useAuth(),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [activeTab, setActiveTab] = useState("job-matches"),;
   const onboardingStatus = useOnboardingStatus(),;
   const showAdvanced =;
@@ -254,21 +242,15 @@ function TalentDashboardContent() {;
           </div>;
           <div className="flex gap-4">;
             <Button variant="outline" asChild>;
-<<<<<<< HEAD
               <Link href="/settings/account" />;
-=======
               <Link href="/settings/account">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <UserIcon className="h-4 w-4 mr-2" />;
                 Profile Settings;
               </Link>;
             </Button>;
             <Button asChild>;
-<<<<<<< HEAD
               <Link href="/dashboard/talent/applications" />;
-=======
               <Link href="/dashboard/talent/applications">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <Inbox className="h-4 w-4 mr-2" /> Application Tracker;
               </Link>;
             </Button>;
@@ -287,16 +269,12 @@ function TalentDashboardContent() {;
                         <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />;
                       ) : (;
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">;
-<<<<<<< HEAD
                           {user?.displayName?.charAt(0) || "U"}"
-=======
                           {user?.displayName?.charAt(0) || "U"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         </div>;
                       )}
                     </Avatar>;
                     <div>;
-<<<<<<< HEAD
                       <CardTitle>{user?.displayName || 'User'}</CardTitle>;
 import { useState, useEffect } from 'react';
 import { Button } from '@/components / ui / button';
@@ -404,7 +382,6 @@ function TalentDashboardContent() {
                   <div className='flex flex - col items - center p - 3 bg - muted / 30 rounded - md'>;
                     <div className='flex items - center gap - 1 text - lg font - bold'>;
                       <Star className='h - 4 w - 4 text - yellow - 500' />;
-=======
                       <CardTitle>{user?.displayName || "User"}</CardTitle>;
                       <CardDescription>{user?.headline || "AI Professional"}</CardDescription>;
                     </div>;
@@ -417,12 +394,10 @@ function TalentDashboardContent() {
                   <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">;
                     <div className="flex items-center gap-1 text-lg font-bold">;
                       <Star className="h-4 w-4 text-yellow-500" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       4.9;
                     </div>;
                     <span className="text-xs text-muted-foreground">Rating</span>;
                   </div>;
-<<<<<<< HEAD
                   <div className='flex flex - col items - center p - 3 bg - muted / 30 rounded - md'>;
                     <div className='text - lg font - bold'>18</div>;
                     <span className='text - xs text - muted - foreground'>;
@@ -434,7 +409,6 @@ function TalentDashboardContent() {
                   <Button className='w - full' as_child>;
                     <Link href='/messages' />;
                       <MessageSquare className='h - 4 w - 4 mr - 2' />;
-=======
                   <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">;
                     <div className="text-lg font-bold">18</div>;
                     <span className="text-xs text-muted-foreground">Projects</span>;
@@ -444,14 +418,12 @@ function TalentDashboardContent() {
                   <Button className="w-full" asChild>;
                     <Link href="/messages">;
                       <MessageSquare className="h-4 w-4 mr-2" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       Messages;
                     </Link>;
                   </Button>;
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
             <Card className="mt-8">"
               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>"
@@ -473,7 +445,6 @@ function TalentDashboardContent() {
                   <div className="flex justify-between">"
                     <span className="text-muted-foreground">Profile completion</span>"
                     <span className="font-medium">85%</span>"
-=======
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />;
             {showAdvanced && (;
@@ -508,13 +479,11 @@ function TalentDashboardContent() {
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Profile completion</span>
                     <span className="font-medium">85%</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </div>
                 </div>
               </CardContent>
             </Card>
           </div>
-<<<<<<< HEAD
           <div className="lg:col-span-2">"
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>"
               <TabsList className="mb-6">"
@@ -534,7 +503,6 @@ function TalentDashboardContent() {
                   <Button variant="outline" asChild>"
                     <Link href="/dashboard/talent/applications" />"
                       <Inbox className="h-4 w-4 mr-2" /> View Full Application Tracker"
-=======
           
           <div className="lg:col-span-2">
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
@@ -557,12 +525,10 @@ function TalentDashboardContent() {
                   <Button variant="outline" asChild>
                     <Link href="/dashboard/talent/applications">
                       <Inbox className="h-4 w-4 mr-2" /> View Full Application Tracker
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </Link>
                   </Button>
                 </div>
               </TabsContent>
-<<<<<<< HEAD
               <TabsContent value="saved" className="mt-0">"
                 <Card className="bg-muted/30">"
                   <CardContent className="pt-6 text-center">"
@@ -571,7 +537,6 @@ function TalentDashboardContent() {
                     </p>
                     <Button className="mt-4" asChild>"
                       <Link href="/jobs" />Browse Jobs</Link>"
-=======
               
               <TabsContent value="saved" className="mt-0">
                 <Card className="bg-muted/30">
@@ -581,7 +546,6 @@ function TalentDashboardContent() {
                     </p>
                     <Button className="mt-4" asChild>
                       <Link href="/jobs">Browse Jobs</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </Button>
                   </CardContent>
                 </Card>
@@ -592,7 +556,6 @@ function TalentDashboardContent() {
       </main>
     </>
   )
-<<<<<<< HEAD
             <div className='mt-8'>;
               <UpcomingInterviewsCard />;
             </div>;
@@ -670,8 +633,6 @@ function TalentDashboardContent() {
     </ProtectedRoute>;
   );
 };
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export default function TalentDashboard() {;
@@ -681,7 +642,6 @@ export default function TalentDashboard() {;
     </ProtectedRoute>;
   );
 }
-<<<<<<< HEAD
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />;
             {show_advanced && (
@@ -772,6 +732,4 @@ function TalentDashboard() {
 }
 ;
 }
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

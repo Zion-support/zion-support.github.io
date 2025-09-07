@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 "use client",;
@@ -229,8 +228,6 @@ if (return null, ) {
       {updates.map ((update) => (
   }
   if (updates.length === 0) return null;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import { useState } from "react",;
 import {;
@@ -266,7 +263,6 @@ interface DeploymentUpdate {;
     action: 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss',;
     href?: string;
   }[];
-<<<<<<< HEAD
 }
 ;
 interface DeploymentNotificationProps {;
@@ -529,7 +525,6 @@ export function DeploymentNotificationExample() {;
       on_action={handle_action}
     />);
 }
-=======
 }
 ;
 interface DeploymentNotificationProps {;
@@ -755,4 +750,3 @@ export function DeploymentNotificationExample() {;
     />;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

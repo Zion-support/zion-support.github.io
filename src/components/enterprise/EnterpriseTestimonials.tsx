@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   Carousel;
   CarouselContent;
@@ -54,17 +53,14 @@ export function EnterpriseTestimonials() {
                       <p className='text-sm text-muted-foreground'>                        {testimonial.title}, {testimonial.company}'
 import React from "react","
 import { Quote } from 'lucide-react''
-=======
 
 import React from "react",
 import { Quote } from 'lucide-react'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
-<<<<<<< HEAD
   CarouselPrevious} from "@/components/ui/carousel",",
 const testimonials = [
   {
@@ -107,7 +103,6 @@ export function EnterpriseTestimonials() {
                     "{testimonial.quote}""
                   </blockquote>
 import React from 'react';
-=======
   CarouselPrevious} from "@/components/ui/carousel",
 
 const testimonials = [
@@ -165,14 +160,12 @@ export function EnterpriseTestimonials() {
                       <p className="font-bold">{testimonial.author}</p>
                       <p className="text-sm text-muted-foreground">
 import React from "react",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { Quote } from 'lucide-react';
 import {;
   Carousel,;
   CarouselContent,;
   CarouselItem,;
   CarouselNext,;
-<<<<<<< HEAD
   CarouselPrevious,;
 } from '@/components/ui/carousel';
 const testimonials = [;,
@@ -223,7 +216,6 @@ export function EnterpriseTestimonials() {;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-12">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;",
-=======
   CarouselPrevious} from "@/components/ui/carousel",;
 const testimonials = [;
   {;
@@ -250,14 +242,12 @@ export function EnterpriseTestimonials() {;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-12">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Trusted by Leading Companies;
           </h2>;
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">;
             See how enterprise teams are transforming their hiring process;
           </p>;
         </div>;
-<<<<<<< HEAD
         <Carousel className='w-full'>;
           <CarouselContent>;
             {testimonials && testimonials.map((testimonial, index) => (;
@@ -266,16 +256,13 @@ export function EnterpriseTestimonials() {;
                   <Quote className='h-10 w-10 text-primary/20 mb-4' />;
                   <blockquote className='text-xl mb-6 italic'>;
             {testimonials && testimonials.map((testimonial, index,) => (;
-=======
         <Carousel className="w-full">;
           <CarouselContent>;
             {testimonials.map((testimonial, index) => (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                 <div className="bg-card rounded-xl p-8 border border-border h-full">;
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />;
                   <blockquote className="text-xl mb-6 italic">;
-<<<<<<< HEAD
                     "{testimonial && testimonial.quote}";
                   </blockquote>;
                   <div className='flex items-center gap-4'>;
@@ -291,7 +278,6 @@ export function EnterpriseTestimonials() {;
                       <p className='text-sm text-muted-foreground'>                        {testimonial && testimonial.title}, {testimonial && testimonial.company}                      <p className="font-bold">{testimonial && testimonial.author}</p>;
                       <p className="text-sm text-muted-foreground">;
                         {testimonial && testimonial.title}, {testimonial && testimonial.company}
-=======
                     "{testimonial.quote}";
                   </blockquote>;
                   <div className="flex items-center gap-4">;
@@ -307,25 +293,20 @@ export function EnterpriseTestimonials() {;
                       <p className="font-bold">{testimonial.author}</p>;
                       <p className="text-sm text-muted-foreground">;
                         {testimonial.title}, {testimonial.company}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </p>;
                     </div>;
                   </div>;
                 </div>;
               </CarouselItem>;
             ))}
-<<<<<<< HEAD
-=======
           </CarouselContent>
           <div className="flex justify-center gap-2 mt-8">
             <CarouselPrevious />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <CarouselNext />
           </div>
         </Carousel>
       </div>
     </section>
-<<<<<<< HEAD
           </CarouselContent>;
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">;
 import React from 'react';
@@ -443,8 +424,6 @@ function EnterpriseTestimonials() {
 }
 ;
 }}})))))))))))))
-=======
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { format } from 'date-fns';
 import { PaperclipIcon } from 'lucide-react';
@@ -43,7 +42,6 @@ export function MessageBubble({ message, isUserMessage }:,  MessageBubbleProps) 
     </div>
   );
 }
-=======
 import React from 'react',;
 import { format } from 'date-fns',;
 import { PaperclipIcon } from 'lucide-react';
@@ -88,4 +86,3 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

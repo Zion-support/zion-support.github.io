@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging';
@@ -71,7 +70,6 @@ export const ConversationsList: React.FC<ConversationsListProps> = ({,
     </div>
   );
 };
-=======
 
 import React, { useMemo } from 'react',;
 import { User } from 'lucide-react';
@@ -143,4 +141,3 @@ export function ConversationsList({;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

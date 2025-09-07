@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 className={`cursor-pointer transition-all ${`
             selectedRole === 'client' '
               ? "border-primary bg-primary/5" "
@@ -17,7 +16,6 @@ className={`cursor-pointer transition-all ${`
               </div>
               {selectedRole === 'client' && ('
                 <Check className="h-5 w-5 text-primary" />"
-=======
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -87,14 +85,12 @@ export function RolePicker({ onSelect }: RolePickerProps) {
               </div>
               {selectedRole === 'client' && (
                 <Check className="h-5 w-5 text-primary" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Briefcase, Users, Check } from 'lucide-react';
 type UserRole = "talent" | "client" | null,;
 interface RolePickerProps {;
-<<<<<<< HEAD
   onSelect: (role:,  UserRole) => void;
 }
 ;
@@ -118,7 +114,6 @@ export function RolePicker({ onSelect }:,  RolePickerProps) {;,
               : 'border-border hover:border-primary/40''
           }`}`
           onClick={() => handleSelect('talent')}'
-=======
   onSelect: (role: UserRole) => void;
 }
 ;
@@ -140,7 +135,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               : "border-border hover:border-primary/40";
           }`}
           onClick={() => handleSelect('talent')}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         >;
           <CardContent className="p-5">;
             <div className="flex items-center">;
@@ -157,7 +151,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
             </div>;
           </CardContent>;
         </Card>;
-<<<<<<< HEAD
         <Card
           className={`cursor-pointer transition-all ${`
             selectedRole === 'client''
@@ -165,7 +158,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               : 'border-border hover:border-primary/40''
           }`}`
           onClick={() => handleSelect('client')}'
-=======
         <Card;
           className={`cursor-pointer transition-all ${;
             selectedRole === 'client';
@@ -173,7 +165,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               : "border-border hover:border-primary/40";
           }`}
           onClick={() => handleSelect('client')}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         >;
           <CardContent className="p-5">;
             <div className="flex items-center">;
@@ -187,7 +178,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               {selectedRole === 'client' && (;
                 <Check className="h-5 w-5 text-primary" />;
               )}
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -256,20 +246,15 @@ function RolePicker() {
               </div>;
               {selected_role === 'client' && ('
                 <Check className='h - 5 w - 5 text - primary' />)}'
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
     </div>);
 }
 ;
 }}}))
-=======
     </div>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

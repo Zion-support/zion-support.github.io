@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {;
   useState,;
   useRef,;
@@ -14,20 +13,17 @@ import { Button } from "@/components/ui/button","
 import { Send } from 'lucide-react''
 interface ChatInputProps {
   onSend: (message:,  string) => void,
-=======
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from 'lucide-react'
 
 interface ChatInputProps {
   onSend: (message: string) => void,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   disabled?: boolean
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Send } from 'lucide-react';
 interface ChatInputProps {;
-<<<<<<< HEAD
   onSend: (message:,  string) => void;,
 disabled?: boolean ;
 }export function ChatInput(): any ({;
@@ -143,7 +139,6 @@ export function ChatInput({ onSend, disabled = false }:,  ChatInputProps) {,
       </Button>;
     </form>);
 }
-=======
   onSend: (message: string) => void,;
   disabled?: boolean;
 }
@@ -194,4 +189,3 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
     </form>
   )
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

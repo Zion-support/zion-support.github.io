@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 export interface DeployTemplateResult {
 
@@ -85,7 +84,6 @@ export function getGitStatus() {
   };
 }
 
-=======
 import fs from "fs";
 import path from "path";
 export type SourceNodeType = "folder" | "file";
@@ -229,12 +227,10 @@ function markExistenceRecursive(node: SourceNode): SourceNode {;
   return withExists;
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function getSourceMapWithExistence(): SourceNode[] {;
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
-<<<<<<< HEAD
 
 export interface DeployTemplateResult {;
   createdPaths: string[];
@@ -250,7 +246,6 @@ export function ensureDirectory(dirPath: string): void {
 export function deployBasicTemplateForPath(
   repoRelativePath: string
 ): DeployTemplateResult {;
-=======
 ;
 export interface DeployTemplateResult {;
   createdPaths: string[];
@@ -264,12 +259,10 @@ export function ensureDirectory(dirPath: string): void {;
 }
 ;
 export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemplateResult {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const absoluteDir = path.join(ROOT, repoRelativePath);
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
-<<<<<<< HEAD
   } else {
     skippedPaths.push(keepFile);
   }
@@ -315,7 +308,6 @@ export function ensure_directory (dir_path: string): void {
   return { created_paths, skipped_paths }
 ;
 
-=======
   const keepFile = path.join(absoluteDir, ".keep");
   if (!fs.existsSync(keepFile)) {;
     fs.writeFileSync(keepFile, "");
@@ -335,4 +327,3 @@ export function ensure_directory (dir_path: string): void {
 ;
   return { createdPaths, skippedPaths }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

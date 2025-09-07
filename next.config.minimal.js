@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -9,11 +8,8 @@
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
-=======
-<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
@@ -39,7 +35,6 @@ domains: ["localhost", "ziontechgroup.com"],
   distDir: '.next',
 };
 
-<<<<<<< HEAD
 
 
 
@@ -73,10 +68,7 @@ const nextConfig = {,
   reactStrictMode: true,
 
 
-=======
 module.exports = nextConfig;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 const nextConfig = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
@@ -296,7 +288,6 @@ module.exports = nextConfig;
 };
 
 export default nextConfig;
-<<<<<<< HEAD
 pageExtensions: ['tsxtsjsxjs'],
   trailingSlash: true,
   // Image optimization,
@@ -393,6 +384,3 @@ module.exports = nextConfig;
 
 
 
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,16 +1,10 @@
-<<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
 import * as React from 'react';
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/cloud-migration.tsx
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
 import React from 'react';
-=======
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/cloud-migration.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/solutions/cloud-migration.tsx
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Cloud, 
@@ -339,9 +333,6 @@ export default function CloudMigrationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/cloud-migration.tsx
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
@@ -363,9 +354,6 @@ export default function CloudMigrationPage() {
         </section>;
       </div>;
     </Layout>;
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/cloud-migration.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/solutions/cloud-migration.tsx
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message:,  string): Promise<void> => {,
     try {
@@ -18,7 +17,6 @@
         })}),
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")"
-=======
 
 import { useState } from "react",
 import { MessageSquare } from 'lucide-react'
@@ -42,7 +40,6 @@ export function ChatAssistantTrigger() {
       
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { useState } from "react",;
 import { MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
@@ -51,17 +48,13 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 export function ChatAssistantTrigger() {;
   const [isOpen, setIsOpen] = useState(false),;
   // Handle sending messages to the AI chat assistant;
-<<<<<<< HEAD
   const handleSendMessage = async (message:,  string): Promise<void> => {;,
-=======
   const handleSendMessage = async (message: string): Promise<void> => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     try {;
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {;
         method: "POST",;
         headers: {;
           "Content-Type": "application/json"},;
-<<<<<<< HEAD
         body: JSON.stringify({;,
           messages: [{ role: "user", content: message }];
         })}),;
@@ -86,7 +79,6 @@ export function ChatAssistantTrigger() {;
     } catch (error) {;
       logErrorToProduction('Error in AI chat:', { data: error }),;
       return Promise && Promise.resolve();
-=======
         body: JSON.stringify({;
           messages: [{ role: "user", content: message }];
         })}),;
@@ -98,14 +90,12 @@ export function ChatAssistantTrigger() {;
     } catch (error) {;
       logErrorToProduction('Error in AI chat:', { data: error }),;
       return Promise.resolve();
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     }
   },;
   return (;
     <>;
       <Button;
         onClick={() => setIsOpen(true)}
-<<<<<<< HEAD
         size="icon""
         variant="outline""
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"",
@@ -134,7 +124,6 @@ export function ChatAssistantTrigger() {;
         <ChatAssistant
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
-=======
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
@@ -145,30 +134,25 @@ export function ChatAssistantTrigger() {;
       
       {isOpen && (
         <ChatAssistant
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           recipient={{;
             id: 'ai-assistant',;
-<<<<<<< HEAD
             name: 'AI Assistant',;
             avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
             role: 'Virtual Assistant';
           }}
           onSendMessage = {handleSendMessage,}
-=======
             name: 'AI Assistant';
             avatarUrl: 'https://placehold.co/64x64?text=AI';
             role: 'Virtual Assistant';
           }}
           onSendMessage={handleSendMessage}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         />;
       )}
     </>;
   );
 }
-<<<<<<< HEAD
 import { useState  } from './react';
 import { MessageSquare } from 'lucide-react'import { Button  } from '@/components / ui / button';
 import { ChatAssistant  } from '@/components / ChatAssistant';
@@ -232,6 +216,4 @@ if ( {) {
 ;
 ;
 }}
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

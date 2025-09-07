@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript`
   // can't determine the generic type for the helper from React Router.'
@@ -13,7 +12,6 @@ class ErrorBoundary extends React.Component {
   }
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin''
       return;
-=======
 
 import { useState } from "react",
 import Link from "next/link",
@@ -108,14 +106,12 @@ export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
   // Cast the result instead to provide the expected shape.
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const router = useRouter(),
   const postId = router.query.postId as string,
   const { user } = useAuth(),
   const { toast } = useToast(),
   const [post, setPost] = useState(mockPost),
   const [replies, setReplies] = useState(mockReplies),
-<<<<<<< HEAD
   // Check if this is the user's own post'
   const isAuthor = user?.id === post?.authorId,
   // Check if user is admin/mod
@@ -127,7 +123,6 @@ export default function ForumPostPage() {
         <h1>Post not found</h1>
         <Button asChild className="mt-4">"
           <Link href="/community" />Back to Community</Link>"
-=======
   
   // Check if this is the user's own post
   const isAuthor = user?.id === post?.authorId,
@@ -142,12 +137,10 @@ export default function ForumPostPage() {
         <h1>Post not found</h1>
         <Button asChild className="mt-4">
           <Link href="/community">Back to Community</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </Button>
       </div>
     )
   }
-<<<<<<< HEAD
   const handleUpvote = () => {
     if (!user) {
       toast({
@@ -192,7 +185,6 @@ export default function ForumPostPage() {
       content,
       authorId: user.id || 'unknown','
       authorName: user.displayName || 'Anonymous','
-=======
 
   const handleUpvote = () => {
     if (!user) {
@@ -243,14 +235,12 @@ export default function ForumPostPage() {
       content,
       authorId: user.id || 'unknown',
       authorName: user.displayName || 'Anonymous',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       authorAvatar: user.avatarUrl,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
       upvotes: 0,
       downvotes: 0
     },
-<<<<<<< HEAD
     ,
     setReplies([...replies, newReply]),
     setPost({ ...post, replyCount: post.replyCount + 1 }),
@@ -268,7 +258,6 @@ export default function ForumPostPage() {
       }),
       return
     }
-=======
     
     setReplies([...replies, newReply]),
     setPost({ ...post, replyCount: post.replyCount + 1 }),
@@ -289,13 +278,11 @@ export default function ForumPostPage() {
       return
     }
     
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     // Update the replies
     const updatedReplies = replies.map(reply => ({
       ...reply,
       isAnswer: reply.id === replyId
     })),
-<<<<<<< HEAD
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
     toast({
@@ -449,7 +436,6 @@ export default function ForumPostPage() {
   },
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),"
-=======
     
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
@@ -497,7 +483,6 @@ export default function ForumPostPage() {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
   
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (
     <>
       <SEO
@@ -519,11 +504,8 @@ import ReplyCard from "@/components/community/ReplyCard",;
 import ReplyForm from "@/components/community/ReplyForm",;
 import { useToast } from "@/hooks/use-toast",;
 // Mock data for a forum post;
-<<<<<<< HEAD
 const mockPost: ForumPost = {;,
-=======
 const mockPost: ForumPost = {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   id: "1",;
   title: "Best practices for AI model fine-tuning",;
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",;
@@ -531,11 +513,8 @@ const mockPost: ForumPost = {;
   authorName: "Alex Johnson",;
   authorAvatar: "https://i.pravatar.cc/150?img=3",;
   authorRole: "Verified Talent",;
-<<<<<<< HEAD
   categoryId: "ai-tools",;,
-=======
   categoryId: "ai-tools",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   tags: ["machine-learning", "fine-tuning", "gpt"],;
   createdAt: "2025-04-01T12:00:00Z",;
   updatedAt: "2025-04-01T12:00:00Z",;
@@ -546,11 +525,8 @@ const mockPost: ForumPost = {;
   isFeatured: true;
 },;
 // Mock data for replies;
-<<<<<<< HEAD
 const mockReplies: ForumReply[] = [;,
-=======
 const mockReplies: ForumReply[] = [;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   {;
     id: "reply1",;
     postId: "1",;
@@ -601,23 +577,17 @@ const mockReplies: ForumReply[] = [;
   }
 ],;
 export default function ForumPostPage() {;
-<<<<<<< HEAD
   // Using `useParams` without type arguments avoids issues when TypeScript;`
-=======
   // Using `useParams` without type arguments avoids issues when TypeScript;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   // can't determine the generic type for the helper from React Router.;
   // Cast the result instead to provide the expected shape.;
   const router = useRouter(),;
   const postId = router.query.postId as string,;
   const { user } = useAuth(),;
-<<<<<<< HEAD
   const { toast } = useToast(),;,
   const [post, setPost] = useState(mockPost),;,
-=======
   const { toast } = useToast(),;
   const [post, setPost] = useState(mockPost),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [replies, setReplies] = useState(mockReplies),;
   // Check if this is the user's own post;
   const isAuthor = user?.id === post?.authorId,;
@@ -629,11 +599,8 @@ export default function ForumPostPage() {;
       <div className="container py-8">;
         <h1>Post not found</h1>;
         <Button asChild className="mt-4">;
-<<<<<<< HEAD
           <Link href="/community" />Back to Community</Link>;
-=======
           <Link href="/community">Back to Community</Link>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </Button>;
       </div>;
     );
@@ -645,11 +612,8 @@ export default function ForumPostPage() {;
         title: "Authentication required",;
         description: "Please sign in to vote on posts"}),;
       const returnTo = encodeURIComponent(router.asPath),;
-<<<<<<< HEAD
       router.push(`/auth/login?returnTo=${returnTo}`),;`
-=======
       router.push(`/auth/login?returnTo=${returnTo}`),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       return;
     }
 ;
@@ -664,11 +628,8 @@ export default function ForumPostPage() {;
         title: "Authentication required",;
         description: "Please sign in to vote on posts"}),;
       const returnTo = encodeURIComponent(router.asPath),;
-<<<<<<< HEAD
       router.push(`/auth/login?returnTo=${returnTo}`),;`
-=======
       router.push(`/auth/login?returnTo=${returnTo}`),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       return;
     }
 ;
@@ -677,32 +638,23 @@ export default function ForumPostPage() {;
       title: "Vote recorded",;
       description: "You downvoted this post"});
   },;
-<<<<<<< HEAD
   const handleSubmitReply = async (content:,  string) => {;,
-=======
   const handleSubmitReply = async (content: string) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     if (!user) {;
       toast({;
         title: "Authentication required",;
         description: "Please sign in to reply"}),;
       const returnTo = encodeURIComponent(router.asPath),;
-<<<<<<< HEAD
       router.push(`/auth/login?returnTo=${returnTo}`),;`
-=======
       router.push(`/auth/login?returnTo=${returnTo}`),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       return;
     }
 ;
     // Create a new reply;
-<<<<<<< HEAD
     const newReply: ForumReply = {;,
       id: `reply${Date.now()}`,;`
-=======
     const newReply: ForumReply = {;
       id: `reply${Date.now()}`,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       postId: post.id,;
       content,;
       authorId: user.id || 'unknown',;
@@ -712,22 +664,16 @@ export default function ForumPostPage() {;
       updatedAt: new Date().toISOString(),;
       upvotes: 0,;
       downvotes: 0;
-<<<<<<< HEAD
     },;,
-=======
     },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     setReplies([...replies, newReply]),;
     setPost({ ...post, replyCount: post.replyCount + 1 }),;
     toast({;
       title: "Reply posted",;
       description: "Your reply has been added to the discussion"});
   },;
-<<<<<<< HEAD
   const handleMarkAsAnswer = (replyId:,  string) => {;
-=======
   const handleMarkAsAnswer = (replyId: string) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     // Only post author or admin can mark an answer;
     if (!isAuthor && !isAdminOrMod) {;
       toast({;
@@ -755,11 +701,8 @@ export default function ForumPostPage() {;
         title: "Authentication required",;
         description: "Please sign in to report content"}),;
       const returnTo = encodeURIComponent(router.asPath),;
-<<<<<<< HEAD
       router.push(`/auth/login?returnTo=${returnTo}`),;`
-=======
       router.push(`/auth/login?returnTo=${returnTo}`),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       return;
     }
 ;
@@ -775,7 +718,6 @@ export default function ForumPostPage() {;
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"});
   },;
   const handleLockPost = () => {;
-<<<<<<< HEAD
     if (!isAdminOrMod) return;
     setPost({ ...post, isLocked: !post && post.isLocked }),;
   const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true }),;
@@ -870,7 +812,6 @@ if (return) {
   );
 }
 ;
-=======
     if (!isAdminOrMod) return,;
     setPost({ ...post, isLocked: !post.isLocked }),;
     toast({;
@@ -1066,4 +1007,3 @@ if (return) {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

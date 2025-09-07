@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   };
 
 
@@ -142,7 +141,6 @@ export const suggestDidYouMean = (query: string) => {
 
 
 
-=======
 export type SearchType = 'all' | 'talent' | 'jobs' | 'projects';
 export type ParsedFilters = {;
   type: SearchType;
@@ -275,4 +273,3 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
     return base;
   }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

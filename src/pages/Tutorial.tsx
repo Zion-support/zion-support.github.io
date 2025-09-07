@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 tutorial?: TutorialType
 }
 export default function Tutorial({ tutorial: initialTutorial }:,  TutorialPageProps) {
@@ -71,7 +70,6 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }:,  Tutori
           {tutorial.author && (
 }
             <p className="mt-8 text-white font-semibold">"
-=======
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { TUTORIALS } from "@/data/tutorials",
@@ -117,7 +115,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
           </div>
           {tutorial.author && (
             <p className="mt-8 text-white font-semibold">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import Link from "next/link",;
 import { useRouter } from "next/router",;
 import { TUTORIALS } from "@/data/tutorials",;
@@ -129,11 +126,8 @@ import type { Tutorial as TutorialType } from "@/types/tutorial",;
 interface TutorialPageProps {;
   tutorial?: TutorialType;
 }
-<<<<<<< HEAD
 export default function Tutorial({ tutorial: initialTutorial }:,  TutorialPageProps) {;
-=======
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const router = useRouter(),;
   const slug = router.query.slug as string | undefined;
   const tutorial = initialTutorial || TUTORIALS.find((t) => t.slug === slug);
@@ -144,7 +138,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       </div>;
     );
   }
-<<<<<<< HEAD
   return (
     <>
       <SEO title={tutorial.title} description={tutorial.excerpt} />
@@ -171,7 +164,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
               {typeof tutorial && tutorial.author === 'string';
                 ? tutorial && tutorial.author;
                 : tutorial && tutorial.author.name}
-=======
 ;
   return (;
     <>;
@@ -195,7 +187,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
           {tutorial.author && (;
             <p className="mt-8 text-white font-semibold">;
               — {typeof tutorial.author === 'string' ? tutorial.author : tutorial.author.name}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </p>;
           )}
         </div>;
@@ -203,7 +194,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
     </>;
   );
 }
-<<<<<<< HEAD
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import { TUTORIALS } from '@/data / tutorials';
@@ -273,6 +263,4 @@ if ( {) {
 }
 ;
 }}}}})))
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

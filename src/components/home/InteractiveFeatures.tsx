@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next / link';
 import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {'
@@ -133,7 +132,6 @@ export function InteractiveFeatures(): any ({;
     setOpenIndex(prev => (prev === index ? null :,  index));
   };
   return (
-=======
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -252,7 +250,6 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
             Hover or click a card to learn more about what Zion offers;
           </p>;
         </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
           {features.map((feature, index) => (;
             <Card;
@@ -260,7 +257,6 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
-<<<<<<< HEAD
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg""
             >
               <CardHeader className="flex flex-row items-start space-x-3">"
@@ -268,7 +264,6 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
                 <div>
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>"
                   <CardDescription className="text-zion-slate-light">"
-=======
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
               <CardHeader className="flex flex-row items-start space-x-3">
@@ -276,14 +271,12 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
                 <div>
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
                   <CardDescription className="text-zion-slate-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     {feature.description}
                   </CardDescription>
                 </div>
               </CardHeader>
               <div
                 className={cn(
-<<<<<<< HEAD
                   'transition-all duration-300','
                   openIndex === index
                     ? 'max-h-48 opacity-100 p-6 pt-0''
@@ -307,7 +300,6 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
                   <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">"
                     <Link href={feature.link} className="flex items-center gap-1" />"
                       Learn more <ArrowRight className="h-4 w-4" />"
-=======
                   "transition-all duration-300",
                   openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
                 )}
@@ -317,25 +309,20 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
                   <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
                     <Link href={feature.link} className="flex items-center gap-1">
                       Learn more <ArrowRight className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </Link>
                   </Button>
                 </CardContent>
               </div>
             </Card>
           ))}
-<<<<<<< HEAD
 export default InteractiveFeatures;
 ;
 }
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
             </Card>))}
         </div>;
       </div>;
@@ -344,8 +331,6 @@ export default InteractiveFeatures;
 }
 ;
 export default InteractiveFeatures;
-=======
 }
 ;
 export default InteractiveFeatures;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface ModerationFlag {
 export interface ModerationFlag {;
 
@@ -127,7 +126,6 @@ export async function updateFlagStatus(
 
 
 
-=======
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -199,14 +197,10 @@ export async function createFlag(init: Omit<FlaggedContent 'id' | 'createdAt' | 
 export async function updateFlagStatus(id: string, status: ModerationStatus, adminNotes?: string): Promise<FlaggedContent | undefined> {;
   const flag = await getFlagById(id);
   if (!flag) return undefined;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
   await upsertFlag(flag);
   return flag;
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface FeatureCTAsProps {;
   className?: string;
   style?: React && React.CSSProperties;
@@ -19,7 +18,6 @@ export function FeatureCTAs(): any ({ className, style }:,  FeatureCTAsProps) {;
       link: '/match',;
       badge: 'popular';
     };
-=======
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -170,12 +168,10 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
       link: '/match',;
       badge: 'popular';
     },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       key: 'talent_directory',;
       descriptionKey: 'talent_directory_desc',;
       detailsKey: 'talent_directory_details',;
-<<<<<<< HEAD
       icon: (;
         <Users className='h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700' />;
       ),;
@@ -186,16 +182,13 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
       detailsKey: 'services_marketplace_details',      icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,;
       link: '/talent';
     };
-=======
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,;
       link: '/talent';
     },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       key: 'services_marketplace',;
       descriptionKey: 'services_marketplace_desc',;
       detailsKey: 'services_marketplace_details',;
-<<<<<<< HEAD
       icon: (;
         <Zap className='h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700' />;
       ),;
@@ -208,17 +201,14 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
       link: '/services',;
       badge: 'new';
     };
-=======
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,;
       link: '/services',;
       badge: 'new';
     },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       key: 'equipment_catalog',;
       descriptionKey: 'equipment_catalog_desc',;
       detailsKey: 'equipment_catalog_details',;
-<<<<<<< HEAD
       icon: (;
         <Settings className='h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700' />;
       ),;
@@ -229,16 +219,13 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
       detailsKey: 'community_hub_details',      icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />,;
       link: '/equipment';
     };
-=======
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />,;
       link: '/equipment';
     },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       key: 'community_hub',;
       descriptionKey: 'community_hub_desc',;
       detailsKey: 'community_hub_details',;
-<<<<<<< HEAD
       icon: (;
         <MessageSquare className='h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700' />;
       ),;
@@ -249,16 +236,13 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
       detailsKey: 'mobile_app_details',      icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />,;
       link: '/community';
     };
-=======
       icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />,;
       link: '/community';
     },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       key: 'mobile_app',;
       descriptionKey: 'mobile_app_desc',;
       detailsKey: 'mobile_app_details',;
-<<<<<<< HEAD
       icon: (;
         <Smartphone className='h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700' />;
       ),;
@@ -271,17 +255,14 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
       link: '/mobile-launch',;
       badge: 'featured';
     };
-=======
       icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,;
       link: '/mobile-launch',;
       badge: 'featured';
     },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       key: 'enterprise_solutions',;
       descriptionKey: 'enterprise_solutions_desc',;
       detailsKey: 'enterprise_solutions_details',;
-<<<<<<< HEAD
       icon: (;
         <Building className='h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700' />;
       ),;
@@ -292,16 +273,13 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
       detailsKey: 'developer_tools_details',      icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,;
       link: '/enterprise';
     };
-=======
       icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,;
       link: '/enterprise';
     },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       key: 'developer_tools',;
       descriptionKey: 'developer_tools_desc',;
       detailsKey: 'developer_tools_details',;
-<<<<<<< HEAD
       icon: (;
         <Code className='h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700' />;
       ),;
@@ -312,16 +290,13 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
       detailsKey: 'learning_resources_details',      icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700" />,;
       link: '/developers';
     };
-=======
       icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700" />,;
       link: '/developers';
     },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       key: 'learning_resources',;
       descriptionKey: 'learning_resources_desc',;
       detailsKey: 'learning_resources_details',;
-<<<<<<< HEAD
       icon: (;
         <BookOpen className='h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700' />;
       ),;
@@ -332,16 +307,13 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
       detailsKey: 'project_management_details',      icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700" />,;
       link: '/blog';
     };
-=======
       icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700" />,;
       link: '/blog';
     },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       key: 'project_management',;
       descriptionKey: 'project_management_desc',;
       detailsKey: 'project_management_details',;
-<<<<<<< HEAD
       icon: (;
         <Calendar className='h-10 w-10 p-2 rounded-md bg-red-100 text-red-700' />;
       ),;
@@ -355,16 +327,13 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
       ),      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,;
       link: '/project-milestones';
     };
-=======
       icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,;
       link: '/project-milestones';
     },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       key: 'zion_hire_ai',;
       descriptionKey: 'zion_hire_ai_desc',;
       detailsKey: 'zion_hire_ai_details',;
-<<<<<<< HEAD
       icon: (;
         <Clock className='h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700' />;
       ),;
@@ -507,7 +476,6 @@ export function FeatureCTAs({ className, style }:,  FeatureCTAsProps) { const { 
                 {feature.descriptionKey && (
                   <CardDescription className="line-clamp-2">"
                     {t(`features.${feature.descriptionKey}`)}`
-=======
       icon: <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,;
       link: '/zion-hire-ai',;
       badge: 'premium';
@@ -546,30 +514,24 @@ export function FeatureCTAs({ className, style }:,  FeatureCTAsProps) { const { 
                 {feature.descriptionKey && (
                   <CardDescription className="line-clamp-2">
                     {t(`features.${feature.descriptionKey}`)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </CardDescription>;
                 )}
               </CardHeader>
               <CardContent>
                 {feature.detailsKey && (
-<<<<<<< HEAD
                   <p className="text-sm text-muted-foreground">"
                     {t(`features.${feature.detailsKey}`)}`
-=======
                   <p className="text-sm text-muted-foreground">
                     {t(`features.${feature.detailsKey}`)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </p>;
                 )}
               </CardContent>
               <CardFooter>
-<<<<<<< HEAD
                 <Button asChild className="w-full gap-1">"
                   <Link href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}`
                     <span />{t('general.explore')} {t(`features.${feature.key}`)}</span>`
                     <ArrowRight className="h-4 w-4" />"
-=======
                 <Button asChild className="w-full gap-1">
                   <Link
                     href={feature.link}
@@ -579,13 +541,11 @@ export function FeatureCTAs({ className, style }:,  FeatureCTAsProps) { const { 
                   >
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
                     <ArrowRight className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </Link>
                 </Button>
               </CardFooter>
             </Card>
           ))}
-<<<<<<< HEAD
 ;
 }
 }
@@ -875,11 +835,9 @@ function FeatureCTAs() {,
 }
 ;
 }}})))]
-=======
         </div>;
       </div>;
     </section>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -9,7 +9,6 @@ export interface Branding {;
   primaryColor?: string,;
   secondaryColor?: string,;
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
-<<<<<<< HEAD
 
 
 
@@ -21,14 +20,11 @@ export interface Branding {logoUrl?: string;
   subdomain?: string;
 }
 export interface DeployModules {marketplace: boolean;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export interface Branding {;
   logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;
-<<<<<<< HEAD
 
 
 
@@ -61,13 +57,10 @@ export interface Branding {;
 
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface DeployModules {;
   marketplace: boolean;
-<<<<<<< HEAD
 
 
 
@@ -81,8 +74,6 @@ export interface DeployModules {;
 
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -94,7 +85,6 @@ export interface DeployModules {;
   apiDocsWiki: boolean;
   zionBrain: boolean;
   // Bonus;
-<<<<<<< HEAD
 
 
 
@@ -117,15 +107,12 @@ export interface DeployModules {;
   }
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   globalMap?: boolean;
   franchiseOnboarding?: boolean;
   referralAmbassadors?: boolean;
   grantPortal?: boolean;
   trailer?: boolean;
   bookStore?: boolean;
-<<<<<<< HEAD
 
 
 
@@ -163,8 +150,6 @@ export interface DeployResult {success: boolean;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface DeployInput {;
@@ -172,12 +157,9 @@ export interface DeployInput {;
   defaultLanguage: string;
   deploymentRegion: string;
   tokenActivation: boolean;
-<<<<<<< HEAD
 
 governanceMode: GovernanceMode;
-=======
   governanceMode: GovernanceMode;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   branding: Branding;
   modules: DeployModules;
   requestedRoutes?: string[];
@@ -196,7 +178,6 @@ export interface GeneratedAsset {;
   description?: string;
 }
 ;
-<<<<<<< HEAD
   governanceMode: GovernanceMode,;
   branding: Branding,;
   modules: DeployModules,;
@@ -247,17 +228,14 @@ export interface DeployResult {;
 export interface DeployResult {;
   success: boolean;
 
-=======
 export interface DeployResult {;
   success: boolean;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
   logs: DeployLogEntry[];
   summary: string;
   version: string;
-<<<<<<< HEAD
 
 
 
@@ -358,14 +336,11 @@ export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | 
 
 
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface AccessControlConfig {;
   allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
   adminKeyConfigured: boolean;
-<<<<<<< HEAD
 
 
 
@@ -382,6 +357,4 @@ export interface AccessControlConfig {;
 
 
 
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface MobileFilterBarProps {
   searchTerm: string;,
   setSearchTerm: (value:,  string) => void;,
@@ -41,7 +40,6 @@ export function MobileFilterBar({
           className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate""
         />
         <p id="mobile-talent-search-help" className="sr-only">"
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -83,43 +81,33 @@ export function MobileFilterBar({
           className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate"
         />
         <p id="mobile-talent-search-help" className="sr-only">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Search by name or skill
         </p>
       </div>
     </div>
   )
-<<<<<<< HEAD
           onChange={e => setSearchTerm(e && e.target.value)}
           aria-describedby='mobile-talent-search-help';
           className='pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate'        />;
         <p id='mobile-talent-search-help' className='sr-only'>;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from 'lucide-react';
 import { Input } from "@/components/ui/input",;
 interface MobileFilterBarProps {;
   searchTerm: string,;
-<<<<<<< HEAD
   setSearchTerm: (value:,  string) => void,;
   setIsMobileFilterOpen: (isOpen:,  boolean) => void;
-=======
   setSearchTerm: (value: string) => void,;
   setIsMobileFilterOpen: (isOpen: boolean) => void;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export function MobileFilterBar({;
   searchTerm;
   setSearchTerm;
   setIsMobileFilterOpen;
-<<<<<<< HEAD
 }:,  MobileFilterBarProps) {;
-=======
 }: MobileFilterBarProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (;
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">;
       <Button;
@@ -135,19 +123,16 @@ export function MobileFilterBar({;
           Search talents;
         </label>;
         <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />;
-<<<<<<< HEAD
         <Input ;
           id="mobile-talent-search";
           placeholder="Search talents...";
           value={searchTerm}
           onChange={e = /> setSearchTerm(e.target.value)}
-=======
         <Input;
           id="mobile-talent-search";
           placeholder="Search talents...";
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           aria-describedby="mobile-talent-search-help";
           className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate";
         />;
@@ -158,7 +143,6 @@ export function MobileFilterBar({;
     </div>;
   );
 }
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Search, Sliders } from 'lucide-react';
@@ -199,6 +183,4 @@ function MobileFilterBar() {
     </div>);
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

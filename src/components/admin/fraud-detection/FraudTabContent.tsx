@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 interface FraudTabContentProps {
@@ -39,7 +38,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />"
           <h3 className="text-xl font-medium mb-4">Dangerous Flags</h3>"
           <p className="text-muted-foreground">"
-=======
 
 import React from "react",
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
@@ -67,12 +65,10 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
           <h3 className="text-xl font-medium mb-4">Dangerous Flags</h3>
           <p className="text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             This tab shows high-priority dangerous flags requiring immediate attention.
           </p>
         </div>
       ),
-<<<<<<< HEAD
     case 'actioned':'
       return (
         <div className='bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center'>;
@@ -91,7 +87,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 }
       ),
     default:,
-=======
     
     case 'actioned':
       return (
@@ -105,12 +100,10 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       ),
     
     default:
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       return null
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 interface FraudTabContentProps {;
-<<<<<<< HEAD
   tabValue: string;,
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({;,
   tabValue,;
@@ -142,7 +135,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({;,
           <CheckCircle className='mx-auto h-12 w-12 text-green-500 mb-4' />;
           <h3 className='text-xl font-medium mb-4'>Actioned Flags</h3>;
           <p className='text-muted-foreground'>;
-=======
   tabValue: string;
 }
 ;
@@ -174,12 +166,10 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" />;
           <h3 className="text-xl font-medium mb-4">Actioned Flags</h3>;
           <p className="text-muted-foreground">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             This tab shows flags where action has already been taken.;
           </p>;
         </div>;
       );
-<<<<<<< HEAD
     default:;,
       return null;
 }
@@ -197,9 +187,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
   }
 };
 }
-=======
     default:;
       return null;
   }
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

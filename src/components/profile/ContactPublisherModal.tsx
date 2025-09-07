@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react''
 import FocusLock from 'react-focus-lock''
 import {
@@ -260,7 +259,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
       </Dialog>;
   const handleKeyDown = (e: React.KeyboardEvent) => {,
     if (e.key === 'Escape') {'
-=======
 import React from 'react',;
 import FocusLock from 'react-focus-lock',;
 import {;
@@ -346,21 +344,16 @@ export function ContactPublisherModal({;
   },;
   const handleKeyDown = (e: React.KeyboardEvent) => {;
     if (e.key === 'Escape') {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       e.stopPropagation();
       onClose();
     }
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (
     <>
     <Dialog open={isOpen} onOpenChange={onClose}>
       <FocusLock disabled={!isOpen} returnFocus>
         <DialogContent
-<<<<<<< HEAD
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"",
           onKeyDown={handleKeyDown}
           aria-modal="true""
@@ -377,7 +370,6 @@ export function ContactPublisherModal({;
             <div className="mb-4 text-zion-slate-light">"
             <span className="block">Email:</span>"
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">"
-=======
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown={handleKeyDown}
           aria-modal="true"
@@ -394,29 +386,24 @@ export function ContactPublisherModal({;
             <div className="mb-4 text-zion-slate-light">
             <span className="block">Email:</span>
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               {publisherEmail}
             </Link>
           </div>
         )}
         <Form {...form}>
-<<<<<<< HEAD
           <form onSubmit={(e) => e.preventDefault()} className="space-y-4">"
             <FormField
               control={form.control}
               name="subject""
-=======
           <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
             <FormField
               control={form.control}
               name="subject"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
-<<<<<<< HEAD
                       placeholder="Subject""
                       className="bg-zion-blue border-zion-blue-light text-white""
                       {...field}
@@ -429,7 +416,6 @@ export function ContactPublisherModal({;
             <FormField
               control = {form.control,}
               name="message""
-=======
                       placeholder="Subject"
                       className="bg-zion-blue border-zion-blue-light text-white"
                       {...field}
@@ -442,13 +428,11 @@ export function ContactPublisherModal({;
             <FormField;
               control={form.control}
               name="message"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
-<<<<<<< HEAD
                       placeholder={`Message to ${publisherName}...`}`
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"",
                       {...field}
@@ -523,7 +507,6 @@ export function ContactPublisherModal({;
               disabled = {!form.form_state.is_valid || is_submitting, }            >;
               <SendIcon className="mr - 2" />;
               {is_submitting ? 'Sending...' : 'Send Message'}'
-=======
                       placeholder={`Message to ${publisherName}...`}
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
                       {...field}
@@ -540,22 +523,18 @@ export function ContactPublisherModal({;
             >
               <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>;
           </form>;
         </Form>;
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
-<<<<<<< HEAD
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>) </>);
 }
 ;
-=======
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

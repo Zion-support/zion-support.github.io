@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 application: JobApplication
 }
 import { useState } from 'react';
@@ -105,7 +104,6 @@ function ApplicationCard() {,
         return (
           <Button variant="outline" size="sm">"
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback"
-=======
 
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
@@ -152,14 +150,12 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         return (
           <Button variant="outline" size="sm">
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>
         ),
       default:
         return null
     }
   },
-<<<<<<< HEAD
   return (
     <Card className="overflow-hidden">"
       <CardHeader className="pb-3">"
@@ -171,7 +167,6 @@ export function ApplicationCard({ application }:,  ApplicationCardProps) {,
   const handleDownloadResume = () => {
     // This would typically download the resume file
             <div className="text-sm text-muted-foreground mt-1">"
-=======
 
   return (
     <Card className="overflow-hidden">
@@ -180,14 +175,12 @@ export function ApplicationCard({ application }:,  ApplicationCardProps) {,
           <div>
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
             <div className="text-sm text-muted-foreground mt-1">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </div>
           </div>
           <StatusBadge status={application.status} />
         </div>
       </CardHeader>
-<<<<<<< HEAD
     <Card className='overflow - hidden'>;
       <CardHeader className='pb - 3'>;
         <div className='flex justify - between items - start'>;
@@ -367,7 +360,6 @@ export function ApplicationCard(): any ({ application }:,  ApplicationCardProps)
             {application.cover_letter && (
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>"
                     <Download className="h-3 w-3 mr-1" /> Download"
-=======
       
       <CardContent className="pb-3">
         <ApplicationProgress status={application.status} className="my-4" />
@@ -390,12 +382,10 @@ export function ApplicationCard(): any ({ application }:,  ApplicationCardProps)
                   </div>
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>
                     <Download className="h-3 w-3 mr-1" /> Download
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </Button>
                 </div>
               </div>
             )}
-<<<<<<< HEAD
               <div>;
                 <h4 className="text - sm font - medium mb - 1">Your Cover Letter</h4>;
                 <p className="text - sm text - muted - foreground">{application.cover_letter}</p>;
@@ -430,7 +420,6 @@ export function ApplicationCard(): any ({ application }:,  ApplicationCardProps)
                     {application.match_score}%
                   </div>
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>"
-=======
             
             {application.match_score && (
               <div>
@@ -440,7 +429,6 @@ export function ApplicationCard(): any ({ application }:,  ApplicationCardProps)
                     {application.match_score}%
                   </div>
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </div>
               </div>
 import { useState } from "react",;
@@ -457,11 +445,8 @@ interface ApplicationCardProps {;
   application: JobApplication;
 }
 ;
-<<<<<<< HEAD
 export function ApplicationCard({ application }:,  ApplicationCardProps) {;,
-=======
 export function ApplicationCard({ application }: ApplicationCardProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [expanded, setExpanded] = useState(false),;
   const handleDownloadResume = () => {;
     // This would typically download the resume file;
@@ -492,11 +477,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback;
           </Button>;
         );
-<<<<<<< HEAD
       default:;,
-=======
       default:;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         return null;
     }
   };
@@ -523,8 +505,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
                 <p className="text-sm text-muted-foreground">{application.cover_letter}</p>;
               </div>;
             )}
-<<<<<<< HEAD
-=======
 ;
             {application.resume && (;
               <div className="border rounded-md p-3 bg-muted/20">;
@@ -538,7 +518,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
                   </Button>;
                 </div>;
               </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             )}
 ;
             {application.match_score && (;
@@ -554,7 +533,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             )}
           </div>;
         )}
-<<<<<<< HEAD
           <Button
             variant='ghost''
             size='sm''
@@ -581,7 +559,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             >
               <Link href={`/jobs/${application.job_id}`} />`
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job"
-=======
       </CardContent>
       
       <CardFooter className="flex flex-col gap-3 pt-0">
@@ -598,12 +575,10 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             >
               <Link href={`/jobs/${application.job_id}`}>
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </Link>
             </Button>
           </div>
         </div>
-<<<<<<< HEAD
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client        '
         <Button
           variant="secondary" "
@@ -613,7 +588,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
         >
           <Link href={`/messages?jobId=${application.job_id}`} />`
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client"
-=======
         
         <Button 
           variant="secondary" 
@@ -623,13 +597,11 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
         >
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Link>
         </Button>
       </CardFooter>
     </Card>
   )
-<<<<<<< HEAD
             <Button variant='outline' size='sm' asChild>;
               <Link href={`/jobs/${application && application.job_id}`} />;`
                 <ExternalLink className='h-4 w-4 mr-1' /> View Job              </Link>;
@@ -730,7 +702,5 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
 }";
 }
 }}}}
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

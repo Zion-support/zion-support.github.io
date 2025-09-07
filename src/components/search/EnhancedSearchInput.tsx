@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { logInfo, logWarn } from '@/utils/productionLogger''
 import React, { useState, useEffect, useRef, useMemo } from "react","
 import { useTranslation } from "react-i18next","
@@ -14,7 +13,6 @@ import { logInfo, logWarn } from '@/utils/productionLogger','
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value:,  string) => void,
-=======
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
 import { Search, X } from 'lucide-react'
@@ -31,12 +29,10 @@ import { logInfo, logWarn } from '@/utils/productionLogger',
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
    */
-<<<<<<< HEAD
   onSelectSuggestion?: (suggestion:,  SearchSuggestion) => void,
   placeholder?: string,
   /**
@@ -62,7 +58,6 @@ import { Search, X  } from 'lucide-react''
 import { Input } from '@/components/ui/input''
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions''
 import { SearchSuggestion } from '@/types/search''
-=======
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   placeholder?: string,
   /**
@@ -72,12 +67,10 @@ import { SearchSuggestion } from '@/types/search''
   searchSuggestions?: SearchSuggestion[]
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function EnhancedSearchInput({
   value,
   onChange,
   onSelectSuggestion,
-<<<<<<< HEAD
   placeholder = "Search...","
   searchSuggestions
 }:,  EnhancedSearchInputProps) {
@@ -90,7 +83,6 @@ import { log_info, log_warn } from '@/utils / production_logger';
 interface EnhancedSearchInputProps {
   value: string,
   on_change: (value: string, ) => void,
-=======
   placeholder = "Search...",
   searchSuggestions
 }: EnhancedSearchInputProps) {
@@ -127,12 +119,10 @@ import { logInfo, logWarn } from '@/utils/productionLogger',;
 interface EnhancedSearchInputProps {;
   value: string,;
   onChange: (value: string) => void,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   /**;
    * Optional callback when a suggestion is selected. This allows parent;
    * components to perform actions such as navigation.;
    */;
-<<<<<<< HEAD
   onSelectSuggestion?: (suggestion:,  SearchSuggestion) => void,;
   placeholder?: string,;
   /**;
@@ -140,7 +130,6 @@ interface EnhancedSearchInputProps {;
    * If provided, these will be shown when the input is empty.;
    */;
   searchSuggestions?: SearchSuggestion[];,
-=======
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
   placeholder?: string,;
   /**;
@@ -148,7 +137,6 @@ interface EnhancedSearchInputProps {;
    * If provided, these will be shown when the input is empty.;
    */;
   searchSuggestions?: SearchSuggestion[];
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export function EnhancedSearchInput({;
@@ -157,7 +145,6 @@ export function EnhancedSearchInput({;
   onSelectSuggestion,;
   placeholder = "Search...",;
   searchSuggestions;
-<<<<<<< HEAD
 }:,  EnhancedSearchInputProps) {;,
   const [isFocused, setIsFocused] = useState(false),;,
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),;,
@@ -168,7 +155,6 @@ export function EnhancedSearchInput({;
   const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false),;
   const { t } = useTranslation(),;,
   const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]),;,
-=======
 }: EnhancedSearchInputProps) {;
   const [isFocused, setIsFocused] = useState(false),;
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),;
@@ -179,12 +165,10 @@ export function EnhancedSearchInput({;
   const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false),;
   const { t } = useTranslation(),;
   const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [loading, setLoading] = useState(false),;
   const debounced = useDebounce(value, 200),;
   const debouncedFetchSuggestions = useMemo(;
     () =>;
-<<<<<<< HEAD
       debounce(async (query:,  string) => {;,
         if (!query.trim()) {;,
           setApiSuggestions([]),;
@@ -251,7 +235,6 @@ if ( {) {
           setFilteredSuggestions([]),
         }
       }, 300),;,
-=======
       debounce(async (query: string) => {;
         if (!query.trim()) {;
           setApiSuggestions([]),;
@@ -281,7 +264,6 @@ if ( {) {
           setLoading(false);
         }
       }, 300),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     [];
   ),;
   // Fetch suggestions from API when input value changes;
@@ -289,22 +271,16 @@ if ( {) {
     if (!debounced) {;
       // Show recent suggestions provided via props when no query entered;
       setFilteredSuggestions(;
-<<<<<<< HEAD
         (searchSuggestions || []).filter(s => s.type === 'recent');,
-=======
         (searchSuggestions || []).filter(s => s.type === 'recent');
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       ),;
       setHighlightedIndex(-1),;
       return;
     }
 ;
     const controller = new AbortController(),;
-<<<<<<< HEAD
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {;`
-=======
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       signal: controller.signal;
     });
       .then(res => {;
@@ -315,11 +291,8 @@ if ( {) {
         if (Array.isArray(data)) {;
           setFilteredSuggestions(data.slice(0, 8));
         } else {;
-<<<<<<< HEAD
           setFilteredSuggestions([]);,
-=======
           setFilteredSuggestions([]);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         }
         setHighlightedIndex(-1);
       });
@@ -328,18 +301,14 @@ if ( {) {
   }, [debounced, searchSuggestions]),;
   // Handle clicks outside the component to close suggestions;
   useEffect(() => {;
-<<<<<<< HEAD
     function handleClickOutside(event:,  MouseEvent) {;,
       if (containerRef.current && !containerRef.current.contains(event.target as,  Node)) {;
-=======
     function handleClickOutside(event: MouseEvent) {;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         setIsFocused(false),;
         // setHighlightedIndex(-1), // Already handled in onBlur generally;
       }
     }
-<<<<<<< HEAD
     document.addEventListener("mousedown", handleClickOutside),"
     return () => document.removeEventListener("mousedown", handleClickOutside)"
   }, []),
@@ -563,7 +532,6 @@ export function EnhancedSearchInput(): any ({;
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion,) => {;
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),;
     onChange(suggestionObj && suggestionObj.text);
-=======
     
     document.addEventListener("mousedown", handleClickOutside),
     return () => document.removeEventListener("mousedown", handleClickOutside)
@@ -596,13 +564,11 @@ export function EnhancedSearchInput(): any ({;
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {;
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),;
     onChange(suggestionObj.text),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     if (onSelectSuggestion) {;
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),;
       onSelectSuggestion(suggestionObj);
     } else {;
       // Provide a sensible default navigation if the parent did not supply a handler;
-<<<<<<< HEAD
       logWarn('onSelectSuggestion callback not provided');
       if (suggestionObj && suggestionObj.id) {;
         router && router.push(`/marketplace/listing/${suggestionObj && suggestionObj.id}`);`
@@ -788,7 +754,6 @@ if ( {) {
     }
   }
     switch(e && e.key) {;
-=======
       logWarn('onSelectSuggestion callback not provided'),;
       if (suggestionObj.id) {;
         router.push(`/marketplace/listing/${suggestionObj.id}`);
@@ -806,7 +771,6 @@ if ( {) {
   },;
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
     switch (e.key) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       case 'ArrowDown':;
         if (isFocused && filteredSuggestions.length > 0) {;
           e.preventDefault(),;
@@ -820,23 +784,17 @@ if ( {) {
         }
         break,;
       case 'Enter':;
-<<<<<<< HEAD
         if (isFocused && highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {;,
           e.preventDefault(), // Prevent form submission;,
-=======
         if (isFocused && highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {;
           e.preventDefault(), // Prevent form submission;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           handleSelectSuggestion(filteredSuggestions[highlightedIndex]);
         } else if (value.trim()) {;
           // Manually trigger search navigation to ensure consistent behavior;
           e.preventDefault(),;
           logInfo('EnhancedSearchInput manual submit:', { data: value }),;
-<<<<<<< HEAD
           router.push(`/search?q=${encodeURIComponent(value)}`),;`
-=======
           router.push(`/search?q=${encodeURIComponent(value)}`),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           setIsFocused(false),;
           setHighlightedIndex(-1),;
           inputRef.current?.blur();
@@ -853,7 +811,6 @@ if ( {) {
         inputRef.current?.blur(),;
         break,;
       default:;
-<<<<<<< HEAD
         // For other keys (character,  input), reset enterHandledPostFocus;
         setEnterHandledPostFocus(false),;
         break;
@@ -914,7 +871,6 @@ if ( {) {
             setEnterHandledPostFocus(false)
             e.target.setSelectionRange(currentVal.length, currentVal.length)
           }}
-=======
         // For other keys (character input), reset enterHandledPostFocus;
         setEnterHandledPostFocus(false),;
         break;
@@ -941,7 +897,6 @@ if ( {) {
           id="enhanced-search-input"
           name="search"
           value={value}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           onChange={(e) => {;
             onChange(e.target.value),;
             setEnterHandledPostFocus(false);
@@ -956,7 +911,6 @@ if ( {) {
           }}
           onBlur={(e) => {;
             const relatedTarget = e.relatedTarget as HTMLElement;
-<<<<<<< HEAD
             if (!containerRef.current || !containerRef.current.contains(relatedTarget as,  Node)) {;
               setIsFocused(false);
               setHighlightedIndex(-1);
@@ -986,7 +940,6 @@ if ( {) {
         onSelectSuggestion = {handleSelectSuggestion,}
         visible = {isFocused,}
       </div>;
-=======
             if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {;
               setIsFocused(false);
               setHighlightedIndex(-1);
@@ -1010,14 +963,12 @@ if ( {) {
           </button>
         )}
       </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <AutocompleteSuggestions;
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
-<<<<<<< HEAD
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls"
       />;
     </div>;
@@ -1196,11 +1147,9 @@ break;
       />;
     </div>);
 }
-=======
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

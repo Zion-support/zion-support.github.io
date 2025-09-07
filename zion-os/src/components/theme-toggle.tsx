@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 "use client",;
 import { useTheme } from "@/components/theme-provider",;
@@ -40,8 +39,6 @@ function ThemeToggle() {
 import { useTheme } from "@/components/theme-provider";
 import { Moon, Sun, Monitor } from "lucide-react";
 export function ThemeToggle() {const { theme, setTheme } = useTheme();
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import { useTheme } from "@/components/theme-provider",;
 import { Moon, Sun, Monitor } from "lucide-react",;
@@ -53,16 +50,12 @@ export function ThemeToggle() {;
       <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;
         <button;
           onClick={() => setTheme("light")}
-<<<<<<< HEAD
           className={`rounded px-2 py-1 text-sm transition-colors ${theme === "light";
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           className={`rounded px-2 py-1 text-sm transition-colors ${;
             theme === "light";
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
           }`}
-<<<<<<< HEAD
           aria - label="Switch to light theme";
           aria - pressed={theme === "light"}
         >;
@@ -99,7 +92,6 @@ export function ThemeToggle() {;
       </div>;
     </div>);
 }
-=======
           aria-label="Switch to light theme";
           aria-pressed={theme === "light"}
         >;
@@ -133,4 +125,3 @@ export function ThemeToggle() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

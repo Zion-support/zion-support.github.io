@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface Project {
   id: string;
   title: string;
@@ -479,7 +478,6 @@ if (return false) {
   return true;
 }
 
-=======
 import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -570,4 +568,3 @@ export function updateMilestone(;
   saveProject(project);
   return next;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

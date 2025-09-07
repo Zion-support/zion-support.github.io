@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4""
 import React from "react","
 import { cn } from "@/lib/utils","
@@ -93,7 +92,6 @@ export function SeverityIndicator({;
   );
 }
 ;
-=======
 
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -185,4 +183,3 @@ export function SeverityIndicator({;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {;
   Select;
   SelectContent;
@@ -47,7 +46,6 @@ export function MobileResumeBuilder() {;
           variant={currentStep === "basics" ? "default" : "outline"}"
           className="flex-1 rounded-full""
           onClick={() => setCurrentStep("basics")}"
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -88,57 +86,45 @@ export function MobileResumeBuilder() {
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         >
           Basics
         </Button>
         <Button
-<<<<<<< HEAD
           variant={currentStep === "experience" ? "default" : "outline"}"
           className="flex-1 rounded-full""
           onClick={() => setCurrentStep("experience")}"
-=======
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         >
           Experience
         </Button>
         <Button
-<<<<<<< HEAD
           variant={currentStep === "education" ? "default" : "outline"}"
           className="flex-1 rounded-full""
           onClick={() => setCurrentStep("education")}"
-=======
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         >
           Education
         </Button>
         <Button
-<<<<<<< HEAD
           variant={currentStep === "skills" ? "default" : "outline"}"
           className="flex-1 rounded-full""
           onClick={() => setCurrentStep("skills")}"
-=======
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         >
           Skills
         </Button>
       </div>
-<<<<<<< HEAD
       {renderStepContent()}
       <Button className="w-full flex gap-2" size="lg">"
         <Zap className="h-5 w-5" /> Enhance with AI"
       </Button>
       <Button variant="default" className="w-full" size="lg">"
-=======
       
       {renderStepContent()}
       
@@ -147,13 +133,11 @@ export function MobileResumeBuilder() {
       </Button>
       
       <Button variant="default" className="w-full" size="lg">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         Save & Preview
       </Button>
     </div>
   )
 }
-<<<<<<< HEAD
 function BasicsStep() {
   return (
     <Card>
@@ -180,7 +164,6 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">"
           <Label htmlFor="summary">Professional Summary</Label>"
-=======
 
 function BasicsStep() {
   return (
@@ -268,7 +251,6 @@ export function MobileResumeBuilder() {;
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full";
           onClick={() => setCurrentStep("skills")}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         >;
           Skills;
         </Button>;
@@ -311,24 +293,20 @@ function BasicsStep() {;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="summary">Professional Summary</Label>;
-<<<<<<< HEAD
           <Textarea
             id="summary" "
             placeholder="Write a brief summary about yourself" "
             rows = {4,}
-=======
           <Textarea;
             id="summary";
             placeholder="Write a brief summary about yourself";
             rows={4}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           />;
         </div>;
       </CardContent>;
     </Card>;
   );
 }
-<<<<<<< HEAD
           <Textarea
             id="summary" "
             placeholder="Write a brief summary about yourself" "
@@ -500,7 +478,6 @@ function ExperienceStep() {;,
   );
 }
 ;
-=======
 
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }]),
@@ -860,4 +837,3 @@ function SkillsStep() {;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

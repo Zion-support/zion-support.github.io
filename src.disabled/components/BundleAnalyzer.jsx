@@ -1,26 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
-=======
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
 
 
-=======
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/BundleAnalyzer.jsx
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
 :src.disabled/components/BundleAnalyzer.jsx
@@ -32,21 +17,9 @@ const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshC
 :temp_exclude/src.disabled/components/BundleAnalyzer.jsx
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
-=======
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88

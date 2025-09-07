@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 loading,
-=======
 
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
@@ -24,14 +22,12 @@ export function WebhooksManager() {
   const {
     webhooks,
     loading,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     testResult,
     fetchWebhooks,
     createWebhook,
     toggleWebhook,
     deleteWebhook,
     testWebhook,
-<<<<<<< HEAD
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),'
   // Load webhooks on mount
@@ -212,23 +208,19 @@ if (=== '' ||) {'
     clearTestResult
   } = useWebhooks(),
   ,
-=======
     clearTestResult
   } = useWebhooks(),
   
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [showCreateDialog, setShowCreateDialog] = useState(false),
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showTestDialog, setShowTestDialog] = useState<string | null>(null),
   const [showTestResult, setShowTestResult] = useState(false),
-<<<<<<< HEAD
   // Create webhook form state,
   const [webhookName, setWebhookName] = useState(""),",
   const [webhookUrl, setWebhookUrl] = useState(""),",
   const [webhookSecret, setWebhookSecret] = useState(""),",
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),'
-=======
 
   // Create webhook form state
   const [webhookName, setWebhookName] = useState(""),
@@ -237,12 +229,10 @@ if (=== '' ||) {'
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   // Load webhooks on mount
   useEffect(() => {
     fetchWebhooks()
   }, []),
-<<<<<<< HEAD
   const handleCreateWebhook = async () => {
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,"
     await createWebhook(
@@ -369,7 +359,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 export function WebhooksManager() {;
   const {    webhooks,    webhooks,;
-=======
 
   const handleCreateWebhook = async () => {
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
@@ -521,7 +510,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 export function WebhooksManager() {;
   const {;
     webhooks,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     loading,;
     testResult,;
     fetchWebhooks,;
@@ -529,7 +517,6 @@ export function WebhooksManager() {;
     toggleWebhook,;
     deleteWebhook,;
     testWebhook,;
-<<<<<<< HEAD
     clearTestResult,;,
   const [showCreateDialog, setShowCreateDialog] = useState(false);,
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(;
@@ -555,7 +542,6 @@ export function WebhooksManager() {;
       selectedEvents && selectedEvents.length === 0;
     );
       return;
-=======
     clearTestResult;
   } = useWebhooks(),;
   const [showCreateDialog, setShowCreateDialog] = useState(false),;
@@ -574,12 +560,10 @@ export function WebhooksManager() {;
   }, []),;
   const handleCreateWebhook = async () => {;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     await createWebhook(;
       webhookName,;
       webhookUrl,;
       selectedEvents,;
-<<<<<<< HEAD
       webhookSecret && webhookSecret.trim() === '' ? undefined : webhookSecret;
     );
     setShowCreateDialog(false);
@@ -613,7 +597,6 @@ export function WebhooksManager() {;
     setShowDeleteConfirm(null);
   },;
   const handleTestWebhook = async (webhookId: string,) => {;
-=======
       webhookSecret.trim() === "" ? undefined : webhookSecret;
     ),;
     setShowCreateDialog(false),;
@@ -627,12 +610,10 @@ export function WebhooksManager() {;
     setShowDeleteConfirm(null);
   },;
   const handleTestWebhook = async (webhookId: string) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     await testWebhook(webhookId, testEventType),;
     setShowTestResult(true);
   },;
   const resetWebhookForm = () => {;
-<<<<<<< HEAD
     setWebhookName('');
     setWebhookUrl('');
     setWebhookSecret('');,
@@ -984,7 +965,6 @@ export function WebhooksManager() {;
               <DialogFooter>
                 <Button variant="outline" onClick={() => {"
                   setShowCreateDialog(false);
-=======
     setWebhookName(""),;
     setWebhookUrl(""),;
     setWebhookSecret(""),;
@@ -1097,30 +1077,25 @@ export function WebhooksManager() {;
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
                   setShowCreateDialog(false),
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   resetWebhookForm()
                 }}>
                   Cancel
                 </Button>
                 <Button onClick={handleCreateWebhook} disabled={
-<<<<<<< HEAD
                   webhookName.trim() === "" || "
                   webhookUrl.trim() === "" || "
                   selectedEvents.length === 0;
                 }>
-=======
                   webhookName.trim() === "" || 
                   webhookUrl.trim() === "" || 
                   selectedEvents.length === 0
                 }>
                   Create Webhook
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
         </div>
-<<<<<<< HEAD
                     webhookName && webhookName.trim() === '' ||'
                     webhookUrl && webhookUrl.trim() === '' ||'
                     selectedEvents && selectedEvents.length === 0
@@ -1262,7 +1237,6 @@ export function WebhooksManager() {;
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">"
-=======
         
         {/* Webhooks List */}
         <div className="space-y-4">
@@ -1305,7 +1279,6 @@ export function WebhooksManager() {;
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         <DropdownMenuItem
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
                         </Label>;
@@ -1361,11 +1334,8 @@ export function WebhooksManager() {;
                         onCheckedChange={() => handleToggleStatus(webhook.id, webhook.is_active)}
                       />;
                       <span className="ml-2 text-sm">;
-<<<<<<< HEAD
                         {webhook.is_active ? "Active" : "Inactive"}"
-=======
                         {webhook.is_active ? "Active" : "Inactive"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </span>;
                     </div>;
                       <DropdownMenu>;
@@ -1383,21 +1353,17 @@ export function WebhooksManager() {;
                         </DropdownMenuItem>;
                         <DropdownMenuItem;
                           onClick={() => setShowDeleteConfirm(webhook.id)}
-<<<<<<< HEAD
                           className="cursor-pointer text-red-500""
                         >
                           <X size={14} className="mr-2" /> Delete"
-=======
                           className="cursor-pointer text-red-500"
                         >
                           <X size={14} className="mr-2" /> Delete
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
                   </div>
                 </div>
-<<<<<<< HEAD
                           onClick={() => setShowDeleteConfirm(webhook && webhook.id)}
                           className='cursor-pointer text-red-500'                        >;
                           <X size={14} className='mr-2' /> Delete                        </DropdownMenuItem>                          <X size={14} className="mr-2" /> Delete;
@@ -1421,7 +1387,6 @@ export function WebhooksManager() {;
                       key={event}
                       variant="secondary""
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800""
-=======
                 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {webhook.event_types.map((event: WebhookEventType) => (
@@ -1429,13 +1394,11 @@ export function WebhooksManager() {;
                       key={event} 
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     >
                       {event}
                     </Badge>;
                   ))}
                 </div>;
-<<<<<<< HEAD
                 <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>;
                   <span>;
                     Created:{' '}'
@@ -1529,8 +1492,6 @@ export function WebhooksManager() {;
       <Dialog;
         open={showTestDialog !== null}
                 </div>;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>;
                   {webhook.last_triggered_at && (;
@@ -1542,7 +1503,6 @@ export function WebhooksManager() {;
           )}
         </div>
       </CardContent>
-<<<<<<< HEAD
       <CardFooter className="justify-between border-t border-zinc-800 py-4">"
         <div className="text-xs text-zinc-500">"
           Webhooks will be sent with HTTPS POST requests to your endpoint.
@@ -1606,7 +1566,6 @@ if ( {) {
         open={showTestDialog !== null}
         </Button>
       </CardFooter>
-=======
       
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
@@ -1617,13 +1576,11 @@ if ( {) {
         </Button>
       </CardFooter>
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {/* Test Webhook Dialog */}
       <Dialog;
         open={showTestDialog !== null} ;
         onOpenChange={(open) => {;
           if (!open) {;
-<<<<<<< HEAD
             setShowTestDialog(null);
             setTestEventType('new_application');
             if (showTestResult) {;
@@ -1685,18 +1642,15 @@ if ( {) {
                     value = {testEventType,}
                     onValueChange = {(value,) => setTestEventType(value as,  WebhookEventType),}
               clearTestResult()
-=======
             setShowTestDialog(null),;
             setTestEventType('new_application'),;
             if (showTestResult) {;
               setShowTestResult(false),;
               clearTestResult();
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             }
           }
         }}
       >
-<<<<<<< HEAD
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">"
           <DialogHeader>
             <DialogTitle>Test Webhook</DialogTitle>
@@ -1779,7 +1733,6 @@ if ( {) {
                   }
               <DialogFooter>
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>"
-=======
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <DialogHeader>
             <DialogTitle>Test Webhook</DialogTitle>
@@ -1816,7 +1769,6 @@ if ( {) {
               
               <DialogFooter>
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Cancel
                 </Button>
                 <Button onClick={() => showTestDialog && handleTestWebhook(showTestDialog)}>
@@ -1826,7 +1778,6 @@ if ( {) {
             </>
           ) : (
             <>
-<<<<<<< HEAD
                 >                  Send Test                  </p>;
                 </div>;
               </div>;
@@ -1874,7 +1825,6 @@ if ( {) {
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">"
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">"
                         {testResult?.responseBody || "No response body"}"
-=======
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
@@ -1896,12 +1846,10 @@ if ( {) {
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">
                         {testResult?.responseBody || "No response body"}
                       </pre>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </ScrollArea>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
                     </Badge>;
                   </div>;
                   <div className='space-y-2 mt-4'>;
@@ -1981,7 +1929,6 @@ if ( {) {
                 </Button>;
                 <Button
                   variant='outline''
-=======
               
               <DialogFooter>
                 <Button variant="default" onClick={() => {
@@ -1996,24 +1943,20 @@ if ( {) {
                   clearTestResult()
                 }}>
                   Test Another Event
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </Button>
               </DialogFooter>
             </>
                     </Badge>;
                   </div>;
                   <div className="space-y-2 mt-4">;
-<<<<<<< HEAD
                     <Label>Response Body</Label>;,
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
                         {testResult?.responseBody || "No response body"}"
-=======
                     <Label>Response Body</Label>;
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
                         {testResult?.responseBody || "No response body"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </pre>;
                     </ScrollArea>;
                   </div>;
@@ -2036,7 +1979,6 @@ if ( {) {
               </DialogFooter>;
             </>;
           )}
-<<<<<<< HEAD
         </DialogContent>
       </Dialog>
                   onClick={() => {;
@@ -2093,14 +2035,12 @@ if ( {) {
             <AlertDialogAction
               onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm),}
               className="bg-red-600 hover: bg-red-700";
-=======
         </DialogContent>;
       </Dialog>;
       {/* Delete Webhook Confirmation Dialog */}
       <AlertDialog;
         open={showDeleteConfirm !== null} ;
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
@@ -2111,17 +2051,14 @@ if ( {) {
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-<<<<<<< HEAD
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;",
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction
-=======
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700";
             >;
@@ -2132,7 +2069,6 @@ if ( {) {
       </AlertDialog>;
     </Card>;
   );
-<<<<<<< HEAD
   value: WebhookEventType,  label: string, description: string ;,
 }[] = [ {;,
   value: 'new application',  label: 'New Application', description: 'When a talent applies to a job' ;
@@ -2409,7 +2345,5 @@ clearTestResult ()
 }
 ;
 }}}}))))]
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { FileText } from 'lucide-react';
 interface ResumeOption {
@@ -96,7 +95,6 @@ export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({,
     </div>
   );
 };
-=======
 
 import React from 'react',;
 import { FileText } from 'lucide-react';
@@ -154,4 +152,3 @@ export function SelectResumeSection({
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

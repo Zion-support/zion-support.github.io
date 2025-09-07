@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Get region flag based on country name (for demo,  purposes)
   const getRegionEmoji = (countryName: string |,  undefined): string => {,
     if (!countryName) return "🌐","
@@ -118,7 +117,6 @@
           </div>
           <div className="flex items-start">"
             <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" />"
-=======
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -213,12 +211,10 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           </div>
           <div className="flex items-start">
             <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <span>First hour included</span>
           </div>
         </div>
       </CardContent>
-<<<<<<< HEAD
 import {;
   Card,;
   CardContent,;
@@ -228,7 +224,6 @@ import {;
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
-=======
       <CardFooter className="flex flex-col space-y-2">
         <Button
           onClick={() => onSelect(country)}
@@ -261,12 +256,10 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button",;
 import Link from 'next/link',;
 import { Badge } from "@/components/ui/badge",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
 import { CountryPricing } from "@/data/onsiteServicePricing",;
 interface CountryServiceCardProps {;
   country: CountryPricing,;
-<<<<<<< HEAD
   onSelect: (country:,  CountryPricing) => void,;
   onQuote?: (country:,  CountryPricing) => void,;
   isPopular?: boolean;
@@ -275,7 +268,6 @@ interface CountryServiceCardProps {;
 export function CountryServiceCard({ country, onSelect, onQuote, isPopular }:,  CountryServiceCardProps) {;
   // Get region flag based on country name (for demo,  purposes);
   const getRegionEmoji = (countryName: string |,  undefined): string => {;,
-=======
   onSelect: (country: CountryPricing) => void,;
   onQuote?: (country: CountryPricing) => void,;
   isPopular?: boolean;
@@ -284,7 +276,6 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }:,  
 export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: CountryServiceCardProps) {;
   // Get region flag based on country name (for demo purposes);
   const getRegionEmoji = (countryName: string | undefined): string => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     if (!countryName) return "🌐",;
     const emojiMap: Record<string string> = {;
       "United States": "🇺🇸",;
@@ -303,7 +294,6 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       "South Africa": "🇿🇦",;
       // Default if no flag is found;
       "default": "🌐";
-<<<<<<< HEAD
     },;,
     return emojiMap[countryName] || "🌐";
   },;
@@ -311,7 +301,6 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
   const getResponseTime = (countryName: string |,  undefined): string => {;,
     if (!countryName) return "8-24 hours",;,
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],;,
-=======
     },;
     return emojiMap[countryName] || "🌐";
   },;
@@ -319,7 +308,6 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
   const getResponseTime = (countryName: string | undefined): string => {;
     if (!countryName) return "8-24 hours",;
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
     if (tier1.includes(countryName)) {;
       return "4 hours";
@@ -330,19 +318,16 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
     }
   };
   return (;
-<<<<<<< HEAD
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${;`,
       isPopular;
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple";
         : "bg-zion-blue-dark border-zion-blue-light";
     }`}>;`
-=======
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${;
       isPopular;
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple";
         : "bg-zion-blue-dark border-zion-blue-light";
     }`}>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <CardHeader className="pb-2">;
         <div className="flex items-center justify-between">;
           <div className="flex items-center space-x-2">;
@@ -377,7 +362,6 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           </div>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
       <CardFooter className='flex flex-col space-y-2'>;
         <Button
           onClick = {() => onSelect(country),}
@@ -440,7 +424,6 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         </Button>;
           className='w-full text-zion-cyan hover:text-zion-purple'>;
           <Link href='/contact' />Contact Sales</Link>;
-=======
       <CardFooter className="flex flex-col space-y-2">;
         <Button;
           onClick={() => onSelect(country)}
@@ -465,13 +448,11 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           className="w-full text-zion-cyan hover: text-zion-purple";
         >;
           <Link href="/contact">Contact Sales</Link>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </Button>;
       </CardFooter>;
     </Card>;
   );
 }
-<<<<<<< HEAD
         <Button;
           variant='outline';
           className='w - full border - zion - purple text - zion - purple hover:bg - zion - purple / 10';',
@@ -516,6 +497,4 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       </CardFooter>
     </Card>
   )
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

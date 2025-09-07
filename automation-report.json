@@ -1,7 +1,4 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   "timestamp": "2025-09-05T15:52:31.442Z",
   "totalDuration": 19528,
   "successfulPhases": 3,
@@ -10,15 +7,10 @@
     "syntaxFixes": {
       "success": true,
       "duration": 1,
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   "timestamp": "2025-09-06T17:32:48.376Z",
   "duration": "64s",
-=======
   "timestamp": "2025-09-06T19:15:45.120Z",
   "duration": "40s",
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   "results": {
     "tests": {
       "passed": 0,
@@ -30,10 +22,6 @@
     },
     "builds": {
       "success": true,
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
   "timestamp": "2025-09-05T15:52:31.442Z",
   "totalDuration": 19528,
   "successfulPhases": 3,
@@ -42,15 +30,10 @@
     "syntaxFixes": {
       "success": true,
       "duration": 1,
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       "errors": []
     },
     "linting": {
       "success": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       "errors": [
         "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nReferenceError: typescriptParser is not defined\n    at file:///workspace/eslint.config.js?mtime=1757186054999:10:15\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async dynamicImportConfig (/workspace/node_modules/eslint/lib/config/config-loader.js:186:17)\n    at async loadConfigFile (/workspace/node_modules/eslint/lib/config/config-loader.js:276:9)\n    at async ConfigLoader.calculateConfigArray (/workspace/node_modules/eslint/lib/config/config-loader.js:589:23)\n    at async #calculateConfigArray (/workspace/node_modules/eslint/lib/config/config-loader.js:743:23)\n    at async directoryFilter (/workspace/node_modules/eslint/lib/eslint/eslint-helpers.js:308:5)\n    at async NodeHfs.<anonymous> (file:///workspace/node_modules/@humanfs/core/src/hfs.js:586:29)\n    at async NodeHfs.walk (file:///workspace/node_modules/@humanfs/core/src/hfs.js:614:3)\n"
       ]
@@ -70,8 +53,6 @@
     "lintingSuccess": false,
     "securityIssuesFixed": 0,
     "improvementsCreated": 1
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       "duration": 1802,
       "errors": [
         "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:6058) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.34.0\n\nA configuration object specifies rule \"@typescript-eslint/no-unused-vars\", but could not find plugin \"@typescript-eslint\".\n\nCommon causes of this problem include:\n\n1. The \"@typescript-eslint\" plugin is not defined in your configuration file.\n2. The \"@typescript-eslint\" plugin is not defined within the same configuration object in which the \"@typescript-eslint/no-unused-vars\" rule is applied.\n\n"
@@ -110,8 +91,6 @@
       "duration": 5292,
       "errors": []
     }
-<<<<<<< HEAD
-=======
       "errors": [
         "spawnSync /bin/sh ETIMEDOUT"
       ]
@@ -131,9 +110,5 @@
     "lintingSuccess": false,
     "securityIssuesFixed": 0,
     "improvementsCreated": 1
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   }
 }

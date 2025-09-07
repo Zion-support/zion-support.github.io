@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
@@ -63,7 +62,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
       <button
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium">;
-=======
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Checkbox } from "@/components/ui/checkbox",
@@ -118,14 +116,12 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium";
       >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <span>Availability</span>;
         {expanded ? (;
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-<<<<<<< HEAD
               <Checkbox
                 id={`availability-${option && option.id}`}`
                 checked={selectedAvailability && selectedAvailability.includes(option && option.id)}
@@ -261,7 +257,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 }</div>) ;
 }</div>) ;
 }"};
-=======
       </button>;
       {expanded && (;
         <div className="mt-4 space-y-2">;
@@ -275,7 +270,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
               />;
               <label;
                 htmlFor={`availability-${option.id}`}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {option.label}
@@ -287,8 +281,5 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
     </div>;
   );
 }
-<<<<<<< HEAD
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

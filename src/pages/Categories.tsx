@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading","
 import { SkeletonCard } from '@/components/ui','
 import ErrorBoundary from "@/components/GlobalErrorBoundary","
@@ -279,7 +278,6 @@ export: default Categories,
 export default Categories, " ];
 export default Categories"")))))))));
 }]]]]]]
-=======
 import useSWR from 'swr',
 import { CategoryCard } from "@/components/CategoryCard",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -393,4 +391,3 @@ export default function Categories({ categories: initialCategories = [] }: Categ
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

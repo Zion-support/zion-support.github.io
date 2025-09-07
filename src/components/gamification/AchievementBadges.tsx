@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface Achievement {
   id: string,
   title: string,
@@ -21,17 +20,14 @@ interface AchievementBadgesProps {,
   achievements: Achievement[];,
   achievements: Achievement[];,
 }
-=======
 import { BadgeCheck } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export interface Achievement {
   id: string,
   title: string,
   description: string,
   achieved: boolean
-<<<<<<< HEAD
 }
 interface AchievementBadgesProps {,
   achievements: Achievement[]
@@ -67,7 +63,6 @@ export function AchievementBadges(): any ({ achievements }:,  AchievementBadgesP
   return (
               <p className="font-medium">{a.title}</p>"
               <p className="text-sm text-muted-foreground">{a.description}</p>"
-=======
 import { BadgeCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 export interface Achievement {;
@@ -96,7 +91,6 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
             <div>
               <p className="font-medium">{a.title}</p>
               <p className="text-sm text-muted-foreground">{a.description}</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>
           </div>
         ))}
@@ -104,7 +98,6 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
     </Card>;
   );
 }
-<<<<<<< HEAD
   );
 }
   achieved: boolean;
@@ -144,6 +137,4 @@ function AchievementBadges() {
 }
 ;
 }}}
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

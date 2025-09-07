@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React from 'react';
@@ -916,6 +915,4 @@ export default function ResourcesPage() {
     </MainLayout>
   );
 }
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

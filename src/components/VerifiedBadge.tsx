@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { CheckCircle } from 'lucide-react''
 import {
   Tooltip
@@ -79,7 +78,6 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
   },
   return (,
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />`
-=======
 
 import React from 'react',;
 import { CheckCircle } from 'lucide-react';
@@ -106,7 +104,6 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
         <TooltipTrigger asChild>
           <span className="inline-flex text-blue-500">
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </span>
         </TooltipTrigger>
         <TooltipContent>
@@ -114,7 +111,6 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
-<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import {;
@@ -177,8 +173,6 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
     </TooltipProvider>);
 }
 }}}}}}}}
-=======
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

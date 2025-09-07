@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import * as React from 'react';
 import {;
@@ -37,8 +36,6 @@ export interface EmptyStateProps {
     | 'error';
     | 'network';
     | 'loading';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -54,7 +51,6 @@ export interface EmptyStateProps {;
   },;
   icon?: React.ReactNode;
 }
-<<<<<<< HEAD
 const defaultContent = {
   products: {,
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,"
@@ -251,7 +247,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
             {" "}"
             <Link href="https://status.zion.ai" className="underline" />"
               {t('general.status_page')}'
-=======
 
 const defaultContent = {
   products: {
@@ -337,7 +332,6 @@ export function EmptyState({
             {" "}
             <Link href="https://status.zion.ai" className="underline">
               {t('general.status_page')}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Link>;
             .;
           </p>;
@@ -360,7 +354,6 @@ export function ProductsEmptyState({;
   const action = onAddProduct;
     ? {;
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
-<<<<<<< HEAD
         onClick: onAddProduct,;
       }
     : onRetry;
@@ -444,7 +437,6 @@ export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
 }
 }
 }}}}}
-=======
         onClick: onAddProduct;
       }
     : onRetry;
@@ -524,4 +516,3 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
     />;
   );
 } ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

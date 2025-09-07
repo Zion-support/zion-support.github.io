@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -292,10 +291,8 @@ import Link from 'next/link';
 export default function ContactPage() {
   return (;
     <div className=&quot;min-h-screen bg-white&quot;>
-=======
 import Link from 'next/link';
 export default function ContactPage() {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -309,10 +306,7 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {/* Contact Form & Info */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -349,10 +343,7 @@ export default function ContactPage() {
                     />
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -366,10 +357,7 @@ export default function ContactPage() {
                     placeholder="Enter your email address"
                   />
                 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     Company
@@ -382,10 +370,7 @@ export default function ContactPage() {
                     placeholder="Enter your company name"
                   />
                 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number
@@ -398,10 +383,7 @@ export default function ContactPage() {
                     placeholder="Enter your phone number"
                   />
                 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                     Service of Interest
@@ -420,10 +402,7 @@ export default function ContactPage() {
                     <option value="other">Other</option>
                   </select>
                 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message *
@@ -437,10 +416,7 @@ export default function ContactPage() {
                     placeholder="Tell us about your project or inquiry..."
                   ></textarea>
                 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <button
                   type="submit"
                   className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
@@ -449,10 +425,7 @@ export default function ContactPage() {
                 </button>
               </form>
             </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
@@ -461,10 +434,7 @@ export default function ContactPage() {
                   We're here to help you succeed. Reach out to us through any of the channels below.
                 </p>
               </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -482,10 +452,7 @@ export default function ContactPage() {
                     </p>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -501,10 +468,7 @@ export default function ContactPage() {
                     </p>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -522,10 +486,7 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               {/* Social Media Links */}
               <div>
                 <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>
@@ -552,7 +513,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
 
 
 
@@ -601,7 +561,6 @@ export default function ContactPage() {
                 Can you work with existing systems?;
               </h3>;
               <p className="text - gray - 600">;
-=======
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -643,7 +602,6 @@ export default function ContactPage() {
                 Can you work with existing systems?;
               </h3>;
               <p className="text-gray-600">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Absolutely! We specialize in integrating with existing infrastructure and can work with your current systems to enhance and optimize them.;
               </p>;
             </div>;
@@ -651,7 +609,6 @@ export default function ContactPage() {
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
 <section className="py - 20 bg - blue - 600 text - white">;
         <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
           <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
@@ -671,7 +628,6 @@ export default function ContactPage() {
         </div>;
       </section>;
     </div>);
-=======
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -692,5 +648,4 @@ export default function ContactPage() {
       </section>
     </div>
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }

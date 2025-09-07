@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const ServicesPage: React.FC = () => {,
   const services = [,
@@ -52,7 +51,6 @@ const ServicesPage: React.FC = () => {,
   );
 };
 export default ServicesPage;
-=======
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { useRouter } from 'next/router',
@@ -355,4 +353,3 @@ export default function ServicesPage() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

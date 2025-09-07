@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes";
@@ -38,7 +37,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }:,  ExportToC
     const csvContent = [,
       headers.join()
 }}]
-=======
 
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
@@ -178,4 +176,3 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     </Button>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

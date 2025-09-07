@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import Link from "next/link",;
@@ -26,8 +25,6 @@ export const metadata = {title: "Space Technology Solutions - Zion Tech Group | 
   description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.";
   keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"}
 export default function SpaceTechPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import Link from "next/link",;
 export const metadata = {;
   title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",;
@@ -37,21 +34,18 @@ export default function SpaceTechPage() {;
   return (;
     <div className="min-h-screen">;
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
             <span className="gradient - text">Space Technology Solutions</span>;
           </h1>;
           <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
-=======
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
           <h1 className="text-5xl md:text-6xl font-bold mb-6">;
             <span className="gradient-text">Space Technology Solutions</span>;
           </h1>;
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Pioneering the future of space exploration and satellite technology.;
             From advanced communications to space infrastructure, we're building;
             the technologies that will connect Earth and beyond.;
@@ -59,7 +53,6 @@ export default function SpaceTechPage() {;
         </div>;
       </section>;
       {/* Space Overview */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="card bg - gradient - to - r from - yellow - 600 / 20 to - orange - 600 / 20 border - yellow - 500 / 30">;
@@ -69,7 +62,6 @@ export default function SpaceTechPage() {;
                   Advancing Humanity's Reach into Space;
                 </h2>;
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="card bg-gradient-to-r from-yellow-600/20 to-orange-600/20 border-yellow-500/30">;
@@ -79,13 +71,11 @@ export default function SpaceTechPage() {;
                   Advancing Humanity's Reach into Space;
                 </h2>;
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Space technology represents the pinnacle of human innovation and;
                   engineering. Our solutions enable global connectivity, Earth;
                   observation, and the foundation for future space exploration;
                   missions.;
                 </p>;
-<<<<<<< HEAD
                 <div className="space - y-4 mb - 6">;
                   <div className="flex items - center">;
                     <div className="w - 6 h - 6 bg - yellow - 500 rounded - full mr - 3"></div>;
@@ -105,7 +95,6 @@ export default function SpaceTechPage() {;
                   </div>;
                 </div>;
                 <Link href="/contact" className="btn - primary">;
-=======
                 <div className="space-y-4 mb-6">;
                   <div className="flex items-center">;
                     <div className="w-6 h-6 bg-yellow-500 rounded-full mr-3"></div>;
@@ -125,20 +114,16 @@ export default function SpaceTechPage() {;
                   </div>;
                 </div>;
                 <Link href="/contact" className="btn-primary">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Explore Space Solutions;
                 </Link>;
               </div>;
               <div className="relative">;
-<<<<<<< HEAD
                 <div className="w - full h - 80 bg - gradient - to - br from - yellow - 500 / 20 to - orange - 500 / 20 rounded - xl flex items - center justify - center">;
                   <svg className="w - 32 h - 32 text - yellow - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                     <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M12 19l9 2 - 9-18 - 9 18 9 - 2zm0 0v - 8" />;
-=======
                 <div className="w-full h-80 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-xl flex items-center justify-center">;
                   <svg className="w-32 h-32 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </svg>;
                 </div>;
               </div>;
@@ -147,7 +132,6 @@ export default function SpaceTechPage() {;
         </div>;
       </section>;
       {/* Core Space Services */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -177,7 +161,6 @@ export default function SpaceTechPage() {;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
                 <li>• High - speed satellite internet</li>;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -203,21 +186,16 @@ export default function SpaceTechPage() {;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
                 <li>• High-speed satellite internet</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Global connectivity solutions</li>;
                 <li>• Remote region communications</li>;
                 <li>• Emergency communications</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/space - tech / satellite - communications" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-=======
               <Link href="/space-tech/satellite-communications" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Earth Observation */}
-<<<<<<< HEAD
             <div className="card group hover:bg - blue - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - blue - 500 / 30">;
                 <svg className="w - 8 h - 8 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -231,7 +209,6 @@ export default function SpaceTechPage() {;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
                 <li>• High - resolution imaging</li>;
-=======
             <div className="card group hover:bg-blue-500/10 transition-colors">;
               <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/30">;
                 <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -245,21 +222,16 @@ export default function SpaceTechPage() {;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
                 <li>• High-resolution imaging</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Environmental monitoring</li>;
                 <li>• Climate change tracking</li>;
                 <li>• Resource management</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/space - tech / earth - observation" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-=======
               <Link href="/space-tech/earth-observation" className="text-blue-400 hover:text-blue-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Space Infrastructure */}
-<<<<<<< HEAD
             <div className="card group hover:bg - purple - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - purple - 500 / 30">;
                 <svg className="w - 8 h - 8 text - purple - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -272,7 +244,6 @@ export default function SpaceTechPage() {;
                 infrastructure for future space exploration missions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
             <div className="card group hover:bg-purple-500/10 transition-colors">;
               <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30">;
                 <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -285,22 +256,17 @@ export default function SpaceTechPage() {;
                 infrastructure for future space exploration missions.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Space station development</li>;
                 <li>• Orbital platforms</li>;
                 <li>• Space habitats</li>;
                 <li>• Launch infrastructure</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/space - tech / space - infrastructure" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-=======
               <Link href="/space-tech/space-infrastructure" className="text-purple-400 hover:text-purple-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Navigation Systems */}
-<<<<<<< HEAD
             <div className="card group hover:bg - green - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - green - 500 / 30">;
                 <svg className="w - 8 h - 8 text - green - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -314,7 +280,6 @@ export default function SpaceTechPage() {;
                 location - based services for global applications.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
             <div className="card group hover:bg-green-500/10 transition-colors">;
               <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30">;
                 <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -328,22 +293,17 @@ export default function SpaceTechPage() {;
                 location-based services for global applications.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Satellite navigation</li>;
                 <li>• Precision positioning</li>;
                 <li>• Location services</li>;
                 <li>• Autonomous navigation</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/space - tech / navigation - systems" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-=======
               <Link href="/space-tech/navigation-systems" className="text-green-400 hover:text-green-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Space Research */}
-<<<<<<< HEAD
             <div className="card group hover:bg - red - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - red - 500 / 30">;
                 <svg className="w - 8 h - 8 text - red - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -356,7 +316,6 @@ export default function SpaceTechPage() {;
                 technology development for space exploration.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
             <div className="card group hover:bg-red-500/10 transition-colors">;
               <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-500/30">;
                 <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -369,22 +328,17 @@ export default function SpaceTechPage() {;
                 technology development for space exploration.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Scientific platforms</li>;
                 <li>• Space experiments</li>;
                 <li>• Technology development</li>;
                 <li>• Research collaboration</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/space - tech / space - research" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-=======
               <Link href="/space-tech/space-research" className="text-red-400 hover:text-red-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Space Consulting */}
-<<<<<<< HEAD
             <div className="card group hover:bg - indigo - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - indigo - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - indigo - 500 / 30">;
                 <svg className="w - 8 h - 8 text - indigo - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -397,7 +351,6 @@ export default function SpaceTechPage() {;
                 and space industry partnerships.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
             <div className="card group hover:bg-indigo-500/10 transition-colors">;
               <div className="w-16 h-16 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/30">;
                 <svg className="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -410,17 +363,13 @@ export default function SpaceTechPage() {;
                 and space industry partnerships.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Space strategy development</li>;
                 <li>• Regulatory compliance</li>;
                 <li>• Industry partnerships</li>;
                 <li>• Investment guidance</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/space - tech / consulting" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-=======
               <Link href="/space-tech/consulting" className="text-indigo-400 hover:text-indigo-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
@@ -428,7 +377,6 @@ export default function SpaceTechPage() {;
         </div>;
       </section>;
       {/* Industry Applications */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - yellow - 600 / 10 to - orange - 600 / 10">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -529,7 +477,6 @@ export default function SpaceTechPage() {;
               </p>;
               <div className="text - sm text - gray - 400">;
                 <strong > Use Cases:</strong> Scientific research, technology development, innovation;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-yellow-600/10 to-orange-600/10">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -630,14 +577,12 @@ export default function SpaceTechPage() {;
               </p>;
               <div className="text-sm text-gray-400">;
                 <strong>Use Cases:</strong> Scientific research, technology development, innovation;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Technology Stack */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -667,7 +612,6 @@ export default function SpaceTechPage() {;
                 <div className="flex items - center">;
                   <div className="w - 3 h - 3 bg - yellow - 500 rounded - full mr - 3"></div>;
                   <span className="text - gray - 300">CubeSats & small satellites</span>;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -697,12 +641,10 @@ export default function SpaceTechPage() {;
                 <div className="flex items-center">;
                   <div className="w-3 h-3 bg-yellow-500 rounded-full mr-3"></div>;
                   <span className="text-gray-300">CubeSats & small satellites</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </div>;
               </div>;
             </div>;
             <div className="card">;
-<<<<<<< HEAD
               <h3 className="text - xl font - semibold mb - 4">Ground Infrastructure</h3>;
               <div className="space - y-4">;
                 <div className="flex items - center">;
@@ -720,7 +662,6 @@ export default function SpaceTechPage() {;
                 <div className="flex items - center">;
                   <div className="w - 3 h - 3 bg - blue - 500 rounded - full mr - 3"></div>;
                   <span className="text - gray - 300">Launch facilities</span>;
-=======
               <h3 className="text-xl font-semibold mb-4">Ground Infrastructure</h3>;
               <div className="space-y-4">;
                 <div className="flex items-center">;
@@ -738,7 +679,6 @@ export default function SpaceTechPage() {;
                 <div className="flex items-center">;
                   <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>;
                   <span className="text-gray-300">Launch facilities</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </div>;
               </div>;
             </div>;
@@ -746,7 +686,6 @@ export default function SpaceTechPage() {;
         </div>;
       </section>;
       {/* Future of Space */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - gray - 800 / 20 to - gray - 900 / 20">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -761,7 +700,6 @@ export default function SpaceTechPage() {;
             <div className="card">;
               <h3 className="text - xl font - semibold mb - 3">Space Tourism</h3>;
               <p className="text - gray - 400 mb - 4">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-800/20 to-gray-900/20">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -776,71 +714,55 @@ export default function SpaceTechPage() {;
             <div className="card">;
               <h3 className="text-xl font-semibold mb-3">Space Tourism</h3>;
               <p className="text-gray-400 mb-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Commercial space travel and orbital tourism experiences;
                 for private individuals and organizations.;
               </p>;
             </div>;
             <div className="card">;
-<<<<<<< HEAD
               <h3 className="text - xl font - semibold mb - 3">Mars Colonization</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Long - term human settlement and infrastructure development;
-=======
               <h3 className="text-xl font-semibold mb-3">Mars Colonization</h3>;
               <p className="text-gray-400 mb-4">;
                 Long-term human settlement and infrastructure development;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 on Mars and other planetary bodies.;
               </p>;
             </div>;
             <div className="card">;
-<<<<<<< HEAD
               <h3 className="text - xl font - semibold mb - 3">Space Mining</h3>;
               <p className="text - gray - 400 mb - 4">;
-=======
               <h3 className="text-xl font-semibold mb-3">Space Mining</h3>;
               <p className="text-gray-400 mb-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Extraction of valuable resources from asteroids, the Moon;
                 and other celestial bodies for Earth use.;
               </p>;
             </div>;
             <div className="card">;
-<<<<<<< HEAD
               <h3 className="text - xl font - semibold mb - 3">Interstellar Travel</h3>;
               <p className="text - gray - 400 mb - 4">;
-=======
               <h3 className="text-xl font-semibold mb-3">Interstellar Travel</h3>;
               <p className="text-gray-400 mb-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Advanced propulsion systems and spacecraft designs;
                 for travel beyond our solar system.;
               </p>;
             </div>;
             <div className="card">;
-<<<<<<< HEAD
               <h3 className="text - xl font - semibold mb - 3">Space Manufacturing</h3>;
               <p className="text - gray - 400 mb - 4">;
                 In - space production of materials, components, and;
-=======
               <h3 className="text-xl font-semibold mb-3">Space Manufacturing</h3>;
               <p className="text-gray-400 mb-4">;
                 In-space production of materials, components, and;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 structures using microgravity and space resources.;
               </p>;
             </div>;
             <div className="card">;
-<<<<<<< HEAD
               <h3 className="text - xl font - semibold mb - 3">Quantum Communications</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Quantum satellite networks for ultra - secure;
-=======
               <h3 className="text-xl font-semibold mb-3">Quantum Communications</h3>;
               <p className="text-gray-400 mb-4">;
                 Quantum satellite networks for ultra-secure;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 communications and quantum internet infrastructure.;
               </p>;
             </div>;
@@ -848,7 +770,6 @@ export default function SpaceTechPage() {;
         </div>;
       </section>;
       {/* Success Metrics */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -875,7 +796,6 @@ export default function SpaceTechPage() {;
             <div className="text - center">;
               <div className="text - 4xl font - bold gradient - text mb - 2">24 / 7</div>;
               <div className="text - gray - 400">Global Coverage</div>;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -902,13 +822,11 @@ export default function SpaceTechPage() {;
             <div className="text-center">;
               <div className="text-4xl font-bold gradient-text mb-2">24/7</div>;
               <div className="text-gray-400">Global Coverage</div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </div>;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm: px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto text - center">;
           <div className="card bg - gradient - to - r from - yellow - 600 / 20 to - orange - 600 / 20 border - yellow - 500 / 30">;
@@ -924,7 +842,6 @@ export default function SpaceTechPage() {;
                 Launch Your Space Initiative;
               </Link>;
               <Link href="/case - studies" className="btn - secondary text - lg px - 8 py - 4">;
-=======
       <section className="py-20 px-4 sm: px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
           <div className="card bg-gradient-to-r from-yellow-600/20 to-orange-600/20 border-yellow-500/30">;
@@ -940,18 +857,14 @@ export default function SpaceTechPage() {;
                 Launch Your Space Initiative;
               </Link>;
               <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 View Space Case Studies;
               </Link>;
             </div>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
     </div>);
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

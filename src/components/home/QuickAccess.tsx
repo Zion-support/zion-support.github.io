@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {quickLinks.map((link, index) => (
             <Link
 import React from 'react';
@@ -474,7 +473,6 @@ export default QuickAccess;
               <div className="flex items-center text-zion-cyan text-xs mt-auto">"
                 <span>{t('general.explore')}</span>'
                 <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />"
-=======
 
 import React from "react",
 import Link from "next/link",
@@ -563,7 +561,6 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
               <div className="flex items-center text-zion-cyan text-xs mt-auto">
                 <span>{t('general.explore')}</span>
                 <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>
             </Link>
           ))}
@@ -571,7 +568,6 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
       </div>;
     </section>;
   );
-<<<<<<< HEAD
 export default QuickAccess;}
 export default QuickAccess;
   { opacity: 0,
@@ -609,8 +605,6 @@ export default QuickAccess;
     </section>);
 export default QuickAccess }
 export default QuickAccess;))))))))))
-=======
 }
 ;
 export default QuickAccess;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

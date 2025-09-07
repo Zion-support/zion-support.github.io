@@ -79,10 +79,6 @@ module && module.exports = {
 
 
 };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 ,;
 ;};
@@ -231,7 +227,6 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
 },;
 ,;
-<<<<<<< HEAD
 },;
 ,;
 
@@ -258,10 +253,6 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
     return config;
   },
 };
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   "analyzerMode": "static",
           "openAnalyzer": false,
           "reportFilename": "bundle-analysis.html"});
@@ -272,12 +263,7 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
 };
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
-<<<<<<< HEAD
 },;
 ,;
 
 
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

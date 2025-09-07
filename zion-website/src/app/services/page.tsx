@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import { 
   UserGroupIcon,
   LightBulbIcon, 
@@ -11,11 +9,9 @@ import {
   AcademicCapIcon,
   GlobeAltIcon
 } from '@heroicons/react/24/outline'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 const services = [
   {
-<<<<<<< HEAD
     title: 'AI Development',
     description: 'Custom AI solutions tailored to your business needs',
     features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
@@ -65,7 +61,6 @@ export default function ServicesPage() {
               </ul>
             </div>
           ))}
-=======
     name: 'AI Strategy & Consulting',
     description: 'Comprehensive assessment and strategic planning for AI transformation initiatives.',
     icon: LightBulbIcon,
@@ -302,7 +297,6 @@ export default function ServicesPage() {
               View Solutions <span aria-hidden="true">→</span>
             </Link>
           </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>
       </div>
     </div>

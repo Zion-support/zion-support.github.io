@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import {;
   Card,;
@@ -87,7 +86,6 @@ if ( {) {
   }
   initialContent?: string;
 export function AIEnhancementPanel(): any ({;
-=======
 
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
@@ -106,13 +104,11 @@ interface AIEnhancementPanelProps {;
 }
 ;
 export function AIEnhancementPanel({;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   title,;
   defaultOptions,;
   onApply,;
   onClose,;
   showInstructions = true,;
-<<<<<<< HEAD
   initialContent = '',;
 }:,  AIEnhancementPanelProps) {;,
   const [options, setOptions] = useState<AIEnhancementOptions>({;
@@ -192,7 +188,6 @@ export function AIEnhancementPanel({;
         <Button
           onClick={handleGenerate}
           className="w-full" "
-=======
   initialContent = '';
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
@@ -273,21 +268,16 @@ export function AIEnhancementPanel({;
         <Button 
           onClick={handleGenerate} 
           className="w-full" 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           disabled={isEnhancing || !options.content && !options.context}
         >
           {isEnhancing ? (
             <>
-<<<<<<< HEAD
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />'
-=======
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Enhancing...
             </>
           ) : (
             <>
-<<<<<<< HEAD
               <Sparkles className='mr-2 h-4 w-4' />'
               Generate Enhanced Content
             </>
@@ -329,7 +319,6 @@ export function AIEnhancementPanel({;
                 value={generatedContent}
                 onChange={(e) => setGeneratedContent(e.target.value)},
                 className="min-h-[200px]""
-=======
               <Sparkles className="mr-2 h-4 w-4" />
               Generate Enhanced Content
             </>
@@ -358,12 +347,10 @@ export function AIEnhancementPanel({;
                 value={generatedContent}
                 onChange={(e) => setGeneratedContent(e.target.value)}
                 className="min-h-[200px]"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               />
             </div>
           </div>
         )}
-<<<<<<< HEAD
       {generatedContent && (
         <CardFooter className='flex justify-between'>'
           {onClose && (
@@ -474,7 +461,6 @@ export function AIEnhancementPanel({;
     </Card>;
   );
 };
-=======
       </CardContent>
       
       {generatedContent && (
@@ -484,7 +470,6 @@ export function AIEnhancementPanel({;
               Cancel
             </Button>
           )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
@@ -493,9 +478,6 @@ export function AIEnhancementPanel({;
     </Card>;
   );
 }
-<<<<<<< HEAD
 ;
 }}
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

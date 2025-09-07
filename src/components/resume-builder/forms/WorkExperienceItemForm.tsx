@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -40,7 +39,6 @@ import { format } from 'date - fns';
             <FormField
               control={form.control}
               name="company_name""
-=======
 import { useState } from 'react',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -129,16 +127,12 @@ export function WorkExperienceItemForm({
             <FormField
               control={form.control}
               name="company_name"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Company Name</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
                     <Input placeholder="e.g. Acme Corporation" {...field} />"
-=======
                     <Input placeholder="e.g. Acme Corporation" {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -157,7 +151,6 @@ import { cn } from "@/lib/utils",;
 import { Switch } from "@/components/ui/switch",;
 import { format } from "date-fns",;
 import { CalendarIcon, Loader2 } from 'lucide-react';
-<<<<<<< HEAD
 import { AIEnhancementButton } from '@/components / ai - enhancement / AIEnhancementButton';
 import { AIEnhancementDialog } from '@/components / ai - enhancement / AIEnhancementDialog';
 // Define form schema;
@@ -247,19 +240,14 @@ import { cn } from '@/lib/utils';
 import { Switch } from '@/components/ui/switch';
 import { format } from 'date-fns';
 import { CalendarIcon, Loader2 } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",;
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",;
 // Define form schema;
 const formSchema = z.object({;
   company_name: z.string().min(1, "Company name is required"),;
   role_title: z.string().min(1, "Role title is required"),;
-<<<<<<< HEAD
   start_date: z.date({;,
-=======
   start_date: z.date({;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     required_error: "Start date is required"}),;
   end_date: z.date().optional(),;
   is_current: z.boolean().default(false),;
@@ -268,31 +256,22 @@ const formSchema = z.object({;
 type FormValues = z.infer<typeof formSchema>,;
 interface WorkExperienceItemFormProps {;
   initialData?: WorkExperience,;
-<<<<<<< HEAD
   onSubmit: (data:,  WorkExperience) => Promise<void>,;
-=======
   onSubmit: (data: WorkExperience) => Promise<void>,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   onCancel: () => void;
 }
 ;
 export function WorkExperienceItemForm({;
   initialData,;
   onSubmit,;
-<<<<<<< HEAD
   onCancel}:,  WorkExperienceItemFormProps) {;,
-=======
   onCancel}: WorkExperienceItemFormProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),;
   // Set up form;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
-<<<<<<< HEAD
     defaultValues: {;,
-=======
     defaultValues: {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       company_name: initialData?.company_name || "",;
       role_title: initialData?.role_title || "",;
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),;
@@ -304,15 +283,12 @@ export function WorkExperienceItemForm({;
   const watchIsCurrent = form.watch("is_current"),;
   const watchRoleTitle = form.watch("role_title"),;
   const watchCompanyName = form.watch("company_name"),;
-<<<<<<< HEAD
   const handleFormSubmit = async (values:,  FormValues) => {;
     // Create a properly typed WorkExperience object with all required fields;
     const workExperience: WorkExperience = {;,
-=======
   const handleFormSubmit = async (values: FormValues) => {;
     // Create a properly typed WorkExperience object with all required fields;
     const workExperience: WorkExperience = {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       id: initialData?.id,;
       company_name: values.company_name,  // Required;
       role_title: values.role_title,      // Required;
@@ -324,19 +300,16 @@ export function WorkExperienceItemForm({;
     },;
     await onSubmit(workExperience);
   },;
-<<<<<<< HEAD
   const handleAIEnhancement = (content:,  string) => {;,
     form.setValue("description", content, { shouldDirty: true }),;
     setIsEnhancementDialogOpen(false);
   };
   return (
-=======
   const handleAIEnhancement = (content: string) => {;
     form.setValue("description", content, { shouldDirty: true }),;
     setIsEnhancementDialogOpen(false);
   },;
   return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <>;
       <Form {...form}>;
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;
@@ -354,7 +327,6 @@ export function WorkExperienceItemForm({;
                 </FormItem>;
               )}
             />;
-<<<<<<< HEAD
             <FormField
               control={form && form.control}
               name='role_title''
@@ -399,47 +371,36 @@ export function WorkExperienceItemForm({;
               control={form.control}
             />;
               name="role_title""
-=======
             <FormField;
               control={form.control}
               name="role_title"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
                     <Input placeholder="e.g. Senior Developer" {...field} />"
-=======
                     <Input placeholder="e.g. Senior Developer" {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
           </div>
-<<<<<<< HEAD
             <FormField
                 </FormItem>)}
               control={form.control}
               name="location""
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
               name="location"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Location</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />"
-=======
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -447,7 +408,6 @@ export function WorkExperienceItemForm({;
             />;
             <FormField;
               control={form.control}
-<<<<<<< HEAD
               name="is_current""
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-col">"
@@ -460,7 +420,6 @@ export function WorkExperienceItemForm({;
                       id="current-position""
                     />
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">"
-=======
               name="is_current"
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-col">
@@ -473,14 +432,12 @@ export function WorkExperienceItemForm({;
                       id="current-position"
                     />
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       I currently work here
                     </label>
                   </div>
                   <FormMessage />
                 </FormItem>
               )}
-<<<<<<< HEAD
             />;
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -489,7 +446,6 @@ export function WorkExperienceItemForm({;
               name="start_date""
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-col">"
-=======
             />
           </div>
 
@@ -499,13 +455,11 @@ export function WorkExperienceItemForm({;
               name="start_date"
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-col">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <FormLabel>Start Date</FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
                         <Button
-<<<<<<< HEAD
                           variant={"outline"}"
                           className={cn(
                             "w-full pl-3 text-left font-normal","
@@ -562,7 +516,6 @@ export function WorkExperienceItemForm({;
                         onSelect={field.onChange}
                         initialFocus
                         captionLayout="dropdown-buttons""
-=======
                           variant={"outline"}
                           className={cn(
                             "w-full pl-3 text-left font-normal",
@@ -585,7 +538,6 @@ export function WorkExperienceItemForm({;
                         onSelect={field.onChange}
                         initialFocus
                         captionLayout="dropdown-buttons"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         fromYear={1990}
                         toYear={new Date().getFullYear()}
                       />;
@@ -596,7 +548,6 @@ export function WorkExperienceItemForm({;
               )}
             />;
             {!watchIsCurrent && (;
-<<<<<<< HEAD
               <FormField
                 control={form && form.control}
                 name='end_date''
@@ -607,7 +558,6 @@ export function WorkExperienceItemForm({;
                         <FormControl>;
                           <Button
 }}}}}}})))))))
-=======
               <FormField;
                 control={form.control}
                 name="end_date"
@@ -725,4 +675,3 @@ export function WorkExperienceItemForm({;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

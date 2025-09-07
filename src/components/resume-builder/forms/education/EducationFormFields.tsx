@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
   })
   const handleSubmit = async (data:,  EducationFormValues) => {,
@@ -86,7 +85,6 @@ function EducationFormFields() {
                 <FormMessage />;
             control={form.control}
             name="institution""
-=======
 
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -155,22 +153,17 @@ export function EducationFormFields({;
           <FormField
             control={form.control}
             name="institution"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
-<<<<<<< HEAD
                   <Input placeholder="University of California, MIT, etc." {...field} />"
-=======
                   <Input placeholder="University of California, MIT, etc." {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />;
-<<<<<<< HEAD
           <FormField
             control={form.control}
             name='degree''
@@ -183,27 +176,21 @@ export function EducationFormFields({;
           <FormField;
             control={form.control}
             name="degree""
-=======
           <FormField;
             control={form.control}
             name="degree"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Degree</FormLabel>
                 <FormControl>
-<<<<<<< HEAD
                   <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />"
-=======
                   <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />;
         </div>;
-<<<<<<< HEAD
         <FormField
           control={form.control}
           name='field_of_study''
@@ -217,42 +204,33 @@ export function EducationFormFields({;
         <FormField;
           control={form.control}
           name="field_of_study""
-=======
         <FormField;
           control={form.control}
           name="field_of_study"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Field of Study</FormLabel>
               <FormControl>
-<<<<<<< HEAD
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />"
-=======
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
         />;
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
           <FormField
             control={form.control}
-=======
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
             name="start_date"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
-<<<<<<< HEAD
             render={({ field }: { field: any }) => (;
               <FormItem>;
                 <FormLabel>Start Date</FormLabel>;
@@ -265,10 +243,8 @@ export function EducationFormFields({;
               </FormItem>
                   <Input
                     type="date" "
-=======
                   <Input 
                     type="date" 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     {...field}
                     value={field.value || ''} ;
                   />;
@@ -277,11 +253,9 @@ export function EducationFormFields({;
               </FormItem>;
             )}
           />
-<<<<<<< HEAD
           <div className='space-y-4'>;
             <FormField
               control={form.control}
-=======
 
           <div className="space-y-4">
             <FormField
@@ -290,23 +264,18 @@ export function EducationFormFields({;
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
                   <FormControl>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
                     />
                   </FormControl>
-<<<<<<< HEAD
                   <div className="space-y-1 leading-none">"
-=======
                   <div className="space-y-1 leading-none">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     <FormLabel>I am currently studying here</FormLabel>
                   </div>
                 </FormItem>
               )}
             />;
-<<<<<<< HEAD
             {!form && form.watch('is_current') && (;
               <FormField
                 control={form && form.control}
@@ -316,33 +285,27 @@ export function EducationFormFields({;
               <FormField;
                 control={form.control}
                 name="end_date""
-=======
             {!form.watch('is_current') && (;
               <FormField;
                 control={form.control}
                 name="end_date"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
                     <FormControl>
-<<<<<<< HEAD
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>'
                       <Input
                         type="date" "
                         {...field}
                         value={field.value || ''} '
-=======
                       <Input 
                         type="date" 
                         {...field} 
                         value={field.value || ''} 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
-<<<<<<< HEAD
                 render={({ field }: { field: any }) => (;
                   <FormItem>;
                     <FormLabel>End Date</FormLabel>;
@@ -428,7 +391,6 @@ export function EducationFormFields({;
                   placeholder='Notable achievements, courses, activities...';,
                   className='min - h-[100px]';
           name="location""
-=======
                 )}
               />;
             )}
@@ -437,16 +399,12 @@ export function EducationFormFields({;
         <FormField;
           control={form.control}
           name="location"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Location (Optional)</FormLabel>
               <FormControl>
-<<<<<<< HEAD
                 <Input placeholder="Cambridge, MA" {...field} />"
-=======
                 <Input placeholder="Cambridge, MA" {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -454,30 +412,22 @@ export function EducationFormFields({;
         />;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
           name="description""
-=======
           name="description"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Description (Optional)</FormLabel>
               <FormControl>
                 <Textarea
-<<<<<<< HEAD
                   placeholder="Notable achievements, courses, activities..."",
                   className="min-h-[100px]""
-=======
                   placeholder="Notable achievements, courses, activities..."
                   className="min-h-[100px]"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
             {isEditing ? 'Update' : 'Add'} Education'
-=======
             </FormItem>;
           )}
         />
@@ -496,13 +446,11 @@ export function EducationFormFields({;
           <Button type="submit" disabled={isLoading}>
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {isEditing ? 'Update' : 'Add'} Education
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>
         </div>
       </form>
     </Form>
   )
-<<<<<<< HEAD
         />;
         {error && (;
           <Alert variant='destructive'>;
@@ -540,7 +488,5 @@ export function EducationFormFields({;
 }
 }
 }})
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

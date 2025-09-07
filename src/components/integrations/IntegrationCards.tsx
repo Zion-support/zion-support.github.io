@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from "react",
 import { logDebug } from '@/utils/productionLogger',
@@ -8,12 +6,10 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface IntegrationCardProps {
   title: string,
   description: string,
   icon: React.ReactNode,
-<<<<<<< HEAD
   status?: 'connected' | 'disconnected' | 'pending''
   href?: string
   onConnect?: () => void
@@ -42,18 +38,15 @@ interface IntegrationCardProps {;
   status?: 'connected' | 'disconnected' | 'pending';
   href?: string;
   onConnect?: () => void;
-=======
   status?: "connected" | "disconnected" | "pending",
   href?: string,
   onConnect?: () => void
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function IntegrationCard({
   title,
   description,
   icon,
-<<<<<<< HEAD
   status = "disconnected","
   href,
   onConnect}:,  IntegrationCardProps) {
@@ -121,7 +114,6 @@ interface IntegrationCardProps {
             <ArrowRight className='ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5' />          </Button>;
             <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />"
-=======
   status = "disconnected",
   href,
   onConnect}: IntegrationCardProps) {
@@ -164,7 +156,6 @@ interface IntegrationCardProps {
           <Button variant="default" className="w-full" onClick={onConnect}>
             <span>Connect</span>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>
 import React from "react",;
 import { logDebug } from '@/utils/productionLogger',;
@@ -175,7 +166,6 @@ import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide
 interface IntegrationCardProps {;
   title: string,;
   description: string,;
-<<<<<<< HEAD
   icon: React && React.ReactNode,;
   status?: "connected" | "disconnected" | "pending";
   href?: string;
@@ -189,7 +179,6 @@ export function IntegrationCard(): any ({;
   href;
   onConnect}:,  IntegrationCardProps) {;
   return (
-=======
   icon: React.ReactNode,;
   status?: "connected" | "disconnected" | "pending",;
   href?: string,;
@@ -204,7 +193,6 @@ export function IntegrationCard({;
   href;
   onConnect}: IntegrationCardProps) {;
   return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <Card className="overflow-hidden">;
       <CardHeader className="pb-2">;
         <div className="flex justify-between items-start">;
@@ -218,11 +206,8 @@ export function IntegrationCard({;
           </div>;
           {status === "connected" ? (;
             <Badge variant="outline" className="bg-green-100 text-green-800 gap-1">;
-<<<<<<< HEAD
               <Check className="h-3 && 3.5 w-3 && 3.5" />;
-=======
               <Check className="h-3.5 w-3.5" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <span>Connected</span>;
             </Badge>;
           ) : status === "pending" ? (;
@@ -246,7 +231,6 @@ export function IntegrationCard({;
         ) : (;
           <Button variant="default" className="w-full" onClick={onConnect}>;
             <span>Connect</span>;
-<<<<<<< HEAD
         </div>
       </CardHeader>
       <CardContent className="pb-4">"
@@ -266,15 +250,12 @@ export function IntegrationCard({;
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />"
           </Button>
         )}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
           </Button>;
         )}
       </CardFooter>;
     </Card>;
   );
-<<<<<<< HEAD
 export function IntegrationCards() {
   return (
     <div className='grid md:grid-cols-3 gap-6'>;
@@ -310,7 +291,6 @@ export function IntegrationCards() {
         icon={<Users className="h-5 w-5" />}"
         onConnect={() => logDebug('Connect Teams clicked')}'
 }
-=======
 }
 
 export function IntegrationCards() {
@@ -333,12 +313,10 @@ export function IntegrationCards() {
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Teams clicked')}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       />;
     </div>;
   );
 }
-<<<<<<< HEAD
   );
 }
 import React from 'react';
@@ -508,6 +486,4 @@ function IntegrationCards() {
 }
 ;
 }}}}
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

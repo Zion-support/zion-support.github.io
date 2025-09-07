@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 });
 interface ProductGalleryProps {
@@ -208,8 +207,6 @@ function ProductGallery() {
   );
 };
 };
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState, Suspense } from 'react',;
 import {;
   Dialog,;
@@ -221,11 +218,8 @@ const ReactPlayer = React.lazy(() => import('react-player')),;
 const ModelViewer = React.lazy(async () => {;
   await import('@google/model-viewer'),;
   return {;
-<<<<<<< HEAD
     default: (props:,  any) => (;,
-=======
     default: (props: any) => (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       React.createElement('model-viewer', props);
     )}
 }),;
@@ -234,7 +228,6 @@ interface ProductGalleryProps {;
   videoUrl?: string,;
   modelUrl?: string;
 }
-<<<<<<< HEAD
 }
 }
           </TabsContent>)}
@@ -254,7 +247,6 @@ interface ProductGalleryProps {;
     </Dialog>);
 }
 ;
-=======
 
 export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryProps) {
   const [selected, setSelected] = useState(0),
@@ -380,4 +372,3 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

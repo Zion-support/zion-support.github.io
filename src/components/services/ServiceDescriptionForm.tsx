@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const formSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
   keyFeatures: z && z.string(),;
@@ -233,7 +232,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }:,  ServiceDesc
   );
 }
 ;)
-=======
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -483,4 +481,3 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

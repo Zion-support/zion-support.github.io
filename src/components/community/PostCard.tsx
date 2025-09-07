@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -6,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ForumPost } from "@/types/community";
 import { logInfo } from '@/utils/productionLogger';
-=======
 
 import React from 'react',
 import { formatDistanceToNow } from "date-fns",
@@ -19,12 +17,10 @@ import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community",
 import { logInfo } from '@/utils/productionLogger',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface PostCardProps {
   post: ForumPost,
   compact?: boolean
 }
-<<<<<<< HEAD
 import React from 'react','
 import { formatDistanceToNow } from "date-fns","
 import Link from "next/link","
@@ -69,7 +65,6 @@ const PostCardComponent = ({ post, compact = false }:,  PostCardProps) => {
 export default PostCard;
 export default PostCard;
 }}}))
-=======
 
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
   logInfo('PostCardComponent rendering with post:', { data: post ? post.id : 'NO POST' }),
@@ -204,4 +199,3 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {;
 export const PostCard = React.memo(PostCardComponent),;
 PostCard.displayName = 'PostCard';
 export default PostCard;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,7 +1,4 @@
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
 import * as React from 'react';
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/retail.tsx
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -16,10 +13,7 @@ import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import React from 'react';
-=======
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/industries/retail.tsx
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
@@ -35,17 +29,11 @@ import {
   Globe,
   Database;
 } from 'lucide-react';
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/retail.tsx
 import Layout from '../../components/Layout';';
 const services = [;
   {}
     title: 'E-commerce Platforms,',
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/industries/retail.tsx
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -114,18 +102,12 @@ const services = [
       'Social commerce integration'';
     ];
   }
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/retail.tsx
 ;];
 const benefits = [;
   {}
     title: 'Increased Sales,',
     description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',
     icon: ShoppingCart;
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/industries/retail.tsx
 ];
 const benefits = [
   {
@@ -148,9 +130,6 @@ const benefits = [
     description: 'Advanced analytics provide actionable insights for business growth.,',
     icon: Database;
   }
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/retail.tsx
 ;];
 export default function RetailPage() {
   return (;
@@ -198,9 +177,6 @@ export default function RetailPage() {
             </motion.div>;
           </div>;
         </section>;
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/industries/retail.tsx
 ];
 export default function RetailPage() {
   return (
@@ -255,9 +231,6 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/retail.tsx
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -271,9 +244,6 @@ export default function RetailPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/industries/retail.tsx
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -291,9 +261,6 @@ export default function RetailPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/retail.tsx
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">";
@@ -305,9 +272,6 @@ export default function RetailPage() {
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/industries/retail.tsx
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">
@@ -325,15 +289,9 @@ export default function RetailPage() {
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/retail.tsx
             </div>,
           </div>;
         </section>;
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/industries/retail.tsx
             </div>
           </div>
         </section>
@@ -344,9 +302,6 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/retail.tsx
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -360,9 +315,6 @@ export default function RetailPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/industries/retail.tsx
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -389,15 +341,9 @@ export default function RetailPage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/retail.tsx
             </div>,
           </div>;
         </section>;
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/industries/retail.tsx
             </div>
           </div>
         </section>
@@ -408,9 +354,6 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/retail.tsx
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Retail?;
@@ -432,9 +375,6 @@ export default function RetailPage() {
         </section>;
       </div>;
     </Layout>;
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/industries/retail.tsx
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Retail?

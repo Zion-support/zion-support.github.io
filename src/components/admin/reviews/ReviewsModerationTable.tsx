@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 Dialog,
-=======
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
@@ -19,12 +17,10 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import {
   Dialog,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-<<<<<<< HEAD
       setViewDetailsOpen(false)
     },
     onError: (error:,  Error) => {,
@@ -62,7 +58,6 @@ if ( {) {
     setSelectedReview (review);
     setViewDetailsOpen (true);
   }
-=======
   DialogTitle} from "@/components/ui/dialog",
 import {
   DropdownMenu,
@@ -172,14 +167,12 @@ import { format } from "date-fns",;
 import { toast } from "@/hooks/use-toast",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Review, ReviewStatus } from "@/types/reviews",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {;
   Table,;
   TableBody,;
   TableCell,;
   TableHead,;
   TableHeader,;
-<<<<<<< HEAD
   TableRow,;
 } from '@/components/ui/table';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';import {;
@@ -284,7 +277,6 @@ export function ReviewsModerationTable(): any ({;
       <div className='py-10 text-center'>;
         <h3 className='text-lg font-medium mb-2'>No reviews to moderate</h3>;
         <p className='text-muted-foreground'>;
-=======
   TableRow} from "@/components/ui/table",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import {;
@@ -363,13 +355,11 @@ export function ReviewsModerationTable({;
       <div className="py-10 text-center">;
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;
         <p className="text-muted-foreground">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           All reviews have been processed. Check back later for new submissions.;
         </p>;
       </div>;
     );
   }
-<<<<<<< HEAD
   const handleApprove = (reviewId:,  string) => {;,
     updateReviewStatus({ reviewId, status: 'approved' });
   };
@@ -401,7 +391,6 @@ export function ReviewsModerationTable({;
     );
   };
   return (
-=======
 ;
   const handleApprove = (reviewId: string) => {;
     updateReviewStatus({ reviewId, status: "approved" });
@@ -426,12 +415,10 @@ export function ReviewsModerationTable({;
     );
   };
   return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <>;
       <Table>;
         <TableHeader>;
           <TableRow>;
-<<<<<<< HEAD
     return (
       <div className="py-10 text-center">"
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>"
@@ -636,7 +623,6 @@ export function ReviewsModerationTable({;
                         disabled={isPending}
                       >
                         <X className="h-4 w-4 text-red-500" />"
-=======
             <TableHead>Reviewer</TableHead>;
             <TableHead>Rating</TableHead>;
             <TableHead>Date</TableHead>;
@@ -714,14 +700,12 @@ export function ReviewsModerationTable({;
                         disabled={isPending}
                       >
                         <X className="h-4 w-4 text-red-500" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </Button>
                     </>
                   )}
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button
-<<<<<<< HEAD
                         variant="ghost""
                         size="sm""
                         className="h-8 w-8 p-0""
@@ -752,7 +736,6 @@ export function ReviewsModerationTable({;
             <div className="space-y-4">"
               <div className="flex items-center justify-between">"
                 <div className="flex items-center gap-2">"
-=======
                         variant="ghost"
                         size="sm"
                         className="h-8 w-8 p-0"
@@ -797,12 +780,10 @@ export function ReviewsModerationTable({;
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
-<<<<<<< HEAD
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />'
                     ) : (
                       <AvatarFallback>
@@ -847,7 +828,6 @@ export function ReviewsModerationTable({;
                         : selectedReview.reviewer_profile?.display_name || "User"}"
                     </div>
                     <Badge variant='outline'>{selectedReview.status}</Badge>'
-=======
                         alt={selectedReview.reviewer_profile.display_name || ""}
                       />;
                     ) : (;
@@ -867,12 +847,10 @@ export function ReviewsModerationTable({;
                     <Badge variant="outline">
                       {selectedReview.status}
                     </Badge>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </div>
                 </div>
                 <div>{renderStars(selectedReview.rating)}</div>
               </div>
-<<<<<<< HEAD
               <div className="border rounded-md p-3 bg-muted/20">"
                 <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>"
               </div>
@@ -949,7 +927,6 @@ export function ReviewsModerationTable({;
                     disabled={isPending}                  >;
                   <Button
                     variant="destructive""
-=======
 
               <div className="border rounded-md p-3 bg-muted/20">
                 <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>
@@ -998,27 +975,22 @@ export function ReviewsModerationTable({;
                 <>
                   <Button
                     variant="destructive"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     onClick={() => handleReject(selectedReview.id)}
                     disabled={isPending}
                   >;
                     Reject;
                   </Button>;
-<<<<<<< HEAD
                   <Button
                     onClick = {() => handleApprove(selectedReview && selectedReview.id),}
                     disabled = {isPending,}
-=======
                   <Button;
                     onClick={() => handleApprove(selectedReview.id)}
                     disabled={isPending}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   >;
                     Approve;
                   </Button>;
                 </>;
               )}
-<<<<<<< HEAD
               {selectedReview && selectedReview.status === 'approved' && (;
                 <Button
                   variant='destructive''
@@ -1041,7 +1013,6 @@ export function ReviewsModerationTable({;
                     });
                   }
                   disabled={isPending}                >;
-=======
               {selectedReview.status === "approved" && (
                 <Button
                   variant="destructive"
@@ -1056,14 +1027,12 @@ export function ReviewsModerationTable({;
                   onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: "approved" })}
                   disabled={isPending}
                 >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Mark as Approved;
                 </Button>;
               )}
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
-<<<<<<< HEAD
       )},
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
   star ;
@@ -1308,9 +1277,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</>);
 }"}"
 }
-=======
       )}
     </>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

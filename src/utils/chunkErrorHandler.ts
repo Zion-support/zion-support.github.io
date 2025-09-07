@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
@@ -202,7 +201,6 @@ if ( {) {
     } catch (error) {;
       logErrorToProduction('Failed to clear caches', error as Error, {;
         context: 'chunkErrorRecovery',;
-=======
 /**;
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
  * Handles automatic retry, cache clearing, and graceful degradation;
@@ -349,7 +347,6 @@ class ChunkErrorHandler {;
     } catch (error) {;
       logErrorToProduction('Failed to clear caches', error as Error, {;
         context: 'chunkErrorRecovery';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         action: 'cache-clear-failed';
       });
     }
@@ -364,7 +361,6 @@ class ChunkErrorHandler {;
     // Force a hard refresh bypassing all caches;
     window.location.href = window.location.href + '?_t=' + Date.now();
   }
-<<<<<<< HEAD
   private showFatalErrorMessage (): void {
     // Create a user - friendly error message;
     const error_div = document.create_element ('div');
@@ -409,7 +405,6 @@ class ChunkErrorHandler {;
     return this && this.errorStats.get(sessionKey)!;
   }
     `,`
-=======
 
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
@@ -462,12 +457,10 @@ class ChunkErrorHandler {;
       </div>
     `,
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     document.body.appendChild(errorDiv)
 ;
   private showFatalErrorMessage(): void {;
     // Create a user-friendly error message;
-<<<<<<< HEAD
     const errorDiv = document.createElement('div'),;
     errorDiv.style.cssText = `;`
       position: fixed,;
@@ -484,7 +477,6 @@ class ChunkErrorHandler {;
       font-family: system-ui, -apple-system, sans-serif,;
     `,;`
     errorDiv.innerHTML = `;`
-=======
     const errorDiv = document.createElement('div');
     errorDiv.style.cssText = `;
       position: fixed;
@@ -501,7 +493,6 @@ class ChunkErrorHandler {;
       font-family: system-ui, -apple-system, sans-serif;
     `;
     errorDiv.innerHTML = `;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <div style="text-align: center, padding: 2rem, max-width: 500px,">;
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>;
         <p style="margin-bottom: 1.5rem, line-height: 1.5,">;
@@ -509,7 +500,6 @@ class ChunkErrorHandler {;
           This might be due to a poor network connection or a temporary server issue.;
         </p>;
         <button onclick="window.location.reload()" style=";
-<<<<<<< HEAD
           background: #0070f3,;
           color: white,;
           border: none,;
@@ -518,7 +508,6 @@ class ChunkErrorHandler {;
           font-size: 1rem,;
           cursor: pointer,;
           margin-right: 1rem,;
-=======
           background: #0070f3;
           color: white;
           border: none;
@@ -527,12 +516,10 @@ class ChunkErrorHandler {;
           font-size: 1rem;
           cursor: pointer;
           margin-right: 1rem;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         ">;
           Try Again;
         </button>;
         <button onclick="window.location.href='/'" style=";
-<<<<<<< HEAD
           background: #666,;
           color: white,;
           border: none,;
@@ -540,7 +527,6 @@ class ChunkErrorHandler {;
           border-radius: 0.5rem,;
           font-size: 1rem,;
           cursor: pointer,;
-=======
           background: #666;
           color: white;
           border: none;
@@ -548,29 +534,24 @@ class ChunkErrorHandler {;
           border-radius: 0.5rem;
           font-size: 1rem;
           cursor: pointer;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         ">;
           Go Home;
         </button>;
       </div>;
-<<<<<<< HEAD
     `,;`
     document.body.appendChild(errorDiv);
   }
 ;
   private delay(ms:,  number): Promise<void> {;,
-=======
     `;
     document.body.appendChild(errorDiv);
   }
 ;
   private delay(ms: number): Promise<void> {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 ;
   private getSessionKey(): string {;
-<<<<<<< HEAD
     return `${navigator.userAgent}_${window.location.origin}`;`
   }
 ;
@@ -641,7 +622,6 @@ export default chunkErrorHandler
 export default chunkErrorHandler;
 }
 }
-=======
     return `${navigator.userAgent}_${window.location.origin}`;
   }
 ;
@@ -656,7 +636,6 @@ export default chunkErrorHandler;
     }
     return this.errorStats.get(sessionKey)!;
   }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;
@@ -667,23 +646,17 @@ export default chunkErrorHandler;
 ;
   // Public method to check if we're in a chunk error state;
   public isInErrorState(): boolean {;
-<<<<<<< HEAD
     const sessionKey = this.getSessionKey(),;
     const stats = this.errorStats.get(sessionKey),;
-=======
     const sessionKey = this.getSessionKey();
     const stats = this.errorStats.get(sessionKey);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     return stats ? stats.errorCount > 0 : false;
   }
 ;
   // Public method to reset error state;
   public resetErrorState(): void {;
-<<<<<<< HEAD
     const sessionKey = this.getSessionKey(),;
-=======
     const sessionKey = this.getSessionKey();
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     this.errorStats.delete(sessionKey);
   }
 }
@@ -691,7 +664,6 @@ export default chunkErrorHandler;
 // Create and export singleton instance;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
-<<<<<<< HEAD
 export default chunkErrorHandler;
 export default chunkErrorHandler;
         ">;
@@ -729,6 +701,4 @@ export default chunkErrorHandler;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
 export default chunkErrorHandler;]
-=======
 export default chunkErrorHandler;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

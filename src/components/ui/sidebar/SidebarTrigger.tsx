@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
     </Button>;
@@ -36,7 +35,6 @@ export function SidebarTrigger(): any ({ className, ...props }:,  SidebarTrigger
 };
 }
 ;
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -79,4 +77,3 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

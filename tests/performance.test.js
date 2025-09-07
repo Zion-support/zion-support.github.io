@@ -7,7 +7,6 @@ interface Performance.testProps {
 export default function Performance.test({ }: Performance.testProps) {
 
 <<<<<<<< HEAD:tests/performance.test.js
-========
 
 <:tests/performance.test.js
 =
@@ -66,7 +65,6 @@ export default function Performance.test({ }: Performance.testProps) {
 }
 
 }
-========
 
 
 >
@@ -106,7 +104,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 
-========
 
 >>>>>>>> main:tests/performance.test.js
 

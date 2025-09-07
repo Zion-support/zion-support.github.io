@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -585,15 +584,12 @@ import React from 'react';
 import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-<<<<<<< HEAD
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const menuItems = [
     { href: '/dashboard', label: 'Dashboard', icon: Home },
@@ -652,5 +648,3 @@ export default Sidebar;
 
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

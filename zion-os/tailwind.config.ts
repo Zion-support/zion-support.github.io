@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
     &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
     &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],
@@ -17,19 +16,16 @@ const config: Config = {
     &quot;./src/pages/**/*.{js,ts,jsx,tsx,mdx}&quot;
     &quot;./src/components/**/*.{js,ts,jsx,tsx,mdx}&quot;
     &quot;./src/app/**/*.{js,ts,jsx,tsx,mdx}&quot;]
-=======
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
         'zion - blue': '#3b82f6zion - purple': '#8b5cf6zion - green': '#10b981zion - orange': '#f59e0bzion - red': '#ef4444zion - teal': '#14b8a6zion - cyan': '#06b6d4zion - indigo': '#6366f1zion - emerald': '#059669zion - pink': '#ec4899'},
       animation: {
         'fade - in': 'fade_in 0.6s ease - outslide - up': 'slide_up 0.8s ease - outbounce - slow': 'bounce 2s infinitepulse - slow': 'pulse 3s infinite'},
@@ -50,7 +46,6 @@ const config: Config = {
 ;
 
 export default config;
-=======
         'zion-blue': '#3b82f6zion-purple': '#8b5cf6zion-green': '#10b981zion-orange': '#f59e0bzion-red': '#ef4444zion-teal': '#14b8a6zion-cyan': '#06b6d4zion-indigo': '#6366f1zion-emerald': '#059669zion-pink': '#ec4899'},
       animation: {
         'fade-in': 'fadeIn 0.6s ease-outslide-up': 'slideUp 0.8s ease-outbounce-slow': 'bounce 2s infinitepulse-slow': 'pulse 3s infinite'},
@@ -68,4 +63,3 @@ export default config;
   plugins: []}
 ;
 export default config;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

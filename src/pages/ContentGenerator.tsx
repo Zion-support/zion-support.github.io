@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const ContentGenerator = () => {
   return (
@@ -9,7 +8,6 @@ const ContentGenerator = () => {
   );
 };
 export default ContentGenerator;
-=======
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Button } from "@/components/ui/button",
@@ -465,4 +463,3 @@ export default function ContentGenerator() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

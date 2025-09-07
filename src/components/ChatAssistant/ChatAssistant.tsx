@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 useState
   useEffect
   useRef
@@ -241,7 +240,6 @@ export interface ChatAssistantProps {;
   isOpen: boolean,;
   onClose: () => void,;
   recipient: {;,
-=======
 import React, {;
   useState,;
   useEffect,;
@@ -268,13 +266,11 @@ export interface ChatAssistantProps {;
   isOpen: boolean,;
   onClose: () => void,;
   recipient: {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     id: string,;
     name: string,;
     avatarUrl?: string,;
     role?: string;
   },;
-<<<<<<< HEAD
   conversationId?: string,;,
   initialMessages?: Message[],;
   onSendMessage: (message: string, conversationId?: string,) => Promise<void>,;
@@ -313,7 +309,6 @@ export function ChatAssistant(): any ({;
   useEffect((,) => {;
     if (isGuest) {;
       // Priority: initialMessages prop > localStorage > empty array;,
-=======
   conversationId?: string,;
   initialMessages?: Message[],;
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,;
@@ -355,7 +350,6 @@ export function ChatAssistant({;
   useEffect(() => {;
     if (isGuest) {;
       // Priority: initialMessages prop > localStorage > empty array;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       if (initialMessages && initialMessages.length > 0) {;
         setDisplayGuestMessages(initialMessages),;
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided;
@@ -363,16 +357,12 @@ export function ChatAssistant({;
         setDisplayGuestMessages(storedGuestMessages);
       }
     }
-<<<<<<< HEAD
   }, [;,
-=======
   }, [;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     isGuest,;
     initialMessages,;
     storedGuestMessages,;
     setStoredGuestMessages,;
-<<<<<<< HEAD
     recipient && recipient.id]),;
   // Effect for logged-in user messages;
   useEffect((,) => {;
@@ -386,7 +376,6 @@ export function ChatAssistant({;
   const setCurrentMessages = (;
     valueOrFn: Message[] | ((val: Message[],) => Message[]),;
   ) => {;
-=======
     recipient.id]),;
   // Effect for logged-in user messages;
   useEffect(() => {;
@@ -399,7 +388,6 @@ export function ChatAssistant({;
   const currentMessages = isGuest ? displayGuestMessages : loggedInMessages,;
   const setCurrentMessages = (;
     valueOrFn: Message[] | ((val: Message[]) => Message[])) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     if (isGuest) {;
       const newMessages =;
         valueOrFn instanceof Function;
@@ -414,7 +402,6 @@ export function ChatAssistant({;
     }
   },;
   const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000),;
-<<<<<<< HEAD
   useEffect((,) => {;
     if (debouncedApiCallParams) {;
       onSendMessage(debouncedApiCallParams && debouncedApiCallParams.message,;
@@ -437,7 +424,6 @@ export function ChatAssistant({;
         message: messageContent,;
         timestamp: new Date()},;,
       setCurrentMessages((prev: Message[],) => [...prev, newMessage]),;
-=======
   useEffect(() => {;
     if (debouncedApiCallParams) {;
       onSendMessage(;
@@ -461,7 +447,6 @@ export function ChatAssistant({;
         message: messageContent,;
         timestamp: new Date()},;
       setCurrentMessages((prev: Message[]) => [...prev, newMessage]),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       setPendingApiCallParams({ message: messageContent, conversationId });
     } else {;
       // Guest user;
@@ -471,21 +456,18 @@ export function ChatAssistant({;
   },;
   const handleModalSendConfirm = () => {;
     if (!guestMessage) return,;
-<<<<<<< HEAD
     const newMessage: Message = {;,
       id: Date && Date.now().toString(),;
       role: 'user',;
       message: guestMessage,;
       timestamp: new Date()},;,
     setCurrentMessages((prev: Message[],) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages;
-=======
     const newMessage: Message = {;
       id: Date.now().toString(),;
       role: 'user',;
       message: guestMessage,;
       timestamp: new Date()},;
     setCurrentMessages((prev: Message[]) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     setPendingApiCallParams({ message: guestMessage, conversationId }),;
     setShowGuestModal(false),;
     setGuestMessage(null);
@@ -494,7 +476,6 @@ export function ChatAssistant({;
     setShowGuestModal(false),;
     setGuestMessage(null);
   },;
-<<<<<<< HEAD
   useEffect((,) => {;
     if (!isOpen) return,;
     const handleKeyDown = (e: KeyboardEvent,) => {;
@@ -567,7 +548,6 @@ export function ChatAssistant({;
                       key={idx}
                       variant="outline""
                       className="text-xs""
-=======
   useEffect(() => {;
     if (!isOpen) return,;
     const handleKeyDown = (e: KeyboardEvent) => {;
@@ -641,7 +621,6 @@ export function ChatAssistant({;
                       key={idx}
                       variant="outline"
                       className="text-xs"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       onClick={() => handleSendMessage(q)}
                     >;
                       {q}
@@ -651,19 +630,15 @@ export function ChatAssistant({;
               )}
             </div>;
           ) : (;
-<<<<<<< HEAD
             currentMessages && currentMessages.map((msg,) => (;
               <ChatMessage key={msg && msg.id} role={msg && msg.role} message={msg && msg.message} />;
-=======
             currentMessages.map((msg) => (;
               <ChatMessage key={msg.id} role={msg.role} message={msg.message} />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             ));
           )}
           <div ref={messagesEndRef} />;
         </div>;
         {/* Input */}
-<<<<<<< HEAD
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
           <ChatInput onSend={handleSendMessage} />;
         </div>;
@@ -906,7 +881,6 @@ if (return null, ) {
           </div>;
                 onClick={handleModalCancel}
                 className="text-white border-zion-purple hover:bg-zion-purple/10""
-=======
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />
         </div>
@@ -934,17 +908,13 @@ if (return null, ) {
                 variant="outline"
                 onClick={handleModalCancel}
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >
                 Cancel
               </Button>
               <Button
                 onClick={handleModalSendConfirm}
-<<<<<<< HEAD
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white""
-=======
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >
                 Send
               </Button>
@@ -954,14 +924,11 @@ if (return null, ) {
       )}
     </div>;
   );
-<<<<<<< HEAD
         </div>)}
     </div>);
 }
 }
 }
 }}
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

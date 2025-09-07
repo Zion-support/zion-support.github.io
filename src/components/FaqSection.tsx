@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { FileText } from 'lucide-react'
 
 import { FileText } from 'lucide-react'',
@@ -319,7 +318,6 @@ function FaqSection() {
                 <AccordionContent className="text-zion-slate-light">"
 import { GradientHeading } from "./GradientHeading",;
 import {;
-=======
 import { GradientHeading } from "./GradientHeading",
 import {
   Accordion,
@@ -388,17 +386,13 @@ export function FaqSection() {
                 <AccordionContent className="text-zion-slate-light">
 import { GradientHeading } from "./GradientHeading",;
 import {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   Accordion,;
   AccordionContent,;
   AccordionItem,;
   AccordionTrigger} from "@/components/ui/accordion",;
 import { FileText } from 'lucide-react';
-<<<<<<< HEAD
 const faqs = [;,
-=======
 const faqs = [;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   {;
     question: "How do I publish my AI product or service?",;
     answer:;
@@ -447,7 +441,6 @@ export function FaqSection() {;
             <h3 className="text-xl font-bold text-white">Common Questions</h3>;
           </div>;
           <Accordion type="single" collapsible className="w-full">;
-<<<<<<< HEAD
             {faqs && faqs.map((faq, index) => (;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
@@ -461,7 +454,6 @@ export function FaqSection() {;
     </section>);
 }
 }}}}}}}})))))))))))]
-=======
             {faqs.map((faq, index) => (;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
@@ -479,4 +471,3 @@ export function FaqSection() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

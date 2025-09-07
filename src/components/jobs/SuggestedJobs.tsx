@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface SuggestedJobsProps {
   talent_id?: string;
 }
@@ -47,7 +46,6 @@ import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
       <div className="flex items-center justify-center p-6">"
         <Loader2 className="w-6 h-6 animate-spin text-primary" />"
-=======
 
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from 'lucide-react'
@@ -85,7 +83,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     return (
       <div className="flex items-center justify-center p-6">
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       </div>
     )
 import { useAuth } from "@/hooks/useAuth",;
@@ -97,7 +94,6 @@ import { NoJobsCard } from "./NoJobsCard",;
 interface SuggestedJobsProps {;
   talentId?: string;
 }
-<<<<<<< HEAD
 export function SuggestedJobs(): any ({ talentId }:,  SuggestedJobsProps) {;
   const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
@@ -118,7 +114,6 @@ export function SuggestedJobs(): any ({ talentId }:,  SuggestedJobsProps) {;
   };
   if (isLoading) {;
     return (
-=======
 ;
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
   const { user } = useAuth(),;
@@ -141,13 +136,11 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
   };
   if (isLoading) {;
     return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <div className="flex items-center justify-center p-6">;
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
     );
   }
-<<<<<<< HEAD
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
   }
@@ -177,7 +170,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
                 match={match}
                 onApply={handleApply}
                 onDecline={handleDecline}
-=======
 ;
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {;
     return <NoJobsCard />;
@@ -202,14 +194,12 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               />
             ))}
           </div>;
         </div>;
       )}
 ;
-<<<<<<< HEAD
 ;
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
@@ -238,7 +228,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
                 match={match}
                 onApply={handleApply}
                 onDecline={handleDecline}
-=======
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
@@ -253,14 +242,12 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               />
             ))}
           </div>;
         </div>;
       )}
 ;
-<<<<<<< HEAD
 ;
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
@@ -284,7 +271,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
                 showApplied = {true,}
-=======
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
@@ -300,7 +286,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
                 onApply={handleApply} 
                 onDecline={handleDecline}
                 showApplied={true}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               />;
             ))}
           </div>;
@@ -308,7 +293,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
       )}
     </div>;
   );
-<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -431,7 +415,5 @@ if ( {) {
 }
 ;
 }}))
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

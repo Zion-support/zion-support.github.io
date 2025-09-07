@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Calendar,
   Clock,
   DollarSign,
@@ -71,8 +70,6 @@ function JobDetails() {
     error: any;
   };
   const { user, isAuthenticated } = useAuth();
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams, useNavigate;
 import { Header } from '@/components/Header',;
@@ -94,17 +91,13 @@ interface Job {;
   description: string,;
   company_name?: string,;
   budget: { min: number, max: number },;
-<<<<<<< HEAD
   client_id: string,;,
-=======
   client_id: string,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   skills?: string[],;
   created_at: string,;
   category: string,;
   deadline?: string;
 }
-<<<<<<< HEAD
   deadline?: string;
 export default function JobDetails() {
   return (
@@ -267,7 +260,6 @@ if ( {) {
                           add_suffix: true,
                         })}
                       </span>;
-=======
 
 export default function JobDetails() {
   const router = useRouter(), // Init router
@@ -448,13 +440,11 @@ export default function JobDetails() {;
                     <div className="flex items-center text-muted-foreground">;
                       <Calendar className="mr-2 h-4 w-4" />;
                       <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </div>;
                   </div>;
                   <Badge>{job.category}</Badge>;
                 </div>;
               </CardHeader>;
-<<<<<<< HEAD
               <CardContent className='space - y-6'>;
                 <div>;
                   <h3 className='font - semibold text - lg mb - 3'>;
@@ -516,7 +506,6 @@ export default function JobDetails() {;
                       This is your job posting;
                     </p>;
                   </div>)}
-=======
               <CardContent className="space-y-6">;
                 <div>;
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
@@ -582,7 +571,6 @@ export default function JobDetails() {;
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
                   </div>
                 )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </CardContent>;
             </Card>;
           </div>;
@@ -592,7 +580,6 @@ export default function JobDetails() {;
       {job && (
         <ApplyToJobModal
           job={{
-<<<<<<< HEAD
             id: job && job.id,
             title: job && job.title,
             description: job && job.description,
@@ -675,7 +662,6 @@ const isOwnJob = user?.id === job.client id;
             description: job.description,
             company_name: job.company_name ?? "Company","
             budget: formatBudget(job.budget),
-=======
             id: job.id,
             title: job.title,
             description: job.description,
@@ -690,4 +676,3 @@ const isOwnJob = user?.id === job.client id;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

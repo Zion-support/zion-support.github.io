@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from &quot;react & quot;
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
 import { cn } from &quot;@/lib / utils & quot;
@@ -63,7 +62,6 @@ const PaginationLink = ({
     className={cn(
       buttonVariants({
         variant: isActive ? "outline" : "ghost","
-=======
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react'
 
@@ -122,32 +120,25 @@ const PaginationLink = ({
     className={cn(
       buttonVariants({
         variant: isActive ? "outline" : "ghost",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         size}),
       className
     )}
     {...props}
   />
 )
-<<<<<<< HEAD
 PaginationLink.displayName = "PaginationLink""
-=======
 PaginationLink.displayName = "PaginationLink"
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
   ({ page, isActive, className, ...props }, ref) => (
     <button
       ref={ref}
-<<<<<<< HEAD
       type="button""
       aria-label={`Page ${page}`}`
       aria-current={isActive ? 'page' : undefined}'
-=======
       type="button"
       aria-label={`Page ${page}`}
       aria-current={isActive ? 'page' : undefined}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className={cn(;
         buttonVariants({ variant: 'ghost', size: 'icon' }),;
         isActive && 'bg-green-600 text-white',;
@@ -156,7 +147,6 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       {...props}
     >;
       {page}
-<<<<<<< HEAD
 </button>
   )
 )
@@ -300,7 +290,6 @@ const PaginationEllipsis = ({
   </span>);
 PaginationEllipsis.display_name = &quot;PaginationEllipsis";
 PaginationEllipsis.displayName = "PaginationEllipsis""
-=======
     </button>
   )
 )
@@ -353,7 +342,6 @@ const PaginationEllipsis = ({
 )
 PaginationEllipsis.displayName = "PaginationEllipsis"
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export {
   Pagination,
   PaginationContent,
@@ -361,10 +349,7 @@ export {
   PaginationItem,
   PaginationLink,
   PaginationButton,
-<<<<<<< HEAD
 }})
-=======
   PaginationNext,
   PaginationPrevious}
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 
 
@@ -36,8 +35,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({,
   error
   notifications
   onMarkAsRead
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import Skeleton from '@/components/ui/skeleton',;
@@ -48,7 +45,6 @@ import { EmptyState } from '@/components/ui/empty-state',;
 import { Bell } from 'lucide-react';
 interface NotificationListProps {;
   loading: boolean,;
-<<<<<<< HEAD
   error: string | null,;,
   notifications: Notification[],;
   onMarkAsRead: (id:,  string) => Promise<void>,;
@@ -118,7 +114,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({,
           <p>{error}</p>
           <Button
             className="mt-2""
-=======
   error: string | null,;
   notifications: Notification[],;
   onMarkAsRead: (id: string) => Promise<void>,;
@@ -143,14 +138,12 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             variant="outline" 
             size="sm" 
             className="mt-2"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             onClick={onRetry}
           >
             Try Again
           </Button>
         </div>
       ) : loading ? (
-<<<<<<< HEAD
         <div className="p-4 space-y-4">"
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />"
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />"
@@ -164,7 +157,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             description="You're all caught up.""
             action={{ text: 'Refresh', onClick: onRetry }}'
             className="border-none bg-transparent""
-=======
         <div className="p-4 space-y-4">
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
@@ -178,13 +170,11 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             description="You're all caught up."
             action={{ text: 'Refresh', onClick: onRetry }}
             className="border-none bg-transparent"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           />
         </div>
       ) : (
         notifications.map((notification) => (
           <NotificationItem
-<<<<<<< HEAD
   );
 };
         <div className="p - 8 text - center text - amber - 500">;
@@ -225,8 +215,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   );
 };
 ";
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             key={notification.id}
             notification={notification}
             onMarkAsRead={onMarkAsRead}
@@ -236,7 +224,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({
       )}
     </ScrollArea>;
   );
-<<<<<<< HEAD
 };
 
 
@@ -315,6 +302,4 @@ export const NotificationList: React.FC<NotificationListProps> = ({,
   );
 };
 
-=======
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

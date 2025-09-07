@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (<a;
           href={href}
     return(<button
@@ -19,13 +18,11 @@ import React, { forwardRef } from "react","
 import { ChevronDown } from 'lucide-react''
 import { cn } from "@/lib/utils","
 import { SafeRef } from "@/types/ref-types","
-=======
 
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode,
   active?: boolean,
@@ -51,7 +48,6 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
         <a;
           href={href}
           target={target}
-<<<<<<< HEAD
           rel={target === "_blank" ? "noopener noreferrer" : undefined}"
           className={cn(
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent","
@@ -61,7 +57,6 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
         >
           <div className="flex items-center gap-2">"
             {icon && <span className="text-muted-foreground">{icon}</span>}"
-=======
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
           className={cn(
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
@@ -71,17 +66,13 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
         >
           <div className="flex items-center gap-2">
             {icon && <span className="text-muted-foreground">{icon}</span>}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <span>{children}</span>
           </div>
           {badge && <span>{badge}</span>}
         </a>
       )
-<<<<<<< HEAD
           rel={target === "_blank" ? "noopener noreferrer" : undefined}"
-=======
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           className={cn(;
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",;
             active && "bg-accent font-medium text-accent-foreground",;
@@ -89,11 +80,8 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
           )}
         >;
           <div className="flex items-center gap-2">;
-<<<<<<< HEAD
             {icon && <span className="text-muted-foreground">{icon}</span>}"
-=======
             {icon && <span className="text-muted-foreground">{icon}</span>}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <span>{children}</span>;
           </div>;
           {badge && <span>{badge}</span>}
@@ -104,28 +92,22 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
     return (;
       <button;
         ref={ref}
-<<<<<<< HEAD
         type="button""
         className={cn(
           "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent","
           active && "bg-accent font-medium text-accent-foreground",",
-=======
         type="button"
         className={cn(
           "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
           active && "bg-accent font-medium text-accent-foreground",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           className
         )}
         {...props}
       >
-<<<<<<< HEAD
         <div className="flex items-center gap-2">"
           {icon && <span className="text-muted-foreground">{icon}</span>}"
-=======
         <div className="flex items-center gap-2">
           {icon && <span className="text-muted-foreground">{icon}</span>}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <span>{children}</span>
         </div>
         {badge && <span>{badge}</span>}
@@ -133,18 +115,14 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
     );
   }
 ),
-<<<<<<< HEAD
 SidebarMenuItem.displayName = "SidebarMenuItem","
-=======
 
 SidebarMenuItem.displayName = "SidebarMenuItem",
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string,
   children: React.ReactNode
 }
-<<<<<<< HEAD
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {
   return (
     <div className="space-y-1" {...props}>"
@@ -153,7 +131,6 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
     </div>
   )
 },
-=======
 
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {
   return (
@@ -164,7 +141,6 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
   )
 },
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export { SidebarMenuItem, SidebarMenuGroup },
 ),;
 SidebarMenuItem.displayName = "SidebarMenuItem",;

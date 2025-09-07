@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/pages_disabled/accessibility.tsx
 import React from 'react';
 
 import * as React from 'react';

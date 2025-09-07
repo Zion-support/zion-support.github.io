@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/ai-autonomous-ecosystem-manager.tsx
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIAutonomousEcosystemManager() {
@@ -27,12 +26,10 @@ export default function AIAutonomousEcosystemManager() {
 		/>;
 	);
 }
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-<<<<<<< HEAD
 export default function AIAutonomousEcosystemManager() {
   return (
     <ServiceLanding
@@ -56,7 +53,6 @@ export default function AIAutonomousEcosystemManager() {
     />
   );
 }
-=======
 const AIAutonomousEcosystemManager: React.FC = () => {
   return (
     <Layout>
@@ -133,5 +129,3 @@ const AIAutonomousEcosystemManager: React.FC = () => {
 };
 
 export default AIAutonomousEcosystemManager;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-autonomous-ecosystem-manager.tsx

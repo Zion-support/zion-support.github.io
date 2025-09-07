@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function TermsPage() {;
   return (;
@@ -11,33 +10,27 @@ function TermsPage() {
   return (
     <div className="min - h-screen bg - white">;
 export default function TermsPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default function TermsPage() {;
   return (;
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="bg - gradient - to - r from - gray - 600 to - gray - 800 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
             Terms of Service;
           </h1>;
           <p className="text - xl md:text - 2xl text - gray - 100 max - w-3xl mx - auto">;
-=======
       <section className="bg-gradient-to-r from-gray-600 to-gray-800 text-white py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <h1 className="text-4xl md:text-6xl font-bold mb-6">;
             Terms of Service;
           </h1>;
           <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Please read these terms carefully before using our services.;
           </p>;
         </div>;
       </section>;
       {/* Terms Content */}
-<<<<<<< HEAD
       <section className="py - 20">;
         <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="prose prose - lg max - w-none">;
@@ -204,7 +197,6 @@ export default function TermsPage() {;
                 </p>;
                 <p className="text - gray - 600 mb - 2">;
                   <strong > Address:</strong> Zion Tech Group, 123 Innovation Drive, Tech Valley, CA 94000, United States;
-=======
       <section className="py-20">;
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="prose prose-lg max-w-none">;
@@ -371,7 +363,6 @@ export default function TermsPage() {;
                 </p>;
                 <p className="text-gray-600 mb-2">;
                   <strong>Address:</strong> Zion Tech Group, 123 Innovation Drive, Tech Valley, CA 94000, United States;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </p>;
               </div>;
             </div>;
@@ -379,7 +370,6 @@ export default function TermsPage() {;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
           <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
@@ -393,7 +383,6 @@ export default function TermsPage() {;
               Contact Us;
             </a>;
             <a href="/privacy" className="border - 2 border - gray - 300 text - gray - 700 px - 8 py - 3 rounded - lg text - lg font - semibold hover:border - gray - 400 transition - colors">;
-=======
       <section className="py-20 bg-gray-50">;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -407,16 +396,12 @@ export default function TermsPage() {;
               Contact Us;
             </a>;
             <a href="/privacy" className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg text-lg font-semibold hover:border-gray-400 transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               View Privacy Policy;
             </a>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
     </div>);
-=======
     </div>;
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }

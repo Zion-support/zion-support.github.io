@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 tokenName: string;
   tokenSymbol: string;
 
@@ -211,7 +210,6 @@ export const tokenStore = new TokenStore();
 
 
 
-=======
 import fs from "fs";
 import path from "path";
 import { TokenConfig, TokenTransaction, Wallet } from "./types";
@@ -301,4 +299,3 @@ export const tokenStore = {;
     if (!userId) return txs;
     return txs.filter((t) => t.userId === userId);
   }};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

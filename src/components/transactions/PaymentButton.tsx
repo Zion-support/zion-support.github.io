@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 redirectUrl?: string
 }
 export function PaymentButton({
@@ -6,7 +5,6 @@ export function PaymentButton({
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {"
         body: {,
-=======
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
@@ -96,14 +94,12 @@ export function PaymentButton({;
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           amount,
           serviceId,
           providerId,
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
           cancelUrl: window.location.href}}),
-<<<<<<< HEAD
       if (error) {
         throw error
       }
@@ -120,7 +116,6 @@ export function PaymentButton({;
         title: "Payment error"",
         description: "There was a problem initiating your payment. Please try again."",
         variant: "destructive"})"
-=======
       
       if (error) {
         throw error
@@ -140,14 +135,11 @@ export function PaymentButton({;
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
         variant: "destructive"})
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     } finally {
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
-<<<<<<< HEAD
       }, 1500))
-=======
       }, 1500)
 ;
       // Call the create-checkout edge function;
@@ -205,4 +197,3 @@ export function PaymentButton({;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

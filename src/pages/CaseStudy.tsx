@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowLeft } from 'lucide-react''
 export default function CaseStudy() {;
   const router = useRouter();
@@ -22,7 +21,6 @@ import {  Breadcrumb,;
 } from '@/components/ui/breadcrumb';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
-=======
 import Link from 'next/link',
 import { useRouter } from 'next/router',
 import { CASE_STUDIES } from '@/data/case-studies',
@@ -30,12 +28,10 @@ import { SEO } from '@/components/SEO',
 import { Button } from '@/components/ui/button',
 import { ArrowLeft } from 'lucide-react'
 import {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
-<<<<<<< HEAD
   BreadcrumbSeparator} from '@/components/ui/breadcrumb','
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
@@ -77,7 +73,6 @@ export default function CaseStudy() {;
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
                   <Link href="/" />Home</Link>"
-=======
   BreadcrumbSeparator} from '@/components/ui/breadcrumb',
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd',
 import { getBreadcrumbsForPath } from '@/utils/routeUtils',
@@ -106,52 +101,41 @@ export default function CaseStudy() {
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
                   <Link href="/">Home</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-<<<<<<< HEAD
                   <Link href="/case-studies" />Case Studies</Link>"
-=======
                   <Link href="/case-studies">Case Studies</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-<<<<<<< HEAD
                 <BreadcrumbLink asChild aria-current="page">"
-=======
                 <BreadcrumbLink asChild aria-current="page">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <span>{study.title}</span>
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
           <Button
-<<<<<<< HEAD
             variant="outline""
             className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"",
             asChild
           >
             <Link href="/case-studies" />"
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies"
-=======
             variant="outline"
             className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
             asChild
           >
             <Link href="/case-studies">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Link>
           </Button>
           <img
             src={study.companyLogo}
-<<<<<<< HEAD
             alt={`${study.company} logo`}`
             className="h-12 mb-4""
             loading="lazy""
@@ -161,7 +145,6 @@ export default function CaseStudy() {
           {study.pdf && (
             <Button variant="secondary" className="mb-6" asChild>"
               <a href={study.pdf} target="_blank" rel="noopener noreferrer">"
-=======
             alt={`${study.company} logo`}
             className="h-12 mb-4"
             loading="lazy"
@@ -171,13 +154,11 @@ export default function CaseStudy() {
           {study.pdf && (
             <Button variant="secondary" className="mb-6" asChild>
               <a href={study.pdf} target="_blank" rel="noopener noreferrer">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Download PDF
               </Link>
             </Button>
           )}
           <div
-<<<<<<< HEAD
             className="prose prose-invert""
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
@@ -189,20 +170,17 @@ export default function CaseStudy() {
             dangerouslySetInnerHTML={{ __html: study && study.content }}
           />;
           <p className="mt-8 text-white font-semibold">;
-=======
             className="prose prose-invert"
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
           <p className="mt-8 text-white font-semibold">
             — {study.author}, {study.role}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </p>;
         </div>;
       </div>;
     </>;
   );
 }
-<<<<<<< HEAD
   );
 }
 import Link from 'next / link';
@@ -344,6 +322,4 @@ if ( {) {
 }
 ;
 }}}))
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

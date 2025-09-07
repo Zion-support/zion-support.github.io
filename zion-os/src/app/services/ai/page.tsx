@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 export default function AIServicesPage() {;
@@ -28,8 +27,6 @@ function AIServicesPage() {
             Transform your business with cutting - edge artificial intelligence. From automation to predictive analytics,
             we deliver enterprise - grade AI solutions that drive real results.;
 export default function AIServicesPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default function AIServicesPage() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
@@ -38,7 +35,6 @@ export default function AIServicesPage() {;
         <div className="container mx-auto px-6 text-center">;
           <h1 className="text-5xl font-bold mb-6">🤖 AI Services & Solutions</h1>;
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">;
-<<<<<<< HEAD
             Transform your business with cutting-edge artificial intelligence. From automation to predictive analytics;
             Transform your business with cutting-edge artificial intelligence. From automation to predictive analytics,;
             we deliver enterprise-grade AI solutions that drive real results.;
@@ -48,7 +44,6 @@ export default function AIServicesPage() {;
               Call Now: +1 302 464 0950;
             </a>;
             <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
-=======
             Transform your business with cutting-edge artificial intelligence. From automation to predictive analytics,;
             we deliver enterprise-grade AI solutions that drive real results.;
           </p>;
@@ -57,29 +52,24 @@ export default function AIServicesPage() {;
               Call Now: +1 302 464 0950;
             </a>;
             <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Get AI Consultation;
             </a>;
           </div>;
         </div>;
       </div>;
       {/* Contact Info Banner */}
-<<<<<<< HEAD
       <div className="bg - zinc - 800 py - 4">;
         <div className="container mx - auto px - 6 text - center text - sm">;
           <span className="mr - 8">📱 +1 302 464 0950</span>;
           <span className="mr - 8">✉️ kleber@ziontechgroup.com</span>;
-=======
       <div className="bg-zinc-800 py-4">;
         <div className="container mx-auto px-6 text-center text-sm">;
           <span className="mr-8">📱 +1 302 464 0950</span>;
           <span className="mr-8">✉️ kleber@ziontechgroup.com</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>;
         </div>;
       </div>;
       {/* AI Services Grid */}
-<<<<<<< HEAD
       <section className="py - 20">;
         <div className="container mx - auto px - 6">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
@@ -127,7 +117,6 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com / ai - services" className="block w - full text - center bg - blue - 600 hover:bg - blue - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
-=======
       <section className="py-20">;
         <div className="container mx-auto px-6">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
@@ -171,12 +160,10 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com/ai-services" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More About ZionGPT Core;
               </a>;
             </div>;
             {/* AI Content Generation */}
-<<<<<<< HEAD
 
                 Automate your content creation with AI-powered writing tools that generate high-quality,;
 
@@ -187,13 +174,10 @@ export default function AIServicesPage() {;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Automate your content creation with AI - powered writing tools that generate high - quality,
                 SEO - optimized content for blogs, social media, and marketing materials.;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">✍️</div>;
               <h2 className="text-3xl font-bold mb-4">AI Content Generation</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
-<<<<<<< HEAD
                 Automate your content creation with AI-powered writing tools that generate high-quality;
                 Automate your content creation with AI-powered writing tools that generate high-quality,;
                 SEO-optimized content for blogs, social media, and marketing materials.;
@@ -225,7 +209,6 @@ export default function AIServicesPage() {;
                     <span className="text - green - 400 font - semibold">$799 / month</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
-=======
                 Automate your content creation with AI-powered writing tools that generate high-quality,;
                 SEO-optimized content for blogs, social media, and marketing materials.;
               </p>;
@@ -256,12 +239,10 @@ export default function AIServicesPage() {;
                     <span className="text-green-400 font-semibold">$799/month</span>;
                   </div>;
                   <div className="text-sm text-zinc-400 mt-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     Setup fee: $800 | Unlimited content generation;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
               <a href="https://ziontechgroup.com / ai - content" className="block w - full text - center bg - blue - 600 hover:bg - blue - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
                 Learn More About AI Content Generation;
               </a>;
@@ -283,7 +264,6 @@ export default function AIServicesPage() {;
                 <ul className="space - y-2 text - zinc - 300">;
                   <li>• Predictive analytics and forecasting</li>;
                   <li>• Real - time data processing</li>;
-=======
               <a href="https://ziontechgroup.com/ai-content" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">;
                 Learn More About AI Content Generation;
               </a>;
@@ -301,14 +281,12 @@ export default function AIServicesPage() {;
                 <ul className="space-y-2 text-zinc-300">;
                   <li>• Predictive analytics and forecasting</li>;
                   <li>• Real-time data processing</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>• Automated reporting and dashboards</li>;
                   <li>• Anomaly detection</li>;
                   <li>• Customer behavior analysis</li>;
                   <li>• Market trend predictions</li>;
                 </ul>;
               </div>;
-<<<<<<< HEAD
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Plans</h4>;
                 <div className="space - y-3">;
@@ -330,7 +308,6 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com / ai - analytics" className="block w - full text - center bg - blue - 600 hover:bg - blue - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
-=======
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -352,12 +329,10 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com/ai-analytics" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More About AI Analytics;
               </a>;
             </div>;
             {/* AI Customer Support */}
-<<<<<<< HEAD
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">💬</div>;
@@ -374,7 +349,6 @@ export default function AIServicesPage() {;
                 <ul className="space - y-2 text - zinc - 300">;
                   <li>• 24 / 7 automated customer support</li>;
                   <li>• Multi - language chatbot support</li>;
-=======
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">💬</div>;
               <h2 className="text-3xl font-bold mb-4">AI Customer Support</h2>;
@@ -387,14 +361,12 @@ export default function AIServicesPage() {;
                 <ul className="space-y-2 text-zinc-300">;
                   <li>• 24/7 automated customer support</li>;
                   <li>• Multi-language chatbot support</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>• Seamless human handoff</li>;
                   <li>• Customer sentiment analysis</li>;
                   <li>• Integration with CRM systems</li>;
                   <li>• Performance analytics and reporting</li>;
                 </ul>;
               </div>;
-<<<<<<< HEAD
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Plans</h4>;
                 <div className="space - y-3">;
@@ -416,7 +388,6 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com / ai - support" className="block w - full text - center bg - blue - 600 hover:bg - blue - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
-=======
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -438,12 +409,10 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com/ai-support" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More About AI Customer Support;
               </a>;
             </div>;
             {/* AI Process Automation */}
-<<<<<<< HEAD
 
                 Streamline your business operations with intelligent workflow automation,;
 
@@ -454,13 +423,10 @@ export default function AIServicesPage() {;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Streamline your business operations with intelligent workflow automation,
                 document processing, and AI - powered business process optimization.;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">⚙️</div>;
               <h2 className="text-3xl font-bold mb-4">AI Process Automation</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
-<<<<<<< HEAD
                 Streamline your business operations with intelligent workflow automation;
                 Streamline your business operations with intelligent workflow automation,;
                 document processing, and AI-powered business process optimization.;
@@ -468,19 +434,16 @@ export default function AIServicesPage() {;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-=======
                 Streamline your business operations with intelligent workflow automation,;
                 document processing, and AI-powered business process optimization.;
               </p>;
               <div className="space-y-4 mb-8">;
                 <h3 className="text-xl font-semibold text-blue-400">Key Features:</h3>;
                 <ul className="space-y-2 text-zinc-300">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>• Intelligent document processing (OCR)</li>;
                   <li>• Workflow automation and optimization</li>;
                   <li>• Process mining and analysis</li>;
                   <li>• Integration with existing systems</li>;
-<<<<<<< HEAD
                   <li>• Real - time monitoring and alerts</li>;
                   <li>• Compliance and audit trails</li>;
                 </ul>;
@@ -506,7 +469,6 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com / ai - automation" className="block w - full text - center bg - blue - 600 hover:bg - blue - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
-=======
                   <li>• Real-time monitoring and alerts</li>;
                   <li>• Compliance and audit trails</li>;
                 </ul>;
@@ -532,12 +494,10 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com/ai-automation" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More About AI Process Automation;
               </a>;
             </div>;
             {/* AI Security & Compliance */}
-<<<<<<< HEAD
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🔒</div>;
@@ -556,7 +516,6 @@ export default function AIServicesPage() {;
                   <li>• Automated compliance monitoring</li>;
                   <li>• Behavioral analysis and anomaly detection</li>;
                   <li>• Real - time security alerts</li>;
-=======
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">🔒</div>;
               <h2 className="text-3xl font-bold mb-4">AI Security & Compliance</h2>;
@@ -571,12 +530,10 @@ export default function AIServicesPage() {;
                   <li>• Automated compliance monitoring</li>;
                   <li>• Behavioral analysis and anomaly detection</li>;
                   <li>• Real-time security alerts</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>• Regulatory compliance frameworks</li>;
                   <li>• Incident response automation</li>;
                 </ul>;
               </div>;
-<<<<<<< HEAD
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Plans</h4>;
                 <div className="space - y-3">;
@@ -598,7 +555,6 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com / ai - security" className="block w - full text - center bg - blue - 600 hover:bg - blue - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
-=======
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -620,7 +576,6 @@ export default function AIServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com/ai-security" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More About AI Security & Compliance;
               </a>;
             </div>;
@@ -628,7 +583,6 @@ export default function AIServicesPage() {;
         </div>;
       </section>;
       {/* AI Implementation Process */}
-<<<<<<< HEAD
       <section className="py - 20 bg - zinc - 800">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
@@ -667,7 +621,6 @@ export default function AIServicesPage() {;
               <div className="bg - blue - 600 w - 16 h - 16 rounded - full flex items - center justify - center text - 2xl font - bold mx - auto mb - 4">6</div>;
               <h3 className="text - xl font - semibold mb - 3">Deployment & Optimization</h3>;
               <p className="text - zinc - 300">Launch AI solutions and continuously optimize for maximum performance and ROI.</p>;
-=======
       <section className="py-20 bg-zinc-800">;
         <div className="container mx-auto px-6">;
           <div className="text-center mb-16">;
@@ -706,13 +659,11 @@ export default function AIServicesPage() {;
               <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">6</div>;
               <h3 className="text-xl font-semibold mb-3">Deployment & Optimization</h3>;
               <p className="text-zinc-300">Launch AI solutions and continuously optimize for maximum performance and ROI.</p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Call to Action */}
-<<<<<<< HEAD
       <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600">;
         <div className="container mx - auto px - 6 text - center">;
           <h2 className="text - 4xl font - bold mb - 6">Ready to Harness the Power of AI?</h2>;
@@ -730,7 +681,6 @@ export default function AIServicesPage() {;
               </a>;
             </div>;
             <p className="text - blue - 100 text - sm">;
-=======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">;
         <div className="container mx-auto px-6 text-center">;
           <h2 className="text-4xl font-bold mb-6">Ready to Harness the Power of AI?</h2>;
@@ -748,17 +698,13 @@ export default function AIServicesPage() {;
               </a>;
             </div>;
             <p className="text-blue-100 text-sm">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com;
             </p>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
     </div>);
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

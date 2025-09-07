@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
   return (
     <ThemeProvider attribute="class" default_theme="light">;
@@ -128,7 +127,6 @@ export const mockNextRouter = () => ({;
 export const createMockProps = (overrides = {}) => ({;
   ...overrides;
 
-=======
 import React from 'react',
 import { render, RenderOptions } from '@testing-library/react',
 import { ThemeProvider } from 'next-themes',
@@ -165,5 +163,4 @@ export const mockNextRouter = () => ({;
 });
 export const createMockProps = (overrides = {}) => ({;
   ...overrides;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 });

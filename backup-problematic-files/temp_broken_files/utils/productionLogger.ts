@@ -11,7 +11,6 @@ export const productionLogger = {;
     }
   };
   warn: (...args: any[]) => {';
-========
   },;
   error: (...args: any[]) => {';'
     if (process.env.NODE_ENV !== 'production') {;

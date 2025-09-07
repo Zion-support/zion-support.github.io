@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link''
 import { GradientHeading } from './GradientHeading''
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs''
@@ -424,7 +423,6 @@ export function FeaturesGuideSection() {
                 key={feature.id}
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"",
-=======
 import Link from "next/link",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -567,7 +565,6 @@ export function FeaturesGuideSection() {
                 key={feature.id} 
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >
 import Link from "next/link",;
 import { GradientHeading } from "./GradientHeading",;
@@ -576,20 +573,14 @@ import { Button } from "./ui/button",;
 import { fireEvent } from '@/lib/analytics',;
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
 export function FeaturesGuideSection() {;
-<<<<<<< HEAD
   const features = [;,
-=======
   const features = [;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       id: "ai-matcher",;
       title: "AI Matcher",;
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",;
-<<<<<<< HEAD
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,;,
-=======
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       instructions: [;
         "Navigate to the AI Matcher page from the homepage or marketplace",;
         "Fill in your project requirements and specifications",;
@@ -603,11 +594,8 @@ export function FeaturesGuideSection() {;
       id: "talent-directory",;
       title: "Talent Directory",;
       description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",;
-<<<<<<< HEAD
       icon: <Users className="h-10 w-10 text-zion-purple" />,;,
-=======
       icon: <Users className="h-10 w-10 text-zion-purple" />,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       instructions: [;
         "Access the talent directory from the main navigation",;
         "Use filters to narrow down by skills, experience, and pricing",;
@@ -621,11 +609,8 @@ export function FeaturesGuideSection() {;
       id: "services",;
       title: "Services Marketplace",;
       description: "Discover professional services for your AI and tech needs, from development to consulting.",;
-<<<<<<< HEAD
       icon: <Zap className="h-10 w-10 text-zion-cyan" />,;,
-=======
       icon: <Zap className="h-10 w-10 text-zion-cyan" />,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       instructions: [;
         "Browse service categories on the marketplace",;
         "Compare service offerings and pricing options",;
@@ -639,11 +624,8 @@ export function FeaturesGuideSection() {;
       id: "equipment",;
       title: "Equipment Catalog",;
       description: "Rent or buy specialized hardware and tech equipment for AI development and research.",;
-<<<<<<< HEAD
       icon: <Settings className="h-10 w-10 text-zion-purple" />,;,
-=======
       icon: <Settings className="h-10 w-10 text-zion-purple" />,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       instructions: [;
         "Search the equipment catalog by category or specifications",;
         "Check availability and rental/purchase options",;
@@ -657,11 +639,8 @@ export function FeaturesGuideSection() {;
       id: "analytics",;
       title: "Marketplace Analytics",;
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",;
-<<<<<<< HEAD
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,;,
-=======
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       instructions: [;
         "Access analytics from your user dashboard",;
         "View interactive charts on market trends and rates",;
@@ -675,11 +654,8 @@ export function FeaturesGuideSection() {;
       id: "ai-assistant",;
       title: "Zion AI Assistant",;
       description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",;
-<<<<<<< HEAD
       icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,;,
-=======
       icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       instructions: [;
         "Click on the chat icon in the bottom right corner",;
         "Ask questions about available services or talents",;
@@ -694,11 +670,8 @@ export function FeaturesGuideSection() {;
       id: "publishing",;
       title: "List Your Services",;
       description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",;
-<<<<<<< HEAD
       icon: <Plus className="h-10 w-10 text-zion-cyan" />,;,
-=======
       icon: <Plus className="h-10 w-10 text-zion-cyan" />,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       instructions: [;
         "Create or log in to your account",;
         "Navigate to 'Create Listing' in your dashboard",;
@@ -712,18 +685,14 @@ export function FeaturesGuideSection() {;
       id: "help-center",;
       title: "Help & Resources",;
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",;
-<<<<<<< HEAD
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,;,
-=======
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       instructions: [;
         "Visit our comprehensive knowledge base",;
         "Watch video tutorials on specific features",;
         "Join community forums to connect with other users",;
         "Contact our support team for personalized assistance";
       ],;
-<<<<<<< HEAD
       link: "/help";",
       buttonText: "View Resources";
     }
@@ -1602,29 +1571,23 @@ function FeaturesGuideSection() {
                     {feature.instructions.map((instruction, idx,) => (
                       <li key={idx} className="text-zion-slate-light">"
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>"
-=======
       link: "/help";
       buttonText: "View Resources";
     }
   ];
   return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
           <GradientHeading>Your Complete Guide to Zion</GradientHeading>;
           <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">;
-<<<<<<< HEAD
             Discover all the powerful tools and features available to help you navigate ;
-=======
             Discover all the powerful tools and features available to help you navigate;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             the world of AI and tech services;
           </p>;
         </div>;
         <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">;
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">;
-<<<<<<< HEAD
             {features && features.slice(0, 4).map(feature => (;
               <TabsTrigger
                 key={feature && feature.id}
@@ -1690,7 +1653,6 @@ function FeaturesGuideSection() {
                     {feature && feature.instructions.map((instruction, idx,) => (;
                       <li key={idx} className="text-zion-slate-light">;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
-=======
             {features.slice(0, 4).map(feature => (;
               <TabsTrigger;
                 key={feature.id} ;
@@ -1740,7 +1702,6 @@ function FeaturesGuideSection() {
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
                         {instruction}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </li>;
                     ))}
                   </ol>;
@@ -1748,7 +1709,6 @@ function FeaturesGuideSection() {
               </div>;
             </TabsContent>;
           ))}
-<<<<<<< HEAD
           <Button
             variant='outline''
             className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'',
@@ -1774,7 +1734,6 @@ function FeaturesGuideSection() {
             >
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />"
-=======
         </Tabs>
         
         <div className="mt-12 text-center">
@@ -1789,13 +1748,11 @@ function FeaturesGuideSection() {
             >
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Link>
           </Button>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
             >;
               Explore Full Marketplace;
               <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />;
@@ -1871,7 +1828,5 @@ function FeaturesGuideSection() {
   )
 }
 }}}}}}}}}}}}})))))))))))))))))))))
-=======
   )
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {
   message: string;,
@@ -21,7 +20,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;,
         {isUser ? (
           <>
             <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />"
-=======
 import React, { useMemo } from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils",
@@ -54,13 +52,11 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
         {isUser ? (
           <>
             <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <AvatarFallback>U</AvatarFallback>
           </>
         ) : (
           <>
             <AvatarImage
-<<<<<<< HEAD
               src="https://placehold.co/40x40?text=AI"",
               alt="Zion Support""
             />
@@ -71,7 +67,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
       <div
         className={cn(
 }}}))
-=======
               src="https://placehold.co/40x40?text=AI"
               alt="Zion Support"
             />
@@ -234,4 +229,3 @@ function formatMessageWithLinks(message: string): string {;
   return formattedMessage;
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

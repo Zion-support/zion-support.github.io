@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
@@ -161,7 +160,6 @@ export function ResumeSelector({ onResumeSelected }:,  ResumeSelectorProps) {,
     </div>
   );
 }
-=======
 
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
@@ -470,4 +468,3 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

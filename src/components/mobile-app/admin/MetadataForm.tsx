@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface MetadataFormProps {;
   form: UseFormReturn<AppMetadataValues>;
 }
@@ -27,7 +26,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const longDescription = watch("longDescription"),;
   return (
     <Card className="bg-zion-blue border-zion-purple/30">"
-=======
 
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
@@ -72,13 +70,11 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <CardHeader>
         <CardTitle>App Metadata</CardTitle>
       </CardHeader>
       <CardContent>
         <Form {...form}>
-<<<<<<< HEAD
           <div className="space-y-4">"
             <FormField
               control = {control,}
@@ -141,7 +137,6 @@ if ( {) {
                     <Input;
                       placeholder="Enter app title";
                       max_length = {platform === "ios" ? 30 : 50, }"
-=======
           <div className="space-y-4">
             <FormField
               control={control}
@@ -213,14 +208,12 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                     <Input;
                       placeholder="Enter app title";
                       maxLength={platform === "ios" ? 30 : 50}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       {...field}
                     />;
                   </FormControl>;
                   <FormDescription>;
                     Max {platform === "ios" ? "30" : "50"} characters;
                   </FormDescription>;
-<<<<<<< HEAD
             />;
             <FormField
               control = {control,}
@@ -363,7 +356,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                     />;
                   </FormControl>;
                 </FormItem>)}
-=======
                 </FormItem>;
               )}
             />;
@@ -450,18 +442,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                   </FormControl>;
                 </FormItem>;
               )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             />;
           </div>;
         </Form>;
       </CardContent>;
-<<<<<<< HEAD
     </Card>);
 },
 ;
 }})))
-=======
     </Card>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

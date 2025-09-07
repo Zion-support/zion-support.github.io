@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 </div>
             <div>
               <h3 className="text-white font-medium">Transportation to Site</h3>"
@@ -109,7 +108,6 @@ export function ServiceIncludes() {
             <div>
               <h3 className="text-white font-medium">Service Documentation</h3>"
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>"
-=======
 
 import { Check } from 'lucide-react'
 
@@ -179,16 +177,12 @@ export function ServiceIncludes() {
             <div>
               <h3 className="text-white font-medium">Service Documentation</h3>
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { Check } from 'lucide-react';
 export function ServiceIncludes() {;
   return (;
@@ -250,7 +244,6 @@ export function ServiceIncludes() {;
             <div>;
               <h3 className="text-white font-medium">Service Documentation</h3>;
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>;
-<<<<<<< HEAD
 import { Check } from 'lucide-react';
 export /**
  * ServiceIncludes - Function description
@@ -397,21 +390,16 @@ function ServiceIncludes() {
             <div>;
               <h3 className="text - white font - medium">Service Documentation</h3>;
               <p className="text - zion - slate - light">Detailed report of work performed and recommendations.</p>;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
   );
 }
     </div>);
 }
 }}))
-=======
     </div>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

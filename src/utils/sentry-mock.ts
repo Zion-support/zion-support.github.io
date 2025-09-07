@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 // Mock Sentry instance with all common methods
 const mockSentry = {
@@ -356,7 +355,6 @@ export const Severity = mock_sentry.Severity;
 export { mock_sentry as Sentry }
 // All exports are already defined above;
 }}}}
-=======
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
 const noop = () => {};
@@ -510,4 +508,3 @@ export const Severity = mockSentry.Severity;
 // Additional exports for compatibility;
 export { mockSentry as Sentry };
 // All exports are already defined above;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

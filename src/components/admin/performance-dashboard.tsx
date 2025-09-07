@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -269,7 +268,6 @@ export function PerformanceDashboard() {;,
         loadTime: navigationEntry;
           ? navigationEntry && navigationEntry.loadEventEnd - navigationEntry && navigationEntry.fetchStart;
           : 0,;
-=======
 import React, { useState, useEffect } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -312,39 +310,32 @@ export function PerformanceDashboard() {;
       const performanceMetrics: PerformanceMetrics = {;
         bundleSize: 0, // This would need to be calculated separately;
         loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         performanceScore: 0, // This would need to be calculated;
         chunkCount: resourceCount,;
         cacheHitRate: 0, // This would need to be calculated from resource timing;
         fcp: 0, // First Contentful Paint - would need Performance Observer;
         lcp: 0, // Largest Contentful Paint - would need Performance Observer;
         cls: 0, // Cumulative Layout Shift - would need Performance Observer;
-<<<<<<< HEAD
         fid: 0, // First Input Delay - would need Performance Observer;
       };
       setMetrics(performanceMetrics);
       logInfo('Performance metrics collected successfully', {;
         loadTime: performanceMetrics && performanceMetrics.loadTime,;
         resourceCount: performanceMetrics && performanceMetrics.chunkCount,;
-=======
         fid: 0  // First Input Delay - would need Performance Observer;
       },;
       setMetrics(performanceMetrics),;
       logInfo('Performance metrics collected successfully', {;
         loadTime: performanceMetrics.loadTime,;
         resourceCount: performanceMetrics.chunkCount;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       });
     } catch (error) {;
       logErrorToProduction('Failed to collect performance metrics', error, {;
         component: 'PerformanceDashboard',;
-<<<<<<< HEAD
         action: 'collectMetrics',;
       });
-=======
         action: 'collectMetrics';
       }),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       // Set fallback metrics;
       setMetrics({;
         bundleSize: 0,;
@@ -355,7 +346,6 @@ export function PerformanceDashboard() {;
         fcp: 0,;
         lcp: 0,;
         cls: 0,;
-<<<<<<< HEAD
         fid: 0,;
       });
     }
@@ -412,7 +402,6 @@ export function PerformanceDashboard() {;
         <div>
           <h2 className="text-2xl font-bold">Performance Dashboard</h2>"
           <p className="text-muted-foreground">"
-=======
         fid: 0;
       });
     }
@@ -519,12 +508,10 @@ export function PerformanceDashboard() {;
         <div>
           <h2 className="text-2xl font-bold">Performance Dashboard</h2>
           <p className="text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Monitor bundle size, performance metrics, and optimization opportunities
           </p>
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
-<<<<<<< HEAD
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />`
 ;
     return vitals;
@@ -649,7 +636,6 @@ export function PerformanceDashboard() {;
                 Click refresh to collect metrics;
               </p>;
             </div>;
-=======
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
 ;
     return vitals;
@@ -750,12 +736,10 @@ export function PerformanceDashboard() {;
               <Clock className="w-8 h-8 mx-auto mb-2 text-muted-foreground" />
               <p className="text-muted-foreground">Click refresh to collect metrics</p>
             </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           )}
         </CardContent>;
       </Card>;
       {/* Metrics Grid */}
-<<<<<<< HEAD
       {metrics && (;
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>;
           <Card>;
@@ -896,7 +880,6 @@ export function PerformanceDashboard() {;
         <CardHeader>
           <CardTitle className="flex items-center gap-2">"
             <Package className="w-5 h-5" />"
-=======
       {metrics && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <Card>
@@ -962,13 +945,11 @@ export function PerformanceDashboard() {;
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Package className="w-5 h-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Bundle Chunks
           </CardTitle>
         </CardHeader>
         <CardContent>
           {chunks.length > 0 ? (
-<<<<<<< HEAD
             <div className="space-y-2">"
               {chunks.slice(0, 10).map((chunk, index) => (
                 <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">"
@@ -1088,7 +1069,6 @@ export function PerformanceDashboard() {;
                   </p>;
                 </div>;
               </div>;
-=======
             <div className="space-y-2">
               {chunks.slice(0, 10).map((chunk, index) => (
                 <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">
@@ -1178,14 +1158,12 @@ export function PerformanceDashboard() {;
                   </p>
                 </div>
               </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             )}
           </div>;
         </CardContent>;
       </Card>;
     </div>;
   );
-<<<<<<< HEAD
 } ;
           {chunks.length > 0 ? (
             <div className='space - y-2'>;
@@ -1282,6 +1260,4 @@ export function PerformanceDashboard() {;
 }
 }
 }}}
-=======
 } ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

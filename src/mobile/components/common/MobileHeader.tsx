@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 title: string;  showBack?: boolean;  title: string,
   showBack?: boolean
   showNotifications?: boolean
@@ -13,7 +12,6 @@ interface MobileHeaderProps {
   className?: string;
   onNotificationsClick?: () => void;
   onSettingsClick?: () => void
-=======
 import React from "react",
 import { useRouter } from 'next/router',
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
@@ -29,7 +27,6 @@ interface MobileHeaderProps {
   onSettingsClick?: () => void
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function MobileHeader({
   title,
   showBack = false,
@@ -37,7 +34,6 @@ export function MobileHeader({
   showSettings = false,
   className,
   onNotificationsClick,
-<<<<<<< HEAD
   onSettingsClick}:,  MobileHeaderProps) {
   const router = useRouter(),
   return (
@@ -137,7 +133,6 @@ export function MobileHeader(): any ({;
 }
 }
 }
-=======
   onSettingsClick}: MobileHeaderProps) {
   const router = useRouter(),
 
@@ -182,7 +177,6 @@ export function MobileHeader(): any ({;
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>
 import React from "react",;
 import { useRouter } from 'next/router',;
@@ -206,7 +200,6 @@ export function MobileHeader({;
   showSettings = false,;
   className,;
   onNotificationsClick,;
-<<<<<<< HEAD
   onSettingsClick,;
 }:,  MobileHeaderProps) {;
   const router = useRouter();
@@ -255,7 +248,6 @@ export function MobileHeader({;
           )}
 ;
 }}}}}}))))))
-=======
   onSettingsClick}: MobileHeaderProps) {;
   const router = useRouter();
   return (;
@@ -307,4 +299,3 @@ export function MobileHeader({;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

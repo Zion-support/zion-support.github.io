@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 email?: string;
   profileName: string;,
   profileType: 'service' | 'talent'',
@@ -132,7 +131,6 @@ export function ProfileContact(): any ({;
             href={`mailto:${email}`} `
             className="text-zion-cyan hover:underline truncate block""
           >
-=======
 
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -259,12 +257,10 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
             href={`mailto:${email}`} ;
             className="text-zion-cyan hover:underline truncate block";
           >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             {email}
           </a>;
         </div>;
       )}
-<<<<<<< HEAD
             <Input placeholder='Subject''
               value={subject}
               onChange={e = /> setSubject(e && e.target.value)}
@@ -278,7 +274,6 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
             <Input placeholder="Subject""
               value={subject}
               onChange={(e) = /> setSubject(e && e.target.value)}
-=======
 ;
       <form onSubmit={handleSendMessage}>;
         <div className="space-y-4">;
@@ -287,13 +282,11 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
               placeholder="Subject";
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               className="bg-zion-blue border-zion-blue-light text-white";
               required;
             />;
           </div>;
           <div>;
-<<<<<<< HEAD
             <Textarea
               placeholder={`Message to ${profileName}...`}`
               value={message}
@@ -303,7 +296,6 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
           >
             <Send className="mr-2 h-4 w-4" />"
             {isSending ? "Sending..." : "Send Message"}"
-=======
             <Textarea;
               placeholder={`Message to ${profileName}...`}
               value={message}
@@ -319,14 +311,12 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
           >;
             <Send className="mr-2 h-4 w-4" />;
             {isSending ? "Sending..." : "Send Message"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>;
         </div>;
       </form>;
     </div>;
   );
 }
-<<<<<<< HEAD
               on_change={e => set_message (e.target.value)},
               className='bg - zion - blue border - zion - blue - light text - white min - h-[120px]';
               required;
@@ -360,6 +350,4 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 }
 ;
 }
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

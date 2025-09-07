@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type ProjectParticipants = {
 
 export type ProjectParticipants = {;
@@ -78,7 +77,6 @@ export function getDaysUntilDue(milestone: Milestone): number | null {
 
 }
 }
-=======
 export type MilestoneStatus =;
   | 'Pending';
   | 'In Progress';
@@ -129,4 +127,3 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {;
     value === 'Paid';
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

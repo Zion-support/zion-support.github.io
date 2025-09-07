@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
   }
 import { ShoppingCart } from 'lucide-react';import { useAuth } from '@/hooks/useAuth';import { ShoppingCart } from 'lucide-react';
@@ -30,7 +29,6 @@ export function CartDrawer() {
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">"
             {count}
           </span>
-=======
 import React from 'react',;
 import { useSelector } from 'react-redux',;
 import Link from 'next/link',;
@@ -58,14 +56,12 @@ export function CartDrawer() {;
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
             {count}
           </span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         )}
       </Link>;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
 }
-<<<<<<< HEAD
   );
 }
       <Link ;
@@ -85,6 +81,4 @@ export function CartDrawer() {;
     </>);
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

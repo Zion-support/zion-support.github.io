@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react''
 import { useRouter } from 'next/router''
 import { useAuth } from '@/hooks/useAuth''
@@ -81,9 +80,7 @@ export function OnboardingWizard(): any ({;
         </div>;
         <div className='flex flex-col items-center text-center p-4'>;
           <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -95,11 +92,8 @@ interface WizardStep {;
   title: string,;
   description: string,;
   icon: React.ReactNode,;
-<<<<<<< HEAD
   action: {;,
-=======
   action: {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     text: string,;
     url: string;
   },;
@@ -112,7 +106,6 @@ interface OnboardingWizardProps {;
   onSkip: () => void,;
   className?: string;
 }
-<<<<<<< HEAD
 export function OnboardingWizard({ type, onComplete, onSkip, className }:,  OnboardingWizardProps) {,
   const [currentStep, setCurrentStep] = useState(0),
   const router = useRouter(), // Changed from useNavigate to useRouter
@@ -191,7 +184,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }:,  Onbo
         <div className="flex items-center mb-6">"
           {/* Step dots */}
           <div className="flex items-center justify-center flex-1">"
-=======
 
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0),
@@ -309,32 +301,27 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         <div className="flex items-center mb-6">
           {/* Step dots */}
           <div className="flex items-center justify-center flex-1">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             {steps.map((_, index) => (
               <div
                 key={index}
                 className={cn(
-<<<<<<< HEAD
                   "h-2 w-2 rounded-full mx-1","
                   index === currentStep
                     ? "bg-zion-purple scale-125""
                     : index < currentStep
                     ? "bg-zion-cyan""
                     : "bg-zion-blue-light""
-=======
                   "h-2 w-2 rounded-full mx-1",
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep
                     ? "bg-zion-cyan"
                     : "bg-zion-blue-light"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 )}
               />;
             ))}
           </div>
         </div>
-<<<<<<< HEAD
         <div className="flex flex-col items-center text-center p-4">"
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">",
             {steps[currentStep]?.icon}
@@ -374,7 +361,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         )}
 ;
 }
-=======
 
         <div className="flex flex-col items-center text-center p-4">
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
@@ -401,12 +387,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             {steps[currentStep]?.skipText}
           </Button>;
         )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       </CardFooter>;
     </Card>;
   );
 }
-<<<<<<< HEAD
   type: 'client' | 'talent';',
   on_complete: () => void;,
   on_skip: () => void;,
@@ -576,6 +560,4 @@ if ( {) {
 }
 ;
 }}}}}}}]]
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

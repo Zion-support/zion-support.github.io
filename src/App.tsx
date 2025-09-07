@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from 'react';
 function App() {
   console.log('App component rendering...');
@@ -27,10 +23,8 @@ function App() {
     </div>
   );
 }
-<<<<<<< HEAD
 export default App;
 
-=======
 ;
 import React from 'react',;
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',;
@@ -67,7 +61,6 @@ export default function App() {,;
       </Router>;
     </ErrorBoundary>);
 };
-=======
 import React, { Suspense, lazy } from 'react';
 import Footer from './components/Footer';
 // Enhanced Components
@@ -194,5 +187,3 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
     </ErrorBoundary>
   );
 }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

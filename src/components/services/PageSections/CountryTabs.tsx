@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from 'react',;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input',;
 import { Button } from '@/components/ui/button',;
@@ -11,7 +8,6 @@ import {;
   PaginationItem,;
   PaginationButton,;
   PaginationNext,;
-<<<<<<< HEAD
   PaginationPrevious,;
 } from '@/components/ui/pagination';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -36,7 +32,6 @@ export function CountryTabs(): any ({;
     (currentPage - 1) * countriesPerPage,;
     currentPage * countriesPerPage;
   );
-=======
   PaginationPrevious} from '@/components/ui/pagination',;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
 import { CountryServiceCard } from '@/components/services/CountryServiceCard',;
@@ -50,14 +45,12 @@ interface CountryTabsProps {;
   setSearchQuery: (query: string) => void;
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function CountryTabs({
   popularCountries,
   filteredCountries,
   handleCountrySelect,
   onQuote,
   searchQuery,
-<<<<<<< HEAD
   popularCountries,
   filteredCountries,
   handleCountrySelect,
@@ -141,7 +134,6 @@ export function CountryTabs({
               isPopular = {popularCountries.includes(country.country),}
             />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">"
-=======
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -180,7 +172,6 @@ export function CountryTabs({
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {filteredCountries
             .filter((country) => popularCountries.includes(country.country))
             .map((country) => (
@@ -194,7 +185,6 @@ export function CountryTabs({
             ))}
         </div>
       </TabsContent>
-<<<<<<< HEAD
       <TabsContent value="all" className="mt-0">"
         <div className="mb-6 max-w-md mx-auto">"
           <div className="relative">"
@@ -243,7 +233,6 @@ export function CountryTabs({
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">"
-=======
 
       <TabsContent value="all" className="mt-0">
         <div className="mb-6 max-w-md mx-auto">
@@ -260,7 +249,6 @@ export function CountryTabs({
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {paginatedCountries.map((country) => (
             <CountryServiceCard
               key={country.country}
@@ -270,7 +258,6 @@ export function CountryTabs({
               isPopular={popularCountries.includes(country.country)}
             />;
           ))}
-<<<<<<< HEAD
         </div>;
         {totalPages > 1 && (;
           <div className='mt-8'>;
@@ -425,7 +412,6 @@ function CountryTabs() {
 }
   );
 }
-=======
         </div>
 
         {totalPages > 1 && (
@@ -435,7 +421,6 @@ function CountryTabs() {
                 <PaginationItem>
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     onClick={(e) => {;
                       e.preventDefault(),;
                       setCurrentPage(Math.max(1, currentPage - 1));
@@ -448,8 +433,6 @@ function CountryTabs() {
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
-<<<<<<< HEAD
-=======
                         onClick={(e) => {;
                           e.preventDefault();
                           setCurrentPage(page);
@@ -457,14 +440,11 @@ function CountryTabs() {
                       />;
                     </PaginationItem>;
                   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 )}
                 <PaginationItem>;
                   <PaginationNext;
                     href={`?page=${currentPage + 1}`}
-<<<<<<< HEAD
 }}))
-=======
                     onClick={(e) => {;
                       e.preventDefault();
                       setCurrentPage(Math.min(totalPages, currentPage + 1));
@@ -480,4 +460,3 @@ function CountryTabs() {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

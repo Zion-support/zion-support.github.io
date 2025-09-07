@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 isOpen;
   onClose;
   talent;
@@ -203,7 +202,6 @@ function SmartContractBuilder() {,
 },
   return []};
 export function SmartContractBuilder(): any ({;
-=======
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -294,12 +292,10 @@ interface SmartContractBuilderProps {;
 }
 ;
 export function SmartContractBuilder({;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   isOpen,;
   onClose,;
   talent,;
   clientName,;
-<<<<<<< HEAD
   onContractGenerated, // This is for Solidity;
   onLegalDraftGenerated, // New prop for the markdown draft;
   onDeploy;
@@ -734,7 +730,6 @@ if ( {) {
   // Modified to match the expected interface;
   const handleFormSubmit = (contract: string,) => {;
     // This should be a function that takes a string (contract,  content);
-=======
   onContractGenerated}: SmartContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form"),;
   const [generatedContract, setGeneratedContract] = useState<string | null>(null),;
@@ -776,18 +771,15 @@ if ( {) {
   // Modified to match the expected interface;
   const handleFormSubmit = (contract: string) => {;
     // This should be a function that takes a string (contract content);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     // Since we need to adapt the interface, we'll implement the simplest solution that works;
     if (onContractGenerated) {;
       onContractGenerated(contract);
     }
-<<<<<<< HEAD
     setGeneratedContract(contract);
     setActiveTab("preview");
   };
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;,
-=======
     setGeneratedContract(contract),
     setActiveTab("preview")
   },
@@ -825,7 +817,6 @@ if ( {) {
   };
   return (;
     <Dialog open={isOpen} onOpenChange={onClose}>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle>Smart Contract Builder</DialogTitle>;
@@ -837,7 +828,6 @@ if ( {) {
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
             </TabsList>;
             <div className="flex gap-2">;
-<<<<<<< HEAD
               <Button
                 variant="outline" "
                 size="sm""
@@ -864,7 +854,6 @@ if ( {) {
                 className="flex gap - 1";
               >;
                 <Save className="h - 4 w - 4" />;
-=======
               <Button;
                 variant="outline";
                 size="sm";
@@ -872,12 +861,10 @@ if ( {) {
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Templates;
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt-4">;
@@ -898,7 +885,6 @@ if ( {) {
                       {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}'
                     </Button>;
                   </div>                )}
-=======
           <TabsContent value="form" className="pt-4">;
             <ContractForm;
               talent={talent}
@@ -930,12 +916,10 @@ if ( {) {
                     </Button>;
                   </div>;
                 )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             )}
           </TabsContent>;
         </Tabs>;
-<<<<<<< HEAD
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
@@ -991,14 +975,11 @@ setActiveTab ("preview");
             {generatedContract && (
               <div>
                 <ContractPreview
-=======
         <TemplateManager;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-<<<<<<< HEAD
 ;
           <TabsContent value="form" className="pt - 4">;
             <ContractForm;
@@ -1041,11 +1022,9 @@ setActiveTab ("preview");
     </Dialog>);
 }
 ;
-=======
         />;
       </DialogContent>;
     </Dialog>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

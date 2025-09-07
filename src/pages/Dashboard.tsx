@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const Dashboard: React.FC = () => {,
   return (
@@ -11,7 +10,6 @@ const Dashboard: React.FC = () => {,
   );
 };
 export default Dashboard;
-=======
 import React from 'react',
 import dynamic from 'next/dynamic',
 import { useAuth } from "@/hooks/useAuth",
@@ -567,4 +565,3 @@ export default function Dashboard() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react';
@@ -127,7 +126,6 @@ export function ConversationDetailView() {
             disabled={!newMessage.trim() || isSending}
           >
             {isSending ? 'Sending...' : 'Send'}'
-=======
 
 import React, { useState, useEffect, useRef } from 'react',;
 import { format } from 'date-fns',;
@@ -310,15 +308,12 @@ export function ConversationDetailView() {;
             className="bg-zion-purple hover: bg-zion-purple-dark text-white"
           >
             Send
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>
         </form>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   )
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
@@ -342,4 +337,3 @@ export function ConversationDetailView() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

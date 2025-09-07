@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export function GlobalServiceSection() {;
   return (
     <section className='py-20 bg-zion-blue' id='global-services'>;
@@ -46,7 +45,6 @@ export function GlobalServiceSection() {
         </div>
         <div className="flex justify-center mt-12">"
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">",
-=======
 
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
@@ -102,13 +100,11 @@ export function GlobalServiceSection() {
 
         <div className="flex justify-center mt-12">
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Get Your Free Commercial Proposal
           </Button>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
         </div>;
         <div className='flex justify-center mt-12'>;
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -213,7 +209,6 @@ function GlobalServiceSection() {
         <div className='flex justify - center mt - 12'>;
           <Button className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8'>        <div className="flex justify - center mt - 12">;
           <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8">;",
-=======
   )
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react';
@@ -266,20 +261,16 @@ export function GlobalServiceSection() {;
         </div>;
         <div className="flex justify-center mt-12">;
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Get Your Free Commercial Proposal;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
   );
 }
     </section>);
 }
 })
-=======
     </section>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

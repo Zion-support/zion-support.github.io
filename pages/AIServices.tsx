@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -119,8 +118,6 @@ import {
   ArrowRight,
   CheckCircle,
 import React from 'react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -141,19 +138,15 @@ import {
   Users,
   TrendingUp,
   Database,
-<<<<<<< HEAD
 
   Network,
   Target,
   Rocket
-=======
   Shield,
   Zap
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 } from 'lucide-react';
 const aiServices = [
   {
-<<<<<<< HEAD
 
     title: "Machine Learning Models",
     description: "Custom ML models tailored to your business needs with advanced algorithms and real-time processing",
@@ -240,14 +233,12 @@ title: 'Natural Language Processing',
     marketPrice: '$2,500 - $8,000/month',
     setupTime: '2-4 weeks',
     targetUsers: 'E-commerce, SaaS, Customer Service, Healthcare'
-=======
     title: 'Natural Language Processing',
     description: 'Advanced text analysis and language understanding capabilities.',
     icon: Brain,
     features: ['Text analysis', 'Sentiment analysis', 'Language translation', 'Content generation'],
     price: '$1,500/month',
     benefits: ['Better customer insights', 'Automated content', 'Multilingual support', 'Cost efficiency']
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   },
   {
     id: 7,
@@ -277,7 +268,6 @@ title: 'Natural Language Processing',
     name: 'AI Drug Discovery & Development',
     description: 'Accelerated pharmaceutical research using AI and machine learning',
     icon: Brain,
-<<<<<<< HEAD
     features: [
       'Molecular property prediction',
       'Drug-target interaction modeling',
@@ -350,11 +340,9 @@ title: 'Natural Language Processing',
 features: ['Predictive analytics', 'Custom algorithms', 'Data training', 'Model optimization'],
     price: '$3,000/month',
     benefits: ['Data-driven decisions', 'Predictive insights', 'Competitive advantage', 'Scalable intelligence']
-=======
     features: ['Predictive analytics', 'Pattern recognition', 'Data insights', 'Custom algorithms'],
     price: '$2,500/month',
     benefits: ['Data-driven decisions', 'Process optimization', 'Competitive advantage', 'Scalable solutions']
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   }
 }
   } catch (error) {
@@ -1410,7 +1398,6 @@ const stats = [
   { number: "48hrs", label: "Average Response Time" }
 ];
 
-<<<<<<< HEAD
 export default function AIServices() {
   
     >
@@ -1460,7 +1447,6 @@ export default function AIServicesPage() {
             className="text-center mb-16"
           >
             <h1 className="text-5xl font-bold text-white mb-6">
-=======
 export default function AIServicesPage() {
   return (
     <MainLayout>
@@ -1473,13 +1459,11 @@ export default function AIServicesPage() {
         <div className="container mx-auto px-4 py-12">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               AI Services
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Harness the power of artificial intelligence to transform your business
             </p>
-<<<<<<< HEAD
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -1495,8 +1479,6 @@ export default function AIServicesPage() {
                 <div className="text-gray-300">{stat.label}</div>
               </motion.div>
             ))}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -1552,10 +1534,7 @@ export default function AIServicesPage() {
             ))}
           </div>
 
-<<<<<<< HEAD
-=======
           {/* Contact Information */}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

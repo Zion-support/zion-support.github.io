@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 reputation: number;,
   size?: 'sm' | 'md' | 'lg''
 import { Trophy } from 'lucide-react''
@@ -98,7 +97,6 @@ export const ReputationDisplay = ({
       <Progress value={progress} className={sizeClasses[size].progress} />,
       <div className="text-xs text-muted-foreground">"
         Level {currentLevel} • {Math.round(nextMilestone -,  reputation)} to level up
-=======
 
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress",
@@ -145,15 +143,11 @@ export const ReputationDisplay = ({
       <Progress value={progress} className={sizeClasses[size].progress} />
       <div className="text-xs text-muted-foreground">
         Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       </div>
     </div>
   )
 },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default ReputationDisplay,
 import { Trophy } from 'lucide-react';
 import { Progress } from "@/components/ui/progress",;
@@ -161,7 +155,6 @@ interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
 }
-<<<<<<< HEAD
 export default ReputationDisplay;
 ';
     },
@@ -219,7 +212,6 @@ export const ReputationDisplay = ({ ;
       progress: "h-2" ;
     };
     lg: {;,
-=======
 ;
 export const ReputationDisplay = ({;
   reputation,;
@@ -242,12 +234,10 @@ export const ReputationDisplay = ({;
       progress: "h-2";
     },;
     lg: {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       container: "text-base",;
       icon: "w-5 h-5",;
       progress: "h-3";
     }
-<<<<<<< HEAD
   };
   return (
   },;
@@ -261,7 +251,6 @@ export const ReputationDisplay = ({;
       <Progress value={progress} className={sizeClasses[size].progress} />;,
       <div className="text-xs text-muted-foreground">;
         Level {currentLevel} • {Math && Math.round(nextMilestone -,  reputation)} to level up;
-=======
   },;
   return (;
     <div className="space-y-1">;
@@ -273,13 +262,11 @@ export const ReputationDisplay = ({;
       <Progress value={progress} className={sizeClasses[size].progress} />;
       <div className="text-xs text-muted-foreground">;
         Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       </div>;
     </div>;
   );
 };
 export default ReputationDisplay;
-<<<<<<< HEAD
 ';
     },;
     md: {;,
@@ -299,5 +286,3 @@ export default ReputationDisplay;
 };
 export default ReputationDisplay;
 }}}}})
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

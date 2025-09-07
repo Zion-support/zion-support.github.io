@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface HelpArticleViewProps {
   articleId: string
 },
@@ -81,7 +80,6 @@ function HelpArticleView() {,
   let article;
   for (const category of,  HELP_CATEGORIES) {
     const found = category.articles.find(a => a.id ===,  articleId),
-=======
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -100,7 +98,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   let article,
   for (const category of HELP_CATEGORIES) {
     const found = category.articles.find(a => a.id === articleId),
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     if (found) {
       article = found,
       break
@@ -114,21 +111,18 @@ interface HelpArticleViewProps {;
   articleId: string;
 }
 ;
-<<<<<<< HEAD
 export function HelpArticleView({ articleId }:,  HelpArticleViewProps) {;,
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),;
   // Find the article in all categories;
   let article,;
   for (const category of,  HELP_CATEGORIES) {;
     const found = category.articles.find(a => a.id ===,  articleId),;
-=======
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),;
   // Find the article in all categories;
   let article,;
   for (const category of HELP_CATEGORIES) {;
     const found = category.articles.find(a => a.id === articleId),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     if (found) {;
       article = found,;
       break;
@@ -138,7 +132,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
   if (!article) {;
     return <div>Article not found</div>;
   }
-<<<<<<< HEAD
   const handleFeedback = (type: "helpful" | "not-helpful") => {",
     setFeedbackGiven(type),
     // In a real implementation, this would send feedback to the server
@@ -184,7 +177,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
                 disabled={feedbackGiven !== null}
               >
                 <ThumbsDown className="h-4 w-4 mr-2" />"
-=======
   
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type),
@@ -238,19 +230,16 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
                 disabled={feedbackGiven !== null}
               >
                 <ThumbsDown className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 No
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
           {feedbackGiven === "not-helpful" && ("
             <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">"
               <p className="text-sm text-zion-slate-light mb-2">"
                 We're sorry this article wasn't helpful. Please contact our support team for further assistance.'
               </p>
               <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-light">",
-=======
           
           {feedbackGiven === "not-helpful" && (
             <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">
@@ -258,16 +247,12 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
                 We're sorry this article wasn't helpful. Please contact our support team for further assistance.
               </p>
               <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Contact Support
               </Button>
             </div>
 ;
-<<<<<<< HEAD
   const handleFeedback = (type: "helpful" | "not-helpful") => {;",
-=======
   const handleFeedback = (type: "helpful" | "not-helpful") => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     setFeedbackGiven(type),;
     // In a real implementation, this would send feedback to the server;
     toast({;
@@ -290,24 +275,18 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
         </div>;
         <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">;
           <div className="flex flex-col sm:flex-row items-center justify-between">;
-<<<<<<< HEAD
             <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">;",
-=======
             <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Was this article helpful?;
             </div>;
             <div className="flex items-center space-x-3">;
               <Button;
                 variant="outline";
                 size="sm";
-<<<<<<< HEAD
                 className={feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : ""}"
                 onClick={() => handleFeedback("helpful")}"
-=======
                 className={feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : ""}
                 onClick={() => handleFeedback("helpful")}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 disabled={feedbackGiven !== null}
               >;
                 <ThumbsUp className="h-4 w-4 mr-2" />;
@@ -316,13 +295,10 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
               <Button;
                 variant="outline";
                 size="sm";
-<<<<<<< HEAD
                 className={feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}"
                 onClick={() => handleFeedback("not-helpful")}"
-=======
                 className={feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}
                 onClick={() => handleFeedback("not-helpful")}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 disabled={feedbackGiven !== null}
               >;
                 <ThumbsDown className="h-4 w-4 mr-2" />;
@@ -335,11 +311,8 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
               <p className="text-sm text-zion-slate-light mb-2">;
                 We're sorry this article wasn't helpful. Please contact our support team for further assistance.;
               </p>;
-<<<<<<< HEAD
               <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-light">;",
-=======
               <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-light">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Contact Support;
               </Button>;
             </div>;
@@ -349,7 +322,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
 function formatDate(date:,  string): string {,
   return new Date(date).toLocaleDateString("en-US", {"
     year: "numeric","
@@ -366,7 +338,6 @@ function formatDate(date:,  string): string {;,
 }
 ;
 }}}}}}}}))
-=======
 
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
@@ -383,4 +354,3 @@ function formatDate(date: string): string {;
   });
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

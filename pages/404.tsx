@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -39,7 +38,6 @@ export default function Custom404() {
     </>
   );
 }
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -66,4 +64,3 @@ const NotFoundPage = () => {
 };
 
 export default NotFoundPage;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

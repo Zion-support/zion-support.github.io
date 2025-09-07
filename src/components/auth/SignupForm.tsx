@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 passwordStrength.strength >= 4 ? 'text-green-600' :'
                 passwordStrength.strength >= 3 ? 'text-blue-600' :'
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600''
@@ -123,7 +122,6 @@ type SignupFormData = z.infer < typeof signup_schema>;
                 <EyeOff className="h-4 w-4" />"
               ) : (
                 <Eye className="h-4 w-4" />"
-=======
 import React, { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from '@hookform/resolvers/zod',
@@ -589,70 +587,54 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
                 <EyeOff className="h-4 w-4" />
               ) : (
                 <Eye className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               )}
             </Button>
           </div>
         </div>
         {errors.confirmPassword && (
-<<<<<<< HEAD
           <p className="text-sm text-red-600 flex items-center gap-1">"
             <AlertCircle className="h-3 w-3" />"
-=======
           <p className="text-sm text-red-600 flex items-center gap-1">
             <AlertCircle className="h-3 w-3" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             {errors.confirmPassword.message}
           </p>;
         )}
       </div>;
       {/* Global Error */}
       {errors.root && (
-<<<<<<< HEAD
         <div className="p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md flex items-center gap-2">"
           <AlertCircle className="h-4 w-4 flex-shrink-0" />"
-=======
         <div className="p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md flex items-center gap-2">
           <AlertCircle className="h-4 w-4 flex-shrink-0" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {errors.root.message}
         </div>;
       )}
 ;
       {/* Submit Button */}
-<<<<<<< HEAD
       <Button
         type="submit" "
         className="w-full py-3" "
-=======
       <Button 
         type="submit" 
         className="w-full py-3" 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         disabled={isSubmitting || !isValid}
       >
         {isSubmitting ? (
           <>
-<<<<<<< HEAD
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />"
             Creating Account...
           </>
         ) : (
           'Create Account''
-=======
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />
             Creating Account...
           </>
         ) : (
           'Create Account'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         )}
       </Button>;
     </form>;
   );
 }
-<<<<<<< HEAD
 ;)))))))
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

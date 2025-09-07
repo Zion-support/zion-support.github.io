@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface QuotesFilterProps {;
 import React from "react","
 import { Calendar, RefreshCw } from 'lucide-react''
@@ -22,7 +21,6 @@ interface QuotesFilterProps {
   setDateRange: (range: DateRange |,  undefined) => void;,
   onReset: () => void;,
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;,
-=======
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
@@ -152,7 +150,6 @@ interface QuotesFilterProps {;
 }
 ;
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   searchQuery,;
   setSearchQuery,;
   statusFilter,;
@@ -160,7 +157,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   archiveFilter,;
   setArchiveFilter,;
   dateRange,;
-<<<<<<< HEAD
   setDateRange,;
   onReset,}) => {;
   onReset;
@@ -370,7 +366,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({,
                 <CalendarComponent
                   initialFocus
                   mode="range""
-=======
   setDateRange;
   onReset;
 }) => {;
@@ -442,12 +437,10 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({,
                 <CalendarComponent;
                   initialFocus;
                   mode="range";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
-<<<<<<< HEAD
                   defaultMonth = {dateRange?.from,}
                   selected = {dateRange,}
                   onSelect = {setDateRange,}
@@ -517,7 +510,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({,
     </Card>);
 }  );
 }
-=======
                 />
               </PopoverContent>
             </Popover>
@@ -537,4 +529,3 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({,
     </Card>
   )
 },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

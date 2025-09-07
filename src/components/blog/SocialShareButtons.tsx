@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const shareToTwitter = () => {
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}``
@@ -182,7 +181,6 @@ export function SocialShareButtons(): any ({ title }:,  SocialShareButtonsProps)
         <Button key={btn.label} variant="outline" size="sm" onClick={btn.onClick} aria-label={btn.label}>"
 ;
 export function SocialShareButtons({ title }:,  SocialShareButtonsProps) {;
-=======
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
@@ -231,17 +229,13 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
         <Button key={btn.label} variant="outline" size="sm" onClick={btn.onClick} aria-label={btn.label}>
 ;
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const shareUrl =;
     typeof window !== 'undefined' ? encodeURIComponent(window.location.href) : '',;
   const shareText = encodeURIComponent(title),;
   const shareToTwitter = () => {;
     window.open(;
-<<<<<<< HEAD
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,;`
-=======
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       '_blank';
     );
   },;
@@ -257,11 +251,8 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
       .writeText(window.location.href);
       .then(() => toast.success('Link copied to clipboard'));
       .catch(() => toast.error('Failed to copy link'));
-<<<<<<< HEAD
   },;,
-=======
   },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const buttons = [;
     { icon: <Twitter className="h-4 w-4" />, label: 'Twitter', onClick: shareToTwitter },;
     { icon: <Facebook className="h-4 w-4" />, label: 'Facebook', onClick: shareToFacebook },;
@@ -278,8 +269,5 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
 ;))
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

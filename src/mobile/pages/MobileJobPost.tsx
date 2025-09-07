@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const goToNextStep = () => {
     if (currentStep === "details") {"
       setCurrentStep("requirements")"
@@ -493,7 +492,6 @@ function RequirementsStep() {;,
   const [newSkill, setNewSkill] = useState(""),;
   const addSkill = () => {;
     if (newSkill && !skills.includes(newSkill)) {;,
-=======
 
 import React, { useState } from "react",
 import { MobileHeader } from "@/mobile/components/common/MobileHeader",
@@ -870,31 +868,24 @@ function RequirementsStep() {;
   const [newSkill, setNewSkill] = useState(""),;
   const addSkill = () => {;
     if (newSkill && !skills.includes(newSkill)) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       setSkills([...skills, newSkill]),;
       setNewSkill("");
     }
   };
-<<<<<<< HEAD
   const removeSkill = (skill:,  string) => {;,
     setSkills(skills.filter(s => s !==,  skill));
-=======
   const removeSkill = (skill: string) => {;
     setSkills(skills.filter(s => s !== skill));
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   };
   return (;
     <div className="space-y-4">;
       <h2 className="text-lg font-medium">Job Requirements</h2>;
       <div className="space-y-2">;
         <Label htmlFor="experience">Experience Level</Label>;
-<<<<<<< HEAD
     <div className="space - y-4">;
       <h2 className="text - lg font - medium">Job Requirements</h2>;
       <div className="space - y-2">;
         <Label html_for="experience">Experience Level</Label>;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <Select>;
           <SelectTrigger>;
             <SelectValue placeholder="Select experience level" />;
@@ -907,13 +898,10 @@ function RequirementsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
-<<<<<<< HEAD
       <div className="space - y-2">;
         <Label html_for="education">Education</Label>;
-=======
       <div className="space-y-2">;
         <Label htmlFor="education">Education</Label>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <Select>;
           <SelectTrigger>;
             <SelectValue placeholder="Select required education" />;
@@ -928,7 +916,6 @@ function RequirementsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
-<<<<<<< HEAD
       <div className="space-y-2">"
         <Label>Required Skills</Label>
         <div className="flex flex-wrap gap-2 mb-3">"
@@ -985,7 +972,6 @@ function BudgetStep() {
               <SelectItem value="usd">USD</SelectItem>"
               <SelectItem value="eur">EUR</SelectItem>"
               <SelectItem value="gbp">GBP</SelectItem>"
-=======
       <div className="space-y-2">;
         <Label>Required Skills</Label>;
         <div className="flex flex-wrap gap-2 mb-3">;
@@ -1070,12 +1056,10 @@ function BudgetStep() {
               <SelectItem value="usd">USD</SelectItem>
               <SelectItem value="eur">EUR</SelectItem>
               <SelectItem value="gbp">GBP</SelectItem>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </SelectContent>
           </Select>
         </div>
       </div>
-<<<<<<< HEAD
       <div className="space-y-2">"
         <Label htmlFor="deadline">Application Deadline</Label>"
         <Input type="date" id="deadline" />"
@@ -1473,7 +1457,6 @@ min - h-screen flex flex - col"> <MobileHeader </div> <Button variant=" outline"
   3;
 }/> </div> </div>) '";
 }<Card> <CardContent className=" p - 4"> <h3 className=" font - bold text - lg">Senior React Developer</h3> <p className=" text - muted - foreground">TechCorp Inc. • Remote • Full - time</p> <div className=" flex gap - 2 my - 3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space - y-1 text - sm mt - 3"> <p className=" font - medium">Experience Level:</p> <p > Senior</p> </div> </div> <div className=" mt - 4 pt - 3 border - t border - border"> <h4 className=" font - medium mb - 2">Description</h4> <p className=" text - sm">We are looking for a skilled React developer to help us build out our new customer - facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w - full" >Edit Job Post</Button> </div> '"}]
-=======
       
       <div className="space-y-2">
         <Label htmlFor="deadline">Application Deadline</Label>
@@ -1557,4 +1540,3 @@ function PreviewStep() {
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

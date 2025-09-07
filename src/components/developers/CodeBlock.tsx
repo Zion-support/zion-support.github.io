@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ))}
           </div>;
         )}
@@ -48,7 +47,6 @@ export default CodeBlock;
 }
 }
 }
-=======
 
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react'
@@ -145,13 +143,9 @@ export function CodeBlock({;
           {language}
         </div>;
       )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
 export default CodeBlock;
-=======
 export default CodeBlock;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

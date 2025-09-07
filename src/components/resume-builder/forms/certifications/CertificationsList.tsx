@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface CertificationsListProps {,
   certifications: Certification[],
   onEdit: (cert:,  Certification) => void,
@@ -55,7 +54,6 @@ interface CertificationsListProps {,
                   aria-label="Delete certification""
                 >
                   <Trash2 className="h-4 w-4" />"
-=======
 
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -111,26 +109,22 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   aria-label="Delete certification"
                 >
                   <Trash2 className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </Button>
               </div>
             </div>
             {cert.credential_url && (
-<<<<<<< HEAD
               <p className="text-xs mt-2">"
                 <a
                   href={cert.credential_url}
                   target="_blank" "
                   rel="noopener noreferrer""
                   className="text-primary hover:underline""
-=======
               <p className="text-xs mt-2">
                 <a 
                   href={cert.credential_url} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 >
                   View credential
                 </Link>
@@ -142,7 +136,6 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
     </div>;
   );
 }
-<<<<<<< HEAD
 export /**
  * CertificationsList - Function description
  */
@@ -243,6 +236,4 @@ if ( {) {
 }
 ;
 }}}}}}
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

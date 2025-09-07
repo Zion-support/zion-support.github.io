@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface AIMatchingResultsProps {,
   matches: MatchResultItem[],
   onSelectMatch?: (match:,  MatchResultItem) => void,
@@ -89,7 +88,6 @@ interface AIMatchingResultsProps {;
   serviceType?: string;interface AIMatchingResultsProps {;,
   matches: MatchResultItem[],;
   onSelectMatch?: (match: MatchResultItem,) => void,;
-=======
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -171,12 +169,10 @@ import { cn } from "@/lib/utils",;
 interface AIMatchingResultsProps {;
   matches: MatchResultItem[],;
   onSelectMatch?: (match: MatchResultItem) => void,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   isLoading?: boolean,;
   projectDescription?: string,;
   serviceType?: string;
 }
-<<<<<<< HEAD
 export function AIMatchingResults(): any ({;
   matches,;
   onSelectMatch,;
@@ -213,7 +209,6 @@ export function AIMatchingResults(): any ({;
           <Skeleton className='h-[120px] w-full' />;,
           <Skeleton className='h-[120px] w-full' />;,
           <Skeleton className='h-[120px] w-full' />;
-=======
 ;
 export function AIMatchingResults({;
   matches,;
@@ -245,12 +240,10 @@ export function AIMatchingResults({;
           <Skeleton className="h-[120px] w-full" />;
           <Skeleton className="h-[120px] w-full" />;
           <Skeleton className="h-[120px] w-full" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>;
       </div>;
     );
   }
-<<<<<<< HEAD
   if (matches && matches.length === 0) {;
     return (
       <Card className='bg-zion-blue-dark border-zion-blue-light text-center p-6'>;
@@ -265,7 +258,6 @@ export function AIMatchingResults({;
             <div className='bg-zion-blue-light/20 p-3 rounded-md text-left'>;
               <p className='text-xs text-zion-slate-light'>Your search:</p>;
               <p className='text-sm text-white'>{projectDescription}</p>;
-=======
 ;
   if (matches.length === 0) {;
     return (;
@@ -280,14 +272,12 @@ export function AIMatchingResults({;
             <div className="bg-zion-blue-light/20 p-3 rounded-md text-left">;
               <p className="text-xs text-zion-slate-light">Your search:</p>;
               <p className="text-sm text-white">{projectDescription}</p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           )}
         </CardContent>;
       </Card>;
     );
   }
-<<<<<<< HEAD
   return (
     <div className='space-y-4'>;
       <Tabs
@@ -469,7 +459,6 @@ if ( {) {
                                   </div>;
                                 </div>;
                               )}
-=======
   
   return (
     <div className="space-y-4">
@@ -530,19 +519,16 @@ if ( {) {
                                   <div className="font-medium text-white">${match.price}</div>
                                   <div className="text-xs text-zion-slate-light">
                                     {match.category.toLowerCase().includes("talent") ? "/hour" : ""}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                                   </div>
                                 </div>
                               )}
                             </div>
-<<<<<<< HEAD
                             <div className="mt-2 flex flex-wrap gap-1">"
                               <Badge variant="outline">"
                                 {match.category}
                               </Badge>
                               {match.skills && match.skills.slice(0, 3).map((skill: string, i:,  number) => (
                                 <Badge key={i} variant="outline">"
-=======
                             
                             <div className="mt-2 flex flex-wrap gap-1">
                               <Badge variant="outline">
@@ -550,12 +536,10 @@ if ( {) {
                               </Badge>
                               {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
                                 <Badge key={i} variant="outline">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                                   {skill}
                                 </Badge>;
                               ))}
                             </div>;
-<<<<<<< HEAD
                             <div className='mt-2 flex flex-wrap gap-1'>;
                               <Badge variant='outline'>{match && match.category}</Badge>;
                               {match && match.skills &&;
@@ -585,13 +569,10 @@ if ( {) {
                                     <Badge key={i} variant='outline'>;
                                       {skill}
                                     </Badge>))}                            </div>;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                           </div>;
                         </div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
             )}
           </TabsContent>;
         ))}
@@ -612,7 +593,6 @@ if ( {) {
     </div>);
 }
 }
-=======
                   </Card>;
                 );
               });
@@ -627,4 +607,3 @@ if ( {) {
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button","
 import { Input } from "@/components/ui/input","
 import { ScrollArea } from "@/components/ui/scroll-area","
@@ -392,7 +391,6 @@ type Message = {
   },
   const handleQuickReply = (text:,  string) => {,
     handleSendMessage(text)))
-=======
 
 import React, { useState, useRef, useEffect } from "react",
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
@@ -924,4 +922,3 @@ export function ChatBotPanel() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

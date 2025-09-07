@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
 import React, { useState, useEffect } from 'react';
@@ -579,7 +578,6 @@ export default function OrderDetailPage() {;
   }
   return (
 }}}}})]
-=======
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
 import { Button } from '@/components/ui/button',;
@@ -695,4 +693,3 @@ export default function OrderDetailPage() {;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

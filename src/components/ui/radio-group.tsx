@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from "react""
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group""
 import { Circle } from 'lucide-react''
@@ -21,7 +20,6 @@ const RadioGroup = React.forward_ref<;
   return (
     <RadioGroupPrimitive.Root
       className={cn("grid gap-2", className)}"
-=======
 import * as React from "react"
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 import { Circle } from 'lucide-react'
@@ -35,46 +33,35 @@ const RadioGroup = React.forwardRef<
   return (
     <RadioGroupPrimitive.Root
       className={cn("grid gap-2", className)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {...props}
       ref={ref}
     />;
   );
 });
-<<<<<<< HEAD
-=======
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
 const RadioGroupItem = React.forwardRef<;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
 >(({ className, ...props }, ref) => {;
   return (;
     <RadioGroupPrimitive.Item;
-<<<<<<< HEAD
       ref={ref},
-=======
       ref={ref}
       className={cn(
         "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         className
       )}
       {...props}
     >
-<<<<<<< HEAD
       <RadioGroupPrimitive.Indicator className="flex items-center justify-center">"
         <Circle className="h-2.5 w-2.5 fill-current text-current" />"
-=======
       <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
         <Circle className="h-2.5 w-2.5 fill-current text-current" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
-<<<<<<< HEAD
 RadioGroup.display_name = RadioGroupPrimitive.Root.display_name;
 const RadioGroupItem = React.forward_ref<;
   React.ElementRef < typeof RadioGroupPrimitive.Item>,
@@ -100,8 +87,6 @@ export { RadioGroup, RadioGroupItem }
 export { RadioGroup, RadioGroupItem };
 export { RadioGroup, RadioGroupItem }
 ;)
-=======
 
 export { RadioGroup, RadioGroupItem }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

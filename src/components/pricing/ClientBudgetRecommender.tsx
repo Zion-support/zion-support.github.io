@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const handleApplySuggestion = () =>: any {
     // Check condition
 if ( {) {
@@ -28,7 +27,6 @@ interface ClientBudgetRecommenderProps {
   timeline?: string,
   scope?: string,
   experienceLevel?: string,
-=======
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -107,12 +105,10 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate),
       
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
           userId: user.id,
-<<<<<<< HEAD
           suggestionType: "client","
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
@@ -174,7 +170,6 @@ if (experienceLevel) params.experienceLevel = experienceLevel
 }
 },
             rateType="hourly""
-=======
           suggestionType: "client",
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
@@ -203,13 +198,11 @@ if (experienceLevel) params.experienceLevel = experienceLevel
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
             rateType="hourly"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           />
         )}
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 };
 return (<div className="space - y-4" > <div> {";
   !suggestion && !is_loading ? (<Button type="button" variant="outline" on_click={"
@@ -219,6 +212,4 @@ return (<div className="space - y-4" > <div> {";
 }
 '"  );
 },)
-=======
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

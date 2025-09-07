@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
@@ -39,8 +38,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;,
     warning: 'text-yellow-500',;
     error: 'text-red-500',;
   };
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState, useEffect } from 'react',;
 import { motion, AnimatePresence } from 'framer-motion',;
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react';
@@ -55,7 +52,6 @@ interface LoadingSpinnerProps {;
   className?: string,;
   showText?: boolean,;
   text?: string;
-<<<<<<< HEAD
 }
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
   size = 'md','
@@ -336,7 +332,6 @@ if ( {) {
         }
       default:
         return {
-=======
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -481,7 +476,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             )}
           />;
         ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       </div>;
     );
   }
@@ -489,13 +483,10 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   return (;
     <div;
       className={cn(;
-<<<<<<< HEAD
         baseClasses,;,
         variantClasses[variant],;,
-=======
         baseClasses,;
         variantClasses[variant],;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         animationClasses[animation],;
         className;
       )}
@@ -523,11 +514,8 @@ interface ErrorStateProps {;
   className?: string;
 }
 ;
-<<<<<<< HEAD
 export const ErrorState: React.FC<ErrorStateProps> = ({;,
-=======
 export const ErrorState: React.FC<ErrorStateProps> = ({;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   error,;
   title,;
   description,;
@@ -539,11 +527,8 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
   maxRetries = 3,;
   onRetry,;
   className;
-<<<<<<< HEAD
 }) => {;,
-=======
 }) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [isOnline, setIsOnline] = useState(true),;
   useEffect(() => {;
     const handleOnline = () => setIsOnline(true),;
@@ -586,7 +571,6 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
           description: description || 'You don\'t have permission to access this resource.',;
           color: 'text-red-500';
         },;
-<<<<<<< HEAD
       default:;,
         return {;
           icon: AlertTriangle,;
@@ -722,7 +706,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({,
           )}
         </motion && motion.div>;
   scale: 0.8, opacity: 0
-=======
       default:;
         return {;
           icon: AlertTriangle,;
@@ -789,12 +772,10 @@ export const Skeleton: React.FC<SkeletonProps> = ({,
               <span>Offline</span>
             </div>
           )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </motion.div>;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
 };
 <motion&& motion.div initial= {
   {
@@ -878,7 +859,6 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({,
                   <div className="flex gap-2">"
                     <Skeleton variant="text" className="h-4 w-16" />"
                     <Skeleton variant="text" className="h-4 w-20" />"
-=======
 },;
 // Loading state for lists/grids;
 interface LoadingGridProps {;
@@ -920,12 +900,10 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
                   <div className="flex gap-2">
                     <Skeleton variant="text" className="h-4 w-16" />
                     <Skeleton variant="text" className="h-4 w-20" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </div>
                 </div>
               </>
             )}
-<<<<<<< HEAD
             {variant === 'list' && ('
               <div className="flex gap-4">"
                 <Skeleton variant="circular" />"
@@ -941,7 +919,6 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
                 <Skeleton variant="text" className="h-4 w-1/3" />"
                 <Skeleton variant="text" className="h-4 w-1/6" />"
                 <Skeleton variant="text" className="h-4 w-1/4" />"
-=======
             
             {variant === 'list' && (
               <div className="flex gap-4">
@@ -959,7 +936,6 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
                 <Skeleton variant="text" className="h-4 w-1/3" />
                 <Skeleton variant="text" className="h-4 w-1/6" />
                 <Skeleton variant="text" className="h-4 w-1/4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>
             )}
           </CardContent>;
@@ -975,7 +951,6 @@ interface PerformanceIndicatorProps {;
   itemCount?: number,;
   className?: string;
 }
-<<<<<<< HEAD
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({,
   isLoading = false,
   loadTime,
@@ -1001,7 +976,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({,
 }
 }
 }}}}}}
-=======
 
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false,
@@ -1038,4 +1012,3 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     </div>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

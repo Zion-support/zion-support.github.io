@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function AccessibilityPage() {;
   return (;
@@ -11,33 +10,27 @@ function AccessibilityPage() {
   return (
     <div className="min - h-screen bg - white">;
 export default function AccessibilityPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default function AccessibilityPage() {;
   return (;
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="bg - gradient - to - r from - green - 600 to - teal - 600 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
             Accessibility;
           </h1>;
           <p className="text - xl md:text - 2xl text - green - 100 max - w-3xl mx - auto">;
-=======
       <section className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <h1 className="text-4xl md:text-6xl font-bold mb-6">;
             Accessibility;
           </h1>;
           <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             We are committed to making our website and services accessible to everyone, including people with disabilities.;
           </p>;
         </div>;
       </section>;
       {/* Accessibility Commitment */}
-<<<<<<< HEAD
       <section className="py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
@@ -88,7 +81,6 @@ export default function AccessibilityPage() {;
                   <div>;
                     <h3 className="font - semibold text - gray - 900">Screen Reader Compatible</h3>;
                     <p className="text - gray - 600">Full compatibility with assistive technologies</p>;
-=======
       <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
@@ -139,7 +131,6 @@ export default function AccessibilityPage() {;
                   <div>;
                     <h3 className="font-semibold text-gray-900">Screen Reader Compatible</h3>;
                     <p className="text-gray-600">Full compatibility with assistive technologies</p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </div>;
                 </div>;
               </div>;
@@ -148,7 +139,6 @@ export default function AccessibilityPage() {;
         </div>;
       </section>;
       {/* Accessibility Features */}
-<<<<<<< HEAD
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center mb - 16">;
@@ -223,7 +213,6 @@ export default function AccessibilityPage() {;
               </div>;
               <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Text Resizing</h3>;
               <p className="text - gray - 600">;
-=======
       <section className="py-20 bg-gray-50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="text-center mb-16">;
@@ -298,7 +287,6 @@ export default function AccessibilityPage() {;
               </div>;
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Text Resizing</h3>;
               <p className="text-gray-600">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Text can be resized up to 200% without loss of functionality or layout issues, accommodating users who need larger text for better readability.;
               </p>;
             </div>;
@@ -306,7 +294,6 @@ export default function AccessibilityPage() {;
         </div>;
       </section>;
       {/* WCAG Compliance */}
-<<<<<<< HEAD
       <section className="py - 20 bg - white">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center mb - 16">;
@@ -345,7 +332,6 @@ export default function AccessibilityPage() {;
                 <li className="flex items - center">;
                   <svg className="w - 5 h - 5 text - green - 500 mr - 3" fill="current_color" view_box="0 0 20 20">;
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
-=======
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="text-center mb-16">;
@@ -384,13 +370,11 @@ export default function AccessibilityPage() {;
                 <li className="flex items-center">;
                   <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">;
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </svg>;
                   Robust: Content can be interpreted reliably by assistive technologies;
                 </li>;
               </ul>;
             </div>;
-<<<<<<< HEAD
             <div className="bg - gray - 50 p - 8 rounded - xl">;
               <h3 className="text - 2xl font - bold text - gray - 900 mb - 4">Ongoing Improvements</h3>;
               <p className="text - gray - 600 mb - 6">;
@@ -418,7 +402,6 @@ export default function AccessibilityPage() {;
                 <li className="flex items - center">;
                   <svg className="w - 5 h - 5 text - blue - 500 mr - 3" fill="current_color" view_box="0 0 20 20">;
                     <path fill_rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l - 8 8a1 1 0 01 - 1.414 0l - 4-4a1 1 0 011.414 - 1.414L8 12.586l7.293 - 7.293a1 1 0 011.414 0z" clip_rule="evenodd" />;
-=======
             <div className="bg-gray-50 p-8 rounded-xl">;
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Ongoing Improvements</h3>;
               <p className="text-gray-600 mb-6">;
@@ -446,7 +429,6 @@ export default function AccessibilityPage() {;
                 <li className="flex items-center">;
                   <svg className="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">;
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </svg>;
                   Staff training and awareness;
                 </li>;
@@ -456,7 +438,6 @@ export default function AccessibilityPage() {;
         </div>;
       </section>;
       {/* Contact Information */}
-<<<<<<< HEAD
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center mb - 16">;
@@ -479,7 +460,6 @@ export default function AccessibilityPage() {;
                 <div>;
                   <h4 className="font - medium text - gray - 900 mb - 2">Email</h4>;
                   <a href="mailto:accessibility@ziontechgroup.com" className="text - blue - 600 hover:text - blue - 700">;
-=======
       <section className="py-20 bg-gray-50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="text-center mb-16">;
@@ -502,31 +482,24 @@ export default function AccessibilityPage() {;
                 <div>;
                   <h4 className="font-medium text-gray-900 mb-2">Email</h4>;
                   <a href="mailto:accessibility@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     accessibility@ziontechgroup.com;
                   </a>;
                 </div>;
                 <div>;
-<<<<<<< HEAD
                   <h4 className="font - medium text - gray - 900 mb - 2">Phone</h4>;
                   <a href="tel:+13024640950" className="text - blue - 600 hover:text - blue - 700">;
                     +1 (302) 464 - 0950;
-=======
                   <h4 className="font-medium text-gray-900 mb-2">Phone</h4>;
                   <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">;
                     +1 (302) 464-0950;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </a>;
                 </div>;
               </div>;
               <div>;
-<<<<<<< HEAD
                 <h4 className="font - medium text - gray - 900 mb - 2">Response Time</h4>;
                 <p className="text - gray - 600">;
-=======
                 <h4 className="font-medium text-gray-900 mb-2">Response Time</h4>;
                 <p className="text-gray-600">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   We aim to respond to accessibility feedback within 2 business days and will work to resolve issues promptly.;
                 </p>;
               </div>;
@@ -535,7 +508,6 @@ export default function AccessibilityPage() {;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py - 20 bg - green - 600 text - white">;
         <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
           <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
@@ -549,7 +521,6 @@ export default function AccessibilityPage() {;
               Contact Us;
             </a>;
             <a href="/privacy" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - green - 600 transition - colors">;
-=======
       <section className="py-20 bg-green-600 text-white">;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
           <h2 className="text-3xl md:text-4xl font-bold mb-6">;
@@ -563,16 +534,12 @@ export default function AccessibilityPage() {;
               Contact Us;
             </a>;
             <a href="/privacy" className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Privacy Policy;
             </a>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
     </div>);
-=======
     </div>;
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }

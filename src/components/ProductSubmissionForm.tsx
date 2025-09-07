@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 try {
       // Create the product listing;
       const product_data = {
@@ -131,7 +130,6 @@ import { logErrorToProduction } from '@/utils/productionLogger';
         .insert([productData]),
         .select('id')'
         .single(),
-=======
 import React from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -267,7 +265,6 @@ export function ProductSubmissionForm() {
         .select('id')
         .single(),
         
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       if (productError) {
         throw new Error(productError.message)
 import React from "react",;
@@ -287,7 +284,6 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
-<<<<<<< HEAD
   FormMessage,;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
@@ -487,7 +483,6 @@ export function ProductSubmissionForm() {;
             images: imagePublicUrl ? [imagePublicUrl] : [],;
             sellerId: user && user.id,;
           },;
-=======
   FormMessage} from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -677,12 +672,10 @@ export function ProductSubmissionForm() {;
             description: values.description,;
             images: imagePublicUrl ? [imagePublicUrl] : [],;
             sellerId: user.id}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         });
       } catch (err) {;
         logErrorToProduction('Error invoking moderation:', { data: err });
       }
-<<<<<<< HEAD
       // Show success message
       toast({
         title: "Product Published!","
@@ -703,7 +696,6 @@ export function ProductSubmissionForm() {;
         title: "Publication Failed","
         description: error instanceof Error ? error.message : "An unknown error occurred","
         variant: "destructive"})"
-=======
       
       // Show success message
       toast({
@@ -717,12 +709,10 @@ export function ProductSubmissionForm() {;
         title: "Publication Failed",
         description: error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive"})
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     } finally {
       setIsSubmitting(false)
     }
   },
-<<<<<<< HEAD
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className='w-full'>;
       <TabsList className='grid grid-cols-2 mb-6'>;
@@ -792,7 +782,6 @@ export function ProductSubmissionForm() {;
               control={form.control}
               name="title""
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "title"> }) => {"
-=======
 
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -813,13 +802,11 @@ export function ProductSubmissionForm() {;
               control={form.control}
               name="title"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "title"> }) => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 const { onChange, onBlur, value, ref } = field,
                 return (
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
-<<<<<<< HEAD
                 field: ControllerRenderProps<ProductFormValues, 'title'>;
               }) => {;
                 const { onChange, onBlur, value, ref } = field;                return (
@@ -829,21 +816,16 @@ export function ProductSubmissionForm() {;
                       <Input
                         ref={ref}                      />;
                         placeholder="Enter product title""
-=======
                       <Input
                         placeholder="Enter product title"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
       // Show success message;
       toast({;
         title: "Product Published!",;
         description: "Your product has been successfully published on Zion."}),;
       // Redirect to product page;
-<<<<<<< HEAD
       router.push(`/marketplace/listing/${productRecord.id}`);`
-=======
       router.push(`/marketplace/listing/${productRecord.id}`);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     } catch (error) {;
       toast({;
         title: "Publication Failed",;
@@ -856,17 +838,14 @@ export function ProductSubmissionForm() {;
   return (;
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
       <TabsList className="grid grid-cols-2 mb-6">;
-<<<<<<< HEAD
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;,
           Manual Creation;
         </TabsTrigger>;,
         <TabsTrigger value="ai" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;,
-=======
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
           Manual Creation;
         </TabsTrigger>;
         <TabsTrigger value="ai" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <Sparkles className="h-4 w-4 mr-2" />;
           AI-Powered Creation;
         </TabsTrigger>;
@@ -899,7 +878,6 @@ export function ProductSubmissionForm() {;
                 );
               }}
             />;
-<<<<<<< HEAD
                 field: ControllerRenderProps < ProductFormValues, 'title'>;
               }) => {
                 const { on_change, on_blur, value, ref } = field; return (
@@ -907,23 +885,18 @@ export function ProductSubmissionForm() {;
               control={form.control}
               name="description""
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "description"> }) => ("
-=======
             <FormField;
               control={form.control}
               name="description"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "description"> }) => (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <FormItem>
                   <FormLabel>Description</FormLabel>
                   <FormControl>
                     <Textarea
-<<<<<<< HEAD
                       placeholder="Describe your product in detail...""
                       className="min-h-32""
-=======
                       placeholder="Describe your product in detail..."
                       className="min-h-32"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               name="description";
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "description"> }) => (;
                 <FormItem>;
@@ -933,7 +906,6 @@ export function ProductSubmissionForm() {;
                       placeholder="Describe your product in detail...";
                       className="min-h-32";
                       {...field}
-<<<<<<< HEAD
                     />
                   </FormControl>
                   <FormDescription>
@@ -949,7 +921,6 @@ export function ProductSubmissionForm() {;
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />"
-=======
                     />;
                   </FormControl>;
                   <FormDescription>;
@@ -969,7 +940,6 @@ export function ProductSubmissionForm() {;
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </FormControl>
                     <FormDescription>
                       Set your price in USD
@@ -983,7 +953,6 @@ export function ProductSubmissionForm() {;
                 name="price";
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (;
                   <FormItem>;
-<<<<<<< HEAD
                     <FormLabel > Product Title</FormLabel>;
                     <FormControl>;
                       <Input;
@@ -1045,7 +1014,6 @@ export function ProductSubmissionForm() {;
                       />;
                     </FormControl>;
                     <FormDescription>Set your price in USD</FormDescription>;
-=======
                     <FormLabel>Price (USD)</FormLabel>;
                     <FormControl>;
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
@@ -1053,12 +1021,10 @@ export function ProductSubmissionForm() {;
                     <FormDescription>;
                       Set your price in USD;
                     </FormDescription>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     <FormMessage />;
                   </FormItem>;
                 )}
               />;
-<<<<<<< HEAD
               <FormField
                 control={form && form.control}
                 name='category''
@@ -1093,17 +1059,14 @@ export function ProductSubmissionForm() {;
                 control={form.control}
                 name="category""
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => ("
-=======
               <FormField;
                 control={form.control}
                 name="category"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <FormItem>
                     <FormLabel>Category</FormLabel>
                     <FormControl>
                       <select
-<<<<<<< HEAD
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm""
                         {...field}
                       >
@@ -1114,7 +1077,6 @@ export function ProductSubmissionForm() {;
                         <option value="course">Course</option>"
                         <option value="template">Template</option>"
                         <option value="other">Other</option>"
-=======
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                         {...field}
                       >
@@ -1125,7 +1087,6 @@ export function ProductSubmissionForm() {;
                         <option value="course">Course</option>
                         <option value="template">Template</option>
                         <option value="other">Other</option>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </select>
                     </FormControl>
                     <FormMessage />
@@ -1135,7 +1096,6 @@ export function ProductSubmissionForm() {;
                   <FormItem>;
                     <FormLabel>Category</FormLabel>;
                     <FormControl>;
-<<<<<<< HEAD
                       <select
                         className='flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm''
                         {...field}>;
@@ -1163,7 +1123,6 @@ export function ProductSubmissionForm() {;
               control={form && form.control}
               name='tags''
                   </FormItem>)}
-=======
                       <select;
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
                         {...field}
@@ -1180,12 +1139,10 @@ export function ProductSubmissionForm() {;
                     <FormMessage />;
                   </FormItem>;
                 )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               />;
             </div>;
             <FormField;
               control={form.control}
-<<<<<<< HEAD
               name="tags""
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => ("
                 <FormItem>
@@ -1209,7 +1166,6 @@ export function ProductSubmissionForm() {;
                   <FormDescription>;
                     Add relevant tags to help users find your product (e && e.g., ai,;
                     productivity, design);
-=======
               name="tags"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (
                 <FormItem>
@@ -1231,13 +1187,11 @@ export function ProductSubmissionForm() {;
                   </FormControl>;
                   <FormDescription>;
                     Add relevant tags to help users find your product (e.g., ai, productivity, design);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </FormDescription>;
                   <FormMessage />;
                 </FormItem>;
               )}
             />;
-<<<<<<< HEAD
             <FormField
               control={form && form.control}
               name='image''
@@ -1252,16 +1206,13 @@ export function ProductSubmissionForm() {;
                   </FormDescription />
                   <FormMessage />
                 </FormItem>
-=======
             <FormField;
               control={form.control}
               name="image"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               render={() => (
                 <FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
                     <Input
                       type="file" "
                       accept="image/*" "
@@ -1300,7 +1251,6 @@ export function ProductSubmissionForm() {;
                         />;
                       </AspectRatio>;
                     </div>;
-=======
                     <Input 
                       type="file" 
                       accept="image/*" 
@@ -1329,12 +1279,10 @@ export function ProductSubmissionForm() {;
                         />
                       </AspectRatio>
                     </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   )}
                 </FormItem>;
               )}
             />;
-<<<<<<< HEAD
             <FormField
               control={form && form.control}
               name='video'              render={() => (;
@@ -1454,20 +1402,15 @@ export function ProductSubmissionForm() {;
             <FormField;
               control={form.control}
               name="video""
-=======
             <FormField;
               control={form.control}
               name="video"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               render={() => (
                 <FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
                     <Input type="file" accept="video/mp4" onChange={handleVideoChange} className="cursor-pointer" />"
-=======
                     <Input type="file" accept="video/mp4" onChange={handleVideoChange} className="cursor-pointer" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </FormControl>
                   <FormDescription>
                     Optional video demonstrating your product
@@ -1478,20 +1421,14 @@ export function ProductSubmissionForm() {;
             />;
             <FormField;
               control={form.control}
-<<<<<<< HEAD
               name="model""
-=======
               name="model"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               render={() => (
                 <FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
                     <Input type="file" accept="model/gltf-binary,.glb" onChange={handleModelChange} className="cursor-pointer" />"
-=======
                     <Input type="file" accept="model/gltf-binary,.glb" onChange={handleModelChange} className="cursor-pointer" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </FormControl>
                   <FormDescription>
                     Upload a 3D model for interactive viewing
@@ -1500,8 +1437,6 @@ export function ProductSubmissionForm() {;
                 </FormItem>
               )}
             />
-<<<<<<< HEAD
-=======
 
             <div className="flex justify-end">
               <Button 
@@ -1510,13 +1445,11 @@ export function ProductSubmissionForm() {;
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
               >
                 {isSubmitting ? "Publishing..." : "Publish Product"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </Button>
             </div>
           </form>
         </Form>
       </TabsContent>
-<<<<<<< HEAD
                 </FormItem>)}
             />;
             <div className='flex justify - end'>;
@@ -1707,7 +1640,6 @@ const {
           initialValues={{
             title: form.getValues("title"),"
             category: form.getValues("category")"
-=======
       
       <TabsContent value="ai">
         <AIListingGenerator 
@@ -1715,13 +1647,11 @@ const {
           initialValues={{
             title: form.getValues("title"),
             category: form.getValues("category")
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           }}
         />;
       </TabsContent>;
     </Tabs>;
   );
-<<<<<<< HEAD
 }
 }className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2"/> AI - Powered Creation </TabsTrigger> </TabsList>;,
 }";
@@ -1747,6 +1677,4 @@ const {
 }/> <div className="flex justify - end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>);
 }'"  );
 }
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

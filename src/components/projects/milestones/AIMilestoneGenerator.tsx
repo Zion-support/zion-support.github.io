@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface AIMilestoneGeneratorProps {;
   scope: string;,
   startDate: string;,
@@ -94,9 +93,7 @@ if ( {) {
       return dateString
     }
   }
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -113,15 +110,12 @@ interface AIMilestoneGeneratorProps {;
   scope: string,;
   startDate: string,;
   endDate: string | null,;
-<<<<<<< HEAD
   projectType: string,;,
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
   onAddMilestone: (milestone:,  GeneratedMilestone) => void;
-=======
   projectType: string,;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
   onAddMilestone: (milestone: GeneratedMilestone) => void;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export function AIMilestoneGenerator({;
@@ -131,24 +125,18 @@ export function AIMilestoneGenerator({;
   projectType,;
   onAddMilestones,;
   onAddMilestone;
-<<<<<<< HEAD
 }:,  AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator(),;,
-=======
 }: AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator(),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string boolean>>({}),;
   const handleGenerateMilestones = async () => {;
     if (!scope || !startDate || !projectType) {;
       return;
     }
 ;
-<<<<<<< HEAD
     const input: MilestoneInput = {;,
-=======
     const input: MilestoneInput = {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       scope,;
       startDate,;
       endDate,;
@@ -157,29 +145,22 @@ export function AIMilestoneGenerator({;
     await generateMilestones(input),;
     // Initially select all milestones;
     const initialSelection: Record<number boolean> = {},;
-<<<<<<< HEAD
     generatedMilestones.forEach((_, index:,  number) => {;,
       initialSelection[index] = true;,
-=======
     generatedMilestones.forEach((_, index: number) => {;
       initialSelection[index] = true;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     }),;
     setSelectedMilestones(initialSelection);
   },;
   const handleAddToProject = () => {;
-<<<<<<< HEAD
     const selectedMilestonesList = generatedMilestones.filter((_, index) =>;,
-=======
     const selectedMilestonesList = generatedMilestones.filter((_, index) =>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       selectedMilestones[index];
     ),;
     onAddMilestones(selectedMilestonesList),;
     clearGeneratedMilestones(),;
     setSelectedMilestones({});
   },;
-<<<<<<< HEAD
   const toggleMilestoneSelection = (index:,  number) => {;,
     setSelectedMilestones(prev => ({;
       ...prev,;,
@@ -190,7 +171,6 @@ export function AIMilestoneGenerator({;
     onAddMilestone(milestone);
   },;
   const formatDate = (dateString:,  string) => {;,
-=======
   const toggleMilestoneSelection = (index: number) => {;
     setSelectedMilestones(prev => ({;
       ...prev,;
@@ -201,14 +181,12 @@ export function AIMilestoneGenerator({;
     onAddMilestone(milestone);
   },;
   const formatDate = (dateString: string) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     try {;
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
     }
   },
-<<<<<<< HEAD
   return (
     <div className="space-y-4">"
       <div className="flex items-center justify-between">"
@@ -219,7 +197,6 @@ export function AIMilestoneGenerator({;
         <Button
           disabled={isGenerating || !scope || !startDate || !projectType}        >
           variant="outline""
-=======
 
   return (
     <div className="space-y-4">
@@ -230,32 +207,24 @@ export function AIMilestoneGenerator({;
         </h3>
         <Button
           variant="outline"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
           {isGenerating ? (
             <>
-<<<<<<< HEAD
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />"
-=======
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Generating...
             </>
           ) : (
             <>
-<<<<<<< HEAD
               <Sparkles className="mr-2 h-4 w-4" />"
-=======
               <Sparkles className="mr-2 h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Generate Milestones
             </>
           )}
         </Button>
       </div>
-<<<<<<< HEAD
       {generatedMilestones.length > 0 && (
         <Card>
           <CardContent className="pt-6">"
@@ -379,7 +348,6 @@ export function AIMilestoneGenerator({;
                       </AccordionTrigger>;
                     </div>;
               <Button
-=======
 
       {generatedMilestones.length > 0 && (
         <Card>
@@ -389,14 +357,12 @@ export function AIMilestoneGenerator({;
                 {generatedMilestones.length} milestones generated based on your project scope
               </p>
               <Button 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 onClick={handleAddToProject}
                 disabled={!Object.values(selectedMilestones).some(Boolean)}
               >
                 Add Selected to Project
               </Button>
             </div>
-<<<<<<< HEAD
             <Accordion type="multiple" className="w-full">"
               {generatedMilestones.map((milestone, index) => (
                 <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">"
@@ -414,7 +380,6 @@ export function AIMilestoneGenerator({;
                           <span className="font-medium">{milestone.title}</span>"
                           <Badge variant="secondary" className="ml-2 flex items-center">"
                             <Sparkles className="w-3 h-3 mr-1" />"
-=======
 
             <Accordion type="multiple" className="w-full">
               {generatedMilestones.map((milestone, index) => (
@@ -433,25 +398,20 @@ export function AIMilestoneGenerator({;
                           <span className="font-medium">{milestone.title}</span>
                           <Badge variant="secondary" className="ml-2 flex items-center">
                             <Sparkles className="w-3 h-3 mr-1" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
-<<<<<<< HEAD
                       variant="ghost""
                       size="sm""
-=======
                       variant="ghost"
                       size="sm"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       onClick={(e) => {
                         e.stopPropagation(),
                         handleAddSingleMilestone(milestone)
                       }}
-<<<<<<< HEAD
                       className="mr-2""
                       variant="ghost""
                       size="sm""
@@ -472,7 +432,6 @@ export function AIMilestoneGenerator({;
                         Due: {formatDate(milestone.dueDate)}
                       </div>
                       <div className="text-sm text-muted-foreground">"
-=======
                       className="mr-2"
                     >
                       <Plus className="h-4 w-4" />
@@ -486,13 +445,11 @@ export function AIMilestoneGenerator({;
                         Due: {formatDate(milestone.dueDate)}
                       </div>
                       <div className="text-sm text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         Estimated effort: {milestone.estimatedHours} hours
                       </div>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
-<<<<<<< HEAD
                       onClick={e => {;
                         e && e.stopPropagation();
                         handleAddSingleMilestone(milestone);                      }}
@@ -515,8 +472,6 @@ export function AIMilestoneGenerator({;
                   </AccordionContent>;
                 </AccordionItem>;
               ))}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               ))}
             </Accordion>;
           </CardContent>;
@@ -525,7 +480,6 @@ export function AIMilestoneGenerator({;
     </div>;
   );
 }
-<<<<<<< HEAD
                     <Button;
                       variant='ghost';
                       size='sm';
@@ -556,6 +510,4 @@ export function AIMilestoneGenerator({;
     </div>);
 }
 })
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

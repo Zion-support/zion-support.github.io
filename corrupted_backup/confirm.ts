@@ -4,20 +4,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     res.status(405).end();
     return;
   }
-<<<<<<< HEAD:pages/api/auth/confirm.ts
 ;
   // TODO: Implement confirmation logic here;
   res.status(200).json({ message: 'Confirm endpoint placeholder' });
 } ;
-=======
-<<<<<<< HEAD
 
   // TODO: Implement confirmation logic here
   res.status(200).json({ message: 'Confirm endpoint placeholder' });
 }
-=======
   
   res.status(200).json({ message: 'Email confirmed' });
 }
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/confirm.ts

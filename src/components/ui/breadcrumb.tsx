@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 >(({ className, separator, ...props }, ref,) => (;
   <nav
@@ -26,7 +25,6 @@ import { cn } from "@/lib/utils""
 const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {"
-=======
 
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
@@ -37,27 +35,22 @@ import { cn } from "@/lib/utils"
 const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     separator?: React.ReactNode
   }
 >(({ className, separator, ...props }, ref) => (;
   <nav;
     ref={ref}
-<<<<<<< HEAD
     aria-label="breadcrumb""
     className={cn(
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",",
-=======
     aria-label="breadcrumb"
     className={cn(
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
   />
 ))
-<<<<<<< HEAD
   />));
 Breadcrumb.display_name = 'Breadcrumb';
     ref = {ref, }
@@ -99,7 +92,6 @@ const BreadcrumbLink = React.forward_ref<;
     <Comp
       ref={ref}
       className={cn("transition-colors hover:text-zion-cyan", className)}"
-=======
 Breadcrumb.displayName = "Breadcrumb"
  
 const BreadcrumbList = React.forwardRef<
@@ -138,12 +130,10 @@ const BreadcrumbLink = React.forwardRef<
     <Comp
       ref={ref}
       className={cn("transition-colors hover:text-zion-cyan", className)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {...props}
     />
   )
 })
-<<<<<<< HEAD
 BreadcrumbLink.displayName = "BreadcrumbLink""
 const BreadcrumbSeparator = ({
 }: React.ComponentProps<"li">) => ("
@@ -270,7 +260,6 @@ const BreadcrumbEllipsis = ({;
     aria-hidden="true""
     className={cn("flex h-9 w-9 items-center justify-center", className)}"
 export {
-=======
 BreadcrumbLink.displayName = "BreadcrumbLink"
  
 const BreadcrumbSeparator = ({
@@ -312,4 +301,3 @@ export {
   BreadcrumbSeparator,
   BreadcrumbEllipsis}
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

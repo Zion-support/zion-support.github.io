@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
@@ -117,7 +116,6 @@ if (return) {
   }) {    if (!user?.id) return;  async function handleRedeem(): any (reward: { id: string, cost: number, title: string }) {;
     if (!user?.id) return;
     setRedeeming(true);
-=======
 import React, { useState } from 'react',;
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth',;
@@ -137,7 +135,6 @@ export default function PointsPage() {;
   async function handleRedeem(reward: { id: string, cost: number, title: string }) {;
     if (!user?.id) return,;
     setRedeeming(true),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     try {;
       await fetch('/api/points/redeem', {;
         method: 'POST',;
@@ -146,7 +143,6 @@ export default function PointsPage() {;
       }),;
       await fetchLedger();
     } finally {;
-<<<<<<< HEAD
       setRedeeming(false);    }      });
       await fetchLedger();
     } finally {;
@@ -356,7 +352,6 @@ export default function PointsPage() {;
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">"
                   <TrendingUp className="h-5 w-5" />"
-=======
       setRedeeming(false);
     }
   }
@@ -419,14 +414,12 @@ export default function PointsPage() {;
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <TrendingUp className="h-5 w-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   How to Earn Points
                 </CardTitle>
                 <CardDescription>
                   Multiple ways to accumulate rewards
                 </CardDescription>
               </CardHeader>
-<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -486,7 +479,6 @@ if ( {) {
                       <p className="text-sm text-muted-foreground">{opportunity.description}</p>"
                     </div>
                     <Badge variant="secondary">{opportunity.points}</Badge>"
-=======
               <CardContent className="space-y-4">
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
@@ -496,31 +488,26 @@ if ( {) {
                       <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                     </div>
                     <Badge variant="secondary">{opportunity.points}</Badge>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </div>
                 ))}
               </CardContent>
             </Card>
-<<<<<<< HEAD
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">"
                 <CardTitle className="flex items-center gap-2">"
                   <Gift className="h-5 w-5" />"
-=======
 
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Gift className="h-5 w-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Upcoming Rewards
                 </CardTitle>
                 <CardDescription>
                   What you can redeem your points for
                 </CardDescription>
               </CardHeader>
-<<<<<<< HEAD
               <CardContent className="space-y-4">"
                 {upcomingRewards.map((reward, index) => (
                   <div key={index} className="flex items-center justify-between p-3 rounded-lg border">"
@@ -529,7 +516,6 @@ if ( {) {
                       <p className="text-sm text-muted-foreground">{reward.category}</p>"
                     </div>
                     <Badge variant="outline">{reward.cost}</Badge>"
-=======
               <CardContent className="space-y-4">
                 {upcomingRewards.map((reward, index) => (
                   <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
@@ -538,26 +524,22 @@ if ( {) {
                       <p className="text-sm text-muted-foreground">{reward.category}</p>
                     </div>
                     <Badge variant="outline">{reward.cost}</Badge>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </div>
                 ))}
               </CardContent>
             </Card>
           </div>
-<<<<<<< HEAD
           <Card className="text-center">"
             <CardContent className="pt-6">"
               <Star className="h-12 w-12 text-primary mx-auto mb-4" />"
               <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>"
               <p className="text-muted-foreground mb-4">"
-=======
 
           <Card className="text-center">
             <CardContent className="pt-6">
               <Star className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>
               <p className="text-muted-foreground mb-4">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.
               </p>
               <Button onClick={() => setLoginOpen(true)}>
@@ -568,7 +550,6 @@ if ( {) {
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
-<<<<<<< HEAD
       <>;
         <div className='container py-10 max-w-4xl'>;
           <div className='text-center mb-8'>;
@@ -744,7 +725,6 @@ if ( {) {
   return (
           <p className="text-sm text-muted-foreground mt-2">"
             You haven't earned any points yet. Complete the tasks below to start'
-=======
     )
   }
 
@@ -760,32 +740,27 @@ if ( {) {
         {!loading && balance === 0 && (
           <p className="text-sm text-muted-foreground mt-2">
             You haven't earned any points yet. Complete the tasks below to start
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             earning and redeem rewards.
           </p>
         )}
       </div>
-<<<<<<< HEAD
       <div className="grid md:grid-cols-2 gap-8 mb-12">"
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">"
               <TrendingUp className="h-5 w-5" />"
-=======
 
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Keep Earning
             </CardTitle>
             <CardDescription>
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
-<<<<<<< HEAD
         <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
       </>);
   }
@@ -858,7 +833,6 @@ if ( {) {
                 <div className="text-right">"
                   <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>"
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>"
-=======
           <CardContent className="space-y-4">
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
@@ -870,32 +844,27 @@ if ( {) {
                 <div className="text-right">
                   <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </div>
               </div>
             ))}
           </CardContent>
         </Card>
-<<<<<<< HEAD
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">"
             <CardTitle className="flex items-center gap-2">"
               <Gift className="h-5 w-5" />"
-=======
 
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Gift className="h-5 w-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Available Rewards
             </CardTitle>
             <CardDescription>
               Redeem your points for these rewards
             </CardDescription>
           </CardHeader>
-<<<<<<< HEAD
                   </p>                </div>                </div>;
                 <div className="text - right">;
                   <Badge variant="secondary" className="mb - 1">{opportunity.points}</Badge>;
@@ -1072,7 +1041,6 @@ if ( {) {
           <CardTitle className="flex items-center gap-2">"
           <CardTitle className="flex items-center gap-2">"
             <History className="h-5 w-5" />"
-=======
           <CardContent className="space-y-4">
             {upcomingRewards.map((reward) => (
               <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
@@ -1100,14 +1068,12 @@ if ( {) {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <History className="h-5 w-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Points History
           </CardTitle>
           <CardDescription>Your recent points activity</CardDescription>
         </CardHeader>
         <CardContent>
           {ledger.length === 0 ? (
-<<<<<<< HEAD
             <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>"
           ) : (
             <ScrollArea className="h-64">"
@@ -1158,7 +1124,6 @@ if ( {) {
                       className = {entry && entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}'
                     >;
                       {entry.delta >= 0 ? '+' : ''}'
-=======
             <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>
           ) : (
             <ScrollArea className="h-64">
@@ -1176,7 +1141,6 @@ if ( {) {
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
                     >;
                       {entry.delta >= 0 ? '+' : ''}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       {entry.delta} pts;
                     </Badge>;
                   </div>;
@@ -1184,7 +1148,6 @@ if ( {) {
               </div>;
             </ScrollArea>;
           )}
-<<<<<<< HEAD
       <Card className="text-center">"
         <CardContent className="pt-6">"
           <Star className="h-12 w-12 text-primary mx-auto mb-4" />"
@@ -1198,7 +1161,6 @@ if ( {) {
             </Button>
             <Button variant="outline" asChild>"
               <Link href="/community" />Join Community</Link>"
-=======
         </CardContent>
       </Card>
 
@@ -1215,13 +1177,11 @@ if ( {) {
             </Button>
             <Button variant="outline" asChild>
               <Link href="/community">Join Community</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>
           </div>
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
         </CardContent>;
       </Card>;
       <Card className='text-center'>;
@@ -1335,8 +1295,6 @@ if ( {) {
   )
 }
 ;))))))))))))]
-=======
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,5 +1,4 @@
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-<<<<<<< HEAD
 export interface ModerationAction {
 
 export interface ModerationAction {;
@@ -77,7 +76,6 @@ export interface ModerationRule {
   severity: 'low' | 'medium' | 'high';
 }
 
-=======
 export type AiScores = {;
   toxicity: number, // 0-1;
   nsfw: number, // 0-1;
@@ -98,4 +96,3 @@ export type FlaggedContent = {;
   updatedAt: string;
   adminNotes?: string;
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

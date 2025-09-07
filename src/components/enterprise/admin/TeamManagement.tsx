@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
@@ -28,22 +27,17 @@ const handleAddMember = () => {
       title: 'Invitation resent'',
       description: `A new invitation has been sent to ${memberEmail}``
     })
-=======
 
 import React, { useState } from "react",
 import {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
   TableRow,
 } from '@/components / ui / table';
-=======
   TableRow} from "@/components/ui/table",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {
   Dialog,
   DialogContent,
@@ -51,7 +45,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
   DialogTrigger,
 } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
@@ -172,7 +165,6 @@ if ( {) {
           <DialogTrigger asChild>
             <Button className="gap-2">"
               <UserPlus className="h-4 w-4" />"
-=======
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -255,7 +247,6 @@ export function TeamManagement() {
           <DialogTrigger asChild>
             <Button className="gap-2">
               <UserPlus className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Add Team Member
             </Button>
           </DialogTrigger>
@@ -263,7 +254,6 @@ export function TeamManagement() {
             <DialogHeader>
               <DialogTitle>Add Team Member</DialogTitle>
               <DialogDescription>
-<<<<<<< HEAD
                 Send an invitation to join your workspace. They'll receive an email with instructions.'
               </DialogDescription>
             </DialogHeader>
@@ -292,7 +282,6 @@ export function TeamManagement() {
                   <option value="recruiter">Recruiter</option>"
                   <option value="manager">Manager</option>"
                   <option value="viewer">Viewer</option>"
-=======
                 Send an invitation to join your workspace. They'll receive an email with instructions.
               </DialogDescription>
             </DialogHeader>
@@ -322,16 +311,12 @@ export function TeamManagement() {
                   <option value="recruiter">Recruiter</option>
                   <option value="manager">Manager</option>
                   <option value="viewer">Viewer</option>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </select>
               </div>
             </div>
             <DialogFooter>
-<<<<<<< HEAD
               <Button variant="outline" onClick={() => setIsAddingMember(false)}>"
-=======
               <Button variant="outline" onClick={() => setIsAddingMember(false)}>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Cancel
               </Button>
               <Button onClick={handleAddMember}>Send Invitation</Button>
@@ -339,12 +324,9 @@ export function TeamManagement() {
           </DialogContent>
         </Dialog>
       </div>
-<<<<<<< HEAD
       <div className="rounded-md border">"
-=======
 
       <div className="rounded-md border">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <Table>
           <TableHeader>
             <TableRow>
@@ -352,18 +334,14 @@ export function TeamManagement() {
               <TableHead>Role</TableHead>
               <TableHead>Status</TableHead>
               <TableHead>Last Active</TableHead>
-<<<<<<< HEAD
               <TableHead className="text-right">Actions</TableHead>"
-=======
               <TableHead className="text-right">Actions</TableHead>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </TableRow>
           </TableHeader>
           <TableBody>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
                 <TableCell>
-<<<<<<< HEAD
                   <div className="flex items-center gap-2">"
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">"
                       <span className="text-sm font-medium">"
@@ -376,7 +354,6 @@ export function TeamManagement() {
                     <div>
                       <div className="font-medium">{member.name}</div>"
                       <div className="text-sm text-muted-foreground">"
-=======
                   <div className="flex items-center gap-2">
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-sm font-medium">
@@ -389,7 +366,6 @@ export function TeamManagement() {
                     <div>
                       <div className="font-medium">{member.name}</div>
                       <div className="text-sm text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         {member.email}
                       </div>
                     </div>
@@ -398,17 +374,13 @@ export function TeamManagement() {
                 <TableCell>{member.role}</TableCell>
                 <TableCell>
                   <Badge
-<<<<<<< HEAD
                     variant={member.status === "active" ? "default" : "outline"}"
-=======
                     variant={member.status === "active" ? "default" : "outline"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   >
                     {member.status}
                   </Badge>
                 </TableCell>
                 <TableCell>{member.lastActive}</TableCell>
-<<<<<<< HEAD
                 <TableCell className="text-right">"
                   <div className="flex justify-end gap-2">"
                     {member.status === "pending" ? ("
@@ -418,7 +390,6 @@ export function TeamManagement() {
                         onClick={() => handleResendInvite(member.email)}
                       >
                         <Mail className="h-4 w-4 mr-1" />"
-=======
                 <TableCell className="text-right">
                   <div className="flex justify-end gap-2">
                     {member.status === "pending" ? (
@@ -428,20 +399,16 @@ export function TeamManagement() {
                         onClick={() => handleResendInvite(member.email)}
                       >
                         <Mail className="h-4 w-4 mr-1" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         Resend
                       </Button>
                     ) : (
                       <Button
-<<<<<<< HEAD
                         variant="ghost""
                         size="sm""
                         className="text-destructive hover:text-destructive"",
-=======
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState } from "react",;
 import {;
   Table,;
@@ -449,12 +416,9 @@ import {;
   TableCell,;
   TableHead,;
   TableHeader,;
-<<<<<<< HEAD
   TableRow,;
 } from '@/components/ui/table';
-=======
   TableRow} from "@/components/ui/table",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {;
   Dialog,;
   DialogContent,;
@@ -462,7 +426,6 @@ import {;
   DialogFooter,;
   DialogHeader,;
   DialogTitle,;
-<<<<<<< HEAD
   DialogTrigger,;
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
@@ -516,7 +479,6 @@ export function TeamManagement() {;,
       lastActive: '3 days ago',;
     },;
   ];
-=======
   DialogTrigger} from "@/components/ui/dialog",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -557,12 +519,10 @@ export function TeamManagement() {;
       role: "Viewer",;
       status: "active",;
       lastActive: "3 days ago"}],;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const handleAddMember = () => {;
     // In a real app, this would make an API call to add the member;
     if (!newMemberEmail) {;
       toast({;
-<<<<<<< HEAD
         title: 'Email required',;
         description: 'Please enter an email address for the new team member.',;
         variant: 'destructive',;
@@ -598,7 +558,6 @@ export function TeamManagement() {;
           <DialogTrigger as_child>;
             <Button className='gap - 2'>;
               <UserPlus className='h - 4 w - 4' />;
-=======
         title: "Email required",;
         description: "Please enter an email address for the new team member.",;
         variant: "destructive"}),;
@@ -631,13 +590,11 @@ export function TeamManagement() {;
           <DialogTrigger asChild>;
             <Button className="gap-2">;
               <UserPlus className="h-4 w-4" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Add Team Member;
             </Button>;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-<<<<<<< HEAD
               <DialogTitle > Add Team Member</DialogTitle>;
               <DialogDescription>;
                 Send an invitation to join your workspace. They'll receive an;
@@ -669,7 +626,6 @@ export function TeamManagement() {;
                   <option value='recruiter'>Recruiter</option>;
                   <option value='manager'>Manager</option>;
                   <option value='viewer'>Viewer</option>;
-=======
               <DialogTitle>Add Team Member</DialogTitle>;
               <DialogDescription>;
                 Send an invitation to join your workspace. They'll receive an email with instructions.;
@@ -701,16 +657,12 @@ export function TeamManagement() {;
                   <option value="recruiter">Recruiter</option>;
                   <option value="manager">Manager</option>;
                   <option value="viewer">Viewer</option>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </select>;
               </div>;
             </div>;
             <DialogFooter>;
-<<<<<<< HEAD
               >;
-=======
               <Button variant="outline" onClick={() => setIsAddingMember(false)}>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Cancel;
               </Button>;
               <Button onClick={handleAddMember}>Send Invitation</Button>;
@@ -718,11 +670,8 @@ export function TeamManagement() {;
           </DialogContent>;
         </Dialog>;
       </div>;
-<<<<<<< HEAD
       <div className='rounded-md border'>;
-=======
       <div className="rounded-md border">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <Table>;
           <TableHeader>;
             <TableRow>;
@@ -730,7 +679,6 @@ export function TeamManagement() {;
               <TableHead>Role</TableHead>;
               <TableHead>Status</TableHead>;
               <TableHead>Last Active</TableHead>;
-<<<<<<< HEAD
               <TableHead className='text-right'>Actions</TableHead>;
             </TableRow>;
           </TableHeader>;
@@ -785,7 +733,6 @@ export function TeamManagement() {;
                     <div>;
                       <div className='font - medium'>{member.name}</div>;
                       <div className='text - sm text - muted - foreground'>;
-=======
               <TableHead className="text-right">Actions</TableHead>;
             </TableRow>;
           </TableHeader>;
@@ -805,14 +752,11 @@ export function TeamManagement() {;
                     <div>;
                       <div className="font-medium">{member.name}</div>;
                       <div className="text-sm text-muted-foreground">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         {member.email}
                       </div>;
                     </div>;
                   </div>;
                 </TableCell>;
-<<<<<<< HEAD
-=======
                 <TableCell>{member.role}</TableCell>;
                 <TableCell>;
                   <Badge;
@@ -842,7 +786,6 @@ export function TeamManagement() {;
                       >;
                         <Trash className="h-4 w-4" />;
                       </Button>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     )}
                   </div>;
                 </TableCell>;
@@ -853,7 +796,6 @@ export function TeamManagement() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
                 <TableCell>{member.role}</TableCell>;
                 <TableCell>;
                   <Badge;
@@ -911,7 +853,5 @@ export function TeamManagement() {;
 }'"}"
 }
 ;)
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

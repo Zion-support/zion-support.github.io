@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/MicroSAAS.tsx
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -73,13 +72,8 @@ export default function MicroSAAS() {
   );
 import React from 'react';
 import Head from 'next/head';
-=======
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/MicroSAAS.tsx
-=======
 import React from 'react';
 import Head from 'next/head';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages/MicroSAAS.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/pages/MicroSAAS.tsx
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';

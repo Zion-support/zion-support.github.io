@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/data-analytics.tsx
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -118,9 +117,7 @@ export default function DataAnalyticsPage() {
 import Layout from '../../components/Layout';
 import { BarChart3, Database, TrendingUp, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 const features = [
-=======
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/data-analytics.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -156,7 +153,6 @@ const analyticsServices = [
     pricing: "$4,000 - $20,000/month"
   }
 ];
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/data-analytics.tsx
 const benefits = [
   'Data-driven decision making',
   'Improved business performance',
@@ -168,8 +164,6 @@ const benefits = [
 export default function DataAnalyticsServices() {
 
 export default function DataAnalyticsPage() {
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/data-analytics.tsx
 
 export default function DataAnalyticsPage() {
   return (
@@ -197,7 +191,6 @@ export default function DataAnalyticsPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/data-analytics.tsx
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -215,8 +208,6 @@ export default function DataAnalyticsPage() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/data-analytics.tsx
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -256,7 +247,6 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/data-analytics.tsx
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -292,8 +282,6 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/data-analytics.tsx
 
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
@@ -328,12 +316,9 @@ export default function DataAnalyticsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/data-analytics.tsx
     </Layout>
     </Layout>
     </>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/data-analytics.tsx
     </>
   );
 }

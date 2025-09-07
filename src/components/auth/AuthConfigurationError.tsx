@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -42,7 +41,6 @@ export function AuthConfigurationError(): any ({;
   onRetry,;
   showSetupButton = true,;
 }:,  AuthConfigurationErrorProps) {;
-=======
 import React from 'react',;
 import Link from 'next/link',;
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
@@ -54,12 +52,10 @@ interface AuthConfigurationErrorProps {;
 }
 ;
 export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const handleRefresh = () => {;
     if (onRetry) {;
       onRetry();
     } else {;
-<<<<<<< HEAD
       window && window.location.reload();    }
       window.location.reload()
 import React from 'react';
@@ -131,7 +127,6 @@ if ( {) {
           <div className="bg-gray-50 rounded-lg p-4 mb-6">"
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>"
             <ul className="text-sm text-gray-700 space-y-1">"
-=======
       window.location.reload();
     }
   },
@@ -165,7 +160,6 @@ if ( {) {
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <li>• AUTH0_SECRET</li>
               <li>• AUTH0_BASE_URL</li>
               <li>• AUTH0_ISSUER_BASE_URL</li>
@@ -173,7 +167,6 @@ if ( {) {
               <li>• AUTH0_CLIENT_SECRET</li>
             </ul>
           </div>
-<<<<<<< HEAD
         <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>;
           <div className='text-center mb-6'>;
             <div className='mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center'>;
@@ -203,7 +196,6 @@ if ( {) {
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1""
               >
                 <Settings className="w-4 h-4 mr-2" />"
-=======
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -213,7 +205,6 @@ if ( {) {
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
                 <Settings className="w-4 h-4 mr-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Setup Guide
               </Button>
   };
@@ -236,16 +227,12 @@ if ( {) {
           <Alert variant="destructive" className="mb-6">;
             <AlertTriangle className="h-4 w-4" />;
             <AlertDescription>;
-<<<<<<< HEAD
               <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured. ;,
-=======
               <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured.;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               New users cannot sign up until this is resolved.;
             </AlertDescription>;
           </Alert>;
           {/* Technical Details */}
-<<<<<<< HEAD
           <div className='bg-gray-50 rounded-lg p-4 mb-6'>;
             <h3 className='font-semibold text-gray-900 mb-2'>;
               Missing Configuration:;
@@ -304,11 +291,9 @@ if ( {) {
             <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb - 6">;
             <h3 className="font - semibold text - gray - 900 mb - 2">Missing Configuration:</h3>;
             <ul className="text - sm text - gray - 700 space - y-1">;
-=======
           <div className="bg-gray-50 rounded-lg p-4 mb-6">;
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>;
             <ul className="text-sm text-gray-700 space-y-1">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <li>• AUTH0_SECRET</li>;
               <li>• AUTH0_BASE_URL</li>;
               <li>• AUTH0_ISSUER_BASE_URL</li>;
@@ -316,7 +301,6 @@ if ( {) {
               <li>• AUTH0_CLIENT_SECRET</li>;
             </ul>;
           </div>;
-<<<<<<< HEAD
                 onClick = {(,) => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}'
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1";
               >;
@@ -505,7 +489,6 @@ if ( {) {
                   <strong>Restart Application:</strong>
                   <br />
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes"
-=======
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             {showSetupButton && (;
@@ -572,13 +555,11 @@ if ( {) {
                   <strong>Restart Application:</strong>
                   <br />
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </div>
               </li>
             </ol>
           </div>
         </div>
-<<<<<<< HEAD
                   to apply changes                </div>                <div>;
                   <strong>Configure Environment:</strong>;
                   <br />;
@@ -673,7 +654,6 @@ if ( {) {
                 Run the setup script to configure Auth0 interactively:
               </p>
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">"
-=======
 
         {/* Alternative Actions Card */}
         <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
@@ -725,13 +705,11 @@ if ( {) {
                 Run the setup script to configure Auth0 interactively:
               </p>
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 npm run setup:auth0
               </code>
             </div>
           </div>
         )}
-<<<<<<< HEAD
             <Link href="/talent" "
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800" />;
               <span>View Talent Pool</span>;
@@ -793,7 +771,6 @@ if ( {) {
             <button
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}'
               className="text-blue-600 hover: underline""
-=======
 ;
         {/* Footer */}
         <div className="mt-6 text-center text-sm text-gray-500">
@@ -802,7 +779,6 @@ if ( {) {
             <button 
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
               className="text-blue-600 hover: underline"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             >
               AUTH0_SETUP_GUIDE_ISSUE_1.md
             </button>
@@ -810,7 +786,6 @@ if ( {) {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
               onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}'
 export default AuthConfigurationError };
 ;
@@ -824,7 +799,6 @@ export default AuthConfigurationError;
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}'
               className="text-blue-600 hover: underline";",
               AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md;
-=======
   )
         <div className="mt-6 text-center text-sm text-gray-500">;
           <p>;
@@ -834,14 +808,12 @@ export default AuthConfigurationError;
               className="text-blue-600 hover: underline";
             >;
               AUTH0_SETUP_GUIDE_ISSUE_1.md;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </button>;
           </p>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
   );
 }
 export default AuthConfigurationError;}
@@ -942,8 +914,6 @@ export default AuthConfigurationError,
 }
 ;
 export default AuthConfigurationError;
-=======
 }
 ;
 export default AuthConfigurationError;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

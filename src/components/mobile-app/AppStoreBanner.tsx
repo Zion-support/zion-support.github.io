@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">"
       <div className="flex items-center">"
@@ -11,7 +10,6 @@ return (
           <a
             href="/open-app""
             className="px-4 py-1 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium""
-=======
 
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
@@ -54,28 +52,23 @@ export const AppStoreBanner: React.FC = () => {
           <a 
             href="/open-app" 
             className="px-4 py-1 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           >
             View
           </Link>
           <button
             onClick={dismissBanner}
-<<<<<<< HEAD
             className="text-gray-400 focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"",
             aria-label="Dismiss banner""
           >
             <X className="h-5 w-5" />"
-=======
             className="text-gray-400 focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
             aria-label="Dismiss banner"
           >
             <X className="h-5 w-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </button>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 };
 import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";
@@ -163,7 +156,6 @@ if (return,  null) {
 '"},"
 }
   )
-=======
   )
 },
 import React, { useState, useEffect } from "react",;
@@ -217,4 +209,3 @@ export const AppStoreBanner: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

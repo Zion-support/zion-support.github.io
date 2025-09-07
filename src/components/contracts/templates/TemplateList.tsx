@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ContractTemplate } from "@/types/contracts","
 import { Button } from "@/components/ui/button","
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react''
@@ -53,7 +52,6 @@ import { Separator  } from '@/components / ui / separator';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components / ui / tooltip';
 import { use_auth  } from '@/hooks / use_auth';
 // use_router replaces the old use_location hook from react - router;
-=======
 
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
@@ -66,7 +64,6 @@ import { useAuth } from "@/hooks/useAuth",
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router',
 import {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -74,7 +71,6 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-<<<<<<< HEAD
   AlertDialogTitle} from "@/components / ui / alert - dialog","
 import { useState  } from './react';
 interface TemplateListProps {,
@@ -136,7 +132,6 @@ import { useAuth } from "@/hooks/useAuth";
 // useRouter replaces the old useLocation hook from react-router;
 import { useRouter } from 'next/router';
 import {;
-=======
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react",
 interface TemplateListProps {
@@ -155,7 +150,6 @@ import { useAuth } from "@/hooks/useAuth",;
 // useRouter replaces the old useLocation hook from react-router;
 import { useRouter } from 'next/router',;
 import {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   AlertDialog,;
   AlertDialogAction,;
   AlertDialogCancel,;
@@ -164,7 +158,6 @@ import {;
   AlertDialogFooter,;
   AlertDialogHeader,;
   AlertDialogTitle} from "@/components/ui/alert-dialog",;
-<<<<<<< HEAD
 import { useState } from "react";
 interface TemplateListProps {;,
   templates: ContractTemplate[],;
@@ -275,7 +268,6 @@ export function TemplateList(): any ({;
               onClick={() => onSelect(template)}
               variant="outline" "
               className="w-full""
-=======
 import { useState } from "react",;
 interface TemplateListProps {;
   templates: ContractTemplate[],;
@@ -398,14 +390,12 @@ export function TemplateList({;
               onClick={() => onSelect(template)} 
               variant="outline" 
               className="w-full"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             >
               Use This Template
             </Button>
           </CardContent>
         </Card>
       ))}
-<<<<<<< HEAD
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -476,8 +466,6 @@ return;
   handleDeleteConfirm ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
 }'"};
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
         <AlertDialogContent>;
@@ -489,16 +477,13 @@ return;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
-<<<<<<< HEAD
             <AlertDialogAction
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"",
               onClick = {handleDeleteConfirm,}>;
-=======
             <AlertDialogAction;
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
               onClick={handleDeleteConfirm}
             >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
@@ -506,7 +491,6 @@ return;
       </AlertDialog>;
     </div>;
   );
-<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -649,7 +633,5 @@ return;
 }'"}"
 }
 ;
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

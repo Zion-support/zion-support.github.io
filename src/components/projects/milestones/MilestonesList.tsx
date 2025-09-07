@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 if (isLoading) {
     return (
       <div className="space-y-4">",
@@ -49,7 +48,6 @@ if (isLoading) {
         <div className="flex justify-end">"
           <Button onClick={() => setShowAddForm(true)}>
             <Plus className="h-4 w-4 mr-2" />"
-=======
 
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
@@ -135,12 +133,10 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
         <div className="flex justify-end">
           <Button onClick={() => setShowAddForm(true)}>
             <Plus className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Add Milestone
           </Button>
         </div>
       )}
-<<<<<<< HEAD
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">"
@@ -172,7 +168,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             onApprove = {onApprove,}
             onReject = {onReject,}
           />
-=======
       
       {showAddForm && (
         <Card>
@@ -201,12 +196,10 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             onApprove={onApprove}
             onReject={onReject}
           />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         ))}
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 };
   // Check condition
 if ( {) {
@@ -282,6 +275,4 @@ if ( {) {
 }
 ";
             <AddMilestoneForm)))
-=======
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

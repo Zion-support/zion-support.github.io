@@ -278,10 +278,7 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-<<<<<<< HEAD
     "@next/swc-linux-x64-gnu": "^15.5.2",
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -303,15 +300,12 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
-<<<<<<< HEAD
 "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
 
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.0",
     "@types/react-datepicker": "^6.2.0",
@@ -321,7 +315,6 @@
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
-<<<<<<< HEAD
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.0.0",
     "critters": "^0.0.23",
@@ -336,11 +329,9 @@
     "express-rate-limit": "^8.1.0",
     "fastify": "^5.6.0",
     "framer-motion": "^10.18.0",
-=======
     "cron-parser": "^5.3.0",
     "events": "^3.3.0",
     "framer-motion": "^12.23.12",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
@@ -348,15 +339,11 @@
     "import-fresh": "^3.3.1",
     "jszip": "^3.10.1",
     "lucide-react": "^0.536.0",
-<<<<<<< HEAD
     "mongodb": "^6.19.0",
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     "next": "^15.5.2",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
-<<<<<<< HEAD
     "postcss-preset-env": "^10.3.1",
     "prettier": "^3.0.3",
     "react": "^18.3.1",
@@ -460,7 +447,6 @@
   "author": "Zion Tech Group",
   "license": "MIT"
 }
-=======
     "postcss": "^8.4.32",
     "react": "^19.1.1",
     "react-datepicker": "^8.4.0",
@@ -490,4 +476,3 @@
     "typescript": "^5"
   }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

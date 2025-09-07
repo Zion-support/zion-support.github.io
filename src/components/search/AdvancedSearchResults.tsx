@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -112,7 +111,6 @@ interface SearchResponse {;,
   page: number;,
   limit: number;,
   query: string;,
-=======
 import React, { useState, useEffect, useMemo } from 'react',;
 import { useRouter } from 'next/router',;
 import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'lucide-react';
@@ -157,7 +155,6 @@ interface SearchResponse {;
   page: number,;
   limit: number,;
   query: string,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   hasMore: boolean;
 }
 ;
@@ -170,7 +167,6 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
   if (!searchTerm.trim()) {;
     return <span className={className}>{text}</span>;
   }
-<<<<<<< HEAD
   const parts = text && text.split(;,
     new RegExp(`(${searchTerm && searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
   );
@@ -1358,7 +1354,6 @@ export const AdvancedSearchResults: React.FC = () => {;,
                 {/* Load More Button */}
                 {hasMore && (
 }}}}}}}}}}}})))
-=======
 
   const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')),
   
@@ -2075,4 +2070,3 @@ export const AdvancedSearchResults: React.FC = () => {;
   );
 };
 export default AdvancedSearchResults;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

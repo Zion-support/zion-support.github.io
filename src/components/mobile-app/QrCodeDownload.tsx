@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const QrCodeDownload: React.FC = () => {
               <AppStoreButtons
                 className="mb-8" "
@@ -46,7 +45,6 @@ export const QrCodeDownload: React.FC = () => {
                   {/* This would be replaced with an actual QR code in production */}
                 </div>;
                 <p className="text - center text - sm mt - 2 text - zion - blue - dark font - medium">;
-=======
 
 import React from "react",
 import { QrCode } from 'lucide-react'
@@ -134,7 +132,6 @@ export const QrCodeDownload: React.FC = () => {;
                   {/* This would be replaced with an actual QR code in production */}
                 </div>;
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Scan to download;
                 </p>;
               </div>;
@@ -142,7 +139,6 @@ export const QrCodeDownload: React.FC = () => {;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </section>);
 }
 };
@@ -205,8 +201,6 @@ export const QrCodeDownload: React.FC = () => {;
       </div>
     </section>
   )
-=======
     </section>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

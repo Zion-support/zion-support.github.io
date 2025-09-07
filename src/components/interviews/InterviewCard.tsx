@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -35,7 +34,6 @@ function InterviewCard() {
 }
   );
 }
-=======
 
 import React, { useState } from "react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -382,4 +380,3 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

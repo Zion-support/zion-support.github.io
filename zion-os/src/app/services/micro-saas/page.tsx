@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 "use client",;
 import { useState } from "react",;
@@ -608,8 +607,6 @@ function MicroSAASPage() {
     <div className="space - y-8">;
 ];
 export default function MicroSAASPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import { useState } from "react",;
 interface MicroSAASService {;
@@ -909,22 +906,18 @@ export default function MicroSAASPage() {;
   return (;
     <div className="space-y-8">;
       {/* Header */}
-<<<<<<< HEAD
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">Micro SAAS Solutions</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Innovative software - as - a-service solutions designed to accelerate your business growth;
-=======
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Micro SAAS Solutions</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Innovative software-as-a-service solutions designed to accelerate your business growth;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           streamline operations, and provide competitive advantages in the digital economy.;
         </p>;
       </div>;
       {/* Micro SAAS Services Grid */}
-<<<<<<< HEAD
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
         {microSAASServices.map (service => (
           <div;
@@ -947,7 +940,6 @@ export default function MicroSAASPage() {;
                     <span className="text - green - 400">🎯</span>;
                     <span>{market}</span>;
                   </div>))}
-=======
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
         {microSAASServices.map(service => (;
           <div;
@@ -971,12 +963,10 @@ export default function MicroSAASPage() {;
                     <span>{market}</span>;
                   </div>;
                 ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
             {/* Features */}
             <div>;
-<<<<<<< HEAD
               <h3 className="font - semibold mb - 3 text - purple - 400">Key Features</h3>;
               <div className="grid grid - cols - 1 gap - 2">;
                 {service.features.map ((feature, index) => (
@@ -984,7 +974,6 @@ export default function MicroSAASPage() {;
                     <span className="text - blue - 400">✓</span>;
                     <span>{feature}</span>;
                   </div>))}
-=======
               <h3 className="font-semibold mb-3 text-purple-400">Key Features</h3>;
               <div className="grid grid-cols-1 gap-2">;
                 {service.features.map((feature, index) => (;
@@ -993,12 +982,10 @@ export default function MicroSAASPage() {;
                     <span>{feature}</span>;
                   </div>;
                 ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
             {/* Benefits */}
             <div>;
-<<<<<<< HEAD
               <h3 className="font - semibold mb - 3 text - green - 400">Business Benefits</h3>;
               <div className="grid grid - cols - 1 gap - 2">;
                 {service.benefits.map ((benefit, index) => (
@@ -1006,7 +993,6 @@ export default function MicroSAASPage() {;
                     <span className="text - yellow - 400">💡</span>;
                     <span>{benefit}</span>;
                   </div>))}
-=======
               <h3 className="font-semibold mb-3 text-green-400">Business Benefits</h3>;
               <div className="grid grid-cols-1 gap-2">;
                 {service.benefits.map((benefit, index) => (;
@@ -1015,12 +1001,10 @@ export default function MicroSAASPage() {;
                     <span>{benefit}</span>;
                   </div>;
                 ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
             {/* Integrations */}
             <div>;
-<<<<<<< HEAD
               <h3 className="font - semibold mb - 3 text - orange - 400">Integrations</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
                 {service.integrations.map ((integration, index) => (
@@ -1028,7 +1012,6 @@ export default function MicroSAASPage() {;
                     <span className="text - purple - 400">🔗</span>;
                     <span>{integration}</span>;
                   </div>))}
-=======
               <h3 className="font-semibold mb-3 text-orange-400">Integrations</h3>;
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">;
                 {service.integrations.map((integration, index) => (;
@@ -1037,12 +1020,10 @@ export default function MicroSAASPage() {;
                     <span>{integration}</span>;
                   </div>;
                 ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
             {/* Deployment */}
             <div>;
-<<<<<<< HEAD
               <h3 className="font - semibold mb - 3 text - cyan - 400">Deployment</h3>;
               <div className="text - sm opacity - 80">{service.deployment}</div>;
             </div>;
@@ -1051,7 +1032,6 @@ export default function MicroSAASPage() {;
               <a;
                 href={service.contact_link}
                 className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold";
-=======
               <h3 className="font-semibold mb-3 text-cyan-400">Deployment</h3>;
               <div className="text-sm opacity-80">{service.deployment}</div>;
             </div>;
@@ -1060,23 +1040,18 @@ export default function MicroSAASPage() {;
               <a;
                 href={service.contactLink}
                 className="w-full block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >;
                 Get Started;
               </a>;
               <a;
-<<<<<<< HEAD
                 href={`https://ziontechgroup.com / services/${service.id}`}
                 className="w - full block text - center text - blue - 400 hover:text - blue - 300 text - sm underline";
-=======
                 href={`https://ziontechgroup.com/services/${service.id}`}
                 className="w-full block text-center text-blue-400 hover:text-blue-300 text-sm underline";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >;
                 Learn More;
               </a>;
             </div>;
-<<<<<<< HEAD
           </div>))}
       </div>;
       {/* SAAS Capabilities Overview */}
@@ -1102,7 +1077,6 @@ export default function MicroSAASPage() {;
             <div className="text - 3xl mb - 3">🔌</div>;
             <h3 className="font - semibold mb - 2">Integrations</h3>;
             <p className="text - sm opacity - 80">Connect with your existing tools</p>;
-=======
           </div>;
         ))}
       </div>;
@@ -1129,12 +1103,10 @@ export default function MicroSAASPage() {;
             <div className="text-3xl mb-3">🔌</div>;
             <h3 className="font-semibold mb-2">Integrations</h3>;
             <p className="text-sm opacity-80">Connect with your existing tools</p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>;
         </div>;
       </div>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <div className="text - center space - y-6 py - 12 bg - gradient - to - r from - blue - 600 / 10 to - purple - 600 / 10 rounded - lg border border - white / 10">;
         <h2 className="text - 3xl font - bold">Ready to Accelerate Your Business?</h2>;
         <p className="text - xl opacity - 80 max - w-2xl mx - auto">;
@@ -1145,7 +1117,6 @@ export default function MicroSAASPage() {;
           <a;
             href="mailto:kleber@ziontechgroup.com?subject = Micro%20SAAS%20Consultation";
             className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text - lg";
-=======
       <div className="text-center space-y-6 py-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg border border-white/10">;
         <h2 className="text-3xl font-bold">Ready to Accelerate Your Business?</h2>;
         <p className="text-xl opacity-80 max-w-2xl mx-auto">;
@@ -1156,43 +1127,33 @@ export default function MicroSAASPage() {;
           <a;
             href="mailto:kleber@ziontechgroup.com?subject=Micro%20SAAS%20Consultation";
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold text-lg";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           >;
             Schedule SAAS Consultation;
           </a>;
           <a;
             href="tel:+13024640950";
-<<<<<<< HEAD
             className="border border - white / 20 text - white px - 8 py - 3 rounded - lg hover:bg - white / 10 transition - all font - semibold text - lg";
-=======
             className="border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           >;
             Call: +1 302 464 0950;
           </a>;
         </div>;
       </div>;
       {/* Back to Services */}
-<<<<<<< HEAD
       <div className="text - center">;
         <a;
           href="/services";
           className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font - semibold";
-=======
       <div className="text-center">;
         <a;
           href="/services";
           className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover: bg-white/10 transition-all font-semibold";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         >;
           ← Back to All Services;
         </a>;
       </div>;
-<<<<<<< HEAD
     </div>);
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

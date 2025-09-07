@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 declare global {,
-=======
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-this-alias */
@@ -18,7 +16,6 @@ declare global {,
 
 // Type declarations for global augmentation
 declare global {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   var webpackChunk_N_E: any[],
   var __webpack_require__: any,
   var __webpack_exports__: any,
@@ -28,7 +25,6 @@ declare global {
   var __rest: any,
   var __decorate: any,
   var __awaiter: any
-<<<<<<< HEAD
 }
 // CRITICAL: Self polyfill - must be first,
 if (typeof self === 'undefined') {'
@@ -225,7 +221,6 @@ if (typeof self === 'undefined') {;
   } else {;
     // Last resort - create minimal self object;
     (globalThis as,  any).self = {}
-=======
 /* eslint-disable @typescript-eslint/no-explicit-any */;
 /* eslint-disable @typescript-eslint/no-unused-vars */;
 /* eslint-disable @typescript-eslint/no-this-alias */;
@@ -267,32 +262,27 @@ if (typeof self === 'undefined') {;
   } else {;
     // Last resort - create minimal self object;
     (globalThis as any).self = {}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   }
 }
 ;
 // Ensure self is properly referenced;
-<<<<<<< HEAD
 const selfRef: any = typeof self !== 'undefined' ? self :;',
                     typeof global !== 'undefined' ? global :;
                     typeof globalThis !== 'undefined' ? globalThis :;
                     typeof window !== 'undefined' ? window : {},;
 // CRITICAL: Webpack chunk array polyfill;,
 if (!selfRef.webpackChunk_N_E) {;,
-=======
 const selfRef: any = typeof self !== 'undefined' ? self :;
                     typeof global !== 'undefined' ? global :;
                     typeof globalThis !== 'undefined' ? globalThis :;
                     typeof window !== 'undefined' ? window : {};
 // CRITICAL: Webpack chunk array polyfill;
 if (!selfRef.webpackChunk_N_E) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   selfRef.webpackChunk_N_E = [];
 }
 ;
 // Ensure webpack chunk array is properly initialized;
 if (typeof webpackChunk_N_E === 'undefined') {;
-<<<<<<< HEAD
   (globalThis as,  any).webpackChunk_N_E = selfRef.webpackChunk_N_E;
 }
 // TypeScript helper polyfills for runtime
@@ -704,7 +694,6 @@ if (process.env.NODE_ENV === 'development') {'
 }
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {'
-=======
   (globalThis as any).webpackChunk_N_E = selfRef.webpackChunk_N_E;
 }
 
@@ -896,37 +885,30 @@ export const verifyPolyfills = () => {
 
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   setTimeout(() => verifyPolyfills(), 100)
 ;
 // Export a verification function for testing;
 export const verifyPolyfills = () => {;
   const checks = {;
-<<<<<<< HEAD
     selfDefined: typeof self !== 'undefined',;
     webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),;
     tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',;
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null;
   },;
   // // // console.log('Serverless polyfill verification:', checks),;
-=======
     selfDefined: typeof self !== 'undefined';
     webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined');
     tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined';
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null;
   };
   // // // console.log('Serverless polyfill verification:', checks);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return Object.values(checks).every(Boolean);
 };
 // Auto-verify in development;
 if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100);
 }
-<<<<<<< HEAD
 export default {}, // Ensure this can be imported as a module;
 }}}}}}}}}}}}}}}}}}}}
-=======
 ;
 export default {}, // Ensure this can be imported as a module;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

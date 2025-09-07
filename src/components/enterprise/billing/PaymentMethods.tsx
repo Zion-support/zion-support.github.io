@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { CreditCard, Plus, Trash } from 'lucide-react''
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import React from "react","
@@ -17,7 +16,6 @@ export function PaymentMethods() {
       type: "credit_card","
       brand: "Visa","
       last4: "4242","
-=======
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -32,19 +30,16 @@ export function PaymentMethods() {
       type: "credit_card",
       brand: "Visa",
       last4: "4242",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       expMonth: 12,
       expYear: 2025,
       isDefault: true},
     {
-<<<<<<< HEAD
       id: "pm-2","
       type: "credit_card","
       brand: "Mastercard","
       last4: "8888","
       expMonth: 4,
       expYear: 2026,
-=======
       id: "pm-2",
       type: "credit_card",
       brand: "Mastercard",
@@ -54,14 +49,12 @@ export function PaymentMethods() {
       isDefault: false}
   ],
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (
     <Card>
       <CardHeader>
         <CardTitle>Payment Methods</CardTitle>
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
       </CardHeader>
-<<<<<<< HEAD
       <CardContent className="space-y-4">"
         {paymentMethods.map((method,) => (
           <div
@@ -137,7 +130,6 @@ export function PaymentMethods() {;
                 <p className="font-medium">"
                   {method.brand} •••• {method.last4}
                   {method.isDefault && (
-=======
       <CardContent className="space-y-4">
         {paymentMethods.map((method) => (
           <div 
@@ -155,40 +147,32 @@ export function PaymentMethods() {;
                   {method.brand} •••• {method.last4}
                   {method.isDefault && (
                     <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       Default
                     </span>
                   )}
                 </p>
-<<<<<<< HEAD
                 <p className="text-sm text-muted-foreground">"
-=======
                 <p className="text-sm text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex gap-2">"
               {!method.isDefault && (
                 <Button size="sm" variant="ghost">Set Default</Button>"
               )}
               <Button size="sm" variant="ghost" className="text-destructive">"
                 <Trash className="h-4 w-4" />"
-=======
             <div className="flex gap-2">
               {!method.isDefault && (
                 <Button size="sm" variant="ghost">Set Default</Button>
               )}
               <Button size="sm" variant="ghost" className="text-destructive">
                 <Trash className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </Button>
             </div>
           </div>
         ))}
-<<<<<<< HEAD
         <Button className="gap-1">"
         <Button className="gap-1">"
           <Plus className="h-4 w-4" />"
@@ -200,30 +184,22 @@ export function PaymentMethods() {;
 };
         <Button className="gap-1">"
           <Plus className="h-4 w-4" />"
-=======
       </CardContent>
       <CardFooter>
         <Button className="gap-1">
           <Plus className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Add Payment Method
         </Button>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
-=======
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from 'lucide-react';
 export function PaymentMethods() {;
-<<<<<<< HEAD
   // Mock payment methods;,
-=======
   // Mock payment methods;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const paymentMethods = [;
     {;
       id: "pm-1",;
@@ -239,11 +215,8 @@ export function PaymentMethods() {;
       brand: "Mastercard",;
       last4: "8888",;
       expMonth: 4,;
-<<<<<<< HEAD
       expYear: 2026;,
-=======
       expYear: 2026;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       isDefault: false}
   ];
   return (;
@@ -256,7 +229,6 @@ export function PaymentMethods() {;
         {paymentMethods.map((method) => (;
           <div;
             key={method.id}
-<<<<<<< HEAD
             className={`flex items-center justify-between p-4 rounded-lg border ${;`
               method.isDefault ? "bg-muted border-primary" : "border-border";
             }`}`
@@ -294,7 +266,6 @@ export function PaymentMethods() {;
       <CardFooter>;
         <Button className='gap-1'>;
           <Plus className='h-4 w-4' />          Add Payment Method        <Button className="gap-1">;
-=======
             className={`flex items-center justify-between p-4 rounded-lg border ${;
               method.isDefault ? "bg-muted border-primary" : "border-border";
             }`}
@@ -330,7 +301,6 @@ export function PaymentMethods() {;
       </CardContent>;
       <CardFooter>;
         <Button className="gap-1">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <Plus className="h-4 w-4" />;
           Add Payment Method;
         </Button>;
@@ -338,7 +308,6 @@ export function PaymentMethods() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
   );
 }
 import React from 'react';
@@ -448,6 +417,4 @@ function PaymentMethods() {
 }
 ;
 }}}))))))]
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

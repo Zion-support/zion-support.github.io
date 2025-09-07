@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   AlertTriangle,
   RefreshCw,
@@ -1135,7 +1134,6 @@ export default GlobalErrorBoundary;
   }
 // Hook for programmatic error boundary
 export const useErrorBoundary = () => {
-=======
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -1538,4 +1536,3 @@ export const withErrorBoundary = <P extends object>(;
 }
 ;
 export default GlobalErrorBoundary;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

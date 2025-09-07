@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
@@ -111,7 +110,6 @@ import { LoginModal } from '@/components/auth/LoginModal';import { LanguageSelec
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
 import { LoginModal } from '@/components/auth/LoginModal';
-=======
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { useState } from "react",
@@ -142,117 +140,86 @@ import { LanguageSelector } from '@/components/header/LanguageSelector',;
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',;
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview',;
 import { LoginModal } from '@/components/auth/LoginModal',;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface MainNavigationProps {;
   isAdmin?: boolean,;
   unreadCount?: number,;
   className?: string;
 }
 ;
-<<<<<<< HEAD
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }:,  MainNavigationProps) {;,
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false), // Add state;
   const { user } = useAuth(),;
   const isAuthenticated = !!user,;,
-=======
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false), // Add state;
   const { user } = useAuth(),;
   const isAuthenticated = !!user,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [loginOpen, setLoginOpen] = useState(false),;
   const { count } = useFavorites(),;
   const { items } = useCart(),;
   const cartCount = items.length,;
   const router = useRouter(), // Changed from useLocation;
   const { t } = useTranslation(),;
-<<<<<<< HEAD
   const handleCartClick = (e: React.MouseEvent) => {;,
-=======
   const handleCartClick = (e: React.MouseEvent) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     if (!isAuthenticated) {;
       e.preventDefault(),;
       setLoginOpen(true),;
       return;
     }
     setIsMobileMenuOpen(false);
-<<<<<<< HEAD
   },;,
-=======
   },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const baseLinks = [;
     {;
       key: 'home',;
       href: '/',;
-<<<<<<< HEAD
       matches: (path:,  string) => path === '/';
-=======
       matches: (path: string) => path === '/';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     },;
     {;
       key: 'marketplace',;
       href: '/marketplace',;
-<<<<<<< HEAD
       matches: (path:,  string) => path.startsWith('/marketplace');
-=======
       matches: (path: string) => path.startsWith('/marketplace');
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     },;
     {;
       key: 'categories',;
       href: '/categories',;
-<<<<<<< HEAD
       matches: (path:,  string) => path.startsWith('/categories');
-=======
       matches: (path: string) => path.startsWith('/categories');
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     },;
     {;
       key: 'talent',;
       href: '/talent',;
-<<<<<<< HEAD
       matches: (path:,  string) => path.startsWith('/talent') && !path.includes('/talent-dashboard');
-=======
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard');
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     },;
     {;
       key: 'equipment',;
       href: '/equipment',;
-<<<<<<< HEAD
       matches: (path:,  string) => path.startsWith('/equipment');
-=======
       matches: (path: string) => path.startsWith('/equipment');
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     },;
     {;
       key: 'community',;
       href: '/community',;
-<<<<<<< HEAD
       matches: (path:,  string) => path.startsWith('/community') || path.startsWith('/forum');
     }
   ],;
   const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),;`
-=======
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum');
     }
   ],;
   const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   // Add authenticated-only links;
   if (isAuthenticated) {;
     links.push({;
       key: 'dashboard',;
       name: t('nav.dashboard'),;
       href: '/dashboard',;
-<<<<<<< HEAD
       matches: (path:,  string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard';
-=======
       matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     });
   }
 ;
@@ -262,7 +229,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'analytics',;
       name: t('nav.analytics'),;
       href: '/analytics',;
-<<<<<<< HEAD
       matches: (path:,  string) => path && path.startsWith('/analytics'),;
     });  }
   return (
@@ -802,7 +768,6 @@ export default function Page() {; []);,
                   <Heart className="w-4 h-4" />"
                   {count > 0 && (
                     <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">"
-=======
       matches: (path: string) => path.startsWith('/analytics');
     });
   }
@@ -870,7 +835,6 @@ export default function Page() {; []);,
                   <Heart className="w-4 h-4" />
                   {count > 0 && (
                     <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       {count}
                     </span>;
                   )}
@@ -880,7 +844,6 @@ export default function Page() {; []);,
 ;
             {/* Wallet link */}
             {isAuthenticated && (
-<<<<<<< HEAD
               <li className="nav-item">"
                 <Link href="/wallet""
                   aria-label="Wallet""
@@ -894,7 +857,6 @@ export default function Page() {; []);,
                   )}
                 >
                   <Wallet className="w-4 h-4" />"
-=======
               <li className="nav-item">
                 <Link 
                   href="/wallet"
@@ -909,14 +871,12 @@ export default function Page() {; []);,
                   )}
                 >
                   <Wallet className="w-4 h-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </Link>
               </li>
             )}
 ;
             {/* Messages link */}
             {isAuthenticated && (
-<<<<<<< HEAD
               <li className="nav-item">"
                 <Link href="/messages""
                   aria-label="Messages""
@@ -933,7 +893,6 @@ export default function Page() {; []);,
                   {unreadCount > 0 && (
                     <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">"
                       {unreadCount > 9 ? '9+' : unreadCount}'
-=======
               <li className="nav-item">
                 <Link 
                   href="/messages"
@@ -951,7 +910,6 @@ export default function Page() {; []);,
                   {unreadCount > 0 && (
                     <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
                       {unreadCount > 9 ? '9+' : unreadCount}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </span>;
                   )}
                 </Link>;
@@ -959,7 +917,6 @@ export default function Page() {; []);,
             )}
 ;
             {/* Cart icon with badge */}
-<<<<<<< HEAD
             <li className="nav-item">"
               <HoverCard openDelay={100}>
                 <HoverCardTrigger asChild>
@@ -1063,7 +1020,6 @@ export default function Page() {; []);,
                   >;
                     <ShoppingCart className="w-4 h-4 mr-1" />;
                     {t('nav.cartCart')}'
-=======
             <li className="nav-item">
               <HoverCard openDelay={100}>
                 <HoverCardTrigger asChild>
@@ -1085,7 +1041,6 @@ export default function Page() {; []);,
                   >;
                     <ShoppingCart className="w-4 h-4 mr-1" />;
                     {t('nav.cartCart')}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     {cartCount > 0 && (;
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                         {cartCount}
@@ -1099,18 +1054,14 @@ export default function Page() {; []);,
               </HoverCard>
             </li>
           </ul>
-<<<<<<< HEAD
           <div className="flex items-center gap-2 mt-4 md:mt-0 md:ml-auto">"
-=======
           <div className="flex items-center gap-2 mt-4 md:mt-0 md:ml-auto">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <LanguageSelector />
           </div>
         </div>
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-<<<<<<< HEAD
                         {link && link.name}
                       </Link>;
                     )}
@@ -1149,8 +1100,6 @@ export default function Page() {; []);,
   )
 }
 ;]
-=======
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

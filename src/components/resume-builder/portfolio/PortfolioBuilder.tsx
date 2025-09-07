@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
   return (
     <div className="space-y-6">"
@@ -127,7 +126,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           <CardContent className="pt-6">"
             <h2 className="text-xl font-semibold mb-6">"
               {editingProject ? 'Edit Project' : 'Add New Project'}'
-=======
 
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -190,38 +188,30 @@ export function PortfolioBuilder() {;
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </h2>;
             <ProjectForm;
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {;
                 setShowAddProject(false);
-<<<<<<< HEAD
                 setEditingProject(null)
-=======
                 setEditingProject(null);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               }}
             />;
           </CardContent>;
         </Card>;
       )}
-<<<<<<< HEAD
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
-=======
 ;
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {projects.map((project) => (
             <ProjectCard
               key={project.id}
               project={project}
-<<<<<<< HEAD
             <CardContent>
               <div className="flex flex-col items-center gap-4">"
                 <div className="bg-muted/50 p-6 rounded-full">"
@@ -234,7 +224,6 @@ export function PortfolioBuilder() {;
                 <Button
                   onClick={() => setShowAddProject(true)}
                   className="mt-2""
-=======
               onEdit={() => setEditingProject(project)}
               onDelete={handleDeleteProject}
             />;
@@ -255,7 +244,6 @@ export function PortfolioBuilder() {;
                 <Button 
                   onClick={() => setShowAddProject(true)} 
                   className="mt-2"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 >
                   Add Your First Project
                 </Button>
@@ -264,7 +252,6 @@ export function PortfolioBuilder() {;
           </Card>
         )
       )}
-<<<<<<< HEAD
                   className='mt-2'                >            <CardContent>;
               <div className="flex flex-col items-center gap-4">;
                 <div className="bg-muted/50 p-6 rounded-full">;
@@ -334,9 +321,7 @@ export function PortfolioBuilder() {;
 }
 ;
 }))))))
-=======
     </div>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

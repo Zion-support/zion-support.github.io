@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Form;
   FormControl;
   FormField;
@@ -30,7 +29,6 @@ type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",",
     path: ["confirmPassword"]}),
-=======
 
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
@@ -418,4 +416,3 @@ export default function UpdatePassword() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

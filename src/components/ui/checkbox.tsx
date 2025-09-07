@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client""
 import * as React from "react""
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox""
@@ -59,7 +58,6 @@ const Checkbox = React.forward_ref<;
 Checkbox.display_name = CheckboxPrimitive.Root.display_name;
 export { Checkbox }
 Checkbox.displayName = CheckboxPrimitive.Root.displayName))
-=======
 
 "use client"
 
@@ -92,4 +90,3 @@ Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
 export { Checkbox }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Handle form submission
   const onSubmit = async (values: ServiceFormValues,) => {
     if (serviceTags.length === 0) {
@@ -1444,7 +1443,6 @@ max - w-4xl mx - auto p - 4 md:p - 6"> <Card className=" bg - zion - blue - dark
 }/> </div> </div> </CardContent> <CardFooter className=" border - t border - zion - blue - light pt - 6"> <div className=" flex flex - col sm:flex - row gap - 4 w - full sm:justify - between"> <Button type=" button"variant=" outline"className=" border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
 }'"}"
 ;
-=======
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -2496,4 +2494,3 @@ export function ServiceProviderRegistrationForm() {;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

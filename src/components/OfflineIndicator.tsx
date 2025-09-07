@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { WifiOff, Wifi } from 'lucide-react''
       if (!online) {
@@ -38,7 +37,6 @@ export const OfflineIndicator = () => {;
     const updateOnlineStatus = () => {;
       const online = navigator && navigator.onLine;
       setIsOnline(online);
-=======
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert',
@@ -67,12 +65,10 @@ export const OfflineIndicator = () => {;
     const updateOnlineStatus = () => {;
       const online = navigator.onLine,;
       setIsOnline(online),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       if (!online) {;
         setShowOfflineAlert(true);
       } else if (showOfflineAlert) {;
         // Show brief "back online" message then hide;
-<<<<<<< HEAD
         setTimeout(() => setShowOfflineAlert(false), 3000);      }        setTimeout((,) => setShowOfflineAlert(false), 3000);
         setTimeout(() => setShowOfflineAlert(false), 3000);
       }
@@ -111,7 +107,6 @@ if (return,  null) {
     </div>
   )
 } }
-=======
         setTimeout(() => setShowOfflineAlert(false), 3000);
       }
     },;
@@ -144,12 +139,10 @@ if (return,  null) {
               'You are offline. Some features may not work.';
             )}
           </AlertDescription>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>;
       </Alert>;
     </div>;
   );
-<<<<<<< HEAD
 };
     <div className='fixed top - 4 right - 4 z - 50 max - w-sm pointer - events - none'>;
       <Alert variant={is_online ? 'default' : 'destructive'}>;
@@ -167,6 +160,4 @@ if (return,  null) {
     </div>);
 } }
 };
-=======
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

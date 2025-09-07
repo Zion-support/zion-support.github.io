@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <div className='container max-w-xl py-10'>;
       <h1 className='text-3xl font-bold mb-6'>Rewards</h1>;
@@ -29,7 +28,6 @@ export default function RewardsPage() {
               <p className="text-sm text-muted-foreground">{r.cost} pts</p>"
             </div>
             <Gift className="h-5 w-5" />"
-=======
 import { Gift } from 'lucide-react'
 
 const REWARDS = [
@@ -49,14 +47,12 @@ export default function RewardsPage() {
               <p className="text-sm text-muted-foreground">{r.cost} pts</p>
             </div>
             <Gift className="h-5 w-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </li>
         ))}
       </ul>;
     </div>;
   );
 }
-<<<<<<< HEAD
   );
 }
 import { Gift } from 'lucide-react';
@@ -88,6 +84,4 @@ const REWARDS = [;
     </div>);
 }
 import { Gift } from 'lucide-react';))
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

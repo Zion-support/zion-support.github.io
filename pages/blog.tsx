@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function BlogPage() {
 	return (
 		<Layout>
@@ -81,11 +80,9 @@ export default function BlogPage() {
 ;
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 const BlogPage = () => {
   return (
@@ -102,7 +99,6 @@ const BlogPage = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Page;
 
 
@@ -175,6 +171,4 @@ export default function BlogPage() {
 
 
 
-=======
 export default BlogPage;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 { purchase: 0, post: 0, referral: 0 }
   );
   const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
@@ -19,9 +18,7 @@ if ( {) {
     } catch (error) {
       logErrorToProduction('Failed to refresh points:', { data: error })'
     } finally {
-=======
 import React, { useState } from 'react',;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -32,13 +29,10 @@ import { Button } from '@/components/ui/button',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 export function PointsBadge() {;
   const { isAuthenticated } = useAuth(),;
-<<<<<<< HEAD
   const { ledger, balance, loading, fetchLedger } = usePoints(),;,
   const [loginOpen, setLoginOpen] = useState(false),;,
-=======
   const { ledger, balance, loading, fetchLedger } = usePoints(),;
   const [loginOpen, setLoginOpen] = useState(false),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [isRefreshing, setIsRefreshing] = useState(false),;
   const points = balance,;
   const breakdown = ledger.reduce(;
@@ -50,21 +44,15 @@ export function PointsBadge() {;
     },;
     { purchase: 0, post: 0, referral: 0 }
   ),;
-<<<<<<< HEAD
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;,
-=======
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     if (!isAuthenticated) {;
       e.preventDefault(),;
       setLoginOpen(true);
     }
   },;
-<<<<<<< HEAD
   const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;,
-=======
   const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     e.preventDefault(),;
     e.stopPropagation(),;
     if (!isAuthenticated) return,;
@@ -77,7 +65,6 @@ export function PointsBadge() {;
       setIsRefreshing(false);
     }
   },
-<<<<<<< HEAD
   return (
     <TooltipProvider>;
       <div className='flex items - center gap - 1'>;
@@ -108,7 +95,6 @@ export function PointsBadge() {;
               className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"" />
               <Gift className="h-4 w-4" aria-hidden="true" />"
               <span>{`${points} pts`}</span>`
-=======
 
   return (
     <TooltipProvider>
@@ -123,13 +109,11 @@ export function PointsBadge() {;
             >
               <Gift className="h-4 w-4" aria-hidden="true" />
               <span>{`${points} pts`}</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Link>
           </TooltipTrigger>
           <TooltipContent>
             {isAuthenticated ? (
               <>
-<<<<<<< HEAD
                 <p className="text-sm font-medium">Point Breakdown</p>"
                 {points === 0 && (
                   <p className="text-xs text-muted-foreground">"
@@ -217,7 +201,6 @@ export function PointsBadge() {;
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}`
                   aria-hidden="true""
-=======
                 <p className="text-sm font-medium">Point Breakdown</p>
                 {points === 0 && (
                   <p className="text-xs text-muted-foreground">
@@ -264,23 +247,19 @@ export function PointsBadge() {;
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-<<<<<<< HEAD
               <p className="text-sm">Refresh points balance</p>"
             </TooltipContent>
           </Tooltip>
         )}
 ;
-=======
               <p className="text-sm">Refresh points balance</p>
             </TooltipContent>
           </Tooltip>
         )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       </div>;
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
@@ -288,7 +267,6 @@ export function PointsBadge() {;
     </TooltipProvider>;
   );
 }
-<<<<<<< HEAD
 }
               <p className='text - sm'>Refresh points balance</p>;
             </TooltipContent>;
@@ -300,6 +278,4 @@ export function PointsBadge() {;
 }
 }
 ;)
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

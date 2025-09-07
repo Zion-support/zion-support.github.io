@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -111,8 +110,6 @@ export default function SignInPage() {const [email, setEmail] = useState("");
     } finally {setIsLoading(false);
     }
   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import { useState } from "react",;
 import Link from "next/link",;
@@ -152,7 +149,6 @@ export default function SignInPage() {;
               </div>;
             )}
 ;
-<<<<<<< HEAD
 
 
 
@@ -162,10 +158,8 @@ export default function SignInPage() {;
 
             <div>;
               <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb - 2">;
-=======
             <div>;
               <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Email Address;
               </label>;
               <input;
@@ -173,22 +167,16 @@ export default function SignInPage() {;
                 type="email";
                 required;
                 value={email}
-<<<<<<< HEAD
                 on_change={(e) => set_email (e.target.value)}
                 className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-=======
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 placeholder="Enter your email";
               />;
             </div>;
             <div>;
-<<<<<<< HEAD
               <label html_for="password" className="block text - sm font - medium text - zinc - 300 mb - 2">;
-=======
               <label htmlFor="password" className="block text-sm font-medium text-zinc-300 mb-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Password;
               </label>;
               <input;
@@ -196,19 +184,15 @@ export default function SignInPage() {;
                 type="password";
                 required;
                 value={password}
-<<<<<<< HEAD
                 on_change={(e) => set_password (e.target.value)}
                 className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-=======
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 placeholder="Enter your password";
               />;
             </div>;
             <button;
               type="submit";
-<<<<<<< HEAD
               disabled={is_loading}
               className="w - full bg - blue - 600 hover:bg - blue - 700 disabled:bg - blue - 600 / 50 text - white font - semibold py - 3 px - 4 rounded - lg transition - colors duration - 200";
             >;
@@ -219,7 +203,6 @@ export default function SignInPage() {;
             <p className="text - zinc - 400 text - sm">;
               Don't have an account?{" "}
               <Link href="/auth / signup" className="text - blue - 400 hover:text - blue - 300 font - medium">;
-=======
               disabled={isLoading}
               className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200";
             >;
@@ -230,13 +213,11 @@ export default function SignInPage() {;
             <p className="text-zinc-400 text-sm">;
               Don't have an account?{" "}
               <Link href="/auth/signup" className="text-blue-400 hover:text-blue-300 font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Sign up for free;
               </Link>;
             </p>;
           </div>;
         </div>;
-<<<<<<< HEAD
         <div className="text - center">;
           <p className="text - zinc - 500 text - xs">;
             By signing in, you agree to our{" "}
@@ -245,7 +226,6 @@ export default function SignInPage() {;
             </Link>{" "}
             and{" "}
             <Link href="/privacy" className="text - zinc - 400 hover: text - zinc - 300">;
-=======
         <div className="text-center">;
           <p className="text-zinc-500 text-xs">;
             By signing in, you agree to our{" "}
@@ -254,16 +234,12 @@ export default function SignInPage() {;
             </Link>{" "}
             and{" "}
             <Link href="/privacy" className="text-zinc-400 hover: text-zinc-300">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Privacy Policy;
             </Link>;
           </p>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </div>);
-=======
     </div>;
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }

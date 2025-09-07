@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 :src.disabled/test/setup.ts
@@ -39,6 +38,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 // Placeholder content - file was empty after conflict resolution
 
-=======
 // Placeholder content - file was empty after conflict resolution
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 // Build sample data from the shared equipment listings;
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;,
@@ -247,7 +246,6 @@ import {logErrorToProduction} from '@/utils/productionLogger','
 interface EquipmentSpecification {
   name: string,
   value: string,
-=======
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { NextSeo } from '@/components/NextSeo',
@@ -269,7 +267,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 interface EquipmentSpecification {
   name: string,
   value: string
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { useState, useEffect } from "react",;
 import { useRouter } from 'next/router',;
 import { NextSeo } from '@/components/NextSeo',;
@@ -299,65 +296,50 @@ interface EquipmentDetails {;
   description: string,;
   brand: string,;
   category: string,;
-<<<<<<< HEAD
   subcategory?: string,;,
-=======
   subcategory?: string,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   images: string[],;
   price: number,;
   currency: string,;
   rating?: number,;
   reviewCount?: number,;
   inStock: boolean,;
-<<<<<<< HEAD
   expectedShipping?: string,;,
   specifications: EquipmentSpecification[],;,
-=======
   expectedShipping?: string,;
   specifications: EquipmentSpecification[],;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   features: string[],;
   warranty?: string,;
   returnPolicy?: string;
 }
 ;
 // Convert ProductListing to EquipmentDetails format;
-<<<<<<< HEAD
 function convertProductListingToEquipmentDetails(item:,  ProductListing): EquipmentDetails {;,
-=======
 function convertProductListingToEquipmentDetails(item: ProductListing): EquipmentDetails {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return {;
     id: item.id,;
     name: item.title,;
     description: item.description,;
     brand: item.brand || 'Unknown',;
     category: item.category,;
-<<<<<<< HEAD
     subcategory: item.subcategory,;,
-=======
     subcategory: item.subcategory,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'],;
     price: item.price || 0,;
     currency: item.currency || '$',;
     rating: item.rating,;
     reviewCount: item.reviewCount,;
     inStock: item.availability === 'In Stock' || !item.availability,;
-<<<<<<< HEAD
     expectedShipping: item.availability || 'In Stock',;,
     specifications: (item.specifications || []).map((spec) => ({;,
       name: spec,;
       value: '';
     })),;,
-=======
     expectedShipping: item.availability || 'In Stock',;
     specifications: (item.specifications || []).map((spec) => ({;
       name: spec,;
       value: '';
     })),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     features: item.tags || [],;
     warranty: '1 Year Manufacturer Warranty',;
     returnPolicy: '30-day return policy';
@@ -365,13 +347,10 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
 }
 ;
 // Build sample data from the shared equipment listings;
-<<<<<<< HEAD
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;,
   equipmentListings.reduce((acc, item) => {;,
-=======
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
   equipmentListings.reduce((acc, item) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     acc[item.id] = convertProductListingToEquipmentDetails(item),;
     return acc;
   }, {} as { [key: string]: EquipmentDetails }),;
@@ -380,21 +359,18 @@ export default function EquipmentDetail() {;
   const { id } = router.query as { id?: string },;
   const { isAuthenticated, user } = useAuth(),;
   const { items, dispatch } = useCart(),;
-<<<<<<< HEAD
   const { formatPrice } = useCurrency(),;,
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),;,
   const [quantity, setQuantity] = useState(1),;,
   const [isAdding, setIsAdding] = useState(false),;,
   const [loading, setLoading] = useState(true),;,
   const [error, setError] = useState<string | null>(null),;,
-=======
   const { formatPrice } = useCurrency(),;
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),;
   const [quantity, setQuantity] = useState(1),;
   const [isAdding, setIsAdding] = useState(false),;
   const [loading, setLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [equipment, setEquipment] = useState<EquipmentDetails | undefined>(),;
   useEffect(() => {;
     async function loadEquipment() {;
@@ -415,17 +391,14 @@ export default function EquipmentDetail() {;
           return;
         }
 ;
-<<<<<<< HEAD
         // Try to get from sessionStorage (for dynamically generated,  equipment);
         if (typeof window !== 'undefined') {;
           try {;
             const stored = sessionStorage.getItem(`equipment:${id}`),;`
-=======
         // Try to get from sessionStorage (for dynamically generated equipment);
         if (typeof window !== 'undefined') {;
           try {;
             const stored = sessionStorage.getItem(`equipment:${id}`),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             if (stored) {;
               const storedData = JSON.parse(stored),;
               // Check if it's already in EquipmentDetails format or needs conversion;
@@ -435,11 +408,8 @@ export default function EquipmentDetail() {;
                 equipmentData = storedData;
               } else {;
                 // It's a ProductListing, convert it;
-<<<<<<< HEAD
                 equipmentData = convertProductListingToEquipmentDetails(storedData as,  ProductListing);
-=======
                 equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               }
 ;
               setEquipment(equipmentData),;
@@ -460,7 +430,6 @@ export default function EquipmentDetail() {;
         setLoading(false);
       }
     }
-<<<<<<< HEAD
     loadEquipment()
   }, [id]),
   const handleAddToCart = async () => {
@@ -977,7 +946,6 @@ if ( {) {
 }
 ;
 }}}}}}))
-=======
 
     loadEquipment()
   }, [id]),
@@ -1396,4 +1364,3 @@ if ( {) {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

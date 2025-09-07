@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 ...formData;            startDate: startDate?.toISOString(),
             endDate: endDate?.toISOString()}
         }
       })
-=======
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -25,7 +23,6 @@ interface ServiceQuoteModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
   service: ProductListing | null
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 
 const BUDGET_RANGES = [
@@ -180,7 +177,6 @@ interface ServiceQuoteModalProps {;
   onOpenChange: (open: boolean) => void,;
   service: ProductListing | null;
 }
-<<<<<<< HEAD
 ...form_data;            start_date: start_date?.toISOString (),
             end_date: end_date?.toISOString ()}
         }
@@ -645,7 +641,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }:,  ServiceQuot
   );
 }
 ;))
-=======
 ;
 const BUDGET_RANGES = [;
   { label: "Less than $5,000", value: "0-5000" },;
@@ -949,4 +944,3 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

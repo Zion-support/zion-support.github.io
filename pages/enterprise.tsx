@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 permanent: false}}
 }
 export default function EnterpriseRedirect() { return null }
@@ -349,5 +348,3 @@ export default function EnterpriseRedirect() { return null   } catch (error) {
 
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

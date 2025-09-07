@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {useState} from "react""
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger''
 import {useToast} from "@/hooks/use-toast""
@@ -154,7 +153,6 @@ function QuoteRequestForm() {
 }
 ;
 }}))
-=======
 
 import { useState } from "react",
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
@@ -560,4 +558,3 @@ export function QuoteRequestForm() {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

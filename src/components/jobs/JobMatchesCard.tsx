@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface JobMatchCardProps {
 import { useState } from 'react';
 import {;
@@ -45,7 +44,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               {match.status === 'viewed' && match.viewed_at && ('
                 <span className="ml-2 text-xs text-muted-foreground">"
                   (Viewed {format(new Date(match.viewed_at), "MMM d")})"
-=======
 
 import { useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
@@ -77,21 +75,16 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               {match.status === 'viewed' && match.viewed_at && (
                 <span className="ml-2 text-xs text-muted-foreground">
                   (Viewed {format(new Date(match.viewed_at), "MMM d")})
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </span>
               )}
             </CardDescription>
           </div>
-<<<<<<< HEAD
           <Badge variant="outline" className="flex items-center">"
-=======
           <Badge variant="outline" className="flex items-center">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             {match.match_score}% Match
           </Badge>
         </div>
       </CardHeader>
-<<<<<<< HEAD
       <CardContent className="p-4 pt-0">"
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">"
           {job.description}
@@ -102,7 +95,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <div className="flex flex-wrap gap-1">"
               {match.matched_skills.slice(0, 5).map((skill, i) => (
                 <Badge key={i} variant="secondary" className="text-xs">"
-=======
       <CardContent className="p-4 pt-0">
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
           {job.description}
@@ -114,7 +106,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <div className="flex flex-wrap gap-1">
               {match.matched_skills.slice(0, 5).map((skill, i) => (
                 <Badge key={i} variant="secondary" className="text-xs">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -124,21 +115,18 @@ import { format } from "date-fns",;
 import { JobMatch } from "@/types/jobs",;
 interface JobMatchCardProps {;
   match: JobMatch,;
-<<<<<<< HEAD
   onApply: (matchId: string, jobId:,  string) => void,;
   onDecline: (matchId:,  string) => void,;
   showApplied?: boolean;
 }
 ;
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }:,  JobMatchCardProps) {;
-=======
   onApply: (matchId: string, jobId: string) => void,;
   onDecline: (matchId: string) => void,;
   showApplied?: boolean;
 }
 ;
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const job = match.job;
   if (!job) return null;
   return (;
@@ -146,26 +134,22 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
       <CardHeader className="p-4 pb-2">;
         <div className="flex justify-between items-start">;
           <div>;
-<<<<<<< HEAD
             <CardTitle className='text-lg'>{job && job.title}</CardTitle>;
             <CardDescription>;
               Posted {format(new Date(job && job.created_at), 'MMM d')}'
               {match && match.status === 'viewed' && match && match.viewed_at && (;
                 <span className='ml-2 text-xs text-muted-foreground'>;
                   (Viewed {format(new Date(match && match.viewed_at), 'MMM d')});
-=======
             <CardTitle className="text-lg">{job.title}</CardTitle>;
             <CardDescription>;
               Posted {format(new Date(job.created_at), "MMM d")}
               {match.status === 'viewed' && match.viewed_at && (;
                 <span className="ml-2 text-xs text-muted-foreground">;
                   (Viewed {format(new Date(match.viewed_at), "MMM d")});
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </span>;
               )}
             </CardDescription>;
           </div>;
-<<<<<<< HEAD
           <Badge variant='outline' className='flex items-center'>;
             {match && match.match_score}% Match;
           </Badge>;
@@ -189,7 +173,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                 <Badge variant="secondary" className="text-xs">"
                   +{match.matched_skills.length - 5}
                 </Badge>
-=======
           <Badge variant="outline" className="flex items-center">;
             {match.match_score}% Match;
           </Badge>;
@@ -212,12 +195,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                 <Badge variant="secondary" className="text-xs">
                   +{match.matched_skills.length - 5}
                 </Badge>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               )}
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>'
           <div className='flex items-center text-sm'>'
             <DollarSign className='h-4 w-4 mr-1 text-muted-foreground' />$'
@@ -286,7 +267,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex gap-2 w-full">"
             <Button
               className="flex-1" "
-=======
         
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
@@ -314,20 +294,16 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex gap-2 w-full">
             <Button 
               className="flex-1" 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               onClick={() => onApply(match.id, job.id)}
             >
               Apply Now
             </Button>
-<<<<<<< HEAD
             <Button
               variant="outline" "
               className="flex-1""
-=======
             <Button 
               variant="outline" 
               className="flex-1"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               onClick={() => onDecline(match.id)}
             >;
               Decline;
@@ -338,7 +314,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
     </Card>;
   );
 }
-<<<<<<< HEAD
 import { useState } from 'react';
 import {
   Card,
@@ -445,6 +420,4 @@ if (return,  null) {
 }
 ;
 }}}}}})))))
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

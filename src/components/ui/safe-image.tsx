@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface SafeImageProps {
   src: string;,
   alt: string;  width?: number;interface SafeImageProps {
@@ -19,14 +18,11 @@ interface SafeImageProps {
 ;
     />;
   );        aria-label={alt}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 'use client',;
 import Image from 'next/image',;
 import { useState } from 'react',;
 import { ImageIcon } from 'lucide-react';
 interface SafeImageProps {;
-<<<<<<< HEAD
   src: string;,
   alt: string;  width?: number;interface SafeImageProps {;,
   src: string,;
@@ -179,7 +175,6 @@ if ( {) {
       </div>);
   }
     />); return (
-=======
   src: string,;
   alt: string,;
   width?: number,;
@@ -231,7 +226,6 @@ export function SafeImage({;
   }
 ;
   return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <Image;
       src={currentSrc}
       alt={alt}
@@ -241,14 +235,11 @@ export function SafeImage({;
       onError={handleError}
       priority={priority}
       // Add unoptimized as fallback for problematic images;
-<<<<<<< HEAD
       unoptimized = {has_error, }
     />);
 }
 } ;
-=======
       unoptimized={hasError}
     />;
   );
 } ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

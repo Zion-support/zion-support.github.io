@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 className
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
           <AvatarImage src={reply && reply.authorAvatar} alt={reply && reply.authorName} />;
           <AvatarFallback>{reply && reply.authorName.charAt(0)}</AvatarFallback>;
-=======
 
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
@@ -80,12 +78,10 @@ export const ReplyCard = ({;
         <Avatar className="h-8 w-8">;
           <AvatarImage src={reply.authorAvatar} alt={reply.authorName} />;
           <AvatarFallback>{reply.authorName.charAt(0)}</AvatarFallback>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </Avatar>;
         <div className="flex-1">;
           <div className="flex items-center">;
             <span className="font-medium">;
-<<<<<<< HEAD
               {reply && reply.authorName}
             </span>;
             {reply && reply.authorRole && (;
@@ -142,7 +138,6 @@ export const ReplyCard = ({;
             Mark as Answer;
           </Button>;
         )}
-=======
               {reply.authorName}
             </span>;
             {reply.authorRole && (;
@@ -185,12 +180,10 @@ export const ReplyCard = ({;
             Mark as Answer
           </Button>
         )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       </CardFooter>;
     </Card>;
   );
 };
-<<<<<<< HEAD
       </CardFooter>;
       </CardFooter>
     </Card>;
@@ -271,6 +264,4 @@ export const ReplyCard = ({
     </Card>);
 }
 export default ReplyCard;
-=======
 export default ReplyCard;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

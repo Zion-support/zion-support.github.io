@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
       let success = false;
       // Check condition
@@ -32,8 +31,6 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
       setIsLoading(false)
     }
   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -73,31 +70,24 @@ interface ProjectFormProps {;
   onCancel: () => void;
 }
 ;
-<<<<<<< HEAD
 export function ProjectForm({ project, onSuccess, onCancel }:,  ProjectFormProps) {;
   const { user } = useAuth(),;
   const { addProject, updateProject } = usePortfolio(),;,
-=======
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
   const { user } = useAuth(),;
   const { addProject, updateProject } = usePortfolio(),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [isLoading, setIsLoading] = useState(false),;
   const isEditing = !!project,;
   const form = useForm<ProjectFormValues>({;
     resolver: zodResolver(projectSchema),;
-<<<<<<< HEAD
     defaultValues: {;,
-=======
     defaultValues: {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       title: project?.title || '',;
       description: project?.description || '',;
       technologies: project?.technologies ? project.technologies.join() : '',;
       image_url: project?.image_url || '',;
       github_url: project?.github_url || '',;
       demo_url: project?.demo_url || '',;
-<<<<<<< HEAD
       pdf_url: project?.pdf_url || ''}'
   }),;
   const onSubmit = async (data:,  ProjectFormValues) => {;,
@@ -108,7 +98,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         title: data.title,;
         description: data.description,;
         technologies: data.technologies ?;,
-=======
       pdf_url: project?.pdf_url || ''}
   }),;
   const onSubmit = async (data: ProjectFormValues) => {;
@@ -119,7 +108,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         title: data.title,;
         description: data.description,;
         technologies: data.technologies ?;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           data.technologies.split().map(tech => tech.trim()) : [],;
         image_url: data.image_url,;
         github_url: data.github_url || undefined,;
@@ -143,7 +131,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       setIsLoading(false);
     }
   },
-<<<<<<< HEAD
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">"
@@ -207,7 +194,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           name='technologies';
           control={form.control}
           name="title""
-=======
   
   return (
     <Form {...form}>
@@ -215,16 +201,12 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         <FormField
           control={form.control}
           name="title"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
-<<<<<<< HEAD
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />"
-=======
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -232,26 +214,20 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         />;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
           name="description""
-=======
           name="description"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Description</FormLabel>
               <FormControl>
-<<<<<<< HEAD
                 <Textarea
                   placeholder="Describe what the project does and your role in it..."",
                   className="min-h-[100px]""
                   {...field}
-=======
                 <Textarea 
                   placeholder="Describe what the project does and your role in it..."
                   className="min-h-[100px]"
                   {...field} 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 />
               </FormControl>
               <FormMessage />
@@ -260,7 +236,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         />;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
           name="technologies""
           render={({ field }: { field: any }) => (
             <FormItem>;
@@ -341,7 +316,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="https://github.com/yourusername/project" {...field} />"
-=======
           name="technologies"
           render={({ field }: { field: any }) => (
             <FormItem>
@@ -366,7 +340,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="https://github.com/yourusername/project" {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -374,7 +347,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           />;
           <FormField;
             control={form.control}
-<<<<<<< HEAD
             name="demo_url""
             render={({ field }: { field: any }) => (
               <FormItem>
@@ -384,7 +356,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="https://your-project-demo.com" {...field} />"
-=======
             name="demo_url"
             render={({ field }: { field: any }) => (
               <FormItem>
@@ -394,14 +365,12 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="https://your-project-demo.com" {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />;
         </div>;
-<<<<<<< HEAD
         <FormField
           control={form.control}
           name='image_url''
@@ -426,7 +395,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               </FormLabel>
               <FormControl>
                 <Input placeholder="https://example.com/screenshot.jpg" {...field} />"
-=======
         <FormField;
           control={form.control}
           name="image_url"
@@ -438,14 +406,12 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               </FormLabel>
               <FormControl>
                 <Input placeholder="https://example.com/screenshot.jpg" {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />;
         {/* Future file upload field would go here */}
-<<<<<<< HEAD
         <div className="flex justify-end space-x-2 pt-4">"
           <Button type="button" variant="outline" onClick={onCancel}>"
             Cancel
@@ -453,7 +419,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           <Button type="submit" disabled={isLoading}>"
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
             {isEditing ? 'Update' : 'Add'} Project'
-=======
         
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
@@ -462,13 +427,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           <Button type="submit" disabled={isLoading}>
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {isEditing ? 'Update' : 'Add'} Project
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>
         </div>
       </form>
     </Form>
   )
-<<<<<<< HEAD
         />;
         {/* Future file upload field would go here */}
         <div className='flex justify-end space-x-2 pt-4'>;
@@ -506,7 +469,5 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     </Form>);
 }
 }
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

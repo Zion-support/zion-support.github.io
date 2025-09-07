@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 const getBenefits = (t: any) => [
 
 
@@ -137,7 +136,6 @@ function BenefitsSection() {
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto">;
           {benefits.map ((benefit, index) => (
             <FeatureCard;
-=======
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
@@ -223,14 +221,12 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {;
           </p>;
         </div>;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {benefits.map((benefit, index) => (;
             <FeatureCard;
               key={index}
               title={benefit.title}
               description={benefit.description}
               icon={benefit.icon}
-<<<<<<< HEAD
           ))}
               className='bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300'            />              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";",
               className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
@@ -253,16 +249,13 @@ function Page() {
       "Bulk discount options",";
       "Transparent cost structure" ];
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300""
-=======
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             />
           ))}
         </div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
   );
 }
 ";
@@ -292,7 +285,5 @@ function Page() {
 }
 ;
 }})))
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

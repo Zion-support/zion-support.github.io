@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/admin/usage-analytics.tsx
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -81,17 +80,14 @@ export default function UsageAnalytics() {;
       setLine(json.line || []),;
       setFunnel(json.funnel || []);
     } finally {;
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
-<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async ctx => {
   const result = await requireAdminRole(ctx);
   // @ts-ignore
   if ('redirect' in result) return result;
   return result;
-=======
 interface AnalyticsData {
   totalUsers: number;
   activeUsers: number;
@@ -142,7 +138,6 @@ const mockAnalyticsData: AnalyticsData = {
     { name: 'Data Analytics', usage: 42 }
   ],
   userSatisfaction: 4.7
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 
 const AdminUsageAnalyticsPage: React.FC = () => {
@@ -151,7 +146,6 @@ const AdminUsageAnalyticsPage: React.FC = () => {
   const [timeRange, setTimeRange] = useState<'7d' | '30d' | '90d' | '1y'>('30d');
   const [selectedMetric, setSelectedMetric] = useState<'users' | 'revenue' | 'projects'>('users');
 
-<<<<<<< HEAD
 function PieChart({ data, size = 160 }: { data: Datum[]; size?: number }) {
   const total = Math.max(
     1,
@@ -262,25 +256,18 @@ export default function UsageAnalytics() {
       setLine(json.line || []);
       setFunnel(json.funnel || []);
     } finally {
-=======
   useEffect(() => {
     // Simulate loading analytics data
     setTimeout(() => {
       setAnalytics(mockAnalyticsData);
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/usage-analytics.tsx
       setLoading(false);
     }
   }, [start, end, userType]),
 
-<<<<<<< HEAD:pages/admin/usage-analytics.tsx
   useEffect(() => { refresh() }, []),
-=======
-<<<<<<< HEAD
   useEffect(() => {
     refresh();
   }, []);
-=======
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -319,15 +306,12 @@ export default function UsageAnalytics() {
       </>
     );
   }
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/usage-analytics.tsx
 
   return (
     <EnhancedLayout>
       <Head>
         <title>Usage Analytics - Admin</title>
       </Head>
-<<<<<<< HEAD:pages/admin/usage-analytics.tsx
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Usage Analytics</h1>
@@ -351,8 +335,6 @@ export default function UsageAnalytics() {
               <option value="b2b">B2B</option>
               <option value="hiring_manager">Hiring Manager</option>
               <option value="guest">Guest</option>
-=======
-<<<<<<< HEAD
       <div className='space-y-6'>
         <div className='flex items-center justify-between'>
           <h1 className='text-2xl font-semibold'>Usage Analytics</h1>
@@ -394,7 +376,6 @@ export default function UsageAnalytics() {
               <option value='b2b'>B2B</option>
               <option value='hiring_manager'>Hiring Manager</option>
               <option value='guest'>Guest</option>
-=======
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold">Usage Analytics</h1>
@@ -417,13 +398,10 @@ export default function UsageAnalytics() {
               <option value="users">Users</option>
               <option value="revenue">Revenue</option>
               <option value="projects">Projects</option>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/usage-analytics.tsx
             </select>
           </div>
         </div>
 
-<<<<<<< HEAD:pages/admin/usage-analytics.tsx
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
             <div className="font-medium mb-2">Most Used Features</div>
@@ -445,8 +423,6 @@ export default function UsageAnalytics() {
                 <div key={e.label} className="flex justify-between border rounded px-2 py-1">
                   <span>{e.label}</span>
                   <span className="text-gray-500">{e.value}</span>
-=======
-<<<<<<< HEAD
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           <div className='border rounded p-4 bg-white/70 dark:bg-gray-900'>
             <div className='font-medium mb-2'>Most Used Features</div>
@@ -477,7 +453,6 @@ export default function UsageAnalytics() {
                 >
                   <span>{e.label}</span>
                   <span className='text-gray-500'>{e.value}</span>
-=======
         {/* Key Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-6">
@@ -563,20 +538,15 @@ export default function UsageAnalytics() {
                     </div>
                     <span className="text-sm text-gray-600">{feature.usage}%</span>
                   </div>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/usage-analytics.tsx
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD:pages/admin/usage-analytics.tsx
         <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
           <div className="font-medium mb-2">Funnel</div>
           <Funnel data={funnel} />
-=======
-<<<<<<< HEAD
         <div className='border rounded p-4 bg-white/70 dark:bg-gray-900'>
           <div className='font-medium mb-2'>Funnel</div>
           <Funnel data={funnel} />
@@ -590,7 +560,6 @@ export default function UsageAnalytics() {
     </EnhancedLayout>
   );
 }
-=======
         {/* Additional Info */}
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-lg font-semibold mb-4">System Information</h2>
@@ -609,10 +578,8 @@ export default function UsageAnalytics() {
               Optional providers supported (setup via env): Plausible, PostHog.
             </p>
           </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/usage-analytics.tsx
         </div>
 
-<<<<<<< HEAD:pages/admin/usage-analytics.tsx
         <div className="text-xs text-gray-500 dark:text-gray-400">
           Optional providers supported (setup via env): Plausible, PostHog. Currently using local event log for aggregation.
         </div>
@@ -620,7 +587,4 @@ export default function UsageAnalytics() {
     </EnhancedLayout>
   )
 }
-=======
 export default AdminUsageAnalyticsPage;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/usage-analytics.tsx

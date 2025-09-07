@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface Milestone {
   id: string;
   title: string;
@@ -77,7 +76,6 @@ export async function createMilestone(projectId: string, payload: any) {;
 export async function updateMilestoneStatus() {
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {method: 'PATCH';
     headers: { 'Content-Type': 'application/json' }
-=======
 export async function fetchMilestones(projectId: string) {;
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;
     headers: { 'Content-Type': 'application/json' };
@@ -100,12 +98,10 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {;
     method: 'PATCH';
     headers: { 'Content-Type': 'application/json' };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     credentials: 'include';
     body: JSON.stringify(body)});
   if (!res.ok) throw new Error(await res.text());
   return res.json();
-<<<<<<< HEAD
 export async function fetchMilestones(projectId: string) {;
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;
     headers: { 'Content-Type': 'application/json' },;
@@ -195,6 +191,4 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
   }
 
 }
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

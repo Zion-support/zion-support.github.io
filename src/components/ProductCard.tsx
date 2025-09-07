@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const stockStatus =;
     product && product.stock === undefined;
       : 'In stock';
@@ -29,7 +28,6 @@ const stockStatus =;
   );
 }
 ;
-=======
 import Link from 'next/link',;
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist',;
@@ -253,4 +251,3 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

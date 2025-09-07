@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 export default function About() {
@@ -203,6 +202,4 @@ export default function About() {
 
   );
 }
-=======
 import { motion } from 'framer-motion';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

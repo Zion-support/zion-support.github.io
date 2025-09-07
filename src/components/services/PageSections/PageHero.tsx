@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export function PageHero() {
   return (
     <div className="text-center mb-12">"
@@ -103,7 +102,6 @@ export function PageHero() {;
   );
 };
     </div>
-=======
 
 import { GradientHeading } from "@/components/GradientHeading",
 import { Clock, Map, DollarSign } from 'lucide-react'
@@ -142,7 +140,6 @@ export function PageHero() {
         </div>
       </div>
     </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   )
 import { GradientHeading } from "@/components/GradientHeading";
 import { Clock, Map, DollarSign } from 'lucide-react';
@@ -179,7 +176,6 @@ export function PageHero() {;
     </div>;
   );
 }
-<<<<<<< HEAD
   );
 }
 import { GradientHeading } from '@/components / GradientHeading';
@@ -270,6 +266,4 @@ function PageHero() {
     </div>);
 }
 }
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

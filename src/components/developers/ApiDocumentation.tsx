@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 method: string;,
 endpoint: string;,
 description: string;,
@@ -27,7 +26,6 @@ import { Alert, AlertDescription } from "@/components/ui/alert","
 import { Badge } from "@/components/ui/badge","
 import CodeBlock from "./CodeBlock","
 import { logInfo } from '@/utils/productionLogger','
-=======
 
 import { useState } from "react",
 import { BookOpen, Terminal } from 'lucide-react'
@@ -37,7 +35,6 @@ import { Alert, AlertDescription } from "@/components/ui/alert",
 import { Badge } from "@/components/ui/badge",
 import CodeBlock from "./CodeBlock",
 import { logInfo } from '@/utils/productionLogger',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface EndpointParam {
   name: string,
   type: string,
@@ -56,7 +53,6 @@ interface EndpointParam {;
   type: string,;
   description: string,;
   required?: boolean;
-<<<<<<< HEAD
 }
 ;
 interface EndpointSectionProps {;
@@ -324,7 +320,6 @@ headers = {;
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
 }
 ;
-=======
 }
 ;
 interface EndpointSectionProps {;
@@ -396,14 +391,12 @@ headers = {;
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 response = requests.get(;
     'https: //api.ziontechgroup.com/v1/jobs',;
     params={'limit': 10, 'category': 'development'},;
     headers=headers;
 );
 data = response.json();
-<<<<<<< HEAD
 print(data)`;`
               }}
               response_examples={{
@@ -2091,7 +2084,6 @@ function EndpointSection() {
       )}
       {responseExamples && (
 }}}}}}}}}}}}}]]]]]]]]]
-=======
 print(data)`;
               }}
               responseExamples={{
@@ -3082,4 +3074,3 @@ function EndpointSection({;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

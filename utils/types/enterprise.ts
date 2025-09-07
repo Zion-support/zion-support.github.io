@@ -5,7 +5,6 @@
 
 
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
-<<<<<<< HEAD
 
 export interface CompanyUsageLimits {;
   monthlyJobPosts: number;
@@ -39,8 +38,6 @@ export interface InvoiceRecord {id: string;
 export interface CompanyUsageLimits {;
   monthlyJobPosts: number;
   budgetCapUsd: number;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export interface CompanyUsageLimits {;
   monthlyJobPosts: number;
   budgetCapUsd: number;
@@ -51,7 +48,6 @@ export interface CompanyPlan {;
   seatsPurchased: number;
   seatsUsed: number;
   usageLimits: CompanyUsageLimits;
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -67,8 +63,6 @@ export interface CompanyPlan {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface CompanyMember {;
@@ -76,13 +70,10 @@ export interface CompanyMember {;
   email: string;
   name: string;
   role: EnterpriseRole;
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface CompanyActivityEvent {;
@@ -91,19 +82,15 @@ export interface CompanyActivityEvent {;
   actorEmail: string;
   action: string;
   meta?: Record<string unknown>;
-<<<<<<< HEAD
   meta?: Record<string, unknown>;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface InvoiceRecord {;
   id: string;
-<<<<<<< HEAD
 
 
 
@@ -111,15 +98,12 @@ export interface InvoiceRecord {;
 
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   companyId: string;
   number: string;
   amountUsd: number;
   periodStartIso: string;
   periodEndIso: string;
   status: 'paid' | 'open' | 'void' | 'past_due';
-<<<<<<< HEAD
 
 
 
@@ -236,8 +220,6 @@ export interface CompanyRecord {id: string;
 
 
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface CompanyRecord {;
@@ -250,7 +232,6 @@ export interface CompanyRecord {;
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
-<<<<<<< HEAD
 
 
 
@@ -280,6 +261,4 @@ export interface CompanyRecord {;
 
 }
 
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

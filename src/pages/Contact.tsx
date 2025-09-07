@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Button from '../components/Button';
 import Card from '../components/Card';
@@ -151,7 +150,6 @@ const handleSubmit = (e: React.FormEvent) => {,
   );
 };
 export default Contact;
-=======
 import { useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { SEO } from '@/components/SEO',;
@@ -612,4 +610,3 @@ export default function Contact() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

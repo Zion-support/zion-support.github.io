@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import { NextResponse } from 'next/server';
@@ -47,8 +46,6 @@ if ( {) {
 
 
 export const config = {matcher: ['/dashboard/dashboard/']}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {;
@@ -57,7 +54,6 @@ export function middleware(request: NextRequest) {;
     const role = request.cookies.get('userRole')?.value || 'talent';
     const target = role === 'client' ? '/dashboard/client' : '/dashboard/talent';
     return NextResponse.redirect(new URL(target, request.url));
-<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -112,11 +108,9 @@ export const config = {;
 
 
 
-=======
   }
   return NextResponse.next();
 }
 ;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

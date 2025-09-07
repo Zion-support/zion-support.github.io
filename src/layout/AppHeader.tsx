@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const showTagline = router.pathname === '/'',
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
   const [loginOpen, setLoginOpen] = useState(false)
@@ -81,7 +80,6 @@ import React from 'react';
                 aria-label={t('auth.login')}'
                 data-testid="login-link""
                 onClick={(e) = /> {
-=======
 import React, { useState } from 'react',
 import { useMessaging } from '@/context/MessagingContext',
 import Link from 'next/link',
@@ -170,12 +168,10 @@ export function AppHeader() {
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
-<<<<<<< HEAD
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })'
                   openLoginModal(router.asPath)
                 onClick={(e,) => {;
@@ -200,7 +196,6 @@ export function AppHeader() {
           {/* User avatar menu */}
           {isLoggedIn && (
             <div className="ml-4">"
-=======
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
                   openLoginModal(router.asPath)
                 }}
@@ -220,14 +215,12 @@ export function AppHeader() {
           {/* User avatar menu */}
           {isLoggedIn && (
             <div className="ml-4">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <UserMenu />
             </div>
           )}
         </div>;
       </header>;
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-<<<<<<< HEAD
       {mobileMenuOpen && (;
         <div className="md:hidden fixed inset-0 z-60 pt-16">;
           <div
@@ -249,7 +242,6 @@ export function AppHeader() {
           </div>
         </div>
               unreadCount={unreadCount}
-=======
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-60 pt-16">
           <div 
@@ -260,14 +252,12 @@ export function AppHeader() {
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu 
               unreadCount={unreadCount} 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
             />;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
   const show_tagline = router.pathname === '/';
@@ -1445,7 +1435,6 @@ export function AppHeader() {
 ;
 ;
 }}}}}}})))))))))
-=======
 ;
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
@@ -1454,4 +1443,3 @@ export function AppHeader() {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

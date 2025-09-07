@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function AboutPage() {;
   return (;
@@ -11,13 +10,10 @@ function AboutPage() {
   return (
     <div className="min - h-screen bg - white">;
 export default function AboutPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default function AboutPage() {;
   return (;
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="bg - gradient - to - r from - blue - 600 to - indigo - 700 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
@@ -25,7 +21,6 @@ export default function AboutPage() {;
           </h1>;
           <p className="text - xl md:text - 2xl text - blue - 100 max - w-3xl mx - auto">;
             Pioneering the future of AI - powered technology solutions and autonomous business operations.;
-=======
       <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -33,12 +28,10 @@ export default function AboutPage() {;
           </h1>;
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">;
             Pioneering the future of AI-powered technology solutions and autonomous business operations.;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </p>;
         </div>;
       </section>;
       {/* Company Overview */}
-<<<<<<< HEAD
       <section className="py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
@@ -89,7 +82,6 @@ export default function AboutPage() {;
                   <div>;
                     <h3 className="font - semibold text - gray - 900">Customer Success</h3>;
                     <p className="text - gray - 600">Dedicated support and success teams</p>;
-=======
       <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
@@ -140,7 +132,6 @@ export default function AboutPage() {;
                   <div>;
                     <h3 className="font-semibold text-gray-900">Customer Success</h3>;
                     <p className="text-gray-600">Dedicated support and success teams</p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </div>;
                 </div>;
               </div>;
@@ -149,7 +140,6 @@ export default function AboutPage() {;
         </div>;
       </section>;
       {/* Mission & Values */}
-<<<<<<< HEAD
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center mb - 16">;
@@ -191,7 +181,6 @@ export default function AboutPage() {;
               </div>;
               <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Collaboration</h3>;
               <p className="text - gray - 600">;
-=======
       <section className="py-20 bg-gray-50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="text-center mb-16">;
@@ -233,7 +222,6 @@ export default function AboutPage() {;
               </div>;
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Collaboration</h3>;
               <p className="text-gray-600">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Working together with clients, partners, and communities to create lasting impact.;
               </p>;
             </div>;
@@ -241,7 +229,6 @@ export default function AboutPage() {;
         </div>;
       </section>;
       {/* Company Stats */}
-<<<<<<< HEAD
       <section className="py - 20 bg - white">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center mb - 16">;
@@ -265,7 +252,6 @@ export default function AboutPage() {;
             <div>;
               <div className="text - 4xl font - bold text - blue - 600 mb - 2">$50M+</div>;
               <div className="text - gray - 600">Revenue Generated</div>;
-=======
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="text-center mb-16">;
@@ -289,13 +275,11 @@ export default function AboutPage() {;
             <div>;
               <div className="text-4xl font-bold text-blue-600 mb-2">$50M+</div>;
               <div className="text-gray-600">Revenue Generated</div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Leadership Team */}
-<<<<<<< HEAD
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center mb - 16">;
@@ -328,7 +312,6 @@ export default function AboutPage() {;
               <h3 className="text - xl font - semibold text - gray - 900 text - center mb - 2">Dr. James Kim</h3>;
               <p className="text - blue - 600 text - center mb - 4">Chief Research Officer</p>;
               <p className="text - gray - 600 text - center">;
-=======
       <section className="py-20 bg-gray-50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="text-center mb-16">;
@@ -361,7 +344,6 @@ export default function AboutPage() {;
               <h3 className="text-xl font-semibold text-gray-900 text-center mb-2">Dr. James Kim</h3>;
               <p className="text-blue-600 text-center mb-4">Chief Research Officer</p>;
               <p className="text-gray-600 text-center">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Leading researcher in autonomous systems and AI consciousness evolution;
               </p>;
             </div>;
@@ -369,7 +351,6 @@ export default function AboutPage() {;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py - 20 bg - blue - 600 text - white">;
         <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
           <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
@@ -383,7 +364,6 @@ export default function AboutPage() {;
               Get in Touch;
             </a>;
             <a href="/careers" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
-=======
       <section className="py-20 bg-blue-600 text-white">;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
           <h2 className="text-3xl md:text-4xl font-bold mb-6">;
@@ -397,16 +377,12 @@ export default function AboutPage() {;
               Get in Touch;
             </a>;
             <a href="/careers" className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               View Careers;
             </a>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
     </div>);
-=======
     </div>;
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }

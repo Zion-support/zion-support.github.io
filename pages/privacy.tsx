@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import Head from 'next/head';
 
@@ -35,5 +34,3 @@ export default function Privacy() {
   );
 }
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

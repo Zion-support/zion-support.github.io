@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -107,12 +106,10 @@ import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../
 
 const generateId = () => Math.random().toString(36).slice(2, 10);
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
-=======
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
 const generateId = () => Math.random().toString(36).slice(2, 10);
 const seedCompany: CompanyRecord = {;
   id: 'cmp_acme';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   name: 'Acme Corporation';
   slug: 'acme';
   logoUrl: '/logo-acme.svg';
@@ -123,7 +120,6 @@ const seedCompany: CompanyRecord = {;
     seatsUsed: 3;
     usageLimits: {;
       monthlyJobPosts: 50;
-<<<<<<< HEAD
       budgetCapUsd: 10000}}
   members: [;
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' }
@@ -315,7 +311,6 @@ export const store = {;
 
 const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
 const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany };
-=======
       budgetCapUsd: 10000}};
   members: [;
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' };
@@ -329,7 +324,6 @@ const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: see
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]};
 const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany };
 const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export const store = {;
   getCompanyBySlug(slug: string) {;
     return companiesBySlug[slug] || null;
@@ -345,7 +339,6 @@ export const store = {;
       name: input.name || 'New Company';
       slug;
       logoUrl: input.logoUrl;
-<<<<<<< HEAD
       brandColor: input.brandColor || '#111827',;
       plan: input.plan || {;
         tier: 'teams',;
@@ -407,7 +400,6 @@ export const store = {;
 }};
 
 
-=======
       brandColor: input.brandColor || '#111827';
       plan: input.plan || {;
         tier: 'teams';
@@ -462,4 +454,3 @@ export const store = {;
     const company = companiesById[companyId];
     return company ? company.invoices : [];
   }};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

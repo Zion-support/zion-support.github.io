@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div className="absolute inset-0 flex items-center justify-center bg-black/30">"
             <Loader2 className="h-8 w-8 animate-spin text-white" />"
           </div>
@@ -11,7 +10,6 @@
       />
     </div>
 ;
-=======
 import Image from 'next/image',;
 import { Loader2 } from 'lucide-react';
 import { useState } from 'react',;
@@ -46,7 +44,6 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
       />
     </div>
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         loading="lazy";
         onLoad={() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
@@ -55,7 +52,6 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
     </div>;
   );
 }
-<<<<<<< HEAD
   );
 }
 interface YoutubeEmbedProps {
@@ -104,6 +100,4 @@ function YoutubeEmbed() {
     </div>);
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

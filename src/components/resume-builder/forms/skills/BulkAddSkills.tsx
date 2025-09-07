@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
       }
     } catch (err:,  any) {;,
@@ -81,7 +80,6 @@
 };
 '""
 '";
-=======
 
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -172,4 +170,3 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
     </div>
   )
 },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

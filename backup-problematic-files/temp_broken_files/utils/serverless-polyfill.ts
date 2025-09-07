@@ -256,10 +256,7 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
 }return new (P || (P = Promise) ) (function (resolve: any, reject: any) {;
   step ( (generator = generator.apply (thisArg, arguments || []) ) .next () );
 });
-<<<<<<< HEAD:temp_broken_files/utils/serverless-polyfill.ts
 
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts
 }
 };
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
@@ -277,10 +274,7 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
   //Ensure Node.js global has necessary polyfills if (typeof global.self === 'undefined') {;
   return Object.values (checks) .every (Boolean);
 };
-<<<<<<< HEAD:temp_broken_files/utils/serverless-polyfill.ts
 
   ;"}, // Ensure this can be imported as a module'"
-=======
   ;
 }, // Ensure this can be imported as a module'"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts

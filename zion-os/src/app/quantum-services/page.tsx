@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import Link from "next/link",;
@@ -26,8 +25,6 @@ export const metadata = {title: "Quantum Computing Services - Zion Tech Group | 
   description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.";
   keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"}
 export default function QuantumServicesPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import Link from "next/link",;
 export const metadata = {;
   title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",;
@@ -37,7 +34,6 @@ export default function QuantumServicesPage() {;
   return (;
     <div className="min-h-screen">;
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
@@ -47,7 +43,6 @@ export default function QuantumServicesPage() {;
             Harness the power of quantum mechanics to solve complex problems that;
             are impossible for classical computers. Transform your business with;
             next - generation computational capabilities.;
-=======
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
           <h1 className="text-5xl md:text-6xl font-bold mb-6">;
@@ -57,12 +52,10 @@ export default function QuantumServicesPage() {;
             Harness the power of quantum mechanics to solve complex problems that;
             are impossible for classical computers. Transform your business with;
             next-generation computational capabilities.;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </p>;
         </div>;
       </section>;
       {/* Quantum Overview */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="card bg - gradient - to - r from - purple - 600 / 20 to - blue - 600 / 20 border - purple - 500 / 30">;
@@ -72,7 +65,6 @@ export default function QuantumServicesPage() {;
                   The Future of Computing is Quantum;
                 </h2>;
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="card bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30">;
@@ -82,13 +74,11 @@ export default function QuantumServicesPage() {;
                   The Future of Computing is Quantum;
                 </h2>;
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Quantum computing represents a paradigm shift in computational power.;
                   By leveraging quantum mechanical phenomena like superposition and;
                   entanglement, we can process information in ways that classical;
                   computers simply cannot match.;
                 </p>;
-<<<<<<< HEAD
                 <div className="space - y-4 mb - 6">;
                   <div className="flex items - center">;
                     <div className="w - 6 h - 6 bg - purple - 500 rounded - full mr - 3"></div>;
@@ -108,7 +98,6 @@ export default function QuantumServicesPage() {;
                   </div>;
                 </div>;
                 <Link href="/contact" className="btn - primary">;
-=======
                 <div className="space-y-4 mb-6">;
                   <div className="flex items-center">;
                     <div className="w-6 h-6 bg-purple-500 rounded-full mr-3"></div>;
@@ -128,20 +117,16 @@ export default function QuantumServicesPage() {;
                   </div>;
                 </div>;
                 <Link href="/contact" className="btn-primary">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Explore Quantum Solutions;
                 </Link>;
               </div>;
               <div className="relative">;
-<<<<<<< HEAD
                 <div className="w - full h - 80 bg - gradient - to - br from - purple - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center">;
                   <svg className="w - 32 h - 32 text - purple - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                     <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M13 10V3L4 14h7v7l9 - 11h - 7z" />;
-=======
                 <div className="w-full h-80 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">;
                   <svg className="w-32 h-32 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </svg>;
                 </div>;
               </div>;
@@ -150,7 +135,6 @@ export default function QuantumServicesPage() {;
         </div>;
       </section>;
       {/* Core Quantum Services */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -185,7 +169,6 @@ export default function QuantumServicesPage() {;
                 <li>• Performance benchmarking</li>;
               </ul>;
               <Link href="/quantum - services / algorithm - development" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -216,12 +199,10 @@ export default function QuantumServicesPage() {;
                 <li>• Performance benchmarking</li>;
               </ul>;
               <Link href="/quantum-services/algorithm-development" className="text-purple-400 hover:text-purple-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Quantum Machine Learning */}
-<<<<<<< HEAD
             <div className="card group hover:bg - blue - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - blue - 500 / 30">;
                 <svg className="w - 8 h - 8 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -234,7 +215,6 @@ export default function QuantumServicesPage() {;
                 superposition for faster training and better pattern recognition.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
             <div className="card group hover:bg-blue-500/10 transition-colors">;
               <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/30">;
                 <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -247,22 +227,17 @@ export default function QuantumServicesPage() {;
                 superposition for faster training and better pattern recognition.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Quantum neural networks</li>;
                 <li>• Quantum feature mapping</li>;
                 <li>• Quantum kernel methods</li>;
                 <li>• Hybrid ML pipelines</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/quantum - services / quantum - ml" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-=======
               <Link href="/quantum-services/quantum-ml" className="text-blue-400 hover:text-blue-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Quantum Optimization */}
-<<<<<<< HEAD
             <div className="card group hover:bg - green - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - green - 500 / 30">;
                 <svg className="w - 8 h - 8 text - green - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -275,7 +250,6 @@ export default function QuantumServicesPage() {;
                 can find global minima in exponentially large search spaces.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
             <div className="card group hover:bg-green-500/10 transition-colors">;
               <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30">;
                 <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -288,22 +262,17 @@ export default function QuantumServicesPage() {;
                 can find global minima in exponentially large search spaces.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Quantum annealing</li>;
                 <li>• Variational quantum algorithms</li>;
                 <li>• Combinatorial optimization</li>;
                 <li>• Supply chain optimization</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/quantum - services / quantum - optimization" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-=======
               <Link href="/quantum-services/quantum-optimization" className="text-green-400 hover:text-green-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Quantum Simulation */}
-<<<<<<< HEAD
             <div className="card group hover:bg - indigo - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - indigo - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - indigo - 500 / 30">;
                 <svg className="w - 8 h - 8 text - indigo - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -316,7 +285,6 @@ export default function QuantumServicesPage() {;
                 chemistry, and physics research applications.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
             <div className="card group hover:bg-indigo-500/10 transition-colors">;
               <div className="w-16 h-16 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/30">;
                 <svg className="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -329,22 +297,17 @@ export default function QuantumServicesPage() {;
                 chemistry, and physics research applications.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Molecular dynamics</li>;
                 <li>• Chemical reaction modeling</li>;
                 <li>• Material property prediction</li>;
                 <li>• Quantum chemistry</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/quantum - services / quantum - simulation" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-=======
               <Link href="/quantum-services/quantum-simulation" className="text-indigo-400 hover:text-indigo-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Quantum Error Correction */}
-<<<<<<< HEAD
             <div className="card group hover:bg - red - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - red - 500 / 30">;
                 <svg className="w - 8 h - 8 text - red - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -363,7 +326,6 @@ export default function QuantumServicesPage() {;
                 <li>• Noise mitigation strategies</li>;
               </ul>;
               <Link href="/quantum - services / error - correction" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-=======
             <div className="card group hover:bg-red-500/10 transition-colors">;
               <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-500/30">;
                 <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -382,12 +344,10 @@ export default function QuantumServicesPage() {;
                 <li>• Noise mitigation strategies</li>;
               </ul>;
               <Link href="/quantum-services/error-correction" className="text-red-400 hover:text-red-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Quantum Consulting */}
-<<<<<<< HEAD
             <div className="card group hover:bg - yellow - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - yellow - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - yellow - 500 / 30">;
                 <svg className="w - 8 h - 8 text - yellow - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -400,7 +360,6 @@ export default function QuantumServicesPage() {;
                 and integration with existing IT infrastructure.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
             <div className="card group hover:bg-yellow-500/10 transition-colors">;
               <div className="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-500/30">;
                 <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -413,17 +372,13 @@ export default function QuantumServicesPage() {;
                 and integration with existing IT infrastructure.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Quantum readiness assessment</li>;
                 <li>• Implementation roadmap</li>;
                 <li>• Talent development</li>;
                 <li>• ROI analysis</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/quantum - services / consulting" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-=======
               <Link href="/quantum-services/consulting" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
@@ -431,7 +386,6 @@ export default function QuantumServicesPage() {;
         </div>;
       </section>;
       {/* Industry Applications */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - purple - 600 / 10 to - blue - 600 / 10">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -531,7 +485,6 @@ export default function QuantumServicesPage() {;
               </p>;
               <div className="text - sm text - gray - 400">;
                 <strong > Use Cases:</strong> Scientific research, breakthrough innovations;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600/10 to-blue-600/10">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -631,14 +584,12 @@ export default function QuantumServicesPage() {;
               </p>;
               <div className="text-sm text-gray-400">;
                 <strong>Use Cases:</strong> Scientific research, breakthrough innovations;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Technology Stack */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -668,7 +619,6 @@ export default function QuantumServicesPage() {;
                 <div className="flex items - center">;
                   <div className="w - 3 h - 3 bg - purple - 500 rounded - full mr - 3"></div>;
                   <span className="text - gray - 300">Quantum annealers</span>;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -698,12 +648,10 @@ export default function QuantumServicesPage() {;
                 <div className="flex items-center">;
                   <div className="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>;
                   <span className="text-gray-300">Quantum annealers</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </div>;
               </div>;
             </div>;
             <div className="card">;
-<<<<<<< HEAD
               <h3 className="text - xl font - semibold mb - 4">Quantum Software</h3>;
               <div className="space - y-4">;
                 <div className="flex items - center">;
@@ -721,7 +669,6 @@ export default function QuantumServicesPage() {;
                 <div className="flex items - center">;
                   <div className="w - 3 h - 3 bg - blue - 500 rounded - full mr - 3"></div>;
                   <span className="text - gray - 300">Custom quantum algorithms</span>;
-=======
               <h3 className="text-xl font-semibold mb-4">Quantum Software</h3>;
               <div className="space-y-4">;
                 <div className="flex items-center">;
@@ -739,7 +686,6 @@ export default function QuantumServicesPage() {;
                 <div className="flex items-center">;
                   <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>;
                   <span className="text-gray-300">Custom quantum algorithms</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </div>;
               </div>;
             </div>;
@@ -747,7 +693,6 @@ export default function QuantumServicesPage() {;
         </div>;
       </section>;
       {/* Success Stories */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - gray - 800 / 20 to - gray - 900 / 20">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -777,7 +722,6 @@ export default function QuantumServicesPage() {;
               </p>;
               <div className="text - sm text - gray - 400">;
                 <strong > Result:</strong> 10x faster drug discovery process;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-800/20 to-gray-900/20">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -807,14 +751,12 @@ export default function QuantumServicesPage() {;
               </p>;
               <div className="text-sm text-gray-400">;
                 <strong>Result:</strong> 10x faster drug discovery process;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
           </div>;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm: px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto text - center">;
           <div className="card bg - gradient - to - r from - purple - 600 / 20 to - blue - 600 / 20 border - purple - 500 / 30">;
@@ -830,7 +772,6 @@ export default function QuantumServicesPage() {;
                 Start Quantum Journey;
               </Link>;
               <Link href="/case - studies" className="btn - secondary text - lg px - 8 py - 4">;
-=======
       <section className="py-20 px-4 sm: px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
           <div className="card bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30">;
@@ -846,18 +787,14 @@ export default function QuantumServicesPage() {;
                 Start Quantum Journey;
               </Link>;
               <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 View Case Studies;
               </Link>;
             </div>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
     </div>);
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

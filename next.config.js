@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
 compress: true,
   poweredByHeader: false,
   generateEtags: true,
@@ -13,7 +12,6 @@ compress: true,
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
-=======
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
@@ -32,7 +30,6 @@ compress: true,
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
@@ -69,7 +66,6 @@ compress: true,
           '**/performance-*.sh',
           '**/performance-*.html',
           '**/performance-*.md',
-<<<<<<< HEAD
 '**/performance-*.txt'
         ],
         poll: 1000,
@@ -127,7 +123,6 @@ chunks: 'all',
 
 export default nextConfig;
 
-=======
         ],
       };
     }
@@ -136,4 +131,3 @@ export default nextConfig;
 };
 
 export default nextConfig;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

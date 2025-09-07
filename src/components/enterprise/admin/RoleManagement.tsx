@@ -1,19 +1,15 @@
-<<<<<<< HEAD
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [,
 import React from 'react';
-=======
 
 import React from "react",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
   TableRow,
 } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -98,7 +94,6 @@ function RoleManagement() {
     Viewer: 'Read - only access to candidates','
   }
 import React from 'react';
-=======
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { Switch } from "@/components/ui/switch",
@@ -337,31 +332,26 @@ export function RoleManagement() {
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewBilling", checked)
 import React from "react",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {;
   Table,;
   TableBody,;
   TableCell,;
   TableHead,;
   TableHeader,;
-<<<<<<< HEAD
   TableRow,;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import { Switch } from '@/components/ui/switch';
 import { toast } from '@/hooks/use-toast';import { InfoIcon } from 'lucide-react';
-=======
   TableRow} from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
 import { Switch } from "@/components/ui/switch",;
 import { toast } from "@/hooks/use-toast",;
 import { InfoIcon } from 'lucide-react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {;
   Tooltip,;
   TooltipContent,;
   TooltipProvider,;
-<<<<<<< HEAD
   TooltipTrigger,;
 } from '@/components/ui/tooltip';
 export function RoleManagement() {;
@@ -664,22 +654,17 @@ import {;
   TooltipTrigger} from "@/components/ui/tooltip",;
 export function RoleManagement() {;
   // Mock team members data;,
-=======
   TooltipTrigger} from "@/components/ui/tooltip",;
 export function RoleManagement() {;
   // Mock team members data;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const teamMembers = [;
     {;
       id: 1,;
       name: "Alex Johnson",;
       email: "alex@example.com",;
       role: "Admin",;
-<<<<<<< HEAD
       permissions: {;,
-=======
       permissions: {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         viewCandidates: true,;
         editCandidates: true,;
         createJobs: true,;
@@ -691,11 +676,8 @@ export function RoleManagement() {;
       name: "Jamie Smith",;
       email: "jamie@example.com",;
       role: "Recruiter",;
-<<<<<<< HEAD
       permissions: {;,
-=======
       permissions: {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         viewCandidates: true,;
         editCandidates: true,;
         createJobs: true,;
@@ -707,11 +689,8 @@ export function RoleManagement() {;
       name: "Sam Williams",;
       email: "sam@example.com",;
       role: "Manager",;
-<<<<<<< HEAD
       permissions: {;,
-=======
       permissions: {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         viewCandidates: true,;
         editCandidates: false,;
         createJobs: true,;
@@ -723,30 +702,24 @@ export function RoleManagement() {;
       name: "Taylor Brown",;
       email: "taylor@example.com",;
       role: "Viewer",;
-<<<<<<< HEAD
       permissions: {;,
-=======
       permissions: {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         viewCandidates: true,;
         editCandidates: false,;
         createJobs: false,;
         manageTeam: false,;
         viewBilling: false,;
         manageBilling: false}}],;
-<<<<<<< HEAD
   const handlePermissionChange = (_memberId: number, permission: string, value:,  boolean) => {;
     // In a real app, this would make an API call to update permissions;
     toast({;
       title: "Permission updated",;
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});`
-=======
   const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {;
     // In a real app, this would make an API call to update permissions;
     toast({;
       title: "Permission updated",;
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   },;
   const roleDescriptions: Record<string string> = {;
     "Admin": "Full access to all features and settings",;
@@ -768,32 +741,23 @@ export function RoleManagement() {;
           ))}
         </div>;
       </div>;
-<<<<<<< HEAD
       <div className='rounded-md border'>;
-=======
       <div className="rounded-md border">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <Table>;
           <TableHeader>;
             <TableRow>;
               <TableHead>Team Member</TableHead>;
               <TableHead>Role</TableHead>;
-<<<<<<< HEAD
               <TableHead className='text-center'>;
                 <div className='flex items-center justify-center gap-1'>;
-=======
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   View Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-<<<<<<< HEAD
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
-=======
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </TooltipTrigger>;
                       <TooltipContent>;
                         Can view candidate profiles and applications;
@@ -802,22 +766,16 @@ export function RoleManagement() {;
                   </TooltipProvider>;
                 </div>;
               </TableHead>;
-<<<<<<< HEAD
               <TableHead className='text-center'>;
                 <div className='flex items-center justify-center gap-1'>;
-=======
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Edit Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-<<<<<<< HEAD
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
-=======
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </TooltipTrigger>;
                       <TooltipContent>;
                         Can edit candidate information and status;
@@ -826,22 +784,16 @@ export function RoleManagement() {;
                   </TooltipProvider>;
                 </div>;
               </TableHead>;
-<<<<<<< HEAD
               <TableHead className='text-center'>;
                 <div className='flex items-center justify-center gap-1'>;
-=======
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Create Jobs;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-<<<<<<< HEAD
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
-=======
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </TooltipTrigger>;
                       <TooltipContent>;
                         Can create and publish job listings;
@@ -850,22 +802,16 @@ export function RoleManagement() {;
                   </TooltipProvider>;
                 </div>;
               </TableHead>;
-<<<<<<< HEAD
               <TableHead className='text-center'>;
                 <div className='flex items-center justify-center gap-1'>;
-=======
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Manage Team;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-<<<<<<< HEAD
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
-=======
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </TooltipTrigger>;
                       <TooltipContent>;
                         Can add, edit, and remove team members;
@@ -874,22 +820,16 @@ export function RoleManagement() {;
                   </TooltipProvider>;
                 </div>;
               </TableHead>;
-<<<<<<< HEAD
               <TableHead className='text-center'>;
                 <div className='flex items-center justify-center gap-1'>;
-=======
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Billing Access;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-<<<<<<< HEAD
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
-=======
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </TooltipTrigger>;
                       <TooltipContent>;
                         Can view and manage billing information;
@@ -901,7 +841,6 @@ export function RoleManagement() {;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-<<<<<<< HEAD
             {teamMembers && teamMembers.map(member => (              <TableRow key={member && member.id}>;
                 <TableCell>;
                   <div className='font-medium'>{member && member.name}</div>;
@@ -1018,26 +957,22 @@ export function RoleManagement() {;
                 <TableCell>;
                   <div className='font - medium'>{member.name}</div>;
                   <div className='text - sm text - muted - foreground'>;
-=======
             {teamMembers.map((member) => (;
               <TableRow key={member.id}>;
                 <TableCell>;
                   <div className="font-medium">{member.name}</div>;
                   <div className="text-sm text-muted-foreground">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     {member.email}
                   </div>;
                 </TableCell>;
                 <TableCell>;
                   <select;
-<<<<<<< HEAD
                     className='w - full h - 9 rounded - md border border - input bg - background px - 3 py - 1 text - sm shadow - sm transition - colors focus - visible:outline - none focus - visible:ring - 1 focus - visible:ring - ring';',
                     default_value={member.role}                  >;
                     <option value='Admin'>Admin</option>;
                     <option value='Recruiter'>Recruiter</option>;
                     <option value='Manager'>Manager</option>;
                     <option value='Viewer'>Viewer</option>;
-=======
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring";
                     defaultValue={member.role}
                   >;
@@ -1045,14 +980,12 @@ export function RoleManagement() {;
                     <option value="Recruiter">Recruiter</option>;
                     <option value="Manager">Manager</option>;
                     <option value="Viewer">Viewer</option>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </select>;
                 </TableCell>;
                 <TableCell className="text-center">;
                   <Switch;
                     aria-label="View candidates";
                     checked={member.permissions.viewCandidates}
-<<<<<<< HEAD
                     onCheckedChange={checked =>
                       handlePermissionChange(
                         member.id
@@ -1119,7 +1052,6 @@ export function RoleManagement() {;
     </div>;
   );
 };
-=======
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewCandidates", checked);
                     }
@@ -1156,7 +1088,6 @@ export function RoleManagement() {;
                   <Switch;
                     aria-label="View billing";
                     checked={member.permissions.viewBilling}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
@@ -1170,7 +1101,6 @@ export function RoleManagement() {;
     </div>;
   );
 }
-<<<<<<< HEAD
                 <TableCell className='text - center'>;
                   <Switch;
                     aria - label='View candidates';
@@ -1225,6 +1155,4 @@ export function RoleManagement() {;
 }
 ;
 }}))]
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

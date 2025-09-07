@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 'use client';
 
@@ -381,8 +380,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     </header>
   );
 }

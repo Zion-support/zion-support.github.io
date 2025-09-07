@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 // Augment the WindowEventMap to include 'beforeinstallprompt''
 declare global {
@@ -70,34 +69,26 @@ export default InstallPrompt;import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.;
 import { Button } from '@/components/ui/button';
 import { safeSessionStorage } from '@/utils/safeStorage';
-=======
 import React, { useEffect, useState } from 'react',;
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.;
 import { Button } from '@/components/ui/button',;
 import { safeSessionStorage } from '@/utils/safeStorage',;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 const SHOWN_KEY = 'pwaInstallShown',;
 const DISMISS_KEY = 'pwaInstallDismissUntil',;
 const DISMISS_MS = 24 * 60 * 60 * 1000, // 24 hours;
 // Define BeforeInstallPromptEvent interface;
-<<<<<<< HEAD
 interface BeforeInstallPromptEvent extends Event {;,
   readonly platforms: string[],;
   readonly userChoice: Promise<{;,
-=======
 interface BeforeInstallPromptEvent extends Event {;
   readonly platforms: string[],;
   readonly userChoice: Promise<{;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     outcome: 'accepted' | 'dismissed',;
     platform: string;
   }>,;
   prompt(): Promise<void>;
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 // Augment the WindowEventMap to include 'beforeinstallprompt';
 declare global {;
   interface WindowEventMap {;
@@ -106,7 +97,6 @@ declare global {;
     // appinstalled: Event;
   }
 }
-<<<<<<< HEAD
 export const InstallPrompt: React.FC = () => {;,
   const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null),;,
   const [visible, setVisible] = useState(false),;
@@ -122,7 +112,6 @@ export const InstallPrompt: React.FC = () => {;,
     const handler = (e: BeforeInstallPromptEvent,) => {;
       e && e.preventDefault(),;
       safeSessionStorage && safeSessionStorage.setItem(SHOWN_KEY, 'true'),;
-=======
 ;
 export const InstallPrompt: React.FC = () => {;
   const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null),;
@@ -140,41 +129,33 @@ export const InstallPrompt: React.FC = () => {;
     const handler = (e: BeforeInstallPromptEvent) => {;
       e.preventDefault(),;
       safeSessionStorage.setItem(SHOWN_KEY, 'true'),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       setPromptEvent(e),;
       setVisible(true);
     },;
     const handleAppInstalled = () => {;
-<<<<<<< HEAD
       if (typeof window !== 'undefined' && (window as,  any).gtag) {;
         (window as,  any).gtag('eventpwa_install_success'), // More specific event for install success;
-=======
       if (typeof window !== 'undefined' && (window as any).gtag) {;
         (window as any).gtag('eventpwa_install_success'), // More specific event for install success;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       }
       setVisible(false), // Hide prompt once installed;
       setPromptEvent(null);
     },;
     // Add typed event listeners;
-<<<<<<< HEAD
     window && window.addEventListener('beforeinstallprompt', handler as,  EventListener),;
     window && window.addEventListener('appinstalled', handleAppInstalled as,  EventListener),;
     return () => {;
       window && window.removeEventListener('beforeinstallprompt', handler as,  EventListener),;
       window && window.removeEventListener('appinstalled', handleAppInstalled as,  EventListener);
-=======
     window.addEventListener('beforeinstallprompt', handler as EventListener),;
     window.addEventListener('appinstalled', handleAppInstalled as EventListener),;
     return () => {;
       window.removeEventListener('beforeinstallprompt', handler as EventListener),;
       window.removeEventListener('appinstalled', handleAppInstalled as EventListener);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     }
   }, []),;
   const install = async () => {;
     if (!promptEvent) return,;
-<<<<<<< HEAD
     promptEvent && promptEvent.prompt(),;
     const { outcome } = await promptEvent && promptEvent.userChoice,;
     if (outcome === 'accepted') {;
@@ -184,7 +165,6 @@ export const InstallPrompt: React.FC = () => {;
     } else {;
       if (typeof window !== 'undefined' && (window as,  any).gtag) {;
         (window as,  any).gtag('eventpwa_install_dismissed');
-=======
     promptEvent.prompt(),;
     const { outcome } = await promptEvent.userChoice,;
     if (outcome === 'accepted') {;
@@ -194,7 +174,6 @@ export const InstallPrompt: React.FC = () => {;
     } else {;
       if (typeof window !== 'undefined' && (window as any).gtag) {;
         (window as any).gtag('eventpwa_install_dismissed');
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       }
     }
     setVisible(false),;
@@ -203,20 +182,16 @@ export const InstallPrompt: React.FC = () => {;
   const close = () => {;
     setVisible(false),;
     setPromptEvent(null), // Clear the event so it doesn't re-appear on next visit in same session;
-<<<<<<< HEAD
     safeSessionStorage && safeSessionStorage.setItem(DISMISS_KEY, String(Date && Date.now() + DISMISS_MS)),;
     if (typeof window !== 'undefined' && (window as,  any).gtag) {;
       (window as,  any).gtag('eventpwa_prompt_closed_manually');
-=======
     safeSessionStorage.setItem(DISMISS_KEY, String(Date.now() + DISMISS_MS)),;
     if (typeof window !== 'undefined' && (window as any).gtag) {;
       (window as any).gtag('eventpwa_prompt_closed_manually');
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     }
   },;
   // Only render if promptEvent is set and visible is true;
   if (!promptEvent || !visible) return null,;
-<<<<<<< HEAD
   return (
     <>;
       {/* Styles can be moved to a CSS file or a styled-components block if preferred */}
@@ -376,7 +351,6 @@ export default InstallPrompt,
     </>
   )
 }}}}}}
-=======
   return (;
     <>;
       {/* Styles can be moved to a CSS file or a styled-components block if preferred */}
@@ -404,4 +378,3 @@ export default InstallPrompt,
 },
 
 export default InstallPrompt,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

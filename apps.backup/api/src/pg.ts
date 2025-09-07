@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   if (!pool) {;
   if (!pool) {;
@@ -23,29 +22,20 @@ import { Pool, PoolClient } from 'pg',;
 let pool: Pool | null = null,;
 export function getPool(): Pool {;
   if (!pool) {;
-=======
 import { Pool, PoolClient } from 'pg';
-<<<<<<< HEAD
 let pool: Pool | null = null;
 export function getPool(): Pool {;
   if (!pool) {;
-=======
 
 let pool: Pool | null = null;
 
 export function getPool(): Pool {
   if (!pool) {
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     pool = new Pool({ connectionString: process.env.DATABASE_URL });
   }
   return pool;
 }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {;
   const client = await getPool().connect();
@@ -64,11 +54,7 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
     client.release();
   }
 }
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
   } finally {
 
@@ -86,8 +72,4 @@ client.release();  }
   }
 
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

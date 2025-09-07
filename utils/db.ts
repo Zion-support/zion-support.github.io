@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   }
   return default_value;
 }
@@ -103,7 +102,6 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
   writeJsonFile < T[]>(file_name, items);
 }
 
-=======
 import fs from 'fs';
 import path from 'path';
 const DATA_ROOT = path.join(process.cwd(), 'datamarketplace');
@@ -138,12 +136,10 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
   fs.renameSync(tmpPath, filePath);
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
-<<<<<<< HEAD
 }
 import fs from 'fs';
 import path from 'path';
@@ -156,6 +152,4 @@ import path from 'path';
 
 }
 
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

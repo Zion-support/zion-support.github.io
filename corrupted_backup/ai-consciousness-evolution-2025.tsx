@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/ai-consciousness-evolution-2025.tsx
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIConsciousnessEvolution2025() {
@@ -27,12 +26,10 @@ export default function AIConsciousnessEvolution2025() {
 		/>;
 	);
 }
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-<<<<<<< HEAD
 export default function AIConsciousnessEvolution2025() {
   return (
     <ServiceLanding
@@ -56,7 +53,6 @@ export default function AIConsciousnessEvolution2025() {
     />
   );
 }
-=======
 const AIConsciousnessEvolution2025: React.FC = () => {
   return (
     <Layout>
@@ -133,5 +129,3 @@ const AIConsciousnessEvolution2025: React.FC = () => {
 };
 
 export default AIConsciousnessEvolution2025;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-consciousness-evolution-2025.tsx

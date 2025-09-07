@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 keys,
     loading,
     newApiKey;
@@ -263,7 +262,6 @@ import {;
   AlertDialogTitle,;
 } from '@/components/ui/alert-dialog';
 import CodeBlock from './CodeBlock';
-=======
 
 import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
@@ -419,7 +417,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
 import CodeBlock from "./CodeBlock",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function ApiKeysManager() {;
   const {;
     keys,;
@@ -429,7 +426,6 @@ export function ApiKeysManager() {;
     createApiKey,;
     regenerateApiKey,;
     revokeApiKey,;
-<<<<<<< HEAD
     clearNewApiKey,;
   } = useApiKeys();
   const [showCreateDialog, setShowCreateDialog] = useState(false);,
@@ -480,7 +476,6 @@ export function ApiKeysManager() {;
     setShowRegenerateConfirm(null);
   },;
   const handleRevokeKey = async (keyId: string,) => {;
-=======
     clearNewApiKey;
   } = useApiKeys(),;
   const [showCreateDialog, setShowCreateDialog] = useState(false),;
@@ -505,12 +500,10 @@ export function ApiKeysManager() {;
     setShowRegenerateConfirm(null);
   },;
   const handleRevokeKey = async (keyId: string) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     await revokeApiKey(keyId),;
     setShowDeleteConfirm(null);
   },;
   // Scope options;
-<<<<<<< HEAD
   const scopeOptions: {;,
     value: ApiKeyScope;,
     label: string;,
@@ -567,7 +560,6 @@ export function ApiKeysManager() {;
           <Key className='mr-2' size={20} /> API Keys;
         </CardTitle>;
         <CardDescription className='text-zinc-400'>;
-=======
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [;
     { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },;
     { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' },;
@@ -600,12 +592,10 @@ export function ApiKeysManager() {;
           <Key className="mr-2" size={20} /> API Keys;
         </CardTitle>;
         <CardDescription className="text-zinc-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Create and manage API keys for accessing the Zion APIs.;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
         <div className='flex justify-between items-center mb-6'>;
           <p className='text-sm text-zinc-400'>;
             You have {keys && keys.length} API {keys && keys.length === 1 ? 'key' : 'keys'}'
@@ -714,7 +704,6 @@ export function ApiKeysManager() {;
                         </Label>
                       </div>
                     ))}
-=======
         <div className="flex justify-between items-center mb-6">;
           <p className="text-sm text-zinc-400">;
             You have {keys.length} API {keys.length === 1 ? 'key' : 'keys'}
@@ -768,13 +757,11 @@ export function ApiKeysManager() {;
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>
                   Create Key
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
         </div>
-<<<<<<< HEAD
                   </div>;
                 </div>;
               </div>;
@@ -912,7 +899,6 @@ export function ApiKeysManager() {;
                       <div className="flex items - center space - x-2 mt - 1">;
                         <span className="text - sm text - zinc - 400 font - mono">{key.key_prefix}••••••••••••</span>;
                         {key.is_active ? (
-=======
         
         {/* New API Key Alert */}
         {newApiKey && (
@@ -926,12 +912,10 @@ export function ApiKeysManager() {;
                 size="icon"
                 className="h-6 w-6"
                 onClick={clearNewApiKey}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >
                 <X size={14} />
               </Button>
             </div>
-<<<<<<< HEAD
             <p className="text-sm text-zinc-300 mb-2">"
               This key will only be displayed once. Please save it securely.
             </p>
@@ -968,7 +952,6 @@ export function ApiKeysManager() {;
                           <Badge className="bg-green-700 text-white">Active</Badge>"
                         ) : (
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>"
-=======
             <p className="text-sm text-zinc-300 mb-2">
               This key will only be displayed once. Please save it securely.
             </p>
@@ -1003,12 +986,10 @@ export function ApiKeysManager() {;
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         )}
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD
                       </div>;
                     </div>;
                   </div>;
@@ -1072,7 +1053,6 @@ export function ApiKeysManager() {;
                         <RefreshCw size={14} className='mr-2' /> Regenerate;
                       </DropdownMenuItem>;
                       <DropdownMenuItem
-=======
                   
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
@@ -1094,12 +1074,10 @@ export function ApiKeysManager() {;
                         disabled={!key.is_active}
                       >
                         <X size={14} className="mr-2" /> Revoke
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
-<<<<<<< HEAD
                 <div className="mt-3 flex flex-wrap gap-2">"
                   {key.scopes.map((scope,) => (
                         onClick={() => setShowDeleteConfirm(key && key.id)}
@@ -1135,7 +1113,6 @@ export function ApiKeysManager() {;
                       {scope}
                     </Badge>;
                   ))}
-=======
                 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope) => (
@@ -1143,13 +1120,11 @@ export function ApiKeysManager() {;
                       key={scope} 
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     >
                       {scope}
                     </Badge>;
                   ))}
                 </div>;
-<<<<<<< HEAD
                 <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>;
                   <span>;
                     Created: {format(new Date(key && key.created_at), 'MMM d, yyyy')}'
@@ -1200,7 +1175,6 @@ export function ApiKeysManager() {;
                     <span>;
                       Expires: {format(new Date(key && key.expires_at), 'MMM d, yyyy')}'
                     </span>                  )}                    <span>Expires: {format(new Date(key && key.expires_at), 'MMM d, yyyy')}</span>;
-=======
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;
                   <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>;
                   <Popover>;
@@ -1221,13 +1195,11 @@ export function ApiKeysManager() {;
                   </Popover>;
                   {key.expires_at && (;
                     <span>Expires: {format(new Date(key.expires_at), 'MMM d, yyyy')}</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   )}
                 </div>;
               </div>;
             ));
           )}
-<<<<<<< HEAD
       <CardFooter className="justify-between border-t border-zinc-800 py-4">"
         <div className="text-xs text-zinc-500">"
           Keep your API keys secure. They have the same permissions as your account.
@@ -1397,7 +1369,6 @@ export function ApiKeysManager() {;
             <AlertDialogAction
               onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
               className="bg-blue-600 hover:bg-blue-700";
-=======
         </div>
       </CardContent>
       
@@ -1414,13 +1385,11 @@ export function ApiKeysManager() {;
       <AlertDialog;
         open={showRegenerateConfirm !== null} ;
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
-<<<<<<< HEAD
             <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;',
               Cancel;
             </AlertDialogCancel>;
@@ -1438,46 +1407,37 @@ export function ApiKeysManager() {;
           <AlertDialogHeader>;
             <AlertDialogTitle > Regenerate API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text - zinc - 400">;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               This action will invalidate the existing key and generate a new one.;
               Any applications using this key will need to be updated.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-<<<<<<< HEAD
-=======
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction;
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             >;
               Regenerate;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD
               This action will revoke the API key and it can no longer be used;
               to access the API. This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-=======
       {/* Delete Key Confirmation Dialog */}
       <AlertDialog;
         open={showDeleteConfirm !== null} ;
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
-<<<<<<< HEAD
             <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;',
               Cancel;
             </AlertDialogCancel>;
@@ -1494,34 +1454,26 @@ export function ApiKeysManager() {;
           <AlertDialogHeader>;
             <AlertDialogTitle > Revoke API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text - zinc - 400">;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               This action will revoke the API key and it can no longer be used to access the API.;
               This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-<<<<<<< HEAD
-=======
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction;
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             >;
               Revoke;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD
 ;
 }}}}}}}}}}}})))))))))))))))
-=======
     </Card>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

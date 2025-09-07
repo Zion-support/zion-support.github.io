@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 rating?: number;
   review_text?: string;
   communication_rating?: number;
@@ -23,7 +22,6 @@ interface ReviewFormProps {
   }
   );
 }
-=======
 
 import { useState } from "react",
 import { Star } from 'lucide-react'
@@ -362,4 +360,3 @@ export function ReviewForm({
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

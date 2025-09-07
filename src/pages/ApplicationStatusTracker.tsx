@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <>;
       <SEO
@@ -42,7 +41,6 @@ function ApplicationStatusTrackerContent() {
               </CardTitle>
             </CardHeader>
             <CardContent className={`p-${isMobile ? '3' : '6'}`}>`
-=======
 
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
@@ -76,21 +74,18 @@ function ApplicationStatusTrackerContent() {
               </CardTitle>
             </CardHeader>
             <CardContent className={`p-${isMobile ? '3' : '6'}`}>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <ApplicationsTracker />
             </CardContent>
           </Card>
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
 export default function ApplicationStatusTracker() {
   return (
     <ProtectedRoute>
 }))
-=======
   )
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -138,4 +133,3 @@ export default function ApplicationStatusTracker() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

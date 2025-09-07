@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/ai-hr-analytics-platform.tsx
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 
 export default function AiHrAnalyticsPlatform() {
@@ -28,8 +27,6 @@ export default function AiHrAnalyticsPlatform() {
 		/>;
 	);
 }
-=======
-<<<<<<< HEAD
 import ServicePage, {
   getStaticProps as getSlugStaticProps,
 } from './services/[slug]';
@@ -58,7 +55,6 @@ export default function AiHrAnalyticsPlatform() {
     />
   );
 }
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -139,5 +135,3 @@ const AIHrAnalyticsPlatform: React.FC = () => {
 };
 
 export default AIHrAnalyticsPlatform;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-hr-analytics-platform.tsx

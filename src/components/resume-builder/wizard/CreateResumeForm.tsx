@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react","
 import { Card, CardContent } from "@/components/ui/card","
 import { Button } from "@/components/ui/button";
@@ -65,7 +64,6 @@ export const CreateResumeForm = ({
     await onCreateResume(newResumeTitle);
   };
   return (
-=======
 
 import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -112,14 +110,12 @@ export const CreateResumeForm = ({;
     await onCreateResume(newResumeTitle);
   };
   return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <Card className="w-full max-w-2xl mx-auto">;
       <CardContent className="py-8">;
         <div className="text-center">;
           <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>;
           <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>;
           <div className="flex gap-2 max-w-md mx-auto">;
-<<<<<<< HEAD
             <input
               type="text""
               placeholder="Resume Title (e.g. 'AI Engineer Resume')""
@@ -129,7 +125,6 @@ export const CreateResumeForm = ({;
             variant="ghost""
             onClick={onCancel}
             className="mt-4""
-=======
             <input;
               type="text";
               placeholder="Resume Title (e.g. 'AI Engineer Resume')";
@@ -150,7 +145,6 @@ export const CreateResumeForm = ({;
             variant="ghost"
             onClick={onCancel}
             className="mt-4"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           >
             Cancel
           </Button>
@@ -158,7 +152,6 @@ export const CreateResumeForm = ({;
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
               onChange={(e) => setNewResumeTitle(e && e.target.value)}
             />;
             <Button
@@ -276,6 +269,4 @@ w - full max - w-2xl mx - auto"> <CardContent className=" py - 8"> <div classNam
 '"},"
   );
 }
-=======
 },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

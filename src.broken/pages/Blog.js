@@ -1,7 +1,5 @@
-<<<<<<< HEAD:src.broken/pages/Blog.js
 :src.broken/pages/Blog.js
 
-<<<<<<< HEAD:src.broken/pages/Blog.js
 
 
 :src.broken/pages/Blog.js
@@ -121,7 +119,6 @@ export default function Blog() {
               </Select>
             </div>
           </div>
-<<<<<<< HEAD:src.broken/pages/Blog.js
 
 :src.broken/pages/Blog.js
 import React from 'react';
@@ -168,7 +165,6 @@ export default function Blog() {
                 </div>
             </div>
         </div>
-<<<<<<< HEAD:src.broken/pages/Blog.js
 
 :src.broken/pages/Blog.js
 
@@ -177,7 +173,6 @@ export default function Blog() {
     </>);
     );
 
-<<<<<<< HEAD:src.broken/pages/Blog.js
 
 :src.broken/pages/Blog.js
       </div>

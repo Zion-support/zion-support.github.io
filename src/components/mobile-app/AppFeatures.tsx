@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
     icon: <Award className="h - 10 w - 10 text - zion - cyan" />,"
     title: "Resume Builder","
@@ -32,7 +31,6 @@ import React from 'react';
 import React from "react",;
 import { Brain, Clock, Award, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;,
-=======
 
 import React from "react",
 import { Brain, Clock, Award, Zap } from 'lucide-react'
@@ -86,7 +84,6 @@ export const AppFeatures: React.FC = () => {
 import React from "react",;
 import { Brain, Clock, Award, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 const features = [;
   {;
     icon: <Brain className="h-10 w-10 text-zion-cyan" />,;
@@ -109,11 +106,8 @@ const features = [;
     description: "Get instant alerts about new job opportunities, messages, and hiring requests.";
   }
 ],;
-<<<<<<< HEAD
 export const AppFeatures: React.FC = () => {;,
-=======
 export const AppFeatures: React.FC = () => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (;
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
@@ -139,7 +133,6 @@ export const AppFeatures: React.FC = () => {;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
 };
 ""
     <section className="py - 16 bg - zion - blue">;
@@ -193,6 +186,4 @@ export const AppFeatures: React.FC = () => {";",
 }</div> </div> </section>);
 }
 ";)))
-=======
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

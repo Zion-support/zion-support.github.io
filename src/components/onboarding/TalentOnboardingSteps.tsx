@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return <OnboardingTracker steps={steps} />
 import React from 'react';
 import { use_auth } from '@/hooks / use_auth';
@@ -60,7 +59,6 @@ action: "Set"},
       completed: onboardingStatus.matchReceived,
 }]
 
-=======
 
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -135,4 +133,3 @@ export function TalentOnboardingSteps() {;
   return <OnboardingTracker steps={steps} />;
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
@@ -166,7 +165,6 @@ export function ThemeProvider({;
     </ThemeProviderContext.Provider>;
   );
 }
-=======
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
@@ -235,16 +233,12 @@ export function ThemeProvider({;
     </ThemeProviderContext.Provider>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 export const useTheme = () => {;
   const context = useContext(ThemeProviderContext),;
   if (context === undefined);
     throw new Error("useTheme must be used within a ThemeProvider");
   return context;
-<<<<<<< HEAD
 };
 
-=======
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

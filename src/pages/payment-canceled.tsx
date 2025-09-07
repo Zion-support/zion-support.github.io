@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router'; // Changed from useNavigate'
@@ -111,7 +110,6 @@ import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router'; // Changed from useNavigate;
 import { XCircle } from 'lucide-react';
 import React from 'react';
-=======
 
 import React from 'react',
 import { Button } from '@/components/ui/button',
@@ -146,18 +144,14 @@ export default function PaymentCanceled() {
             variant="outline"
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           >
             Return to Dashboard
           </Button>
         </div>
         </div>
       </div>
-<<<<<<< HEAD
 ;
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   )
 import React from 'react',;
 import { Button } from '@/components/ui/button';
@@ -176,7 +170,6 @@ export default function PaymentCanceled() {;
           Your payment process was canceled. No charges have been made to your account.;
         </p>;
         <div className="flex flex-col space-y-3">;
-<<<<<<< HEAD
           <Button
             onClick={(,) => router && router.push('/payments')} // Changed to router && router.push;
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
@@ -234,8 +227,6 @@ function PaymentCanceled() {
           Your payment process was canceled. No charges have been made to your account.;
         </p>;
         <div className="flex flex - col space - y-3">;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <Button;
             onClick={() => router.push('/payments')} // Changed to router.push;
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
@@ -244,7 +235,6 @@ function PaymentCanceled() {
           </Button>;
           <Button;
             variant="outline";
-<<<<<<< HEAD
             on_click={() => router.push ('/dashboard')} // Changed to router.push;
             className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';',
 export default /**
@@ -292,7 +282,6 @@ function PaymentCanceled() {
 }
 ;
 }}}}
-=======
             onClick={() => router.push('/dashboard')} // Changed to router.push;
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
           >;
@@ -304,4 +293,3 @@ function PaymentCanceled() {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

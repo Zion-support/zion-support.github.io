@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -101,7 +100,6 @@ export default function Internationalization() {
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>"
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">"
-=======
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -146,12 +144,10 @@ export default function Internationalization() {
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <li>Publish product and service pages in your native language.</li>
             <li>Attract international clients and expand your reach.</li>
             <li>Automatic language detection ensures a localized experience.</li>
           </ul>
-<<<<<<< HEAD
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>"
           <div className="space-y-4 mb-12">"
             <div>
@@ -166,7 +162,6 @@ export default function Internationalization() {
           <div className="text-center">"
             <Button size="lg" className="bg-zion-purple text-white" asChild>"
               <Link href="/" />Explore Zion</Link>"
-=======
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
             <div>
@@ -181,17 +176,13 @@ export default function Internationalization() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/">Explore Zion</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>
           </div>
         </div>
       </main>
     </>
   )
-<<<<<<< HEAD
 ;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -227,13 +218,11 @@ export default function Internationalization() {;
             Our interface and search support multiple languages so you can collaborate without barriers.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
-<<<<<<< HEAD
             <img
               src="https://placehold && placehold.co/800x400"",
               alt="Screenshot of language options""
               className="object-cover""
               <Link href="/" />Explore Zion</Link>;
-=======
             <img;
               src="https://placehold.co/800x400";
               alt="Screenshot of language options";
@@ -260,17 +249,13 @@ export default function Internationalization() {;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
               <Link href="/">Explore Zion</Link>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
 ;
 }}})
-=======
     </>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

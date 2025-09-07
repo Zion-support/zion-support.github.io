@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type UIKitKind = "ios" | "android" | "web";
 
 
@@ -435,7 +434,6 @@ export async function buildUIKit(
     tokens,
   };
 }
-=======
 export type DesignMapSection = {;
   id: string;
   title: string;
@@ -700,4 +698,3 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {;
     return null;
   }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

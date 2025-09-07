@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -1769,5 +1768,3 @@ export default function SolutionsPage() {
     </MainLayout>
   );
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Card from '../components/Card';
 const Careers: React.FC = () => {,
@@ -29,7 +28,6 @@ const Careers: React.FC = () => {,
   );
 };
 export default Careers;
-=======
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -347,4 +345,3 @@ export default function Careers() {;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

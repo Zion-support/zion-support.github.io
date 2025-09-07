@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 key={language.code}
               className={`cursor-pointer transition-all ${`
                 selectedLanguage === language.code
@@ -19,7 +18,6 @@ key={language.code}
                   ? "border-primary bg-primary/5" "
                   : "border-border hover:border-primary/40""
               }`}`
-=======
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -102,7 +100,6 @@ export function LanguageThemeSelector() {;
                   ? "border-primary bg-primary/5";
                   : "border-border hover:border-primary/40";
               }`}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               onClick={() => setSelectedLanguage(language.code)}
             >;
               <CardContent className="p-3 flex items-center justify-between">;
@@ -116,7 +113,6 @@ export function LanguageThemeSelector() {;
               </CardContent>;
             </Card>;
           ))}
-<<<<<<< HEAD
         </div>;
       </div>;
       <div className='space-y-2'>;
@@ -328,7 +324,6 @@ function LanguageThemeSelector() {
     </div>);
 }
 ;
-=======
         </div>
       </div>
 
@@ -376,4 +371,3 @@ function LanguageThemeSelector() {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

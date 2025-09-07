@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 BarChart3,;
   Smartphone,;
 } from 'lucide-react';
@@ -351,7 +350,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
                   <span>{t ("general.explore")}</span>;
                   <ArrowRight className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`} />;`
               </Link>))}
-=======
 
 import { Header } from "@/components/Header",
 import { TrustedBySection } from "@/components/TrustedBySection",
@@ -557,13 +555,11 @@ export default function LandingPage() {;
                 </div>;
               </Link>;
             ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>;
         </div>;
       </section>;
       <CategoriesSection />;
       <BenefitsSection />;
-<<<<<<< HEAD
       <CategoriesSection />;
       <BenefitsSection />;
       {/* Add the comprehensive features guide section */}
@@ -572,8 +568,6 @@ export default function LandingPage() {;
       <FeaturesGuideSection />;
       <CategoriesSection />;
       <BenefitsSection />;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
       <HowItWorksSection />;
@@ -583,7 +577,6 @@ export default function LandingPage() {;
       <BlogSection />;
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />;
-<<<<<<< HEAD
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />;
       <FloatingCTA />;
@@ -591,11 +584,9 @@ export default function LandingPage() {;
 }
 ;
 }}}}})))))]]
-=======
       <WaitlistSection />;
       <FloatingCTA />;
     </div>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

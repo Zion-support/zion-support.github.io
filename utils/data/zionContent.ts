@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 export type Infobox = {;
@@ -24,36 +23,27 @@ export type DocsContent = {;
   productOverview: WikiSection,;
 
 export type Infobox = {
-=======
 export type Infobox = {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   founder: string;
   launchYear: string;
   token: string;
   protocolType: string;
 };
-<<<<<<< HEAD
 export type WikiSection = {
-=======
 export type WikiSection = {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   id: string;
   title: string;
   paragraphs: string[];
 };
-<<<<<<< HEAD
 export type WikiContent = {
   title: string;
 
-=======
 export type WikiContent = {;
   title: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   intro: string;
   infobox: Infobox;
   sections: WikiSection[];
   references: string[];
-<<<<<<< HEAD
 
 export type Infobox = {
   founder: string,
@@ -489,7 +479,6 @@ export function slugify(input: string): string {;
 }
 
 }
-=======
 };
 export type DocsContent = {;
   productOverview: WikiSection;
@@ -660,4 +649,3 @@ export function slugify(input: string): string {;
     .replace(/\s+/g, '-');
     .replace(/-+/g, '-');
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

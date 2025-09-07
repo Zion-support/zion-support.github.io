@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const imgRef = useRef<HTMLDivElement>(null);,
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
@@ -333,7 +332,6 @@ export function getImageDimensions(
   })
 }
 }}}}})))
-=======
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { cn } from '@/lib/utils',;
@@ -567,4 +565,3 @@ export function getImageDimensions(src: string): Promise<{ width: number, height
     img.src = src;
   });
 } ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

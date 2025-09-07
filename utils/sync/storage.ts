@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
     );
@@ -443,7 +442,6 @@ if ( {) {
   return events;export function reset_state (): void {
   state = { ...default_state }
 }
-=======
 import fs from "fs";
 import path from "path";
 import { MultiverseState, InstanceConfig, SyncEvent } from "./types";
@@ -553,4 +551,3 @@ export function filterEventsByScope(;
   }
   return events;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

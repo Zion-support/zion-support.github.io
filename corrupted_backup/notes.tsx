@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 type Note = {
   id: string;
-<<<<<<< HEAD:pages/admin/notes.tsx
   targetType: string;
   targetId: string,;
   text: string,;
@@ -36,7 +35,6 @@ export default function AdminNotesConsole() {;
           <span>Admin</span>
         </label>
       </div>
-=======
   title: string;
   content: string;
   author: string;
@@ -88,7 +86,6 @@ const AdminNotesPage: React.FC = () => {
   const [isAdmin, setIsAdmin] = useState(true);
 
   useEffect(() => {
-<<<<<<< HEAD
     async function load() {
       setLoading(true);
       try {
@@ -136,7 +133,6 @@ const AdminNotesPage: React.FC = () => {
               <div>{n.text}</div>
             </div>
           ))}
-=======
     // Simulate loading notes
     setTimeout(() => {
       setNotes(mockNotes);
@@ -167,9 +163,7 @@ const AdminNotesPage: React.FC = () => {
           <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
             Add New Note
           </button>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
         </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/notes.tsx
 
       {loading ? (
         <div>Loading…</div>
@@ -188,14 +182,8 @@ const AdminNotesPage: React.FC = () => {
       )}
     </div>;
   );
-<<<<<<< HEAD:pages/admin/notes.tsx
 }
-=======
-<<<<<<< HEAD
 }
-=======
 };
 
 export default AdminNotesPage;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/notes.tsx

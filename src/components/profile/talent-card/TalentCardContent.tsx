@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 summary: string | undefined;,
   bio: string;,
   timezone: string | undefined;,
   skills: string[] | undefined
-=======
 
 import React, { useState } from "react",
 import { MapPin } from 'lucide-react'
@@ -52,4 +50,3 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

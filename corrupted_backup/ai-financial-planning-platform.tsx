@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/ai-financial-planning-platform.tsx
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AiFinancialPlanningPlatform() {
@@ -28,12 +27,10 @@ export default function AiFinancialPlanningPlatform() {
 		/>;
 	);
 }
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-<<<<<<< HEAD
 export default function AiFinancialPlanningPlatform() {
   return (
     <ServiceLanding
@@ -58,7 +55,6 @@ export default function AiFinancialPlanningPlatform() {
     />
   );
 }
-=======
 const AIFinancialPlanningPlatform: React.FC = () => {
   return (
     <Layout>
@@ -135,5 +131,3 @@ const AIFinancialPlanningPlatform: React.FC = () => {
 };
 
 export default AIFinancialPlanningPlatform;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-financial-planning-platform.tsx

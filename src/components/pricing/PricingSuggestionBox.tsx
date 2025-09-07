@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -22,7 +21,6 @@ import { Card, CardContent } from "@/components/ui/card","
 import { Badge } from "@/components/ui/badge","
 import { Loader2, Info, ThumbsUp } from 'lucide-react''
 import { PricingSuggestion } from "@/services/pricingSuggestionService","
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -31,12 +29,10 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Info, ThumbsUp } from 'lucide-react'
 import { PricingSuggestion } from "@/services/pricingSuggestionService",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null,
   isLoading: boolean,
   onApplySuggestion: () => void,
-<<<<<<< HEAD
   rateType: "hourly" | "fixed""
 }
       <Card className='border border-dashed border-muted'>'
@@ -73,7 +69,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({,
           <div className="text-center">"
             <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />"
             <p className="text-sm text-muted-foreground">"
-=======
   rateType: "hourly" | "fixed"
 }
 
@@ -89,22 +84,18 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
           <div className="text-center">
             <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />
             <p className="text-sm text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Generating optimal pricing suggestion...
             </p>
           </div>
         </CardContent>
       </Card>
     )
-<<<<<<< HEAD
   }
   if (!suggestion) {
     return null
   }
   const confidenceColor = {
     )
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",;
@@ -119,11 +110,8 @@ interface PricingSuggestionBoxProps {;
   rateType: "hourly" | "fixed";
 }
 ;
-<<<<<<< HEAD
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;,
-=======
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   suggestion,;
   isLoading,;
   onApplySuggestion,;
@@ -146,7 +134,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   if (!suggestion) {;
     return null;
   }
-<<<<<<< HEAD
   const confidenceColor = {
     High: "bg-green-100 text-green-800","
     Medium: "bg-yellow-100 text-yellow-800",",
@@ -249,7 +236,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;,
                   variant="default""
                   onClick={onApplySuggestion}
         <div className="flex items-center justify-between">"
-=======
 
   const confidenceColor = {
     High: "bg-green-100 text-green-800",
@@ -291,7 +277,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;,
                 >
                   <ThumbsUp className="h-4 w-4 mr-2" /> Apply Suggestion
                 </Button>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </TooltipTrigger>
               <TooltipContent>
                 <p>Apply this suggestion to your pricing field</p>
@@ -299,7 +284,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;,
             </Tooltip>
           </TooltipProvider>
         </div>
-<<<<<<< HEAD
         <p className="text-xs text-center text-muted-foreground pt-2">"
           Based on market data & trends. You can adjust as needed.
         </p>
@@ -307,16 +291,13 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;,
     </Card>
   )
         <p className="text-xs text-center text-muted-foreground pt-2">"
-=======
         
         <p className="text-xs text-center text-muted-foreground pt-2">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Based on market data & trends. You can adjust as needed.
         </p>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
   );
 };
 "  );
@@ -504,7 +485,6 @@ if ( {) {
 }
 "  );
 }
-=======
 },
 ;
   const confidenceColor = {;
@@ -557,4 +537,3 @@ if ( {) {
     </Card>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

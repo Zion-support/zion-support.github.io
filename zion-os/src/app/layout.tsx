@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -31,8 +30,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {retur
 
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import "./globals.css",;
 import type { ReactNode } from "react",;
 import { Metadata } from "next",;
@@ -42,7 +39,6 @@ export const metadata = {;
   keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion"};
 export default function RootLayout({ children }: { children: ReactNode }) {;
   return (;
-<<<<<<< HEAD
 
 
 
@@ -81,7 +77,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
                     Instances;
                   </a>;
                   <a href="/admin / os - deploy" className="text - white / 80 hover:text - white px - 3 py - 2 rounded - md text - sm font - medium transition - colors">;
-=======
     <html lang="en">;
       <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">;
         <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/80 backdrop-blur-md">;
@@ -107,28 +102,23 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
                     Instances;
                   </a>;
                   <a href="/admin/os-deploy" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     Admin;
                   </a>;
                 </div>;
               </div>;
               <div className="md:hidden">;
-<<<<<<< HEAD
                 <button className="text - white / 80 hover:text - white p - 2">;
                   <svg className="w - 6 h - 6" fill="none" stroke="current_color" view_box="0 0 24 24">;
                     <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M4 6h16M4 12h16M4 18h16" />;
-=======
                 <button className="text-white/80 hover:text-white p-2">;
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </svg>;
                 </button>;
               </div>;
             </div>;
           </div>;
         </nav>;
-<<<<<<< HEAD
         <main className="min - h-screen">{children}</main>;
         <footer className="border - t border - white / 10 bg - zinc - 900 / 50 mt - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 12">;
@@ -142,7 +132,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
                 </div>;
                 <p className="text - white / 70 max - w-md">;
                   Launch sovereign AI - powered digital economies with one click.;
-=======
         <main className="min-h-screen">{children}</main>;
         <footer className="border-t border-white/10 bg-zinc-900/50 mt-20">;
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
@@ -156,12 +145,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
                 </div>;
                 <p className="text-white/70 max-w-md">;
                   Launch sovereign AI-powered digital economies with one click.;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Unified deployment protocol for the future of decentralized business.;
                 </p>;
               </div>;
               <div>;
-<<<<<<< HEAD
                 <h3 className="text - white font - semibold mb - 4">Platform</h3>;
                 <ul className="space - y-2 text - white / 70">;
                   <li><a href="/multiverse / launch" className="hover:text - white transition - colors">Launch Wizard</a></li>;
@@ -179,7 +166,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
               </div>;
             </div>;
             <div className="border - t border - white / 10 mt - 8 pt - 8 text - center text - white / 50">;
-=======
                 <h3 className="text-white font-semibold mb-4">Platform</h3>;
                 <ul className="space-y-2 text-white/70">;
                   <li><a href="/multiverse/launch" className="hover:text-white transition-colors">Launch Wizard</a></li>;
@@ -197,16 +183,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
               </div>;
             </div>;
             <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/50">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <p>&copy, 2024 Zion OS. All rights reserved.</p>;
             </div>;
           </div>;
         </footer>;
       </body>;
-<<<<<<< HEAD
     </html>);
-=======
     </html>;
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }

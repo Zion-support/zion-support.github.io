@@ -1,7 +1,4 @@
-<<<<<<< HEAD:pages_backup/solutions/smb.tsx
 import * as React from 'react';
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/smb.tsx
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -47,10 +44,7 @@ export default function SMBSolutionsPage() {
       <div className="min-h-screen bg-gray-50">";
   ];
 import React from 'react';
-=======
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/smb.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/solutions/smb.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -102,9 +96,6 @@ export default function SMBSolutionsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD:pages_backup/solutions/smb.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/smb.tsx
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -117,9 +108,6 @@ export default function SMBSolutionsPage() {
             </motion.div>;
           </div>;
         </section>;
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/smb.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/solutions/smb.tsx
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">SMB Solutions</h1>
@@ -129,9 +117,6 @@ export default function SMBSolutionsPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD:pages_backup/solutions/smb.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/smb.tsx
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -173,9 +158,6 @@ export default function SMBSolutionsPage() {
             </div>
           </div>
         </section>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/smb.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/solutions/smb.tsx
 
         {/* Services Section */}
         <section className="py-16 px-4">

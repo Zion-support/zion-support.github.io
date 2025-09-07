@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -84,7 +83,6 @@ if (typeof window !== 'undefined') {;
 
 
 
-=======
 import * as Sentry from '@sentry/react';
 if (typeof window !== 'undefined') {;
   Sentry.init({;
@@ -93,4 +91,3 @@ if (typeof window !== 'undefined') {;
     integrations: [];
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

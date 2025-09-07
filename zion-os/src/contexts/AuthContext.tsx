@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
@@ -148,8 +147,6 @@ if ( {) {
 
   }
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 import { useSession, signIn, signOut } from "next-auth/react",;
@@ -269,7 +266,6 @@ export function useAuth() {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
-<<<<<<< HEAD
 }
 
   return context;
@@ -383,6 +379,4 @@ export function useAuth() {;
   }
   return context;
 }
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

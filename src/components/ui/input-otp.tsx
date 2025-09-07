@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from "react""
 import { OTPInput, OTPInputContext } from "input-otp""
 import { Dot } from 'lucide-react''
@@ -127,7 +126,6 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
 InputOTPSeparator.displayName = "InputOTPSeparator""
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;))
-=======
 import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from 'lucide-react'
@@ -198,4 +196,3 @@ InputOTPSeparator.displayName = "InputOTPSeparator"
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

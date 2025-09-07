@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Footer() {
@@ -36,7 +35,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-=======
 const navigation = {;
   main: [;
     { name: 'About', href: '/about' },;
@@ -209,6 +207,5 @@ export default function Footer() {;
         </div>;
       </div>;
     </footer>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   );
 }

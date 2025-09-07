@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const options: RequestInit = {,
       method
       headers: {,
@@ -138,7 +137,6 @@ export function ApiPlayground({ method, path, params = [] }:,  ApiPlaygroundProp
       setResponse(;
         `Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting:\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`;`
       );
-=======
 import { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
@@ -274,12 +272,10 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       }
 ;
       setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting: \n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     } finally {;
       setLoading(false);
     }
   },
-<<<<<<< HEAD
   return (
     <div className='space-y-4'>;
       <Input value={apiKey}
@@ -417,7 +413,6 @@ if (contentType?.includes ('application/json') ) {;
         {loading ? "Sending..." : "Send Request"}"
       </Button>
       {response && <CodeBlock code={response} language="json" />}"
-=======
 
   return (
     <div className="space-y-4">
@@ -444,13 +439,9 @@ if (contentType?.includes ('application/json') ) {;
         {loading ? "Sending..." : "Send Request"}
       </Button>
       {response && <CodeBlock code={response} language="json" />}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     </div>
   )
 }
 ;
-<<<<<<< HEAD
 export default ApiPlayground;
-=======
 export default ApiPlayground;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

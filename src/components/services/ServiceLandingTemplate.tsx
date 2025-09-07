@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: string;,
   role?: string;
   text: string;,
@@ -17,18 +16,15 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
-=======
 import React from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import Image from "next/image",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export interface Benefit {
   title: string,
   description: string,
   icon?: React.ReactNode
-<<<<<<< HEAD
 import React from 'react';
 export interface Benefit {
   title: string;,
@@ -50,8 +46,6 @@ interface ServiceLandingTemplateProps {
   stats?: Array<{ label: string; value: string }>
   ctaText: string,
   ctaLink: string,
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -62,7 +56,6 @@ export interface Benefit {;
   description: string,;
   icon?: React.ReactNode;
 }
-<<<<<<< HEAD
 export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({,
 export interface Benefit {
   title: string;,
@@ -108,7 +101,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                 alt={title}
                 className="object-cover rounded-lg""
                 loading="lazy""
-=======
 ;
 export interface Testimonial {;
   name: string,;
@@ -154,13 +146,11 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                 alt={title}
                 className="object-cover rounded-lg"
                 loading="lazy"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               />
             </div>
           )}
         </div>
       </section>
-<<<<<<< HEAD
       <section className="py-12 px-4">"
         <div className="container mx-auto text-center">"
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">"
@@ -366,7 +356,6 @@ className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gr
                 )}
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>"
                 <p className="text-zion-slate-light">{benefit.description}</p>"
-=======
 
       <section className="py-12 px-4">
         <div className="container mx-auto text-center">
@@ -394,13 +383,11 @@ className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gr
                 )}
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       <section className="py-16 bg-zion-blue">"
         <div className="container mx-auto px-4">"
           <h2 className="text-2xl font-bold text-white text-center mb-8">"
@@ -417,7 +404,6 @@ className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gr
                 </CardContent>
                 <CardFooter className="border-t border-zion-purple/20 pt-4">"
                   <div className="flex items-center">"
-=======
 
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -435,14 +421,12 @@ className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gr
                 </CardContent>
                 <CardFooter className="border-t border-zion-purple/20 pt-4">
                   <div className="flex items-center">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     {t.avatar && (
                       <Image
                         src={t.avatar}
                         alt={t.name}
                         width={40}
                         height={40}
-<<<<<<< HEAD
                         className="rounded-full mr-4""
                         loading="lazy""
                       />
@@ -463,7 +447,6 @@ className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gr
               </Card>;
 
 
-=======
                         className="rounded-full mr-4"
                         loading="lazy"
                       />
@@ -477,12 +460,10 @@ className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gr
                   </div>;
                 </CardFooter>;
               </Card>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       <section className="py-12 bg-zion-blue-dark text-center">"
         <Button
           size="lg""
@@ -493,7 +474,6 @@ className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gr
 
           <a href={ctaLink}>{ctaText}</a>
 
-=======
 
       <section className="py-12 bg-zion-blue-dark text-center">
         <Button
@@ -502,12 +482,10 @@ className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gr
           asChild
         >
           <a href={ctaLink}>{ctaText}</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </Button>
       </section>
     </div>
   )
-<<<<<<< HEAD
                   </div>;
                   <div className="text - gray - 600">{stat.label}</div>;
                 </div>))}
@@ -532,6 +510,4 @@ className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gr
       </section>;
     </div>);
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 },

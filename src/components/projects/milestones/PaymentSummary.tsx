@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -57,7 +56,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
           <div>;
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>;
             <p className="font-medium">;
-=======
 
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
@@ -107,7 +105,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               ${paidAmount}
             </p>;
           </div>;
@@ -115,7 +112,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
 };
 '""
 } import React from 'react';
@@ -167,6 +163,4 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({ milestones, pa
     </Card>);
 }
 '";
-=======
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

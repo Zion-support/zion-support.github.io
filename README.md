@@ -1,8 +1,5 @@
 # Zion Tech Group - Technology Solutions Platform
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 A modern, responsive website built with React, TypeScript, and Vite, showcasing Zion Tech Group's comprehensive technology solutions.
 
 ## 🚀 Features
@@ -28,8 +25,6 @@ A modern, responsive website built with React, TypeScript, and Vite, showcasing 
 - **Package Manager**: npm
 
 ## 📦 Installation
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 A modern, responsive website built with Next.js showcasing comprehensive technology services including AI, IT solutions, micro SaaS development, and more.
 
 ## 🚀 Features
@@ -86,8 +81,6 @@ A modern, responsive website built with Next.js showcasing comprehensive technol
 - E-commerce Solutions
 
 ## 🚀 Getting Started
-<<<<<<< HEAD
-=======
 A modern, responsive website built with React, TypeScript, and Vite, showcasing Zion Tech Group's comprehensive technology solutions.
 
 ## 🚀 Features
@@ -113,10 +106,6 @@ A modern, responsive website built with React, TypeScript, and Vite, showcasing 
 - **Package Manager**: npm
 
 ## 📦 Installation
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 1. Clone the repository:
 ```bash
@@ -124,34 +113,20 @@ git clone https://github.com/Zion-Holdings/zion.app.git
 cd zion.app
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - Node.js 18+
 - npm or yarn
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 2. Install dependencies:
 ```bash
 npm install
 ```
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
 - Node.js 18+
 - npm or yarn
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 3. Start the development server:
 ```bash
 npm run dev
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 4. Open your browser and navigate to `http://localhost:3000`
 
 ## 🏗️ Build for Production
@@ -161,8 +136,6 @@ npm run build
 ```
 
 The built files will be in the `dist` directory, ready for deployment.
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 1. Clone the repository:
 
 ```bash
@@ -190,15 +163,10 @@ npm run dev
 npm run build
 npm start
 ```
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 ## 📁 Project Structure
 
 ```
-<<<<<<< HEAD
 ├── pages/                 # Next.js pages
 │   ├── index.tsx         # Homepage
 │   ├── about.tsx         # About page
@@ -215,7 +183,6 @@ npm start
 └── package.json         # Dependencies and scripts
 ```
 
-=======
 4. Open your browser and navigate to `http://localhost:3000`
 
 ## 🏗️ Build for Production
@@ -229,9 +196,6 @@ The built files will be in the `dist` directory, ready for deployment.
 ## 📁 Project Structure
 
 ```
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 src/
 ├── components/          # Reusable UI components
 │   ├── Button.tsx      # Enhanced button component
@@ -280,10 +244,6 @@ Interactive service display cards with:
 - Icon support
 - Responsive design
 
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
 ├── pages/                 # Next.js pages
 │   ├── index.tsx         # Homepage
 │   ├── about.tsx         # About page
@@ -300,16 +260,12 @@ Interactive service display cards with:
 └── package.json         # Dependencies and scripts
 ```
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 ## 🔧 Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
-<<<<<<< HEAD
-<<<<<<< HEAD
 - `npm run lint:fix` - Fix ESLint errors
 
 ## 🎨 Design System
@@ -354,9 +310,6 @@ The project uses a consistent design system with:
 - Lazy loading
 - Bundle analysis
 - Performance monitoring
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 - `npm run type-check` - Run TypeScript checks
 
 ## 🌐 Deployment
@@ -405,10 +358,6 @@ The project is configured for deployment on:
 - **Twitter Cards** - Twitter sharing optimization
 - **Sitemap** - Automatic sitemap generation
 - **Robots.txt** - Search engine directives
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
 - `npm run lint:fix` - Fix ESLint errors
 
 ## 🎨 Design System
@@ -453,14 +402,10 @@ The project uses a consistent design system with:
 - Lazy loading
 - Bundle analysis
 - Performance monitoring
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 ## 🤝 Contributing
 
 1. Fork the repository
-<<<<<<< HEAD
-<<<<<<< HEAD
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
@@ -486,9 +431,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Built with ❤️ by the Zion Tech Group team
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 2. Create a feature branch
 3. Make your changes
 4. Add tests if applicable
@@ -519,10 +461,6 @@ We provide comprehensive technology solutions to help businesses transform and s
 ---
 
 Built with ❤️ by the Zion Tech Group team
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
@@ -548,5 +486,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Built with ❤️ by the Zion Tech Group team
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

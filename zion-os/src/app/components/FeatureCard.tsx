@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface FeatureCardProps {;
   icon: string,;
   title: string,;
   description: string,;
   features: string[],;
   gradient: string,;
-<<<<<<< HEAD
 
   className?: string;
 }
@@ -63,7 +59,6 @@ function FeatureCard() {
       <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>
         <span className="text-white text-xl">{icon}</span>
 
-=======
   className?: string;
 }
 
@@ -79,7 +74,6 @@ export default function FeatureCard({
     <div className={`feature-card group ${className}`}>
       <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>
         <span className="text-white text-xl">{icon}</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       </div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <p className="text-white/70 mb-4">{description}</p>
@@ -88,11 +82,8 @@ export default function FeatureCard({
           <li key={index}>• {feature}</li>
         ))}
       </ul>;
-<<<<<<< HEAD
     </div>);
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -199,7 +199,6 @@ if (return "Not specified") {
   );
 };
 
-=======
       return date_string;
     }
   }

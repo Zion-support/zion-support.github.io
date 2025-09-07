@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -107,7 +106,6 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
                     <Badge variant="outline">{project.status}</Badge>"
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">"
                       <Clock className="h-3 w-3" />"
-=======
 import React from "react",
 import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
@@ -145,19 +143,16 @@ function ProjectsContent() {
                     <Badge variant="outline">{project.status}</Badge>
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">
                       <Clock className="h-3 w-3" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       Started {new Date(project.start_date).toLocaleDateString()}
                     </span>
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-<<<<<<< HEAD
                   <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`} />View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">"
             ))}
           </div>
         )}
 }}}}}}))))))
-=======
                   <p className="text-sm text-muted-foreground line-clamp-2">
                     {project.job?.description || "Project details"}
                   </p>
@@ -230,4 +225,3 @@ export default function Projects() {;
   return <ProjectsContent />;
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

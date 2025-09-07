@@ -3,7 +3,6 @@ import Head from 'next/head'
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground'
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
 
-<<<<<<< HEAD:pages/agentic-rag.tsx
 export default function AgenticRAGPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
@@ -11,8 +10,6 @@ export default function AgenticRAGPage() {
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
 	},
-=======
-<<<<<<< HEAD
 import {
   Database,
   Link,
@@ -180,7 +177,6 @@ export default function AgenticRAGPage() {
     </UltraFuturisticMatrixBackground>
   );
 }
-=======
 const AgenticRAG: React.FC = () => {
   return (
     <Layout>
@@ -205,7 +201,6 @@ const AgenticRAG: React.FC = () => {
             </a>
           </div>
         </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/agentic-rag.tsx
 
 	const plans = [
 		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestionBasic rerankerCSV export'] },
@@ -220,7 +215,6 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 		{_name: 'Starter', _price: '$199/month', _items: ['100K tokens/month', _'Web/PDF ingestion', _'Basic reranker', _'CSV export']},
 		{_name: 'Pro', _price: '$599/month', _items: ['2M tokens/month', _'GitHub/S3 connectors', _'Hybrid search + rerank', _'Eval kits']},
 		{_name: 'Enterprise', _price: 'Custom', _items: ['Siloed indexes', _'SOC2/ISO support', _'Private VPC', _'SAML/SSO']}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 	return (_<UltraFuturisticMatrixBackground>
 			<Head>
@@ -239,7 +233,6 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 					</div>
 				</div>
 
-<<<<<<< HEAD:pages/agentic-rag.tsx
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
 					{plans.map((p) => (
 						<div key={p.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
@@ -286,7 +279,4 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 		</UltraFuturisticMatrixBackground>
 	)
 }
-=======
 export default AgenticRAG;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/agentic-rag.tsx

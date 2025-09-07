@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 "use client",
 import { useEffect, useRef, useState  } from './react';,
@@ -9,14 +8,11 @@ export /**
 function SkipLink() {
   return (
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import { useEffect, useRef, useState } from "react",;
 // Skip link component for keyboard navigation;
 export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {;
   return (;
-<<<<<<< HEAD
 
     <a;
       href={`#${target_id}`}
@@ -32,7 +28,6 @@ export /**
 function LiveRegion() {
   return (
 
-=======
     <a;
       href={`#${targetId}`}
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[var(--accent)] text-white px-4 py-2 rounded z-50";
@@ -41,7 +36,6 @@ function LiveRegion() {
     </a>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 // Live region for screen reader announcements;
 export function LiveRegion({;
@@ -54,7 +48,6 @@ export function LiveRegion({;
   "aria-live"?: "polite" | "assertive" | "off";
 }) {;
   return (;
-<<<<<<< HEAD
 
     <div;
       role={role}
@@ -66,7 +59,6 @@ export function LiveRegion({;
     </div>);
 }
 
-=======
     <div;
       role={role}
       aria-live={ariaLive}
@@ -77,7 +69,6 @@ export function LiveRegion({;
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 // Focus trap for modals and dialogs;
 export function useFocusTrap(enabled: boolean = true) {;
@@ -90,28 +81,21 @@ export function useFocusTrap(enabled: boolean = true) {;
     ),;
     const firstElement = focusableElements[0] as HTMLElement,;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
-<<<<<<< HEAD
-=======
             e.preventDefault(),;
             lastElement.focus();
           }
         } else {;
           if (document.activeElement === lastElement) {;
             e.preventDefault(),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             firstElement.focus();
           }
         }
       }
-<<<<<<< HEAD
   return (;
     <div aria-live={priority} aria-atomic="true" className="sr-only">;
       {announcements.map((announcement, index) => (;
@@ -322,7 +306,6 @@ export function useKeyboardNavigation(items: any[], onSelect: (item: any) => voi
   }, [items, selectedIndex, onSelect]),;
   return { selectedIndex, setSelectedIndex }
 }
-=======
     },;
     container.addEventListener("keydown", handleKeyDown),;
     return () => container.removeEventListener("keydown", handleKeyDown);
@@ -359,7 +342,6 @@ export function useKeyboardNavigation(items: any[], onSelect: (item: any) => voi
   }, [items, selectedIndex, onSelect]),;
   return { selectedIndex, setSelectedIndex }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 // Announcement component for screen readers;
 export function Announcement({;
@@ -387,7 +369,6 @@ export function Announcement({;
       ))}
     </div>;
   );
-<<<<<<< HEAD
 }
 // Progress indicator component;
 export /**
@@ -593,7 +574,6 @@ export function Tooltip({;
         </div>)}
     </div>);
 }
-=======
 }
 ;
 // Progress indicator component;
@@ -712,4 +692,3 @@ export function Tooltip({;
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

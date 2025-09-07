@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/api.tsx
 import Head from 'next/head';
 import Layout from '../components/Layout';
 

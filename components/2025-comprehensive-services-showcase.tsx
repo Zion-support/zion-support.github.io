@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 // All services combined const allServices = [ ...advancedAIMLServices;
@@ -333,13 +332,10 @@ const ComprehensiveServicesShowcase2025 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {/* Service Header */}
@@ -868,12 +864,10 @@ className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                         </div>
                       </div>
 
-=======
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       {/* ROI and Popularity */}
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-sm">
@@ -887,7 +881,6 @@ className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                             <Star className="w-4 h-4 fill-current" />
                             <span className="text-sm font-medium">Popular</span>
                           </div>
-<<<<<<< HEAD
                         </div>
 
                         {/* Price and Features */}
@@ -1455,5 +1448,3 @@ export default ComprehensiveServicesShowcase2025;
 export default ComprehensiveServicesShowcase2025;
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

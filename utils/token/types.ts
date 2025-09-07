@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -7,15 +6,12 @@ export type TokenSymbol = "ZION$",
 
 
 
-=======
 export type TokenSymbol = "ZION$";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export type TokenTransactionType =;
   | "earn";
   | "burn";
   | "issue";
   | "revoke";
-<<<<<<< HEAD
 
 
 
@@ -30,19 +26,16 @@ export interface TokenTransaction {;
   id: string,;
   userId: string,;
   type: TokenTransactionType,;
-=======
   | "redeem";
 export interface TokenTransaction {;
   id: string;
   userId: string;
   type: TokenTransactionType;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   amount: number, // positive integer tokens;
   reason: string;
   metadata?: Record<string, any>;
   createdAt: string, // ISO timestamp;
 }
-<<<<<<< HEAD
 export interface Wallet {userId: string;
   balance: number, // current token balance;
 }
@@ -127,13 +120,10 @@ export interface TokenConfig {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 export interface Wallet {;
   userId: string;
   balance: number, // current token balance;
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -165,7 +155,6 @@ export interface WalletSummary {;
 }
 
 
-=======
 }
 ;
 export interface TokenConfig {;
@@ -180,4 +169,3 @@ export interface WalletSummary {;
   transactions: TokenTransaction[];
   config: TokenConfig;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

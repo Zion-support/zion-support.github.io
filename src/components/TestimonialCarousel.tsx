@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 import {  Carousel,  Carousel
   CarouselContent
@@ -136,7 +135,6 @@ function TestimonialCarousel() {
                     <CardContent className='p-8 flex flex-col md:flex-row gap-6 flex-1'>;
                       <div className='flex-shrink-0 flex flex-col items-center'>;
                         <Avatar className='h-20 w-20 border-2 border-zion-cyan mb-3'>                          <Image              {testimonials && testimonials.map((testimonial, index) => (;
-=======
 import {
   Carousel,
   CarouselContent,
@@ -211,25 +209,20 @@ export function TestimonialCarousel() {;
           >;
             <CarouselContent>;
               {testimonials.map((testimonial, index) => (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col">;
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">;
                       <div className="flex-shrink-0 flex flex-col items-center">;
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">;
-<<<<<<< HEAD
                             width={80}
                             height={80}
                             loading="lazy""
                           />
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                           <Image;
                             src={testimonial.avatar}
                             alt={testimonial.author}
                             width={80}
                             height={80}
-<<<<<<< HEAD
                             loading="lazy""
                           />
                         </Avatar>
@@ -253,7 +246,6 @@ export function TestimonialCarousel() {;
                     <CardFooter className="p-6 pt-0">"
                       <Button variant="link" className="text-zion-cyan p-0" asChild>"
                         <Link href={`/case-studies/${testimonial.slug}`} />Read Case Study →</Link>`
-=======
                             loading="lazy"
                           />
                         </Avatar>
@@ -281,28 +273,23 @@ export function TestimonialCarousel() {;
                     <CardFooter className="p-6 pt-0">
                       <Button variant="link" className="text-zion-cyan p-0" asChild>
                         <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study →</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </Button>
                     </CardFooter>
                   </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>
-<<<<<<< HEAD
             <div className="flex justify-center mt-8 gap-2">"
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />"
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />"
-=======
             <div className="flex justify-center mt-8 gap-2">
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>
           </Carousel>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
             </CarouselContent>;
             <div className='flex justify-center mt-8 gap-2'>;
               <CarouselPrevious className='relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />;
@@ -382,7 +369,6 @@ export function TestimonialCarousel() {;
               <CarouselNext className='relative static right - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover:bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple' />            </div>            <div className="flex justify - center mt - 8 gap - 2">;
               <CarouselPrevious className="relative static left - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover: bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
               <CarouselNext className="relative static right - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover:bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
-=======
   )
                             className="h-8 w-auto";
                             loading="lazy";
@@ -405,20 +391,16 @@ export function TestimonialCarousel() {;
             <div className="flex justify-center mt-8 gap-2">;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </Carousel>;
         </div>;
       </div>;
-<<<<<<< HEAD
   );
 }
     </section>);
 }
 )))))
-=======
     </section>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

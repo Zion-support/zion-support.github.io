@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();,
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
@@ -6,7 +5,6 @@ export function ActiveProjectsCard() {
     if (projects && !isLoading) {
       const active = projects.filter(p =>
         ['offer_acceptedin_progress'].includes(p.status)',
-=======
 
 import { useEffect, useState } from "react",
 import Link from "next/link",
@@ -24,12 +22,10 @@ export function ActiveProjectsCard() {
     if (projects && !isLoading) {
       const active = projects.filter(p => 
         ['offer_acceptedin_progress'].includes(p.status)
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       ).slice(0, 3), // Limit to 3 most recent projects
       setActiveProjects(active)
     }
   }, [projects, isLoading]),
-<<<<<<< HEAD
   if (isLoading) {
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -59,7 +55,6 @@ export function ActiveProjectsCard() {;
   if (isLoading) {;
     return (
             <BriefcaseIcon className="h-5 w-5 text-primary" />"
-=======
   
   if (isLoading) {
     return (
@@ -67,13 +62,11 @@ export function ActiveProjectsCard() {;
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <BriefcaseIcon className="h-5 w-5 text-primary" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
           <div className="space-y-2">"
                 className='h-16 animate-pulse bg-muted rounded'></div>            ))}'
           </div>;
@@ -83,11 +76,9 @@ export function ActiveProjectsCard() {;
   }          <div className="space-y-2">;
             {[1, 2].map(idx => (
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>"
-=======
           <div className="space-y-2">
             {[1, 2].map(idx => (
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { useEffect, useState } from "react",;
 import Link from "next/link",;
 import { BriefcaseIcon, Clock } from 'lucide-react';
@@ -97,21 +88,18 @@ import { Badge } from "@/components/ui/badge",;
 import { useProjects } from "@/hooks/useProjects",;
 import { Project } from "@/types/projects",;
 export function ActiveProjectsCard() {;
-<<<<<<< HEAD
   const { projects, isLoading } = useProjects(),;,
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);,
   useEffect(() => {;
     if (projects && !isLoading) {;
       const active = projects.filter(p =>;
         ['offer_acceptedin_progress'].includes(p.status);,
-=======
   const { projects, isLoading } = useProjects(),;
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
   useEffect(() => {;
     if (projects && !isLoading) {;
       const active = projects.filter(p =>;
         ['offer_acceptedin_progress'].includes(p.status);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       ).slice(0, 3), // Limit to 3 most recent projects;
       setActiveProjects(active);
     }
@@ -127,11 +115,8 @@ export function ActiveProjectsCard() {;
           <CardDescription>Your ongoing work</CardDescription>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
           <div className="space-y-2">;,
-=======
           <div className="space-y-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             {[1, 2].map(idx => (;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
             ))}
@@ -140,29 +125,22 @@ export function ActiveProjectsCard() {;
       </Card>;
     );
   }
-<<<<<<< HEAD
     );
   }
   }
-=======
   
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   if (activeProjects.length === 0) {
     return (
       <Card>
         <CardHeader>
-<<<<<<< HEAD
           <CardTitle className="flex items-center gap-2">"
             <BriefcaseIcon className="h-5 w-5 text-primary" />"
-=======
           <CardTitle className="flex items-center gap-2">
             <BriefcaseIcon className="h-5 w-5 text-primary" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
-<<<<<<< HEAD
   if (activeProjects && activeProjects.length === 0) {;
     return (
       <Card>;
@@ -193,18 +171,15 @@ export function ActiveProjectsCard() {;
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>'
           <Button variant="outline" asChild>"
             <Link href="/jobs" />Find Opportunities</Link>"
-=======
         <CardContent className="text-center py-6">
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
           <Button variant="outline" asChild>
             <Link href="/jobs">Find Opportunities</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>
         </CardContent>
       </Card>
     )
   }
-<<<<<<< HEAD
   return (
   }
   return (
@@ -422,7 +397,6 @@ if ( {) {
   );
 }
 ;
-=======
   
   return (
     <Card>
@@ -466,4 +440,3 @@ if ( {) {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

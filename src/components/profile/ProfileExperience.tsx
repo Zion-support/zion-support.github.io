@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div key={exp.id} className="flex">"
             <div className="mr-4">"
               <div className="h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center">"
@@ -20,7 +19,6 @@
 import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
 }
               <p className="text-zion-slate">{exp.description}</p>"
-=======
 
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from 'lucide-react'
@@ -50,24 +48,20 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
                 {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
               </div>
               <p className="text-zion-slate">{exp.description}</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>
           </div>
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 import { Briefcase } from 'lucide-react';
-<<<<<<< HEAD
 interface ProfileExperienceProps {;,
   experience: ProfileExperienceType[];
 }
 ;
 export function ProfileExperience({ experience }:,  ProfileExperienceProps) {;
-=======
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
 }
 ;
 export function ProfileExperience({ experience }: ProfileExperienceProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (;
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
       <h3 className="text-xl font-bold text-white mb-4">Experience</h3>;
@@ -83,11 +77,8 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
               <h4 className="text-white font-medium">{exp.role}</h4>;
               <div className="text-zion-cyan mb-1">{exp.company}</div>;
               <div className="text-sm text-zion-slate-light mb-2">;
-<<<<<<< HEAD
                 {exp.startDate} - {exp.current ? 'Present' : exp.endDate}'
-=======
                 {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
               <p className="text-zion-slate">{exp.description}</p>;
             </div>;
@@ -97,7 +88,6 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
   );
 }
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
@@ -130,6 +120,4 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
     </div>);
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

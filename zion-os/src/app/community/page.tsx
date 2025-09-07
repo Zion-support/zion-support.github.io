@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import Link from './next / link';
 export default /**
@@ -12,14 +11,11 @@ function CommunityPage() {
 
 import Link from "next/link";
 export default function CommunityPage() {return (;
-=======
 import Link from "next/link";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default function CommunityPage() {;
   return (;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
-<<<<<<< HEAD
 
 
 
@@ -30,19 +26,16 @@ export default function CommunityPage() {;
             <span className="gradient - text">Join Our Community</span>;
           </h1>;
           <p className="text - xl text - gray - 300 max - w-2xl mx - auto">;
-=======
         {/* Header */}
         <div className="text-center mb-16">;
           <h1 className="text-4xl md:text-5xl font-bold mb-6">;
             <span className="gradient-text">Join Our Community</span>;
           </h1>;
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Connect with fellow developers, entrepreneurs, and innovators building the future of digital economies.;
           </p>;
         </div>;
         {/* Community Stats */}
-<<<<<<< HEAD
         <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 8 mb - 20">;
           <div className="text - center">;
             <div className="text - 4xl font - bold gradient - text mb - 2">10K+</div>;
@@ -76,7 +69,6 @@ export default function CommunityPage() {;
             <a;
               href="https://discord.gg / ziontechgroup";
               className="btn - primary inline - block";
-=======
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-20">;
           <div className="text-center">;
             <div className="text-4xl font-bold gradient-text mb-2">10K+</div>;
@@ -110,14 +102,12 @@ export default function CommunityPage() {;
             <a;
               href="https://discord.gg/ziontechgroup";
               className="btn-primary inline-block";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               target="_blank";
               rel="noopener noreferrer";
             >;
               Join Discord;
             </a>;
           </div>;
-<<<<<<< HEAD
           <div className="card - hover text - center">;
             <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
               <svg className="w - 8 h - 8 text - blue - 400" fill="current_color" view_box="0 0 24 24">;
@@ -131,7 +121,6 @@ export default function CommunityPage() {;
             <a;
               href="https://linkedin.com / company / ziontechgroup";
               className="btn - primary inline - block";
-=======
           <div className="card-hover text-center">;
             <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
               <svg className="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 24 24">;
@@ -145,14 +134,12 @@ export default function CommunityPage() {;
             <a;
               href="https://linkedin.com/company/ziontechgroup";
               className="btn-primary inline-block";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               target="_blank";
               rel="noopener noreferrer";
             >;
               Join LinkedIn;
             </a>;
           </div>;
-<<<<<<< HEAD
           <div className="card - hover text - center">;
             <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
               <svg className="w - 8 h - 8 text - blue - 400" fill="current_color" view_box="0 0 24 24">;
@@ -166,7 +153,6 @@ export default function CommunityPage() {;
             <a;
               href="https://github.com / ziontechgroup";
               className="btn - primary inline - block";
-=======
           <div className="card-hover text-center">;
             <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
               <svg className="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 24 24">;
@@ -180,7 +166,6 @@ export default function CommunityPage() {;
             <a;
               href="https://github.com/ziontechgroup";
               className="btn-primary inline-block";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               target="_blank";
               rel="noopener noreferrer";
             >;
@@ -189,7 +174,6 @@ export default function CommunityPage() {;
           </div>;
         </div>;
         {/* Community Events */}
-<<<<<<< HEAD
         <div className="mb - 20">;
           <div className="text - center mb - 12">;
             <h2 className="text - 3xl font - bold mb - 4">Upcoming Events</h2>;
@@ -228,7 +212,6 @@ export default function CommunityPage() {;
               <p className="text - gray - 400 mb - 3">Build innovative solutions using Zion OS and win amazing prizes.</p>;
               <div className="text - sm text - gray - 500 mb - 4">May 10 - 12, 2024 • Virtual</div>;
               <button className="btn - outline w - full">Register Now</button>;
-=======
         <div className="mb-20">;
           <div className="text-center mb-12">;
             <h2 className="text-3xl font-bold mb-4">Upcoming Events</h2>;
@@ -267,12 +250,10 @@ export default function CommunityPage() {;
               <p className="text-gray-400 mb-3">Build innovative solutions using Zion OS and win amazing prizes.</p>;
               <div className="text-sm text-gray-500 mb-4">May 10-12, 2024 • Virtual</div>;
               <button className="btn-outline w-full">Register Now</button>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </div>;
         </div>;
         {/* Community Guidelines */}
-<<<<<<< HEAD
         <div className="mb - 20">;
           <div className="text - center mb - 12">;
             <h2 className="text - 3xl font - bold mb - 4">Community Guidelines</h2>;
@@ -282,7 +263,6 @@ export default function CommunityPage() {;
             <div className="card">;
               <h3 className="text - xl font - semibold mb - 4 text - green - 400">✅ What We Encourage</h3>;
               <ul className="space - y-2 text - gray - 300">;
-=======
         <div className="mb-20">;
           <div className="text-center mb-12">;
             <h2 className="text-3xl font-bold mb-4">Community Guidelines</h2>;
@@ -292,7 +272,6 @@ export default function CommunityPage() {;
             <div className="card">;
               <h3 className="text-xl font-semibold mb-4 text-green-400">✅ What We Encourage</h3>;
               <ul className="space-y-2 text-gray-300">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Respectful and constructive discussions</li>;
                 <li>• Sharing knowledge and helping others</li>;
                 <li>• Constructive feedback and suggestions</li>;
@@ -301,17 +280,14 @@ export default function CommunityPage() {;
               </ul>;
             </div>;
             <div className="card">;
-<<<<<<< HEAD
               <h3 className="text - xl font - semibold mb - 4 text - red - 400">❌ What We Don't Allow</h3>;
               <ul className="space - y-2 text - gray - 300">;
                 <li>• Harassment or discrimination</li>;
                 <li>• Spam or self - promotion</li>;
-=======
               <h3 className="text-xl font-semibold mb-4 text-red-400">❌ What We Don't Allow</h3>;
               <ul className="space-y-2 text-gray-300">;
                 <li>• Harassment or discrimination</li>;
                 <li>• Spam or self-promotion</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Sharing of sensitive information</li>;
                 <li>• Offensive or inappropriate content</li>;
                 <li>• Violation of platform terms</li>;
@@ -320,7 +296,6 @@ export default function CommunityPage() {;
           </div>;
         </div>;
         {/* Get Involved */}
-<<<<<<< HEAD
         <div className="text - center">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30">;
             <h2 className="text - 3xl font - bold mb - 4">Ready to Get Involved?</h2>;
@@ -332,7 +307,6 @@ export default function CommunityPage() {;
                 Contact Us;
               </a>;
               <a href="/docs" className="btn - secondary text - lg px - 8 py - 4">;
-=======
         <div className="text-center">;
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">;
             <h2 className="text-3xl font-bold mb-4">Ready to Get Involved?</h2>;
@@ -344,17 +318,13 @@ export default function CommunityPage() {;
                 Contact Us;
               </a>;
               <a href="/docs" className="btn-secondary text-lg px-8 py-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Read Documentation;
               </a>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </div>);
-=======
     </div>;
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }

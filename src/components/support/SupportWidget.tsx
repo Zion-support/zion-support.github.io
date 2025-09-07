@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
@@ -86,7 +85,6 @@ import { ChatBotPanel } from "./ChatBotPanel","
 import { MessageSquare, Info, X } from 'lucide-react''
 import { cn } from "@/lib/utils","
 import { useTheme } from "@/hooks/useTheme","
-=======
 import React, { useState } from "react",
 import { useRouter } from "next/router",
 import { Button } from "@/components/ui/button",
@@ -94,15 +92,11 @@ import { ChatBotPanel } from "./ChatBotPanel",
 import { MessageSquare, Info, X } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { useTheme } from "@/hooks/useTheme",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false),
   const { theme } = useTheme(),
   const router = useRouter(),
-<<<<<<< HEAD
-=======
   
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (
     <>
 import React, { useState } from "react",;
@@ -122,25 +116,21 @@ export function SupportWidget() {;
       {!isOpen && (;
         <Button;
           onClick={() => setIsOpen(true)}
-<<<<<<< HEAD
           size="icon""
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50"",
           aria-label="Open support""
         >
           <MessageSquare className="h-6 w-6" />"
-=======
           size="icon"
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50"
           aria-label="Open support"
         >
           <MessageSquare className="h-6 w-6" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </Button>
       )}
 ;
       {/* Support panel */}
       {isOpen && (
-<<<<<<< HEAD
         <div
           className={cn(
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col","
@@ -189,7 +179,6 @@ export function SupportWidget() {;
 
 }}})))
 
-=======
         <div 
           className={cn(
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
@@ -235,4 +224,3 @@ export function SupportWidget() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

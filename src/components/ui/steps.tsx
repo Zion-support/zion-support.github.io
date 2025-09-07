@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 status;
   label;
   description;
@@ -8,7 +7,6 @@ import { cn } from "@/lib/utils","
 import { CheckIcon } from 'lucide-react''
 interface StepProps {
   status: "incomplete" | "current" | "complete","
-=======
 
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -16,12 +14,10 @@ import { CheckIcon } from 'lucide-react'
 
 interface StepProps {
   status: "incomplete" | "current" | "complete",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   label: string,
   description?: string,
   className?: string
 }
-<<<<<<< HEAD
 export function Step({
   className}:,  StepProps) {
   return (
@@ -30,7 +26,6 @@ export function Step({
         "relative flex items-center","
         {
           "opacity-60": status === "incomplete"},",
-=======
 
 export function Step({
   status,
@@ -43,13 +38,11 @@ export function Step({
         "relative flex items-center",
         {
           "opacity-60": status === "incomplete"},
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         className
       )}
     >
       <div
         className={cn(
-<<<<<<< HEAD
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium"          {"
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":"
               status === "incomplete""
@@ -76,7 +69,6 @@ export function Step({
       >
         {status === "complete" ? ("
           <CheckIcon className="h-5 w-5" />"
-=======
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",
           {
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
@@ -89,7 +81,6 @@ export function Step({
       >
         {status === "complete" ? (
           <CheckIcon className="h-5 w-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         ) : (
           <span>
 import React from "react",;
@@ -106,11 +97,8 @@ export function Step({;
   status,;
   label,;
   description,;
-<<<<<<< HEAD
   className}:,  StepProps) {;
-=======
   className}: StepProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (;
     <li;
       className={cn(;
@@ -129,11 +117,8 @@ export function Step({;
             "bg-zion-blue border-zion-cyan text-white":;
               status === "current",;
             "bg-zion-purple border-zion-purple text-white":;
-<<<<<<< HEAD
               status === "complete"}"
-=======
               status === "complete"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         )}
       >;
         {status === "complete" ? (;
@@ -143,7 +128,6 @@ export function Step({;
             {/* Step number would go here */}
           </span>;
         )}
-<<<<<<< HEAD
             "text-zion-slate-light": status === "incomplete","
             "text-zion-slate-light": status === "incomplete","
             "text-white": status === "current" || status === "complete"})}"
@@ -170,7 +154,6 @@ interface StepsProps {
 }
 export function Steps({ currentStep, className, children }:,  StepsProps) {
   const childrenArray = React.Children.toArray(children)
-=======
       </div>
 
       <div className="ml-4 min-w-0">
@@ -188,14 +171,12 @@ export function Steps({ currentStep, className, children }:,  StepsProps) {
     </li>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 interface StepsProps {;
   currentStep: number,;
   className?: string,;
   children: React.ReactNode;
 }
-<<<<<<< HEAD
 export function Steps({ currentStep, className, children }:,  StepsProps) {
   const childrenArray = React.Children.toArray(children),
   return (
@@ -210,7 +191,6 @@ export function Steps({ currentStep, className, children }:,  StepsProps) {
           let status: "incomplete" | "current" | "complete" = "incomplete","
           if (index <,  currentStep) status = "complete","
           if (index ===,  currentStep) status = "current","
-=======
 
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
@@ -225,12 +205,10 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
       </ol>
-<<<<<<< HEAD
       <div className="hidden md:flex md:mt-4">",
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">",
           <div
@@ -249,7 +227,6 @@ export function Steps(): any ({ currentStep, className, children }:,  StepsProps
 ;
 ;
 export function Steps({ currentStep, className, children }:,  StepsProps) {;
-=======
       
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
@@ -258,7 +235,6 @@ export function Steps({ currentStep, className, children }:,  StepsProps) {;
             style={{
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const childrenArray = React.Children.toArray(children),;
   return (;
     <div className={cn("w-full", className)}>;
@@ -266,38 +242,31 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
         {React.Children.map(childrenArray, (child, index) => {;
           if (!React.isValidElement(child)) return null,;
           let status: "incomplete" | "current" | "complete" = "incomplete",;
-<<<<<<< HEAD
           if (index <,  currentStep) status = "complete";
           if (index ===,  currentStep) status = "current";
-=======
           if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           return React.cloneElement(child as React.ReactElement<StepProps>, {;
             status});
         })}
       </ol>;
-<<<<<<< HEAD
       <div className="hidden md:flex md:mt-4">;,
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;,
           <div;
             className="h-full bg-zion-purple transition-all";
             style={{;
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}`
-=======
       <div className="hidden md:flex md:mt-4">;
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
           <div;
             className="h-full bg-zion-purple transition-all";
             style={{;
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           />;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
           // Check condition
 if (status = "complete") {"
   $2
@@ -398,7 +367,5 @@ if (status = "current") {"
 }"}"
 }
 ;
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -39,7 +39,6 @@ class ErrorMonitor {
 
 
 
-========
 
 
 >
@@ -94,7 +93,6 @@ class ErrorMonitor {
 
         timestamp: new Date().toISOString()
 
-========
 
 >
 
@@ -276,7 +274,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
-========
 
 
 >
@@ -310,7 +307,6 @@ timestamp: new Date().toISOString()
     const errors = [];
     const lines = output.split('\n');
 <<<<<<<< HEAD:automation/error-monitor.js
-========
 
 
 
@@ -349,7 +345,6 @@ timestamp: new Date().toISOString()
     );
       }
     }
-========
 
 >
 
@@ -369,7 +364,6 @@ timestamp: new Date().toISOString()
 
 
 
-========
 
 
 >
@@ -405,7 +399,6 @@ timestamp: new Date().toISOString()
     const totalErrors = this.monitoringReport.metrics.totalErrors;
     const totalWarnings = this.monitoringReport.metrics.totalWarnings;
 <<<<<<<< HEAD:automation/error-monitor.js
-========
 
 
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
@@ -466,7 +459,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       console.log('✅ Error fixer completed');
 
 
-========
 
 
 >
@@ -496,7 +488,6 @@ console.log('✅ Error fixer completed');
 
         timestamp: new Date().toISOString()
 
-========
 
 >
 
@@ -545,7 +536,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
-========
 
 
 >

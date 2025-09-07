@@ -4,7 +4,6 @@ interface NewsletterSubscription.testProps {
 <<<<<<<< HEAD:corrupted_backup/NewsletterSubscription.test.tsx
 }
 
-========
 >
 
 
@@ -32,7 +31,6 @@ export default function NewsletterSubscription.test({ }: NewsletterSubscription.
 <<<<<<<< HEAD:tests/NewsletterSubscription.test.tsx
 
 
-========
 
 
 <:tests/NewsletterSubscription.test.tsx
@@ -42,7 +40,6 @@ export default function NewsletterSubscription.test({ }: NewsletterSubscription.
 }
 
 }
-========
 
 
 >

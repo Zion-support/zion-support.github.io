@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 import { useRouter } from 'next/router','
 import { useState, useEffect, useCallback, useMemo } from 'react','
@@ -196,7 +195,6 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
             Datacenter Equipment
           </h1>
           <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure</p>"
-=======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -579,15 +577,12 @@ function EquipmentPageContent() {;
             Datacenter Equipment
           </h1>
           <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </motion.div>
         <EquipmentLoadingGrid />
       </div>
     )
   }
-<<<<<<< HEAD
 )
-=======
 
   // Error state
   if (error && equipment.length === 0) {
@@ -794,4 +789,3 @@ export default function EquipmentPage() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { formatDistanceToNow } from 'date-fns';
 import { cn } from '@/lib/utils';
-=======
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -13,12 +11,10 @@ import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
 import { formatDistanceToNow } from 'date-fns',
 import { cn } from '@/lib/utils',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-<<<<<<< HEAD
   TooltipTrigger
 } from '@/components/ui/tooltip';
 import { useRouter } from 'next/router';
@@ -136,7 +132,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({,
                 className="h-8 w-8 p-0 text-gray-400 hover:text-red-500""
               >
                 <Trash2 className="h-4 w-4" />"
-=======
   TooltipTrigger} from '@/components/ui/tooltip',
 import { useRouter } from 'next/router',
 import { Notification, NotificationType } from '@/context/notifications',
@@ -301,18 +296,15 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
                 aria-label="Dismiss notification"
               >
                 <Trash2 className="h-3.5 w-3.5 text-red-400" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </Button>
             </TooltipTrigger>
             <TooltipContent>
               <p>Dismiss</p>
             </TooltipContent>
           </Tooltip>
-<<<<<<< HEAD
         </div>
       </div>
     </TooltipProvider>
-=======
         </TooltipProvider>
       </div>
     </div>
@@ -363,6 +355,5 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
         </TooltipProvider>;
       </div>;
     </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   );
 };

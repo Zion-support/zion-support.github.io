@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
@@ -114,7 +113,6 @@ if ( {) {
   );
 }
 ;
-=======
 
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -275,4 +273,3 @@ export function Web3Login() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

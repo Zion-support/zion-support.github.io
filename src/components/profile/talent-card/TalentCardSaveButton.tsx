@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
     setLocalIsSaved(!localIsSaved)
     if (onToggleSave) {
@@ -15,7 +14,6 @@
     >
   isAuthenticated: boolean;,
 export function TalentCardSaveButton(): any ({;
-=======
 
 import React from "react",
 import { Heart } from 'lucide-react'
@@ -69,12 +67,10 @@ interface TalentCardSaveButtonProps {;
 }
 ;
 export function TalentCardSaveButton({;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   profileId,;
   profileName,;
   isSaved,;
   onToggleSave,;
-<<<<<<< HEAD
   isAuthenticated,;
 }:,  TalentCardSaveButtonProps) {;
   const { toast } = useToast();
@@ -177,7 +173,6 @@ if ( {) {
       description: localIsSaved;
         ? `${profileName} has been removed from your favorites`;`
         : `${profileName} has been added to your favorites`,;`
-=======
   isAuthenticated;
 }: TalentCardSaveButtonProps) {;
   const { toast } = useToast(),;
@@ -232,21 +227,17 @@ if ( {) {
       description: localIsSaved;
         ? `${profileName} has been removed from your favorites`;
         : `${profileName} has been added to your favorites`,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       variant: "default";
     });
   };
   return (;
     <button;
-<<<<<<< HEAD
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors";",
       onClick={handleSaveToggle}
       aria-label={localIsSaved ? "Remove from favorites" : "Save to favorites"}"
-=======
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors";
       onClick={handleSaveToggle}
       aria-label={localIsSaved ? "Remove from favorites" : "Save to favorites"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     >;
       <Heart;
         className={cn(;
@@ -257,11 +248,8 @@ if ( {) {
     </button>;
   );
 }
-<<<<<<< HEAD
 }/> </button>);
 }";
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export interface OperatorSession {
   id: string;
@@ -105,7 +104,6 @@ export const getSupportEvents = () => operatorManager.getSupportEvents();
 
 
 
-=======
 type OperatorEvent = {;
   type: string;
   sessionId: string;
@@ -120,4 +118,3 @@ export async function logSupportEventToOperator(event: OperatorEvent): Promise<v
 export async function tagOperatorSession(sessionId: string, tag: string): Promise<void> {;
   return Promise.resolve();
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

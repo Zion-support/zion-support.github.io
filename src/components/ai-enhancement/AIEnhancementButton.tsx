@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -8,7 +7,6 @@ const handleEnhance = async () => {
         variant: "destructive"",
   import { useState } from 'react';
 import { Button } from '@/components / ui / button';
-=======
 
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
@@ -45,13 +43,11 @@ export function AIEnhancementButton({
         title: "Not enough content",
         description: `Please enter at least ${contentLength} characters before enhancing.`,
         variant: "destructive"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       }),
       return
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
-<<<<<<< HEAD
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks / useAIContentEnhancer';
 import { toast } from '@/hooks / use - toast';
 interface AIEnhancementButtonProps {
@@ -154,7 +150,6 @@ export function AIEnhancementButton(): any ({;
       setShowActions(true);
     }
   },
-=======
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
 import { toast } from '@/hooks/use-toast',;
 interface AIEnhancementButtonProps {;
@@ -197,14 +192,12 @@ export function AIEnhancementButton({;
     }
   },
   
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
       toast({
-<<<<<<< HEAD
         title: "Content applied"",
         description: "AI-enhanced content has been applied."})"
     }
@@ -212,7 +205,6 @@ export function AIEnhancementButton({;
   const handleRegenerate = async () => {
     await handleEnhance()
   },
-=======
         title: "Content applied",
         description: "AI-enhanced content has been applied."})
     }
@@ -222,12 +214,10 @@ export function AIEnhancementButton({;
     await handleEnhance()
   },
   
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const handleCancel = () => {
     setShowActions(false),
     setGeneratedContent(null)
   },
-<<<<<<< HEAD
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">;
@@ -247,7 +237,6 @@ export function AIEnhancementButton({;
           onClick = {handleRegenerate,}
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"",
           disabled = {isEnhancing,}>;
-=======
   
   if (showActions) {
     return (
@@ -333,7 +322,6 @@ export function AIEnhancementButton({;
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20";
           disabled={isEnhancing}
         >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {isEnhancing ? (;
             <Loader2 className="h-4 w-4 mr-1 animate-spin" />;
           ) : (;
@@ -341,14 +329,12 @@ export function AIEnhancementButton({;
           )}
           Regenerate;
         </Button>;
-<<<<<<< HEAD
         <Button
           type="button""
           variant="ghost""
           size="sm""
           onClick = {handleCancel,}
           className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20">;
-=======
         <Button;
           type="button";
           variant="ghost";
@@ -356,12 +342,10 @@ export function AIEnhancementButton({;
           onClick={handleCancel}
           className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20";
         >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <X className="h-4 w-4 mr-1" />;
           Cancel;
         </Button>;
       </div>;
-<<<<<<< HEAD
     ),;
   }
   return (
@@ -458,7 +442,6 @@ if ( {) {
         <Sparkles className="h-4 w-4" />"
       )}
       <span className="text-xs">{buttonText}</span>
-=======
     );
   }
 ;
@@ -481,4 +464,3 @@ if ( {) {
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

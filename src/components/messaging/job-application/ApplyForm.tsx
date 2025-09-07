@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -107,7 +106,6 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {,
     </div>
   );
 };
-=======
 
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
@@ -369,4 +367,3 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

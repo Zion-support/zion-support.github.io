@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 className?: string;
   style?: React && React.CSSProperties;
 export function FeatureHighlights(): any ({;
@@ -101,7 +100,6 @@ function FeatureHighlights() {
                     <li key={idx} className="flex items-start">"
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />"
                       <span className="text-zion-slate-light">{feature}</span>"
-=======
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -169,7 +167,6 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </li>
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -180,17 +177,14 @@ interface FeatureHighlightsProps {;
   style?: React.CSSProperties;
 }
 ;
-<<<<<<< HEAD
 export function FeatureHighlights({ className, style }:,  FeatureHighlightsProps) {;,
   const highlightsData = [;
     {;
       title: "For Talent Seekers",;,
-=======
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {;
   const highlightsData = [;
     {;
       title: "For Talent Seekers",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       features: [;
         "AI-powered talent matching based on your specific project requirements",;
         "Verified profiles with skills validation and credential checking",;
@@ -201,11 +195,8 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       ];
     },;
     {;
-<<<<<<< HEAD
       title: "For Talent & Service Providers",;,
-=======
       title: "For Talent & Service Providers",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       features: [;
         "Create a professional profile showcasing your skills and experience",;
         "Get matched with relevant projects that fit your expertise",;
@@ -216,11 +207,8 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       ];
     },;
     {;
-<<<<<<< HEAD
       title: "For Enterprise Clients",;,
-=======
       title: "For Enterprise Clients",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       features: [;
         "White-labeled talent portal with your company branding",;
         "Dedicated account management and priority support",;
@@ -256,7 +244,6 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
               </CardContent>;
             </Card>;
           ))}
-<<<<<<< HEAD
         <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
           {highlights_data.map ((category, index) => (
             <Card;
@@ -412,14 +399,11 @@ function FeatureHighlights() {
               </h3>;
               <p className="text - gray - 400 text - sm leading - relaxed">;
                 {feature.description}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>;
       </div>;
     </section>;
   );
 }
-<<<<<<< HEAD
 import { motion  } from 'framer-motion';
   {;
     icon: "⚡",;
@@ -588,6 +572,4 @@ export function FeatureHighlights() {;
     </section>)}
 '"`);`
 ;)))))]
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

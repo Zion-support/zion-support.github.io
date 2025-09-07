@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";
 import { useLocalStorage } from "@/hooks";
 import { Header } from "@/components/Header";
@@ -142,7 +141,6 @@ variant="outline""
                 </div>
                 <Switch
                   id="displayWeb3""
-=======
 
 import { useState } from 'react',;
 import { useLocalStorage } from '@/hooks',;
@@ -272,12 +270,10 @@ export default function AccountSettings() {;
                 </div>
                 <Switch
                   id="displayWeb3"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   checked={displayWeb3}
                   onCheckedChange={setDisplayWeb3}
                 />
               </div>
-<<<<<<< HEAD
               <Separator />
 <div className="flex items-center justify-between">"
                 <div className="space-y-0.5">"
@@ -290,7 +286,6 @@ export default function AccountSettings() {;
                     Decentralized Backup
                   </Label>
                   <p className="text-xs text-gray-500">"
-=======
               
               <Separator />
               
@@ -301,21 +296,16 @@ export default function AccountSettings() {;
                     Decentralized Backup
                   </Label>
                   <p className="text-xs text-gray-500">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     Backup your profile data to IPFS/Arweave
                   </p>
                 </div>
                 <Switch
-<<<<<<< HEAD
 id="backup""
-=======
                   id="backup"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
                 />
               </div>
-<<<<<<< HEAD
 
               {enableBackup && (
                 <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">"
@@ -359,7 +349,6 @@ id="backup""
                     >
                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>"
                       <polyline points="22 4 12 14.01 9 11.01"></polyline>"
-=======
               
               {enableBackup && (
                 <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">
@@ -402,12 +391,10 @@ id="backup""
                     >
                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                       <polyline points="22 4 12 14.01 9 11.01"></polyline>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </svg>
                     <span>{didHandle}</span>
                   </div>
                 ) : (
-<<<<<<< HEAD
                   <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">"
                     <svg
                       xmlns="http://www.w3.org/2000/svg"",
@@ -423,7 +410,6 @@ id="backup""
                     >
                       <line x1="18" y1="6" x2="6" y2="18"></line>"
                       <line x1="6" y1="6" x2="18" y2="18"></line>"
-=======
                   <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
@@ -439,13 +425,11 @@ id="backup""
                     >
                       <line x1="18" y1="6" x2="6" y2="18"></line>
                       <line x1="6" y1="6" x2="18" y2="18"></line>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </svg>
                     <span>No wallet connected</span>
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
               <div>
                 <h3 className="font-medium mb-2">Backup Status</h3>"
                 <div className="grid grid-cols-2 gap-2">"
@@ -471,7 +455,6 @@ id="backup""
                     <p className="text-sm font-medium">Reviews</p>"
                     <p className="text-xs text-gray-500">"
                       {enableBackup ? "Backed up" : "Not backed up"}"
-=======
               
               <div>
                 <h3 className="font-medium mb-2">Backup Status</h3>
@@ -498,30 +481,25 @@ id="backup""
                     <p className="text-sm font-medium">Reviews</p>
                     <p className="text-xs text-gray-500">
                       {enableBackup ? 'Backed up' : 'Not backed up'}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </p>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>"
                 <Button
                   variant="outline""
                   className="w-full""
-=======
               
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>
                 <Button 
                   variant="outline" 
                   className="w-full"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   disabled={!enableBackup}
                 >
                   Restore Profile from Backup
                 </Button>
-<<<<<<< HEAD
                 <p className="text-xs text-gray-500 mt-1">"
                   {enableBackup
                     ? "Restore your profile data from decentralized storage""
@@ -547,25 +525,20 @@ id="backup""
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
                     : 'Enable backup first to use this feature'}'
-=======
                 <p className="text-xs text-gray-500 mt-1">
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
                     : 'Enable backup first to use this feature'}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </p>;
               </div>;
             </CardContent>;
           </Card>;
         </div>;
       </main>;
-<<<<<<< HEAD
     </>);
 }
 ;
-=======
     </>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

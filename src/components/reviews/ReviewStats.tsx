@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h3 className="text-xl font-bold">{formattedRating}</h3>"
           <div className="flex items-center">"
             <div className="flex mr-2">",
@@ -22,7 +21,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
   const getPercentage = (count:,  number) => {;,
     if (totalReviews === 0) return 0;
     return (count /,  totalReviews) * 100;
-=======
 
 import { Star } from 'lucide-react'
 import { Progress } from "@/components/ui/progress",
@@ -69,7 +67,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
   const getPercentage = (count: number) => {;
     if (totalReviews === 0) return 0;
     return (count / totalReviews) * 100;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   };
   return (;
     <div className="bg-card border rounded-lg p-4">;
@@ -77,7 +74,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
         <div>;
           <h3 className="text-xl font-bold">{formattedRating}</h3>;
           <div className="flex items-center">;
-<<<<<<< HEAD
             <div className="flex mr-2">;,
               {[1, 2, 3, 4, 5].map((i) => (;
                 <Star;
@@ -90,7 +86,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
             </div>
             <span className="text-sm text-muted-foreground">"
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}"
-=======
             <div className="flex mr-2">;
               {[1, 2, 3, 4, 5].map((i) => (;
                 <Star;
@@ -103,12 +98,10 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
             </div>
             <span className="text-sm text-muted-foreground">
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </span>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       {ratingDistribution && (
         <div className="space-y-2">",
           {[5, 4, 3, 2, 1].map((rating) => (
@@ -182,7 +175,6 @@ if (return 0) {
               <div className="w-6 text-sm text-right">{rating}</div>"
               <Star className="h-3 w-3 text-yellow-400" />"
               <Progress
-=======
       
       {ratingDistribution && (
         <div className="space-y-2">
@@ -198,13 +190,11 @@ if (return 0) {
                 {ratingDistribution[rating] || 0}
               </div>;
             </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           ))}
         </div>;
       )}
     </div>;
   );
-<<<<<<< HEAD
 }</div>) ;
 }</div>) ;
 }"}"
@@ -241,7 +231,5 @@ if (return 0) {
   );
 }
 ;
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

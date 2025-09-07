@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 export interface FeedbackRecord {;
@@ -95,7 +94,6 @@ export function getAllFeedback(): FeedbackRecord[] {
 export function getAllFeedback (): FeedbackRecord[] {
   return [...feedback_data];
 }
-=======
 import fs from "fs";
 import path from "path";
 export type FeedbackRecord = {;
@@ -123,4 +121,3 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {;
   fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), "utf-8");
   return rec;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

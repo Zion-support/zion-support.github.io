@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -266,7 +265,6 @@ export const isAdmin = () => {
 ;
 
 
-=======
 // Stub admin auth utility - placeholder for missing functionality;
 export const requireAdminAuth = () => {;
   // Placeholder implementation;
@@ -276,4 +274,3 @@ export const isAdmin = () => {;
   // Placeholder implementation;
   return true;
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

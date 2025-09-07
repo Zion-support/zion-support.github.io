@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import Link from "next/link",;
 export const metadata = {;
@@ -27,8 +26,6 @@ export const metadata = {title: "Quantum Neural Network Platform - Zion Tech Gro
   description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.";
   keywords: "quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group"}
 export default function QuantumNeuralNetworkPlatformPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import Link from "next/link",;
 export const metadata = {;
   title: "Quantum Neural Network Platform - Zion Tech Group",;
@@ -39,42 +36,35 @@ export default function QuantumNeuralNetworkPlatformPage() {;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Hero Section */}
-<<<<<<< HEAD
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
             <span className="gradient - text">Quantum Neural Network Platform</span>;
           </h1>;
           <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed">;
-=======
         <div className="text-center mb-16">;
           <h1 className="text-4xl md:text-6xl font-bold mb-6">;
             <span className="gradient-text">Quantum Neural Network Platform</span>;
           </h1>;
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             The future of artificial intelligence meets quantum computing. Our platform enables unprecedented computational power;
             for solving complex problems that were previously impossible.;
           </p>;
         </div>;
         {/* Overview Section */}
-<<<<<<< HEAD
         <section className="mb - 20">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
             <div>;
               <h2 className="text - 3xl font - bold mb - 6">Quantum Advantage in AI</h2>;
               <p className="text - lg text - gray - 300 mb - 6">;
-=======
         <section className="mb-20">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
             <div>;
               <h2 className="text-3xl font-bold mb-6">Quantum Advantage in AI</h2>;
               <p className="text-lg text-gray-300 mb-6">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Our Quantum Neural Network Platform represents a paradigm shift in computational capabilities.;
                 By harnessing quantum superposition and entanglement, we can process exponentially more information;
                 than classical computers.;
               </p>;
-<<<<<<< HEAD
               <p className="text - lg text - gray - 300 mb - 8">;
                 This platform is designed for researchers, enterprises, and innovators who need to tackle problems;
                 in drug discovery, financial modeling, climate prediction, and beyond.;
@@ -84,7 +74,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                   Get Access;
                 </Link>;
                 <Link href="/quantum - services" className="btn - secondary">;
-=======
               <p className="text-lg text-gray-300 mb-8">;
                 This platform is designed for researchers, enterprises, and innovators who need to tackle problems;
                 in drug discovery, financial modeling, climate prediction, and beyond.;
@@ -94,12 +83,10 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                   Get Access;
                 </Link>;
                 <Link href="/quantum-services" className="btn-secondary">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Explore All Quantum Services;
                 </Link>;
               </div>;
             </div>;
-<<<<<<< HEAD
             <div className="card bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 border - purple - 500 / 30 p - 8">;
               <h3 className="text - 2xl font - bold mb - 4">Quantum Capabilities</h3>;
               <ul className="space - y-3 text - gray - 300">;
@@ -126,7 +113,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                     <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M13 10V3L4 14h7v7l9 - 11h - 7z" />;
                   </svg>;
                   Hybrid quantum - classical computing;
-=======
             <div className="card bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-purple-500/30 p-8">;
               <h3 className="text-2xl font-bold mb-4">Quantum Capabilities</h3>;
               <ul className="space-y-3 text-gray-300">;
@@ -153,14 +139,12 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />;
                   </svg>;
                   Hybrid quantum-classical computing;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </li>;
               </ul>;
             </div>;
           </div>;
         </section>;
         {/* Platform Features */}
-<<<<<<< HEAD
         <section className="mb - 20">;
           <h2 className="text - 3xl font - bold text - center mb - 12">Platform Features</h2>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
@@ -175,7 +159,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               <h3 className="text - xl font - semibold mb - 3">Quantum Circuit Designer</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Visual drag - and - drop interface for designing quantum circuits with real - time simulation and validation.;
-=======
         <section className="mb-20">;
           <h2 className="text-3xl font-bold text-center mb-12">Platform Features</h2>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -190,12 +173,10 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               <h3 className="text-xl font-semibold mb-3">Quantum Circuit Designer</h3>;
               <p className="text-gray-400 mb-4">;
                 Visual drag-and-drop interface for designing quantum circuits with real-time simulation and validation.;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </p>;
             </div>;
             {/* Neural Network Training */}
             <div className="card group">;
-<<<<<<< HEAD
               <div className="w - 12 h - 12 bg - blue - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - blue - 500 / 30 transition - colors">;
                 <svg className="w - 6 h - 6 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h - 1M4 12H3m3.343 - 5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11 - 4 0v-.531c0-.895-.356 - 1.754-.988 - 2.386l-.548-.547z" />;
@@ -203,7 +184,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               </div>;
               <h3 className="text - xl font - semibold mb - 3">Neural Network Training</h3>;
               <p className="text - gray - 400 mb - 4">;
-=======
               <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">;
                 <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />;
@@ -211,13 +191,11 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-3">Neural Network Training</h3>;
               <p className="text-gray-400 mb-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Train quantum neural networks using our advanced optimization algorithms and quantum backpropagation.;
               </p>;
             </div>;
             {/* Quantum Simulator */}
             <div className="card group">;
-<<<<<<< HEAD
               <div className="w - 12 h - 12 bg - green - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - green - 500 / 30 transition - colors">;
                 <svg className="w - 6 h - 6 text - green - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9.75 17L9 20l - 1 1h8l - 1-1-.75 - 3M3 13h18M5 17h14a2 2 0 002 - 2V5a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v10a2 2 0 002 2z" />;
@@ -226,7 +204,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               <h3 className="text - xl font - semibold mb - 3">Quantum Simulator</h3>;
               <p className="text - gray - 400 mb - 4">;
                 High - performance quantum simulator supporting up to 100+ qubits with noise modeling and error correction.;
-=======
               <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors">;
                 <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />;
@@ -235,12 +212,10 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               <h3 className="text-xl font-semibold mb-3">Quantum Simulator</h3>;
               <p className="text-gray-400 mb-4">;
                 High-performance quantum simulator supporting up to 100+ qubits with noise modeling and error correction.;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </p>;
             </div>;
             {/* API Integration */}
             <div className="card group">;
-<<<<<<< HEAD
               <div className="w - 12 h - 12 bg - yellow - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - yellow - 500 / 30 transition - colors">;
                 <svg className="w - 6 h - 6 text - yellow - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M8 9l3 3 - 3 3m5 0h3M5 20h14a2 2 0 002 - 2V6a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v12a2 2 0 002 2z" />;
@@ -248,7 +223,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               </div>;
               <h3 className="text - xl font - semibold mb - 3">API Integration</h3>;
               <p className="text - gray - 400 mb - 4">;
-=======
               <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-yellow-500/30 transition-colors">;
                 <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />;
@@ -256,13 +230,11 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-3">API Integration</h3>;
               <p className="text-gray-400 mb-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 RESTful APIs and SDKs for seamless integration with existing applications and workflows.;
               </p>;
             </div>;
             {/* Real Quantum Hardware */}
             <div className="card group">;
-<<<<<<< HEAD
               <div className="w - 12 h - 12 bg - red - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - red - 500 / 30 transition - colors">;
                 <svg className="w - 6 h - 6 text - red - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19.428 15.428a2 2 0 00 - 1.022-.547l - 2.387-.477a6 6 0 00 - 3.86.517l-.318.158a6 6 0 01 - 3.86.517L6.05 15.21a2 2 0 00 - 1.806.547M8 4h8l - 1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414 - 1.415 3.414H4.828c - 1.782 0 - 2.674 - 2.154 - 1.414 - 3.414l5 - 5A2 2 0 009 10.172V5L8 4z" />;
@@ -270,7 +242,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               </div>;
               <h3 className="text - xl font - semibold mb - 3">Real Quantum Hardware</h3>;
               <p className="text - gray - 400 mb - 4">;
-=======
               <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-500/30 transition-colors">;
                 <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />;
@@ -278,13 +249,11 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-3">Real Quantum Hardware</h3>;
               <p className="text-gray-400 mb-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Access to real quantum computers from leading providers including IBM, Google, and our own quantum systems.;
               </p>;
             </div>;
             {/* Advanced Analytics */}
             <div className="card group">;
-<<<<<<< HEAD
               <div className="w - 12 h - 12 bg - indigo - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - indigo - 500 / 30 transition - colors">;
                 <svg className="w - 6 h - 6 text - indigo - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 19v - 6a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v6a2 2 0 002 2h2a2 2 0 002 - 2zm0 0V9a2 2 0 012 - 2h2a2 2 0 012 2v10m - 6 0a2 2 0 002 2h2a2 2 0 002 - 2m0 0V5a2 2 0 012 - 2h2a2 2 0 012 2v14a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2z" />;
@@ -292,7 +261,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               </div>;
               <h3 className="text - xl font - semibold mb - 3">Advanced Analytics</h3>;
               <p className="text - gray - 400 mb - 4">;
-=======
               <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-500/30 transition-colors">;
                 <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />;
@@ -300,14 +268,12 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-3">Advanced Analytics</h3>;
               <p className="text-gray-400 mb-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Comprehensive analytics dashboard with performance metrics, optimization insights, and result visualization.;
               </p>;
             </div>;
           </div>;
         </section>;
         {/* Use Cases */}
-<<<<<<< HEAD
         <section className="mb - 20">;
           <h2 className="text - 3xl font - bold text - center mb - 12">Applications & Use Cases</h2>;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
@@ -322,7 +288,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                 <li>• Molecular dynamics simulation</li>;
                 <li>• Protein folding prediction</li>;
                 <li>• Drug - target interaction modeling</li>;
-=======
         <section className="mb-20">;
           <h2 className="text-3xl font-bold text-center mb-12">Applications & Use Cases</h2>;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
@@ -337,12 +302,10 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                 <li>• Molecular dynamics simulation</li>;
                 <li>• Protein folding prediction</li>;
                 <li>• Drug-target interaction modeling</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Toxicity prediction</li>;
               </ul>;
             </div>;
             {/* Financial Modeling */}
-<<<<<<< HEAD
             <div className="card bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 border - purple - 500 / 30">;
               <h3 className="text - 2xl font - bold mb - 4">Financial Modeling</h3>;
               <p className="text - gray - 300 mb - 4">;
@@ -350,7 +313,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                 financial algorithms.;
               </p>;
               <ul className="text - sm text - gray - 400 space - y-1">;
-=======
             <div className="card bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-purple-500/30">;
               <h3 className="text-2xl font-bold mb-4">Financial Modeling</h3>;
               <p className="text-gray-300 mb-4">;
@@ -358,7 +320,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                 financial algorithms.;
               </p>;
               <ul className="text-sm text-gray-400 space-y-1">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Risk assessment and management</li>;
                 <li>• Portfolio optimization</li>;
                 <li>• Market prediction models</li>;
@@ -366,7 +327,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               </ul>;
             </div>;
             {/* Climate Prediction */}
-<<<<<<< HEAD
             <div className="card bg - gradient - to - r from - green - 600 / 20 to - blue - 600 / 20 border - green - 500 / 30">;
               <h3 className="text - 2xl font - bold mb - 4">Climate Prediction</h3>;
               <p className="text - gray - 300 mb - 4">;
@@ -374,7 +334,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                 quantum computational power.;
               </p>;
               <ul className="text - sm text - gray - 400 space - y-1">;
-=======
             <div className="card bg-gradient-to-r from-green-600/20 to-blue-600/20 border-green-500/30">;
               <h3 className="text-2xl font-bold mb-4">Climate Prediction</h3>;
               <p className="text-gray-300 mb-4">;
@@ -382,7 +341,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                 quantum computational power.;
               </p>;
               <ul className="text-sm text-gray-400 space-y-1">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Weather pattern modeling</li>;
                 <li>• Climate change prediction</li>;
                 <li>• Atmospheric dynamics</li>;
@@ -390,7 +348,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               </ul>;
             </div>;
             {/* Logistics Optimization */}
-<<<<<<< HEAD
             <div className="card bg - gradient - to - r from - yellow - 600 / 20 to - orange - 600 / 20 border - yellow - 500 / 30">;
               <h3 className="text - 2xl font - bold mb - 4">Logistics Optimization</h3>;
               <p className="text - gray - 300 mb - 4">;
@@ -398,7 +355,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                 that scale to enterprise levels.;
               </p>;
               <ul className="text - sm text - gray - 400 space - y-1">;
-=======
             <div className="card bg-gradient-to-r from-yellow-600/20 to-orange-600/20 border-yellow-500/30">;
               <h3 className="text-2xl font-bold mb-4">Logistics Optimization</h3>;
               <p className="text-gray-300 mb-4">;
@@ -406,7 +362,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                 that scale to enterprise levels.;
               </p>;
               <ul className="text-sm text-gray-400 space-y-1">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Route optimization</li>;
                 <li>• Supply chain management</li>;
                 <li>• Resource allocation</li>;
@@ -416,7 +371,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
           </div>;
         </section>;
         {/* Technology Stack */}
-<<<<<<< HEAD
         <section className="mb - 20">;
           <h2 className="text - 3xl font - bold text - center mb - 12">Quantum Technology Stack</h2>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
@@ -435,7 +389,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
             <div className="card text - center p - 6">;
               <h4 className="font - semibold mb - 2">Error Correction</h4>;
               <p className="text - sm text - gray - 400">Quantum error correction codes</p>;
-=======
         <section className="mb-20">;
           <h2 className="text-3xl font-bold text-center mb-12">Quantum Technology Stack</h2>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
@@ -454,12 +407,10 @@ export default function QuantumNeuralNetworkPlatformPage() {;
             <div className="card text-center p-6">;
               <h4 className="font-semibold mb-2">Error Correction</h4>;
               <p className="text-sm text-gray-400">Quantum error correction codes</p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </div>;
         </section>;
         {/* Pricing Tiers */}
-<<<<<<< HEAD
         <section className="mb - 20">;
           <h2 className="text - 3xl font - bold text - center mb - 12">Platform Access Tiers</h2>;
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
@@ -476,7 +427,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                   <li>• 100 API calls / month</li>;
                 </ul>;
                 <Link href="/contact" className="btn - primary w - full">;
-=======
         <section className="mb-20">;
           <h2 className="text-3xl font-bold text-center mb-12">Platform Access Tiers</h2>;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
@@ -493,13 +443,11 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                   <li>• 100 API calls/month</li>;
                 </ul>;
                 <Link href="/contact" className="btn-primary w-full">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Get Started;
                 </Link>;
               </div>;
             </div>;
             {/* Professional */}
-<<<<<<< HEAD
             <div className="card border border - purple - 500 bg - gradient - to - b from - purple - 600 / 10 to - transparent">;
               <div className="text - center p - 6">;
                 <h3 className="text - 2xl font - bold mb - 2">Professional</h3>;
@@ -513,7 +461,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                   <li>• Real quantum hardware access</li>;
                 </ul>;
                 <Link href="/contact" className="btn - primary w - full">;
-=======
             <div className="card border border-purple-500 bg-gradient-to-b from-purple-600/10 to-transparent">;
               <div className="text-center p-6">;
                 <h3 className="text-2xl font-bold mb-2">Professional</h3>;
@@ -527,42 +474,35 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                   <li>• Real quantum hardware access</li>;
                 </ul>;
                 <Link href="/contact" className="btn-primary w-full">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Get Started;
                 </Link>;
               </div>;
             </div>;
             {/* Enterprise */}
-<<<<<<< HEAD
             <div className="card border border - blue - 500">;
               <div className="text - center p - 6">;
                 <h3 className="text - 2xl font - bold mb - 2">Enterprise</h3>;
                 <p className="text - gray - 400 mb - 4">Custom solutions for large organizations</p>;
                 <div className="text - 3xl font - bold mb - 6">Custom</div>;
                 <ul className="text - left space - y-2 text - sm text - gray - 300 mb - 6">;
-=======
             <div className="card border border-blue-500">;
               <div className="text-center p-6">;
                 <h3 className="text-2xl font-bold mb-2">Enterprise</h3>;
                 <p className="text-gray-400 mb-4">Custom solutions for large organizations</p>;
                 <div className="text-3xl font-bold mb-6">Custom</div>;
                 <ul className="text-left space-y-2 text-sm text-gray-300 mb-6">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>• Unlimited qubit access</li>;
                   <li>• Custom quantum algorithms</li>;
                   <li>• Dedicated support team</li>;
                   <li>• Unlimited API access</li>;
-<<<<<<< HEAD
                   <li>• On - premise deployment</li>;
                   <li>• Custom integrations</li>;
                 </ul>;
                 <Link href="/contact" className="btn - primary w - full">;
-=======
                   <li>• On-premise deployment</li>;
                   <li>• Custom integrations</li>;
                 </ul>;
                 <Link href="/contact" className="btn-primary w-full">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Contact Sales;
                 </Link>;
               </div>;
@@ -570,7 +510,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
           </div>;
         </section>;
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="text - center">;
           <div className="card bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 border - purple - 500 / 30 max - w-4xl mx - auto">;
             <h2 className="text - 3xl font - bold mb - 4">Ready to Experience Quantum Advantage?</h2>;
@@ -582,7 +521,6 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                 Get Platform Access;
               </Link>;
               <Link href="/quantum - services" className="btn - secondary">;
-=======
         <section className="text-center">;
           <div className="card bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-purple-500/30 max-w-4xl mx-auto">;
             <h2 className="text-3xl font-bold mb-4">Ready to Experience Quantum Advantage?</h2>;
@@ -594,17 +532,13 @@ export default function QuantumNeuralNetworkPlatformPage() {;
                 Get Platform Access;
               </Link>;
               <Link href="/quantum-services" className="btn-secondary">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Explore All Quantum Services;
               </Link>;
             </div>;
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
     </div>);
-=======
     </div>;
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }

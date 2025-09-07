@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import {supabase} from '@/utils / supabase / client';
 import {Button} from '@/components / ui / button';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
@@ -55,8 +54,6 @@ if ( {) {
   $2
 'use client';
 import React, { useEffect, useState } from 'react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { supabase } from '@/utils/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -65,7 +62,6 @@ import { User, LogOut, LogIn } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import type { User as SupabaseUser, AuthChangeEvent, Session } from '@supabase/supabase-js';
 interface UserProfileProps {;
-<<<<<<< HEAD
   onUserChange?: (user: SupabaseUser |,  null) => void;
 }
     return (
@@ -183,7 +179,6 @@ export default function UserProfile(): any ({ onUserChange }:,  UserProfileProps
 }
         <Button onClick={handleSignOut} variant="outline" className="w-full">"
           <LogOut className="h-4 w-4 mr-2" />"
-=======
   onUserChange?: (user: SupabaseUser | null) => void;
 }
 ;
@@ -281,12 +276,10 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
         
         <Button onClick={handleSignOut} variant="outline" className="w-full">
           <LogOut className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Sign Out
         </Button>
       </CardContent>
     </Card>
-<<<<<<< HEAD
     <Card className='w-full max-w-sm'>;
       <CardHeader>;
         <CardTitle className='flex items-center gap-2'>;
@@ -376,7 +369,5 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
-=======
   )
 } 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

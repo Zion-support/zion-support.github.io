@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from "react""
 import { PanelLeft } from 'lucide-react''
 export const SidebarTrigger = React.forwardRef<
@@ -34,7 +33,6 @@ export const SidebarTrigger = React.forward_ref<;
       variant="ghost""
       size="icon""
       className={cn("h-7 w-7", props.className)}"
-=======
 
 import * as React from "react"
 import { PanelLeft } from 'lucide-react'
@@ -55,13 +53,11 @@ export const SidebarTrigger = React.forwardRef<
       variant="ghost"
       size="icon"
       className={cn("h-7 w-7", props.className)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       onClick={(event) => {
         props.onClick?.(event)
         toggleSidebar()
       }}
       {...props}
-<<<<<<< HEAD
     >;
       <PanelLeft />;
       <span className=&quot;sr - only & quot;>Toggle Sidebar</span>;
@@ -71,7 +67,6 @@ SidebarTrigger.display_name = &quot;SidebarTrigger & quot;
 ;
 SidebarTrigger.displayName = "SidebarTrigger"
 }}}))
-=======
     >
       <PanelLeft />
       <span className="sr-only">Toggle Sidebar</span>
@@ -79,4 +74,3 @@ SidebarTrigger.displayName = "SidebarTrigger"
   )
 })
 SidebarTrigger.displayName = "SidebarTrigger"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

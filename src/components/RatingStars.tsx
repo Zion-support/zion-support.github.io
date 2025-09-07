@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Star, StarHalf } from 'lucide-react''
 export function RatingStars({ value;
   return (
@@ -24,7 +23,6 @@ export function RatingStars({ value;
       })}
       {typeof count === 'number' && ('
         <span className="text-xs ml-1">({count})</span>"
-=======
 import React from 'react',
 import { Star, StarHalf } from 'lucide-react'
 
@@ -56,7 +54,6 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
       })}
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               className="h-4 w-4 fill-zion-cyan text-zion-cyan";
             />;
           );
@@ -66,7 +63,6 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
       {typeof count === 'number' && (;
         <span className="text-xs ml-1">({count})</span>;
       )}
-<<<<<<< HEAD
     </div>
   )
   const half = value - filled >= 0 && 0.5;
@@ -79,9 +75,7 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
 }
 }
 ;
-=======
     </div>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

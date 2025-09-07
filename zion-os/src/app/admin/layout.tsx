@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { ReactNode } from "react";
 
@@ -15,14 +14,11 @@ function AdminLayout() {
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - gray - 800 to - black">;
 import { ReactNode } from "react";
 export default function AdminLayout({ children }: { children: ReactNode }) {return (;
-=======
 import { ReactNode } from "react";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default function AdminLayout({ children }: { children: ReactNode }) {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
       {/* Admin Header */}
-<<<<<<< HEAD
       <div className="glass border - b border - white / 10">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="flex items - center justify - between h - 16">;
@@ -36,7 +32,6 @@ export default function AdminLayout({ children }: { children: ReactNode }) {;
               <a;
                 href="/admin / instances";
                 className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
-=======
       <div className="glass border-b border-white/10">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex items-center justify-between h-16">;
@@ -50,28 +45,21 @@ export default function AdminLayout({ children }: { children: ReactNode }) {;
               <a;
                 href="/admin/instances";
                 className="text-white/70 hover:text-white transition-colors duration-200 font-medium";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >;
                 Instances;
               </a>;
               <a;
-<<<<<<< HEAD
                 href="/admin / os - deploy";
                 className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
-=======
                 href="/admin/os-deploy";
                 className="text-white/70 hover:text-white transition-colors duration-200 font-medium";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >;
                 Deploy;
               </a>;
               <a;
                 href="/";
-<<<<<<< HEAD
                 className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
-=======
                 className="text-white/70 hover:text-white transition-colors duration-200 font-medium";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >;
                 ← Back to Dashboard;
               </a>;
@@ -80,7 +68,6 @@ export default function AdminLayout({ children }: { children: ReactNode }) {;
         </div>;
       </div>;
       {/* Admin Content */}
-<<<<<<< HEAD
       <div className="py - 8">;
         {children}
       </div>;
@@ -92,11 +79,9 @@ export default function AdminLayout({ children }: { children: ReactNode }) {;
 
 export default Layout;
 
-=======
       <div className="py-8">;
         {children}
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

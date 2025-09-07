@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 // Marketplace data store utilities
 
@@ -1017,7 +1016,6 @@ export function generate_id (prefix: string = 'item'): string {
 export function generate_id (prefix: string = 'item'): string {
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }
-=======
 import fs from "fs";
 import path from "path";
 import { MarketplaceDb, Offer, Project } from "./types";
@@ -1093,4 +1091,3 @@ export function getProjectById(id: string): Project | undefined {;
   const db = readDb();
   return db.projects.find((p) => p.id === id);
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

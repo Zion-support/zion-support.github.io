@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import Link from "next/link",;
@@ -26,8 +25,6 @@ export const metadata = {title: "Cybersecurity Services - Zion Tech Group | Adva
   description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.";
   keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"}
 export default function CybersecurityPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import Link from "next/link",;
 export const metadata = {;
   title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",;
@@ -44,21 +41,17 @@ export default function CybersecurityPage() {;
           </h1>;
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
             Protect your organization from evolving cyber threats with our comprehensive;
-<<<<<<< HEAD
 
             security solutions. From threat detection to compliance management,
 
             security solutions. From threat detection to compliance management,;
 
-=======
             security solutions. From threat detection to compliance management,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             we secure your digital assets and ensure business continuity.;
           </p>;
         </div>;
       </section>;
       {/* Security Overview */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="card bg - gradient - to - r from - green - 600 / 20 to - blue - 600 / 20 border - green - 500 / 30">;
@@ -92,7 +85,6 @@ export default function CybersecurityPage() {;
                   </div>;
                 </div>;
                 <Link href="/contact" className="btn - primary">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="card bg-gradient-to-r from-green-600/20 to-blue-600/20 border-green-500/30">;
@@ -126,20 +118,16 @@ export default function CybersecurityPage() {;
                   </div>;
                 </div>;
                 <Link href="/contact" className="btn-primary">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Secure Your Organization;
                 </Link>;
               </div>;
               <div className="relative">;
-<<<<<<< HEAD
                 <div className="w - full h - 80 bg - gradient - to - br from - green - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center">;
                   <svg className="w - 32 h - 32 text - green - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                     <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 12l2 2 4 - 4m5.618 - 4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01 - 8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176 - 1.332 9 - 6.03 9 - 11.622 0 - 1.042-.133 - 2.052-.382 - 3.016z" />;
-=======
                 <div className="w-full h-80 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">;
                   <svg className="w-32 h-32 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </svg>;
                 </div>;
               </div>;
@@ -148,7 +136,6 @@ export default function CybersecurityPage() {;
         </div>;
       </section>;
       {/* Core Security Services */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -179,7 +166,6 @@ export default function CybersecurityPage() {;
                 <li>• Threat intelligence feeds</li>;
               </ul>;
               <Link href="/cybersecurity / threat - detection" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -210,12 +196,10 @@ export default function CybersecurityPage() {;
                 <li>• Threat intelligence feeds</li>;
               </ul>;
               <Link href="/cybersecurity/threat-detection" className="text-green-400 hover:text-green-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Security Assessment */}
-<<<<<<< HEAD
             <div className="card group hover:bg - blue - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - blue - 500 / 30">;
                 <svg className="w - 8 h - 8 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -232,7 +216,6 @@ export default function CybersecurityPage() {;
                 vulnerability scanning, and risk analysis.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
             <div className="card group hover:bg-blue-500/10 transition-colors">;
               <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/30">;
                 <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -245,22 +228,17 @@ export default function CybersecurityPage() {;
                 vulnerability scanning, and risk analysis.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Penetration testing</li>;
                 <li>• Vulnerability assessments</li>;
                 <li>• Security architecture review</li>;
                 <li>• Risk analysis & reporting</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/cybersecurity / security - assessment" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-=======
               <Link href="/cybersecurity/security-assessment" className="text-blue-400 hover:text-blue-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Compliance Management */}
-<<<<<<< HEAD
             <div className="card group hover:bg - purple - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - purple - 500 / 30">;
                 <svg className="w - 8 h - 8 text - purple - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -282,7 +260,6 @@ export default function CybersecurityPage() {;
                 GDPR, and industry-specific regulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
             <div className="card group hover:bg-purple-500/10 transition-colors">;
               <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30">;
                 <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -295,22 +272,17 @@ export default function CybersecurityPage() {;
                 GDPR, and industry-specific regulations.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• SOC2 compliance</li>;
                 <li>• ISO 27001 certification</li>;
                 <li>• GDPR compliance</li>;
                 <li>• Industry regulations</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/cybersecurity / compliance" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-=======
               <Link href="/cybersecurity/compliance" className="text-purple-400 hover:text-purple-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Identity & Access Management */}
-<<<<<<< HEAD
             <div className="card group hover:bg - indigo - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - indigo - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - indigo - 500 / 30">;
                 <svg className="w - 8 h - 8 text - indigo - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -329,7 +301,6 @@ export default function CybersecurityPage() {;
                 <li>• Identity governance</li>;
               </ul>;
               <Link href="/cybersecurity / identity - access" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-=======
             <div className="card group hover:bg-indigo-500/10 transition-colors">;
               <div className="w-16 h-16 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/30">;
                 <svg className="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -348,12 +319,10 @@ export default function CybersecurityPage() {;
                 <li>• Identity governance</li>;
               </ul>;
               <Link href="/cybersecurity/identity-access" className="text-indigo-400 hover:text-indigo-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Data Protection */}
-<<<<<<< HEAD
             <div className="card group hover:bg - red - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - red - 500 / 30">;
                 <svg className="w - 8 h - 8 text - red - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -366,7 +335,6 @@ export default function CybersecurityPage() {;
                 and disaster recovery solutions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
             <div className="card group hover:bg-red-500/10 transition-colors">;
               <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-500/30">;
                 <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -379,22 +347,17 @@ export default function CybersecurityPage() {;
                 and disaster recovery solutions.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Data encryption</li>;
                 <li>• Backup & recovery</li>;
                 <li>• Data loss prevention</li>;
                 <li>• Privacy protection</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/cybersecurity / data - protection" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-=======
               <Link href="/cybersecurity/data-protection" className="text-red-400 hover:text-red-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
             {/* Security Training */}
-<<<<<<< HEAD
             <div className="card group hover:bg - yellow - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - yellow - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - yellow - 500 / 30">;
                 <svg className="w - 8 h - 8 text - yellow - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -407,7 +370,6 @@ export default function CybersecurityPage() {;
                 to build a security - conscious culture.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
             <div className="card group hover:bg-yellow-500/10 transition-colors">;
               <div className="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-500/30">;
                 <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -420,17 +382,13 @@ export default function CybersecurityPage() {;
                 to build a security-conscious culture.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Security awareness training</li>;
                 <li>• Phishing simulations</li>;
                 <li>• Incident response training</li>;
                 <li>• Compliance training</li>;
               </ul>;
-<<<<<<< HEAD
               <Link href="/cybersecurity / security - training" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-=======
               <Link href="/cybersecurity/security-training" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More →;
               </Link>;
             </div>;
@@ -438,7 +396,6 @@ export default function CybersecurityPage() {;
         </div>;
       </section>;
       {/* Security Framework */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - green - 600 / 10 to - blue - 600 / 10">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -456,7 +413,6 @@ export default function CybersecurityPage() {;
               </div>;
               <h3 className="text - xl font - semibold mb - 3">Identify</h3>;
               <p className="text - gray - 400">;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-600/10 to-blue-600/10">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -474,64 +430,54 @@ export default function CybersecurityPage() {;
               </div>;
               <h3 className="text-xl font-semibold mb-3">Identify</h3>;
               <p className="text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Asset discovery, risk assessment, and threat intelligence;
                 to understand your security posture.;
               </p>;
             </div>;
-<<<<<<< HEAD
             <div className="text - center">;
               <div className="w - 20 h - 20 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
                 <span className="text - 2xl font - bold text - blue - 400">2</span>;
               </div>;
               <h3 className="text - xl font - semibold mb - 3">Protect</h3>;
               <p className="text - gray - 400">;
-=======
             <div className="text-center">;
               <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
                 <span className="text-2xl font-bold text-blue-400">2</span>;
               </div>;
               <h3 className="text-xl font-semibold mb-3">Protect</h3>;
               <p className="text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Implement security controls, access management, and;
                 data protection measures.;
               </p>;
             </div>;
-<<<<<<< HEAD
             <div className="text - center">;
               <div className="w - 20 h - 20 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
                 <span className="text - 2xl font - bold text - purple - 400">3</span>;
               </div>;
               <h3 className="text - xl font - semibold mb - 3">Detect</h3>;
               <p className="text - gray - 400">;
-=======
             <div className="text-center">;
               <div className="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
                 <span className="text-2xl font-bold text-purple-400">3</span>;
               </div>;
               <h3 className="text-xl font-semibold mb-3">Detect</h3>;
               <p className="text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Continuous monitoring, threat detection, and;
                 security event analysis.;
               </p>;
             </div>;
-<<<<<<< HEAD
             <div className="text - center">;
               <div className="w - 20 h - 20 bg - red - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
                 <span className="text - 2xl font - bold text - red - 400">4</span>;
               </div>;
               <h3 className="text - xl font - semibold mb - 3">Respond</h3>;
               <p className="text - gray - 400">;
-=======
             <div className="text-center">;
               <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
                 <span className="text-2xl font-bold text-red-400">4</span>;
               </div>;
               <h3 className="text-xl font-semibold mb-3">Respond</h3>;
               <p className="text-gray-400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Incident response, containment, and recovery;
                 to minimize business impact.;
               </p>;
@@ -540,7 +486,6 @@ export default function CybersecurityPage() {;
         </div>;
       </section>;
       {/* Compliance Standards */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -595,7 +540,6 @@ export default function CybersecurityPage() {;
               </p>;
               <div className="text - sm text - gray - 400">;
                 <strong > Coverage:</strong> Data Privacy & Protection;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -650,14 +594,12 @@ export default function CybersecurityPage() {;
               </p>;
               <div className="text-sm text-gray-400">;
                 <strong>Coverage:</strong> Data Privacy & Protection;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Security Technology Stack */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - gray - 800 / 20 to - gray - 900 / 20">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -703,7 +645,6 @@ export default function CybersecurityPage() {;
                 <div > Auth0</div>;
                 <div > Microsoft Azure AD</div>;
                 <div > CyberArk</div>;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-800/20 to-gray-900/20">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -749,14 +690,12 @@ export default function CybersecurityPage() {;
                 <div>Auth0</div>;
                 <div>Microsoft Azure AD</div>;
                 <div>CyberArk</div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Security Success Metrics */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -783,7 +722,6 @@ export default function CybersecurityPage() {;
             <div className="text - center">;
               <div className="text - 4xl font - bold gradient - text mb - 2">24 / 7</div>;
               <div className="text - gray - 400">Security monitoring coverage</div>;
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -810,13 +748,11 @@ export default function CybersecurityPage() {;
             <div className="text-center">;
               <div className="text-4xl font-bold gradient-text mb-2">24/7</div>;
               <div className="text-gray-400">Security monitoring coverage</div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </div>;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py - 20 px - 4 sm: px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto text - center">;
           <div className="card bg - gradient - to - r from - green - 600 / 20 to - blue - 600 / 20 border - green - 500 / 30">;
@@ -832,7 +768,6 @@ export default function CybersecurityPage() {;
                 Secure Your Organization;
               </Link>;
               <Link href="/case - studies" className="btn - secondary text - lg px - 8 py - 4">;
-=======
       <section className="py-20 px-4 sm: px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
           <div className="card bg-gradient-to-r from-green-600/20 to-blue-600/20 border-green-500/30">;
@@ -848,18 +783,14 @@ export default function CybersecurityPage() {;
                 Secure Your Organization;
               </Link>;
               <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 View Security Case Studies;
               </Link>;
             </div>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
     </div>);
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function ClientDashboardContent() {;,
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();,
@@ -10,7 +9,6 @@ function ClientDashboardContent() {;,
     onboardingStatus && onboardingStatus.jobPosted &&;
     onboardingStatus && onboardingStatus.inviteSent &&;
     onboardingStatus && onboardingStatus.responseReceived;
-=======
 import { useState, useEffect } from "react",
 import { JobsList } from "@/components/jobs/JobsList",
 import { Button } from "@/components/ui/button",
@@ -82,7 +80,6 @@ function ClientDashboardContent() {
           </div>
         </div>
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { useState, useEffect } from "react",;
 import { JobsList } from "@/components/jobs/JobsList",;
 import { Button } from "@/components/ui/button",;
@@ -102,13 +99,10 @@ import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingIntervie
 import { useIsMobile } from "@/hooks/use-mobile",;
 function ClientDashboardContent() {;
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),;
-<<<<<<< HEAD
   const { jobs, isLoading } = useJobs(),;,
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null),;,
-=======
   const { jobs, isLoading } = useJobs(),;
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),;
   const isMobile = useIsMobile(),;
   const onboardingStatus = useOnboardingStatus(),;
@@ -116,15 +110,12 @@ function ClientDashboardContent() {;
     onboardingStatus.jobPosted &&;
     onboardingStatus.inviteSent &&;
     onboardingStatus.responseReceived,;
-<<<<<<< HEAD
   // Set the first job as selected when jobs are loaded (if,  any);
   useEffect(() => {;
     if (jobs.length > 0 && !selectedJobId) {;,
-=======
   // Set the first job as selected when jobs are loaded (if any);
   useEffect(() => {;
     if (jobs.length > 0 && !selectedJobId) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       const firstJob = jobs[0],;
       if (firstJob) {;
         setSelectedJobId(firstJob.id),;
@@ -132,11 +123,8 @@ function ClientDashboardContent() {;
       }
     }
   }, [jobs, selectedJobId]),;
-<<<<<<< HEAD
   const handleJobSelect = (jobId: string, jobTitle:,  string) => {;,
-=======
   const handleJobSelect = (jobId: string, jobTitle: string) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     setSelectedJobId(jobId),;
     setSelectedJobTitle(jobTitle);
   };
@@ -147,7 +135,6 @@ function ClientDashboardContent() {;
         description="Manage your jobs and talent requests in the Zion AI Marketplace.";
       />;
       <main className="container mx-auto px-4 py-8">;
-<<<<<<< HEAD
         <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>;`
           <div>;
             <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>My Jobs</h1>;`
@@ -156,7 +143,6 @@ function ClientDashboardContent() {;
           <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>;`
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>;
               <Link href="/hiring-tracker" />;
-=======
         <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>;
           <div>;
             <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>My Jobs</h1>;
@@ -165,12 +151,10 @@ function ClientDashboardContent() {;
           <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>;
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>;
               <Link href="/hiring-tracker">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline;
               </Link>;
             </Button>;
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>;
-<<<<<<< HEAD
               <Link href="/post-job" />;
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;
     onboarding_status.response_received;
@@ -382,7 +366,6 @@ if ( {) {
     </>;
   );
 }
-=======
               <Link href="/post-job">;
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;
               </Link>;
@@ -457,7 +440,6 @@ if ( {) {
     </>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 export default function ClientDashboard() {;
   return (;
@@ -465,7 +447,6 @@ export default function ClientDashboard() {;
       <ClientDashboardContent />;
     </ProtectedRoute>;
   );
-<<<<<<< HEAD
 export default /**
  * ClientDashboard - Function description
  */
@@ -513,7 +494,5 @@ function ClientDashboard() {
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}"
 }
 ;)
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

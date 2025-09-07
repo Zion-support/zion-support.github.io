@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast'
@@ -37,7 +36,6 @@ import { useState } from 'react';
     })
   },
   const candidateName = application.talent_profile?.full_name || "Candidate","
-=======
 import { useState } from "react",
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -96,12 +94,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 
   const candidateName = application.talent_profile?.full_name || "Candidate",
   
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
         {(provided) => (
-<<<<<<< HEAD
           <Card
             className="mb-2 p-0 shadow-sm border""
 import { useState } from "react",;
@@ -157,7 +153,6 @@ export function CandidateCard(): any ({ application, index }:,  CandidateCardPro
     application && application.updated_at &&;
     new Date(application && application.updated_at).getTime() <;
       Date && Date.now() - 7 * 24 * 60 * 60 * 1000;
-=======
           <Card 
             className="mb-2 p-0 shadow-sm border"
 import { useState } from "react",;
@@ -195,12 +190,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
   const isStalled = application.updated_at &&;
     new Date(application.updated_at).getTime() <;
     (Date.now() - 7 * 24 * 60 * 60 * 1000),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const handleSaveNotes = () => {;
     // Here you would save the notes to the database;
     // For now, we'll just show a toast;
     toast({;
-<<<<<<< HEAD
       title: 'Notes saved',;
       description: 'Your notes have been saved',;
     });
@@ -215,7 +208,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
   };
   const candidateName = application && application.talent_profile?.full_name || 'Candidate';
   return (
-=======
       title: "Notes saved",;
       description: "Your notes have been saved";
     }),;
@@ -230,7 +222,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
   };
   const candidateName = application.talent_profile?.full_name || "Candidate";
   return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <>;
       <Draggable draggableId={application.id} index={index}>;
         {(provided) => (;
@@ -239,21 +230,18 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
-<<<<<<< HEAD
           >
             <CardContent className='p-3'>'
               {/* Candidate Header */}
               <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
                   <AvatarPrimitive className="h-8 w-8"> {/* Using renamed AvatarPrimitive */}"
-=======
           >;
             <CardContent className="p-3">;
               {/* Candidate Header */}
               <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
                   <AvatarPrimitive className="h-8 w-8"> {/* Using renamed AvatarPrimitive */}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     {application.talent_profile?.profile_picture_url && !avatarError ? (;
                       <Image;
                         src={application.talent_profile.profile_picture_url} ;
@@ -272,7 +260,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     <h4 className="font-medium text-sm">;
                       {candidateName}
                     </h4>
-<<<<<<< HEAD
                     <p className="text-xs text-muted-foreground">"
                       {application.talent_profile?.professional_title || "Applicant"}"
                     </p>
@@ -326,7 +313,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                           View Resume;
                         </a>;
                       </DropdownMenuItem>;
-=======
                     <p className="text-xs text-muted-foreground">
                       {application.talent_profile?.professional_title || "Applicant"}
                     </p>
@@ -357,13 +343,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                           View Resume
                         </Link>
                       </DropdownMenuItem>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     )}
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
               {/* Application Info */}
-<<<<<<< HEAD
               <div className='flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2'>;
                 <div className='flex items-center'>;
                   <Calendar className='h-3 w-3 mr-1' />;
@@ -374,7 +358,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                 {isStalled && (;
                   <div className='flex items-center text-amber-500'>;
                     <AlertTriangle className='h-3 w-3 mr-1' />;
-=======
               <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">;
                 <div className="flex items-center">;
                   <Calendar className="h-3 w-3 mr-1" />;
@@ -383,13 +366,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                 {isStalled && (;
                   <div className="flex items-center text-amber-500">;
                     <AlertTriangle className="h-3 w-3 mr-1" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     Stalled;
                   </div>;
                 )}
               </div>;
               {/* Match Score */}
-<<<<<<< HEAD
               {application && application.match_score !== null &&;
                 application && application.match_score !== undefined && (;
                   <div className='mb-2'>;
@@ -465,7 +446,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   variant="default" "
                   size="sm" "
                   className="flex-1""
-=======
               {application.match_score !== null && application.match_score !== undefined && (;
                 <div className="mb-2">;
                   <ScoreBadge application={application} />;
@@ -521,7 +501,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   variant="default" 
                   size="sm" 
                   className="flex-1"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   onClick={() => setShowHireModal(true)}
                 >;
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;
@@ -532,7 +511,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
         )}
       </Draggable>;
       {/* Hire Confirmation Modal */}
-<<<<<<< HEAD
       <HireConfirmationModal
         isOpen = {showHireModal,}
         onClose = {() => setShowHireModal(false),}
@@ -914,8 +892,6 @@ function CandidateCard() {
 }'"}"
       </Draggable>;
       {/* Hire Confirmation Modal */}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <HireConfirmationModal;
         isOpen={showHireModal}
         onClose={() => setShowHireModal(false)}
@@ -925,8 +901,5 @@ function CandidateCard() {
     </>;
   );
 }
-<<<<<<< HEAD
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

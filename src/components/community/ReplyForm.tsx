@@ -1,23 +1,19 @@
-<<<<<<< HEAD
 interface ReplyFormProps {;
   onSubmit: (content:,  string) => Promise<void>;,
 import { useState } from 'react''
 import { useForm, ControllerRenderProps } from 'react-hook-form''
 import { Button } from '@/components/ui/button''
 import { Textarea } from '@/components/ui/textarea''
-=======
 
 import { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-<<<<<<< HEAD
 interface ReplyFormProps {
   onSubmit: (content:,  string) => Promise<void>;,
   parentId?: string
@@ -96,7 +92,6 @@ export const ReplyForm = ({ on_submit, parent_id }:,  ReplyFormProps) =>: any {,
   return (
     <Card>
       <CardContent className="pt-6">"
-=======
   FormMessage
 } from "@/components/ui/form",
 import { Card, CardContent } from "@/components/ui/card",
@@ -145,26 +140,22 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
   return (
     <Card>
       <CardContent className="pt-6">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleSubmit)}>
             <FormField
               control={form.control}
-<<<<<<< HEAD
               name="content""
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => ("
                 <FormItem>
                   <FormControl>
                     <Textarea
                       className="min-h-[100px] resize-y"",
-=======
               name="content"
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (
                 <FormItem>
                   <FormControl>
                     <Textarea
                       className="min-h-[100px] resize-y"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   },;
   return (;
     <Card>;
@@ -177,19 +168,15 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (;
                 <FormItem>;
                   <FormControl>;
-<<<<<<< HEAD
                     <Textarea className='min-h-[100px] resize-y' {...field} />;,
-=======
                     <Textarea;
                       className="min-h-[100px] resize-y";
                       {...field}
                     />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
             />;
             <div className='mt-4 flex justify-end'>;
               <Button type='submit' disabled={isSubmitting}>;
@@ -222,7 +209,6 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
 }
 export default ReplyForm;
 }}}}})
-=======
             />
             <div className="mt-4 flex justify-end">
               <Button type="submit" disabled={isSubmitting}>
@@ -237,4 +223,3 @@ export default ReplyForm;
 },
 
 export default ReplyForm,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

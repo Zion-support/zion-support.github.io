@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -11,11 +9,9 @@ import {
   UserGroupIcon,
   CogIcon
 } from '@heroicons/react/24/outline'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 const solutions = [
   {
-<<<<<<< HEAD
     title: 'Enterprise AI Platform',
     description: 'Complete AI infrastructure for large organizations',
     benefits: ['Scalable Architecture', 'Real-time Processing', 'Advanced Analytics', 'Enterprise Security']
@@ -71,7 +67,6 @@ export default function SolutionsPage() {
               </button>
             </div>
           ))}
-=======
     name: 'AI Research Assistant',
     description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.',
     icon: LightBulbIcon,
@@ -302,7 +297,6 @@ export default function SolutionsPage() {
               View Services <span aria-hidden="true">→</span>
             </Link>
           </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>
       </div>
     </div>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 },
     set_messages (prev => [...prev, user_msg]);
     set_loading (true);
@@ -20,14 +19,11 @@ interface Msg {
   role: 'user' | 'assistant'',
   message: string,
 import { useState, useRef, useEffect } from 'react';
-=======
 import { useState, useRef, useEffect } from 'react',;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { MessageSquare, X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
-<<<<<<< HEAD
 interface Msg { id: string, role: 'user' | 'assistant', message: string }'
 // Fallback responses when API is unavailable
 const FALLBACK_RESPONSES = [,
@@ -629,7 +625,6 @@ set_typing (false);
 }'";
 }
 }]
-=======
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
 // Fallback responses when API is unavailable
@@ -915,4 +910,3 @@ export function SupportChatbot() {;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

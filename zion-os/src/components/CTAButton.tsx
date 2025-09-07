@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 "use client",
 import Link from './next / link';,
@@ -41,8 +40,6 @@ function CTAButton() {
     <Link;
       href={href}
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -78,7 +75,6 @@ export function CTAButton({;
   return (;
     <Link;
       href={href} ;
-<<<<<<< HEAD
 
       className={classes}
       on_click={on_click}
@@ -88,7 +84,6 @@ export function CTAButton({;
       {children}
     </Link>);
 }
-=======
       className={classes}
       onClick={onClick}
       role="button";
@@ -98,4 +93,3 @@ export function CTAButton({;
     </Link>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

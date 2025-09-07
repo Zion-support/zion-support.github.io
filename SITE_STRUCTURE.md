@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 # Zion Tech Group - Site Structure Documentation
 
 ## 🌐 Overview
-=======
 # Zion Tech Group Website - Site Structure & Architecture
 
 ## Overview
 The Zion Tech Group website is a modern, responsive web application built with React, TypeScript, and Vite. It showcases the company's comprehensive technology services and solutions portfolio.
->>>>>>> origin/clean-integration
 
 ## Technology Stack
 
@@ -21,7 +18,6 @@ The Zion Tech Group website is a modern, responsive web application built with R
 - **Framer Motion** - Animation library for smooth interactions
 - **CSS Modules** - Component-scoped styling
 
-<<<<<<< HEAD
 ## 🏗️ **Technology Stack**
 
 ### **Core Technologies**
@@ -663,7 +659,6 @@ Solutions
 
 ### **Scripts**
 
-=======
 ### State Management
 - **React Context** - Lightweight state management
 - **React Query** - Server state management and caching
@@ -827,12 +822,10 @@ zion.app/
 ## Development Scripts
 
 ### Package Scripts
->>>>>>> origin/clean-integration
 ```json
 {
   "dev": "vite",
   "build": "vite build",
-<<<<<<< HEAD
   "start": "vite preview",
   "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
   "type-check": "tsc --noEmit"
@@ -1062,7 +1055,6 @@ npm run preview     # Preview production build
 **Status**: Production Ready ✅*Last Updated: December 2024*  
 _Version: 2.0 - Enhanced Futuristic Design_  
 _Maintained by: Zion Tech Group Development Team_
-=======
   "preview": "vite preview",
   "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
   "type-check": "tsc --noEmit",
@@ -1218,4 +1210,3 @@ _Maintained by: Zion Tech Group Development Team_
 ---
 
 *This document is maintained by the Zion Tech Group development team and should be updated as the architecture evolves.*
->>>>>>> origin/clean-integration

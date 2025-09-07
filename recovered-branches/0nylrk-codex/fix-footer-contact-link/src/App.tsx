@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import { Routes, Route  } from 'react-router-dom';
 import './App.css',
@@ -94,9 +93,6 @@ const baseRoutes = [;
   { path: "/community", element: <CommunityPage /> },;
   { path: "/contact", element: <ContactPage /> },;
 ];
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { Suspense } from 'react',
 import { Routes, Route } from 'react-router-dom',
 import './App.css',
@@ -104,7 +100,6 @@ import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
-<<<<<<< HEAD
 
 const App = () => {;
 
@@ -190,9 +185,6 @@ import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
-=======
-=======
-<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -200,8 +192,6 @@ import { ThemeProvider } from './components/ThemeProvider';
 import { WhitelabelProvider } from './context/WhitelabelContext';
 import { Toaster } from './components/ui/toaster';
 import { Toaster as SonnerToaster } from './components/ui/sonner';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -213,7 +203,6 @@ import {
   ErrorRoutes,
   EnterpriseRoutes,
   CommunityRoutes,
-<<<<<<< HEAD
   DeveloperRoutes,
 } from './routes';
 const Home = React.lazy (() => import ("./pages / Home"));
@@ -318,9 +307,6 @@ const ITOnsiteServicesPage = React.lazy(
 );
 const OpenAppRedirect = React.lazy(() => import("./pages/OpenAppRedirect"));
 const ContactPage = React.lazy(() => import("./pages/Contact"));
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   DeveloperRoutes
 } from './routes',
 const Home = React.lazy(() => import('./pages/Home')),
@@ -338,9 +324,6 @@ const Signup = React.lazy(() => import('./pages/Signup')),
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
-<<<<<<< HEAD
-=======
-=======
   DeveloperRoutes,
 } from './routes';
 const Home = React.lazy(() => import('./pages/Home'));
@@ -360,8 +343,6 @@ const ITOnsiteServicesPage = React.lazy(
 );
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -378,10 +359,6 @@ const baseRoutes = [
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
   { path: '/open-app', element: <OpenAppRedirect /> },
   { path: '/community', element: <CommunityPage /> },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   { path: '/contact', element: <ContactPage /> }],
 
 const App = () => {
@@ -526,7 +503,6 @@ const App = () =>: any {
     </WhitelabelProvider>;
   );
 },;
-<<<<<<< HEAD
   )
 },
 
@@ -542,8 +518,6 @@ export default App;
 export default App;
 export default App;
 
-=======
-=======
   { path: '/contact', element: <ContactPage /> },
 ];
 
@@ -574,7 +548,6 @@ const App = () => {
       </ThemeProvider>
     </WhitelabelProvider>
   );
-=======
  import {
   {
   {
@@ -663,8 +636,5 @@ const App = () => {
   element 
 }/>) ) 
 }</Routes> </Suspense> <Toaster /> <SonnerToaster position="top-right" /> </ThemeProvider> </WhitelabelProvider>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default App;

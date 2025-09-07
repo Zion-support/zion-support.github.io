@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function PrivacyPage() {;
   return (;
@@ -11,33 +10,27 @@ function PrivacyPage() {
   return (
     <div className="min - h-screen bg - white">;
 export default function PrivacyPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default function PrivacyPage() {;
   return (;
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="bg - gradient - to - r from - gray - 600 to - gray - 800 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
             Privacy Policy;
           </h1>;
           <p className="text - xl md:text - 2xl text - gray - 100 max - w-3xl mx - auto">;
-=======
       <section className="bg-gradient-to-r from-gray-600 to-gray-800 text-white py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <h1 className="text-4xl md:text-6xl font-bold mb-6">;
             Privacy Policy;
           </h1>;
           <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Your privacy is important to us. Learn how we collect, use, and protect your personal information.;
           </p>;
         </div>;
       </section>;
       {/* Privacy Content */}
-<<<<<<< HEAD
       <section className="py - 20">;
         <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="prose prose - lg max - w-none">;
@@ -203,7 +196,6 @@ export default function PrivacyPage() {;
                 <li > Right to be forgotten</li>;
               </ul>;
               <p className="text - gray - 600">;
-=======
       <section className="py-20">;
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="prose prose-lg max-w-none">;
@@ -369,7 +361,6 @@ export default function PrivacyPage() {;
                 <li>Right to be forgotten</li>;
               </ul>;
               <p className="text-gray-600">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Our legal basis for processing your personal information includes consent, contract performance, legal obligations, legitimate interests, and vital interests.;
               </p>;
             </div>;
@@ -377,7 +368,6 @@ export default function PrivacyPage() {;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
           <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
@@ -391,7 +381,6 @@ export default function PrivacyPage() {;
               Contact Us;
             </a>;
             <a href="/terms" className="border - 2 border - gray - 300 text - gray - 700 px - 8 py - 3 rounded - lg text - lg font - semibold hover:border - gray - 400 transition - colors">;
-=======
       <section className="py-20 bg-gray-50">;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -405,16 +394,12 @@ export default function PrivacyPage() {;
               Contact Us;
             </a>;
             <a href="/terms" className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg text-lg font-semibold hover:border-gray-400 transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               View Terms of Service;
             </a>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
     </div>);
-=======
     </div>;
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }

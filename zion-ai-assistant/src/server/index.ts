@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -34,8 +33,6 @@ if ( {) {
 
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
@@ -45,7 +42,6 @@ import { generateMilestones } from "./milestoneGenerator.js";
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: "1mb" }));
-<<<<<<< HEAD
 const inputSchema = z.object({scopeOfWork: z.string().min(10);
   startDateIso: z.string().datetime();
   endDateIso: z.string().datetime();
@@ -171,7 +167,6 @@ app.listen(port, () => {;
 });
 
 
-=======
 const inputSchema = z.object({;
   scopeOfWork: z.string().min(10);
   startDateIso: z.string().datetime();
@@ -195,4 +190,3 @@ const port = process.env.PORT ? Number(process.env.PORT) : 4321;
 app.listen(port, () => {;
   // // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
 });
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 }
   },
   return (
     <>
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">"
-=======
 import React, { useState } from "react",
 import { Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -75,12 +73,10 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
   return (
     <>
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         {/* Experience or Hourly Rate */}
         <div>
           {profile.hourly_rate ? (
             <div>
-<<<<<<< HEAD
               <span className="text-zion-slate-light text-xs">Hourly Rate</span>"
               <div className="text-white font-bold">${profile.hourly_rate}/hr</div>"
             </div>
@@ -140,7 +136,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         isOpen = {isHireModalOpen,}
         onClose = {() => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
-=======
               <span className="text-zion-slate-light text-xs">Hourly Rate</span>
               <div className="text-white font-bold">${profile.hourly_rate}/hr</div>
             </div>
@@ -174,7 +169,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         </div>
       </div>
       
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {/* Hire Request Modal */}
       <HireRequestModal;
         talent={profile}
@@ -185,7 +179,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     </>;
   );
 }
-<<<<<<< HEAD
 import { use_router } from 'next / router';
 interface TalentCardFooterProps {
   profile: TalentProfile,
@@ -287,6 +280,4 @@ if ( {) {
     </>);
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/admin/tokens.tsx
 import React, { useEffect, useState } from "react",
 import EnhancedLayout from "../../components/layout/EnhancedLayout",
 export default function AdminTokens() {
@@ -14,8 +13,6 @@ export default function AdminTokens() {
       fetch("/api/admin/tokens/config").then((r) => r.json())]),
     setTransactions(txRes.transactions || []),
     setConfig(cfgRes)
-=======
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
@@ -33,7 +30,6 @@ export default function AdminTokens() {
     ]);
     setTransactions(txRes.transactions || []);
     setConfig(cfgRes);
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
@@ -81,15 +77,12 @@ const mockTransactions: Transaction[] = [
     status: 'completed',
     createdAt: '2025-01-14T15:00:00Z',
     type: 'bonus'
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/tokens.tsx
   }
 
   useEffect(() => {
     load()
   }, []),
 
-<<<<<<< HEAD:pages/admin/tokens.tsx
   async function issue() {
     const res = await fetch("/api/admin/tokens/issue", {
       method: "POST",
@@ -109,8 +102,6 @@ const mockTransactions: Transaction[] = [
     if (data.error) alert(data.error),;
     await load();
   }
-=======
-<<<<<<< HEAD
   async function issue() {
     const res = await fetch('/api/admin/tokens/issue', {
       method: 'POST',
@@ -238,7 +229,6 @@ const mockTransactions: Transaction[] = [
             ))}
             {transactions.length === 0 && (
               <div className='text-gray-500'>No transactions.</div>
-=======
   const handleConfigUpdate = async (updates: Partial<TokenConfig>) => {
     setSaving(true);
     try {
@@ -251,7 +241,6 @@ const mockTransactions: Transaction[] = [
       setSaving(false);
     }
   };
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/tokens.tsx
 
   async function saveConfig() {
     const res = await fetch("/api/admin/tokens/config", {
@@ -289,9 +278,7 @@ const mockTransactions: Transaction[] = [
               </div>
               <div className="text-xs text-gray-500">Example: 0.05 means 100 ZION$ = $5 credit.</div>
             </div>
-<<<<<<< HEAD:pages/admin/tokens.tsx
           )}
-=======
 
             {/* Conversion Rules */}
             <div className="bg-white rounded-lg shadow p-6">
@@ -353,10 +340,8 @@ const mockTransactions: Transaction[] = [
                   </div>
                 ))}
               </div>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
             )}
           </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/tokens.tsx
         </div>
 
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
@@ -428,14 +413,8 @@ const mockTransactions: Transaction[] = [
       </div>;
     </EnhancedLayout>;
   );
-<<<<<<< HEAD:pages/admin/tokens.tsx
 }
-=======
-<<<<<<< HEAD
 }
-=======
 };
 
 export default AdminTokensPage;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/tokens.tsx

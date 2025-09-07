@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 const Footer: React.FC = () => {,
@@ -68,7 +67,6 @@ const Footer: React.FC = () => {,
   );
 };
 export default Footer;
-=======
 import { FooterNewsletter } from "@/components/FooterNewsletter",
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
 import Link from "next/link", // Changed from react-router-dom
@@ -486,4 +484,3 @@ export function Footer() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

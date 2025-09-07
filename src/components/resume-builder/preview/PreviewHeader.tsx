@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
@@ -14,7 +13,6 @@ import { useIsMobile } from '@/hooks/use-mobile';
         }
         .print-section, .print-section * {
           visibility: visible
-=======
 
 import { Button } from '@/components/ui/button',;
 import { ArrowLeft, FileText, Link } from 'lucide-react';
@@ -41,7 +39,6 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         }
         .print-section, .print-section * {;
           visibility: visible;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         }
         .print-section {;
           position: absolute,;
@@ -49,7 +46,6 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           top: 0,;
           width: 100%;
         }
-<<<<<<< HEAD
     `;`
     document && document.head.appendChild(style);
     window && window.print();
@@ -138,7 +134,6 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
 }
     </div>
   )
-=======
         .no-print {;
           display: none !important;
         }
@@ -189,4 +184,3 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

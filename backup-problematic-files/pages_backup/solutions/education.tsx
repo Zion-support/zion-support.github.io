@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/education.tsx
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
 import React from 'react';
@@ -12,9 +11,7 @@ const features = [;
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
 import React from 'react';
-=======
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/education.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -49,7 +46,6 @@ const features = [
   },
   {
     icon: Laptop,
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/education.tsx
     title: 'Virtual Classrooms,',
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },
@@ -162,8 +158,6 @@ const benefits = [
   'Accessible learning for all students'
 ];
 export default function EducationSolutions() {
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/education.tsx
     title: 'Virtual Classrooms',
     description: 'Online learning platform with video conferencing and collaboration',
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording']
@@ -210,15 +204,12 @@ export default function EducationSolutionsPage() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our education solutions are designed to enhance learning and improve outcomes.
               </p>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/education.tsx
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/education.tsx
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -232,7 +223,6 @@ export default function EducationSolutionsPage() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/education.tsx
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -357,8 +347,6 @@ export default function EducationSolutionsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/education.tsx
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -408,12 +396,9 @@ export default function EducationSolutionsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/education.tsx
     </Layout>
     </Layout>
     </>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/education.tsx
     </>
   );
 }

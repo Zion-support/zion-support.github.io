@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 "use client",;
 interface LoadingSpinnerProps {;
@@ -34,8 +33,6 @@ function LoadingSpinner() {
   }
   return (
     <div className={`${size_classes[size]} ${class_name}`} role="status" aria - label="Loading">;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 interface LoadingSpinnerProps {;
   size?: "small" | "medium" | "large",;
@@ -51,7 +48,6 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
   return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
       <svg;
-<<<<<<< HEAD
         className="animate - spin text - blue - 500";
         xmlns="http: //www.w3.org / 2000 / svg";
         fill="none";
@@ -75,7 +71,6 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
       <span className="sr - only">Loading...</span>;
     </div>);
 }
-=======
         className="animate-spin text-blue-500";
         xmlns="http: //www.w3.org/2000/svg";
         fill="none";
@@ -100,4 +95,3 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

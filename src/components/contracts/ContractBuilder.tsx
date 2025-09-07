@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 isOpen;
   onClose;
   talent;
@@ -121,7 +120,6 @@ isOpen;
 }"}"
 }
 ;
-=======
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -287,4 +285,3 @@ export function ContractBuilder({;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

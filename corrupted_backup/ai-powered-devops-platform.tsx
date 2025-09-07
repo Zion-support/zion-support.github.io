@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/ai-powered-devops-platform.tsx
 import React from 'react',
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
@@ -35,12 +34,10 @@ export default function AIPoweredDevOpsPlatformPage() {
 		</>;
 	);
 }
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-<<<<<<< HEAD
 export default function AIPoweredDevOpsPlatformPage() {
   return (
     <>
@@ -76,7 +73,6 @@ export default function AIPoweredDevOpsPlatformPage() {
     </>
   );
 }
-=======
 const AIPoweredDevOpsPlatform: React.FC = () => {
   return (
     <Layout>
@@ -153,5 +149,3 @@ const AIPoweredDevOpsPlatform: React.FC = () => {
 };
 
 export default AIPoweredDevOpsPlatform;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-powered-devops-platform.tsx

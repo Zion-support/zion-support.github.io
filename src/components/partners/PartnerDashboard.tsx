@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {;
   Card,;
   CardContent,;
@@ -20,13 +19,11 @@ import { Button } from "@/components/ui/button";
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
-=======
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -37,7 +34,6 @@ export function PartnerDashboard() {
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   },
-<<<<<<< HEAD
   return (
     <div className="space-y-6">"
       {/* Stats Overview */}
@@ -64,7 +60,6 @@ export function PartnerDashboard() {
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>"
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>"
             <p className="text-xs text-zion-slate-light">"
-=======
   
   return (
     <div className="space-y-6">
@@ -78,12 +73,10 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
             <p className="text-xs text-zion-slate-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               {stats.completedReferrals} completed, {stats.pendingReferrals} pending
             </p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
         <Card className="bg-zion-blue-dark border-zion-blue-light">"
           <CardHeader className="flex flex-row items-center justify-between pb-2">"
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>"
@@ -92,7 +85,6 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">{stats.conversionRate}%</div>"
             <p className="text-xs text-zion-slate-light">"
-=======
         
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -102,12 +94,10 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">{stats.conversionRate}%</div>
             <p className="text-xs text-zion-slate-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Of clicks that convert to sign-ups
             </p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        '
         <Card className="bg-zion-blue-dark border-zion-blue-light">"
           <CardHeader className="flex flex-row items-center justify-between pb-2">"
@@ -117,7 +107,6 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>"
             <p className="text-xs text-zion-slate-light">"
-=======
         
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -127,25 +116,20 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               ${stats.pendingRevenue} pending payout
             </p>
           </CardContent>
         </Card>
       </div>
-<<<<<<< HEAD
       {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">"
-=======
       
       {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
           <CardDescription>Track your referral performance over time</CardDescription>
         </CardHeader>
-<<<<<<< HEAD
         <CardContent className="flex justify-center items-center p-6">"
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg w-full">"
             <LineChart className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />"
@@ -154,7 +138,6 @@ export function PartnerDashboard() {
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">"
         <CardHeader className="flex flex-row items-center justify-between">"
-=======
         <CardContent className="flex justify-center items-center p-6">
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg w-full">
             <LineChart className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
@@ -166,12 +149,10 @@ export function PartnerDashboard() {
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <div>
             <CardTitle>Recent Referrals</CardTitle>
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>
-<<<<<<< HEAD
           <Button variant="outline" size="sm">View All</Button>"
         </CardHeader>
         <CardContent>
@@ -179,7 +160,6 @@ export function PartnerDashboard() {
             <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />"
             <p className="text-zion-slate-light mb-4">No referrals yet</p>"
             <p className="text-xs text-zion-slate-light">"
-=======
           <Button variant="outline" size="sm">View All</Button>
         </CardHeader>
         <CardContent>
@@ -187,13 +167,11 @@ export function PartnerDashboard() {
             <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
             <p className="text-zion-slate-light mb-4">No referrals yet</p>
             <p className="text-xs text-zion-slate-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Start sharing your referral links to earn rewards
             </p>
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
         </CardContent>
       </Card>
       {/* Recent Referrals */}
@@ -215,7 +193,6 @@ export function PartnerDashboard() {
           </div>
         </CardContent>
 }}))
-=======
     </div>
   )
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -308,4 +285,3 @@ export function PartnerDashboard() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

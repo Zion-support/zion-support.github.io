@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
       return (
       // Reset error state after a brief delay;
@@ -84,7 +83,6 @@ if ( {) {
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />"
-=======
 import React, { Component, ReactNode } from 'react',;
 import { QueryClient } from '@tanstack/react-query',;
 import * as Sentry from '@sentry/nextjs',;
@@ -237,12 +235,10 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     Retrying...
                   </>
                 ) : (
                   <>
-<<<<<<< HEAD
                     <RefreshCw className="mr-2 h-4 w-4" />"
                     Try Again
                   </>
@@ -250,7 +246,6 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 variant="outline""
                 onClick={() => window.location.reload()}
                 className="w-full""
-=======
                     <RefreshCw className="mr-2 h-4 w-4" />
                     Try Again
                   </>
@@ -261,12 +256,10 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 variant="outline"
                 onClick={() => window.location.reload()}
                 className="w-full"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >
                 Reload Page
               </Button>
             </div>
-<<<<<<< HEAD
             {!this.state.isOnline && (
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>'
                 <WifiOff className='h-4 w-4' />'
@@ -360,7 +353,6 @@ export const useApiErrorHandler = () =>: any {
             )}
 }, ;
   return { handleApiError };
-=======
 
             {!this.state.isOnline && (
               <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
@@ -380,12 +372,10 @@ export const useApiErrorHandler = () =>: any {
                 </pre>;
               </details>;
             )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>;
         </div>;
       );
     }
-<<<<<<< HEAD
     return this && this.props.children;
   }
 // Hook for accessing query client in function components;
@@ -404,7 +394,6 @@ export const useApiErrorHandler = () => {;
   return { handleApiError }
 },
 };)
-=======
 ;
     return this.props.children;
   }
@@ -421,4 +410,3 @@ export const useApiErrorHandler = () => {;
   };
   return { handleApiError }
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

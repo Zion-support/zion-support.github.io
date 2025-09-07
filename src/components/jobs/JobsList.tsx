@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from "react","
 import { useAuth } from "@/hooks/useAuth","
 import { supabase } from "@/integrations/supabase/client","
@@ -139,7 +138,6 @@ export function JobsList(): any ({ filter, onSelectJob }:,  JobsListProps) {;
   useEffect((,) => {;
     const fetchJobs = async () => {;
       if (!user) return;
-=======
 
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -198,12 +196,10 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
   useEffect(() => {;
     const fetchJobs = async () => {;
       if (!user) return,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       try {;
         let query = supabase;
           .from("jobs");
           .select("*");
-<<<<<<< HEAD
           .eq("client_id", user && user.id);
           .order("created_at", { ascending: false }),;
         if (filter) {;
@@ -212,7 +208,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
         const { data, error } = await query;
         if (error) throw error;
         setJobs(data as Job[]);,
-=======
           .eq("client_id", user.id);
           .order("created_at", { ascending: false }),;
         if (filter) {;
@@ -222,13 +217,11 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
         const { data, error } = await query,;
         if (error) throw error,;
         setJobs(data as Job[]);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       } catch (error) {;
         logErrorToProduction('Error fetching jobs:', { data: error });
       } finally {;
         setIsLoading(false);
       }
-<<<<<<< HEAD
     };
     }
   },
@@ -268,7 +261,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
   }, [user, filter]);
   if (isLoading) {;
     return (
-=======
     },
 
     fetchJobs()
@@ -347,13 +339,11 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
   }, [user, filter]),;
   if (isLoading) {;
     return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
     );
   }
-<<<<<<< HEAD
   if (jobs && jobs.length === 0) {;
     return (<div className="text-center p-8 border rounded-md bg-muted/20">;
         <p className="text-lg text-muted-foreground">;
@@ -363,7 +353,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
         </p>;
         <Button asChild className="mt-4">;
           <Link href="/post-job" />Post Your First Job</Link>;
-=======
 ;
   if (jobs.length === 0) {;
     return (;
@@ -376,12 +365,10 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
         </p>;
         <Button asChild className="mt-4">;
           <Link href="/post-job">Post Your First Job</Link>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </Button>;
       </div>;
     );
   }
-<<<<<<< HEAD
   const getStatusColor = (status: JobStatus,) => {;
     switch (status) {;
       case "new": return "bg-blue-100 text-blue-800";
@@ -415,7 +402,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
             onSelectJob ? "cursor-pointer" : """
           }`}`
           onClick = {(,) => onSelectJob?.(job && job.id, job && job.title),}
-=======
 ;
   const getStatusColor = (status: JobStatus) => {;
     switch (status) {;
@@ -439,12 +425,10 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
             onSelectJob ? "cursor-pointer" : "";
           }`}
           onClick={() => onSelectJob?.(job.id, job.title)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         >;
           <CardHeader className="p-4">;
             <div className="flex justify-between items-start">;
               <div>;
-<<<<<<< HEAD
                 <CardTitle className="text-xl">{job && job.title}</CardTitle>;
                 <CardDescription className="mt-1">;
                   Posted {format(new Date(job && job.created_at), "PPP")}"
@@ -452,7 +436,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
               </div>;
               <Badge className={getStatusColor(job && job.status)}>;
                 {job && job.status.replace("_", " ").toUpperCase()}"
-=======
                 <CardTitle className="text-xl">{job.title}</CardTitle>;
                 <CardDescription className="mt-1">;
                   Posted {format(new Date(job.created_at), "PPP")}
@@ -460,28 +443,23 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
               </div>;
               <Badge className={getStatusColor(job.status)}>;
                 {job.status.replace("_", " ").toUpperCase()}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </Badge>;
             </div>;
           </CardHeader>;
           <CardContent className="p-4 pt-0">;
             <p className="line-clamp-3 text-sm text-muted-foreground mb-2">;
-<<<<<<< HEAD
               {job && job.description}
             </p>;
             <div className="flex flex-wrap gap-1 mt-2">;
               {job && job.skills.slice(0, 3).map((skill, index,) => (;
-=======
               {job.description}
             </p>;
             <div className="flex flex-wrap gap-1 mt-2">;
               {job.skills.slice(0, 3).map((skill, index) => (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <Badge key={index} variant="outline" className="text-xs">;
                   {skill}
                 </Badge>;
               ))}
-<<<<<<< HEAD
               {job && job.skills.length > 3 && (;
                 <Badge variant="outline" className="text-xs">;
                   +{job && job.skills.length - 3} more;
@@ -618,7 +596,6 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {",
               </Button>
             </div>
           </CardFooter>)))))
-=======
               {job.skills.length > 3 && (
                 <Badge variant="outline" className="text-xs">
                   +{job.skills.length - 3} more
@@ -655,4 +632,3 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {",
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -72,7 +71,6 @@ export default function AdminDashboard() {
               className="object-cover""
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>"
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">"
-=======
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -117,12 +115,10 @@ export default function AdminDashboard() {
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <li>Track sales and service metrics in real time.</li>
             <li>Approve or remove listings with a few clicks.</li>
             <li>Assign roles and permissions to your team.</li>
           </ul>
-<<<<<<< HEAD
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>"
           <div className="space-y-4 mb-12">"
             <div>
@@ -137,7 +133,6 @@ export default function AdminDashboard() {
           <div className="text-center">"
             <Button size="lg" className="bg-zion-purple text-white" asChild>"
               <Link href="/admin" />View Dashboard</Link>"
-=======
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
             <div>
@@ -152,14 +147,11 @@ export default function AdminDashboard() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/admin">View Dashboard</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>
           </div>
         </div>
       </main>
     </>
-<<<<<<< HEAD
-=======
   )
 import React from "react",;
 import { Header } from "@/components/Header",;
@@ -200,7 +192,6 @@ export default function AdminDashboard() {;
               src="https: //placehold.co/800x400";
               alt="Screenshot of admin dashboard";
               className="object-cover";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             />;
           </div>;
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
@@ -212,7 +203,6 @@ export default function AdminDashboard() {;
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>;
           <div className="space-y-4 mb-12">;
             <div>;
-<<<<<<< HEAD
               <p className='font-semibold'>Who can access the dashboard?</p>;
               <p className='text-zion-slate-light'>;
       <SEO;
@@ -289,7 +279,6 @@ export default function AdminDashboard() {;
             </div>;
           </div>;
               <Link href="/admin" />View Dashboard</Link>;
-=======
               <p className="font-semibold">Who can access the dashboard?</p>;
               <p className="text-zion-slate-light">Only authorized admins and moderators with the proper roles.</p>;
             </div>;
@@ -301,20 +290,16 @@ export default function AdminDashboard() {;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
               <Link href="/admin">View Dashboard</Link>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
   );
 }
     </>);
 }
   )
-=======
     </>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

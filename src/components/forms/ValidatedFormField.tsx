@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import {;
   FormField,;
@@ -713,7 +712,6 @@ export const commonValidations = {;
   }},
     }
   }};
-=======
 import React, { useState, useEffect } from 'react',;
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
@@ -1052,4 +1050,3 @@ export const commonValidations = {;
       return null;
     }
   }};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

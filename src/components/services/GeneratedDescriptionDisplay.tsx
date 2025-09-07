@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -47,7 +46,6 @@ export function GeneratedDescriptionDisplay(): any ({;
             {isEditing ? (
               <>
                 <Check className="h-4 w-4 mr-1" />"
-=======
 
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -92,16 +90,12 @@ export function GeneratedDescriptionDisplay({
             {isEditing ? (
               <>
                 <Check className="h-4 w-4 mr-1" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Done
               </>
             ) : (
               <>
-<<<<<<< HEAD
                 <Pencil className="h-4 w-4 mr-1" />"
-=======
                 <Pencil className="h-4 w-4 mr-1" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Edit
               </>
 import React, { useState } from "react",;
@@ -112,35 +106,26 @@ import { Textarea } from "@/components/ui/textarea",;
 import { Check, Pencil } from 'lucide-react';
 interface GeneratedDescriptionDisplayProps {;
   description: string,;
-<<<<<<< HEAD
   onSave: (editedDescription:,  string) => void;
-=======
   onSave: (editedDescription: string) => void;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export function GeneratedDescriptionDisplay({;
   description,;
   onSave;
-<<<<<<< HEAD
 }:,  GeneratedDescriptionDisplayProps) {;
   const { toast } = useToast(),;,
   const [isEditing, setIsEditing] = useState(false),;,
-=======
 }: GeneratedDescriptionDisplayProps) {;
   const { toast } = useToast(),;
   const [isEditing, setIsEditing] = useState(false),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [editedDescription, setEditedDescription] = useState(description),;
   const handleSave = () => {;
     onSave(editedDescription),;
     setIsEditing(false),;
     toast({;
-<<<<<<< HEAD
       title: "Description Saved";",
-=======
       title: "Description Saved";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       description: "Your edited description has been saved.";
     });
   };
@@ -166,7 +151,6 @@ export function GeneratedDescriptionDisplay({;
                 Edit;
               </>;
             )}
-<<<<<<< HEAD
     <Card className='border border - zion - blue - light bg - zion - blue - dark'>;
       <CardHeader>;
         <CardTitle className='text - white flex items - center justify - between'>;
@@ -185,13 +169,10 @@ export function GeneratedDescriptionDisplay({;
                 <Pencil className='h - 4 w - 4 mr - 1' />;
                 Edit;
               </>)}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>;
         </CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
             onChange={(e) => setEditedDescription(e.target.value)}
             className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none"",
           />
@@ -199,7 +180,6 @@ export function GeneratedDescriptionDisplay({;
           <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">"
             {editedDescription}
           </div>
-=======
         {isEditing ? (;
           <Textarea;
             value={editedDescription}
@@ -210,24 +190,19 @@ export function GeneratedDescriptionDisplay({;
           <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
             {editedDescription}
           </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         )}
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
           <Button;
             onClick={handleSave}
-<<<<<<< HEAD
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white""
-=======
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           >
             Save Changes
           </Button>
         </CardFooter>
       )}
-<<<<<<< HEAD
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) "
 }</Card>)
 }'";
@@ -266,9 +241,7 @@ export function GeneratedDescriptionDisplay({;
 }'";
 }
 ;
-=======
     </Card>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

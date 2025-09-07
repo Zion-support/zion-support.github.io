@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 onViewDetails, }
   )
 }
@@ -565,7 +564,6 @@ interface PartnerTableProps {;
   getFraudFlagBadge: (flags?:,  number) => JSX.Element | null;
 }
 ;
-=======
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useRouter } from 'next/router',
@@ -1317,7 +1315,6 @@ interface PartnerTableProps {;
   getFraudFlagBadge: (flags?: number) => JSX.Element | null;
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 function PartnerTable({;
   partners,;
   isLoading,;
@@ -1326,11 +1323,8 @@ function PartnerTable({;
   onOpenSettings;
   getStatusBadge;
   getFraudFlagBadge;
-<<<<<<< HEAD
 }:,  PartnerTableProps) {;
-=======
 }: PartnerTableProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   if (isLoading) {;
     return (;
       <div className="text-center py-8">;
@@ -1338,7 +1332,6 @@ function PartnerTable({;
       </div>;
     );
   }
-<<<<<<< HEAD
   if (partners.length === 0) {
     return (
       <div className="py-8">"
@@ -1347,7 +1340,6 @@ function PartnerTable({;
           title="No Partners Found""
           description="There are no partner applications to display.""
           className="border-none bg-transparent text-center""
-=======
   
   if (partners.length === 0) {
     return (
@@ -1357,7 +1349,6 @@ function PartnerTable({;
           title="No Partners Found"
           description="There are no partner applications to display."
           className="border-none bg-transparent text-center"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         />
       </div>
     )
@@ -1386,17 +1377,13 @@ function PartnerTable({;
             </TableCell>;
             <TableCell>{partner.niche}</TableCell>;
             <TableCell>;
-<<<<<<< HEAD
               {partner.audience_size.replace('k,000').replace('- - ').replace('overOver ')}'
-=======
               {partner.audience_size.replace('k,000').replace('- - ').replace('overOver ')}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </TableCell>;
             <TableCell>{getStatusBadge(partner.status)}</TableCell>;
             <TableCell>;
               {new Date(partner.created_at).toLocaleDateString()}
             </TableCell>
-<<<<<<< HEAD
             <TableCell className="text-right">"
               <div className="flex justify-end gap-2">"
                 {partner.status === 'pending' && ('
@@ -1433,7 +1420,6 @@ function PartnerTable({;
                 <Button
                   variant="outline" "
                   size="sm""
-=======
             <TableCell className="text-right">
               <div className="flex justify-end gap-2">
                 {partner.status === 'pending' && (
@@ -1472,7 +1458,6 @@ function PartnerTable({;
                 <Button 
                   variant="outline" 
                   size="sm"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   onClick={() => onViewDetails(partner)}
                 >;
                   View;
@@ -1485,8 +1470,5 @@ function PartnerTable({;
     </Table>;
   );
 }
-<<<<<<< HEAD
 ;)
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

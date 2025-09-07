@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
   try {
@@ -79,7 +78,6 @@ export interface GptClassification {
 }
 
 }
-=======
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(text: string, source: MonitoredSource): Promise<GptClassification> {;
   const apiKey = process.env.OPENAI_API_KEY;
@@ -116,4 +114,3 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
     return { label: 'SUSPICIOUS', reason: 'Invalid JSON from GPT', confidence: 0.5 }
   }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

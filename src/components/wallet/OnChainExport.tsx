@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
   )
 }
@@ -43,7 +42,6 @@ if ( {) {
   );
 }
 ;
-=======
 
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -312,4 +310,3 @@ export function OnChainExport() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

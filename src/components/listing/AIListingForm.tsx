@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
         disabled={isLoading || !title || !category}
         className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'>        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";",
@@ -29,7 +28,6 @@ import { Sparkles } from 'lucide-react''
 import { Star } from 'lucide-react';
 interface AIListingFormProps {
   onSubmit: (formData: {,
-=======
 
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -40,12 +38,10 @@ import { Sparkles } from 'lucide-react'
 
 interface AIListingFormProps {
   onSubmit: (formData: {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     title: string,
     category: string,
     keyFeatures: string,
     targetAudience: string
-<<<<<<< HEAD
   }) => void;
   isLoading: boolean,
   initialValues?: {
@@ -287,7 +283,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }:,  AIL
   return;
 }/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {""
 }}}}))
-=======
   }) => void,
   isLoading: boolean,
   initialValues?: {
@@ -475,4 +470,3 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Check, Copy, ExternalLink } from 'lucide-react''
 export function ZapierIntegration() {
 import React, { useState } from 'react';
@@ -92,7 +91,6 @@ function ZapierIntegration() {
           </CardHeader>;
           <CardContent>;
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}"
-=======
 
 import React, { useState } from "react",
 import { Badge } from "@/components/ui/badge",
@@ -139,26 +137,21 @@ export function ZapierIntegration() {
                   />
                   <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </Button>
                 </div>
               </div>
             </div>
           </CardContent>
-<<<<<<< HEAD
           <CardFooter className="flex flex-col items-start">"
             <Button variant="outline" className="gap-2">"
               <ExternalLink className="h-4 w-4" />"
-=======
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Open Zapier Dashboard
             </Button>
           </CardFooter>
         </Card>
-<<<<<<< HEAD
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold">Popular Zaps</h3>"
@@ -179,7 +172,6 @@ export function ZapierIntegration() {
               </li>
               <li className="flex items-center gap-2">"
                 <Check className="h-4 w-4 text-green-500" />"
-=======
         
         <Card>
           <CardHeader>
@@ -201,25 +193,20 @@ export function ZapierIntegration() {
               </li>
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-green-500" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <span>Create calendar events for interviews</span>
               </li>
             </ul>
           </CardContent>
           <CardFooter>
-<<<<<<< HEAD
             <Button variant="outline" className="w-full gap-1">"
               <ExternalLink className="h-4 w-4" />"
-=======
             <Button variant="outline" className="w-full gap-1">
               <ExternalLink className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <span>Explore Zion Zaps</span>
             </Button>
           </CardFooter>
         </Card>
       </div>
-<<<<<<< HEAD
       <Card>
         <CardHeader>
           <h3 className='text-lg font-semibold'>Zapier Webhook Triggers</h3>'
@@ -266,7 +253,6 @@ export function ZapierIntegration() {
                 Triggers when a contract is signed by all parties.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>"
-=======
       
       <Card>
         <CardHeader>
@@ -300,19 +286,15 @@ export function ZapierIntegration() {
                 Triggers when a contract is signed by all parties.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>
           </div>
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
             <p className='text - sm text - muted - foreground mb - 4'>;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
               to set up integrations.;
-=======
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -321,11 +303,8 @@ import { Input } from "@/components/ui/input",;
 import { toast } from "sonner",;
 import { Check, Copy, ExternalLink } from 'lucide-react';
 export function ZapierIntegration() {;
-<<<<<<< HEAD
   const [copied, setCopied] = useState(false),;,
-=======
   const [copied, setCopied] = useState(false),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),;
   const handleCopyApiKey = () => {;
     navigator.clipboard.writeText(apiKey),;
@@ -347,7 +326,6 @@ export function ZapierIntegration() {;
             <p className="text-sm text-muted-foreground mb-4">;
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;
             </p>;
-<<<<<<< HEAD
             <div className='space - y-4'>;
               <div className='space - y-2'>;
                 <label className='text - sm font - medium'>Your Zion API Key</label>;
@@ -365,7 +343,6 @@ export function ZapierIntegration() {;
                       <Check className='h - 4 w - 4' />) : ('
                       <Copy className='h - 4 w - 4' />)}                  </Button>                  <Button size="sm" variant="outline" on_click={handleCopyApiKey}>;
                     {copied ? <Check className="h - 4 w - 4" /> : <Copy className="h - 4 w - 4" />}"
-=======
             <div className="space-y-4">;
               <div className="space-y-2">;
                 <label className="text-sm font-medium">Your Zion API Key</label>;
@@ -377,13 +354,11 @@ export function ZapierIntegration() {;
                   />;
                   <Button size="sm" variant="outline" onClick={handleCopyApiKey}>;
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </Button>;
                 </div>;
               </div>;
             </div>;
           </CardContent>;
-<<<<<<< HEAD
           <CardFooter className='flex flex - col items - start'>;
             <Button variant='outline' className='gap - 2'>;
               <ExternalLink className='h - 4 w - 4' />              Open Zapier Dashboard;
@@ -393,18 +368,15 @@ export function ZapierIntegration() {;
           <CardFooter className="flex flex - col items - start">;
             <Button variant="outline" className="gap - 2">;
               <ExternalLink className="h - 4 w - 4" />;
-=======
           <CardFooter className="flex flex-col items-start">;
             <Button variant="outline" className="gap-2">;
               <ExternalLink className="h-4 w-4" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Open Zapier Dashboard;
             </Button>;
           </CardFooter>;
         </Card>;
         <Card>;
           <CardHeader>;
-<<<<<<< HEAD
             <h3 className='text - lg font - semibold'>Popular Zaps</h3>;
           </CardHeader>;
           <CardContent>;
@@ -424,7 +396,6 @@ export function ZapierIntegration() {;
                 <Check className='h - 4 w - 4 text - green - 500' />                <span > Create calendar events for interviews</span>              <li className="flex items - center gap - 2">;
                 <Check className="h - 4 w - 4 text - green - 500" />;
                 <span > Create calendar events for interviews</span>;
-=======
             <h3 className="text-lg font-semibold">Popular Zaps</h3>;
           </CardHeader>;
           <CardContent>;
@@ -444,22 +415,17 @@ export function ZapierIntegration() {;
               <li className="flex items-center gap-2">;
                 <Check className="h-4 w-4 text-green-500" />;
                 <span>Create calendar events for interviews</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </li>;
             </ul>;
           </CardContent>;
           <CardFooter>;
-<<<<<<< HEAD
-=======
             <Button variant="outline" className="w-full gap-1">;
               <ExternalLink className="h-4 w-4" />;
               <span>Explore Zion Zaps</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>;
           </CardFooter>;
         </Card>;
       </div>;
-<<<<<<< HEAD
                 Triggers when a new job is published on your account.;
               </p>;
               <Button size='sm' variant='outline'>;
@@ -476,7 +442,6 @@ export function ZapierIntegration() {;
               <Button size='sm' variant='outline'>;
                 Set Up Trigger;
               </Button>            </div>              <Button size="sm" variant="outline">Set Up Trigger</Button>;
-=======
       <Card>;
         <CardHeader>;
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>;
@@ -506,17 +471,13 @@ export function ZapierIntegration() {;
                 Triggers when a contract is signed by all parties.;
               </p>;
               <Button size="sm" variant="outline">Set Up Trigger</Button>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
 ;
 }}}}))
-=======
     </div>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -31,7 +31,6 @@
     ],
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
 "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
@@ -44,7 +43,6 @@
     "allowSyntheticDefaultImports": true
   }
 }
-=======
       "@/*": [
         "./*"
       ]
@@ -59,4 +57,3 @@
     "node_modules"
   ]
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

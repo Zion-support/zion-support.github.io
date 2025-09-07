@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { X } from 'lucide-react''
 interface ActiveFiltersProps {
   selectedSkills: string[],
@@ -51,7 +50,6 @@ interface ActiveFiltersProps {
         <ClickableBadge
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"",
-=======
 
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
@@ -105,12 +103,10 @@ export function ActiveFilters({
         <ClickableBadge 
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from "react",;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { Button } from "@/components/ui/button",;
 import { X } from 'lucide-react';
-<<<<<<< HEAD
 interface ActiveFiltersProps {;,
   selectedSkills: string[],;
   toggleSkill: (skill:,  string) => void,;,
@@ -121,7 +117,6 @@ interface ActiveFiltersProps {;,
   priceRange: [number, number],;,
   setPriceRange: (range: [number, number]) => void,;,
   experienceRange: [number, number],;,
-=======
 interface ActiveFiltersProps {;
   selectedSkills: string[],;
   toggleSkill: (skill: string) => void,;
@@ -132,7 +127,6 @@ interface ActiveFiltersProps {;
   priceRange: [number, number],;
   setPriceRange: (range: [number, number]) => void,;
   experienceRange: [number, number],;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   setExperienceRange: (range: [number, number]) => void,;
   clearFilters: () => void;
 }
@@ -149,17 +143,13 @@ export function ActiveFilters({;
   experienceRange,;
   setExperienceRange,;
   clearFilters;
-<<<<<<< HEAD
 }:,  ActiveFiltersProps) {;
-=======
 }: ActiveFiltersProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   // Check if any filters are active;
   const hasActiveFilters =;
     selectedSkills.length > 0 ||;
     selectedAvailability.length > 0 ||;
     selectedRegions.length > 0 ||;
-<<<<<<< HEAD
     experienceRange[0] !== 0 ||;,
     experienceRange[1] !== 15 ||;,
     priceRange[0] !== 50 ||;,
@@ -182,7 +172,6 @@ export function ActiveFilters({;
         <ClickableBadge
           key={status}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"",
-=======
     experienceRange[0] !== 0 ||;
     experienceRange[1] !== 15 ||;
     priceRange[0] !== 50 ||;
@@ -206,12 +195,10 @@ export function ActiveFilters({;
         <ClickableBadge;
           key={status}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           onClick={() => toggleAvailability(status)}
         >;
           {status === 'full-time' ? 'Full-time' :;
            status === 'part-time' ? 'Part-time' :;
-<<<<<<< HEAD
            'Project-based'}'
           <X className="h-3 w-3" />"
         </ClickableBadge>
@@ -275,7 +262,6 @@ export function ActiveFilters({;
         size="sm" "
         onClick={clearFilters}
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent""
-=======
            'Project-based'}
           <X className="h-3 w-3" />
         </ClickableBadge>
@@ -317,13 +303,11 @@ export function ActiveFilters({;
         size="sm" 
         onClick={clearFilters}
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       >
         Clear All
       </Button>
     </div>
   )
-<<<<<<< HEAD
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
@@ -345,7 +329,6 @@ export function ActiveFilters({;
           onClick={() => setExperienceRange([0, 15])}
         >;
           {experienceRange[0]}-{experienceRange[1]} years;,
-=======
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -366,7 +349,6 @@ export function ActiveFilters({;
           onClick={() => setExperienceRange([0, 15])}
         >;
           {experienceRange[0]}-{experienceRange[1]} years;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
@@ -382,7 +364,6 @@ export function ActiveFilters({;
     </div>;
   );
 }
-<<<<<<< HEAD
 import React from 'react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { Button } from '@/components / ui / button';
@@ -483,6 +464,4 @@ if (return,  null) {
     </div>);
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

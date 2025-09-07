@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ImageIcon, AlertTriangle } from 'lucide-react''
 import { cn  } from '@/lib/utils';
 import { imageOptimization  } from '@/utils/performance';
@@ -630,7 +629,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({,
         className={`grid gap-4`}`
         style={{;
           gridTemplateColumns: `repeat(${columns}, 1fr)`;`
-=======
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -956,7 +954,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
         className={`grid gap-4`}
         style={{;
           gridTemplateColumns: `repeat(${columns}, 1fr)`;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         }}
       >;
         {images.map((image, index) => (;
@@ -965,22 +962,18 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-<<<<<<< HEAD
             className="group cursor-pointer""
             onClick={() => onImageClick?.(index)}
           >
             <div className="relative">"
-=======
             className="group cursor-pointer"
             onClick={() => onImageClick?.(index)}
           >
             <div className="relative">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <OptimizedImage
                 src={image.src}
                 alt={image.alt}
                 aspectRatio={aspectRatio}
-<<<<<<< HEAD
                 className="rounded-lg group-hover:scale-105 transition-transform duration-300"",
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images
@@ -1246,7 +1239,6 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({,
 },
 },
 }}}}}}}
-=======
                 className="rounded-lg group-hover:scale-105 transition-transform duration-300"
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images
@@ -1309,4 +1301,3 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
     </div>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

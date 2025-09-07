@@ -1,13 +1,10 @@
-<<<<<<< HEAD:pages/admin/web3.tsx
 import React, { useEffect, useState } from 'react',
 import Head from 'next/head',
 export default function AdminWeb3Page() {
   const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
-<<<<<<< HEAD
 export default function AdminWeb3Page() {
   const [users, setUsers] = useState<
     { id: string; enabled: boolean; chain?: string }[]
@@ -34,7 +31,6 @@ export default function AdminWeb3Page() {
     enabled: users.filter(u => u.enabled).length,
     disabled: users.filter(u => !u.enabled).length,
   };
-=======
 interface Web3Project {
   id: string;
   name: string;
@@ -81,7 +77,6 @@ const AdminWeb3Page: React.FC = () => {
   const [projects, setProjects] = useState<Web3Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<'all' | 'active' | 'inactive' | 'development'>('all');
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/web3.tsx
 
   useEffect(() => {
     const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null,
@@ -93,7 +88,6 @@ const AdminWeb3Page: React.FC = () => {
     setUsers(list)
   },
 
-<<<<<<< HEAD:pages/admin/web3.tsx
   const metrics = {
     total: users.length,
     evm: users.filter(u => u.chain === 'evm').length,
@@ -165,7 +159,6 @@ export default function AdminWeb3Page() {;
                   }} />;
                 </label>;
               </li>;
-=======
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'bg-green-100 text-green-800';
@@ -187,12 +180,10 @@ export default function AdminWeb3Page() {;
   const activeProjects = projects.filter(p => p.status === 'active').length;
   const developmentProjects = projects.filter(p => p.status === 'development').length;
   const totalProjects = projects.length;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>Admin — Web3</title>
       </Head>
       <div className='max-w-3xl mx-auto space-y-6'>
@@ -226,7 +217,6 @@ export default function AdminWeb3Page() {;
                   />
                 </label>
               </li>
-=======
         <title>Admin Web3 - Zion Tech Group</title>
         <meta name="description" content="Manage Web3 projects and blockchain integrations" />
       </Head>
@@ -340,22 +330,14 @@ export default function AdminWeb3Page() {;
                   </div>
                 </div>
               </div>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/web3.tsx
             ))}
           </ul>;
         </div>;
       </div>;
     </>;
   );
-<<<<<<< HEAD:pages/admin/web3.tsx
 }
-=======
-<<<<<<< HEAD
 }
-=======
 };
 
 export default AdminWeb3Page;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/web3.tsx

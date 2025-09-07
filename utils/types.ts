@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 export interface Application {
@@ -47,7 +46,6 @@ export type UserRole = "admin" | "user" | "guest";
 
 export type UserRole = "admin" | "user" | "guest";
 
-=======
 export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
 export type Job = {;
   id: string;
@@ -94,4 +92,3 @@ export type Conversation = {;
   updatedAtIso: string;
   messages: Message[];
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

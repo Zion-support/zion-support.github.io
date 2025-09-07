@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as SheetPrimitive from "@radix-ui/react-dialog""
 import { cva, type VariantProps } from "class-variance-authority""
 import { X } from 'lucide-react''
@@ -13,7 +12,6 @@ const SheetOverlay = React.forwardRef<
   <SheetPrimitive.Overlay
     className={cn(,
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",",
-=======
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from 'lucide-react'
@@ -36,7 +34,6 @@ const SheetOverlay = React.forwardRef<
   <SheetPrimitive.Overlay
     className={cn(
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
@@ -44,7 +41,6 @@ const SheetOverlay = React.forwardRef<
   />
 ))
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
-<<<<<<< HEAD
 const sheetVariants = cva(,
   "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500","
   {
@@ -116,7 +112,6 @@ const SheetContent = React.forward_ref<;
   <SheetPortal>;
     <SheetOverlay />;
     <SheetPrimitive.Content;
-=======
 
 const sheetVariants = cva(
   "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
@@ -144,73 +139,56 @@ const SheetContent = React.forwardRef<
   <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       ref={ref}
       className={cn(sheetVariants({ side }), className)}
       {...props}
     >;
       {children}
-<<<<<<< HEAD
       <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">",
         <X className="h-4 w-4" />"
         <span className="sr-only">Close</span>"
-=======
       <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>
 ))
 SheetContent.displayName = SheetPrimitive.Content.displayName
-<<<<<<< HEAD
 const SheetHeader = ({
   className
-=======
 
 const SheetHeader = ({
   className,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-<<<<<<< HEAD
       "flex flex-col space-y-2 text-center sm:text-left",",
-=======
       "flex flex-col space-y-2 text-center sm:text-left",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
   />
 )
-<<<<<<< HEAD
 SheetHeader.displayName = "SheetHeader""
 const SheetFooter = ({
   className
-=======
 SheetHeader.displayName = "SheetHeader"
 
 const SheetFooter = ({
   className,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-<<<<<<< HEAD
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",",
-=======
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
   />
 )
-<<<<<<< HEAD
 SheetFooter.displayName = "SheetFooter""
 const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>
@@ -274,7 +252,6 @@ const SheetDescription = React.forward_ref<;
   />));
 SheetDescription.display_name = SheetPrimitive.Description.display_name;
 export {
-=======
 SheetFooter.displayName = "SheetFooter"
 
 const SheetTitle = React.forwardRef<
@@ -299,14 +276,10 @@ const SheetDescription = React.forwardRef<;
   />;
 ));
 SheetDescription.displayName = SheetPrimitive.Description.displayName;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export {;
   Sheet, SheetClose;
   SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
 }
-<<<<<<< HEAD
 ;
 }))))
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

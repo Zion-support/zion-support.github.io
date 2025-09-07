@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import ErrorBoundary from '../components/ErrorBoundary';
 // import { Brain, TrendingUp, FileText, Eye, Database, Shield, Mic, Zap, Cog, Search, Users, Code } from 'lucide-react';
 export default function AIServices() {
@@ -1086,8 +1085,6 @@ export default function AIServices() {
     }
   ];
   */
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -1400,7 +1397,6 @@ export default function AIServices() {
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Advanced AI services and solutions" />
       </Head>
-<<<<<<< HEAD
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           <div className="container mx-auto px-4 py-16">
@@ -1990,17 +1986,14 @@ export default function AIServicesPage() {
               </div>
             </div>
           </motion.div>
-=======
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold text-gray-800 mb-6">AI Services</h1>
           <p className="text-xl text-gray-600">Coming soon...</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
 }
 import ErrorBoundary from '../components/ErrorBoundary';
 export default function AIServices() {
@@ -2413,6 +2406,4 @@ export default function AIServicesPage(req, res) {
 ;
 
 
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

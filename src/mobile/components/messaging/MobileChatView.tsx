@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 id: string;,
   content: string;,
   timestamp: string;,
@@ -153,7 +152,6 @@ export function MobileChatView(): any ({;
             <ChevronLeft className="h-5 w-5" />"
           </Button>
           <div className="flex items-center flex-1 gap-3 mx-2">"
-=======
 
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
@@ -260,13 +258,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </Button>
           
           <div className="flex items-center flex-1 gap-3 mx-2">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
               <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
             </Avatar>
             <div>
-<<<<<<< HEAD
             aria-label='Go back'>;
             <ChevronLeft className='h-5 w-5' />;
           </Button>;
@@ -302,7 +298,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               </p>
             </div>
           </div>
-=======
               <h3 className="font-medium">{contact.name}</h3>
               <p className="text-xs text-muted-foreground">
                 {contact.status || "Online"}
@@ -331,12 +326,10 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             
             <Button variant="ghost" size="icon" aria-label="More options">
               <MoreVertical className="h-5 w-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>
           </div>
         </div>
       </header>
-<<<<<<< HEAD
               aria-label='Start video call'>;
               <Video className='h-5 w-5' />;
             </Button>;
@@ -422,7 +415,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 message.isMe
                   ? "bg-primary text-primary-foreground rounded-tr-none" "
                   : "bg-muted rounded-tl-none""
-=======
       
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message) => (
@@ -439,12 +431,10 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 message.isMe 
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
                   : "bg-muted rounded-tl-none"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               )}
             >
               <p>{message.content}</p>
               <div className={cn(
-<<<<<<< HEAD
                 "text-xs mt-1 flex justify-end","
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground""
               )}>
@@ -464,7 +454,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     }),;
     // Navigate to video call page with audio-only flag;
     router.push(`/call/${roomId}?audioOnly=true`);`
-=======
                 "text-xs mt-1 flex justify-end",
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
@@ -484,7 +473,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     }),;
     // Navigate to video call page with audio-only flag;
     router.push(`/call/${roomId}?audioOnly=true`);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   },;
   return (;
     <div className="flex flex-col h-full pb-safe">;
@@ -506,11 +494,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             <div>;
               <h3 className="font-medium">{contact.name}</h3>;
               <p className="text-xs text-muted-foreground">;
-<<<<<<< HEAD
                 {contact.status || "Online"}"
-=======
                 {contact.status || "Online"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </p>;
             </div>;
           </div>;
@@ -548,18 +533,14 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           >;
             <div;
               className={cn(;
-<<<<<<< HEAD
                 "max-w-[80%] rounded-2xl px-4 py-2";,
-=======
                 "max-w-[80%] rounded-2xl px-4 py-2";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 message.isMe;
                   ? "bg-primary text-primary-foreground rounded-tr-none";
                   : "bg-muted rounded-tl-none";
               )}
             >;
               <p>{message.content}</p>;
-<<<<<<< HEAD
               <div;
                 className={cn (
                   'text - xs mt - 1 flex justify - end','
@@ -571,7 +552,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
                     {message.status === 'read' ? '✓✓' : '✓'}'
-=======
               <div className={cn(;
                 "text-xs mt-1 flex justify-end";
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground";
@@ -582,12 +562,10 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>;
                 )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
           </div>;
         ))}
-<<<<<<< HEAD
       <div className="sticky bottom-0 bg-background border-t border-border p-2">"
         <div className="flex items-center gap-2">"
           <Button variant="ghost" size="icon" aria-label="Attach file">"
@@ -664,7 +642,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             aria-label="Send message""
           >
             <Send className="h-5 w-5" />"
-=======
       </div>
       
       <div className="sticky bottom-0 bg-background border-t border-border p-2">
@@ -689,13 +666,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
             placeholder='Type a message...';
             className='flex-1'          />;
           <Button
@@ -741,7 +716,5 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 }
 }
 ;
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

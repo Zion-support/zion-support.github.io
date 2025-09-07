@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Star } from 'lucide-react''
 interface SaveTalentButtonProps {
   talentId: string,
@@ -94,7 +93,6 @@ function SaveTalentButton() {
   onSave: (talentId: string,) => void,
   isSaved: boolean
 }}}}
-=======
 
 import React from 'react',
 import { Button } from "@/components/ui/button",
@@ -127,4 +125,3 @@ export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButton
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

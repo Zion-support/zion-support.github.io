@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 import { GradientHeading } from "./GradientHeading";
@@ -198,19 +197,16 @@ import { GradientHeading } from "./GradientHeading","
 import { Check, Handshake, Search, Send } from 'lucide-react''
 import { cn } from "@/lib/utils","
 import { useTranslation } from "react-i18next","
-=======
 
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface HowItWorksSectionProps {
   className?: string,
   style?: React.CSSProperties
 }
-<<<<<<< HEAD
 const getSteps = (t:,  any) => [,
   {
     title: t('how_it_works.post'),'
@@ -504,7 +500,6 @@ function HowItWorksSection() {
                     </div>;
                   ) : null}
                   ) : null}
-=======
 
 const getSteps = (t: any) => [
   {
@@ -616,7 +611,6 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
                       <p className="text-zion-slate-light">{step.description}</p>;
                     </div>;
                   ) : null}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </div>;
               </div>;
             ))}
@@ -625,7 +619,6 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
       </div>;
     </section>;
   );
-<<<<<<< HEAD
 };
 
 export default HowItWorksSection;
@@ -663,7 +656,5 @@ export default Component;
 }
 ;
 ))))))
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

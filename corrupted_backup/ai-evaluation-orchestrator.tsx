@@ -5,7 +5,6 @@ export default function AIEvaluationOrchestratorPage() {
   return (
     <>
       <Head>
-<<<<<<< HEAD:pages/ai-evaluation-orchestrator.tsx
         <title>AI Evaluation Orchestrator | Zion Tech Group</title>
         <meta name="description" content="Define evals, run batch tests, score prompts and models, and prevent regressions." />
         <link rel="canonical" href="https://ziontechgroup.com/ai-evaluation-orchestrator" />
@@ -31,8 +30,6 @@ export default function AIEvaluationOrchestratorPage() {
     </>
   )
 }
-=======
-<<<<<<< HEAD
         <title>AI Evaluation Orchestrator | Zion Tech Group</title>
         <meta
           name='description'
@@ -78,7 +75,6 @@ export default function AIEvaluationOrchestratorPage() {
             >
               Talk to Sales
             </Button>
-=======
         <title>AI Evaluation Orchestrator - Zion Tech Group</title>
         <meta name="description" content="Orchestrate AI model evaluations and testing workflows" />
       </Head>
@@ -128,7 +124,6 @@ export default function AIEvaluationOrchestratorPage() {
               <li>• Error handling</li>
               <li>• Compliance monitoring</li>
             </ul>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
         </div>
 
@@ -140,11 +135,7 @@ export default function AIEvaluationOrchestratorPage() {
       </main>
     </Layout>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
 export default AIEvaluationOrchestrator;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-evaluation-orchestrator.tsx

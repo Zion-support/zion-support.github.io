@@ -1,7 +1,4 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   "timestamp": "2025-09-05T22:09:22.350Z",
   "bundleAnalysis": {
     "success": true,
@@ -28,22 +25,11 @@
     "score": 100
   }
 }
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   "timestamp": "2025-09-06T10:56:47.356Z",
   "totalDuration": 7910,
-=======
   "timestamp": "2025-09-06T19:16:08.900Z",
   "totalDuration": 2675,
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   "optimizations": [
     {
       "type": "bundle-analysis",
@@ -8755,13 +8741,7 @@
         "Large files detected: search/embeddings.json.backup.1756001055, search/embeddings.json.backup.1756001070, search/embeddings.json.backup.1756001082, search/embeddings.json.backup.1756001125, search/embeddings.json.backup.1756001057, search/embeddings.json.backup.1756001098, sitemap.xml.backup.1756000986, sitemap.xml.backup.1755991590, reports.backup/metadata/latest.json.backup.1755991115.backup.1756000882.backup.1756000935, reports.backup/metadata/latest.json.backup.1755991177.backup.1756000882.backup.1756000935, static-reports/reports/metadata/latest.json.backup.1755991115.backup.1756000938, static-reports/reports/metadata/latest.json.backup.1755991177.backup.1756000938, reports.backup/metadata/index.html.backup.1755991115.backup.1756000882.backup.1756000935, reports.backup/metadata/index.html.backup.1755991177.backup.1756000882.backup.1756000935, static-reports/reports/metadata/index.html.backup.1755991115.backup.1756000938, static-reports/reports/metadata/index.html.backup.1755991177.backup.1756000938, sitemap.xml.backup.1755991628, sitemap.xml.backup.1755991602, sitemap.xml.backup.1755991600, assets/vendor-DEQ385Nk.js.map, search/embeddings.json.backup.1756000913, assets/vendor-DEQ385Nk.js, search/meta.json.backup.1756001055, search/index.json.backup.1756001079, search/meta.json.backup.1756001057, search/index.json.backup.1756001115, search/meta.json.backup.1756001070, search/meta.json.backup.1756001098, search/meta.json.backup.1756001082, search/meta.json.backup.1756001125, search/index.json.backup.1756000925",
         "Consider consolidating JavaScript files"
       ]
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     {
       "type": "image-optimization",
@@ -8771,8 +8751,6 @@
         "Implement lazy loading for images",
         "Use responsive images with srcset"
       ]
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     },
     {
       "type": "code-splitting",
@@ -8791,12 +8769,7 @@
       ]
     }
   ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
   "timestamp": "2025-09-06T04:57:30.817Z",
   "issues": [],
   "optimizations": [
@@ -8843,15 +8816,10 @@
         "Optimize font loading and subsetting"
       ]
     }
-<<<<<<< HEAD
-=======
-=======
   "timestamp": "2025-09-05T22:09:22.350Z",
   "bundleAnalysis": {
     "success": true,
     "result": "\n> ziontechgroup-site@1.0.0 build:analyze\n> ANALYZE=true npm run build\n\n\n> ziontechgroup-site@1.0.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup-site@1.0.0 build\n> next build\n\n  ▲ Next.js 14.2.32\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully\n   Collecting page data ...\n   Generating static pages (0/6) ...\n   Generating static pages (1/6) \r\n   Generating static pages (2/6) \r\n   Generating static pages (4/6) \r\n ✓ Generating static pages (6/6)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                             Size     First Load JS\n┌ ○ /                                     2.13 kB        84.6 kB\n├ ○ /404                                  1.9 kB         84.3 kB\n├ ○ /ai-services                          4.12 kB        86.6 kB\n├ ○ /blockchain                           3.48 kB        85.9 kB\n└ ○ /contact                              3.25 kB        85.7 kB\n+ First Load JS shared by all             80 kB\n  ├ chunks/framework-64ad27b21261a9ce.js  44.8 kB\n  ├ chunks/main-dc99c5fa652eb074.js       34.2 kB\n  └ other shared chunks (total)           947 B\n\nƒ Middleware                              25.7 kB\n\n○  (Static)  prerendered as static content\n\n\n> ziontechgroup-site@1.0.0 postbuild\n> echo \"Build completed\"\n\nBuild completed\n"
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   },
   "summary": {
     "bundleOptimized": false,
@@ -8859,11 +8827,7 @@
     "codeSplittingImplemented": true,
     "cachingConfigured": true,
     "compressionSetup": true
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   "timestamp": "2025-09-06T01:32:26.433Z",
   "optimizations": [
     "Use WebP format for images",
@@ -8898,16 +8862,8 @@
       "Use CDN for static assets",
       "Enable gzip compression"
     ]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   "timestamp": "2025-09-06T00:06:24.470Z",
   "metrics": {
     "bundleSize": 0,
@@ -8923,23 +8879,9 @@
     "performanceScore": 0
   }
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
 }
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88

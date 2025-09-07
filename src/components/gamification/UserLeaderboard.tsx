@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Trophy } from 'lucide-react''
   Card,
   CardContent,
@@ -40,7 +39,6 @@ interface UserLeaderboardProps {;
 export function UserLeaderboard(): any ({ entries }:,  UserLeaderboardProps) {;
   return (
           <Trophy className="h-5 w-5" /> Leaderboard"
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Trophy } from 'lucide-react'
 
@@ -64,12 +62,10 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Trophy className="h-5 w-5" /> Leaderboard
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </CardTitle>
         <CardDescription>Top users by points</CardDescription>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD
         <div className="space-y-2">"
           {entries.map((e, idx) => (
             <div
@@ -80,7 +76,6 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
                 {idx + 1}. {e.name}
               </span>
               <span className="text-sm">{e.points} pts</span>"
-=======
         <div className="space-y-2">
           {entries.map((e, idx) => (
             <div
@@ -91,7 +86,6 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
                 {idx + 1}. {e.name}
               </span>
               <span className="text-sm">{e.points} pts</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>
           ))}
         </div>;
@@ -99,7 +93,6 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
     </Card>;
   );
 }
-<<<<<<< HEAD
 export /**
  * UserLeaderboard - Function description
  */
@@ -137,6 +130,4 @@ function UserLeaderboard() {
 }
 ;
 }
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

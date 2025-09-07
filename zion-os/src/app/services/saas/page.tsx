@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 export default function SAASServicesPage() {;
@@ -12,13 +11,10 @@ function SAASServicesPage() {
   return (
     <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
 export default function SAASServicesPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default function SAASServicesPage() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
       {/* Hero Section */}
-<<<<<<< HEAD
       <div className="bg - gradient - to - r from - purple - 600 to - pink - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;
           <h1 className="text - 5xl font - bold mb - 6">🚀 Micro SAAS Services</h1>;
@@ -31,7 +27,6 @@ export default function SAASServicesPage() {;
               Call Now: +1 302 464 0950;
             </a>;
               <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - purple - 600 transition - colors">;
-=======
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 py-20">;
         <div className="container mx-auto px-6 text-center">;
           <h1 className="text-5xl font-bold mb-6">🚀 Micro SAAS Services</h1>;
@@ -44,29 +39,24 @@ export default function SAASServicesPage() {;
               Call Now: +1 302 464 0950;
             </a>;
               <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Get SAAS Demo;
             </a>;
           </div>;
         </div>;
       </div>;
       {/* Contact Info Banner */}
-<<<<<<< HEAD
       <div className="bg - zinc - 800 py - 4">;
         <div className="container mx - auto px - 6 text - center text - sm">;
           <span className="mr - 8">📱 +1 302 464 0950</span>;
           <span className="mr - 8">✉️ kleber@ziontechgroup.com</span>;
-=======
       <div className="bg-zinc-800 py-4">;
         <div className="container mx-auto px-6 text-center text-sm">;
           <span className="mr-8">📱 +1 302 464 0950</span>;
           <span className="mr-8">✉️ kleber@ziontechgroup.com</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>;
         </div>;
       </div>;
       {/* SAAS Services Grid */}
-<<<<<<< HEAD
       <section className="py - 20">;
         <div className="container mx - auto px - 6">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
@@ -114,7 +104,6 @@ export default function SAASServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com / marketplace" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
-=======
       <section className="py-20">;
         <div className="container mx-auto px-6">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
@@ -158,12 +147,10 @@ export default function SAASServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com/marketplace" className="block w-full text-center bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More About Zion Marketplace;
               </a>;
             </div>;
             {/* Resume AI Builder */}
-<<<<<<< HEAD
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">📝</div>;
               <h2 className="text - 3xl font - bold mb - 4">Resume AI Builder</h2>;
@@ -177,7 +164,6 @@ export default function SAASServicesPage() {;
                   <li>• AI - powered resume writing assistance</li>;
                   <li>• ATS - optimized formatting</li>;
                   <li>• Industry - specific templates</li>;
-=======
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">📝</div>;
               <h2 className="text-3xl font-bold mb-4">Resume AI Builder</h2>;
@@ -191,13 +177,11 @@ export default function SAASServicesPage() {;
                   <li>• AI-powered resume writing assistance</li>;
                   <li>• ATS-optimized formatting</li>;
                   <li>• Industry-specific templates</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>• Keyword optimization and suggestions</li>;
                   <li>• Cover letter generation</li>;
                   <li>• Resume analytics and tracking</li>;
                 </ul>;
               </div>;
-<<<<<<< HEAD
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Plans</h4>;
                 <div className="space - y-3">;
@@ -214,7 +198,6 @@ export default function SAASServicesPage() {;
                     <span className="text - green - 400 font - semibold">$399 / month</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
-=======
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -231,21 +214,16 @@ export default function SAASServicesPage() {;
                     <span className="text-green-400 font-semibold">$399/month</span>;
                   </div>;
                   <div className="text-sm text-zinc-400 mt-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     Setup fee: $500 | Unlimited resume creation;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
               <a href="https://ziontechgroup.com / resume - ai" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
-=======
               <a href="https://ziontechgroup.com/resume-ai" className="block w-full text-center bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More About Resume AI Builder;
               </a>;
             </div>;
             {/* Token Rewards System */}
-<<<<<<< HEAD
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🪙</div>;
@@ -264,7 +242,6 @@ export default function SAASServicesPage() {;
                   <li>• Gamified rewards and challenges</li>;
                   <li>• Community engagement tools</li>;
                   <li>• Multi - chain blockchain support</li>;
-=======
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">🪙</div>;
               <h2 className="text-3xl font-bold mb-4">Token Rewards System</h2>;
@@ -279,12 +256,10 @@ export default function SAASServicesPage() {;
                   <li>• Gamified rewards and challenges</li>;
                   <li>• Community engagement tools</li>;
                   <li>• Multi-chain blockchain support</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>• Analytics and reporting dashboard</li>;
                   <li>• API integration capabilities</li>;
                 </ul>;
               </div>;
-<<<<<<< HEAD
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Plans</h4>;
                 <div className="space - y-3">;
@@ -396,7 +371,6 @@ export default function SAASServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com / dao - governance" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
-=======
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -504,12 +478,10 @@ export default function SAASServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com/dao-governance" className="block w-full text-center bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More About DAO Governance Platform;
               </a>;
             </div>;
             {/* Zion Academy */}
-<<<<<<< HEAD
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🎓</div>;
               <h2 className="text - 3xl font - bold mb - 4">Zion Academy</h2>;
@@ -521,7 +493,6 @@ export default function SAASServicesPage() {;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
                   <li>• AI - powered course creation</li>;
-=======
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">🎓</div>;
               <h2 className="text-3xl font-bold mb-4">Zion Academy</h2>;
@@ -533,7 +504,6 @@ export default function SAASServicesPage() {;
                 <h3 className="text-xl font-semibold text-purple-400">Key Features:</h3>;
                 <ul className="space-y-2 text-zinc-300">;
                   <li>• AI-powered course creation</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>• Interactive assessments and quizzes</li>;
                   <li>• Skill tracking and certification</li>;
                   <li>• Personalized learning paths</li>;
@@ -541,7 +511,6 @@ export default function SAASServicesPage() {;
                   <li>• Progress analytics and reporting</li>;
                 </ul>;
               </div>;
-<<<<<<< HEAD
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Plans</h4>;
                 <div className="space - y-3">;
@@ -563,7 +532,6 @@ export default function SAASServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com / academy" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
-=======
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -585,7 +553,6 @@ export default function SAASServicesPage() {;
                 </div>;
               </div>;
               <a href="https://ziontechgroup.com/academy" className="block w-full text-center bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More About Zion Academy;
               </a>;
             </div>;
@@ -593,7 +560,6 @@ export default function SAASServicesPage() {;
         </div>;
       </section>;
       {/* SAAS Implementation Process */}
-<<<<<<< HEAD
       <section className="py - 20 bg - zinc - 800">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
@@ -627,7 +593,6 @@ export default function SAASServicesPage() {;
               <div className="bg - purple - 600 w - 16 h - 16 rounded - full flex items - center justify - center text - 2xl font - bold mx - auto mb - 4">5</div>;
               <h3 className="text - xl font - semibold mb - 3">Launch</h3>;
               <p className="text - zinc - 300">Go - live with ongoing support and continuous optimization.</p>;
-=======
       <section className="py-20 bg-zinc-800">;
         <div className="container mx-auto px-6">;
           <div className="text-center mb-16">;
@@ -661,13 +626,11 @@ export default function SAASServicesPage() {;
               <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">5</div>;
               <h3 className="text-xl font-semibold mb-3">Launch</h3>;
               <p className="text-zinc-300">Go-live with ongoing support and continuous optimization.</p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </div>;
         </div>;
       </section>;
       {/* SAAS Benefits */}
-<<<<<<< HEAD
       <section className="py - 20">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
@@ -706,7 +669,6 @@ export default function SAASServicesPage() {;
               <div className="text - 4xl mb - 4">📊</div>;
               <h3 className="text - xl font - semibold mb - 3">Analytics & Insights</h3>;
               <p className="text - zinc - 300">Built - in analytics and reporting to track performance and optimize operations.</p>;
-=======
       <section className="py-20">;
         <div className="container mx-auto px-6">;
           <div className="text-center mb-16">;
@@ -745,13 +707,11 @@ export default function SAASServicesPage() {;
               <div className="text-4xl mb-4">📊</div>;
               <h3 className="text-xl font-semibold mb-3">Analytics & Insights</h3>;
               <p className="text-zinc-300">Built-in analytics and reporting to track performance and optimize operations.</p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Call to Action */}
-<<<<<<< HEAD
       <section className="py - 20 bg - gradient - to - r from - purple - 600 to - pink - 600">;
         <div className="container mx - auto px - 6 text - center">;
           <h2 className="text - 4xl font - bold mb - 6">Ready to Deploy Your SAAS Solution?</h2>;
@@ -769,7 +729,6 @@ export default function SAASServicesPage() {;
               </a>;
             </div>;
             <p className="text - purple - 100 text - sm">;
-=======
       <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">;
         <div className="container mx-auto px-6 text-center">;
           <h2 className="text-4xl font-bold mb-6">Ready to Deploy Your SAAS Solution?</h2>;
@@ -787,17 +746,13 @@ export default function SAASServicesPage() {;
               </a>;
             </div>;
             <p className="text-purple-100 text-sm">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com;
             </p>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
     </div>);
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

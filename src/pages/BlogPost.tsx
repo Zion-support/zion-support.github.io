@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react''
 import type { BlogPost as BlogPostType } from "@/types/blog","
 import { Separator } from "@/components/ui/separator";
@@ -1351,7 +1350,6 @@ function BlogPost() {return (";
 }
 ;
 }}}}}}}}
-=======
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import Link from 'next/link',
@@ -1757,4 +1755,3 @@ export default function BlogPost() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

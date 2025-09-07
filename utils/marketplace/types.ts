@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 // Marketplace types
 export interface Offer {
@@ -118,7 +117,6 @@ export interface ProjectNote {
 
 
 
-=======
 export type PaymentTermsType = "hourly" | "fixed" | "milestone";
 export type Milestone = {;
   id: string;
@@ -179,4 +177,3 @@ export type MarketplaceDb = {;
   offers: Offer[];
   projects: Project[];
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 if (error) {
           throw error
         }
@@ -23,7 +22,6 @@ import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, Check
 import { Badge } from '@/components/ui/badge';
 import { Star } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
 
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
@@ -70,7 +68,6 @@ export default function ProfilePage() {
           description: "Failed to load profile. Please try again later.",
           variant: "destructive"})
       } finally {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         setIsLoading(false)
 import { useState, useEffect } from "react",;
 import { useRouter } from "next/router",;
@@ -87,15 +84,12 @@ export default function ProfilePage() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
   const router = useRouter(),;
-<<<<<<< HEAD
   const profileId = router.query.profileId as string,;,
   const [profileData, setProfileData] = useState<any>(null),;,
   const [isLoading, setIsLoading] = useState(true),;,
-=======
   const profileId = router.query.profileId as string,;
   const [profileData, setProfileData] = useState<any>(null),;
   const [isLoading, setIsLoading] = useState(true),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [isError, setIsError] = useState(false),;
   useEffect(() => {;
     const fetchProfile = async () => {;
@@ -106,11 +100,8 @@ export default function ProfilePage() {;
           .from("talent_profiles");
           .select("*");
           .eq("id", profileId);
-<<<<<<< HEAD
           .single();
-=======
           .single(),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         if (error) {;
           throw error;
         }
@@ -131,7 +122,6 @@ export default function ProfilePage() {;
       fetchProfile();
     }
   }, [profileId]),
-<<<<<<< HEAD
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">"
@@ -167,7 +157,6 @@ export default function ProfilePage() {;
       <SEO
         title={`${profileData.full_name} | Talent Profile`}`
         description = {profileData.bio || "View the profile of this talented individual.",}"
-=======
 
   if (isLoading) {
     return (
@@ -184,12 +173,10 @@ export default function ProfilePage() {;
       </div>
     )
   }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
   return (;
     <>;
       <SEO;
-<<<<<<< HEAD
         title={`${profileData.full_name} | Talent Profile`}`
         description={profileData.bio || "View the profile of this talented individual."}"
       />
@@ -208,7 +195,6 @@ export default function ProfilePage() {;
                 {/* Avatar */}
                 <div className="relative mr-4">"
                   <Avatar className="w-24 h-24">"
-=======
         title={`${profileData.full_name} | Talent Profile`}
         description={profileData.bio || "View the profile of this talented individual."}
       />
@@ -222,7 +208,6 @@ export default function ProfilePage() {;
                 {/* Avatar */}
                 <div className="relative mr-4">
                   <Avatar className="w-24 h-24">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     {profileData.profile_picture_url ? (
                       <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
                     ) : (
@@ -230,56 +215,44 @@ export default function ProfilePage() {;
                     )}
                   </Avatar>
                   {profileData.is_verified && (
-<<<<<<< HEAD
                     <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">"
                       <CheckCircle2 className="w-5 h-5 text-zion-cyan" />"
-=======
                     <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
                       <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </div>
                   )}
                 </div>;
                 {/* Main Info */}
-<<<<<<< HEAD
                 <div className="flex-1">"
                   <div className="flex justify-between items-start">"
                     <div>
                       <h1 className="text-2xl font-bold text-white">{profileData.full_name}</h1>"
                       <p className="text-zion-cyan font-medium">{profileData.professional_title}</p>"
-=======
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
                     <div>
                       <h1 className="text-2xl font-bold text-white">{profileData.full_name}</h1>
                       <p className="text-zion-cyan font-medium">{profileData.professional_title}</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </div>
                     {/* Add Save/Unsave Button Here */}
                   </div>;
                   {/* Location & Availability */}
-<<<<<<< HEAD
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">"
                     {profileData.location && (
                       <div className="flex items-center text-zion-slate-light">"
                         <MapPin className="h-4 w-4 mr-1" />"
-=======
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">
                     {profileData.location && (
                       <div className="flex items-center text-zion-slate-light">
                         <MapPin className="h-4 w-4 mr-1" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         <span>{profileData.location}</span>
                       </div>
                     )}
                     {profileData.availability && (
-<<<<<<< HEAD
                       <div className="flex items-center text-zion-slate-light">"
                         <Clock className="h-4 w-4 mr-1" />"
-=======
                       <div className="flex items-center text-zion-slate-light">
                         <Clock className="h-4 w-4 mr-1" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         <span>{profileData.availability}</span>
                       </div>
                     )}
@@ -287,7 +260,6 @@ export default function ProfilePage() {;
                 </div>;
               </div>;
               {/* Skills */}
-<<<<<<< HEAD
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>;
@@ -320,7 +292,6 @@ export default function ProfilePage() {;
                       className="flex items-center text-zion-cyan hover:text-white transition-colors""
                     >
                       <LinkIcon className="h-4 w-4 mr-2" />"
-=======
               {profileData.skills && profileData.skills.length > 0 && (
                 <div className="mt-4">
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>
@@ -352,12 +323,10 @@ export default function ProfilePage() {;
                       className="flex items-center text-zion-cyan hover:text-white transition-colors"
                     >
                       <LinkIcon className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       {link}
                     </Link>
                   ))
                 ) : (
-<<<<<<< HEAD
                   <p className="text-zion-slate-light">No portfolio links provided.</p>"
                 )}
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>"
@@ -383,7 +352,6 @@ export default function ProfilePage() {;
                     title="GitHub""
                   >
                     <Github className="h-6 w-6" />"
-=======
                   <p className="text-zion-slate-light">No portfolio links provided.</p>
                 )}
               </div>;
@@ -408,13 +376,11 @@ export default function ProfilePage() {;
                     title="GitHub"
                   >
                     <Github className="h-6 w-6" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </Link>
                 )}
                 {profileData.twitter_link && (;
                   <a;
                     href={profileData.twitter_link}
-<<<<<<< HEAD
                     target="_blank""
                     rel="noopener noreferrer""
                     className="text-zion-cyan hover:text-white transition-colors"",
@@ -433,7 +399,6 @@ export default function ProfilePage() {;
                     title="LinkedIn""
                   >
                     <Linkedin className="h-6 w-6" />"
-=======
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
@@ -453,14 +418,12 @@ export default function ProfilePage() {;
                     title="LinkedIn"
                   >
                     <Linkedin className="h-6 w-6" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </Link>
                 )}
               </div>;
             </div>;
           </div>;
           {/* Sidebar with HireNowCTA */}
-<<<<<<< HEAD
           <div className="col-span-12 lg:col-span-4 space-y-6">"
             <HireNowCTA
               talentProfile={{
@@ -639,7 +602,6 @@ if ( {) {
                 full_name: profile_data?.full_name || '','
                 professional_title: profile_data?.professional_title || '','
                 hourly_rate: profile_data?.hourly_rate || 0,
-=======
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA
               talentProfile={{
@@ -647,14 +609,12 @@ if ( {) {
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               }}
             />;
             {/* Placeholder for other sidebar elements */}
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </>);
 }
 // Check condition
@@ -704,9 +664,7 @@ if ( {") {"
 }'"}"
 }
 ;
-=======
     </>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

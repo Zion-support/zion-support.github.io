@@ -20,7 +20,6 @@
     ]
   },
 
-<<<<<<< HEAD:backup-problematic-files/temp-exclude/zion-os/tsconfig.json
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",

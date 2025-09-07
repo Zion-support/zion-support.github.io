@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
       <div className='flex'>;
         {[1, 2, 3, 4, 5].map(star => (;
@@ -39,7 +38,6 @@ import {
         ))}
               <AvatarFallback className="bg-muted">"
                 <User className="h-4 w-4" />"
-=======
 
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
@@ -112,7 +110,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
             <Avatar>
               <AvatarFallback className="bg-muted">
                 <User className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </AvatarFallback>
             </Avatar>
           ) : (
@@ -121,7 +118,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />
               ) : (
                 <AvatarFallback>
-<<<<<<< HEAD
                   {review.reviewer_profile?.display_name ?
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
@@ -648,7 +644,6 @@ return (<div className="border rounded - lg p - 4 bg - card"> <div className="fl
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>);
 }"}
 }}}
-=======
                   {review.reviewer_profile?.display_name ? 
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
@@ -824,4 +819,3 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

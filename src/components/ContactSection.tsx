@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -28,7 +27,6 @@ fetch("/api/contact", {"
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
         setFormData({ name: "", email: "", subject: "", message: "" })"
-=======
 
 import { useState } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -106,12 +104,10 @@ export function ContactSection() {
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
         setFormData({ name: "", email: "", subject: "", message: "" })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       })
       .catch((err) => {
         setIsSubmitting(false),
         toast({
-<<<<<<< HEAD
           title: "Submission Error","
           description: err.message,
           variant: "destructive"})"
@@ -203,7 +199,6 @@ export function ContactSection() {
                   <Textarea
                     id="message""
                     name="message""
-=======
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
@@ -297,7 +292,6 @@ export function ContactSection() {
                   <Textarea
                     id="message"
                     name="message"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { useState } from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -306,16 +300,12 @@ import { Textarea } from "@/components/ui/textarea",;
 import { toast } from "@/components/ui/use-toast",;
 import z from "zod",;
 import { Mail } from 'lucide-react';
-<<<<<<< HEAD
 export function ContactSection() {;,
-=======
 export function ContactSection() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [formData, setFormData] = useState({;
     name: "",;
     email: "",;
     subject: "",;
-<<<<<<< HEAD
     message: ""}),;,
   const [isSubmitting, setIsSubmitting] = useState(false);,
   const [submitted, setSubmitted] = useState(false);,
@@ -612,7 +602,6 @@ description: err.message;
 }
 ;
 
-=======
     message: ""}),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const [submitted, setSubmitted] = useState(false),;
@@ -797,4 +786,3 @@ description: err.message;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

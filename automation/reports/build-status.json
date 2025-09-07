@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-01T09:45:49.476Z",
   "build": {
     "status": "failed",
@@ -16,7 +15,6 @@
   },
   "dependencies": {
     "status": "unknown",
-=======
   "timestamp": "2025-09-05T21:41:32.481Z",
   "build": {
     "status": "success",
@@ -8181,12 +8179,10 @@
   },
   "dependencies": {
     "status": "warning",
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     "outdated": []
   },
   "trends": {
     "consecutiveFailures": 0,
-<<<<<<< HEAD
     "improvementSinceLastRun": false,
     "degradationSinceLastRun": false
   },
@@ -8196,7 +8192,6 @@
     "Run intelligent error fixer"
   ]
 }
-=======
     "improvementSinceLastRun": true,
     "degradationSinceLastRun": false
   },
@@ -8208,4 +8203,3 @@
     "Review type definitions"
   ]
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

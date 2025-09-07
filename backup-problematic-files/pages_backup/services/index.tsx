@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/index.tsx
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -242,8 +241,6 @@ const ServicesIndex: NextPage = () => {
       link: "/services/ai-automation"
     }
   ];
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/index.tsx
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
@@ -297,7 +294,6 @@ export default function ServicesIndex() {
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive technology services including AI development, cloud services, cybersecurity, and data analytics solutions." />
       </Head>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/index.tsx
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -501,8 +497,6 @@ export default function ServicesIndex() {
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/index.tsx
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -594,7 +588,6 @@ export default function ServicesIndex() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/index.tsx
       </main>
     </div>
   );
@@ -609,9 +602,7 @@ export default ServicesIndex;
     </>
   );
 }
-=======
       </div>
     </>
   );
 }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/index.tsx

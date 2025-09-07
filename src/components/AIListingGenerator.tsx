@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 })
       // Check condition
 if (?.error) {) {
@@ -287,7 +286,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2""
-=======
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -588,24 +586,19 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           >
             {isLoading ? (
               <>Generating Optimized Content...</>
             ) : (
               <>
-<<<<<<< HEAD
                 <Sparkles className='h-4 w-4 mr-2' />'
-=======
                 <Sparkles className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Generate Optimized Content
               </>
             )}
           </Button>
         </CardContent>
       </Card>
-<<<<<<< HEAD
       {isLoading && (
         <Card className='border border-zion-blue-light bg-zion-blue-dark overflow-hidden'>'
           <CardHeader>
@@ -758,7 +751,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             <div className="space-y-2">"
               {[...Array(3)].map((_, i) => (
                 <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />"
-=======
 
       {isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
@@ -776,13 +768,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             <div className="space-y-2">
               {[...Array(3)].map((_, i) => (
                 <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               ))}
             </div>;
           </CardContent>;
         </Card>;
       )}
-<<<<<<< HEAD
       {generatedContent && !isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark">"
           <CardHeader>
@@ -884,7 +874,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
               </h3>;
               <ul className='list - disc pl - 5 text - white space - y-1'>;
                 {generated_content.key_points.map ((point, index) => (                  <li key={index}>{point}</li>))}
-=======
 
       {generatedContent && !isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -917,29 +906,24 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
                 {generatedContent.keyPoints.map((point, index) => (
                   <li key={index}>{point}</li>
                 ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </ul>;
             </div>;
           </CardContent>;
           <CardFooter>;
             <Button;
               onClick={handleApply}
-<<<<<<< HEAD
               className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white""
             >
               Apply to My Listing
               <ArrowRight className="ml-2 h-4 w-4" />"
-=======
               className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
             >
               Apply to My Listing
               <ArrowRight className="ml-2 h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>
           </CardFooter>
         </Card>
       )}
-<<<<<<< HEAD
   value: string ;
 }, field: string) => {;,
   switch (field) {;
@@ -1052,8 +1036,6 @@ toast ({
   );
 }
 }}}}}
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

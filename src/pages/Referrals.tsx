@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useReferrals } from '@/hooks/useReferrals';
@@ -102,7 +101,6 @@ import { Button } from '@/components/ui/button','
 import { toast } from '@/hooks/use-toast','
 import { Share, Users } from 'lucide-react''
 import { useRouter } from 'next/router', // Changed from useNavigate'
-=======
 
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
@@ -120,7 +118,6 @@ import { toast } from '@/hooks/use-toast',
 import { Share, Users } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default function ReferralsPage() {
   const router = useRouter(), // Changed from navigate
   const { isAuthenticated } = useAuth(),
@@ -132,7 +129,6 @@ export default function ReferralsPage() {
     stats,
     getReferralLink,
     copyReferralLink,
-<<<<<<< HEAD
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">"
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Referral Program</h1>"
@@ -276,7 +272,6 @@ export default function ReferralsPage() {;
               <ReferralTable referrals={referrals} isLoading={isLoading} />
             </TabsContent>
             <TabsContent value="rewards" className="p-0 mt-6">"
-=======
     shareOnSocialMedia} = useReferrals(),
 
   useEffect(() => {
@@ -331,27 +326,20 @@ export default function ReferralsPage() {;
               <ReferralTable referrals={referrals} isLoading={isLoading} />
             </TabsContent>
             <TabsContent value="rewards" className="p-0 mt-6">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <RewardsCard rewards={rewards} isLoading={isLoading} />
             </TabsContent>
           </Tabs>
         </div>
-<<<<<<< HEAD
         <div className="space-y-6">"
-=======
 
         <div className="space-y-6">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <ReferralGuide />
           <ReferralLeaderboard />
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
 ;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -430,7 +418,6 @@ export default function ReferralsPage() {;
             </TabsContent>;
           </Tabs>;
         </div>;
-<<<<<<< HEAD
         <div className='space-y-6'>          <ReferralGuide />        <div className="space-y-6">;
 import { useEffect } from 'react';
 import { use_auth } from '@/hooks / use_auth';
@@ -597,7 +584,6 @@ if ( {) {
 }
 ;
 }}}}}}}}}))))))
-=======
         <div className="space-y-6">;
           <ReferralGuide />;
           <ReferralLeaderboard />;
@@ -607,4 +593,3 @@ if ( {) {
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

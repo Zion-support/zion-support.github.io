@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 webhooks,
     loading,
     error,
@@ -25,7 +24,6 @@ import {;
   SelectValue,;
 } from '@/components/ui/select';
 import { toast } from 'sonner';
-=======
 
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -154,7 +152,6 @@ import { PlusCircle, Save, Trash } from 'lucide-react';
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { toast } from "sonner",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function WebhookManager() {;
   const {;
     webhooks,;
@@ -165,7 +162,6 @@ export function WebhookManager() {;
     createWebhook,;
     toggleWebhook,;
     deleteWebhook,;
-<<<<<<< HEAD
     testWebhook,;
   } = useWebhooks();
   const [newWebhook, setNewWebhook] = useState({;
@@ -349,7 +345,6 @@ export function WebhookManager() {;
     { value: "talent_hired", label: "Talent Hired" }"
   ],;
   useEffect(() = /> {;
-=======
     testWebhook;
   } = useWebhooks(),;
   const [newWebhook, setNewWebhook] = useState({;
@@ -366,7 +361,6 @@ export function WebhookManager() {;
     { value: "talent_hired", label: "Talent Hired" }
   ],;
   useEffect(() => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     fetchWebhooks();
   }, []),;
   const handleAddEvent = () => {;
@@ -377,26 +371,20 @@ export function WebhookManager() {;
     }
 ;
     setNewWebhook({;
-<<<<<<< HEAD
       ...newWebhook,;,
-=======
       ...newWebhook,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],;
       selectedEvent: "" as WebhookEventType;
     });
   },;
-<<<<<<< HEAD
   const handleRemoveEvent = (event:,  WebhookEventType) => {;,
     setNewWebhook({;
       ...newWebhook,;
       eventTypes: newWebhook.eventTypes.filter(e => e !==,  event);
-=======
   const handleRemoveEvent = (event: WebhookEventType) => {;
     setNewWebhook({;
       ...newWebhook,;
       eventTypes: newWebhook.eventTypes.filter(e => e !== event);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     });
   },;
   const handleCreateWebhook = async () => {;
@@ -415,20 +403,14 @@ export function WebhookManager() {;
     setNewWebhook({;
       name: "",;
       url: "",;
-<<<<<<< HEAD
       selectedEvent: "" as WebhookEventType,;,
-=======
       selectedEvent: "" as WebhookEventType,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       eventTypes: [],;
       secret: "";
     });
   };
-<<<<<<< HEAD
   const handleTestWebhook = async (webhookId: string, eventType:,  WebhookEventType) => {;,
-=======
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     await testWebhook(webhookId, eventType);
   };
   return (;
@@ -444,36 +426,30 @@ export function WebhookManager() {;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <div className="space-y-2">;
               <Label htmlFor="webhook-name">Webhook Name</Label>;
-<<<<<<< HEAD
               <Input ;
                 id="webhook-name";
                 placeholder="e.g., Job Postings Webhook";
                 value={newWebhook.name}
                 onChange={(e) = /> setNewWebhook({...newWebhook, name: e.target.value})}
-=======
               <Input;
                 id="webhook-name";
                 placeholder="e.g., Job Postings Webhook";
                 value={newWebhook.name}
                 onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               />;
             </div>;
             <div className="space-y-2">;
               <Label htmlFor="webhook-url">URL</Label>;
-<<<<<<< HEAD
               <Input ;
                 id="webhook-url";
                 placeholder="https://example.com/webhook";",
                 value={newWebhook.url}
                 onChange={(e) = /> setNewWebhook({...newWebhook, url: e.target.value})}
-=======
               <Input;
                 id="webhook-url";
                 placeholder="https://example.com/webhook";
                 value={newWebhook.url}
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               />;
             </div>;
           </div>;
@@ -485,11 +461,9 @@ export function WebhookManager() {;
                   key={event} ;
                   onRemove={() => handleRemoveEvent(event)}
                 >;
-<<<<<<< HEAD
                   {eventOptions.find(e => e.value ===,  event)?.label || event}
                 </ClickableBadge>;
               ))}
-=======
                   {eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>;
               ))}
@@ -501,13 +475,11 @@ export function WebhookManager() {;
               >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select event" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </SelectTrigger>
                 <SelectContent>
                   {eventOptions.map(option => (
                     <SelectItem key={option.value} value={option.value}>
                       {option.label}
-<<<<<<< HEAD
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -727,7 +699,6 @@ export function WebhookManager() {;
             />;
             <p className="text-xs text-muted-foreground">;
               If provided, this secret will be used to sign the webhook payload.</p>;
-=======
                     </SelectItem>;
                   ))}
                 </SelectContent>
@@ -749,7 +720,6 @@ export function WebhookManager() {;
             <p className="text-xs text-muted-foreground">;
               If provided, this secret will be used to sign the webhook payload.;
             </p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>;
         </CardContent>;
         <CardFooter>;
@@ -764,7 +734,6 @@ export function WebhookManager() {;
           <p>Loading webhooks...</p>;
         ) : error ? (;
           <p className="text-red-500">{error}</p>;
-<<<<<<< HEAD
         ) : webhooks && webhooks.length === 0 ? (;
           <p>No webhooks configured yet && yet.Create your first webhook above.</p>;
         ) : (;
@@ -812,7 +781,6 @@ export function WebhookManager() {;
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >;
                           {webhook.is_active ? 'Disable' : 'Enable'}'
-=======
         ) : webhooks.length === 0 ? (;
           <p>No webhooks configured yet. Create your first webhook above.</p>;
         ) : (;
@@ -839,13 +807,11 @@ export function WebhookManager() {;
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >;
                           {webhook.is_active ? 'Disable' : 'Enable'}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         </Button>
                       </div>
                     </div>
                   </div>
                 </CardHeader>
-<<<<<<< HEAD
                 <CardContent className='py-2'>'
                   <div className='flex flex-col space-y-2'>'
                     <div>
@@ -936,7 +902,6 @@ export function WebhookManager() {;
                         {webhook.event_types.map((event:,  WebhookEventType) => (
                           <ClickableBadge key={event} variant="secondary">"
                             {eventOptions.find(e => e.value ===,  event)?.label || event}
-=======
                 <CardContent className="py-2">
                   <div className="flex flex-col space-y-2">
                     <div>
@@ -945,14 +910,12 @@ export function WebhookManager() {;
                         {webhook.event_types.map((event: WebhookEventType) => (
                           <ClickableBadge key={event} variant="secondary">
                             {eventOptions.find(e => e.value === event)?.label || event}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                           </ClickableBadge>;
                         ))}
                       </div>;
                     </div>;
                     <div className="text-xs text-muted-foreground">;
                       {webhook.last_triggered_at;
-<<<<<<< HEAD
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`;`
                         : 'Never triggered'}'
                     </div>
@@ -962,7 +925,6 @@ export function WebhookManager() {;
                   <Button
                     variant="outline""
                     size="sm""
-=======
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`;
                         : 'Never triggered'}
                     </div>
@@ -972,13 +934,11 @@ export function WebhookManager() {;
                   <Button
                     variant="outline"
                     size="sm"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     onClick={() => deleteWebhook(webhook.id)}
                   >;
                     <Trash className="h-4 w-4 mr-2" /> Delete;
                   </Button>;
                   <Select;
-<<<<<<< HEAD
                     onValueChange={(value) => handleTestWebhook(webhook.id, value as,  WebhookEventType)}
                   >
                     <SelectTrigger className="w-[180px]">",
@@ -1024,7 +984,6 @@ export function WebhookManager() {;
                         ? 'text-green-600';
                         : 'text-red-600';
                     }
-=======
                     onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
                   >
                     <SelectTrigger className="w-[180px]">
@@ -1044,7 +1003,6 @@ export function WebhookManager() {;
             ))}
           </div>;
         )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
         {testResult && (;
           <Card className="mt-4 border-blue-200">;
@@ -1062,7 +1020,6 @@ export function WebhookManager() {;
                 <div>;
                   <span className="font-medium">Response:</span>;
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">;
-<<<<<<< HEAD
                     {testResult.responseBody || '<empty>'}'
                   </pre>
                 </div>
@@ -1077,9 +1034,7 @@ export function WebhookManager() {;
                   <span className='font-medium'>Response:</span>;
                   <pre className='mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto'>;
                     {testResult && testResult.responseBody || '<empty>'}'
-=======
                     {testResult.responseBody || '<empty>'}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </pre>;
                 </div>;
               </div>;
@@ -1089,7 +1044,6 @@ export function WebhookManager() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 }setNewWebhook ({;
   ...newWebhook;
 eventTypes: [...newWebhook && newWebhook.eventTypes, newWebhook && newWebhook.selectedEvent];
@@ -1275,7 +1229,5 @@ newWebhook.secret |undefined);""
 event_types: [...new_webhook.event_types, new_webhook.selected_event];
 }
 ;))))))))))
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

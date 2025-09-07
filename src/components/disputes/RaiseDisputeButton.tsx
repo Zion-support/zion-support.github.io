@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <>;
   projectId: string,
@@ -64,7 +63,6 @@ export function RaiseDisputeButton({
     </>);
 }
           <DisputeForm
-=======
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -123,7 +121,6 @@ export function RaiseDisputeButton({
           </DialogHeader>
           
           <DisputeForm 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -149,21 +146,18 @@ export function RaiseDisputeButton({;
   variant = "outline",;
   size,;
   className;
-<<<<<<< HEAD
 }:,  RaiseDisputeButtonProps) {;,
   const [isDialogOpen, setIsDialogOpen] = useState(false),;
   const router = useRouter(),;
   const handleDisputeCreated = (disputeId:,  string) => {;,
     setIsDialogOpen(false);
     router.push(`/dashboard/disputes/${disputeId}`);`
-=======
 }: RaiseDisputeButtonProps) {;
   const [isDialogOpen, setIsDialogOpen] = useState(false),;
   const router = useRouter(),;
   const handleDisputeCreated = (disputeId: string) => {;
     setIsDialogOpen(false);
     router.push(`/dashboard/disputes/${disputeId}`);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   };
   return (;
     <>;
@@ -176,11 +170,8 @@ export function RaiseDisputeButton({;
         <ShieldAlert className="h-4 w-4 mr-2" />;
         Raise Dispute;
       </Button>;
-<<<<<<< HEAD
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;,
-=======
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
@@ -192,20 +183,14 @@ export function RaiseDisputeButton({;
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
-<<<<<<< HEAD
             onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
-=======
             onCancel={() => setIsDialogOpen(false)}
           />;
         </DialogContent>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       </Dialog>;
     </>;
   );
 }
-<<<<<<< HEAD
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

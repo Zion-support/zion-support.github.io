@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export function DynamicListingPage({
   title,
   description,
@@ -31,7 +30,6 @@ import { ProductListingCard  } from '@/components / ProductListingCard';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
 import { log_info, logErrorToProduction } from '@/utils / production_logger';
-=======
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { GradientHeading } from "@/components/GradientHeading",
@@ -39,13 +37,11 @@ import { ProductListingCard } from "@/components/ProductListingCard",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {
   Select,
   SelectValue,
   SelectTrigger,
   SelectContent,
-<<<<<<< HEAD
   SelectItem,
 } from '@/components / ui / select';
 import { Checkbox } from '@/components / ui / checkbox';
@@ -312,7 +308,6 @@ import { ProductListingCard } from "@/components/ProductListingCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-=======
   SelectItem} from "@/components/ui/select",
 import { Checkbox } from "@/components/ui/checkbox",
 import Skeleton from "react-loading-skeleton",
@@ -332,13 +327,11 @@ import { ProductListingCard } from "@/components/ProductListingCard",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {;
   Select,;
   SelectValue,;
   SelectTrigger,;
   SelectContent,;
-<<<<<<< HEAD
   SelectItem,;
 } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -366,7 +359,6 @@ initialPrice?: PriceRange;
 max: 10000 ;
 });
 export function DynamicListingPage(): any ({;
-=======
   SelectItem} from "@/components/ui/select",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import Skeleton from "react-loading-skeleton",;
@@ -522,14 +514,12 @@ export function DynamicListingPage({
           )
 ;
 export function DynamicListingPage({;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   title,;
   description,;
   categorySlug,;
   listings: allListings,;
   categoryFilters,;
   initialPrice = { min: 0, max: 10000 },;
-<<<<<<< HEAD
   detailBasePath = '/marketplace/listing',;
 }:,  DynamicListingPageProps) {;
   const router = useRouter();
@@ -618,7 +608,6 @@ export function DynamicListingPage({;
         selectedRating === null ||;
         (listing && listing.rating !== undefined && listing && listing.rating >=,  selectedRating),;
       return (
-=======
   detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {;
   const router = useRouter(),;
   const [searchQuery, setSearchQuery] = useState(""),;
@@ -703,7 +692,6 @@ export function DynamicListingPage({;
         selectedRating === null ||;
         (listing.rating !== undefined && listing.rating >= selectedRating),;
       return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         matchesSearch &&;
         matchesCategory &&;
         matchesPrice &&;
@@ -712,7 +700,6 @@ export function DynamicListingPage({;
         matchesSpecs &&;
         matchesAvailability;
       );
-<<<<<<< HEAD
     });
     filteredListings && filteredListings.sort((a, b) => {      switch (sortOption) {;
         case 'price-asc':;
@@ -725,7 +712,6 @@ export function DynamicListingPage({;
         default:;,
           return (
             new Date(b && b.createdAt).getTime() - new Date(a && a.createdAt).getTime();
-=======
     }),;
     filteredListings.sort((a, b) => {;
       switch (sortOption) {;
@@ -739,12 +725,10 @@ export function DynamicListingPage({;
           return (;
             new Date(b.createdAt).getTime() -;
             new Date(a.createdAt).getTime();
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           );
       }
     });
   } catch (error) {;
-<<<<<<< HEAD
     captureException(error);
     logErrorToProduction('Listing filter error:', { data: error });
   }
@@ -794,7 +778,6 @@ export function DynamicListingPage({;
                       >
 ;
   const handleRequestQuote = (listingId:,  string) => {;,
-=======
     captureException(error),;
     logErrorToProduction('Listing filter error:', { data: error });
   }
@@ -865,7 +848,6 @@ export function DynamicListingPage({;
                       >
 ;
   const handleRequestQuote = (listingId: string) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     setIsLoading(true),;
     const listing = allListings.find((item) => item.id === listingId),;
     setTimeout(() => {;
@@ -873,7 +855,6 @@ export function DynamicListingPage({;
       if (listing) {;
         toast({;
           title: "Quote Requested",;
-<<<<<<< HEAD
           description: `Your quote request for ${listing.title} has been sent.`}),;`
         // Store quote data in sessionStorage for the request-quote page;
         const quoteData = {;
@@ -882,7 +863,6 @@ export function DynamicListingPage({;
             id: listing.id,;
             title: listing.title,;
             category: listing.category,;,
-=======
           description: `Your quote request for ${listing.title} has been sent.`}),;
         // Store quote data in sessionStorage for the request-quote page;
         const quoteData = {;
@@ -891,7 +871,6 @@ export function DynamicListingPage({;
             id: listing.id,;
             title: listing.title,;
             category: listing.category,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             image: listing.images?.[0]}},;
         if (typeof window !== 'undefined') {;
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData));
@@ -910,7 +889,6 @@ export function DynamicListingPage({;
             {description}
           </p>;
         </div>;
-<<<<<<< HEAD
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-6'>;
           <div className='lg:col-span-1'>;
             <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6'>;
@@ -919,7 +897,6 @@ export function DynamicListingPage({;
               </h3>;
               <div className='mb-6'>;
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
-=======
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
           <div className="lg:col-span-1">;
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">;
@@ -928,14 +905,12 @@ export function DynamicListingPage({;
               </h3>;
               <div className="mb-6">;
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Categories;
                 </label>;
                 <div className="space-y-2">;
                   {categoryFilters.map(filter => (;
                     <div key={filter.value} className="flex items-center">;
                       <Checkbox;
-<<<<<<< HEAD
                         id={`cat-${filter.value}`}`
                         checked={selectedCategories.includes(filter.value)}
                         onCheckedChange={() => toggleCategory(filter.value)},
@@ -974,7 +949,6 @@ export function DynamicListingPage({;
                       {brandOptions.map((b) => (
                         <SelectItem key={b || 'unknown-brand'} value={b || ''} className="text-white">"
                           {b || 'N/A'}'
-=======
                         id={`cat-${filter.value}`}
                         checked={selectedCategories.includes(filter.value)}
                         onCheckedChange={() => toggleCategory(filter.value)}
@@ -1010,14 +984,12 @@ export function DynamicListingPage({;
                       {brandOptions.map((b) => (
                         <SelectItem key={b || 'unknown-brand'} value={b || ''} className="text-white">
                           {b || 'N/A'}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         </SelectItem>;
                       ))}
                     </SelectContent>;
                   </Select>;
                 </div>;
               )}
-<<<<<<< HEAD
               <div className='mb-6'>;
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
                   Specifications;
@@ -1061,7 +1033,6 @@ export function DynamicListingPage({;
                       {availabilityOptions.map((a) => (
                         <SelectItem key={a || 'unknown-availability'} value={a || ''} className="text-white">"
                           {a || 'N/A'}'
-=======
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -1099,14 +1070,12 @@ export function DynamicListingPage({;
                       {availabilityOptions.map((a) => (
                         <SelectItem key={a || 'unknown-availability'} value={a || ''} className="text-white">
                           {a || 'N/A'}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         </SelectItem>;
                       ))}
                     </SelectContent>;
                   </Select>;
                 </div>;
               )}
-<<<<<<< HEAD
               <div className="mb-6">"
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">"
                   Price Range
@@ -1129,7 +1098,6 @@ export function DynamicListingPage({;
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">",
                     <span>${currentPriceFilter[0].toLocaleString()}</span>,
-=======
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -1148,12 +1116,10 @@ export function DynamicListingPage({;
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
                     className='mb-4'                  />;
                   <div className='flex justify-between text-sm text-zion-slate-light'>;
                     <span>${currentPriceFilter[0].toLocaleString()}</span>;,
@@ -1233,7 +1199,6 @@ export function DynamicListingPage({;
                   setSelectedBrand("all"),"
                   setSpecQuery(""),"
                   setSelectedAvailability("all")"
-=======
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -1286,14 +1251,12 @@ export function DynamicListingPage({;
                   setSelectedBrand("all"),
                   setSpecQuery(""),
                   setSelectedAvailability("all")
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 }}
               >
                 Clear All
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
                 </div>;
               </div>;
               <Button
@@ -1492,7 +1455,6 @@ export function DynamicListingPage({;
                   logInfo("Clearing filters"),;
                   setSearchQuery(""),;
                   clearCategories(),;,
-=======
 
           <div className="lg:col-span-3">
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
@@ -1511,7 +1473,6 @@ export function DynamicListingPage({;
                   logInfo("Clearing filters"),;
                   setSearchQuery(""),;
                   clearCategories(),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   setCurrentPriceFilter([0, priceRange.max]),;
                   setSelectedRating(null),;
                   setSelectedBrand("all"),;
@@ -1528,7 +1489,6 @@ export function DynamicListingPage({;
               <div className="flex flex-col md:flex-row gap-4">;
                 <div className="relative flex-grow">;
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
-<<<<<<< HEAD
                   <Input ;
                     type="text";
                     placeholder="Search listings...";
@@ -1702,7 +1662,6 @@ export function DynamicListingPage({;
                       <div className="flex justify-between items-center pt-4">"
                         <Skeleton height={24} width="25%" />"
                         <Skeleton height={32} width="25%" />"
-=======
                   <Input;
                     type="text";
                     placeholder="Search listings...";
@@ -1775,12 +1734,10 @@ export function DynamicListingPage({;
                       <div className="flex justify-between items-center pt-4">
                         <Skeleton height={24} width="25%" />
                         <Skeleton height={32} width="25%" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       </div>
                     </div>
                   </div>
                 ))}
-<<<<<<< HEAD
               </div>;
             ) : filteredListings && filteredListings.length > 0 ? (;
               <div
@@ -1788,7 +1745,6 @@ export function DynamicListingPage({;
                   view === "grid""
                     ? "grid grid-cols-1 md:grid-cols-2 gap-6""
                     : "flex flex-col gap-6""
-=======
               </div>
             ) : filteredListings.length > 0 ? (
               <div
@@ -1796,7 +1752,6 @@ export function DynamicListingPage({;
                   view === "grid"
                     ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                     : "flex flex-col gap-6"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 }
               >;
                 {filteredListings.map((listing) => (;
@@ -1808,7 +1763,6 @@ export function DynamicListingPage({;
                     detailBasePath={detailBasePath}
                   />;
                 ))}
-<<<<<<< HEAD
               </div>;
             ) : (;
               <div className='text-center py-20'>;
@@ -1830,7 +1784,6 @@ export function DynamicListingPage({;
                     setSelectedAvailability("all")"
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10""
-=======
               </div>
             ) : (
               <div className="text-center py-20">
@@ -1852,12 +1805,10 @@ export function DynamicListingPage({;
                     setSelectedAvailability("all")
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 >
                   Clear All
                 </Button>
               </div>
-<<<<<<< HEAD
                   onClick={() => {;
                     setSearchQuery('');
                     clearCategories();,
@@ -1867,7 +1818,6 @@ export function DynamicListingPage({;
                     setSpecQuery('');
                     setSelectedAvailability('all');                  }}'
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
-=======
               </div>;
             ) : (;
               <div className="text-center py-20">;
@@ -1889,7 +1839,6 @@ export function DynamicListingPage({;
                     setSelectedAvailability("all");
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 >;
                   Clear All;
                 </Button>;
@@ -1900,7 +1849,6 @@ export function DynamicListingPage({;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 };
 if (typeof window !== 'undefined') {';
   sessionStorage && sessionStorage.setItem ('quoteRequestData', JSON && JSON.stringify (quoteData) ) ;
@@ -2110,7 +2058,5 @@ setSelectedRating (null);
 }'"  );
 }
 ;
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

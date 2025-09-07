@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function ContactPage() {
@@ -82,7 +81,6 @@ export default function ContactPage() {
                 Send Message
               </button>
             </form>
-=======
 import { 
   EnvelopeIcon,
   PhoneIcon, 
@@ -373,7 +371,6 @@ export default function ContactPage() {
             <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Learn More <span aria-hidden="true">→</span>
             </Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>
         </div>
       </div>

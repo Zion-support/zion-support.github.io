@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       name: 'Test User'
     }
   }
@@ -119,7 +118,6 @@ if ( {) {
   }
   return user;
 }
-=======
 import { NextApiRequest } from "next";
 type DemoUser = { id: string, role: "client" | "talent", talentSlug?: string };
 export function getDemoUser(req: NextApiRequest): DemoUser {;
@@ -150,4 +148,3 @@ export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clien
   err.statusCode = 403;
   throw err;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

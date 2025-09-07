@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';,
@@ -68,7 +67,6 @@ export function EnterpriseStickyNav() {
             aria-label="Toggle navigation";
             aria-expanded={open}
               <Link href="#contact" className="text-sm font-medium hover:text-primary" />Contact Us</Link>"
-=======
 import { useState } from "react",
 import { Menu } from 'lucide-react'
 import Link from "next/link",
@@ -98,13 +96,11 @@ export function EnterpriseStickyNav() {
             </li>
             <li>
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </li>
           </ul>
         </div>
       </div>
     </nav>
-<<<<<<< HEAD
           >;
             <Menu className="h-6 w-6" />;
           </button>;
@@ -155,7 +151,6 @@ function EnterpriseStickyNav() {
             </li>;
             <li>;
               <Link href="#contact" className="text - sm font - medium hover:text - primary" />Contact Us</Link>;
-=======
   )
 import { useState } from "react",;
 import { Menu } from 'lucide-react';
@@ -186,20 +181,16 @@ export function EnterpriseStickyNav() {;
             </li>;
             <li>;
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </li>;
           </ul>;
         </div>;
       </div>;
-<<<<<<< HEAD
   );
 }
     </nav>);
 }
 }})
-=======
     </nav>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

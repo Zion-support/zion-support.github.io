@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/about.jsx
 import React from 'react';
 
 import Layout from "../components/Layout";
@@ -26,7 +25,6 @@ const About = ({ className }) => {
           {/* Mission & Vision */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="bg-white rounded-lg shadow-lg p-8">
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/about.jsx
               <div className="text-4xl mb-4"></div>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
 
@@ -42,7 +40,6 @@ const About = ({ className }) => {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8">
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/about.jsx
               <div className="text-4xl mb-4"></div>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
 
@@ -76,7 +73,6 @@ const About = ({ className }) => {
                 for future growth and innovation.
               </p>
               <p className="text-lg text-gray-600">
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/about.jsx
                 Today, we&apos;re proud to have helped over 150+ businesses transform their digital 
                 presence, from small startups to enterprise-level organizations. Our commitment 
                 to excellence, innovation, and client success continues to drive everything we do.
@@ -95,7 +91,6 @@ const About = ({ className }) => {
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Core Values</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/about.jsx
                 <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Innovation</h3>
                 <p className="text-gray-600">
@@ -128,7 +123,6 @@ const About = ({ className }) => {
                 </p>
               </div>
               <div className="text-center">
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/about.jsx
                 <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
 
@@ -190,7 +184,6 @@ const About = ({ className }) => {
           <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-8 text-white">
             <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
             <p className="text-xl mb-6">
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/about.jsx
               Let&apos;s discuss how we can help transform your business with our technology solutions.
 
               Let's discuss how we can help transform your business with our

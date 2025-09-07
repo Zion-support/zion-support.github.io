@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
   const handleViewOffer = (project_id: string, ) =>: any {
     router.push (`/project/${project_id}`);`
@@ -239,7 +238,6 @@ if () ) {) {
   );
 }
 ;
-=======
 
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
@@ -333,4 +331,3 @@ export function ProjectOfferBanner() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

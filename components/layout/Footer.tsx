@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
@@ -245,7 +244,6 @@ const Footer: React.FC = () => {
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
           </p>
 
-=======
 
 const Footer = () => {
   return (
@@ -318,17 +316,13 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>
       </div>
     </footer>
   );
 };
 
-<<<<<<< HEAD
 export default Footer;
 export default Footer;
 
-=======
 export default Footer;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

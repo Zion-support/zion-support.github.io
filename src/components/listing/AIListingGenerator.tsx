@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -109,7 +108,6 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
     title;
     category;
     keyFeatures;
-=======
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -164,7 +162,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     title,;
     category,;
     keyFeatures,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     targetAudience;
   }: {;
     title: string,;
@@ -172,7 +169,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     keyFeatures: string,;
     targetAudience: string;
   }) => {;
-<<<<<<< HEAD
     setIsLoading(true);    ;
     try {;
       const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {;
@@ -185,7 +181,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         throw new Error((data as,  any).error);
       }
       setGeneratedContent((data as,  any)?.generated || null);
-=======
     setIsLoading(true),;
     try {;
       const { data, error } = await supabase.functions.invoke('ai-listing-generator', {;
@@ -244,7 +239,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             isLoading={isLoading} 
 ;
       setGeneratedContent((data as any)?.generated || null),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       toast({;
         title: "Content Generated",;
         description: "AI has created optimized listing content for you.";
@@ -253,17 +247,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       logErrorToProduction('Error generating content:', { data: error }),;
       toast({;
         title: "Generation Failed",;
-<<<<<<< HEAD
         description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
-=======
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
-<<<<<<< HEAD
   };
   const handleApply = () => {;
     if (generatedContent &&,  onApplyGenerated) {;
@@ -287,7 +277,6 @@ if ( {) {
     }
   },
   return (
-=======
   },;
   const handleApply = () => {;
     if (generatedContent && onApplyGenerated) {;
@@ -299,7 +288,6 @@ if ( {) {
     }
   };
   return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
@@ -312,7 +300,6 @@ if ( {) {
           </p>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
           <AIListingForm
             onSubmit = {handleGenerate,}
             isLoading = {isLoading,}
@@ -384,26 +371,20 @@ if (.error) {) {
 toast ({
 }catch (error) {''
   logErrorToProduction ('Error generating content:', {'
-=======
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
             initialValues={initialValues}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           />;
         </CardContent>;
       </Card>;
       {isLoading && <LoadingContentSkeleton />}
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {generatedContent && !isLoading && (;
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
       )}
     </div>;
   );
-<<<<<<< HEAD
 }: AIListingGeneratorProps) {;
   const {;
   toast ;
@@ -490,7 +471,5 @@ toast ({
 }
 ;
 }}}}}}}
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

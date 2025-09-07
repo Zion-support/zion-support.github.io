@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {useEffect, useState} from 'react''
 import {ProductListingCard} from '@/components/ProductListingCard''
 import {useAuth} from '@/hooks/useAuth''
@@ -79,7 +78,6 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
   }, [isAuthenticated, user]),
   if (!isAuthenticated) {;
     return (
-=======
 import { useEffect, useState } from 'react',;
 import { ProductListingCard } from '@/components/ProductListingCard',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -109,23 +107,18 @@ export default function EquipmentRecommendations() {;
     return (
       <Dialog open>
         <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <DialogHeader>
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
           <p>Please sign in to get personalized AI picks.</p>
-<<<<<<< HEAD
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">"
             <Link href="/auth/login?returnTo=/equipment/recommendations" />Sign In</Link>"
-=======
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>
         </DialogContent>
       </Dialog>
     )
-<<<<<<< HEAD
             className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'>;
             <Link href='/auth/login?returnTo=/equipment/recommendations' />;
               Sign In;
@@ -137,7 +130,6 @@ export default function EquipmentRecommendations() {;
     );
   }
   return (
-=======
   }
 
   return (
@@ -154,12 +146,10 @@ export default function EquipmentRecommendations() {;
           <div key={listing.id} className="break-inside-avoid mb-4">
             <ProductListingCard listing={listing} />
           </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         ))}
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 import {useEffect, useState} from 'react';
 import {ProductListingCard} from '@/components / ProductListingCard';
 import {use_auth} from '@/hooks / use_auth';
@@ -254,7 +244,5 @@ if ( {) {
 }
 ;
 }}}}}}}}))
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

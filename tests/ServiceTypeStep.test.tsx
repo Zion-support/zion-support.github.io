@@ -4,7 +4,6 @@ interface ServiceTypeStep.testProps {
 <<<<<<<< HEAD:corrupted_backup/ServiceTypeStep.test.tsx
 }
 
-========
 >
 
 
@@ -32,7 +31,6 @@ export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
 <<<<<<<< HEAD:tests/ServiceTypeStep.test.tsx
 
 
-========
 
 
 <:tests/ServiceTypeStep.test.tsx
@@ -42,7 +40,6 @@ export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
 }
 
 }
-========
 
 
 >

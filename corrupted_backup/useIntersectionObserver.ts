@@ -22,21 +22,12 @@ export function useIntersectionObserver({
     const hasIOSupport = !!window.IntersectionObserver;
     if (!hasIOSupport || frozen || !node) return;
     const observerParams = { threshold, root, rootMargin };
-<<<<<<< HEAD:hooks/useIntersectionObserver.ts
-=======
-<<<<<<< HEAD
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/useIntersectionObserver.ts
     const currentObserver = new IntersectionObserver(
       updateEntry,
       observerParams
     );
-<<<<<<< HEAD:hooks/useIntersectionObserver.ts
-=======
-=======
     const currentObserver = new IntersectionObserver(updateEntry, observerParams);
 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/useIntersectionObserver.ts
     observer.current = currentObserver;
     currentObserver.observe(node);
     return () => {
@@ -51,21 +42,15 @@ export function useIntersectionObserver({
     if (node) {
       observer.current?.observe(node);
     }
-<<<<<<< HEAD:hooks/useIntersectionObserver.ts
-=======
-<<<<<<< HEAD
     prevNode.current = node;
   }, [node]);
   return [setNode, entry] as const;
 }
-=======
 
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/useIntersectionObserver.ts
     prevNode.current = node;
   }, [node]);
   return [setNode, entry] as const;
 }
-<<<<<<< HEAD:hooks/useIntersectionObserver.ts
 import { useEffect, useRef, useState } from 'react';
 interface UseIntersectionObserverProps {;
   threshold?: number;
@@ -109,6 +94,3 @@ export function useIntersectionObserver({;
   }, [node]);
   return [setNode, entry] as const;
 }
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/useIntersectionObserver.ts

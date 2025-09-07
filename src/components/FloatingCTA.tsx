@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button","
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -263,7 +262,6 @@ return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md
 }
 }
 ;
-=======
 
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
@@ -382,4 +380,3 @@ export function FloatingCTA() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

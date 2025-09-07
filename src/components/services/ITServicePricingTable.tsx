@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useMemo } from 'react';
 import {;
   onsiteServicePricing,;
@@ -118,7 +117,6 @@ export function ITServicePricingTable() {;,
                   <ArrowUpDown className="h-4 w-4" />"
                 </Button>
               </TableHead>
-=======
 
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
@@ -332,4 +330,3 @@ export function ITServicePricingTable() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

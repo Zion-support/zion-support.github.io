@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 >
         <Eye className="h-4 w-4" />"
       </Button>
@@ -119,7 +118,6 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({,
 '"},"
   );
 }
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -240,4 +238,3 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
     </div>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

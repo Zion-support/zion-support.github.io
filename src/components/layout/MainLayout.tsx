@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 
 export default function MainLayout({
   children,
@@ -15,4 +13,3 @@ export default function MainLayout({
     </div>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

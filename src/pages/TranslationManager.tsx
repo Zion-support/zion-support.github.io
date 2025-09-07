@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let sourceText = '';    ;
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
 }
@@ -340,7 +339,6 @@ let sourceText = '';    ;
   );
 }
 }
-=======
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -802,4 +800,3 @@ export default function TranslationManager() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -25,14 +24,11 @@ import bcrypt from "bcryptjs",;
 const handler = NextAuth({;
   adapter: PrismaAdapter(prisma),;
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
-<<<<<<< HEAD
 const handler = NextAuth({adapter: PrismaAdapter(prisma);
 
 
@@ -118,15 +114,12 @@ import bcrypt from "bcryptjs",;
 const handler = NextAuth({;
   adapter: PrismaAdapter(prisma),;
 
-=======
 const handler = NextAuth({;
   adapter: PrismaAdapter(prisma);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   providers: [;
     CredentialsProvider({;
       name: "credentials";
       credentials: {;
-<<<<<<< HEAD
         email: { label: "Email", type: "email" }
         password: { label: "Password", type: "password" }
       }
@@ -139,7 +132,6 @@ const handler = NextAuth({;
         });
         if (!user |!user.password) {return null;
         }
-=======
         email: { label: "Email", type: "email" };
         password: { label: "Password", type: "password" }
       };
@@ -157,30 +149,25 @@ const handler = NextAuth({;
           return null;
         }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         const isPasswordValid = await bcrypt.compare(;
           credentials.password;
           user.password;
         );
-<<<<<<< HEAD
         if (!isPasswordValid) {return null;
         }
         return {id: user.id;
-=======
         if (!isPasswordValid) {;
           return null;
         }
 ;
         return {;
           id: user.id;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           email: user.email;
           name: user.name;
           role: user.role}
       }
     });
   ];
-<<<<<<< HEAD
   session: {strategy: "jwt"}
   callbacks: {async jwt({ token, user }) {if (user) {;
         token.role = user.role;
@@ -188,7 +175,6 @@ const handler = NextAuth({;
       return token;
     }
     async session({ session, token }) {if (token) {;
-=======
   session: {;
     strategy: "jwt"};
   callbacks: {;
@@ -200,12 +186,10 @@ const handler = NextAuth({;
     };
     async session({ session, token }) {;
       if (token) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         session.user.id = token.sub!;
         session.user.role = token.role;
       }
       return session;
-<<<<<<< HEAD
 
 
 
@@ -228,10 +212,8 @@ export { handler as GET, handler as POST };
 
 
 
-=======
     }};
   pages: {;
     signIn: "/auth/signin";
     signUp: "/auth/signup"}});
 export { handler as GET, handler as POST };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

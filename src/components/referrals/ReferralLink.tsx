@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react''
 interface ReferralLinkProps {
   referralLink: string;,
@@ -132,7 +131,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }:,  ReferralLinkPr
       <CardHeader>;
         <CardTitle className="flex items - center gap - 2">;
           <Link className="h - 5 w - 5" />;
-=======
 
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -246,7 +244,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <Link className="h-5 w-5" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Your Referral Link;
         </CardTitle>;
         <CardDescription>;
@@ -254,7 +251,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
             <Input value={referralLink}
               readOnly
               className="font-mono text-sm""
@@ -262,7 +258,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         </div />
       </CardContent>
 }}}}}}}}}})))
-=======
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
             <Input;
@@ -320,4 +315,3 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

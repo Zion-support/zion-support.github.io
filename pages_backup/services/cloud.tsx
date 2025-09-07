@@ -1,6 +1,3 @@
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud.tsx
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
@@ -45,17 +42,11 @@ export default function CloudServicesPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/services/cloud.tsx
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/services/cloud.tsx
 
 const cloudServices = [
   {
@@ -111,9 +102,6 @@ export default function CloudServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud.tsx
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -126,9 +114,6 @@ export default function CloudServicesPage() {
             </motion.div>;
           </div>;
         </section>;
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/services/cloud.tsx
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Cloud Services</h1>
@@ -139,9 +124,6 @@ export default function CloudServicesPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD:pages_backup/services/cloud.tsx
-=======
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud.tsx
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -183,9 +165,6 @@ export default function CloudServicesPage() {
             </div>
           </div>
         </section>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud.tsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/pages_backup/services/cloud.tsx
 
         {/* Services Grid */}
         <section className="py-16 px-4">

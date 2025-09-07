@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 yearsExperience
 }: TalentCardHeaderProps) {
   return (
@@ -30,7 +29,6 @@ export function TalentCardHeader(): any ({;
   );
 };
 }
-=======
 
 import React from "react",
 import { BadgeCheck } from 'lucide-react'
@@ -102,7 +100,6 @@ export function TalentCardHeader({;
             {yearsExperience > 5 && (;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </h3>;
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
@@ -111,7 +108,6 @@ export function TalentCardHeader({;
     </div>;
   );
 }
-<<<<<<< HEAD
 import React from 'react';
 import { BadgeCheck } from 'lucide-react';
 import { TalentCardAvatar } from './TalentCardAvatar';
@@ -150,6 +146,4 @@ function TalentCardHeader() {
     </div>);
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

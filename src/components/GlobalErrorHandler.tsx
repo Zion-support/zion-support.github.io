@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 reportError: (error: Error, context?:,  any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;,
@@ -519,7 +518,6 @@ export function GlobalErrorHandler({ children }:,  GlobalErrorHandlerProps) {;,
 function getErrorMessage(error:,  Error): string {,
   const message = error.message.toLowerCase(),
 }}}}
-=======
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',;
 import { toast } from '@/hooks/use-toast',;
 import { Button } from '@/components/ui/button',;
@@ -727,4 +725,3 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 } ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

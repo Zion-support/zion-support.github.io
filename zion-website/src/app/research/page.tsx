@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const researchAreas = [
@@ -65,7 +64,6 @@ export default function ResearchPage() {
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             View Open Positions
           </button>
-=======
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -363,7 +361,6 @@ export default function ResearchPage() {
               Research Careers <span aria-hidden="true">→</span>
             </Link>
           </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>
       </div>
     </div>

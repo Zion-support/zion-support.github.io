@@ -92,18 +92,8 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     customers: 3200,
     rating: 4.8,
     reviews: 1800
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   };
 ],
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   }
 ];
 // Placeholder content - file was empty after conflict resolution
-<<<<<<< HEAD
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

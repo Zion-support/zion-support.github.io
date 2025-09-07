@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import { useState, useEffect } from "react",;
 interface Feature {;
@@ -13,7 +10,6 @@ interface Feature {;
   color: string,;
   details: string[],;
   demo?: string;
-<<<<<<< HEAD
 }
 ;
 const features: Feature[] = [;
@@ -360,7 +356,6 @@ export function FeatureShowcase() {;
       </div>;
     </section>);
 }
-=======
 }
 ;
 const features: Feature[] = [;
@@ -560,4 +555,3 @@ export function FeatureShowcase() {;
     </section>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

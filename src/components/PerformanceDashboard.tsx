@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react''
 import {
   Card
@@ -529,7 +528,6 @@ export default PerformanceDashboard;
 }
 },
 export default PerformanceDashboard,
-=======
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -845,7 +843,6 @@ const PerformanceDashboard: React.FC = () => {;
 },
 
 export default PerformanceDashboard, 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <div className="flex space-x-4">;
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">;
           <Shield className="h-4 w-4 mr-2" />;
@@ -858,7 +855,6 @@ export default PerformanceDashboard,
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 };
 export default PerformanceDashboard;
           <div className='space - y-4'>;
@@ -914,7 +910,5 @@ export default PerformanceDashboard;
 export default PerformanceDashboard,
 export default PerformanceDashboard,
 }}}
-=======
 },;
 export default PerformanceDashboard;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

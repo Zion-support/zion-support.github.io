@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 rank: number,
   name: string,
   referrals: number
@@ -80,7 +79,6 @@ export function ReferralLeaderboard() {;
                         ? 'bg-slate-200 text-slate-800''
                         : entry && entry.rank === 3
                           ? 'bg-amber-200 text-amber-800''
-=======
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Award } from 'lucide-react'
@@ -107,12 +105,10 @@ export function ReferralLeaderboard() {
         <CardTitle className="flex items-center gap-2">
           <Award className="h-5 w-5" />
           Leaderboard
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </CardTitle>
         <CardDescription>Top referrers this month</CardDescription>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD
         <div className="space-y-2">"
           {leaderboardData.map((entry) => (
             <div
@@ -133,7 +129,6 @@ export function ReferralLeaderboard() {
     </Card>;
   );
 };
-=======
         <div className="space-y-2">
           {leaderboardData.map((entry) => (
             <div 
@@ -150,7 +145,6 @@ export function ReferralLeaderboard() {
                       : entry.rank === 3
                       ? "bg-amber-200 text-amber-800"
                       : "bg-muted text-muted-foreground"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from 'lucide-react';
 interface LeaderboardEntry {;
@@ -161,13 +155,10 @@ interface LeaderboardEntry {;
 ;
 export function ReferralLeaderboard() {;
   // This would typically be fetched from the server;
-<<<<<<< HEAD
   // For now, we'll use mock data;,
   const leaderboardData: LeaderboardEntry[] = [;,
-=======
   // For now, we'll use mock data;
   const leaderboardData: LeaderboardEntry[] = [;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     { rank: 1, name: "Alex Johnson", referrals: 24 },;
     { rank: 2, name: "Jamie Smith", referrals: 18 },;
     { rank: 3, name: "Taylor Wong", referrals: 15 },;
@@ -191,11 +182,8 @@ export function ReferralLeaderboard() {;
             >;
               <div className="flex items-center gap-3">;
                 <div;
-<<<<<<< HEAD
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${;`
-=======
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     entry.rank === 1;
                       ? "bg-yellow-200 text-yellow-800";
                       : entry.rank === 2;
@@ -203,7 +191,6 @@ export function ReferralLeaderboard() {;
                       : entry.rank === 3;
                       ? "bg-amber-200 text-amber-800";
                       : "bg-muted text-muted-foreground";
-<<<<<<< HEAD
                   }`}`
                 >;
                   {entry.rank}
@@ -240,7 +227,6 @@ export function ReferralLeaderboard() {;
                 {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? "s" : ""}"
             </div>;
           ))}
-=======
                   }`}
                 >;
                   {entry.rank}
@@ -252,13 +238,11 @@ export function ReferralLeaderboard() {;
               </span>
             </div>
           ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>;
       </CardContent>;
     </Card>;
   );
 }
-<<<<<<< HEAD
   );
 }
             </div>))}
@@ -267,6 +251,4 @@ export function ReferralLeaderboard() {;
     </Card>);
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

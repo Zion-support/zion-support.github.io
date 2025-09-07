@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/pages._archive_corrupted/demo.tsx
 
 
 
@@ -275,7 +274,6 @@ const "DemoPage": React.FC = () => {
     </>
   )
 }
-<<<<<<< HEAD:backup-problematic-files/pages._archive_corrupted/demo.tsx
 export default DemoPage
 
 export default DemoPage

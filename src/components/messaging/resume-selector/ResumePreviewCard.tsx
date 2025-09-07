@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -95,7 +94,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({,
     </Card>
   );
 };
-=======
 
 import React from 'react',
 import { Card, CardContent } from "@/components/ui/card",
@@ -200,4 +198,3 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

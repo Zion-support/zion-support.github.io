@@ -1,20 +1,16 @@
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../src/components/layout/MainLayout';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages/ITServices.tsx
 import { 
   Server, 
   Shield, 
   Cloud, 
   Database, 
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
   Monitor, 
   CheckCircle, 
   Settings,
@@ -22,7 +18,6 @@ import {
   Headphones,
   HardDrive,
   Wifi,
-=======
   Network, 
   Lock, 
   Monitor, 
@@ -43,7 +38,6 @@ import {
   BarChart3,
   Headphones,
   Wrench,
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages/ITServices.tsx
   FileText,
   Cpu,
   Lock
@@ -212,7 +206,6 @@ export default function ITServicesPage() {
             <p className="text-xl text-blue-100 mb-8">
               Contact us today to discuss your IT needs and get expert solutions.
             </p>
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
@@ -301,7 +294,6 @@ export default function ITServicesPage() {
             <div className="mt-8 text-gray-600">
               <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:underline">kleber@ziontechgroup.com</a></p>
               <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
-=======
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
               <div className="flex items-center text-white">
                 <Phone className="h-5 w-5 mr-2" />
@@ -315,7 +307,6 @@ export default function ITServicesPage() {
                 <MapPin className="h-5 w-5 mr-2" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages/ITServices.tsx
             </div>
           </motion.div>
         </div>

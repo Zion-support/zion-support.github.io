@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 </ArrowRight>;
                       </Link>;
                     </li>;
@@ -38,21 +37,18 @@ export default function FuturisticFooter() {
   return (
     <footer className="bg-gray-900 text-white p-4">"
       <div className="container mx-auto text-center">"
-=======
 import React from 'react';
 
 export default function FuturisticFooter() {
   return (
     <footer className="bg-gray-900 text-white p-4">
       <div className="container mx-auto text-center">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
       </div>
     </footer>
   );
 }
   ],
-<<<<<<< HEAD
 ,
   const socialLinks = ['],'
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'','
@@ -152,7 +148,6 @@ export default function FuturisticFooter() {
                 <div className="flex items-center space-x-3 text-slate-300">","
 </div>","
                   <MapPin className="w-4 h-4 text-cyan-400" />","
-=======
 
   const socialLinks = ['],
     { nam: e: 'LinkedIn', hre: f: 'http: s://linkedin.com/company/zion-tech-group', ico: n: 'LinkedIn' },'',
@@ -256,14 +251,12 @@ export default function FuturisticFooter() {
                 <div className="flex items-center space-x-3 text-slate-300">",
 </div>",
                   <MapPin className="w-4 h-4 text-cyan-400" />",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 </MapPin>,
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>,
                 </div>,
               </div>,
             </div>,
               <div key={section.title}>,
-<<<<<<< HEAD
 </div>","
                 <h4 className="text-lg font-semibold text-white mb-4 flex items-center">","
 </h4>","
@@ -279,7 +272,6 @@ export default function FuturisticFooter() {
 </Link>","
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover: bg-cyan-400 transition-colors duration-200"></div>"","
                         <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover: opacity-100 group-hover:translate-x-1 transition-all duration-200" />","
-=======
 </div>",
                 <h4 className="text-lg font-semibold text-white mb-4 flex items-center">",
 </h4>",
@@ -296,13 +288,11 @@ export default function FuturisticFooter() {
 </Link>",
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hove: r: bg-cyan-400 transition-colors duration-200"></div>"",
                         <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hove: r: opacity-100 group-hove: r:translate-x-1 transition-all duration-200" />",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 </ArrowRight>,
                       </Link>,
                     </li>,
                 </ul>,
               </div>,
-<<<<<<< HEAD
           </div>","
           <div className="pt-8 border-t border-slate-800/50">","
 </div>","
@@ -326,7 +316,6 @@ export default function FuturisticFooter() {
                 <span className="flex items-center">","
 </span>","
                   <Award className="w-4 h-4 text-yellow-400 mr-2" />","
-=======
           </div>",
           <div className="pt-8 border-t border-slate-800/50">",
 </div>",
@@ -350,7 +339,6 @@ export default function FuturisticFooter() {
                 <span className="flex items-center">",
 </span>",
                   <Award className="w-4 h-4 text-yellow-400 mr-2" />",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 </Award>,
                 </span>,
               </div>,
@@ -358,17 +346,14 @@ export default function FuturisticFooter() {
           </div>,
         </div>,
       </div>,
-<<<<<<< HEAD
     </footer>","
     </footer>";
   ],;
 ,;,
-=======
     </footer>",
 
   ],;
 ,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const socialLinks = ['],;
     { nam: e: 'LinkedIn', hre: f: 'http: s://linkedin.com/company/zion-tech-group', ico: n: 'LinkedIn' },'',;
     { nam: e: 'Twitter', hre: f: 'http: s://twitter.com/ziontechgroup', ico: n: 'Twitter' },'',;
@@ -482,16 +467,13 @@ export default function FuturisticFooter() {
 </ul>,;
                     <li key={link.name}>,;
 </li>,;
-<<<<<<< HEAD
                       <Link ,;
                         href={link.href}",;
                         className="flex items-center text-slate-400: hover: text-cyan-400 transition-colors duration-200 group"",;" />,;
-=======
                       <Link,;
                         href={link.href}",;
                         className="flex items-center text-slate-400: hover: text-cyan-400 transition-colors duration-200 group"",;
                       >,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 </Link>",;
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hove: r: bg-cyan-400 transition-colors duration-200"></div>"",;
                         <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hove: r: opacity-100 group-hove: r:translate-x-1 transition-all duration-200" />",;

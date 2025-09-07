@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 export default function ITServicesPage() {;
@@ -12,13 +11,10 @@ function ITServicesPage() {
   return (
     <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
 export default function ITServicesPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default function ITServicesPage() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
       {/* Hero Section */}
-<<<<<<< HEAD
       <div className="bg - gradient - to - r from - green - 600 to - blue - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;
           <h1 className="text - 5xl font - bold mb - 6">💻 IT Services & Solutions</h1>;
@@ -31,7 +27,6 @@ export default function ITServicesPage() {;
               Call Now: +1 302 464 0950;
             </a>;
             <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - green - 600 transition - colors">;
-=======
       <div className="bg-gradient-to-r from-green-600 to-blue-600 py-20">;
         <div className="container mx-auto px-6 text-center">;
           <h1 className="text-5xl font-bold mb-6">💻 IT Services & Solutions</h1>;
@@ -44,29 +39,24 @@ export default function ITServicesPage() {;
               Call Now: +1 302 464 0950;
             </a>;
             <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Get IT Consultation;
             </a>;
           </div>;
         </div>;
       </div>;
       {/* Contact Info Banner */}
-<<<<<<< HEAD
       <div className="bg - zinc - 800 py - 4">;
         <div className="container mx - auto px - 6 text - center text - sm">;
           <span className="mr - 8">📱 +1 302 464 0950</span>;
           <span className="mr - 8">✉️ kleber@ziontechgroup.com</span>;
-=======
       <div className="bg-zinc-800 py-4">;
         <div className="container mx-auto px-6 text-center text-sm">;
           <span className="mr-8">📱 +1 302 464 0950</span>;
           <span className="mr-8">✉️ kleber@ziontechgroup.com</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>;
         </div>;
       </div>;
       {/* IT Services Grid */}
-<<<<<<< HEAD
       <section className="py - 20">;
         <div className="container mx - auto px - 6">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
@@ -105,7 +95,6 @@ export default function ITServicesPage() {;
                     <span className="text - green - 400 font - semibold">$2K - $10K</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
-=======
       <section className="py-20">;
         <div className="container mx-auto px-6">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
@@ -144,12 +133,10 @@ export default function ITServicesPage() {;
                     <span className="text-green-400 font-semibold">$2K - $10K</span>;
                   </div>;
                   <div className="text-sm text-zinc-400 mt-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     Free initial cloud assessment | Custom pricing for enterprise;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
               <a href="https://ziontechgroup.com / cloud - services" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
                 Learn More About Cloud Infrastructure;
               </a>;
@@ -170,7 +157,6 @@ export default function ITServicesPage() {;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
                   <li>• CI / CD pipeline design and implementation</li>;
-=======
               <a href="https://ziontechgroup.com/cloud-services" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">;
                 Learn More About Cloud Infrastructure;
               </a>;
@@ -187,7 +173,6 @@ export default function ITServicesPage() {;
                 <h3 className="text-xl font-semibold text-green-400">Services Include:</h3>;
                 <ul className="space-y-2 text-zinc-300">;
                   <li>• CI/CD pipeline design and implementation</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>• Infrastructure as Code (Terraform, CloudFormation)</li>;
                   <li>• Container orchestration (Kubernetes, Docker)</li>;
                   <li>• Monitoring and observability setup</li>;
@@ -195,7 +180,6 @@ export default function ITServicesPage() {;
                   <li>• Automated testing and quality gates</li>;
                 </ul>;
               </div>;
-<<<<<<< HEAD
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Structure</h4>;
                 <div className="space - y-3">;
@@ -212,7 +196,6 @@ export default function ITServicesPage() {;
                     <span className="text - green - 400 font - semibold">$3K - $15K</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
-=======
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -229,12 +212,10 @@ export default function ITServicesPage() {;
                     <span className="text-green-400 font-semibold">$3K - $15K</span>;
                   </div>;
                   <div className="text-sm text-zinc-400 mt-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     Free DevOps maturity assessment | Training included;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
               <a href="https://ziontechgroup.com / devops" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
                 Learn More About DevOps & CI / CD;
               </a>;
@@ -254,7 +235,6 @@ export default function ITServicesPage() {;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-=======
               <a href="https://ziontechgroup.com/devops" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">;
                 Learn More About DevOps & CI/CD;
               </a>;
@@ -270,7 +250,6 @@ export default function ITServicesPage() {;
               <div className="space-y-4 mb-8">;
                 <h3 className="text-xl font-semibold text-green-400">Services Include:</h3>;
                 <ul className="space-y-2 text-zinc-300">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>• Security assessments and penetration testing</li>;
                   <li>• Compliance frameworks (SOC2, ISO27001, HIPAA)</li>;
                   <li>• Security architecture design and review</li>;
@@ -279,7 +258,6 @@ export default function ITServicesPage() {;
                   <li>• Threat intelligence and monitoring</li>;
                 </ul>;
               </div>;
-<<<<<<< HEAD
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Structure</h4>;
                 <div className="space - y-3">;
@@ -296,7 +274,6 @@ export default function ITServicesPage() {;
                     <span className="text - green - 400 font - semibold">$5K - $25K</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
-=======
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -313,21 +290,16 @@ export default function ITServicesPage() {;
                     <span className="text-green-400 font-semibold">$5K - $25K</span>;
                   </div>;
                   <div className="text-sm text-zinc-400 mt-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     Free security assessment | Compliance roadmap included;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
               <a href="https://ziontechgroup.com / cybersecurity" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
-=======
               <a href="https://ziontechgroup.com/cybersecurity" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More About Cybersecurity;
               </a>;
             </div>;
             {/* Data Engineering */}
-<<<<<<< HEAD
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">📈</div>;
               <h2 className="text - 3xl font - bold mb - 4">Data Engineering</h2>;
@@ -342,7 +314,6 @@ export default function ITServicesPage() {;
                   <li>• Data warehouse architecture and design</li>;
                   <li>• ETL / ELT process development</li>;
                   <li>• Real - time data streaming solutions</li>;
-=======
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">📈</div>;
               <h2 className="text-3xl font-bold mb-4">Data Engineering</h2>;
@@ -357,12 +328,10 @@ export default function ITServicesPage() {;
                   <li>• Data warehouse architecture and design</li>;
                   <li>• ETL/ELT process development</li>;
                   <li>• Real-time data streaming solutions</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>• Data quality and governance</li>;
                   <li>• Business intelligence and reporting</li>;
                 </ul>;
               </div>;
-<<<<<<< HEAD
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Structure</h4>;
                 <div className="space - y-3">;
@@ -379,7 +348,6 @@ export default function ITServicesPage() {;
                     <span className="text - green - 400 font - semibold">$3K - $20K</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
-=======
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -396,21 +364,16 @@ export default function ITServicesPage() {;
                     <span className="text-green-400 font-semibold">$3K - $20K</span>;
                   </div>;
                   <div className="text-sm text-zinc-400 mt-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     Free data assessment | Custom analytics solutions;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
               <a href="https://ziontechgroup.com / data - engineering" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
-=======
               <a href="https://ziontechgroup.com/data-engineering" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More About Data Engineering;
               </a>;
             </div>;
             {/* API Development */}
-<<<<<<< HEAD
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🔌</div>;
               <h2 className="text - 3xl font - bold mb - 4">API Development</h2>;
@@ -421,7 +384,6 @@ export default function ITServicesPage() {;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-=======
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">🔌</div>;
               <h2 className="text-3xl font-bold mb-4">API Development</h2>;
@@ -432,7 +394,6 @@ export default function ITServicesPage() {;
               <div className="space-y-4 mb-8">;
                 <h3 className="text-xl font-semibold text-green-400">Services Include:</h3>;
                 <ul className="space-y-2 text-zinc-300">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>• RESTful API design and development</li>;
                   <li>• GraphQL API implementation</li>;
                   <li>• Microservices architecture design</li>;
@@ -441,7 +402,6 @@ export default function ITServicesPage() {;
                   <li>• Performance optimization and scaling</li>;
                 </ul>;
               </div>;
-<<<<<<< HEAD
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Structure</h4>;
                 <div className="space - y-3">;
@@ -458,7 +418,6 @@ export default function ITServicesPage() {;
                     <span className="text - green - 400 font - semibold">$2K - $12K</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
-=======
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -475,21 +434,16 @@ export default function ITServicesPage() {;
                     <span className="text-green-400 font-semibold">$2K - $12K</span>;
                   </div>;
                   <div className="text-sm text-zinc-400 mt-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     Free API assessment | Documentation included;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
               <a href="https://ziontechgroup.com / api - development" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
-=======
               <a href="https://ziontechgroup.com/api-development" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More About API Development;
               </a>;
             </div>;
             {/* Digital Transformation */}
-<<<<<<< HEAD
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🔄</div>;
@@ -504,7 +458,6 @@ export default function ITServicesPage() {;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-=======
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">🔄</div>;
               <h2 className="text-3xl font-bold mb-4">Digital Transformation</h2>;
@@ -515,7 +468,6 @@ export default function ITServicesPage() {;
               <div className="space-y-4 mb-8">;
                 <h3 className="text-xl font-semibold text-green-400">Services Include:</h3>;
                 <ul className="space-y-2 text-zinc-300">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <li>• Digital strategy and roadmap development</li>;
                   <li>• Legacy system modernization</li>;
                   <li>• Change management and training</li>;
@@ -524,7 +476,6 @@ export default function ITServicesPage() {;
                   <li>• ROI measurement and analytics</li>;
                 </ul>;
               </div>;
-<<<<<<< HEAD
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Structure</h4>;
                 <div className="space - y-3">;
@@ -541,7 +492,6 @@ export default function ITServicesPage() {;
                     <span className="text - green - 400 font - semibold">$10K - $50K</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
-=======
               <div className="bg-zinc-700 rounded-lg p-6 mb-6">;
                 <h4 className="text-lg font-semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -558,16 +508,12 @@ export default function ITServicesPage() {;
                     <span className="text-green-400 font-semibold">$10K - $50K</span>;
                   </div>;
                   <div className="text-sm text-zinc-400 mt-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     Free transformation assessment | Strategic roadmap included;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
               <a href="https://ziontechgroup.com / digital - transformation" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
-=======
               <a href="https://ziontechgroup.com/digital-transformation" className="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Learn More About Digital Transformation;
               </a>;
             </div>;
@@ -575,7 +521,6 @@ export default function ITServicesPage() {;
         </div>;
       </section>;
       {/* IT Service Delivery Process */}
-<<<<<<< HEAD
       <section className="py - 20 bg - zinc - 800">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
@@ -604,7 +549,6 @@ export default function ITServicesPage() {;
               <div className="bg - green - 600 w - 16 h - 16 rounded - full flex items - center justify - center text - 2xl font - bold mx - auto mb - 4">4</div>;
               <h3 className="text - xl font - semibold mb - 3">Optimization</h3>;
               <p className="text - zinc - 300">Performance tuning, monitoring setup, and ongoing support and maintenance.</p>;
-=======
       <section className="py-20 bg-zinc-800">;
         <div className="container mx-auto px-6">;
           <div className="text-center mb-16">;
@@ -633,13 +577,11 @@ export default function ITServicesPage() {;
               <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>;
               <h3 className="text-xl font-semibold mb-3">Optimization</h3>;
               <p className="text-zinc-300">Performance tuning, monitoring setup, and ongoing support and maintenance.</p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Technology Stack */}
-<<<<<<< HEAD
       <section className="py - 20">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
@@ -652,7 +594,6 @@ export default function ITServicesPage() {;
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700">;
               <h3 className="text - xl font - semibold mb - 4 text - green - 400">Cloud & Infrastructure</h3>;
               <ul className="space - y-2 text - zinc - 300">;
-=======
       <section className="py-20">;
         <div className="container mx-auto px-6">;
           <div className="text-center mb-16">;
@@ -665,43 +606,36 @@ export default function ITServicesPage() {;
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">;
               <h3 className="text-xl font-semibold mb-4 text-green-400">Cloud & Infrastructure</h3>;
               <ul className="space-y-2 text-zinc-300">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• AWS, Azure, Google Cloud</li>;
                 <li>• Kubernetes, Docker, Terraform</li>;
                 <li>• Ansible, Jenkins, GitLab CI</li>;
                 <li>• Prometheus, Grafana, ELK Stack</li>;
               </ul>;
             </div>;
-<<<<<<< HEAD
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700">;
               <h3 className="text - xl font - semibold mb - 4 text - green - 400">Development & APIs</h3>;
               <ul className="space - y-2 text - zinc - 300">;
-=======
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">;
               <h3 className="text-xl font-semibold mb-4 text-green-400">Development & APIs</h3>;
               <ul className="space-y-2 text-zinc-300">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Node.js, Python, Java, .NET</li>;
                 <li>• React, Angular, Vue.js</li>;
                 <li>• REST, GraphQL, gRPC</li>;
                 <li>• PostgreSQL, MongoDB, Redis</li>;
               </ul>;
             </div>;
-<<<<<<< HEAD
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700">;
               <h3 className="text - xl font - semibold mb - 4 text - green - 400">Security & Compliance</h3>;
               <ul className="space - y-2 text - zinc - 300">;
                 <li>• OWASP, NIST, ISO27001</li>;
                 <li>• Penetration testing tools</li>;
                 <li>• SIEM, IDS / IPS solutions</li>;
-=======
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">;
               <h3 className="text-xl font-semibold mb-4 text-green-400">Security & Compliance</h3>;
               <ul className="space-y-2 text-zinc-300">;
                 <li>• OWASP, NIST, ISO27001</li>;
                 <li>• Penetration testing tools</li>;
                 <li>• SIEM, IDS/IPS solutions</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <li>• Compliance automation tools</li>;
               </ul>;
             </div>;
@@ -709,7 +643,6 @@ export default function ITServicesPage() {;
         </div>;
       </section>;
       {/* Call to Action */}
-<<<<<<< HEAD
       <section className="py - 20 bg - gradient - to - r from - green - 600 to - blue - 600">;
         <div className="container mx - auto px - 6 text - center">;
           <h2 className="text - 4xl font - bold mb - 6">Ready to Modernize Your IT Infrastructure?</h2>;
@@ -727,7 +660,6 @@ export default function ITServicesPage() {;
               </a>;
             </div>;
             <p className="text - green - 100 text - sm">;
-=======
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">;
         <div className="container mx-auto px-6 text-center">;
           <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your IT Infrastructure?</h2>;
@@ -745,17 +677,13 @@ export default function ITServicesPage() {;
               </a>;
             </div>;
             <p className="text-green-100 text-sm">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com;
             </p>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
     </div>);
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

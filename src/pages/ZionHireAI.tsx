@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -155,7 +154,6 @@ export default function ZionHireAI() {
                     asChild
                   >
                     <Link href="/enterprise/demo" />"
-=======
 
 import React from "react",
 import { Header } from "@/components/Header",
@@ -210,13 +208,11 @@ export default function ZionHireAI() {
                     asChild
                   >
                     <Link href="/enterprise/demo">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       Request Demo
                     </Link>
                   </Button>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="relative hidden md:block">"
                 <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>"
                 <img
@@ -224,7 +220,6 @@ export default function ZionHireAI() {
                   alt="Zion Hire AI Dashboard""
                   className="relative z-10 rounded-lg shadow-xl""
                   loading="lazy""
-=======
               <div className="relative hidden md:block">
                 <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>
                 <img
@@ -232,20 +227,17 @@ export default function ZionHireAI() {
                   alt="Zion Hire AI Dashboard"
                   className="relative z-10 rounded-lg shadow-xl"
                   loading="lazy"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 />
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-16 bg-background">"
           <div className="container mx-auto px-4 md:px-6">"
             <div className="text-center mb-12">"
               <h2 className="text-3xl font-bold tracking-tight">Powerful AI Hiring Tools</h2>"
               <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">"
-=======
 
         {/* Features Section */}
         <section className="py-16 bg-background">
@@ -253,30 +245,25 @@ export default function ZionHireAI() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight">Powerful AI Hiring Tools</h2>
               <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Our comprehensive suite of AI-powered hiring tools help you streamline your recruiting process,
                 find better candidates, and make data-driven decisions.
               </p>
             </div>
-<<<<<<< HEAD
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">"
               <Card className="bg-card border border-border">"
                 <CardHeader>
                   <Briefcase className="h-10 w-10 text-zion-purple mb-2" />"
-=======
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <Briefcase className="h-10 w-10 text-zion-purple mb-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <CardTitle>Job Description Generator</CardTitle>
                   <CardDescription>
                     Create compelling job descriptions with AI assistance to attract top talent.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">"
                     <li className="flex items-center">"
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>"
@@ -288,7 +275,6 @@ export default function ZionHireAI() {
                     </li>
                     <li className="flex items-center">"
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>"
-=======
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
@@ -300,30 +286,25 @@ export default function ZionHireAI() {
                     </li>
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       <span>Industry-specific templates</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
               <Card className="bg-card border border-border">"
               <Card className="bg-card border border-border">"
                 <CardHeader>
                   <PenTool className="h-10 w-10 text-zion-purple mb-2" />"
-=======
               
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <PenTool className="h-10 w-10 text-zion-purple mb-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <CardTitle>Resume Screener</CardTitle>
                   <CardDescription>
                     Automatically evaluate and score candidate resumes against job requirements.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">"
                     <li className="flex items-center">"
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>"
@@ -360,7 +341,6 @@ export default function ZionHireAI() {
               </Card>
                     <li className="flex items-center">"
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>"
-=======
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
@@ -372,29 +352,24 @@ export default function ZionHireAI() {
                     </li>
                     <li className="flex items-center">
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       <span>Customizable scoring criteria</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
               <Card className="bg-card border border-border">"
                 <CardHeader>
                   <Users className="h-10 w-10 text-zion-purple mb-2" />"
-=======
               
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <CardTitle>Candidate Matchmaker</CardTitle>
                   <CardDescription>
                     Find the best candidates for each position with AI-powered matching.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">"
                     <li className="flex items-center">"
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>"
@@ -406,7 +381,6 @@ export default function ZionHireAI() {
                     </li>
                     <li className="flex items-center">"
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>"
-=======
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
@@ -418,31 +392,26 @@ export default function ZionHireAI() {
                     </li>
                     <li className="flex items-center">
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       <span>Performance tracking</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
               <Card className="bg-card border border-border">"
                 <CardHeader>
               <Card className="bg-card border border-border">"
                 <CardHeader>
                   <Globe className="h-10 w-10 text-zion-purple mb-2" />"
-=======
               
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <Globe className="h-10 w-10 text-zion-purple mb-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <CardTitle>Embeddable Widget</CardTitle>
                   <CardDescription>
                     Add an AI assistant to your careers page to answer applicant questions.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">"
                     <li className="flex items-center">"
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>"
@@ -454,7 +423,6 @@ export default function ZionHireAI() {
                     </li>
                     <li className="flex items-center">"
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>"
-=======
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
@@ -466,30 +434,25 @@ export default function ZionHireAI() {
                     </li>
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       <span>Simple JavaScript snippet</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
               <Card className="bg-card border border-border">"
               <Card className="bg-card border border-border">"
                 <CardHeader>
                   <BarChart3 className="h-10 w-10 text-zion-purple mb-2" />"
-=======
               
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <BarChart3 className="h-10 w-10 text-zion-purple mb-2" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <CardTitle>Advanced Analytics</CardTitle>
                   <CardDescription>
                     Track recruiting metrics and optimize your hiring process with data.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">"
                     <li className="flex items-center">"
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>"
@@ -501,7 +464,6 @@ export default function ZionHireAI() {
                     </li>
                     <li className="flex items-center">"
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>"
-=======
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
@@ -513,13 +475,11 @@ export default function ZionHireAI() {
                     </li>
                     <li className="flex items-center">
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       <span>Cost per hire analysis</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
               <Card className="bg-card border border-border">"
                 <CardHeader>
                   <Shield className='h-10 w-10 text-zion-purple mb-2' />'
@@ -563,7 +523,6 @@ export default function ZionHireAI() {
                     </li>
                     <li className="flex items-center">"
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>"
-=======
               
               <Card className="bg-card border border-border">
                 <CardHeader>
@@ -585,7 +544,6 @@ export default function ZionHireAI() {
                     </li>
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       <span>Team roles & permissions</span>
                     </li>
                   </ul>
@@ -594,7 +552,6 @@ export default function ZionHireAI() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA Section */}
             </p>
             <Button
@@ -615,7 +572,6 @@ export default function ZionHireAI() {
               asChild
             >
               <Link href="/enterprise/demo" />"
-=======
 
         {/* CTA Section */}
         <section className="bg-zion-blue-dark py-16">
@@ -631,7 +587,6 @@ export default function ZionHireAI() {
               asChild
             >
               <Link href="/enterprise/demo">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Schedule a Demo
               </Link>
             </Button>
@@ -639,9 +594,7 @@ export default function ZionHireAI() {
         </section>
       </main>
     </>
-<<<<<<< HEAD
                   loading='lazy'                />                  src="https://placehold && placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI";",
-=======
   )
 import React from "react",;
 import { Header } from "@/components/Header",;
@@ -704,7 +657,6 @@ export default function ZionHireAI() {;
                 <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>;
                 <img;
                   src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   alt="Zion Hire AI Dashboard";
                   className="relative z-10 rounded-lg shadow-xl";
                   loading="lazy";
@@ -885,7 +837,6 @@ export default function ZionHireAI() {;
               Join leading companies using Zion Hire AI to find better talent faster;
               reduce time-to-hire, and improve candidate experience.;
             </p>;
-<<<<<<< HEAD
             <Button
               size='lg''
               className='bg-zion-purple hover:bg-zion-purple-light text-white'',
@@ -1228,28 +1179,23 @@ export default function ZionHireAI() {;
               asChild;
             >;
               <Link href="/enterprise / demo" />;
-=======
             <Button;
               size="lg";
               className="bg-zion-purple hover: bg-zion-purple-light text-white";
               asChild;
             >;
               <Link href="/enterprise/demo">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Schedule a Demo;
               </Link>;
             </Button>;
           </div>;
         </section>;
       </main>;
-<<<<<<< HEAD
   );
 }
     </>);
 }
-=======
     </>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

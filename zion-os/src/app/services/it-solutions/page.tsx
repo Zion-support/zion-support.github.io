@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 "use client",;
 import { useState } from "react",;
@@ -596,8 +595,6 @@ function ITSolutionsPage() {
     <div className="space - y-8">;
 ];
 export default function ITSolutionsPage() {return (;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import { useState } from "react",;
 interface ITService {;
@@ -891,22 +888,18 @@ export default function ITSolutionsPage() {;
   return (;
     <div className="space-y-8">;
       {/* Header */}
-<<<<<<< HEAD
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">IT Solutions & Services</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Enterprise - grade IT solutions designed to modernize your infrastructure;
-=======
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">IT Solutions & Services</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Enterprise-grade IT solutions designed to modernize your infrastructure;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           enhance security, and drive operational efficiency across your organization.;
         </p>;
       </div>;
       {/* IT Services Grid */}
-<<<<<<< HEAD
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
         {it_services.map (service => (
           <div;
@@ -930,7 +923,6 @@ export default function ITSolutionsPage() {;
                     <span className="text - green - 400">✓</span>;
                     <span>{deliverable}</span>;
                   </div>))}
-=======
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
         {itServices.map(service => (;
           <div;
@@ -955,12 +947,10 @@ export default function ITSolutionsPage() {;
                     <span>{deliverable}</span>;
                   </div>;
                 ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
             {/* Features */}
             <div>;
-<<<<<<< HEAD
               <h3 className="font - semibold mb - 3 text - purple - 400">Key Features</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
                 {service.features.map ((feature, index) => (
@@ -968,7 +958,6 @@ export default function ITSolutionsPage() {;
                     <span className="text - blue - 400">⚙️</span>;
                     <span>{feature}</span>;
                   </div>))}
-=======
               <h3 className="font-semibold mb-3 text-purple-400">Key Features</h3>;
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">;
                 {service.features.map((feature, index) => (;
@@ -977,12 +966,10 @@ export default function ITSolutionsPage() {;
                     <span>{feature}</span>;
                   </div>;
                 ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
             {/* Technologies */}
             <div>;
-<<<<<<< HEAD
               <h3 className="font - semibold mb - 3 text - green - 400">Technologies</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
                 {service.technologies.map ((tech, index) => (
@@ -990,7 +977,6 @@ export default function ITSolutionsPage() {;
                     <span className="text - yellow - 400">🔧</span>;
                     <span>{tech}</span>;
                   </div>))}
-=======
               <h3 className="font-semibold mb-3 text-green-400">Technologies</h3>;
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">;
                 {service.technologies.map((tech, index) => (;
@@ -999,12 +985,10 @@ export default function ITSolutionsPage() {;
                     <span>{tech}</span>;
                   </div>;
                 ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
             {/* Industries */}
             <div>;
-<<<<<<< HEAD
               <h3 className="font - semibold mb - 3 text - orange - 400">Industries Served</h3>;
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
                 {service.industries.map ((industry, index) => (
@@ -1019,7 +1003,6 @@ export default function ITSolutionsPage() {;
               <a;
                 href={service.contact_link}
                 className="w - full block text - center bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 3 px - 6 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold";
-=======
               <h3 className="font-semibold mb-3 text-orange-400">Industries Served</h3>;
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">;
                 {service.industries.map((industry, index) => (;
@@ -1035,23 +1018,18 @@ export default function ITSolutionsPage() {;
               <a;
                 href={service.contactLink}
                 className="w-full block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >;
                 Get Started;
               </a>;
               <a;
-<<<<<<< HEAD
                 href={`https://ziontechgroup.com / services/${service.id}`}
                 className="w - full block text - center text - blue - 400 hover:text - blue - 300 text - sm underline";
-=======
                 href={`https://ziontechgroup.com/services/${service.id}`}
                 className="w-full block text-center text-blue-400 hover:text-blue-300 text-sm underline";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >;
                 Learn More;
               </a>;
             </div>;
-<<<<<<< HEAD
           </div>))}
       </div>;
       {/* IT Capabilities Overview */}
@@ -1077,7 +1055,6 @@ export default function ITSolutionsPage() {;
             <div className="text - 3xl mb - 3">💡</div>;
             <h3 className="font - semibold mb - 2">Strategy</h3>;
             <p className="text - sm opacity - 80">IT strategy and digital transformation consulting</p>;
-=======
           </div>;
         ))}
       </div>;
@@ -1104,12 +1081,10 @@ export default function ITSolutionsPage() {;
             <div className="text-3xl mb-3">💡</div>;
             <h3 className="font-semibold mb-2">Strategy</h3>;
             <p className="text-sm opacity-80">IT strategy and digital transformation consulting</p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>;
         </div>;
       </div>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <div className="text - center space - y-6 py - 12 bg - gradient - to - r from - blue - 600 / 10 to - purple - 600 / 10 rounded - lg border border - white / 10">;
         <h2 className="text - 3xl font - bold">Ready to Modernize Your IT Infrastructure?</h2>;
         <p className="text - xl opacity - 80 max - w-2xl mx - auto">;
@@ -1120,7 +1095,6 @@ export default function ITSolutionsPage() {;
           <a;
             href="mailto:kleber@ziontechgroup.com?subject = IT%20Solutions%20Consultation";
             className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text - lg";
-=======
       <div className="text-center space-y-6 py-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg border border-white/10">;
         <h2 className="text-3xl font-bold">Ready to Modernize Your IT Infrastructure?</h2>;
         <p className="text-xl opacity-80 max-w-2xl mx-auto">;
@@ -1131,43 +1105,33 @@ export default function ITSolutionsPage() {;
           <a;
             href="mailto:kleber@ziontechgroup.com?subject=IT%20Solutions%20Consultation";
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold text-lg";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           >;
             Schedule IT Consultation;
           </a>;
           <a;
             href="tel:+13024640950";
-<<<<<<< HEAD
             className="border border - white / 20 text - white px - 8 py - 3 rounded - lg hover:bg - white / 10 transition - all font - semibold text - lg";
-=======
             className="border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           >;
             Call: +1 302 464 0950;
           </a>;
         </div>;
       </div>;
       {/* Back to Services */}
-<<<<<<< HEAD
       <div className="text - center">;
         <a;
           href="/services";
           className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font - semibold";
-=======
       <div className="text-center">;
         <a;
           href="/services";
           className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover: bg-white/10 transition-all font-semibold";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         >;
           ← Back to All Services;
         </a>;
       </div>;
-<<<<<<< HEAD
     </div>);
 }
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

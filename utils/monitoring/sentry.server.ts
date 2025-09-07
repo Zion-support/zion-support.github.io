@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 if (!Sentry.getCurrentHub().getClient()) {Sentry.init({;
     dsn: process.env.SENTRY_DSN |process.env.NEXT_PUBLIC_SENTRY_DSN |'';
@@ -67,7 +66,6 @@ if (!Sentry.getCurrentHub().getClient()) {;
 }
 
 
-=======
 import * as Sentry from '@sentry/node';
 if (!Sentry.getCurrentHub().getClient()) {;
   Sentry.init({;
@@ -75,4 +73,3 @@ if (!Sentry.getCurrentHub().getClient()) {;
     tracesSampleRate: 0.1;
     enabled: Boolean(process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN)});
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 } from '@/components/ui/dialog';
 import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {;
@@ -33,7 +32,6 @@ import { PaymentButton } from "@/components/transactions/PaymentButton","
 import { ProfileContact } from "@/components/profile/ProfileContact","
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog","
 import { useCurrency } from '@/hooks/useCurrency','
-=======
 
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -52,7 +50,6 @@ import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { ProfileContact } from "@/components/profile/ProfileContact",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { useCurrency } from '@/hooks/useCurrency',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -64,7 +61,6 @@ export default function ListingDetail() {
   const [isChatOpen, setIsChatOpen] = useState(false),
   const { user } = useAuth(),
   const { formatPrice } = useCurrency(),
-<<<<<<< HEAD
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id ===,  id),
   if (!listing) {
@@ -988,7 +984,6 @@ export default function ListingDetail() {;
   )
 }
 ;
-=======
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
@@ -1374,4 +1369,3 @@ export default function ListingDetail() {;
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { type Company } from './CompanyDashboard';
@@ -113,7 +112,6 @@ export function WorkspaceHeader(): any ({ company }:,  WorkspaceHeaderProps) {;
           <div>
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>"
             <p className="text-muted-foreground">"
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -140,12 +138,10 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           <div>
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               {company.plan} Plan · {company.teamSize} team members
             </p>
           </div>
         </div>
-<<<<<<< HEAD
         <div className="flex items-center gap-2">"
           <Button variant="outline" size="icon" aria-label="Notifications">"
             <Bell className="h-4 w-4" />"
@@ -247,7 +243,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
     </div>;
   );
 }          </Button>;
-=======
         
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
@@ -310,7 +305,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
           <Button variant="outline" size="icon" aria-label="Notifications">;
             <Bell className="h-4 w-4" />;
           </Button>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <Button variant="outline" size="icon" aria-label="Team members">;
             <Users className="h-4 w-4" />;
           </Button>;
@@ -336,7 +330,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
   );
 }
 export /**
@@ -420,6 +413,4 @@ function WorkspaceHeader() {
     </div>);
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

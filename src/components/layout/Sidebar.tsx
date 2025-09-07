@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 
 import { Link } from 'react-router-dom';
 const Sidebar: React.FC = () => {;,
@@ -126,7 +125,6 @@ export default Sidebar;
         <div className="mb-8">,"
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Quick Actions</h3>,"
           <div className="space-y-2">,"
-=======
 export default function Sidebar() {
   return (
     <aside className="sidebar">
@@ -213,12 +211,10 @@ export default function Sidebar() {
         <div className="mb-8">,
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Quick Actions</h3>,
           <div className="space-y-2">,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             {quickLinks.map((link) => {,
               const IconComponent = link.icon,
               return (,
                 <button,
-<<<<<<< HEAD
                   key={link.name};
                   onClick={() => handleLinkClick(link.href)};
                   className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-left transition-colors ${,`
@@ -236,7 +232,6 @@ export default function Sidebar() {
         </div>,
         {/* Navigation Sections */};
         <div className="space-y-6">,"
-=======
                   key={link.name},
                   onClick={() => handleLinkClick(link.href)},
                   className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-left transition-colors ${,
@@ -254,7 +249,6 @@ export default function Sidebar() {
         </div>,
         {/* Navigation Sections */},
         <div className="space-y-6">,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {navigationSections.map((section) => {,
             const isExpanded = expandedSections.includes(section.id),
             const IconComponent = section.icon,
@@ -262,7 +256,6 @@ export default function Sidebar() {
             return (,
               <div key={section.id}>,
                 <button,
-<<<<<<< HEAD
                   onClick={() => toggleSection(section.id)};
                   className="w-full flex items-center justify-between px-4 py-3 text-left text-gray-700 hover: bg-gray-100 rounded-lg transition-colors","
                 >,
@@ -282,7 +275,6 @@ export default function Sidebar() {
                     animate={{ opacity: 1, height: 'auto' }};
                     exit={{ opacity: 0, height: 0 }};
                     className="mt-2 space-y-1","
-=======
                   onClick={() => toggleSection(section.id)},
                   className="w-full flex items-center justify-between px-4 py-3 text-left text-gray-700: hover: bg-gray-100 rounded-lg transition-colors",
                 >,
@@ -300,13 +292,11 @@ export default function Sidebar() {
                     animate={{ opacit: y: 1, heigh: t: 'auto' }},
                     exit={{ opacit: y: 0, heigh: t: 0 }},
                     className="mt-2 space-y-1",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   >,
                     {section.items.map((item) => {,
                       const ItemIconComponent = item.icon,
                       return (,
                         <button,
-<<<<<<< HEAD
                           key={item.name};
                           onClick={() => handleLinkClick(item.href)};
                           className="w-full flex items-start space-x-3 px-6 py-3 text-left text-gray-600 hover: bg-gray-50 rounded-lg transition-colors group","
@@ -361,7 +351,6 @@ export default function Sidebar() {
             <div className="text-center">,"
               <div className="text-lg font-bold text-yellow-600">24/7</div>,"
               <div className="text-xs text-gray-500">Support</div>,"
-=======
                           key={item.name},
                           onClick={() => handleLinkClick(item.href)},
                           className="w-full flex items-start space-x-3 px-6 py-3 text-left text-gray-600: hover: bg-gray-50 rounded-lg transition-colors group",
@@ -416,20 +405,17 @@ export default function Sidebar() {
             <div className="text-center">,
               <div className="text-lg font-bold text-yellow-600">24/7</div>,
               <div className="text-xs text-gray-500">Support</div>,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>,
           </div>,
         </div>,
       </div>,
     </motion.aside>,
-<<<<<<< HEAD
   ),
 };
   );
 };
 export default Sidebar;
 
-=======
   )
 
 },
@@ -586,4 +572,3 @@ export default Sidebar;
     </motion.aside>,;
   );
 },;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

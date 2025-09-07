@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 if (!id) return;
       try {;
         const res = await fetch(`/api/products/${id}`);`
@@ -19,7 +18,6 @@ if (!id) return;
   if (!product) {
         if (res && res.ok) {;
           const data = await res && res.json();
-=======
 import { useRouter } from 'next/router', // Changed from useParams;
 import { useEffect, useState } from 'react',;
 import Image from 'next/image',;
@@ -52,14 +50,12 @@ export default function ProductPage() {;
         const res = await fetch(`/api/products/${id}`),;
         if (res.ok) {;
           const data = await res.json(),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           setProduct(data);
         }
       } catch (err) {;
         // Fail silently and fall back to local data;
         logErrorToProduction('Error fetching product', { data: err });
       }
-<<<<<<< HEAD
     };
     // Only fetch if id is available (from,  router);
     if (id) {;
@@ -67,7 +63,6 @@ export default function ProductPage() {;
     }
   }, [id]), // id is now from router && router.query;
     return <div className="p-6 text-white">Product not found</div>"
-=======
     },;
     // Only fetch if id is available (from router);
     if (id) {;
@@ -81,7 +76,6 @@ export default function ProductPage() {;
 
   if (!product) {
     return <div className="p-6 text-white">Product not found</div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   }, [id]), // id is now from router.query;
   if (!product && !id) { // If no id from router yet, it might still be loading;
     return <div className="p-6 text-white">Loading product details...</div>;
@@ -97,7 +91,6 @@ export default function ProductPage() {;
     setAdding(true),;
     dispatch({;
       type: 'ADD_ITEM',;
-<<<<<<< HEAD
       payload: { id: product && product.id, name: product && product.title, price: product && product.price ?? 0, quantity: 1 }
     });
     toast && toast.success(`1× ${product && product.title} added`);`
@@ -141,7 +134,6 @@ export default function ProductPage() {;
         <p className="mb-6">{product && product.description}</p>;
         <Button onClick={handleAdd} disabled={adding || inCart}>;
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}'
-=======
       payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
     }),;
     toast.success(`1× ${product.title} added`);
@@ -168,13 +160,11 @@ export default function ProductPage() {;
         <p className="mb-6">{product.description}</p>
         <Button onClick={handleAdd} disabled={adding || inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </Button>;
       </div>;
     </>;
   );
 }
-<<<<<<< HEAD
 //Only fetch if id is available (from,  router) ;
 }
 import Image from 'next / image';
@@ -240,6 +230,4 @@ product.title ;
 }/> </Button> </div> </>) ;
 }';
 }
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

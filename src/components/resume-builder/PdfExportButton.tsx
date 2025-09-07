@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const PdfExportButton = () => {
   return (
@@ -8,7 +7,6 @@ const PdfExportButton = () => {
   );
 };
 export default PdfExportButton;
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -223,4 +221,3 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

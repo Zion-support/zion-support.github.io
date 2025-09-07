@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 import React from 'react',;
@@ -111,5 +110,3 @@ origin/automation-improvements-final
 
 export default Page;
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

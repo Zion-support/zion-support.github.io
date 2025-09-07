@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -60,7 +59,6 @@ export function getUserFromRequest (req: any): User | null {
 
 
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 export type CurrentUser = {;
   userId: string;
@@ -90,4 +88,3 @@ export function requireUser(;
   }
   return user;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

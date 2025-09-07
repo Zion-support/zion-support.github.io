@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export function EmptyMatchesCard(): any ({;
   onRefresh,;
   isProcessing,;
@@ -20,7 +19,6 @@ export function EmptyMatchesCard(): any ({;
         {isProcessing ? (
           <>
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />"
-=======
 
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -49,17 +47,14 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
         {isProcessing ? (
           <>
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Processing...
           </>
         ) : (
           <>
-<<<<<<< HEAD
 }
             <Sparkles className="mr-2 h-4 w-4" />"
             Find AI Matches
           </>
-=======
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
           </>
@@ -96,13 +91,11 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
             <Sparkles className="mr-2 h-4 w-4" />;
             Find AI Matches;
           </>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         )}
       </Button>;
     </Card>;
   );
 }
-<<<<<<< HEAD
 import { Card } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Sparkles, RefreshCcw } from 'lucide-react';
@@ -143,6 +136,4 @@ function EmptyMatchesCard() {
     </Card>);
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

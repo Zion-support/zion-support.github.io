@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">"
         <div
@@ -35,20 +34,17 @@ import React from './react';
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn  } from '@/lib / utils';
 import { Button  } from '@/components / ui / button';
 import Link from './next / link';
-=======
 
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export interface OnboardingStep {
   id: string,
   label: string,
   completed: boolean,
   link: string,
-<<<<<<< HEAD
   action?: string;
 }
 interface OnboardingTrackerProps {,
@@ -125,7 +121,6 @@ function OnboardingTracker() {
 }"}"
 }
 ;
-=======
   action?: string
 import React from "react",;
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react';
@@ -219,4 +214,3 @@ export function OnboardingTracker({;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

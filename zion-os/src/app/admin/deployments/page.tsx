@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   Rocket
   Clock
   CheckCircle
@@ -215,8 +214,6 @@ interface Deployment {
           >
             {label} ({count})
           </button>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import { useState, useEffect } from "react",;
 import {;
@@ -257,7 +254,6 @@ interface Deployment {;
   subdomain?: string,;
   region?: string,;
   country?: string;
-<<<<<<< HEAD
 }
 ;
 // Mock data - replace with actual API calls;
@@ -1602,7 +1598,6 @@ const getVerticalIcon = (vertical: string) =>: any {
     </div>))}
     </div>);
 }
-=======
 }
 ;
 // Mock data - replace with actual API calls;
@@ -1960,4 +1955,3 @@ export default function DeploymentsPage() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

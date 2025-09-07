@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Calendar, Clock, Video } from 'lucide-react''
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
@@ -45,7 +44,6 @@ function InterviewsContent() {
             {isLoading ? (
               <div className="flex justify-center py-12">"
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>"
-=======
 
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
@@ -250,12 +248,10 @@ function InterviewsContent() {;
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>
             ) : upcomingInterviews.length > 0 ? (
               renderInterviewGroups(upcomingGrouped)
             ) : (
-<<<<<<< HEAD
               <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">"
                 <Video className="h-12 w-12 mx-auto text-muted-foreground mb-4" />"
                 <h3 className="text-xl font-medium mb-2">No upcoming interviews</h3>"
@@ -267,7 +263,6 @@ function InterviewsContent() {;
             {isLoading ? (
               <div className="flex justify-center py-12">"
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>"
-=======
               <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
                 <Video className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
                 <h3 className="text-xl font-medium mb-2">No upcoming interviews</h3>
@@ -280,12 +275,10 @@ function InterviewsContent() {;
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>
             ) : pendingInterviews.length > 0 ? (
               renderInterviewGroups(pendingGrouped)
             ) : (
-<<<<<<< HEAD
               <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">"
                 <Clock className="h-12 w-12 mx-auto text-muted-foreground mb-4" />"
                 <h3 className="text-xl font-medium mb-2">No pending interviews</h3>"
@@ -297,7 +290,6 @@ function InterviewsContent() {;
             {isLoading ? (
               <div className="flex justify-center py-12">"
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>"
-=======
               <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
                 <Clock className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
                 <h3 className="text-xl font-medium mb-2">No pending interviews</h3>
@@ -310,12 +302,10 @@ function InterviewsContent() {;
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>
             ) : pastInterviews.length > 0 ? (
               renderInterviewGroups(pastGrouped)
             ) : (
-<<<<<<< HEAD
               <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">"
                 <Calendar className="h-12 w-12 mx-auto text-muted-foreground mb-4" />"
                 <h3 className="text-xl font-medium mb-2">No past interviews</h3>"
@@ -344,14 +334,12 @@ function InterviewsContent() {;
               </div>;
             )}
           </TabsContent>;
-=======
               <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
                 <Calendar className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
                 <h3 className="text-xl font-medium mb-2">No past interviews</h3>
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </TabsContent>;
         </Tabs>;
       </main>;
@@ -366,7 +354,6 @@ export default function Interviews() {;
     </ProtectedRoute>;
   );
 }
-<<<<<<< HEAD
 }
         <Tabs;
           default_value={active_tab}
@@ -452,6 +439,4 @@ function Interviews() {
 }
 }
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Logo  } from '@/components/header/Logo';
@@ -635,7 +634,6 @@ setLoginOpen (true);
 }/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
-=======
 import { useState } from 'react',;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
 import Link from 'next/link',;
@@ -865,4 +863,3 @@ export function PrimaryNav() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

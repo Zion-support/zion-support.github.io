@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Loader2 } from 'lucide-react''
 import { TalentProfile } from "@/types/talent","
 import { PersonalInfoFields } from "./PersonalInfoFields","
@@ -23,7 +22,6 @@ export interface HireRequestFormProps {;
     email?: string;
 import { TimelineField } from "./TimelineField","
 import { BudgetFields } from "./BudgetFields","
-=======
 
 import React from "react",
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",
@@ -36,7 +34,6 @@ import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ProjectDetailsField } from "./ProjectDetailsField",
 import { TimelineField } from "./TimelineField",
 import { BudgetFields } from "./BudgetFields",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export interface HireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -48,7 +45,6 @@ export interface HireRequestFormProps {
   },
   onSubmitSuccess?: () => void
 }
-<<<<<<< HEAD
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }:,  HireRequestFormProps) {
   const { form, isSubmitting, onSubmit } = useHireRequestForm({
     talent,
@@ -135,7 +131,6 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
-=======
 
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
@@ -214,7 +209,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
   return (;
     <Form {...form}>;
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <PersonalInfoFields form={form} />;
         </div>;
@@ -224,7 +218,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
           <BudgetFields form={form} talent={talent} />;
         </div>;
         <DialogFooter className="pt-4">;
-<<<<<<< HEAD
           <Button
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
@@ -254,7 +247,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             {isSubmitting ? (;
               <>;
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-=======
           <Button;
             type="button";
             variant="outline";
@@ -272,12 +264,10 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             {isSubmitting ? (;
               <>;
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Submitting...;
               </>;
             ) : (;
               'Submit Request';
-<<<<<<< HEAD
           >
             Cancel
           </Button>
@@ -294,16 +284,13 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             ) : (
               'Submit Request''
 }
-=======
             )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>;
         </DialogFooter>;
       </form>;
     </Form>;
   );
 }
-<<<<<<< HEAD
   );
 }
 import React from 'react';
@@ -424,6 +411,4 @@ function HireRequestForm() {
 }
 ;
 }}}}}}))))))
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

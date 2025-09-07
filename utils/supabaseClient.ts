@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { createClient, SupabaseClient } from '@supabase/supabase-js',;
 export type ZionSupabase = SupabaseClient | undefined,;
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '',;
@@ -36,7 +35,6 @@ export function getSupabaseClient(): ZionSupabase {;
   }
 }
 
-=======
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 export type ZionSupabase = SupabaseClient | undefined;
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '';
@@ -51,12 +49,10 @@ export function getSupabaseClient(): ZionSupabase {;
       }
       return browserClient;
     }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     // Server-side: create a new client per call to avoid cross-request state;
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {;
     return undefined;
-<<<<<<< HEAD
 
   }
 
@@ -82,7 +78,5 @@ export function getSupabaseClient(): ZionSupabase {;
   }
 }
 
-=======
   }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

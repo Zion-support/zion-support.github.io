@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 if (scrollContainerRef.current) {
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
@@ -190,7 +189,6 @@ if ( {) {
 '"},"
 }
   )
-=======
 
 import React, { useRef } from "react",
 import { ChevronLeft, ChevronRight } from 'lucide-react'
@@ -342,4 +340,3 @@ export const AppScreenshots: React.FC = () => {;
     </section>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

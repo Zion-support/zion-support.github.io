@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
   {
     title: "Comprehensive Services"",
@@ -146,7 +145,6 @@ const getSpecialServices = (t:,  any) => [,
   {
     title: t('categories.it_onsite_services'),'
     link: "/it-onsite-services"",
-=======
 
 import { GradientHeading } from "./GradientHeading",
 import Link from "next/link",
@@ -213,7 +211,6 @@ const getSpecialServices = (t: any) => [
   {
     title: t('categories.it_onsite_services'),
     link: "/it-onsite-services"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { GradientHeading } from "./GradientHeading",;
 import Link from "next/link",;
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
@@ -233,11 +230,8 @@ interface CategoryType {;
 }
 ;
 // Default static categories with translation keys;
-<<<<<<< HEAD
 const getDefaultCategories = (t:,  any) => [;,
-=======
 const getDefaultCategories = (t: any) => [;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   {;
     id: "services",;
     name: t('categories.services'),;
@@ -268,11 +262,8 @@ const getDefaultCategories = (t: any) => [;
     link: "/innovation",;
     color: "from-emerald-500 to-green-600"}],;
 // Helper to get icon component from name;
-<<<<<<< HEAD
 const getIcon = (iconName?:,  string) => {;
-=======
 const getIcon = (iconName?: string) => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   switch (iconName) {;
     case "Briefcase": return <Briefcase className="w-10 h-10" />,;
     case "Users": return <Users className="w-10 h-10" />,;
@@ -281,17 +272,13 @@ const getIcon = (iconName?: string) => {;
     default: return <HelpCircle className="w-10 h-10" />, // Default icon;
   }
 },;
-<<<<<<< HEAD
 const getSpecialServices = (t:,  any) => [;,
-=======
 const getSpecialServices = (t: any) => [;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   {;
     title: t('categories.it_onsite_services'),;
     link: "/it-onsite-services";
   }
 ],;
-<<<<<<< HEAD
 interface CategoriesSectionProps {;
   showTitle?: boolean,;
   className?: string,;
@@ -738,7 +725,6 @@ if ( {) {
 }'"}"
 }
 ;]]
-=======
 interface CategoriesSectionProps {;
   showTitle?: boolean,;
   className?: string,;
@@ -847,4 +833,3 @@ export function CategoriesSection({
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:data/2025-innovative-ai-automation-services.ts
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
 real_implementation: true;
@@ -185,9 +184,7 @@ reviews: 167;
 ;
 
 import { ServiceVariant } from '../types/service-variants',;
-=======
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/2025-innovative-ai-automation-services.ts
 export interface InnovativeAIAutomationService {;
   id: string;
   name: string;
@@ -419,7 +416,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     growthRate: '26% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {;
-<<<<<<< HEAD:data/2025-innovative-ai-automation-services.ts
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
@@ -523,7 +519,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     launchDate: '2025-01-25',;
     customers: 156,;
     rating: 4.7,;
-=======
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -534,7 +529,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     launchDate: '2025-01-25';
     customers: 156;
     rating: 4.7;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/2025-innovative-ai-automation-services.ts
     reviews: 89;
   };
   // Autonomous Data Analytics Platform;

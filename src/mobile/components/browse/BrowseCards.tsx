@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface BrowseItem {;
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components / ui / card';
@@ -96,7 +95,6 @@ import { Button } from "@/components/ui/button","
 import { Badge } from "@/components/ui/badge","
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react''
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar","
-=======
 
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -105,7 +103,6 @@ import { Badge } from "@/components/ui/badge",
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface BrowseItem {
   id: string,
   title: string,
@@ -118,7 +115,6 @@ interface BrowseItem {
   match?: number,
   timePosted?: string
 }
-<<<<<<< HEAD
 interface BrowseCardsProps {,
   items: BrowseItem[],
   type: "jobs" | "talents","
@@ -143,7 +139,6 @@ export function BrowseCards({ items, type, onViewDetails }:,  BrowseCardsProps) 
                 <div className="flex items-center gap-3">"
                   {type === "talents" ? ("
                     <Avatar className="h-12 w-12">"
-=======
 
 interface BrowseCardsProps {
   items: BrowseItem[],
@@ -172,12 +167,10 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 <div className="flex items-center gap-3">
                   {type === "talents" ? (
                     <Avatar className="h-12 w-12">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       <AvatarImage src={item.image} alt={item.title} />
                       <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
                     </Avatar>
                   ) : (
-<<<<<<< HEAD
                     <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">"
                       <span className="text-primary font-semibold">JOB</span>"
                     </div>
@@ -248,7 +241,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <BookmarkCheck className="h-5 w-5 text-primary" />"
                   ) : (
                     <Bookmark className="h-5 w-5 text-muted-foreground" />"
-=======
                     <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
                       <span className="text-primary font-semibold">JOB</span>
                     </div>
@@ -343,7 +335,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     <BookmarkCheck className="h-5 w-5 text-primary" />;
                   ) : (;
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   )}
                 </button>;
               </div>;
@@ -355,7 +346,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     className="text-xs font-normal";
                   >;
                     {badge}
-<<<<<<< HEAD
                   </Badge>
                 ))}
               </div>
@@ -378,7 +368,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   </div>
                 )}
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">"
-=======
                   </Badge>;
                 ))}
               </div>
@@ -409,13 +398,11 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 
                 {item.match && (
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     {item.match}% match
                   </div>
                 )}
               </div>
             </div>
-<<<<<<< HEAD
               </div>;
               <p className='mt-3 text-sm line-clamp-2'>{item && item.description}</p>;
               <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>;
@@ -486,7 +473,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 className="gap-1""
               >
                 View Details <ChevronRight className="h-4 w-4" />"
-=======
             
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
@@ -495,12 +481,10 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 className="gap-1"
               >
                 View Details <ChevronRight className="h-4 w-4" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </Button>
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
   time_posted?: string;
 interface BrowseCardsProps {
   items: BrowseItem[];,
@@ -651,10 +635,8 @@ function BrowseCards() {
 }
 ;
 }}}}}}}})))))))))
-=======
       ))}
     </div>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

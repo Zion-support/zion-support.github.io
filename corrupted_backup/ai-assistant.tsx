@@ -5,7 +5,6 @@ export default function AIAssistantPage() {
   return (
     <>
       <Head>
-<<<<<<< HEAD:pages/ai-assistant.tsx
         <title>AI Assistant | Zion Tech Group</title>
         <meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
         <link rel="canonical" href="https://ziontechgroup.com/ai-assistant" />
@@ -31,8 +30,6 @@ export default function AIAssistantPage() {
     </>
   )
 }
-=======
-<<<<<<< HEAD
         <title>AI Assistant | Zion Tech Group</title>
         <meta
           name='description'
@@ -75,7 +72,6 @@ export default function AIAssistantPage() {
             >
               Request a Demo
             </Button>
-=======
         <title>AI Assistant - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI assistant for your business needs" />
       </Head>
@@ -125,7 +121,6 @@ export default function AIAssistantPage() {
               <li>• Data visualization</li>
               <li>• Trend analysis</li>
             </ul>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
         </div>
 
@@ -146,11 +141,7 @@ export default function AIAssistantPage() {
       </main>
     </Layout>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
 export default AIAssistant;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-assistant.tsx

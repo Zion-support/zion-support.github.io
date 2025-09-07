@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { useRouter } from 'next/router', // Changed from useNavigate'
@@ -116,7 +115,6 @@ export default function PaymentSuccess() {;
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white""
           >
             {t('errors.return_home')}'
-=======
 
 import React from 'react',
 import { Button } from '@/components/ui/button',
@@ -154,14 +152,12 @@ export default function PaymentSuccess() {
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
           >
             {t('errors.return_home')}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>;
         </div>;
       </div>;
     </div>;
   );
 }
-<<<<<<< HEAD
   );
 }
 import React from 'react';
@@ -228,6 +224,4 @@ function PaymentSuccess() {
     </div>);
 }
 ;))
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

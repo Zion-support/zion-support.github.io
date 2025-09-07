@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
@@ -58,7 +57,6 @@ function RegionFilter() {
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from "@/components/ui/checkbox",;
 import { RegionFilterProps } from "@/types/filters",;,
-=======
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Checkbox } from "@/components/ui/checkbox",
@@ -104,14 +102,12 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from "@/components/ui/checkbox",;
 import { RegionFilterProps } from "@/types/filters",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 const REGION_OPTIONS = [;
   { id: "North America", label: "North America" },;
   { id: "Europe", label: "Europe" },;
   { id: "Asia", label: "Asia" },;
   { id: "South America", label: "South America" },;
   { id: "Australia", label: "Australia" },;
-<<<<<<< HEAD
   { id: "Africa", label: "Africa" }"
 ]
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }:,  RegionFilterProps) {
@@ -227,7 +223,6 @@ function RegionFilter() {
 }</div>) ;
 }</div>) ;
 }"};
-=======
   { id: "Africa", label: "Africa" }
 ];
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
@@ -256,7 +251,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
               />;
               <label;
                 htmlFor={`region-${region.id}`}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {region.label}
@@ -268,8 +262,5 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
     </div>;
   );
 }
-<<<<<<< HEAD
 ;
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

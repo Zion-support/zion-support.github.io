@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Form } from "@/components/ui/form";
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
@@ -59,7 +58,6 @@ export type ContractFormValues = z.infer < typeof form_schema>;
   );
 }
 ;
-=======
 
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
@@ -314,4 +312,3 @@ export function ContractForm({;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

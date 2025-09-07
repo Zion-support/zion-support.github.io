@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
@@ -10,7 +9,6 @@ type ChangelogEntry = {
 }
     })
   }
-=======
 
 import React, { useState } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -24,13 +22,11 @@ interface ChangelogManagerProps {
 }
 
 type ChangelogEntry = {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   id: string,
   version: string,
   date: string,
   changes: string
 },
-<<<<<<< HEAD
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {,
   const [entries, setEntries] = useState<ChangelogEntry[]>([,
     {
@@ -48,7 +44,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   }),
   const handleAddEntry = () => {
     if (!newEntry.version || !newEntry.changes) return,
-=======
 
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {
   const [entries, setEntries] = useState<ChangelogEntry[]>([
@@ -69,12 +64,10 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   const handleAddEntry = () => {
     if (!newEntry.version || !newEntry.changes) return,
     
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     const entry: ChangelogEntry = {
       ...newEntry,
       id: Math.random().toString(36).substring(2, 9)
     },
-<<<<<<< HEAD
     ,
     setEntries([entry, ...entries]),
     setNewEntry({
@@ -97,7 +90,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./MetadataManager";
   return (
     <Card className="bg-zion-blue border-zion-purple/30">"
-=======
     
     setEntries([entry, ...entries]),
     setNewEntry({
@@ -118,12 +110,10 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./Metada
   
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <CardHeader>
         <CardTitle>Version History</CardTitle>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD
         <div className="space-y-4">"
           <div className="flex flex-col md:flex-row gap-3">"
             <div className="flex-1 grid grid-cols-2 gap-3">"
@@ -136,7 +126,6 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./Metada
               <Input type="date""
                 name="date""
               disabled = {!newEntry.version || !newEntry.changes,}
-=======
         <div className="space-y-4">
           <div className="flex flex-col md:flex-row gap-3">
             <div className="flex-1 grid grid-cols-2 gap-3">
@@ -149,7 +138,6 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./Metada
               <Input
                 type="date"
                 name="date"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -167,28 +155,22 @@ type ChangelogEntry = {;
   date: string,;
   changes: string;
 },;
-<<<<<<< HEAD
 export const ChangelogManager: React.FC<ChangelogManagerProps /> = ({ platform }) => {;
   const [entries, setEntries] = useState<ChangelogEntry[]>([;,
-=======
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {;
   const [entries, setEntries] = useState<ChangelogEntry[]>([;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       id: "1",;
       version: "1.0.0",;
       date: "2025-05-15",;
       changes: "Initial release of the Zion AI Marketplace app.";
     }
-<<<<<<< HEAD
   ]),;,
   const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry "id">>({;
     version: "",;,
-=======
   ]),;
   const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry "id">>({;
     version: "",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'),;
     changes: "";
   }),;
@@ -197,22 +179,18 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     const entry: ChangelogEntry = {;
       ...newEntry,;
       id: Math.random().toString(36).substring(2, 9);
-<<<<<<< HEAD
     },;,
     setEntries([entry, ...entries]),;
     setNewEntry({;
       version: "",;,
-=======
     },;
     setEntries([entry, ...entries]),;
     setNewEntry({;
       version: "",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'),;
       changes: "";
     });
   },;
-<<<<<<< HEAD
   const handleRemoveEntry = (id:,  string) => {;,
     setEntries(entries.filter(entry => entry.id !==,  id));
   },;
@@ -221,7 +199,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     setNewEntry(prev => ({ ...prev, [name]: value }));,
   },;
   return (
-=======
   const handleRemoveEntry = (id: string) => {;
     setEntries(entries.filter(entry => entry.id !== id));
   },;
@@ -230,7 +207,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     setNewEntry(prev => ({ ...prev, [name]: value }));
   };
   return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle>Version History</CardTitle>;
@@ -256,7 +232,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
             >
-<<<<<<< HEAD
               <Plus className="mr-2 h-4 w-4" />"
               Add
             </Button>
@@ -273,7 +248,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
           <Textarea
             placeholder="What's new in this version?""
             name="changes""
-=======
               <Plus className="mr-2 h-4 w-4" />
               Add
             </Button>
@@ -282,12 +256,10 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             value={newEntry.changes}
             onChange={handleInputChange}
             rows={3}
           />
-<<<<<<< HEAD
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">"
             {entries.map((entry) => (
               <div
@@ -326,7 +298,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>;
             )}
 };
-=======
           
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
@@ -355,13 +326,11 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             {entries.length === 0 && (
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
             )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
   const handleRemoveEntry = (id:,  string) =>: any {,
     set_entries (entries.filter (entry => entry.id !==,  id)),
   }
@@ -441,6 +410,4 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 },
 ;
 };
-=======
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

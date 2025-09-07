@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface DeployConfig {
   instanceName: string;
   governanceMode: string;
@@ -76,18 +75,15 @@ function toSlug(name: string): string {;
 
 
 
-=======
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
 function toSlug(name: string): string {;
   return name;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
-<<<<<<< HEAD
 
 
 
@@ -106,14 +102,11 @@ function toSlug(name: string): string {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 function ensureDir(dirPath: string) {;
   if (!fs.existsSync(dirPath)) {;
     fs.mkdirSync(dirPath, { recursive: true });
-<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -122,34 +115,26 @@ function ensureDir(dirPath: string) {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   }
 }
 ;
 function writeTextFile(filePath: string, content: string) {;
-<<<<<<< HEAD
   ensureDir(path.dirname(filePath)),;
   fs.writeFileSync(filePath, content, "utf8");
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
   ensureDir(path.dirname(filePath));
   fs.writeFileSync(filePath, content, "utf8");
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 function nowIso(): string {;
   return new Date().toISOString();
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export async function performDeploy(input: DeployInput): Promise<DeployResult> {;
@@ -157,7 +142,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const logs: DeployLogEntry[] = [];
   const assets: GeneratedAsset[] = [];
   const instanceSlug = toSlug(input.instanceName);
-<<<<<<< HEAD
   const baseDir = path.join(process.cwd(), "data", "deployments", instanceSlug),;
   const docsDir = path.join(process.cwd(), "docs"),;
   const eventsDir = path.join(process.cwd(), "data", "events"),;
@@ -179,8 +163,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const logs: DeployLogEntry[] = [];
   const assets: GeneratedAsset[] = [];
   const instanceSlug = toSlug(input.instanceName);
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const baseDir = path.join(process.cwd(), "data", "deployments", instanceSlug);
   const docsDir = path.join(process.cwd(), "docs");
   const eventsDir = path.join(process.cwd(), "data", "events");
@@ -189,19 +171,15 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const tokenDir = path.join(process.cwd(), "data", "token");
   ensureDir(baseDir);
   const configPath = path.join(baseDir, "config.json");
-<<<<<<< HEAD
   writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, createdAt: nowIso() }, null, 2)),;
   logs.push({ timestamp: nowIso(), level: "info", action: "save_config", details: { configPath } }),;
-=======
   writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, createdAt: nowIso() }, null, 2));
   logs.push({ timestamp: nowIso(), level: "info", action: "save_config", details: { configPath } });
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   assets.push({ kind: "config", path: configPath, description: "Deployment config" });
   // 1. Initialize ZionGPT;
   if (input.modules.gpt) {;
     ensureDir(gptDir);
     const promptBasePath = path.join(gptDir, `${instanceSlug}-prompt-base.md`);
-<<<<<<< HEAD
     const promptBase = `# ZionGPT Prompt Base\n\nInstance: ${input.instanceName}\nLanguage: ${input.defaultLanguage}\nGovernance: ${input.governanceMode}\n\nBehaviors:\n- Assist with proposals, resumes, and marketplace tasks.\n- Route to domain experts per module.\n`,;
     writeTextFile(promptBasePath, promptBase);
     assets.push({ kind: "file", path: promptBasePath, description: "ZionGPT prompt base" });
@@ -211,45 +189,36 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
     const promptBase = `# ZionGPT Prompt Base\n\nInstance: ${input.instanceName}\nLanguage: ${input.defaultLanguage}\nGovernance: ${input.governanceMode}\n\nBehaviors:\n- Assist with proposals, resumes, and marketplace tasks.\n- Route to domain experts per module.\n`;
     writeTextFile(promptBasePath, promptBase);
     assets.push({ kind: "file", path: promptBasePath, description: "ZionGPT prompt base" });
     logs.push({ timestamp: nowIso(), level: "info", action: "zion_gpt_initialized" });
   }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
   // 2. Deploy DAO + Token Logic;
   if (input.modules.dao) {;
     ensureDir(daoDir);
     const daoConfigPath = path.join(daoDir, `${instanceSlug}-dao.json`);
     writeTextFile(;
-<<<<<<< HEAD
       daoConfigPath,;
       JSON.stringify(;
         {treasury: `${instanceSlug}-treasury`;
-=======
       daoConfigPath;
       JSON.stringify(;
         {;
           treasury: `${instanceSlug}-treasury`;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           governanceMode: input.governanceMode;
           quorum: 0.6;
           votingPeriodDays: 7;
           constitutionDoc: `/constitution`;
-<<<<<<< HEAD
           createdAt: nowIso()}
-=======
           createdAt: nowIso()};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         null;
         2;
       );
     );
     assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" });
     logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });
-<<<<<<< HEAD
         {;
           treasury: `${instanceSlug}-treasury`,;
           governanceMode: input.governanceMode,;
@@ -268,40 +237,31 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
   }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
   if (input.modules.token || input.tokenActivation) {;
     ensureDir(tokenDir);
     const tokenConfigPath = path.join(tokenDir, `${instanceSlug}-token.json`);
     writeTextFile(;
-<<<<<<< HEAD
       tokenConfigPath,;
       JSON.stringify(;
         {symbol: "ZION$";
-=======
       tokenConfigPath;
       JSON.stringify(;
         {;
           symbol: "ZION$";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           decimals: 18;
           enabled: input.tokenActivation;
           stakingEnabled: input.modules.token;
           escrowEnabled: true;
-<<<<<<< HEAD
           createdAt: nowIso()}
-=======
           createdAt: nowIso()};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         null;
         2;
       );
     );
     assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" });
     logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });
-<<<<<<< HEAD
         {;
           symbol: "ZION$",;
           decimals: 18,;
@@ -322,17 +282,14 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 }
 ;
 
-=======
   }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   // 3. Publish Assets;
   const wpPath = path.join(docsDir, `whitepaper-${instanceSlug}.md`);
   const roadmapPath = path.join(docsDir, `roadmap-${instanceSlug}.md`);
   const changelogPath = path.join(docsDir, `changelog-${instanceSlug}.md`);
   const bookPath = path.join(docsDir, `zion-book-${instanceSlug}.md`);
   const trailerScriptPath = path.join(docsDir, `trailer-script-${instanceSlug}.md`);
-<<<<<<< HEAD
 
   if (input.modules.roadmapWhitepaper) {;
     ensureDir(docsDir);
@@ -345,7 +302,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     writeTextFile(;
       roadmapPath,;
 
-=======
   if (input.modules.roadmapWhitepaper) {;
     ensureDir(docsDir);
     writeTextFile(;
@@ -356,12 +312,10 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     logs.push({ timestamp: nowIso(), level: "info", action: "whitepaper_generated" });
     writeTextFile(;
       roadmapPath;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       `# Public Roadmap\n\n- Q1: Launch core modules\n- Q2: DAO consolidation\n- Q3: Nation builder\n`;
     );
     assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" });
     writeTextFile(;
-<<<<<<< HEAD
 
 import fs from './fs';,
 import path from './path';,
@@ -633,40 +587,31 @@ if ( {) {
     );
   ),;
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       changelogPath;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
     );
     assets.push({ kind: "file", path: changelogPath, description: "Changelog" });
   }
-<<<<<<< HEAD
   if (input.modules.bookBuilder) {ensureDir(docsDir);
-=======
 ;
   if (input.modules.bookBuilder) {;
     ensureDir(docsDir);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     writeTextFile(;
       bookPath;
       `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`;
     );
     assets.push({ kind: "file", path: bookPath, description: "Zion Book (markdown source)" });
   }
-<<<<<<< HEAD
   if (input.modules.launchKit) {ensureDir(docsDir);
-=======
 ;
   if (input.modules.launchKit) {;
     ensureDir(docsDir);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     writeTextFile(;
       trailerScriptPath;
       `# Launch Trailer Script\n\nVoiceover: Welcome to ${input.instanceName}, a sovereign digital nation built on Zion OS.\n`;
     );
     assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" });
   }
-<<<<<<< HEAD
 
 
 
@@ -1071,7 +1016,6 @@ if ( {) {
       null;
       2;
     );
-=======
 ;
   // Schedule launch stream (/summit);
   ensureDir(eventsDir);
@@ -1087,7 +1031,6 @@ if ( {) {
       2;
     );
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" });
   // 4. Activate Public Pages (record intent);
   const pagesActivationPath = path.join(baseDir, "pages.json");
@@ -1099,7 +1042,6 @@ if ( {) {
         activate: [;
           "/about";
           "/manifesto";
-<<<<<<< HEAD
           "/constitution",;
           "/partners",;
           "/academy",;
@@ -1111,7 +1053,6 @@ if ( {) {
     );
   ),;
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" }),;
-=======
           "/constitution";
           "/partners";
           "/academy";
@@ -1122,19 +1063,16 @@ if ( {) {
       2;
     );
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });
   // Optional modules markers;
   const optionalModules = Object.entries(input.modules);
     .filter(([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key));
-<<<<<<< HEAD
     .map(([key]) => key),;
   if (optionalModules.length > 0) {;
     const optionalPath = path.join(baseDir, "optional-modules.json"),;
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),;
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
   }
-=======
     .map(([key]) => key);
   if (optionalModules.length > 0) {;
     const optionalPath = path.join(baseDir, "optional-modules.json");
@@ -1142,25 +1080,20 @@ if ( {) {
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
   }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules);
     .filter(([ v]) => v);
     .map(([k]) => k);
     .join(", ")}.`;
   logs.push({ timestamp: nowIso(), level: "info", action: "deploy_complete", details: { instanceSlug } });
-<<<<<<< HEAD
   return {success: true;
-=======
   return {;
     success: true;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     instanceSlug;
     configPath;
     assets;
     logs;
     summary;
     version}
-<<<<<<< HEAD
     .map(([key]) => key),;
   if (optionalModules.length > 0) {;
     const optionalPath = path.join(baseDir, "optional-modules.json");
@@ -1265,6 +1198,4 @@ if ( {) {
 
 
 
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

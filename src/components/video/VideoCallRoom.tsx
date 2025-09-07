@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react','
 import { Button } from "@/components/ui/button","
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card","
@@ -114,7 +113,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;,
   // Call duration timer;
   React && React.useEffect((,) => {;
     const timer = setInterval((,) => {;
-=======
 
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
@@ -175,24 +173,20 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
   // Call duration timer;
   React.useEffect(() => {;
     const timer = setInterval(() => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       setCallDuration(prevDuration => prevDuration + 1);
     }, 1000),;
     return () => clearInterval(timer);
   }, []),;
-<<<<<<< HEAD
   const formatDuration = (seconds: number,) => {;
     const hrs = Math && Math.floor(seconds / 3600),;
     const mins = Math && Math.floor((seconds % 3600) / 60),;
     const secs = seconds % 60,;
     return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;`
-=======
   const formatDuration = (seconds: number) => {;
     const hrs = Math.floor(seconds / 3600),;
     const mins = Math.floor((seconds % 3600) / 60),;
     const secs = seconds % 60,;
     return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   },;
   const handleToggleMute = () => {;
     const newMuteState = !isMuted,;
@@ -207,10 +201,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     if (onToggleVideo) {;
       onToggleVideo(newVideoState);
     }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     // If turning video back on, ensure we're not in audio-only mode;
     if (newVideoState) {;
       setIsAudioOnly(false);
@@ -236,7 +227,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     if (onLeave) {;
       onLeave();
     }
-<<<<<<< HEAD
   },;
   return (
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>;`
@@ -425,7 +415,6 @@ if ( {) {
                   <span>{participant.name}</span>
                   {participant.isMuted && <MicOff className="h-4 w-4" />}"
                   {participant.isHost && <Badge variant="secondary" className="text-xs">Host</Badge>}"
-=======
   },
 
   return (
@@ -477,28 +466,23 @@ if ( {) {
                   <span>{participant.name}</span>
                   {participant.isMuted && <MicOff className="h-4 w-4" />}
                   {participant.isHost && <Badge variant="secondary" className="text-xs">Host</Badge>}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </div>
               </div>
             ))
           ) : (
-<<<<<<< HEAD
             <div className="col-span-full flex flex-col items-center justify-center py-12 text-white">"
               <Video className="h-16 w-16 mb-4 opacity-30" />"
               <p className="text-center text-lg mb-2">No participants yet</p>"
               <p className="text-center text-sm text-gray-300">"
-=======
             <div className="col-span-full flex flex-col items-center justify-center py-12 text-white">
               <Video className="h-16 w-16 mb-4 opacity-30" />
               <p className="text-center text-lg mb-2">No participants yet</p>
               <p className="text-center text-sm text-gray-300">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Share the meeting link to invite others
               </p>
             </div>
           )}
         </div>
-<<<<<<< HEAD
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">"
                 <div className="video-metadata flex items-center space-x-2">;
                   <span>{participant && participant.name}</span>;
@@ -566,7 +550,6 @@ if ( {) {
             aria-label="Leave call""
           >
             <Phone className="rotate-135" />"
-=======
         
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
           <Button
@@ -617,13 +600,11 @@ if ( {) {
             aria-label="Leave call"
           >
             <Phone className="rotate-135" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>
         </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
             aria-label="Leave call">;
             <Phone className="rotate-135" />;
           </Button>;
@@ -713,6 +694,4 @@ if ( {) {
     </Card>);
 },
 ;
-=======
 },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

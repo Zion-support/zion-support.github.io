@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Phone, ShieldCheck, Clock } from 'lucide-react''
 export default function ITSupportPage() {
   const benefits = [,
@@ -114,7 +113,6 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
       testimonials={testimonials}
       ctaText="Get IT Support""
       ctaLink="/request-quote""
-=======
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
@@ -156,14 +154,12 @@ export default function ITSupportPage() {
       testimonials={testimonials}
       ctaText="Get IT Support"
       ctaLink="/request-quote"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     />
   )
 import React from "react",;
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",;
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
 export default function ITSupportPage() {;
-<<<<<<< HEAD
   const benefits = [;,
     {;
       title: '24/7 Assistance',;
@@ -205,7 +201,6 @@ export default function ITSupportPage() {;
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"",
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
 }}}}}}}}}]]]]]
-=======
   const benefits = [;
     {;
       title: "24/7 Assistance",;
@@ -244,4 +239,3 @@ export default function ITSupportPage() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

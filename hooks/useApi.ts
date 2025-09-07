@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useEffect, useCallback } from 'react';
 
@@ -211,9 +210,6 @@ interface UseApiProps {
 
 
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { useState, useEffect } from 'react';
 
 interface ApiState<T> {
@@ -253,8 +249,6 @@ export function useApi<T>(
 
   useEffect(() => {
 
-<<<<<<< HEAD
-=======
   return {
     data,
     loading,
@@ -263,16 +257,8 @@ export function useApi<T>(
   };
 }
 };
-=======
-<<<<<<< HEAD
 import { useState,useEffect,useCallback } from &apos;react&apos;; interface UseApiOptions<T = unknown> { immediate?: boolean; onSuccess?: (data: T) => void; onError?: (error: Error) => void} export const useApi = <T = unknown>( apiFunction: (...args: unknown[]) => Promise<T>,options: UseApiOptions<T> = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<Error | null>(null); const execute = useCallback(async (...args: unknown[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { const error = err instanceof Error ? err : new Error(String(err)); setError(error); options.onError?.(error); throw error} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
 import React from 'react';
-<<<<<<< HEAD
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 
 
@@ -297,7 +283,6 @@ interface ApiState<T> {
 
 }
 }
-<<<<<<< HEAD
 export function useApi<T>(
   apiCall: () => Promise<T>,
   options: UseApiOptions = {}
@@ -360,10 +345,3 @@ function UseApi() {
 
 
 
-=======
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

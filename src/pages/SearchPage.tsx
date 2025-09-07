@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -48,7 +47,6 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput","
 import { generateSearchSuggestions } from "@/data/marketplaceData","
 import { SearchSuggestion } from "@/types/search","
 import {logErrorToProduction} from '@/utils/productionLogger','
-=======
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
@@ -56,12 +54,10 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { SearchSuggestion } from "@/types/search",
 import {logErrorToProduction} from '@/utils/productionLogger',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import {
   Tabs,
   TabsContent,
   TabsList,
-<<<<<<< HEAD
   TabsTrigger} from "@/components/ui/tabs","
 import { Loader2 } from 'lucide-react''
   const pageKey = `search-${routeKey}-${router.asPath}``
@@ -513,7 +509,6 @@ router.push (`/search?q=$ {`
 }
 }
 ;
-=======
   TabsTrigger} from "@/components/ui/tabs",
 import { Loader2 } from 'lucide-react'
 
@@ -800,4 +795,3 @@ export default function SearchPage() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

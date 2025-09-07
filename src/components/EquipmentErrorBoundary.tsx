@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface Props {;
   children: React && React.ReactNode;
 }
-=======
 import React from 'react',;
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -15,12 +13,10 @@ interface Props {;
   children: React.ReactNode;
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface State {;
   hasError: boolean,;
   error?: Error;
 }
-<<<<<<< HEAD
 export class EquipmentErrorBoundary extends React && React.Component<Props, State> {;
   constructor(props:,  Props) {;,
     super(props);
@@ -33,7 +29,6 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
     if (this && this.state.hasError) {;
       return (
                 <Button onClick={() => window.location.reload()} variant="default">"
-=======
 ;
 export class EquipmentErrorBoundary extends React.Component<Props State> {;
   constructor(props: Props) {;
@@ -69,7 +64,6 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
                   Try Again
                 </Button>
                 <Button onClick={() => window.location.reload()} variant="default">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Refresh Page
                 </Button>
               </div>
@@ -77,7 +71,6 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
           </Card>
         </div>
       )
-<<<<<<< HEAD
     return this.props.children
   }      )
     }
@@ -172,10 +165,8 @@ if ( {) {
     return this.props.children;
   }
 } ;
-=======
     }
 ;
     return this.props.children;
   }
 } ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

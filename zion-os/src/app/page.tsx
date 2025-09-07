@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
   const features = [
@@ -148,12 +147,10 @@ export default function HomePage() {
         &quot;Blog + Roadmap Setup&quot;
       ]
       gradient: &quot;bg-gradient-to-r from-indigo-600 to-blue-600&quot;
-=======
 import FeatureCard from './components/FeatureCard',
 export default function HomePage() {
   const features = [
     {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       icon: "🤖",
       title: "AI-Powered Intelligence",
       description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
@@ -226,7 +223,6 @@ export default function HomePage() {
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
   ],
-<<<<<<< HEAD
   return (
     <div className=&quot;min - h-screen & quot;>;
       {/* Hero Section */}
@@ -345,12 +341,10 @@ export default function HomePage() {
           <div className=&quot;animate-fade-in&quot;>
             <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6&quot;>
               <span className=&quot;gradient-text&quot;>Launch Sovereign</span>
-=======
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="hero-gradient absolute inset-0 -z-10"></div>
@@ -361,7 +355,6 @@ export default function HomePage() {
               <br />
               <span className="text-white">AI-Powered Digital Economies</span>
             </h1>
-<<<<<<< HEAD
             <p className=&quot;text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed&quot;>
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click.
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
@@ -369,8 +362,6 @@ export default function HomePage() {
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
               <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift&quot;>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
@@ -388,10 +379,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -399,24 +387,18 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Everything You Need to Build the Future
             </h2>
-<<<<<<< HEAD
             <p className=&quot;text-xl text-white/70 max-w-2xl mx-auto&quot;>
               From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit
               for launching sovereign digital economies.
             </p>
           </div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
               From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
               for launching sovereign digital economies.
             </p>
           </div>
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -427,17 +409,13 @@ export default function HomePage() {
                 description={feature.description}
                 features={feature.features}
                 gradient={feature.gradient}
-<<<<<<< HEAD
               />))}
-=======
               />;
             ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
 
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -508,8 +486,6 @@ export default function HomePage() {
         <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <div className=&quot;glass-effect rounded-2xl p-12 animate-slide-up&quot;>
             <h2 className=&quot;text-4xl font-bold mb-6&quot;>
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-effect rounded-2xl p-12 animate-slide-up">
@@ -530,10 +506,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -559,8 +532,5 @@ export default function HomePage() {
       </section>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

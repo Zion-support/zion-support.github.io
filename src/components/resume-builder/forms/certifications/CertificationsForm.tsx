@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <div className='space-y-6'>;
       <div>;
@@ -97,7 +96,6 @@ return (
                   {editingId ? 'Update' : 'Add'} Certification'
                 </Button>
                 <Button type="button" onClick={onComplete}>"
-=======
 
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -239,7 +237,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                 </Button>
 
                 <Button type="button" onClick={onComplete}>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Next
                 </Button>
               </div>
@@ -249,7 +246,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       </div>
     </div>
   )
-<<<<<<< HEAD
               </Button>;
               <div className='flex gap-2'>;
                 <Button type='submit' disabled={isLoading}>;
@@ -384,7 +380,5 @@ if ( {) {
 }'"}"
 }
 ;
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -12,7 +12,6 @@ const features = [
   {
     name: 'AI-Powered Research',
     description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
-<<<<<<< HEAD
     icon: LightBulbIcon,
   },
   {
@@ -41,7 +40,6 @@ const features = [
     icon: UserGroupIcon,
   },
 ];
-=======
     icon: LightBulbIcon},
   {
     name: 'Quantum Computing',
@@ -87,7 +85,6 @@ const solutions = [
     name: 'IT Asset Management',
     description: 'Intelligent management of digital infrastructure.',
     href: '/solutions/it-asset-management'}]
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 export default function HomePage() {
   return (
@@ -96,7 +93,6 @@ export default function HomePage() {
       <div className="relative bg-gradient-to-r from-blue-600 to-purple-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-<<<<<<< HEAD
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Zion Tech Group
             </h1>
@@ -110,7 +106,6 @@ export default function HomePage() {
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Learn More
               </button>
-=======
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Leading the Future of{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
@@ -131,13 +126,11 @@ export default function HomePage() {
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 Learn More <span aria-hidden="true">→</span>
               </Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <div className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,7 +174,6 @@ export default function HomePage() {
     </div>
   );
 }
-=======
       {/* Features section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -312,4 +304,3 @@ export default function HomePage() {
   )
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

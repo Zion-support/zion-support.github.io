@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -103,7 +102,6 @@ export default function SearchFeature() {
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>"
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">"
-=======
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -148,12 +146,10 @@ export default function SearchFeature() {
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <li>Find the right expert or product without endless scrolling.</li>
             <li>Save favorite searches and get notified of new matches.</li>
             <li>Sort by rating, price, or recency to surface the best options.</li>
           </ul>
-<<<<<<< HEAD
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>"
           <div className="space-y-4 mb-12">"
             <div>
@@ -168,7 +164,6 @@ export default function SearchFeature() {
           <div className="text-center">"
             <Button size="lg" className="bg-zion-purple text-white" asChild>"
               <Link href="/search" />Try Search</Link>"
-=======
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
             <div>
@@ -183,17 +178,13 @@ export default function SearchFeature() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/search">Try Search</Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>
           </div>
         </div>
       </main>
     </>
   )
-<<<<<<< HEAD
 ;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -229,13 +220,11 @@ export default function SearchFeature() {;
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
-<<<<<<< HEAD
             <img
               src="https: //placehold && placehold.co/800x400"",
               alt="Screenshot of search results""
               className="object-cover""
               <Link href="/search" />Try Search</Link>;
-=======
             <img;
               src="https: //placehold.co/800x400";
               alt="Screenshot of search results";
@@ -262,17 +251,13 @@ export default function SearchFeature() {;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
               <Link href="/search">Try Search</Link>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </Button>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
 ;
 }}})
-=======
     </>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

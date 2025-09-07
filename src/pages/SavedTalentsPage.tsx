@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
         const { data, error } = await supabase;
           .from ('saved_talents');
@@ -547,7 +546,6 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
   );
 }
 ;
-=======
 import { useState, useEffect } from "react",
 import { SEO } from "@/components/SEO",
 import { TalentCard } from "@/components/talent/TalentCard",
@@ -906,4 +904,3 @@ export default function SavedTalentsPage() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

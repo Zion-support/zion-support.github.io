@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react''
 import { NextSeo  } from '@/components/NextSeo';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
@@ -49,7 +48,6 @@ const MarketplaceInsights = ({ stats }: { stats: any }) => (
         <div className="text-center">"
           <div className="text-2xl font-bold text-orange-400">{stats.availableCount}</div>"
           <div className="text-sm text-muted-foreground">Available</div>"
-=======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { useTranslation } from 'react-i18next',
@@ -91,12 +89,10 @@ const MarketplaceInsights = ({ stats }: { stats: any }) => (
         <div className="text-center">
           <div className="text-2xl font-bold text-orange-400">{stats.availableCount}</div>
           <div className="text-sm text-muted-foreground">Available</div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>
       </div>
     </CardContent>
   </Card>
-<<<<<<< HEAD
 )
 // Filter controls
 const MarketplaceFilterControls = ({
@@ -300,7 +296,6 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
           aria-label="Add to cart""
 const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">"
-=======
 ),
 
 // Filter controls
@@ -397,7 +392,6 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
 // Loading grid
 const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
   </div>;
 ),;
@@ -406,7 +400,6 @@ function MarketplacePageContent() {;
   const router = useRouter(),;
   const { t } = useTranslation(),;
   const dispatch = useDispatch<AppDispatch>(),;
-<<<<<<< HEAD
   const { isAuthenticated } = useAuth(),;,
   const [sortBy, setSortBy] = useState('newest'),;,
   const [filterCategory, setFilterCategory] = useState(''),;,
@@ -416,7 +409,6 @@ function MarketplacePageContent() {;
     await new Promise(resolve => setTimeout(resolve, 300)),;
     try {;
       // Combine initial products with marketplace listings;,
-=======
   const { isAuthenticated } = useAuth(),;
   const [sortBy, setSortBy] = useState('newest'),;
   const [filterCategory, setFilterCategory] = useState(''),;
@@ -426,12 +418,10 @@ function MarketplacePageContent() {;
     await new Promise(resolve => setTimeout(resolve, 300)),;
     try {;
       // Combine initial products with marketplace listings;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       const fullDataset: ProductListing[] = [...INITIAL_MARKETPLACE_PRODUCTS, ...MARKETPLACE_LISTINGS],;
       // Apply category filtering;
       let processedDataset = fullDataset,;
       if (filterCategory) {;
-<<<<<<< HEAD
         processedDataset = processedDataset.filter(p => p.category ===,  filterCategory);
       }
       // Apply recommended filtering
@@ -564,7 +554,6 @@ function MarketplacePageContent() {;
             return (b && b.aiScore || 0) - (a && a.aiScore || 0),;
           default: // 'newest';',
             return new Date(b && b.createdAt || '').getTime() - new Date(a && a.createdAt || '').getTime();
-=======
         processedDataset = processedDataset.filter(p => p.category === filterCategory);
       }
 ;
@@ -588,37 +577,31 @@ function MarketplacePageContent() {;
             return (b.aiScore || 0) - (a.aiScore || 0),;
           default: // 'newest';
             return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         }
       }),;
       // Slice for pagination;
       const startIndex = (page - 1) * limit,;
       const endIndex = startIndex + limit,;
-<<<<<<< HEAD
       const items = processedDataset && processedDataset.slice(startIndex, endIndex),;
       return {;
         items,;
         hasMore: endIndex < processedDataset && processedDataset.length,;
         total: processedDataset && processedDataset.length;
-=======
       const items = processedDataset.slice(startIndex, endIndex),;
       return {;
         items,;
         hasMore: endIndex < processedDataset.length,;
         total: processedDataset.length;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       }
     } catch (error) {;
       logErrorToProduction('Error in fetchProducts:', { data: error }),;
       throw new Error('Failed to load marketplace data. Please try again.');
     }
-<<<<<<< HEAD
     return (
       <>
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services""
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.""
-=======
   }, [sortBy, filterCategory, showRecommended]),
 
   const {
@@ -671,7 +654,6 @@ function MarketplacePageContent() {;
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   }, [sortBy, filterCategory, showRecommended]),;
   const {;
     items: products,;
@@ -703,11 +685,8 @@ function MarketplacePageContent() {;
   }, [products]),;
   const categories = useMemo(() => {;
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"];
-<<<<<<< HEAD
   }, []),;,
-=======
   }, []),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [showScrollTop, setShowScrollTop] = useState(false),;
   useEffect(() => {;
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),;
@@ -720,7 +699,6 @@ function MarketplacePageContent() {;
       <>;
         <NextSeo;
           title="Marketplace - Zion Tech Marketplace Solutions & Services";
-<<<<<<< HEAD
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";,
           openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}'
         />
@@ -730,7 +708,6 @@ function MarketplacePageContent() {;
             {t('marketplace.hero_title')}'
           </h1>
           <p className="text-muted-foreground text-lg">{t('marketplace.hero_subtitle')}</p>'
-=======
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";
           openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
         />;
@@ -740,14 +717,12 @@ function MarketplacePageContent() {;
             {t('marketplace.hero_title')}
           </h1>
           <p className="text-muted-foreground text-lg">{t('marketplace.hero_subtitle')}</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </motion.div>
         <MarketplaceLoadingGrid />
       </div>
       </>
     )
   }
-<<<<<<< HEAD
   // Error state
   if (error && products.length === 0) {
     return (
@@ -1259,7 +1234,6 @@ function MarketplacePage() {
 }
 ;
 }})))))
-=======
 
   // Error state
   if (error && products.length === 0) {
@@ -1416,4 +1390,3 @@ export default function MarketplacePage() {;
   return <MarketplacePageContent />;
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

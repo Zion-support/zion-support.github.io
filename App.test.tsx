@@ -29,15 +29,8 @@ describe('App', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   it('displays correct content', () => {
     render(<App />);
     expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
@@ -71,14 +64,9 @@ describe("App", () => {
     expect(true).toBe(true);
   });
 });
-<<<<<<< HEAD
 
 
 
 
 
 
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

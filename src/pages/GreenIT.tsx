@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function GreenIT() {,
   const greenITSolutions = [
     {
@@ -1843,7 +1842,6 @@ export { GreenIT, GreenIT }
 }
 }
 ;
-=======
 
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -2087,4 +2085,3 @@ export default function GreenIT() {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

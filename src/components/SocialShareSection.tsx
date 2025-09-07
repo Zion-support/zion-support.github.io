@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <section className="py-12 bg-zion-blue">"
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
@@ -17,7 +16,6 @@ return (
                 key={index}
                 className={`${link.color} text-white`}`
                 size="sm""
-=======
 
 import { Button } from "./ui/button",
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
@@ -101,7 +99,6 @@ export function SocialShareSection() {
                 key={index}
                 className={`${link.color} text-white`}
                 size="sm"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
 import { toast } from "./ui/use-toast",;
@@ -137,50 +134,38 @@ export function SocialShareSection() {;
           variant: "destructive";
         });
       });
-<<<<<<< HEAD
   },;,
   const shareLinks = [;
     {;
       name: "Twitter",;
       icon: <Twitter className="h-5 w-5" aria-hidden="true" />,;,
-=======
   },;
   const shareLinks = [;
     {;
       name: "Twitter",;
       icon: <Twitter className="h-5 w-5" aria-hidden="true" />,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80",;
       onClick: shareToTwitter;
     },;
     {;
       name: "Facebook",;
-<<<<<<< HEAD
       icon: <Facebook className="h-5 w-5" aria-hidden="true" />,;,
-=======
       icon: <Facebook className="h-5 w-5" aria-hidden="true" />,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       color: "bg-[#4267B2] hover:bg-[#4267B2]/80",;
       onClick: shareToFacebook;
     },;
     {;
       name: "LinkedIn",;
-<<<<<<< HEAD
       icon: <Linkedin className="h-5 w-5" aria-hidden="true" />,;,
-=======
       icon: <Linkedin className="h-5 w-5" aria-hidden="true" />,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       color: "bg-[#0077B5] hover:bg-[#0077B5]/80",;
       onClick: shareToLinkedIn;
     },;
     {;
       name: "Copy Link",;
       icon: <Link className="h-5 w-5" aria-hidden="true" />,;
-<<<<<<< HEAD
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80";",
-=======
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       onClick: copyLinkToClipboard;
     }];
   return (;
@@ -195,24 +180,18 @@ export function SocialShareSection() {;
             {shareLinks.map((link, index) => (;
               <Button;
                 key={index}
-<<<<<<< HEAD
                 className={`${link.color} text-white`}`
-=======
                 className={`${link.color} text-white`}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 size="sm";
                 onClick={link.onClick}
                 aria-label={link.name}
                 title={link.name}
               >;
                 {link.icon}
-<<<<<<< HEAD
                 <span className="sr-only">{link.name}</span>"
                 <span aria-hidden="true">{link.name}</span>"
-=======
                 <span className="sr-only">{link.name}</span>
                 <span aria-hidden="true">{link.name}</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </Button>
             ))}
           </div>;
@@ -220,7 +199,6 @@ export function SocialShareSection() {;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
   navigator && navigator.clipboard.writeText (window && window.location.href) .then ( () => {;
   toast ({;
 }) .catch ( () => {;
@@ -297,7 +275,5 @@ export function SocialShareSection() {;
 }'";
 }
 ;)))
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 userType: string
 }
 export function ProfileSetup({ onComplete, userType }:,  ProfileSetupProps) {
@@ -32,7 +31,6 @@ export function ProfileSetup({ onComplete, userType }:,  ProfileSetupProps) {
                   </div>
                 </FormControl>
                 <FormMessage className="text-red-400" />"
-=======
 
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -110,7 +108,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                   </div>
                 </FormControl>
                 <FormMessage className="text-red-400" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </FormItem>
 import { useState } from "react",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -133,7 +130,6 @@ const profileSchema = z.object({;
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),;
 type ProfileFormValues = z.infer<typeof profileSchema>,;
 interface ProfileSetupProps {;
-<<<<<<< HEAD
   onComplete: (data:,  ProfileFormValues) => void,;
   userType: string;
 }
@@ -142,7 +138,6 @@ export function ProfileSetup({ onComplete, userType }:,  ProfileSetupProps) {;
   const form = useForm<ProfileFormValues>({;
     resolver: zodResolver(profileSchema),;
     defaultValues: {;,
-=======
   onComplete: (data: ProfileFormValues) => void,;
   userType: string;
 }
@@ -151,13 +146,11 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
   const form = useForm<ProfileFormValues>({;
     resolver: zodResolver(profileSchema),;
     defaultValues: {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       displayName: "",;
       bio: "",;
       headline: ""}}),;
   const getTypeLabel = () => {;
     switch (userType) {;
-<<<<<<< HEAD
       case "serviceProvider": return "Service Provider";
   on_complete: (data: ProfileFormValues, ) => void,
   user_type: string;
@@ -175,26 +168,21 @@ function ProfileSetup() {
   const getTypeLabel = () =>: any {
     switch (user_type) {
       case "service_provider": return "Service Provider";
-=======
       case "serviceProvider": return "Service Provider",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       case "talent":;
         return "Talent",;
       case "client":;
         return "Client";
-<<<<<<< HEAD
       default:;,
         return "User";
     }
   }
   return (
-=======
       default:;
         return "User";
     }
   };
   return (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <div className="space-y-6">;
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Create Your {getTypeLabel()} Profile</h3>;
@@ -203,19 +191,16 @@ function ProfileSetup() {
         </p>;
       </div>;
       <Form {...form}>;
-<<<<<<< HEAD
         <form onSubmit={form && form.handleSubmit(onComplete)} className="space-y-6">;
           <FormField
             control = {form && form.control,}
             name="displayName""
             render={({ field }: { field: any },) => (;
-=======
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">;
           <FormField;
             control={form.control}
             name="displayName";
             render={({ field }: { field: any }) => (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <FormItem>;
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
                 <FormControl>;
@@ -232,7 +217,6 @@ function ProfileSetup() {
               </FormItem>;
             )}
           />;
-<<<<<<< HEAD
           <FormField
             control = {form && form.control,}
             name="headline""
@@ -339,7 +323,6 @@ function ProfileSetup() {
                   </div>
                 </FormControl>
                 <FormMessage className="text-red-400" />"
-=======
           <FormField;
             control={form.control}
             name="headline"
@@ -361,13 +344,11 @@ function ProfileSetup() {
                   </div>
                 </FormControl>
                 <FormMessage className="text-red-400" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </FormItem>
             )}
           />;
           <FormField;
             control={form.control}
-<<<<<<< HEAD
             name="bio""
             render={({ field }: { field: any }) => (
               <FormItem>
@@ -390,7 +371,6 @@ function ProfileSetup() {
           <Button
             type="submit""
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white""
-=======
             name="bio"
             render={({ field }: { field: any }) => (
               <FormItem>
@@ -414,7 +394,6 @@ function ProfileSetup() {
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           >
             Complete Profile
           </Button>
@@ -422,14 +401,11 @@ function ProfileSetup() {
       </Form>
     </div>
   )
-<<<<<<< HEAD
-=======
                   />;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
               </FormItem>;
             )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           />;
           <Button;
             type="submit";
@@ -441,7 +417,6 @@ function ProfileSetup() {
       </Form>;
     </div>;
   );
-<<<<<<< HEAD
 case "talent": return "Talent";";
 case "client": return "Client";
 default: ;
@@ -486,7 +461,5 @@ getTypeLabel () ";
 }/> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
 }/> <Button > Complete Profile </Button> </form> </Form> </div>);
 }"}
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

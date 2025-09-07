@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
@@ -22,7 +21,6 @@ import {
         className="bg-background border border-border px-3 py-2 rounded""
       >
         <option value="">All Categories</option>"
-=======
 import { useRouter } from 'next/router',;
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling',;
 import ProductCard from '@/components/ProductCard',;
@@ -136,7 +134,6 @@ const FilterControls: React.FC<{
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">All Categories</option>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         {categories.map(category => (
           <option key={category} value={category}>{category}</option>
         ))}
@@ -145,11 +142,9 @@ const FilterControls: React.FC<{
     <div className="flex items-center gap-2">;
       <SortAsc className="h-4 w-4 text-muted-foreground" />;
       <select;
-<<<<<<< HEAD
         value={min_rating}
         on_change={e => setMinRating (Number (e.target.value))}
         className='bg - background border border - border px - 2 py - 1 rounded'      >;
-=======
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value)}
         className="bg-background border border-border px-3 py-2 rounded"
@@ -202,7 +197,6 @@ const FilterControls: React.FC<{
         onChange={(e) => setMinRating(Number(e.target.value))}
         className="bg-background border border-border px-2 py-1 rounded";
       >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <option value={0}>Any</option>;
         <option value={5}>5</option>;
         <option value={4}>4</option>;
@@ -211,8 +205,6 @@ const FilterControls: React.FC<{
         <option value={1}>1</option>;
       </select>;
     </div>;
-<<<<<<< HEAD
-=======
     <div className="flex items-center gap-2">;
       <select;
         value={filterAvailability}
@@ -220,13 +212,11 @@ const FilterControls: React.FC<{
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">Any Availability</option>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>{opt}</option>
         ))}
       </select>
     </div>
-<<<<<<< HEAD
     <div className='flex items-center gap-2'>;
       <select
         value={filterLocation}
@@ -275,7 +265,6 @@ export default function Marketplace() {
                   <Star className='h-3 w-3 mr-1' />'
                   Featured
                 </Badge>
-=======
 
     <div className="flex items-center gap-2">
       <select
@@ -791,7 +780,6 @@ export default function Marketplace() {;
                   AI {product.aiScore}
                 </Badge>;
               )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
               {/* Featured Badge */}
               {product.featured && (;
@@ -800,7 +788,6 @@ export default function Marketplace() {;
                   Featured;
                 </Badge>;
               )}
-<<<<<<< HEAD
             </motion && motion.div>;
           ))}
       {(isFetching ||,  loading) && (
@@ -817,14 +804,12 @@ export default function Marketplace() {;
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>'
             {Array.from({ length: 4 }).map((_, i) => (              <SkeletonCard key={`loading-${i}`} />`
       {(isFetching ||,  loading) && (;
-=======
             </motion.div>;
           ))}
         </AnimatePresence>;
       </motion.div>;
       {/* Loading More Indicator */}
       {(isFetching || loading) && (;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <motion.div;
           className="mt-8";
           initial={{ opacity: 0 }}
@@ -832,20 +817,17 @@ export default function Marketplace() {;
         >;
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">;
             {Array.from({ length: 4 }).map((_, i) => (;
-<<<<<<< HEAD
               <SkeletonCard key={`loading-${i}`} />;`
             ))}
           </div>
         </motion.div>
       )}
-=======
               <SkeletonCard key={`loading-${i}`} />;
             ))}
           </div>;
         </motion.div>;
       )}
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {/* End of Results */}
       {!hasMore && products.length > 0 && (;
         <motion.div;
@@ -861,7 +843,6 @@ export default function Marketplace() {;
           </div>;
         </motion.div>;
       )}
-<<<<<<< HEAD
       {/* Scroll to Top Button */}
       <AnimatePresence>;
         {showScrollTop && (;
@@ -1451,7 +1432,6 @@ const Marketplace = () =>: any {
     </>);
 }
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";",
-=======
 ;
       {/* Scroll to Top Button */}
       <AnimatePresence>;
@@ -1459,13 +1439,11 @@ const Marketplace = () =>: any {
           <motion.button;
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-<<<<<<< HEAD
 ;
 }
 }
@@ -1483,8 +1461,6 @@ const Marketplace = () =>: any {
 }
 }
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           >;
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
           </motion.button>;
@@ -1493,9 +1469,6 @@ const Marketplace = () =>: any {
     </div>;
   );
 }
-<<<<<<< HEAD
 ;
 }}}}}}}}}}}
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

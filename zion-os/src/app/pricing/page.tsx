@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 "use client",;
 import { useState } from "react",;
@@ -679,8 +678,6 @@ function PricingPage() {
 ];
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"];
 export default function PricingPage() {const [selectedCategory, setSelectedCategory] = useState("All");
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import { useState } from "react",;
 interface PricingTier {;
@@ -937,7 +934,6 @@ export default function PricingPage() {;
         </p>;
       </div>;
       {/* Category Filter */}
-<<<<<<< HEAD
       <div className="flex justify - center">;
         <div className="flex flex - wrap gap - 2 bg - zinc - 800 rounded - lg p - 1">;
           {categories.map (category => (
@@ -984,7 +980,6 @@ export default function PricingPage() {;
                       <span className="w - 2 h - 2 bg - green - 500 rounded - full"></span>;
                       {benefit}
                     </li>))}
-=======
       <div className="flex justify-center">;
         <div className="flex flex-wrap gap-2 bg-zinc-800 rounded-lg p-1">;
           {categories.map(category => (;
@@ -1032,12 +1027,10 @@ export default function PricingPage() {;
                       {benefit}
                     </li>;
                   ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </ul>;
               </div>;
             </div>;
             {/* Pricing Tiers */}
-<<<<<<< HEAD
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
               {service.tiers.map ((tier, tier_index) => (
                 <div;
@@ -1082,7 +1075,6 @@ export default function PricingPage() {;
                           ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
                           : 'bg - zinc - 700 hover:bg - zinc - 600 text - white';
 
-=======
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
               {service.tiers.map((tier, tierIndex) => (;
                 <div;
@@ -1124,13 +1116,11 @@ export default function PricingPage() {;
                         tier.popular;
                           ? 'bg-blue-600 hover:bg-blue-700 text-white';
                           : 'bg-zinc-700 hover:bg-zinc-600 text-white';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       }`}
                     >;
                       {tier.cta}
                     </a>;
                   </div>;
-<<<<<<< HEAD
                 </div>))}
             </div>;
           </div>))}
@@ -1154,7 +1144,6 @@ export default function PricingPage() {;
             <div>;
               <h3 className="font - semibold">Consulting Services</h3>;
               <p className="text - sm opacity - 90">Strategic guidance from $150 / hour</p>;
-=======
                 </div>;
               ))}
             </div>;
@@ -1180,23 +1169,18 @@ export default function PricingPage() {;
             <div>;
               <h3 className="font-semibold">Consulting Services</h3>;
               <p className="text-sm opacity-90">Strategic guidance from $150/hour</p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>;
           </div>;
           <a;
             href="mailto:kleber@ziontechgroup.com";
-<<<<<<< HEAD
             className="inline - block px - 6 py - 3 bg - white text - purple - 600 rounded - lg font - semibold hover:bg - gray - 100 transition - colors";
-=======
             className="inline-block px-6 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           >;
             Get Custom Quote;
           </a>;
         </div>;
       </div>;
       {/* Contact Information */}
-<<<<<<< HEAD
       <div className="text - center space - y-4">;
         <h2 className="text - 2xl font - bold">Questions About Pricing?</h2>;
         <p className="opacity - 80">;
@@ -1219,7 +1203,6 @@ export default function PricingPage() {;
       </div>;
     </div>);
 }
-=======
       <div className="text-center space-y-4">;
         <h2 className="text-2xl font-bold">Questions About Pricing?</h2>;
         <p className="opacity-80">;
@@ -1243,4 +1226,3 @@ export default function PricingPage() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

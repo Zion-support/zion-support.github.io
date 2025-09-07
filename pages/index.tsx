@@ -1,15 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import Head from 'next/head';
 
 export default function Home() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>Zion Tech Group - Advanced IT Solutions & AI Services</title>
         <meta name="description" content="Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for businesses worldwide." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -113,7 +109,6 @@ export default function Home() {
     </>
   );
 }
-=======
         <title>Zion Tech Group - Technology Solutions</title>
         <meta name="description" content="Leading technology solutions provider" />
       </Head>
@@ -133,4 +128,3 @@ export default function Home() {
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

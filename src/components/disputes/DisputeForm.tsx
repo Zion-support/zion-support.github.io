@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 if (onDisputeCreated) {
-=======
 import React, { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -93,25 +91,20 @@ export function DisputeForm({
         toast.success("Your dispute has been submitted"),
         
         if (onDisputeCreated) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
-<<<<<<< HEAD
       logErrorToProduction('Error submitting dispute:', { data: error }),'
       toast.error("Failed to submit dispute. Please try again.")"
       logErrorToProduction('Error submitting dispute:', { data: error }),'
       toast.error("Failed to submit dispute. Please try again.")"
-=======
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     } finally {
       setIsSubmitting(false)
     }
   }
-<<<<<<< HEAD
   return (
     <div className="space-y-6">"
       <div className="flex items-center space-x-2">"
@@ -124,7 +117,6 @@ export function DisputeForm({
             control={form.control}
             name="reason_code""
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => ("
-=======
 
   return (
     <div className="space-y-6">
@@ -139,17 +131,13 @@ export function DisputeForm({
             control={form.control}
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <FormItem>
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-<<<<<<< HEAD
                       <SelectValue placeholder="Select a reason" />"
-=======
                       <SelectValue placeholder="Select a reason" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -167,20 +155,16 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
-<<<<<<< HEAD
   FormMessage,;
 } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';import {;
-=======
   FormMessage} from "@/components/ui/form",;
 import { Textarea } from "@/components/ui/textarea",;
 import {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   Select,;
   SelectContent,;
   SelectItem,;
   SelectTrigger,;
-<<<<<<< HEAD
   SelectValue,;
 } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
@@ -249,7 +233,6 @@ export function DisputeForm(): any ({;
           // logInfo(`Would upload ${files && files.length} files for dispute ${dispute.id}`);`
         }
         toast && toast.success('Your dispute has been submitted');
-=======
   SelectValue} from "@/components/ui/select",;
 import { Input } from "@/components/ui/input",;
 import { disputeReasonLabels } from "@/types/disputes",;
@@ -312,23 +295,18 @@ export function DisputeForm({;
         }
 ;
         toast.success("Your dispute has been submitted");
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         if (onDisputeCreated) {;
           onDisputeCreated(dispute.id);
         }
       }
     } catch (error) {;
       logErrorToProduction('Error submitting dispute:', { data: error });
-<<<<<<< HEAD
       toast && toast.error('Failed to submit dispute. Please try again.');
-=======
       toast.error("Failed to submit dispute. Please try again.");
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     } finally {;
       setIsSubmitting(false);
     }
   }
-<<<<<<< HEAD
   return (
     <div className='space-y-6'>;
       <div className='flex items-center space-x-2'>;
@@ -450,7 +428,6 @@ if ( {) {
                   <Textarea;
                     placeholder='Please provide specific details about the issue...';,
                     className='min - h-[150px]';
-=======
 ;
   return (;
     <div className="space-y-6">;
@@ -492,12 +469,10 @@ if ( {) {
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<< HEAD
           />;
           <FormItem>;
             <FormLabel>Attachments (optional)</FormLabel>;
@@ -537,7 +512,6 @@ if ( {) {
               </FormItem>
             )}
           />
-=======
               </FormItem>;
             )}
           />
@@ -569,12 +543,10 @@ if ( {) {
                             Remove;
                           </Button>;
                         </li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       ))}
                     </ul>;
                   </div>;
                 )}
-<<<<<<< HEAD
           <div className="flex justify-end space-x-2">"
             {onCancel && (
               <Button type='button' variant='outline' onClick={onCancel}>'
@@ -702,7 +674,6 @@ if ( {) {
 }</ul> </div>);
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>);
 }'"}
-=======
               </div>
             </FormControl>
             <FormMessage />
@@ -723,4 +694,3 @@ if ( {) {
     </div>
   )
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

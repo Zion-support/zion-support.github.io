@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/ai-ethics-governance-framework.tsx
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIEthicsGovernanceFramework() {
@@ -27,12 +26,10 @@ export default function AIEthicsGovernanceFramework() {
 		/>;
 	);
 }
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-<<<<<<< HEAD
 export default function AIEthicsGovernanceFramework() {
   return (
     <ServiceLanding
@@ -56,7 +53,6 @@ export default function AIEthicsGovernanceFramework() {
     />
   );
 }
-=======
 const AIEthicsGovernanceFramework: React.FC = () => {
   return (
     <Layout>
@@ -133,5 +129,3 @@ const AIEthicsGovernanceFramework: React.FC = () => {
 };
 
 export default AIEthicsGovernanceFramework;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-ethics-governance-framework.tsx

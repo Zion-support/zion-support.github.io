@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
@@ -946,5 +945,3 @@ function CookiesPage() {
     </MainLayout>
   );
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

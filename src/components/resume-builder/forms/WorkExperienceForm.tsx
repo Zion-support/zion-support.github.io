@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
       // Check condition
 if ( {) {
@@ -34,7 +33,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   const [error, setError] = useState<string | null>(null),;
   // Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date |,  undefined): string => {;,
-=======
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -80,25 +78,20 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   const [error, setError] = useState<string | null>(null),;
   // Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date | undefined): string => {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     if (!dateValue) return '',;
     if (typeof dateValue === 'string') return dateValue,;
     return format(dateValue, 'yyyy-MM-dd');
   },;
   const form = useForm<WorkExperienceFormValues>({;
     resolver: zodResolver(workExperienceSchema),;
-<<<<<<< HEAD
     defaultValues: {;,
-=======
     defaultValues: {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       company_name: '',;
       role_title: '',;
       start_date: format(new Date(), 'yyyy-MM-dd'),;
       is_current: false,;
       description: '',;
       location: ''}}),;
-<<<<<<< HEAD
   const handleAddOrUpdate = async (data:,  WorkExperienceFormValues) => {;,
     try {;
       setError(null),;
@@ -108,7 +101,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         role_title: data.role_title, // Required field;
         start_date: data.start_date, // Required field;
         end_date: data.is_current ? undefined : (data.end_date ||,  undefined),;
-=======
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {;
     try {;
       setError(null),;
@@ -118,7 +110,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         role_title: data.role_title, // Required field;
         start_date: data.start_date, // Required field;
         end_date: data.is_current ? undefined : (data.end_date || undefined),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         is_current: data.is_current,;
         description: data.description,;
         location: data.location},;
@@ -138,7 +129,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           location: ''}),;
         setEditingId(null);
       }
-<<<<<<< HEAD
     } catch (err:,  any) {;,
       setError(err.message || 'An error occurred');
     }
@@ -449,7 +439,6 @@ if ( {) {
                   <Button type='button' on_click={on_complete}>;
                     Next;
                   </Button>)}
-=======
     } catch (err: any) {;
       setError(err.message || 'An error occurred');
     }
@@ -699,13 +688,11 @@ if ( {) {
                     Next
                   </Button>
                 )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>;
             </div>;
           </form>;
         </Form>;
       </div>;
-<<<<<<< HEAD
       ...work;
       start_date: formatDateValue(work.start_date),
       end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
@@ -719,9 +706,7 @@ if ( {) {
 }
 ;
 }}}})))
-=======
     </div>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

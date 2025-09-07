@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
               onClose(), // Close mobile menu on any click
             }}
@@ -16,7 +15,6 @@
         ))}
       </nav>
       <div className="mt-6 px-6">"
-=======
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
@@ -151,12 +149,10 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
         ))}
       </nav>
       <div className="mt-6 px-6">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <ModeToggle />
       </div>
     </div>
   )
-<<<<<<< HEAD
     name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );`
 }
   );
@@ -167,7 +163,5 @@ name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),
 }
 }
 ;
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

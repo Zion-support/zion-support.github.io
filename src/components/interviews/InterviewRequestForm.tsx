@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -150,7 +149,6 @@ import { CalendarIcon } from 'lucide-react''
 import { toast } from "@/components/ui/use-toast","
 import { useInterviews } from "@/hooks/useInterviews","
 import {logErrorToProduction} from '@/utils/productionLogger','
-=======
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -171,13 +169,11 @@ import { CalendarIcon } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast",
 import { useInterviews } from "@/hooks/useInterviews",
 import {logErrorToProduction} from '@/utils/productionLogger',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface InterviewRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
   userDetails?: UserProfile
 }
-<<<<<<< HEAD
 const formSchema = z.object({
   date: z.date({,
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {"
@@ -392,7 +388,6 @@ export function InterviewRequestForm(): any ({;
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
                 <Input placeholder='Brief title for the interview' {...field} />'
-=======
 
 const formSchema = z.object({
   date: z.date({
@@ -498,13 +493,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
                 <Input placeholder="Brief title for the interview" {...field} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-<<<<<<< HEAD
             field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'title'>;
           }) => (            <FormItem>;
               <FormLabel>Interview Title</FormLabel>;
@@ -524,7 +517,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             render={({
               field
             }: {
-=======
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
@@ -533,12 +525,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (
               <FormItem className="flex flex-col">
                 <FormLabel>Date</FormLabel>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
                       <Button
-<<<<<<< HEAD
                         variant="outline""
                         className={cn(
                           "w-full pl-3 text-left font-normal","
@@ -573,7 +563,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   <PopoverContent className='w-auto p-0' align='start'>;
                     <Calendar
                       mode="single""
-=======
                         variant="outline"
                         className={cn(
                           "w-full pl-3 text-left font-normal",
@@ -592,22 +581,17 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   <PopoverContent className="w-auto p-0" align="start">
                     <Calendar
                       mode="single"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       selected={field.value}
                       onSelect={field.onChange}
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus
-<<<<<<< HEAD
                       className="p-3 pointer-events-auto""
-=======
                       className="p-3 pointer-events-auto"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     />
                   </PopoverContent>
                 </Popover>
                 <FormMessage />
               </FormItem>
-<<<<<<< HEAD
                       selected={field && field.value}
                       onSelect={field && field.onChange}
                       disabled={date =>;
@@ -617,8 +601,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               field: ControllerRenderProps < z.infer < typeof form_schema>, 'date'>;
             }) => (
               <FormItem className='flex flex - col'>                <FormLabel > Date</FormLabel>;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
@@ -645,11 +627,8 @@ interface InterviewRequestFormProps {;
 }
 ;
 const formSchema = z.object({;
-<<<<<<< HEAD
   date: z.date({;,
-=======
   date: z.date({;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {;
     message: "Interview date must be in the future";
   }),;
@@ -659,7 +638,6 @@ const formSchema = z.object({;
   meetingLink: z.string().optional(),;
   title: z.string().min(3, "Please provide a brief title for the interview."),;
   notes: z.string().optional()}),;
-<<<<<<< HEAD
 export function InterviewRequestForm({ talent, onClose, userDetails }:,  InterviewRequestFormProps) {;
   const { requestInterview } = useInterviews(),;,
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -667,7 +645,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }:,  Intervi
     resolver: zodResolver(formSchema),;
     defaultValues: {;,
       title: `Interview with ${talent.full_name}`,;`
-=======
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
   const { requestInterview } = useInterviews(),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -675,16 +652,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
     resolver: zodResolver(formSchema),;
     defaultValues: {;
       title: `Interview with ${talent.full_name}`,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       duration: "30",;
       platform: "zoom",;
       notes: "",;
       meetingLink: ""}}),;
-<<<<<<< HEAD
   async function onSubmit(values: z.infer<typeof formSchema>) {;,
-=======
   async function onSubmit(values: z.infer<typeof formSchema>) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     if (!userDetails?.id) {;
       toast({;
         title: "Authentication required",;
@@ -696,11 +669,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
     setIsSubmitting(true),;
     try {;
       // Combine date and time;
-<<<<<<< HEAD
       const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`,;`
-=======
       const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`,;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       const scheduledDate = new Date(dateTimeString),;
       // Calculate end time based on duration;
       const durationMinutes = parseInt(values.duration),;
@@ -717,11 +687,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       }),;
       toast({;
         title: "Interview requested",;
-<<<<<<< HEAD
         description: `Your interview request with ${talent.full_name} has been sent.`}),;`
-=======
         description: `Your interview request with ${talent.full_name} has been sent.`}),;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       onClose();
     } catch (error) {;
       logErrorToProduction('Failed to schedule interview:', { data: error }),;
@@ -733,11 +700,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       setIsSubmitting(false);
     }
   }
-<<<<<<< HEAD
 ;,
-=======
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const timeSlots = [;
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",;
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",;
@@ -750,11 +714,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         <div className="flex items-center mb-6">;
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">;
             <img;
-<<<<<<< HEAD
               src={talent.profile_picture_url || "/placeholder.svg"}"
-=======
               src={talent.profile_picture_url || "/placeholder.svg"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               alt={talent.full_name}
               className="h-full w-full object-cover";
               loading="lazy";
@@ -786,7 +747,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem className="flex flex-col">;
                 <FormLabel>Date</FormLabel>;
                 <Popover>;
-<<<<<<< HEAD
                   <PopoverTrigger as_child>;
                     <FormControl>;
                       <Button;
@@ -810,7 +770,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                         date < new Date () || date > add_days (new Date (), 90);
                       }                      initial_focus;
                       className='p - 3 pointer - events - auto';
-=======
                   <PopoverTrigger asChild>;
                     <FormControl>;
                       <Button;
@@ -837,12 +796,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
                       className="p-3 pointer-events-auto";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     />;
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
-<<<<<<< HEAD
               </FormItem>)}
           />;
           <FormField;
@@ -877,7 +834,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             }: {
             name="time""
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => ("
-=======
               </FormItem>;
             )}
           />;
@@ -885,13 +841,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             control={form.control}
             name="time"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <FormItem>
                 <FormLabel>Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-<<<<<<< HEAD
                       <SelectValue placeholder="Select time" />"
                     </SelectTrigger>
                   </FormControl>,
@@ -901,7 +855,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                         {time}
                       </SelectItem>
                     ))}
-=======
                       <SelectValue placeholder="Select time" />
                     </SelectTrigger>
                   </FormControl>
@@ -937,13 +890,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     <SelectItem value="30">30 minutes</SelectItem>
                     <SelectItem value="45">45 minutes</SelectItem>
                     <SelectItem value="60">60 minutes</SelectItem>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </SelectContent>
                 </Select>
                 <FormMessage />
               </FormItem>
             )}
-<<<<<<< HEAD
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
@@ -1087,7 +1038,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   />;
                 </FormControl>;
                 <FormMessage />;
-=======
           />;
           <FormField;
             control={form.control}
@@ -1111,24 +1061,19 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormMessage />
               </FormItem>
             )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           />;
         </div>;
         {form.watch('platform') !== 'in-app' && (;
           <FormField;
             control={form.control}
-<<<<<<< HEAD
             name="meetingLink""
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => ("
-=======
             name="meetingLink"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <FormItem>
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
                   <Input
-<<<<<<< HEAD
                     placeholder={`Add your ${form.watch('platform')} link here`}`
                     {...field}
                   />
@@ -1180,7 +1125,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           </Button>
           <Button type='submit' disabled={isSubmitting}>'
             {isSubmitting ? 'Scheduling...' : 'Schedule Interview'}'
-=======
                     placeholder={`Add your ${form.watch('platform')} link here`}
                     {...field}
                   />;
@@ -1215,13 +1159,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           </Button>
           <Button type="submit" disabled={isSubmitting}>
             {isSubmitting ? "Scheduling..." : "Schedule Interview"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </Button>
         </div>
       </form>
     </Form>
   )
-<<<<<<< HEAD
 toast ({;
 }finally {;
   setIsSubmitting (false) ;
@@ -1321,7 +1263,5 @@ toast ({
 }'"}"
 }
 ;
-=======
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

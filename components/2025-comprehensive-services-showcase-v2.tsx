@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import SEO from './seo/Seo';
 import { motion } from 'framer-motion';
@@ -140,25 +139,19 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold text-white mb-8"
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
           >
             Ready to Transform Your Business?
           </motion.h2>
           <motion.div 
             className="grid md:grid-cols-3 gap-8"
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
           >
             <div className="text-center">
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -184,13 +177,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
           >
             Our Comprehensive Service Portfolio
           </motion.h2>
@@ -273,26 +263,20 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
           >
             Market Impact & Growth
           </motion.h2>
           
           <motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
           >
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">25+</div>
@@ -319,37 +303,28 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white mb-6"
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
           >
             Ready to Lead the Future?
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-300 mb-8"
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
           >
             Join thousands of businesses already transforming their operations with our cutting-edge solutions.
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-<<<<<<< HEAD
           >
             <a 
               href={`mailto:${contactInfo.email}`}
@@ -368,6 +343,4 @@ export default function ComprehensiveServicesShowcase2025V2() {
       </section>
     </div>
   )
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
