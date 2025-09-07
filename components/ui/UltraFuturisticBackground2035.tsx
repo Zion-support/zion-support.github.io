@@ -1,10 +1,6 @@
   enableNeonEffects = true,;
   enableSpaceTime = true;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -27,7 +23,6 @@ interface UltraFuturisticBackground2035Props {
 const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props /> = ({
   intensity;
 
-<<<<<<< HEAD
   const getColorScheme = () => {;
     switch (colorScheme) {;
       case 'quantum-fusion':;
@@ -79,7 +74,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           primary: '#00ffff','
           secondary: '#ff00ff','
           accent: '#ffff00',
-<<<<<<< HEAD
+
           background: 'rgba(0, 0, 0, 0.95)',
 glow: 'rgba(0, 255, 255, 0.3)',
         };
@@ -130,9 +125,6 @@ canvas.height = window.innerHeight;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
     resizeCanvas();
-=======
-    resizeCanvas();'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles;
     const initParticles = () => {}
@@ -211,15 +203,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = colors.glow;
           ctx.fill();
-<<<<<<< HEAD
 ctx.shadowBlur = 0;
 origin/cursor/automate-test-improve-and-merge-code-2533
         } else {
           // Normal particle
-=======
-        } else {}
-          // Normal particle;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = particle.color;
@@ -227,7 +214,6 @@ ctx.fill();
 origin/cursor/automate-test-improve-and-merge-code-2533
         }
       });
-<<<<<<< HEAD
       // Draw holographic grid
       if (enableHolographic) {
 drawHolographicGrid(ctx, colors);
@@ -247,10 +233,6 @@ drawSpaceTimeEffects(ctx, colors);
     };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      // Draw holographic grid;
-      if (enableHolographic) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     animate();
     return () => {'
       window.removeEventListener('resize', resizeCanvas);
@@ -292,12 +274,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.lineTo(x, ctx.canvas.height);
       ctx.stroke();
     }
-<<<<<<< HEAD
 
     for (let y = 0; y < ctx.canvas.height; y += gridSize) {
-=======
-    for (let y = 0, y < ctx.canvas.height, y += gridSize) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       ctx.beginPath();
       ctx.moveTo(0, y);
       ctx.lineTo(ctx.canvas.width, y);
@@ -319,16 +297,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {}
     const time = Date.now() * 0.001;
-<<<<<<< HEAD
     // Neon orbs
     for (let i = 0, i < 3, i++) {
 // Neon orbs
     for (let i = 0; i < 3; i++) {
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    // Neon orbs;
-    for (let i = 0, i < 3, i++) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
       const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
       const size = 30 + Math.sin(time + i) * 10;
@@ -354,7 +327,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const x = centerX + Math && Math.cos(angle) * radius;
       const y = centerY + Math && Math.sin(angle) * radius;
       const alpha = 1 - i / 20;      const alpha = 1 - (i / 20);
-<<<<<<< HEAD
 ctx.fill();
     }
   }
@@ -392,9 +364,6 @@ ctx.fill();
       />
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Additional overlay effects */}
-=======
-      {/* Additional overlay effects */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className='absolute inset-0 pointer-events-none'>;
         {/* Quantum energy field */}
         <motion&& motion.div'
@@ -452,32 +421,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               }}
 
-
-<<<<<<< HEAD
               transition={{
                 duration: 3,
                 delay: i * 0.1,
                 repeat: Infinity,
 ease: 'easeInOut',
-=======
-              transition={{}
-                duration: 3;
-                delay: i * 0.1;
-                repeat: Infinity'"
-                ease: 'easeInOut',              }}                ease: "easeInOut"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               }}
-
-
-
-
 
               transition={{}
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
-
-
 
             />
 
@@ -507,7 +461,6 @@ export default UltraFuturisticBackground2035;  )
 export default UltraFuturisticBackground2035;
 
 export default UltraFuturisticBackground2035;
-<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -516,8 +469,4 @@ export default UltraFuturisticBackground2035;
 
 export default UltraFuturisticBackground2035;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'AI Data Analytics | Zion Tech Group',
   description: 'Advanced AI data analytics solutions for business intelligence.',
@@ -37,21 +36,6 @@ export default function ServicePage() {
             <p className="text-gray-300">
               Round-the-clock support to ensure your ai-data-analytics solutions run smoothly.
             </p>
-=======
-<<<<<<< HEAD
-import Link from 'next/link';
-
-export const metadata = {
-  title: 'AI Data Analytics | Zion Tech Group',
-  description:
-    'Advanced AI-powered data analytics platform with predictive modeling, real-time insights, and automated reporting.',
-=======
-import React from 'react';
-
-export const metadata = {
-  title: 'AI Data Analytics Platform | Zion Tech Group',
-  description: 'Advanced AI-powered data analytics with predictive modeling, real-time insights, and automated reporting. Transform raw data into actionable business intelligence.',
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function AIDataAnalyticsPage() {
@@ -62,7 +46,6 @@ export default function AIDataAnalyticsPage() {
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
           AI Data Analytics Platform
         </h1>
-<<<<<<< HEAD
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
           Transform your data into actionable insights with our AI-powered
           analytics platform. Get predictive modeling, real-time dashboards, and
@@ -158,7 +141,7 @@ export default function AIDataAnalyticsPage() {
               ]}
               popular={false}
             />
->>>>>>> origin/main
+
           </div>
         </div>
       </div>
@@ -208,11 +191,6 @@ export default function AIDataAnalyticsPage() {
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
           Join 800+ businesses using our AI Data Analytics platform to make
           smarter, data-driven decisions.
-=======
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your data into actionable insights with AI-powered analytics, predictive modeling, 
-          and automated reporting. Make data-driven decisions with confidence and speed.
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -495,7 +473,6 @@ export default function AIDataAnalyticsPage() {
 
 function FeatureCard({ icon, title, description, features }: { icon: string; title: string; description: string; features: string[] }) {
   return (
-<<<<<<< HEAD
     <div className="flex items-start space-x-4">
       <div className="text-3xl">{icon}</div>
       <div>
@@ -533,11 +510,6 @@ function PricingCard({
         </div>
       )}
       <h3 className="text-xl font-bold text-gray-900 mb-2">{name}</h3>
-=======
-    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <p className="text-gray-600 mb-4">{description}</p>
       <ul className="space-y-2">
         {features.map((feature, index) => (

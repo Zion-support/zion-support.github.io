@@ -1,38 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Head from 'next/head';
-import Link from 'next/link';
 
-export default function FAQ() {
-  const contact = {
-=======
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
 
-const Page = () => {
-  return (
-    <MainLayout
-      title="FAQ - Zion Tech Group"
-      description="Frequently asked questions about Zion Tech Group services"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">FAQ</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-=======
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function FAQ() {
   const contact = {
     phone: "+1 302 464 0950"
@@ -96,15 +63,11 @@ import Link from 'next/link'
 export default function FAQ() {
   const contact = {
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   };
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function FAQ() {}
   const contact = {}
@@ -220,18 +183,8 @@ export default function FAQ() {}
     {"
       question: "Do you work with small businesses?","
       answer: "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
   ];
-=======
-      } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ]
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>;
@@ -244,7 +197,6 @@ export default function FAQ() {}
         <meta"
           name="keywords""
           content="FAQ, frequently asked questions, zion tech group, micro SaaS, AI services, IT solutions"
-<<<<<<< HEAD
         />
         <link rel="canonical" href={`${contact.site}/faq`} />
       </Head>
@@ -262,60 +214,6 @@ export default function FAQ() {}
               Find answers to the most common questions about our services,
               pricing, implementation, and support. Can't find what
               you're looking for? Contact us directly.
-=======
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ]
-              Find answers to the most common questions about our services, pricing,
-              implementation, and support. Can't find what you're looking for? Contact us directly.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-        />;"
-        <link rel="canonical" href={`${contact && contact.site}/faq`} />;
-      </Head>;"
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">;
-        {/* Hero Section */}"
-        <section className="py-20 px-4 text-center">;"
-          <div className="max-w-4xl mx-auto">;"
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">;
-              Frequently Asked Questions;
-            </h1>;"
-            <p className="text-xl text-slate-300 mb-8">;
-              Get Answers to Common Questions;
-            </p>;"
-            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">;
-              Find answers to the most common questions about our services,;
-              pricing, implementation, and support. Can&apos;t find what;
-              you&apos;re looking for? Contact us directly.;
-            </p>;
-          </div>;
-        </section>;
-
-
-        {/* FAQ Section */}"
-        <section className="py-16 px-4">;"
-          <div className="max-w-4xl mx-auto">;"
-            <div className="space-y-8">;
-              {faqs && faqs.map((faq, index) => (;
-                <div;
-                  key={index}"
-                  className="p-8 bg-slate-900/60 rounded-xl border border-white/10">;"
-                  <h3 className="text-xl font-bold mb-4 text-blue-400">;
-                    {faq && faq.question}
-                  </h3>;"
-                  <p className="text-slate-300 leading-relaxed">{faq && faq.answer}</p>;
-                </div>;
-              ))}
-
-
-
-              Find answers to the most common questions about our services, pricing,'
-              implementation, and support. Can't find what you're looking for? Contact us directly.
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </div>
         </section>"
@@ -335,31 +233,10 @@ export default function FAQ() {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
         {/* Contact CTA */}
-=======
-        {/* Contact CTA */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
-=======
-        {/* Contact CTA */  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-"
-        <section className="py-16 px-4 bg-slate-900/40">"
-          <div className="max-w-4xl mx-auto text-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               Still Have Questions?
             </h2>"
@@ -369,8 +246,6 @@ export default function FAQ() {}
               business.
             </p>"
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
               <a
                 href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
@@ -389,47 +264,13 @@ export default function FAQ() {}
               >
                 Contact Form
               </Link>
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/Layout';
-export default function FAQPage() {
-    >
-      <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Frequently Asked Questions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Find answers to common questions about our services
-              </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </main>
     </>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-      </div>
-    </Layout>
-
-  );
-}
-}
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 '
 import React from 'react';'
@@ -452,10 +293,6 @@ export default function FAQPage() {}
         </section>
       </div>
     </Layout>
-
-
-
-
 
   );
 }
@@ -513,4 +350,4 @@ const Page = () => {}
 export default Page;
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

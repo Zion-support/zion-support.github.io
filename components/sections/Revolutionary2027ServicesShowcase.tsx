@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   ArrowRight;
   Brain;
   Zap;
@@ -183,7 +182,7 @@ const Revolutionary2027ServicesShowcase = () => {}
     { name: 'Space Technology', count: '15+', icon: Satellite, color: 'from-blue-500 to-cyan-600' }'
     { name: 'Biotechnology', count: '20+', icon: TestTube, color: 'from-green-500 to-emerald-600' }'
     { name: 'Emerging Tech', count: '30+', icon: Sparkles, color: 'from-pink-500 to-rose-600' }
-<<<<<<< HEAD
+
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network  } from 'lucide-react';
@@ -202,14 +201,6 @@ staggerChildren: 0.1,
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
-=======
-  const containerVariants = {}
-    hidden: { opacity: 0 }
-    visible: {}
-      opacity: 1;
-      transition: {}
-  const itemVariants = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     hidden: { opacity: 0, y: 20 }
     visible: {}
       opacity: 1;
@@ -236,7 +227,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0 && 0.1),transparent_50%)]"></div>;
 "
       <div className="max-w-7xl mx-auto relative z-10">;
-<<<<<<< HEAD
         <motion&& motion.div
         duration: 0.6,
 ease: 'easeOut' as const,
@@ -255,45 +245,23 @@ ease: 'easeOut' as const,
         {/* Section Header */}
         <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        <motion&& motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
 
-<<<<<<< HEAD
 className='text-center mb-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
-=======
-        >'
-          <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
               2027 Revolutionary Services;
             </span>
           </h2>'
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
-<<<<<<< HEAD
             Experience the future of technology with our cutting-edge AI
             quantum computing, and emerging technology services. Transform your
             business with solutions that were once science fiction.
-=======
-            Experience the future of technology with our cutting-edge AI;
-            quantum computing, and emerging technology services. Transform your;
-            business with solutions that were once science fiction.          </p>        >"
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">"
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              2027 Revolutionary Services;
-            </span>
-          </h2>"
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the future of technology with our cutting-edge AI, quantum computing, and emerging technology services.
-            Transform your business with solutions that were once science fiction.
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </p>
         </motion.div>'
           className='text-center mb-20'>;'
@@ -318,15 +286,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion && motion.div>;
 
         {/* Category Overview */}
-<<<<<<< HEAD
         <motion&& motion.div
           variants={containerVariants}
 initial='hidden'
-=======
-        <motion&& motion.div;
-          variants={containerVariants}'
-          initial='hidden''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           whileInView='visible'
           viewport={{ once: true }}'"
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'>          initial="hidden";"
@@ -703,7 +665,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div key={idx} className="flex items-center space-x-2">;"
                         <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>;"
                         <span className="text-sm text-gray-400">{feature}</span>;
-<<<<<<< HEAD
 className='group relative'
             >
               <div className='relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20'>
@@ -734,10 +695,6 @@ className='group relative'
 origin/cursor/automate-test-improve-and-merge-code-2533
                   {/* Market Info */}
 <div className='pt-4 border-t border-gray-700/50'>
-=======
-                  {/* Market Info */}'
-                  <div className='pt-4 border-t border-gray-700/50'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className='flex justify-between items-center text-sm text-gray-400'>
                       <span>Market: {service.marketSize}</span>'
                       <span className='text-green-400'>
@@ -844,15 +801,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
-=======
-        >'
-          <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
             </h3>'
@@ -998,8 +950,6 @@ export default Revolutionary2027ServicesShowcase;
 
 };
 
-
-<<<<<<< HEAD
                 className='inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl'
               >
                 <span>Call +1 302 464 0950</span>
@@ -1014,8 +964,4 @@ export default Revolutionary2027ServicesShowcase;
 
 export default Revolutionary2027ServicesShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

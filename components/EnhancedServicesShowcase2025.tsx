@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { FaRocket;
-=======
-  FaRocket;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   FaBrain;
   FaCloud;
   FaShieldAlt;
@@ -17,7 +13,6 @@ import { FaRocket;
   FaDatabase;
   FaNetworkWired;
   FaRobot;
-<<<<<<< HEAD
   FaSearch
  } from 'react-icons/fa';
 import { SiNextdotjs;
@@ -33,7 +28,6 @@ import { SiNextdotjs;
   SiGooglecloud;
   SiMicrosoftazure
  } from 'react-icons/si';
-<<<<<<< HEAD
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
   FaRocket
@@ -48,83 +42,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   FaDatabase
   FaNetworkWired
   FaRobot
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  FaSearch;
-import {};
-  SiNextdotjs;
-  SiReact;
-  SiTypescript;
-  SiTailwindcss;
-  SiPrisma;
-  SiSupabase;
-  SiVercel;
-  SiDocker;
-  SiKubernetes;
-  SiAws;
-  SiGooglecloud;
-  SiMicrosoftazure;
-
-} from 'react-icons/si';
-
-interface Service {;'
-} from 'react-icons/si';
-
-interface Service {;
-  FaRocket,
-  FaBrain,
-  FaCloud,
-  FaShieldAlt,
-  FaChartLine,
-  FaCogs,
-  FaLightbulb,
-  FaGlobe,
-  FaMobile,
-  FaDatabase,
-  FaNetworkWired,
-  FaRobot,
-  FaSearch,
-import {}
-  SiNextdotjs,
-  SiReact,
-  SiTypescript,
-  SiTailwindcss,
-  SiPrisma,
-  SiSupabase,
-  SiVercel,
-  SiDocker,
-  SiKubernetes,
-  SiAws,
-;
-  SiGooglecloud,;
-  SiMicrosoftazure,;
-'
-} from 'react-icons/si';
-
-
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface Service {
-=======
-interface Service {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   title: string;
   description: string;
     starter: number;
     professional: number;
-<<<<<<< HEAD
 
     enterprise: number;
   }
   technologies: string[];
   benefits: string[];
 
-
-<<<<<<< HEAD
   color: string;  id: string
   name: string
   description: string
@@ -135,46 +64,23 @@ interface Service {}
   technologies: string[];
   benefits: string[]
 }
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface ServiceCategory {
   id: string;
   name: string;
   description: string;
   icon: React.ReactNode;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   color: string
-=======
-  color: string;  id: string;
-  name: string;
-  description: string;
-  icon: React.ReactNode;
-  color: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
   color: string;  id: string,
   name: string,
   description: string,
   icon: React.ReactNode,
-=======
-
-}
-
-  color: string;  id: string;,
-  name: string;,
-  description: string;,
-  icon: React.ReactNode;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   color: string;
 }
 
-
-<<<<<<< HEAD
 const serviceCategories: ServiceCategory[] = []
   {}
 '
@@ -260,19 +166,11 @@ const serviceCategories: ServiceCategory[] = []
     icon: <FaRobot className='w-8 h-8' />'
     color: 'from-yellow-500 to-orange-500'"
   },    icon: <FaRobot className="w-8 h-8" />
-<<<<<<< HEAD
-=======
-const serviceCategories: ServiceCategory[] = [
-  {
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     id: 'ai-ml';
     name: 'AI & Machine Learning';
     description: 'Cutting-edge artificial intelligence and machine learning solutions';
     icon: <FaBrain className;
 export default EnhancedServicesShowcase2025;
-<<<<<<< HEAD
 ];
 const services: Service[] = [
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -288,18 +186,6 @@ description:
   {
     id: 'security',
     name: 'Cybersecurity',
-=======
-  {'
-    id: 'ai-automation-suite''
-    title: 'AI-Powered Automation Suite'
-    description:'
-      'Comprehensive automation platform leveraging artificial intelligence for business process optimization''
-    icon: <FaRobot className='w-6 h-6' />
-    features: []
-  {'
-    id: 'security','
-    name: 'Cybersecurity','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Advanced security solutions for modern threats',
   {'
     id: 'data','
@@ -330,7 +216,6 @@ description:
       enterprise: 1999;
     },
 
-<<<<<<< HEAD
     technologies: [;
       'Intelligent workflow automation'
       'Natural language processing'
@@ -475,13 +360,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Apache Spark',
       'Snowflake',
       'Databricks',
-=======
-    technologies: [;'
-      'Apache Kafka','
-      'Apache Spark','
-      'Snowflake','
-      'Databricks','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Airflow',
     ],'
       'Improved data quality','
@@ -493,7 +371,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description: 'Modern cloud - native development and deployment platform','
     icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs';
     ];
-<<<<<<< HEAD
     benefits: [
       'Unified data view',
       'Real-time insights',
@@ -505,11 +382,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
-=======
-  {'
-    id: 'cloud-native-platform','
-    title: 'Cloud-Native Development Platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Modern cloud-native development and deployment platform',
   }
   {}
@@ -757,7 +629,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {'
   const [selectedService, setSelectedService] = useState<Service | null>(null);'
   const [searchTerm, setSearchTerm] = useState('');'
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
-<<<<<<< HEAD
   const filteredServices = useMemo(() => {
     let filtered = services;
     if (selectedCategory !== 'all') {
@@ -778,11 +649,6 @@ if (selectedCategory !== 'all') {
           )
       );
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  const filteredServices = useMemo(() => {}
-    let filtered = services;'
-    if (selectedCategory !== 'all') {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     return filtered.sort((a, b) => {}
       switch (sortBy) {'
@@ -790,7 +656,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           return a.pricing.starter - b.pricing.starter;'
         case 'category':
           return a.category.localeCompare(b.category);
-<<<<<<< HEAD
 default:
           return a.title.localeCompare(b.title);
       }
@@ -798,9 +663,6 @@ default:
   }, [selectedCategory, searchTerm, sortBy]);
 origin/cursor/automate-test-improve-and-merge-code-2533
   const handleServiceSelect = (service: Service) => {
-=======
-  const handleServiceSelect = (service: Service) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setSelectedService(service);
   }
   const closeModal = () => {}
@@ -819,14 +681,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">;
       {/* Header */}"
       <div className="container mx-auto px-4 py-16">;
-<<<<<<< HEAD
         <motion&& motion.div
       <div className='container mx-auto px-4 py-16'>
         <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        <motion&& motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
   return ("
@@ -871,16 +729,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
 
-<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.2 }}
 className='mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
-=======
-        >'
-          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className='relative flex-1 max-w-md'>
               <input'
                 type='text''
@@ -978,7 +831,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.4 }}
 className='mb-12'
         >
@@ -986,13 +838,6 @@ className='mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
             <button
 
-
-
-
-=======
-            <button;
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;'
                 selectedCategory === 'all';'
@@ -1000,7 +845,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';`
               }`}
 
-<<<<<<< HEAD
             >
               All Services
             </button>
@@ -1008,13 +852,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               <button
 
-
-
-
-
-=======
-              <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}`
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${}
@@ -1089,7 +926,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {tech}
                   </span>
                 ))}
-<<<<<<< HEAD
                     className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'
                   >
                     {tech}
@@ -1099,16 +935,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <span className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     +{service.technologies.length - 3} more
-=======
-                    +{service.technologies.length - 3} more;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </span>
                 )}
               </div>"
                   <span className="text-sm text-gray-400 font-normal">/month</span>
                 </div>"
                 <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-<<<<<<< HEAD
 <div className='flex items-center justify-between'>
                 <div className='text-2xl font-bold text-blue-400'>
                   ${service.pricing.starter}
@@ -1119,9 +951,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button className='px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Learn More
-=======
-                  Learn More;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </button>
               </div>
             </motion.div>
@@ -1151,7 +980,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </motion && motion.div>;
 
-
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div;
@@ -1175,17 +1003,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion&& motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-<<<<<<< HEAD
             exit={{ opacity: 0 }}
 className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'
             onClick={closeModal}
-=======
-            exit={{ opacity: 0 }}'"
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={closeModal}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}
-
 
           >
             <motion.div;
@@ -1195,9 +1016,6 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
 className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
 origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={e => e.stopPropagation()}
-
-
-
 
             >'
               <div className='flex items-start justify-between mb-6'>'
@@ -1215,23 +1033,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           c => c.id === selectedService.category;
                         )?.name;
                       }
-<<<<<<< HEAD
                     </p>
-=======
-                    </p>                  </div>
-                </div>
-                <button;
-                  onClick={closeModal}'
-                  className='p-2 hover:bg-white/10 rounded-lg transition-colors'            >"
-              <div className="flex items-start justify-between mb-6">"
-                <div className="flex items-center gap-4">"
-                  <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
-                    {selectedService.icon}
-                  </div>
-                  <div>"
-                    <h2 className="text-3xl font-bold text-white mb-2">{selectedService.title}</h2>"
-                    <p className="text-gray-400">{serviceCategories.find(c => c.id === selectedService.category)?.name}</p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
                 <button;
@@ -1303,13 +1105,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </li>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
-<<<<<<< HEAD
               {/* Technologies */}
 <div className='mt-8'>
-=======
-              {/* Technologies */}'
-              <div className='mt-8'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <h3 className='text-xl font-bold text-white mb-4'>
                   Technologies;
                 </h3>'
@@ -1338,12 +1135,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
 
-
-
-
-
               {/* Pricing */}
-
 
 <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -1697,8 +1489,6 @@ export default EnhancedServicesShowcase2025;
 
 };
 
-
-<<<<<<< HEAD
       </AnimatePresence>
     </div>
 );
@@ -1706,9 +1496,3 @@ export default EnhancedServicesShowcase2025;
 
 export default EnhancedServicesShowcase2025;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

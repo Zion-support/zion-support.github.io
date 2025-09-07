@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 
   Menu;
@@ -82,26 +81,17 @@ const contactInfo = {'
   address: '364 E Main St STE 1008 Middletown DE 19709''
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
-<<<<<<< HEAD
 import { Menu, X, Zap, Sparkles, ChevronDown, ChevronRight;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Brain, Atom, Globe, Shield, Cpu, Database;
   Cloud, Smartphone, Palette, Search, MessageSquare;
   FileText, Calendar, CreditCard, BarChart3, Settings;
   Rocket, Star, TrendingUp, Users, Target, Award;
-<<<<<<< HEAD
   Phone, Mail, MapPin, ExternalLink, Building
  } from 'lucide-react';
 const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 const serviceCategories = [
   {
-=======
-const serviceCategories = []
-  {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     title: '🚀 2028 Cutting-Edge Innovations'
     icon: Rocket'
     color: 'from-violet-600 to-purple-600''
@@ -122,7 +112,6 @@ const companyLinks = ['
     href: '/ultimate-2028-services-showcase'
     icon: Rocket;
   }
-<<<<<<< HEAD
 {
         name: 'AI Consciousness Evolution',
         href: '/ai-consciousness-evolution-platform',
@@ -321,14 +310,9 @@ const companyLinks = [
 origin/cursor/automate-test-improve-and-merge-code-2533
   {
     name: '⭐ Ultimate 2028'
-=======
-  {'
-    name: '⭐ Ultimate 2028''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     href: '/ultimate-2028-services-showcase'
     icon: Star;
   }
-<<<<<<< HEAD
   {
     name: '💰 2028 Pricing',
     href: '/revolutionary-2028-pricing',
@@ -340,21 +324,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   { name: '🔧 Solutions', href: '/solutions', icon: Layers },
   { name: '💼 Careers', href: '/careers', icon: Users },
 { name: '📞 Contact', href: '/contact', icon: MessageCircle },
-=======
-  {'
-    name: '💰 2028 Pricing''
-    href: '/revolutionary-2028-pricing'
-    icon: DollarSign'
-  },  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },  { name: '🚀 2028 Services', href: '/ultimate-2028-services-showcase', icon: Rocket }'
-  { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star }'
-  { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign }'
-  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase }'
-  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen }'
-  { name: '📈 Reports', href: '/reports', icon: TrendingUp }'
-  { name: '🔧 Solutions', href: '/solutions', icon: Layers }'
-  { name: '💼 Careers', href: '/careers', icon: Users }'
-  { name: '📞 Contact', href: '/contact', icon: MessageCircle },];  { name: '📞 Contact', href: '/contact', icon: MessageCircle }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ];
 
 const _serviceCategories = ['
@@ -408,7 +377,6 @@ const _serviceCategories = ['
   { name: '📈 Reports', href: '/reports', icon: TrendingUp },'
   { name: '🔧 Solutions', href: '/solutions', icon: Layers },'
   { name: '💼 Careers', href: '/careers', icon: Users },
-<<<<<<< HEAD
 const technologyLinks = [
   { name: '🤖 AI Services', href: '/ai-services', icon: Brain },
   { name: '⚛️ Quantum Services', href: '/quantum-services', icon: Atom },
@@ -426,11 +394,6 @@ export default function UltraFuturisticNavigation2027() {;
   useEffect(() => {
 setIsClient(true);
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export default function UltraFuturisticNavigation2027() {};
-export default function UltraFuturisticNavigation2027() { return null; }
-  useEffect(() => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }, []);
   useEffect(() => {}
     if (!isClient) return;
@@ -1235,7 +1198,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           description: 'Scalable cloud infrastructure','
           price: 'Custom',
 
-
   ];
 
   const contactInfo = {'
@@ -1263,7 +1225,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> }
   ];
   return (
-<<<<<<< HEAD
               whileHover={{ rotate: 5, scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -1276,9 +1237,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='text-xs text-gray-400 group-hover:text-cyan-300 transition-colors'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Revolutionary Technology Solutions
-=======
-                Revolutionary Technology Solutions;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
           </Link>
@@ -1298,10 +1256,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0 && 0.95 }}
                 >;
-<<<<<<< HEAD
                   <div
-
-
 
           {/* Desktop Navigation */}
 <nav className='hidden xl:flex items-center space-x-1'>
@@ -1324,9 +1279,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.button>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
-                  <div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {/* Dropdown Menu */}
                 <AnimatePresence>;
                   {activeDropdown === item && item.name && (;
@@ -1334,18 +1286,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
 
-
-<<<<<<< HEAD
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
 className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
 origin/cursor/automate-test-improve-and-merge-code-2533
                     >
                       <div className='p-4'>
-=======
-                    >'
-                      <div className='p-4'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <div className='flex items-center space-x-3 mb-4'>
                           <div;
           {/* Desktop Navigation */}'
@@ -1477,13 +1423,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Right Side */}'
           <div className='flex items-center space-x-4'>
 
-<<<<<<< HEAD
 <div className='flex items-center space-x-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Contact Info */}
-=======
-            {/* Contact Info */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className='hidden lg:flex items-center space-x-4 text-sm'>
               <a;`
                 href={`tel:${contactInfo && contactInfo.mobile}`}"
@@ -1506,26 +1448,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >`
                 href={`mailto:${contactInfo.email}`}'
                 className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'
-<<<<<<< HEAD
               >
                 <Mail className='w-4 h-4' />
-=======
-              >'
-                <Mail className='w-4 h-4' />                <span>{contactInfo.email}</span>            {/* Contact Info */}"
-            <div className="hidden lg:flex items-center space-x-4 text-sm">
-              <a;`
-                href={`tel:${contactInfo.mobile}`}"
-                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
-              >"
-                <Phone className="w-4 h-4" />
-                <span>{contactInfo.mobile}</span>
-              </a>
-              <a;`
-                href={`mailto:${contactInfo.email}`}"
-                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
-              >"
-                <Mail className="w-4 h-4" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <span>{contactInfo.email}</span>
               </a>
             </div>
@@ -1539,9 +1463,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>;
             </motion && motion.div>;
 
-
-
-
 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href='/contact'
@@ -1553,15 +1474,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Mobile Menu Button */}
-<<<<<<< HEAD
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
 className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors'
-=======
-            <button;
-              onClick={() => setIsMenuOpen(!isMenuOpen)}'
-              className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             >
               {isMenuOpen ? ('
                 <X className='w-6 h-6' />
@@ -1620,9 +1535,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
                 <div className='space-y-6'>
 
-
-
-<<<<<<< HEAD
                           </div>
                           <div>
                             <div className='font-medium text-white'>
@@ -1641,9 +1553,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='space-y-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                   <div>
-=======
-                  <div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <h3 className='text-lg font-semibold text-white mb-4'>
                       Quick Links;
                     </h3>'
@@ -1679,7 +1588,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
                         >;
                           {link.icon}
-<<<<<<< HEAD
                           <span className='text-white'>{link.name}</span>
                         </Link>
                       ))}
@@ -1695,12 +1603,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         href={`tel:${contactInfo && contactInfo.mobile}`}
                         className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'>;
                         <Phone className='w-4 h-4 text-cyan-400' />;
-=======
-                      <a;`
-                        href={`tel:${contactInfo && contactInfo.mobile}`}'
-                        className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'>;'
-                        <Phone className='w-4 h-4 text-cyan-400' />;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <span className='text-white'>{contactInfo && contactInfo.mobile}</span>;
                       </a>;
                       <a"
@@ -1750,7 +1652,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   `p - 2 rounded - lg bg - gradient - to - br $ {}
   item.color;`
 }shadow - lg`;
-<<<<<<< HEAD
               {/* Mobile CTA */}
 <div className='mt-6 pt-6 border-t border-gray-700/50'>
                 <Link
@@ -1775,9 +1676,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }shadow-lg`
 origin/cursor/automate-test-improve-and-merge-code-2533
 }> {
-=======
-}> {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   item.icon;
 }</div> </motion.button> {}
   /* Dropdown Menu */;
@@ -1813,7 +1711,6 @@ export default UltraFuturisticNavigation2027;
 export default UltraFuturisticNavigation2027;
 export default UltraFuturisticNavigation2027;
 ;
-<<<<<<< HEAD
   item.icon 
 }</div> <div> </div> </a> </div>) ) 
 }</div> </div>) ) 
@@ -1822,9 +1719,3 @@ export default UltraFuturisticNavigation2027;
 };
 export default UltraFuturisticNavigation2027;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

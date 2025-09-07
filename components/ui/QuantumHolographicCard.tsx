@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 
 import { motion  } from 'framer-motion';
 
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -22,17 +15,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Check
   Users
   Clock
-=======
-  Star;
-  Zap;
-  Shield;
-  TrendingUp;
-  ArrowRight;
-  ExternalLink;
-  Check;
-  Users;
-  Clock;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   DollarSign;
   Star,
   Zap,
@@ -47,11 +29,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 } from 'lucide-react';
 interface QuantumHolographicCardProps {}
   service: {}
-=======
-
-interface QuantumHolographicCardProps {
-  service: {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Star,;
   Zap,;
@@ -95,7 +72,6 @@ interface QuantumHolographicCardProps  {service: {id: string;
       email: string;
       address: string;
 
-<<<<<<< HEAD
       website: string;
     }
       opacity: 1,
@@ -116,20 +92,15 @@ interface QuantumHolographicCardProps  {service: {id: string;
 ;
   const glow_variants = {}
     initial: { opacity: 0.5, scale: 1 },
-<<<<<<< HEAD
     animate: {
       website: string
     },
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     realImplementation: boolean;
 
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
-<<<<<<< HEAD
     reviews: number
   },
   className?: string
@@ -138,10 +109,6 @@ interface QuantumHolographicCardProps  {service: {id: string;
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className;
 origin/cursor/automate-test-improve-and-merge-code-2533
   const featureVariants = {
-=======
-    animate: {}
-  const featureVariants = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     hidden: { opacity: 0, x: -20 }
     visible: (i: number) => ({}
       opacity: 1;
@@ -274,7 +241,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
             )}
           </div>
-
 
             )}
           </div>
@@ -536,8 +502,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
 
-
-
           {/* ROI and competitors */}
 
               </div>
@@ -548,9 +512,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.a;
             href={service.link}'
             className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
-
-
-
 
 className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -610,7 +571,6 @@ export default QuantumHolographicCard);
 ;
 export default QuantumHolographicCard;
 ;
-<<<<<<< HEAD
               href={service.link}
               className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300'
             >
@@ -626,10 +586,3 @@ export default QuantumHolographicCard;
 
 export default QuantumHolographicCard;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

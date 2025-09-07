@@ -1,42 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import React from 'react';
-
-import { motion  } from 'framer-motion';
-import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
-import SEO from '../components/SEO';
-const QuantumAINeuralNetworkPlatform: React.FC;
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  Atom
-  Brain
-  Zap
-  Shield
-  Users
-  Target
-  ArrowRight
-  Check
-  Star
-  Globe
-  Cpu
-=======
-  Atom;
-  Brain;
-  Zap;
-  Shield;
-  Users;
-  Target;
-  ArrowRight;
-  Check;
-  Star;
-  Globe;
-  Cpu;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Network;
   Atom,
   Brain,
@@ -51,7 +13,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Cpu,;
   Network,;
 } from 'lucide-react';
-
 
 const QuantumAINeuralNetworkPlatform: React.FC = () => {}
   const features = ['
@@ -205,14 +166,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section className='py-20 bg-gray-900/50'>'"
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gray-900/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
 <section className='py-20 bg-gray-900/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-=======
-          <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
   Atom,
@@ -343,13 +300,9 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {}
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-=======
-          >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
               Quantum-Powered Features;
             </h2>'
@@ -399,9 +352,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </motion && motion.div>;
 
-
-<<<<<<< HEAD
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <motion.div
@@ -414,10 +364,6 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-=======
-              >"
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Check className="w-6 h-6 text-white" />
                 </div>"
                 <h3 className="text-lg font-semibold mb-2">{feature}</h3>
@@ -462,7 +408,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
 
-
               >"
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">"
                   <Check className="w-6 h-6 text-white" />
@@ -475,18 +420,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits Section */}
 <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
-=======
-      {/* Benefits Section */}'
-      <section className='py-20'>'"
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -523,7 +460,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
 
-<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: index * 0.1 }}
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -532,17 +468,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Star className='w-8 h-8 text-white' />
                 </div>
                 <h3 className='text-xl font-semibold mb-2'>{benefit}</h3>
-=======
-              >'
-                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>'
-                  <Star className='w-8 h-8 text-white' />
-                </div>'
-                <h3 className='text-xl font-semibold mb-2'>{benefit}</h3>              </motion.div>              >"
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <Star className="w-8 h-8 text-white" />
-                </div>"
-                <h3 className="text-xl font-semibold mb-2">{benefit}</h3>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </motion.div>
 
             ))}
@@ -554,42 +479,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 
-
       {/* Pricing Section */}'
       <section className='py-20 bg-gray-900/50'>;'"
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gray-900/50">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-<<<<<<< HEAD
           <motion&& motion.div
       {/* Pricing Section */}
 <section className='py-20 bg-gray-900/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 
-=======
-          <motion&& motion.div;
-      {/* Pricing Section */}'
-      <section className='py-20 bg-gray-900/50'>'"
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gray-900/50">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}'
             className='text-center mb-16'
 
-
-
-
-<<<<<<< HEAD
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-=======
-          >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
               Pricing Plans;
             </h2>'
@@ -709,11 +617,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
 
-
       {/* CTA Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<<<<<<< HEAD
                 className={`bg-gray-800/50 border rounded-xl p-8 ${
 plan === 'professional'
                     ? 'border-blue-500/50 bg-blue-900/20'
@@ -740,12 +646,6 @@ plan === 'professional'
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
-
-
-
-=======
-          <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -785,7 +685,6 @@ export default QuantumAINeuralNetworkPlatform;
 export default QuantumAINeuralNetworkPlatform;
 
 };
-
 
       {/* CTA Section */}'
       <section className='py-20'>;'"
@@ -897,15 +796,8 @@ export default QuantumAINeuralNetworkPlatform);
 ;
 export default QuantumAINeuralNetworkPlatform;
 ;
-<<<<<<< HEAD
 );
 };
 
 export default QuantumAINeuralNetworkPlatform;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

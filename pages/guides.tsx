@@ -1,72 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-
-const Page = () => {
-  return (
-    <MainLayout
-      title="Guides - Zion Tech Group"
-      description="Helpful guides and tutorials from Zion Tech Group"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Guides</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
@@ -179,22 +117,7 @@ const categories = [;
   { name: "Database", count: 1, icon: Database },;
   { name: "Performance", count: 1, icon: Zap },;
 ];
-=======
-<<<<<<< HEAD
-=======
-=======
 
-
-import React from "react";"
-import Head from "next/head";"
-import Link from "next/link";"
-import { motion } from "framer-motion";"
-import Layout from "./components/Layout";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-<<<<<<< HEAD
   return (
     <Layout>;
       <Head>;
@@ -243,7 +166,6 @@ import Layout from "./components/Layout";
           </div>;
         </section>;
 
-
         {/* Categories Section */}
         <section id="categories" className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -284,7 +206,6 @@ import Layout from "./components/Layout";
             </div>;
           </div>;
         </section>;
-
 
         {/* Guides Grid */}
         <section id="guides" className="py-16 bg-gray-50">;
@@ -336,7 +257,7 @@ import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
 import {
-<<<<<<< HEAD
+
 import React from 'react';
 import Head from 'next/head';
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -548,25 +469,7 @@ import {
   SleepyFace2
   YawningFace2
   DizzyFace2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
 
-import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-
-
-
-import {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   BookOpen,
   Clock,
   User,
@@ -765,14 +668,9 @@ import {
   YawningFace2,
 
   DizzyFace2,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 } from "lucide-react";
 const guides = []
   {}
@@ -1072,7 +970,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {}
                         }`}
                       >
                         {guide.difficulty}
-<<<<<<< HEAD
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -1083,34 +980,13 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {}
                           ))}
                         <span
                           key={tag}
-=======
-
-                            <Star;
-                              key={i}`
-                              className={`w-4 h-4 ${}
-                                i < Math.floor(guide.rating)`
-                              }`}"
-                              fill="currentColor"
-                            />;
-                          ))}
-
-                        <span;
-                          key={tag}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">;
                           {tag}
                         </span>;
                       ))}
-<<<<<<< HEAD
                       <Link
                         href="#"
                         className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center inline-flex items-center justify-center">;
-=======
-
-                      <Link"
-                        href="#""
-                        className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center inline-flex items-center justify-center">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <Play className="w-4 h-4 mr-2" />;
                         Start Guide;
                       </Link>;
@@ -1123,14 +999,8 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {}
                   </div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
-=======
-
-        {/* CTA Section */}"
-        <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">;
             <motion&& motion.div"
               className="text-center"
@@ -1152,7 +1022,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {}
                 </Link>;
                 <Link"
                   href="/contact"
-<<<<<<< HEAD
 import Layout from '../components/Layout';
 
 export default function GuidesPage() {
@@ -1165,51 +1034,19 @@ export default function GuidesPage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Guides
               </h1>
-=======
-
-export default function GuidesPage() {}
-    >"
-      <div className="min-h-screen bg-gray-50">"
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">"
-          <div className="container mx-auto px-4">"
-            <div className="text-center text-white">"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-                Guides;
-              </h1>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Comprehensive guides and tutorials for our services;
               </p>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       </div>
 
     </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   );
-=======
-<<<<<<< HEAD
-=======
 
-=======
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </div>
     </Layout>"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">;
@@ -1221,31 +1058,9 @@ export default function GuidesPage() {}
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-      </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
 
       </div>
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </Layout>;
   );
                       </span>;
@@ -1351,18 +1166,9 @@ export default function GuidesPage() {}
         </section>;
       </div>;
     </Layout>);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+}
+
 import MainLayout from '../src/components/layout/MainLayout';
 
 const Page = () => {}
@@ -1382,16 +1188,6 @@ const Page = () => {}
 };
 
 export default Page;
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

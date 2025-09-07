@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'AI Content Writer | Zion Tech Group',
   description: 'Professional AI content writer services for your business needs.',
@@ -43,24 +42,11 @@ export default function ServicePage() {
     </div>
   )
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Link from "next/link";
-
-<<<<<<< HEAD
-export const metadata = {
-  title: 'AI Content Writer | Zion Tech Group',
-  description: 'AI-powered content creation platform. Generate blog posts, social media content, and marketing copy with advanced AI.',
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
   title: "AI Content Writer | Zion Tech Group",
   description:
     "AI-powered content creation platform. Generate blog posts, social media content, and marketing copy with advanced AI.",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
 };
 
 export default function AIContentWriterPage() {
@@ -71,14 +57,8 @@ export default function AIContentWriterPage() {
           AI Content Writer
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
           AI-powered content creation platform that generates high-quality blog posts, social media content,
           and marketing copy. Save time while maintaining brand voice and SEO optimization.
-=======
-          AI-powered content creation platform that generates high-quality blog
-          posts, social media content, and marketing copy. Save time while
-          maintaining brand voice and SEO optimization.
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
       </div>
 
@@ -86,55 +66,31 @@ export default function AIContentWriterPage() {
         <FeatureCard
           title="Content Generation"
           details={[
-<<<<<<< HEAD
             'Blog posts & articles',
             'Social media content',
             'Email marketing copy',
             'Product descriptions',
             'SEO-optimized content',
-=======
-            "Blog posts & articles",
-            "Social media content",
-            "Email marketing copy",
-            "Product descriptions",
-            "SEO-optimized content",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="AI Features"
           details={[
-<<<<<<< HEAD
             'GPT-4 powered writing',
             'Brand voice training',
             'Tone adjustment',
             'Plagiarism detection',
             'Content optimization',
-=======
-            "GPT-4 powered writing",
-            "Brand voice training",
-            "Tone adjustment",
-            "Plagiarism detection",
-            "Content optimization",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Workflow & Collaboration"
           details={[
-<<<<<<< HEAD
             'Content calendar',
             'Team collaboration',
             'Approval workflows',
             'Version control',
             'Performance analytics',
-=======
-            "Content calendar",
-            "Team collaboration",
-            "Approval workflows",
-            "Version control",
-            "Performance analytics",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -146,13 +102,8 @@ export default function AIContentWriterPage() {
           Ready to Scale Your Content?
         </h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-<<<<<<< HEAD
           Start creating high-quality content at scale with our AI-powered platform.
           Perfect for marketing teams, agencies, and content creators.
-=======
-          Start creating high-quality content at scale with our AI-powered
-          platform. Perfect for marketing teams, agencies, and content creators.
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -196,7 +147,7 @@ export default function ServicePage() {
               View All Services
             </Link>
           </div>
-=======
+
 import Link from "next/link";
 
 export const metadata = {"
@@ -275,31 +226,12 @@ export default function AIContentWriterPage() {}
           >
             Email Us;
           </a>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-}
-
-function FeatureCard({ title, details }: { title: string; details: string[] }) {}
-  return ("
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">"
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>"
-      <ul className="space-y-2 text-gray-600">
-        {details.map((detail, index) => ("
-          <li key={index} className="flex items-center">"
-=======
-}
-=======
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
 
 function FeatureCard({ title, details }: { title: string; details: string[] }) {
   return (
@@ -308,7 +240,7 @@ function FeatureCard({ title, details }: { title: string; details: string[] }) {
       <ul className="space-y-2 text-gray-600">
         {details.map((detail, index) => (
           <li key={index} className="flex items-center">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             <span className="text-indigo-500 mr-2">•</span> {detail}
           </li>
         ))}
@@ -317,8 +249,6 @@ function FeatureCard({ title, details }: { title: string; details: string[] }) {
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 function PricingSection() {}
   return ("
     <div className="mb-12">"
@@ -345,38 +275,12 @@ function PricingSection() {}
             "Advanced templates & customization","
             "GPT-4 access","
             "Priority support","
-=======
-function PricingSection() {
-  return (
-    <div className="mb-12">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-        Pricing Plans
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <PricingPlan
-          name="Creator"
-          price="$19/mo"
-          features={[
-<<<<<<< HEAD
-            '50 AI-generated articles/month',
-            'Basic templates',
-            'Standard AI models',
-            'Email support',
-            'Basic analytics',
-=======
-            "50 AI-generated articles/month",
-            "Basic templates",
-            "Standard AI models",
-            "Email support",
-            "Basic analytics",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <PricingPlan
           name="Professional"
           price="$79/mo"
           features={[
-<<<<<<< HEAD
             '200 AI-generated articles/month',
             'Advanced templates & customization',
             'GPT-4 access',
@@ -385,17 +289,10 @@ function PricingSection() {
           ]}
           featured={true}
         />
-=======
-            "200 AI-generated articles/month",
-            "Advanced templates & customization",
-            "GPT-4 access",
-            "Priority support",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Team collaboration (5 users)",
           ]}
           featured={true}
         />
-<<<<<<< HEAD
         <PricingPlan"
           name="Agency""
           price="$199/mo"
@@ -404,26 +301,8 @@ function PricingSection() {
             "Custom brand voice training","
             "White-label solution","
             "Dedicated account manager","
-=======
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-        <PricingPlan
-          name="Agency"
-          price="$199/mo"
-          features={[
-<<<<<<< HEAD
-            'Unlimited articles',
-            'Custom brand voice training',
-            'White-label solution',
-            'Dedicated account manager',
-            'Advanced analytics & reporting',
-=======
-            "Unlimited articles",
-            "Custom brand voice training",
-            "White-label solution",
-            "Dedicated account manager",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Advanced analytics & reporting",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           ]}
         />
       </div>
@@ -431,33 +310,18 @@ function PricingSection() {
   );
 }
 
-<<<<<<< HEAD
 function PricingPlan({
-=======
-<<<<<<< HEAD
-function PricingPlan({}
-=======
-function PricingPlan({
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
   name,
   price,
   features,
   featured = false,
-<<<<<<< HEAD
 }: {
-=======
-<<<<<<< HEAD
-}: {}
-=======
-}: {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
   name: string;
   price: string;
   features: string[];
   featured?: boolean;
-<<<<<<< HEAD
 }) {}
   return (
     <div;
@@ -472,71 +336,17 @@ function PricingPlan({
       <ul className="space-y-2 text-gray-600 mb-6">
         {features.map((feature, index) => ("
           <li key={index} className="flex items-center">"
-=======
-}) {
-  return (
-<<<<<<< HEAD
-    <div className={`border rounded-xl p-6 ${
-      featured
-        ? 'border-indigo-500 bg-indigo-50 shadow-lg'
-        : 'border-gray-200 bg-white shadow-sm'
-    }`}>
-=======
-    <div
-      className={`border rounded-xl p-6 ${
-        featured
-          ? "border-indigo-500 bg-indigo-50 shadow-lg"
-          : "border-gray-200 bg-white shadow-sm"
-      }`}
-    >
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
       <ul className="space-y-2 text-gray-600 mb-6">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             <span className="text-indigo-500 mr-2">✓</span> {feature}
           </li>
         ))}
       </ul>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <a"
-        href="tel:+13024640950"`
-        className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
-          featured"
-            ? "bg-indigo-600 text-white hover:bg-indigo-700""
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"`
-        }`}
-      >
-        Get Started;
-=======
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-      <a
-        href="tel:+13024640950"
-        className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
-          featured
-            ? "bg-indigo-600 text-white hover:bg-indigo-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
-        }`}
-      >
-        Get Started
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      </a>
-    </div>
-  );
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
+
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
@@ -627,6 +437,4 @@ export default function ServicePage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
->>>>>>> origin/main
+

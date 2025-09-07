@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Menu,
   X,
@@ -63,9 +62,6 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Search, ChevronDown, ChevronRight;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
 
   BookOpen, MessageCircle, Star, TrendingUp;
@@ -76,11 +72,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Code, Wrench, Smartphone, BarChart3, Eye, Globe2;
 
   Zap, Rocket, Brain, Sparkles, ShieldCheck, Target;
-<<<<<<< HEAD
     icon: Target,
     color: 'from-green-600 via-yellow-600 to-orange-600','
     description: 'Cutting-edge micro solutions',
-<<<<<<< HEAD
     services: [
       'Advanced Research Automation',
   Users2, Briefcase, Lightbulb, Award, Clock, CheckCircle
@@ -326,12 +320,6 @@ const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
       'Quantum Research Platform',
       'AI Research Assistant',
-=======
-    services: ['
-      'Advanced Research Automation','
-      'Quantum Research Platform','
-      'AI Research Assistant','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Biotech Research Suite',
     ],'
   }, ];      'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite';
@@ -352,7 +340,6 @@ const main_navigation = [;'
 
 const quickLinks = ['
   { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-<<<<<<< HEAD
   },
 ];
 const mainNavigation = [
@@ -380,13 +367,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
   { name: 'Blog', href: '/blog', icon: BookOpen },
   { name: 'News', href: '/news', icon: TrendingUp },
-=======
-];'
-  { name: 'About Us', href: '/about', icon: Users },'
-  { name: 'Case Studies', href: '/case - studies', icon: BookOpen },'
-  { name: 'Blog', href: '/blog', icon: BookOpen },'
-  { name: 'News', href: '/news', icon: TrendingUp },'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { name: 'Careers', href: '/careers', icon: GraduationCap },
 
 export default function UltraFuturisticNavigation2029V2() {}
@@ -397,11 +377,6 @@ export default function UltraFuturisticNavigation2029V2() {}
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
 <nav className='relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20' />}
 }
@@ -421,23 +396,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-<<<<<<< HEAD
-=======
-          >'
-            <Link href='/' className='flex items-center space-x-3 group'>'
-              <div className='relative'>'
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+
            />
             <Link href='/' className='flex items-center space-x-3 group' />
               <div className='relative' />
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300' />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                   <Rocket className='w-7 h-7 text-white' />
                 </div>'
                 <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300' />
-<<<<<<< HEAD
               </div>'
               <div className='hidden sm:block'>'
                 <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -445,32 +412,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h1>'
                 <p className='text-xs text-gray-400'>
                   Future Technology Solutions;
-=======
-              </div>
-              <div className='hidden sm:block' />
-                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent' />
-                  Zion Tech Group;
-                </h1>
-                <p className='text-xs text-gray-400'>
-                  Future Technology Solutions
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </p>              </div>          >
     <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
       {/* Main Navigation Bar */}"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-<<<<<<< HEAD
           <motion.div;
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}"
-=======
-          <motion.div
-            initial={{ opacity: 0;, x: -20 ;}}
-            animate={{ opacity: 1;, x: 0 ;}}
-            transition={{ duration: 0.5 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             className="flex-shrink-0"
           >"
             <Link href="/" className="flex items-center space-x-3 group">"
@@ -493,21 +444,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </Link>
           </motion.div>
-<<<<<<< HEAD
           {/* Desktop Navigation */}'
-=======
-          {/* Desktop Navigation */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className='hidden lg:flex items-center space-x-8'>;
             {mainNavigation && mainNavigation.map(item => (              <motion&& motion.div;
                 key={item && item.name}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: -20 }}
                 }}'
-=======
-                initial={{ opacity: 0;, y: -20 ;}}
-                }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='relative group';
                 <Link;
                   href={item.href}
@@ -519,17 +461,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 placeholder='Search services...'
                 value={searchQuery}
             {mainNavigation.map((item) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<div className='hidden lg:flex items-center space-x-8'>
-            {mainNavigation.map(item => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <motion.div
-=======
-              <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                 key={item.name}
                 initial={{ opacity: 0;, y: -20 ;}}
                 animate={{ opacity: 1;, y: 0 ;}}
@@ -558,26 +490,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>{item.name}</span>
                   <span />{item.name}</span>
                 </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                 {/* Hover effect */}
                 <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />
-=======
-                {/* Hover effect */}'"
-                <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />              </motion.div>                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </motion.div>
-=======
-
-                {/* Hover effect *}
-}
-                <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />;
-              </motion.div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             ))}
 
           </div>
-<<<<<<< HEAD
           {/* Right side - Contact & Search */}'
           <div className='hidden lg:flex items-center space-x-4'>
 
@@ -587,45 +506,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           {/* Right side - Contact & Search */}"
           <div className="hidden lg:flex items-center space-x-4">
-=======
-          {/* Right side - Contact & Search */}
-          <div className='hidden lg:flex items-center space-x-4'>
-
-<div className='hidden lg: flex items-center space-x-4' />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {/* Search */}
             ))}
           </div>
 
           {/* Right side - Contact & Search */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<div className='hidden lg:flex items-center space-x-4'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            {/* Search */}
-            <div className='relative'>
-<<<<<<< HEAD
-=======
-            {/* Search */}'
-            <div className='relative'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
               <input'
                 type='text''
                 placeholder='Search services...'
                 value={searchQuery}"
             <div className="relative">"
-=======
-            <div className='relative' />
-              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
-              <input;
-type='text'
-                placeholder='Search services...'
-                value={searchQuery}
-            <div className="relative">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
 
               <input"
@@ -638,7 +529,6 @@ type='text'
             </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Contact Button */}
-<<<<<<< HEAD
             <motion&& motion.div;
               initial={{ opacity: 0, scale: 0 && 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -646,15 +536,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Link;
             <button;
               onClick={toggleMenu}'
-=======
-            <motion&& motion.div
-              initial={{ opacity: 0;, scale: 0 && 0.8 ;}}
-              animate={{ opacity: 1;, scale: 1 ;}}
-              transition={{ duration: 0 && 0.5;, delay: 0 && 0.5 ;}}>;
-              <Link
-            <button
-              onClick={toggleMenu}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300'>;
               {isOpen ? (;'
                 <X className='w-6 h-6' />;
@@ -668,9 +549,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </div>;
-
-<<<<<<< HEAD
-=======
 
                 onChange={e = /> setSearchQuery(e.target.value)}
                 className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'
@@ -688,7 +566,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 } />;
 
               <Link;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 href='/contact'
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'
                />
@@ -717,30 +595,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
-<<<<<<< HEAD
           <motion&& motion.div;
             initial={{ opacity: 0, height: 0 }}'
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
 
-<<<<<<< HEAD
             transition={{ duration: 0.3 }}
-=======
-          <motion&& motion.div
-            initial={{ opacity: 0;, height: 0 ;}}
-            animate={{ opacity: 1;, height: 'auto' ;}}
-            exit={{ opacity: 0;, height: 0 ;}}
-
-            transition={{ duration: 0.3 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-=======
-          >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className='px-4 py-6 space-y-4'>
-<<<<<<< HEAD
               {/* Mobile Search */}'
               <div className='relative'>'
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -751,33 +615,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     onClick={closeMenu}'
                     className='flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'>;'
                     <item && item.icon className='w-5 h-5' />                    <span>{item && item.name}</span>          >;"
-=======
-
-      {/* Mobile Navigation Menu */}
-      <AnimatePresence />;
-        {isOpen && (<motion&& motion.div;}
-            initial={{ opacity: 0;, height: 0 ;}
-}
-            animate={{ opacity: 1;, height: 'auto' ;}
-}
-
-            exit={{ opacity: 0;, height: 0 ;}}
-
-            transition={{ duration: 0.3 ;}}
-className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'
-           />
-            <div className='px-4 py-6 space-y-4' />
-              {/* Mobile Search */}
-              <div className='relative' />
-                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
-                <input;
-type='text'
-                  placeholder='Search services...'
-                  value={searchQuery}
-                    onClick={closeMenu}
-                    className='flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'>;
-                    <item && item.icon className='w-5 h-5' />                    <span>{item && item.name}</span>          >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="px-4 py-6 space-y-4">;
               {/* Mobile Search */}"
               <div className="relative">;"
@@ -786,54 +623,10 @@ type='text'
                   type="text""
                   placeholder="Search services..."
                   value={searchQuery}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                  onChange={e => setSearchQuery(e.target.value)}
-
-                  onChange={e = /> setSearchQuery(e.target.value)}
-                  className='w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50'
-                />
-              </div>
-              {/* Mobile Navigation Links */}
-<div className='space-y-2'>
-                {mainNavigation.map(item => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-                  <Link
-                    key={item && item.name}
-                    href={item && item.href}
-                    onClick={closeMenu}
-<div className='space-y-2' />
-                {mainNavigation.map(item => (}
-                  <Link;}
-key={item && item.name}
-                    href={item && item.href}
-                    onClick={closeMenu}
-
-className='flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
-                   />
-                    <item.icon className='w-5 h-5' />
-                    <span />{item.name}</span>
-                  </Link>
-                ))}
-              </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              {/* Quick Links */}
-<div className='pt-4 border-t border-gray-700'>
-=======
-                  <Link;
-                    key={item && item.name}
-                    href={item && item.href}
-                    onClick={closeMenu}
-              {/* Quick Links */}'
-              <div className='pt-4 border-t border-gray-700'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
                   Quick Links;
                 </h3>'
                 <div className='space-y-2'>
-<<<<<<< HEAD
                   {quickLinks.map(item => (
                     <Link
 
@@ -848,60 +641,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
-<<<<<<< HEAD
+
 className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
                     >
                       <item.icon className='w-4 h-4' />
                       <span className='text-sm'>{item.name}</span>
                     </Link>
-=======
-                  {quickLinks.map(item => (                    <Link;
-                      key={item.name}
-                      href={item.href}
-                      onClick={closeMenu}'
-                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
-                    >'
-                      <item.icon className='w-4 h-4' />'"
-                      <span className='text-sm'>{item.name}</span>                    </Link>              <div className="pt-4 border-t border-gray-700">"
-                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</h3>"
-                <div className="space-y-2">
-                  {quickLinks.map((item) => (
-                      key={item.name}
-                      href={item.href}
-                      onClick={closeMenu}'
-                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
-                    >'
-                      <item.icon className='w-4 h-4' />'"
-                      <span className='text-sm'>{item.name}</span>                      className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
-                    >"
-                      <item.icon className="w-4 h-4" />"
-                      <span className="text-sm">{item.name}</span>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300' />
-
-                      <item.icon className='w-4 h-4' />;
-                      <span className='text-sm' />{item.name}</span>;
-                    </Link>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   ))}
                 </div>;
               </div>;
                   ))}
-<<<<<<< HEAD
                 </div>
               </div>
 
-
-
-
-<<<<<<< HEAD
               {/* Contact Info */}
 <div className='pt-4 border-t border-gray-700'>
-=======
-              {/* Contact Info */}'
-              <div className='pt-4 border-t border-gray-700'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
                   Contact Info;
                 </h3>'
@@ -912,23 +666,6 @@ className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
                   </div>"
                   <div className="flex items-center space-x-3 text-gray-400">"
                     <Mail className="w-4 h-4" />"
-=======
-                </div>;
-              </div>;
-              {/* Contact Info */}
-
-<div className='pt-4 border-t border-gray-700' />
-                <h3 className='text-sm font-medium text-gray-400 mb-3 px-4' />
-                  Contact Info;
-                </h3>
-                <div className='space-y-2 px-4' />
-                  <div className='flex items-center space-x-3 text-gray-400' />
-                    <Phone className='w-4 h-4' />
-                    <span className='text-sm' />{contactInfo.mobile}</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-400">
-                    <Mail className="w-4 h-4" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className="text-sm">{contactInfo.email}</span>
                   </div>"
                   <div className="flex items-center space-x-3 text-gray-400">"
@@ -950,7 +687,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
 
       {/* Service Categories Dropdown */}
-<<<<<<< HEAD
       <AnimatePresence>;
         {activeCategory && (;
           <motion&& motion.div;
@@ -962,33 +698,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
 
-
-<<<<<<< HEAD
             transition={{ duration: 0.3 }}
-=======
-      <AnimatePresence />;
-        {activeCategory && (<motion&& motion.div;}
-      {/* Service Categories Dropdown */}
-      <AnimatePresence />;
-        {activeCategory && (<motion.div;}
-            initial={{ opacity: 0;, y: -20 ;}
-}
-            animate={{ opacity: 1;, y: 0 ;}
-}
-
-            exit={{ opacity: 0;, y: -20 ;}}
-
-
-            transition={{ duration: 0.3 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
-=======
-          >'
-            <div className='max-w-7xl mx-auto px-4 py-8'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
                 {serviceCategories.map(category => ('
                   <div key={category.title} className='space-y-4'>'
@@ -1019,13 +733,8 @@ className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl bord
                           {category.title}
                         </h3>;'
                         <p className='text - sm text - gray - 400'>;
-<<<<<<< HEAD
                           {category.description}"
             <div className="max-w-7xl mx-auto px-4 py-8">"
-=======
-                          {category.description}
-            <div className="max-w-7xl mx-auto px-4 py-8">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 {serviceCategories.map((category) => ("
                   <div key={category.title} className="space-y-4">"
@@ -1179,20 +888,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </AnimatePresence>;
     </nav>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      </AnimatePresence>
-    </nav>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

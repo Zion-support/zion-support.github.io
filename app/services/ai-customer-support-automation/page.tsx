@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'AI Customer Support Automation | Zion Tech Group',
   description: 'Automated customer support solutions powered by AI technology.',
@@ -43,14 +42,6 @@ export default function ServicePage() {
     </div>
   )
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React from "react";
-import Link from "next/link";
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 export const metadata = {
   title: "AI Customer Support Automation | Zion Tech Group",
@@ -67,8 +58,7 @@ interface FeatureProps {
 }
 
 function Feature({ title, description, icon }: FeatureProps) {
-<<<<<<< HEAD
-=======
+
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
@@ -78,20 +68,7 @@ export const metadata = {
 };
 
 export default function AiCustomerSupportAutomationPage() {
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-  return (
-    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
-      <div className="text-3xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
 }
 
 interface PricingTierProps {
@@ -492,29 +469,6 @@ export default function AICustomerSupportAutomationPage() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
+
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-import Link from 'next/link';
 
-
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> origin/main

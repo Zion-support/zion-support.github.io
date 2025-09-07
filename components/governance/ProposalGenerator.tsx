@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -15,19 +14,12 @@ class ErrorBoundary extends React.Component {}
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
-=======
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
-  render() {if (this.state.hasError) ;}
-  return <div />Something went wrong.</div>;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
     return this.props.children;
   }
 }'
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
 export type ProposalForm = {;
 
 export type ProposalForm = {;
@@ -58,7 +50,6 @@ export type ProposalForm = {};
   language?: string;
   customPrompt?: string;
 }
-<<<<<<< HEAD
   customPrompt?: string;
 };
 
@@ -73,19 +64,6 @@ export default function ProposalGenerator() {
     language: 'English'
     customPrompt:
 
-=======
-export default function ProposalGenerator() {}
-  const [form, setForm] = useState<ProposalForm>({'
-    targetInstitution: 'UNDP''
-    type: 'Workforce Dev''
-    regionalScope: 'Global''
-    budgetOrGoals: '''
-    supportingMultiverses: '''
-    language: 'English'
-    customPrompt:
-
-;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   language?: string;
   customPrompt?: string;
 }'
@@ -97,7 +75,6 @@ export type ProposalForm = {}
   type: ProposalType,
   regional_scope: string,
   budgetOrGoals: string,
-<<<<<<< HEAD
   supporting_multiverses: string,
   language?: string
 };
@@ -113,12 +90,6 @@ export default function ProposalGenerator() {;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  supporting_multiverses: string,;
-  language?: string;
-};
-export default function ProposalGenerator() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   });
   const [isGenerating, setIsGenerating] = useState(false);'
   const [draftMarkdown, setDraftMarkdown] = useState('');
@@ -136,7 +107,6 @@ export default function ProposalGenerator() { return null; }
     } catch (e: any) {}
       console.error(e);'
       setStatusMessage('Failed to generate. You can edit manually and export.')
-<<<<<<< HEAD
     } finally {
   function handleChange<K extends keyof ProposalForm>(
     key: K
@@ -163,9 +133,6 @@ body: JSON.stringify(form),
     } finally {
       setIsGenerating(false);
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    } finally {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
     } finally {}
@@ -181,7 +148,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (e) {}
       console.error(e);'
       setStatusMessage('Export failed')
-<<<<<<< HEAD
           markdown: draftMarkdown,
           json: draftJson,
 meta: form,
@@ -199,9 +165,6 @@ meta: form,
       setStatusMessage('Export failed');
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
-=======
-    }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setStatusMessage('Export failed');    }
 
     }
@@ -211,164 +174,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   async function handleSubmitBridge() { return null; }
       const res = await fetch('/api/proposals/submit', {}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    }
-  }
-
-  async function handleExport() { return null; }
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          markdown: draftMarkdown,;
-          json: draftJson,;
-          meta: form,;
-        }),;
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-
-        method: 'POST',}
-  headers: { 'Content-Type': 'application/json',}
-},
-body: JSON.stringify({
-          markdown: draftMarkdown,
-          json: draftJson,}
-          meta: form,}
-        }),
-origin/cursor/automate-test-improve-and-merge-code-2533
-      });
-
-const data = await res && res.json();
-      setExportLinks({;
-        pdfUrl: data && data.pdfUrl,;
-<<<<<<< HEAD
-        jsonUrl: data && data.jsonUrl,;
-        mdUrl: data && data.mdUrl,;
-      });'
-      setStatusMessage('Exported. Files saved.');
-    } catch (e) {;
-      console && console.error(e);'
-      setStatusMessage('Export failed');    }      const data = await res && res.json();
-      setExportLinks({ pdfUrl: data && data.pdfUrl, jsonUrl: data && data.jsonUrl, mdUrl: data && data.mdUrl }),;'
-      setStatusMessage('Exported. Files saved.');
-    } catch (e) {;
-      console && console.error(e);'
-      setStatusMessage('Export failed');
-    }
-  }
-  async function handleSubmitBridge() { return null; }
-        headers: { 'Content-Type': 'application/json' },;
-=======
-        jsonUrl: data && data.jsonUrl,;}
-        mdUrl: data && data.mdUrl,;}
-      });
-      setStatusMessage('Exported. Files saved.');
-    } catch (e) {;}
-      console && console.error(e);}
-      setStatusMessage('Export failed');    }
-
-const data = await res && res.json();
-      setExportLinks({ pdfUrl: data && data.pdfUrl, jsonUrl: data && data.jsonUrl, mdUrl: data && data.mdUrl,}
-}),;
-      setStatusMessage('Exported. Files saved.');
-    } catch (e) {;
-      console && console.error(e);}
-      setStatusMessage('Export failed');}
-    }
-  }
-  async function handleSubmitBridge() {;
-    setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
-    try {;
-
-const res = await fetch('/api/proposals/submit', {;
-        method: 'POST',;}
-        headers: { 'Content-Type': 'application/json',}
-},;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        body: JSON && JSON.stringify({;
-          markdown: draftMarkdown,;
-          json: draftJson,;}
-          meta: form,;}
-        }),;
-      });
-<<<<<<< HEAD
-      const data = await res && res.json();
-      setStatusMessage(;'
-        `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
-=======
-
-const data = await res && res.json();
-      setStatusMessage(;
-        `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A,}
-}`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      );
-    } catch (e) {;
-      console && console.error(e);'
-      setStatusMessage('Submission failed');    }
-  }
-  return ('
-        <div className='space-y-4'>      const data = await res.json();'`
-      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
-    } catch (e) {}
-      console.error(e);'
-        <div className='space-y-4'>      const data = await res.json();'`
-      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
-    } catch (e) {}
-      console.error(e);
-'
-    <div className='space-y-6'>;'
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;'
-        <div className='space-y-4'>      const data = await res && res.json();'`
-      setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`);
-    } catch (e) {;
-      console && console.error(e);'
-      setStatusMessage('Submission failed');
-
-    } catch (e) {
-      console.error(e);
-      setStatusMessage('Submission failed');
-      setStatusMessage('Submission failed')
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-    } catch (e) {
-      console.error(e);
-      setStatusMessage('Submission failed');}
-      setStatusMessage('Submission failed')}
-    }
-
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-<div className='space-y-6'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-=======
-  return ('
-    <div className='space-y-6'>'
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        <div className='space-y-4'>
-          <div>'
-            <label className='block text-sm font-medium'>
-              Target institution;
-            </label>
-            <input'
-              className='w-full border rounded px-3 py-2'
-              value={form && form.targetInstitution}'
-              onChange={e => handleChange('targetInstitution', e && e.target.value)}'
-=======
-  return (<div className='space-y-6' />;
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4' />;
-        <div className='space-y-4' />;
-          <div />;
-            <label className='block text-sm font-medium' />;
-              Target institution;
-            </label>;
-            <input;
-              className='w-full border rounded px-3 py-2';
-              value={form && form.targetInstitution}
-              onChange={e = /> handleChange('targetInstitution', e && e.target.value)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               placeholder='UNDP / World Bank / ILO';
             />;
           </div>;
@@ -403,16 +208,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div>;'
             <label className='block text-sm font-medium'>Regional scope</label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          <div />;
-            <label className='block text-sm font-medium' />Type</label>;
-
-            <select;
-className='w-full border rounded px-3 py-2'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               value={form.type}
               onChange={e = />}
                 handleChange('type', e.target.value as ProposalType)}
@@ -428,11 +223,7 @@ className='w-full border rounded px-3 py-2'
 <label className='block text-sm font-medium'>Regional scope</label>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <input
-=======
-            <input'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className='w-full border rounded px-3 py-2'
-<<<<<<< HEAD
               value={form && form.regionalScope}'
               onChange={e => handleChange('regionalScope', e && e.target.value)}'
               placeholder='Global / Africa / LATAM / APAC / EU / ...';
@@ -480,71 +271,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='w-full border rounded px-3 py-2 min-h-[80px]'
                 value={form && form.customPrompt}'
                 onChange={e => handleChange('customPrompt', e && e.target.value)}
-=======
-          <div />
-<label className='block text-sm font-medium' />Regional scope</label>
-            <input;
-className='w-full border rounded px-3 py-2'
-
-              value={form && form.regionalScope}
-              onChange={e = /> handleChange('regionalScope', e && e.target.value)}
-              placeholder='Global / Africa / LATAM / APAC / EU / ...';
-            />;
-          </div>;
-          <div />;
-            <label className='block text-sm font-medium' />;
-              Budget / Resolution goals;
-            </label>;
-            <textarea;
-              className='w-full border rounded px-3 py-2 min-h-[80px]';
-              value={form && form.budgetOrGoals}
-              onChange={e = /> handleChange('budgetOrGoals', e && e.target.value)}
-              placeholder='$5M for pilot; goals: 10k workers onboarded, 70% female youth, etc.';
-            />;
-          </div>;
-          <div />;
-            <label className='block text-sm font-medium' />;
-              Supporting multiverse(s)</label>;
-            <input;
-              className='w-full border rounded px-3 py-2';
-              value={form && form.supportingMultiverses}
-              onChange={e = />;}
-                handleChange('supportingMultiverses', e && e.target.value)}
-              placeholder='Eg. Zion && Zion.ai, Zion && Zion.ID, Zion && Zion.Work';
-            />;
-          </div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4' />;
-            <div />;
-              <label className='block text-sm font-medium' />Language</label>;
-              <input;
-                className='w-full border rounded px-3 py-2';
-                value={form && form.language}
-                onChange={e = /> handleChange('language', e && e.target.value)}
-                placeholder='English / French / Spanish / Arabic / ...';
-              />;
-            </div>;
-            <div />;
-              <label className='block text-sm font-medium' />;
-                GPT Prompt Assist;
-              </label>;
-              <textarea;
-                className='w-full border rounded px-3 py-2 min-h-[80px]';
-                value={form && form.customPrompt}
-                onChange={e = /> handleChange('customPrompt', e && e.target.value)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               />;
             </div>;
           </div>;'
           <div className='flex gap-2'>;
-<<<<<<< HEAD
             <button'
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input;
             <textarea"
-=======
-            <button
-              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
-            <textarea
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="w-full border rounded px-3 py-2 min-h-[80px]"
               value={form && form.budgetOrGoals}'
               onChange={(e) => handleChange('budgetOrGoals', e && e.target.value)}"
@@ -580,81 +313,43 @@ className='w-full border rounded px-3 py-2'
             </div>;
           </div>;"
           <div className="flex gap-2">;
-<<<<<<< HEAD
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-            <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               onClick={handleGenerate}
               disabled={isGenerating}>;'
-=======
-          <div className='flex gap-2' />;
-
-            <button;
-className='px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50'
-
-              onClick={handleGenerate}
-              disabled={isGeneratin,}
-} />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>;
-<<<<<<< HEAD
             <button
 className='px-4 py-2 bg-emerald-600 text-white rounded'
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-            <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
             <button;
 className='px-4 py-2 bg-emerald-600 text-white rounded'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
               onClick={handleExport}
               disabled={!draftMarkdown} />;
               Export (PDF/JSON/MD);
             </button>;
-<<<<<<< HEAD
             <button;
-=======
-            <button
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               onClick={handleGenerate}
               disabled={isGenerating}>;'
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>;
-<<<<<<< HEAD
             <button
 
-=======
-            <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               onClick={handleExport}
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD);
             </button>;
-<<<<<<< HEAD
             <button
 
-=======
-            <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               disabled={!draftMarkdown}>;
               Submit Bridge;
             </button>;
           </div>;
           {statusMessage && (;'
             <p className='text-sm text-gray-600'>{statusMessage}</p>;
-<<<<<<< HEAD
-=======
-            <button;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='px-4 py-2 bg-purple-600 text-white rounded'
               onClick={handleSubmitBridge}
               disabled={!draftMarkdown}
@@ -669,7 +364,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className='text-sm text-gray-600' />{statusMessage}</p>
 
           )}
-<<<<<<< HEAD
           {exportLinks && (;'
             <div className='text-sm space-y-1'>;
               {exportLinks && exportLinks.pdfUrl && (;
@@ -678,15 +372,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className='text-blue-600 underline'
                     href={exportLinks && exportLinks.pdfUrl}'
                     target='_blank''
-=======
-          {exportLinks && (<div className='text-sm space-y-1' />;
-              {exportLinks && exportLinks.pdfUrl && (<div />;
-                  <a;}
-                    className='text-blue-600 underline';}
-                    href={exportLinks && exportLinks.pdfUrl}
-
-                    target='_blank'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     rel='noreferrer'>;
                     PDF;
                   </a>                </div>;
@@ -701,12 +386,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
               {exportLinks && exportLinks.mdUrl && (;
                 <div>;
-<<<<<<< HEAD
                   <a
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     rel='noreferrer'
                    />
                     PDF;
@@ -717,17 +398,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>
 <a
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                  <a'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className='text-blue-600 underline'
-<<<<<<< HEAD
                     href={exportLinks && exportLinks.mdUrl}'
                     target='_blank''
-=======
-                    href={exportLinks && exportLinks.mdUrl}
-                    target='_blank'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     rel='noreferrer'>;
                     Markdown;
                   </a>                </div>;
@@ -738,17 +411,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
               {exportLinks && exportLinks.jsonUrl && (;
                 <div>;
-<<<<<<< HEAD
                   <a
-<<<<<<< HEAD
-=======
-                <div />
-<a;}
-className='text-blue-600 underline'}
-                    href={exportLinks && exportLinks.mdUrl}
-                    target='_blank'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     rel='noreferrer'
                    />
                     Markdown;
@@ -759,30 +422,20 @@ className='text-blue-600 underline'}
                 <div>
 <a
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                  <a'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className='text-blue-600 underline'
-<<<<<<< HEAD
                     href={exportLinks && exportLinks.jsonUrl}'
                     target='_blank''
-=======
-                    href={exportLinks && exportLinks.jsonUrl}
-                    target='_blank'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     rel='noreferrer'>;
                     JSON;"
                   </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>;
                 </div>;
-<<<<<<< HEAD
-=======
+
                 <div />
 <a;}
 className='text-blue-600 underline'}
                     href={exportLinks && exportLinks.jsonUrl}
                     target='_blank'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     rel='noreferrer'
                    />
                     JSON;
@@ -792,13 +445,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </div>;
           )}
-<<<<<<< HEAD
         </div>;'
         <div className='space-y-2'>;'
-=======
-        </div>;
-        <div className='space-y-2'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <label className='block text-sm font-medium'>Draft (Markdown)</label>;
           <textarea'
             className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
@@ -813,13 +461,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>;
             onChange={(e) => setDraftMarkdown(e.target.value)}
-<<<<<<< HEAD
-=======
-              )}
-            </div>;
-          )}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>
 <div className='space-y-2' />
           <label className='block text-sm font-medium' />Draft (Markdown)</label>
@@ -989,7 +630,7 @@ function handleSubmitBridge() { return null; }
               value={form.type}
               on_change={e =>;'
                 handle_change ('type', e.target.value as ProposalType);
-<<<<<<< HEAD
+
               }            >          <div>;
             <label className="block text-sm font-medium" html_for="input - Target institution">Target institution</label>;
             <input;
@@ -1004,22 +645,6 @@ function handleSubmitBridge() { return null; }
             <select;
               className="w - full border rounded px-3 py-2";
               value={form.type}
-=======
-              }            >          <div>;"
-            <label className="block text - sm font - medium" html_for="input - Target institution">Target institution</label>;
-            <input;"
-              className="w - full border rounded px - 3 py - 2";
-              value={form.target_institution}'
-              on_change={(e) => handle_change ('target_institution', e.target.value)}"
-              placeholder="UNDP / World Bank / ILO";
-            />;
-          </div>;
-          <div>;"
-            <label className="block text - sm font - medium" html_for="input - Type">Type</label>;
-            <select;"
-              className="w - full border rounded px - 3 py - 2";
-              value={form.type}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               on_change={(e) => handle_change ('type', e.target.value as ProposalType)}
             >;
               <option > Workforce Dev</option>;
@@ -1083,7 +708,6 @@ function handleSubmitBridge() { return null; }
             </div>;
           </div>;'
           <div className='flex gap - 2'>;
-<<<<<<< HEAD
             <button;
               className='px - 4 py - 2 bg - blue - 600 text - white rounded disabled:opacity - 50'              on_click={handle_generate}            <input;
               className="w - full border rounded px-3 py-2";
@@ -1132,80 +756,20 @@ function handleSubmitBridge() { return null; }
           <div className="flex gap-2">;
             <button;
               className="px - 4 py - 2 bg - blue - 600 text-white rounded disabled:opacity-50";
-=======
-            <button;'
-              className='px - 4 py - 2 bg - blue - 600 text - white rounded disabled:opacity - 50'              on_click={handle_generate}            <input;"
-              className="w - full border rounded px - 3 py - 2";
-              value={form.regional_scope}'
-              on_change={(e) => handle_change ('regional_scope', e.target.value)}"
-              placeholder="Global / Africa / LATAM / APAC / EU / ...";
-            />;
-          </div>;
-          <div>;"
-            <label className="block text - sm font - medium" html_for="input - Budget / Resolution goals">Budget / Resolution goals</label>;
-            <textarea;"
-              className="w - full border rounded px - 3 py - 2 min - h-[80px]";
-              value={form.budgetOrGoals}'
-              on_change={(e) => handle_change ('budgetOrGoals', e.target.value)}"
-              placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc.";
-            />;
-          </div>;
-          <div>;"
-            <label className="block text - sm font - medium" html_for="input - Supporting multiverse (s)">Supporting multiverse (s)</label>;
-            <input;"
-              className="w - full border rounded px - 3 py - 2";
-              value={form.supporting_multiverses}'
-              on_change={(e) => handle_change ('supporting_multiverses', e.target.value)}"
-              placeholder="Eg. Zion.ai, Zion.ID, Zion.Work";
-            />;
-          </div>;"
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-            <div>;"
-              <label className="block text - sm font - medium" html_for="input - Language">Language</label>;
-              <input;"
-                className="w - full border rounded px - 3 py - 2";
-                value={form.language}'
-                on_change={(e) => handle_change ('language', e.target.value)}"
-                placeholder="English / French / Spanish / Arabic / ...";
-              />;
-            </div>;
-            <div>;"
-              <label className="block text - sm font - medium" html_for="input - GPT Prompt Assist">GPT Prompt Assist</label>;
-              <textarea;"
-                className="w - full border rounded px - 3 py - 2 min - h-[80px]";
-                value={form.custom_prompt}'
-                on_change={(e) => handle_change ('custom_prompt', e.target.value)}
-              />;
-            </div>;
-          </div>;"
-          <div className="flex gap - 2">;
-            <button;"
-              className="px - 4 py - 2 bg - blue - 600 text - white rounded disabled:opacity - 50";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               on_click={handle_generate}
               disabled={is_generating}
             >;'
               {is_generating ? 'Generating...' : 'Generate Draft'}
             </button>;
-<<<<<<< HEAD
             <button;
               className='px - 4 py - 2 bg - emerald - 600 text - white rounded'              on_click={handle_export}              className="px - 4 py - 2 bg - emerald-600 text-white rounded";
-=======
-            <button;'"
-              className='px - 4 py - 2 bg - emerald - 600 text - white rounded'              on_click={handle_export}              className="px - 4 py - 2 bg - emerald - 600 text - white rounded";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               on_click={handle_export}
               disabled={!draft_markdown}
             >;
               Export (PDF / JSON / MD);
             </button>;
-<<<<<<< HEAD
             <button;
               className='px - 4 py - 2 bg - purple - 600 text - white rounded'              on_click={handleSubmitBridge}              className="px - 4 py - 2 bg - purple-600 text-white rounded";
-=======
-            <button;'"
-              className='px - 4 py - 2 bg - purple - 600 text - white rounded'              on_click={handleSubmitBridge}              className="px - 4 py - 2 bg - purple - 600 text - white rounded";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               on_click={handleSubmitBridge}
               disabled={!draft_markdown}
             >;
@@ -1227,19 +791,11 @@ function handleSubmitBridge() { return null; }
                     PDF;
                   </a>                </div>)}
               {export_links.md_url && (
-<<<<<<< HEAD
                 <div>          {export_links && (
             <div className="text-sm space-y-1">;
               {export_links.pdf_url && (
                 <div>;
                   <a className="text-blue-600 underline" href={export_links.pdf_url} target="_blank" rel="noreferrer">PDF</a>;
-=======
-                <div>          {export_links && ("
-            <div className="text - sm space - y-1">;
-              {export_links.pdf_url && (
-                <div>;"
-                  <a className="text - blue - 600 underline" href={export_links.pdf_url} target="_blank" rel="noreferrer">PDF</a>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>)}
               {export_links.md_url && (
                 <div>;
@@ -1251,13 +807,8 @@ function handleSubmitBridge() { return null; }
                   >;
                     Markdown;
                   </a>                </div>)}
-<<<<<<< HEAD
               {export_links.json_url && (
                 <div>                  <a className="text-blue-600 underline" href={export_links.md_url} target="_blank" rel="noreferrer">Markdown</a>;
-=======
-              {export_links.json_url && ("
-                <div>                  <a className="text - blue - 600 underline" href={export_links.md_url} target="_blank" rel="noreferrer">Markdown</a>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>)}
               {export_links.json_url && (
                 <div>;
@@ -1267,13 +818,8 @@ function handleSubmitBridge() { return null; }
                     target='_blank';'
                     rel='noreferrer';
                   >;
-<<<<<<< HEAD
                     JSON;
                   </a>                </div>                  <a className="text-blue-600 underline" href={export_links.json_url} target="_blank" rel="noreferrer">JSON</a>;
-=======
-                    JSON;"
-                  </a>                </div>                  <a className="text - blue - 600 underline" href={export_links.json_url} target="_blank" rel="noreferrer">JSON</a>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>)}
             </div>)}
         </div>;'
@@ -1282,13 +828,8 @@ function handleSubmitBridge() { return null; }
           <textarea;'
             className='w - full border rounded px - 3 py - 2 min - h-[520px] font - mono';
             value={draft_markdown}
-<<<<<<< HEAD
             on_change={e => setDraftMarkdown (e.target.value)}          />          <textarea;
             className="w - full border rounded px - 3 py - 2 min-h-[520px] font-mono";
-=======
-            on_change={e => setDraftMarkdown (e.target.value)}          />          <textarea;"
-            className="w - full border rounded px - 3 py - 2 min - h-[520px] font - mono";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             value={draft_markdown}
             on_change={(e) => setDraftMarkdown (e.target.value)}
           />;
@@ -1297,10 +838,4 @@ function handleSubmitBridge() { return null; }
     </div>);
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-<<<<<<< HEAD
 '"`
-=======
-
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

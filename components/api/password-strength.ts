@@ -22,7 +22,6 @@ interface PasswordStrengthResult {}
   strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
   score: number;
   feedback: string[];
-<<<<<<< HEAD
   details: {}
     entropy: number;
   }
@@ -38,12 +37,6 @@ export default async function handler(;
     score += entropy > 50 ? 15 : 0; // High entropy bonus;
     score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns;
     // Generate suggestions;
-=======
-  details: {
-
-
-    // Generate suggestions
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const suggestions: string[] = []
     if (score < 50) {}
       password;
@@ -111,7 +104,6 @@ if ( {) {}
         has_lowercase;
         has_numbers;
         has_symbols;
-<<<<<<< HEAD
         hasCommonPatterns;
 password.toLowerCase () .includes (pattern) );
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -122,16 +114,7 @@ if (score < 30) strength = 'very-weak';
 else if (score < 50) strength = 'weak';
 else if (score < 70) strength = 'medium';
 else if (score < 90) strength = 'strong';
-=======
-        hasCommonPatterns;'
-// Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];'
-if (score < 30) strength = 'very-weak';'
-else if (score < 50) strength = 'weak';'
-else if (score < 70) strength = 'medium';'
-else if (score < 90) strength = 'strong';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 else strength = 'very-strong';
-<<<<<<< HEAD
 // Generate feedback const feedback: string[] = [];'
 if (length < 8) feedback.push ('Password is too short (minimum 8 characters) ');'
 if (!hasUppercase) feedback.push ('Add uppercase letters');'
@@ -140,17 +123,6 @@ if (!hasNumbers) feedback.push ('Add numbers');'
 if (!hasSymbols) feedback.push ('Add special characters');'
 if (hasCommonPatterns) feedback.push ('Avoid common patterns and words');'
 if (entropy < 30) feedback.push ('Password is too predictable');'
-=======
-// Generate feedback const feedback: string[] = [];
-
-if (length < 8) feedback.push ('Password is too short (minimum 8 characters) ');
-if (!hasUppercase) feedback.push ('Add uppercase letters');
-if (!hasLowercase) feedback.push ('Add lowercase letters');
-if (!hasNumbers) feedback.push ('Add numbers');
-if (!hasSymbols) feedback.push ('Add special characters');
-if (hasCommonPatterns) feedback.push ('Avoid common patterns and words');
-if (entropy < 30) feedback.push ('Password is too predictable');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Generate suggestions import type { NextApiRequest, NextApiResponse } from 'next';
 interface PasswordStrengthResult {}
   password: string;'
@@ -164,45 +136,22 @@ interface PasswordStrengthResult {}
     hasNumbers: boolean;
     hasSymbols: boolean;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     hasCommonPatterns: boolean
 
     hasCommonPatterns: boolean;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     entropy: number
-=======
-    hasCommonPatterns: boolean;
-    entropy: number;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   suggestions: string[]
 
     hasCommonPatterns: boolean;
     entropy: number;
 }
-<<<<<<< HEAD
 export default async function handler() { return null; }
-=======
-  suggestions: string[];
-}
-
-export default async function handler(
-
-  req: NextApiRequest
-
-  res: NextApiResponse<PasswordStrengthResult | { error: string }>
-) {
-  if (req.method !== 'POST') {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
   }
   try {}
     const { password } = req.body;
-<<<<<<< HEAD
 '
     if (!password |typeof password !== 'string') {}
 '
@@ -214,7 +163,6 @@ export default async function handler(
     const hasLowercase = /[a-z]/.test(password);
     const hasNumbers = /\d/.test(password);'
     const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
-<<<<<<< HEAD
   req: NextApiRequest;
   res: NextApiResponse<PasswordStrengthResult | { error: string }>
 ) {
@@ -245,29 +193,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'qwerty'
       'asdf'
     ];
-=======
-    // Check for common patterns;
-    const commonPatterns = ['
-      '123''
-      'abc''
-      'qwe''
-      'password''
-      'admin''
-      'user''
-      'test''
-      '123456''
-      'password123''
-      'admin123''
-      'qwerty''
-      'asdf'
-    ];
-    const hasCommonPatterns = commonPatterns.some(pattern =>      password.toLowerCase().includes(pattern)
-    );
-    // Calculate entropy (simplified)    // Check for common patterns;
-    const commonPatterns = ['
-      '123abcqwepasswordadminusertest123456', 'password123admin123qwertyasdf'
-    ];
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const hasCommonPatterns = commonPatterns.some(pattern =>
       password.toLowerCase().includes(pattern)
     );
@@ -286,7 +211,6 @@ const charsetSize =
     score += hasLowercase ? 10 : 0;
     score += hasNumbers ? 10 : 0;
     score += hasSymbols ? 15 : 0;
-<<<<<<< HEAD
 score += entropy > 50 ? 15 : 0; // High entropy bonus
     score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns
     // Determine strength level
@@ -305,44 +229,11 @@ const feedback: string[] = [];
     if (!hasNumbers) feedback.push('Add numbers');
     if (!hasSymbols) feedback.push('Add special characters');
     if (hasCommonPatterns) feedback.push('Avoid common patterns and words');
-=======
-    score += entropy > 50 ? 15 : 0; // High entropy bonus;
-    score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns    const charsetSize = (hasUppercase ? 26 : 0) + (hasLowercase ? 26 : 0) +
-                       (hasNumbers ? 10 : 0) + (hasSymbols ? 32 : 0);
-    const entropy = charsetSize > 0 ? Math.log2(Math.pow(charsetSize, length)) : 0;
-    // Calculate score;
-    let score = 0;
-    score += Math.min(length * 2, 20), // Length contribution (max 20)
-    score += hasLowercase ? 10 : 0;
-    score += hasNumbers ? 10 : 0;
-    score += hasSymbols ? 15 : 0;
-    score += entropy > 50 ? 15 : 0; // High entropy bonus;
-    score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns;
-    // Determine strength level'
-    let strength: PasswordStrengthResult['strength'];'
-    if (score < 30) strength = 'very-weak';    else if (score < 50) strength = 'weak';    else if (score < 70) strength = 'medium';'
-    else if (score < 90) strength = 'strong';'
-    else strength = 'very-strong';
-    // Generate feedback;
-    const feedback: string[] = [];
-    if (length < 8)'
-      feedback.push('Password is too short (minimum 8 characters)');    if (!hasUppercase) feedback.push('Add uppercase letters');    if (length < 8) feedback.push('Password is too short (minimum 8 characters)');'
-    if (!hasUppercase) feedback.push('Add uppercase letters');'
-    if (!hasLowercase) feedback.push('Add lowercase letters');'
-    if (!hasNumbers) feedback.push('Add numbers');'
-    if (!hasSymbols) feedback.push('Add special characters');'
-    if (hasCommonPatterns) feedback.push('Avoid common patterns and words');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (entropy < 30) feedback.push('Password is too predictable');
     // Generate suggestions;
     const suggestions: string[] = []
-<<<<<<< HEAD
     if (score < 50) {
 suggestions.push(
-=======
-    if (score < 50) {}
-      suggestions.push('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Use a mix of uppercase, lowercase, numbers, and symbols'
       );'
       suggestions.push('Make it at least 12 characters long');'
@@ -379,26 +270,8 @@ suggestions.push(
   }
 }
   }
-<<<<<<< HEAD
   }
-=======
-
-
-      return res.status(400).json({ error: 'Password is required' });
-    }
-    // Password analysis
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     res.status(500).json({ error: 'Internal server error' })
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

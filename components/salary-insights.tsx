@@ -3,7 +3,6 @@ import {;
   BarChart,;
   DonutChart,;
 import React, { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
 type InsightResponse = any;
 import {
@@ -57,7 +56,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [data, setData] = useState<InsightResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-<<<<<<< HEAD
   useEffect(() => {
 // Lightweight login check via Supabase client if available; otherwise public mode
     (async () => {
@@ -90,9 +88,6 @@ roleTitle,
         })
 origin/cursor/automate-test-improve-and-merge-code-2533
       });
-=======
-      });'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       if (!res && res.ok) throw new Error('Failed to fetch insights');
       const json = (await res && res.json()) as InsightResponse;
       setData(json);
@@ -133,7 +128,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, []);
-<<<<<<< HEAD
   function saveInsight() {
 const payload = {
       createdAt: new Date().toISOString(),
@@ -150,10 +144,6 @@ const payload = {
 origin/cursor/automate-test-improve-and-merge-code-2533
     (async () => {
       try {
-=======
-    (async () => {}
-      try {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         const { supabase } = await import('../utils/supabase/client');
         const user = await supabase.auth.getUser();
         if (user.data.user) {}
@@ -245,14 +235,10 @@ if ( {) {}
           await supabase.from ('salary_insights').insert ({}
             user_id: user.data.user.id,
             payload,
-<<<<<<< HEAD
             user_id: user.data.user.id,
 payload,
 origin/cursor/automate-test-improve-and-merge-code-2533
           });
-=======
-          });'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           alert ('Insight saved to your profile');
           return;
         }
@@ -287,13 +273,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
     })()
   }
-<<<<<<< HEAD
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string; value: number }[];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  const donutData = useMemo(() => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const min = data.minHourlyUsd;
     const median = data.medianHourlyUsd;
     const max = data.maxHourlyUsd;
@@ -357,9 +339,6 @@ if (return [] as { label: string, value: number }[], ) {}
 { label: 'Above Median', value: upper || 1 },
     ];
   }, [data]);
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div>
 <div className='relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow'>
@@ -411,22 +390,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <option>Lead</option>
                 </select>
               </div>
-<<<<<<< HEAD
               <div>"
                 <label className="block text-sm mb-2" htmlFor="input-Employment">Employment</label>"
                 <select value={employmentType} onChange={(e) => setEmploymentType(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">"
                   <option value="contract">Contract</option>"
                   <option value="freelance">Freelance</option>"
                   <option value="full-time">Full-time</option>
-<<<<<<< HEAD
-=======
-              <div>
-                <label className="block text-sm mb-2" htmlFor="input-Employment">Employment</label>
-                <select value={employmentType} onChange={(e) => setEmploymentType(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
-                  <option value="contract">Contract</option>
-                  <option value="freelance">Freelance</option>
-                  <option value="full-time">Full-time</option>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <label className='block text-sm mb-2'>Employment</label>
                 <select
                   value={employmentType}
@@ -444,20 +413,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               <input
                 id='remote'
-=======
-              <input'
-                id='remote''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 type='checkbox'
-<<<<<<< HEAD
                 checked={remote}"
             <div className="flex items-center gap-2 mt-3">"
               <input id="remote" type="checkbox" checked={remote} onChange={(e) => setRemote(e.target.checked)} />"
-=======
-                checked={remote}
-            <div className="flex items-center gap-2 mt-3">
-              <input id="remote" type="checkbox" checked={remote} onChange={(e) => setRemote(e.target.checked)} />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <label htmlFor="remote" className="text-sm" htmlFor="input-Remote role">Remote role</label>
             </div>
             {!isLoggedIn && ("
@@ -470,41 +429,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Remote role;
               </label>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                onChange={e => setRemote(e.target.checked)}
-              />
-              <label htmlFor='remote' className='text-sm'>
-                Remote role
-              </label>
-            </div>
-            {!isLoggedIn && (
-              <div className='mt-3 text-xs text-gray-500'>
-                Advanced filters are available when you sign in.
-              </div>
-            )}
-
-<button
-              onClick={fetchInsights}
-              disabled={loading}
-              className='mt-4 w-full rounded bg-indigo-600 text-white py-2 text-sm hover:bg-indigo-700 disabled:opacity-50'
-            >
-              {loading ? 'Calculating…' : 'Update Insights'}
-            </button>
-          </div>
-
-<div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-            <h3 className='font-medium mb-2'>Actions</h3>
-            <div className='flex flex-col gap-2'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <button
-                onClick={saveInsight}
-=======
-              <button;
-                onClick={saveInsight}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className='rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900'>;
                 Save insight;
               </button>;
@@ -517,19 +441,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <button;
                 onClick={() =>;'
                   alert('This would suggest a resume rate optimization.');
-<<<<<<< HEAD
                 }"
             <h3 className="font-medium mb-2">Actions</h3>"
             <div className="flex flex-col gap-2">"
               <button onClick={saveInsight} className="rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900">Save insight</button>'"
               <button onClick={() => alert('This would prefill a job posting flow.')} className="rounded bg-emerald-600 text-white py-2 text-sm hover:bg-emerald-700">Use in Job Post</button>'"
-=======
-                }
-            <h3 className="font-medium mb-2">Actions</h3>
-            <div className="flex flex-col gap-2">
-              <button onClick={saveInsight} className="rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900">Save insight</button>
-              <button onClick={() => alert('This would prefill a job posting flow.')} className="rounded bg-emerald-600 text-white py-2 text-sm hover:bg-emerald-700">Use in Job Post</button>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <button onClick={() => alert('This would suggest a resume rate optimization.')} className="rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700">Optimize Resume Rate</button>
               >;
                 Optimize Resume Rate;
@@ -537,7 +453,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
               </div>;
-<<<<<<< HEAD
             </div>;
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
               <div className='text - xs text - gray - 500'>Recommended Monthly</div>;
@@ -567,12 +482,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='text-xs text-gray-500'>Recommended Monthly</div>
               <div className='text-xl font-semibold'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-            </div>;'
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;'
-              <div className='text - xs text - gray - 500'>Recommended Monthly</div>;'
-              <div className='text - xl font - semibold'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {data ? `$${data.recommendedMonthlyUsd}` : '—'}
               </div>;
             </div>;'
@@ -648,16 +557,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </tbody>;
                 </table>;
               )}
-<<<<<<< HEAD
             </div>
 
 <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <h3 className='font-medium mb-3'>Distribution</h3>
 origin/cursor/automate-test-improve-and-merge-code-2533
               {data ? (
-=======
-              {data ? ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className='flex flex - col items - center gap - 3'>;
                   <DonutChart;
                     slices={}
@@ -665,33 +570,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   />;'
                   <div className='flex gap-2 flex-wrap justify-center text-xs'>;
                     {donutData && donutData.map(d => (;
-<<<<<<< HEAD
                       <span;
                         key={d && d.label}'
-=======
-                      <span
-                        key={d && d.label}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         className='rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0 && 0.5'>;
                         {d && d.label}
                       </span>                    ))}
                   </div>;
                 </div>;
-<<<<<<< HEAD
               ) : (;'"
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />              )}                <div className="flex flex-col items-center gap-3">;
                   <DonutChart slices={donutData && donutData.map((d, i) => ({ label: d && d.label, value: d && d.value })) as any} />;"
                   <div className="flex gap-2 flex-wrap justify-center text-xs">;
                     {donutData && donutData.map((d) => (;"
                       <span key={d && d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0 && 0.5">{d && d.label}</span>;
-=======
-              ) : (;
-                <div className='h-40 animate-pulse bg-gray-100 dark: bg-gray-900 rounded' />              );}                <div className="flex flex-col items-center gap-3">;
-                  <DonutChart slices={donutData && donutData.map((d, i) => ({ label: d && d.label;, value: d && d.value ;})) as any} />;
-                  <div className="flex gap-2 flex-wrap justify-center text-xs">;
-                    {donutData && donutData.map((d) => (;
-                      <span key={d && d.label} className="rounded-full border border-gray-300 dark: border-gray-700 px-2 py-0 && 0.5">{d && d.label;}</span>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </div>;
                 </div>;
               ) : (;'"
@@ -700,17 +591,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className="font-medium mb-3">Distribution</h3>
               {data ? ("
                 <div className="flex flex-col items-center gap-3">
-<<<<<<< HEAD
                   <DonutChart slices={donutData.map((d, i) => ({ label: d.label, value: d.value })) as any} />"
                   <div className="flex gap-2 flex-wrap justify-center text-xs">
                     {donutData.map((d) => ("
                       <span key={d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{d.label}</span>
-=======
-                  <DonutChart slices={donutData.map((d, i) => ({ label: d.label;, value: d.value ;})) as any} />
-                  <div className="flex gap-2 flex-wrap justify-center text-xs">
-                    {donutData.map((d) => (
-                      <span key={d.label} className="rounded-full border border-gray-300 dark: border-gray-700 px-2 py-0.5">{d.label;}</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         key={d.label}
                         className='rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5'
                       >
@@ -726,15 +610,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
-<<<<<<< HEAD
           {data?.gptRecommendation && (
 <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <h3 className='font-medium mb-2'>GPT Recommendation</h3>
-=======
-          {data?.gptRecommendation && ('
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>'
-              <h3 className='font-medium mb-2'>GPT Recommendation</h3>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap'>
                 {data.gptRecommendation}
               </p>            </div>
@@ -748,22 +626,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
 
-<<<<<<< HEAD
               )}"
               <h3 className="font-medium mb-2">GPT Recommendation</h3>"
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
           )}
           {data && (
-<<<<<<< HEAD
-=======
-              )}
-              <h3 className="font-medium mb-2">GPT Recommendation</h3>
-              <p className="text-sm text-gray-700 dark: text-gray-300 whitespace-pre-wrap">{data.gptRecommendation;}</p>
-            </div>
-          )}
-          {data && (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
               </p>
             </div>
           )}
@@ -778,12 +647,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                   <span
                     key={t}
-=======
-                  <span;
-                    key={t}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className='rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs'>;
-<<<<<<< HEAD
                     {t}"
                   </span>                ))}            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;"
               <h3 className="font-medium mb-3">Signals</h3>;"
@@ -791,29 +655,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data && data.minHourlyUsd} - ${data && data.maxHourlyUsd} / hr</span>;
                 {data && data.tags.map((t) => (;"
                   <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>;
-=======
-                    {t}
-                  </span>                ))}            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
-              <h3 className="font-medium mb-3">Signals</h3>;
-              <div className="flex gap-2 flex-wrap">;
-                <span className="rounded-full bg-gray-100 dark: bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data && data.minHourlyUsd;} - ${data && data.maxHourlyUsd} / hr</span>;
-                {data && data.tags.map((t) => (;
-                  <span key={t} className="rounded-full bg-indigo-50 dark: bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t;}</span>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>;
             </div>;
           )}
   );
 }
-<<<<<<< HEAD
                       donut_data.map ((d, i) => ({}
                         label: d.label,
                         value: d.value,
-=======
-                      donut_data.map ((d, i) => ({
-                        label: d.label;,
-                        value: d.value;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       })) as any;
                     }
                   />;'
@@ -826,7 +675,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {d.label}
                       </span>                    ))}
                   </div>;
-<<<<<<< HEAD
                 </div>) : (
                 <div className='h - 40 animate - pulse bg - gray - 100 dark: bg - gray - 900 rounded' />              );}                <div className="flex flex - col items-center gap-3">;
                   <DonutChart slices={donut_data.map ((d, i) => ({ label: d.label;, value: d.value ;})) as any} />;
@@ -835,22 +683,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span key={d.label} className="rounded - full border border - gray - 300 dark: border - gray - 700 px-2 py-0.5">{d.label;}</span>;
                   </div>;
                 </div>) : (
-<<<<<<< HEAD
                 <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg-gray-900 rounded" />)}
-=======
-                </div>) : ('"
-                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />              )}                <div className="flex flex - col items - center gap - 3">;
-                  <DonutChart slices={donut_data.map ((d, i) => ({ label: d.label, value: d.value })) as any} />;"
-                  <div className="flex gap - 2 flex - wrap justify - center text - xs">;
-                    {donut_data.map ((d) => ("
-                      <span key={d.label} className="rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5">{d.label}</span>;
-                  </div>;
-                </div>) : ('"
-                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded" />)}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                <div className='h - 40 animate - pulse bg - gray - 100 dark: bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg-gray-900 rounded" />);}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
           </div>;
           {data?.gpt_recommendation && ('
@@ -858,21 +691,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className='font - medium mb - 2'>GPT Recommendation</h3>;'
               <p className='text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap'>;
                 {data.gpt_recommendation}
-<<<<<<< HEAD
               </p>            </div>)}
           {data && (            <div className="rounded - lg border border - gray - 200 dark:border - gray-800 p-4">;
               <h3 className="font-medium mb-2">GPT Recommendation</h3>;
-<<<<<<< HEAD
               <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace-pre-wrap">{data.gpt_recommendation}</p>;
-=======
-              </p>            </div>)}"
-          {data && (            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;"
-              <h3 className="font - medium mb - 2">GPT Recommendation</h3>;"
-              <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap">{data.gpt_recommendation}</p>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              <p className="text - sm text - gray - 700 dark: text - gray - 300 whitespace-pre-wrap">{data.gpt_recommendation;}</p>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>)}
           {data && (
 
@@ -890,27 +712,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     key={t}'
                     className='rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs';
                   >;
-<<<<<<< HEAD
                     {t}
                   </span>                ))}            <div className="rounded - lg border border - gray - 200 dark:border - gray-800 p-4">;
               <h3 className="font-medium mb-3">Signals</h3>;
               <div className="flex gap-2 flex-wrap">;
                 <span className="rounded - full bg - gray - 100 dark: bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py-1 text-xs">Range: ${data.minHourlyUsd;} - ${data.maxHourlyUsd} / hr</span>;
                 {data.tags.map ((t) => (
-<<<<<<< HEAD
                   <span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py-1 text-xs">{t}</span>;
-=======
-                    {t}"
-                  </span>                ))}            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;"
-              <h3 className="font - medium mb - 3">Signals</h3>;"
-              <div className="flex gap - 2 flex - wrap">;"
-                <span className="rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>;
-                {data.tags.map ((t) => ("
-                  <span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs">{t}</span>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                  <span key={t} className="rounded - full bg - indigo - 50 dark: bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py-1 text-xs">{t;}</span>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>;
             </div>)}
         </div>;

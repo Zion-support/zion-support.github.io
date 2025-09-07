@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'Invoice Automation | Zion Tech Group',
   description: 'Automated invoice processing for streamlined billing.',
@@ -43,13 +42,6 @@ export default function ServicePage() {
     </div>
   )
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Link from "next/link";
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
   title: "Invoice Automation | Zion Tech Group",
   description:
@@ -149,8 +141,7 @@ export default function InvoiceAutomationPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
+
 import Link from "next/link";
 
 export const metadata = {"
@@ -268,29 +259,10 @@ export default function InvoiceAutomationPage() {}
           />
           <BenefitCard"
             title="Real-time Insights""
-=======
-
-      <div className="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-          Why Choose Our Invoice Automation?
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <BenefitCard
-            title="95% Time Savings"
-            description="Automated invoice processing reduces manual work by 95%, freeing up your team for strategic tasks."
-          />
-          <BenefitCard
-            title="99.5% Accuracy Rate"
-            description="AI-powered data extraction achieves 99.5% accuracy, reducing errors and improving financial accuracy."
-          />
-          <BenefitCard
-            title="Real-time Insights"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             description="Get instant visibility into your financial data with real-time dashboards and predictive analytics."
           />
         </div>
       </div>
-<<<<<<< HEAD
 "
       <div className="text-center">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -315,32 +287,6 @@ export default function InvoiceAutomationPage() {}
             Email Us;
           </a>
         </div>"
-=======
-
-      <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Automate Your Invoicing?
-        </h2>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Transform your accounting operations with AI-powered invoice
-          automation that saves time, reduces errors, and provides real-time
-          insights.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="mt-4 text-sm text-gray-500">
           <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
@@ -350,7 +296,6 @@ export default function InvoiceAutomationPage() {}
   );
 }
 
-<<<<<<< HEAD
 function FeatureItem({}
   title,
   description,
@@ -369,62 +314,28 @@ function FeatureItem({}
           <path"
             fillRule="evenodd""
             d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z""
-=======
-function FeatureItem({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="flex items-start space-x-4">
-      <div className="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mt-1">
-        <svg
-          className="w-4 h-4 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path
-            fillRule="evenodd"
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             clipRule="evenodd"
           />
         </svg>
       </div>
-<<<<<<< HEAD
       <div>"
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>"
-=======
-      <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <p className="text-gray-600">{description}</p>
       </div>
     </div>
   );
 }
 
-<<<<<<< HEAD
 function PricingCard({}
-=======
-function PricingCard({
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   plan,
   price,
   description,
   features,
-<<<<<<< HEAD
 }: {}
-=======
-}: {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   plan: string;
   price: string;
   description: string;
   features: string[];
-<<<<<<< HEAD
 }) {}
   return ("
     <div className="border border-gray-200 rounded-xl p-6 bg-white">"
@@ -434,17 +345,6 @@ function PricingCard({
       <ul className="space-y-2">
         {features.map((feature, index) => ("
           <li key={index} className="flex items-center text-sm text-gray-600">"
-=======
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{plan}</h3>
-      <div className="text-3xl font-bold text-orange-600 mb-2">{price}</div>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-sm text-gray-600">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span className="text-orange-500 mr-2">•</span> {feature}
           </li>
         ))}
@@ -453,7 +353,6 @@ function PricingCard({
   );
 }
 
-<<<<<<< HEAD
 function BenefitCard({}
   title,
   description,
@@ -465,25 +364,9 @@ function BenefitCard({}
     <div className="text-center">"
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>"
       <p className="text-gray-600">{description}</p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     </div>
   );
 }
 "
-=======
-function BenefitCard({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center">
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/main
+

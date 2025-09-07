@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';
-<<<<<<< HEAD
 
     req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
   }
@@ -15,27 +14,15 @@ import path from 'path';
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {}
-=======
-
-
-  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
-<<<<<<< HEAD
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
 
-=======
-  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
-<<<<<<< HEAD
   }
   try {}
     const timestamp = new Date().toISOString();'
@@ -113,6 +100,3 @@ return res.status(500).json({ error: 'Internal error' });
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
 '`
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

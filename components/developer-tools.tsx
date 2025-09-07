@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';
 
@@ -29,9 +28,6 @@ import {}
   Cloud,
   Shield,
   Zap,
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Code;
   GitBranch;
   Database;
@@ -44,7 +40,6 @@ import { Code;
   CheckCircle;
   TrendingUp;
   Cpu;
-<<<<<<< HEAD
 '
       pricing: '$10 / month','
       market_price: '$10 - 20 / month','
@@ -226,7 +221,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description: 'Average productivity improvement''
     },  ];      description: 'Global developer tools market size'
     }
-<<<<<<< HEAD
       title: 'Dev Tools Market',
       value: '$8.2B',
       growth: '+24% YoY',
@@ -251,29 +245,6 @@ description: 'Cloud-based development platforms',
       growth: '+18% YoY',
 description: 'Average productivity improvement',
     },
-=======
-    {'
-      title: 'AI Code Tools''
-      value: '$2.1B''
-      growth: '+45% YoY''
-      description: 'AI-powered development tools market''
-    },      description: 'AI-powered development tools market'
-    }
-    {'
-      title: 'Cloud Dev Tools''
-      value: '$4.8B''
-      growth: '+32% YoY''
-      description: 'Cloud-based development platforms''
-    },      description: 'Cloud-based development platforms'
-    }
-    {'
-      title: 'Dev Productivity''
-      value: '35%''
-      growth: '+18% YoY''
-      description: 'Average productivity improvement''
-    },      description: 'Average productivity improvement'
-    }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
   const devCategories = ['
       description: 'AI - powered development tools market',
@@ -378,58 +349,6 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
       description: 'Deploy and host applications',
     },
   ];
-=======
-
-      pricing: '$10 / month';,
-      market_price: '$10 - 20 / month';,
-      website: 'https://github.com / features / copilot';,
-      color: 'bg - gradient - to - br from - gray - 500 to - black';,
-      text_color: 'text - gray - 400';,
-      gradient: 'from - gray - 400 to - black';,
-      popular: true;,
-      ];
-      pricing: '$4 / month';,
-      market_price: '$4 / month';,
-      website: 'https://github.com / pricing';,
-      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600';,
-      text_color: 'text - green - 400';,
-      gradient: 'from - green - 400 to - emerald - 500';,
-      popular: true;,
-      ];
-      pricing: '$9 / month';,
-      market_price: '$9 - 57 / month';,
-      website: 'https://www.mongodb.com / atlas';,
-      color: 'bg - gradient - to - br from - green - 500 to - blue - 600';,
-      text_color: 'text - green - 400';,
-      gradient: 'from - green - 400 to - blue - 500';,
-      popular: false;,
-      ];
-      pricing: '$20 / month';,
-      market_price: '$20 / month';,
-      website: 'https://vercel.com / pricing';,
-      color: 'bg - gradient - to - br from - black to - gray - 600';,
-      text_color: 'text - gray - 400';,
-      gradient: 'from - black to - gray - 500';,
-      popular: false;,
-      ];
-      pricing: '$25 / month';,
-      market_price: '$25 - 100 / month';,
-      website: 'https://snyk.io / pricing';,
-      color: 'bg - gradient - to - br from - red - 500 to - pink - 600';,
-      text_color: 'text - red - 400';,
-      gradient: 'from - red - 400 to - pink - 500';,
-      popular: false;,
-      ];
-      pricing: '$12 / month';,
-      market_price: '$12 - 99 / month';,
-      website: 'https://www.postman.com / pricing';,
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600';,
-      text_color: 'text - orange - 400';,
-      gradient: 'from - orange - 400 to - red - 500';,
-      popular: false;,
-  Globe
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -478,66 +397,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </div>;
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<section className='section-padding bg-gradient-cursor-accent'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-            </h2>
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              Understanding the developer tools landscape helps you make
-              informed decisions about your development stack.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>
-            {devMarketStats.map((stat, index) => (
-              <Card
-                key={index}
-                className='card-hover border-gradient-blue text-center'
-                style={{ animationDelay: `${index * 0.1;}s` }}
-              >
-                <div className='p-6'>
-                  <h3 className='text-lg font-semibold text-white mb-3'>
-                    {stat.title}
-                  </h3>
-                  <div className='text-2xl font-bold text-cursor-blue mb-2'>
-                    {stat.value}
-                  </div>
-                  <div className='text-sm text-green-400 mb-3'>
-                    {stat.growth}
-                  </div>
-                  <p className='text-sm text-gray-400'>{stat.description}</p>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {/* Developer Tools Grid */}
-<section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-=======
-      {/* Developer Tools Grid */}'
-      <section className='section-padding bg-gradient-cursor'>'
-        <div className='container-cursor'>'
-          <div className='text-center mb-20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-<<<<<<< HEAD
               Curated Developer Tools & Services;
             </h2>"
-=======
-              Curated Developer Tools & Services
-            </h2>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
             </p>
@@ -563,15 +426,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Each tool has been carefully selected based on performance,;
               reliability, and real-world developer usage.;
             </p>;
-<<<<<<< HEAD
           </div>;'
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {developerTools && developerTools.map((tool, index) => (              Curated Developer Tools & Services;
             </h2>;"
-=======
-          </div>;
-          <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>            {developerTools && developerTools.map((tool;, index) => (              Curated Developer Tools & Services;
-            </h2>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.;
             </p>;
@@ -581,12 +438,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className={`card-hover group border-gradient-blue relative ${'
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''`
                 }`}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                 style={{ animationDelay: `${index * 0.1}s` }}
-=======
-                style={{ animationDelay: `${index * 0.1;}s` }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               >
                 {tool.popular && (
 <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>
@@ -656,43 +509,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         href={tool && tool.website}
                         variant='primary'
                         size='sm'
-<<<<<<< HEAD
-=======
-                      <Button;
-                        href={tool && tool.website}'
-                        variant='primary''
-                        size='sm''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                        className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
-                        Try Tool;'
-                        <ExternalLink className='w-4 h-4 ml-2' />;
-                      </Button>;'
-                      <div className='text-right'>;'
-                        <div className='text-xs text-gray-500'>Direct Link</div>;'
-                        <div className='text-xs text-cursor-blue font-mono'>;
-                          {tool && tool.website}
-                        </div>                      </div>                      <Button;
-                        href={tool && tool.website}"
-                        variant="primary""
-                        size="sm""
-                        className="bg-cursor-blue hover:bg-cursor-blue-dark">;
-                        Try Tool;"
-                        <ExternalLink className="w-4 h-4 ml-2" />;
-                      </Button>;"
-                      <div className="text-right">;"
-                        <div className="text-xs text-gray-500">Direct Link</div>;"
-                        <div className="text-xs text-cursor-blue font-mono">{tool && tool.website}</div>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
-              </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         className='bg-cursor-blue hover:bg-cursor-blue-dark'
                       >
                         Try Tool
@@ -717,16 +533,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
-=======
+
       {/* Developer Workflow */}'
       <section className='section-padding bg-gradient-cursor-accent'>'
         <div className='container-cursor'>'
           <div className='text-center mb-20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-
-
 
               Complete Developer Workflow;
             </h2>'
@@ -753,17 +566,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Build a complete development pipeline with these essential tools that work together seamlessly.;
             </p>;
-<<<<<<< HEAD
           </div>;`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;"
                 <div className="p-6 text-center">;"
                   <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">;"
-=======
-          </div>;
-                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
-                <div className="p-6 text-center">;
-                  <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <Cpu className="w-8 h-8 text-cursor-blue" />;
                   </div>;"
                   <h3 className="text-xl font-semibold text-white mb-3">{phase && phase.phase}</h3>;"
@@ -829,32 +635,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
             {dev_categories.map ((category, index) => (
               <Card;
-<<<<<<< HEAD
                 key={index}'
                 className='card - hover border - gradient - blue';`
                 style={{ animation_delay: `${index * 0.1}s` }}
-=======
-                key={index}
-                className='card - hover border - gradient - blue';
-                style={{ animation_delay: `${index * 0.1;}s` }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               >;
                 </div>;
               </Card>))}
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
       {/* Tool Categories */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
-=======
-      {/* Tool Categories */}'
-      <section className='section-padding bg-gradient-cursor'>'
-        <div className='container-cursor'>'
-          <div className='text-center mb-20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
             </h2>'
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -864,7 +657,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {devCategories.map((category, index) => (
-<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='card-hover border-gradient-blue'`
@@ -878,39 +670,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='flex items-center justify-between text-sm'>'
                     <span className='text-gray-500'>'
                       Tools Available:{' '}'
-=======
-              <Card
-                key={index}
-                className='card-hover border-gradient-blue'
-                style={{ animationDelay: `${index * 0.1;}s` }}
-              >
-                <div className='p-6'>
-                  <h3 className='text-xl font-semibold text-white mb-3'>
-                    {category.name}
-                  </h3>
-                  <p className='text-gray-400 mb-4'>{category.description}</p>
-                  <div className='flex items-center justify-between text-sm'>
-                    <span className='text-gray-500'>
-                      Tools Available: {' ';}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <span className='text-white'>{category.tools}</span>
                     </span>'
                     <span className='text-cursor-blue font-semibold'>
-<<<<<<< HEAD
                       {category.avgPrice}"
                     </span>                  </div>                <div className="p-6">"
                   <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>"
                   <p className="text-gray-400 mb-4">{category.description}</p>"
                   <div className="flex items-center justify-between text-sm">"
                     <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>"
-=======
-                      {category.avgPrice}
-                    </span>                  </div>                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
-                  <p className="text-gray-400 mb-4">{category.description}</p>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools;}</span></span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
                     </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -926,23 +694,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 
-
       {/* CTA Section */}
-
 
             Start with one tool or build a complete development stack. Each tool;
             is designed to work independently and integrate seamlessly with your;
             existing workflow.;
           </p>;
-<<<<<<< HEAD
       {/* CTA Section */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
-=======
-      {/* CTA Section */}'
-      <section className='section-padding bg-gradient-cursor-accent'>'
-        <div className='container-cursor text-center'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
           </h2>'
           <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
@@ -951,7 +711,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             existing workflow.
           </p>'
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
-<<<<<<< HEAD
             <Button'
               href='/ai-tools''
               variant='primary''
@@ -959,16 +718,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
               Explore AI Tools;
             </Button>;
-<<<<<<< HEAD
-=======
-            <Button
-              href='/ai-tools'
-              variant='primary'
-              size='lg'
-              className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
-              Explore AI Tools;
-            </Button>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='bg-cursor-blue hover:bg-cursor-blue-dark'
             >
               Explore AI Tools
@@ -977,17 +726,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Button
 href='/contact'
               variant='outline'
-=======
-            <Button'
-              href='/contact''
-              variant='outline''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               size='lg'
-<<<<<<< HEAD
               Get Dev Consultation;
-=======
-              Get Dev Consultation
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </Button>;
           </div>;
         </div>;
@@ -999,21 +739,3 @@ href='/contact'
               Explore AI Tools;
             </Button>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'
-            >
-              Get Dev Consultation
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

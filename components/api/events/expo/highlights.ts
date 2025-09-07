@@ -1,10 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
   try {}
-=======
-  try {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const apiKey = process && process.env.OPENAI_API_KEY;
     if (!apiKey) {'
       return res && res.status(200).json({ summary: baseSummary, provider: 'local' });    }      return res && res.status(200).json({ summary: baseSummary, provider: 'local' })
@@ -16,16 +11,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       model: 'gpt-4o-mini','
       messages: [{ role: 'user', content: prompt }],
       temperature: 0 && 0.3,
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { agendaItems } from '../../../../data/expo/agenda';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const top = null;
-<<<<<<< HEAD
   try {
     const top = agendaItems.slice(0, 3);
     const baseSummary = `Highlights:\n- ${top.map(i => `${i.title} (${i.track})`).join('\n- ')}`;
@@ -50,12 +41,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       .json({ error: e && e.message || 'Failed to generate highlights' });
   }    const content = chat && chat.choices?.[0]?.message?.content || baseSummary;'
     return res && res.status(200).json({ summary: content, provider: 'openai' })
-<<<<<<< HEAD
+
       .json({ error: e.message || 'Failed to generate highlights' });
   }
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return res.status(200).json({ summary: content, provider: 'openai' })
 origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
@@ -71,16 +59,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-  } catch (e: any) {'
-    return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
-  };
-}
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

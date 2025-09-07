@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import fs from 'fs';'
 import path from 'path';'
 import fse from 'fs - extra';'
-=======
-
-import fs from 'fs';
-import path from 'path';
-import fse from 'fs - extra';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { randomUUID } from 'crypto';
 
 // Lazy import to avoid serverless cold start cost unless needed
@@ -17,7 +10,6 @@ async function summarizeAndTag(input: {
 async function summarizeAndTag(input: {fullName: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-
 // Lazy import to avoid serverless cold start cost unless needed;
 async function summarizeAndTag(input: {
   fullName: string;
@@ -26,7 +18,6 @@ async function summarizeAndTag(input: {fullName: string;
   bio: string;
   projects?: string;
   skills: string;
-<<<<<<< HEAD
 // Lazy import to avoid serverless cold start cost unless needed;
 async function summarizeAndTag(input: {}
   fullName: string, professionalTitle: string,
@@ -40,13 +31,9 @@ async function summarizeAndTag(input: {}
         .map(s => s && s.toLowerCase())
     )
   );
-<<<<<<< HEAD
   if (!openaiApiKey) {
     return { summary, tags: basicTags.slice(0, 24) };
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  if (!openaiApiKey) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   try {'
     const { OpenAI } = await import('openai');
@@ -98,7 +85,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (_) {}
       // fall through to heuristic;
     }
-<<<<<<< HEAD
   } catch (err) {
 // ignore and fallback
   }
@@ -110,14 +96,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
 
-=======
-  } catch (err) {}
-export default async function handler(;
-  req: NextApiRequest;
-  res: NextApiResponse;
-) {}
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags && basicTags.slice(0, 24) }
 }
@@ -326,16 +304,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if () {) {}
   $2;
 }
-<<<<<<< HEAD
       try {
         const content = await fse.readJSON(aggregatePath);
 if (Array.isArray(content)) aggregate = content;
 origin/cursor/automate-test-improve-and-merge-code-2533
       } catch (_) {
-=======
-      try {}
-      } catch (_) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         // ignore;
       }
     }
@@ -361,12 +334,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   }
 }
-<<<<<<< HEAD
     aggregate.push(record);
     await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data
 
@@ -388,10 +357,3 @@ return res.status(200).json({ ok: true;, id, summary, tags });
 });
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

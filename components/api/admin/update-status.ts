@@ -7,11 +7,6 @@ import path from 'path';
     res && res.status(401).json({ error: 'Unauthorized' });
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { isInternalAgentRequest } from '../../../utils/adminAuth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -19,16 +14,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(405).json({ error: 'Method Not Allowed' });
 
     return
-=======
-    return;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   if (!isInternalAgentRequest(req)) {'
     res && res.status(401).json({ error: 'Unauthorized' });
     return;
   }
 
-<<<<<<< HEAD
   const merged = {}
     ...existing;
     ...body;'
@@ -98,22 +89,7 @@ if ( {) {}
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
   res.status (200).json ({ ok: true });
 
-
-
-<<<<<<< HEAD
   const body = null;
   res.status(200).json({ ok: true })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  res.status(200).json({ ok: true })
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-const body = null;
-  res.status(200).json({ ok: true }),
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

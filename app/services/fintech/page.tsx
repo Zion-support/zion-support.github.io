@@ -154,7 +154,6 @@ export default function FinTechPage() {
   return (
 <div className="animate-fade-in">
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-br from-emerald-50 to-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -565,31 +564,6 @@ function FinTechServiceCard({
       <div className="mb-4">
         <div className="text-lg font-semibold text-emerald-600 mb-1">{pricing}</div>
         <div className="text-sm text-gray-500">{marketSize}</div>
-=======
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          FinTech Solutions
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-          Transform financial services with cutting-edge technology. From
-          digital banking to cryptocurrency exchanges, we build secure, scalable
-          FinTech solutions that meet the highest industry standards.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get FinTech Consultation
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Request Demo
-          </a>
-        </div>
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       </div>
 
 {/* FinTech Capabilities */}
@@ -780,7 +754,6 @@ function FinTechServiceCard({ service }: { service: any }) {
     </div>
   );
 }
-<<<<<<< HEAD
 
 function FeatureCard({ title, description }: { title: string; description: string }) {
   return (
@@ -838,37 +811,3 @@ function FinTechPricingCard({
     </div>
   );
 }
-=======
-function ComplianceCard({
-  title,
-  description,
-  icon,
-}: {
-  title: string;
-  description: string;
-  icon: string;
-}) {
-  return (
-    <div className="text-center p-6 bg-white rounded-lg border border-gray-200">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm">{description}</p>
-    </div>
-  );
-}
-
-function TechStackItem({
-  name,
-  description,
-}: {
-  name: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
-      <h3 className="font-semibold text-gray-900 mb-1">{name}</h3>
-      <p className="text-sm text-gray-600">{description}</p>
-    </div>
-  );
-}
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172

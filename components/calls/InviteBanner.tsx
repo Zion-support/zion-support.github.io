@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 
 type Props = any;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 type Props = {
-=======
-type Props = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   message: string;
   onJoin?: () => void;
   canJoin?: boolean;
@@ -56,9 +46,6 @@ type Props = {;
 
 export default function InviteBanner(): any ({ message, onJoin, canJoin = true }: Props) {;
         >
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function InviteBanner({ message, onJoin, canJoin = true }: Props) {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
@@ -66,8 +53,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <span className="text-sm">{message}</span>
       {onJoin && ('`
         <button onClick={onJoin} disabled={!canJoin} className={`px-3 py-2 rounded ${canJoin ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-400'}`}>
-<<<<<<< HEAD
-=======
+
           Join Meeting
 
          />
@@ -78,13 +64,12 @@ export default function InviteBanner({ message, onJoin, canJoin = true }: Props)
       <span className=\"text-sm\" />{message}</span>
       {onJoin && (}
         <button onClick={onJoin} disabled={!canJoin} className={`px-3 py-2 rounded ${canJoin ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-400'}`} />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
           Join Meeting;
         </button>
       )}
     </div>;
   );
-<<<<<<< HEAD
 }'
 import React from 'react';
 type Props = {}
@@ -92,19 +77,5 @@ type Props = {}
   on_join?: () => void;
   can_join?: boolean;
 }
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
-type Props = {
-  message: string;,
-  on_join?: () => void;
-  can_join?: boolean;
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
 
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+origin/cursor/automate-test-improve-and-merge-code-2533

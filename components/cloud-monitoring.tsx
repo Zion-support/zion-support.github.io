@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -42,34 +41,20 @@ import React from 'react';
   Code,;'
 } from 'lucide-react';
 
-<<<<<<< HEAD
 export default function CloudMonitoringPage() {
   const features = [
-
 
 export default function CloudMonitoringPage() {
   const features = [
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Button from '../components/ui/Button';
 import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
 export default function CloudMonitoringPage() {
   const features = null;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
-=======
-export default function CloudMonitoringPage() {}
-  const features = []
-export default function CloudMonitoringPage() {}
-  const features = []
-    {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: <Activity className='w-8 h-8 text-white' />
       description:'
         'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.''
@@ -168,9 +153,6 @@ export default function CloudMonitoringPage() {}
       icon: <Activity className='w-8 h-8 text-white' />,
   ];
 
-
-
-<<<<<<< HEAD
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -182,11 +164,6 @@ export default function CloudMonitoringPage() {
       ],
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export default function CloudMonitoringPage() {}
-  const features = []
-    {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
   const pricingPlans = []
     {'
@@ -194,7 +171,6 @@ export default function CloudMonitoringPage() {}
       price: '$49''
       period: '/month''
       description: 'Perfect for small teams and startups'
-<<<<<<< HEAD
       features: [
 'Up to 10 servers',
         'Basic monitoring',
@@ -232,16 +208,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'Enterprise',
       price: '$599',
       period: '/month',
-=======
-      features: ['
-      name: 'Professional','
-      price: '$199','
-      period: '/month','
-      description: 'Ideal for growing businesses','
-      name: 'Enterprise','
-      price: '$599','
-      period: '/month','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: 'For large organizations',
 ;
   const use_cases = [;
@@ -249,7 +215,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       title: 'DevOps Teams',
       description:;'
         'Monitor CI / CD pipelines, deployment success rates, and infrastructure health.',
-<<<<<<< HEAD
       benefits: [;
       features: [
 'Unlimited servers',
@@ -288,12 +253,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Faster deployments',
         'Reduced downtime',
         'Better collaboration',
-=======
-      benefits: [;'
-        'Faster deployments','
-        'Reduced downtime','
-        'Better collaboration','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Automated scaling',
       ],
     },
@@ -301,7 +260,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       title: 'SaaS Companies',
       description:;'
         'Track user experience, application performance, and business metrics.',
-<<<<<<< HEAD
       benefits: [;
       description:
         'Track user experience, application performance, and business metrics.',
@@ -311,12 +269,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'User satisfaction',
         'Revenue optimization',
         'Competitive advantage',
-=======
-      benefits: [;'
-        'User satisfaction','
-        'Revenue optimization','
-        'Competitive advantage','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Customer retention',
       ],
     },
@@ -324,7 +276,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       title: 'E - commerce',
       description:;'
         'Monitor website performance, payment processing, and inventory systems.',
-<<<<<<< HEAD
       benefits: [;
       title: 'E-commerce',
       description:
@@ -335,12 +286,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Higher conversion',
         'Faster checkout',
         'Inventory optimization',
-=======
-      benefits: [;'
-        'Higher conversion','
-        'Faster checkout','
-        'Inventory optimization','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Revenue growth',
       ],
     },
@@ -348,7 +293,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       title: 'Financial Services',
       description:;'
         'Ensure compliance, security, and 24 / 7 availability of critical systems.',
-<<<<<<< HEAD
       benefits: [;
       description:
         'Ensure compliance, security, and 24/7 availability of critical systems.',
@@ -358,12 +302,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Regulatory compliance',
         'Fraud detection',
         'Risk management',
-=======
-      benefits: [;'
-        'Regulatory compliance','
-        'Fraud detection','
-        'Risk management','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Customer trust',
       ],'
     },  ];      benefits: ['Regulatory compliance_fraud detection_risk management_customer trust'];
@@ -386,12 +324,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href="#demo""
               variant="outline""
               size="lg"
-<<<<<<< HEAD
     },
   ];
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -498,22 +432,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
-=======
-              <Card;
-                key={index}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
-<<<<<<< HEAD
                 style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }}>;'
                 <div className='relative'>;
                   <div;`
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
-=======
-                style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2;}s` }}>;
-                <div className='relative'>;
-                  <div
-                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover: scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color;} shadow-xl`}>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {feature && feature.icon}
                   </div>;
                 </div>;'
@@ -524,21 +447,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card;
                 key={index}"
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-<<<<<<< HEAD
                 key={index}"
                 className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";`
                 style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
               >;"
                 <div className="relative">;`
                   <div className={`w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center transition - all duration - 300 group - hover:scale - 110 group - hover:shadow - lg bg - gradient - to - br ${feature.color} shadow - xl`}>;
-=======
-                key={index}
-                className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
-                style={{ animation_delay: `${(index * 0.1) + 0.2;}s` }}
-              >;
-                <div className="relative">;
-                  <div className={`w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center transition - all duration - 300 group - hover: scale - 110 group - hover:shadow - lg bg - gradient - to - br ${feature.color;} shadow - xl`}>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {feature.icon}
                   </div>;
                 </div>;"
@@ -546,11 +460,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {feature.title}
                 </h3>;"
                 <p className="text - gray - 400 leading - relaxed">;
-<<<<<<< HEAD
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
-=======
-                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover: scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color;} shadow-xl`}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   >
                     {feature.icon}
                   </div>
@@ -568,17 +478,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Monitoring Capabilities */}
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
-=======
-      {/* Monitoring Capabilities */}'
-      <section className='py-24 bg-black relative overflow-hidden'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>'
-          <div className='text-center mb-20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
               Comprehensive Monitoring;
@@ -636,21 +539,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </Card>;
             ))}
-<<<<<<< HEAD
       {/* Use Cases Section */}
 <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
-=======
-      {/* Use Cases Section */}'
-      <section className='py-24 bg-gray-900 relative overflow-hidden'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>'
-          <div className='text-center mb-20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-
-
-
 
               Use Cases;
             </h2>'
@@ -729,11 +622,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 
       {/* Pricing Section */}
-<<<<<<< HEAD
 "
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <section id="pricing" className="py-24 bg-black relative overflow-hidden">
 "
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">"
@@ -751,17 +640,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>;'
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your monitoring needs;
             </p>;
-<<<<<<< HEAD
           </div>;'"
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-black relative overflow-hidden">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;"
           <div className="text-center mb-20">;"
-=======
-          </div>;
-          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan;, index) => (      <section id="pricing" className="py-24 bg-black relative overflow-hidden">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
-          <div className="text-center mb-20">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
               Simple, Transparent Pricing;
             </h2>;"
@@ -801,7 +683,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </h3>;'
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     {plan.price}
-
 
 '
                 <div className='text-center mb-8'>;'
@@ -845,20 +726,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>;
               </Card>;
 
-
                     </li>
                   ))}
                 </ul>
 
-<<<<<<< HEAD
                 <Button"
                   href="/contact"`
                   className={`w-full ${plan.buttonColor} text-white`}"
-=======
-                <Button
-                  href="/contact"
-                  className={`w-full ${plan.buttonColor} text-white`}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   size="lg"
                 >
                   Get Started"
@@ -874,11 +748,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>
             ))}
       {/* Integrations Section */}
-<<<<<<< HEAD
 "
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <section className="py-24 bg-gray-900 relative overflow-hidden">
 
             ))}"
@@ -952,7 +822,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>
 
-
               </Card>
 
             ))}
@@ -967,17 +836,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             ))}
       {/* CTA Section */}
-<<<<<<< HEAD
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
-=======
-      {/* CTA Section */}'
-      <section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden'>'
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
             Ready to Monitor Your Infrastructure?
@@ -1006,17 +868,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='#demo''
               variant='outline''
               size='lg'
-<<<<<<< HEAD
             <Button"
               href="/contact""
               variant="secondary""
               size="lg""
-=======
-            <Button
-              href="/contact"
-              variant="secondary"
-              size="lg"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl">;
               Start Free Trial;"
               <ArrowRight className="w-5 h-5 ml-2" />;
@@ -1025,7 +880,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href="#demo""
               variant="outline""
               size="lg"
-
 
               Watch Demo;
             </Button>;
@@ -1038,22 +892,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'
-            >
-              <Play className='w-5 h-5 mr-2' />
-              Watch Demo
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 };export default CareersPage;import React, { useState } from 'react';
 '
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);'
@@ -37,7 +36,6 @@ import Layout from '../components/layout/Layout';'
 import {motion} from 'framer-motion';'
 import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
 
-<<<<<<< HEAD
 export default function Careers() {;
 
   const [selectedDepartment, setSelectedDepartment] = useState('all');
@@ -49,18 +47,6 @@ export default function Careers() {;
     { id: 'space-tech', name: 'Space Technology' }
     { id: 'sales', name: 'Sales & Business Development' }
     { id: 'marketing', name: 'Marketing' }
-=======
-
-
-export default function Careers() { return null; }
-    { id: 'all', name: 'All Departments' }'
-    { id: 'engineering', name: 'Engineering' }'
-    { id: 'ai-research', name: 'AI Research' }'
-    { id: 'quantum', name: 'Quantum Computing' }'
-    { id: 'space-tech', name: 'Space Technology' }'
-    { id: 'sales', name: 'Sales & Business Development' }'
-    { id: 'marketing', name: 'Marketing' }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { id: 'operations', name: 'Operations' }
   ];
   const jobOpenings = []
@@ -145,7 +131,6 @@ export default function Careers() { return null; }
           </p>
         </motion.div>
 
-<<<<<<< HEAD
 export default function Careers() {;
   const [selectedDepartment, setSelectedDepartment] = useState('all');
 
@@ -157,26 +142,11 @@ export default function Careers() {;
     { id: 'space-tech', name: 'Space Technology' },;
     { id: 'sales', name: 'Sales & Business Development' },;
     { id: 'marketing', name: 'Marketing' },;
-=======
-
-
-
-
-export default function Careers() { return null; }
-    { id: 'all', name: 'All Departments' },;'
-    { id: 'engineering', name: 'Engineering' },;'
-    { id: 'ai-research', name: 'AI Research' },;'
-    { id: 'quantum', name: 'Quantum Computing' },;'
-    { id: 'space-tech', name: 'Space Technology' },;'
-    { id: 'sales', name: 'Sales & Business Development' },;'
-    { id: 'marketing', name: 'Marketing' },;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { id: 'operations', name: 'Operations' }
   ];
 
   const jobOpenings = [;
     {;
-<<<<<<< HEAD
       id: 1,;
       title: 'Senior AI Engineer',;
       department: 'ai-research',;
@@ -185,21 +155,10 @@ export default function Careers() { return null; }
       experience: '5+ years',,
   description: 'Lead the development of cutting-edge AI solutions and machine learning models.',;
       requirements: [;
-=======
-      id: 1,;'
-      title: 'Senior AI Engineer',;'
-      department: 'ai-research',;'
-      location: 'Remote / Middletown, DE';'
-      type: 'Full-time',;'
-      experience: '5+ years',;'
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',;
-      requirements: [;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Advanced degree in Computer Science, AI, or related fieldExpertise in Python, TensorFlow, PyTorchExperience with large language models and neural networksStrong problem-solving and analytical skills';
       ]
 };
     {;
-<<<<<<< HEAD
       id: 2,;
       title: 'Quantum Computing Researcher',;
       department: 'quantum',;
@@ -208,21 +167,10 @@ export default function Careers() { return null; }
       experience: '3+ years',,
   description: 'Research and develop quantum algorithms and quantum computing solutions.',;
       requirements: [;
-=======
-      id: 2,;'
-      title: 'Quantum Computing Researcher',;'
-      department: 'quantum',;'
-      location: 'Remote / Middletown, DE';'
-      type: 'Full-time',;'
-      experience: '3+ years',;'
-      description: 'Research and develop quantum algorithms and quantum computing solutions.',;
-      requirements: [;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'PhD in Physics, Computer Science, or related fieldExperience with quantum programming languages (Qiskit, Cirq)Knowledge of quantum algorithms and quantum information theoryStrong mathematical and theoretical background';
       ]
 };
     {;
-<<<<<<< HEAD
       id: 3,;
       title: 'Space Technology Engineer',;
       department: 'space-tech',;
@@ -231,21 +179,10 @@ export default function Careers() { return null; }
       experience: '4+ years',,
   description: 'Design and develop innovative space technology solutions and satellite systems.',;
       requirements: [;
-=======
-      id: 3,;'
-      title: 'Space Technology Engineer',;'
-      department: 'space-tech',;'
-      location: 'Remote / Middletown, DE';'
-      type: 'Full-time',;'
-      experience: '4+ years',;'
-      description: 'Design and develop innovative space technology solutions and satellite systems.',;
-      requirements: [;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Degree in Aerospace Engineering, Physics, or related fieldExperience with satellite design and space systemsKnowledge of orbital mechanics and space environmentFamiliarity with space industry standards and regulations';
       ]
 };
     {;
-<<<<<<< HEAD
       id: 4,;
       title: 'Full Stack Developer',;
       department: 'engineering',;
@@ -254,21 +191,10 @@ export default function Careers() { return null; }
       experience: '3+ years',,
   description: 'Build scalable web applications and cloud-based solutions.',;
       requirements: [;
-=======
-      id: 4,;'
-      title: 'Full Stack Developer',;'
-      department: 'engineering',;'
-      location: 'Remote / Middletown, DE';'
-      type: 'Full-time',;'
-      experience: '3+ years',;'
-      description: 'Build scalable web applications and cloud-based solutions.',;
-      requirements: [;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Experience with React, Node && Node.js, and cloud platformsKnowledge of modern web technologies and APIsUnderstanding of software architecture and design patternsExperience with DevOps and CI/CD practices';
       ]
 };
     {;
-<<<<<<< HEAD
       id: 5,;
       title: 'Business Development Manager',;
       department: 'sales',;
@@ -277,23 +203,12 @@ export default function Careers() { return null; }
       experience: '5+ years',,
   description: 'Drive business growth through strategic partnerships and client relationships.',;
       requirements: [;
-=======
-      id: 5,;'
-      title: 'Business Development Manager',;'
-      department: 'sales',;'
-      location: 'Remote / Middletown, DE';'
-      type: 'Full-time',;'
-      experience: '5+ years',;'
-      description: 'Drive business growth through strategic partnerships and client relationships.',;
-      requirements: [;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Proven track record in B2B sales and business developmentExperience in technology or consulting industriesStrong networking and relationship-building skillsUnderstanding of emerging technologies and market trends';
       ];
     }
   ];
 
   const companyValues = [;
-<<<<<<< HEAD
     {;
       icon: <Brain className="w-8 h-8" />,;
       title: 'Innovation First',,
@@ -313,27 +228,6 @@ export default function Careers() { return null; }
       icon: <Star className="w-8 h-8" />,;
       title: 'Excellence',,
   description: 'We strive for the highest quality in everything we do.';
-=======
-    {;"
-      icon: <Brain className="w-8 h-8" />,;'
-      title: 'Innovation First',;'
-      description: 'We push boundaries and explore new technologies to solve complex problems.';
-    };
-    {;"
-      icon: <Heart className="w-8 h-8" />,;'
-      title: 'People Matter',;'
-      description: 'Our team is our greatest asset, and we invest in their growth and well-being.';
-    };
-    {;"
-      icon: <Globe className="w-8 h-8" />,;'
-      title: 'Global Impact',;'
-      description: 'We create solutions that make a difference in the world.';
-    };
-    {;"
-      icon: <Star className="w-8 h-8" />,;'
-      title: 'Excellence',;'
-      description: 'We strive for the highest quality in everything we do.';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -449,12 +343,8 @@ export default function Careers() { return null; }
                       </span>;
                     </div>;
                   </div>;
-<<<<<<< HEAD
                   <a
 
-=======
-                  <a;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {/* General Application */}
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
@@ -493,7 +383,6 @@ export default function Careers() { return null; }
               </a>;
             </div>;
           </div>;
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout';
@@ -506,9 +395,3 @@ export default function Careers() {
   const departments = null;
 export default CareersPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

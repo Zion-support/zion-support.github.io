@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   ArrowRight;
   Brain;
   Rocket;
@@ -46,7 +45,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const containerVariants = {}
     hidden: { opacity: 0 }
-<<<<<<< HEAD
+
     visible: {
       opacity: 1
       transition: {
@@ -57,12 +56,6 @@ staggerChildren: 0.1,
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
-=======
-    visible: {}
-      opacity: 1;
-      transition: {}
-  const itemVariants = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     hidden: { opacity: 0, y: 30 }
     visible: {}
       opacity: 1;
@@ -117,7 +110,6 @@ const Revolutionary2027Hero = () => {;
       },;
     },;
   };
-<<<<<<< HEAD
         duration: 0.8,
 ease: 'easeOut' as const,
       },
@@ -126,9 +118,6 @@ ease: 'easeOut' as const,
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-=======
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>;
       {/* Enhanced Background Effects */}'
       <div className='absolute inset-0 opacity-20'>;'
@@ -145,7 +134,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
       </div>;
 
-
 '
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
 
@@ -158,14 +146,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Animated Grid Pattern */}"
       <div className="absolute inset-0 opacity-20">"
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-<<<<<<< HEAD
       <div className='absolute inset-0 opacity-20'>
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>
 origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
-=======
-      </div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>
 
       </div>
@@ -201,7 +185,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >'"
           <item.icon className='w-8 h-8' />            ease: "easeInOut"
 
-
           }}          transition={{}
             rotate: [0, 5, -5, 0]}}
           transition={{}
@@ -212,7 +195,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >"
           <item.icon className="w-8 h-8" />
         </motion.div>
-<<<<<<< HEAD
 y: [0, -20, 0],
             rotate: [0, 5, -5, 0],
           }}
@@ -233,11 +215,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           variants={containerVariants}
           initial='hidden'
           animate='visible'
-=======
-          variants={containerVariants}'
-          initial='hidden''
-          animate='visible''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className='space-y-8'>;
           {/* Main Heading */}'
           <motion && motion.div variants={itemVariants} className='space-y-6'>;'
@@ -503,7 +480,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ease: 'easeInOut',
         }}>;'
         <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>;
-<<<<<<< HEAD
           <motion&& motion.div
       {/* Scroll Indicator */}
       <motion.div
@@ -520,9 +496,6 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
         <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          <motion&& motion.div'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className='w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2'
       >;'
         <div className='w - 6 h - 10 border - 2 border - purple - 400 / 50 rounded - full flex justify - center'>;
@@ -531,7 +504,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{}
             animate={{}
               coordinate_y: [0, 12, 0]}}
-<<<<<<< HEAD
             transition={{
               y: [0, 12, 0],
             }}
@@ -540,9 +512,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               repeat: Infinity,
               ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-            transition={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             }}
             transition={{}
               duration: 2;
@@ -553,14 +522,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </motion && motion.div>;
 
-
       {/* Particle Effects */}
-
 
       {/* Particle Effects */}'
       <div className='absolute inset-0 pointer-events-none'>
-
-
 
 <div className='absolute inset-0 pointer-events-none'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -615,7 +580,6 @@ export default Revolutionary2027Hero);
 ;
 export default Revolutionary2027Hero;
 ;
-<<<<<<< HEAD
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
@@ -629,8 +593,4 @@ export default Revolutionary2027Hero;
 
 export default Revolutionary2027Hero;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

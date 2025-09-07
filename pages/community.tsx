@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
@@ -150,16 +141,11 @@ function CommunityPage() {}
         </div>;
       </div>;
 
-
-
-
-
 }
 
 '
 import React from 'react','
 import Head from 'next/head',
-
 
 export default function CommunityPage() {}
 	return (
@@ -182,7 +168,6 @@ export default function CommunityPage() {}
 						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>"
 						<ul className="text-slate-300 space-y-1">
 
-
 						</ul>
 					</div>
 				</div>
@@ -192,26 +177,9 @@ export default function CommunityPage() {}
 ;
 ;
 
-
-
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, Calendar, Users, Award } from 'lucide-react';
-=======
-
-'
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { MessageCircle, Calendar, Users, Award } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Layout from '../components/Layout';
 
 export default function CommunityPage() {}
@@ -348,15 +316,7 @@ export default function CommunityPage() {}
     </Layout>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -400,7 +360,6 @@ export default function CommunityPage() {}
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
 }
 import React from 'react',
@@ -537,21 +496,5 @@ export default function CommunityPage() {
 
 ;
 
-<<<<<<< HEAD
-
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-    </div>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 interface EmailValidationResult {}
-=======
-interface EmailValidationResult {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   email: string;
   is_valid: boolean;
 interface EmailValidationResult {}
@@ -30,11 +26,7 @@ interface EmailValidationResult {}
       'temp-mail && mail.org','
       'sharklasers && sharklasers.com','
       'getairmail && getairmail.com',
-<<<<<<< HEAD
-=======
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     isRoleBased: boolean;
     isFreeProvider: boolean;
   },
@@ -50,7 +42,7 @@ return res.status(405).json({ error: 'Method not allowed',}
   }
   try {}
     const { email } = req.body;
-<<<<<<< HEAD
+
     if (!email || typeof email !== 'string') {
       return res.status(400).json({ error: 'Email is required' });
     }
@@ -170,17 +162,10 @@ suggestions.push('Check email format (should be user@domain.com)');
   } catch (error) {
     console.error('Email validation error:', error);
     res.status(500).json({ error: 'Internal server error' });
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
     res.status(500).json({ error: 'Internal server error' })
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
   },
 }
-<<<<<<< HEAD
 '
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

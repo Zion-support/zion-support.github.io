@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'Blockchain Solutions | Zion Tech Group',
   description: 'Comprehensive blockchain solutions for modern businesses.',
@@ -8,37 +7,13 @@ export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
-=======
-export const metadata = { 
-  title: 'Blockchain Solutions | Zion Tech Group',
-  description: 'Comprehensive blockchain development services including DeFi, NFTs, smart contracts, and Web3 applications.'
-}; 
 
-<<<<<<< HEAD
-export const metadata = {
-  title: 'Blockchain Solutions - Zion Tech Group',
-  description: 'Professional blockchain solutions solutions for your business needs.',
-};
-
-export default function BlockchainSolutionsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
->>>>>>> origin/main
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Blockchain Solutions
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
             Comprehensive blockchain solutions for modern businesses.
-=======
-            Professional blockchain solutions services for your business needs.
->>>>>>> origin/main
           </p>
         </div>
         
@@ -46,7 +21,6 @@ export default function BlockchainSolutionsPage() {
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
             <p className="text-gray-300">
-<<<<<<< HEAD
               Tailored blockchain-solutions solutions designed for your specific business requirements.
             </p>
           </div>
@@ -63,42 +37,7 @@ export default function BlockchainSolutionsPage() {
             <p className="text-gray-300">
               Round-the-clock support to ensure your blockchain-solutions solutions run smoothly.
             </p>
-=======
-              Tailored blockchain solutions solutions designed for your specific business requirements.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your blockchain solutions solutions run smoothly.
-            </p>
-<<<<<<< HEAD
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-              >
-                Get Started
-                <ArrowRightIcon className="h-5 w-5 ml-2" />
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
-              >
-                View All Services
-              </Link>
-            </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
+
 export default function BlockchainSolutionsPage() { 
   return ( 
     <div className="animate-fade-in">
@@ -328,8 +267,7 @@ export default function BlockchainSolutionsPage() {
               price="Starting at $10k"
               icon="🔗"
             />
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> origin/main
+
           </div>
         </div>
 

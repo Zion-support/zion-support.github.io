@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-export type ModerationModalProps = {};
-  flag: any | null;
 
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,66 +19,18 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-
-=======
-
-export type ModerationModalProps = {
-  flag: any | null;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  onAction: (;
-    action: 'approve' | 'remove' | 'warn' | 'ban';,;
-    adminNotes?: string;
-  ) => Promise<void>;
-export default function ModerationModal(): any ({;
-  flag,;
-  onClose,;
-  onAction,;
-}: ModerationModalProps) {;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 pr-12243
-=======
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   flag,
   onClose,
   onAction,
@@ -101,7 +41,6 @@ class ErrorBoundary extends React.Component {}
     super(props);
     this.state = { hasError: false ;};
   }
-<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {}
     return { hasError: true };
@@ -113,45 +52,24 @@ class ErrorBoundary extends React.Component {}
   
   render() {}
     if (this.state.hasError) {}
-=======
-  static getDerivedStateFromError(error) {
-    return { hasError: true ;};
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: ';, error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
-<<<<<<< HEAD
 }'
 import React, { useState } from 'react';
 
 export type ModerationModalProps = {;
   flag: any | null;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 pr-12243
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
 
 export type ModerationModalProps = {;
   flag: any | null;
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -162,15 +80,9 @@ pr-12243
           <div className='font-semibold'>Review Flag — {flag && flag.id}</div>;
           <button;
             onClick={onClose}
-<<<<<<< HEAD
 
 pr-12243
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             className='text-gray-500 hover:text-gray-700'>;
             ✕;
           </button>;
@@ -225,25 +137,12 @@ pr-12243
               Admin Notes;
             </label>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 pr-12243
-=======
 
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <textarea
-=======
-
 
             <textarea;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
               rows={3}'
@@ -279,19 +178,8 @@ pr-12243
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 pr-12243
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type ModerationModalProps = {
   flag: any | null;,
   onClose: () => void;,
@@ -353,61 +241,17 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
 pr-12243
   );
 }        <div className="p-4 border-t flex items-center justify-end gap-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
-          <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
-          <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
-          <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
-      </div>
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  );
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-);
-pr-12243
-<<<<<<< HEAD
-=======
-'
-          <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>'"
-          <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>'"
-          <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>'"
-          <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
-      </div>
-    </div>
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-=======
-  );
-);
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
   on_close: () => void;
   on_action: ('
     action: 'approve' | 'remove' | 'warn' | 'ban',
-=======
+
 }
   on_close: () => void;
   on_action: (
     action: 'approve' | 'remove' | 'warn' | 'ban';,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     admin_notes?: string) => Promise < void>;
 ;
 export default /**;
@@ -521,57 +365,21 @@ if (return null) {}
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
 
   );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  );
-
-=======
-
-
-
-
-  );
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React, { useState } from 'react';
-=======
 
 );
   );
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type ModerationModalProps = {;
 
 export type ModerationModalProps = {};
   flag: any | null;
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 export type ModerationModalProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-export type ModerationModalProps = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   onClose: () => void;
   onAction: ('
     action: 'approve' | 'remove' | 'warn' | 'ban'
@@ -588,31 +396,17 @@ export default function ModerationModal({};
 }: ModerationModalProps) {;'
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
         <div className='p-4 border-b flex items-center justify-between'>
-=======
+
   return ('
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>'
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>'
         <div className='p-4 border-b flex items-center justify-between'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           <div className='font-semibold'>Review Flag — {flag.id}</div>
           <button;
             onClick={onClose}'
@@ -701,23 +495,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={() => onAction('ban', adminNotes)}'
             className='px-3 py-2 rounded bg-gray-800 text-white'
           >
-<<<<<<< HEAD
             Ban User
-<<<<<<< HEAD
-<<<<<<< HEAD
+
           </button>
         </div>
-=======
-            Ban User;
-          </button>        </div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          </button>        </div>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
+
           </button>
         </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
       </div>
     </div>
   );"
@@ -731,26 +516,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 }
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
-=======
-
-
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }        <div className="p-4 border-t flex items-center justify-end gap-2">
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
@@ -762,11 +531,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 );
   );
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

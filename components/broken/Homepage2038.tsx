@@ -1,17 +1,10 @@
-<<<<<<< HEAD
 import Link from 'next/link';'
-=======
-
-import Link from 'next/link';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 
 import {};
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
 
-<<<<<<< HEAD
               {/* Company Badge */}
               <motion&& motion.div;
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -86,10 +79,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <Layout>;
       {/* Main Content */}
 
-
-
-
-<<<<<<< HEAD
 <main className='relative z-10'>
         {/* Hero Section */}
         <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>
@@ -109,27 +98,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 className='space-y-8'
-=======
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}'
-              className='space-y-8'              className="space-y-8"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             >
               {/* Company Badge */}
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
 
-<<<<<<< HEAD
                 transition={{ duration: 0.6, delay: 0.2 }}
 className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-=======
-              >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2038</span>'
                 <Sparkles className='w-4 h-4' />
@@ -190,7 +168,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-<<<<<<< HEAD
                     <span className='flex items-center gap-3'>
                       Get Started
                       <ArrowRight className='w-6 h-6 group-hover:translate-x-1 transition-transform' />
@@ -205,12 +182,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     whileTap={{ scale: 0.95 }}
                   >
                     Explore Services
-=======
-                    Explore Services;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </motion.button>
-
-
 
                 </Link>
               </div>
@@ -224,7 +196,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className="py-24 px-4 bg-black/30 relative">"
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>"
           <div className="max-w-7xl mx-auto relative z-10">
-<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.4 }}
 className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400'
               >
@@ -254,9 +225,6 @@ className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-40
           <div className='max-w-7xl mx-auto relative z-10'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-=======
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -364,26 +332,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Featured AI Services */}"
         <section className="py-24 px-4">"
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
 <section className='py-24 px-4'>
           <div className='max-w-7xl mx-auto'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-=======
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
-<<<<<<< HEAD
 className='text-center mb-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-=======
-            >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
                 Revolutionary AI Services;
               </h2>'
@@ -738,30 +698,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Featured Micro SAAS Services */}
 <section className='py-24 px-4 bg-black/20'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
 
-=======
-        {/* Featured Micro SAAS Services */}'
-        <section className='py-24 px-4 bg-black/20'>'"
-          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/20">"
-          <div className="max-w-7xl mx-auto">
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
 className='text-center mb-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-=======
-            >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent'>
                 Innovative Micro SAAS;
               </h2>'
@@ -913,30 +861,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Featured IT Services */}
 <section className='py-24 px-4'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
 
-=======
-        {/* Featured IT Services */}'
-        <section className='py-24 px-4'>'"
-          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">"
-          <div className="max-w-7xl mx-auto">
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
 className='text-center mb-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-=======
-            >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>
                 Advanced IT Infrastructure;
               </h2>'
@@ -1090,7 +1026,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Why Choose Us */}
 <section className='py-24 px-4 bg-black/30'>
           <div className='max-w-7xl mx-auto'>
@@ -1103,17 +1038,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-20'
             >
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        {/* Why Choose Us */}'
-        <section className='py-24 px-4 bg-black/30'>'"
-          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/30">"
-          <div className="max-w-7xl mx-auto">
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Why Choose Zion Tech Group?
               </h2>'
@@ -1202,7 +1126,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   color: "from - yellow - 500 to - orange - 500";
                 }
 
-
                     'Track record of delivering transformative solutions to leading organizations',
                   color: 'from-yellow-500 to-orange-500',
                 },
@@ -1276,27 +1199,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* CTA Section */}"
         <section className="py-24 px-4">"
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
 <section className='py-24 px-4'>
           <div className='max-w-4xl mx-auto text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
 
-=======
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
-<<<<<<< HEAD
 className='space-y-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-=======
-            >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 Ready to Shape the Future?
               </h2>'
@@ -1502,8 +1417,6 @@ export default Homepage2038;
 
 };
 
-
-<<<<<<< HEAD
                     className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -1522,8 +1435,4 @@ export default Homepage2038;
 
 export default Homepage2038;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

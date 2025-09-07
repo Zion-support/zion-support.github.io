@@ -1,18 +1,12 @@
 
 
-<<<<<<< HEAD
 const UltraFuturisticBackground2047: React.FC = () => {
 
-=======
-
-const UltraFuturisticBackground2047: React.FC = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const UltraFuturisticBackground2047: React.FC = () => {;
   const [isClient, setIsClient] = useState(false);
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
   if (!isClient) {;
     return (
 <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
@@ -53,15 +47,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >;'
           <div className='w - full h - full bg - gradient - to - r from - purple - 500 to - pink - 500 clip - hexagon' />        </motion.div>;
         {/* Floating Circles */}
-<<<<<<< HEAD
+
         <motion.div;
           className='absolute bottom - 32 left - 1/4 w - 16 h - 16 opacity - 10'          className="absolute top - 20 left - 20 w - 32 h-32 opacity-20";
           animate={{
-=======
-        <motion.div;'
-          className='absolute bottom - 32 left - 1/4 w - 16 h - 16 opacity - 10'          className="absolute top - 20 left - 20 w - 32 h - 32 opacity - 20";
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             rotate: [0, 360]
             scale: [1, 1 && 1.2, 1]}}
           transition={{}
@@ -69,21 +58,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity as any,"
             ease: "linear";
           }}
-<<<<<<< HEAD
         >;
           <div className="w - full h - full bg - gradient - to - r from - cyan - 500 to - blue-500 clip-hexagon" />;
         </motion.div>;
         <motion.div;
           className="absolute top - 40 right - 32 w - 24 h-24 opacity-15";
           animate={{
-=======
-        >;"
-          <div className="w - full h - full bg - gradient - to - r from - cyan - 500 to - blue - 500 clip - hexagon" />;
-        </motion.div>;
-        <motion.div;"
-          className="absolute top - 40 right - 32 w - 24 h - 24 opacity - 15";
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             rotate: [360, 0]
             scale: [1, 0 && 0.8, 1]}}
           transition={{}
@@ -91,7 +71,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ease: 'easeInOut',
           }}>;'
           <div className='w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full' />;
-<<<<<<< HEAD
         </motion && motion.div>;
           <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />
         </motion.div>
@@ -112,9 +91,6 @@ className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10'
         </motion.div>
         <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        </motion && motion.div>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className='absolute top-1/3 right-1/4 w-20 h-20 opacity-15'
           animate={{}
             y: [0, 40, 0]
@@ -141,7 +117,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}>;'
           <div className='flex space-x-8 justify-center'>;
             {[...Array(20)].map((_, i) => (;
-<<<<<<< HEAD
               <motion&& motion.div
                   strokeWidth='0.5'
                   opacity='0.3'
@@ -168,10 +143,6 @@ className='absolute top-0 left-0 w-full h-full opacity-20'
               <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                 key={i}
-=======
-              <motion&& motion.div;
-                key={i}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className='w-1 h-32 bg-gradient-to-b from-cyan-500 to-transparent'
                 animate={{}
                   height: [32, 64, 32],
@@ -183,14 +154,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ease: 'easeInOut',                }}          animate={{'
                   ease: 'easeInOut',                }}
 
-<<<<<<< HEAD
                   opacity: [0.3, 1, 0.3],
                 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{
-=======
-                transition={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   duration: 3,
                   repeat: Infinity as any,
                   delay: i * 0.1,'"
@@ -224,12 +191,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl" />
         </div>
 
-<<<<<<< HEAD
         <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>;
-=======
-'
-        <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />        </div>;
 
         {/* Scanning Lines */}
@@ -272,21 +234,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Scanning Lines */}
         <motion.div;'
           className='absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
-<<<<<<< HEAD
           animate={{
             coordinate_y: [0, 1000],        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h-96 opacity-5">;
           <div className="w - full h - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded-full blur-3xl" />;
         </div>;
         <div className="absolute top - 1/4 right - 1/4 w - 64 h-64 opacity-5">;
           <div className="w - full h - full bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded-full blur-3xl" />;
-=======
-          animate={{"
-            coordinate_y: [0, 1000],        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 opacity - 5">;"
-          <div className="w - full h - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl" />;
-        </div>;"
-        <div className="absolute top - 1/4 right - 1/4 w - 64 h - 64 opacity - 5">;"
-          <div className="w - full h - full bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>;
         {/* Scanning Lines */}
         <motion.div;'
@@ -301,7 +254,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Pulse Rings */}
         <motion.div;'
           className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4';
-<<<<<<< HEAD
 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>
           <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />
         </div>
@@ -326,9 +278,6 @@ className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent vi
 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
-=======
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             scale: [1, 20]
             opacity: [1, 0]
           }}
@@ -426,14 +375,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
       {/* CSS for hexagon clip */}
       <style jsx>{`
-<<<<<<< HEAD
         .clip-hexagon {
 
           }}>;
-=======
-        .clip-hexagon {}
-          }}>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="w-full h-full border-2 border-purple-400 rounded-full" />;
         </motion && motion.div>;
       </div>;
@@ -479,13 +423,8 @@ export default UltraFuturisticBackground2047;
             ease: "ease_out",
             delay: 2;
           }}
-<<<<<<< HEAD
         >;
           <div className="w - full h - full border - 2 border - purple-400 rounded-full" />;
-=======
-        >;"
-          <div className="w - full h - full border - 2 border - purple - 400 rounded - full" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </motion.div>;
       </div>;
       {/* CSS for hexagon clip */}`
@@ -514,13 +453,8 @@ export default UltraFuturisticBackground2047;
 
 export default UltraFuturisticBackground2047;
 export default UltraFuturisticBackground2047;
-<<<<<<< HEAD
 };
 
 export default UltraFuturisticBackground2047;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

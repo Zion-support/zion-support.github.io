@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 type ModernLayoutProps = {}
   children: ReactNode;
 type ModernLayoutProps = {;
@@ -38,30 +37,11 @@ const ModernLayout = ({;
         <link rel="icon" type="image / png" sizes="32x32" href="/favicon - 32x32.png" />;"
         <link rel="icon" type="image / png" sizes="16x16" href="/favicon - 16x16.png" />;"
         <link rel="manifest" href="/site.webmanifest" />;
-<<<<<<< HEAD
       </Head>;
       <div className="min - h-screen bg - white text-gray-900">;
-=======
-      </Head>;"
-      <div className="min - h-screen bg - white text - gray - 900">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {children}
       </div>;
 </>),
 }
 ;
-=======
-type ModernLayoutProps = {children: ReactNode;
-
-type ModernLayoutProps = {children: ReactNode,title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-
-
-        {children}
-      </div>;
-</>)}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default ModernLayout;"

@@ -1,23 +1,17 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
-
 export type AdminNotesPanelProps = {;
   targetType: string; // e && e.g., 'user' | 'listing';
   targetId: string; // unique identifier for the target;
 };
 type Note = {;'
   target_type: string; // e.g., 'user' | 'listing';
-<<<<<<< HEAD
   target_id: string; // unique identifier for the target;'
 import React, { useEffect, useMemo, useState } from 'react';'
   targetType: string; // e.g., 'user' | 'listing'
-<<<<<<< HEAD
 export type AdminNotesPanelProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
   targetId: string; // unique identifier for the target
-=======
-  targetId: string; // unique identifier for the target;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
 type Note = {}
@@ -38,11 +32,8 @@ type Note = {}
   createdAt: number;
 };
 
-
-
 };
 
-<<<<<<< HEAD
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
 
   authorId: string;
@@ -67,9 +58,6 @@ const res = await fetch(
         {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export default function AdminNotesPanel() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       );
       if (!res && res.ok) {;
@@ -80,7 +68,6 @@ export default function AdminNotesPanel() { return null; }
         method: 'POST','
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
-<<<<<<< HEAD
       const data = await res.json();
       setNotes(data.notes |[]);
     } finally {
@@ -90,10 +77,6 @@ export default function AdminNotesPanel() { return null; }
 origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {
 if (isAdmin) fetchNotes();
-=======
-  useEffect(() => {}
-    if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }, [isAdmin, targetType, targetId]);
   async function addNote() {}
     if (!text.trim()) return;
@@ -107,7 +90,6 @@ if (isAdmin) fetchNotes();
           'X-Admin-User': adminId;
         }
         body: JSON.stringify({ targetType, targetId, text })
-<<<<<<< HEAD
     } finally {
       setAdding(false);    }      if (!res.ok) {
         method: 'POST',
@@ -120,25 +102,15 @@ headers: {
       });
       if (!res.ok) {
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    } finally {}
-      setAdding(false);    }      if (!res.ok) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         alert('Failed to add note');
         return;
       }'
       setText('');
       setAdding(false);    }
 
-
       await fetchNotes();
     } finally {
       setAdding(false);
-=======
-  target_id: string; // unique identifier for the target;
-import React, { useEffect, useMemo, useState } from 'react';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       await fetchNotes()
     } finally {
       setAdding(false)
@@ -146,58 +118,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
 
-
       await fetchNotes();
     } finally {
       setAdding(false);
     }
   }
 
-<<<<<<< HEAD
   if (!isAdmin) {
     return (
-<<<<<<< HEAD
 <div className='rounded border p-3'>
-=======
-  if (!isAdmin) {}
-    return ('
-      <div className='rounded border p-3'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      <div className='rounded border p-3'>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className='flex items-center gap-2 text-sm'>
           <input'
             id='isAdminToggle''
             type='checkbox'
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
-<<<<<<< HEAD
           />'
           <label htmlFor='isAdminToggle'>Admin</label>'
-=======
-          />
-          <label htmlFor='isAdminToggle'>Admin</label>
-        </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>
       </div>
     );
   }
-<<<<<<< HEAD
   return ('
     <div className='rounded border p-4 space-y-3'>'
       <div className='flex items-center justify-between'>'
         <h3 className='font-medium'>Admin Notes</h3>'
         <div className='flex items-center gap-3 text-sm'>'
-=======
-
-  return (
-    <div className='rounded border p-4 space-y-3'>
-      <div className='flex items-center justify-between'>
-        <h3 className='font-medium'>Admin Notes</h3>
-        <div className='flex items-center gap-3 text-sm'>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <label className='inline-flex items-center gap-2'>
             <input'
               type='checkbox'
@@ -209,22 +155,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <input'
             className='border rounded px-2 py-1'
             value={adminId}
-<<<<<<< HEAD
         <textarea'
-=======
-            onChange={e => setAdminId(e.target.value)}
-            placeholder='Admin ID'
-          />
-        </div>
-      </div>
-      <div className='space-y-2'>
-        <textarea
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           className='w-full border rounded-md px-3 py-2'
           rows={3}'
           placeholder='Write a private note (abuse, spam, special support)'
           value={text}
-<<<<<<< HEAD
 
       </div>;
     </div>;
@@ -393,13 +328,6 @@ if ( {) {}
         <button;
           disabled={!text.trim() |adding}
           onClick={addNote}'
-=======
-          onChange={e => setText(e.target.value)}
-        />
-        <button
-          disabled={!text.trim() || adding}
-          onClick={addNote}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'
         >'
           {adding ? 'Adding…' : 'Add Note'}
@@ -418,24 +346,15 @@ if ( {) {}
             {notes.map(n => ('
               <li key={n.id} className='rounded border p-2 text-sm'>'
                 <div className='opacity-60 text-xs mb-1'>
-<<<<<<< HEAD
                   {new Date(n.createdAt).toLocaleString()} • {n.authorId}
                 </div>
                 <div>{n.text}</div>
-=======
-                  {new Date(n.createdAt).toLocaleString()} • {n.authorId}"
-                </div>                <div>{n.text}</div>          <ul className="space-y-2">
-            {notes.map((n) => ("
-              <li key={n.id} className="rounded border p-2 text-sm">"
-                <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </li>
             ))}
           </ul>
         )}
       </div>
     </div>
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -447,17 +366,6 @@ class ErrorBoundary extends React.Component {}
   }
   
   componentDidCatch(error, errorInfo) {'
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
 }
@@ -734,15 +642,10 @@ if ( {) {}
       </div>;
     </div>);
 }
-<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+
   );
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

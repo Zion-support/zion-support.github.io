@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import Document, {
@@ -8,12 +6,6 @@ import Document, {
 export default function Document() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-=======
-import Document, {};
-} from 'next/document';
-
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Html lang='en'>;
       <Head>;'
         <link rel='icon' href='/favicon && favicon.ico' />;'
@@ -77,9 +69,6 @@ function Document() {}
   Main,
   NextScript,;
   DocumentContext,;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export default function Document() {}
   return ("
@@ -102,11 +91,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

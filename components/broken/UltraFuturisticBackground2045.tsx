@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 ctx.fill ();
 ctx.restore ();
 // Remove dead particles and create new ones // Check condition;
@@ -35,7 +34,6 @@ interface UltraFuturisticBackground2045Props {;
   children: React && React.ReactNode;
 }
       x: number;
-<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -83,11 +81,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       y: number;
   coordinate_x: Math.random () * canvas.width, coordinate_y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2, vy: (Math.random () - 0.5) * 2, size: Math.random () * 3 + 1, color: `hsl ($ {
   Math.random () * 360;
-=======
-      y: number;`
-  coordinate_x: Math.random () * canvas.width, coordinate_y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2, vy: (Math.random () - 0.5) * 2, size: Math.random () * 3 + 1, color: `hsl ($ {}
-  Math.random () * 360;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }, 70%, 60%) `;
 alpha: Math.random () * 0.8 + 0.2;
 life: Math.random () * 100 + 50;
@@ -131,7 +124,6 @@ if (return) {}
       size: number,
       color: string,
       alpha: number,
-<<<<<<< HEAD
     // Create initial particles
     for (let i = 0; i < 100; i++) {
       particles.push({
@@ -149,10 +141,6 @@ color: `hsl(${Math.random() * 360}, 70%, 60%)`,
 origin/cursor/automate-test-improve-and-merge-code-2533
     // Animation loop
     const animate = () => {
-=======
-    // Animation loop;
-    const animate = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles;
       particles.forEach((particle, index) => {}
@@ -176,7 +164,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx.shadowBlur = 20;
         ctx.fill();
         ctx.restore();
-<<<<<<< HEAD
         // Remove dead particles and create new ones
         if (particle.life <= 0) {
           particles[index] = {
@@ -202,16 +189,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ctx.save();
 ctx.globalAlpha = ((150 - distance) / 150) * 0.3;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        // Remove dead particles and create new ones;
-        if (particle.life <= 0) {}
-          particles[index] = {}
-          const dx = particle1.x - particle2.x;
-          const dy = particle1.y - particle2.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < 150) {}
-            ctx.save();'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ctx.strokeStyle = '#00ffff';
             ctx.lineWidth = 1;
             ctx.beginPath();
@@ -292,7 +269,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             backgroundImage: `'
             backgroundSize: '50px 50px'
 ;
-<<<<<<< HEAD
   return (
     <div className="relative min - h-screen bg-black overflow-hidden">;
       {/* Animated Canvas Background */}
@@ -307,22 +283,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div;
           className="absolute inset-0 opacity-20";
           style={{
-=======
-  return ("
-    <div className="relative min - h-screen bg - black overflow - hidden">;
-      {/* Animated Canvas Background */}
-      <canvas;
-        ref={canvas_ref}"
-        className="fixed inset - 0 w - full h - full pointer - events - none z - 0";'
-        style={{ background: 'radial - gradient (ellipse at center, #0a0a0a 0%, #000000 100%)' }}
-      />;
-      {/* Floating Geometric Shapes */}"
-      <div className="fixed inset - 0 pointer - events - none z - 10">;
-        {/* Animated Grid */}
-        <motion.div;"
-          className="absolute inset - 0 opacity - 20";
-          style={{}`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             background_image: `;
               linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px);
               linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);`
@@ -359,7 +319,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             rotate: [0, 360]
             scale: [1, 1 && 1.1, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
-<<<<<<< HEAD
           transition={{
             duration: 20,
             repeat: Infinity,
@@ -384,10 +343,6 @@ className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-l
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
 origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
-=======
-          transition={{}
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             rotate: [360, 0]
             scale: [1, 1.2, 1]
             opacity: [0.3, 0.7, 0.3]
@@ -460,7 +415,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             rotate: [45, 405];
             scale: [1, 1.15, 1];
             opacity: [0.3, 0.5, 0.3]}}
-<<<<<<< HEAD
           transition={{
             duration: 6,
             repeat: Infinity,
@@ -484,13 +438,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div
 className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
           animate={{
-=======
-          transition={{}
-        {/* Additional floating elements */}
-        <motion.div'
-          className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             y: [0, -20, 0]
             opacity: [0.2, 0.5, 0.2]
             y: [0, -20, 0],
@@ -556,7 +503,6 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounde
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />;'
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />;
 
-<<<<<<< HEAD
             y: [0, -20, 0],
             opacity: [0.2, 0.5, 0.2],
           }}
@@ -615,13 +561,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='relative z-30'>{children}</div>;
 
       {/* Animated Border Effects */}
-=======
-      {/* Content */}'
-      <div className='relative z-30'>{children}</div>;
-
-
-      {/* Animated Border Effects */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className='fixed inset-0 pointer-events-none z-40'>;
         <motion&& motion.div'
           className='absolute inset-0 border border-transparent'
@@ -658,11 +597,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
       </div>;
     </div>;
-<<<<<<< HEAD
   )
-=======
-  );'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };export default UltraFuturisticBackground2045;            ease: 'linear';
           }}
         />;
@@ -690,7 +625,6 @@ export default UltraFuturisticBackground2045;'
 ;
 export default UltraFuturisticBackground2045;
 ;
-<<<<<<< HEAD
             duration: 15,
             repeat: Infinity,
             ease: 'linear',
@@ -702,14 +636,3 @@ export default UltraFuturisticBackground2045;
 };
 export default UltraFuturisticBackground2045;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-interface UltraFuturisticBackground2045Props {
-  children: React.ReactNode;
-}
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   Zap;
   Globe;
   Phone;
@@ -109,42 +108,26 @@
   Headphones,;} from 'lucide-react';import {}
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
 
-
-<<<<<<< HEAD
-
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Zap, Globe, Phone, Mail, MapPin, ArrowRight;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
   ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2;'
       { name: 'Services Advertising', href: '/services-advertising' }
-=======
-
-  Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
-  Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
-  ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2;
-      { name: 'Services Advertising';, href: '/services-advertising' ;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ]
   }
 ];
 
   Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
 
-
  } from 'lucide-react';
 
 const contactInfo = null;
 
-<<<<<<< HEAD
 const socialLinks = [
   {
     name: 'Twitter',
@@ -228,13 +211,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             backgroundSize: '200px 200px',
 origin/cursor/automate-test-improve-and-merge-code-2533
           }}
-<<<<<<< HEAD
+
           animate={{
             backgroundPosition: ['0px 0px', '200px 200px'],
-=======
-          animate={{'
-            backgroundPosition: ['0px 0px', '200px 200px']
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }}
           transition={{}
             duration: 20;
@@ -263,7 +242,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
       </div>;'
       <div className='relative z - 10'>;
-<<<<<<< HEAD
             duration: 20,
             repeat: Infinity,
             ease: 'linear',
@@ -275,10 +253,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Main Footer Content */}
         <div className='container mx - auto px - 4 py - 20'>;
-=======
-        {/* Main Footer Content */}'
-        <div className='container mx - auto px - 4 py - 20'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 8'>;
             {/* Company Info */}
                       Revolutionary Technology Solutions;
@@ -328,7 +302,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       target="_blank""
                       rel="noopener noreferrer""
                       className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
-
 
                       {social.icon}
                     </a>
@@ -430,38 +403,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={section.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 className='space-y-4'
               >
-=======
-                transition={{ duration: 0.6, delay: index * 0.1 }}'
-                className='space-y-4'
-              >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className='flex items-center gap-2'>
                   {section.icon}'
                   <h4 className='font-semibold text-white'>{section.title}</h4>
                 </div>'
                 <p className='text-sm text-gray-400'>{section.description}</p>'
                 <ul className='space-y-2'>
-<<<<<<< HEAD
                   {section.links.map(link => (
-=======
-                  {section.links.map(link => (                    <li key={link.name}>
-                      <Link;
-                        href={link.href}`
-                        className={`text-sm transition-colors duration-200 ${}
-                          link.featured'
-                            ? 'text-cyan-400 hover:text-cyan-300'                            : 'text-gray-400 hover:text-white'              >"
-                <div className="flex items-center gap-2">
-                  {section.icon}"
-                  <h4 className="font-semibold text-white">{section.title}</h4>
-                </div>"
-                <p className="text-sm text-gray-400">{section.description}</p>"
-                <ul className="space-y-2">
-                  {section.links.map((link) => (
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <li key={link.name}>
                       <Link;
                         href={link && link.href}`
@@ -483,19 +434,12 @@ className='space-y-4'
                             ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured '
                             ? 'text-cyan-400 hover:text-cyan-300' 
 
-<<<<<<< HEAD
                           link.featured 
                             ? 'text-cyan-400 hover:text-cyan-300' 
 link.featured
                             ? 'text-cyan-400 hover:text-cyan-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                          link.featured '
-                            ? 'text-cyan-400 hover:text-cyan-300' '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             : 'text-gray-400 hover:text-white'
-
-
 
 `
                         }`}
@@ -517,16 +461,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 
-<<<<<<< HEAD
             transition={{ duration: 0.6, delay: 0.3 }}
 className='mt-16 pt-8 border-t border-gray-800/50'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
-=======
-          >'
-            <div className='flex flex-col md:flex-row items-center justify-between gap-4'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className='text-sm text-gray-400'>
                 © 2025 Zion Tech Group. All rights reserved.
               </div>'
@@ -561,14 +500,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Terms of Service;
                 </Link>"
                 <Link href="/cookies" className="hover:text-white transition-colors duration-200">
-<<<<<<< HEAD
                   className='hover:text-white transition-colors duration-200'
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Cookie Policy
-=======
-                  Cookie Policy;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </Link>
               </div>'
                   className='hover:text-white transition-colors duration-200'>                  Cookie Policy          >;"
@@ -592,8 +527,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 /* Animated grid */ 
   /* Animated grid */ 
 
-<<<<<<< HEAD
-
 className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110'
                 aria-label='Scroll to top'
               >
@@ -611,11 +544,6 @@ className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hove
 origin/cursor/automate-test-improve-and-merge-code-2533
 }<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
   social.icon
-=======
-"
-}<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {}
-  social.icon;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }</a>) )
 }</div> </motion.div> </div> {}
   /* Footer Sections */
@@ -839,10 +767,5 @@ export default UltraFuturisticFooter2035);
 ;
 export default UltraFuturisticFooter2035;
 ;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

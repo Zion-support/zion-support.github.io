@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   ArrowRight;
   Star;
   TrendingUp;
@@ -52,7 +51,6 @@ function UltraFuturisticHero2029() {}
     { number: '$2.5B+', label: 'Market Opportunity', icon: TrendingUp }'
     { number: '99.9%', label: 'Success Rate', icon: Star }'
     { number: '24/7', label: 'AI Operations', icon: Zap }
-
 
 import {;
   ArrowRight,;
@@ -257,29 +255,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 top: Math.random() * 100 + '%',
 origin/cursor/automate-test-improve-and-merge-code-2533
               }}
-<<<<<<< HEAD
-=======
-              style={{'
-                left: Math.random() * 100 + '%''
-                top: Math.random() * 100 + '%'}}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             />
           ))}
         </div>
 
-
           ))}
         </div>
 
-<<<<<<< HEAD
         {/* Grid Pattern */}
 <div className='absolute inset-0 opacity-10'>
           <div
-=======
-        {/* Grid Pattern */}'
-        <div className='absolute inset-0 opacity-10'>
-          <div'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className='absolute inset-0'
             style={{}
               backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`'
@@ -328,10 +313,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>'
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}
-=======
-
-        </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         </div>
         {/* Gradient Orbs */}
@@ -349,60 +330,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
       {/* Content */}
 
-<<<<<<< HEAD
         <motion.div;
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}'
-=======
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center' />
-        {/* Main Heading *}
-}
-
-        <motion.div;
-initial={{ opacity: 0, y: 30 }
-}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           className='mb-8'
-<<<<<<< HEAD
 
 className='mb-8'
         >
 origin/cursor/automate-test-improve-and-merge-code-2533
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>
-=======
-'
-          <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-<<<<<<< HEAD
               2029;
             </span>
             <br />'
             <span className='text-white'>Future Technology</span>
             <br />'
             <span className='bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 bg-clip-text text-transparent'>
-=======
-              2029
-          transition={{ duration: 0.8 }
-}
-
-className='mb-8'
-         />
-          <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6' />
-            <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent' />
-              2029;
-            </span>
-            <br />
-            <span className='text-white' />Future Technology</span>
-            <br />
-            <span className='bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 bg-clip-text text-transparent' />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               Revolution;
             </span>
-<<<<<<< HEAD
           </h1>
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed' />
             Experience the future of technology with Zion Tech Group's;
@@ -410,20 +356,7 @@ revolutionary 2029 services. From AI consciousness evolution to;
 quantum space mining, we're building tomorrow's solutions today.
           </p>
         </motion.div>
-<<<<<<< HEAD
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>;
-=======
-          </h1>'
-          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>'
-            Experience the future of technology with Zion Tech Group's;
-            revolutionary 2029 services. From AI consciousness evolution to'
-            quantum space mining, we're building tomorrow's solutions today.          </p>"
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">'
-            Experience the future of technology with Zion Tech Group's revolutionary 2029 services.'
-            From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.
-        </motion.div>'
-          <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>;
               2029;
             </span>;
@@ -442,7 +375,6 @@ quantum space mining, we're building tomorrow's solutions today.
             Experience the future of technology with Zion Tech Group's revolutionary 2029 services. ;'
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.;
         </motion && motion.div>;
-
 
         {/* CTA Buttons */}
         <motion&& motion.div;
@@ -488,70 +420,12 @@ quantum space mining, we're building tomorrow's solutions today.
               background_image: `radial - gradient (circle at 1px 1px, rgba (6, 182, 212, 0.3) 1px, transparent 0)`,'
               background_size: '50px 50px',
             }}
-=======
-
-          <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6' />;
-            <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent' />;
-              2029;
-            </span>;
-            <br />;
-            <span className='text-white' />Future Technology</span>;
-            <br />;
-            <span className='bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 bg-clip-text text-transparent' />;
-              Revolution;
-            </span>;
-          </h1>;
-          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed' />;
-            Experience the future of technology with Zion Tech Group's;
-            revolutionary 2029 services. From AI consciousness evolution to;
-            quantum space mining, we're building tomorrow's solutions today.          </p>          ;
-          <p className=\"text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed\" />;
-            Experience the future of technology with Zion Tech Group's revolutionary 2029 services. ;
-            From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.;
-        </motion && motion.div>;{/* CTA Buttons */}
-        <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 }
-}
-          animate={{ opacity: 1, y: 0 }
-} />;
-          <Link;
-            href='/services';
-          <Link;
-            href='/contact';
-            className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center space-x-2' />;
-            <span />Get Started</span>;
-            <Zap className='w-5 h-5' />          </Link>        >;
-          <Link;"
-            href=\"/services\";
-        {/* Features Grid */}
-        <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 }
-}
-          animate={{ opacity: 1, y: 0 }
-} />;
-          {features.map((feature, index) => (<motion.div;
-                coordinate_x: [0, Math.random () * 1000];}
-                coordinate_y: [0, Math.random () * 1000];}
-                opacity: [0.2, 0.8, 0.2]}}"
-              transition={{duration: Math.random () * 10 + 10,repeat: Infinity,ease: \"linear\";}
-              }}
-              style={{left: Math.random () * 100 + '%',top: Math.random () * 100 + '%'}}
-            />)
-}
-        </div>;
-        {/* Grid Pattern */}
-        <div className='absolute inset - 0 opacity - 10' />;
-          <div;
-            className='absolute inset - 0';
-            style={{background_image: `radial - gradient (circle at 1px 1px, rgba (6, 182, 212, 0.3) 1px, transparent 0)`,background_size: '50px 50px'}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           />;
         </div>;
         {/* Gradient Orbs */}'
         <div className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 rounded - full blur - 3xl animate - pulse' />;'
         <div className='absolute bottom - 1/4 right - 1/4 w - 96 h - 96 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000' />;
       </div>;
-<<<<<<< HEAD
       {/* Content */}'
       <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>        {/* Main Heading */}        </div>;
         {/* Gradient Orbs */}"
@@ -560,23 +434,11 @@ quantum space mining, we're building tomorrow's solutions today.
       </div>;
       {/* Content */}"
       <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
-=======
-      {/* Content */}
-      <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center' />        {/* Main Heading *}
-}        </div>;
-        {/* Gradient Orbs */}"
-        <div className=\"absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 rounded - full blur - 3xl animate - pulse\" />;"
-        <div className=\"absolute bottom - 1/4 right - 1/4 w - 96 h - 96 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000\" />;
-      </div>;
-      {/* Content */}"
-      <div className=\"relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center\" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {/* Main Heading */}
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 30 }
 }
           animate={{ opacity: 1, coordinate_y: 0 }}
-<<<<<<< HEAD
           transition={{ duration: 0.8 }}'
           className='mb - 8';'
           <h1 className='text - 5xl md:text - 7xl lg:text - 8xl font - bold mb - 6'>;'
@@ -596,33 +458,10 @@ quantum space mining, we're building tomorrow's solutions today.
             quantum space mining, we're building tomorrow's solutions today.          </p>;"
           <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed">;'
             Experience the future of technology with Zion Tech Group's revolutionary 2029 services.;'
-=======
-          transition={{ duration: 0.8 }
-}
-          className='mb - 8';
-          <h1 className='text - 5xl md:text - 7xl lg:text - 8xl font - bold mb - 6' />;
-            <span className='bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent' />;
-              2029;
-            </span>;
-            <br />;
-            <span className='text - white' />Future Technology</span>;
-            <br />;
-            <span className='bg - gradient - to - r from - emerald - 400 via - teal - 500 to - cyan - 500 bg - clip - text text - transparent' />;
-              Revolution;
-            </span>;
-          </h1>;
-          <p className='text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed' />;
-            Experience the future of technology with Zion Tech Group's;
-            revolutionary 2029 services. From AI consciousness evolution to;
-            quantum space mining, we're building tomorrow's solutions today.          </p>;"
-          <p className=\"text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed\" />;
-            Experience the future of technology with Zion Tech Group's revolutionary 2029 services.;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.;
         </motion.div>;
         {/* CTA Buttons */}
         <motion.div;
-<<<<<<< HEAD
           initial={{ opacity: 0, coordinate_y: 30 }}
           animate={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}'
@@ -630,14 +469,6 @@ quantum space mining, we're building tomorrow's solutions today.
         >;
         {/* Main Heading */}'
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}
-=======
-          initial={{ opacity: 0, coordinate_y: 30 }
-}
-          animate={{ opacity: 1, coordinate_y: 0 }
-}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className='flex flex - col sm:flex - row gap - 4 justify - center mb - 16' />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         {/* Main Heading */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center' />        {/* Main Heading */}{/* Main Heading *}
@@ -651,13 +482,8 @@ quantum space mining, we're building tomorrow's solutions today.
         <motion.div;
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
           transition={{ duration: 0.8 }}'
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>'
-=======
-          transition={{ duration: 0.8 }}
-          <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               2029;
             </span>
@@ -680,7 +506,6 @@ quantum space mining, we're building tomorrow's solutions today.
 className='flex flex-col sm:flex-row gap-4 justify-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
-<<<<<<< HEAD
           <Link'
             href='/services''
             className='group px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-lg font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center space-x-2'
@@ -692,45 +517,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             href='/contact''
             className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center space-x-2'
           >
-<<<<<<< HEAD
             <span>Get Started</span>
-=======
-          <Link
-            href='/services'
-          transition={{ duration: 0.8, delay: 0.2 }}
-className='flex flex-col sm:flex-row gap-4 justify-center mb-16'
-         />
-          <Link;
-href='/services'
-            className='group px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-lg font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center space-x-2'
-           />
-            <span />Explore Services</span>
-            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-          </Link>
-          <Link;
-href='/contact'
-            className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center space-x-2'
-           />
-            <span />Get Started</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <Zap className='w-5 h-5' />
-=======
-            <span>Get Started</span>'
-            <Zap className='w-5 h-5' />          </Link>        >
-          <Link"
-            href="/services""
-            className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-lg font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center space-x-2"
-          >
-            <span>Explore Services</span>"
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <Link"
-            href="/contact""
-            className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center space-x-2"
-          >
-            <span>Get Started</span>"
-            <Zap className="w-5 h-5" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </Link>
         </motion.div>
         {/* Features Grid */}
@@ -746,15 +534,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               key={feature.text}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
               transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}'
-=======
-              transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/50'
-
-
-
 
 className='group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/50'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -828,7 +609,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='grid grid-cols-2 md:grid-cols-4 gap-8'
          />
           {stats.map((stat, index) => (
-<<<<<<< HEAD
             <motion.div'
               className='group p - 4 rounded - xl bg - gray - 800 / 30 backdrop - blur - sm border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:bg - gray - 800 / 50';
             >;
@@ -842,32 +622,12 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8'
                 <feature.icon className="w - 6 h - 6 text - white" />;
               </div>;"
               <p className="text - xs text - gray - 300 group - hover:text - white transition - colors text - center leading - tight">;
-=======
-            <motion.div;
-className='group p - 4 rounded - xl bg - gray - 800 / 30 backdrop - blur - sm border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:bg - gray - 800 / 50' />
-}
-              <div;}
-                className={`w - 12 h - 12 mx - auto mb - 3 rounded - lg bg - gradient - to - r ${feature.color} flex items - center justify - center group - hover: shadow - lg hover:shadow - cyan - 400 / 40 transition - transform
-} />
-
-                <feature.icon className='w - 6 h - 6 text - white' />;
-              </div>;
-              <p className='text - xs text - gray - 300 group - hover: text - white transition - colors text - center leading - tight' />                {feature.tex}
-}            >;
-              <div className={`w - 12 h - 12 mx - auto mb - 3 rounded - lg bg - gradient - to - r ${feature.color} flex items - center justify - center group - hover: shadow - lg hover:shadow - cyan - 400 / 40 transition - transform
-} />
-"
-                <feature.icon className=\"w - 6 h - 6 text - white\" />;
-              </div>;"
-              <p className=\"text - xs text - gray - 300 group - hover:text - white transition - colors text - center leading - tight\" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {feature.text}
               </p>;
             </motion.div>))}
         </motion.div>;
         {/* Stats */}
         <motion.div;
-<<<<<<< HEAD
           initial={{ opacity: 0, coordinate_y: 30 }}
           animate={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}'"
@@ -877,23 +637,6 @@ className='group p - 4 rounded - xl bg - gray - 800 / 30 backdrop - blur - sm bo
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}'
-=======
-          initial={{ opacity: 0, coordinate_y: 30 }
-}
-          animate={{ opacity: 1, coordinate_y: 0 }
-}
-          transition={{ duration: 0.8, delay: 0.6 }}"
-          className='grid grid - cols - 2 md:grid - cols - 4 gap - 8'         />          className=\"grid grid - cols - 2 md:grid - cols - 4 gap - 8\">
-
-              key={stat.labe}
-}
-              initial={{ opacity: 0, scale: 0.8 }
-}
-              animate={{ opacity: 1, scale: 1 }
-}
-
-              transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='text - center group';
             >;'
               <div className='w - 16 h - 16 mx - auto mb - 4 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 flex items - center justify - center group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform'>;'
@@ -913,34 +656,11 @@ className='group p - 4 rounded - xl bg - gray - 800 / 30 backdrop - blur - sm bo
               <div className="text - sm text - gray - 400 group - hover:text - gray - 300 transition - colors">;
                 {stat.label}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-className='text-center group'
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-className='text-center group'
-            >
-<<<<<<< HEAD
-              <div className='w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform'>
-=======
-            >'
-              <div className='w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <stat.icon className='w-8 h-8 text-cyan-400' />
               </div>'
               <div className='text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                 {stat.number}
               </div>'
-=======
-              <div className='w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform' />
-                <stat.icon className='w-8 h-8 text-cyan-400' />
-              </div>
-              <div className='text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors' />
-                {stat.number}
-              </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className='text-sm text-gray-400 group-hover:text-gray-300 transition-colors'>                {stat.label}
 
               <div className='text-sm text-gray-400 group-hover:text-gray-300 transition-colors'>
@@ -992,24 +712,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
       </div>
 
-<<<<<<< HEAD
-
-
       {/* Floating Elements */}
       <motion&& motion.div;
               </div>;
-=======
-      {/* Floating Elements *}
-}
-      <motion&& motion.div;
-              </div />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </motion.div>))}
         </motion.div>;
         {/* Scroll Indicator */}
         <motion.div;
           initial={{ opacity: 0 }}
-<<<<<<< HEAD
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}'
           className='absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2'        >;
@@ -1031,35 +741,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               animate={{ coordinate_y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }}'"
               className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'              className="w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2";
-=======
-          animate={{ opacity: 1 }
-}
-          transition={{ duration: 1, delay: 1.2 }
-}
-          className='absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2'         />;
-          <motion.div;
-            animate={{ coordinate_y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }
-}
-            className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'           />;
-            <motion.div;
-              animate={{ coordinate_y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }
-}"
-              className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'            />          className=\"absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2\">
-
-          <motion.div;
-            animate={{ coordinate_y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }
-}"
-            className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'            className=\"w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center\" />
-
-            <motion.div;
-              animate={{ coordinate_y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }
-}"
-              className='w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2'              className=\"w - 1 h - 3 bg - cyan - 400 rounded - full mt - 2\";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             />;
           </motion.div>;
         </motion.div>;
@@ -1067,19 +748,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Floating Elements */}
       <motion.div;
         animate={{ rotate: 360 }}
-<<<<<<< HEAD
 
-
-
-
-=======
-
-        animate={{ rotate: 360 }
-}
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
         className='absolute top-20 right-20 w-32 h-32 border border-cyan-500/20 rounded-full'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1087,15 +756,8 @@ transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
         className='absolute top-20 right-20 w-32 h-32 border border-cyan-500/20 rounded-full'
       />
       <motion.div;
-<<<<<<< HEAD
         animate={{ rotate: -360 }}'
         transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}'
-=======
-animate={{ rotate: -360 }
-}
-        transition={{ duration: 25, repeat: Infinity, ease: 'linear' }
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         className='absolute bottom-20 left-20 w-24 h-24 border border-purple-500/20 rounded-full'
 }
         animate={{ rotate: -360 }}"
@@ -1125,9 +787,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       />
     </section>
   );
-<<<<<<< HEAD
 '"`
-=======
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

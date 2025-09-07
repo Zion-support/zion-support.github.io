@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'AI Social Scheduler | Zion Tech Group',
   description: 'Smart AI social media scheduling solutions.',
@@ -43,32 +42,14 @@ export default function ServicePage() {
     </div>
   )
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export const metadata = {
-  title: 'Ai Social Scheduler | Zion Tech Group',
-  description: 'Professional ai social scheduler services for your business needs.',
-  keywords: 'ai-social-scheduler, services, business, technology'
-
-=======
-import React from "react";
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'AI Social Media Scheduler | Zion Tech Group',
-  description: 'Intelligent social media management with optimal posting times and content suggestions. Maximize engagement across all platforms.',
-  keywords: 'social media scheduler, AI social media, content scheduling, social media automation, engagement optimization',
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
 import React from "react";
 
 export const metadata = {
   title: "AI Social Media Scheduler | Zion Tech Group",
   description:
     "Intelligent social media scheduling with AI-powered content generation, optimal timing, and performance analytics. Grow your social presence 5x faster.",
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
 };
 
 export default function AISocialSchedulerPage() {
@@ -454,4 +435,4 @@ function StatItem({ number, label }: { number: string; label: string }) {
     </div>
   );
 }
->>>>>>> origin/main
+

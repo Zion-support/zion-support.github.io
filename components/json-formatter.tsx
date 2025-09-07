@@ -10,7 +10,6 @@ import {}
   XCircle,
   ArrowRight,
   Download,
-<<<<<<< HEAD
   Upload,
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
@@ -21,20 +20,12 @@ import { Star } from 'lucide-react';
 export default function JSONFormatterPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [inputJson, setInputJson] = useState('');
-=======
-  Upload,';
-} from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';'
-import { Star } from 'lucide-react';'
-  const [inputJson, setInputJson] = useState('');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [formattedJson, setFormattedJson] = useState('');
   const [isValid, setIsValid] = useState(true);'
   const [errorMessage, setErrorMessage] = useState('');
   const [indentSize, setIndentSize] = useState(2);
   const [compactMode, setCompactMode] = useState(false);
   const [showLineNumbers, setShowLineNumbers] = useState(true);
-<<<<<<< HEAD
 
       setIsValid(true);'
       setErrorMessage('');
@@ -56,7 +47,7 @@ import { Star } from 'lucide-react';'
   const copyToClipboard = (text: string) => {}
     navigator.clipboard.writeText(text)
   }
-<<<<<<< HEAD
+
   const downloadJSON = (content: string, filename: string) => {
 return;
     }
@@ -120,10 +111,6 @@ setErrorMessage('');
     const blob = new Blob([content], { type: 'application/json' });
 origin/cursor/automate-test-improve-and-merge-code-2533
     const url = URL.createObjectURL(blob);
-=======
-  const downloadJSON = (content: string, filename: string) => {}
-    const url = URL.createObjectURL(blob);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const a = document.createElement('a');
     a.href = url;
     a.download = filename;
@@ -131,7 +118,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     a.click();
     document.body.removeChild(a);
         }
-<<<<<<< HEAD
 URL.revokeObjectURL(url);
   };
 
@@ -163,18 +149,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     };
 
     setInputJson(JSON.stringify(sample, null, 2));
-=======
-        {'
-          type: 'work''
-          number: '555-987-6543'
-        }
-      ]'
-      interests: ['programming', 'reading', 'hiking']
-      active: true'
-      lastLogin: '2024-01-15T10:30:00Z'
-    }
-    setInputJson(JSON.stringify(sample, null, 2));'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setFormattedJson('');
     setIsValid(true);
   };
@@ -268,8 +242,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const lines = text.split('\n');
 return lines.map((_, index) => index + 1).join('\n');
   };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <>
@@ -305,15 +277,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
       </section>
-<<<<<<< HEAD
       {/* JSON Formatter Tool */}"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="text-center mb-16">"
-=======
-      {/* JSON Formatter Tool */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Format Your JSON Data;
             </h2>"
@@ -374,33 +340,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <option value={8}>8 spaces</option>;
                   </select>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<div className='flex items-center space-x-2'>
-                  <input
-                    type='checkbox'
-                    id='compactMode'
-                    checked={compactMode}
-                    onChange={e => setCompactMode(e.target.checked)}
-                    className='w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500'
-                  />
-                  <label
-                    htmlFor='compactMode'
-                    className='text-sm text-gray-300'
-                  >
-                    Compact mode
-                  </label>
-                </div>
-                <div className='flex items-center space-x-2'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                  <input
-                    type='checkbox'
-=======
-                  <input'
-                    type='checkbox''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                     id='showLineNumbers'
                     checked={showLineNumbers}
                     onChange={e => setShowLineNumbers(e && e.target.checked)}'
@@ -416,76 +356,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onClick={loadSampleJSON}"
                   variant="outline""
                   size="sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    className='text-sm text-gray-300'
-                  >
-                    Line numbers
-                  </label>
-                </div>
-              </div>
-              <div className='flex items-center space-x-3'>
-                <Button
-                  onClick={loadSampleJSON}
-                  variant='outline'
-                  size='sm'
-                  className='border-gray-600 text-gray-300 hover:bg-gray-700'
-                >
-                  <Upload className='w-4 h-4 mr-2' />
-                  Load Sample
-                </Button>
-                <Button
-                  onClick={clearAll}
-variant='outline'
-                  size='sm'
-                  className='border-gray-600 text-gray-300 hover:bg-gray-700'
-                >
-                  <Upload className='w-4 h-4 mr-2' />                  Load Sample
-                </Button>
-                <Button
-                  onClick={clearAll}
-                  variant='outline'
-                  size='sm'
-                  className='border-gray-600 text-gray-300 hover:bg-gray-700'                >
-                  Clear All
-                </Button>
-              </div>
-            </div>
-          </Card>
 
-<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            {/* Input Section */}
-            <Card className='p-8 bg-gray-800 border border-gray-700'>
-              <div className='flex items-center justify-between mb-6'>
-                <h3 className='text-2xl font-bold text-white flex items-center'>
-                  <Code className='w-6 h-6 mr-3 text-teal-400' />
-                  Input JSON
-                </h3>
-                <div className='flex items-center space-x-2'>
-                  <span
-                    className={`px-2 py-1 rounded text-xs font-medium ${
-                      isValid
-                        ? 'bg-green-500/20 text-green-400'
-                        : 'bg-red-500/20 text-red-400'
-                    }`}
-                  >
-                    {isValid ? 'Valid' : 'Invalid'}
-                  </span>
-                </div>
-              </div>
-
-<div className='space-y-4'>
-                <div className='relative'>
-                  {showLineNumbers && (
-                    <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>
-                      {getLineNumbers(inputJson)}
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    </div>
-=======
-                    </div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
 
                       {getLineNumbers(inputJson)}
@@ -511,26 +382,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                   <textarea;
                     value={inputJson}
-<<<<<<< HEAD
 onChange={e => setInputJson(e.target.value)}
                     placeholder='Paste your JSON data here...'
 origin/cursor/automate-test-improve-and-merge-code-2533
                     rows={15}
                     className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;
                       showLineNumbers ? 'pl-16' : '';
-=======
-                    rows={15}`
-                    className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;'
-                      showLineNumbers ? 'pl-16' : '';`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     }`}
-<<<<<<< HEAD
 '"
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">'
-=======
-
-                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div className='flex space-x-3'>
 
                     <strong>Error:</strong> {errorMessage}
@@ -686,17 +546,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features */}
 <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
-=======
-      {/* Features */}'
-      <section className='py-20 bg-gray-800'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-          <div className='text-center mb-16'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
               Professional JSON Formatting Features;
@@ -763,26 +616,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Customizable;
               </h3>'
               <p className='text-gray-400'>
-<<<<<<< HEAD
                 Adjust indentation size, toggle compact mode, and customize
                 display options.
               </p>
-=======
-                Adjust indentation size, toggle compact mode, and customize"
-                display options.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">"
-              <div className="text-4xl mb-4">⚙️</div>"
-              <h3 className="text-xl font-bold text-white mb-4">Customizable</h3>"
-              <p className="text-gray-400">
-                Adjust indentation size, toggle compact mode, and customize display options.
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Card>
           </div>
         </div>
-<<<<<<< HEAD
       </section>"
-=======
-      </section>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From development to data analysis, our JSON formatter serves all your formatting needs.
             </p>
@@ -821,13 +661,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li>• Configuration file management</li>
                 <li>• Debug and troubleshooting</li>
               </ul>
-<<<<<<< HEAD
             </Card>"
               <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>"
-=======
-            </Card>
-              <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-gray-400 mb-6">
                 Clean and format JSON datasets for analysis, reporting, and data visualization projects.
               </p>"

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export default function Partners() {}
   const [form, setForm] = useState({}
 export default function Partners() {}
@@ -26,9 +25,6 @@ export default function Partners() {}
     pocName: """
     pocEmail: """
     useCaseType: "Education Partnership"})
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     name: "";
     entityType: "";
     pocName: "";
@@ -38,7 +34,6 @@ export default function Partners() {}
 origin/cursor/automate-test-improve-and-merge-code-2533
 const [result, setResult] = useState<any />(null),
   const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
   async function submit(e: React.FormEvent) {}
     e.preventDefault();
     setLoading(true);
@@ -152,18 +147,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         name: form.name,
         entity_type: form.entity_type,
         useCaseType: form.useCaseType,
-=======
-
-  async function submit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    setResult(null);
-
-
-            <select;
-className='w-full border rounded px-3 py-2 mb-6'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               value={form.useCaseType}
 
               onChange={e = /> setForm({ ...form, useCaseType: e.target.value }
@@ -220,32 +203,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <li>POST /verify-student</li>
               <li>POST /redeem-grant</li>
             </ul>
-<<<<<<< HEAD
 <div className='mt-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <a
                 className='text-blue-600 underline mr-4'
-=======
-              <a'
-                className='text-blue-600 underline mr-4''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 href='/api/partners/sdk?type=rest'>;
                 Download REST SDK;
               </a>;
-<<<<<<< HEAD
               <a'
                 className='text-blue-600 underline'"
-=======
-              <a
-                className='text-blue-600 underline'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="mt-6 text-sm text-gray-600">
               <p>Badges:</p>"
               <div className="flex gap-2 mt-2">"
                 <span className="inline-flex items-center bg-green-100 text-green-800 px-2 py-1 rounded">Verified Partner</span>"
                 <span className="inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded">Government API Active</span>
-<<<<<<< HEAD
-=======
+
           <div className='bg-white p-6 rounded-lg shadow' />
             <h2 className='text-xl font-medium mb-4' />Available Endpoints</h2>
             <ul className='list-disc ml-6 space-y-1 text-sm' />
@@ -265,7 +237,6 @@ className='text-blue-600 underline mr-4'
               <a;
 className='text-blue-600 underline'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 href='/api/partners/sdk?type=graphql'
                />
                 Download GraphQL SDK;
@@ -286,13 +257,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
         {result && (
-<<<<<<< HEAD
             <a;
               href={result && result.dashboardUrl}'
-=======
-            <a
-              href={result && result.dashboardUrl}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='inline-block mt-4 bg-black text-white px-4 py-2 rounded'>;
               Go to Dashboard;"
             </a>          </div>          <div className="mt-8 bg-white p-6 rounded-lg shadow">;"
@@ -307,7 +273,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
 }
 
-<<<<<<< HEAD
         )}
 
       </div>;
@@ -316,7 +281,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
         )}
   );
-<<<<<<< HEAD
+
 }
     <div className="min - h-screen bg - gray - 50 text-gray-900">;
       <Head>;
@@ -339,30 +304,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             <label className="block text-sm mb-2" html_for="input - Use Case">Use Case</label>;
             <select className="w - full border rounded px - 3 py-2 mb-6" value={form.useCaseType} on_change={(e) => set_form ({ ...form, useCaseType: e.target.value })}>;
-=======
-}"
-    <div className="min - h-screen bg - gray - 50 text - gray - 900">;
-      <Head>;
-        <title > Zion Partners</title>;
-      </Head>;"
-      <div className="max - w-4xl mx - auto py - 12 px - 4">;"
-        <h1 className="text - 3xl font - semibold mb - 2">Integrate Zion</h1>;"
-        <p className="text - gray - 600 mb - 8">Trusted institutions can embed Zion into platforms, programs, or marketplaces.</p>;"
-        <div className="grid md:grid - cols - 2 gap - 8">;"
-          <form on_submit={submit} className="bg - white p - 6 rounded - lg shadow">;"
-            <h2 className="text - xl font - medium mb - 4">Partner Registration</h2>;"
-            <label className="block text - sm mb - 2" html_for="input - Name">Name</label>;"
-            <input className="w - full border rounded px - 3 py - 2 mb - 4" value={form.name} on_change={(e) => set_form ({ ...form, name: e.target.value })} required />;"
-            <label className="block text - sm mb - 2" html_for="input - Entity Type">Entity Type</label>;"
-            <input className="w - full border rounded px - 3 py - 2 mb - 4" value={form.entity_type} on_change={(e) => set_form ({ ...form, entity_type: e.target.value })} required />;"
-            <label className="block text - sm mb - 2" html_for="input - Point of Contact">Point of Contact</label>;"
-            <div className="grid grid - cols - 2 gap - 3 mb - 4">;"
-              <input placeholder="Name" className="border rounded px - 3 py - 2" value={form.poc_name} on_change={(e) => set_form ({ ...form, poc_name: e.target.value })} required />;"
-              <input placeholder="Email" type="email" className="border rounded px - 3 py - 2" value={form.poc_email} on_change={(e) => set_form ({ ...form, poc_email: e.target.value })} required />;
-            </div>;"
-            <label className="block text - sm mb - 2" html_for="input - Use Case">Use Case</label>;"
-            <select className="w - full border rounded px - 3 py - 2 mb - 6" value={form.useCaseType} on_change={(e) => set_form ({ ...form, useCaseType: e.target.value })}>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <option > Education Partnership</option>;
               <option > Workforce Development</option>;
               <option > Token Integration</option>;
@@ -374,7 +315,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >;'
               {loading ? 'Submitting...' : 'Register'}
             </button>;
-<<<<<<< HEAD
           </form>;
           <div className='bg - white p - 6 rounded - lg shadow'>;
             <h2 className='text - xl font - medium mb - 4'>Available Endpoints</h2>;
@@ -383,16 +323,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="bg - white p-6 rounded-lg shadow">;
             <h2 className="text - xl font-medium mb-4">Available Endpoints</h2>;
             <ul className="list - disc ml - 6 space-y-1 text-sm">;
-=======
-          </form>;'
-          <div className='bg - white p - 6 rounded - lg shadow'>;'
-            <h2 className='text - xl font - medium mb - 4'>Available Endpoints</h2>;'"
-            <ul className='list - disc ml - 6 space - y-1 text - sm'>              <li > POST /talents</li>            <button disabled={loading} className="bg - black text - white px - 4 py - 2 rounded disabled:opacity - 50">{loading ? "Submitting..." : "Register"}</button>;
-          </form>;"
-          <div className="bg - white p - 6 rounded - lg shadow">;"
-            <h2 className="text - xl font - medium mb - 4">Available Endpoints</h2>;"
-            <ul className="list - disc ml - 6 space - y-1 text - sm">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <li > GET /jobs</li>;
               <li > GET /certifications</li>;
               <li > POST /verify - student</li>;
@@ -420,21 +350,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>;'
                 <span className='inline - flex items - center bg - blue - 100 text - blue - 800 px - 2 py - 1 rounded'>;
                   Government API Active;
-<<<<<<< HEAD
                 </span>              </div>            </div>;
             <div className="mt - 6 text - sm text-gray-600">;
               <p > Badges:</p>;
               <div className="flex gap-2 mt-2">;
                 <span className="inline - flex items - center bg - green - 100 text - green - 800 px-2 py-1 rounded">Verified Partner</span>;
                 <span className="inline - flex items - center bg - blue - 100 text - blue - 800 px-2 py-1 rounded">Government API Active</span>;
-=======
-                </span>              </div>            </div>;"
-            <div className="mt - 6 text - sm text - gray - 600">;
-              <p > Badges:</p>;"
-              <div className="flex gap - 2 mt - 2">;"
-                <span className="inline - flex items - center bg - green - 100 text - green - 800 px - 2 py - 1 rounded">Verified Partner</span>;"
-                <span className="inline - flex items - center bg - blue - 100 text - blue - 800 px - 2 py - 1 rounded">Government API Active</span>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>;
             </div>;
           </div>;
@@ -447,37 +368,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className='text - sm'>Your API Key:</p>;'
             <pre className='bg - gray - 100 p - 3 rounded text - xs overflow - auto'>;
               {result.api_key}
-=======
-<div className='mt-8 bg-white p-6 rounded-lg shadow' />
-            <h3 className='text-lg font-medium mb-2' />
-              Registration Successful;
-            </h3>
-            <p className='text-sm' />Your API Key:</p>
-            <pre className='bg-gray-100 p-3 rounded text-xs overflow-auto' />
-}
-              {result.apiKe}
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </pre>;
             <a;
               href={result.dashboard_url}'
               className='inline - block mt - 4 bg - black text - white px - 4 py - 2 rounded';
             >;
-<<<<<<< HEAD
               Go to Dashboard;
             </a>          </div>          <div className="mt - 8 bg - white p-6 rounded-lg shadow">;
             <h3 className="text - lg font-medium mb-2">Registration Successful</h3>;
             <p className="text-sm">Your API Key:</p>;
             <pre className="bg - gray - 100 p - 3 rounded text-xs overflow-auto">{result.api_key}</pre>;
             <a href={result.dashboard_url} className="inline - block mt - 4 bg - black text - white px-4 py-2 rounded">Go to Dashboard</a>)}
-=======
-              Go to Dashboard;"
-            </a>          </div>          <div className="mt - 8 bg - white p - 6 rounded - lg shadow">;"
-            <h3 className="text - lg font - medium mb - 2">Registration Successful</h3>;"
-            <p className="text - sm">Your API Key:</p>;"
-            <pre className="bg - gray - 100 p - 3 rounded text - xs overflow - auto">{result.api_key}</pre>;"
-            <a href={result.dashboard_url} className="inline - block mt - 4 bg - black text - white px - 4 py - 2 rounded">Go to Dashboard</a>)}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </div>;
     </div>);
 }
@@ -485,37 +386,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<div className='mt-8 bg-white p-6 rounded-lg shadow'>
-            <h3 className='text-lg font-medium mb-2'>
-              Registration Successful
-            </h3>
-            <p className='text-sm'>Your API Key:</p>
-            <pre className='bg-gray-100 p-3 rounded text-xs overflow-auto'>
-              {result.apiKey}
-            </pre>
-            <a
-              href={result.dashboardUrl}
-              className='inline-block mt-4 bg-black text-white px-4 py-2 rounded' />
-
-              Go to Dashboard;
-            </a>;
-          </div>;
-        )}
-
-      </div>
-    </div>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

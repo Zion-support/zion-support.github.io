@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Brain, Shield, Rocket, Cpu, Database, Atom, Users;
   CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
@@ -19,20 +17,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Clock
   Star
   Filter
-=======
-  Brain;
-  Shield;
-  Rocket;
-  Cpu;
-  Database;
-  Atom;
-  Users;
-  CheckCircle;
-  TrendingUp;
-  Clock;
-  Star;
-  Filter;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ChevronDown;
   Brain,
   Shield,
@@ -64,17 +48,10 @@ interface Service {;
   Clock,
   Star,
 
-<<<<<<< HEAD
 } from 'lucide-react';
 ;
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface Service {
-=======
-'
-} from 'lucide-react';
-;
-interface Service {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   name: string;
   tagline: string;
@@ -91,7 +68,6 @@ interface Service {}
   popular?: boolean;
   ];
 
-<<<<<<< HEAD
   icon: React.ComponentType<any>;
   color: string
 }
@@ -302,15 +278,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const filteredServices = services.filter(service => {
     const matchesCategory =
       selectedCategory === 'all' || service.category === selectedCategory;
-=======
-  const filteredServices = services.filter(service => {}
-    const matchesCategory ='
-      selectedCategory === 'all' |service.category === selectedCategory;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const matchesSearch =
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-<<<<<<< HEAD
     return matchesCategory && matchesSearch;
   });
 
@@ -327,26 +297,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   };
 
   return (
-=======
-    return matchesCategory && matchesSearch;  });
-  const getCategoryIcon = (category: string) => {'
-    const iconMap: { [key: string]: React.ComponentType<any> } = {    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  const getCategoryIcon = (category: string) => {}
-    const iconMap: { [key: string]: React.ComponentType<any> } = {'
-      'AI & Analytics': Brain;
-      Security: Shield;
-      Infrastructure: Cpu'
-      'Space Tech': Rocket'
-      'Emerging Tech': Brain'
-      'Quantum AI': Atom;
-    }
-    return iconMap[category] |Brain;
-  }
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}
   };
@@ -362,7 +312,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onChange={(e) => setSelectedCategory(e.target.value)}"
               className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12"
             >
-<<<<<<< HEAD
               {categories.map((category) => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
       <div className='absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
@@ -398,10 +347,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className='bg-slate-800 text-white'
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-              {categories.map((category) => ("
-                <option key={category} value={category} className="bg-slate-800 text-white">'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   {category === 'all' ? 'All Categories' : category}
                 </option>;
               ))}
@@ -409,15 +354,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />;
           </div>;
 
-<<<<<<< HEAD
             </select>
 <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />
           </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Search */}
-=======
-          {/* Search */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className='relative'>;
             <input'
               type='text''
@@ -442,51 +383,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
-<<<<<<< HEAD
         {/* Services Grid */}
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
-        {/* Services Grid */}'
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           {filteredServices.map((service, index) => (
             <div;
               key={service.id}'
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
             >
               {/* Popular Badge */}
-<<<<<<< HEAD
               {service.popular && (
                 <div className='absolute top-4 right-4 z-20'>
                   <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
                     <Star className='w-3 h-3' />
                     Popular
-=======
-              {service.popular && ('
-                <div className='absolute top-4 right-4 z-20'>'
-                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>'
-                    <Star className='w-3 h-3' />                    Popular          {filteredServices.map((service, index) => (
-            <div;
-              key={service.id}"
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-            >
-              {/* Popular Badge */}
-              {service.popular && ("
-                <div className="absolute top-4 right-4 z-20">"
-                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">"
-                    <Star className="w-3 h-3" />
-                    Popular;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
               )}
 
-<<<<<<< HEAD
               {/* Service Content */}
-=======
-
-              {/* Service Content */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className='p-8'>
         </div>
 
@@ -514,13 +428,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               )}
               {/* Service Content */}
-<<<<<<< HEAD
 <div className='p-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Icon and Category */}
-=======
-                {/* Icon and Category */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className='flex items-center justify-between mb-4'>;
                   <div;
 '
@@ -580,7 +490,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return icon_map[category] || Brain;
   }
 ;
-<<<<<<< HEAD
   return (
     <section id="services" className="py - 24 px-6 relative overflow-hidden">;
       {/* Background */}
@@ -597,24 +506,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </span>;
           </h2>;
           <p className="text - xl text - white / 70 max - w-3xl mx-auto leading-relaxed">;
-=======
-  return ("
-    <section id="services" className="py - 24 px - 6 relative overflow - hidden">;
-      {/* Background */}"
-      <div className="absolute inset - 0 bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">;"
-        <div className="absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (59, 130, 246, 0.1), transparent_50%)]" />;"
-        <div className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (168, 85, 247, 0.1), transparent_50%)]" />;
-      </div>;"
-      <div className="max - w-7xl mx - auto relative z - 10">;
-        {/* Header */}"
-        <div className="text - center mb - 16">;"
-          <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;"
-            <span className="bg - gradient - to - r from - blue - 400 to - cyan - 400 bg - clip - text text - transparent">;
-              Our Services;
-            </span>;
-          </h2>;"
-          <p className="text - xl text - white / 70 max - w-3xl mx - auto leading - relaxed">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             Cutting - edge technology solutions designed to transform your business and accelerate innovation;
           </p>;
         </div>;
@@ -639,19 +530,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="relative">;
             <select;
               value={selected_category}
-<<<<<<< HEAD
               on_change={(e) => setSelectedCategory (e.target.value)}
               className="px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus:outline - none focus:border - blue - 400 transition - colors duration - 300 appearance-none pr-12";
             >;
               {categories.map ((category) => (
                 <option key={category} value={category} className="bg - slate-800 text-white">;
-=======
-              on_change={(e) => setSelectedCategory (e.target.value)}"
-              className="px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus:outline - none focus:border - blue - 400 transition - colors duration - 300 appearance - none pr - 12";
-            >;
-              {categories.map ((category) => ("
-                <option key={category} value={category} className="bg - slate - 800 text - white">;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   {category === 'all' ? 'All Categories' : category}
                 </option>))}
             </select>;'
@@ -676,17 +559,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               type="text";"
               placeholder="Search services...";
               value={search_term}
-<<<<<<< HEAD
               on_change={(e) => setSearchTerm (e.target.value)}
               className="px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white placeholder - white / 50 focus:outline - none focus:border - blue - 400 transition - colors duration-300 w-64";
             />;
             <Filter className="absolute right - 4 top - 1/2 transform -translate - y-1 / 2 w - 5 h-5 text-white / 50" />;
-=======
-              on_change={(e) => setSearchTerm (e.target.value)}"
-              className="px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white placeholder - white / 50 focus:outline - none focus:border - blue - 400 transition - colors duration - 300 w - 64";
-            />;"
-            <Filter className="absolute right - 4 top - 1/2 transform -translate - y-1 / 2 w - 5 h - 5 text - white / 50" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>;
         </div>;
         {/* Services Grid */}'
@@ -702,7 +578,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1'>;'
                     <Star className='w - 3 h - 3' />                    Popular          {filtered_services.map ((service, index) => (
             <div;
-<<<<<<< HEAD
               key={service.id}
               className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale-105 hover:shadow-2xl";
             >;
@@ -711,16 +586,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="absolute top - 4 right-4 z-20">;
                   <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items-center gap-1">;
                     <Star className="w-3 h-3" />;
-=======
-              key={service.id}"
-              className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl";
-            >;
-              {/* Popular Badge */}
-              {service.popular && ("
-                <div className="absolute top - 4 right - 4 z - 20">;"
-                  <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1">;"
-                    <Star className="w - 3 h - 3" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     Popular;
                   </div>;
                 </div>)}
@@ -789,7 +654,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;"
                       <Users className="w-3 h-3" />
-<<<<<<< HEAD
                   <div className='text-right'>
                     <div className='text-xs text-white/60 mb-1'>
                       {getCategoryIcon(service.category)({
@@ -848,14 +712,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Benefits */}
 <div className='mb-6'>
-=======
-                      {service.customers} customers;
-                    </span>
-                  </div>
-                </div>
-                {/* Benefits */}'
-                <div className='mb-6'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <h4 className='text-sm font-semibold text-white mb-3'>
                     Key Benefits:
                   </h4>'
@@ -864,19 +720,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div;
                         key={idx}'
                         className='flex items-center gap-2 text-xs text-white/70'
-<<<<<<< HEAD
                       >
                         <TrendingUp className='w-3 h-3 text-blue-400' />
                         {benefit}
-=======
-                      >'"
-                        <TrendingUp className='w-3 h-3 text-blue-400' />                        {benefit}                <div className="mb-6">"
-                  <h4 className="text-sm font-semibold text-white mb-3">Key Benefits:</h4>"
-                  <div className="space-y-2">
-                    {service.benefits.slice(0, 2).map((benefit, idx) => ("
-                      <div key={idx} className="flex items-center gap-2 text-xs text-white/70">"
-                        <TrendingUp className="w-3 h-3 text-blue-400" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       </div>
                   </div>;
                 </div>;
@@ -966,16 +812,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* CTA Section */}
 
-<<<<<<< HEAD
         {/* CTA Section */}
 <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
-=======
-
-        {/* CTA Section */}'
-        <div className='text-center mt-16'>'
-          <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h3 className='text-2xl font-bold text-white mb-4'>
               Ready to Transform Your Business?
             </h3>'
@@ -1038,7 +877,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <a;'
                 href='tel:+13024640950';'
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'              >              Ready to Transform Your Business?;
-<<<<<<< HEAD
             </h3>;
             <p className="text - white / 70 mb - 6 max-w-2xl mx-auto">;
               Let's discuss how our cutting - edge technology solutions can accelerate your digital transformation journey.;
@@ -1054,23 +892,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='tel:+13024640950';
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                href="tel:+13024640950";
                 className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg-white / 5 hover:bg-white / 10";
-=======
-            </h3>;"
-            <p className="text - white / 70 mb - 6 max - w-2xl mx - auto">;'
-              Let's discuss how our cutting - edge technology solutions can accelerate your digital transformation journey.;
-            </p>;"
-            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-              <a;"
-                href="mailto:kleber@ziontechgroup.com?subject = Consultation Request";"
-                className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl";
-              >;
-                Schedule Consultation;
-              </a>;
-              <a;'
-                href='tel:+13024640950';'"
-                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                href="tel:+13024640950";"
-                className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >;
                 Call Now;
               </a>;
@@ -1097,7 +918,6 @@ export default EnhancedServicesShowcase;
 }
 }
 export default EnhancedServicesShowcase;
-<<<<<<< HEAD
                 href='mailto:kleber@ziontechgroup.com?subject=Consultation Request'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
               >
@@ -1119,10 +939,3 @@ href='tel:+13024640950'
 
 export default EnhancedServicesShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-import React, { useState } from 'react';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

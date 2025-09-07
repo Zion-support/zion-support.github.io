@@ -1,6 +1,5 @@
 
 
-<<<<<<< HEAD
 import React from 'react';
 
 interface Homepage2040Props {}
@@ -73,51 +72,27 @@ export default Homepage2040;'
 import React, { Suspense, lazy, useState, useEffect } from 'react';'
 import Layout from './layout/Layout';'
 import Link from 'next/link';'
-=======
-import Link from 'next/link';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import { 
   ArrowRight, Star, 
-<<<<<<< HEAD
 import React, { Suspense, lazy, useState, useEffect } from 'react',
 import Layout from './layout/Layout',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
-import Layout from './layout/Layout';;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ArrowRight, Star;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import {}
-  ArrowRight, Star, ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Users, Cpu, Eye, Network;
   Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette;
   FileText, BarChart3, Heart, Truck, ShieldCheck;
-<<<<<<< HEAD
   Sparkles, Infinity as InfinityIcon, Zap as Lightning'
 } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-  Sparkles, Infinity as InfinityIcon, Zap as Lightning
-} from 'lucide-react';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 // Import new service data
 import { innovativeMicroSaasServices2025V2  } from '../data/2025-innovative-micro-saas-expansion-v2';
-=======
-// Import new service data'
-import { innovativeMicroSaasServices2025V2  } from '../data/2025-innovative-micro-saas-expansion-v2';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
-<<<<<<< HEAD
 // Lazy load heavy components for better performance'
 const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
 const Homepage2040: React.FC = () => {}
@@ -241,7 +216,6 @@ const Homepage2040: React.FC = () => {}
 ;
   return (
     <Layout>;
-<<<<<<< HEAD
       {/* Main Content */}
       <main className="relative z-10" id="main">;
         {/* Hero Section with Enhanced Background */}
@@ -271,37 +245,6 @@ const Homepage2040: React.FC = () => {}
             ></motion.div>;
             {/* Quantum particle effects */}
             <div className="absolute inset-0">;
-=======
-      {/* Main Content */}"
-      <main className="relative z - 10" id="main">;
-        {/* Hero Section with Enhanced Background */}
-        <section;"
-          className="min - h-screen flex items - center justify - center px - 4 relative overflow - hidden";"
-          aria - labelledby="hero - heading";
-        >;
-          {/* Enhanced Futuristic Background Elements */}"
-          <div className="absolute inset - 0 pointer - events - none">;
-            {/* Animated geometric shapes */}
-            <motion.div;
-              variants={floating_variants}"
-              animate="float";"
-              className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 20 rounded - lg";
-            ></motion.div>;
-            <motion.div;
-              variants={floating_variants}"
-              animate="float";'
-              style={{ animation_delay: '1s' }}"
-              className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full";
-            ></motion.div>;
-            <motion.div;
-              variants={floating_variants}"
-              animate="float";'
-              style={{ animation_delay: '2s' }}"
-              className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45";
-            ></motion.div>;
-            {/* Quantum particle effects */}"
-            <div className="absolute inset - 0">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {[...Array (20)].map ((_, i) => (
                 <motion.div;
                   key={i}`
@@ -332,31 +275,18 @@ const Homepage2040: React.FC = () => {}
                 className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm""
                 role="banner"
 
-<<<<<<< HEAD
               <motion.h1 
 
                 variants={itemVariants}
                 id="hero-heading"
-=======
-
-              <motion.h1;
-                variants={itemVariants}"
-                id="hero-heading""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
               >
                 Zion Tech Group;
               </motion.h1>
 
-<<<<<<< HEAD
               <motion.p 
 
                 variants={itemVariants}
-=======
-
-              <motion.p;
-                variants={itemVariants}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
               >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide;
@@ -454,14 +384,8 @@ const Homepage2040: React.FC = () => {}
           </div>;
         </section>;
 
-<<<<<<< HEAD
         {/* Enhanced Stats Section */}
         <section className="py-20 px-4 relative">;
-=======
-
-        {/* Enhanced Stats Section */}"
-        <section className="py-20 px-4 relative">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div;
               variants={containerVariants}"
@@ -538,15 +462,9 @@ const Homepage2040: React.FC = () => {}
                         Popular;
                       </div>;
                     )}
-<<<<<<< HEAD
                       {/* Service Price */}
                       <div className="mb-6">;
                         <span className="text - 2xl font - bold text-cyan-400">;
-=======
-                      {/* Service Price */}"
-                      <div className="mb - 6">;"
-                        <span className="text - 2xl font - bold text - cyan - 400">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           {service.price}
 
                       {/* CTA Button */}
@@ -568,19 +486,11 @@ const Homepage2040: React.FC = () => {}
                       </div>;
                       {/* CTA Button */}
                       <Link;
-<<<<<<< HEAD
                         href={service.link}
                         className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - blue - 500 text - white font - semibold rounded - xl hover:from - cyan - 500 hover:to - blue - 600 transition - all duration - 300 focus:outline - none focus:ring - 4 focus:ring - cyan - 400 / 50 group - hover:shadow - lg group - hover:shadow-cyan-400 / 25";
                       >;
                         Learn More;
                         <ArrowRight className="w - 5 h - 5 ml - 2 group - hover:translate - x-1 transition-transform duration-300" />;
-=======
-                        href={service.link}"
-                        className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - blue - 500 text - white font - semibold rounded - xl hover:from - cyan - 500 hover:to - blue - 600 transition - all duration - 300 focus:outline - none focus:ring - 4 focus:ring - cyan - 400 / 50 group - hover:shadow - lg group - hover:shadow - cyan - 400 / 25";
-                      >;
-                        Learn More;"
-                        <ArrowRight className="w - 5 h - 5 ml - 2 group - hover:translate - x-1 transition - transform duration - 300" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       </Link>;
                     </motion.div>))}
                 </motion.div>;
@@ -606,15 +516,9 @@ const Homepage2040: React.FC = () => {}
               whileInView="visible"
               viewport={{ once: true }}
 
-<<<<<<< HEAD
               <motion.div 
 
                 variants={itemVariants}
-=======
-
-              <motion.div;
-                variants={itemVariants}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="flex flex-col sm:flex-row gap-6 justify-center"
               >"
                 <Link href="/contact" aria-label="Contact us">"
@@ -655,15 +559,5 @@ const Homepage2040: React.FC = () => {}
 
 export default Homepage2040;
 
-<<<<<<< HEAD
 const LazyServiceCard = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-// Lazy load heavy components for better performance
-
-const LazyServiceCard = null;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

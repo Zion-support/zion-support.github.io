@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';'
-=======
-
-import React, { useState } from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, DollarSign, Target;
   ArrowRight, Check, Star, BarChart3;
@@ -14,7 +9,6 @@ import React, { useState } from 'react';'
 import {motion} from 'framer-motion';'
 import {TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, BarChart3, Globe, Zap, Shield, Crown, Brain, Atom} from 'lucide-react';'
 import Link from 'next/link';
-<<<<<<< HEAD
 export default function MarketPricing() { return null; }
     { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },'"
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },'"
@@ -297,7 +291,6 @@ export default function MarketPricing() { return null; }
     }
   const currentMarket = marketData[selectedMarket as keyof typeof marketData];
 
-
   const getGrowthIcon = (trend: string) => {;'
     return trend === 'up' ? ;"
       <TrendingUp className="w-5 h-5 text-green-400" /> : ;"
@@ -329,9 +322,6 @@ export default function MarketPricing() { return null; }
           </motion && motion.div>;
         </div>;
       </section>;
-
-
-
 
       {/* Competitive Analysis Section */}
             initial={{ opacity: 0, y: 20 }}
@@ -518,9 +508,6 @@ export default function MarketPricing() { return null; }
         </div>;
       </section>;
 
-
-
-
       {/* Market Trends Section */}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -561,7 +548,6 @@ export default function MarketPricing() { return null; }
         <div className="max-w-4xl mx-auto text-center">;
           <motion&& motion.div;
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
   const markets = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -581,23 +567,6 @@ pricingAnalysis: {
 };
 'enterprise-it': {
   marketSize: '$1.2T', growthRate: '+12.3%', growthTrend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {
-=======
-            whileInView={{ opacity: 1, y: 0 }}'
-'quantum-computing': {'
-  marketSize: '$8.7B', growthRate: '+45.2%', growthTrend: 'up', description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {}
-  ];
-pricingAnalysis: {'
-  lowEnd: '$0.80 per quantum hour', midRange: '$1.50 per quantum hour', highEnd: '$2.50 per quantum hour', ourPosition: 'Competitive mid-range pricing'
-}'
-'autonomous-systems': {'
-  marketSize: '$23.1B', growthRate: '+34.7%', growthTrend: 'up', description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.', competitors: [ {}
-  ];
-pricingAnalysis: {'
-  lowEnd: '$300 per user/month', midRange: '$750 per user/month', highEnd: '$1, 200 per user/month', ourPosition: 'Competitive pricing with AI advantages'
-}'
-'enterprise-it': {'
-  marketSize: '$1.2T', growthRate: '+12.3%', growthTrend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 pricingAnalysis: {'
   lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
@@ -646,7 +615,6 @@ export default MarketPricing;export default MarketPricing;
     </div>;
   );
 };
-
 
 ];'
   'ai - consciousness': {'
@@ -1491,10 +1459,7 @@ export default MarketPricing;export default MarketPricing;
 '
   lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
 
-
 };
-
-<<<<<<< HEAD
 
 };
 
@@ -1503,9 +1468,3 @@ export default MarketPricing;export default MarketPricing;
 };
 export default MarketPricing;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

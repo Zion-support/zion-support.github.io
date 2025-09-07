@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';'
 import Button from '../components/ui/Button';'
@@ -51,18 +50,7 @@ export default function AuditLogVaultPage() { return null; }
 
 }
 
-
-<<<<<<< HEAD
   const contactInfo = null;
-=======
-import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import {FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck} from 'lucide-react';
-import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -110,6 +98,3 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} f
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

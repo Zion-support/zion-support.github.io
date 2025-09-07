@@ -7,7 +7,6 @@ import { Smartphone, Tablet, Monitor, RotateCcw;
  } from 'lucide-react';
 // TouchEvent types are already defined in DOM
 
-
 import { motion, AnimatePresence  } from 'framer-motion';
   Wifi, WifiOff, Signal, SignalHigh;}
   Mouse, Hand;}
@@ -32,7 +31,6 @@ interface TouchGesture {
 const MobileOptimizer: React.FC<MobileOptimizerProps /> = ({children;
   showDebugInfo;
 
-<<<<<<< HEAD
 //Apply mobile - specific optimizations // Check condition;
 if ( {) {}
   $2;
@@ -158,13 +156,9 @@ if (return) {}
 //Set up event listeners window && window.addEventListener ('orientationchange', handleOrientationChange);'
 window && window.addEventListener ('resize', handleResize);'
 //Set up orientation change detection const mediaQuery = window && window.matchMedia (' (orientation: portrait) ');
-<<<<<<< HEAD
+
 const handleMediaQueryChange = (e: MediaQueryListEvent) => {;
   setCurrentOrientation (e && e.matches ? 'portrait' : 'landscape') 
-=======
-const handleMediaQueryChange = (e: MediaQueryListEvent) => {;'
-  setCurrentOrientation (e && e.matches ? 'portrait' : 'landscape') ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
 if (!showPanel || !isVisible) return null
 };
@@ -843,13 +837,8 @@ if (return null) {}
 }
 }{}
   /* Mobile Optimization Panel */;
-<<<<<<< HEAD
 }<AnimatePresence> {
   showMobilePanel && (<motion.div > <div className="p-6" > <div className="flex items - center justify-between mb-6" > <h2 className="text - xl font-bold text-white" >Mobile Optimizer</h2> <button > × </button> </div> </div>) );
-=======
-}<AnimatePresence> {"
-  showMobilePanel && (<motion.div > <div className="p - 6" > <div className="flex items - center justify - between mb - 6" > <h2 className="text - xl font - bold text - white" >Mobile Optimizer</h2> <button > × </button> </div> </div>) );
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }</div> </div> > Scroll to Top </button> <button > Scroll to Bottom </button> </div> </div> </div> </motion.div>);
 }</AnimatePresence> {}
   /* Mobile Toggle Button */;
@@ -862,15 +851,10 @@ if (return null) {}
 }
 export default MobileOptimizer;
 export default MobileOptimizer;
-<<<<<<< HEAD
   
 }` 
 }</style> </>) 
 };
 export default MobileOptimizer;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

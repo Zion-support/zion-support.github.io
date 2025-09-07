@@ -1,45 +1,16 @@
 
 
-<<<<<<< HEAD
 }
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';'
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import { motion } from 'framer-motion';
-interface UltraFuturisticBackground2035Props {;
-  children: React && React.ReactNode;
-}
-
-<<<<<<< HEAD
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-<<<<<<< HEAD
-    if (!canvas) return;
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface UltraFuturisticBackground2035Props {
-  children: React.ReactNode
-}
-export default function UltraFuturisticBackground2035({ children }: UltraFuturisticBackground2035Props) {
-  const canvasRef = null;
-              ease: 'easeInOut'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    if (!canvas) return;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
-<<<<<<< HEAD
     if (ctx) {
 ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
     }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    if (ctx) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     let animationFrameId: number;
     let particles: Array<{;
       x: number;
@@ -114,7 +85,6 @@ if ( {) {}
         case 'quantum':;'
           return ['#8b5cf6', '#06b6d4', '#ec4899'][;
             Math && Math.floor(Math && Math.random() * 3);
-<<<<<<< HEAD
       maxLife: number;
     }> = [];
 
@@ -156,10 +126,6 @@ return ['#8b5cf6', '#06b6d4', '#ec4899'][
 origin/cursor/automate-test-improve-and-merge-code-2533
           ];
         case 'hologram':;
-=======
-          ];'
-        case 'hologram':;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           return ['#10b981', '#f59e0b', '#ef4444'][;
             Math && Math.floor(Math && Math.random() * 3);
           ];'
@@ -261,7 +227,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       })
 };            ctx && ctx.stroke();
           }
-<<<<<<< HEAD
         }
 break;
       }
@@ -410,21 +375,13 @@ ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
     };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     window.addEventListener('resize', handleResize);
     initParticles();
     updateParticles();
     return () => {'
       window.removeEventListener('resize', handleResize);
-<<<<<<< HEAD
       if (animationFrameId) {
 cancelAnimationFrame(animationFrameId);
-=======
-      if (animationFrameId) {}
-        cancelAnimationFrame(animationFrameId);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
     };  }, []);
   return (
@@ -467,15 +424,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         {/* Holographic grid effect */}'
         <div className='absolute inset-0 opacity-20'>;
-<<<<<<< HEAD
         />
 {/* Holographic grid effect */}
         <div className='absolute inset-0 opacity-20'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <div
-=======
-          <div'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className='h-full w-full'
             style={{}
               backgroundImage: `
@@ -497,7 +450,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ref={canvasRef}
 '
           className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
-<<<<<<< HEAD
 
           />
         </div>
@@ -506,9 +458,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ref={canvasRef}
 className='absolute inset-0 w-full h-full'
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           style={{ filter: 'blur(0.5px)' }}
 
         />
@@ -567,12 +516,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         />;
 
-<<<<<<< HEAD
         {/* Quantum energy waves */}
-=======
-
-        {/* Quantum energy waves */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className='absolute inset-0 overflow-hidden'>;
           <motion&& motion.div'
             className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent'
@@ -636,9 +580,7 @@ ease: 'easeInOut',
               repeat: Infinity,
 ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }}
           />
         </div>
@@ -652,20 +594,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {children}
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    </>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-    </>
-  );
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

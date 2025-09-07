@@ -1,14 +1,9 @@
       x: number;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const UltraFuturisticBackground2040: React.FC;
-<<<<<<< HEAD
     let time = 0;
     // Particle system
     const particles: Array<{
@@ -66,12 +61,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     const animate = () => {}
       time += 0.01;
-<<<<<<< HEAD
 
       // Clear canvas with fade effect
-=======
-      // Clear canvas with fade effect'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles;
@@ -219,7 +210,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ctx && ctx.lineTo(x, y);
           }
         }
-<<<<<<< HEAD
         for (let x = -100; x < canvas.width + 100; x += 5) {
           const y = waveY + Math.sin((x + waveOffset) * 0.02) * 20;
           if (x === -100) {
@@ -259,9 +249,6 @@ cancelAnimationFrame(animationFrameId);
       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Floating Elements */}
-=======
-      {/* Floating Elements */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className='absolute inset-0'>
         {/* Animated Grid Pattern */}
           <div'
@@ -287,7 +274,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             backgroundImage: `'
             ease: 'linear',  }, []);
 ;
-<<<<<<< HEAD
   return (
     <div className="fixed inset - 0 pointer - events-none overflow-hidden">;
       {/* Canvas Background */}
@@ -304,24 +290,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Animated Grid Pattern */}
         <div className="absolute inset-0 opacity-20">;
           <div className="absolute top - 0 left - 0 w-full h-full" style={{
-=======
-  return ("
-    <div className="fixed inset - 0 pointer - events - none overflow - hidden">;
-      {/* Canvas Background */}
-      <canvas;
-        ref={canvas_ref}"
-        className="absolute inset - 0 w - full h - full";
-        style={{ z_index: -1 }}
-      />;
-      {/* Overlay Gradients */}"
-      <div className="absolute inset - 0 bg - gradient - to - br from - black / 80 via - transparent to - black / 80" />;"
-      <div className="absolute inset - 0 bg - gradient - to - t from - black / 60 via - transparent to - black / 60" />;
-      {/* Floating Elements */}"
-      <div className="absolute inset - 0">;
-        {/* Animated Grid Pattern */}"
-        <div className="absolute inset - 0 opacity - 20">;"
-          <div className="absolute top - 0 left - 0 w - full h - full" style={{}`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             background_image: `;
               linear - gradient (rgba (6, 182, 212, 0.1) 1px, transparent 1px);
               linear - gradient (90deg, rgba (6, 182, 212, 0.1) 1px, transparent 1px);`
@@ -331,15 +299,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }} />;
         </div>;
         {/* Floating Geometric Elements */}
-<<<<<<< HEAD
         <motion.div;
           className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan-400 / 20 rounded-lg";
           animate={{
-=======
-        <motion.div;"
-          className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 20 rounded - lg";
-          animate={{"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
         />;
         <motion.div;'
@@ -353,21 +315,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,'
             ease: 'linear',          }}
         />;
-<<<<<<< HEAD
         <motion.div;
           className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple-400 / 20 rounded-full";
           animate={{
           transition={{
             duration: 12
             repeat: Infinity
-=======
-        <motion.div;"
-          className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full";
-          animate={{}
-          transition={{}
-            duration: 12;
-            repeat: Infinity'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ease: 'linear',          }}
           />
         </div>
@@ -452,15 +405,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,'
             ease: 'linear',          }}
         />;
-<<<<<<< HEAD
         <motion.div;
           className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink-400 / 20 transform rotate-45";
           animate={{
-=======
-        <motion.div;"
-          className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45";
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }}
           transition={{}
             duration: 12,
@@ -501,7 +448,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,'
             ease: 'linear',          }}
         />;
-<<<<<<< HEAD
         <motion.div;
           className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green-400 / 20 rounded-full";
           animate={{
@@ -527,11 +473,6 @@ ease: 'linear',
             repeat: Infinity,
 ease: 'linear',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        <motion.div;"
-          className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full";
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }}
         {/* Particle Effects */}
         <motion&& motion.div'
@@ -544,12 +485,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Particle Effects */}
         <motion&& motion.div"
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
-<<<<<<< HEAD
           animate={{
 
-=======
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }}
           transition={{}
             duration: 3;
@@ -692,7 +629,6 @@ export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 ;
-<<<<<<< HEAD
           50% {
             opacity: 0.5;
           }
@@ -703,10 +639,3 @@ export default UltraFuturisticBackground2040;
 };
 export default UltraFuturisticBackground2040;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

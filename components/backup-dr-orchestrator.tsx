@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';'
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',';
@@ -11,12 +10,8 @@ export default function BackupDROrchestratorPage() {}
   );  if (!service) return null;export default function BackupDROrchestratorPage() { return null; }
         <title>{service && service.name} - Zion Tech Group</title>;'
         <meta name='description' content={service && service.description} />;
-<<<<<<< HEAD
   );
   if (!service) return null;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -25,10 +20,6 @@ export default function BackupDROrchestratorPage() {}
 origin/cursor/automate-test-improve-and-merge-code-2533
         <link
           rel='canonical'
-=======
-        <link'
-          rel='canonical''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           href='https://ziontechgroup && ziontechgroup.com/backup-dr-orchestrator'
         />;'
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;'
@@ -74,17 +65,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
               <Button'
                 href='/contact''
                 variant='quantum''
                 size='lg''
-=======
-              <Button
-                href='/contact'
-                variant='quantum'
-                size='lg'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='w-full'>;
                 Start Trial;'
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -195,7 +179,6 @@ if (return null) {}
                 <div className='flex items - center space - x-2'>;'
                   <Mail className='w - 4 h - 4 text - purple - 400' />;
                   <span>{service.contact_info.email}</span>;
-<<<<<<< HEAD
                 </div>;
                 <div className='flex items - center space - x-2'>;
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
@@ -205,17 +188,6 @@ if (return null) {}
                 <div className="flex items-center space-x-2"><Phone className="w - 4 h - 4 text-cyan-400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w - 4 h - 4 text-purple-400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w - 4 h - 4 text-green-400" /><span className="text-xs">{service.contact_info.address}</span></div>;
-=======
-                </div>;'
-                <div className='flex items - center space - x-2'>;'
-                  <MapPin className='w - 4 h - 4 text - green - 400' />;'
-                  <span className='text - xs'>{service.contact_info.address}</span>;"
-                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w - full">Start Trial < ArrowRight className="w - 5 h - 5 ml - 2" /></Button>;"
-              <div className="mt - 6 space - y-3 text - sm text - slate - 300">;"
-                <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;"
-                <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;"
-                <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>;
           </div>;
         </div>;
@@ -262,14 +234,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </UltraAdvancedFuturisticBackground>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  );
-}
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

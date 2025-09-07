@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 import {;
   Mail,;
@@ -110,7 +109,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
-<<<<<<< HEAD
+
   const services = [
 'AI Development',
     'Cloud Architecture',
@@ -119,16 +118,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     'Blockchain Solutions',
     'Data Analytics',
     'Other',
-=======
-  const services = ['
-    'AI Development''
-    'Cloud Architecture''
-    'Digital Transformation''
-    'IoT Platforms''
-    'Blockchain Solutions''
-    'Data Analytics''
-    'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const contactInfo = [;
@@ -138,17 +127,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       content: 'contact@ziontechgroup && ziontechgroup.com',;'
       href: 'mailto:contact@ziontechgroup && ziontechgroup.com',;
     },    {;
-<<<<<<< HEAD
       icon: Phone,;
       title: 'Call Us',;
       content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup && ziontechgroup.com'
 };
-=======
-      icon: Phone,;'
-      title: 'Call Us',;'
-      content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup && ziontechgroup.com';
-    };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     {;
       icon: Phone,;'
       title: 'Call Us',;'
@@ -161,12 +143,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       href: '#',;
     },;
 
-<<<<<<< HEAD
   return (
-=======
-
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
       {/* Background Elements */}
 '
@@ -186,7 +163,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       content: 'contact@ziontechgroup.com''
       href: 'mailto:contact@ziontechgroup.com'
 
-<<<<<<< HEAD
       icon: Mail,
       title: 'Email Us',
       content: 'contact@ziontechgroup.com',
@@ -224,9 +200,6 @@ href: '#',
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
-=======
-        >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Let&apos;s Start a'
             <span className='block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
@@ -253,7 +226,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
 '
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}
-
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -417,13 +389,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
 
-<<<<<<< HEAD
 className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-=======
-          >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {submitStatus === 'success' ? (
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -472,15 +440,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       required"
                       className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors""
                       placeholder="Enter your full name"
-<<<<<<< HEAD
                     />
               <form onSubmit={handleSubmit} className='space-y-6'>
 <form onSubmit={handleSubmit} className='space-y-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                    />'
-              <form onSubmit={handleSubmit} className='space-y-6'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div>
                     <label'
@@ -508,7 +471,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     />;
                   </div>;
                 </div>;
-<<<<<<< HEAD
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -539,10 +501,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                     <label
                       htmlFor='phone'
-=======
-                    <label'
-                      htmlFor='phone''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       className='block text-white font-medium mb-2'>;
                       Phone Number;
                     </label>;
@@ -562,7 +520,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     name="service"
                     value={formData && formData.service}
                     onChange={handleChange}
-<<<<<<< HEAD
                   <label
                       placeholder='Enter phone number'
                     />
@@ -598,10 +555,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <label
 origin/cursor/automate-test-improve-and-merge-code-2533
                     htmlFor='message'
-=======
-                  <label'
-                    htmlFor='message''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className='block text-white font-medium mb-2'>;
                     Message *;
                   </label>;
@@ -685,21 +638,12 @@ export default ContactForm;
                     id="service";"
                     name="service";
                     value={form_data.service}
-<<<<<<< HEAD
                     on_change={handle_change}
                     className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue-500 transition-colors";
                   >;
                     <option value="">Select a service</option>;
                     {services.map ((service) => (
                       <option key={service} value={service} className="bg - gray-800 text-white">;
-=======
-                    on_change={handle_change}"
-                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue - 500 transition - colors";
-                  >;"
-                    <option value="">Select a service</option>;
-                    {services.map ((service) => ("
-                      <option key={service} value={service} className="bg - gray - 800 text - white">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         {service}
                       </option>))}
                   </select>;
@@ -716,17 +660,10 @@ export default ContactForm;
                     name='message'                    value={form_data.message}
                     on_change={handle_change}
                     required;
-<<<<<<< HEAD
                     rows={5}
                     className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';
                     placeholder='Tell us about your project or inquiry...'                  />                  <label html_for="message" className="block text - white font-medium mb-2" html_for="input-;
                     Message *;
-=======
-                    rows={5}'
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';'"
-                    placeholder='Tell us about your project or inquiry...'                  />                  <label html_for="message" className="block text - white font - medium mb - 2" html_for="input-;
-                    Message *;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   ">;
                     Message *;
                   </label>;
@@ -735,15 +672,9 @@ export default ContactForm;
                     name="message";
                     on_change={handle_change}
                     required;
-<<<<<<< HEAD
                     rows={5}
                     className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';
                     placeholder='Tell us about your project or inquiry...'                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition-colors resize-none";
-=======
-                    rows={5}'
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';'"
-                    placeholder='Tell us about your project or inquiry...'                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     placeholder="Tell us about your project or inquiry...";
                   />;
                 </div>;'
@@ -752,17 +683,10 @@ export default ContactForm;
                     initial={{ opacity: 0, coordinate_y: -10 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}'
                     className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4';
-<<<<<<< HEAD
                   >;
                     <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className="flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded-lg p-4";
                   >;
                     <AlertCircle className="w-5 h-5" />;
-=======
-                  >;'"
-                    <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className="flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4";
-                  >;"
-                    <AlertCircle className="w - 5 h - 5" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <span > Something went wrong. Please try again.</span>;
                   </motion.div>)}
                 <button;'
@@ -774,7 +698,6 @@ export default ContactForm;
                     <>;'
                       <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />                      <span > Sending...</span>;
                     </>) : (
-<<<<<<< HEAD
                     <>;
                       <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}
                   className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2";
@@ -786,19 +709,6 @@ export default ContactForm;
                     </>) : (
                     <>;
                       <Send className='w - 5 h - 5' />                      <Send className="w-5 h-5" />;
-=======
-                    <>;'
-                      <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}"
-                  className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify - center space - x-2";
-                >;
-                  {is_submitting ? (
-                    <>;"
-                      <div className="w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin" />;
-                      <span > Sending...</span>;
-                    </>) : (
-                    <>;'"
-                      <Send className='w - 5 h - 5' />                      <Send className="w - 5 h - 5" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <span > Send Message</span>;
                     </>)}
                 </button>;
@@ -820,7 +730,6 @@ export default ContactForm;  )
 export default ContactForm;
 
 export default ContactForm;
-<<<<<<< HEAD
           </motion.div>
         </div>
       </div>
@@ -830,8 +739,4 @@ export default ContactForm;
 
 export default ContactForm;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

@@ -1,24 +1,13 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';'
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
 function grantPath() { return null; }
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-
-const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
-
-function grantPath(id: string) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {}`
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
-<<<<<<< HEAD
 function readGrant(id: string): GrantApplication | null {}
 }
 function writeGrant(record: GrantApplication) {}
@@ -28,12 +17,7 @@ function writeGrant(record: GrantApplication) {}
 function isAuthorized(req: NextApiRequest) {}
   return (
   return path.join(GRANTS_DIR, `${id}.json`);
-=======
-function readGrant(id: string): GrantApplication | null {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
-<<<<<<< HEAD
 function writeGrant(record: GrantApplication) {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs.writeFileSync(
@@ -183,14 +167,10 @@ writeGrant(existing);
 }
   writeGrant(existing);
   res.status(200).json({ record: existing });
-<<<<<<< HEAD
+
   existing.updatedAt = new Date().toISOString();
 
   writeGrant(existing);
 res.status(200).json({ record: existing });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

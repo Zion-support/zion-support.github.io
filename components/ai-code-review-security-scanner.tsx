@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Brain,
   Shield,
@@ -33,7 +32,6 @@ import {}
   Award,;'
 } from 'lucide-react';
 
-<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -58,23 +56,6 @@ import {
   BarChart3
   Globe
   Award;
-=======
-import {};
-  Brain;
-  Shield;
-  Code;
-  CheckCircle;
-  Zap;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Users;
-  Lock;
-  Eye;
-  BarChart3;
-  Globe;
-  Award;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
   return (
     <>;
@@ -100,7 +81,6 @@ import {};
         title="AI-Powered Code Review & Security Scanner | Zion Tech Group""
         description="Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, suggests improvements, and ensures code quality across multiple programming languages.""
         keywords={["AI code review", "security scanner", "vulnerability detection", "code quality", "automated code analysis", "security testing", "DevOps security"]}
-<<<<<<< HEAD
         <section className='relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20' />
           <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20'>
@@ -175,13 +155,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0.8 }}
 className='text-center mb-16'
             >
-=======
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}'
-              className='text-center mb-16''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Comprehensive Code Security & Quality;
               </h2>'
@@ -226,7 +199,6 @@ className='text-center mb-16'
                 {'
                   icon: <Globe className='w-8 h-8' />'
                   title: 'Integration & APIs'
-<<<<<<< HEAD
                   description:
                     'Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access.',
                 },
@@ -238,57 +210,25 @@ className='text-center mb-16'
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300'
                 >
-=======
-                  description:'
-                    'Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access.'"
-                },              ].map((feature, index) => (                  icon: <Globe className="w-8 h-8" />"
-                  title: "Integration & APIs""
-                  description: "Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access."
-                }
-                <motion.div;
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}'
-                  className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300'
-                >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6'>
                     {feature.icon}
                   </div>'
                   <h3 className='text-xl font-semibold text-white mb-4'>
                     {feature.title}
-<<<<<<< HEAD
                   </h3>
                   <p className='text-gray-300'>{feature.description}</p>
-=======
-                  </h3>'
-                  <p className='text-gray-300'>{feature.description}</p>                </motion.div>                >"
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6">
-                    {feature.icon}
-                  </div>"
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
-                  <p className="text-gray-300">{feature.description}</p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
-
 
               ))}
             </div>
           </div>
         </section>
 
-
-
               ))}
 
             </div>;
           </div>;
         </section>;
-
-
-
-
 
               ))}
         {/* Pricing Section */}'
@@ -300,7 +240,6 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 ho
         {/* Pricing Section */}"
         <section className="py-20">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
 <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -314,14 +253,6 @@ className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Transparent Pricing Plans
               </h2>
-=======
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-                Transparent Pricing Plans;
-              </h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your development team size and security requirements. 
                 All plans include our core AI-powered security scanning capabilities.
@@ -346,7 +277,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   popular: false;
                 }
-<<<<<<< HEAD
                     'Up to 10 developers',
                     'Basic security scanning',
                     'GitHub/GitLab integration',
@@ -389,40 +319,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     'Advanced compliance'
                     'API access'
                     'Custom integrations'
-=======
-                {'
-                  name: 'Professional''
-                  price: '$799''
-                  period: '/month''
-                  description: 'Ideal for growing development teams'
-                  features: ['
-                    'Up to 50 developers''
-                    'Advanced security scanning''
-                    'Multi-repository support''
-                    'Priority support''
-                    'Custom security rules''
-                    'Advanced analytics''
-                    'CI/CD integration''
-                    'Team collaboration tools'
-                  ]
-                  popular: true;
-                }
-                {'
-                  name: 'Enterprise''
-                  price: '$1,999''
-                  period: '/month'
-                  description:'
-                    'For large organizations with complex security needs'
-                  features: ['
-                    'Unlimited developers''
-                    'Enterprise security scanning''
-                    'On-premise deployment''
-                    '24/7 dedicated support''
-                    'Custom rule creation''
-                    'Advanced compliance''
-                    'API access''
-                    'Custom integrations''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     'SLA guarantees'
                   ]
                   popular: false'
@@ -520,16 +416,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     plan.popular '
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10' 
-<<<<<<< HEAD
 
 plan.popular
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10'
 origin/cursor/automate-test-improve-and-merge-code-2533
                       : 'border-white/10'
-=======
-'
-                      : 'border-white/10'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     "SLA guarantees";
                   ],
                   popular: false;
@@ -555,14 +446,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >;
                   {plan.popular && ("
                       <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-<<<<<<< HEAD
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                       <span className='bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                         Most Popular
-=======
-                        Most Popular;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       </span>
                     </div>
                   )}
@@ -599,7 +486,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </li>;
                     ))}
 
-
                         className='flex items-center text-gray-300'
                       >
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
@@ -608,12 +494,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
 
                   <motion.button
-=======
-                  <motion.button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   </ul>;
@@ -663,14 +545,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     title: "Improve Code Quality & Maintainability",;"
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.";
 
-<<<<<<< HEAD
 <section className='py-20 bg-white/5'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-=======
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -820,14 +698,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Benefits Section */}"
         <section className="py-20 bg-white/5">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
 <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-=======
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -924,7 +798,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>;
             </motion.div>;'
             <div className='grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8'>;
-<<<<<<< HEAD
               {[;
 className='text-center mb-16'
             >
@@ -954,23 +827,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 "E - commerce Platforms";
                 "Government Software Projects";
                 "Educational Institutions",;
-=======
-              {[;'
-                'Software Development Teams','
-                'DevOps & Security Teams','
-                'Financial Technology Companies','
-                'Healthcare Software Providers','
-                'E - commerce Platforms','
-                'Government Software Projects','
-                'Educational Institutions','"
-                'Startups & Enterprises',              ].map ((use_case, index) => (                "Software Development Teams";"
-                "DevOps & Security Teams";"
-                "Financial Technology Companies";"
-                "Healthcare Software Providers";"
-                "E - commerce Platforms";"
-                "Government Software Projects";"
-                "Educational Institutions",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 "Startups & Enterprises";
                 <motion&& motion.div;
                   key={index}
@@ -982,8 +838,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className="text-white font-semibold">{useCase}</h3>
                 </motion.div>
 
-
-<<<<<<< HEAD
                 'E-commerce Platforms',
                 'Government Software Projects',
                 'Educational Institutions',
@@ -1010,17 +864,11 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-=======
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 
-
                 </motion.div>
-
-
 
               ))}
         {/* CTA Section */}'
@@ -1031,7 +879,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* CTA Section */}"
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">"
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
 
         {/* CTA Section */}'
         <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>'
@@ -1323,16 +1170,8 @@ export default AICodeReviewSecurityScanner;
 
 };
 
-
-<<<<<<< HEAD
 );
 };
 
 export default AICodeReviewSecurityScanner;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

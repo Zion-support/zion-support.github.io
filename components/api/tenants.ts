@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import { authenticateRequest } from '@/utils/auth';
 import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
@@ -16,10 +14,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method |'GET').toUpperCase()
 origin/cursor/automate-test-improve-and-merge-code-2533
   if (method === 'GET') {
-=======
-export default function handler() { return null; }
-  if (method === 'GET') {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res && res.status(200).json({ tenants: getTenants() });
   }
   const auth = authenticateRequest(req, false);
@@ -168,7 +162,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (!tenantId || !rotateKey)'
       return res.status(400).json({ error: 'tenantId and rotateKey required' });    return res.status(200).json({ tenant: result })
   }
-<<<<<<< HEAD
 
   if (method === 'PATCH') {
     const result = updateTenant(tenantId, update |{});
@@ -178,14 +171,6 @@ return res.status(200).json({ tenant: result });
 
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
-=======
-
-  }
-
-  if (method = == 'PATCH') {}
-   ;}
-  const { tenantId, rotateKey } = req.body || {};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (!tenantId || !rotateKey)
       return res.status(400).json({ error: 'tenantId and rotateKey required';,}
 });
@@ -199,11 +184,6 @@ const result = rotateTenantApiKey(tenantId);
 
   return res.status(405).json({ error: 'Method not allowed' ;});
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'
-  if (method === 'PATCH') {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(200).json({ tenant: result })
   }'
 return res.status(405).json({ error: 'Method not allowed' });
@@ -212,21 +192,4 @@ return res.status(405).json({ error: 'Method not allowed' });
   if (method === 'PATCH') {}
     const { tenantId, rotateKey } = req.body || {};
     const { tenantId, rotateKey } = req.body || {};
-<<<<<<< HEAD
-=======
-  return res.status(405).json({ error: 'Method not allowed';,}
-});
-    return res.status(200).json({ tenant: result ;})
-  }
-return res.status(405).json({ error: 'Method not allowed';,}
-});
-}
-
-  if (method === 'PATCH') {
-    const { tenantId, rotateKey } = req.body || {};
-    const { tenantId, rotateKey } = req.body || {};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

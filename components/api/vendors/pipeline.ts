@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { listPipelineForVendor } from "../../../utils/vendor-store";
 export default function handler() { return null; }
@@ -25,17 +24,9 @@ function handler() { return null; }
   res.status (200).json ({ items });
   res.status (200).json ({ items });
 
-
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listPipelineForVendor } from '../../../utils/vendor-store';
   const vendorId = null;
   res.status(200).json({ items })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

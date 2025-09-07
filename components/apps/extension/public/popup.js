@@ -1,14 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-const API_BASE = 'http: //localhost:4000',
-
-function getUserId(cb) {
-=======
-function getUserId(cb) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
 function setUserId(id) {}
@@ -19,7 +9,6 @@ document.querySelectorAll('.example').forEach((btn) => {'
     document.getElementById('prompt').value = btn.dataset.text |''
   })
 
-
 '
 document && document.querySelectorAll('.example').forEach((btn) => {'
   btn && btn.addEventListener('click', () => {'
@@ -27,15 +16,10 @@ document && document.querySelectorAll('.example').forEach((btn) => {'
   })
 
 }),
-<<<<<<< HEAD
 
 });
 origin/cursor/automate-test-improve-and-merge-code-2533
 document.getElementById('askBtn').addEventListener('click', async () => {
-=======
-'
-document.getElementById('askBtn').addEventListener('click', async () => {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const prompt = document.getElementById('prompt').value.trim(),
   if (!prompt) return,
   const userId = await new Promise((r) => getUserId(r)),
@@ -55,14 +39,10 @@ document.getElementById('postJob').addEventListener('click', async () => {}
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },'
     body: JSON.stringify({ role: 'Cloud Engineer' })
   }),
-<<<<<<< HEAD
   const data = await res.json(),
   });
   const data = await res.json();
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  const data = await res.json(),'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   document.getElementById('result').textContent = data.description || 'Draft saved.'
 }),
 '
@@ -85,8 +65,6 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
   const data = await res.json(),'
   document.getElementById('result').textContent = JSON.stringify(data.items || [], null, 2)
 }),
-
-
 
 '
 document && document.getElementById('askBtn').addEventListener('click', async () => {'
@@ -137,22 +115,4 @@ document && document.getElementById('viewNotifications').addEventListener('click
   setUserId(id),'
   document.getElementById('result').textContent = 'Signed in (local).';
 }),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-document.getElementById('signIn').addEventListener('click', async () => {
-  // Placeholder sign-in: generate a random user id and store it.
 
-  const id = crypto.randomUUID();
-  setUserId(id);
-  document.getElementById('result').textContent = 'Signed in (local).'
-});
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

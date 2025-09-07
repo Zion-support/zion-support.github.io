@@ -1,15 +1,10 @@
 import Link from 'next/link';
-<<<<<<< HEAD
 
 export const metadata = {
   title: 'AI Customer Insights | Zion Tech Group',
   description:
     'Unlock customer behavior insights with AI-powered analytics, sentiment analysis, and predictive modeling. Drive growth with data-driven decisions.',
 };
-=======
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 export default function ServicePage() {
   return (
@@ -43,7 +38,6 @@ export default function ServicePage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
             Ready to Unlock Customer Insights?
           </h2>
-<<<<<<< HEAD
           <div className="space-y-6">
             <FeatureItem
               icon="🧠"
@@ -125,30 +119,11 @@ export default function ServicePage() {
               ]}
               popular={false}
             />
-=======
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our AI Customer Insights solutions can help you understand your customers better.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-            >
-              Email Us
-            </a>
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           </div>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 
 function FeatureItem({
@@ -316,6 +291,3 @@ function CTA() {
     </div>
   );
 }
-=======
-}
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172

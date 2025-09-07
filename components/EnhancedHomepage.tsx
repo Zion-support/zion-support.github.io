@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import Link from 'next/link';
@@ -21,7 +16,6 @@ import { ArrowRight;
  } from 'lucide-react';
 import Head from 'next/head';
 // Import our enhanced components
-<<<<<<< HEAD
 import EnhancedNavigation from './layout/EnhancedNavigation',
 import EnhancedServiceCard from './ui/EnhancedServiceCard',
 import PerformanceMonitor from './PerformanceMonitor',
@@ -34,15 +28,6 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 //Import our enhanced components import EnhancedNavigation from './layout / EnhancedNavigation';
 import EnhancedServiceCard from './ui / EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
-=======
-import EnhancedServiceCard from './ui/EnhancedServiceCard';'
-import PerformanceMonitor from './PerformanceMonitor';'
-import UltraFuturisticBackground from './ui/UltraFuturisticBackground';'
-//Import service data window && window.addEventListener ('mousemove', handleMouseMove);'
-//Import our enhanced components import EnhancedNavigation from './layout / EnhancedNavigation';'
-import EnhancedServiceCard from './ui / EnhancedServiceCard';'
-import PerformanceMonitor from './PerformanceMonitor';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 //Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
@@ -52,14 +37,8 @@ import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 ...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
 ...innovative2025AIAutonomousServices ];
 
-<<<<<<< HEAD
   opacity: 0 
 
-=======
-
-  opacity: 0;
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react';
 
 interface EnhancedHomepageProps {}
@@ -259,15 +238,10 @@ const EnhancedHomepage: React.FC = () => {}
               Explore Our Revolutionary Services;
             </motion && motion.h2>;
 
-<<<<<<< HEAD
             <motion&& motion.div 
 
             
             <motion.div 
-=======
-            <motion&& motion.div;
-            <motion.div "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="flex flex-wrap justify-center gap-4 mb-12"
               variants={itemVariants}
             >
@@ -311,14 +285,9 @@ const EnhancedHomepage: React.FC = () => {}
           initial="hidden""
           animate="visible">;"
           <div className="max-w-7xl mx-auto">;
-<<<<<<< HEAD
             <motion&& motion.div 
 
             <motion.div 
-=======
-            <motion&& motion.div;
-            <motion.div "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}>;
               {getFilteredServices().slice(0, 12).map((service, index) => (;
@@ -382,14 +351,9 @@ const EnhancedHomepage: React.FC = () => {}
               variants={itemVariants}>;
               Featured Revolutionary Services;
             </motion && motion.h2>;
-<<<<<<< HEAD
             <motion&& motion.div 
 
             <motion.div 
-=======
-            <motion&& motion.div;
-            <motion.div "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}>;"
               <AnimatePresence mode="wait">;
@@ -401,12 +365,7 @@ const EnhancedHomepage: React.FC = () => {}
 `
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
 
-<<<<<<< HEAD
                       <motion.button
-=======
-
-                      <motion.button"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -437,14 +396,8 @@ const EnhancedHomepage: React.FC = () => {}
           variants={containerVariants}"
           initial="hidden"
 
-<<<<<<< HEAD
             <motion.p 
 
-=======
-
-            <motion.p;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
             >'
@@ -526,9 +479,7 @@ const EnhancedHomepage: React.FC = () => {}
         {showPerformanceMonitor && (;
           <PerformanceMonitor />;
         )}
-<<<<<<< HEAD
   duration: 0.8, staggerChildren: 0.1 
-
 
 };
 
@@ -552,9 +503,3 @@ import { innovative2025ITInfrastructureServices  } from '../data/2025-innovative
 import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
 const EnhancedHomepage: React.FC;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
