@@ -343,6 +343,12 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                     Support: {service.supportLevel}
                   </div>
                 </div>
+                <Link
+                  to={`/services?category=${encodeURIComponent(category.name)}`}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
+                >
+                  View Services <ArrowRight className="ml-1 w-4 h-4" />
+                </Link>
               </motion.div>
             ))}
           </div>
