@@ -1013,7 +1013,6 @@ key={card && card.title}
                     </a>
                   </Link>
 
-                
 }
               </article>;
             ))}
@@ -1290,9 +1289,6 @@ className='mx-auto max-w-7xl px-6 pb-14' />
           </div>;
 
         </motion && motion.section>;
-
-
-
 
         {/* AUTO-GENERATED: FRONT_ADS_START *}
 }
@@ -1620,8 +1616,6 @@ happen.
 
         </motion && motion.section>;
 
-
-
         {/* Suites */}
 
         <motion.section;
@@ -1685,7 +1679,6 @@ className='mx-auto max-w-7xl px-6 pb-14' />
                     </Link>
                   ))}
               </article>
-
 
             )
 }
@@ -2420,9 +2413,6 @@ className='mx-auto max-w-7xl px-6 pb-14' />
           </div>
         </motion.section>
 
-
-
-
           </div>;
         </motion && motion.section>;{/* Extended Feature Directory */}
         <motion&& motion.section;
@@ -2910,7 +2900,6 @@ key={item && item.label}
           </div>
         </motion.section>
 
-
                   className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30'>;
                   <div className='text-2xl font-extrabold tracking-tight' />;
                     {item && item.value}
@@ -2966,11 +2955,8 @@ key={item && item.label}
 
           transition={{ duration: 0.5 }}
 
-
-
           </div>
         </motion.section>
-
 
         {/* Capabilities *}
 }
@@ -3293,7 +3279,6 @@ title: 'Quality & Reliability',
 
         </motion && motion.section>;
 
-
         {/* Benefits */}
 
         <motion.section;
@@ -3376,7 +3361,6 @@ className='mx-auto max-w-7xl px-6 pb-20'
                 <span className='mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
                 <span className='text-sm text-white/80' />{b}</span>
               </div>
-
 
             ))}
           </div>;
@@ -3784,7 +3768,6 @@ key={}
 
           </div>;
         </section>;
-
 
             ))}
 
@@ -4311,8 +4294,6 @@ title: 'Main Sync',
 
         </motion && motion.section>;
 
-
-
         {/* Capabilities Matrix */}
 
         <motion.section;
@@ -4391,7 +4372,6 @@ live hub, report, or workflow.
           </div>
         </motion.section>
 
-
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo'>;
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
                   <div className='text-base font-semibold' />{item && item.title}</div>;
@@ -4461,13 +4441,8 @@ live hub, report, or workflow.
 
         </motion && motion.section>;
 
-
-
-
           </div>
         </motion.section>
-
-
 
         {/* Benefits Directory */}
 
@@ -4544,7 +4519,6 @@ className='mx-auto max-w-7xl px-6 pb-16' />
 
         {/* AUTO-GENERATED: FRONT_ADS_START *}
 }
-
 
 <section id='auto-ads' className='mx-auto max-w-7xl px-6 pb-16' />
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90' />

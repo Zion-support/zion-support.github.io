@@ -154,5 +154,3 @@ if (require.main === module) {}
   }
 });
 };
-
-"

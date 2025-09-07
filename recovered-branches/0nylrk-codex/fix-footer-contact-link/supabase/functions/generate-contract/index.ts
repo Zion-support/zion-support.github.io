@@ -42,7 +42,7 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
-;
+
 
 try {;
     // Get the OpenAI API key from environment variables;

@@ -578,13 +578,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     reviews: 19;
 ];
 
-
   }
-
-
-
-'
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface AdvancedHealthcareBiotechService {;
   id: string,;

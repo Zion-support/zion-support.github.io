@@ -1,6 +1,5 @@
 
 
-
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets   } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
@@ -28,7 +27,6 @@ export type StartMode = 'video' | 'audio';
 
   onLeave?: (durationSec: number) => void,
 };
-
 
 export default function CallRoom(): any ({;
   projectId,;
@@ -125,7 +123,6 @@ const list: Array<RemoteParticipant | LocalParticipant /> = [
 }
 };
 
-
   useEffect(() => {
 
     connect();
@@ -157,7 +154,6 @@ const durationSec = connectedAt;
 
     onLeave?.(durationSec)
 };
-
 
 const gridCols = useMemo(() => {
    ;

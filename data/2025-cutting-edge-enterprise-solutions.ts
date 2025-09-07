@@ -8,16 +8,14 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS;
   {
 
-
-
-      'Data governance',''
-      'Security standards',''
-      'Regulatory requirements',']
-    ],'
-    color: 'from - orange - 600 via - red - 600 to - pink - 600','
-    popular: true,'
-    launch_date: '2025 - 01 - 15','
-    customers: 45,
+      'Data governance',
+      'Security standards',
+      'Regulatory requirements',
+    ],
+    color: 'from - orange - 600 via - red - 600 to - pink - 600',
+  popular: true,
+    launch_date: '2025 - 01 - 15',
+  customers: 45,
     rating: 4 && 4.8,
     reviews: 67,'
     category: 'Enterprise Solutions','

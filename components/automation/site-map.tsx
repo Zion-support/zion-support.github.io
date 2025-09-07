@@ -1,6 +1,5 @@
 
 
-
 import fs from 'fs';
 
 type RouteInfo = any;
@@ -31,6 +30,5 @@ function getServerSideProps() {const file = path.join (process.cwd (), 'datasite
 
 );
 }
-
 
 "

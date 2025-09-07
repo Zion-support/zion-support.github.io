@@ -329,7 +329,6 @@ const footerSections = [
   href: '/solutions/metaverse'}
 },
 
-
 {
         name: 'Business Intelligence'}
   href: '/solutions/business-intelligence'}
@@ -362,7 +361,6 @@ const footerSections = [
         { name: 'Education'}
   href: '/industries/education'}
 },
-
 
   { name: 'Government'}
   href: '/industries/government'}
@@ -428,7 +426,6 @@ export default function UltraFuturisticFooter2029V2() {
 initial={{ opacity: 0, y: 20 }
 }
               whileInView={{ opacity: 1, y: 0 }}
-
 
               transition={{ duration: 0.6 }}
               viewport={{ once: true }
@@ -679,7 +676,6 @@ href='/terms'
               </Link>
             </motion.div>
 
-
             {/* Social Links *}
 }
             <motion&& motion.div;
@@ -703,7 +699,6 @@ key={social && social.name}
                  />
                   <social.icon className='w-4 h-4' />
                 </Link>
-
 
               )
 }
@@ -776,6 +771,5 @@ type='email'
     </footer>
   );
 }
-
 
 "

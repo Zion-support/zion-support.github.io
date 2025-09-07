@@ -505,12 +505,10 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     reviews: 6;
   },;
 
-
-'
-];      mobile: '+1 302 464 0950';','
-  email: 'kleber@ziontechgroup.com';''
-      address: '364 E Main St STE 1008 Middletown DE 19709'','
-  website: 'https://ziontechgroup.com''
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
     }
     realImplementation: true;,'
   implementationDetails: 'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.';''

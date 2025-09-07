@@ -34,5 +34,4 @@ export default function NewsDigestPage() {return (<div className=\"space-y-6\" /
 );
 }
 
-
 "

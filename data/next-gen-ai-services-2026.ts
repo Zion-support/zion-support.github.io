@@ -64,16 +64,11 @@ export interface NextGenAIService2026 {
   growthRate: string,
   variant: ServiceVariant,
 
-
-
-
-
-  contactInfo: {,
-  mobile: string;
-    email: string;,
-  address: string;
-
-    website: string;
+contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;}
+    website: string;}
   }
 
   realImplementation: boolean;,
@@ -442,9 +437,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     growthRate: '110% annual growth',''
     variant: 'ai-futuristic','
 
+    growthRate: '110% annual growth',
+  variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-
 
     customers: 203,
     rating: 4 && 4.7,}

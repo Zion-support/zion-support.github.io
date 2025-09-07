@@ -151,9 +151,272 @@ class TypeChecker {}
           fixedLine = line.replace(/\{\s*,\s*\}/g,{});
         };
         break;
-        '
-      case '1009: // Expression expected;
-        if (line.includes('render(<App: />))) {}
-</App>'
-          fixedLine = line.replace(/render\(<App:\s*\/>\)/g,render(<App />));
-</App>'
+        
+      case '1009': // Expression expected;
+        if (line.includes('render(<App: />)')) {}
+          fixedLine = line.replace(/render\(<App:\s*\/>\)/g, 'render(<App />)');
+        };
+        break;
+        
+      case '1109': // Expression expected;
+        if (line.includes('expect(') && line.includes('))')) {}
+          fixedLine = line.replace(/\)\)/g, ')');
+        };
+        break;
+        
+      default:
+        // Generic fixes for common patterns;
+        if (line.includes(';;')) {}
+          fixedLine = line.replace(/;;/g, ';');
+        } else if (line.includes('import') && line.includes('from') && !line.includes(';')) {}
+          fixedLine = line + ';';
+        } else if (line.includes('interface') && line.includes('{') && !line.includes('}')) {}
+          fixedLine = line + '}';
+        };
+        break;
+    };
+    if (fixedLine !== line) {}
+      lines[lineIndex] = fixedLine;
+      return lines.join('\n');
+    };
+    return null;
+  };
+  async fixCommonTypeScriptIssues() {}
+    this.log('Fixing common TypeScript issues...');
+    
+    const files = this.getTypeScriptFiles();
+    let fixedCount = 0;
+    
+    for (const file of files) {}
+      try {}
+        let content = fs.readFileSync(file, 'utf8');
+        let modified = false;
+        
+        // Common TypeScript fixes;
+        const fixes = []
+          {}
+            pattern: /interface\s+(\w+)\s*\{\s*([^}]+)\s*,\s*\}/g,
+            replacement: 'interface $1 {\n  $2\n}',
+            description: 'Fix interface trailing commas'
+          },
+          {}
+            pattern: /:\s*'string'/g,
+            replacement: ': string',
+            description: 'Fix string type quotes'
+          },
+          {}
+            pattern: /:\s*'number'/g,
+            replacement: ': number',
+            description: 'Fix number type quotes'
+          },
+          {}
+            pattern: /:\s*'boolean'/g,
+            replacement: ': boolean',
+            description: 'Fix boolean type quotes'
+          },
+          {}
+            pattern: /import\s+([^;]+);;\s*import/g,
+            replacement: 'import $1;\nimport',
+            description: 'Fix malformed imports'
+          },
+          {}
+            pattern: /describe\([^)]*\)\s*\{[^}]*\}\s*it\(/g,)
+            replacement: (match) => {}
+              return match.replace(/\}\s*it\(/g, '}
+});\n  it(');
+            },
+            description: 'Fix test structure'
+          };
+        ];
+        
+        for (const fix of fixes) {}
+          const before = content;
+          if (typeof fix.replacement === 'function') {}
+            content = content.replace(fix.pattern, fix.replacement);
+          } else {}
+            content = content.replace(fix.pattern, fix.replacement);
+          };
+          if (content !== before) {}
+            modified = true;
+            this.log(`Applied fix "${fix.description}" to ${file}`);
+          };
+        };
+        if (modified) {}
+          fs.writeFileSync(file, content);
+          fixedCount++;
+        };
+      } catch (err) {}
+        this.error(`Error processing ${file}: ${err.message}`);
+      };
+    };
+    this.log(`Fixed common TypeScript issues in ${fixedCount} files`);
+    return fixedCount;
+  };
+  getTypeScriptFiles() {}
+    const sourceDirs = ['src', 'pages', 'components', '__tests__', 'scripts'];
+    const extensions = ['.ts', '.tsx'];
+    const files = [];
+    
+    for (const dir of sourceDirs) {}
+      if (fs.existsSync(dir)) {}
+        this.getFilesRecursively(dir, extensions, files);
+      };
+    };
+    return files;
+  };
+  getFilesRecursively(dir, extensions, files) {}
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {}
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {}
+        this.getFilesRecursively(fullPath, extensions, files);
+      } else if (extensions.some(ext => item.endsWith(ext))) {}
+        files.push(fullPath);
+      };
+    };
+  };
+  startWatching() {}
+    this.log('Starting TypeScript file watcher...');
+    
+    const watchPatterns = []
+      'src/**/*.{ts,tsx}',
+      'pages/**/*.{ts,tsx}',
+      'components/**/*.{ts,tsx}',
+      '__tests__/**/*.{ts,tsx}',
+      'scripts/**/*.{ts,tsx}'
+    ];
+
+    this.watcher = chokidar.watch(watchPatterns, {})
+      ignored: []
+        /node_modules/,
+        /\.next/,
+        /\.git/,
+        /dist/,
+        /build/,
+        /coverage/,
+        /\.cache/
+      ],
+      persistent: true,
+      ignoreInitial: true;
+    }
+});
+
+    this.watcher;
+      .on('add', (filePath) => {}
+        this.log(`New TypeScript file detected: ${filePath}`);
+        this.processFile(filePath);
+      }
+});
+      .on('change', (filePath) => {}
+        this.log(`TypeScript file changed: ${filePath}`);
+        this.processFile(filePath);
+      }
+});
+      .on('error', (error) => {}
+        this.error(`TypeScript watcher error: ${error.message}`);
+      }
+});
+
+    this.log('TypeScript file watcher started successfully');
+  };
+  async processFile(filePath) {}
+    this.log(`Processing TypeScript file: ${filePath}`);
+    
+    try {}
+      // Run type check on the specific file;
+      execSync(`npx tsc --noEmit "${filePath}"`, { `})
+        stdio: 'pipe',
+        cwd: process.cwd();
+      }
+});
+      this.log(`Type check passed for ${filePath}`);
+    } catch (err) {}
+      this.log(`Type check failed for ${filePath}: ${err.message}`);
+      
+      // Try to fix the errors;
+      const errors = this.parseTypeScriptErrors(err.stderr ? err.stderr.toString() : err.message);
+      if (errors.length > 0) {}
+        await this.fixTypeScriptErrors(errors);
+      };
+    };
+  };
+  stopWatching() {}
+    if (this.watcher) {}
+      this.watcher.close();
+      this.log('TypeScript file watcher stopped');
+    };
+  };
+  async run() {}
+    this.log('Starting TypeScript type checking automation...');
+    
+    try {}
+      // Fix common issues first;
+      await this.fixCommonTypeScriptIssues();
+      
+      // Run type check;
+      const result = await this.runTypeCheck();
+      
+      if (!result.success && result.errors > 0) {}
+        this.log(`Found ${result.errors} TypeScript errors, attempting to fix...`);
+        await this.fixTypeScriptErrors(result.errorDetails);
+        
+        // Run type check again;
+        const retryResult = await this.runTypeCheck();
+        if (retryResult.success) {}
+          this.log('All TypeScript errors fixed successfully');
+        } else {}
+          this.log(`Still have ${retryResult.errors} TypeScript errors after fixing`);
+        };
+      };
+      // Start watching for changes;
+      this.startWatching();
+      
+      // Keep the process running;
+      process.on('SIGINT', () => {}
+        this.log('Received SIGINT, stopping...');
+        this.stopWatching();
+        process.exit(0);
+      }
+});
+      
+      process.on('SIGTERM', () => {}
+        this.log('Received SIGTERM, stopping...');
+        this.stopWatching();
+        process.exit(0);
+      }
+});
+      
+      this.log('TypeScript type checking automation is running...');
+      
+    } catch (err) {}
+      this.error(`Error in run: ${err.message}`);
+      return { success: false, error: err.message };
+    };
+  };
+};
+// Run if called directly;
+if (require.main === module) {}
+  const checker = new TypeChecker();
+  
+  const command = process.argv[2];
+  
+  if (command === 'watch') {}
+    checker.run();
+  } else if (command === 'fix') {}
+    checker.fixCommonTypeScriptIssues().then(() => {}
+      checker.runTypeCheck().then(result => {})
+        process.exit(result.success ? 0 : 1);
+      }
+});
+    }
+});
+  } else {}
+    checker.runTypeCheck().then(result => {})
+      process.exit(result.success ? 0 : 1);
+    }
+});
+  };
+};

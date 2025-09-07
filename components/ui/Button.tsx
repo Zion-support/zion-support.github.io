@@ -77,7 +77,6 @@ const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} 
 const Button: React.FC<ButtonProps /> = ({ children,variant = \"primary\",size = \"md\",className = \"\",onClick,disabled = false,type = \"button\",asChild = false,...props;}
    }) => {
 
-
 const baseClasses =;"
     \"inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50\";
 }"
@@ -94,7 +93,6 @@ const variantClasses = {primary: \"bg-blue-600 text-white hover:bg-blue-700\",se
 "
 const Button: React.FC < ButtonProps> = ({ children,variant = \"primary\",size = \"md\",class_name = \"\",on_click,disabled = false,type = \"button\",...props;}
    }) => {
-
 
 const base_classes =;"
     \"inline - flex items - center justify - center rounded - md font - medium transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:pointer - events - none disabled:opacity - 50\";

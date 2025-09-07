@@ -185,22 +185,4 @@ export const useRecordActivity = () => {;
     recordMilestoneActivity;
 
   }
-
 };
-
-    }
-  };
-  return {;
-    recordMilestoneActivity;
-  }
-  return {
-  // TODO: Implement
-}
-    recordMilestoneActivity;
-
-  }
-}
-};
-
-"
-

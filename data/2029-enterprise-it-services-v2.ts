@@ -609,29 +609,24 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Achieve 99.99% uptimeReduce operational costs by 85%Eliminate manual interventionsImprove system performanceEnhance user experienceOptimize resource utilization'']
     ];
 
-    useCases: ['
-      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'']
-    ];'
-    marketSize: '$28.9B by 2029', competitors: ['ServiceNowBMCMicro FocusIvanti'],''
-    technology: ['AI/MLAutomationMonitoringITSM'], integration: ['ITSM platformsMonitoring toolsEnterprise systems'],''
-    support: ['24/7 operations supportIT expertsImplementation team'], compliance: ['SOC 2ISO 27001ITILCOBIT'],''
-    scalability: 'Enterprise-grade, multi-tenant support',''
-    roi: '450% within 18 months',''
-    deployment: 'Cloud-native, hybrid options',''
-    support: ['24 / 7 operations support', 'IT experts', 'Implementation team'],''
-    compliance: ['SOC 2', 'ISO 27001', 'ITIL', 'COBIT'],    scalability: 'Enterprise - grade, multi - tenant support',    roi: '450% within 18 months',''
-    deployment: 'Cloud - native, hybrid options',''
-    maintenance: 'Fully autonomous, continuous optimization',''
-    training: 'IT operations training, certification',''
-    documentation: 'Operations guides, best practices',''
-    compliance: ['SOC 2ISO 27001ITILCOBIT']','
-  scalability: 'Enterprise-grade, multi-tenant support';''
-    roi: '450% within 18 months'','
-  deployment: 'Cloud-native, hybrid options';''
-    maintenance: 'Fully autonomous, continuous optimization',''
-    training: 'IT operations training, certification',''
-    documentation: 'Operations guides, best practices','
+    deployment: 'Cloud-native, hybrid options',
+  support: ['24 / 7 operations support', 'IT experts', 'Implementation team'],
+    compliance: ['SOC 2', 'ISO 27001', 'ITIL', 'COBIT'],    scalability: 'Enterprise - grade, multi - tenant support',
+  roi: '450% within 18 months',
+    deployment: 'Cloud - native, hybrid options',
+  maintenance: 'Fully autonomous, continuous optimization',
+    training: 'IT operations training, certification',
+  documentation: 'Operations guides, best practices',
 
+compliance: ['SOC 2ISO 27001ITILCOBIT']
+    scalability: 'Enterprise-grade, multi-tenant support';
+    roi: '450% within 18 months',
+  deployment: 'Cloud-native, hybrid options';
+    maintenance: 'Fully autonomous, continuous optimization',
+  training: 'IT operations training, certification',
+    documentation: 'Operations guides, best practices'
+}
+}
     }
   }
 ];

@@ -30,15 +30,13 @@ const { execSync } = require("child_process")
             "description": "Invalid JSON syntax"
             "severity": "high"
             "error"
-        content.includes()
-        content.includes(">>>>>>>")
+        content.includes("")
   "file"
           "type": "merge-conflict"
           "description": "Merge conflicts detected"
           "severity": "high"
       if (fileName === "package.json")
         content.includes(")
-        content.includes(">>>>>>>")
   "file"
           "type": "merge-conflict"
           "description": "Merge conflicts detected"

@@ -1,8 +1,6 @@
+import Link from 'next/link';
 
-
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-const [servicesOpen, setServicesOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false)
+const EnhancedNavigation = () => {
   return (
     <nav className='bg-white shadow-lg sticky top-0 z-50' />
       <div className='container mx-auto px-4' />
@@ -194,8 +192,6 @@ const [servicesOpen, setServicesOpen] = useState(false);
 const EnhancedNavigation: React.FC<EnhancedNavigationProps /> = ({ className = \"\"}
   }
 }) => {
-
-
 
  ;
   const [isOpen, setIsOpen] = useState(false);

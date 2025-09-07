@@ -40,7 +40,6 @@ function handler() {  try {export default async /**;
 function handler() {try {const supabase = createServerClient ()const talent_id = (req.query.talent_id as string) || null;
   const [views_r, invites_r, apps_r, tags_r] = await Promise.all_settled ([;
 
-
       supabase;
         .from('profile_views')
         .select('id, talent_id')
@@ -79,11 +78,9 @@ const views =
    ,
 });
 
-
   }
 
 }
-
 
   }
 

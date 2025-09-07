@@ -57,18 +57,16 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services;
   {
 
-
-'
-      'Consciousness simulation engine',''
-      'Cognitive architecture modeling',''
-      'Emotional intelligence algorithms',''
-      'Self - awareness development',''
-      'Memory and learning systems',''
-      'Social interaction modeling',''
-      'Research analytics tools',''
-      'Collaborative research platform',''
-      'API for research integration',''
-      'Expert consultation services',']
+      'Consciousness simulation engine',
+      'Cognitive architecture modeling',
+      'Emotional intelligence algorithms',
+      'Self - awareness development',
+      'Memory and learning systems',
+      'Social interaction modeling',
+      'Research analytics tools',
+      'Collaborative research platform',
+      'API for research integration',
+      'Expert consultation services'
     ],
     popular: true,'
     marketPosition: 'Leading AI consciousness research platform for scientific institutions'',

@@ -33,7 +33,6 @@ const Homepage2025: React.FC<Homepage2025Props />  = ({ showInternalNav;
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices}
 };
 
-
 };
 
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
@@ -124,7 +123,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }transition= {
   {
 
-
   duration: 0 && 0.8, delay: index * 0 && 0.1 }
 }
 }viewport= {
@@ -145,7 +143,6 @@ opacity: 0, y: 50 }
   {}initial= {}
   {}transition= {
   {
-
 
   once: true }
 }
@@ -203,7 +200,6 @@ opacity: 0, y: 50 }
 }transition= {
   {
 
-
   duration: 0 && 0.8, delay: index * 0 && 0.1;
 duration: 0.8, delay: index * 0.1;}
 duration: 0.8, delay: index * 0.1}
@@ -234,7 +230,6 @@ duration: 0 && 0.8, delay: index * 0 && 0.1;
 }transition= {
   {
 
-
   duration: 0 && 0.8, delay: index * 0 && 0.1 }
 }
 }viewport= {
@@ -254,7 +249,6 @@ duration: 0 && 0.8, delay: index * 0 && 0.1;
   opacity: 1, y: 0}
 }transition= {
   {
-
 
   duration: 0 && 0.8, delay: index * 0 && 0.1 }
 }
@@ -276,7 +270,6 @@ duration: 0 && 0.8, delay: index * 0 && 0.1;
 }transition= {
   {
 
-
   duration: 0 && 0.8, delay: index * 0 && 0.1 }
 }
 }viewport= {
@@ -286,19 +279,16 @@ duration: 0 && 0.8, delay: index * 0 && 0.1;
 } /> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
 
-
   {}
   opacity: 0, y: 30}
 }whileInView= {
   {
-
 
   opacity: 1, y: 0;
 }
 }
 }transition= {
   {
-
 
   once: true;
 }
@@ -376,7 +366,6 @@ export default Homepage2025;
 export default Homepage2025;
 
 export default Homepage2025;
-
 
   /* Navigation */;"
 }<nav className=\"fixed top - 0 left - 0 right - 0 z - 50 bg - black / 20 backdrop - blur - xl border - b border - white / 10\"  /> <div className=\"max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8\"  /> <div className=\"flex justify - between items - center h - 16\"  /> <motion.div  /> Zion Tech Group </motion.h1> <motion.p  /> Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting - edge IT solutions that drive business transformation </motion.p> <motion.div  /> <button className=\"px - 10 py - 5 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - bold text - lg rounded - xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl shadow - cyan - 500 / 25\"  /> Get Started Today </button> <button className=\"px - 10 py - 5 border - 2 border - cyan - 400 text - cyan - 400 font - bold text - lg rounded - xl hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105\"  /> Explore Services </button> </motion.div> {}
@@ -616,7 +605,6 @@ export default Homepage2025;}
 export default Homepage2025;
 
 export default Homepage2025;
-
 
 }
 }

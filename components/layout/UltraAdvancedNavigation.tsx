@@ -25,7 +25,6 @@ setIsScrolled(window.scrollY > 50)) => {
 }
 };
 
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -234,7 +233,6 @@ const contactInfo = {
 address: '364 E Main St STE 1008 Middletown DE 19709'}
   };
 
-  
     >
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />
         <div className='flex justify-between items-center h-20' />
@@ -475,7 +473,6 @@ className='flex items-center space-x-3 text-gray-300 hover: text-white transitio
                 </div>
               ))}
 
-
 {/* Mobile Contact Info *}
 }
               <div className='pt-6 border-t border-gray-800/50' />;
@@ -520,7 +517,6 @@ href='/contact'
     </nav>
 )
 };
-
 
 export default UltraAdvancedNavigation;
 

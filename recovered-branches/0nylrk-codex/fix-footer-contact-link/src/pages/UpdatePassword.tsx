@@ -23,67 +23,59 @@ const updatePasswordSchema = z;
       .min(8, "Password must be at least 8 characters");""
       .max(64, "Password must be less than 64 characters");"
     confirmPassword: z && z.string()});
-  .refine((data) => data && data.password === data && data.confirmPassword, {;"
-    message: "Passwords do not match",;""
-    path: ["confirmPassword"]}),;"
-type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
-</typeof>
-  const [accessToken, setAccessToken] = useState<string | null>(null);
-</string>
-  const [error, setError] = useState<string | null>(null);
-</string>
-type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
-</typeof>
-  const [accessToken, setAccessToken] = useState<string | null>(null);
-</string>
-  const [error, setError] = useState<string | null>(null);
-</string>
-type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
-</typeof>
-  const [accessToken, setAccessToken] = useState<string | null>(null);
-</string>
-  const [error, setError] = useState<string | null>(null);
-</string>
-  const [accessToken, setAccessToken] = useState<string | null>(null),
-</string>
-  const [error, setError] = useState<string | null>(null),
-</string>
-  const form = useForm<UpdatePasswordFormValues>({
-</UpdatePasswordFormValues>
-type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
-;
-export default /**
- * UpdatePassword - Function description;
- */)
-function UpdatePassword() {
-  const [is_loading, setIsLoading] = useState (false);
-  const [access_token, setAccessToken] = useState < string | null>(null);
-  const [error, set_error] = useState < string | null>(null);
-  const [success, set_success] = useState (false);
-  const navigate = use_navigate ();
-  const location = use_location ();
-;
-  // Initialize react - hook - form;
-  const form = use_form < UpdatePasswordFormValues>({)
-    resolver: zod_resolver (updatePasswordSchema),
-    default_values: {,"
-  password: "",""
-      confirm_password: ""}}),"
-  useEffect (() => {
-    // Extract access token from URL hash;
-    const hash_params = new URLSearchParams (location.hash.substring (1));"
-    const token = hash_params.get ("access_token");"
-;
-    // Check condition;
-if ( {) {
-  $2;
-}
-      setAccessToken (token);
-    } else {
-  // TODO: Implement
-}"
-      set_error ("No access token found. Please request a new password reset link.");"
-
+  .refine((data) => data && data.password === data && data.confirmPassword, {;}
+    message: \"Passwords do not match\",;}
+    path: [\"confirmPassword\"]}),;
+type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema />;
+export default function UpdatePassword() {;}
+import { useState, useEffect } from \"react\",
+import { useNavigate, useLocation } from \"react-router-dom\",
+import { zodResolver } from \"@hookform/resolvers/zod\",
+import { useForm } from \"react-hook-form\",
+import { z } from \"zod\",
+import { LockKeyhole } from \"lucide-react\",
+import { supabase } from \"@/integrations/supabase/client\",
+import { Button } from \"@/components/ui/button\";
+import { Input } from \"@/components/ui/input\";
+import {
+  Form;
+  FormControl;
+  FormField;
+  FormItem;}
+  FormLabel;}
+  FormMessage} from \"@/components/ui/form\",
+import { toast } from \"@/hooks/use-toast\",
+import { Header } from \"@/components/Header\",
+import { Footer } from \"@/components/Footer\";
+import { cleanupAuthState } from \"@/utils/authUtils\";
+import { Button } from \"@/components/ui/button\",
+import { Input } from \"@/components/ui/input\",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,}
+  FormLabel,}
+  FormMessage} from \"@/components/ui/form\",
+import { toast } from \"@/hooks/use-toast\",
+import { Header } from \"@/components/Header\",
+import { Footer } from \"@/components/Footer\",
+import { cleanupAuthState } from \"@/utils/authUtils\",  // Initialize react-hook-form;
+const form = useForm<UpdatePasswordFormValues />({
+    resolver: zodResolver(updatePasswordSchema)
+    defaultValues: {}
+      password: \"password\",}
+    confirmPassword: \"\"}})
+  useEffect(() => {}
+    // Extract access token from URL hash}
+    } else {}
+      setError(\"No access token found. Please request a new password reset link.\")}
+    }
+    const hashParams = new URLSearchParams(location.hash.substring(1)),
+    const token = hashParams.get(\"access_token\"),
+    if (token) {}
+      setAccessToken(token)}
+      set_error (\"No access token found. Please request a new password reset link.\");}
     }
   }, [location]),
 

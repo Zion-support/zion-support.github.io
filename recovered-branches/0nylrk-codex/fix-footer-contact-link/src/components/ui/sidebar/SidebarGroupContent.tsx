@@ -20,10 +20,10 @@ interface SidebarGroupContentProps;
 export /**
  * SidebarGroupContent - Function description;
  */
-
-function SidebarGroupContent() {
-  return ()"
-    <div className={cn ("space - y-1", class_name)} {...props}>;"
-</div>
-    </div>);"
-
+function SidebarGroupContent() {}
+  return (}
+    <div className={cn (\"space - y-1\", class_name)} {...props} />;
+      {children}
+    </div>);
+}
+;

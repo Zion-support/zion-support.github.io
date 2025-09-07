@@ -252,10 +252,3 @@ including content, users, and analytics. Tenant admins cannot access data from o
   );
 }
 ;
-
-}
-;
-    </>);
-}
-"
-

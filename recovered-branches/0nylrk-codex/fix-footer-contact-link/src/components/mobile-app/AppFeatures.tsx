@@ -1,6 +1,8 @@
 import React from \"react\";
 import {Brain, Clock, Award, Zap} from \"lucide-react\";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from \"@/components/ui/card\";
+import {Brain, Clock, Award, Zap} from \"lucide-react\";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from \"@/components/ui/card\";
 import React from \"react\",
 import { Brain, Clock, Award, Zap } from \"lucide-react\",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from \"@/components/ui/card\",
@@ -38,7 +40,6 @@ const features = [
 };  {;
     icon: <Award className=\"h-10 w-10 text-zion-cyan\" />,;
     title: \"Resume Builder\",,}
-  description: \"Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired.\";import React from './react';}
 import { Brain, Clock, Award, Zap } from './lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 const features = [;

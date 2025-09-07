@@ -371,7 +371,6 @@ className='relative group'
 
             </div>;
 
-
             {/* CTA Buttons */}
 
 <div className='hidden lg:flex items-center space-x-4' />

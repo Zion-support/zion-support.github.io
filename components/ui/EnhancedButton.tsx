@@ -110,7 +110,6 @@ export default EnhancedButton;
     fullWidth?: boolean;
 };
 
-
 const baseStyles =;"
   \"inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]\";
 "
@@ -119,7 +118,6 @@ const sizeStyles: Record<NonNullable<EnhancedButtonProps[\"size\"] />, string> =
   md: \"text-sm px-4 py-3\",;}"
   lg: \"text-base px-5 py-3\"}
 };
-
 
 const variantStyles: Record<;"
   NonNullable<EnhancedButtonProps[\"variant\"] />,;
@@ -131,7 +129,6 @@ const variantStyles: Record<;"
   ghost:;}"
     \"bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100\"}
 };
-
 
 export default function EnhancedButton(): any ({;
   className,;"
@@ -220,7 +217,6 @@ sizeStyles[size]
 
 }
 
-
 }
     />;
 );
@@ -232,7 +228,6 @@ sizeStyles[size]
 
 const EnhancedButton: React.FC<EnhancedButtonProps /> = ({ className    }) => {
 
-
 }
   return (}
     <div className={className || ''} />
@@ -241,7 +236,6 @@ const EnhancedButton: React.FC<EnhancedButtonProps /> = ({ className    }) => {
     </div>
   )
 };
-
 
 export default EnhancedButton;
 }

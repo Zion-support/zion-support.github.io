@@ -96,7 +96,13 @@ const AlertDialogContent = React.forwardRef<;
     />
 </AlertDialogPrimitive>
   </AlertDialogPortal>
-  <div;
+
+))
+AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName;
+const AlertDialogHeader = ({
+  className}
+  ...props}
+}: React.HTMLAttributes<H</HTMLDivElement />TMLDivElement>) => (
 className={cn(
 
       \"flex flex-col space-y-2 text-center sm:text-left\",
@@ -284,25 +290,6 @@ const AlertDialogDescription = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Description>;
 </typeof>
   <AlertDialogPrimitive.Description;
-    ref={ref}"
-    className={cn("text-sm text-muted-foreground", className)}"
-
-    {...props}
-  />;
-</AlertDialogPrimitive>
-const AlertDialogAction = React.forwardRef<;
-
-  React.ElementRef<typeof AlertDialogPrimitive.Action>,;
-</typeof>
-  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Action>;
-</typeof>
-
-  <AlertDialogPrimitive.Action;
-    ref={ref}"
-    className={cn ('text - lg font - semibold', class_name)}'
-    {...props}
-
-    ref={ref}
     className={cn ('text - lg font - semibold', class_name)}
     {...props}
   />));

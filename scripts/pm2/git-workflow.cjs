@@ -1,6 +1,4 @@
-
-
-#!/usr/bin/env node
+#!/usr/bin/env node;
 /**
  * PM2 Git Workflow Service;
  * Manages git operations and branch cleanup;
@@ -27,7 +25,6 @@ class GitWorkflow {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -143,7 +140,7 @@ class GitWorkflow {}
         try {}
           this.log(`Resolving conflicts in ${file}...`);
           // Read the file and resolve conflicts (simplified approach);
-          let content = fs.readFileSync(file,utf8);
+          let content = fs.readFileSync(file, 'utf8');
           // Remove conflict markers and keep both versions (simplified);
           content = content.replace(/\n/g, );
           content = content.replace(/\n/g, );
@@ -266,5 +263,5 @@ if (require.main === module) {}
 };
 module.exports = GitWorkflow;
 cursor/website-audit-and-update-with-deployment-76dc;
-
-"
+cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;

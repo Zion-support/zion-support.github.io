@@ -323,8 +323,8 @@
       reviews: 500;
     },;
 
+  ];    features: [
 
-  ];    features: [,
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,]
@@ -379,7 +379,6 @@
   customers: 800;
     rating: 4.8;,
   reviews: 500;
-
 
 
 }

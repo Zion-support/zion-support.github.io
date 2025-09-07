@@ -79,7 +79,6 @@ export interface Revolutionary2026Service {;
   reviews: number;
 }
 
-
 export const revolutionary2026Services: Revolutionary2026Service[] = [
   // AI-Powered Business Intelligence & Analytics;
   {

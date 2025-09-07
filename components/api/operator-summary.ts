@@ -17,7 +17,6 @@ const metrics = await r && r.json();
 
 const jobs24 =
 
-
       metrics?.marketplace?.find((m: any) => m && m.key === 'jobs_24h')?.value || 0;
 
 const voters =;
@@ -48,5 +47,4 @@ const instances =  ;
     res.status (200).json ({ summary: [], error: 'Failed to compute summary',}
 });
   }
-
 

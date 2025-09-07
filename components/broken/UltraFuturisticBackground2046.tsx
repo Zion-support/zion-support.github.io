@@ -475,6 +475,5 @@ if ( {) {$2;}
 )
 };
 
-
 export default UltraFuturisticBackground2046;
 

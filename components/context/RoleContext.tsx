@@ -12,14 +12,11 @@ type RoleContextValue = {role: UserRole;}
   setRole: (role: UserRole) => void,}
 };
 
-
 const RoleContext = createContext<RoleContextValue | undefined />(undefined);
 
 export const RoleProvider: React.FC<{ children: React.ReactNode,}
 }> = ({ children,}
    }) => {
-
-
 
   const [role, setRole] = useState<UserRole />('client');
   useEffect(() => {
@@ -53,10 +50,8 @@ window.localStorage.setItem('zion_user_role', role);}
 
 const value = useMemo(() => ({ role, setRole }), [role]);
 
-
 return <RoleContext.Provider value={value} />{children}</RoleContext.Provider>
 };
-
 
 export function useRole(): RoleContextValue {
   const ctx = useContext(RoleContext);

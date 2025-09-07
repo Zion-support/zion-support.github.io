@@ -216,9 +216,6 @@ function Page() {
     </div>);
 }
 
-
-
-
       <Head />
         <title />Case Study — Trigger Homepage</title>
         <meta name=&quot;description&quot; content=&quot;Pragmatic case scenario inspired by live site signals.&quot; />

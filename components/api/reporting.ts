@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
 import { authenticateRequest  } from '@/utils/auth';
 import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
 
@@ -83,7 +82,6 @@ updatedAt: new Date().toISOString()}
     );
     return res && res.status(200).json(updated && updated.byTenant[tenantId]);
   }
-
 
   return res.status(405).json({ error: 'Method not allowed',}
 });

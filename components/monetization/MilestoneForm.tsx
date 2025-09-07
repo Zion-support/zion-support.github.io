@@ -11,7 +11,6 @@ type Props = any;
   }) => Promise<void /> | void;
 };
 
-
 export default function MilestoneForm({ onSubmit }: Props) {
   const [title, setTitle] = useState('');
 

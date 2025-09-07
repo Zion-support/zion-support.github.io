@@ -412,7 +412,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 
 ];
 
-
 ;
 ];
 ;

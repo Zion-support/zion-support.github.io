@@ -117,7 +117,6 @@ setActiveDropdown(activeDropdown === name ? null : name),) => {
 }
 };
 
-
   useEffect(() => {
 
     const handleResize = (
@@ -386,7 +385,6 @@ href='/contact'
     </nav>
 )
 };
-
 
 export default UltraFuturisticNavigation2047;
 

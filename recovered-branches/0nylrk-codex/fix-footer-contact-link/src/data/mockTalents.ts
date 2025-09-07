@@ -1299,28 +1299,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
     ],
     experience: [
 
-      {'
-        id: 'e1'','
-  role: 'Lead DevOps Engineer'''
-        company: 'CloudScale Solutions'',
-  description:'
-          'Architecting and implementing cloud-native infrastructure for enterprise clients. Leading a team of 5 DevOps engineers in building automated deployment pipelines and infrastructure management systems.'''
-        startDate: 'Jun 2020'','
-  endDate: 'Present''
-        current: true;
-
-      }
-      {'
-        id: 'e2'','
-  role: 'Senior Cloud Architect'''
-        company: 'TechInfra Inc.'',
-  description:'
-          'Designed and implemented multi-cloud infrastructure solutions using AWS, Azure, and GCP. Reduced infrastructure costs by 35% while improving system reliability and performance.'''
-        startDate: 'Feb 2017'','
-  endDate: 'May 2020''
-      }]
-    ]
-    experience: [;
 
       {
         id: 'e1',
@@ -1468,7 +1446,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
     ],
     availability: {
 
-hourly_rate: 150;
 
 contact_email: \"alexandra.chen@example.com\";}
 }

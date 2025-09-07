@@ -276,7 +276,6 @@
   return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
 };
 
-
 export const getEmergingTechServicesByCategory = (
   );) => {
   return $3;}

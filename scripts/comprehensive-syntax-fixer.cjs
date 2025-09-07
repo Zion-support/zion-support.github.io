@@ -28,6 +28,9 @@
   // Check if file has merge conflicts;
   hasMergeConflicts(content) {
 
+
+
+
   }
 
   // Check if file has syntax errors;

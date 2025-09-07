@@ -43,9 +43,7 @@ export default function ReportsIndex() {
       <main className=\"container mx-auto px-4 py-12 max-w-7xl\" />;}
         {/* Header */}
 
-
         {/* Back to Home */}
-
 
         {/* Back to Home */}
         <div className='mt-12 text-center' />;
@@ -222,8 +220,6 @@ export default function ReportsIndex() {return (<div className=\"min-h-screen bg
     </div>);
 }
 
-
-
     </div>
     </div>
   );
@@ -254,8 +250,6 @@ export default function ReportsIndex() {return (<div className=\"min-h-screen bg
 
     </div>);
 }
-
-
 
     </div>);
 }

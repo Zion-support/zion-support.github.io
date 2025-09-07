@@ -231,9 +231,6 @@ function Page() {
     </div>);
 }
 
-
-
-
       <Head />
         <title />Playbook — Autonomous Delivery</title>
         <meta name=&quot;description&quot; content=&quot;A practical step-by-step playbook for reliable autonomous delivery.&quot; />

@@ -287,7 +287,6 @@ const closeDropdown = (
 }
 };
 
-
   return (
     <>
       {/* Top Contact Bar */}
@@ -296,7 +295,6 @@ const closeDropdown = (
   return (
     <>;
       {/* Top Contact Bar */}
-
 
                 {contactInfo.mobile}
               </span>

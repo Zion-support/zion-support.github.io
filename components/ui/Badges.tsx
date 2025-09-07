@@ -16,7 +16,6 @@ function TrustBadge() {const color_map = {Verified:;
  */;
 function MicroTestimonial() {return (<figure className='border rounded - md p - 3 text - sm' />;
 
-
   quote: string;}
   author: string;}
 }) {;
@@ -151,8 +150,6 @@ function MicroTestimonial() {
 
   );
 }
-
-
 
 export function MicroTestimonial({ quote, author }: { quote: string, author: string}
 }) {

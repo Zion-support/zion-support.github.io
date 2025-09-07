@@ -25,7 +25,6 @@
   uptime: string;,
   contact: string;
 
-
   {
 
       'Advanced AI algorithms',''

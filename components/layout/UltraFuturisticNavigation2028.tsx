@@ -456,7 +456,6 @@ setActiveCategory(categoryTitle),) => {
 }
 };
 
-
 const handleCategoryLeave = (
     setActiveCategory(null);) => {
   return $3;}
@@ -505,7 +504,6 @@ const filteredServices = serviceCategories.flatMap(category =>
           </div>;
         </div>;
       </div>;
-
 
       {/* Main Navigation */}
 

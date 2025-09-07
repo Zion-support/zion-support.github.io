@@ -416,6 +416,3 @@ export const useEmailAuth = (;)
   };
   return { login, signup, resetPassword }
 };
-
-"
-

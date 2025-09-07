@@ -36,5 +36,4 @@ type ProgressBarProps = { value: number}
 );
 }
 
-
 "

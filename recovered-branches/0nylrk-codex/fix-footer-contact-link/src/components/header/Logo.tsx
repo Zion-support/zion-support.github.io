@@ -42,6 +42,12 @@ interface LogoProps {;
 export function Logo({ customLogo, customColor }: LogoProps) {}
   const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel(),
   return (
+    <Link to=\"/\" className=\"flex items-center\" />
+      <div className=\"text-2xl font-bold\" style={colorToUse ? { color: colorToUse } : {}} />
+        {isWhitelabel ? brandName : 'Zion'}<span className=\"text-zion-cyan\" />AI</span>
+      </div>
+    </Link>
+  )
     <Link to=\"/\" className=\"flex items-center\" />;
       <div;
 className=\"text-2xl font-bold\"
@@ -183,6 +189,11 @@ export function Logo({ customLogo, customColor } LogoProps) {;}
       </div>;
     </Link>;
  </Link>) 
-
-}return (</div> </Link>) "
-
+}return (</div> </Link>) 
+}
+  );
+  )
+}
+  )
+}
+;

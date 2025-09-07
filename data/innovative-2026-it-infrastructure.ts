@@ -660,13 +660,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     reviews: 550;
 ];
 
-
   }
-
-
-
-'
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface Innovative2026ITInfrastructureService {;
   id: string,;

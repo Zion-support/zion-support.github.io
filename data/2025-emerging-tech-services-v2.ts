@@ -7,12 +7,8 @@
   category: string;,
   price: {
 
-    monthly: number;,
-  yearly: number;
-    currency: string;,
-  features: string[];
-  benefits: string[];,
-
+features: string[];
+  benefits: string[];
   target_audience: string[];
   market_position: string;,
   competitors: string[];

@@ -80,7 +80,6 @@ solutions;
                 </a>
               </div>
 
-
               {/* Trust Indicators *}
 }
               <motion&& motion.div;
@@ -88,7 +87,6 @@ initial={{ opacity: 0, y: 20 }
 }
                 animate={{ opacity: 1, y: 0 }
 }
-
 
                 transition={{ duration: 0.8, delay: 0.4 }
 }
@@ -272,8 +270,6 @@ service, our AI solutions save time and improve efficiency.
                   </button>
                 </Link>
               </motion.div>
-
-
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }
 }
@@ -631,8 +627,6 @@ drive growth.
                 </Link>
               </motion.div>
 
-
-
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }
 }
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'>;
@@ -906,7 +900,6 @@ href='tel:+13024640950'
     </Layout>
 )
 };
-
 
 export default Homepage2026;
 

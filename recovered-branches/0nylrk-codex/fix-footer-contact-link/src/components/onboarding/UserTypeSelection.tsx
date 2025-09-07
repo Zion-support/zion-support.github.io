@@ -159,7 +159,6 @@ function UserTypeSelection() {
 
             <Button;
               key={type.id}
-          return (
             <Button;
               key={type.id}
               }`}

@@ -1,6 +1,4 @@
-
-
-#!/usr/bin/env node
+#!/usr/bin/env node;
 /**
  * Health Monitor Script for PM2;
  * Replaces GitHub Actions health monitoring workflows;
@@ -104,5 +102,5 @@ main().catch(error => {})
   log(`Health Monitor Process failed: ${error.message});
   process.exit(1);
 }
-
-'
+});});
+});});

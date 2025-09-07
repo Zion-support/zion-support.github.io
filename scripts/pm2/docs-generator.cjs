@@ -1,6 +1,4 @@
-
-
-#!/usr/bin/env node
+#!/usr/bin/env node;
 /**
  * PM2 Documentation Generator Service;
  * Automatically generates and updates documentation;
@@ -28,7 +26,6 @@ class DocsGenerator {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -300,5 +297,5 @@ if (require.main === module) {}
   const docsGenerator = new DocsGenerator();
   docsGenerator.start().catch(console.error);
 };
-
-"
+module.exports = DocsGenerator;module.exports = DocsGenerator;
+module.exports = DocsGenerator;module.exports = DocsGenerator;

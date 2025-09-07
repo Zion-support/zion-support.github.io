@@ -200,5 +200,3 @@ main().catch(error => {})
   log(`Quality Checks Process failed: ${error.message});
   process.exit(1);
 }
-
-'

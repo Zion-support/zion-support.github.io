@@ -21,11 +21,9 @@
     phone: string;,
   email: string;
 
-
-
-];      phone: '+1 302 464 0950';','
-  email: 'kleber@ziontechgroup.com';''
-      address: '364 E Main St STE 1008 Middletown DE 19709';'
+];      phone: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';}
+      address: '364 E Main St STE 1008 Middletown DE 19709';}
     }
     trial_days: 60;,'
   setup_time: '4 - 6 weeks';''

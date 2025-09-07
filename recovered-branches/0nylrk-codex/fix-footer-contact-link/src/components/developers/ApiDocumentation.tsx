@@ -2508,7 +2508,120 @@ print(data)`
             />;
 </EndpointSection>
           </TabsContent>;
-                The Zion API uses conventional HTTP status codes to indicate the success or failure of an API request.;
+          <TabsContent value=\"webhooks\" className=\"space-y-6\" />;
+            <div className=\"prose prose-invert max-w-none\" />;
+              <h3 className=\"text-lg font-semibold mb-2\" />Webhook Events</h3>;
+              <p className=\"text-zinc-400 mb-4\" />;
+                The Zion API can send webhook notifications when certain events occur in your account.;
+                You can configure webhooks in the Webhooks tab of the Developer Dashboard.;
+              </p>;
+              <h4 className=\"text-md font-semibold mt-6 mb-2\" />Authentication</h4>;
+              <p className=\"text-zinc-400 mb-4\" />;
+                When you create a webhook, you can optionally provide a secret key.;
+                If a secret is provided, each webhook request will include a signature in the;
+                <code className=\"bg-zinc-800 px-1 py-0 && 0.5 rounded\" />X-Zion-Signature</code> header.;
+                This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.;
+              </p>;
+              <CodeBlock;
+code={`import crypto from 'crypto';  // Process the webhook event;
+const event = JSON.parse(payload);
+  console.log('Received valid webhook:', event);
+  // Respond to acknowledge receipt;
+res.status(200).send('Webhook received')}
+// Example usage in Express && Express.js;}
+app && app.post('/webhook', express && express.raw({type: 'application/json'}), (req, res) = /> {;
+  const signature = req && req.headers['x-zion-signature'];
+  const payload = req && req.body.toString();
+  const webhookSecret = process && process.env.WEBHOOK_SECRET;
+  if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;}
+    return res && res.status(401).send('Invalid signature');}
+  }
+  // Process the webhook event;
+  const event = JSON && JSON.parse(payload);
+  console && console.log('Received valid webhook:', event);
+  // Respond to acknowledge receipt;
+  res && res.status(200).send('Webhook received');
+}),`}
+                language=\"javascript\";
+                showLineNumbers={true}
+              />;
+  if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;}
+    return res && res.status(401).send('Invalid signature');}
+  }
+  // Process the webhook event;
+  const event = JSON && JSON.parse(payload);
+  console && console.log('Received valid webhook:', event);
+  // Respond to acknowledge receipt;
+  res && res.status(200).send('Webhook received');
+}),`}
+                language=\"javascript\";
+                showLineNumbers={true}
+              />;
+              <p className=\"text-zinc-400 mb-2\" />;
+            />
+          </TabsContent>
+          <TabsContent value=\"quotes\" className=\"space-y-6\" />
+  }
+}`;
+              }}
+            <EndpointSection;
+method=\"POST\"
+              endpoint=\"/api/quotes\"
+              description=\"Create a quote request for a talent.\"
+              note=\"Requires quotes:write scope\"
+              params={[}
+                { name: \"talent_id\", type: \"string\", description: \"ID of the talent to request a quote from\", required: true }
+                { name: \"project_name\", type: \"string\", description: \"Name of the project\", required: true }
+                { name: \"project_summary\", type: \"string\", description: \"Brief summary of the project\", required: true }
+                { name: \"project_description\", type: \"string\", description: \"Detailed project description\" }
+                { name: \"timeline\", type: \"string\", description: \"Expected timeline\", required: true }
+                { name: \"budget_min\", type: \"number\", description: \"Minimum budget\" }
+                { name: \"budget_max\", type: \"number\", description: \"Maximum budget\" }
+                { name: \"requester_name\", type: \"string\", description: \"Name of the requester\", required: true }
+                { name: \"requester_email\", type: \"string\", description: \"Email of the requester\", required: true }
+              ]}
+              codeExamples={{
+                curl: `curl -X POST \"https://api && api.ziontechgroup.com/v1/quotes\" \\
+  -H \"Authorization: Bearer YOUR_API_KEY\" \\
+  -H \"Content-Type: application/json\" \\
+            />;
+          </TabsContent>;
+          <TabsContent value=\"quotes\" className=\"space-y-6\" />;
+            <EndpointSection;
+              method=\"POST\";
+              endpoint=\"/api / quotes\";
+              description=\"Create a quote request for a talent.\";
+              note=\"Requires quotes:write scope\";}
+              params={[;}
+                { name: \"talent_id\", type: \"string\", description: \"ID of the talent to request a quote from\", required: true },
+                { name: \"project_name\", type: \"string\", description: \"Name of the project\", required: true },
+                { name: \"project_summary\", type: \"string\", description: \"Brief summary of the project\", required: true },
+                { name: \"project_description\", type: \"string\", description: \"Detailed project description\" },
+                { name: \"timeline\", type: \"string\", description: \"Expected timeline\", required: true },
+                { name: \"budget_min\", type: \"number\", description: \"Minimum budget\" },
+                { name: \"budget_max\", type: \"number\", description: \"Maximum budget\" },
+                { name: \"requester_name\", type: \"string\", description: \"Name of the requester\", required: true },
+                { name: \"requester_email\", type: \"string\", description: \"Email of the requester\", required: true }
+              ]}
+              code_examples={{
+                curl: `curl -X POST \"https://api.ziontechgroup.com / v1 / quotes\" \\;
+  -H \"Authorization: Bearer YOUR_API_KEY\" \\;
+  -H \"Content - Type: application / json\" \\;
+  -d '{
+headers = {}
+    'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';}
+}
+    'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
+    'budget_max': 12000;
+    'requester_name': 'John Doerequester_email': 'john@example.com'
+}
+    \"match_score\": 85;
+    \"applied_at\": \"2025 - 05 - 16T15:28:30Z\";
+    \"status\": \"new\",
+    \"match_score\": 85;
+            <div className=\"prose prose-invert max-w-none\" />;
+              <h3 className=\"text-lg font-semibold mb-2\" />Error Responses</h3>;
+              <p className=\"text-zinc-400 mb-4\" />;
                 In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error with the;
                 provided information, and codes in the 5xx range indicate an error with our servers.;
               </p>;

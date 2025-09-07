@@ -366,6 +366,3 @@ return (<> <Tabs value= {
   );
 }
 ;
-
-'
-

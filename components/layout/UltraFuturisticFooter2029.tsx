@@ -178,7 +178,6 @@ const footerSections = [
   href: '/press'}
 },
 
-
   { name: 'Partnerships'}
   href: '/partnerships'}
 }
@@ -388,7 +387,6 @@ const UltraFuturisticFooter2029 = (
               innovation.;
             </p>;
 
-
           {/* Service Categories */}
 
 <div className='lg:col-span-1' />
@@ -590,7 +588,6 @@ type='email'
     </footer>
 )
 };
-
 
 export default UltraFuturisticFooter2029;
 

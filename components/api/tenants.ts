@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
 import { authenticateRequest } from '@/utils/auth';
 import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
 
@@ -219,5 +218,4 @@ const result = rotateTenantApiKey(tenantId);
 return res.status(405).json({ error: 'Method not allowed',}
 });
 }
-
 

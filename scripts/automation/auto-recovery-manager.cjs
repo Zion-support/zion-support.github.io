@@ -51,8 +51,7 @@ this.log(Found ${issues.length} system issues")
         "description": "node_modules directory is missing"
         "severity": "high"
   const content = fs.readFileSync(filePath, "utf8")
-          content.includes()
-          content.includes(">>>>>>>")
+          content.includes("")
   "type": "corruption"
             "name": "merge-conflicts","description": "Merge conflicts detected in ${filePath}"
             "severity": "high"

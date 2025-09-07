@@ -10,7 +10,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
 import React, { useState } from 'react';
 
-
 import { Milestone } from '../../utils/types/milestones';
 
 type Props = any;
@@ -187,7 +186,6 @@ className='text-blue-600 underline'
 
         </div>
       )}
-
 
 <div className='mt-4 flex flex-wrap gap-2' />
         {canClientMarkInProgress && (

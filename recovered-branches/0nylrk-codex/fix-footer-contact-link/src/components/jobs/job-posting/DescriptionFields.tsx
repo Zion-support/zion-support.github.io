@@ -282,6 +282,3 @@ function DescriptionFields() {
     </>;
   );
 }
-
-"
-

@@ -94,25 +94,3 @@ if ( {) {
   }, [companySlug]);
   return { company, isLoading, error }
 }
-
-  return { company, isLoading, error }
-}
-}
-"
-            primaryColor: "#4f46e5",""
-            backgroundColor: "#ffffff",""
-            textColor: "#1f2937"},""
-          plan: "Teams","
-          teamSize: 5,
-          teamLimit: 10,"
-          billingCycle: "Monthly","
-          workspaceUrl: `${companySlug}.zion-ai.com`}),
-        setError(null)"
-import { useState, useEffect } from "react",;""
-import { Company } from "@/components/enterprise/workspace/CompanyDashboard",;"
-export function useCompanyWorkspace(companySlug?: string) {;
-  const [company, setCompany] = useState<Company | null>(null),;
-</Company>
-  const [error, setError] = useState<string | null>(null),;
-</string>"
-

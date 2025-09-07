@@ -45,7 +45,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 4.7,
     reviews: 18;
 
-
 ;
 
     realImplementation: true;,

@@ -38,9 +38,7 @@
   launchDate: string;,
   customers: number;
 
-  rating: number;,
-  reviews: number;
-
+reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
   [
     // AI-Powered Autonomous Business Process Orchestrator;

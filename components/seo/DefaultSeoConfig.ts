@@ -41,8 +41,6 @@ export default config;import type { DefaultSeoProps } from 'next - seo';
 
 export default config;
 
-
-
 import type { DefaultSeoProps } from 'next - seo';
   default_title: 'Zion Tech Solutions';
   title_template: '%s | Zion Tech Solutions',

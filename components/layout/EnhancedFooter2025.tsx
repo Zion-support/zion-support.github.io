@@ -289,9 +289,6 @@ className='space-y-4'
             ))}
           </div>;
 
-
-
-
           {/* Additional Links */}
 
 <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50' />
@@ -311,7 +308,6 @@ key={link.name}
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
 
                   >
-
 
                     {link.nam}
 }
@@ -457,7 +453,6 @@ type='email'
     </footer>
 )
 };
-
 
 export default EnhancedFooter2025;
 

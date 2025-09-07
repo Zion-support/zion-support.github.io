@@ -64,7 +64,6 @@ export interface InnovativeBusinessSolution {
     rating: 4.7,
     reviews: 26;
 
-
 ;
 
     realImplementation: true;,

@@ -98,6 +98,3 @@ import type { UserProfile } from "@/types/auth",;"
   }
 }
 ;
-
-"
-

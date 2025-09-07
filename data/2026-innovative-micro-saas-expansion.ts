@@ -986,7 +986,6 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
 
 };
 
-
 ;
 export const getInnovativeMicroSaasServices2026ByCategory = ()
   category: string) =>: any {

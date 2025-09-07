@@ -46,4 +46,3 @@ clearTimeout(timer);}
   return { translations, loading, error }
 }
 
-

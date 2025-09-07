@@ -27,12 +27,10 @@ function writeGrant(record: GrantApplication) {}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;}
 }
 const { id } = req.query as { id: string,}
 };
-
 
   if (!id) return res.status(400).json({ error: 'Missing id',}
 });

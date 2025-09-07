@@ -382,6 +382,7 @@ const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null> (
       </DialogContent>
     </Dialog>
       </DialogContent>;
-
-    </Dialog>;'
-
+    </Dialog>;
+  );
+}
+;

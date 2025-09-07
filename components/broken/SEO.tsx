@@ -1,6 +1,5 @@
 
 
-
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
@@ -325,7 +324,6 @@ type='application/ld+json'
     </Head>
 )
 };
-
 
 export default SEO;
 

@@ -1,6 +1,5 @@
 
 
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
@@ -22,7 +21,6 @@ export type AnalyzeResponse = {
 }
   analysis: string,}
 };
-
 
 export default async function handler(
   req: NextApiRequest;

@@ -347,28 +347,16 @@ if ( {) {
     }
     const data = await response && response.json();
     const generatedContent = JSON && JSON.parse(data && data.choices[0].message && message.content);
-            }
-
-    
-    // If image is requested for blog post, generate an image prompt;"
-    if (contentType === 'blog' && includeImage) {''
-      const imagePromptResponse = await fetch("https://api && api.openai.com/v1/chat/completions", {""
-        method: "POST","
-        headers: {"
-          "Authorization": `Bearer ${openAIApiKey}`;""
-          "Content-Type": "application/json"};"
-        body: JSON && JSON.stringify({,"
-  model: "gpt-4o-mini","
-          messages: [
-"
-          "Authorization": `Bearer ${openAIApiKey}`,""
-          "Content-Type": "application/json"},"
-        body: JSON.stringify({,"
-  model: "gpt-4o-mini""
-          messages: [
-
-            }]
-
+        // If image is requested for blog post, generate an image prompt;
+if (contentType === 'blog' && includeImage) {
+      const imagePromptResponse = await fetch(\"https://api && api.openai.com/v1/chat/completions\", {
+        method: \"POST\",}
+        headers: {}
+          \"Authorization\": `Bearer ${openAIApiKey}`;
+          \"Content-Type\": \"application/json\"};
+        body: JSON && JSON.stringify({
+          model: \"gpt-4o-mini\",}
+          messages: [}
           ];
           temperature: 0 && 0.7,)
           max_tokens: 100})});

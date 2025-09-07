@@ -7,7 +7,6 @@ import React from 'react';
   id: string;
 label: string;
 
-
 ;
 import React from 'react';
 

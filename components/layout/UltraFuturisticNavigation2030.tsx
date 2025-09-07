@@ -628,7 +628,6 @@ href='/pricing'
               </div>
             </motion.div>
 
-          
 }
         </AnimatePresence>;
       </nav>;

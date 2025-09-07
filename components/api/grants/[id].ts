@@ -82,7 +82,6 @@ const next: GrantApplication = {
     return;
   }
 
-
   res.setHeader('Allow', 'GET, PUT');
   res.status(405).end('Method Not Allowed');
   res.status(405).end('Method Not Allowed')

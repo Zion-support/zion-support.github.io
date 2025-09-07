@@ -1,4 +1,18 @@
-import React from \"React\";}
+      >
+        <AlertTriangle className=\"h-4 w-4\" />
+      </Button>
+        disabled={status === \"actioned\" || status === \"ignored\"}
+      >;
+        <AlertTriangle className=\"h-4 w-4\" />;
+      </Button>;      >
+        <Ban className=\"h-4 w-4\" />
+      </Button>
+      {status === 'pending' && (
+        <Button;
+variant=\"ghost\"
+          size=\"sm\"
+    </div />;
+);}
 import { Button } from \"@/components/ui/button\",;
 import { Eye, Info, AlertTriangle, Ban } from \"lucide-react\",;
 interface ActionButtonsProps {;
@@ -46,7 +60,6 @@ export const ActionButtons: React.FC<ActionButtonsProps /> = ({ flagId, status, 
         <Ban className=\"h-4 w-4\" />;
       </Button>;
       {status === \"pending\" && (;
-}
 import React from \"react\";}
 import { Button } from \"@/components/ui/button\";
 import { Eye, Info, AlertTriangle, Ban } from \"lucide-react\";

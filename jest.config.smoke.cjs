@@ -3,10 +3,44 @@ const createJestConfig = nextJest({
   dir: ./,
 });
 
-const config = {
-  testEnvironment: jsdom,
-  setupFilesAfterEnv: [<rootDir>/jest.setup.js],
-  moduleNameMapping: {^@/(.*)$: <rootDir>/$1,
+// Add any custom config to be passed to Jest
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom',
+  testMatch: [
+    '**/__tests__/**/*.(js|jsx|ts|tsx)',
+    '**/*.(test|spec).(js|jsx|ts|tsx)'
+  ],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/src_backup/',
+    '/src_backup_temp/',
+    '/backup-problematic-files/',
+    '/src.disabled/',
+    '/pages_backup/',
+    '/corrupted-files-backup/',
+    '/lib_backup/',
+    '/components.disabled/',
+    '/components.disabled_full/',
+    '/pages.disabled/',
+    '/src.pages.disabled/',
+    '/recovered-branches/',
+    '/temp_backup/',
+    '/api.disabled/',
+    '/src.broken/',
+    '/src.corrupted/',
+    '/pages.broken/',
+    '/pages.corrupted/',
+    '/components.broken/',
+    '/components.corrupted/'
+  ],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{js,jsx,ts,tsx}',
+  ],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   testMatch: [<rootDir>/__tests__/**/*.smoke.(js|jsx|ts|tsx),<rootDir>/**/*.smoke.test.(js|jsx|ts|tsx),
   ],

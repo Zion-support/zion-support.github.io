@@ -834,13 +834,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     reviews: 45;
 ];
 
-
   }
-
-
-
-'
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface InnovativeMicroSaasService2025 {;
   id: string,;

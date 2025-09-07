@@ -241,11 +241,9 @@ key={q}
           
 }
 
-
 <div className='border-t border-gray-200 dark:border-gray-800 p-2' />
             {!showEscalation ? (
               <div className='flex gap-2' />
-
 
           <div className='border-t border-gray-200 dark:border-gray-800 p-2' />;
             {!showEscalation ? (<div className='flex gap-2' />;}

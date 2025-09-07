@@ -166,7 +166,13 @@ class ErrorBoundary extends React.Component {
                         />;
 </Input>
                       </div>;
-
+                    </div>;
+                    <div className=\"space-y-2\" />;
+                      <Label htmlFor=\"theme_preset\" />Theme Preset</Label>;
+                      <Select;
+name=\"theme_preset\" 
+                        value={formData && formData.theme_preset} 
+                        onValueChange={(value) = /> handleSelectChange(\"theme_preset\", value)}                        placeholder=\"hire && hire.yourcompany.com\"
                         placeholder=\"hire && hire.yourcompany.com\"
 import React, { useState } from \"react\";
 import { Header } from \"@/components/Header\";
@@ -598,10 +604,3 @@ Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label 
   );
 }
 ;
-
-}
-;
-    </>);
-}
-'
-

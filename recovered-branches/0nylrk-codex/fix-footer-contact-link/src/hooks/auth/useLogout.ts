@@ -71,6 +71,6 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
   };
   return { logout }
 };
-
-"
-
+  return { logout }
+}
+};

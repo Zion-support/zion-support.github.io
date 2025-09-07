@@ -556,37 +556,9 @@ if ( {) {
     is_submitting;
     fetchProjectReviews;
     fetchUserReviews;
-
-
-        toast({
-"
-          title: "Report Submitted",")"
-          description: "Thank you. Our team will review your report"}),"
-        return true;
-      }
-    } catch (err: any) {"
-      console.error("Error reporting review:", err),"
-      toast({
-
-    }
-    return false;
-  }
-  // Initialize by fetching reviews if projectId is provided;)
-  if (projectId && reviews.length === 0 && !isLoading) {
-    fetchProjectReviews(projectId)
-  }
-  return {
-  // TODO: Implement
-}
-    reviews;
-    user_review;
-    is_loading;
-    is_submitting;
-    fetchProjectReviews;
-    fetchUserReviews;
-
-  },;
-  // Update a review;
-  const updateReview = async (reviewId: string, updates: Partial<Review>) => {;
-</Review>"
-
+    submitReview;}
+    updateReview;}
+    reportReview}
+    submit_review;
+    update_review;
+    report_review}

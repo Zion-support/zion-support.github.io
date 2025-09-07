@@ -127,7 +127,18 @@ ref as SafeRef<HTMLDivElement>
   showChevron && (<ChevronDown />) 
 </ChevronDown>
 }</button>) 
-}</div>) "
-        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;"
-      </div>;"
-
+}</div>) 
+});
+SidebarGroup.displayName = \"SidebarGroup\";
+SidebarGroup.displayName = \"SidebarGroup\",
+export { SidebarGroup },
+        <div className={cn(\"mt-1\", !expanded && \"hidden\")} />{children}</div>;
+      </div>;
+    );
+  }
+);
+SidebarGroup && SidebarGroup.displayName = \"SidebarGroup\";
+    )
+  }
+),
+export { SidebarGroup };
