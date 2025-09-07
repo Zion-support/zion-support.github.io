@@ -8,6 +8,34 @@ const DatabaseDesignChat: NextPage = () => ;
       <Head />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const DatabaseDesignChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />DatabaseDesignChat - Zion Tech Solutions</title>;
+        <meta name = \"description\" content=\"DatabaseDesignChat service\" />{\" \"}
+;
+  const DatabaseDesignChat: NextPage = () => ;
+  return (<div />;
+      <Head /></Head>;<meta name=\"description\" content=\"DatabaseDesignChat service\" />;
+      </Head>;
+      </Head>;<meta name=\"description\" content=\"DatabaseDesignChat service\" />;
+      </Head>;
+
+import type { NextPage } from \"next\";
+import Head from \"next/head\";
+import Link from \"next/link\";
+
+const DatabaseDesignChat: NextPage = () => {
+ ;
+  return (
+    <div />
+      <Head />
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
@@ -40,6 +68,10 @@ const DatabaseDesignChat: NextPage = () => {
     <div />
       <Head />
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const DatabaseDesignChat: NextPage = () => {;
   return (
     <div />;
@@ -47,16 +79,32 @@ const DatabaseDesignChat: NextPage = () => {
         <title />DatabaseDesignChat - Zion Tech Solutions</title>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 return (;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import type { NextPage } from "next";""
 import Head from "next/head";""
 import Link from "next/link";""
 const DatabaseDesignChat: NextPage = () => {
   return (
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div>
 </div>
       <Head>
@@ -68,6 +116,12 @@ const DatabaseDesignChat: NextPage = () => {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const DatabaseDesignChat: NextPage = () => {
   return (
     <div />
@@ -75,7 +129,14 @@ const DatabaseDesignChat: NextPage = () => {
 
       </Head>;
 
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <main>
         <h1>DatabaseDesignChat</h1>
         <p>Service details coming soon...</p>
@@ -114,17 +175,33 @@ import Head from './next / head';
 import Link from './next / link';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title > DatabaseDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="DatabaseDesignChat service" />{" "}"
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const DatabaseDesignChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> DatabaseDesignChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"DatabaseDesignChat service\" />{\" \"}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </Head>;
       <main />;
         <h1  /> DatabaseDesignChat</h1>;
@@ -149,17 +226,33 @@ export default DatabaseDesignChat;<div />;
   )},export default DatabaseDesignChat;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="DatabaseDesignChat service" />{" "}"
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const DatabaseDesignChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />DatabaseDesignChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"DatabaseDesignChat service\" />{\" \"}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </Head>;
       <main />;
         <h1 />DatabaseDesignChat</h1>;
@@ -176,9 +269,19 @@ export default DatabaseDesignChat;<title />DatabaseDesignChat - Zion Tech Soluti
 
 export default DatabaseDesignChat;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const DatabaseDesignChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+const DatabaseDesignChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const DatabaseDesignChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -201,9 +304,19 @@ export default DatabaseDesignChat;
         <title />DatabaseDesignChat - Zion Tech Solutions</title>
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const DatabaseDesignChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+const DatabaseDesignChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const DatabaseDesignChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />

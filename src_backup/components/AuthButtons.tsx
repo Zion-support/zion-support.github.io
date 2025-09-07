@@ -24,6 +24,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     await signIn(provider)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { signIn  } from next-auth/react';
 type Provider = any;
 type Provider = 'google | github' | 'facebook | credentials';
@@ -72,6 +77,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+>>>>>>> merged-prs-20250907-203621
 :src/components/AuthButtons.tsx
 
   return (
@@ -87,7 +93,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {loadingProvider === 'google ? (
             <svg className=h-5 w-5 animate-spin' viewBox='0 0 24 24 />
           ) : (
-
             <svg
               className=h-5 w-5'
               aria-hidden='true
@@ -116,6 +121,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
       {providers.includes(github') && (
         <Button
+<<<<<<< HEAD
+          type='button'
+          variant='outline'
+          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          onClick={() => handleSignIn('github')}
+=======
           disabled={loadingProvider !== null}
         >
           <span className=sr-only">Sign in with GitHub</span>
@@ -123,6 +134,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           variant=outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan
           onClick={() => handleSignIn(github')}
+>>>>>>> merged-prs-20250907-203621
           disabled={loadingProvider !== null}        >
           <span className='sr-only>Sign in with GitHub</span>
           {loadingProvider === github' ? (
@@ -140,6 +152,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
       {providers.includes('facebook) && (
         <Button
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          type='button'
+          variant='outline'
+          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          onClick={() => handleSignIn('facebook')}
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
@@ -147,11 +168,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           variant='outline
           className=w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('facebook)}
+>>>>>>> merged-prs-20250907-203621
           disabled={loadingProvider !== null}        >
           <span className=sr-only'>Sign in with Facebook</span>
           {loadingProvider === 'facebook ? (
             <svg className=h-5 w-5 animate-spin' viewBox='0 0 24 24 />
           ) : (
+<<<<<<< HEAD
+            <Facebook className='h-5 w-5' />
+=======
             <Facebook className=h-5 w-5' />
 interface AuthButtonsProps  {providers?: Provider[];
 export /**;
@@ -236,6 +261,10 @@ import { Button } from '@/components / ui / button;
 import { Facebook } from lucide-react';
 import { sign_in } from 'next - auth / react;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -402,6 +431,11 @@ interface AuthButtonsProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </svg>
           )}
         </Button>
@@ -423,6 +457,10 @@ interface AuthButtonsProps {
           variant=outline"
           className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           type="button"
           variant="outline"
           className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -446,6 +484,8 @@ interface AuthButtonsProps {
 <<<<<<< HEAD
 :src/components/AuthButtons.tsx
 }
+<<<<<<< HEAD
+=======
     </div>)}) : (<>Email Login</>;
           )}
         </Button>;
@@ -477,6 +517,7 @@ interface AuthButtonsProps {
       )}</div>;
   )}</div>;
   )
+>>>>>>> merged-prs-20250907-203621
 ;
 }
 =======

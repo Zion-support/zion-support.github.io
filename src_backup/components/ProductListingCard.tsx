@@ -62,6 +62,12 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    }
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       log_debug ('[ProductCard] Navigating to:, {
         path: `${detailBasePath}/${listing.id}`});
       log_debug ([ProductCard] Listing ID:', { id: listing.id });
@@ -147,6 +153,10 @@ if ( {) {$2;
 =======
     }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   const handleViewListing = () => {
     // Debug logging for development
@@ -265,7 +275,14 @@ const ProductListingCardComponent = ({;
   listing,;
   view = 'grid',;
   onRequestQuote,;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const imageContainerClasses = isGrid ? 'h-48 : h-32 w-48';
 
@@ -287,9 +304,18 @@ const ProductListingCardComponent = ({;
 
     <div
 <<<<<<< HEAD
+<<<<<<< HEAD
       data-testid= equipment-link"'`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? flex-col : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
 =======
+=======
+=======
+<<<<<<< HEAD
+      data-testid= equipment-link"'`
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? flex-col : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       data-testid="equipment-link"
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -310,6 +336,11 @@ const ProductListingCardComponent = ({;
         className = {isGrid ? block w-full' : 'block w-48 flex-shrink-0}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {/* Image */}<div;
         className = {isGrid ? block w-full' : 'block w-48 flex-shrink-0}onClick={handleViewListing} // Keep existing onClick for navigation;
         role=button';
@@ -393,6 +424,10 @@ if ( {) {$2;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         onKeyDown={(e) => {
 
           if (e.key === Enter || e.key === ' ') {
@@ -400,6 +435,11 @@ if ( {) {$2;
             handleViewListing()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {/* Ensure this container has dimensions */}onKeyDown={(e) => {if (e.key === Enter || e.key === ' ') {e.preventDefault()handleViewListing()}
         }}
       >;
@@ -520,6 +560,10 @@ if ( {) {$2;
           </p>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             priority={false} // Assuming these are not LCP images
             sizes={isGrid ? (max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw : "192px"} // 192px is w-48
           />
@@ -546,12 +590,21 @@ if ( {) {$2;
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div onClick={handleViewListing} className=block>
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             <h3 className=font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]>
 
@@ -571,6 +624,11 @@ if ( {) {$2;
                 >
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </p>;{/* Tags */}
           {listing && listing.tags && listing && listing.tags.length > 0 && (<div className=flex flex-wrap gap-1 mb-4>;
               {listing && listing.tags.map((tag, idx) => (<span;
@@ -656,6 +714,10 @@ if ( {) {$2;
             {listing.price !== null ? (
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {tag}
                 </span>;
               ))}
@@ -672,6 +734,15 @@ if ( {) {$2;
               </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <span className="text-foreground/80">
+                {getPrice()}
+              </span>;
+            )}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <span className=text-foreground/80>
               ) : (Add to Cart;
               )}</Button>;<Button;
@@ -722,6 +793,10 @@ if ( {) {$2;
                 {getPrice()}
               </span>;
             )}
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>
           
           <div className="flex gap-2">
@@ -745,7 +820,14 @@ if ( {) {$2;
                 </>
               ) : (
                 "Add to Cart"
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               )}
             </Button>
 
@@ -796,6 +878,12 @@ if ( {) {$2;
             )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          </p>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 Request Quote;
             </Button>;
             <Button;
@@ -824,6 +912,10 @@ if ( {) {$2;
 =======
           </p>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className='flex flex - wrap gap - 1 mb - 4'>;
@@ -838,10 +930,19 @@ if ( {) {$2;
         {/* Footer with price and button */}
         <div className='flex items - center justify - between mt - auto pt - 3 border - t border - primary / 10 sm:border - primary / 20'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className=text - sm font - medium>;
             {listing.price !== null ? (<div className='flex items - center text - primary'>;
                 <DollarSign className=h - 4 w - 4 mr - 1 />;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className='text - sm font - medium'>;
             {listing.price !== null ? (
               <div className='flex items - center text - primary'>;
@@ -953,9 +1054,18 @@ if ( {) {$2;
             {onRequestQuote && (;
               <Button;
 <<<<<<< HEAD
+<<<<<<< HEAD
               </Button>) }export const ProductListingCard = React.memo(ProductListingCardComponent)ProductListingCard.displayName = ProductListingCard;{onRequestQuote && (<Button;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+              </Button>) }export const ProductListingCard = React.memo(ProductListingCardComponent)ProductListingCard.displayName = ProductListingCard;{onRequestQuote && (<Button;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 size="sm";
                 variant=outline;
                 onClick={handleRequestQuote}
@@ -967,6 +1077,11 @@ if ( {) {$2;
 
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className=flex gap-2>;
             <Button;
               size="sm";
@@ -1008,6 +1123,10 @@ if ( {) {$2;
           </div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         </div>;
       </div>;
@@ -1016,6 +1135,11 @@ if ( {) {$2;
 
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )},export const ProductListingCard = React.memo(ProductListingCardComponent)ProductListingCard.displayName = ProductListingCard;</div>;
         </div>;
       </div>;
@@ -1023,6 +1147,10 @@ if ( {) {$2;
 export default React.memo (ProductListingCard)export default ProductListingCard;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;
       </div>;
     </div>) }
@@ -1035,10 +1163,19 @@ export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 '"`;export const ProductListingCard = React.memo (ProductListingCardComponent)ProductListingCard.display_name = 'ProductListingCard;
 },export const ProductListingCard = React.memo(ProductListingCardComponent)ProductListingCard.displayName = ProductListingCard';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default ProductListingCard;
 '"`;
 

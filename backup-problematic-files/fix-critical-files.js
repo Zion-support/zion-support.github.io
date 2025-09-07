@@ -46,7 +46,15 @@ try {,;
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg: px-8">,
         <div className="text-center mb-12">,
           <h1 className="text-4xl font-bold text-gray-900 mb-4">,
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+    { &quot;to&quot;: &quot;/services/ai-seo-optimizer&quot;, &quot;label&quot;: &quot;AI SEO Optimizer&quot; };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ],
   return (,
               <h3 className="text-lg font-semibold text-gray-900">,;"

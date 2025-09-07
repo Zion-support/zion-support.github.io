@@ -1,24 +1,74 @@
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Label } from '@/components/ui/label',;
+<<<<<<< HEAD
+=======
+import { useState } from 'react,
+import { Button } from @/components/ui/button',
+import { Input } from '@/components/ui/input,
+import { Label } from @/components/ui/label',
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 try {
       on_submit ({ email, address });
     } finally {
+<<<<<<< HEAD
 
 ;
 import { useState } from 'react',import { Button } from '@/components/ui/button',import { Input } from '@/components/ui/input',import { Label } from '@/components/ui/label',import { Textarea } from '@/components/ui/textarea',try {on_submit ({ email, address })} finally {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState } from 'react,import { Button } from @/components/ui/button',import { Input } from '@/components/ui/input,import { Label } from @/components/ui/label',import { Textarea } from '@/components/ui/textarea,try {on_submit ({ email, address })} finally {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error(Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }return this.props.children;
+=======
+>>>>>>> merged-prs-20250907-203621
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+  }
+<<<<<<< HEAD
 import React from 'react';
 :src_backup/components/cart/GuestCheckoutModal.tsx
+=======
+}
+import React from 'react';
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+<<<<<<< HEAD
 
 :src_backup/components/cart/GuestCheckoutModal.tsx
 import { useState } from 'react',;
@@ -40,10 +90,63 @@ import { User, Mail, MapPin, CreditCard } from 'lucide-react';
 interface GuestCheckoutModalProps {;
 :src_backup/components/cart/GuestCheckoutModal.tsx
 
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Label } from '@/components/ui/label',;
+import { Textarea } from '@/components/ui/textarea',;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+import {;
+import { useState } from react';
+import { Button } from '@/components/ui/button;
+import { Input } from @/components/ui/input';
+import { Label } from '@/components/ui/label;
+import { Textarea } from @/components/ui/textarea';
+
+import { Textarea } from '@/components/ui/textarea,
+import {
+
+<<<<<<< HEAD
+=======
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle} from @/components/ui/dialog',
+import { User, Mail, MapPin, CreditCard } from 'lucide-react;
+
+<<<<<<< HEAD
+interface GuestCheckoutModalProps {;
+interface GuestCheckoutModalProps {
+
+import { useState  } from react';
+import { Button  } from '@/components/ui/button;
+import { Input  } from @/components/ui/input';
+import { Label  } from '@/components/ui/label;
+import { Textarea  } from @/components/ui/textarea';
+import {Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle} from '@/components/ui/dialog;
+import { User, Mail, MapPin, CreditCard  } from lucide-react';
+import { isProdDomain  } from '@/utils/getStripe;
+interface GuestCheckoutModalProps  {import { useState   } from react';
+import { Button   } from '@/components/ui/button;
+import { Input   } from @/components/ui/input';
+import { Label   } from '@/components/ui/label;
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Label  } from '@/components/ui/label';
+<<<<<<< HEAD
 import { Textarea  } from '@/components/ui/textarea';
 import {Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle} from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard  } from 'lucide-react';
@@ -52,12 +155,22 @@ interface GuestCheckoutModalProps  {import { useState   } from 'react';
 import { Button   } from '@/components/ui/button';
 import { Input   } from '@/components/ui/input';
 import { Label   } from '@/components/ui/label';
+=======
+import { Textarea } from '@/components/ui/textarea';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Dialog;
   DialogContent;
   DialogDescription;
   DialogFooter;
   DialogHeader;
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   DialogTitle } from '@/components/ui/dialog';
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -65,6 +178,15 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import {
+<<<<<<< HEAD
+=======
+  DialogTitle } from @/components/ui/dialog';
+import { useState } from 'react
+import { Button } from @/components/ui/button'
+import { Input } from '@/components/ui/input
+import { Label } from @/components/ui/label'
+import { Textarea } from '@/components/ui/textarea
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Dialog
   DialogContent
   DialogDescription
@@ -75,7 +197,13 @@ import {
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
 interface GuestCheckoutModalProps {
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -89,7 +217,10 @@ export default function GuestCheckoutModal(): any ({;
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
 
 
@@ -110,7 +241,10 @@ export default function GuestCheckoutModal(): any ({;
 
 
 
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleSubmit = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
@@ -157,7 +291,10 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             Pay with test data – use card 4242 4242 4242 4242 and any future;
             date.;
           </div>;
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         )}
 
         <form onSubmit={handleSubmit} className='space-y-4'>;
@@ -179,6 +316,9 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             Enter your details to complete your purchase as a guest.
           </DialogDescription>
         </DialogHeader>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     }
   },
@@ -189,12 +329,26 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
           <div className="rounded-md bg-amber-500/20 p-2 text-center text-amber-400">
             Pay with test data – use card 4242 4242 4242 4242 and any future date.
           </div>
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
         )}
               htmlFor='guest-email'
         )}<form onSubmit={handleSubmit} className='space-y-4'>;
           <div className='space-y-2'>;<Label;
               htmlFor='guest-email';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        )}
+              htmlFor=guest-email'
+        )}<form onSubmit={handleSubmit} className='space-y-4>;
+          <div className=space-y-2'>;<Label;
+              htmlFor='guest-email;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         <form onSubmit={handleSubmit} className='space-y-4'>;
           <div className='space-y-2'>;
@@ -206,9 +360,28 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               <Mail className='h-4 w-4 text-zion-cyan' />;
               Email Address;
             </Label>;
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
             <Input
               id='guest-email'
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <Input
+              id='guest-email'
+              type='email'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+            <Input id='guest-email''
+              type='email''
+              value={email || ''}'
+              onChange={e = /> setEmail(e && e.target.value || '')}'
+            <Input
+              id='guest-email'
+            <Input id='guest-email
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               type='email'
 :src_backup/components/cart/GuestCheckoutModal.tsx
             <Input id='guest-email''
@@ -227,6 +400,9 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             />
           </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
             <Input;
               id='guest-email';
               type='email';
@@ -261,17 +437,40 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             <Button;
               type="submit";
               disabled={isSubmitting || !email || !address}
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue";
+=======
+              className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue";
+              className=bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             >;
               value={email || ''}
               onChange={e => setEmail(e && e.target.value || '')}
               placeholder='your && your.email@example && example.com'              required;
               className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light';
             />;
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
           </div>;<div className='space-y-2'>;<Label;
               htmlFor='guest-address';
+=======
+          </div>;<div className='space-y-2'>;<Label;
+              htmlFor='guest-address';
+          </div>;<div className='space-y-2>;<Label;
+              htmlFor=guest-address';
+=======
+>>>>>>> merged-prs-20250907-203621
+              value={email || ''}
+              onChange={e => setEmail(e && e.target.value || '')}
+              placeholder='your && your.email@example && example.com'              required;
+              className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light';
+            />;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>;
 
           <div className='space-y-2'>;
@@ -281,11 +480,24 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               <MapPin className='h-4 w-4 text-zion-cyan' />;
               Shipping Address;
             </Label>;
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <Textarea;
               id='guest-address';
               value={address || ''}
+<<<<<<< HEAD
               onChange={e => setAddress(e && e.target.value || '')}
+=======
+              onChange={e => setAddress(e && e.target.value || )}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <Textarea
               id='guest-address''
               value={address || ''}'
@@ -293,8 +505,19 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               placeholder='Enter your full shipping address...'              required;
               className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]';,
             />;
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
           </div>;<div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          </div>;<div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
+          </div>;<div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>;
           <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
             <p className='text-yellow-400 text-sm'>;
@@ -309,7 +532,21 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             Enter your details to complete your purchase as a guest.;
           </DialogDescription>;
         </DialogHeader>;
+<<<<<<< HEAD
         {!isProdDomain () && (<div className='rounded - md bg - amber - 500 / 20 p - 2 text - center text - amber - 400'>;
+=======
+<<<<<<< HEAD
+        {!isProdDomain () && (
+          <div className='rounded - md bg - amber - 500 / 20 p - 2 text - center text - amber - 400'>;
+=======
+<<<<<<< HEAD
+        {!isProdDomain () && (<div className=rounded - md bg - amber - 500 / 20 p - 2 text - center text - amber - 400'>;
+=======
+        {!isProdDomain () && (
+          <div className='rounded - md bg - amber - 500 / 20 p - 2 text - center text - amber - 400'>;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             Pay with test data – use card 4242 4242 4242 4242 and any future;
             date.;
           </div>)}
@@ -348,6 +585,7 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             />;
           </div>;
           <div className='bg - yellow - 500 / 10 border border - yellow - 500 / 30 rounded - lg p - 3'>;
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
             <p className='text - yellow - 400 text - sm'>;💡 Creating an account allows you to track your order and checkout;
             <p className='text - yellow - 400 text - sm'>;
@@ -355,6 +593,21 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               faster next time.;
             </p>;
 :src_backup/components/cart/GuestCheckoutModal.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <p className='text - yellow - 400 text - sm'>;💡 Creating an account allows you to track your order and checkout;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+            <p className='text - yellow - 400 text - sm'>;
+            <p className=text - yellow - 400 text - sm'>;💡 Creating an account allows you to track your order and checkout;
+            <p className='text - yellow - 400 text - sm>;
+              💡 Creating an account allows you to track your order and checkout;
+              faster next time.;
+            </p>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>;
         <form onSubmit={handleSubmit} className="space-y-4">"
           <div className="space-y-2">"
@@ -416,12 +669,30 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
 
         <form onSubmit={handleSubmit} className="space-y-4">
 
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >
           <div className="space-y-2">
             <Label htmlFor="guest-address" className="text-white flex items-center gap-2">
               <MapPin className="h-4 w-4 text-zion-cyan" />
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
+              className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue
+            >
+          <div className=space-y-2">
+            <Label htmlFor="guest-address className=text-white flex items-center gap-2">
+              <MapPin className="h-4 w-4 text-zion-cyan />
+=======
+>>>>>>> merged-prs-20250907-203621
+          <div className="space-y-2">
+            <Label htmlFor="guest-address" className="text-white flex items-center gap-2">
+              <MapPin className="h-4 w-4 text-zion-cyan" />
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               Shipping Address
             </Label>
 
@@ -487,7 +758,13 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
                 </>
               )}
 
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <DialogFooter className='space - x-2'>;
           </div>;<form onSubmit={handleSubmit} className="space-y-4">;
@@ -524,9 +801,15 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               {is_submitting ? ('Processing...') : (<>;
                   <CreditCard className='h - 4 w - 4 mr - 2' />;
                   Continue to Payment;
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </>)}
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               disabled={isSubmitting || !email || !address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
               {isSubmitting ? (;
@@ -538,13 +821,36 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
                 </>;
               )}
 
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
 };
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+};
+};
+}
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
+=======
+<<<<<<< HEAD
+    </Dialog>;
+  );
+}
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 
@@ -564,7 +870,10 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
       </DialogContent>
     </Dialog>
   );
+<<<<<<< HEAD
 :src_backup/components/cart/GuestCheckoutModal.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </>)}</Button>;
           </DialogFooter>;
@@ -580,4 +889,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Dialog>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+=======
+    </Dialog>;
+  );
+}
+;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

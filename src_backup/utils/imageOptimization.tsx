@@ -17,6 +17,11 @@ interface OptimizedImageProps {
   fallbackSrc?: string;
   lazy?: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const imgRef = useRef<HTMLDivElement>(null);
 
 
@@ -35,6 +40,10 @@ const imgRef = useRef<HTMLDivElement>(null);
 }`
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 export function OptimizedImage({
@@ -92,6 +101,13 @@ export function OptimizedImage({}
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return () => observer.disconnect ();
 }, [lazy, priority, isInView]);
 //Generate WebP - compatible src const getOptimizedSrc = (original_src: string) =>: any {
@@ -106,6 +122,10 @@ export function OptimizedImage({}
   const img_ref = useRef < HTMLDivElement>(null);
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   // Intersection Observer for lazy loading;
 
@@ -251,11 +271,20 @@ if (||) {}
       )}
       {/* Error fallback */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {hasError && (;
         <div className=absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>;
           {fallbackSrc ? (;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             <img
 
@@ -305,6 +334,11 @@ export function getImageDimensions(;
   return new Promise((resolve, reject) => {}
     img.onload = () =>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       resolve({ width: img.naturalWidth, height: img.naturalHeight });
     img.onerror = reject;
     img.src = src;
@@ -312,6 +346,10 @@ export function getImageDimensions(;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       resolve({ width: img.naturalWidth, height: img.naturalHeight });
     img.onerror = reject;

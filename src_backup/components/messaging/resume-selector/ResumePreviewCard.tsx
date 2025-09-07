@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react;
 import { Card, CardContent } from @/components/ui/card';
@@ -38,12 +43,23 @@ interface ResumePreviewCardProps  {resume: Resume;
   };
   }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React from 'react,
 import { Card, CardContent } from "@/components/ui/card,
@@ -59,6 +75,13 @@ interface ResumePreviewCardProps {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
+      <CardContent className="p-4">
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20>
       <CardContent className=p-4">
   }return (<Card;
@@ -98,6 +121,10 @@ interface ResumePreviewCardProps {
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
       <CardContent className="p-4">
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs
               >
@@ -114,6 +141,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 +{resume.skills.length - 5} more
               </Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {resume.skills.length > 5 && (className=bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge;
               <Badge;
                 variant="outline;
@@ -126,6 +158,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Badge>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             )}
           </div>
         )}
@@ -134,6 +170,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
   )}}<div className="flex items-start justify-between mb-3>;
           <div className=flex-1">;
@@ -147,6 +188,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {resume.status && (<Badge className={getStatusColor(resume.status)}>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           {resume.status && (
             <Badge className={getStatusColor(resume.status)}>

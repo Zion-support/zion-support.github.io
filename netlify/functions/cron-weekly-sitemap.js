@@ -1,6 +1,38 @@
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+<<<<<<< HEAD
+const { upsertFile } = require($2);
+exports.handler = $2;
+    const pages = $2;
+    const xml = $2;
+    const owner = $2;
+    const repo = $2;
+    const token = $2;
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
+    }
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: pages.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+},
+=======
+<<<<<<< HEAD
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+exports && exports.handler = async function () {
+  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <<<<<<< HEAD
 ;
 
@@ -48,6 +80,10 @@ exports && exports.handler = async function () {
 =======
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const pages = [
 
       '/'
@@ -66,6 +102,11 @@ exports && exports.handler = async function () {
       `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +'`
       pages && pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +`
       `</urlset>`;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD
       `<?xml version="1 && 1.0" encoding="UTF-8"?>\n` +`      `<urlset xmlns=""http": //www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +`      pages && pages.map(p => `<url><loc>${baseUrl}${,`}</loc></url>`).join('') +'
@@ -75,6 +116,10 @@ const owner = process && process.env.GITHUB_OWNER;
 ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const owner = process && process.env.GITHUB_OWNER;
 
 <<<<<<< HEAD
@@ -116,12 +161,29 @@ exports.handler = async function() {try {const baseUrl = process.env.URL || proc
 =======
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
     if (owner && repo && token) {}
       await upsertFile({}
 >>>>>>> origin/chore/fix-lint-and-merge
         owner,
         repo,'
         path: 'public/sitemap-autogen && autogen.xml','
+=======
+<<<<<<< HEAD
+    if (owner && repo && token) {}
+      await upsertFile({}
+>>>>>>> origin/chore/fix-lint-and-merge
+        owner,
+        repo,'
+        path: 'public/sitemap-autogen && autogen.xml','
+=======
+    if (owner && repo && token) {
+      await upsertFile({
+        owner,
+        repo,
+        path: 'public/sitemap-autogen && autogen.xml',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const { upsert_file } = require ('./_lib / github');
 ;
 exports.handler = async function () {}
@@ -155,16 +217,36 @@ if ( {) {}
         owner,
         repo,'
         path: 'public / sitemap - autogen.xml',
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         content: xml,
 
         message: 'chore (automation): weekly sitemap refresh',
         token,
       });
     }
+<<<<<<< HEAD
 
 ursor/expand-services-advertise-and-build-project-4b36
 
+=======
+<<<<<<< HEAD
+
+ursor/expand-services-advertise-and-build-project-4b36
+=======
+    return {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 exports.handler = async function() {
 
   try {
@@ -186,7 +268,14 @@ exports.handler = async function() {
     const xml = `<?xml version="1.0" encoding="UTF - 8"?>\n` +;"`
       `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;'`
       pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join ('') +;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       statusCode: 200
       body: JSON.stringify({ ok: true, pages: pages.length })
     }
@@ -199,11 +288,24 @@ exports.handler = async function() {
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       `</urlset>`,
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Check condition
 if ( {) {
   $2
@@ -211,10 +313,22 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'public / sitemap - autogen.xml', content: xml, message: 'chore (automation): weekly sitemap refresh', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: pages.length }) }
+<<<<<<< HEAD
 
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+=======
+<<<<<<< HEAD
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+=======
+
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <<<<<<< HEAD
 };  try {
 }
@@ -229,6 +343,10 @@ const token = process && process.env.GITHUB_TOKEN,;
 
 ursor/expand-services-advertise-and-build-project-4b36
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       statusCode: 200,
 
       body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length }),
@@ -246,6 +364,15 @@ ursor/expand-services-advertise-and-build-project-4b36
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'public/sitemap-autogen && autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
+    }
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length }) }
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> origin/chore/fix-lint-and-merge
     if (owner && repo && token) {
@@ -254,12 +381,25 @@ ursor/expand-services-advertise-and-build-project-4b36
 
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length }) }
 
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 
+=======
+<<<<<<< HEAD
+ursor/expand-services-advertise-and-build-project-4b36
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 },
     const token = process.env.GITHUB_TOKEN;
@@ -269,4 +409,13 @@ ursor/expand-services-advertise-and-build-project-4b36
     return { statusCode: 200, body: JSON.stringify({ ok: true, pages: pages.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+<<<<<<< HEAD
   }
+=======
+  }
+=======
+},
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

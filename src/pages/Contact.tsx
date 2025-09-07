@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/pages/Contact.tsx
 import { useState } from 'react';
 import { Header } from '@/components/Header';
@@ -24,45 +25,82 @@ import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from 'react';
 
-export default function Contact() {
+export function Contact() {
+=======
+import React, { useState } from 'react';
+import { useToast } from '../components/ui/use-toast';
+import { useNotifications } from '../context/NotificationContext';
+import { motion } from 'framer-motion';
+
+const Contact: React.FC = () => {
+  const { toast } = useToast();
+  const { addNotification } = useNotifications();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: '',
+    company: '',
+<<<<<<< HEAD
+    message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errors, setErrors] = useState<{
-    name?: string;
-    email?: string;
-    message?: string;
-  }>({});
-  const [isChatOpen, setIsChatOpen] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setErrors(prev => ({ ...prev, [name]: undefined }));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+=======
+    service: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
+<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    logInfo('[ContactForm] handleSubmit triggered.');
-    logInfo('[ContactForm] formData:', { data: formData });
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+    alert('Thank you for your message! We\'ll get back to you soon.');
+  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-    const schema = z.object({
-      name: z.string().min(2, 'Name must be at least 2 characters'),
-      email: z.string().email('Invalid email address'),
-      message: z.string().min(10, 'Message must be at least 10 characters'),
-    });
+const ContactPage: React.FC = () => {
+  return (
+<<<<<<< HEAD
+    <div className="p-8">
+      <h1 className="text-3xl font-bold text-gray-900">Contact Us</h1>
+      <p className="mt-4 text-lg text-gray-700">Get in touch with our team.</p>
+    </div>
+  );
+};
 
-    const result = schema.safeParse(formData);
-    logInfo('[ContactForm] Zod validation result:', { data: result });
+export default ContactPage;
+=======
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            Contact Us
+          </h1>
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+            Ready to start your next project? Get in touch with our team and let's discuss 
+            how we can help you achieve your technology goals.
+          </p>
+        </div>
 
+<<<<<<< HEAD
     if (!result.success) {
       const fieldErrors: Record<string, string> = {};
       for (const err of result.error.errors) {
@@ -79,19 +117,111 @@ export default function Contact() {
           fieldErrors: result.error.flatten().fieldErrors,
         },
       });
+=======
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <div className="bg-card p-8 rounded-xl border">
+            <h2 className="text-2xl font-bold text-foreground mb-6">Send us a message</h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
+                  placeholder="Your full name"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
+                  placeholder="Your company name"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={5}
+                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
+                  placeholder="Tell us about your project..."
+                />
+              </div>
+=======
+  const validateForm = () => {
+    const errors: string[] = [];
+    
+    if (!formData.name.trim()) errors.push('Name is required');
+    if (!formData.email.trim()) errors.push('Email is required');
+    if (!formData.message.trim()) errors.push('Message is required');
+    
+    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.push('Please enter a valid email address');
+    }
+    
+    if (formData.message && formData.message.length < 10) {
+      errors.push('Message must be at least 10 characters long');
+    }
+    
+    return errors;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const errors = validateForm();
+    if (errors.length > 0) {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       toast({
-        title: 'Form Validation Error',
-        description: validationErrorMsg,
-        variant: 'destructive',
+        title: "Validation Error",
+        description: errors.join(', '),
+        variant: "destructive",
       });
       return;
     }
-
-    setErrors({});
+    
     setIsSubmitting(true);
-    logInfo('[ContactForm] Starting form submission (fetch to /api/contact).');
-
+    
     try {
+<<<<<<< HEAD
       fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -179,122 +309,153 @@ export default function Contact() {
           body: JSON.stringify({
             messages: [{ role: 'user', content: message }],
           }),
+=======
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Show success notification
+      addNotification({
+        type: 'success',
+        title: 'Message sent successfully!',
+        message: 'Thank you for your message. We\'ll get back to you within 24 hours.',
+        duration: 5000,
+        action: {
+          label: 'View Services',
+          onClick: () => window.location.href = '/services'
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }
-      );
-
-      if (!response.ok) {
-        throw new Error('Failed to get response from AI assistant');
-      }
-
-      return Promise.resolve();
-    } catch (error) {
-      logErrorToProduction('Error in AI chat', error);
-      toast({
-        title: 'Chat Error',
-        description:
-          'There was an error communicating with our AI assistant. Please try again.',
-        variant: 'destructive',
       });
-      return Promise.resolve();
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your message. We'll get back to you within 24 hours.",
+      });
+      
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        service: '',
+        message: ''
+      });
+    } catch (error) {
+      // Show error notification
+      addNotification({
+        type: 'error',
+        title: 'Error sending message',
+        message: 'There was an error sending your message. Please try again.',
+        duration: 7000
+      });
+      
+      toast({
+        title: "Error",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  const offices = [
-    {
-      name: 'Headquarters',
-      address: '123 Tech Avenue, San Francisco, CA 94105',
-      phone: '+1 302 464 0950',
-      email: 'commercial@ziontechgroup.com',
-    },
-    {
-      name: 'East Coast Office',
-      address: '456 Innovation Street, New York, NY 10001',
-      phone: '+1 302 464 0950',
-      email: 'commercial@ziontechgroup.com',
-    },
-  ];
-
   return (
-    <>
-      <SEO
-        title='Contact Us - Get Help from Zion Tech Marketplace'
-        description='Reach out to Zion Tech Marketplace for personalized support. Ask questions, get guidance, and connect with our tech-savvy team today. We’re eager to assist—drop us a line anytime.'
-        keywords='contact Zion, AI marketplace support, tech platform contact'
-        canonical='https://app.ziontechgroup.com/contact'
-      />
-      <main className='min-h-screen bg-zion-blue pt-24 pb-20'>
-        <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <GradientHeading>Contact Us</GradientHeading>
-            <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
-              Have questions or want to learn more? We'd love to hear from you.
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Get in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Touch</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Ready to transform your business with our technology solutions? Let&apos;s discuss your project.
             </p>
           </div>
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24'>
-            <div>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                Get in Touch
-              </h2>
-              <p className='text-zion-slate-light text-lg mb-8'>
-                Whether you have a question about our platform, pricing, or
-                anything else, our team is ready to answer all your questions.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8">
+              <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
+              
+              <button
+                type="submit"
+                className="w-full bg-primary text-primary-foreground py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
 
-              <form onSubmit={handleSubmit} className='space-y-6'>
-                <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
-                  <div>
-                    <label htmlFor='name' className='block text-white mb-2'>
-                      Your Name
-                    </label>
-                    <Input
-                      id='name'
-                      name='name'
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
-                      placeholder='John Doe'
-                      required
-                    />
-                    {errors.name && (
-                      <p className='mt-1 text-sm text-red-500'>{errors.name}</p>
-                    )}
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-6">Get in touch</h2>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">📧</span>
                   </div>
                   <div>
-                    <label htmlFor='email' className='block text-white mb-2'>
-                      Email Address
+                    <h3 className="font-semibold text-foreground">Email</h3>
+                    <p className="text-foreground/70">hello@ziontechgroup.com</p>
+                    <p className="text-foreground/70">support@ziontechgroup.com</p>
+                  </div>
+                </div>
+<<<<<<< HEAD
+=======
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                      Company
                     </label>
-                    <Input
-                      id='email'
-                      name='email'
-                      type='email'
-                      value={formData.email}
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
                       onChange={handleChange}
-                      className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
-                      placeholder='john@example.com'
-                      required
+                      className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                      placeholder="Your company name"
                     />
-                    {errors.email && (
-                      <p className='mt-1 text-sm text-red-500'>
-                        {errors.email}
-                      </p>
-                    )}
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                      Service Interest
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                    >
+                      <option value="">Select a service</option>
+                      <option value="ai-services">AI Services</option>
+                      <option value="it-services">IT Services</option>
+                      <option value="micro-saas">Micro SaaS</option>
+                      <option value="cybersecurity">Cybersecurity</option>
+                      <option value="consulting">Consulting</option>
+                    </select>
                   </div>
 
 :src/pages/Contact.tsx
                 <div>
-                  <label htmlFor='message' className='block text-white mb-2'>
-                    Message
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    Message *
                   </label>
-                  <Textarea
-                    id='message'
-                    name='message'
-                    value={formData.message}
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
                     onChange={handleChange}
-                    className={`bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px] ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
-                    placeholder="Tell us what you'd like to know..."
                     required
+                    rows={6}
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent resize-none"
+                    placeholder="Tell us about your project..."
                   />
+<<<<<<< HEAD
                   {errors.message && (
                     <p className='mt-1 text-sm text-red-500'>
                       {errors.message}
@@ -478,38 +639,22 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Tell us about your project or requirements..."
                   ></textarea>
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </div>
 
-                <Button
-                  type='submit'
-                  className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
+                <button
+                  type="submit"
                   disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-black py-3 px-6 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
-                </Button>
-                <AnimatePresence>
-                  {submitted && (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      className='mt-4 text-center space-y-1'
-                    >
-                      <h3 className='text-green-500 text-lg font-bold'>
-                        Message Sent!
-                      </h3>
-                      <p className='text-zion-slate-light'>
-                        Thanks for reaching out. Our team received your message
-                        and will respond with helpful info as soon as possible
-                        shortly.
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                </button>
               </form>
 :src/pages/Contact.tsx
             </div>
 
+<<<<<<< HEAD
             <div>
               <TooltipProvider>
                 <Tooltip>
@@ -594,48 +739,113 @@ export default function ContactPage() {
                   </Button>
                 </Card>
               </div>
+=======
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">📞</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">Phone</h3>
+                    <p className="text-foreground/70">+1 (555) 123-4567</p>
+                    <p className="text-foreground/70">+1 (555) 987-6543</p>
+                  </div>
+                </div>
+<<<<<<< HEAD
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">📍</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">Office</h3>
+                    <p className="text-foreground/70">
+                      123 Technology Drive<br />
+                      San Francisco, CA 94105<br />
+                      United States
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">🕒</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">Business Hours</h3>
+                    <p className="text-foreground/70">
+                      Monday - Friday: 9:00 AM - 6:00 PM<br />
+                      Saturday: 10:00 AM - 4:00 PM<br />
+                      Sunday: Closed
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
-          <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
-            <h2 className='text-3xl font-bold text-white mb-6'>
-              Need immediate assistance?
-            </h2>
-            <p className='text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto'>
-              Our customer support team is available 24/7 to help you with any
-              questions.
-            </p>
-            <div className='flex flex-col sm:flex-row justify-center gap-4'>
-              <Button
-                onClick={() => setIsChatOpen(true)}
-                className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
-              >
-                <MessageSquare className='mr-2 h-5 w-5' />
-                Chat With AI
-              </Button>
-              <Button
-                variant='outline'
-                className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'
-                asChild
-              >
-                <a href='mailto:support@ziontechgroup.com'>
-                  <Mail className='mr-2 h-5 w-5' />
-                  Email Support
+            {/* Social Links */}
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-4">Follow us</h3>
+              <div className="flex space-x-4">
+                <a href="https://twitter.com/ziontechgroup" className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors">
+                  <span className="text-lg">🐦</span>
                 </a>
+<<<<<<< HEAD
               </Button>
             </div>
+=======
+                <a href="https://linkedin.com/company/ziontechgroup" className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors">
+                  <span className="text-lg">💼</span>
+                </a>
+                <a href="https://github.com/ziontechgroup" className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors">
+                  <span className="text-lg">🐙</span>
+                </a>
+                <a href="https://youtube.com/ziontechgroup" className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors">
+                  <span className="text-lg">📺</span>
+                </a>
+=======
+              </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
-          <div className='mt-12 text-center'>
-            <p className='text-zion-slate-light text-lg'>
-              Looking for more details about our platform? Visit our{' '}
-              <Link href='/services' className='text-zion-cyan underline'>
-                services page
-              </Link>{' '}
-              or explore the{' '}
-              <Link href='/blog' className='text-zion-cyan underline'>
-                Zion blog
-              </Link>{' '}
-              for additional insights.
-            </p>
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Expert team with 10+ years experience
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Proven track record of successful projects
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    24/7 support and maintenance
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Competitive pricing and flexible terms
+                  </li>
+                </ul>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
+              </div>
+            </div>
           </div>
+<<<<<<< HEAD
       </main>
 
       {/* Chat Assistant Modal */}
@@ -666,4 +876,11 @@ export default function ContactPage() {
       </section>
     </div>
   );
+=======
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

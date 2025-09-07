@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+
+import React from 'react';
+interface Performance.testProps {
+  // Add props here as needed
+>
+
+export default function Performance.test({ }: Performance.testProps) {
+
+<
+
+
+
+<<<<<<< HEAD
+export default function PricingGuidePage({ }: PricingGuidePageProps) {
+=======
 import React from 'react';
 interface Performance.testProps {
   // Add props here as needed
@@ -36,6 +52,7 @@ interface PricingGuidePageProps {
 
 export default function PricingGuidePage({ }: PricingGuidePageProps) {
 import React from 'react';
+>>>>>>> merged-prs-20250907-203621
 interface Performance.testProps {
   // Add props here as needed
 }
@@ -51,6 +68,20 @@ export default function Performance.test({ }: Performance.testProps) {
 >
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+><
+
+
+
+
+
+
+
+:src.pages.disabled/PricingGuidePage.jsx;
+:temp_exclude/src.pages.disabled/PricingGuidePage.jsx;
+=
+>}
+=======
 
 }
 }
@@ -73,15 +104,27 @@ export default function Performance.test({ }: Performance.testProps) {
 }
 
 }
+>>>>>>> merged-prs-20250907-203621
 
 
 
 
 
 
+<<<<<<< HEAD
+
+
+
+
+<}
+>
+
+
+=======
 :src.pages.disabled/PricingGuidePage.jsx
 }
 }
 }
 }
 }
+>>>>>>> merged-prs-20250907-203621

@@ -1,5 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Handle sending messages to the AI chat assistant
+>>>>>>> merged-prs-20250907-203621
 :src/components/ChatAssistantTrigger.tsx
 import { useState } from "react,
 import { MessageSquare } from 'lucide-react
@@ -80,6 +86,11 @@ export function ChatAssistantTrigger() {
         throw new Error(Failed to get response from AI assistant");
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return Promise.resolve()
     } catch (error) {
       logErrorToProduction(Error in AI chat:', { data: error })
@@ -87,6 +98,10 @@ export function ChatAssistantTrigger() {
     }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   },
 
@@ -117,6 +132,12 @@ export function ChatAssistantTrigger() {
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Handle sending messages to the AI chat assistant;
 // Handle sending messages to the AI chat assistant;
   const handleSendMessage = async (message: string): Promise<void> => {try {const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat, {method: POST";
@@ -150,6 +171,10 @@ import { Button } from @/components/ui/button",import { ChatAssistant } from "@/
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <ChatAssistant
 
           isOpen = {isOpen}
@@ -202,7 +227,14 @@ import { useState  } from './react';
 import { MessageSquare } from 'lucide-react'import { Button  } from '@/components / ui / button';
 import { ChatAssistant  } from '@/components / ChatAssistant';
 import {logErrorToProduction} from '@/utils / production_logger';
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export /**
  * ChatAssistantTrigger - Function description
  */
@@ -234,6 +266,12 @@ if ( {) {
   return (
     <>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <Button;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return Promise.resolve()} catch (error) {logErrorToProduction('Error in AI chat:, { data: error }),return Promise.resolve()}
   },size="icon;
         variant=outline";
@@ -288,6 +326,10 @@ if ( {) {$2;
         aria - label=Open chat assistant";
 =======
       <Button;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         on_click = {(, ) => setIsOpen (true), }
         size="icon";
         variant="outline";
@@ -308,6 +350,11 @@ if ( {) {$2;
             role: 'Virtual Assistant;
           }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           onSendMessage = {handleSendMessage, }
           onSendMessage = {handleSendMessage}
         />)}
@@ -316,6 +363,10 @@ if ( {) {$2;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           onSendMessage = {handleSendMessage}
         />)}
@@ -346,6 +397,11 @@ return (<> <Button > <MessageSquare className=h-5 w-5" /> </Button> {
 }</>) ;
 <<<<<<< HEAD
 }'"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
       {is_open && (<ChatAssistant;
           is_open = {is_open }
@@ -363,3 +419,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }'"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -246,6 +246,10 @@ this.log(`Tests "failed: ${error.message}`, ERROR"`)
   const fullPath = path.join(dir, ")
   files.push(...this.getAllFiles(fullPath")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 <<<<<<< HEAD
@@ -262,3 +266,12 @@ this.log(`Tests "failed: ${error.message}`, ERROR"`)
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+=======
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

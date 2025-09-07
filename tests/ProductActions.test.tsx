@@ -1,4 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
+import { render, screen, fireEvent, waitFor } from '@testing-library/react',;
+import '@testing-library/jest-dom',;
+import { describe, it, expect, vi } from 'vitest',;
+import { ProductActions } from '@/components/ProductActions',;
+function setup() {;
+  const addToCart = vi.fn().mockResolvedValue(undefined),;
+  render(<ProductActions productId="1" addToCart={addToCart} />),;
+  const button = screen.getByRole('button', { name: /add to cart/i }),;
+  return { addToCart, button }
+=======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { vi } from 'vitest';
@@ -37,6 +48,7 @@ function setup() {
   render(<ProductActions productId='1' addToCart={addToCart} />);
   const button = screen.getByRole('button', { name: /add to cart/i });
   return { addToCart, button };
+>>>>>>> merged-prs-20250907-203621
 }
 
 
@@ -84,4 +96,36 @@ describe('ProductActions', () => {
 
     vi.useRealTimers();
   });
+<<<<<<< HEAD
 });
+
+
+import React from 'react';
+interface ProductActions.testProps {
+  // Add props here as needed
+}
+export default function ProductActions.test({ }: ProductActions.testProps) {
+  return (
+    <div>
+      <h1>ProductActions.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+}
+
+interface ProductActions.testProps {
+  // TODO: Implement
+}
+  // Add props here as needed;
+export default function ProductActions.test({ }: ProductActions.testProps) {
+  return (
+    <div>
+</div>
+      <h1>ProductActions.test</h1>
+      <p>This component is currently under development.</p>
+    </div>)
+  render(<ProductActions productId='1' addToCart={addToCart} />);
+=======
+});
+>>>>>>> merged-prs-20250907-203621

@@ -1,8 +1,34 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
 import {DisputeForm} from "./DisputeForm";
 import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 "
 import React, { useState } from "react","
@@ -22,6 +48,14 @@ import { Button } from "@/components/ui/button",
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { 
 
   Dialog;
@@ -29,6 +63,7 @@ import {
   DialogHeader;
   DialogTitle;
   DialogDescription;
+<<<<<<< HEAD
   DialogOverlay"
 } from "@/components/ui/dialog","
 import { DisputeForm } from "./DisputeForm",
@@ -57,10 +92,88 @@ import { ShieldAlert } from "lucide-react";
 interface RaiseDisputeButtonProps {
 
   projectId: string
-
+=======
+<<<<<<< HEAD
+  DialogOverlay
+} from "@/components/ui/dialog",
+import { DisputeForm } from "./DisputeForm";
+=======
+  DialogOverlay"
+} from "@/components/ui/dialog","
+import { DisputeForm } from "./DisputeForm",
+<<<<<<< HEAD
   milestoneId?: string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
+  className?: string;
+}
+>>>>>>> merged-prs-20250907-203621
+import { useNavigate } from "react-router-dom";
+import { ShieldAlert } from "lucide-react";
+interface RaiseDisputeButtonProps {
+
+  projectId: string
+=======
+
+import {Button} from "@/components/ui/button";
+import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
+import {DisputeForm} from "./DisputeForm";
+import {useNavigate} from "react-router-dom";
+import {ShieldAlert} from "lucide-react";
+interface RaiseDisputeButtonProps {;
+  projectId: string,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+  milestoneId?: string;
+
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  className?: string
+}
+export function RaiseDisputeButton({
+  projectId;
+
+  milestoneId
+  variant = "outline"
+  size;
+  className
+}: RaiseDisputeButtonProps) {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const navigate = useNavigate();
+import { useNavigate } from "react-router-dom",
+import { ShieldAlert } from "lucide-react",
+=======
+  className?: string;
+}
+<<<<<<< HEAD
+import { DisputeForm } from "./DisputeForm";
+=======
+
+<<<<<<< HEAD
+import { useNavigate } from "react-router-dom";
+import { ShieldAlert } from "lucide-react";
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+
+import { useNavigate } from "react-router-dom",
+import { ShieldAlert } from "lucide-react",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+interface RaiseDisputeButtonProps {
+
+  projectId: string
+
+<<<<<<< HEAD
+=======
+  milestoneId?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   className?: string;
 }
@@ -76,6 +189,16 @@ interface RaiseDisputeButtonProps {
   className?: string;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export function RaiseDisputeButton({ ;
+  projectId;
+export function RaiseDisputeButton({ 
+  projectId,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   milestoneId, 
 
   variant = "outline", 
@@ -89,9 +212,11 @@ interface RaiseDisputeButtonProps {
   },
   
 
+<<<<<<< HEAD
     setIsDialogOpen(false)
     navigate(`/dashboard/disputes/${disputeId}`)
   }
+>>>>>>> merged-prs-20250907-203621
 export function RaiseDisputeButton({ 
   projectId,
   milestoneId, 
@@ -106,11 +231,31 @@ export function RaiseDisputeButton({
   },
   
 =======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+  
+  const handleDisputeCreated = (disputeId: string) => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     setIsDialogOpen(false)
     navigate(`/dashboard/disputes/${disputeId}`)
   }
 
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+  },
+  
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <>
       <Button;
@@ -119,6 +264,10 @@ export function RaiseDisputeButton({
         size={size}
         className={className})
         onClick={() => setIsDialogOpen(true)}
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 
         <DialogContent className="sm:max-w-[550px]">
 
@@ -127,6 +276,46 @@ export function RaiseDisputeButton({
             <DialogTitle>Raise a Dispute
             <DialogDescription>
 
+          <DisputeForm
+          
+          <DisputeForm 
+          <DisputeForm 
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import {;
+
+    <>;
+        className={className} "
+import React, { useState } from "react",;""
+import { Button } from "@/components/ui/button",;"
+import { ;
+
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogDescription,;
+=======
+      >
+        <ShieldAlert className="h-4 w-4 mr-2" />
+        Raise Dispute
+      </Button>
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        <DialogContent className="sm:max-w-[550px]">
+
+          <DialogHeader>
+
+            <DialogTitle>Raise a Dispute
+            <DialogDescription>
+<<<<<<< HEAD
+
+=======
+              Please provide details about the issue you're experiencing with this project.
+            </DialogDescription>
+          </DialogHeader>
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <DisputeForm
           
           <DisputeForm 
@@ -165,18 +354,52 @@ export function RaiseDisputeButton({ ;
   milestoneId, ;"
   variant = "outline", ;"
   size,;
+<<<<<<< HEAD
+
+=======
+  className;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+export function RaiseDisputeButton(): any ({ ;
+  projectId;
+  milestoneId, ;"
+  variant = "outline", ;
+  size;
+  className ;
+
+;
+  projectId:string,;
+  milestoneId?:string,;"
+  variant?:"default" | "outline" | "secondary" | "destructive" | "ghost" | "link",;""
+  size?:"default" | "sm" | "lg" | "icon",;"
+  className?:string;
+export function RaiseDisputeButton({ ;
+  projectId,;
+  milestoneId, ;"
+  variant = "outline", ;"
+  size,;
 
 }: RaiseDisputeButtonProps) {;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleDisputeCreated = (disputeId: string) => {;
 
     navigate(`/dashboard/disputes/${disputeId}`);
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
+<<<<<<< HEAD
       <Button;
 
       >;
@@ -195,26 +418,210 @@ export function RaiseDisputeButton({ ;
         className={className} 
         <ShieldAlert className="h-4 w-4 mr-2" />;"
 
+=======
+      <Button
+        variant={variant} 
+        size={size} 
+        className={className} 
+<<<<<<< HEAD
+
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { ;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogDescription,;
+  DialogOverlay;
+} from "@/components/ui/dialog",;
+import { DisputeForm } from "./DisputeForm",;
+import { useNavigate } from "react-router-dom",;
+import { ShieldAlert } from "lucide-react",;
+;
+interface RaiseDisputeButtonProps {;
+  projectId:string,;
+  milestoneId?:string,;
+  variant?:"default" | "outline" | "secondary" | "destructive" | "ghost" | "link",;
+  size?:"default" | "sm" | "lg" | "icon",;
+  className?:string;
+}
+;
+export function RaiseDisputeButton({ ;
+  projectId,;
+  milestoneId, ;
+  variant = "outline", ;
+  size,;
+  className ;
+} RaiseDisputeButtonProps) {;
+  const [isDialogOpen, setIsDialogOpen] = useState(false),;
+  const navigate = useNavigate(),;
+  ;
+  const handleDisputeCreated = (disputeId:string) => {;
+    setIsDialogOpen(false),;
+    navigate(`/dashboard/disputes/${disputeId}`),;
+  },;
+  ;
+  return (;
+    <>;
+      <Button ;
+        variant={variant} ;
+        size={size} ;
+        className={className} ;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}: RaiseDisputeButtonProps) {;
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleDisputeCreated = (disputeId: string) => {;
+
+    navigate(`/dashboard/disputes/${disputeId}`);
+  };
+
+  return (
+    <>;
+      <Button;
+<<<<<<< HEAD
+
+      >;
+        <ShieldAlert className="h-4 w-4 mr-2" />;
+        Raise Dispute;
+      </Button>;      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+
+        <DialogContent className="sm:max-w-[550px]">;
+          <DialogHeader>;
+
+            <DialogDescription>;'
+
+        variant={variant} ;
+        size={size} ;
+        className={className} ;
+        className={className} 
+        <ShieldAlert className="h-4 w-4 mr-2" />;"
+
+=======
+        variant={variant} ;
+        size={size} ;
+        className={className} ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        onClick={() => setIsDialogOpen(true)}
+      >;
+        <ShieldAlert className="h-4 w-4 mr-2" />;
+        Raise Dispute;
+      </Button>;
+<<<<<<< HEAD
+      ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+        <DialogContent className="sm:max-w-[550px]">;
+          <DialogHeader>;
+            <DialogTitle>Raise a Dispute</DialogTitle>;
+<<<<<<< HEAD
+=======
+=======
+import React, { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay } from '@/components / ui / dialog';
+import { DisputeForm } from './DisputeForm';
+import { use_navigate } from './react-router-dom';
+import { ShieldAlert } from './lucide-react';
+interface RaiseDisputeButtonProps {
+  project_id: string,
+  milestone_id?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  class_name?: string;
+}
+export /**
+ * RaiseDisputeButton - Function description
+ */
+function RaiseDisputeButton() {
+  const [isDialogOpen, setIsDialogOpen] = useState (false);
+  const navigate = use_navigate ();
+;
+  const handleDisputeCreated = (dispute_id: string) =>: any {
+    setIsDialogOpen (false),
+    navigate (`/dashboard / disputes/${dispute_id}`);
+  }
+;
+  return (
+    <>;
+      <Button;
+        variant={variant}
+        size={size}
+        className={class_name}
+        on_click={() => setIsDialogOpen (true)}
+      >;
+        <ShieldAlert className="h - 4 w - 4 mr - 2" />;
+        Raise Dispute;
+      </Button>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
         <DialogContent className="sm:max-w-[550px]">;"
 
           <DialogHeader>;
 
+<<<<<<< HEAD
             <DialogTitle>Raise a Dispute;
             <DialogDescription>;
 
+=======
+<<<<<<< HEAD
+            <DialogTitle>Raise a Dispute;
+            <DialogDescription>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            <DialogDescription>;
+              Please provide details about the issue you're experiencing with this project.;
+            </DialogDescription>;
+          </DialogHeader>;
+<<<<<<< HEAD
+          <DisputeForm;
+=======
+
+
+          
+          <DisputeForm 
+          <DisputeForm 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+<<<<<<< HEAD
+          <DisputeForm;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           />;
         </DialogContent>;
       </Dialog>;
     </>;
   );
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+          <DisputeForm;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             project_id={project_id}
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}
@@ -224,14 +631,31 @@ export function RaiseDisputeButton({ ;
       </Dialog>;
     </>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           ;
           <DisputeForm ;
 
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+          ;
+          <DisputeForm ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     </>;
   );
@@ -259,7 +683,55 @@ return (<> <Button variant= {
 }> <ShieldAlert className="h-4 w-4 mr-2" /> Raise Dispute  <DialogHeader> <DialogTitle>Raise a Dispute <DialogDescription> Please provide details about the issue you're experiencing with this project.   <DisputeForm projectId= {
 
 }/>   </>) 
+<<<<<<< HEAD
+=======
           />
     </>
   )
 }
+=======
+          />;
+        </DialogContent>;
+      </Dialog>;
+    </>;
+  ),;}
+ import {
+  Dialog;
+DialogContent;
+DialogHeader;
+DialogTitle;
+DialogDescription;
+DialogOverlay interface RaiseDisputeButtonProps {
+  projectId: string;
+milestoneId?: string;
+return (<> <Button variant= {
+  variant 
+}size= {
+  size 
+}className= {
+  className 
+}onClick= {
+  () => setIsDialogOpen (true) 
+}> <ShieldAlert className="h-4 w-4 mr-2" /> Raise Dispute </Button> <DialogHeader> <DialogTitle>Raise a Dispute</DialogTitle> <DialogDescription> Please provide details about the issue you're experiencing with this project. </DialogDescription> </DialogHeader> <DisputeForm projectId= {
+  projectId 
+}milestoneId= {
+  milestoneId 
+}onDisputeCreated= {
+  handleDisputeCreated 
+}onCancel= {
+  () => setIsDialogOpen (false) 
+}/> </DialogContent> </Dialog> </>) 
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          />
+    </>
+  )
+<<<<<<< HEAD
+}
+=======
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

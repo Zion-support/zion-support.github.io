@@ -1,5 +1,31 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
+=======
+interface Notification {
+  id: string;
+  type: "success" | "error" | "warning" | "info";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
+import React from './react';
+;
+export interface Notification {
+export interface Notification {;
+import React from "react";
+
+export interface Notification {
+export interface Notification {;
+
+
+
+
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 interface Notification {
   id: string,
@@ -80,6 +106,14 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   id: string;
   type: "success" | "error" | "warning" | "info";
 
@@ -113,11 +147,30 @@ interface Notification {
 
 pr-12243
   type: 'success | error' | 'warning | info';
+<<<<<<< HEAD
   title?: string;
   "message": string;
   duration?: number;
 }
 
+=======
+>>>>>>> merged-prs-20250907-203621
+  title?: string;
+  message: string;
+  duration?: number;
+}
+<<<<<<< HEAD
+interface NotificationSystemProps {
+  notifications: Notification[];
+  onDismiss?: (id: string) => void;
+}
+
+          key;
+
+=======
+
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 pr-12243
 const getNotificationStyles = (type: Notification["type"]): string => {
@@ -133,6 +186,81 @@ interface NotificationSystemProps {
   notifications: Notification[],
   onDismiss?: (id: string) => void,
   className?: string;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+interface NotificationSystemProps {
+interface NotificationSystemProps {;
+  notifications: Notification[];
+  on_dismiss?: (id: string) => void;
+}
+
+const getNotificationStyles = (type: Notification["type"]): string => {;
+  const baseStyles = "border-l-4";
+  const typeStyles = {;
+    success: "bg-green-50 border-green-400 text-green-800",;
+    error: "bg-red-50 border-red-400 text-red-800",;
+    warning: "bg-yellow-50 border-yellow-400 text-yellow-800",;
+    info: "bg-blue-50 border-blue-400 text-blue-800",;
+<<<<<<< HEAD
+  };
+  return `${baseStyles} ${typeStyles[type]}`;
+};
+export default function NotificationSystem(): any ({;
+  notifications,;
+  onDismiss,;
+}: NotificationSystemProps) {;
+  if (notifications && notifications.length === 0) return null;
+  return (
+    <div className="fixed top-4 right-4 z-50 space-y-2">;
+      {notifications && notifications.map((notification) => (;
+        <div
+          key={notification && notification.id}
+          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification && notification.type)}`}>;
+          <div className="flex items-start justify-between">;
+            <div className="flex-1">;
+              {notification && notification.title && (;
+                <h4 className="font-medium mb-1">{notification && notification.title}</h4>;
+              )}
+              <p className="text-sm">{notification && notification.message}</p>;
+            </div>;
+            {onDismiss && (;
+              <button
+                onClick={() => onDismiss(notification && notification.id)}
+                className="ml-2 text-gray-400 hover:text-gray-600";
+              >;
+                ×;
+              </button>;
+            )}
+          </div>;
+        </div>;
+      ))}
+    </div>;
+  );
+}
+import React from 'react';
+interface Notification {
+  id: string;
+  type: 'success' | 'error' | 'warning' | 'info';
+  title?: string;
+  message: string;
+}
+interface NotificationSystemProps {
+  notifications: Notification[];
+  onDismiss?: (id: string) => void;
+  className?: string;
+}
+
+          key;
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
   const typeStyles = {
@@ -141,6 +269,12 @@ const getNotificationStyles = (type: Notification["type"]): string => {
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800"
     info: "bg-blue-50 border-blue-400 text-blue-800"
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return `${baseStyles} ${typeStyles[type]}`;
 }
 
@@ -149,7 +283,180 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
   onDismiss;
   className;
 }
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> merged-prs-20250907-203621
+  return `${baseStyles} ${typeStyles[type]}`;
+}
+export default function NotificationSystem({
+  notifications
+  onDismiss
+key={notification.id}
+<<<<<<< HEAD
+          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}>
+"
+          <div className=\"flex items-start justify-between\"    />;"
+            <div className=\"flex-1\"    />;"
+              {notification.title && (<h4 className=\"font-medium mb-1\"    />{notification.title}</h4>)}"
+              <p className=\"text-sm\"    />{notification.message}</p>
+            </div>
+            {onDismiss && (<button;}
+                onClick = {() =    /> onDismiss(notification.id)}
+import React, { createContext, useContext,;}
+  useState, useCallback, ReactNode } from 'react'
+import { AnimatePresence, motion  } from 'framer-motion'
+export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error';}
+
+type NotificationContextValue = {notify: (message: string, tone?: 'default' | 'success' | 'error') => void;}
+
+const NotificationContext = createContext<NotificationContextValue    />({ notify: () => {}
+})export function useToast()
+  return useContext(NotificationContext
+export function NotificationProvider() {const [toasts, setToasts] = useState<Toast[]    />([])const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => ;}"
+  const id = Math.random().toString(36).slice(2)setToasts((prev) => [...prev, { id, message, tone }])setTimeout(() => {setToasts((prev) => prev.filter((t) => t.id !== id))}, 3000)}, [])success: \"bg-green-50 border-green-400 text-green-800\",error: \"bg-red-50 border-red-400 text-red-800\",warning: \"bg-yellow-50 border-yellow-400 text-yellow-800\",info: \'bg-blue-50 border-blue-400 text-blue-800\';"
+    info: \'bg-blue-50 border-blue-400 text-blue-800\'
+  }return `${baseStyles} ${typeStyles[type]}`
+}import React from 'react'
+import React, { createContext, useContext, useState, ReactNode } from 'react'
+interface Notification  {id: string;}
+import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react'
+  title?: string
+  message: string;}
+  duration?: number;}
+
+interface NotificationSystemProps {
+  notifications: Notification[]
+  onDismiss?: (id: string) => void
+  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'
+const NotificationSystem: React.FC<NotificationSystemProps    /> = ({ notifications,
+  onDismiss}
+  position = 'top-right'}
+   }) => {
+
+  const [visibleNotifications, setVisibleNotifications] = useState<Notification[]    />([])
+const handleDismiss = useCallback((id: string) => {
+    setVisibleNotifications(prev => prev.filter(n => n.id !== id));}
+    onDismiss?.(id);}
+  }, [onDismiss])
+  useEffect(() => {
+
+    setVisibleNotifications(notifications);}
+  }, [notifications])
+  useEffect(() => {
+
+    const timers: ReturnType<typeof setTimeout    />[] = []
+    notifications.forEach(notification = > {
+  if($2) {
+
+  const timer = setTimeout(() => {}
+          handleDismiss(notification.id);}
+        }, notification.duration)
+        timers.push(timer)
+    })
+    return () => {}
+      timers.forEach(timer => clearTimeout(timer))}
+=======
+          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
+        >
+          <div className="flex items-start justify-between">
+            <div className="flex-1">
+              {notification.title && (
+                <h4 className="font-medium mb-1">{notification.title}</h4>)}
+              <p className="text-sm">{notification.message}</p>
+            </div>
+            {onDismiss && (
+              <button
+                onClick={() => onDismiss(notification.id)}
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' }
+type NotificationContextValue = {
+  notify: (message: string, tone?: 'default' | 'success' | 'error') => void
+}
+const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} })
+export function useToast() {
+  return useContext(NotificationContext)
+}
+export function NotificationProvider({ children }: { children: ReactNode }) {
+  const [toasts, setToasts] = useState<Toast[]>([])
+  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
+    const id = Math.random().toString(36).slice(2)
+    setToasts((prev) => [...prev, { id, message, tone }])
+    setTimeout(() => {
+      setToasts((prev) => prev.filter((t) => t.id !== id))
+    }, 3000)
+  }, [])
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    success: "bg-green-50 border-green-400 text-green-800",
+    error: "bg-red-50 border-red-400 text-red-800",
+    warning: "bg-yellow-50 border-yellow-400 text-yellow-800",
+    info: "bg-blue-50 border-blue-400 text-blue-800",
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  };
+  return `${baseStyles} ${typeStyles[type]}`;
+};
+
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React from 'react';
+
+interface Notification {
+  id: string;
+  type: 'success' | 'error' | 'warning' | 'info';
+  title?: string;
+  message: string;
+<<<<<<< HEAD
+export default function NotificationSystem({
+  notifications,
+  onDismiss,
+key={notification.id},
+          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`},
+
+        >,
+          <div className="flex items-start justify-between">,
+            <div className="flex-1">,
+              {notification.title && (,
+                <h4 className="font-medium mb-1">{notification.title}</h4>)},
+              <p className="text-sm">{notification.message}</p>,
+            </div>,
+            {onDismiss && (,
+              <button,
+                onClick={() => onDismiss(notification.id)},;
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',;
+import { AnimatePresence, motion } from 'framer-motion',;
+;
+export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },
+
+type NotificationContextValue = {
+  notify: (message: string, tone?: 'default' | 'success' | 'error') => void
+},
+
+const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} }),
+
+export function useToast() {
+  return useContext(NotificationContext)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+
+export function NotificationProvider({ children }: { children: ReactNode }) {
+  const [toasts, setToasts] = useState<Toast[]>([]),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
   notifications,
   onDismiss,
@@ -293,6 +600,10 @@ pr-12243
         return 'top-4 right-4';
     }
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         >;
           <div className="flex items-start justify-between">;
             <div className="flex-1">;
@@ -305,6 +616,17 @@ pr-12243
                 onClick={() => onDismiss(notification.id)};
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default function NotificationSystem({
+  notifications,
+  onDismiss,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 type NotificationContextValue = {
@@ -328,8 +650,30 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
     }, 3000)
   }, []);
 
+<<<<<<< HEAD
   return (
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
+=======
+<<<<<<< HEAD
+  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
+    const id = Math.random().toString(36).slice(2),
+    setToasts((prev) => [...prev, { id, message, tone }]),
+    setTimeout(() => {
+      setToasts((prev) => prev.filter((t) => t.id !== id))
+    }, 3000)
+  }, []),
+
+}: NotificationSystemProps) {;
+}: NotificationSystemProps) {
+  if (notifications.length === 0) return null;
+  return (
+    <div className="fixed top-4 right-4 z-50 space-y-2">
+=======
+  return (
+<<<<<<< HEAD
+    <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {notifications.map((notification) => (
         <div
           key={notification.id}
@@ -358,6 +702,10 @@ import { AnimatePresence, motion } from 'framer-motion';
 export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' }
 type NotificationContextValue = {
   notify: (message: string, tone?: 'default' | 'success' | 'error') => void
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} })
 export function useToast() {
@@ -372,6 +720,46 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       setToasts((prev) => prev.filter((t) => t.id !== id))
     }, 3000)
   }, [])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}: NotificationSystemProps) {
+  if (notifications.length === 0) return null;
+
+  return (
+    <div className="fixed top-4 right-4 z-50 space-y-2">
+      {notifications.map((notification) => (
+        <NotificationItem
+          key={notification.id}
+className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
+        >
+          <div className="flex items-start justify-between">
+            <div className="flex-1">
+
+              <div className="flex items-start space-x-2">
+                {getIcon(notification.type)}
+                <div className="flex-1">
+                  {notification.title && (
+                    <h4 className="font-medium mb-1">{notification.title}</h4>
+                  )}
+                  <p className="text-sm">{notification.message}</p>
+        <div
+          key={notification.id}
+          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
+        >
+          <div className="flex items-start justify-between">
+            <div className="flex-1">
+        <NotificationItem
+          key={notification.id}
+          notification={notification}
+          onRemove={removeNotification}
+        />
+
+const NotificationContainer: React.FC = () => {}
+ ;}
+  const { notifications, removeNotification } = useNotifications()
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     success: bg-green-50 border-green-400 text-green-800",
     error: "bg-red-50 border-red-400 text-red-800,
     warning: bg-yellow-50 border-yellow-400 text-yellow-800",
@@ -636,6 +1024,10 @@ const NotificationContainer: React.FC = () => {}
   const { notifications, removeNotification } = useNotifications();
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return ("
     <div className=\"fixed top-4 right-4 z-50 space-y-2\"    />
       {notifications.map((notification) => (}
@@ -665,6 +1057,14 @@ onClick={() =    /> handleDismiss(notification.id)}"
             )}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      ))}
+    </div>
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ))}
     </div>
   );
@@ -703,6 +1103,10 @@ export const useNotifications = () => {
   }
   return context;
 };
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )
 }
               {notification.title && (
@@ -718,6 +1122,30 @@ export const useNotifications = () => {
             )}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+}
+
+
+
+>>>>>>> merged-prs-20250907-203621
+      ))}
+    </div>;
+  );
+}
+<<<<<<< HEAD
+=======
+}
+
+}
+}
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ))}
     </div>;
   );
@@ -820,13 +1248,33 @@ export const useNotifications = (
     throw new Error('useNotifications must be used within a NotificationProvider');) => {
   return $3;}
 }
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   return context;
 };
 
 <<<<<<< HEAD
 "
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

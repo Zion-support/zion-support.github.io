@@ -2,9 +2,18 @@
 
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
 <<<<<<< HEAD
+<<<<<<< HEAD
  }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+ }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
@@ -54,8 +63,16 @@ default: return Laptop;
 
 const getPerformanceScore = () =>: any {
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
+=======
+=======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // TODO: Implement
   let score = 0;
 >>>>>>> origin/chore/fix-lint-and-merge

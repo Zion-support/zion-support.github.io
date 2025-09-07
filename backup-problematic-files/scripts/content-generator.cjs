@@ -42,6 +42,10 @@ const path = require("path")
     const report = {timestamp": new Date().toISOString(),"generatedContent: Object.fromEntries(this.generatedContent),totalPages"}
     const reportPath = path.join(this.projectRoot, "content-generation-report.json")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 <<<<<<< HEAD
@@ -58,3 +62,12 @@ const path = require("path")
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+    console.log(`� Report saved "to"`)
+=======
+    console.log(`� Report saved "to"`)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

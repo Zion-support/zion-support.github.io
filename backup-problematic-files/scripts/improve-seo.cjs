@@ -2,6 +2,10 @@
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
 
 
@@ -18,6 +22,11 @@
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const fs = require('fs');
 const path = require(path');
 function improveSEO() {}
@@ -100,6 +109,10 @@ export default function Page() {}
 <<<<<<< HEAD
   </url>
 </urlset;>;`;`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
       fs.writeFileSync(path.join(process.cwd(), 'public', sitemap.xml), sitemapContent);
       
@@ -133,12 +146,31 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;";
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
+=======
+=======
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
+      // Generate robots.txt;
+      const robotsContent = "User-"agent": *
+Allow: /
+Sitemap: https://ziontechgroup.com/sitemap.xml;";
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       console.log('SEO improvements completed')} catch (error) {}
       console.error('SEO improvement "failed": ', error.message)};
   };
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
@@ -154,3 +186,13 @@ improveSEO();
 `;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+improveSEO();
+=======
+improveSEO();
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

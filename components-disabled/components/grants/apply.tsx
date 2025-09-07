@@ -13,6 +13,18 @@ const categories: GrantCategory[] = [
 export default function ApplyGrantPage() {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState  } from 'react';
+  'Ecosystem Tools
+  'Talent Development
+  'Regional Expansion
+  'Research Grants]
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+export default function ApplyGrantPage() {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 import { useState  } from 'react';'
@@ -39,13 +51,24 @@ import { useState  } from 'react';
   'Research Grants]
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 export default function ApplyGrantPage() {
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
   'Talent Development',;
   'Regional Expansion',;
   'Research Grants',;']
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState();
@@ -60,6 +83,11 @@ const categories: GrantCategory[] = [;
   const [sector, setSector] = useState<string>();
   const [error, setError] = useState<string | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import EnhancedLayout from '../../components / layout / EnhancedLayout';'
 import {use_router} from 'next / router';'
@@ -82,12 +110,23 @@ function ApplyGrantPage() {
   const [proposal_summary, setProposalSummary] = useState ('');'
   const [timeline, set_timeline] = useState ('');'
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [program, set_program] = useState<'grant' | 'incubator'>('grant');
   const [project_name, setProjectName] = useState ();
   const [team_info, setTeamInfo] = useState ();
   const [proposal_summary, setProposalSummary] = useState ();
   const [timeline, set_timeline] = useState ();
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [budget_amount, setBudgetAmount] = useState < number>(0);
   const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(')
     'USDC');  const [supporting_links, setSupportingLinks] = useState < string>();  const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
@@ -184,6 +223,11 @@ function ApplyGrantPage() {
 
           submit})});
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (!resp && resp.ok) throw new Error(data?.error || 'Failed');'
       router && router.push(`/grants/${data && data.id}`);`    } catch ("e": any) {;
       }
@@ -192,6 +236,10 @@ function ApplyGrantPage() {
       }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       setLoading(false);
 
           <textarea;
@@ -231,6 +279,11 @@ function ApplyGrantPage() {
 </label>"
             <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const _save = async ("_submit": boolean) => {
     }
@@ -326,6 +379,10 @@ return (;
             <select,
 className='mt-1 w-full border rounded p-2''
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 </select>
 "
       <h1 className='text-2xl font-semibold mb-4'>
@@ -334,7 +391,14 @@ className='mt-1 w-full border rounded p-2''
         <div className='grid md:grid-cols-2 gap-3'>
           <label className='text-sm'>
             <select;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               value={program}
               onChange={e => setProgram(e.target.value as any)}
               <option value='grant'>Grant</option>

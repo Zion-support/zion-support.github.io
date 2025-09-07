@@ -7,6 +7,10 @@
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
@@ -19,6 +23,12 @@ const fs = require(fs')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const pm2 = require('pm2')
 =======
 
@@ -128,6 +138,10 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
@@ -140,3 +154,12 @@ const { execSync } = require('child_process')
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+      this.log(` Fatal "error"`)
+=======
+      this.log(` Fatal "error"`)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

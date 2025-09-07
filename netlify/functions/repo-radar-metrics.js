@@ -1,14 +1,59 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const path = require($2);
+const { spawnSync } = require($2);
+function runNode(relPath, args = []) {
+  const abs = path.resolve($2);
+  const res = spawnSync($2);
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}
+
+exports.config = $2;
+exports.handler = $2;
+  const step = (name, fn) => {
+    logs.push($2);
+    const { status, stdout, stderr } = fn($2);
+    if (stdout) logs.push($2);
+    if (stderr) logs.push($2);
+    logs.push($2);
+    return status
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const abs = path && path.resolve(__dirname, '..', '..', relPath);
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function runNode(relPath, args = []) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ursor/expand-services-advertise-and-build-project-4b36
 
     status: res && res.status || 0,
@@ -25,18 +70,57 @@ ursor/expand-services-advertise-and-build-project-4b36
 
     stderr: res && res.stderr || '',
   };'
+<<<<<<< HEAD
 exports && exports.config = { schedule: '*/30 * * * *' };
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    status: res && res.status || 0,
+    stdout: res && res.stdout || '',
+    stderr: res && res.stderr || '',
+  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+exports && exports.config = { schedule: '*/30 * * * *' };
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> origin/chore/fix-lint-and-merge
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+exports && exports.handler = async () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const logs = [];
   const step = (name, fn) => {}
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
 
 ursor/expand-services-advertise-and-build-project-4b36
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+ursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    if (stdout) logs && logs.push(stdout);
+    if (stderr) logs && logs.push(stderr);
+    logs && logs.push(`exit=${status}`);
+    return status;
+  };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD
 const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8',;'
@@ -48,11 +132,16 @@ const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'ut
 }, "body": logs && logs.join('\n') },'
 },ursor/expand-services-advertise-and-build-project-4b36;
 
+<<<<<<< HEAD
 const path = require ('path';'
   const { spawn_sync }  = require ('child_process')/**;'
  * run_node - Function description;
  */;
 function run_node() {const abs = path.resolve (__dirname, '..', '..', rel_path;'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    return status;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
   const res = spawn_sync ('node', [abs, ...args], {"stdio": 'pipe',"encoding": 'utf8';'
     }
@@ -111,6 +200,7 @@ const { status, stdout, stderr } = fn();
   step('repo:radar-metrics', () =>'
     runNode('automation/repo-radar-metrics && metrics.cjs')
   );
+<<<<<<< HEAD
 
 ursor/expand-services-advertise-and-build-project-4b36
 
@@ -118,6 +208,21 @@ ursor/expand-services-advertise-and-build-project-4b36
 
   return {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+ursor/expand-services-advertise-and-build-project-4b36
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
+  return {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
     "statusCode": 200,
     "headers": { 'content-type': 'text/plain','
@@ -134,7 +239,39 @@ const abs = path.resolve(__dirname, '....', relPath),;'
 }
 
 exports && exports.config = { "schedule": '*/30 * * * *','
+=======
+    statusCode: 200,
+    headers: { 'content-type': 'text/plain' },
+    body: logs && logs.join('\n'),
+  };
+};function runNode(relPath, args = []) {
+  const abs = path && path.resolve(__dirname, '....', relPath),
+<<<<<<< HEAD
+  const abs = path.resolve(__dirname, '....', relPath),
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+  return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
+}
+exports && exports.config = { schedule: '*/30 * * * *' },
+exports && exports.handler = async () => {
+  const logs = [],
+  const step = (name, fn) => {
+    logs && logs.push(`\n=== ${name} ===`),
+    const { status, stdout, stderr } = fn(),
+    if (stdout) logs && logs.push(stdout),
+    if (stderr) logs && logs.push(stderr),
+    logs && logs.push(`exit=${status}`),
+    return status
+  },
+  step('repo:radar-metrics', () => runNode('automation/repo-radar-metrics && metrics.cjs')),
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 },
+<<<<<<< HEAD
+=======
 
 exports && exports.config = { "schedule": '*/30 * * * *' },'
 exports && exports.handler = async () => {
@@ -145,10 +282,17 @@ const logs = [],;
     if (stdout) logs && logs.push(stdout),
     if (stderr) logs && logs.push(stderr),
     logs && logs.push(`exit=${status}`),`return status;
+>>>>>>> merged-prs-20250907-203621
   },
-  step('"repo":radar-metrics', () => runNode('automation/repo-radar-metrics && metrics.cjs')),'
-  step('"git":sync', () => runNode('automation/advanced-git-sync && sync.cjs')),'
 
+<<<<<<< HEAD
+  step('repo:radar-metrics', () => runNode('automation/repo-radar-metrics.cjs')),
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
+
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
+},
+=======
+<<<<<<< HEAD
  ;
 return { "statusCode": 200, "headers": { 'content-type': 'text/plain',;'
 }, "body": logs && logs.join('\n') },'
@@ -158,6 +302,12 @@ return { "statusCode": 200, "headers": { 'content-type': 'text/plain',;'
   return { "statusCode": 200, "headers": { 'content-type': 'text/plain' }, "body": logs && logs.join('\n') }'
 },
 const { spawn_sync } = require ('child_process');'
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const path = require ('path');
+const { spawn_sync } = require ('child_process');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 /**
  * run_node - Function description
@@ -262,6 +412,10 @@ exports && exports.handler = async () => {}
     logs && logs.push(`exit=${status}`),
     return status;
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 '
   step('repo:radar-metrics', () => runNode('automation/repo-radar-metrics && metrics.cjs')),'
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
@@ -341,4 +495,15 @@ exports.handler = async () => {}
 
 const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
+<<<<<<< HEAD
 function runNode(relPath, args = []) {
+=======
+function runNode(relPath, args = []) {
+=======
+  step ('repo:radar - metrics', () => run_node ('automation / repo - radar - metrics.cjs')),
+  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
+  return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

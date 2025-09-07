@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 
@@ -17,6 +24,10 @@ import { Card;
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Badge  } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
@@ -24,9 +35,18 @@ import { Button } from @/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from react'
 =======
+=======
+=======
+<<<<<<< HEAD
+
+import React, { useState } from react'
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from 'react'
 >>>>>>> origin/chore/fix-lint-and-merge
 import {
@@ -53,6 +73,11 @@ interface PerformanceMetrics {
   healthStatus: 'healthy | warning' | 'error
 interface Improvement {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   CheckCircle;
   AlertCircle;
   TrendingUp;
@@ -82,6 +107,10 @@ interface PerformanceMetrics  {buildSize: string;
   title: string;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   id: string;
   title: string,
@@ -107,6 +136,11 @@ import { Button } from @/components / ui / button';
 interface PerformanceMetrics {
   build_size: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   category: performance' | 'security | ux' | 'build;
 const PerformanceDashboard: React.FC = () => {const [metrics] = useState<PerformanceMetrics>({buildSize: 959 MB';
     pageCount: 166;
@@ -203,6 +237,10 @@ interface PerformanceMetrics  {build_size: string;
 interface Improvement  {id: string;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   page_count: number;
   load_time: number;
   health_status: healthy' | 'warning | error';
@@ -214,6 +252,11 @@ interface Improvement {
   impact: high' | 'medium | low';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const PerformanceDashboard: React.FC = () => {
   const [metrics] = useState<PerformanceMetrics>({
     buildSize: '959 MB
@@ -622,6 +665,10 @@ interface Improvement {
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
   },
 
@@ -726,6 +773,15 @@ interface Improvement {
 
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm font-medium text-gray-900">
+                      {improvement.title}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <div className=flex-1 min-w-0">
                   <div className="flex items-center justify-between>
                     <h3 className=text-sm font-medium text-gray-900">
@@ -758,12 +814,23 @@ interface Improvement {
                   <div className="flex items-center justify-between">
                     <h3 className="text-sm font-medium text-gray-900">
                       {improvement.title}
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </h3>
                     <div className="flex items-center space-x-2">
                       <Badge className={getImpactColor(improvement.impact)}>
                         {improvement.impact} impact
                       </Badge>
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
@@ -780,6 +847,11 @@ interface Improvement {
       default: return <CheckCircle className="h-4 w-4 />;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </div>;
                   </div>;
                   <p className=text-sm text-gray-600 mt-1">;
@@ -872,6 +944,10 @@ interface Improvement {
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             </div>;
 
@@ -881,6 +957,13 @@ interface Improvement {
 
       {/* Completed Improvements */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <Card>;
+        <CardHeader>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <span className='text - sm font - semibold text - green - 600>;Healthy;
               </span>;</div>;
           </CardContent>;
@@ -901,6 +984,10 @@ interface Improvement {
 =======
       <Card>;
         <CardHeader>;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <CardTitle className="flex items-center space-x-2">;
             <CheckCircle className="h-5 w-5 text-green-500" />;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -956,6 +1043,14 @@ interface Improvement {
 
 export default PerformanceDashboard, 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <div className="flex space-x-4">;
+        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">;
+          <Shield className="h-4 w-4 mr-2" />;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className="flex space-x-4>;
                     </div>;
                   </div>;
@@ -977,6 +1072,10 @@ export default PerformanceDashboard,
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">;
           <Shield className="h-4 w-4 mr-2" />;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           Bundle Analysis;
         </Button>;
@@ -984,6 +1083,11 @@ export default PerformanceDashboard,
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 };
 }
 
@@ -991,11 +1095,20 @@ export default PerformanceDashboard;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <div className='space - y-4>;
             {completed_improvements.map (improvement => (
               <div;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )variant=outline';
         >;
           <TrendingUp className='h-4 w-4 mr-2 />;export default PerformanceDashboard;
@@ -1014,6 +1127,10 @@ export default PerformanceDashboard,export default PerformanceDashboard;
             {completed_improvements.map (improvement => (<div;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 key={improvement.id}
                 className='flex items - start space - x-3 p - 3 border rounded - lg;
               >;

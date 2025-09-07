@@ -1,17 +1,54 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
 const { execSync, spawn } = require("child_process");
     this.logDir = path.join(this.projectRoot, "logs")
     this.reportsDir = path.join(this.projectRoot, "reports")
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
+
+#!/usr/bin/env node;
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/usr/bin/env node;
+>>>>>>> merged-prs-20250907-203621
+const fs = require("child_process")
+const path = require("child_process")
+const { execSync, spawn } = require("child_process")
+    this.logDir = path.join(this.projectRoot, "logs")
+    this.reportsDir = path.join(this.projectRoot, "reports")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "timestamp"
       "overallStatus": "pending"
         fs.mkdirSync(dir, { "recursive"})
   log(message, level = "INFO")
-const logFile = path.join(this.logDir, "build-automation.log");
+    const logFile = path.join(this.logDir, "build-automation.log")
     fs.appendFileSync(logFile, logMessage + "\n")
     this.log(`Starting "step"`)
-const result = execSync(command, {"cwd": this.projectRoot,"encoding": "utf8","stdio": options.silent ? "pipe" : "inherit"});
+      const result = execSync(command, {"cwd": this.projectRoot,"encoding": "utf8","stdio": options.silent ? "pipe" : "inherit"})
       this.buildResults.steps.push({name,"status": "success"})
         "output": options.silent ? result : "See console output"
       this.log(`Completed "step"`)
@@ -51,12 +88,12 @@ const result = execSync(command, {"cwd": this.projectRoot,"encoding": "utf8","st
         "Run tests"
         "npm test -- --watchAll=false --coverage"
         { "continueOnError"}
-const coverageFile = path.join(this.projectRoot, "coverage", "coverage-summary.json");
-const coverage = JSON.parse(fs.readFileSync(coverageFile, "utf8");
+      const coverageFile = path.join(this.projectRoot, "coverage", "coverage-summary.json")
+        const coverage = JSON.parse(fs.readFileSync(coverageFile, "utf8")
       this.buildResults.warnings.push({"type": "testing","message": "Test failures or issues found"})
     this.log("Running build...")
       await this.runStep("Build application", "npm run build")
-const buildDir = path.join(this.projectRoot, ".next");
+      const buildDir = path.join(this.projectRoot, ".next")
       this.log(`Build "failed": ${error.message}`, "ERROR"`)
     this.log("Running security audit...")
         "Security audit"
@@ -65,17 +102,34 @@ const buildDir = path.join(this.projectRoot, ".next");
       this.buildResults.warnings.push({"type": "security","message": "Security vulnerabilities found"})
     this.log("Generating build report...")
       this.buildResults.overallStatus = "failed"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.buildResults.overallStatus = "warning"
       this.buildResults.overallStatus = "success"
     this.buildResults.summary = {"totalSteps": this.buildResults.steps.length,"successfulSteps": this.buildResults.steps.filter(s => s.status === "success").length,"failedSteps": this.buildResults.steps.filter(s => s.status === "failed"})
       "errorCount"
-const latestReportFile = path.join(this.reportsDir, "latest-build-report.json");
+    const latestReportFile = path.join(this.reportsDir, "latest-build-report.json")
     this.log(`Build report saved "to"`)
     this.log(" Starting Comprehensive Build Automation...")
       // Step "1"
-throw new Error("Dependency check failed");
+        throw new Error("Dependency check failed")
       // Step "2"
-throw new Error("Dependency installation failed");
+        throw new Error("Dependency installation failed")
       // Step "3"
       this.log("Running automated fixes...")
           "Auto-fix issues"
@@ -94,10 +148,56 @@ throw new Error("Dependency installation failed");
       this.buildResults.overallStatus = "failed"
       console.log("\n Build automation completed")
       process.exit(results.overallStatus === "success")
+<<<<<<< HEAD
 
+      console.error("\n Build automation "failed": ")
+      console.error("\n Build automation "failed": ")
       console.error("\n Build automation "failed": ")
 
 
 
+=======
+<<<<<<< HEAD
+
+      console.error("\n Build automation "failed": ")
 
 
+<<<<<<< HEAD
+
+
+
+=======
+      console.error("\n Build automation failed: ")
+
+      console.error("\n Build automation failed: ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      console.error("\n Build automation failed: ")
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      console.error("\n Build automation "failed": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      console.error("\n Build automation "failed": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      console.error("\n Build automation "failed": ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

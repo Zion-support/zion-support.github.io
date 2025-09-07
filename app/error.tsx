@@ -2,6 +2,7 @@
 
 import React from 'react'
 
+<<<<<<< HEAD
 interface ErrorProps {
   error: Error & { digest?: string };
   reset: () => void;
@@ -27,3 +28,13 @@ export default function Error({ error, reset }: ErrorProps) {
     </div>
   );
 }
+=======
+export default function Error({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+	return (
+		<main className="p-8">
+			<h1>Something went wrong</h1>
+			<button onClick={() => reset()}>Try again</button>
+		</main>
+	)
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

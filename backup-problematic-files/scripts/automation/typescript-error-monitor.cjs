@@ -896,6 +896,10 @@ if (require.main === module) {
   monitor.run().catch(error => {
     console.error('TypeScript error monitor failed": ', error);
     process.exit(1)})}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
   monitor.run().catch(error => {)
 
@@ -903,3 +907,14 @@ if (require.main === module) {
 module.exports = TypeScriptErrorMonitor;
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+=======
+=======
+;
+<<<<<<< HEAD
+module.exports = TypeScriptErrorMonitor
+=======
+module.exports = TypeScriptErrorMonitor
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -149,6 +149,11 @@ import {
   CardFooter,
   CardHeader,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   CardTitle} from @/components/ui/card';
 import { Badge } from '@/components/ui/badge;
 export /**;
@@ -177,6 +182,10 @@ import { useCurrency  } from @/hooks/useCurrency';
 import { logErrorToProduction  } from '@/utils/productionLogger;
 interface Transaction  {id: string;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   CardTitle,;
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -198,7 +207,14 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface Transaction {
   id: string;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   user_id: string;
   provider_id: string;
   service_id: string;

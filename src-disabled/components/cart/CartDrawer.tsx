@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 :src_backup/components/cart/CartDrawer.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 }
 import { ShoppingCart } from 'lucide-react';import { useAuth } from '@/hooks/useAuth';import { ShoppingCart } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
@@ -16,7 +25,13 @@ import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 export function CartDrawer() {
   const items = null;
+<<<<<<< HEAD
 :src_backup/components/cart/CartDrawer.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
     if (!isAuthenticated) {
       e.preventDefault()
@@ -44,42 +59,73 @@ export function CartDrawer() {
       e.preventDefault();
       setLoginOpen(true)
     }
+<<<<<<< HEAD
   };
+=======
+  }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   }
 import { ShoppingCart } from 'lucide-react';import { useAuth } from '@/hooks/useAuth';import { ShoppingCart } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 
-
-
-
-
-origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Link href="/cart" aria-label="Cart" className="relative p-1" onClick={handleClick}>
         <ShoppingCart className="h-5 w-5 text-foreground hover:text-primary" />
         {count > 0 && (
 
+<<<<<<< HEAD
 :src_backup/components/cart/CartDrawer.tsx
 
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
           <span className='absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center'>
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center>
+          <span className='absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center>
+=======
+>>>>>>> merged-prs-20250907-203621
+          <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
+          <span className='absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center'>
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
             {count}
           </span>;
         )}
 
+<<<<<<< HEAD
 :src_backup/components/cart/CartDrawer.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       </Link>;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
 });
 }
+<<<<<<< HEAD
 :src_backup/components/cart/CartDrawer.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   );
 }
@@ -109,15 +155,31 @@ export function CartDrawer() {const items  = null;if (!isAuthenticated) {e.preve
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   )})}<Link;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <Link ;
         href='/cart';
         aria - label='Cart';
         className='relative p - 1';
         on_click={handle_click} />;
         <ShoppingCart className='h - 5 w - 5 text - foreground hover:text - primary' />;
+<<<<<<< HEAD
 :src_backup/components/cart/CartDrawer.tsx
         {count > 0 && (<span className='absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}
           <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        {count > 0 && (<span className='absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}
+          <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;
+        {count > 0 && (<span className=absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}
+          <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {count > 0 && (
           <span className='absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}',
           <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;,
@@ -126,7 +188,10 @@ export function CartDrawer() {const items  = null;if (!isAuthenticated) {e.preve
           </span>)}
       </Link>;
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+<<<<<<< HEAD
 :src_backup/components/cart/CartDrawer.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </>);
 }
 
@@ -136,7 +201,14 @@ export function CartDrawer() {const items  = null;if (!isAuthenticated) {e.preve
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
+<<<<<<< HEAD
 :src_backup/components/cart/CartDrawer.tsx
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     </>)}</Link>;
@@ -144,3 +216,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   )}
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

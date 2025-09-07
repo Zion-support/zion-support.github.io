@@ -1,14 +1,44 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import * as React from 'react';
 import * as SeparatorPrimitive from '@radix-ui/react-separator';
 import {cn} from '@/lib/utils';
+=======
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
+import * as React from 'react';
+import * as SeparatorPrimitive from '@radix-ui/react-separator';
+import {cn} from '@/lib/utils';
+<<<<<<< HEAD
+
+=======
+=======
+<<<<<<< HEAD
+import * as React from 'react';
+import * as SeparatorPrimitive from '@radix-ui/react-separator';
+import {cn} from '@/lib/utils';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { cn } from "@/lib/utils"
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 "
 
@@ -47,6 +77,10 @@ const Separator = React.forwardRef<
 </typeof>
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
 ></typeof>(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     ref
   ) => (
@@ -58,6 +92,7 @@ const Separator = React.forwardRef<
       className={cn(        className
 =======
     <SeparatorPrimitive.Root
+<<<<<<< HEAD
 
 "
     { className, orientation = "horizontal", decorative = true, ...props },
@@ -204,6 +239,210 @@ const Separator = React.forward_ref<;
   (
 
 =======
+
+"
+    { className, orientation = "horizontal", decorative = true, ...props },
+
+    ref
+
+  ) => (
+    <SeparatorPrimitive.Root
+
+    <SeparatorPrimitive.Root;
+const Separator = React && React.forwardRef<;
+  React && React.ElementRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>,;
+
+  React && React.ComponentPropsWithoutRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>;
+></typeof>(;
+=======
+  (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+    { className, orientation = "horizontal", decorative = true, ...props },
+
+
+    ref
+  ) => (
+    <SeparatorPrimitive.Root
+
+import * as React from "react";
+import * as SeparatorPrimitive from "@radix-ui/react-separator";
+;
+import { cn } from "@/lib/utils";
+;
+const Separator = React.forwardRef<;
+  React.ElementRef<typeof SeparatorPrimitive.Root>,;
+  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>;
+>(;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  (;
+    { className, orientation = "horizontal", decorative = true, ...props },;
+    ref;
+  ) => (;
+<<<<<<< HEAD
+    <SeparatorPrimitive.Root;
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+=======
+    <SeparatorPrimitive&& SeparatorPrimitive.Root
+    <SeparatorPrimitive&& SeparatorPrimitive.Root;"
+import React from 'react';
+pr-12325
+import * as React from 'react';
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+      className={cn(
+import * as React from "react";
+import * as SeparatorPrimitive from "@radix-ui/react-separator";
+;
+import { cn } from "@/lib/utils";
+;
+const Separator = React.forwardRef<;
+  React.ElementRef<typeof SeparatorPrimitive.Root>,;
+  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>;
+>(;
+  (;
+    { className, orientation = "horizontal", decorative = true, ...props },;
+    ref;
+  ) => (;
+    <SeparatorPrimitive.Root;
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+
+        "shrink-0 bg-border",
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+
+        className
+className
+      className={cn(        className
+      className={cn(;
+        "shrink-0 bg-border",;
+        orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
+        className;
+
+;
+    ref;
+  ) => (
+    <SeparatorPrimitive.Root;
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+      className={cn(
+
+<<<<<<< HEAD
+"
+        "shrink-0 bg-border","
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+        "shrink-0 bg-border",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+
+        className;
+      className={cn(;"
+        "shrink-0 bg-border",;"
+        orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
+        className;
+
+<<<<<<< HEAD
+=======
+        className
+      className={cn(;
+        "shrink-0 bg-border",;
+        orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
+        className;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+      )}
+      {...props}
+    />;
+  );
+);
+<<<<<<< HEAD
+export { Separator }
+=======
+
+Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
+
+export { Separator }
+;
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
+export { Separator };
+<<<<<<< HEAD
+=======
+import * as SeparatorPrimitive from '@radix - ui / react - separator';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+;
+
+Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
+
+export { Separator };
+;
+
+export { Separator };'
+import * as SeparatorPrimitive from '@radix - ui / react - separator';
+;'
+import {cn} from '@/lib / utils';
+;
+
+import {cn} from '@/lib/utils';''
+import * as React from "react"""
+import * as SeparatorPrimitive from "@radix-ui/react-separator"""
+import * as React from "react"""
+import * as SeparatorPrimitive from "@radix-ui/react-separator"""
+import { cn } from "@/lib/utils""
+const Separator = React.forwardRef<
+  React.ElementRef<typeof SeparatorPrimitive.Root>
+</typeof>
+  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
+</typeof>
+></typeof>(
+    <SeparatorPrimitive.Root;
+const Separator = React && React.forwardRef<;
+  React && React.ElementRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>,;
+</SeparatorPrimitive>
+  React && React.ComponentPropsWithoutRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>;
+</typeof>
+></typeof>(;
+    <SeparatorPrimitive&& SeparatorPrimitive.Root;"
+import React from 'react';''
+import * as React from 'react';'
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+      className={cn(
+
+'
+        "shrink-0 bg-border",""
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]","
+        className;
+      className={cn(;"
+        "shrink-0 bg-border",;""
+        orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;"
+        className;)
+      )}
+      {...props}
+    />;
+</SeparatorPrimitive>
+>>>>>>> origin/chore/fix-lint-and-merge
+
+const Separator = React.forward_ref<;
+  React.ElementRef < typeof SeparatorPrimitive.Root />,
+  React.ComponentPropsWithoutRef < typeof SeparatorPrimitive.Root>;
+></typeof>(
+<<<<<<< HEAD
+  (
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
   ('
     { class_name, orientation = 'horizontal', decorative = true, ...props },
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -256,6 +495,10 @@ const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>
 </typeof>
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
+
+=======
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
 
       ref={ref}
@@ -293,6 +536,97 @@ React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>)
 export { Separator }
 export { Separator }
 ;
+<<<<<<< HEAD
 
 export { Separator };
 ;
+=======
+<<<<<<< HEAD
+Separator.displayName = SeparatorPrimitive.Root.displayName;
+;
+export { Separator }import * as React from "react" import * as SeparatorPrimitive from "@radix-ui/react-separator" const Separator = React.forwardRef< React.ElementRef<typeof SeparatorPrimitive.Root>;
+React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>) 
+}{
+  ...props 
+}/>) ) Separator.displayName = SeparatorPrimitive.Root.displayName export {
+  Separator 
+}
+>>>>>>> merged-prs-20250907-203621
+
+import { cn } from "@/lib/utils"
+
+const Separator = React.forwardRef<
+  React.ElementRef<typeof SeparatorPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
+>(
+  (
+    { className, orientation = 'horizontal', decorative = true, ...props }
+    { className, orientation = "horizontal", decorative = true, ...props },
+    ref
+  ) => (
+    <SeparatorPrimitive.Root
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+      className={cn(
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        'shrink-0 bg-border'
+        orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]'
+        "shrink-0 bg-border",
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        className
+
+      )}
+      {...props}
+    />;
+
+const Separator = React.forward_ref<;
+  React.ElementRef < typeof SeparatorPrimitive.Root>,
+  React.ComponentPropsWithoutRef < typeof SeparatorPrimitive.Root>;
+      className={cn ("
+        'shrink - 0 bg - border',
+        orientation === 'horizontal' ? 'h-[1px] w - full' : 'h - full w-[1px]',')
+        class_name)}
+    />));
+
+export { Separator }import * as React from "react" import * as SeparatorPrimitive from "@radix-ui/react-separator" const Separator = React.forwardRef< React.ElementRef<typeof SeparatorPrimitive.Root>;"
+React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>) 
+      className={cn("
+        'shrink-0 bg-border
+        orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]
+    />
+<<<<<<< HEAD
+
+export { Separator }
+=======
+  )
+);
+Separator.displayName = SeparatorPrimitive.Root.displayName;
+<<<<<<< HEAD
+export { Separator }
+=======
+export { Separator }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+export { Separator }
+;
+
+export { Separator };
+<<<<<<< HEAD
+;
+=======
+export { Separator }
+;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

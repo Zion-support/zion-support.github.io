@@ -1,6 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   title?: string;
   description?: string;
   keywords?: string;
@@ -17,6 +26,37 @@
       <meta name="twitter:image" content={fullOgImage} />;
       <meta name="twitter:site" content="@ziontechgroup" />;
       <meta name="twitter:creator" content="@ziontechgroup" />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+import Head from 'next / head';
+import { use_router } from 'next / router';
+interface SEOHeadProps {
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -78,14 +118,44 @@ interface SEOHeadProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
   keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+export default function SEOHead({
+  title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions',
+  description = 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
+  keywords = 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions',
+<<<<<<< HEAD
+
+export default function SEOHead({
+  title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions,
+  description = Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
+  keywords = 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions,
+=======
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   canonicalUrl,
   ogImage = '/og-image.jpg',
   ogType = 'website',
@@ -220,6 +290,11 @@ export default function SEOHead({
       <meta property="og:locale" content="en_US" />
       {/* Twitter Card Tags */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
@@ -233,6 +308,10 @@ export default function SEOHead({
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <meta name="twitter: card" content={twitterCard} />
       <meta name="twitter: title" content={fullTitle} />
       <meta name="twitter: description" content={description} />
@@ -280,6 +359,41 @@ export default function SEOHead({
 <<<<<<< HEAD
       <link rel="manifest" href="/site.webmanifest" />
       {/* Preconnect to external domains */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(mergedStructuredData)
+        }}
+      />
+      {/* Additional SEO Meta Tags */}
+      <meta name="google-site-verification" content="your-google-verification-code" />
+      <meta name="yandex-verification" content="your-yandex-verification-code" />
+      <meta name="bing-site-verification" content="your-bing-verification-code" />
+      {/* Language and Region */}
+      <meta name="language" content="English" />
+      <meta name="geo.region" content="US" />
+      <meta name="geo.placename" content="United States" />
+      {/* Mobile App Meta Tags */}
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="application-name" content="Zion Tech Group" />
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />
+    </Head>
+  )
+}
+
+export default SEOHead
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -340,6 +454,10 @@ export default SEOHead;
 ;
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   title?: string;
   description?: string;
   keywords?: string;
@@ -351,21 +469,296 @@ export default SEOHead;
   noindex?: boolean;
   nofollow?: boolean;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const SEOHead: React.FC<SEOHeadProps> = ({;
+  title = 'Zion Tech Group - Technology Solutions',;
+  description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',;
+  keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',}
+const SEOHead: React.FC<SEOHeadProps> = ({;
+  title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions',;
+  description = 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',;
+  keywords = 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions',;
+  canonicalUrl,;
+  ogImage = '/og-image && image.jpg',;
+  ogType = 'website',;
+  twitterCard = 'summary_large_image',;
+  noIndex = false,;
+  structuredData;
+}) => {;
+  const router = useRouter();
+  const baseUrl = 'https://ziontechgroup && ziontechgroup.com';
+  const fullCanonicalUrl = canonicalUrl || `${baseUrl}${router && router.asPath}`;
+  const fullOgImage = ogImage && ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
+  const defaultStructuredData = {;
+    '@context': 'https://schema && schema.org',;
+    '@type': 'Organization',;
+    name: 'Zion Tech Group',;
+    url: 'https://zion && zion.app',;
+    logo: 'https://zion && zion.app/logo && logo.png',;
+    description: 'Leading provider of AI services, IT solutions, and micro SaaS development',;
+    address: {;
+      '@type': 'PostalAddress',;
+      addressCountry: 'US'    },;
+    "contactPoint": {;
+      "@type": "ContactPoint",;
+      "telephone": "+1 302 464 0950",;
+      "contactType": "customer service",;
+      "email": "kleber@ziontechgroup && ziontechgroup.com";
+    },;
+    sameAs: [;
+      'https://linkedin && linkedin.com/company/zion-tech-group',;
+      'https://twitter && twitter.com/ziontechgroup';
+    ]  };
+<<<<<<< HEAD
+  return (
+    <Head>;
+      {/* Basic Meta Tags */}
+=======
+
+
+  return (
+    <Head>;
+      {/* Basic Meta Tags */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      <title>{title}</title>;
+      <meta name="description" content={description} />;
+      <meta name="keywords" content={keywords} />;
+      <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
+      <metahttpEquiv="Content-Type" content="text/html charset=utf-8" />;
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />;
+<<<<<<< HEAD
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {/* Open Graph Tags */}
+=======
+
+
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {/* Open Graph Tags */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      <meta property="og:title" content={fullTitle} />;
+      <meta property="og:description" content={description} />;
+      <meta property="og:type" content={ogType} />;
+      <meta property="og:url" content={currentUrl} />;
+      <meta property="og:image" content={imageUrl} />;
+      <meta property="og:image:width" content="1200" />;
+      <meta property="og:image:height" content="630" />;
+      <meta property="og:site_name" content="Zion Tech Group" />;
+      <meta property="og:locale" content="en_US" />;
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={imageUrl} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      {/* Additional Meta Tags */}
+      <meta name="theme-color" content="#2563eb" />;
+      <meta name="msapplication-TileColor" content="#2563eb" />;
+      <meta name="apple-mobile-web-app-capable" content="yes" />;
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />;
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />      ;
+      {/* Favicon */}
+      <link rel="icon" href="/favicon && favicon.ico" />;
+      <link rel="apple-touch-icon" href="/apple-touch-icon && icon.png" />;
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32 && 32x32.png" />;
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16 && 16x16.png" />;
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />;
+      <meta property="og:description" content={description} />;
+      <meta property="og:url" content={fullCanonicalUrl} />;
+      <meta property="og:type" content={ogType} />;
+      <meta property="og:site_name" content="Zion Tech Group" />;
+      <meta property="og:locale" content="en_US" />;
+      <meta property="og:image" content={fullOgImage} />;
+      <meta property="og:image:width" content="1200" />;
+      <meta property="og:image:height" content="630" />;
+      <meta property="og:image:alt" content={title} />;
+      {/* Twitter */}
+      <meta name="twitter:card" content={twitterCard} />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <meta name="twitter:title" content={title} />;
       <meta name="twitter:description" content={description} />;
       <meta name="twitter:image" content={fullOgImage} />;
       <meta name="twitter:site" content="@ziontechgroup" />;
       <meta name="twitter:creator" content="@ziontechgroup" />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      {/* Additional SEO */}
+      <meta name="theme-color" content="#1e40af" />;
+      <meta name="msapplication-TileColor" content="#1e40af" />;
+      <meta name="msapplication-config" content="/browserconfig && browserconfig.xml" />;
+
+
+<<<<<<< HEAD
+      <meta name="theme-color" content="#1e40af" />;
+      <meta name="msapplication-TileColor" content="#1e40af" />;
+      <meta name="msapplication-config" content="/browserconfig && browserconfig.xml" />;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const SEOHead: React.FC < SEOHeadProps> = ({
+  title = 'Zion Tech Group - Technology Solutions',
+  description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting - edge technology solutions.',
+  keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development', }
+const SEOHead: React.FC < SEOHeadProps> = ({
+  title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions',
+  description = 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
+  keywords = 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions',
+  canonical_url,
+  og_image = '/og - image.jpg',
+  og_type = 'website',
+  twitter_card = 'summary_large_image',
+  no_index = false,
+  structured_data;
+}) => {
+  const router = use_router ();
+  const base_url = 'https://ziontechgroup.com';
+  const fullCanonicalUrl = canonical_url || `${base_url}${router.as_path}`;
+  const fullOgImage = og_image.starts_with ('http') ? og_image : `${base_url}${og_image}`;
+;
+  const defaultStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://zion.app',
+    logo: 'https://zion.app / logo.png',
+    description: 'Leading provider of AI services, IT solutions, and micro SaaS development',
+    address: {
+      '@type': 'PostalAddress',
+      address_country: 'US'    },
+    "contact_point": {
+      "@type": "ContactPoint",
+      "telephone": "+1 302 464 0950",
+      "contact_type": "customer service",
+      "email": "kleber@ziontechgroup.com";
+    },
+    same_as: [;
+      'https://linkedin.com / company / zion - tech - group',
+      'https://twitter.com / ziontechgroup';
+    ]  }
+;
+  return (
+    <Head>;
+      {/* Basic Meta Tags */}
+      <title>{title}</title>;
+      <meta name="description" content={description} />;
+      <meta name="keywords" content={keywords} />;
+      <meta name="viewport" content="width = device - width, initial - scale = 1.0" />;
+      <meta http_equiv="Content - Type" content="text / html; charset = utf - 8" />;
+      <meta http_equiv="X - UA - Compatible" content="IE = edge" />;
+      {/* Canonical URL */}
+      {canonical_url && <link rel="canonical" href={canonical_url} />}
+      {/* Open Graph Tags */}
+      <meta property="og:title" content={full_title} />;
+      <meta property="og:description" content={description} />;
+      <meta property="og:type" content={og_type} />;
+      <meta property="og:url" content={current_url} />;
+      <meta property="og:image" content={image_url} />;
+      <meta property="og:image:width" content="1200" />;
+      <meta property="og:image:height" content="630" />;
+      <meta property="og:site_name" content="Zion Tech Group" />;
+      <meta property="og:locale" content="en_US" />;
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content={twitter_card} />;
+      <meta name="twitter:title" content={full_title} />;
+      <meta name="twitter:description" content={description} />;
+      <meta name="twitter:image" content={image_url} />;
+      <meta name="twitter:site" content="@ziontechgroup" />;
+      <meta name="twitter:creator" content="@ziontechgroup" />;
+      {/* Additional Meta Tags */}
+      <meta name="theme - color" content="#2563eb" />;
+      <meta name="msapplication - TileColor" content="#2563eb" />;
+      <meta name="apple - mobile - web - app - capable" content="yes" />;
+      <meta name="apple - mobile - web - app - status - bar - style" content="default" />;
+      <meta name="apple - mobile - web - app - title" content="Zion Tech Group" />;
+      {/* Favicon */}
+      <link rel="icon" href="/favicon.ico" />;
+      <link rel="apple - touch - icon" href="/apple - touch - icon.png" />;
+      <link rel="icon" type="image / png" sizes="32x32" href="/favicon - 32x32.png" />;
+      <link rel="icon" type="image / png" sizes="16x16" href="/favicon - 16x16.png" />;
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />;
+      <meta property="og:description" content={description} />;
+      <meta property="og:url" content={fullCanonicalUrl} />;
+      <meta property="og:type" content={og_type} />;
+      <meta property="og:site_name" content="Zion Tech Group" />;
+      <meta property="og:locale" content="en_US" />;
+      <meta property="og:image" content={fullOgImage} />;
+      <meta property="og:image:width" content="1200" />;
+      <meta property="og:image:height" content="630" />;
+      <meta property="og:image:alt" content={title} />;
+      {/* Twitter */}
+      <meta name="twitter:card" content={twitter_card} />;
+      <meta name="twitter:title" content={title} />;
+      <meta name="twitter:description" content={description} />;
+      <meta name="twitter:image" content={fullOgImage} />;
+      <meta name="twitter:site" content="@ziontechgroup" />;
+      <meta name="twitter:creator" content="@ziontechgroup" />;
+      {/* Additional SEO */}
+      <meta name="theme - color" content="#1e40af" />;
+      <meta name="msapplication - TileColor" content="#1e40af" />;
+      <meta name="msapplication - config" content="/browserconfig.xml" />;
+<<<<<<< HEAD
+      <meta name="theme-color" content="#1e40af" />
+      <meta name="msapplication-TileColor" content="#1e40af" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {/* Structured Data */}
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          __html: JSON.stringify(structuredData |defaultStructuredData)
+        }}
+      />
+=======
+
+          __html: JSON && JSON.stringify(structuredData || defaultStructuredData)
+        }}
+      />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
       <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
       <link rel="preconnect" href="https://images && images.unsplash.com" />;
     </Head>;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           __html: JSON.stringify (structured_data || defaultStructuredData);
         }}
       />;
@@ -377,6 +770,10 @@ export default SEOHead;
 }
 ;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react';
 },
 ,
@@ -491,15 +888,30 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
 },
 ,
 export default SEOHead,
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export default SEOHead
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </Head>
   );
 <<<<<<< HEAD
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default SEOHead;
 =======
 }
@@ -507,4 +919,28 @@ export default SEOHead;
 =======
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
 >>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
+=======
+
+<<<<<<< HEAD
+export default SEOHead;
+export default SEOHead;
+};
+
+export default SEOHead;
+}
+};
+
+export default SEOHead;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default SEOHead;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

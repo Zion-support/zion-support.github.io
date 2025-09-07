@@ -2,94 +2,43 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔧 Starting comprehensive syntax error fix...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+    content = content.replace(/
 
-// Common syntax error patterns and their fixes
-const syntaxFixes = [
-  // Fix extra semicolons and commas in type definitions
-  {
-    pattern: /,\s*;/g,
-    replacement: ';'
-  },
-  {
-    pattern: /;\s*;/g,
-    replacement: ';'
-  },
-  {
-    pattern: /export\s+type\s+(\w+)\s*=\s*([^;]+),\s*;/g,
-    replacement: 'export type $1 = $2;'
-  },
-  {
-    pattern: /export\s+type\s+(\w+)\s*=\s*{([^}]+)},\s*;/g,
-    replacement: 'export type $1 = {$2};'
-  },
-  // Fix function declarations
-  {
-    pattern: /export\s+async\s+function\s+(\w+)\s*\([^)]*\)\s*{\s*;/g,
-    replacement: 'export async function $1() {'
-  },
-  // Fix object properties
-  {
-    pattern: /(\w+):\s*([^,;]+),\s*;/g,
-    replacement: '$1: $2;'
-  },
-  // Fix array types
-  {
-    pattern: /(\w+)\[\],\s*;/g,
-    replacement: '$1[];'
-  },
-  // Fix union types
-  {
-    pattern: /\|\s*'([^']+)';\s*;/g,
-    replacement: "| '$1';"
-  },
-  // Fix generic types
-  {
-    pattern: /Pick<\s*(\w+),\s*([^>]+)\s*>\s*&\s*{([^}]+)},\s*;/g,
-    replacement: 'Pick<$1, $2> & {$3};'
-  },
-  // Fix Omit types
-  {
-    pattern: /Omit<(\w+)\s+'([^']+)'\s*>\s*&\s*{([^}]+)},\s*;/g,
-    replacement: "Omit<$1, '$2'> & {$3};"
-  },
-  // Fix Record types
-  {
-    pattern: /Record<string\s+any>/g,
-    replacement: 'Record<string, any>'
-  },
-  // Fix fetch options
-  {
-    pattern: /body:\s*JSON\.stringify\([^)]+\);\s*keepalive:\s*true\s+as\s+any\}/g,
-    replacement: 'body: JSON.stringify($1),\n      keepalive: true as any\n    }'
-  }
-];
+    // Fix missing semicolons in imports
+    content = content.replace(/import\s+([^;]+)\s*$/gm, 'import $1;');
 
-function fixFile(filePath) {
+    // Fix missing semicolons in exports
+    content = content.replace(/export\s+([^;]+)\s*$/gm, 'export $1;');
+
+    // Fix JSX syntax errors
+    content = content.replace(/<([^>]+)>\s*$/gm, '<$1>');
+
+    // Fix TypeScript interface syntax
+    content = content.replace(/interface\s+(\w+)\s*\{\s*\}/g, 'interface $1 {}');
+
+=======
+console.log('🔧 Starting syntax error fixes...');
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+function fixSyntaxErrors(filePath) {
   try {
+<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
+=======
+  // TODO: Implement
+}
+
+    const originalContent = content;
+
+<<<<<<< HEAD
+    // Fix common syntax errors
+>>>>>>> merged-prs-20250907-203621
     
-    // Apply all syntax fixes
-    syntaxFixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
-    
-    // Additional specific fixes
-    content = content
-      .replace(/,\s*$/gm, '') // Remove trailing commas
-      .replace(/;\s*$/gm, ';') // Ensure proper semicolons
-      .replace(/\{\s*;\s*\}/g, '{}') // Fix empty objects with semicolons
-      .replace(/\}\s*;\s*$/gm, '}') // Fix closing braces
-      .replace(/\{\s*$/gm, '{') // Fix opening braces
-      .replace(/\}\s*,\s*$/gm, '}') // Fix closing braces with commas
-      .replace(/\{\s*;\s*([^}]+)\s*\}/g, '{$1}') // Fix objects with semicolons inside
-      .replace(/\|\s*$/gm, '') // Remove trailing pipes
-      .replace(/\|\s*\|\s*/g, '|') // Fix double pipes
-      .replace(/\s+$/gm, '') // Remove trailing whitespace
-      .replace(/\n\s*\n\s*\n/g, '\n\n'); // Fix multiple newlines
-    
-    content = content.replace(/    // Fix missing semicolons in imports
+    // Fix missing semicolons in imports
     content = content.replace(/import\s+([^;]+)\s*$/gm, 'import $1;');
     
     // Fix missing semicolons in exports
@@ -101,88 +50,71 @@ function fixFile(filePath) {
     // Fix TypeScript interface syntax
     content = content.replace(/interface\s+(\w+)\s*\{\s*\}/g, 'interface $1 {}');
     
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Fix missing closing braces
+=======
+    // Fix common syntax errors;
+    content = content.replace(/
+    // Fix missing semicolons in imports;)
+
+    // Fix missing closing braces;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
     if (openBraces > closeBraces) {
-      content += '\n}'.repeat(openBraces - closeBraces);
-    }
 
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed: ${filePath}`);
       return true;
-    }
     return false;
+<<<<<<< HEAD
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+<<<<<<< HEAD
+
+=======
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return false;
   }
 }
+=======
 
-function findFiles(dir, extensions) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
-      
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          // Skip certain directories
-          if (!['node_modules', '.git', 'dist', 'build', '.next', 'cache'].includes(item)) {
-            traverse(fullPath);
-          }
-        } else if (stat.isFile()) {
-          const ext = path.extname(item);
-          if (extensions.includes(ext)) {
-            files.push(fullPath);
-          }
-        }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+<<<<<<< HEAD
+=======
+function processDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+      fixedCount += processDirectory(filePath);
+    } else if (file.match(/\.(ts|tsx|js|jsx)$/)) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
     } catch (error) {
       // Skip directories we can't read
     }
   }
+<<<<<<< HEAD
+
+  traverse(dir);
+  return files;
+}
+=======
   
   traverse(dir);
   return files;
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-// Main execution
-const targetDir = process.cwd();
-const extensions = ['.ts', '.tsx', '.js', '.jsx'];
-
-console.log(`📁 Scanning ${targetDir} for files with extensions: ${extensions.join(', ')}`);
-
-const files = findFiles(targetDir, extensions);
-console.log(`📄 Found ${files.length} files to check`);
-
-let fixedCount = 0;
-let errorCount = 0;
-
-for (const file of files) {
-  try {
-    if (fixFile(file)) {
-      fixedCount++;
-    }
-  } catch (error) {
-    console.error(`❌ Error processing ${file}:`, error.message);
-    errorCount++;
-  }
-}
-
-console.log(`\n🎉 Syntax fix complete!`);
-console.log(`✅ Fixed: ${fixedCount} files`);
-console.log(`❌ Errors: ${errorCount} files`);
-
-// Run linter to check remaining issues
-console.log('\n🔍 Running linter to check remaining issues...');
-try {
-  execSync('npm run lint', { stdio: 'inherit' });
-} catch (error) {
-  console.log('⚠️  Linter found remaining issues (this is expected)');
-}
+console.log(`🎉 Fixed ${fixedCount} files with syntax errors`);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

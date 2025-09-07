@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:src/components/mobile-app/MobileFeatureShowcase.tsx
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 {
       icon: <Users className="h-8 w-8 text-zion-cyan />,
       title: Hire from Anywhere",
@@ -28,11 +35,20 @@ import React from react";
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
     {{import React from react';
 import { CheckCircle, Smartphone, Users, Star, Mail  } from 'lucide-react;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const MobileFeatureShowcase: React.FC;
 }
 export const MobileFeatureShowcase: React.FC = () => {
@@ -46,10 +62,38 @@ export const MobileFeatureShowcase: React.FC = () => {
 
       icon: <Star className=h-8 w-8 text-zion-purple" />
 
+<<<<<<< HEAD
       title: "AI-Match Instantly
       description: Get matched with the perfect talent or jobs using our advanced AI algorithm."
 
     {
+=======
+<<<<<<< HEAD
+      title: "AI-Match Instantly"
+      description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
+:src/components/mobile-app/MobileFeatureShowcase.tsx
+    }
+
+    {
+      icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
+      title: "Track Milestones"
+      description: "Monitor project progress and approve milestones directly from your phone."
+:src/components/mobile-app/MobileFeatureShowcase.tsx
+    }
+
+    {
+
+      icon: <Mail className="h-8 w-8 text-zion-purple" />
+      title: "Instant Messaging"
+      description: "Chat with candidates or clients and receive notifications in real-time."
+:src/components/mobile-app/MobileFeatureShowcase.tsx
+    }
+=======
+      title: "AI-Match Instantly
+      description: Get matched with the perfect talent or jobs using our advanced AI algorithm."
+
+    {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <<<<<<< HEAD
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan />
       title: Track Milestones"
@@ -71,6 +115,10 @@ export const MobileFeatureShowcase: React.FC = () => {
       icon: <Mail className=h-8 w-8 text-zion-purple" />
       title: "Instant Messaging
       description: Chat with candidates or clients and receive notifications in real-time."
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     {
 <<<<<<< HEAD
@@ -108,7 +156,14 @@ export const MobileFeatureShowcase: React.FC = () => {const features = [;
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />
       title: "Biometric Security"
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     {
       icon: <Star className=h - 8 w - 8 text - zion - purple" />,
@@ -120,7 +175,19 @@ export const MobileFeatureShowcase: React.FC = () => {const features = [;
 =======
       title: "AI - Match Instantly",
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm.";
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    }
+    {
+      icon: <CheckCircle className="h - 8 w - 8 text - zion-cyan" />,
+      title: "Track Milestones",
+      description: "Monitor project progress and approve milestones directly from your phone.";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     }
     {
       icon: <CheckCircle className=h - 8 w - 8 text - zion-cyan" />,
@@ -139,6 +206,11 @@ export const MobileFeatureShowcase: React.FC = () => {const features = [;
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
 
   ],
@@ -153,6 +225,10 @@ export const MobileFeatureShowcase: React.FC = () => {const features = [;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
     <section id="features className=py-16 bg-zion-blue">
@@ -184,6 +260,9 @@ export const MobileFeatureShowcase: React.FC = () => {const features = [;
               className=bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
             >
 
+<<<<<<< HEAD
+              <div className="mb-4">
+=======
               <div className="mb-4>
   ];return (<section id=features" className="py-16 bg-zion-blue>;
       <div className=container mx-auto px-4">;
@@ -206,6 +285,10 @@ export const MobileFeatureShowcase: React.FC = () => {const features = [;
 
               <div className="mb-4">
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             Everything You Need On The Go;
           </h2>;
@@ -270,6 +353,11 @@ export const MobileFeatureShowcase: React.FC = () => {
   ];
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <section id=features className="py-16 bg-zion-blue">;
                 {feature.icon}</div>;
               <h3 className=text-xl font-bold text-white mb-2>{feature.title}</h3>;
@@ -286,6 +374,10 @@ export const MobileFeatureShowcase: React.FC = () => {
   return (<section id=features" className="py-16 bg-zion-blue>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     <section id=features" className="py-16 bg-zion-blue>;
 
@@ -311,7 +403,14 @@ export const MobileFeatureShowcase: React.FC = () => {
 =======
               key={index} ;
               className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300";
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             >;
               <div className=mb-4">;
                 {feature.icon}
@@ -332,6 +431,11 @@ export const MobileFeatureShowcase: React.FC = () => {
 };
 <<<<<<< HEAD
 '"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
           ))}</div>;
       </div>;
@@ -343,3 +447,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

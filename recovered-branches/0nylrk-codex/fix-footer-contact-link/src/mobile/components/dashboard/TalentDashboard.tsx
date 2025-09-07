@@ -3,11 +3,50 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+export function TalentDashboard() {
+  return (
+    <div className="space-y-6 px-4 pb-24">
+      <section>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-medium">New Job Matches</h2>
+          <Link to="/mobile/browse">
+            <Button variant="ghost" size="sm" className="h-8 gap-1">
+=======
+
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Card,
   CardContent,
   CardHeader,
   CardTitle,
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {ChevronRight, FileText, Image, Clock, Zap, BookOpen} from "lucide-react";
+import {Link} from "react-router-dom";
+import React from "react",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+
+
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",
+import { Link } from "react-router-dom",
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   ChevronRight,
   FileText,
@@ -15,6 +54,16 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
   Clock,
   Zap,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export function TalentDashboard() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
 
     <div className="space-y-6 px-4 pb-24">
@@ -23,17 +72,29 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
           <h2 className="text-lg font-medium">New Job Matches</h2>"
           <Link to="/mobile/browse">"
             <Button variant="ghost" size="sm" className="h-8 gap-1">"
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               View all <ChevronRight className="h-4 w-4" />
             </Button>
           </Link>
         </div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="space-y-3">
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
                 <div className="space-y-1">
                   <h3 className="font-medium">Senior React Developer</h3>
+<<<<<<< HEAD
 
                   <div className="text-sm text-muted-foreground">
                     TechCorp Inc.
@@ -56,10 +117,53 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
                   </span>
 
                 </div>
+=======
+<<<<<<< HEAD
+                  <div className="text-sm text-muted-foreground">TechCorp Inc.</div>
+                  <div className="flex items-center gap-1 mt-1">
+                    <Badge variant="secondary" className="text-xs">Remote</Badge>
+                    <Badge variant="secondary" className="text-xs">Full-time</Badge>
+                  </div>
+                </div>
+                <div className="flex flex-col items-end">
+                  <div className="bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs">
+                    92% match
+                  </div>
+                  <span className="text-xs text-muted-foreground mt-1">2 days ago</span>
+                </div>
+              </div>
+              <div className="flex gap-2 mt-3">
+                <Button size="sm">Apply Now</Button>
+                <Button size="sm" variant="outline">View Details</Button>
+=======
+
+                  <div className="text-sm text-muted-foreground">
+                    TechCorp Inc.
+                  </div>"
+                  <div className="flex items-center gap-1 mt-1">"
+                    <Badge variant="secondary" className="text-xs">;
+                      Remote;
+                    </Badge>"
+                    <Badge variant="secondary" className="text-xs">
+                      Full-time;
+                    </Badge>
+
+                  </div>
+                </div>"
+                <div className="flex flex-col items-end">"
+                  <div className="bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs">
+
+                  <span className="text-xs text-muted-foreground mt-1">
+                    2 days ago;
+                  </span>
+
+                </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 <Button size="sm" variant="outline">
 
                 </Button>
+>>>>>>> merged-prs-20250907-203621
               </div>
             </CardContent>
           </Card>
@@ -69,6 +173,7 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
               <div className="flex justify-between items-start">
                 <div className="space-y-1">
                   <h3 className="font-medium">UX/UI Designer</h3>
+<<<<<<< HEAD
 
                   <div className="text-sm text-muted-foreground">
                     Creative Studios;
@@ -91,11 +196,57 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
                   </span>
 
                 </div>
+=======
+<<<<<<< HEAD
+                  <div className="text-sm text-muted-foreground">Creative Studios</div>
+                  <div className="flex items-center gap-1 mt-1">
+                    <Badge variant="secondary" className="text-xs">Hybrid</Badge>
+                    <Badge variant="secondary" className="text-xs">Contract</Badge>
+                  </div>
+                </div>
+                <div className="flex flex-col items-end">
+                  <div className="bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs">
+                    87% match
+                  </div>
+                  <span className="text-xs text-muted-foreground mt-1">4 hours ago</span>
+                </div>
+              </div>
+              <div className="flex gap-2 mt-3">
+                <Button size="sm">Apply Now</Button>
+                <Button size="sm" variant="outline">View Details</Button>
+=======
+
+                  <div className="text-sm text-muted-foreground">
+                    Creative Studios;
+                  </div>"
+                  <div className="flex items-center gap-1 mt-1">"
+                    <Badge variant="secondary" className="text-xs">
+                      Hybrid;
+                    </Badge>"
+                    <Badge variant="secondary" className="text-xs">
+                      Contract;
+                    </Badge>
+
+                  </div>
+                </div>"
+                <div className="flex flex-col items-end">"
+                  <div className="bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs">
+
+                  <span className="text-xs text-muted-foreground mt-1">
+                    4 hours ago;
+                  </span>
+
+                </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 <Button size="sm" variant="outline">
 
                 </Button>
 
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </div>
             </CardContent>
           </Card>
@@ -109,6 +260,7 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center p-3 bg-primary/5 rounded-lg">
                 <div className="text-2xl font-bold text-primary">3</div>
+<<<<<<< HEAD
 
                 <div className="text-xs text-muted-foreground">
                   Active Applications;
@@ -129,6 +281,48 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
             </div>"
             <Button variant="outline" className="w-full mt-4">
 
+=======
+<<<<<<< HEAD
+                <div className="text-xs text-muted-foreground">Active Applications</div>
+              </div>
+              <div className="text-center p-3 bg-primary/5 rounded-lg">
+                <div className="text-2xl font-bold text-primary">2</div>
+                <div className="text-xs text-muted-foreground">Interviews Scheduled</div>
+              </div>
+              <div className="text-center p-3 bg-primary/5 rounded-lg">
+                <div className="text-2xl font-bold text-primary">5</div>
+                <div className="text-xs text-muted-foreground">Jobs Saved</div>
+              </div>
+              <div className="text-center p-3 bg-primary/5 rounded-lg">
+                <div className="text-2xl font-bold text-primary">12</div>
+                <div className="text-xs text-muted-foreground">Jobs Viewed</div>
+              </div>
+            </div>
+            <Button variant="outline" className="w-full mt-4">
+              View All Applications
+=======
+
+                <div className="text-xs text-muted-foreground">
+                  Active Applications;
+                </div>
+              </div>"
+              <div className="text-center p-3 bg-primary/5 rounded-lg">"
+                <div className="text-2xl font-bold text-primary">2</div>"
+                <div className="text-xs text-muted-foreground">
+                  Interviews Scheduled;
+                </div>
+
+                <div className="text-xs text-muted-foreground">Jobs Saved</div>
+              </div>"
+              <div className="text-center p-3 bg-primary/5 rounded-lg">"
+                <div className="text-2xl font-bold text-primary">12</div>"
+                <div className="text-xs text-muted-foreground">Jobs Viewed</div>
+              </div>
+            </div>"
+            <Button variant="outline" className="w-full mt-4">
+
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </Button>
           </CardContent>
         </Card>
@@ -138,6 +332,7 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">
+<<<<<<< HEAD
 
             <FileText className="h-5 w-5 mb-1" />
             <span>Update Resume</span>
@@ -151,6 +346,36 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
             <span>Availability</span>
           </Button>"
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">"
+=======
+<<<<<<< HEAD
+            <FileText className="h-5 w-5 mb-1" />
+            <span>Update Resume</span>
+          </Button>
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">
+            <Image className="h-5 w-5 mb-1" />
+            <span>Portfolio</span>
+          </Button>
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">
+            <Clock className="h-5 w-5 mb-1" />
+            <span>Availability</span>
+          </Button>
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">
+            <Zap className="h-5 w-5 mb-1" />
+=======
+
+            <FileText className="h-5 w-5 mb-1" />
+            <span>Update Resume</span>
+          </Button>"
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">"
+            <Image className="h-5 w-5 mb-1" />
+            <span>Portfolio</span>
+          </Button>"
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">"
+            <Clock className="h-5 w-5 mb-1" />
+            <span>Availability</span>
+          </Button>"
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <Zap className="h-5 w-5 mb-1" />
 </section>"
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>""
@@ -178,6 +403,10 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
 </Button>"
             <Zap className="h-5 w-5 mb-1" />"
 </Zap>
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <span>AI Resume Boost</span>
           </Button>
         </div>
@@ -186,11 +415,34 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>
+<<<<<<< HEAD
 
           <Button variant="ghost" size="sm" className="h-8">
             View all;
           </Button>
         </div>
+=======
+<<<<<<< HEAD
+          <Button variant="ghost" size="sm" className="h-8">
+            View all
+          </Button>
+        </div>
+        <Card>
+          <CardContent className="p-4">
+            <div className="flex items-center gap-3">
+              <div className="bg-primary/10 p-3 rounded-full">
+                <BookOpen className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-medium">Improve your profile visibility</h3>
+                <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>
+=======
+
+          <Button variant="ghost" size="sm" className="h-8">
+            View all;
+          </Button>
+        </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <Card>"
           <CardContent className="p-4">"
             <div className="flex items-center gap-3">"
@@ -202,6 +454,10 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
 
                 </p>
 
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </div>
             </div>
           </CardContent>
@@ -211,6 +467,15 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
 
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+}
+;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";"
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";"
 import {Button} from "@/components/ui/button";"
@@ -223,8 +488,32 @@ import { Badge } from "@/components/ui/badge",;"
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",;"
     <div className="space-y-6 px-4 pb-24">;"
 =======
+<<<<<<< HEAD
 }
 
+=======
+
+<<<<<<< HEAD
+
+}
+=======
+import React from "react";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {ChevronRight, FileText, Image, Clock, Zap, BookOpen} from "lucide-react";
+import {Link} from "react-router-dom";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+}
+
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -232,6 +521,28 @@ import { Badge } from "@/components/ui/badge",;
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",;
 import { Link } from "react-router-dom";
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",;
+import { Link } from "react-router-dom",;
+;
+export function TalentDashboard() {;
+  return (;
+export function TalentDashboard() {;
+  return (;
+=======
+export function TalentDashboard() {;
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="space-y-6 px-4 pb-24">;
 >>>>>>> origin/chore/fix-lint-and-merge
       <section>;
@@ -243,7 +554,15 @@ import { Link } from "react-router-dom";
             </Button>;
           </Link>;
         </div>;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="space-y-3">;
           <Card>;
             <CardContent className="p-4">;
@@ -264,13 +583,116 @@ import { Link } from "react-router-dom";
                 </div>;
               </div>;
               <div className="flex gap-2 mt-3">;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+=======
+import React from './react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from './lucide-react';
+import { Link } from './react-router-dom';
+export /**
+ * TalentDashboard - Function description
+ */
+function TalentDashboard() {
+  return (
+    <div className="space - y-6 px - 4 pb - 24">;
+      <section>;
+        <div className="flex items - center justify - between mb - 4">;
+          <h2 className="text - lg font - medium">New Job Matches</h2>;
+          <Link to="/mobile / browse">;
+            <Button variant="ghost" size="sm" className="h - 8 gap - 1">;
+              View all <ChevronRight className="h - 4 w - 4" />;
+            </Button>;
+          </Link>;
+        </div>;
+        <div className="space - y-3">;
+          <Card>;
+            <CardContent className="p - 4">;
+              <div className="flex justify - between items - start">;
+                <div className="space - y-1">;
+                  <h3 className="font - medium">Senior React Developer</h3>;
+                  <div className="text - sm text - muted - foreground">TechCorp Inc.</div>;
+                  <div className="flex items - center gap - 1 mt - 1">;
+                    <Badge variant="secondary" className="text - xs">Remote</Badge>;
+                    <Badge variant="secondary" className="text - xs">Full - time</Badge>;
+                  </div>;
+                </div>;
+                <div className="flex flex - col items - end">;
+                  <div className="bg - primary / 10 text - primary font - medium rounded - full px - 2 py - 1 text - xs">;
+                    92% match;
+                  </div>;
+                  <span className="text - xs text - muted - foreground mt - 1">2 days ago</span>;
+                </div>;
+              </div>;
+              <div className="flex gap - 2 mt - 3">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Button size="sm">Apply Now</Button>;
                 <Button size="sm" variant="outline">View Details</Button>;
               </div>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+          ;
+          <Card>;
+            <CardContent className="p-4">;
+              <div className="flex justify-between items-start">;
+                <div className="space-y-1">;
+                  <h3 className="font-medium">UX/UI Designer</h3>;
+                  <div className="text-sm text-muted-foreground">Creative Studios</div>;
+                  <div className="flex items-center gap-1 mt-1">;
+                    <Badge variant="secondary" className="text-xs">Hybrid</Badge>;
+                    <Badge variant="secondary" className="text-xs">Contract</Badge>;
+                  </div>;
+                </div>;
+                <div className="flex flex-col items-end">;
+                  <div className="bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs">;
+                    87% match;
+                  </div>;
+                  <span className="text-xs text-muted-foreground mt-1">4 hours ago</span>;
+                </div>;
+              </div>;
+              <div className="flex gap-2 mt-3">;
+=======
+
+<<<<<<< HEAD
+=======
+          <Card>;
+            <CardContent className="p - 4">;
+              <div className="flex justify - between items - start">;
+                <div className="space - y-1">;
+                  <h3 className="font - medium">UX / UI Designer</h3>;
+                  <div className="text - sm text - muted - foreground">Creative Studios</div>;
+                  <div className="flex items - center gap - 1 mt - 1">;
+                    <Badge variant="secondary" className="text - xs">Hybrid</Badge>;
+                    <Badge variant="secondary" className="text - xs">Contract</Badge>;
+                  </div>;
+                </div>;
+                <div className="flex flex - col items - end">;
+                  <div className="bg - primary / 10 text - primary font - medium rounded - full px - 2 py - 1 text - xs">;
+                    87% match;
+                  </div>;
+                  <span className="text - xs text - muted - foreground mt - 1">4 hours ago</span>;
+                </div>;
+              </div>;
+              <div className="flex gap - 2 mt - 3">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Button size="sm">Apply Now</Button>;
                 <Button size="sm" variant="outline">View Details</Button>;
               </div>;
@@ -278,18 +700,164 @@ import { Link } from "react-router-dom";
           </Card>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+      ;
+      <section>;
+        <h2 className="text-lg font-medium mb-4">Application Tracker</h2>;
+        <Card>;
+          <CardContent className="p-4">;
+            <div className="grid grid-cols-2 gap-4">;
+              <div className="text-center p-3 bg-primary/5 rounded-lg">;
+                <div className="text-2xl font-bold text-primary">3</div>;
+                <div className="text-xs text-muted-foreground">Active Applications</div>;
+              </div>;
+              <div className="text-center p-3 bg-primary/5 rounded-lg">;
+                <div className="text-2xl font-bold text-primary">2</div>;
+                <div className="text-xs text-muted-foreground">Interviews Scheduled</div>;
+              </div>;
+              <div className="text-center p-3 bg-primary/5 rounded-lg">;
+                <div className="text-2xl font-bold text-primary">5</div>;
+                <div className="text-xs text-muted-foreground">Jobs Saved</div>;
+              </div>;
+              <div className="text-center p-3 bg-primary/5 rounded-lg">;
+                <div className="text-2xl font-bold text-primary">12</div>;
+                <div className="text-xs text-muted-foreground">Jobs Viewed</div>;
+              </div>;
+            </div>;
+            <Button variant="outline" className="w-full mt-4">;
+=======
+
+<<<<<<< HEAD
+=======
+      <section>;
+        <h2 className="text - lg font - medium mb - 4">Application Tracker</h2>;
+        <Card>;
+          <CardContent className="p - 4">;
+            <div className="grid grid - cols - 2 gap - 4">;
+              <div className="text - center p - 3 bg - primary / 5 rounded - lg">;
+                <div className="text - 2xl font - bold text - primary">3</div>;
+                <div className="text - xs text - muted - foreground">Active Applications</div>;
+              </div>;
+              <div className="text - center p - 3 bg - primary / 5 rounded - lg">;
+                <div className="text - 2xl font - bold text - primary">2</div>;
+                <div className="text - xs text - muted - foreground">Interviews Scheduled</div>;
+              </div>;
+              <div className="text - center p - 3 bg - primary / 5 rounded - lg">;
+                <div className="text - 2xl font - bold text - primary">5</div>;
+                <div className="text - xs text - muted - foreground">Jobs Saved</div>;
+              </div>;
+              <div className="text - center p - 3 bg - primary / 5 rounded - lg">;
+                <div className="text - 2xl font - bold text - primary">12</div>;
+                <div className="text - xs text - muted - foreground">Jobs Viewed</div>;
+              </div>;
+            </div>;
+            <Button variant="outline" className="w - full mt - 4">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               View All Applications;
             </Button>;
           </CardContent>;
         </Card>;
       </section>;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+      ;
+      <section>;
+        <h2 className="text-lg font-medium mb-4">Quick Actions</h2>;
+        <div className="grid grid-cols-2 gap-4">;
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">;
+            <FileText className="h-5 w-5 mb-1" />;
+            <span>Update Resume</span>;
+          </Button>;
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">;
+            <Image className="h-5 w-5 mb-1" />;
+            <span>Portfolio</span>;
+          </Button>;
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">;
+            <Clock className="h-5 w-5 mb-1" />;
+            <span>Availability</span>;
+          </Button>;
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">;
+            <Zap className="h-5 w-5 mb-1" />;
+            <span>AI Resume Boost</span>;
+=======
+
+<<<<<<< HEAD
+=======
+      <section>;
+        <h2 className="text - lg font - medium mb - 4">Quick Actions</h2>;
+        <div className="grid grid - cols - 2 gap - 4">;
+          <Button variant="outline" className="h - auto py - 4 flex flex - col gap - 1">;
+            <FileText className="h - 5 w - 5 mb - 1" />;
+            <span > Update Resume</span>;
+          </Button>;
+          <Button variant="outline" className="h - auto py - 4 flex flex - col gap - 1">;
+            <Image className="h - 5 w - 5 mb - 1" />;
+            <span > Portfolio</span>;
+          </Button>;
+          <Button variant="outline" className="h - auto py - 4 flex flex - col gap - 1">;
+            <Clock className="h - 5 w - 5 mb - 1" />;
+            <span > Availability</span>;
+          </Button>;
+          <Button variant="outline" className="h - auto py - 4 flex flex - col gap - 1">;
+            <Zap className="h - 5 w - 5 mb - 1" />;
+            <span > AI Resume Boost</span>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          </Button>;
+        </div>;
+      </section>;
+      <section>;
+<<<<<<< HEAD
+        <div className="flex items-center justify-between mb-4">;
+          <h2 className="text-lg font-medium">Learning Hub</h2>;
+          <Button variant="ghost" size="sm" className="h-8">;
+=======
+        <div className="flex items - center justify - between mb - 4">;
+          <h2 className="text - lg font - medium">Learning Hub</h2>;
+          <Button variant="ghost" size="sm" className="h - 8">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             View all;
           </Button>;
         </div>;
         <Card>;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+          <CardContent className="p-4">;
+            <div className="flex items-center gap-3">;
+              <div className="bg-primary/10 p-3 rounded-full">;
+                <BookOpen className="h-6 w-6 text-primary" />;
+              </div>;
+              <div>;
+                <h3 className="font-medium">Improve your profile visibility</h3>;
+                <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>;
+=======
+
+<<<<<<< HEAD
+=======
+          <CardContent className="p - 4">;
+            <div className="flex items - center gap - 3">;
+              <div className="bg - primary / 10 p - 3 rounded - full">;
+                <BookOpen className="h - 6 w - 6 text - primary" />;
+              </div>;
+              <div>;
+                <h3 className="font - medium">Improve your profile visibility</h3>;
+                <p className="text - sm text - muted - foreground">5 tips for getting noticed by clients</p>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </div>;
             </div>;
           </CardContent>;
@@ -300,6 +868,8 @@ import { Link } from "react-router-dom";
 import React from "react";"
 import {
   // TODO: Implement
+<<<<<<< HEAD
+=======
 }
   Card,
   CardContent,
@@ -333,6 +903,119 @@ export function TalentDashboard() {
               View all <ChevronRight className="h-4 w-4" />"
 
 ;
+
+        <div className="space-y-3">"
+          <Card>
+            <CardContent className="p-4">"
+              <div className="flex justify-between items-start">"
+                <div className="space-y-1">"
+                  <h3 className="font-medium">Senior React Developer</h3>""
+                  <div className="text-sm text-muted-foreground">"
+                  <div className="flex items-center gap-1 mt-1">"
+                    <Badge variant="secondary" className="text-xs">"
+
+<<<<<<< HEAD
+                <div className="flex flex-col items-end">"
+                  <div className="bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs">"
+                  <span className="text-xs text-muted-foreground mt-1">"
+</span>
+              <div className="flex gap-2 mt-3">"
+                <Button size="sm">Apply Now""
+                <Button size="sm" variant="outline">"
+
+                  <h3 className="font-medium">UX/UI Designer</h3>""
+
+      </section>
+
+        <h2 className="text-lg font-medium mb-4">Application Tracker</h2>"
+            <div className="grid grid-cols-2 gap-4">"
+              <div className="text-center p-3 bg-primary/5 rounded-lg">"
+                <div className="text-2xl font-bold text-primary">3</div>""
+                <div className="text-xs text-muted-foreground">"
+                <div className="text-2xl font-bold text-primary">2</div>""
+                <div className="text-2xl font-bold text-primary">5</div>""
+                <div className="text-xs text-muted-foreground">Jobs Saved</div>"
+                <div className="text-2xl font-bold text-primary">12</div>""
+                <div className="text-xs text-muted-foreground">Jobs Viewed</div>"
+            <Button variant="outline" className="w-full mt-4">"
+
+        <h2 className="text-lg font-medium mb-4">Quick Actions</h2>""
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">"
+            <FileText className="h-5 w-5 mb-1" />"
+
+            <span>Update Resume</span>
+            <Image className="h-5 w-5 mb-1" />"
+
+            <span>Portfolio</span>
+            <Clock className="h-5 w-5 mb-1" />"
+
+            <span>Availability</span>
+            <Zap className="h-5 w-5 mb-1" />"
+
+            <span>AI Resume Boost</span>
+
+          <h2 className="text-lg font-medium">Learning Hub</h2>""
+          <Button variant="ghost" size="sm" className="h-8">"
+
+            <div className="flex items-center gap-3">"
+              <div className="bg-primary/10 p-3 rounded-full">"
+                <BookOpen className="h-6 w-6 text-primary" />"
+
+              <div>
+                <h3 className="font-medium">Improve your profile visibility</h3>""
+                <p className="text-sm text-muted-foreground">"
+</p>
+    </div>)"
+pr-12325
+
+    </div>)"
+
+"
+=======
+<<<<<<< HEAD
+    </div>);
+}
+    </div>;
+  ),;
+} export function TalentDashboard () {
+  return (<div className="space-y-6 px-4 pb-24" > flex items-center justify-between mb-4"> <h2 className=" text-lg font-medium">New Job Matches</h2> <Link to=" /mobile/browse"> <Button variant=" ghost"size=" sm"className=" h-8 gap-1"> View all <ChevronRight className=" h-4 w-4"/> </Button> </Link> </div> <div className=" space-y-3"> <Card> <CardContent className=" p-4"> <div className=" flex justify-between items-start"> <div className=" space-y-1"> <h3 className=" font-medium">Senior React Developer</h3> <div className=" text-sm text-muted-foreground">TechCorp Inc.</div> <div className=" flex items-center gap-1 mt-1"> <Badge variant=" secondary"className=" text-xs">Remote</Badge> <Badge variant=" secondary"className=" text-xs">Full-time</Badge> </div> </div> <div className=" flex flex-col items-end"> <div className=" bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs"> 92% match </div> <span className=" text-xs text-muted-foreground mt-1">2 days ago</span> </div> </div> <div className=" flex gap-2 mt-3"> <Button size=" sm">Apply Now</Button> <Button size=" sm"variant=" outline">View Details</Button> </div> </CardContent> </Card> <Card> <CardContent className=" p-4"> <div className=" flex justify-between items-start"> <div className=" space-y-1"> <h3 className=" font-medium">UX/UI Designer</h3> <div className=" text-sm text-muted-foreground">Creative Studios</div> <div className=" flex items-center gap-1 mt-1"> <Badge variant=" secondary"className=" text-xs">Hybrid</Badge> <Badge variant=" secondary"className=" text-xs">Contract</Badge> </div> </div> <div className=" flex flex-col items-end"> <div className=" bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs"> 87% match </div> <span className=" text-xs text-muted-foreground mt-1">4 hours ago</span> </div> </div> <div className=" flex gap-2 mt-3"> <Button size=" sm">Apply Now</Button> <Button size=" sm"variant=" outline">View Details</Button> </div> </CardContent> </Card> </div> </section> <section> <h2 className=" text-lg font-medium mb-4">Application Tracker</h2> <Card> <CardContent className=" p-4"> <div className=" grid grid-cols-2 gap-4"> <div className=" text-center p-3 bg-primary/5 rounded-lg"> <div className=" text-2xl font-bold text-primary">3</div> <div className=" text-xs text-muted-foreground">Active Applications</div> </div> <div className=" text-center p-3 bg-primary/5 rounded-lg"> <div className=" text-2xl font-bold text-primary">2</div> <div className=" text-xs text-muted-foreground">Interviews Scheduled</div> </div> <div className=" text-center p-3 bg-primary/5 rounded-lg"> <div className=" text-2xl font-bold text-primary">5</div> <div className=" text-xs text-muted-foreground">Jobs Saved</div> </div> <div className=" text-center p-3 bg-primary/5 rounded-lg"> <div className=" text-2xl font-bold text-primary">12</div> <div className=" text-xs text-muted-foreground">Jobs Viewed</div> </div> </div> <Button variant=" outline"className=" w-full mt-4"> View All Applications </Button> </CardContent> </Card> </section> <section> <h2 className=" text-lg font-medium mb-4">Quick Actions</h2> <div className=" grid grid-cols-2 gap-4"> <Button variant=" outline"className=" h-auto py-4 flex flex-col gap-1"> <FileText className=" h-5 w-5 mb-1"/> <span>Update Resume</span> </Button> <Button variant=" outline"className=" h-auto py-4 flex flex-col gap-1"> <Image className=" h-5 w-5 mb-1"/> <span>Portfolio</span> </Button> <Button variant=" outline"className=" h-auto py-4 flex flex-col gap-1"> <Clock className=" h-5 w-5 mb-1"/> <span>Availability</span> </Button> <Button variant=" outline"className=" h-auto py-4 flex flex-col gap-1"> <Zap className=" h-5 w-5 mb-1"/> <span>AI Resume Boost</span> </Button> </div> </section> <section> <div className=" flex items-center justify-between mb-4"> <h2 className=" text-lg font-medium">Learning Hub</h2> <Button variant=" ghost"size=" sm"className=" h-8"> View all </Button> </div> <Card> <CardContent className=" p-4"> <div className=" flex items-center gap-3"> <div className=" bg-primary/10 p-3 rounded-full"> <BookOpen className=" h-6 w-6 text-primary"/> </div> <div> <h3 className=" font-medium">Improve your profile visibility</h3> <p className=" text-sm text-muted-foreground" >5 tips for getting noticed by clients</p> </div> </div> </CardContent> </Card> </section> </div> 
+    </div>;
+  );
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,"
+} from "@/components/ui/card";""
+import { Button } from "@/components/ui/button";""
+import { Badge } from "@/components/ui/badge";"
+  // TODO: Implement
+  ChevronRight,
+  FileText,
+  Image,
+  Clock,
+  Zap,
+  BookOpen,"
+} from "lucide-react";""
+import { Link } from "react-router-dom";"
+export function TalentDashboard() {
+  return ("
+    <div className="space-y-6 px-4 pb-24">"
+</div>
+      <section>
+</section>"
+        <div className="flex items-center justify-between mb-4">"
+</div>"
+          <h2 className="text-lg font-medium">New Job Matches</h2>""
+          <Link to="/mobile/browse">"
+"
+            <Button variant="ghost" size="sm" className="h-8 gap-1">"
+              View all <ChevronRight className="h-4 w-4" />"
+
+;
+<<<<<<< HEAD
 
         <div className="space-y-3">"
           <Card>
@@ -400,3 +1083,10 @@ pr-12325
     </div>)"
 
 "
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

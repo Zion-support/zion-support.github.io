@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 resetFilters: () => void
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
@@ -9,6 +14,10 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface FraudFiltersProps {
   searchQuery: string,
   setSearchQuery: (value: string) => void,
@@ -38,6 +47,11 @@ import React from 'react;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface FraudFiltersProps {
   searchQuery: string,
   setSearchQuery: (value: string,) => void,
@@ -67,6 +81,10 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({searchQuery;
     <div className="flex flex-col md: flex-row gap-4 mb-6>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   searchQuery,
   setSearchQuery,
@@ -81,9 +99,18 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
     <div className="flex flex-col md:flex-row gap-4 mb-6">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className=relative flex-1>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+      <div className=relative flex-1>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
           placeholder=Search by user or content..."
@@ -124,6 +151,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Select>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       
 
@@ -171,6 +203,10 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setSeverityFilter;
   contentTypeFilter;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Search, Filter } from 'lucide-react';
 interface FraudFiltersProps {;
   searchQuery: string,;
@@ -193,7 +229,14 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   severityFilter,;
   setSeverityFilter,;
   contentTypeFilter,;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   setContentTypeFilter;
   resetFilters}) => {
   return (;"
@@ -208,10 +251,19 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         />;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
         <SelectTrigger className=w-[180px]>;
@@ -355,7 +407,14 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({}
 =======
 }'"
 '"},
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React from react;
 import { Input } from '@/components/ui/input';
@@ -371,6 +430,11 @@ import { Search, Filter } from lucide-react;
 interface FraudFiltersProps {
   searchQuery: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>)}
 '"}}
 '"}}import { Input  } from @/components/ui/input;
@@ -379,6 +443,10 @@ import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from @/compo
 interface FraudFiltersProps  {searchQuery: string;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   setSearchQuery: (value: string) => void;
   statusFilter: string | null;
   setStatusFilter: (value: string | null) => void;
@@ -391,6 +459,13 @@ interface FraudFiltersProps  {searchQuery: string;
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+'"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({)}'";
 '"
@@ -398,3 +473,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({)}'";
 };
 '"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

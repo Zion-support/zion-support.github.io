@@ -1,4 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from "react";
+import { Badge } from "@/components/ui/badge";
+interface TalentCardSkillsProps {
+  skills: string[] | undefined
+}
+
+export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
+  // Get top skills (limit to 4)
+  const topSkills = skills.slice(0, 4) || [],
+
+  return (
+    <div className="flex flex-wrap gap-1 mb-5">
+      {topSkills.map((skill) => (
+        <Badge
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react","
 import { Badge } from "@/components/ui/badge","
 import {Badge} from "@/components/ui/badge";"
@@ -15,6 +35,39 @@ import React from "react";
 
 import { Badge } from "@/components/ui/badge";
 interface TalentCardSkillsProps {}
+<<<<<<< HEAD
+=======
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+
+import React from "react";
+import { Badge } from "@/components/ui/badge";
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+import {Badge} from "@/components/ui/badge";
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+import React from "react";
+
+import { Badge } from "@/components/ui/badge";
+
+import React from "react";
+import { Badge } from "@/components/ui/badge";
+
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+interface TalentCardSkillsProps {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   skills: string[] | undefined;
 }
 
@@ -29,6 +82,10 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
 
   // Get top skills (limit to 4)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const topSkills = skills.slice(0, 4) || [];
   // Get top skills (limit to 4);
 pr-12325
@@ -36,11 +93,48 @@ pr-12325
   // Get top skills (limit to 4)
   const topSkills = skills.slice(0, 4) |[];
   const topSkills = skills.slice(0, 4) || [],
+<<<<<<< HEAD
+=======
+=======
+
+<<<<<<< HEAD
+// Get top skills (limit to 4);
+  const topSkills = skills.slice(0, 4) || [];
+  // Get top skills (limit to 4);
+  const topSkills = skills.slice(0, 4) || [];
+  // Get top skills (limit to 4)
+  const topSkills = skills.slice(0, 4) |[];
+  const topSkills = skills.slice(0, 4) || [],
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
     <div className="flex flex-wrap gap-1 mb-5">
       {topSkills.map((skill) => (
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+import {Badge} from "@/components/ui/badge";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        <Badge
+          key={skill}
+          className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
+        >
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 
@@ -58,19 +152,39 @@ interface TalentCardSkillsProps {;
     </div>
   );
 }
+<<<<<<< HEAD
 
 export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps) {;
   // Get top skills (limit to 4);
   const topSkills = skills && skills.slice(0, 4) || [];
+=======
+export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps) {;
+  // Get top skills (limit to 4);
+  const topSkills = skills && skills.slice(0, 4) || [];
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return ("
     <div className="flex flex-wrap gap-1 mb-5">;
       {topSkills && topSkills.map(skill => (;
         <Badge;
+<<<<<<< HEAD
+=======
+=======
+  return (
+    <div className="flex flex-wrap gap-1 mb-5">;
+      {topSkills && topSkills.map(skill => (;
+        <Badge
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           key={skill}
 "
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           {skill}
         </Badge>;
       ))}
@@ -79,13 +193,27 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
           +{skills && skills.length - 4} more;
         </Badge>;
       )}
+<<<<<<< HEAD
 
 }
 
+<<<<<<< HEAD
 import { Badge  } from '@/components / ui / badge';
 interface TalentCardSkillsProps {}
   skills: string[] | undefined;
 }
+=======
+=======
+    </div>;
+  );
+}
+import React from './react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+import { Badge  } from '@/components / ui / badge';
+interface TalentCardSkillsProps {}
+  skills: string[] | undefined;
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export /**;
  * TalentCardSkills - Function description;
  */
@@ -97,4 +225,48 @@ function TalentCardSkills() {}
           +{skills.length - 4} more;
         </Badge>)}
     </div>);
+<<<<<<< HEAD
 }
+=======
+}
+<<<<<<< HEAD
+
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
+;
+interface TalentCardSkillsProps {;
+  skills:string[] | undefined;
+}
+;
+export function TalentCardSkills({ skills = [] } TalentCardSkillsProps) {;
+  // Get top skills (limit to 4);
+  const topSkills = skills.slice(0, 4) || [],;
+;
+  return (;
+    <div className="flex flex-wrap gap-1 mb-5">;
+      {topSkills.map(skill => (;
+        <Badge ;
+>>>>>>> merged-prs-20250907-203621
+          key={skill}
+          className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
+        >
+          {skill}
+        </Badge>
+      ))}
+      {skills.length > 4 && (
+        <Badge className="bg-zion-blue-light text-zion-slate-light border-0">
+          +{skills.length - 4} more
+        </Badge>
+      )}
+    </div>
+<<<<<<< HEAD
+  )
+}
+=======
+  );
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

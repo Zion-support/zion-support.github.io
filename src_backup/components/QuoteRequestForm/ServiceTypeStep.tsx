@@ -83,6 +83,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useEffect, useState  } from react';
 import { QuoteFormData, ListingItem, ServiceType  } from '@/types/quotes;
 import { Input  } from @/components/ui/input';
@@ -133,6 +138,10 @@ import { useEffect, useState } from react",import { QuoteFormData, ListingItem, 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     const fetchServices = async () => {
       setLoading(true);
@@ -268,6 +277,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   });
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <div className="space-y-6">;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className=space-y-6">;
     }fetchServices()}, [formData.serviceType, debouncedQuery, isMounted])const handleTypeSelect = (type: ServiceType) => {updateFormData({ serviceType: type })}const handleItemSelect = (item: ListingItem) => {updateFormData({specificItem: item,serviceCategory: item.category,serviceType: item.category.toLowerCase() as ServiceType})}const sourceListings  = listings;const filteredListings = sourceListings.filter(item => {// Filter by category only when a service type has been selected;
     if (formData.serviceType !== ') {const categoryMatch =;
@@ -278,15 +293,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     <div className="space-y-6">;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div>;
         <h3 className=text-xl font-semibold text-white mb-4">What are you looking for?</h3>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4>;
           <Card;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === service";
                 ? "bg-zion-purple/20 border-zion-purple;
                 : bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             className={`p-4 cursor-pointer border-2 transition-colors ${;
               formData.serviceType === "service";
                 ? "bg-zion-purple/20 border-zion-purple";
@@ -300,10 +328,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>;
           <Card;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === talent";
                 ? "bg-zion-purple/20 border-zion-purple;
                 : bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             className={`p-4 cursor-pointer border-2 transition-colors ${;
               formData.serviceType === "talent";
                 ? "bg-zion-purple/20 border-zion-purple";
@@ -317,6 +354,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>;
           <Card;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === equipment";
                 ? "bg-zion-purple/20 border-zion-purple;
                 : bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
@@ -358,6 +400,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ? bg-zion-purple/20 border-zion-purple";
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             className={`p-4 cursor-pointer border-2 transition-colors ${;
               formData.serviceType === "equipment";
                 ? "bg-zion-purple/20 border-zion-purple";
@@ -372,11 +418,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {formData.serviceType && (<div className="space-y-4>;
           <h3 className=text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>;
           <div className="relative>;
             <Search className=absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {formData.serviceType && (;
         <div className="space-y-4">;
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>;
@@ -405,6 +460,11 @@ return (<div className=space-y-6"> <div> <h3 className="text-xl font-semibold te
   formData.serviceType && (<div className=space-y-4> <h3 className="text-xl font-semibold text-white">Select a specific {
   formData.serviceType ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }</h3> <div className=relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4 /> <Input placeholder= {
   `Search $ {
   formData.serviceType ;
@@ -458,6 +518,10 @@ return (<div className=space-y-6"> <div> <h3 className="text-xl font-semibold te
 }> {";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }...` ;
 }value= {
   searchQuery ;
@@ -478,6 +542,12 @@ return (<div className=space-y-6"> <div> <h3 className="text-xl font-semibold te
 }
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   loading ? (<> <Skeleton className=h-[120px] w-full" /> <Skeleton className="h-[120px] w-full /> <Skeleton className=h-[120px] w-full" /> </>) : filteredListings.length > 0 ? (filteredListings.map ( (item) => (<div key= {item.id ";
 }/> </div>) ) ) : (<div className=text-center py-8 text-zion-slate-light > No items found. Please try a different search. </div>)}</div> </div>)}</div>)}";
   )}
@@ -485,3 +555,7 @@ return (<div className=space-y-6"> <div> <h3 className="text-xl font-semibold te
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

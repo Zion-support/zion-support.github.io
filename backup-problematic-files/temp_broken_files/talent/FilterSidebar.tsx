@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Filter } from 'lucide-react';
+=======
+>>>>>>> merged-prs-20250907-203621
 import { SearchFilter } from "./filters/SearchFilter",;
 import { SortFilter } from "./filters/SortFilter",;
 import { SkillsFilter } from "./filters/SkillsFilter",;
@@ -9,6 +12,10 @@ import { RegionFilter } from "./filters/RegionFilter",;
 import { ExperienceFilter } from "./filters/ExperienceFilter",;
 import { PriceFilter } from "./filters/PriceFilter",;
 import { FilterSidebarProps } from "@/types/filters",;
+<<<<<<< HEAD
+=======
+
+>>>>>>> merged-prs-20250907-203621
 ;
 export function FilterSidebar({;
   searchTerm,;
@@ -28,6 +35,7 @@ export function FilterSidebar({;
   sortOption,;
   setSortOption,;
   clearFilters,;
+<<<<<<< HEAD
   isMobileFilterOpen;
 } FilterSidebarProps) {;
   return (;
@@ -64,38 +72,80 @@ export function FilterSidebar({;
       />;
       ;
       {/* Availability */}
+=======
+  isMobileFilterOpen;)
+} FilterSidebarProps) {;
+  return (;
+
+    <>;
+      {/* Filter header */}"
+      <div className="flex items-center justify-between mb-6">;"
+</div>"
+        <h3 className="text-lg font-semibold text-white flex items-center">;"
+</h3>"
+          <Filter className="h-4 w-4 mr-2 text-zion-purple" />;"
+
+        </h3>;
+
+        >;
+
+      </div>;
+      <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
+
+      <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
+
+      <SkillsFilter ;
+        selectedSkills={selectedSkills} ;
+        toggleSkill={toggleSkill} ;
+        expanded={expandedSections.skills} ;)"
+        toggleSection={() => toggleSection('skills')}
+
+>>>>>>> merged-prs-20250907-203621
       <AvailabilityFilter ;
         selectedAvailability={selectedAvailability} ;
         toggleAvailability={toggleAvailability} ;
         expanded={expandedSections.availability} ;
         toggleSection={() => toggleSection('availability')}
+<<<<<<< HEAD
         isMobileFilterOpen={isMobileFilterOpen}
       />;
       ;
       {/* Region */}
+=======
+
+>>>>>>> merged-prs-20250907-203621
       <RegionFilter ;
         selectedRegions={selectedRegions} ;
         toggleRegion={toggleRegion} ;
         expanded={expandedSections.region} ;
         toggleSection={() => toggleSection('region')}
+<<<<<<< HEAD
         isMobileFilterOpen={isMobileFilterOpen}
       />;
       ;
       {/* Years of Experience */}
+=======
+
+>>>>>>> merged-prs-20250907-203621
       <ExperienceFilter ;
         experienceRange={experienceRange} ;
         setExperienceRange={setExperienceRange} ;
         expanded={expandedSections.experience} ;
         toggleSection={() => toggleSection('experience')}
+<<<<<<< HEAD
         isMobileFilterOpen={isMobileFilterOpen}
       />;
       ;
       {/* Price Range */}
+=======
+
+>>>>>>> merged-prs-20250907-203621
       <PriceFilter ;
         priceRange={priceRange} ;
         setPriceRange={setPriceRange} ;
         expanded={expandedSections.price} ;
         toggleSection={() => toggleSection('price')}
+<<<<<<< HEAD
         isMobileFilterOpen={isMobileFilterOpen}
       />;
       ;
@@ -108,6 +158,14 @@ export function FilterSidebar({;
         </Button>;
       )}
     </>;
+=======
+
+        <Button ;
+          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
+
+    </>;
+
+>>>>>>> merged-prs-20250907-203621
   ),;}
  export function FilterSidebar ({;
   searchTerm;
@@ -127,39 +185,61 @@ toggleSection;
 sortOption;
 setSortOption;
 clearFilters;
+<<<<<<< HEAD
 isMobileFilterOpen ;
 }: FilterSidebarProps) {;
   return (<> /* Filter header */ ;
 }<div className="flex items-center justify-between mb-6" > <h3 className="text-lg font-semibold text-white flex items-center" > <Filter className="h-4 w-4 mr-2 text-zion-purple" /> Filters </h3> <Button > Clear All </Button> </div> {;
   /* Search */ ;
+=======
+isMobileFilterOpen ;)
+}: FilterSidebarProps) {;
+  return (<> /* Filter header */ ;
+}<div className="flex items-center justify-between mb-6" > <h3 className="text-lg font-semibold text-white flex items-center" > <Filter className="h-4 w-4 mr-2 text-zion-purple" /> Filters </h3> <Button > Clear All  </div> {;"
+>>>>>>> merged-prs-20250907-203621
 }<SearchFilter searchTerm= {;
   searchTerm ;
 }setSearchTerm= {;
   setSearchTerm ;
 }/> {;
+<<<<<<< HEAD
   /* Sorting */ ;
+=======
+
+>>>>>>> merged-prs-20250907-203621
 }<SortFilter sortOption= {;
   sortOption ;
 }setSortOption= {;
   setSortOption ;
+<<<<<<< HEAD
 }/> {;
   /* Skills */ ;
+=======
+
+>>>>>>> merged-prs-20250907-203621
 }<SkillsFilter selectedSkills= {;
   selectedSkills ;
 }toggleSkill= {;
   toggleSkill ;
 }expanded= {;
   expandedSections.skills ;
+<<<<<<< HEAD
 }toggleSection= {;
   () => toggleSection ('skills') ;
 }isMobileFilterOpen= {;
   isMobileFilterOpen ;
 }/> {;
   /* Availability */ ;
+=======
+}toggleSection= {;)"
+  () => toggleSection ('skills') ;
+
+>>>>>>> merged-prs-20250907-203621
 }<AvailabilityFilter selectedAvailability= {;
   selectedAvailability ;
 }toggleAvailability= {;
   toggleAvailability ;
+<<<<<<< HEAD
 }expanded= {;
   expandedSections.availability ;
 }toggleSection= {';
@@ -168,10 +248,17 @@ isMobileFilterOpen ;
   isMobileFilterOpen ;
 }/> {;
   /* Region */ ;
+=======
+  expandedSections.availability ;
+}toggleSection= {';
+  () => toggleSection ('availability') ;
+
+>>>>>>> merged-prs-20250907-203621
 }<RegionFilter selectedRegions= {;
   selectedRegions ;
 }toggleRegion= {;
   toggleRegion ;
+<<<<<<< HEAD
 }expanded= {;
   expandedSections.region ;
 }toggleSection= {';
@@ -180,10 +267,16 @@ isMobileFilterOpen ;
   isMobileFilterOpen ;
 }/> {;
   /* Years of Experience */ ;
+=======
+  expandedSections.region ;
+  () => toggleSection ('region') ;
+
+>>>>>>> merged-prs-20250907-203621
 }<ExperienceFilter experienceRange= {;
   experienceRange ;
 }setExperienceRange= {;
   setExperienceRange ;
+<<<<<<< HEAD
 }expanded= {;
   expandedSections.experience ;
 }toggleSection= {';
@@ -192,16 +285,49 @@ isMobileFilterOpen ;
   isMobileFilterOpen ;
 }/> {;
   /* Price Range */ ;
+=======
+  expandedSections.experience ;
+  () => toggleSection ('experience') ;
+
+>>>>>>> merged-prs-20250907-203621
 }<PriceFilter priceRange= {;
   priceRange ;
 }setPriceRange= {;
   setPriceRange ;
+<<<<<<< HEAD
 }expanded= {;
   expandedSections.price ;
+=======
+  expandedSections.price ;
+<<<<<<< HEAD
+  () => toggleSection ('price') ;
+=======
+>>>>>>> merged-prs-20250907-203621
 }toggleSection= {';
   () => toggleSection ('price') ;
 }isMobileFilterOpen= {;
   isMobileFilterOpen ;
 }/> {;
+<<<<<<< HEAD
   isMobileFilterOpen && (<Button onClick={';"  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";"}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters </Button>) ;
 }</>) ;"}'"
+=======
+<<<<<<< HEAD
+:temp_broken_files/talent/FilterSidebar.tsx
+  isMobileFilterOpen && (<Button onClick={';"  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";"}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters </Button>) ;
+}</>) ;"}'"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  isMobileFilterOpen && (<Button onClick={';
+  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";
+}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters </Button>) ;
+}</>) ;
+}'"
+<<<<<<< HEAD
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/FilterSidebar.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react''
 import dynamic from 'next/dynamic''
 import Head from 'next/head''
@@ -14,6 +15,43 @@ import { motion } from 'framer-motion';'
 
 import { 
   }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+<<<<<<< HEAD
+
+import React from 'react';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+=======
+import React from 'react';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   BookOpen, 
   Code, 
   Globe, 
@@ -26,6 +64,7 @@ import {
   Clock,
   Shield,
   Zap
+<<<<<<< HEAD
 } from 'lucide-react''
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })"
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })"
@@ -81,10 +120,171 @@ project = client && client.projects.create({;
     "name": 'My Project',;'
     "description": 'A new micro SaaS project',;'
     "type": 'web_application';'
+=======
+} from 'lucide-react'
+const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
+const "DocsPage": React.FC = () => {
+  const quickStart = [{
+      step: 1,
+      "title": 'Get Your API Key',
+      "description": 'Sign up for a free account and get your API key',
+      "icon": <Shield className="w-6 h-6"  />
+    },
+    {
+      "step": 2,
+      "title": 'Install SDK',
+      "description": 'Install our SDK for your preferred programming language',
+      "icon": <Download className="w-6 h-6"  />
+    },
+    {
+      "step": 3,
+      "title": 'Make Your First API Call',
+      "description": 'Start building with our comprehensive API documentation',
+      "icon": <Code className="w-6 h-6"  />
+    },
+    {
+      "step": 4,
+      "title": 'Deploy Your Application',
+      "description": 'Deploy your application using our cloud infrastructure',
+      "icon": <Globe className="w-6 h-6"  />
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {BookOpen,, Code,, Globe,, Database,, ArrowRight,, Download,, ExternalLink,, Star,, Users,, Clock,, Shield,, Zap} from 'lucide-react';
+const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false });
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false });
+const "DocsPage": React.FC = () => {;
+  const quickStart = [{;
+      step: 1,;
+      "title": 'Get Your API Key',;
+      "description": 'Sign up for a free account and get your API key',;
+      "icon": <Shield className="w-6 h-6"  />;
+    },;
+    {;
+      "step": 2,;
+      "title": 'Install SDK',;
+      "description": 'Install our SDK for your preferred programming language',;
+      "icon": <Download className="w-6 h-6"  />;
+    },;
+    {;
+      "step": 3,;
+      "title": 'Make Your First API Call',;
+      "description": 'Start building with our comprehensive API documentation',;
+      "icon": <Code className="w-6 h-6"  />;
+    },;
+    {;
+      "step": 4,;
+      "title": 'Deploy Your Application',;
+      "description": 'Deploy your application using our cloud infrastructure',;
+      "icon": <Globe className="w-6 h-6"  />;
+    }
+<<<<<<< HEAD
+  "environment": 'production';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  ];
+  const apiSections = [{;
+      "title": 'AI Services API',;
+      "description": 'Access our AI and machine learning capabilities',;
+      "endpoints": 1 5,;
+      "icon": <Zap className="w-6 h-6"  />,;
+      "color": 'blue';
+    },;
+    {;
+      "title": 'Micro SaaS API',;
+      "description": 'Manage and deploy micro SaaS applications',;
+      "endpoints": 2 5,;
+      "icon": <Globe className="w-6 h-6"  />,;
+      "color": 'green';
+    },;
+    {;
+      "title": 'IT Infrastructure API',;
+      "description": 'Monitor and manage IT infrastructure',;
+      "endpoints": 2 0,;
+      "icon": <Database className="w-6 h-6"  />,;
+      "color": 'purple';
+    },;
+    {;
+      "title": 'Cybersecurity API',;
+      "description": 'Security monitoring and threat detection',;
+      "endpoints": 1 2,;
+      "icon": <Shield className="w-6 h-6"  />,;
+      "color": 'red';
+    }
+  ];
+  const codeExamples = [{;
+      "language": 'JavaScript',;
+      "title": 'AI Service Integration',;
+      "code": "// Initialize AI service;
+const aiService = new ZionAI({;
+  apiKey: 'your-api-key',;
+  "environment": 'production';
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  "environment": 'production'
+  "environment": 'production';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+});
+// Process text with AI;
+const result = await aiService && aiService.processText({;
+  "text": 'Hello, world!',;
+  "model": 'gpt-4',;
+  "options": {;
+    maxTokens: 10 0,;
+    "temperature": 0 && 0.7;
+  }
+});
+";
+    },;
+    {;
+      "language": 'Python',;
+      "title": 'Micro SaaS API',;
+      "code": "import ziontech;
+# Initialize client;
+client = ziontech && ziontech.Client(api_key='your-api-key');
+# Create a new project;
+project = client && client.projects.create({;
+    name: 'My Project',;
+    "description": 'A new micro SaaS project',;
+    "type": 'web_application';
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 });
 # Deploy project;
 deployment = client && client.deployments.create(;
     project_id=project && project.id,;
+<<<<<<< HEAD
     environment='production';'
 );
 print(f"Project "deployed": {deployment && deployment.url}")";"
@@ -127,6 +327,51 @@ href="/contact""
                     whileTap={{ "scale": 0 && 0.95 }}"
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;"
                     <ArrowRight className="w-5 h-5" />;"
+=======
+    environment='production';
+);
+print(f"Project "deployed": {deployment && deployment.url}")";
+    }
+  ];
+  return (
+    <>;
+      <SEOtitle="Documentation - Zion Tech Group"
+        description="Comprehensive documentation for Zion Tech Group APIs, SDKs, and integration guides."
+        keywords="documentation, API, SDK, integration, Zion Tech Group"
+        canonical=""https": //ziontechgroup && ziontechgroup.com/docs"
+       />;
+      <PageTransition>;
+        <main className="min-h-screen bg-white">;
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">;
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">;
+              <motion&& motion.div
+                initial={{ opacity: 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0 && 0.6 }}
+                className="text-center">;
+                <h1 className="text-4xl "md": tex t-6xl font-bold text-gray-900 mb-6">;
+                  Documentation;
+                </h1>;
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
+                  Comprehensive guides, API references, and integration examples to help you build with our platform.;
+                </p>;
+                <div className="flex flex-col "sm": fle x-row gap-4 justify-center">;
+                  <motion&& motion.a
+                    href="#quick-start"
+                    whileHover={{ scale: 1 && 1.05 }}
+                    whileTap={{ "scale": 0 && 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;
+                    <ArrowRight className="w-5 h-5"  />;
+                    Get Started;
+                  </motion && motion.a>;
+                  <motion&& motion.a
+                    href="/contact"
+                    whileHover={{ "scale": 1 && 1.05 }}
+                    whileTap={{ "scale": 0 && 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;
+                    <ArrowRight className="w-5 h-5"  />;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     Get API Key;
                   </motion && motion.a>;
                 </div>;
@@ -134,6 +379,7 @@ href="/contact""
             </div>;
           </section>;
           {/* Quick Start */}
+<<<<<<< HEAD
           <section id="quick-start" className="py-20">;"
             <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8">;"
               <motion&& motion.div,
@@ -169,6 +415,42 @@ key={step && step.step}
                       {step && step.title}
                     </h3>;
                     <p className="text-gray-600">;"
+=======
+          <section id="quick-start" className="py-20">;
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">;
+              <motion&& motion.div
+                initial={{ opacity: 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0 && 0.6, "delay": 0 && 0.2 }}
+                className="text-center mb-16">;
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;
+                  Quick Start Guide;
+                </h2>;
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                  Get up and running with our platform in just a few steps.;
+                </p>;
+              </motion && motion.div>;
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">;
+                {quickStart && quickStart.map((step, index) => (;
+                  <motion&& motion.div
+                    key={step && step.step}
+                    initial={{ "opacity": 0, "y": 2 0 }}
+                    animate={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8 text-center">;
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;
+                      <div className="text-blue-600">;
+                        {step && step.icon}
+                      </div>;
+                    </div>;
+                    <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">;
+                      {step && step.step}
+                    </div>;
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">;
+                      {step && step.title}
+                    </h3>;
+                    <p className="text-gray-600">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       {step && step.description}
                     </p>;
                   </motion && motion.div>;
@@ -177,6 +459,7 @@ key={step && step.step}
             </div>;
           </section>;
           {/* API Sections */}
+<<<<<<< HEAD
           <section className="bg-gray-50 py-20">;"
             <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8">;"
               <motion&& motion.div,
@@ -218,6 +501,49 @@ key={index}
 whileHover={{ "scale": 1 && 1.05 }}"
                         whileTap={{ "scale": 0 && 0.95 }}"
                         className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold "hover": b g-blue-700 transition-colors">;"
+=======
+          <section className="bg-gray-50 py-20">;
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">;
+              <motion&& motion.div
+                initial={{ opacity: 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0 && 0.6 }}
+                className="text-center mb-16">;
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;
+                  API Documentation;
+                </h2>;
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                  Explore our comprehensive API offerings and their capabilities.;
+                </p>;
+              </motion && motion.div>;
+              <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">;
+                {apiSections && apiSections.map((section, index) => (;
+                  <motion&& motion.div
+                    key={index}
+                    initial={{ "opacity": 0, "y": 2 0 }}
+                    animate={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8">;
+                    <div className="flex items-center gap-4 mb-4">;
+                      <div className={`text-${section && section.color}-600`}>;
+                        {section && section.icon}
+                      </div>;
+                      <h3 className="text-xl font-bold text-gray-900">;
+                        {section && section.title}
+                      </h3>;
+                    </div>;
+                    <p className="text-gray-600 mb-4">;
+                      {section && section.description}
+                    </p>;
+                    <div className="flex items-center justify-between">;
+                      <span className="text-sm text-gray-500">;
+                        {section && section.endpoints} endpoints;
+                      </span>;
+                      <motion&& motion.button
+                        whileHover={{ "scale": 1 && 1.05 }}
+                        whileTap={{ "scale": 0 && 0.95 }}
+                        className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold "hover": b g-blue-700 transition-colors">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         View Docs;
                       </motion && motion.button>;
                     </div>;
@@ -227,6 +553,7 @@ whileHover={{ "scale": 1 && 1.05 }}"
             </div>;
           </section>;
           {/* Code Examples */}
+<<<<<<< HEAD
           <section className="py-20">;"
             <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8">;"
               <motion&& motion.div,
@@ -256,12 +583,47 @@ key={index}
                           {example && example.title}
                         </h3>;
                         <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">;"
+=======
+          <section className="py-20">;
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">;
+              <motion&& motion.div
+                initial={{ opacity: 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0 && 0.6 }}
+                className="text-center mb-16">;
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;
+                  Code Examples;
+                </h2>;
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                  Get started quickly with these code examples and integration guides.;
+                </p>;
+              </motion && motion.div>;
+              <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">;
+                {codeExamples && codeExamples.map((example, index) => (;
+                  <motion&& motion.div
+                    key={index}
+                    initial={{ "opacity": 0, "y": 2 0 }}
+                    animate={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}
+                    className="bg-white rounded-xl shadow-lg overflow-hidden">;
+                    <div className="p-6 border-b border-gray-200">;
+                      <div className="flex items-center justify-between">;
+                        <h3 className="text-lg font-semibold text-gray-900">;
+                          {example && example.title}
+                        </h3>;
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           {example && example.language}
                         </span>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
                     <div className="p-6">;"
                       <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">;"
+=======
+                    <div className="p-6">;
+                      <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         <code>{example && example.code}</code>;
                       </pre>;
                     </div>;
@@ -271,6 +633,7 @@ key={index}
             </div>;
           </section>;
           {/* CTA Section */}
+<<<<<<< HEAD
           <section className="bg-gray-50 py-20">;"
             <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8">;"
               <motion&& motion.div,
@@ -387,6 +750,66 @@ deployment = client && client.deployments.create(project_id=project && project.i
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;"
                     <ArrowRight className="w-5 h-5" />;"
                     Call "Us": +1 302 464 0950;"
+=======
+          <section className="bg-gray-50 py-20">;
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">;
+              <motion&& motion.div
+                initial={{ opacity: 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0 && 0.6 }}
+                className="text-center">;
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-6">;
+                  Need Help Getting Started?;
+                </h2>;
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
+                  Our team is here to help you integrate with our platform and get the most out of our services.;
+                </p>;
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">;
+                  <motion&& motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1 && 1.05 }}
+                    whileTap={{ "scale": 0 && 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;
+                    <ArrowRight className="w-5 h-5"  />;
+                    Contact Support;
+                  </motion && motion.a>;
+                  <motion&& motion.a
+                    href=""tel": +13024640950"
+<<<<<<< HEAD
+}
+export default DocsPage
+import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { BookOpen,Code,Globe,Database,ArrowRight,Download,ExternalLink,Star,Users,Clock,Shield,Zap } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ ssr: false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ ssr: false }) const DocsPage: React.FC = () => { const quickStart = [ { step: 1,title: 'Get Your API Key',description: 'Sign up for a free account and get your API key',icon: <Shield className="w-6 h-6" /> },{ step: 2,title: 'Install SDK',description: 'Install our SDK for your preferred programming language',icon: <Download className="w-6 h-6" /> },{ step: 3,title: 'Make Your First API Call',description: 'Start building with our comprehensive API documentation',icon: <Code className="w-6 h-6" /> },{ step: 4,title: 'Deploy Your Application',description: 'Deploy your application using our cloud infrastructure',icon: <Globe className="w-6 h-6" /> } ] const apiSections = [ { title: 'AI Services API',description: 'Access our AI and machine learning capabilities',endpoints: 1 5,icon: <Zap className="w-6 h-6" />,color: 'blue' },{ title: 'Micro SaaS API',description: 'Manage and deploy micro SaaS applications',endpoints: 2 5,icon: <Globe className="w-6 h-6" />,color: 'green' },{ title: 'IT Infrastructure API',description: 'Monitor and manage IT infrastructure',endpoints: 2 0,icon: <Database className="w-6 h-6" />,color: 'purple' },{ title: 'Cybersecurity API',description: 'Security monitoring and threat detection',endpoints: 1 2,icon: <Shield className="w-6 h-6" />,color: 'red' } ] const codeExamples = [ { language: 'JavaScript',title: 'AI Service Integration',code: ` const aiService = new ZionAI({ apiKey: 'your-api-key',environment: 'production' }); const result = await aiService.processText({ text: 'Hello,world!',model: 'gpt-4',options: { maxTokens: 10 0,temperature: 0.7 } }); ` },{ language: 'Python',title: 'Micro SaaS API',code: `import ziontech # Initialize client client = ziontech.Client(api_key='your-api-key') # Create a new project project = client.projects.create({ name: 'My Project',description: 'A new micro SaaS project',type: 'web_application' }) # Deploy project deployment = client.deployments.create( project_id=project.id,environment='production' ) print(f"Project deployed: {deployment.url}")` } ] return ( <> <SEO title="Documentation - Zion Tech Group" description="Comprehensive documentation for Zion Tech Group APIs,SDKs,and integration guides." keywords="documentation,API,SDK,integration,Zion Tech Group" canonical="https: /> <PageTransition> <main className="min-h-screen bg-white"> {} <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6"> Documentation </h1> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Comprehensive guides,API references,and integration examples to help you build with our platform. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="#quick-start" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get Started </motion.a> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get API Key </motion.a> </div> </motion.div> </div> </section> {} <section id="quick-start" className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: 0.2 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Quick Start Guide </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get up and running with our platform in just a few steps. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8"> {quickStart.map((step,index) => ( <motion.div key={step.step} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8 text-center" > <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <div className="text-blue-600"> {step.icon} </div> </div> <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold"> {step.step} </div> <h3 className="text-lg font-semibold text-gray-900 mb-3"> {step.title} </h3> <p className="text-gray-600"> {step.description} </p> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> API Documentation </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Explore our comprehensive API offerings and their capabilities. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 gap-8"> {apiSections.map((section,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8" > <div className="flex items-center gap-4 mb-4"> <div className={`text-${section.color}-600`}> {section.icon} </div> <h3 className="text-xl font-bold text-gray-900"> {section.title} </h3> </div> <p className="text-gray-600 mb-4"> {section.description} </p> <div className="flex items-center justify-between"> <span className="text-sm text-gray-500"> {section.endpoints} endpoints </span> <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-700 transition-colors" > View Docs </motion.button> </div> </motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Code Examples </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get started quickly with these code examples and integration guides. </p> </motion.div> <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8"> {codeExamples.map((example,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg overflow-hidden" > <div className="p-6 border-b border-gray-200"> <div className="flex items-center justify-between"> <h3 className="text-lg font-semibold text-gray-900"> {example.title} </h3> <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"> {example.language} </span> </div> </div> <div className="p-6"> <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"> <code>{example.code}</code> </pre> </div> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6"> Need Help Getting Started? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Our team is here to help you integrate with our platform and get the most out of our services. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Contact Support </motion.a> <motion.a href="tel:+13024640950" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Call Us: +1 302 464 0950 </motion.a> </div> </motion.div> </div> </section> </main> </PageTransition> </> ) } export default DocsPage
+import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { BookOpen,Code,Globe,Database,ArrowRight,Download,ExternalLink,Star,Users,Clock,Shield,Zap } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ ssr: false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ ssr: false }) const DocsPage: React.FC = () => { const quickStart = [ { step: 1,title: 'Get Your API Key',description: 'Sign up for a free account and get your API key',icon: <Shield className="w-6 h-6" /> },{ step: 2,title: 'Install SDK',description: 'Install our SDK for your preferred programming language',icon: <Download className="w-6 h-6" /> },{ step: 3,title: 'Make Your First API Call',description: 'Start building with our comprehensive API documentation',icon: <Code className="w-6 h-6" /> },{ step: 4,title: 'Deploy Your Application',description: 'Deploy your application using our cloud infrastructure',icon: <Globe className="w-6 h-6" /> } ] const apiSections = [ { title: 'AI Services API',description: 'Access our AI and machine learning capabilities',endpoints: 1 5,icon: <Zap className="w-6 h-6" />,color: 'blue' },{ title: 'Micro SaaS API',description: 'Manage and deploy micro SaaS applications',endpoints: 2 5,icon: <Globe className="w-6 h-6" />,color: 'green' },{ title: 'IT Infrastructure API',description: 'Monitor and manage IT infrastructure',endpoints: 2 0,icon: <Database className="w-6 h-6" />,color: 'purple' },{ title: 'Cybersecurity API',description: 'Security monitoring and threat detection',endpoints: 1 2,icon: <Shield className="w-6 h-6" />,color: 'red' } ] const codeExamples = [ { language: 'JavaScript',title: 'AI Service Integration',code: ` const aiService = new ZionAI({ apiKey: 'your-api-key',environment: 'production' }); const result = await aiService.processText({ text: 'Hello,world!',model: 'gpt-4',options: { maxTokens: 10 0,temperature: 0.7 } }); ` },{ language: 'Python',title: 'Micro SaaS API',code: `import ziontech # Initialize client client = ziontech.Client(api_key='your-api-key') # Create a new project project = client.projects.create({ name: 'My Project',description: 'A new micro SaaS project',type: 'web_application' }) # Deploy project deployment = client.deployments.create( project_id=project.id,environment='production' ) print(f"Project deployed: {deployment.url}")` } ] return ( <> <SEO title="Documentation - Zion Tech Group" description="Comprehensive documentation for Zion Tech Group APIs,SDKs,and integration guides." keywords="documentation,API,SDK,integration,Zion Tech Group" canonical="https: /> <PageTransition> <main className="min-h-screen bg-white"> {} <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6"> Documentation </h1> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Comprehensive guides,API references,and integration examples to help you build with our platform. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="#quick-start" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get Started </motion.a> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get API Key </motion.a> </div> </motion.div> </div> </section> {} <section id="quick-start" className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: 0.2 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Quick Start Guide </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get up and running with our platform in just a few steps. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8"> {quickStart.map((step,index) => ( <motion.div key={step.step} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8 text-center" > <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <div className="text-blue-600"> {step.icon} </div> </div> <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold"> {step.step} </div> <h3 className="text-lg font-semibold text-gray-900 mb-3"> {step.title} </h3> <p className="text-gray-600"> {step.description} </p> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> API Documentation </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Explore our comprehensive API offerings and their capabilities. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 gap-8"> {apiSections.map((section,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8" > <div className="flex items-center gap-4 mb-4"> <div className={`text-${section.color}-600`}> {section.icon} </div> <h3 className="text-xl font-bold text-gray-900"> {section.title} </h3> </div> <p className="text-gray-600 mb-4"> {section.description} </p> <div className="flex items-center justify-between"> <span className="text-sm text-gray-500"> {section.endpoints} endpoints </span> <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-700 transition-colors" > View Docs </motion.button> </div> </motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Code Examples </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get started quickly with these code examples and integration guides. </p> </motion.div> <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8"> {codeExamples.map((example,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg overflow-hidden" > <div className="p-6 border-b border-gray-200"> <div className="flex items-center justify-between"> <h3 className="text-lg font-semibold text-gray-900"> {example.title} </h3> <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"> {example.language} </span> </div> </div> <div className="p-6"> <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"> <code>{example.code}</code> </pre> </div> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6"> Need Help Getting Started? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Our team is here to help you integrate with our platform and get the most out of our services. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Contact Support </motion.a> <motion.a href="tel:+13024640950" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Call Us: +1 302 464 0950 </motion.a> </div> </motion.div> </div> </section> </main> </PageTransition> </> ) } export default DocsPage
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+<<<<<<< HEAD
+=======
+
+import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { BookOpen,Code,Globe,Database,ArrowRight,Download,ExternalLink,Star,Users,Clock,Shield,Zap } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ ssr: false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ ssr: false }) const DocsPage: React.FC = () => { const quickStart = [ { step: 1,title: 'Get Your API Key',description: 'Sign up for a free account and get your API key',icon: <Shield className="w-6 h-6" /> },{ step: 2,title: 'Install SDK',description: 'Install our SDK for your preferred programming language',icon: <Download className="w-6 h-6" /> },{ step: 3,title: 'Make Your First API Call',description: 'Start building with our comprehensive API documentation',icon: <Code className="w-6 h-6" /> },{ step: 4,title: 'Deploy Your Application',description: 'Deploy your application using our cloud infrastructure',icon: <Globe className="w-6 h-6" /> } ] const apiSections = [ { title: 'AI Services API',description: 'Access our AI and machine learning capabilities',endpoints: 1 5,icon: <Zap className="w-6 h-6" />,color: 'blue' },{ title: 'Micro SaaS API',description: 'Manage and deploy micro SaaS applications',endpoints: 2 5,icon: <Globe className="w-6 h-6" />,color: 'green' },{ title: 'IT Infrastructure API',description: 'Monitor and manage IT infrastructure',endpoints: 2 0,icon: <Database className="w-6 h-6" />,color: 'purple' },{ title: 'Cybersecurity API',description: 'Security monitoring and threat detection',endpoints: 1 2,icon: <Shield className="w-6 h-6" />,color: 'red' } ] const codeExamples = [ { language: 'JavaScript',title: 'AI Service Integration',code: ` const aiService = new ZionAI({ apiKey: 'your-api-key',environment: 'production' }); const result = await aiService.processText({ text: 'Hello,world!',model: 'gpt-4',options: { maxTokens: 10 0,temperature: 0.7 } }); ` },{ language: 'Python',title: 'Micro SaaS API',code: `import ziontech # Initialize client client = ziontech.Client(api_key='your-api-key') # Create a new project project = client.projects.create({ name: 'My Project',description: 'A new micro SaaS project',type: 'web_application' }) # Deploy project deployment = client.deployments.create( project_id=project.id,environment='production' ) print(f"Project deployed: {deployment.url}")` } ] return ( <> <SEO title="Documentation - Zion Tech Group" description="Comprehensive documentation for Zion Tech Group APIs,SDKs,and integration guides." keywords="documentation,API,SDK,integration,Zion Tech Group" canonical="https: /> <PageTransition> <main className="min-h-screen bg-white"> {} <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6"> Documentation </h1> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Comprehensive guides,API references,and integration examples to help you build with our platform. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="#quick-start" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get Started </motion.a> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get API Key </motion.a> </div> </motion.div> </div> </section> {} <section id="quick-start" className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: 0.2 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Quick Start Guide </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get up and running with our platform in just a few steps. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8"> {quickStart.map((step,index) => ( <motion.div key={step.step} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8 text-center" > <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <div className="text-blue-600"> {step.icon} </div> </div> <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold"> {step.step} </div> <h3 className="text-lg font-semibold text-gray-900 mb-3"> {step.title} </h3> <p className="text-gray-600"> {step.description} </p> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> API Documentation </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Explore our comprehensive API offerings and their capabilities. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 gap-8"> {apiSections.map((section,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8" > <div className="flex items-center gap-4 mb-4"> <div className={`text-${section.color}-600`}> {section.icon} </div> <h3 className="text-xl font-bold text-gray-900"> {section.title} </h3> </div> <p className="text-gray-600 mb-4"> {section.description} </p> <div className="flex items-center justify-between"> <span className="text-sm text-gray-500"> {section.endpoints} endpoints </span> <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-700 transition-colors" > View Docs </motion.button> </div> </motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Code Examples </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get started quickly with these code examples and integration guides. </p> </motion.div> <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8"> {codeExamples.map((example,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg overflow-hidden" > <div className="p-6 border-b border-gray-200"> <div className="flex items-center justify-between"> <h3 className="text-lg font-semibold text-gray-900"> {example.title} </h3> <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"> {example.language} </span> </div> </div> <div className="p-6"> <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"> <code>{example.code}</code> </pre> </div> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6"> Need Help Getting Started? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Our team is here to help you integrate with our platform and get the most out of our services. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Contact Support </motion.a> <motion.a href="tel:+13024640950" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Call Us: +1 302 464 0950 </motion.a> </div> </motion.div> </div> </section> </main> </PageTransition> </> ) } export default DocsPage
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+export default DocsPage;
+import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { BookOpen,Code,Globe,Database,ArrowRight,Download,ExternalLink,Star,Users,Clock,Shield,Zap } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ ssr: false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ ssr: false }) const DocsPage: React.FC = () => { const quickStart = [ { step: 1,title: 'Get Your API Key',description: 'Sign up for a free account and get your API key',icon: <Shield className="w-6 h-6" /> },{ step: 2,title: 'Install SDK',description: 'Install our SDK for your preferred programming language',icon: <Download className="w-6 h-6" /> },{ step: 3,title: 'Make Your First API Call',description: 'Start building with our comprehensive API documentation',icon: <Code className="w-6 h-6" /> },{ step: 4,title: 'Deploy Your Application',description: 'Deploy your application using our cloud infrastructure',icon: <Globe className="w-6 h-6" /> } ] const apiSections = [ { title: 'AI Services API',description: 'Access our AI and machine learning capabilities',endpoints: 1 5,icon: <Zap className="w-6 h-6" />,color: 'blue' },{ title: 'Micro SaaS API',description: 'Manage and deploy micro SaaS applications',endpoints: 2 5,icon: <Globe className="w-6 h-6" />,color: 'green' },{ title: 'IT Infrastructure API',description: 'Monitor and manage IT infrastructure',endpoints: 2 0,icon: <Database className="w-6 h-6" />,color: 'purple' },{ title: 'Cybersecurity API',description: 'Security monitoring and threat detection',endpoints: 1 2,icon: <Shield className="w-6 h-6" />,color: 'red' } ] const codeExamples = [ { language: 'JavaScript',title: 'AI Service Integration',code: ` const aiService = new ZionAI({ apiKey: 'your-api-key',environment: 'production' }); const result = await aiService.processText({ text: 'Hello,world!',model: 'gpt-4',options: { maxTokens: 10 0,temperature: 0.7 } }); ` },{ language: 'Python',title: 'Micro SaaS API',code: `import ziontech # Initialize client client = ziontech.Client(api_key='your-api-key') # Create a new project project = client.projects.create({ name: 'My Project',description: 'A new micro SaaS project',type: 'web_application' }) # Deploy project deployment = client.deployments.create( project_id=project.id,environment='production' ) print(f"Project deployed: {deployment.url}")` } ] return ( <> <SEO title="Documentation - Zion Tech Group" description="Comprehensive documentation for Zion Tech Group APIs,SDKs,and integration guides." keywords="documentation,API,SDK,integration,Zion Tech Group" canonical="https: /> <PageTransition> <main className="min-h-screen bg-white"> {} <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6"> Documentation </h1> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Comprehensive guides,API references,and integration examples to help you build with our platform. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="#quick-start" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get Started </motion.a> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get API Key </motion.a> </div> </motion.div> </div> </section> {} <section id="quick-start" className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: 0.2 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Quick Start Guide </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get up and running with our platform in just a few steps. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8"> {quickStart.map((step,index) => ( <motion.div key={step.step} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8 text-center" > <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <div className="text-blue-600"> {step.icon} </div> </div> <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold"> {step.step} </div> <h3 className="text-lg font-semibold text-gray-900 mb-3"> {step.title} </h3> <p className="text-gray-600"> {step.description} </p> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> API Documentation </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Explore our comprehensive API offerings and their capabilities. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 gap-8"> {apiSections.map((section,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8" > <div className="flex items-center gap-4 mb-4"> <div className={`text-${section.color}-600`}> {section.icon} </div> <h3 className="text-xl font-bold text-gray-900"> {section.title} </h3> </div> <p className="text-gray-600 mb-4"> {section.description} </p> <div className="flex items-center justify-between"> <span className="text-sm text-gray-500"> {section.endpoints} endpoints </span> <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-700 transition-colors" > View Docs </motion.button> </div> </motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Code Examples </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get started quickly with these code examples and integration guides. </p> </motion.div> <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8"> {codeExamples.map((example,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg overflow-hidden" > <div className="p-6 border-b border-gray-200"> <div className="flex items-center justify-between"> <h3 className="text-lg font-semibold text-gray-900"> {example.title} </h3> <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"> {example.language} </span> </div> </div> <div className="p-6"> <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"> <code>{example.code}</code> </pre> </div> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6"> Need Help Getting Started? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Our team is here to help you integrate with our platform and get the most out of our services. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Contact Support </motion.a> <motion.a href="tel:+13024640950" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Call Us: +1 302 464 0950 </motion.a> </div> </motion.div> </div> </section> </main> </PageTransition> </> ) } export default DocsPage;
+import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { BookOpen,Code,Globe,Database,ArrowRight,Download,ExternalLink,Star,Users,Clock,Shield,Zap } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ ssr: false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ ssr: false }) const DocsPage: React.FC = () => { const quickStart = [ { step: 1,title: 'Get Your API Key',description: 'Sign up for a free account and get your API key',icon: <Shield className="w-6 h-6" /> },{ step: 2,title: 'Install SDK',description: 'Install our SDK for your preferred programming language',icon: <Download className="w-6 h-6" /> },{ step: 3,title: 'Make Your First API Call',description: 'Start building with our comprehensive API documentation',icon: <Code className="w-6 h-6" /> },{ step: 4,title: 'Deploy Your Application',description: 'Deploy your application using our cloud infrastructure',icon: <Globe className="w-6 h-6" /> } ] const apiSections = [ { title: 'AI Services API',description: 'Access our AI and machine learning capabilities',endpoints: 1 5,icon: <Zap className="w-6 h-6" />,color: 'blue' },{ title: 'Micro SaaS API',description: 'Manage and deploy micro SaaS applications',endpoints: 2 5,icon: <Globe className="w-6 h-6" />,color: 'green' },{ title: 'IT Infrastructure API',description: 'Monitor and manage IT infrastructure',endpoints: 2 0,icon: <Database className="w-6 h-6" />,color: 'purple' },{ title: 'Cybersecurity API',description: 'Security monitoring and threat detection',endpoints: 1 2,icon: <Shield className="w-6 h-6" />,color: 'red' } ] const codeExamples = [ { language: 'JavaScript',title: 'AI Service Integration',code: ` const aiService = new ZionAI({ apiKey: 'your-api-key',environment: 'production' }); const result = await aiService.processText({ text: 'Hello,world!',model: 'gpt-4',options: { maxTokens: 10 0,temperature: 0.7 } }); ` },{ language: 'Python',title: 'Micro SaaS API',code: `import ziontech # Initialize client client = ziontech.Client(api_key='your-api-key') # Create a new project project = client.projects.create({ name: 'My Project',description: 'A new micro SaaS project',type: 'web_application' }) # Deploy project deployment = client.deployments.create( project_id=project.id,environment='production' ) print(f"Project deployed: {deployment.url}")` } ] return ( <> <SEO title="Documentation - Zion Tech Group" description="Comprehensive documentation for Zion Tech Group APIs,SDKs,and integration guides." keywords="documentation,API,SDK,integration,Zion Tech Group" canonical="https: /> <PageTransition> <main className="min-h-screen bg-white"> {} <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6"> Documentation </h1> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Comprehensive guides,API references,and integration examples to help you build with our platform. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="#quick-start" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get Started </motion.a> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get API Key </motion.a> </div> </motion.div> </div> </section> {} <section id="quick-start" className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: 0.2 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Quick Start Guide </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get up and running with our platform in just a few steps. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8"> {quickStart.map((step,index) => ( <motion.div key={step.step} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8 text-center" > <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <div className="text-blue-600"> {step.icon} </div> </div> <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold"> {step.step} </div> <h3 className="text-lg font-semibold text-gray-900 mb-3"> {step.title} </h3> <p className="text-gray-600"> {step.description} </p> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> API Documentation </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Explore our comprehensive API offerings and their capabilities. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 gap-8"> {apiSections.map((section,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8" > <div className="flex items-center gap-4 mb-4"> <div className={`text-${section.color}-600`}> {section.icon} </div> <h3 className="text-xl font-bold text-gray-900"> {section.title} </h3> </div> <p className="text-gray-600 mb-4"> {section.description} </p> <div className="flex items-center justify-between"> <span className="text-sm text-gray-500"> {section.endpoints} endpoints </span> <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-700 transition-colors" > View Docs </motion.button> </div> </motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Code Examples </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get started quickly with these code examples and integration guides. </p> </motion.div> <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8"> {codeExamples.map((example,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg overflow-hidden" > <div className="p-6 border-b border-gray-200"> <div className="flex items-center justify-between"> <h3 className="text-lg font-semibold text-gray-900"> {example.title} </h3> <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"> {example.language} </span> </div> </div> <div className="p-6"> <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"> <code>{example.code}</code> </pre> </div> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6"> Need Help Getting Started? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Our team is here to help you integrate with our platform and get the most out of our services. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Contact Support </motion.a> <motion.a href="tel:+13024640950" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Call Us: +1 302 464 0950 </motion.a> </div> </motion.div> </div> </section> </main> </PageTransition> </> ) } export default DocsPage
+;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+                    whileHover={{ scale: 1 && 1.05 }}
+                    whileTap={{ "scale": 0 && 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;
+                    <ArrowRight className="w-5 h-5"  />;
+                    Call "Us": +1 302 464 0950;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </motion && motion.a>;
                 </div>;
               </motion && motion.div>;
@@ -398,6 +821,7 @@ deployment = client && client.deployments.create(project_id=project && project.i
   );
 }
 export default DocsPage;
+<<<<<<< HEAD
 import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { BookOpen,Code,Globe,Database,ArrowRight,Download,ExternalLink,Star,Users,Clock,Shield,Zap } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ "ssr": false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ "ssr": false }) const "DocsPage": React.FC = () => { const quickStart = [ { "step": 1,"title": 'Get Your API Key',"description": 'Sign up for a free account and get your API key',"icon": <Shield className="w-6 h-6" /> },{ "step": 2,"title": 'Install SDK',"description": 'Install our SDK for your preferred programming language',"icon": <Download className="w-6 h-6" /> },{ "step": 3,"title": 'Make Your First API Call',"description": 'Start building with our comprehensive API documentation',"icon": <Code className="w-6 h-6" /> },{ "step": 4,"title": 'Deploy Your Application',"description": 'Deploy your application using our cloud infrastructure',"icon": <Globe className="w-6 h-6" /> } ] const apiSections = [ { "title": 'AI Services API',"description": 'Access our AI and machine learning capabilities',"endpoints": 1 5,"icon": <Zap className="w-6 h-6" />,"color": 'blue' },{ "title": 'Micro SaaS API',"description": 'Manage and deploy micro SaaS applications',"endpoints": 2 5,"icon": <Globe className="w-6 h-6" />,"color": 'green' },{ "title": 'IT Infrastructure API',"description": 'Monitor and manage IT infrastructure',"endpoints": 2 0,"icon": <Database className="w-6 h-6" />,"color": 'purple' },{ "title": 'Cybersecurity API',"description": 'Security monitoring and threat detection',"endpoints": 1 2,"icon": <Shield className="w-6 h-6" />,"color": 'red' } ] const codeExamples = [ { "language": 'JavaScript',"title": 'AI Service Integration',"code": ` const aiService = new ZionAI({ "apiKey": 'your-api-key',"environment": 'production' }); const result = await aiService && aiService.processText({ "text": 'Hello,world!',"model": 'gpt-4',"options": { "maxTokens": 10 0,"temperature": 0 && 0.7 } }); ` },{ "language": 'Python',"title": 'Micro SaaS API',"code": `import ziontech # Initialize client client = ziontech && ziontech.Client(api_key='your-api-key') # Create a new project project = client && client.projects.create({ "name": 'My Project',"description": 'A new micro SaaS project',"type": 'web_application' }) # Deploy project deployment = client && client.deployments.create( project_id=project && project.id,environment='production' ) print(f"Project "deployed": {deployment && deployment.url}")` } ] return ( <> <SEO title="Documentation - Zion Tech Group" description="Comprehensive documentation for Zion Tech Group APIs,SDKs,and integration guides." keywords="documentation,API,SDK,integration,Zion Tech Group" canonical=""https": /> <PageTransition> <main className="min-h-screen bg-white"> {} <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20"> <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8"> <motion && motion.div initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0 && 0.6 }} className="text-center" > <h1 className="text-4xl "md": tex t-6xl font-bold text-gray-900 mb-6"> Documentation </h1> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Comprehensive guides,API references,and integration examples to help you build with our platform. </p> <div className="flex flex-col "sm": fle x-row gap-4 justify-center"> <motion && motion.a href="#quick-start" whileHover={{ "scale": 1 && 1.05 }} whileTap={{ "scale": 0 && 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get Started </motion && motion.a> <motion && motion.a href="/contact" whileHover={{ "scale": 1 && 1.05 }} whileTap={{ "scale": 0 && 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get API Key </motion && motion.a> </div> </motion && motion.div> </div> </section> {} <section id="quick-start" className="py-20"> <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8"> <motion && motion.div initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0 && 0.6,"delay": 0 && 0.2 }} className="text-center mb-16" > <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4"> Quick Start Guide </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get up and running with our platform in just a few steps. </p> </motion && motion.div> <div className="grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8"> {quickStart && quickStart.map((step,index) => ( <motion && motion.div key={step && step.step} initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0 && 0.6,"delay": inde x * 0 && 0.1 }} className="bg-white rounded-xl shadow-lg p-8 text-center" > <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <div className="text-blue-600"> {step && step.icon} </div> </div> <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold"> {step && step.step} </div> <h3 className="text-lg font-semibold text-gray-900 mb-3"> {step && step.title} </h3> <p className="text-gray-600"> {step && step.description} </p> </motion && motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8"> <motion && motion.div initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0 && 0.6 }} className="text-center mb-16" > <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4"> API Documentation </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Explore our comprehensive API offerings and their capabilities. </p> </motion && motion.div> <div className="grid grid-cols-1 "md": gri d-cols-2 gap-8"> {apiSections && apiSections.map((section,index) => ( <motion && motion.div key={index} initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0 && 0.6,"delay": inde x * 0 && 0.1 }} className="bg-white rounded-xl shadow-lg p-8" > <div className="flex items-center gap-4 mb-4"> <div className={`text-${section && section.color}-600`}> {section && section.icon} </div> <h3 className="text-xl font-bold text-gray-900"> {section && section.title} </h3> </div> <p className="text-gray-600 mb-4"> {section && section.description} </p> <div className="flex items-center justify-between"> <span className="text-sm text-gray-500"> {section && section.endpoints} endpoints </span> <motion && motion.button whileHover={{ "scale": 1 && 1.05 }} whileTap={{ "scale": 0 && 0.95 }} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold "hover": b g-blue-700 transition-colors" > View Docs </motion && motion.button> </div> </motion && motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8"> <motion && motion.div initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0 && 0.6 }} className="text-center mb-16" > <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4"> Code Examples </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get started quickly with these code examples and integration guides. </p> </motion && motion.div> <div className="grid grid-cols-1 "lg": gri d-cols-2 gap-8"> {codeExamples && codeExamples.map((example,index) => ( <motion && motion.div key={index} initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0 && 0.6,"delay": inde x * 0 && 0.1 }} className="bg-white rounded-xl shadow-lg overflow-hidden" > <div className="p-6 border-b border-gray-200"> <div className="flex items-center justify-between"> <h3 className="text-lg font-semibold text-gray-900"> {example && example.title} </h3> <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"> {example && example.language} </span> </div> </div> <div className="p-6"> <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"> <code>{example && example.code}</code> </pre> </div> </motion && motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8"> <motion && motion.div initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0 && 0.6 }} className="text-center" > <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-6"> Need Help Getting Started? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Our team is here to help you integrate with our platform and get the most out of our services. </p> <div className="flex flex-col "sm": fle x-row gap-4 justify-center"> <motion && motion.a href="/contact" whileHover={{ "scale": 1 && 1.05 }} whileTap={{ "scale": 0 && 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Contact Support </motion && motion.a> <motion && motion.a href=""tel":+13024640950" whileHover={{ "scale": 1 && 1.05 }} whileTap={{ "scale": 0 && 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Call "Us": +1 302 464 0950 </motion && motion.a> </div> </motion ;"    }
   ]
   const apiSections = [{
@@ -513,6 +937,123 @@ href="/contact""
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2""
                   >
                     <ArrowRight className="w-5 h-5" />"
+=======
+import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { BookOpen,Code,Globe,Database,ArrowRight,Download,ExternalLink,Star,Users,Clock,Shield,Zap } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ ssr: false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ ssr: false }) const DocsPage: React.FC = () => { const quickStart = [ { step: 1,title: 'Get Your API Key',description: 'Sign up for a free account and get your API key',icon: <Shield className="w-6 h-6" /> },{ step: 2,title: 'Install SDK',description: 'Install our SDK for your preferred programming language',icon: <Download className="w-6 h-6" /> },{ step: 3,title: 'Make Your First API Call',description: 'Start building with our comprehensive API documentation',icon: <Code className="w-6 h-6" /> },{ step: 4,title: 'Deploy Your Application',description: 'Deploy your application using our cloud infrastructure',icon: <Globe className="w-6 h-6" /> } ] const apiSections = [ { title: 'AI Services API',description: 'Access our AI and machine learning capabilities',endpoints: 1 5,icon: <Zap className="w-6 h-6" />,color: 'blue' },{ title: 'Micro SaaS API',description: 'Manage and deploy micro SaaS applications',endpoints: 2 5,icon: <Globe className="w-6 h-6" />,color: 'green' },{ title: 'IT Infrastructure API',description: 'Monitor and manage IT infrastructure',endpoints: 2 0,icon: <Database className="w-6 h-6" />,color: 'purple' },{ title: 'Cybersecurity API',description: 'Security monitoring and threat detection',endpoints: 1 2,icon: <Shield className="w-6 h-6" />,color: 'red' } ] const codeExamples = [ { language: 'JavaScript',title: 'AI Service Integration',code: ` const aiService = new ZionAI({ apiKey: 'your-api-key',environment: 'production' }); const result = await aiService && aiService.processText({ text: 'Hello,world!',model: 'gpt-4',options: { maxTokens: 10 0,temperature: 0 && 0.7 } }); ` },{ language: 'Python',title: 'Micro SaaS API',code: `import ziontech # Initialize client client = ziontech && ziontech.Client(api_key='your-api-key') # Create a new project project = client && client.projects.create({ name: 'My Project',description: 'A new micro SaaS project',type: 'web_application' }) # Deploy project deployment = client && client.deployments.create( project_id=project && project.id,environment='production' ) print(f"Project deployed: {deployment && deployment.url}")` } ] return ( <> <SEO title="Documentation - Zion Tech Group" description="Comprehensive documentation for Zion Tech Group APIs,SDKs,and integration guides." keywords="documentation,API,SDK,integration,Zion Tech Group" canonical="https: /> <PageTransition> <main className="min-h-screen bg-white"> {} <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6 }} className="text-center" > <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6"> Documentation </h1> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Comprehensive guides,API references,and integration examples to help you build with our platform. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion && motion.a href="#quick-start" whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get Started </motion && motion.a> <motion && motion.a href="/contact" whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get API Key </motion && motion.a> </div> </motion && motion.div> </div> </section> {} <section id="quick-start" className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6,delay: 0 && 0.2 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Quick Start Guide </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get up and running with our platform in just a few steps. </p> </motion && motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8"> {quickStart && quickStart.map((step,index) => ( <motion && motion.div key={step && step.step} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6,delay: inde x * 0 && 0.1 }} className="bg-white rounded-xl shadow-lg p-8 text-center" > <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <div className="text-blue-600"> {step && step.icon} </div> </div> <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold"> {step && step.step} </div> <h3 className="text-lg font-semibold text-gray-900 mb-3"> {step && step.title} </h3> <p className="text-gray-600"> {step && step.description} </p> </motion && motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> API Documentation </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Explore our comprehensive API offerings and their capabilities. </p> </motion && motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 gap-8"> {apiSections && apiSections.map((section,index) => ( <motion && motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6,delay: inde x * 0 && 0.1 }} className="bg-white rounded-xl shadow-lg p-8" > <div className="flex items-center gap-4 mb-4"> <div className={`text-${section && section.color}-600`}> {section && section.icon} </div> <h3 className="text-xl font-bold text-gray-900"> {section && section.title} </h3> </div> <p className="text-gray-600 mb-4"> {section && section.description} </p> <div className="flex items-center justify-between"> <span className="text-sm text-gray-500"> {section && section.endpoints} endpoints </span> <motion && motion.button whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-700 transition-colors" > View Docs </motion && motion.button> </div> </motion && motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Code Examples </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get started quickly with these code examples and integration guides. </p> </motion && motion.div> <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8"> {codeExamples && codeExamples.map((example,index) => ( <motion && motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6,delay: inde x * 0 && 0.1 }} className="bg-white rounded-xl shadow-lg overflow-hidden" > <div className="p-6 border-b border-gray-200"> <div className="flex items-center justify-between"> <h3 className="text-lg font-semibold text-gray-900"> {example && example.title} </h3> <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"> {example && example.language} </span> </div> </div> <div className="p-6"> <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"> <code>{example && example.code}</code> </pre> </div> </motion && motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6 }} className="text-center" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6"> Need Help Getting Started? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Our team is here to help you integrate with our platform and get the most out of our services. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion && motion.a href="/contact" whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Contact Support </motion && motion.a> <motion && motion.a href="tel:+13024640950" whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Call Us: +1 302 464 0950 </motion && motion.a> </div> </motion ;
+<<<<<<< HEAD
+
+    }
+  ]
+  const apiSections = [{
+      "title": 'AI Services API',
+      "description": 'Access our AI and machine learning capabilities',
+      "endpoints": 1 5,
+      "icon": <Zap className="w-6 h-6"  />,
+      "color": 'blue'
+    },
+    {
+      "title": 'Micro SaaS API',
+      "description": 'Manage and deploy micro SaaS applications',
+      "endpoints": 2 5,
+      "icon": <Globe className="w-6 h-6"  />,
+      "color": 'green'
+    },
+    {
+      "title": 'IT Infrastructure API',
+      "description": 'Monitor and manage IT infrastructure',
+      "endpoints": 2 0,
+      "icon": <Database className="w-6 h-6"  />,
+      "color": 'purple'
+    },
+    {
+      "title": 'Cybersecurity API',
+      "description": 'Security monitoring and threat detection',
+      "endpoints": 1 2,
+      "icon": <Shield className="w-6 h-6"  />,
+      "color": 'red'
+    }
+
+  ]
+  const codeExamples = [{
+      "language": 'JavaScript',
+      "title": 'AI Service Integration',
+      "code": "// Initialize AI service
+const aiService = new ZionAI({
+  apiKey: 'your-api-key',
+  "environment": 'production'
+});
+// Process text with AI
+const result = await aiService.processText({
+  "text": 'Hello, world!',
+  "model": 'gpt-4',
+  "options": {
+    maxTokens: 10 0,
+    "temperature": 0.7
+  }
+});
+"
+    },
+    {
+      "language": 'Python',
+      "title": 'Micro SaaS API',
+      "code": "import ziontech
+# Initialize client
+client = ziontech.Client(api_key='your-api-key')
+# Create a new project
+project = client.projects.create({
+    name: 'My Project',
+    "description": 'A new micro SaaS project',
+    "type": 'web_application'
+})
+# Deploy project
+deployment = client.deployments.create(
+    project_id=project.id,
+    environment='production'
+)
+print(f"Project "deployed": {deployment.url}")"
+    }
+  ]
+  return (
+    <>
+      <SEO title="Documentation - Zion Tech Group"
+        description="Comprehensive documentation for Zion Tech Group APIs, SDKs, and integration guides."
+        keywords="documentation, API, SDK, integration, Zion Tech Group"
+        canonical=""https": //ziontechgroup.com/docs"
+       />
+      <PageTransition>
+        <main className="min-h-screen bg-white">
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6 }}
+                className="text-center"
+              >
+                <h1 className="text-4xl "md": tex t-6xl font-bold text-gray-900 mb-6">
+                  Documentation
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Comprehensive guides, API references, and integration examples to help you build with our platform.
+                </p>
+                <div className="flex flex-col "sm": fle x-row gap-4 justify-center">
+                  <motion.a
+                    href="#quick-start"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ "scale": 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Get Started
+                  </motion.a>
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ "scale": 1.05 }}
+                    whileTap={{ "scale": 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     Get API Key
                   </motion.a>
                 </div>
@@ -520,6 +1061,7 @@ href="/contact""
             </div>
           </section>
           {/* Quick Start */}
+<<<<<<< HEAD
           <section id="quick-start" className="py-20">"
             <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8">"
               <motion.div,
@@ -557,6 +1099,44 @@ key={step.step}
                       {step.title}
                     </h3>
                     <p className="text-gray-600">"
+=======
+          <section id="quick-start" className="py-20">
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6, "delay": 0.2 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">
+                  Quick Start Guide
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Get up and running with our platform in just a few steps.
+                </p>
+              </motion.div>
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+                {quickStart.map((step, index) => (
+                  <motion.div
+                    key={step.step}
+                    initial={{ "opacity": 0, "y": 2 0 }}
+                    animate={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0.6, "delay": inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8 text-center"
+                  >
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="text-blue-600">
+                        {step.icon}
+                      </div>
+                    </div>
+                    <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
+                      {step.step}
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600">
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       {step.description}
                     </p>
                   </motion.div>
@@ -565,6 +1145,7 @@ key={step.step}
             </div>
           </section>
           {/* API Sections */}
+<<<<<<< HEAD
           <section className="bg-gray-50 py-20">;"
             <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8">;"
               <motion&& motion.div;
@@ -652,6 +1233,51 @@ key={index}
 whileHover={{ "scale": 1.05 }}"
                         whileTap={{ "scale": 0.95 }}"
                         className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold "hover": b g-blue-700 transition-colors""
+=======
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">
+                  API Documentation
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Explore our comprehensive API offerings and their capabilities.
+                </p>
+              </motion.div>
+              <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
+                {apiSections.map((section, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ "opacity": 0, "y": 2 0 }}
+                    animate={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0.6, "delay": inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8"
+                  >
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className={`text-${section.color}-600`}>
+                        {section.icon}
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {section.title}
+                      </h3>
+                    </div>
+                    <p className="text-gray-600 mb-4">
+                      {section.description}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">
+                        {section.endpoints} endpoints
+                      </span>
+                      <motion.button
+                        whileHover={{ "scale": 1.05 }}
+                        whileTap={{ "scale": 0.95 }}
+                        className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold "hover": b g-blue-700 transition-colors"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       >
                         View Docs
                       </motion.button>
@@ -662,6 +1288,7 @@ whileHover={{ "scale": 1.05 }}"
             </div>
           </section>
           {/* Code Examples */}
+<<<<<<< HEAD
           <section className="py-20">;"
             <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8">;"
               <motion&& motion.div;
@@ -710,12 +1337,49 @@ key={index}
                           {example.title}
                         </h3>
                         <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">"
+=======
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">
+                  Code Examples
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Get started quickly with these code examples and integration guides.
+                </p>
+              </motion.div>
+              <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">
+                {codeExamples.map((example, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ "opacity": 0, "y": 2 0 }}
+                    animate={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0.6, "delay": inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg overflow-hidden"
+                  >
+                    <div className="p-6 border-b border-gray-200">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-lg font-semibold text-gray-900">
+                          {example.title}
+                        </h3>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           {example.language}
                         </span>
                       </div>
                     </div>
+<<<<<<< HEAD
                     <div className="p-6">"
                       <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">"
+=======
+                    <div className="p-6">
+                      <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         <code>{example.code}</code>
                       </pre>
                     </div>
@@ -725,6 +1389,10 @@ key={index}
             </div>
           </section>
           {/* CTA Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <section className="bg-gray-50 py-20">;"
             <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8">;"
               <motion&& motion.div;
@@ -769,7 +1437,10 @@ import React from 'react' import dynamic from 'next/dynamic' import Head from 'n
   }
 }
 import { BookOpen,, Code,, Globe,, Database,, ArrowRight,, Download,, ExternalLink,, Star,, Users,, Clock,, Shield,, Zap } from 'lucide-react';'
+<<<<<<< HEAD
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })const "DocsPage": React.FC = () => {const quickStart = [{"step": 1,"title": 'Get Your API Key',"description": 'Sign up for a free account and get your API key',"icon": <Shield className="w-6 h-6" />;"
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     },{"step": 2,"title": 'Install SDK',"description": 'Install our SDK for your preferred programming language',"icon": <Download className="w-6 h-6" />;"
     },{"step": 3,"title": 'Make Your First API Call',"description": 'Start building with our comprehensive API documentation',"icon": <Code className="w-6 h-6" />;"
     },{"step": 4,"title": 'Deploy Your Application',"description": 'Deploy your application using our cloud infrastructure',"icon": <Globe className="w-6 h-6" />;"
@@ -788,7 +1459,10 @@ const aiService = new ZionAI({"apiKey": 'your-api-key',"environment": 'productio
 }
 ursor/automate-test-improve-and-merge-code-646c;
 })// Process text with AI;
+<<<<<<< HEAD
 const result = await aiService && aiService.processText({"text": 'Hello, world!',"model": 'gpt-4',"options": {"maxTokens": 10 0,"temperature": 0 && 0.7;"
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
 })";"
     },{"language": 'Python',"title": 'Micro SaaS API',"code": "import ziontech;"
@@ -1018,13 +1692,19 @@ export default DocsPage;whileHover={{ "scale": 1 && 1.05 }}
   )}
 export default DocsPage;}
   ];
+<<<<<<< HEAD
   const apiSections = [{"title": 'AI Services API',"description": 'Access our AI and machine learning capabilities',"endpoints": 1 5,"icon": <Zap className="w-6 h-6" />,"color": 'blue';'
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     },{"title": 'Micro SaaS API',"description": 'Manage and deploy micro SaaS applications',"endpoints": 2 5,"icon": <Globe className="w-6 h-6" />,"color": 'green';'
     },{"title": 'IT Infrastructure API',"description": 'Monitor and manage IT infrastructure',"endpoints": 2 0,"icon": <Database className="w-6 h-6" />,"color": 'purple';'
     },{"title": 'Cybersecurity API',"description": 'Security monitoring and threat detection',"endpoints": 1 2,"icon": <Shield className="w-6 h-6" />,"color": 'red';'
     }
   ];
+<<<<<<< HEAD
   const codeExamples = [{"language": 'JavaScript',"title": 'AI Service Integration',"code": "// Initialize AI service;"
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 const aiService = new ZionAI({"apiKey": 'your-api-key',"environment": 'production';'
 })// Process text with AI;
@@ -1274,13 +1954,19 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     }return this.props.children;
   }
 }
+<<<<<<< HEAD
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })const "DocsPage": React.FC = () => {const quickStart = [{"step": 1,"title": 'Get Your API Key',"description": 'Sign up for a free account and get your API key',"icon": <Shield className="w-6 h-6" />;"
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     },{"step": 2,"title": 'Install SDK',"description": 'Install our SDK for your preferred programming language',"icon": <Download className="w-6 h-6" />;"
     },{"step": 3,"title": 'Make Your First API Call',"description": 'Start building with our comprehensive API documentation',"icon": <Code className="w-6 h-6" />;"
     },{"step": 4,"title": 'Deploy Your Application',"description": 'Deploy your application using our cloud infrastructure',"icon": <Globe className="w-6 h-6" />;"
     }
 })// Process text with AI;
+<<<<<<< HEAD
 const result = await aiService && aiService.processText({"text": 'Hello, world!',"model": 'gpt-4',"options": {"maxTokens": 10 0,"temperature": 0 && 0.7;"
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
 })";"
     },{"language": 'Python',"title": 'Micro SaaS API',"code": "import ziontech;"
@@ -1517,6 +2203,7 @@ initial={{ "opacity": 0, "y": 2 0 }}"
                 animate={{ "opacity": 1, "y": 0 }}"
                 transition={{ "duration": 0.6 }}"
                 className="text-center""
+<<<<<<< HEAD
               >
                 <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-6">"
                   Need Help Getting Started?
@@ -1542,6 +2229,42 @@ href=""tel": +13024640950""
                   >
                     <ArrowRight className="w-5 h-5" />"
                     Call "Us": +1 302 464 0950"
+=======
+=======
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, "y": 2 0 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6 }}
+                className="text-center"
+>>>>>>> origin/chore/fix-lint-and-merge
+              >
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-6">
+                  Need Help Getting Started?
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Our team is here to help you integrate with our platform and get the most out of our services.
+                </p>
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ "scale": 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Contact Support
+                  </motion.a>
+                  <motion.a
+                    href=""tel": +13024640950"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ "scale": 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Call "Us": +1 302 464 0950
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </motion.a>
                 </div>
               </motion.div>
@@ -1552,5 +2275,283 @@ href=""tel": +13024640950""
     </>
   )
 }
+<<<<<<< HEAD
 export default DocsPage,
 import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { BookOpen,Code,Globe,Database,ArrowRight,Download,ExternalLink,Star,Users,Clock,Shield,Zap } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ "ssr": false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ "ssr": false }) const "DocsPage": React.FC = () => { const quickStart = [ { "step": 1,"title": 'Get Your API Key',"description": 'Sign up for a free account and get your API key',"icon": <Shield className="w-6 h-6" /> },{ "step": 2,"title": 'Install SDK',"description": 'Install our SDK for your preferred programming language',"icon": <Download className="w-6 h-6" /> },{ "step": 3,"title": 'Make Your First API Call',"description": 'Start building with our comprehensive API documentation',"icon": <Code className="w-6 h-6" /> },{ "step": 4,"title": 'Deploy Your Application',"description": 'Deploy your application using our cloud infrastructure',"icon": <Globe className="w-6 h-6" /> } ] const apiSections = [ { "title": 'AI Services API',"description": 'Access our AI and machine learning capabilities',"endpoints": 1 5,"icon": <Zap className="w-6 h-6" />,"color": 'blue' },{ "title": 'Micro SaaS API',"description": 'Manage and deploy micro SaaS applications',"endpoints": 2 5,"icon": <Globe className="w-6 h-6" />,"color": 'green' },{ "title": 'IT Infrastructure API',"description": 'Monitor and manage IT infrastructure',"endpoints": 2 0,"icon": <Database className="w-6 h-6" />,"color": 'purple' },{ "title": 'Cybersecurity API',"description": 'Security monitoring and threat detection',"endpoints": 1 2,"icon": <Shield className="w-6 h-6" />,"color": 'red' } ] const codeExamples = [ { "language": 'JavaScript',"title": 'AI Service Integration',"code": ` const aiService = new ZionAI({ "apiKey": 'your-api-key',"environment": 'production' }); const result = await aiService.processText({ "text": 'Hello,world!',"model": 'gpt-4',"options": { "maxTokens": 10 0,"temperature": 0.7 } }); ` },{ "language": 'Python',"title": 'Micro SaaS API',"code": `import ziontech # Initialize client client = ziontech.Client(api_key='your-api-key') # Create a new project project = client.projects.create({ "name": 'My Project',"description": 'A new micro SaaS project',"type": 'web_application' }) # Deploy project deployment = client.deployments.create( project_id=project.id,environment='production' ) print(f"Project "deployed": {deployment.url}")` } ] return ( <> <SEO title="Documentation - Zion Tech Group" description="Comprehensive documentation for Zion Tech Group APIs,SDKs,and integration guides." keywords="documentation,API,SDK,integration,Zion Tech Group" canonical=""https": /> <PageTransition> <main className="min-h-screen bg-white"> {} <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20"> <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8"> <motion.div initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0.6 }} className="text-center" > <h1 className="text-4xl "md": tex t-6xl font-bold text-gray-900 mb-6"> Documentation </h1> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Comprehensive guides,API references,and integration examples to help you build with our platform. </p> <div className="flex flex-col "sm": fle x-row gap-4 justify-center"> <motion.a href="#quick-start" whileHover={{ "scale": 1.05 }} whileTap={{ "scale": 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get Started </motion.a> <motion.a href="/contact" whileHover={{ "scale": 1.05 }} whileTap={{ "scale": 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get API Key </motion.a> </div> </motion.div> </div> </section> {} <section id="quick-start" className="py-20"> <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8"> <motion.div initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0.6,"delay": 0.2 }} className="text-center mb-16" > <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4"> Quick Start Guide </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get up and running with our platform in just a few steps. </p> </motion.div> <div className="grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-8"> {quickStart.map((step,index) => ( <motion.div key={step.step} initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0.6,"delay": inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8 text-center" > <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <div className="text-blue-600"> {step.icon} </div> </div> <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold"> {step.step} </div> <h3 className="text-lg font-semibold text-gray-900 mb-3"> {step.title} </h3> <p className="text-gray-600"> {step.description} </p> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8"> <motion.div initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0.6 }} className="text-center mb-16" > <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4"> API Documentation </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Explore our comprehensive API offerings and their capabilities. </p> </motion.div> <div className="grid grid-cols-1 "md": gri d-cols-2 gap-8"> {apiSections.map((section,index) => ( <motion.div key={index} initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0.6,"delay": inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8" > <div className="flex items-center gap-4 mb-4"> <div className={`text-${section.color}-600`}> {section.icon} </div> <h3 className="text-xl font-bold text-gray-900"> {section.title} </h3> </div> <p className="text-gray-600 mb-4"> {section.description} </p> <div className="flex items-center justify-between"> <span className="text-sm text-gray-500"> {section.endpoints} endpoints </span> <motion.button whileHover={{ "scale": 1.05 }} whileTap={{ "scale": 0.95 }} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold "hover": b g-blue-700 transition-colors" > View Docs </motion.button> </div> </motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8"> <motion.div initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0.6 }} className="text-center mb-16" > <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4"> Code Examples </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get started quickly with these code examples and integration guides. </p> </motion.div> <div className="grid grid-cols-1 "lg": gri d-cols-2 gap-8"> {codeExamples.map((example,index) => ( <motion.div key={index} initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0.6,"delay": inde x * 0.1 }} className="bg-white rounded-xl shadow-lg overflow-hidden" > <div className="p-6 border-b border-gray-200"> <div className="flex items-center justify-between"> <h3 className="text-lg font-semibold text-gray-900"> {example.title} </h3> <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"> {example.language} </span> </div> </div> <div className="p-6"> <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"> <code>{example.code}</code> </pre> </div> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8"> <motion.div initial={{ "opacity": 0,"y": 2 0 }} animate={{ "opacity": 1,"y": 0 }} transition={{ "duration": 0.6 }} className="text-center" > <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-6"> Need Help Getting Started? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Our team is here to help you integrate with our platform and get the most out of our services. </p> <div className="flex flex-col "sm": fle x-row gap-4 justify-center"> <motion.a href="/contact" whileHover={{ "scale": 1.05 }} whileTap={{ "scale": 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Contact Support </motion.a> <motion.a href=""tel":+13024640950" whileHover={{ "scale": 1.05 }} whileTap={{ "scale": 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Call "Us": +1 302 464 0950 </motion.a> </div> </motion.div> </div> </section> </main> </PageTransition> </> ) } export default DocsPage"
+=======
+export default DocsPage
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+
+    }
+  ]
+  const apiSections = [{
+      "title": 'AI Services API',
+      "description": 'Access our AI and machine learning capabilities',
+      "endpoints": 1 5,
+      "icon": <Zap className="w-6 h-6"  />,
+      "color": 'blue'
+    },
+    {
+      "title": 'Micro SaaS API',
+      "description": 'Manage and deploy micro SaaS applications',
+      "endpoints": 2 5,
+      "icon": <Globe className="w-6 h-6"  />,
+      "color": 'green'
+    },
+    {
+      "title": 'IT Infrastructure API',
+      "description": 'Monitor and manage IT infrastructure',
+      "endpoints": 2 0,
+      "icon": <Database className="w-6 h-6"  />,
+      "color": 'purple'
+    },
+    {
+      "title": 'Cybersecurity API',
+      "description": 'Security monitoring and threat detection',
+      "endpoints": 1 2,
+      "icon": <Shield className="w-6 h-6"  />,
+      "color": 'red'
+    }
+  ]
+  const codeExamples = [{
+      "language": 'JavaScript',
+      "title": 'AI Service Integration',
+      "code": "// Initialize AI service
+const aiService = new ZionAI({
+  apiKey: 'your-api-key',
+  "environment": 'production'
+});
+// Process text with AI
+const result = await aiService.processText({
+  "text": 'Hello, world!',
+  "model": 'gpt-4',
+  "options": {
+    maxTokens: 10 0,
+    "temperature": 0.7
+  }
+});
+
+"
+      "icon": <Download className="w-6 h-6"  />"
+      "icon": <Code className="w-6 h-6"  />"
+      "icon": <Globe className="w-6 h-6"  />"
+
+    <>;"
+      <SEOtitle="Documentation - Zion Tech Group"""
+        description="Comprehensive documentation for Zion Tech Group APIs, SDKs, and integration guides."""
+        keywords="documentation, API, SDK, integration, Zion Tech Group"""
+        canonical=""https": //ziontechgroup && ziontechgroup.com/docs""
+       />;
+
+      <PageTransition>;
+        <main className="min-h-screen bg-white">;"
+</main>"
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">;"
+</section>"
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">;"
+</div>
+              <motion&& motion.div;"
+                initial={{ opacity: 0, "y": 2 0 }}""
+                animate={{ "opacity": 1, "y": 0 }}""
+                transition={{ "duration": 0 && 0.6 }}""
+                className="text-center">;"
+</motion>"
+                <h1 className="text-4xl "md": tex t-6xl font-bold text-gray-900 mb-6">;"
+</h1>
+                </h1>;"
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;"
+</p>
+                </p>;"
+                <div className="flex flex-col "sm": fle x-row gap-4 justify-center">;"
+                  <motion&& motion.a;"
+                    href="#quick-start""
+                    whileHover={{ scale: 1 && 1.05 }}"
+                    whileTap={{ "scale": 0 && 0.95 }}""
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;"
+                    <ArrowRight className="w-5 h-5"  />;"
+
+                  </motion && motion.a>;
+                    href="/contact"""
+                    whileHover={{ "scale": 1 && 1.05 }}""
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;"
+
+                </div>;
+              </motion && motion.div>;
+          </section>;"
+          <section id="quick-start" className="py-20">;"
+                transition={{ "duration": 0 && 0.6, "delay": 0 && 0.2 }}""
+                className="text-center mb-16">;"
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;"
+</h2>
+                </h2>;"
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">;"
+                </p>;
+              </motion && motion.div>;"
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">;"
+                  <motion&& motion.div;
+                    key={step && step.step}"
+                    initial={{ "opacity": 0, "y": 2 0 }}""
+                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}""
+                    className="bg-white rounded-xl shadow-lg p-8 text-center">;"
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;"
+</div>"
+                      <div className="text-blue-600">;"
+                    </div>;"
+                    <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">;"
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">;"
+</h3>
+                    </h3>;"
+                    <p className="text-gray-600">;"
+                ))}
+          <section className="bg-gray-50 py-20">;"
+              <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">;"
+                    key={index}"
+                    className="bg-white rounded-xl shadow-lg p-8">;"
+                    <div className="flex items-center gap-4 mb-4">;"
+                      <div className={`text-${section && section.color}-600`}>;
+                      <h3 className="text-xl font-bold text-gray-900">;"
+                      </h3>;
+                    <p className="text-gray-600 mb-4">;"
+                    <div className="flex items-center justify-between">;"
+                      <span className="text-sm text-gray-500">;"
+</span>
+                      </span>;
+                      <motion&& motion.button;"
+                        className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold "hover": b g-blue-700 transition-colors">;"
+</motion>
+                      </motion && motion.button>;
+          <section className="py-20">;"
+              <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">;"
+                    className="bg-white rounded-xl shadow-lg overflow-hidden">;"
+                    <div className="p-6 border-b border-gray-200">;"
+                        <h3 className="text-lg font-semibold text-gray-900">;"
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">;"
+                    <div className="p-6">;"
+                      <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">;"
+</pre>
+                        <code>{example && example.code}</code>;
+                      </pre>;
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-6">;"
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">;"
+                    href="/contact""
+
+                    href=""tel": +13024640950""
+export default DocsPage;]"`;
+import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { BookOpen,Code,Globe,Database,ArrowRight,Download,ExternalLink,Star,Users,Clock,Shield,Zap } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ ssr: false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ ssr: false }) const DocsPage: React.FC = () => { const quickStart = [ { step: 1,title: 'Get Your API Key',description: 'Sign up for a free account and get your API key',icon: <Shield className="w-6 h-6" /> },{ step: 2,title: 'Install SDK',description: 'Install our SDK for your preferred programming language',icon: <Download className="w-6 h-6" /> },{ step: 3,title: 'Make Your First API Call',description: 'Start building with our comprehensive API documentation',icon: <Code className="w-6 h-6" /> },{ step: 4,title: 'Deploy Your Application',description: 'Deploy your application using our cloud infrastructure',icon: <Globe className="w-6 h-6" /> } ] const apiSections = [ { title: 'AI Services API',description: 'Access our AI and machine learning capabilities',endpoints: 1 5,icon: <Zap className="w-6 h-6" />,color: 'blue' },{ title: 'Micro SaaS API',description: 'Manage and deploy micro SaaS applications',endpoints: 2 5,icon: <Globe className="w-6 h-6" />,color: 'green' },{ title: 'IT Infrastructure API',description: 'Monitor and manage IT infrastructure',endpoints: 2 0,icon: <Database className="w-6 h-6" />,color: 'purple' },{ title: 'Cybersecurity API',description: 'Security monitoring and threat detection',endpoints: 1 2,icon: <Shield className="w-6 h-6" />,color: 'red' } ] const codeExamples = [ { language: 'JavaScript',title: 'AI Service Integration',code: ` const aiService = new ZionAI({ apiKey: 'your-api-key',environment: 'production' }); const result = await aiService.processText({ text: 'Hello,world!',model: 'gpt-4',options: { maxTokens: 10 0,temperature: 0.7 } }); ` },{ language: 'Python',title: 'Micro SaaS API',code: `import ziontech # Initialize client client = ziontech.Client(api_key='your-api-key') # Create a new project project = client.projects.create({ name: 'My Project',description: 'A new micro SaaS project',type: 'web_application' }) # Deploy project deployment = client.deployments.create( project_id=project.id,environment='production' ) print(f"Project deployed: {deployment.url}")` } ] return ( <> <SEO title="Documentation - Zion Tech Group" description="Comprehensive documentation for Zion Tech Group APIs,SDKs,and integration guides." keywords="documentation,API,SDK,integration,Zion Tech Group" canonical="https: /> <PageTransition> <main className="min-h-screen bg-white"> {} <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6"> Documentation </h1> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Comprehensive guides,API references,and integration examples to help you build with our platform. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="#quick-start" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get Started </motion.a> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get API Key </motion.a> </div> </motion.div> </div> </section> {} <section id="quick-start" className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: 0.2 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Quick Start Guide </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get up and running with our platform in just a few steps. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8"> {quickStart.map((step,index) => ( <motion.div key={step.step} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8 text-center" > <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <div className="text-blue-600"> {step.icon} </div> </div> <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold"> {step.step} </div> <h3 className="text-lg font-semibold text-gray-900 mb-3"> {step.title} </h3> <p className="text-gray-600"> {step.description} </p> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> API Documentation </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Explore our comprehensive API offerings and their capabilities. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 gap-8"> {apiSections.map((section,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8" > <div className="flex items-center gap-4 mb-4"> <div className={`text-${section.color}-600`}> {section.icon} </div> <h3 className="text-xl font-bold text-gray-900"> {section.title} </h3> </div> <p className="text-gray-600 mb-4"> {section.description} </p> <div className="flex items-center justify-between"> <span className="text-sm text-gray-500"> {section.endpoints} endpoints </span> <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-700 transition-colors" > View Docs </motion.button> </div> </motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Code Examples </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get started quickly with these code examples and integration guides. </p> </motion.div> <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8"> {codeExamples.map((example,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg overflow-hidden" > <div className="p-6 border-b border-gray-200"> <div className="flex items-center justify-between"> <h3 className="text-lg font-semibold text-gray-900"> {example.title} </h3> <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"> {example.language} </span> </div> </div> <div className="p-6"> <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"> <code>{example.code}</code> </pre> </div> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6"> Need Help Getting Started? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Our team is here to help you integrate with our platform and get the most out of our services. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Contact Support </motion.a> <motion.a href="tel:+13024640950" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Call Us: +1 302 464 0950 </motion.a> </div> </motion.div> </div> </section> </main>  </> ) } export default DocsPage;"
+</motion>"`;
+
+          </section>;
+        </main>;
+      ;
+    </>;
+  );
+export default DocsPage;"`;
+import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { BookOpen,Code,Globe,Database,ArrowRight,Download,ExternalLink,Star,Users,Clock,Shield,Zap } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ ssr: false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ ssr: false }) const DocsPage: React.FC = () => { const quickStart = [ { step: 1,title: 'Get Your API Key',description: 'Sign up for a free account and get your API key',icon: <Shield className="w-6 h-6" /> },{ step: 2,title: 'Install SDK',description: 'Install our SDK for your preferred programming language',icon: <Download className="w-6 h-6" /> },{ step: 3,title: 'Make Your First API Call',description: 'Start building with our comprehensive API documentation',icon: <Code className="w-6 h-6" /> },{ step: 4,title: 'Deploy Your Application',description: 'Deploy your application using our cloud infrastructure',icon: <Globe className="w-6 h-6" /> } ] const apiSections = [ { title: 'AI Services API',description: 'Access our AI and machine learning capabilities',endpoints: 1 5,icon: <Zap className="w-6 h-6" />,color: 'blue' },{ title: 'Micro SaaS API',description: 'Manage and deploy micro SaaS applications',endpoints: 2 5,icon: <Globe className="w-6 h-6" />,color: 'green' },{ title: 'IT Infrastructure API',description: 'Monitor and manage IT infrastructure',endpoints: 2 0,icon: <Database className="w-6 h-6" />,color: 'purple' },{ title: 'Cybersecurity API',description: 'Security monitoring and threat detection',endpoints: 1 2,icon: <Shield className="w-6 h-6" />,color: 'red' } ] const codeExamples = [ { language: 'JavaScript',title: 'AI Service Integration',code: ` const aiService = new ZionAI({ apiKey: 'your-api-key',environment: 'production' }); const result = await aiService && aiService.processText({ text: 'Hello,world!',model: 'gpt-4',options: { maxTokens: 10 0,temperature: 0 && 0.7 } }); ` },{ language: 'Python',title: 'Micro SaaS API',code: `import ziontech # Initialize client client = ziontech && ziontech.Client(api_key='your-api-key') # Create a new project project = client && client.projects.create({ name: 'My Project',description: 'A new micro SaaS project',type: 'web_application' }) # Deploy project deployment = client && client.deployments.create( project_id=project && project.id,environment='production' ) print(f"Project deployed: {deployment && deployment.url}")` } ] return ( <> <SEO title="Documentation - Zion Tech Group" description="Comprehensive documentation for Zion Tech Group APIs,SDKs,and integration guides." keywords="documentation,API,SDK,integration,Zion Tech Group" canonical="https: /> <PageTransition> <main className="min-h-screen bg-white"> {} <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6 }} className="text-center" > <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6"> Documentation </h1> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Comprehensive guides,API references,and integration examples to help you build with our platform. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion && motion.a href="#quick-start" whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get Started </motion && motion.a> <motion && motion.a href="/contact" whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get API Key </motion && motion.a> </div> </motion && motion.div> </div> </section> {} <section id="quick-start" className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6,delay: 0 && 0.2 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Quick Start Guide </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get up and running with our platform in just a few steps. </p> </motion && motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8"> {quickStart && quickStart.map((step,index) => ( <motion && motion.div key={step && step.step} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6,delay: inde x * 0 && 0.1 }} className="bg-white rounded-xl shadow-lg p-8 text-center" > <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <div className="text-blue-600"> {step && step.icon} </div> </div> <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold"> {step && step.step} </div> <h3 className="text-lg font-semibold text-gray-900 mb-3"> {step && step.title} </h3> <p className="text-gray-600"> {step && step.description} </p> </motion && motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> API Documentation </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Explore our comprehensive API offerings and their capabilities. </p> </motion && motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 gap-8"> {apiSections && apiSections.map((section,index) => ( <motion && motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6,delay: inde x * 0 && 0.1 }} className="bg-white rounded-xl shadow-lg p-8" > <div className="flex items-center gap-4 mb-4"> <div className={`text-${section && section.color}-600`}> {section && section.icon} </div> <h3 className="text-xl font-bold text-gray-900"> {section && section.title} </h3> </div> <p className="text-gray-600 mb-4"> {section && section.description} </p> <div className="flex items-center justify-between"> <span className="text-sm text-gray-500"> {section && section.endpoints} endpoints </span> <motion && motion.button whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-700 transition-colors" > View Docs </motion && motion.button> </div> </motion && motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Code Examples </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get started quickly with these code examples and integration guides. </p> </motion && motion.div> <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8"> {codeExamples && codeExamples.map((example,index) => ( <motion && motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6,delay: inde x * 0 && 0.1 }} className="bg-white rounded-xl shadow-lg overflow-hidden" > <div className="p-6 border-b border-gray-200"> <div className="flex items-center justify-between"> <h3 className="text-lg font-semibold text-gray-900"> {example && example.title} </h3> <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"> {example && example.language} </span> </div> </div> <div className="p-6"> <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"> <code>{example && example.code}</code> </pre> </div> </motion && motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6 }} className="text-center" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6"> Need Help Getting Started? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Our team is here to help you integrate with our platform and get the most out of our services. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion && motion.a href="/contact" whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Contact Support </motion && motion.a> <motion && motion.a href="tel:+13024640950" whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Call Us: +1 302 464 0950 </motion && motion.a> </div> </motion ;"
+      "icon": <Zap className="w-6 h-6"  />,"
+      "icon": <Globe className="w-6 h-6"  />,"
+      "icon": <Database className="w-6 h-6"  />,"
+      "icon": <Shield className="w-6 h-6"  />,"
+
+    <>"
+      <SEO title="Documentation - Zion Tech Group"""
+        canonical=""https": //ziontechgroup.com/docs""
+       />
+
+      <PageTransition>
+        <main className="min-h-screen bg-white">"
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">"
+            <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">"
+              <motion.div;"
+                transition={{ "duration": 0.6 }}""
+                className="text-center""
+              >
+                <h1 className="text-4xl "md": tex t-6xl font-bold text-gray-900 mb-6">"
+                </h1>"
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">"
+                </p>"
+                <div className="flex flex-col "sm": fle x-row gap-4 justify-center">"
+                  <motion.a;"
+                    whileHover={{ scale: 1.05 }}"
+                    whileTap={{ "scale": 0.95 }}""
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2""
+                    <ArrowRight className="w-5 h-5"  />"
+
+                  </motion.a>
+                    whileHover={{ "scale": 1.05 }}""
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2""
+
+              </motion.div>
+          <section id="quick-start" className="py-20">"
+                transition={{ "duration": 0.6, "delay": 0.2 }}""
+                className="text-center mb-16""
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">"
+                </h2>"
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+              </motion.div>"
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">"
+                  <motion.div;
+                    key={step.step}"
+                    transition={{ "duration": 0.6, "delay": inde x * 0.1 }}""
+                    className="bg-white rounded-xl shadow-lg p-8 text-center""
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">"
+                      <div className="text-blue-600">"
+                    <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">"
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">"
+                    </h3>"
+                    <p className="text-gray-600">"
+          <section className="bg-gray-50 py-20">"
+              <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">"
+                    className="bg-white rounded-xl shadow-lg p-8""
+                    <div className="flex items-center gap-4 mb-4">"
+</div>`;
+                      <div className={`text-${section.color}-600`}>
+                      <h3 className="text-xl font-bold text-gray-900">"
+                    <p className="text-gray-600 mb-4">"
+                    <div className="flex items-center justify-between">"
+                      <span className="text-sm text-gray-500">"
+                      <motion.button;"
+                        className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold "hover": b g-blue-700 transition-colors""
+                      </motion.button>
+          <section className="py-20">"
+              <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">"
+                    className="bg-white rounded-xl shadow-lg overflow-hidden""
+                    <div className="p-6 border-b border-gray-200">"
+                        <h3 className="text-lg font-semibold text-gray-900">"
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">"
+                    <div className="p-6">"
+                      <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">"
+                        <code>{example.code}</code>
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-6">"
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+
+          </section>
+        </main>
+      
+    </>
+  )
+}
+
+export default DocsPage
+import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { BookOpen,Code,Globe,Database,ArrowRight,Download,ExternalLink,Star,Users,Clock,Shield,Zap } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ ssr: false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ ssr: false }) const DocsPage: React.FC = () => { const quickStart = [ { step: 1,title: 'Get Your API Key',description: 'Sign up for a free account and get your API key',icon: <Shield className="w-6 h-6" /> },{ step: 2,title: 'Install SDK',description: 'Install our SDK for your preferred programming language',icon: <Download className="w-6 h-6" /> },{ step: 3,title: 'Make Your First API Call',description: 'Start building with our comprehensive API documentation',icon: <Code className="w-6 h-6" /> },{ step: 4,title: 'Deploy Your Application',description: 'Deploy your application using our cloud infrastructure',icon: <Globe className="w-6 h-6" /> } ] const apiSections = [ { title: 'AI Services API',description: 'Access our AI and machine learning capabilities',endpoints: 1 5,icon: <Zap className="w-6 h-6" />,color: 'blue' },{ title: 'Micro SaaS API',description: 'Manage and deploy micro SaaS applications',endpoints: 2 5,icon: <Globe className="w-6 h-6" />,color: 'green' },{ title: 'IT Infrastructure API',description: 'Monitor and manage IT infrastructure',endpoints: 2 0,icon: <Database className="w-6 h-6" />,color: 'purple' },{ title: 'Cybersecurity API',description: 'Security monitoring and threat detection',endpoints: 1 2,icon: <Shield className="w-6 h-6" />,color: 'red' } ] const codeExamples = [ { language: 'JavaScript',title: 'AI Service Integration',code: ` const aiService = new ZionAI({ apiKey: 'your-api-key',environment: 'production' }); const result = await aiService.processText({ text: 'Hello,world!',model: 'gpt-4',options: { maxTokens: 10 0,temperature: 0.7 } }); ` },{ language: 'Python',title: 'Micro SaaS API',code: `import ziontech # Initialize client client = ziontech.Client(api_key='your-api-key') # Create a new project project = client.projects.create({ name: 'My Project',description: 'A new micro SaaS project',type: 'web_application' }) # Deploy project deployment = client.deployments.create( project_id=project.id,environment='production' ) print(f"Project deployed: {deployment.url}")` } ] return ( <> <SEO title="Documentation - Zion Tech Group" description="Comprehensive documentation for Zion Tech Group APIs,SDKs,and integration guides." keywords="documentation,API,SDK,integration,Zion Tech Group" canonical="https: /> <PageTransition> <main className="min-h-screen bg-white"> {} <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6"> Documentation </h1> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Comprehensive guides,API references,and integration examples to help you build with our platform. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="#quick-start" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get Started </motion.a> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get API Key </motion.a> </div> </motion.div> </div> </section> {} <section id="quick-start" className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: 0.2 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Quick Start Guide </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get up and running with our platform in just a few steps. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8"> {quickStart.map((step,index) => ( <motion.div key={step.step} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8 text-center" > <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <div className="text-blue-600"> {step.icon} </div> </div> <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold"> {step.step} </div> <h3 className="text-lg font-semibold text-gray-900 mb-3"> {step.title} </h3> <p className="text-gray-600"> {step.description} </p> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> API Documentation </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Explore our comprehensive API offerings and their capabilities. </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 gap-8"> {apiSections.map((section,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg p-8" > <div className="flex items-center gap-4 mb-4"> <div className={`text-${section.color}-600`}> {section.icon} </div> <h3 className="text-xl font-bold text-gray-900"> {section.title} </h3> </div> <p className="text-gray-600 mb-4"> {section.description} </p> <div className="flex items-center justify-between"> <span className="text-sm text-gray-500"> {section.endpoints} endpoints </span> <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-700 transition-colors" > View Docs </motion.button> </div> </motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Code Examples </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get started quickly with these code examples and integration guides. </p> </motion.div> <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8"> {codeExamples.map((example,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="bg-white rounded-xl shadow-lg overflow-hidden" > <div className="p-6 border-b border-gray-200"> <div className="flex items-center justify-between"> <h3 className="text-lg font-semibold text-gray-900"> {example.title} </h3> <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"> {example.language} </span> </div> </div> <div className="p-6"> <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"> <code>{example.code}</code> </pre> </div> </motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6"> Need Help Getting Started? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Our team is here to help you integrate with our platform and get the most out of our services. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Contact Support </motion.a> <motion.a href="tel:+13024640950" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Call Us: +1 302 464 0950 </motion.a> </div> </motion.div> </div> </section> </main> </PageTransition> </> ) } export default DocsPage
+=======
+import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { BookOpen,Code,Globe,Database,ArrowRight,Download,ExternalLink,Star,Users,Clock,Shield,Zap } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ ssr: false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ ssr: false }) const DocsPage: React.FC = () => { const quickStart = [ { step: 1,title: 'Get Your API Key',description: 'Sign up for a free account and get your API key',icon: <Shield className="w-6 h-6" /> },{ step: 2,title: 'Install SDK',description: 'Install our SDK for your preferred programming language',icon: <Download className="w-6 h-6" /> },{ step: 3,title: 'Make Your First API Call',description: 'Start building with our comprehensive API documentation',icon: <Code className="w-6 h-6" /> },{ step: 4,title: 'Deploy Your Application',description: 'Deploy your application using our cloud infrastructure',icon: <Globe className="w-6 h-6" /> } ] const apiSections = [ { title: 'AI Services API',description: 'Access our AI and machine learning capabilities',endpoints: 1 5,icon: <Zap className="w-6 h-6" />,color: 'blue' },{ title: 'Micro SaaS API',description: 'Manage and deploy micro SaaS applications',endpoints: 2 5,icon: <Globe className="w-6 h-6" />,color: 'green' },{ title: 'IT Infrastructure API',description: 'Monitor and manage IT infrastructure',endpoints: 2 0,icon: <Database className="w-6 h-6" />,color: 'purple' },{ title: 'Cybersecurity API',description: 'Security monitoring and threat detection',endpoints: 1 2,icon: <Shield className="w-6 h-6" />,color: 'red' } ] const codeExamples = [ { language: 'JavaScript',title: 'AI Service Integration',code: ` const aiService = new ZionAI({ apiKey: 'your-api-key',environment: 'production' }); const result = await aiService && aiService.processText({ text: 'Hello,world!',model: 'gpt-4',options: { maxTokens: 10 0,temperature: 0 && 0.7 } }); ` },{ language: 'Python',title: 'Micro SaaS API',code: `import ziontech # Initialize client client = ziontech && ziontech.Client(api_key='your-api-key') # Create a new project project = client && client.projects.create({ name: 'My Project',description: 'A new micro SaaS project',type: 'web_application' }) # Deploy project deployment = client && client.deployments.create( project_id=project && project.id,environment='production' ) print(f"Project deployed: {deployment && deployment.url}")` } ] return ( <> <SEO title="Documentation - Zion Tech Group" description="Comprehensive documentation for Zion Tech Group APIs,SDKs,and integration guides." keywords="documentation,API,SDK,integration,Zion Tech Group" canonical="https: /> <PageTransition> <main className="min-h-screen bg-white"> {} <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6 }} className="text-center" > <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6"> Documentation </h1> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Comprehensive guides,API references,and integration examples to help you build with our platform. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion && motion.a href="#quick-start" whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get Started </motion && motion.a> <motion && motion.a href="/contact" whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Get API Key </motion && motion.a> </div> </motion && motion.div> </div> </section> {} <section id="quick-start" className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6,delay: 0 && 0.2 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Quick Start Guide </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get up and running with our platform in just a few steps. </p> </motion && motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8"> {quickStart && quickStart.map((step,index) => ( <motion && motion.div key={step && step.step} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6,delay: inde x * 0 && 0.1 }} className="bg-white rounded-xl shadow-lg p-8 text-center" > <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <div className="text-blue-600"> {step && step.icon} </div> </div> <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold"> {step && step.step} </div> <h3 className="text-lg font-semibold text-gray-900 mb-3"> {step && step.title} </h3> <p className="text-gray-600"> {step && step.description} </p> </motion && motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> API Documentation </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Explore our comprehensive API offerings and their capabilities. </p> </motion && motion.div> <div className="grid grid-cols-1 md: gri d-cols-2 gap-8"> {apiSections && apiSections.map((section,index) => ( <motion && motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6,delay: inde x * 0 && 0.1 }} className="bg-white rounded-xl shadow-lg p-8" > <div className="flex items-center gap-4 mb-4"> <div className={`text-${section && section.color}-600`}> {section && section.icon} </div> <h3 className="text-xl font-bold text-gray-900"> {section && section.title} </h3> </div> <p className="text-gray-600 mb-4"> {section && section.description} </p> <div className="flex items-center justify-between"> <span className="text-sm text-gray-500"> {section && section.endpoints} endpoints </span> <motion && motion.button whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-700 transition-colors" > View Docs </motion && motion.button> </div> </motion && motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6 }} className="text-center mb-16" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4"> Code Examples </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get started quickly with these code examples and integration guides. </p> </motion && motion.div> <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8"> {codeExamples && codeExamples.map((example,index) => ( <motion && motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6,delay: inde x * 0 && 0.1 }} className="bg-white rounded-xl shadow-lg overflow-hidden" > <div className="p-6 border-b border-gray-200"> <div className="flex items-center justify-between"> <h3 className="text-lg font-semibold text-gray-900"> {example && example.title} </h3> <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"> {example && example.language} </span> </div> </div> <div className="p-6"> <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"> <code>{example && example.code}</code> </pre> </div> </motion && motion.div> ))} </div> </div> </section> {} <section className="bg-gray-50 py-20"> <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8"> <motion && motion.div initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0 && 0.6 }} className="text-center" > <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6"> Need Help Getting Started? </h2> <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"> Our team is here to help you integrate with our platform and get the most out of our services. </p> <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <motion && motion.a href="/contact" whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Contact Support </motion && motion.a> <motion && motion.a href="tel:+13024640950" whileHover={{ scale: 1 && 1.05 }} whileTap={{ scale: 0 && 0.95 }} className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2" > <ArrowRight className="w-5 h-5" /> Call Us: +1 302 464 0950 </motion && motion.a> </div> </motion && motion.div> </div> </section> </main> </PageTransition> </> ) } export default DocsPage
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

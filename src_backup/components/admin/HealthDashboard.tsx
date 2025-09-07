@@ -30,6 +30,11 @@ import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   constructor(props) {
     super(props);
     this.state = { hasError: false }
@@ -57,6 +62,10 @@ import { Badge } from '@/components/ui/badge
 import { Button } from @/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -109,6 +118,11 @@ interface HealthData {
       medium: number;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       low: number;
     }
@@ -118,6 +132,10 @@ interface HealthData {
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       patternId: string;
       description: string;
 
@@ -129,6 +147,11 @@ interface HealthData {
 
       low: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     }return this.props.children;
   }
@@ -180,6 +203,10 @@ interface HealthData  {status: healthy | 'warning' | critical;
     byCategory: { [category: string]: number }low: number;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
     top_errors: Array<{}
       pattern_id: string;
@@ -190,6 +217,13 @@ interface HealthData  {status: healthy | 'warning' | critical;
     }>;
     by_category: { [category: string]: number }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  }
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }import React, { useState, useEffect } from 'react',import { Card, CardContent, CardHeader, CardTitle } from @/components/ui/card,import { Badge } from '@/components/ui/badge',import { Button } from @/components/ui/button,import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',interface HealthData  {status: healthy | 'warning' | critical,timestamp: string,uptime: number,version: string,environment: string,metrics: {errorRate: number,criticalErrors: number,responseTime: number,memoryUsage: number;
   },health: {status: string,score: number,issues: string[],recommendations: string[];
   },errors: {summary: {total: number,critical: number,high: number,medium: number,low: number;
@@ -274,6 +308,10 @@ interface HealthData {'
 =======
   }
 
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react';
 interface HealthData {;'
   status: 'healthy' | 'warning' | 'critical',;
@@ -383,12 +421,21 @@ interface HealthData {;'
         <div className="flex items-center space-x-2>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (!healthData) return null
   if (!healthData) return null,
 
             variant=outline"
             size="sm
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             variant="outline"
             size="sm"
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -445,10 +492,19 @@ interface HealthData {;'
         </TabsList>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
         <TabsContent value="overview" className=space-y-4>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <TabsContent value="overview" className="space-y-4">
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -511,6 +567,13 @@ interface HealthData {;'
 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  },;
+  const getStatusBadge = (status: string) => {;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },
   const getStatusBadge = (status: string) => {
       </Badge>;
@@ -531,6 +594,10 @@ interface HealthData {;'
   },;
   const getStatusBadge = (status: string) => {;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       </Badge>;
 
@@ -549,6 +616,11 @@ interface HealthData {;'
         </CardContent>;
       </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <Button;
             variant=outline;
             size='sm';
@@ -623,6 +695,10 @@ interface HealthData {;'
                 </p>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     );
   }
 
@@ -666,6 +742,11 @@ interface HealthData {;'
                 </div>;
               </CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       </li>
                     ))}
                   </ul>
@@ -674,6 +755,10 @@ interface HealthData {;'
                 )}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </Card>;
             <Card>;
 
@@ -698,6 +783,11 @@ interface HealthData {;'
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 ) : (<p className='text-green-600 text-sm'>No issues detected</p>;
                 )}<TabsContent value=errors" className="space-y-4>;
           <div className=grid grid-cols-1 lg:grid-cols-2 gap-4">;
@@ -802,6 +892,10 @@ interface HealthData {;'
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         <div
                           key={index}
                           className='border-l-4 border-red-400 pl-3 py-1'>;
@@ -833,7 +927,14 @@ interface HealthData {;'
                       <div key={index} className="border-l-4 border-red-400 pl-3 py-1">"
                         <p className="text-sm font-medium">{error.description}</p>"
                         <p className="text-xs text-gray-600">
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           {error.occurrences} occurrences • {error.severity}
                         </p>;
                       </div>;
@@ -912,6 +1013,12 @@ interface HealthData {;'
               </CardHeader>
               <CardContent>'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <p className='text-2xl font-bold text-red-600'>
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <p className='text-2xl font-bold text-red-600>
                   </div>;
                 ) : (<p className=text-gray-600 text-sm>No recurring errors</p>;
@@ -937,6 +1044,10 @@ interface HealthData {;'
 =======
                 <p className='text-2xl font-bold text-red-600'>
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {healthData.metrics.criticalErrors}
                 </p>'
                 <p className=text-xs text-gray-600>In last hour</p>
@@ -969,11 +1080,20 @@ interface HealthData {;'
         </TabsContent>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 ) : (
                   <p className=text-gray-600 text-sm>No recurring errors</p>
                 )}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <Card>
 
             <CardHeader>
@@ -982,6 +1102,11 @@ interface HealthData {;'
             <CardContent>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 </p>;
                 <p className='text-xs text-gray-600'>JavaScript heap</p>;
@@ -1026,6 +1151,10 @@ interface HealthData {;'
                 <p className="text-xs text-gray-600">JavaScript heap</p>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </CardContent>;
             </Card>;
           </div>;
@@ -1090,6 +1219,11 @@ interface HealthData {;'
             </CardHeader>;
             <CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   ))}
                       <span className=text-sm'>{rec}</span>                    </li>;))}
                 </ul>;
@@ -1099,6 +1233,10 @@ interface HealthData {;'
               )}
               {healthData && healthData.health.recommendations && recommendations.length > 0 ? (;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               {healthData && healthData.health.recommendations && recommendations.length > 0 ? (;'
 >>>>>>> origin/chore/fix-lint-and-merge
                 <ul className='space-y-3'>;
@@ -1130,6 +1268,11 @@ export default HealthDashboard;
       set_loading (false);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               )}export default HealthDashboard,export default HealthDashboard;
 }const response = await fetch (/api / admin / health)// Check condition;
 if ( {) {$2;
@@ -1137,6 +1280,10 @@ if ( {) {$2;
       const data = await response.json ()setHealthData (data)set_error (null)} catch (err) {set_error (err instanceof Error ? err.message : 'Failed to fetch health data')} finally {set_loading (false)}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   useEffect (() => {}
     fetchHealthData ();
@@ -1342,7 +1489,14 @@ if (return null) {}
                   <AlertTriangle className='w - 4 h - 4 mr - 2' />;
                   Current Issues ({health_data.health.issues.length});
                 </CardTitle>;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </CardHeader>;
               <CardContent>;
                 {health_data.health.issues.length > 0 ? ('
@@ -1497,6 +1651,11 @@ export default HealthDashboard;
 export default HealthDashboard,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default HealthDashboard;
 
   }
@@ -1514,6 +1673,10 @@ export default HealthDashboard,export default HealthDashboard}
   )}export default HealthDashboard;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   });
 }
 

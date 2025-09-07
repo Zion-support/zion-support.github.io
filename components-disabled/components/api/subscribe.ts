@@ -18,6 +18,13 @@ export default async function handler(
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || ).includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ).includes('placeholder');
     if (isPlaceholder) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      return res && res.status(200).json({ ok: true, simulated: true });
+      .from('email_signups');
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
       return res && res.status(200).json({ "ok": true, "simulated": true });
       .from('email_signups');'
@@ -25,11 +32,20 @@ export default async function handler(
       return res && res.status(200).json({ ok: true, simulated: true });
       .from('email_signups');
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
     return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { email } = req.body || {};
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (!email || typeof email !== 'string')'
     return res.status(400).send('Invalid email');export default async function handler() {;'
   }
@@ -51,6 +67,10 @@ export default async function handler(
       return res && res.status(200).json({ "ok": true, "simulated": true });
       .from('email_signups');'
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (!email || typeof email !== 'string')
     return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!email |typeof email !== 'string') return res.status(400).send('Invalid email');
@@ -60,7 +80,14 @@ export default async function handler(
       (process && process.env.NEXT_PUBLIC_SUPABASE_URL || ).includes('placeholder') ||
       (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ).includes('placeholder');
       return res && res.status(200).json({ ok: true, simulated: true });    }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       .insert({
         email: normalized;,
   source: 'mobile-launch)
@@ -81,6 +108,11 @@ function handler() {
   $2;
 const { email } = req.body || {}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (
     return res.status (400).send ('Invalid email')) {'
   $2
@@ -98,11 +130,22 @@ function handler() {
 }
 try {
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if ()
     return res.status (400).send ('Invalid email')) {
   if (return res.status (400).send ('Invalid email')) {
   // TODO: Implement
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Basic validation;
     const normalized = email.trim ().toLowerCase ();
     const is_valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test (normalized);
@@ -114,6 +157,16 @@ try {
     // Check condition;
 if ( {) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      return res.status (200).json ({ ok: true, simulated: true });    
+      .from ('email_signups')    const is_placeholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || ).includes ('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ).includes ('placeholder');
+    // Check condition;
+    
+      .from ('email_signups');
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   $2
 }
 return res.status (200).json ({ "ok": true, "simulated": true });    
@@ -132,6 +185,10 @@ return res.status (200).json ({ "ok": true, "simulated": true });
     
       .from ('email_signups');
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       .insert ({
         email: normalized,
         source: 'mobile - launch',')

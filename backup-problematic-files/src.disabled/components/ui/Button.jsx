@@ -15,5 +15,18 @@ const Button = ({ className }) => {
   )
 };
 
+<<<<<<< HEAD
     </div>)'
 pr-12325
+=======
+<<<<<<< HEAD
+    </div>)'
+pr-12325
+=======
+<<<<<<< HEAD
+export default Button;
+=======
+export default Button;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

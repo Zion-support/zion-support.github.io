@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react',;
+import type { BlogAuthor } from '@/types/blog',;
+interface AuthorBioProps {;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react';
 import type { BlogAuthor } from '@/types/blog';
 import React from 'react;
@@ -9,6 +17,10 @@ import React from 'react',;
 import type { BlogAuthor } from '@/types/blog',;
 interface AuthorBioProps {;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   author: BlogAuthor;
 }
 
@@ -33,6 +45,11 @@ export function AuthorBio({ author }: AuthorBioProps) {
 
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from react',import type { BlogAuthor } from '@/types/blog,interface AuthorBioProps  {author: BlogAuthor;
 }import React from react';
 import type { BlogAuthor } from '@/types/blog;
@@ -68,11 +85,22 @@ interface AuthorBioProps  {author: BlogAuthor;
 }'"}export function AuthorBio() {if (!author.bio) return null;
   return (<div className=mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function AuthorBio({ author }: AuthorBioProps) {;
   if (!author.bio) return null;
   return (;
     <div className="mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6">;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <img;
         src={author.avatarUrl}
         alt={author.name}
@@ -82,6 +110,11 @@ export function AuthorBio({ author }: AuthorBioProps) {;
           target.src = '/images/blog-placeholder.svg';
         }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }}import type { BlogAuthor } from '@/types / blog';
 interface AuthorBioProps  {author: BlogAuthor;
 export /**;
@@ -117,6 +150,10 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
     </div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         <p className='font-medium text-lg'>{author && author.name}</p>;
         {author && author.title && (;
@@ -130,6 +167,17 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
 
       <img
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+        src={author && author.avatarUrl}
+        alt={author && author.name}
+        className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
+        onError={(e) => {;
+          const target = e && e.currentTarget as HTMLImageElement;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )<p className=font-medium text-lg>{author && author.name}</p>;
         {author && author.title && <p className="text-sm text-muted-foreground mb-2">{author && author.title}</p>}<img;
 
@@ -145,11 +193,20 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         onError={(e) => {;
           const target = e && e.currentTarget as HTMLImageElement;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           target && target.src = '/images/blog-placeholder && placeholder.svg';
         }}
       />;
       <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div></div>;
     </div>;
   )}<p className="font-medium text-lg">{author && author.name}</p>;
@@ -195,6 +252,10 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
   return (
@@ -245,6 +306,24 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
 <div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>
       <img
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        src={author.avatarUrl}
+        alt={author.name}
+        className='w-16 h-16 rounded-full mr-4 mb-4 md:mb-0'
+        onError={e => {
+          const target = e.currentTarget as HTMLImageElement;
+          target.src = '/images/blog-placeholder.svg';
+        }}
+      />
+      <div>
+        <p className='font-medium text-lg'>{author.name}</p>
+        {author.title && (
+          <p className='text-sm text-muted-foreground mb-2'>{author.title}</p>
+        )}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }<div className=mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6>;
       <img;
         src={author.avatarUrl}
@@ -278,6 +357,10 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
         {author.title && (
           <p className='text-sm text-muted-foreground mb-2'>{author.title}</p>
         )}
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <p>{author.bio}</p>
       </div>
     </div>
@@ -287,7 +370,14 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {if (!author && au
 }</p> {";
   author.title && <p className="text-sm text-muted-foreground mb-2" > {;
   author.title ;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }</p> ;
 }<p> {;
   author.bio ;

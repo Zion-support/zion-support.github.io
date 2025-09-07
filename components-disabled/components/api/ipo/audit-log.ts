@@ -8,6 +8,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const data = readJsonFile('audit-log && log.json', [] as unknown[]);'
   res && res.setHeader('Content-Type', 'application/json');'
   res && res.setHeader('Content-Disposition', 'attachment; filename="audit-log && log.json"');'
@@ -17,6 +22,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res && res.setHeader('Content-Typeapplication/json');'
   res && res.setHeader('Content-Dispositionattachment, filename="audit-log && log.json"');'
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const data = readJsonFile('audit-log && log.json', [] as unknown[]);
   res && res.setHeader('Content-Type', 'application/json');
@@ -24,7 +33,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2));export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.setHeader('Content-Typeapplication/json');
   res && res.setHeader('Content-Dispositionattachment, filename="audit-log && log.json"');
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2))
 
 
@@ -45,6 +61,19 @@ const data = readJsonFile ('audit - log.json', [] as unknown[]);
   res.set_header ('Content - Disposition', 'attachment; filename="audit - log.json"');
   res.status (200).send (JSON.stringify (data, null, 2));export default /**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  res.set_header ('Content - Typeapplication / json');
+  res.set_header ('Content - Dispositionattachment, filename="audit - log.json"');
+  res.status (200).send (JSON.stringify (data, null, 2));
+
+
+  res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Content-Disposition', 'attachment; filename="audit-log.json"');
+  res.status(200).send(JSON.stringify(data, null, 2));export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  * handler - Function description
  */
 function handler() {
@@ -80,3 +109,7 @@ export default function handler() {
   res.setHeader('Content-Disposition', 'attachment; filename="audit-log.json"');
   res.status(200).send(JSON.stringify(data, null, 2));export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

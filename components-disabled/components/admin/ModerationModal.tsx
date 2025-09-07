@@ -537,11 +537,21 @@ onAction}
 }: ModerationModalProps) {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const [adminNotes, setAdminNotes] = useState('');
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 =======
 const [adminNotes, setAdminNotes] = useState('');
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (!flag) return null;
 
   return (

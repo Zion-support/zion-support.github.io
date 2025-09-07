@@ -26,6 +26,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    const episode = {      return res && res.status(500).json({ error: 'Failed to generate structured content' });
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. "Produce":;'
 1) 7-10 concise interview questions mixing visionary and technical angles,
 2) Time markers "for": Intro, segment transitions, Closing CTA for Zion,
@@ -37,6 +43,10 @@ Return a strict JSON object with "keys": title, questions (array), timeMarkers {
 =======
     const episode = {      return res && res.status(500).json({ error: 'Failed to generate structured content' });
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const episode = {
         intro: '00:00',
         segments: [],
@@ -71,6 +81,12 @@ function ensure_storage() {
     fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json');
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  * ensure_storage - Function description
  */
 function ensure_storage() {
@@ -86,6 +102,10 @@ fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');'
 =======
     fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 episodes.unshift (episode);
 write_episodes (episodes);
@@ -155,6 +175,11 @@ const completion = await openai.chat.completions.create ({
           'Talent networks become protocols when incentives, reputation, and opportunity align.',
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
       id,
 "createdAt": new Date().toISOString();
@@ -177,6 +202,10 @@ invitee
     try {
       }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       id;
       createdAt: new Date().toISOString();
       persona;
@@ -194,7 +223,14 @@ invitee
       bestQuote: generated.bestQuote |',
   audio: {}
   // TODO: Implement
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       generated = JSON.parse (content);
     } catch {
   // TODO: Implement
@@ -205,6 +241,14 @@ invitee
 if ( {) {
         .status (500);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        .json ({ error: 'Failed to generate structured content' });
+const episodes = read_episodes ();
+    const episode = {      return res.status (500).json ({ error: 'Failed to generate structured content' });
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         .json ({ "error": 'Failed to generate structured content' });    '
 const episode = {      return res.status (500).json ({ "error": 'Failed to generate structured content' });'
     
@@ -214,6 +258,10 @@ const episode = {      return res.status (500).json ({ "error": 'Failed to gener
 const episodes = read_episodes ();
     const episode = {      return res.status (500).json ({ error: 'Failed to generate structured content' });
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       id,
       created_at: new Date ().toISOString (),
         transcript: 'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.',
@@ -228,6 +276,13 @@ const episodes = read_episodes ();
       if (match) generated = JSON.parse(match[0]);
     if (!generated || !generated.title || !generated.transcript) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      return res.status(500).json({ error: 'Failed to generate structured content' });
+      createdAt: new Date().toISOString(),
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
       return res.status(500).json({ "error": 'Failed to generate structured content' });'
       }
@@ -237,6 +292,10 @@ const episodes = read_episodes ();
       return res.status(500).json({ error: 'Failed to generate structured content' });
       createdAt: new Date().toISOString(),
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       persona,
       invitee,
@@ -274,6 +333,11 @@ time_markers: generated.time_markers || {,
       // Attempt to extract JSON block;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {
       }
       generated = JSON.parse(content);
@@ -287,6 +351,10 @@ time_markers: generated.time_markers || {,
     
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       transcript: generated.transcript,
       youtube_description: generated.youtube_description || ,
@@ -300,10 +368,19 @@ time_markers: generated.time_markers || {,
   }    episodes.unshift (episode);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 `;

@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Fragment } from "react";"
 import { Route, Routes } from "react-router-dom";"
 import Login from "@/pages/Login";"
@@ -146,6 +152,8 @@ const AuthRoutes = () => {;
       <Route"
         path="/onboarding"
         element={}
+<<<<<<< HEAD
+=======
           <ProtectedRoute>
             <Onboarding />
           </ProtectedRoute>
@@ -162,11 +170,202 @@ const AuthRoutes = () => {;
       <Route"
         path="/service-onboarding"
 
+=======
+
+<<<<<<< HEAD
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import Login from "@/pages/Login";
+import Signup from "@/pages/Signup";
+import ForgotPassword from "@/pages/ForgotPassword";
+import UpdatePassword from "@/pages/UpdatePassword";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import Onboarding from "@/pages/Onboarding";
+import TalentOnboarding from "@/pages/TalentOnboarding";
+import ServiceOnboarding from "@/pages/ServiceOnboarding";
+>>>>>>> merged-prs-20250907-203621
+import { Fragment } from "react",
+import { Route, Routes } from "react-router-dom",
+import Login from "@/pages/Login",
+import Signup from "@/pages/Signup",
+import ForgotPassword from "@/pages/ForgotPassword",
+import UpdatePassword from "@/pages/UpdatePassword",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import Onboarding from "@/pages/Onboarding",
+import TalentOnboarding from "@/pages/TalentOnboarding";
+import ServiceOnboarding from "@/pages/ServiceOnboarding";
+<<<<<<< HEAD
+const AuthRoutes = $2;
+export default AuthRoutes,
+=======
+
+import TalentOnboarding from "@/pages/TalentOnboarding",
+import ServiceOnboarding from "@/pages/ServiceOnboarding",
+const AuthRoutes = () => {
+  return (
+    <Routes>
+      {/* Auth Routes */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/update-password" element={<UpdatePassword />} />
+      {/* Onboarding Routes */}
+      <Route
+        path="/onboarding"
+        element={
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          <ProtectedRoute>
+            <Onboarding />
+          </ProtectedRoute>
+        }
+      />
+<<<<<<< HEAD
+      <Route"
+        path="/talent-onboarding"
+        element={}
+=======
+      <Route
+        path="/talent-onboarding"
+        element={
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+          <ProtectedRoute>
+            <TalentOnboarding />
+          </ProtectedRoute>
+        }
+      />
+<<<<<<< HEAD
+      <Route"
+        path="/service-onboarding"
+
+=======
+      <Route
+        path="/service-onboarding"
+        element={
+          <ProtectedRoute>
+            <ServiceOnboarding />
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  )
+}
+export default AuthRoutes;
+
+},
+
+export default AuthRoutes,
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
+import Login from "@/pages/Login",;
+import Signup from "@/pages/Signup",;
+import ForgotPassword from "@/pages/ForgotPassword",;
+import UpdatePassword from "@/pages/UpdatePassword",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import Onboarding from "@/pages/Onboarding",;
+import TalentOnboarding from "@/pages/TalentOnboarding",;
+import ServiceOnboarding from "@/pages/ServiceOnboarding",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+const AuthRoutes = () => {
+const AuthRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Auth Routes */}
+
+<<<<<<< HEAD
+const AuthRoutes = () => {;
+  return (
+
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
+import Login from "@/pages/Login",;
+import Signup from "@/pages/Signup",;
+import ForgotPassword from "@/pages/ForgotPassword",;
+import UpdatePassword from "@/pages/UpdatePassword",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import Onboarding from "@/pages/Onboarding",;
+import TalentOnboarding from "@/pages/TalentOnboarding",;
+import ServiceOnboarding from "@/pages/ServiceOnboarding",;
+;
+const AuthRoutes = () => {;
+  return (;
+    <Routes>;
+      {/* Auth Routes */}
+const AuthRoutes = () => {;
+  return (;
+    <Routes>;
+      {/* Auth Routes */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      <Route path="/login" element={<Login />} />;
+      <Route path="/signup" element={<Signup />} />;
+      <Route path="/forgot-password" element={<ForgotPassword />} />;
+      <Route path="/update-password" element={<UpdatePassword />} />;
+<<<<<<< HEAD
+      ;
+      {/* Onboarding Routes */}
+      <Route ;
+        path="/onboarding" ;
+        element={;
+      {/* Onboarding Routes */}
+      <Route;
+        path="/onboarding";
+        element={;
+=======
+
+      {/* Onboarding Routes */}
+      <Route
+        path="/onboarding" 
+        element={
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <ProtectedRoute>;
+            <Onboarding />;
+          </ProtectedRoute>;
+        } ;
+      />;
+<<<<<<< HEAD
+      <Route ;
+        path="/talent-onboarding" ;
+        element={;
+      <Route;
+        path="/talent-onboarding";
+        element={;
+=======
+      <Route
+        path="/talent-onboarding" 
+        element={
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <ProtectedRoute>;
+            <TalentOnboarding />;
+          </ProtectedRoute>;
+        } ;
+      />;
+<<<<<<< HEAD
+      <Route ;
+        path="/service-onboarding" ;
+        element={;
+      <Route;
+        path="/service-onboarding";
+        element={;
+=======
+      <Route
+        path="/service-onboarding" 
+        element={
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <ProtectedRoute>;
             <ServiceOnboarding />;
           </ProtectedRoute>;
         } ;
       />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export default AuthRoutes;
 
@@ -180,10 +379,39 @@ export default AuthRoutes;
 };
 
 };
+<<<<<<< HEAD
+=======
+=======
+    </Routes>;
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 };
 
 },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+export default AuthRoutes;
+import { Fragment } from './react';
+import { Route, Routes } from './react-router-dom';
+import Login from "@/pages / Login";
+import Signup from "@/pages / Signup";
+import ForgotPassword from "@/pages / ForgotPassword";
+import UpdatePassword from "@/pages / UpdatePassword";
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import Onboarding from "@/pages / Onboarding";
+import TalentOnboarding from "@/pages / TalentOnboarding";
+import ServiceOnboarding from "@/pages / ServiceOnboarding";
+const AuthRoutes = () =>: any {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Routes>;
       {/* Auth Routes */}
@@ -209,6 +437,45 @@ export default AuthRoutes,; const AuthRoutes = () => {
 }/> </Routes>) 
 };
 export default AuthRoutes;
+<<<<<<< HEAD
   );
 },;
 export default AuthRoutes;
+=======
+<<<<<<< HEAD
+  );
+},;
+export default AuthRoutes;
+=======
+;
+<<<<<<< HEAD
+  ),;
+},;
+;
+export default AuthRoutes,; const AuthRoutes = () => {
+  return (<Routes> {
+  /* Auth Routes */ 
+}<Route path="/login" element= {
+  <Login /> 
+}/> <Route path="/signup" element= {
+  <Signup /> 
+}/> <Route path="/forgot-password" element= {
+  <ForgotPassword /> 
+}/> <Route path="/update-password" element= {
+  <UpdatePassword /> 
+}/> /* Onboarding Routes */ 
+}<Route <Onboarding /> </ProtectedRoute> 
+}/> <Route <TalentOnboarding /> </ProtectedRoute> 
+}/> <Route <ServiceOnboarding /> </ProtectedRoute> 
+}/> </Routes>) 
+};
+export default AuthRoutes;
+  );
+},;
+export default AuthRoutes;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

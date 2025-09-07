@@ -1,28 +1,44 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "target": "ES2017",
+=======
+    "target": "ES2020",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "lib": [
       "dom",
       "dom.iterable",
-      "es6"
+      "es2020"
     ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+<<<<<<< HEAD
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
+=======
+    "esModuleInterop": true,
+    "module": "ESNext",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+<<<<<<< HEAD
+=======
+    "incremental": true,
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "plugins": [
       {
         "name": "next"
       }
     ],
+<<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -57,18 +73,49 @@
       ]
     },
     "allowSyntheticDefaultImports": true,
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+<<<<<<< HEAD
     ".next",
     "out",
     "dist"
+=======
+    "apps/**",
+    "apps.backup/**",
+    "api-backup/**",
+    "backup/**",
+    "backup-merge-conflicts/**",
+    "backup-problematic-files/**",
+    "broken_files_backup/**",
+    "corrupted_backup/**",
+    "_conflicted_disabled/**",
+    "components-disabled/**",
+    "components.disabled/**",
+    "components.disabled_full/**",
+    "api-disabled/**",
+    "api.disabled/**",
+    "api.disabled.temp/**",
+    "src_backup/**",
+    "utils/**",
+    "vite.config-backup.ts",
+    "browserstack.config.ts",
+    "cypress.config.ts",
+    "jest.config.*",
+    "*.config.ts",
+    "types/**",
+    "netlify/**",
+    "components/**",
+    "src/**"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ]
 }

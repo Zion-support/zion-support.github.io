@@ -148,6 +148,11 @@ import { Input } from @/components/ui/input';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 import { Table;
@@ -160,6 +165,10 @@ import { Badge  } from @/components/ui/badge';
 import { CalendarIcon, Search  } from 'lucide-react;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Table;
   TableBody;
   TableCell;
@@ -177,6 +186,11 @@ export function TeamActivity() {
   // Mock activity data
   const activities = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   TableRow} from @/components/ui/table";
 import { Button  } from '@/components/ui/button;
 import { Input  } from @/components/ui/input';
@@ -295,6 +309,10 @@ const getCategoryBadge = (category: string) =>: any {}";
   activities.map ( (activity) => (<TableRow key= {/>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
     <div className=space-y-6>
@@ -496,6 +514,8 @@ const getCategoryBadge = (category: string) => {};
 <<<<<<< HEAD
 }</TableBody> </Table> </div> <div className="flex items-center justify-between > <Button variant=outline" size="sm > Previous </Button> <div className=text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline size=sm" > Next </Button> </div> </div>) ;
 }"
+<<<<<<< HEAD
+=======
           </TableBody>;
         </Table>;
       </div>;
@@ -519,3 +539,7 @@ const getCategoryBadge = (category: string) => {};
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
 }"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

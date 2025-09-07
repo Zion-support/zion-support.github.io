@@ -4,6 +4,49 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
 
     } catch (error) {_;
       // Skip files that can't be accessed'};
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      continue
+}
+}
+};
+// Function to fix specific parsing errors;
+  for (const item of, items) {};
+    const fullPath = path.join(dir, item),;
+    try {};
+        // Skip node_modules, .git, and other common directories};
+        if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
+          files = files.concat(findFiles(fullPath, extensions));
+        };
+      } else if (extensions.some(ext => item.endsWith(ext))) {};
+        files.push(fullPath);
+      };
+;
+    } catch (error) {,;
+;    try {};
+        // Skip node_modules, .git, and other common directories};
+        if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
+          files = files.concat(findFiles(fullPath, extensions));
+        };
+      } else if (extensions.some(ext => item.endsWith(ext))) {};
+        files.push(fullPath);
+      };
+;
+    } catch (error) {,;
+;    try {};
+        // Skip node_modules, .git, and other common directories};
+        if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
+          files = files.concat(findFiles(fullPath, extensions))
+        };
+      } else if (extensions.some(ext => item.endsWith(ext))) {};
+        files.push(fullPath)
+      };
+    } catch (error) {;
+      // Skip files that can't be accessed'};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       continue;
 };
 // Function to fix specific parsing errors;
@@ -18,4 +61,30 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
     _,'
 }
 };
+<<<<<<< HEAD
         fixedCount++}
+=======
+<<<<<<< HEAD
+        fixedCount++}
+=======
+        fixedCount++}
+    } catch (error) {_;
+<<<<<<< HEAD
+      errorCount++}
+}
+=======
+  
+      errorCount++}
+}
+
+  };
+};
+        fixedCount++};
+    } catch (error) {,
+  console.error(`Error processing ${file}:`, error.message),
+      errorCount++};
+  };
+,
+  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

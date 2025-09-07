@@ -1,8 +1,35 @@
+<<<<<<< HEAD
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
 const crypto = require("crypto");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
+const crypto = require("crypto")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.projectRoot,logs"
       "smart-testing-automation.log"
       this.projectRoot,logs"
@@ -46,13 +73,27 @@ const crypto = require("crypto");
       "utilities"
       "hooks"
   this.log(" Running Jest coverage analysis...")
+<<<<<<< HEAD
 const coverageOutput = execSync(npm run test -- --coverage --watchAll=false");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
+  const coverageOutput = execSync(npm run test -- --coverage --watchAll=false")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "cwd"
               "stdio": "pipe"
               "encoding": "utf8"
           Object.assign(coverage, coverageData)} catch (error) {  this.log(`Coverage analysis "failed": ${error.message  }`, "WARN"`)
       Object.assign(coverage, testStructure)} catch (error) {  this.log(`Coverage analysis "failed": ${error.message  }`, "ERROR"`)
+<<<<<<< HEAD
 const jestConfigs = ["jest.config.js", "jest.config.ts", "jest.config.cjs"];
+=======
+  const jestConfigs = ["jest.config.js", "jest.config.ts", "jest.config.cjs"]
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // This is a simplified parser - in production you"d use Jest"
   "total"
       "covered"
@@ -62,6 +103,29 @@ const jestConfigs = ["jest.config.js", "jest.config.ts", "jest.config.cjs"];
       "testSuites"
       "testCases"
       "components"
+<<<<<<< HEAD
+=======
+      "utilities"
+      "hooks"
+    const testsDir = path.join(this.projectRoot, "tests")
+    const srcDir = path.join(this.projectRoot, "src")
+  const testFiles = this.getAllFiles(testsDir, [".test.js", ".test.ts", ".test.jsx", ".test.tsx", ".spec.js", ".spec.ts", ".spec.jsx", ".spec.tsx", ")]
+  const testContent = fs.readFileSync(testFile, "utf8")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+        // Track what"
+  "suites
+      cases"
+      "components
+      utilities"
+      "hooks
+    // Count test cases (it/test")
+    // Identify what"
+      /import\s+{?\s*([A-Z][a-zA-Z0-9]*)\s*}?\s+from/g""
+  components
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "utilities"
       "hooks"
 const testsDir = path.join(this.projectRoot, "tests");
@@ -81,9 +145,21 @@ const testContent = fs.readFileSync(testFile, "utf8");
       "utilities"
       "hooks"
       "total"
+<<<<<<< HEAD
 const srcDir = path.join(this.projectRoot, "src");
 const sourceFiles = this.getAllFiles(srcDir, [".tsx", ".ts", ".jsx", ".js", ")];
 const content = fs.readFileSync(file, "utf8");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
+    const srcDir = path.join(this.projectRoot, "src")
+    const sourceFiles = this.getAllFiles(srcDir, [".tsx", ".ts", ".jsx", ".js", ")]
+  const content = fs.readFileSync(file, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         for (const ["category", "items")]
   "name"
                 "file"
@@ -97,6 +173,10 @@ const content = fs.readFileSync(file, "utf8");
                 "line"
                 "exportType"
   this.log(Error analyzing source file ${file  }: ${error.message}")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "
   this.log(Error analyzing source file ${file}: ${error.message}")
           "WARN"
@@ -112,24 +192,57 @@ const content = fs.readFileSync(file, "utf8");
             "exportType": pattern.pattern.source.includes("default")
               ? "default"
               : "named"
+<<<<<<< HEAD
 const lines = content.substring(0, index).split("\n");
 const testsDir = path.join(this.projectRoot, "tests");
 const testFiles = this.getAllFiles(testsDir, [".test.js", ".test.ts", ".test.jsx", ".test.tsx", ".spec.js", ".spec.ts", ".spec.jsx", ".spec.tsx", ")];
 const testContent = fs.readFileSync(testFile, "utf8");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
+  const lines = content.substring(0, index).split("\n")
+  const testsDir = path.join(this.projectRoot, "tests")
+    const testFiles = this.getAllFiles(testsDir, [".test.js", ".test.ts", ".test.jsx", ".test.tsx", ".spec.js", ".spec.ts", ".spec.jsx", ".spec.tsx", ")]
+  const testContent = fs.readFileSync(testFile, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     for (const ["category", "items")]
   if (category === "total")
     for (const ["category", "items")]
   if (category === "total")
             "testFile"
             "timestamp"
+<<<<<<< HEAD
           this.log(Generated test for ${item.name} in ${testFilePath}")
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+          this.log(Generated test for ${item.name} in ${testFilePath}")
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             "
             "ERROR"
   "component"
       "utility"
       "hook"
+<<<<<<< HEAD
   getComponentTestTemplate(item) {return "import React from "react"}
 import { render, screen  } from "@testing-";"library/react""
+=======
+  getComponentTestTemplate($2) {return "import React from "react"}
+import { render, screen  } from "@testing-";"library/react""
+=======
+            
+            ERROR"
+  "component
+      utility"
+      "hook
+  getComponentTestTemplate(item) {return import React from "react"}
+import { render, screen  } from @testing-;"library/react"
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { ${item.name} } from `${this.getRelativeImportPath(item.file)}
 describe("${item.name}")
   it(")
@@ -139,6 +252,7 @@ describe("${item.name}")
   it("renders without crashing")
     expect(screen.getByTestId(`${item.name.toLowerCase()}
   it(")
+<<<<<<< HEAD
   it("should work correctly with valid input")
   it("should handle edge cases")
   it(`should handle invalid input gracefully``)
@@ -161,6 +275,50 @@ return importPath.replace("/index", "");
 return importPath.replace("/index", ");
       path.join(this.projectRoot, "src")
 const testDir = path.join(this.projectRoot, "tests");
+=======
+  it("should work correctly with valid input)
+  it(should handle edge cases")
+  it(`should handle invalid input gracefully``)
+<<<<<<< HEAD
+  return "import { ${item.name} } from "${this.getRelativeImportPath(item.file)}"
+=======
+<<<<<<< HEAD
+
+=======
+  return "import { ${item.name} } from "${this.getRelativeImportPath(item.file)}"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+describe("${item.name}")
+  it(should work correctly with valid input)
+  it("should handle edge cases")
+<<<<<<< HEAD
+
+describe("${item.name})
+  it()
+      .replace(/\\/g, `/``)
+      .replace(/\.(tsx?|jsx?)$/, ""
+
+=======
+  it("should handle invalid input gracefully")
+  return "import { renderHook, act  } from "@testing-";`library/react""
+import { ${item.name} } from `${this.getRelativeImportPath(item.file)}
+describe("${item.name}")
+  it(")
+      .replace(/\\/g, `/``)
+      .replace(/\.(tsx?|jsx?)$/, ""
+    if (importPath.endsWith("/index")
+  return importPath.replace("/index", "")
+      .replace(/\\/g, "/")
+      .replace(/\.(tsx?|jsx?)$/, "
+    if (importPath.endsWith("/index")
+  return importPath.replace("/index", ")
+      path.join(this.projectRoot, "src")
+    const testDir = path.join(this.projectRoot, "tests")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       relativePath.replace(/\.(tsx?|jsx?)$/, ".test.$1"
   fs.mkdirSync(testDirPath, { "recursive"})
   "success"
@@ -170,15 +328,32 @@ const testDir = path.join(this.projectRoot, "tests");
       "errors"
       "duration"
   this.log("🧪 Running existing tests...")
+<<<<<<< HEAD
 const testOutput = execSync("npm test -- --watchAll=false");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
+      const testOutput = execSync("npm test -- --watchAll=false")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "cwd"
         "stdio": "pipe"
         "encoding": "
       this.log(Tests "completed")
+<<<<<<< HEAD
 const errorOutput = error.stdout || error.stderr || "";
   this.log(`Failed to parse test "output": ${parseError.message}`, "WARN"`)
       this.log(Tests "completed": ${results.passed} passed, ${results.failed} failed")
 const errorOutput = error.stdout || error.stderr || ";
+=======
+  const errorOutput = error.stdout || error.stderr || ""
+  this.log(`Failed to parse test "output": ${parseError.message}`, "WARN"`)
+      this.log(Tests "completed": ${results.passed} passed, ${results.failed} failed")
+  const errorOutput = error.stdout || error.stderr || "
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.log(`Failed to parse test "output": ${parseError.message}`, "WARN"`)
 this.log(`Tests "failed": ${error.message}`, "ERROR"`)
   "success"
@@ -188,7 +363,11 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
       "errors"
       "duration"
   this.log("🧪 Running newly generated tests...")
+<<<<<<< HEAD
 const testOutput = execSync("npm test -- --watchAll=false");
+=======
+      const testOutput = execSync("npm test -- --watchAll=false")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "cwd"
         "stdio": "pipe"
         "encoding": "
@@ -200,7 +379,13 @@ const testOutput = execSync("npm test -- --watchAll=false");
       "failed"
       /"Tests"
     this.log(" Attempting to auto-fix failing tests...")
+<<<<<<< HEAD
   this.log(Failed to fix test failure in ${failure.testFile  }: ${error.message}")
+=======
+  this.log(" Attempting to auto-fix failing tests...")
+  this.log(Failed to fix test failure in ${failure.testFile  }: ${error.message}")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             "
   this.log(Failed to fix test failure in ${failure.testFile}: ${error.message}")
             "ERROR"
@@ -227,16 +412,72 @@ const testOutput = execSync("npm test -- --watchAll=false");
       execSync(`git add .", { "cwd": this.projectRoot, "stdio": "pipe"`})
       // Commit with descriptive messageconst commitMessage = "🧪 Test "Improvements": ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed";execSync("git commit -m "${commitMessage}"")
   "cwd"
+<<<<<<< HEAD
         "stdio": "
       this.log(Committed test "improvements")
         "INFO"
       )} catch (error) {  this.log(`Failed to commit test "improvements": ${error.message  }`, "ERROR"`)
 const fullPath = path.join(dir, ");
   files.push(...this.getAllFiles(fullPath")
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
 
 
+<<<<<<< HEAD
 
 
 
+=======
+      this.log(🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation failed: ${error.message  }", ")
+
+      this.log(🧪 Smart Testing Automation completed successfully)} catch (error) {  this.log("Smart Testing Automation "failed: ${error.message  }, ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      this.log("🧪 Smart Testing Automation completed successfully)} catch (error) {  this.log(Smart Testing Automation "failed": ${error.message  }", ")
+
+=======
+        "stdio": "
+      this.log(Committed test "improvements")
+        "INFO"
+      )} catch (error) {  this.log(`Failed to commit test "improvements": ${error.message  }`, "ERROR"`)
+  const fullPath = path.join(dir, ")
+  files.push(...this.getAllFiles(fullPath")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+<<<<<<< HEAD
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

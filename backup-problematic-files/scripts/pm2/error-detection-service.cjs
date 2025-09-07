@@ -7,6 +7,10 @@ const fs = // // require('fs');
 const path = // // require(path');
 const { execSync, spawn } = // // require('child_process');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const chokidar = // // require(chokidar');
 
 
@@ -28,6 +32,16 @@ const chokidar = // // require('chokidar');
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+const chokidar = // // require('chokidar');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -55,6 +69,10 @@ class ErrorDetectionService {}
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
@@ -65,6 +83,14 @@ class ErrorDetectionService {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
+=======
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     this.errorTypes = {}
       "syntax": [],
       "typescript": [],
@@ -102,11 +128,21 @@ class ErrorDetectionService {}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
@@ -138,6 +174,10 @@ class ErrorDetectionService {}
       // Start file watching for real-time detection;
       this.startFileWatching();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
 <<<<<<< HEAD
       this.log(info', 'Error Detection Service started successfully);
@@ -159,6 +199,16 @@ class ErrorDetectionService {}
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+      this.log('info', 'Error Detection Service started successfully');
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Keep the process alive;
       setInterval(() => {}
         if (!this.isRunning) {}
@@ -174,8 +224,19 @@ class ErrorDetectionService {}
       backups',
       'temp
     ];
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -396,6 +457,10 @@ class ErrorDetectionService {}
       ];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
 
 
@@ -404,6 +469,13 @@ class ErrorDetectionService {}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -434,8 +506,19 @@ class ErrorDetectionService {}
     const sourceDirs = [src', 'components, pages', 'utils, hooks', 'types];
     const extensions = [.js', '.jsx, .ts', '.tsx];
     const files = [];
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     sourceDirs.forEach(dir => {})
       if (fs.existsSync(fullPath)) {}
         this.walkDirectory(fullPath, extensions, files)}
@@ -519,7 +602,17 @@ class ErrorDetectionService {}
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (openComments !== closeComments) {}
       return true}
     // Check for missing semicolons in certain contexts;
@@ -913,6 +1006,10 @@ class ErrorDetectionService {}
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 <<<<<<< HEAD
@@ -929,6 +1026,14 @@ class ErrorDetectionService {}
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+=======
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || medium';
         report.summary.severityBreakdown[severity]++})}
@@ -1139,6 +1244,10 @@ service.start().catch(error => {})
   service.log('error, Failed to start service', error);
   process.exit(1)}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 <<<<<<< HEAD
@@ -1156,3 +1265,12 @@ service.start().catch(error => {})
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+});
+=======
+});
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

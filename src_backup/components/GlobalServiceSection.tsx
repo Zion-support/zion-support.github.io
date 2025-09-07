@@ -27,7 +27,14 @@ import { GradientHeading } from "./GradientHeading,
 =======
 } from 'lucide-react'
 import { Button } from './ui/button'
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 const services = [
   {
@@ -59,6 +66,11 @@ const services = [
     icon: <Truck className='h-10 w-10 />
   }
 ]
+<<<<<<< HEAD
+  Truck,;
+} from 'lucide-react';
+import { Button } from './ui/button';
+=======
     title: "Equipment Rentals,
     description: Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10 />}],
@@ -67,6 +79,10 @@ const services = [
 import { Button } from './ui/button;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { GradientHeading } from ./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from lucide-react'
@@ -93,6 +109,14 @@ import { Button } from "./ui/button,
     icon: <Recycle className=h-10 w-10" />},
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    title: "Equipment Rentals",
+    description: "Flexible rental options for temporary projects and scaling requirements",
+    icon: <Truck className="h-10 w-10" />}],
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     title: "Equipment Rentals,
     description: Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10 />}],
@@ -168,6 +192,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description: "Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10" />}],
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export function GlobalServiceSection() {
   return (
@@ -179,9 +207,15 @@ export function GlobalServiceSection() {
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes
           </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>
 
 
+>>>>>>> merged-prs-20250907-203621
 :src/components/GlobalServiceSection.tsx
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
@@ -222,6 +256,11 @@ export function GlobalServiceSection() {
         <div className="flex justify-center mt-12>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <Button className=bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
             Get Your Free Commercial Proposal
           </Button>
@@ -244,6 +283,10 @@ export function GlobalServiceSection() {
 <div className=flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
 <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>
@@ -261,6 +304,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from lucide-react';
 
         </div>;
+<<<<<<< HEAD
+
+        <div className='flex justify-center mt-12'>;
+          <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          {services && services.map((service, index) => (;
+            <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">;
+              <div className="text-zion-cyan mb-4">;
+                {service && service.icon}
+              </div>;
+              <h3 className="text-xl font-bold text-white mb-2">{service && service.title}</h3>;
+              <p className="text-zion-slate-light mb-4">{service && service.description}</p>;
+          ))}
+        </div>;
+
+        <div className='flex justify-center mt-12'>;
+          <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>        <div className="flex justify-center mt-12">;
+          <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">;
+import { GradientHeading } from './GradientHeading';
+import {
+  Server,
+  HardDrive,
+  Network,
+  Clock,
+  Recycle,
+  Truck,
+} from 'lucide-react';
+import { Button } from './ui / button';
+=======
         </div>;
         <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {services.map((service, index) => (<div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300>;
@@ -288,6 +359,10 @@ import { Server, HardDrive, Network, Clock, Recycle, Truck } from lucide-react';
 =======
 
         </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         <div className='flex justify-center mt-12'>;
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -382,6 +457,16 @@ export function GlobalServiceSection() {
           </p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          {services.map((service, index) => (;
+            <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">;
+              <div className="text-zion-cyan mb-4">;
+                {service.icon}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {services.map((service, index) => (<div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300>;
               <div className=text-zion-cyan mb-4">;
@@ -396,6 +481,10 @@ export function GlobalServiceSection() {
               <div className="text-zion-cyan mb-4">;
                 {service.icon}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             Get Your Free Commercial Proposal;
           </Button>;
@@ -403,6 +492,8 @@ export function GlobalServiceSection() {
 <<<<<<< HEAD
 :src/components/GlobalServiceSection.tsx
       </div>;
+<<<<<<< HEAD
+=======
           <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8">;Get Your Free Commercial Proposal;
           </Button>;
         </div>;
@@ -412,6 +503,7 @@ export function GlobalServiceSection() {
 
   );
 }
+>>>>>>> merged-prs-20250907-203621
     </section>;
   );
 }

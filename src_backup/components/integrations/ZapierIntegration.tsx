@@ -1,5 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+>>>>>>> merged-prs-20250907-203621
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
 import React, { useState } from "react;
 import { Badge } from @/components/ui/badge";
@@ -27,8 +33,16 @@ export function ZapierIntegration() {
 
 } from @/components/ui/card";
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -39,6 +53,11 @@ import { Button } from @/components/ui/button",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Check, Copy, ExternalLink } from 'lucide-react
 export function ZapierIntegration() {
 
@@ -134,6 +153,10 @@ export /**;
 
                     {copied ? <Check className="h-4 w-4 /> : <Copy className=h-4 w-4" />}
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -195,7 +218,14 @@ export /**;
                 <label className='text-sm font-medium'>Your Zion API Key</label>
                 <div className='flex gap-2'>
                   <Input
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     value={apiKey}
                     readOnly
                     className=font-mono text-sm'                  />
@@ -217,6 +247,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardContent>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
@@ -235,6 +270,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Button variant=outline' className='gap-2>
               <ExternalLink className=h-4 w-4' />
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
@@ -271,6 +310,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>Sync completed projects to accounting</span>
               </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <li className=flex items-center gap-2">
 
 
@@ -278,6 +322,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Check className="h-4 w-4 text-green-500 />
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 <span>Create calendar events for interviews</span>
 
@@ -286,6 +334,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardContent>
           <CardFooter>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
               <ExternalLink className=h-4 w-4" />
@@ -294,6 +347,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             <Button variant="outline className=w-full gap-1">
 
@@ -306,6 +363,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardFooter>
         </Card>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <Card>
 
@@ -368,12 +432,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Triggers when a contract is signed by all parties.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <Button size=sm" variant="outline>Set Up Trigger</Button>
 
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             </div>
           </div>
@@ -382,6 +455,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </p>;
                   >;
                     {copied ? (<Check className='h-4 w-4 />;
@@ -492,6 +570,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
             <p className=text - sm text - muted - foreground mb - 4'>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <p className='text - sm text - muted - foreground mb - 4'>;
 >>>>>>> origin/chore/fix-lint-and-merge
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
@@ -525,6 +607,12 @@ export function ZapierIntegration() {
           <CardContent>;
             <p className="text-sm text-muted-foreground mb-4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;</p>;
             <div className=space - y-4'>;
               <div className='space - y-2>;
@@ -562,6 +650,10 @@ export function ZapierIntegration() {
 =======
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   </Button>;
 
@@ -595,9 +687,18 @@ export function ZapierIntegration() {
               </li>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </li>;
             </ul>;
           </CardContent>;
@@ -628,9 +729,19 @@ export function ZapierIntegration() {
       </Card>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </Card>;)}
   );
 }
 =======
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

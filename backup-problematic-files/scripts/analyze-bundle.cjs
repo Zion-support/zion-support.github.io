@@ -2,6 +2,10 @@
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
 
 
@@ -18,6 +22,11 @@
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const { execSync } = require('child_process');
 const fs = require(fs');
 const path = require('path');
@@ -32,6 +41,10 @@ async function analyzeBundle() {}
     execSync(ANALYZE=true npm run build', { "stdio: 'inherit }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     console.log(Bundle analysis completed. Check .next/analyze/ for results.')} catch (error) {}
     console.error('Bundle analysis failed": ', error.message)}
@@ -48,17 +61,33 @@ analyzeBundle();
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     console.log('Bundle analysis completed. Check .next/analyze/ for results.')} catch (error) {}
     console.error('Bundle analysis "failed": ', error.message)};
 };
 analyzeBundle();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     console.log('Bundle analysis completed. Check .next/analyze/ for results.')} catch (error) {}
     console.error('Bundle analysis "failed": ', error.message)};
 };
 analyzeBundle();
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
@@ -69,3 +98,9 @@ analyzeBundle();
 analyzeBundle();
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

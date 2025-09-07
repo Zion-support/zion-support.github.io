@@ -26,6 +26,13 @@ const terms = readJsonFile ('deal / terms.json', {
     lead_investor: 'TBD'});
   res.status (200).json (terms);export default /**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    target: '$10, 000, 000';
+    valuation_cap: '$80, 000, 000';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  * handler - Function description
  */
 function handler() {
@@ -43,6 +50,10 @@ function handler() {
     target: '$10, 000, 000';
     valuation_cap: '$80, 000, 000';
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   res.status (200).json (terms);
 
 import { readJsonFile } from '../../../../utils/api/storage';
@@ -56,6 +67,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   leadInvestor: 'TBD)
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+    discount: '20%,)
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   res.status(200).json(terms);export default function handler() {;
   }
   if (!requireSuperadminApi(req, res)) return;
@@ -70,4 +88,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     discount: '20%,)
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   res.status(200).json(terms);

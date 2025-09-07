@@ -211,6 +211,13 @@ export function SocialShareSection() {
         });
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  },;
+  const shareLinks = [;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },
   const shareLinks = [;
     {name: Twitter",icon: <Twitter className="h-5 w-5 aria-hidden=true" />,color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80,onClick: shareToTwitter;
@@ -228,6 +235,10 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
 =======
   },;
   const shareLinks = [;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     {;
       name: "Twitter",;
       icon: <Twitter className="h-5 w-5" aria-hidden="true" />,;
@@ -322,8 +333,16 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
 
           <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className=text - xl font - bold text - white mb - 2'>;Share Zion with Your Network;
 =======
+=======
+=======
+<<<<<<< HEAD
+            <h3 className=text - xl font - bold text - white mb - 2'>;Share Zion with Your Network;
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -336,6 +355,11 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>;<div className=flex flex-wrap gap-3'>;
             {shareLinks && shareLinks.map((link, index) => (              <Button;
                 key = {index}
@@ -353,6 +377,10 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
                 key = {index }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <div className='flex flex - wrap gap - 3>;
             {share_links.map ((link, index) => (              <Button;
@@ -378,6 +406,12 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
 }
 }</div> </div> </div> </section>)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}'"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     </section>)navigator.clipboard.write_text (window.location.href) .then ( () => {toast ({}) .catch ( () => {toast ({title: t ('errors.failed to copy')})}}</div> </div> </div> </section>)}'";
@@ -385,3 +419,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }'"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

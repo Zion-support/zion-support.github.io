@@ -59,6 +59,7 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
 
 import React from './react';
 import SEO from "../components / SEO";
@@ -67,13 +68,50 @@ export default /**
  * SecretsRotationAutomationPage - Function description
  */
 function SecretsRotationAutomationPage() {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+import React from './react';
+import SEO from "../components / SEO";
+import { Check, ExternalLink  } from './lucide-react';
+export default /**
+ * SecretsRotationAutomationPage - Function description
+ */
+function SecretsRotationAutomationPage() {
+=======
+>>>>>>> merged-prs-20250907-203621
 
+<<<<<<< HEAD
+=======
+import React from './react';
+import SEO from "../components / SEO";
+import { Check, ExternalLink  } from './lucide-react';
+export default /**
+ * SecretsRotationAutomationPage - Function description
+ */
+function SecretsRotationAutomationPage() {
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from \"react\";}
 import SEO from \"../components/SEO\";}
 import { Check, ExternalLink } from \"lucide-react\";
 export default function SecretsRotationAutomationPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const features = [
+  export default function SecretsRotationAutomationPage() {
+
+  const features = [;
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
   export default function SecretsRotationAutomationPage() {
 
@@ -91,16 +129,32 @@ export default function SecretsRotationAutomationPage() {
 
   const features = [;
 
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const features = [
     \"Automated key and secret rotation\"
     \"JIT credentials with expirations\"
     \"Policy approvals and audit trails\"
     \"CI/CD integration (GitHub Actions, CircleCI)\"
     \"Cloud KMS and Vault support\"
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
   ];
   return (
 export default function SecretsRotationAutomationPage() {
+=======
+<<<<<<< HEAD
+  ];
+  return (
+export default function SecretsRotationAutomationPage() {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+  ];
+  return (
+export default function SecretsRotationAutomationPage() {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <<<<<<< HEAD
 }
     "Automated key and secret rotation","
@@ -109,13 +163,24 @@ export default function SecretsRotationAutomationPage() {
     "CI / CD integration (GitHub Actions, CircleCI)","
     "Cloud KMS and Vault support""
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const features = [
     \"Automated key and secret rotation\",
     \"JIT credentials with expirations\",
     \"Policy approvals and audit trails\",
     \"CI / CD integration (GitHub Actions, CircleCI)\",
     \"Cloud KMS and Vault support\"
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ];
 ;
   return (
@@ -354,11 +419,22 @@ key={,}
     </>)}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const features = [
+  'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support''
 =======
 const features = [
   'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ];
 
 const features  = null;return (<>;
@@ -413,11 +489,22 @@ const features  = null;return (<>;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const features = [
+		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support''
 =======
 const features = [
 		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 	];
 	return (
 		<>

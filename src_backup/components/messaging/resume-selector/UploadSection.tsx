@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Button } from "@/components/ui/button;
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> merged-prs-20250907-203621
 :src/components/messaging/resume-selector/UploadSection.tsx
 import React from react';
 import { Button } from @/components/ui/button";
@@ -24,6 +30,11 @@ interface UploadSectionProps {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className=space - y-3'>;
 import { Button  } from '@/components/ui/button;
 import { Upload, FileText  } from lucide-react';
@@ -34,6 +45,10 @@ interface UploadSectionProps  {customFile: File | null;
         <Upload className='h - 8 w - 8 text - zion - purple mb - 2 />;
         <p className=text - sm text - zion - slate mb - 2'>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className='space - y-3'>;
       <div className='flex flex - col items - center justify - center border - 2 border - dashed border - zion - purple / 30 rounded - lg p - 6 bg - zion - blue - dark / 30'>;
         <Upload className='h - 8 w - 8 text - zion - purple mb - 2' />;
@@ -145,6 +160,13 @@ import { Button } from @/components/ui/button",
 interface UploadSectionProps {
   customFile: File | null;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             : Drag & drop your PDF or click to browse'}</p>;
         <Button variant='outline className=relative'>;
           Browse Files;type="file;
@@ -244,6 +266,7 @@ import React from react',import { Button } from @/components/ui/button",interfac
 origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )}
+>>>>>>> merged-prs-20250907-203621
 :src/components/messaging/resume-selector/UploadSection.tsx
 }
       )}

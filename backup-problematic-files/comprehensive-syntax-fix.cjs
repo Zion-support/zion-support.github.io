@@ -1,8 +1,33 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/comprehensive-syntax-fix.cjs
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/comprehensive-syntax-fix.cjs
+
+
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 ;const fs = require('fs');
 const path = require('path');
@@ -88,6 +113,8 @@ function fixFile(filePath) {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
   }
+<<<<<<< HEAD
+=======
     content = content.replace(/[\s\S]*?[\s\S]*?
     content = content.replace(/[\s\S]*?
     content = content.replace(/[\s\S]*?
@@ -105,6 +132,10 @@ function fixFile(filePath) {
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return match.replace(/,\s*$/, '')
   // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
   content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"
@@ -549,8 +580,25 @@ if (fs.existsSync(srcDir)) {
 <<<<<<< HEAD
   console.log('❌ src directory not found');
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   // TODO: Implement
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

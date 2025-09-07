@@ -117,9 +117,19 @@ import React, { useState } from 'react';
 export type ReviewFormValues = any;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const ReviewForm: React.FC<Props /> = ({ initial   ,}
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+const ReviewForm: React.FC<Props /> = ({ initial   ,}
+=======
+<<<<<<< HEAD
+=======
+const ReviewForm: React.FC<Props /> = ({ initial   ,}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }) => {
 
 const [rating, setRating] = useState(0);
@@ -179,6 +189,16 @@ type Props = {;
 
 type Props = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  initial: Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;
+}
+const ReviewForm: React.FC < Props> = ({ initial   ,}
+}) => {
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   "initial": Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;'
 
@@ -196,6 +216,10 @@ type Props = {
 const ReviewForm: React.FC < Props> = ({ initial   ,}
 }) => {
 
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [rating, set_rating] = useState (0);
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -280,11 +304,22 @@ const res = await fetch('/api/reviews/submit', {;
       });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const data = await res && res.json();
+      if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');'
 =======
 const data = await res && res.json();
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;}
@@ -293,6 +328,11 @@ const data = await res && res.json();
       setSubmitting(false);    }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 return (;
 const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {'
@@ -303,11 +343,22 @@ const data = await res.json ();
   return (<form on_submit={handle_submi
 } className='space - y-6'>;'
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
 
     <form onSubmit={handleSubmit} className='space-y-6'>;
 </form>
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div>;
 </div>
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />;

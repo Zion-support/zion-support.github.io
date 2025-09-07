@@ -1,10 +1,24 @@
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
 
 :src_backup/components/ComparisonSection.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
 import { CheckCircle2 } from 'lucide-react'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
+<<<<<<< HEAD
+=======
+import { GradientHeading } from "./GradientHeading;
+import { Button } from ./ui/button";
+import { CheckCircle2 } from 'lucide-react
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export function ComparisonSection() {
   return (
@@ -25,8 +39,16 @@ export function ComparisonSection() {
 
 export function ComparisonSection() {
   return (
+<<<<<<< HEAD
     <section className='py-20 bg-zion-blue-dark'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+=======
+    <section className=py-20 bg-zion-blue-dark'>
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 return (
     <section className='py-20 bg-zion-blue-dark'>'
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>'
@@ -55,7 +77,10 @@ return (
               </TableHeader>
               <TableBody>
                 {[                <TableRow className="border-b border-zion-purple/20">
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
@@ -82,6 +107,7 @@ export function ComparisonSection() {}
                   <TableHead className="text-white text-center">Traditional Providers</TableHead>
                   <TableHead className="text-white text-center">With Zion</TableHead>
                   <TableHead className="text-white text-center">Savings</TableHead>
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
 
 :src_backup/components/ComparisonSection.tsx
@@ -89,6 +115,20 @@ export function ComparisonSection() {}
 import { GradientHeading } from './GradientHeading';
 import { Button } from './ui / button';
 import { CheckCircle2 } from 'lucide-react';
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { GradientHeading } from './GradientHeading;
+import { Button } from ./ui / button';
+import { CheckCircle2 } from 'lucide-react;
+=======
+>>>>>>> merged-prs-20250907-203621
+import { CheckCircle2 } from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {}
   Table,
   TableBody,
@@ -100,7 +140,13 @@ import {}
 export /**;
  * ComparisonSection - Function description;
  */
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function ComparisonSection() {
   return (
     <section className='py - 20 bg - zion - blue - dark'>;
@@ -157,7 +203,17 @@ import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from './ui / 
 export /**;
  * ComparisonSection - Function description;
  */;
+<<<<<<< HEAD
 function ComparisonSection() {return (<section className='py - 20 bg - zion - blue - dark'>;
+=======
+      <div className=container mx - auto px - 4 sm:px - 6 lg:px - 8>;
+=======
+>>>>>>> merged-prs-20250907-203621
+function ComparisonSection() {}
+>>>>>>> origin/chore/fix-lint-and-merge
+  return ('
+    <section className='py - 20 bg - zion - blue - dark>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className='container mx - auto px - 4 sm:px - 6 lg:px - 8'>;
 function ComparisonSection() {}
   return ('
@@ -195,7 +251,17 @@ function ComparisonSection() {}
               </TableHeader>;
               <TableBody>;
                 {[;
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  {
+                    service: 'Server Hosting,
+                    traditional: $1, 200 / mo',
+                    zion: '$650 / mo,
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {
                     service: 'Server Hosting',
                     traditional: '$1, 200 / mo',
@@ -207,7 +273,10 @@ function ComparisonSection() {}
                     savings: '45%',
                   },
 
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { GradientHeading } from './GradientHeading';
 import { Button } from './ui/button';
@@ -236,6 +305,19 @@ import { CheckCircle2 } from 'lucide-react'
                     savings: '45%',
                   },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> merged-prs-20250907-203621
+                  {'
+                    service: 'Server Hosting','
+                    traditional: '$1, 200 / mo','
+                    zion: '$650 / mo','
+                    savings: '45%',
+                  },
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   {
 
                     service: 'IT Equipment'
@@ -244,6 +326,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     savings: '60%'
                   }
                   {
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
 
 :src_backup/components/ComparisonSection.tsx
@@ -253,6 +336,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     zion: '$950 / mo',
                     savings: '62%',
                   },
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                    service: '24 / 7 Support,
+                    traditional: $2, 500 / mo',
+                    zion: '$950 / mo,
+                    savings: 62%'},
+=======
+>>>>>>> merged-prs-20250907-203621
+                    savings: '62%',
+                  },
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {'
                     service: 'Storage Solutions','
                     traditional: '$800 / mo','
@@ -270,9 +369,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <TableCell className='font - medium text - white'>;
 
                       {item.service}
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
                   {service: 'Server Hosting',traditional: '$1, 200 / mo',zion: '$650 / mo',savings: '45%'},TableBody,TableCell,TableHead,TableHeader,TableRow} from './ui/table';
 import { GradientHeading } from "./GradientHeading",</TableHead>;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  {service: 'Server Hosting',traditional: '$1, 200 / mo',zion: '$650 / mo',savings: '45%'},TableBody,TableCell,TableHead,TableHeader,TableRow} from './ui/table';
+import { GradientHeading } from "./GradientHeading",</TableHead>;
+                  {service: Server Hosting',traditional: '$1, 200 / mo,zion: $650 / mo',savings: '45%},TableBody,TableCell,TableHead,TableHeader,TableRow} from ./ui/table';
+import { GradientHeading } from ./GradientHeading,</TableHead>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </TableRow>;
               </TableHeader>;
               <TableBody>;
@@ -285,6 +394,9 @@ import { GradientHeading } from "./GradientHeading",</TableHead>;
                   {service: '24 / 7 Support',traditional: '$2, 500 / mo',zion: '$950 / mo',savings: '62%'},{service: 'Storage Solutions',traditional: '$800 / mo',zion: '$350 / mo',savings: '56%'},{service: 'Marketplace Listings',traditional: '$99 / mo',zion: 'Free',savings: '100%'}].map ((item, index) => (<TableRow key={index} className='border - b border - zion - blue'>;
                     <TableCell className='font - medium text - white'>;{item.service}
                     </TableCell>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                     </TableCell>;'
                     <TableCell className='text - center text - zion - slate - light'>;
                       {item.traditional}
@@ -293,12 +405,22 @@ import { GradientHeading } from "./GradientHeading",</TableHead>;
                       {item.zion}
                     </TableCell>;'
                     <TableCell className='text - center text - green - 400 font - bold'>;
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
                       {item.savings}
 :src_backup/components/ComparisonSection.tsx
+=======
+                      {item.savings}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </TableCell>
                   </TableRow>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
@@ -337,16 +459,39 @@ export function ComparisonSection() {}
 
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
 
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </TableRow>
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 ))}
               </TableBody>
             </Table>
           </div>
 
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
+=======
+<<<<<<< HEAD
+            <div className="flex items-start">
+              <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
+              <p className="text-white">
+                <span className="font-bold">Total Annual Savings: </span>
+                <span className="text-green-400 font-bold text-xl">Up to 65%</span>
+                <span className="block text-sm text-zion-slate-light mt-1">Results may vary based on specific requirements and service levels</span>
+              </p>
+            </div>
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
@@ -360,12 +505,20 @@ export function ComparisonSection() {}
                 <span className="block text-sm text-zion-slate-light mt-1">Results may vary based on specific requirements and service levels</span>
               </p>
             </div>
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
 
               Calculate Your Savings
 
 :src_backup/components/ComparisonSection.tsx
+=======
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap>
+
+              Calculate Your Savings
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               Calculate Your Savings
 
 
@@ -390,10 +543,29 @@ export function ComparisonSection() {}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
               Calculate Your Savings
+=======
+            <div className="flex items-start">
+              <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
+              <p className="text-white">
+                <span className="font-bold">Total Annual Savings: </span>
+                <span className="text-green-400 font-bold text-xl">Up to 65%</span>
+                <span className="block text-sm text-zion-slate-light mt-1">Results may vary based on specific requirements and service levels</span>
+              </p>
+            </div>
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             </Button>
           </div>
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
+=======
+        </div>
+      </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
@@ -407,7 +579,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>;
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>;
                   </TableRow>;
+<<<<<<< HEAD
 import { Button } from "./ui/button",import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",export function ComparisonSection() {return (<section className="py-20 bg-zion-blue-dark">;
+=======
+import { Button } from "./ui/button,import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ./ui/table",export function ComparisonSection() {return (<section className="py-20 bg-zion-blue-dark>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     </section>
 
@@ -488,10 +667,23 @@ export function ComparisonSection() {;
               <TableHeader>;
                 <TableRow className="border-b border-zion-purple/20">;
                   <TableHead className="text-white">Service</TableHead>;
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
                   <TableHead className="text-white text-center">Traditional Providers</TableHead>;
                   <TableHead className="text-white text-center">With Zion</TableHead>;
                   <TableHead className="text-white text-center">Savings</TableHead>;
+=======
+                  <TableHead className="text-white text-center">Traditional Providers</TableHead>;
+                  <TableHead className="text-white text-center">With Zion</TableHead>;
+                  <TableHead className="text-white text-center">Savings</TableHead>;
+<<<<<<< HEAD
+              </TableHeader>;
+=======
+<<<<<<< HEAD
+                  <TableHead className="text-white text-center>Traditional Providers</TableHead>;
+                  <TableHead className=text-white text-center">With Zion</TableHead>;
+                  <TableHead className="text-white text-center>Savings</TableHead>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </TableRow>;
               </TableHeader>;
               <TableBody>;
@@ -582,7 +774,10 @@ export function ComparisonSection() {return (<section className='py-20 bg-zion-b
                   <TableHead className="text-white text-center">With Zion</TableHead>;
                   <TableHead className="text-white text-center">Savings</TableHead>;
               </TableHeader>;
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <TableBody>;
                 {[;
                   {service: 'Server Hosting',traditional: '$1,200/mo',zion: '$650/mo',savings: '45%'},{service: 'IT Equipment',traditional: 'Full Purchase',zion: 'Flexible Rental',savings: '60%'},{service: '24/7 Support',traditional: '$2,500/mo',zion: '$950/mo',savings: '62%'},{service: 'Storage Solutions',traditional: '$800/mo',zion: '$350/mo',savings: '56%'},{service: 'Marketplace Listings',traditional: '$99/mo',zion: 'Free',savings: '100%'}].map((item, index) => (<TableRow key={index} className='border-b border-zion-blue'>;
@@ -602,7 +797,14 @@ export function ComparisonSection() {return (<section className='py-20 bg-zion-b
                     <TableCell className="font-medium text-white">{item && item.service}</TableCell>;
                     <TableCell className="text-center text-zion-slate-light">{item && item.traditional}</TableCell>;
                     <TableCell className="text-center text-zion-cyan font-semibold">{item && item.zion}</TableCell>;
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
+=======
+=======
+              </TableHeader>;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <TableBody>;,
                 {[;
                   { service: "Server Hosting", traditional: "$1,200/mo", zion: "$650/mo", savings: "45%" },;
@@ -618,21 +820,42 @@ export function ComparisonSection() {return (<section className='py-20 bg-zion-b
               </TableBody>;
             </Table>;
           </div>;
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <div className='mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20'>;
                     <TableCell className="text-center text-green-400 font-bold">{item && item.savings}</TableCell>;))}
               </TableBody>;
             </Table>;
+<<<<<<< HEAD
           </div>;<div className='mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20'>;
+=======
+          </div>;<div className=mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <div className='mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20'>;
             <div className='flex items-start'>;
               <CheckCircle2 className='mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1' />;
               <p className='text-white'>;
                 <span className='font-bold'>Total Annual Savings: </span>;
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
                 <span className='text-green-400 font-bold text-xl'>;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                <span className='text-green-400 font-bold text-xl'>;
+                <span className=text-green-400 font-bold text-xl>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   Up to 65%;
                 </span>;
                 <span className='block text-sm text-zion-slate-light mt-1'>;
@@ -650,11 +873,20 @@ export function ComparisonSection() {return (<section className='py-20 bg-zion-b
               <CheckCircle2 className='mr - 2 h - 6 w - 6 text - green - 400 flex - shrink - 0 mt - 1' />;
               <p className='text - white'>;
                 <span className='font - bold'>Total Annual Savings: </span>;
+<<<<<<< HEAD
                 <span className='text - green - 400 font - bold text - xl'>;
                   Up to 65%;
                 </span>;
 
                 <span className='text-green-400 font-bold text-xl'>;
+=======
+                <span className=text - green - 400 font - bold text - xl'>;
+=======
+>>>>>>> merged-prs-20250907-203621
+
+                <span className='text-green-400 font-bold text-xl'>;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   Up to 65%;
                 </span>;'
                 <span className='block text-sm text-zion-slate-light mt-1'>;
@@ -675,7 +907,13 @@ export function ComparisonSection() {return (<section className='py-20 bg-zion-b
                   levels;
                 </span>;
               </p>;
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </div>;<Button className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white whitespace - nowrap'>              Calculate Your Savings          <div className="mt - 8 flex justify - between items - center bg - zion - blue p - 6 rounded - lg border border - zion - purple / 20">;
             <div className="flex items - start">;
               <CheckCircle2 className="mr - 2 h - 6 w - 6 text - green - 400 flex - shrink - 0 mt - 1" />;
@@ -683,12 +921,31 @@ export function ComparisonSection() {return (<section className='py-20 bg-zion-b
                 <span className="font - bold">Total Annual Savings: </span>;
                 <span className="text - green - 400 font - bold text - xl">Up to 65%</span>;
                 <span className="block text - sm text - zion - slate - light mt - 1">Results may vary based on specific requirements and service levels</span>;
+<<<<<<< HEAD
               </p>;
             </div>;
 :src_backup/components/ComparisonSection.tsx
             <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white whitespace - nowrap">;
+=======
+              </p>;
+            </div>;
+            <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white whitespace - nowrap">;
+            </div>;<Button className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white whitespace - nowrap'>              Calculate Your Savings          <div className=mt - 8 flex justify - between items - center bg - zion - blue p - 6 rounded - lg border border - zion - purple / 20">;
+            <div className="flex items - start>;
+              <CheckCircle2 className=mr - 2 h - 6 w - 6 text - green - 400 flex - shrink - 0 mt - 1" />;
+              <p className="text - white>;
+                <span className=font - bold">Total Annual Savings: </span>;
+                <span className="text - green - 400 font - bold text - xl>Up to 65%</span>;
+                <span className=block text - sm text - zion - slate - light mt - 1">Results may vary based on specific requirements and service levels</span>;
+              </p>;
+            </div>;
+            <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white whitespace - nowrap>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
             </div>;
 
                 <span className="block text - sm text - zion - slate - light mt - 1">Results may vary based on specific requirements and service levels</span>;
@@ -699,8 +956,15 @@ export function ComparisonSection() {return (<section className='py-20 bg-zion-b
             </Button>;
           </div>;
 
+<<<<<<< HEAD
 :src_backup/components/ComparisonSection.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
 }
 
     </section>);
@@ -720,3 +984,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   );
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

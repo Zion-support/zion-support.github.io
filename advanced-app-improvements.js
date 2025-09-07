@@ -12,16 +12,38 @@ function createAdvancedMonitoring() {
   
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 class HealthChecker {
   constructor() {
     this.checks = new Map();
     this.results = new Map();
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export class HealthChecker {
   constructor() {;
     this.checks = new Map();
     this.results = new Map();  }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   addCheck(name, checkFunction) {
     this.checks.set(name, checkFunction);
   }
@@ -31,14 +53,39 @@ export class HealthChecker {
     for (const [name, check] of this.checks) {
       try {
         const result = await check();
+<<<<<<< HEAD
         const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
       try {
         const result = await checkFunction();
         results[name] = { status: 'healthy', result };
+=======
+<<<<<<< HEAD
+        const result = await check();
+        const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
+      try {
+        const result = await checkFunction();
+=======
+=======
+        const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
+      try {
+        const result = await checkFunction();
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+        results[name] = { status: 'healthy', result };
+
+        results[name] = { status: healthy', result }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       } catch (error) {
         results[name] = { status: 'unhealthy', error: error.message };
       }
     this.results = results;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return results;
   }
 
@@ -451,6 +498,13 @@ module.exports = { QueryOptimizer, queryOptimizer };`,
     
     'database/connection-pool.js': `// Database connection pooling
 class ConnectionPool {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
 
 export const healthChecker = new HealthChecker();`,
@@ -630,6 +684,14 @@ export const queryOptimizer = new QueryOptimizer();`,
     
     'database/connection-pool.js': `// Database connection pooling
 export class ConnectionPool {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   constructor(options = {}) {
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
@@ -639,6 +701,18 @@ export class ConnectionPool {
   }
 
   async getConnection() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  async getConnection() {
+async getConnection() {
+async getConnection() {
+=======
+=======
+async getConnection() {
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (this.availableConnections.length > 0) {
       const connection = this.availableConnections.pop();
       this.usedConnections.add(connection);
@@ -668,6 +742,13 @@ export class ConnectionPool {
 });
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   releaseConnection(connection) {
     this.usedConnections.delete(connection);
     this.availableConnections.push(connection);
@@ -693,6 +774,13 @@ export class ConnectionPool {
 
 const connectionPool = new ConnectionPool();
 module.exports = { ConnectionPool, connectionPool };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export function debounce(func, wait) {
   let timeout = null;
@@ -753,7 +841,17 @@ export function preloadCriticalResources() {
 
 
 export const connectionPool = new ConnectionPool();
+<<<<<<< HEAD
   };
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+  };
+
+  }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   Object.entries(dbFiles).forEach(([filename, content]) => {
     const fullPath = path.join('/workspace', filename);
@@ -761,8 +859,33 @@ export const connectionPool = new ConnectionPool();
     fs.writeFileSync(fullPath, content);
     console.log(`[OK] Created ${filename}`);
   });
+<<<<<<< HEAD
 }
 
+=======
+});
+}
+
+<<<<<<< HEAD
+}
+
+=======
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+// Main execution
+async function main() {
+  try {
+    console.log('🚀 Starting advanced app improvements...);
+    
+    // Create all improvement systems
+    createAdvancedMonitoring();
+<<<<<<< HEAD
+    createAdvancedMonitoring();
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Main execution
 async function main() {
   try {
@@ -776,10 +899,25 @@ async function main() {
     console.log('🚀 Starting advanced app improvements...');
     
     // Create all improvement systems
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Create PM2 ecosystem configuration
     const pm2Config = {
       apps: [{
@@ -823,6 +961,13 @@ async function main() {
     
   } catch (error) {
     console.error('❌ Error during advanced improvements:', error.message);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     console.log('\n✅ Advanced app improvements completed successfully!');
     console.log('\n📋 Summary:');
     console.log('  - Advanced monitoring system created');
@@ -832,13 +977,39 @@ async function main() {
     
   } catch (error) {
     console.error('❌ Error during app improvements:', error);
+<<<<<<< HEAD
     process.exit(1);
   }
 
 main();
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+    process.exit(1);
+  }
+}
+
+main();
+<<<<<<< HEAD
+main();
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 main();// Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

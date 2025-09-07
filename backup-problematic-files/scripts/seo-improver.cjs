@@ -3,6 +3,10 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
@@ -10,6 +14,12 @@
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const fs = require("child_process")
 const path = require("path")
 =======
@@ -51,6 +61,10 @@ Allow: /contact"
 // console.log(" Meta tags configuration created")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
 const fs = require("child_process")
 const path = require("path")
@@ -70,3 +84,12 @@ const path = require("path")
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+    console.log(" SEO improvement completed!")
+=======
+    console.log(" SEO improvement completed!")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

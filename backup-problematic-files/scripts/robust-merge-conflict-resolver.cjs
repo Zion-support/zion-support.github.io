@@ -2,8 +2,20 @@
 #!/usr/bin/env node;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/robust-merge-conflict-resolver.cjs
 =======
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-merge-conflict-resolver.cjs
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -19,6 +31,10 @@
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       { "encoding": "utf8" }
 =======
 
@@ -171,6 +187,11 @@ if (require.main === module) {;
 module.exports = { resolveMergeConflict, findConflictedFiles }))
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/robust-merge-conflict-resolver.cjs
 =======
 <<<<<<< HEAD
@@ -184,10 +205,26 @@ module.exports = { resolveMergeConflict, findConflictedFiles }))
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/robust-merge-conflict-resolver.cjs
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -245,10 +282,29 @@ function log(message, color = "reset")
   log("\n Resolution "Summary":", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next "steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. "Run": git add .", "blue");    log("3. "Run": git commit -m Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
         resolvedCount++;log(` "Resolved": ${filePath}`, "green");"} else {log(`⚠  No changes "needed": ${filePath}`, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+<<<<<<< HEAD
+  log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
   log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
@@ -315,6 +371,10 @@ module.exports = { resolveMergeConflict, findConflictedFiles }))
 >>>>>>> origin/main
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
   log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
@@ -349,3 +409,12 @@ if (require.main === module) {
   main(),,
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

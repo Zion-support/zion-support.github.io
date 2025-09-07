@@ -1,5 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -224,7 +232,20 @@ module.exports = { resolveConflicts, commitMerge, pushChanges };
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const { execSync } = require('child_process')
 console.log('� Starting Comprehensive Merge Conflict Resolver...')
   log(message, level = 'INFO')
@@ -244,11 +265,35 @@ console.log('� Starting Comprehensive Merge Conflict Resolver...')
       console.log('\n Failed to merge "branches")
   console.error(' Merge conflict resolution "failed")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -268,3 +313,12 @@ module.exports = { resolveConflicts, commitMerge, pushChanges };
 
 "`;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

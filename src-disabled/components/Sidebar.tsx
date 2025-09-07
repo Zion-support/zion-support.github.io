@@ -1,5 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 :src_backup/components/Sidebar.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface SidebarProps  {isOpen: boolean;
   onClose: () => void;
 }const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {if (!isOpen) return null;return (<div className="fixed inset-0 z-50 lg:hidden">;
@@ -37,6 +43,9 @@ interface SidebarProps  {isOpen: boolean;
   )</nav>;
       </div>;
   )}export default Sidebar;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 interface SidebarProps {
   isOpen: boolean;,
@@ -78,5 +87,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </nav>
       </div>
   );
+<<<<<<< HEAD
 };
+=======
+<<<<<<< HEAD
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default Sidebar;
+=======
+};
+<<<<<<< HEAD
+export default Sidebar;
+=======
+export default Sidebar;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

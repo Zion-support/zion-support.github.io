@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 import React from "react,
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from @/components/ui/card",
 import { Button } from "@/components/ui/button,
 import { Badge } from @/components/ui/badge";
+>>>>>>> merged-prs-20250907-203621
 :src/mobile/components/dashboard/TalentDashboard.tsx
 import React from 'react
 import {
@@ -29,9 +35,14 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from @/comp
 import { Button } from "@/components/ui/button
 import { Badge } from @/components/ui/badge"
 
+<<<<<<< HEAD
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
+import Link from "next/link";
+=======
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react
 import Link from "next/link;
 
+>>>>>>> merged-prs-20250907-203621
 export function TalentDashboard() {
   return (
     <div className=space-y-6 px-4 pb-24">
@@ -94,6 +105,11 @@ import { Button } from "@/components/ui/button",
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <div className='flex gap-2 mt-3'>
                 <Button size='sm'>Apply Now</Button>
                 <Button size='sm' variant='outline'>
@@ -105,6 +121,10 @@ import { Button } from "@/components/ui/button",
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 <Button size="sm>Apply Now</Button>
                 <Button size=sm" variant="outline>View Details</Button>
@@ -127,6 +147,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:src/mobile/components/dashboard/TalentDashboard.tsx
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <section>
         <h2 className=text-lg font-medium mb-4">Application Tracker</h2>
@@ -186,8 +213,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardContent>
         </Card>
       </section>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/mobile/components/dashboard/TalentDashboard.tsx
       <section>
         <h2 className="text-lg font-medium mb-4>Quick Actions</h2>
@@ -306,6 +339,10 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-reac
 import Link from next/link";
 export function TalentDashboard() {
   return (;
+<<<<<<< HEAD
+    <div className="space-y-6 px-4 pb-24">;
+
+=======
     <div className="space-y-6 px-4 pb-24>;
 import React from react",import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card,import { Button } from @/components/ui/button",import { Badge  } from @/components/ui/badge';
 import React from 'react;
@@ -448,6 +485,10 @@ export function TalentDashboard() {return (<div className="space-y-6 px-4 pb-24>
       </section>;
     <div className='space-y-6 px-4 pb-24>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className='space-y-6 px-4 pb-24'>;
 >>>>>>> origin/chore/fix-lint-and-merge
       <section>;
@@ -459,12 +500,24 @@ export function TalentDashboard() {return (<div className="space-y-6 px-4 pb-24>
             </Button>;
           </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        </div>;
+
+        <div className='space-y-3'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;<div className='space-y-3>;
 =======
         </div>;
 
         <div className='space-y-3'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <Card>;
             <CardContent className=p-4'>;
               <div className='flex justify-between items-start>;
@@ -507,12 +560,21 @@ import { Button  } from '@/components / ui / button;
 import { Badge  } from @/components / ui / badge';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import Link from ./next / link';
 export /**;
  * TalentDashboard - Function description;
  */;
 function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react';
 import Link from './next / link';
 export /**
@@ -521,7 +583,14 @@ export /**
 function TalentDashboard() {
   return (
     <div className='space - y-6 px - 4 pb - 24'>;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <section>;
         <div className=flex items - center justify - between mb - 4'>;
           <h2 className='text - lg font - medium>New Job Matches</h2>;
@@ -622,6 +691,11 @@ function TalentDashboard() {
           </Button>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </section>;<section>;
         <h2 className=text-lg font-medium mb-4">Quick Actions</h2>;
         <div className="grid grid-cols-2 gap-4>;
@@ -642,6 +716,10 @@ function TalentDashboard() {
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <Button;
             variant="outline;
             className=h-auto py-4 flex flex-col gap-1";
@@ -669,7 +747,14 @@ function TalentDashboard() {
 =======
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">
             <Zap className="h-5 w-5 mb-1" aria-hidden="true" />
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <section>
         <h2 className=text-lg font-medium mb-4'>Quick Actions</h2>
         <div className='grid grid-cols-2 gap-4>
@@ -709,6 +794,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <section>
         <div className=flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium>Learning Hub</h2>
@@ -716,6 +806,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <section>
         <div className=flex items-center justify-between mb-4">
@@ -732,9 +826,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         <Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <CardContent className="p-4>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+          <CardContent className="p-4>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <CardContent className=p-4'>
             <div className='flex items-center gap-3>
@@ -757,6 +860,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           >;<Image className=h-5 w-5 mb-1" aria-hidden="true />;
             <span>Portfolio</span>;
           </Button>;
@@ -849,6 +957,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
             aria-label=Set Availability">;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             aria-label="Set Availability">;
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -888,9 +1000,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src/mobile/components/dashboard/TalentDashboard.tsx
 }
 }
+<<<<<<< HEAD
+=======
       </section>;)}</div>)}</div>;
   ))}
   )
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

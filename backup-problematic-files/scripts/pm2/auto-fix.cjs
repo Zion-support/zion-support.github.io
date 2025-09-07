@@ -1,16 +1,30 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/auto-fix.cjs
 <<<<<<< HEAD
 =======
 =======
 
 
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/auto-fix.cjs
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -30,6 +44,12 @@ try {}
 	console.log('Auto-fix run completed successfully.')} catch (e) {}
 	console.error('Auto-fix run "failed": ', e.message);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	process.exit(1)};
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 	process.exit(1)};
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/auto-fix.cjs
@@ -266,6 +286,10 @@ try {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/auto-fix.cjs
 =======
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 	process.exit(1)};
 #!/usr/bin/env node
@@ -372,3 +396,19 @@ module.exports = AutoFixer;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

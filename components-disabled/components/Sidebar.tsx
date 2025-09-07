@@ -158,6 +158,11 @@ if (isOpen) {document.body.style.overflow = 'hidden';}
   return $3;}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';'
@@ -165,6 +170,10 @@ import { useRouter } from 'next/router';'
   }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   X,
   ChevronDown,
   ChevronRight,
@@ -403,12 +412,24 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen;, onClose }) => {
         <>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const quickLinks = [
+    { name: 'Free Consultation';,}
+  href: '/consultation';,}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     { "name": 'Free Consultation', "href": '/consultation','
 =======
 const quickLinks = [
     { name: 'Free Consultation';,}
   href: '/consultation';,}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 },
 
     { name: 'Get Quote';,}
@@ -426,6 +447,13 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps /> = ({ isOpen;, onClose    }) => {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const [openDropdowns, setOpenDropdowns] = useState<string[] />([]);
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const "Sidebar": React.FC<SidebarProps> = ({ isOpen, onClose    }) => {
 
 
@@ -440,11 +468,22 @@ const "Sidebar": React.FC<SidebarProps> = ({ isOpen, onClose    }) => {
 =======
   const [openDropdowns, setOpenDropdowns] = useState<string[] />([]);
 
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const navigation = {
     'Services': [
         { name: 'AI Services';,}
   href: '/ai-services';,}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 },
 
         { name: 'IT Services';,}
@@ -484,12 +523,24 @@ const navigation = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const quickLinks = [
+      { name: 'About Us';,}
+  href: '/about';,}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       { "name": 'About Us', "href": '/about','
 =======
 const quickLinks = [
       { name: 'About Us';,}
   href: '/about';,}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 },
 
       { name: 'Contact';,}
@@ -966,12 +1017,21 @@ const [open_dropdowns, setOpenDropdowns]  = useState < string[]>([])const handle
       prev.includes (title)? prev.filter (item = > item !== title): [...prev, title])}
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       { "name": 'Web Development', "href": '/services / web - development', "icon": Code,'
 },{ "name": 'Mobile Development', "href": '/services / mobile - development', "icon": Smartphone,'
 },{ "name": 'Cloud Solutions', "href": '/services / cloud - solutions', "icon": Cloud,'
 },{ "name": 'Cybersecurity', "href": '/services / cybersecurity', "icon": Shield,'
 },{ "name": 'Performance Optimization', "href": '/services / performance', "icon": Zap,'
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const navigation = {'Services': [;
       { name: 'Web Development';,}
   href: '/services / web - development';, icon: Code;,}
@@ -983,7 +1043,14 @@ const [open_dropdowns, setOpenDropdowns]  = useState < string[]>([])const handle
   href: '/services / cybersecurity';, icon: Shield;,}
 },{ name: 'Performance Optimization';,}
   href: '/services / performance';, icon: Zap;,}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
     ],'Solutions': [;
       { name: 'Enterprise Solutions';,}
@@ -1117,12 +1184,24 @@ export default Sidebar;ursor/expand-services-advertise-and-build-project-c52f;
 } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const navigation = {'Services': [;
+      { name: 'AI Services';,}
+  href: '/ai-services';,}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       { "name": 'AI Services', "href": '/ai-services','
 =======
 const navigation = {'Services': [;
       { name: 'AI Services';,}
   href: '/ai-services';,}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 },
   { name: 'IT Services';,}
   href: '/it-services';,}
@@ -1294,11 +1373,21 @@ href = \"/contact\"
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const Sidebar: React.FC < SidebarProps /> = ({ is_open;, on_close    }) => {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 =======
 const Sidebar: React.FC < SidebarProps /> = ({ is_open;, on_close    }) => {
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
  ;
   const [open_dropdowns, setOpenDropdowns] = useState < string[]>([]);
@@ -1312,14 +1401,30 @@ const handleDropdownToggle = (title: string) =>: any {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Services': [;'
       { "name": 'Web Development', "href": '/services / web - development', "icon": Code,'
 =======
+=======
+=======
+<<<<<<< HEAD
+    'Services': [;'
+      { "name": 'Web Development', "href": '/services / web - development', "icon": Code,'
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const navigation = {
     'Services': [;
       { name: 'Web Development';,}
   href: '/services / web - development';, icon: Code;,}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 },
       { name: 'Mobile Development';,}
   href: '/services / mobile - development';, icon: Smartphone;,}
@@ -1369,12 +1474,24 @@ const navigation = {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const quick_links = [
+    { name: 'About Us';,}
+  href: '/about';,}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     { "name": 'About Us', "href": '/about','
 =======
 const quick_links = [
     { name: 'About Us';,}
   href: '/about';,}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 },
 
       { name: 'Our Team';,}
@@ -1489,9 +1606,18 @@ export default Sidebar;
 ;
   X, 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   X, 
   ChevronDown, 
   Home, 
@@ -1507,14 +1633,30 @@ export default Sidebar;
 } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   'Services': ['
       { "name": 'AI Services', "href": '/ai-services','
 =======
+=======
+=======
+<<<<<<< HEAD
+  'Services': ['
+      { "name": 'AI Services', "href": '/ai-services','
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const navigation = {
   'Services': [
       { name: 'AI Services';,}
   href: '/ai-services';,}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 },
 
       { name: 'IT Services';,}

@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -38,6 +43,10 @@ import { Job } from "./types;
 import {logErrorToProduction} from '@/utils/productionLogger;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface ApplyFormProps {
   job: Job,
   onClose: () => void,
@@ -160,6 +169,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setIsSubmitting(false);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {setIsSubmitting(true)// First submit the application to the job applications table;
       const applicationSuccess = await applyToJob(job.id;
         message;
@@ -192,6 +206,10 @@ interface ApplyFormProps  {job: Job,onClose: () => void,onApplySuccess?: (jobId:
         <TabsList className="w-full mb-4 bg-zion-blue-dark/30>;
           <TabsTrigger value=message" className="flex-1>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   };
   return (;
     <>;
@@ -206,6 +224,12 @@ interface ApplyFormProps  {job: Job,onClose: () => void,onApplySuccess?: (jobId:
           </TabsTrigger>;
         </TabsList>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <TabsContent value="message">;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             message = {message}
             setMessage = {setMessage}
             proposalLink = {proposalLink}
@@ -225,6 +249,10 @@ interface ApplyFormProps  {job: Job,onClose: () => void,onApplySuccess?: (jobId:
 =======
         <TabsContent value="message">;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             message={message}
             setMessage={setMessage}
@@ -320,9 +348,19 @@ return (<> <Tabs value= {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+;
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         </Button>
       </div>
@@ -338,6 +376,11 @@ return (<> <Tabs value= {
   toast ({
   return;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId || undefined : undefined, selectedResume && selectedResume.type === custom upload? selectedResume.file : undefined);
 if (!applicationSuccess) {}//Format message with proposal link if provided let fullMessage = message;
           />;
@@ -413,6 +456,10 @@ return (<> <Tabs value= {activeTab;
 if (proposalLink) {;
   fullMessage += `\n\nHeres a link to my proposal: $ {proposalLink ;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId || undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined);
 if (!applicationSuccess) {;
   ;
@@ -420,7 +467,14 @@ if (!applicationSuccess) {;
 if (proposalLink) {';
   fullMessage += `\n\nHere's a link to my proposal: $ {;
   proposalLink ;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }` ;
 }//Add info about attached resume if available if (selectedResume) {';
   fullMessage += `\n\nI've attached my resume: $ {;
@@ -435,6 +489,15 @@ title: selectedResume.title;
 type: selectedResume.type ;
 }: null ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+fullMessage;';
+'job';
+job.id;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }fullMessage;;
 job';
 job.id;
@@ -456,6 +519,10 @@ contextData)//Call onApplySuccess to update job status in the UI onClose ()}catc
 fullMessage;';
 'job';
 job.id;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 contextData);
 //Call onApplySuccess to update job status in the UI onClose () ;
 }catch (error) {';
@@ -487,5 +554,14 @@ return (<> <Tabs value= {;
 }/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {'";
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application') ;
 }</Button> </div> </>) ;
+<<<<<<< HEAD
 }'"
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+}'"
+=======
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

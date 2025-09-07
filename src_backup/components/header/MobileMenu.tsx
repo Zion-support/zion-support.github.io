@@ -1,6 +1,14 @@
 onClose(), // Close mobile menu on any click
 
+<<<<<<< HEAD
             }}
+=======
+<<<<<<< HEAD
+              onClose(), // Close mobile menu on any click
+            }}
+=======
+            }}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <<<<<<< HEAD
           >;
             <div className="relative mr-4>;
@@ -9,6 +17,10 @@ onClose(), // Close mobile menu on any click
                   {item.badge > 9 ? '9+ : item.badge}
                 </span>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           >
             <div className="relative mr-4">
               <item.icon className="h-5 w-5" aria-hidden="true" />
@@ -16,7 +28,14 @@ onClose(), // Close mobile menu on any click
                 <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               )}
             </div>
             {item.name}
@@ -27,6 +46,11 @@ onClose(), // Close mobile menu on any click
         <ModeToggle />
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </nav>;
       <div className=mt-6 px-6">;
         <ModeToggle />;
@@ -44,6 +68,7 @@ onClose(), // Close mobile menu on any click
 }"
 origin/cursor/automate-test-improve-and-merge-code-2533
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>)}";
+>>>>>>> merged-prs-20250907-203621
 
     </div>
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src_backup/pages/ProjectDetails.tsx
 import React, { useState, useEffect } from 'react';
 :src/pages/ProjectDetails.tsx
@@ -13,6 +14,38 @@ import { Project, ProjectStatus } from "@/types/projects",
 :src_backup/pages/ProjectDetails.tsx
 import { Button } from "@/components/ui/button";
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+>>>>>>> merged-prs-20250907-203621
+:src/pages/ProjectDetails.tsx
+import React, { useState, useEffect } from "react",
+import Link from 'next/link';
+import { useRouter  } from 'next/router';
+import { format } from "date-fns",
+import { useAuth } from "@/hooks/useAuth",
+import { useProjects } from "@/hooks/useProjects",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Project, ProjectStatus } from "@/types/projects",
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import React, { useState, useEffect } from 'react;
+:src/pages/ProjectDetails.tsx
+import React, { useState, useEffect } from "react,
+import Link from next/link';
+import { useRouter  } from 'next/router;
+import { format } from date-fns",
+import { useAuth } from "@/hooks/useAuth,
+import { useProjects } from @/hooks/useProjects",
+import { SEO } from "@/components/SEO,
+import { ProtectedRoute } from @/components/ProtectedRoute",
+import { Project, ProjectStatus } from "@/types/projects,
+import { Button } from @/components/ui/button";
+import {logErrorToProduction} from @/utils/productionLogger';
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {
   AlertDialog,
   AlertDialogAction,
@@ -318,7 +351,13 @@ function ProjectDetailsContent() {
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
+=======
+=======
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Card;
@@ -352,8 +391,17 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
 
 function ProjectDetailsContent() {
   const router = null;
+<<<<<<< HEAD
 :src_backup/pages/ProjectDetails.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   return (
     <>
@@ -365,13 +413,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
             <div>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
               <h1 className='text-3xl font-bold'>
                 {project.job?.title |'Project'}
               </h1>
+<<<<<<< HEAD
               <div className='flex items-center gap-2 mt-1'>
               <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
               <div className="flex items-center gap-2 mt-1">
+=======
+              <div className=flex items-center gap-2 mt-1>
+              <h1 className=text-3xl font-bold">{project.job?.title || "Project}</h1>
+              <div className=flex items-center gap-2 mt-1">
+=======
+              <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
+              <div className="flex items-center gap-2 mt-1">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {getStatusBadge(project.status)}
                 <span className="text-muted-foreground">
                   Started on {format(new Date(project.start_date), "PPP")}
@@ -397,16 +456,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
                         <AlertDialogAction
                           onClick={() => handleStatusChange('offer_accepted')}
                         >                          Accept Offer
+<<<<<<< HEAD
                         <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>
+=======
+                        <AlertDialogAction onClick={() => handleStatusChange(offer_accepted")}>
+=======
+                        <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           Accept Offer
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
                   <Button
                     variant='outline'
@@ -417,8 +485,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </>
               )}
               {(isClient |isTalent) && project.status === 'in_progress' && (
+<<<<<<< HEAD
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
+=======
+                  <Button variant="outline onClick={() => handleStatusChange(changes_requested")}>
+                    <MessageSquare className="mr-2 h-4 w-4 /> Request Changes
+=======
+                  <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
+                    <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </Button>
                 </>
               )}
@@ -439,11 +516,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
                       <AlertDialogAction
                         onClick={() => handleStatusChange('completed')}
                       >                        Mark as Completed
+<<<<<<< HEAD
                       <AlertDialogAction onClick={() => handleStatusChange("completed")}>
+=======
+                      <AlertDialogAction onClick={() => handleStatusChange("completed)}>
+=======
+                      <AlertDialogAction onClick={() => handleStatusChange("completed")}>
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         Mark as Completed
                       </AlertDialogAction>
                     </AlertDialogFooter>
@@ -465,9 +550,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>
                 </Button>
               )}
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
               {(isClient |isTalent) &&
+<<<<<<< HEAD
                 ['offer_sent', 'offer_accepted', 'in_progress'].includes(
+=======
+                ['offer_sent', offer_accepted, 'in_progress'].includes(
+=======
+                ['offer_sent', 'offer_accepted', 'in_progress'].includes(
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   project.status
                 ) && (
                   <Button
@@ -498,9 +591,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <TabsTrigger value='reviews'>Reviews</TabsTrigger>
                 )}
               </TabsList>
+<<<<<<< HEAD
               <TabsContent value='details'>
 :src/pages/ProjectDetails.tsx
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
+=======
+<<<<<<< HEAD
+              <TabsContent value=details>
+:src/pages/ProjectDetails.tsx
+              {(isClient || isTalent) && [offer_sent", "offer_accepted, in_progress"].includes(project.status) && (
+=======
+              <TabsContent value='details'>
+              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Button 
                   variant="outline" 
                   onClick={() => router.push(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
@@ -550,9 +654,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </CardContent>
                 </Card>
               </TabsContent>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
               <TabsContent value='timeline'>
+<<<<<<< HEAD
               <TabsContent value="timeline">
+=======
+              <TabsContent value=timeline">
+=======
+              <TabsContent value="timeline">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Timeline</CardTitle>
@@ -568,11 +680,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <h3 className="font-semibold">Start Date</h3>
                           <p>{format(new Date(project.start_date), "PPP")}</p>
                         </div>
+<<<<<<< HEAD
+=======
+                      </div>
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/pages/ProjectDetails.tsx
                       <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>
                         <Clock className='h-5 w-5 text-primary mt-0.5' />
+<<<<<<< HEAD
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
                         <Clock className="h-5 w-5 text-primary mt-0.5" />
+=======
+                      <div className=flex items-start gap-3 p-3 bg-muted/30 rounded-md">
+                        <Clock className="h-5 w-5 text-primary mt-0.5 />
+=======
+                      <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
+                        <Clock className="h-5 w-5 text-primary mt-0.5" />
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         <div>
                           <h3 className="font-semibold">Project Status</h3>
                           <div className="mt-1">
@@ -581,9 +707,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </CardContent>
                 </Card>
               </TabsContent>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
+<<<<<<< HEAD
               <TabsContent value='documents'>
               <TabsContent value="documents">
+=======
+              <TabsContent value=documents>
+              <TabsContent value=documents">
+=======
+              <TabsContent value="documents">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Documents</CardTitle>
@@ -635,9 +770,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </CardContent>
                 </Card>
               </TabsContent>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
               <TabsContent value='notes'>
+<<<<<<< HEAD
               <TabsContent value="notes">
+=======
+              <TabsContent value=notes">
+=======
+              <TabsContent value="notes">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Notes</CardTitle>
@@ -649,6 +792,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="space-y-4">
                       <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
                         {notes.length > 0 ? (
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
                           notes.map(note => (
                             <div
@@ -656,7 +800,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               className='bg-muted/30 p-3 rounded-md'
                             >
                               <div className='flex items-center gap-2 mb-2'>
+<<<<<<< HEAD
                                 <Avatar className='h-6 w-6'>
+=======
+                                <Avatar className=h-6 w-6>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           notes.map((note) => (
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">
                               <div className="flex items-center gap-2 mb-2">
@@ -665,20 +815,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                     <img
                                       src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
                                       loading='lazy'                                    />
+<<<<<<< HEAD
                                       loading="lazy"
+=======
+                                      loading=lazy"
+=======
+                                      loading="lazy"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                                     />
                                   ) : (
                                     <User className="h-4 w-4" />
                                   )}
                                 </Avatar>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
                                 <span className='font-medium text-sm'>
                                   {note.created_by_profile?.display_name |
                                     'User'}
+<<<<<<< HEAD
                                 <span className="font-medium text-sm">
                                   {note.created_by_profile?.display_name || "User"}
+=======
+                                <span className=font-medium text-sm">
+                                  {note.created_by_profile?.display_name || "User}
+=======
+                                <span className="font-medium text-sm">
+                                  {note.created_by_profile?.display_name || "User"}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                                 </span>
                                 <span className="text-xs text-muted-foreground">
                                   {format(new Date(note.created_at), "PPp")}
@@ -696,6 +864,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
                         )}
                       </div>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
                       {isOfferAccepted && (
                         <div>
@@ -705,8 +874,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             onChange={e => setNewNote(e.target.value)}
                             className='min-h-[100px] mb-2'                          />
                           <Button
+<<<<<<< HEAD
                             onClick = {handleSubmitNote,}
                             disabled = {!newNote.trim() |isSubmittingNote,}
+=======
+                            onClick = {handleSubmitNote}
+                            disabled = {!newNote.trim() |isSubmittingNote}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                       {isOfferAccepted && (
                         <div>
@@ -732,17 +908,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </CardContent>
                 </Card>
               </TabsContent>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
+<<<<<<< HEAD
               <TabsContent value='reviews'>
               <TabsContent value="reviews">
+=======
+              <TabsContent value=reviews>
+              <TabsContent value=reviews">
+=======
+              <TabsContent value="reviews">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
           </div>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
           <div className='order-1 lg:order-2 lg:col-span-1'>
+<<<<<<< HEAD
           <div className="order-1 lg:order-2 lg:col-span-1">
+=======
+          <div className="order-1 lg:order-2 lg:col-span-1>
+=======
+          <div className="order-1 lg:order-2 lg:col-span-1">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <Card>
               <CardHeader>
                 <CardTitle>Project Participants</CardTitle>
@@ -760,9 +953,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
+<<<<<<< HEAD
                           loading='lazy'                        />
                           loading="lazy"
+=======
+                          loading=lazy                        />
+                          loading="lazy
+=======
+                          loading="lazy"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         />
                       ) : (
                         <User className="h-6 w-6" />
@@ -905,29 +1107,61 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </Button>
                       )}
                     </div>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
+=======
+                  </div>
+<<<<<<< HEAD
+:src/pages/ProjectDetails.tsx
+                  <div className='flex items-start gap-4'>
+                    <Avatar className=h-10 w-10>
+                  <div className=flex items-start gap-4">
+                    <Avatar className="h-10 w-10>
+=======
+                  <div className="flex items-start gap-4">
+                    <Avatar className="h-10 w-10">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       {project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
                           loading='lazy'                        />
+<<<<<<< HEAD
                           loading="lazy"
+=======
+                          loading=lazy"
+=======
+                          loading="lazy"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         />
                       ) : (
                         <User className="h-6 w-6" />
                       )}
                     </Avatar>
                     <div>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
                       <h3 className='font-semibold'>
                         {project.talent_profile?.full_name |'Client'}
+<<<<<<< HEAD
                       <h3 className="font-semibold">
                         {project.talent_profile?.full_name || "Client"}
+=======
+                      <h3 className=font-semibold">
+                        {project.talent_profile?.full_name || "Client}
+=======
+                      <h3 className="font-semibold">
+                        {project.talent_profile?.full_name || "Client"}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       {project.talent_profile?.profile_picture_url ? (
                         <img;
                           src={project.talent_profile.profile_picture_url}
@@ -941,6 +1175,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <p className="text-sm text-muted-foreground">Project Owner</p>
                       {isTalent && (
                         <Button
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
                           variant='outline'
                           size='sm'
@@ -958,9 +1193,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Card>
             {/* Project Status Card */}
             <Card className='mt-6'>
+<<<<<<< HEAD
                           variant="outline"
                           size="sm"
                           className="mt-2"
+=======
+                          variant="outline
+                          size=sm"
+                          className="mt-2
+=======
+                          variant="outline"
+                          size="sm"
+                          className="mt-2"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           onClick={() => router.push(`/messages?clientId=${project.client_id}`)}
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
@@ -1439,6 +1685,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className="text-sm font-medium">Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
                   <div className='flex justify-between items-center'>
                     <span className='text-sm font-medium'>Creation Date:</span>
@@ -1446,14 +1693,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {format(new Date(project.created_at), 'PPP')}
                     </span>
                   </div>
+<<<<<<< HEAD
                   <div className='flex justify-between items-center'>
                     <span className='text-sm font-medium'>Start Date:</span>
                     <span className='text-sm'>
                       {format(new Date(project.start_date), 'PPP')}
+=======
+                  <div className=flex justify-between items-center'>
+                    <span className='text-sm font-medium>Start Date:</span>
+                    <span className=text-sm'>
+                      {format(new Date(project.start_date), 'PPP)}
+                  <div className="flex justify-between items-center>
+                    <span className=text-sm font-medium">Creation Date:</span>
+                    <span className="text-sm>
+                      {format(new Date(project.created_at), PPP")}
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
                     <span className="text-sm">
                       {format(new Date(project.created_at), "PPP")}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
@@ -1479,6 +1742,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
                   <Button
                     variant='outline'
@@ -1490,9 +1754,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Button>
                 </CardFooter>
               )}
+<<<<<<< HEAD
               {project.status === 'offer_sent' && isClient && (
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
                   <p className='text-sm text-muted-foreground'>
+=======
+              {project.status === offer_sent' && isClient && (
+                <CardFooter className='flex-col items-start gap-2 border-t pt-6>
+                  <p className=text-sm text-muted-foreground'>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   <Button 
                     variant="outline"
@@ -1511,6 +1783,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                 </CardFooter>
               )}
+<<<<<<< HEAD
 :src/pages/ProjectDetails.tsx
               {project.status === 'completed' && (
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
@@ -1528,10 +1801,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                 </CardFooter>
               )}
+<<<<<<< HEAD
+=======
+              {project.status === "completed && (
+                <CardFooter className=flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-green-600 flex items-center gap-1>
+                    <CheckCircle2 className=h-4 w-4" /> This project has been completed.
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               {project.status === "completed" && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-green-600 flex items-center gap-1">
                     <CheckCircle2 className="h-4 w-4" /> This project has been completed.
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </p>
                 </CardFooter>
               )}
@@ -1572,7 +1857,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
       </main>
     </>
+<<<<<<< HEAD
 :src_backup/pages/ProjectDetails.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/pages/ProjectDetails.tsx
   )
 }
@@ -1726,7 +2018,12 @@ export default function ProjectDetails() {;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   );
 

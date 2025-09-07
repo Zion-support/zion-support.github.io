@@ -131,6 +131,11 @@ export function EnterpriseStickyNav() {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <nav className="sticky top-16 z-40 bg-card border-b border-border">;
       <div className="container mx-auto px-4 md:px-6">;
         <div className="flex items-center justify-between h-12">;
@@ -150,6 +155,10 @@ export function EnterpriseStickyNav() {
       <div className=container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-12>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <nav className="sticky top-16 z-40 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-12">
@@ -174,6 +183,8 @@ export function EnterpriseStickyNav() {
           </ul>
         </div>
       </div>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 import { useState  } from 'react;
@@ -275,6 +286,7 @@ export function EnterpriseStickyNav() {const [open, setOpen]  = useState(false)i
               <Link href="#testimonials className=text-sm font-medium hover:text-primary">Testimonials</Link>;
             </li>;
             <li>;
+>>>>>>> merged-prs-20250907-203621
 :src/components/enterprise/EnterpriseStickyNav.tsx
     </nav>;
   );
@@ -298,11 +310,21 @@ export function EnterpriseStickyNav() {;
             className=md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
             onClick={() => setOpen(!open)}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            aria-label="Toggle navigation";
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             aria-label="Toggle navigation;
             aria-expanded={open}
 =======
             aria-label="Toggle navigation";
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     </nav>
 
@@ -322,6 +344,11 @@ export function EnterpriseStickyNav() {;
             </li>;
             <li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <Link href="#contact className=text-sm font-medium hover:text-primary">Contact Us</Link>;
 
 
@@ -362,12 +389,21 @@ function EnterpriseStickyNav() {const [open, set_open] = useState (false)return 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             </li>;
           </ul>;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
   );
@@ -377,6 +413,7 @@ function EnterpriseStickyNav() {const [open, set_open] = useState (false)return 
         </div>;
       </div>;)}
     </nav>)})}
+>>>>>>> merged-prs-20250907-203621
 
   );
 }

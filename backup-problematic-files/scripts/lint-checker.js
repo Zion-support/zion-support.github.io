@@ -82,16 +82,26 @@ const issues = [];,"});,"})
 const totalFiles = 0;,"});,"})
 const filesWithIssues = 0;,"});,"})
 function shouldIgnoreFile(filePath) {;,"});,"})
+<<<<<<< HEAD
   return ignoreDirs.some(dir => filePath.includes(dir));,"});,"})
 function checkFile(filePath) {;,"});,"})
   try {;,"});,"})
     const content = fs.readFileSync(filePath, 'utf8;,"});,"})
   ');,"});,"})
     const lines = content.split('\n;,"});,"})
+=======
+  return ignoreDirs && ignoreDirs.some(dir => filePath && filePath.includes(dir));,"});,"})
+function checkFile(filePath) {;,"});,"})
+  try {;,"});,"})
+    const content = fs && fs.readFileSync(filePath, 'utf8;,"});,"})
+  ');,"});,"})
+    const lines = content && content.split('\n;,"});,"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ');,"});,"})
     totalFiles++;,"});,"})
     const fileIssues = [];,"});,"})
     // Check each line for issues;,"});,"})
+<<<<<<< HEAD
     lines.forEach((line, lineNum) => {;,"});,"})
       Object.entries(lintRules).forEach(([rule, pattern]) => {;,"});,"})
         if (pattern.test(line)) {;,"});,"})
@@ -127,10 +137,56 @@ function generateReport() {;,"});,"})
   // // // // // // // console.log('\n=== LINT CHECK REPORT ===\n;,"});,"})
   ');,"});,"})
 
+=======
+    lines && lines.forEach((line, lineNum) => {;,"});,"})
+      Object && Object.entries(lintRules).forEach(([rule, pattern]) => {;,"});,"})
+        if (pattern && pattern.test(line)) {;,"});,"})
+          fileIssues && fileIssues.push({;,"});,"})
+            rule,;,"});,"})
+            line: lineNum + 1,;,"});,"})
+            content: line && line.trim(),;,"});,"})
+            file: filePath,,"});,"})
+          });,"});,"})
+      });,"});,"})
+    });,"});,"})
+    if (fileIssues && fileIssues.length > 0) {;,"});,"})
+      filesWithIssues++;,"});,"})
+      issues && issues.push(...fileIssues);,"});,"})
+  } catch (error) {;,"});,"})
+    // // // // // // // console && console.warn(`Warning: Could not read file ${filePath}: ${error && error.message}`);,"});,"})
+  }"});,"})
+}"});,"})
+function walkDir(dir) {;,"});,"})
+  const files = fs && fs.readdirSync(dir);,"});,"})
+  files && files.forEach(file => {;,"});,"})
+    const filePath = path && path.join(dir, file);,"});,"})
+    const stat = fs && fs.statSync(filePath);,"});,"})
+    if (stat && stat.isDirectory()) {;,"});,"})
+      if (!shouldIgnoreFile(filePath)) {;,"});,"})
+        walkDir(filePath);,"});,"})
+    } else if (stat && stat.isFile()) {;,"});,"})
+      const ext = path && path.extname(file);,"});,"})
+      if (extensions && extensions.includes(ext)) {;,"});,"})
+        checkFile(filePath);,"});,"})
+  });,"});,"})
+function generateReport() {;,"});,"})
+  // // // // // // // console && console.log('\n=== LINT CHECK REPORT ===\n;,"});,"})
+  ');,"});,"})
+<<<<<<< HEAD
+
+=======
+  // // // // // // // console && console.log(`Total files checked: ${totalFiles}`);,"});,"})
+  // // // // // // // console && console.log(`Files with issues: ${filesWithIssues}`);,"});,"})
+  // // // // // // // console && console.log(`Total issues found: ${issues && issues.length}\n`);,"});,"})
+  if (issues && issues.length === 0) {;,"});,"})
+    // // // // // // // console && console.log('✅ No lint issues found!;,"});,"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ');,"});,"})
     return;,"});,"})
   // Group issues by file;,"});,"})
   const issuesByFile = { /* empty */ };,"});,"})
+<<<<<<< HEAD
   issues.forEach(issue => {;,"});,"})
     if (!issuesByFile[issue.file]) {;,"});,"})
       issuesByFile[issue.file] = [];,"});,"})
@@ -161,6 +217,58 @@ function main() {;,"});,"})
 if (require.main === module) {;,"});,"})
   main();,"});,"})
 module.exports = { checkFile, walkDir, lintRules };,"});,"})
+=======
+  issues && issues.forEach(issue => {;,"});,"})
+    if (!issuesByFile[issue && issue.file]) {;,"});,"})
+      issuesByFile[issue && issue.file] = [];,"});,"})
+    issuesByFile[issue && issue.file].push(issue);,"});,"})
+  });,"});,"})
+<<<<<<< HEAD
+
+=======
+  Object && Object.entries(issuesByFile).forEach(([file, fileIssues]) => {;,"});,"})
+    // // // // // // // console && console.log(`\n📁 ${file} (${fileIssues && fileIssues.length} issues):`);,"});,"})
+    fileIssues && fileIssues.forEach(issue => {;,"});,"})
+      // // // // // // // console && console.log(`  Line ${issue && issue.line}: [${issue && issue.rule}] ${issue && issue.content}`);,"});,"})
+    });,"});,"})
+  });,"});,"})
+  // Summary by rule;,"});,"})
+  // // // // // // // console && console.log(,;,"});,"})
+  \n📊 Issues by rule: ),,"});,"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  const ruleCounts = { /* empty */ };,"});,"})
+  issues && issues.forEach(issue => {;,"});,"})
+    ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1;,"});,"})
+  });,"});,"})
+  Object && Object.entries(ruleCounts);,"});,"})
+    .sort(([a], [b]) => b - a);,"});,"})
+    .forEach(([rule, count]) => {;,"});,"})
+      // // // // // // // console && console.log(`  ${rule}: ${count}`);,"});,"})
+    });,"});,"})
+function main() {;,"});,"})
+<<<<<<< HEAD
+
+=======
+  // // // // // // // console && console.log('🔍 Starting lint check...;,"});,"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  ');,"});,"})
+  const startTime = Date && Date.now();,"});,"})
+  walkDir('.');,"});,"})
+  const endTime = Date && Date.now();,"});,"})
+  generateReport();,"});,"})
+<<<<<<< HEAD
+
+=======
+  // // // // // // // console && console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);,"});,"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  // Exit with error code if issues found;,"});,"})
+  if (issues && issues.length > 0) {;,"});,"})
+    process && process.exit(1);,"});,"})
+// Run the checker;,"});,"})
+if (require && require.main === module) {;,"});,"})
+  main();,"});,"})
+module && module.exports = { checkFile, walkDir, lintRules };,"});,"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }}}}}}}}}}}}}));,"});,"})
 
 #!/usr/bin/env node,"}),"})
@@ -247,16 +355,26 @@ const issues = [],"}),"})
 const totalFiles = 0,"}),"})
 const filesWithIssues = 0,"}),"})
 function shouldIgnoreFile(filePath) {,"}),"})
+<<<<<<< HEAD
   return ignoreDirs.some(dir => filePath.includes(dir)),"}),"})
 function checkFile(filePath) {,"}),"})
   try {,"}),"})
     const content = fs.readFileSync(filePath, 'utf8,"}),"})
   '),"}),"})
     const lines = content.split('\n,"}),"})
+=======
+  return ignoreDirs && ignoreDirs.some(dir => filePath && filePath.includes(dir)),"}),"})
+function checkFile(filePath) {,"}),"})
+  try {,"}),"})
+    const content = fs && fs.readFileSync(filePath, 'utf8,"}),"})
+  '),"}),"})
+    const lines = content && content.split('\n,"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   '),"}),"})
     totalFiles++,"}),"})
     const fileIssues = [],"}),"})
     // Check each line for issues,"}),"})
+<<<<<<< HEAD
     lines.forEach((line, lineNum) => {,"}),"})
       Object.entries(lintRules).forEach(([rule, pattern]) => {,"}),"})
         if (pattern.test(line)) {,"}),"})
@@ -264,10 +382,20 @@ function checkFile(filePath) {,"}),"})
             rule,,"}),"})
             "line": lineNum + 1,,"}),"})
             "content": line.trim(),,"}),"})
+=======
+    lines && lines.forEach((line, lineNum) => {,"}),"})
+      Object && Object.entries(lintRules).forEach(([rule, pattern]) => {,"}),"})
+        if (pattern && pattern.test(line)) {,"}),"})
+          fileIssues && fileIssues.push({,"}),"})
+            rule,,"}),"})
+            "line": lineNum + 1,,"}),"})
+            "content": line && line.trim(),,"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             "file": filePath,"}),"})
           }),"}),"})
       }),"}),"})
     }),"}),"})
+<<<<<<< HEAD
     if (fileIssues.length > 0) {,"}),"})
       filesWithIssues++,"}),"})
       issues.push(...fileIssues),"}),"})
@@ -292,10 +420,45 @@ function generateReport() {,"}),"})
   // // // // // // // console.log('\n=== LINT CHECK REPORT ===\n,"}),"})
   '),"}),"})
 
+=======
+    if (fileIssues && fileIssues.length > 0) {,"}),"})
+      filesWithIssues++,"}),"})
+      issues && issues.push(...fileIssues),"}),"})
+  } catch (error) {,"}),"})
+    // // // // // // // console && console.warn(`"Warning": Could not read file ${filePath}: ${error && error.message}`),"}),"})
+  }"}),"})
+}"}),"})
+function walkDir(dir) {,"}),"})
+  const files = fs && fs.readdirSync(dir),"}),"})
+  files && files.forEach(file => {,"}),"})
+    const filePath = path && path.join(dir, file),"}),"})
+    const stat = fs && fs.statSync(filePath),"}),"})
+    if (stat && stat.isDirectory()) {,"}),"})
+      if (!shouldIgnoreFile(filePath)) {,"}),"})
+        walkDir(filePath),"}),"})
+    } else if (stat && stat.isFile()) {,"}),"})
+      const ext = path && path.extname(file),"}),"})
+      if (extensions && extensions.includes(ext)) {,"}),"})
+        checkFile(filePath),"}),"})
+  }),"}),"})
+function generateReport() {,"}),"})
+  // // // // // // // console && console.log('\n=== LINT CHECK REPORT ===\n,"}),"})
+  '),"}),"})
+<<<<<<< HEAD
+
+=======
+  // // // // // // // console && console.log(`Total files "checked": ${totalFiles}`),"}),"})
+  // // // // // // // console && console.log(`Files with "issues": ${filesWithIssues}`),"}),"})
+  // // // // // // // console && console.log(`Total issues "found": ${issues && issues.length}\n`),"}),"})
+  if (issues && issues.length === 0) {,"}),"})
+    // // // // // // // console && console.log('✅ No lint issues found!,"}),"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   '),"}),"})
     return,"}),"})
   // Group issues by file,"}),"})
   const issuesByFile = { /* empty */ },"}),"})
+<<<<<<< HEAD
   issues.forEach(issue => {,"}),"})
     if (!issuesByFile[issue.file]) {,"}),"})
       issuesByFile[issue.file] = [],"}),"})
@@ -326,6 +489,58 @@ function main() {,"}),"})
 if (require.main === module) {,"}),"})
   main(),"}),"})
 module.exports = { checkFile, walkDir, lintRules },"}),"})
+=======
+  issues && issues.forEach(issue => {,"}),"})
+    if (!issuesByFile[issue && issue.file]) {,"}),"})
+      issuesByFile[issue && issue.file] = [],"}),"})
+    issuesByFile[issue && issue.file].push(issue),"}),"})
+  }),"}),"})
+<<<<<<< HEAD
+
+=======
+  Object && Object.entries(issuesByFile).forEach(([file, fileIssues]) => {,"}),"})
+    // // // // // // // console && console.log(`\n📁 ${file} (${fileIssues && fileIssues.length} issues):`),"}),"})
+    fileIssues && fileIssues.forEach(issue => {,"}),"})
+      // // // // // // // console && console.log(`  Line ${issue && issue.line}: [${issue && issue.rule}] ${issue && issue.content}`),"}),"})
+    }),"}),"})
+  }),"}),"})
+  // Summary by rule,"}),"})
+  // // // // // // // console && console.log(,,"}),"})
+  \n📊 Issues by "rule": ),"}),"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  const ruleCounts = { /* empty */ },"}),"})
+  issues && issues.forEach(issue => {,"}),"})
+    ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1,"}),"})
+  }),"}),"})
+  Object && Object.entries(ruleCounts),"}),"})
+    .sort(([a], [b]) => b - a),"}),"})
+    .forEach(([rule, count]) => {,"}),"})
+      // // // // // // // console && console.log(`  ${rule}: ${count}`),"}),"})
+    }),"}),"})
+function main() {,"}),"})
+<<<<<<< HEAD
+
+=======
+  // // // // // // // console && console.log('🔍 Starting lint check...,"}),"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  '),"}),"})
+  const startTime = Date && Date.now(),"}),"})
+  walkDir('.'),"}),"})
+  const endTime = Date && Date.now(),"}),"})
+  generateReport(),"}),"})
+<<<<<<< HEAD
+
+=======
+  // // // // // // // console && console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`),"}),"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  // Exit with error code if issues found,"}),"})
+  if (issues && issues.length > 0) {,"}),"})
+    process && process.exit(1),"}),"})
+// Run the checker,"}),"})
+if (require && require.main === module) {,"}),"})
+  main(),"}),"})
+module && module.exports = { checkFile, walkDir, lintRules },"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }}}}}}}}}}}}})),"}),"})
   'fs');
 const path = // // require(',
@@ -629,11 +844,19 @@ const issues = [];
 const totalFiles = 0;
 const filesWithIssues = 0;
 function shouldIgnoreFile(filePath) {;
+<<<<<<< HEAD
   return ignoreDirs.some(dir => filePath.includes(dir));
 function checkFile(filePath) {
   try {'
     const content = fs.readFileSync(filePath, 'utf8';);
     const lines = content.split('\n';);
+=======
+  return ignoreDirs && ignoreDirs.some(dir => filePath && filePath.includes(dir));
+function checkFile(filePath) {
+  try {'
+    const content = fs && fs.readFileSync(filePath, 'utf8';);
+    const lines = content && content.split('\n';);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     totalFiles++;
     const fileIssues = [];
     // Check each line for issues;
@@ -643,6 +866,7 @@ function checkFile(filePath) {
           fileIssues.push({;
             rule,;
             line: lineNum + 1,;
+<<<<<<< HEAD
             content: line.trim(),;
             file: filePath})})});
             rule,
@@ -650,11 +874,21 @@ function checkFile(filePath) {
             "content": line.trim(),
             "file": filePath})})});
     if (fileIssues.length > 0) {;
+=======
+            content: line && line.trim(),;
+            file: filePath})})});
+            rule,
+            "line": lineNum + 1,
+            "content": line && line.trim(),
+            "file": filePath})})});
+    if (fileIssues && fileIssues.length > 0) {;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       filesWithIssues++;
       issues.push(...fileIssues)} catch (error) {'
     // // // // // // // console.warn(`"Warning": Could not read file ${filePath}: ${error.message}`)}
 }
 function walkDir(dir) {;
+<<<<<<< HEAD
   const files = fs.readdirSync(dir);
   files.forEach(file => {;
     const filePath = path.join(dir, file);
@@ -707,6 +941,65 @@ function generateReport() {"
 if: (require.main === module) {
   main();
 module.exports: = { checkFile, walkDir, lintRules }
+=======
+  const files = fs && fs.readdirSync(dir);
+  files && files.forEach(file => {;
+    const filePath = path && path.join(dir, file);
+    const stat = fs && fs.statSync(filePath);
+    if (stat && stat.isDirectory()) {;
+      if (!shouldIgnoreFile(filePath)) {;
+        walkDir(filePath)} else if (stat && stat.isFile()) {;
+      const ext = path && path.extname(file);
+      if (extensions && extensions.includes(ext)) {
+        checkFile(filePath)})
+function generateReport() {"
+  // // // // // // // console && console.log('\n=== LINT CHECK REPORT ===\n';);
+  // // // // // // // console && console.log("Total files "checked": ${totalFiles}");"
+  // // // // // // // console && console.log(`Files with "issues": ${filesWithIssues}`);"
+  // // // // // // // console && console.log("Total issues "found": ${issues && issues.length}\n");
+  if (issues && issues.length === 0) {"
+    // // // // // // // console && console.log('✅ No lint issues found!';);
+    return;
+  // Group issues by file;
+  const issuesByFile = { /* empty */ }
+  issues && issues.forEach(issue => {;
+    if (!issuesByFile[issue && issue.file]) {;
+      issuesByFile[issue && issue.file] = [];
+    issuesByFile[issue && issue.file].push(issue)})
+  Object && Object.entries(issuesByFile).forEach(([file, fileIssues]) => {'
+    // // // // // // // console && console.log(`\n📁 ${file} (${fileIssues && fileIssues.length} issues):`);
+    fileIssues && fileIssues.forEach("issue": => {
+      // // // // // // // console && console.log(`  Line ${issue && issue.line}: [${issue && issue.rule}] ${issue && issue.content}`)})})
+  // "Summary": by rule;
+  // // // // // // // console && console.log(
+  \n📊 Issues: by rule: ),
+  const ruleCounts = { /* empty */}
+  issues && issues.forEach(issue => {
+    ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1})
+  Object && Object.entries(ruleCounts);
+    .sort(([a], [b]) => "b": - a);
+    .forEach(([rule, count]) => {
+      // // // // // // // console && console.log(`  ${rule}: ${count}`)})
+"function": main() {
+  // // // // // // // console && console.log('🔍 Starting lint check...', ')';
+  const startTime = Date && Date.now();
+  walkDir('.')';
+  const endTime = Date && Date.now();
+  generateReport();
+  // // // // // // // console && console.log(`\n⏱️  Check: completed in ${endTime - startTime}ms`);
+  // "Exit": with error code if issues found;
+  // // // // // // // console.log(,;
+  \n📊 Issues by rule: );
+  // // // // // // // console.log(,;
+  \n📊 Issues by rule: );
+  // // // // // // // console.log(,
+  if: (issues && issues.length > 0) {
+    process && process.exit(1),
+// Run: the checker,
+if: (require && require.main === module) {
+  main(),
+module && module.exports: = { checkFile, walkDir, lintRules }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }}}}}}}}}}}}}));
   // Summary by rule;
   // // // // // // // console.log(,;
@@ -714,6 +1007,7 @@ module.exports: = { checkFile, walkDir, lintRules }
   // // // // // // // console.log(,
   \n📊 Issues by "rule": );
   const ruleCounts = { /* empty */ }
+<<<<<<< HEAD
   issues.forEach(issue => {;
     ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1});
   Object.entries(ruleCounts);
@@ -734,6 +1028,28 @@ function main() {"
 if (require.main === module) {;
   main();
 module.exports = { checkFile, walkDir, lintRules }
+=======
+  issues && issues.forEach(issue => {;
+    ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1});
+  Object && Object.entries(ruleCounts);
+    .sort(([a], [b]) => b - a);
+    .forEach(([rule, count]) => {"
+      // // // // // // // console && console.log("  ${rule}: ${count}")})
+function main() {"
+  // // // // // // // console && console.log('🔍 Starting lint check...';);
+  const startTime = Date && Date.now();
+  walkDir('.');
+  const endTime = Date && Date.now();
+  generateReport();
+  // // // // // // // console && console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);
+  // Exit with error code if issues found;
+  if (issues && issues.length > 0) {;
+    process && process.exit(1);
+// Run the checker;
+if (require && require.main === module) {;
+  main();
+module && module.exports = { checkFile, walkDir, lintRules }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }}}}}}}}}}}}}));`
 #!/usr/bin/env node,"}),"}) const fs = require(,"}),"}) 'fs'),"}),"}) const path = require(,"}),"}) 'path'),"}),"}) const { execSync } = require(,"}),"}) 'child_process'),"}),"}) const lintRules = {,"}),"}) 'no-console': /console\.(log|warn|error|info|debug)/g,,"}),"}) 'no-unused-imports': /import\s+[^}]+from\s+[,"}),"}) '"][^'"]+[,"}),"}) '"];?\s*$/gm,,"}),"}) 'no-unused-vars,"}),"}) ': /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,,"}),"}) 'no-debugger,"}),"}) ': /debugger;/g,,"}),"}) 'no-alert,"}),"}) ': /alert\(/g,,"}),"}) 'no-eval,"}),"}) ': /eval\(/g,,"}),"}) 'no-var,"}),"}) ': /var\s+/g,,"}),"}) 'prefer-const,"}),"}) ': /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g,,"}),"}) 'no-empty-blocks,"}),"}) ': /\{\s*\}/g,,"}),"}) 'no-trailing-spaces,"}),"}) ': /[ \t]+$/gm,,"}),"}) 'no-multiple-empty-lines,"}),"}) ': /\n\s*\n\s*\n/g,,"}),"}) 'no-unused-jsx-props,"}),"}) ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g,"}),"}) },"}),"}) const extensions = ['.js,"}),"}) ','.jsx,"}),"}) ','.ts,"}),"}) ','.tsx,"}),"}) '],"}),"}) const ignoreDirs = [,"}),"}) 'node_modules,"}),"}) ',,"}),"}) '.git,"}),"}) ',,"}),"}) 'dist,"}),"}) ',,"}),"}) 'build,"}),"}) ',,"}),"}) '.next,"}),"}) ',,"}),"}) 'out,"}),"}) ',,"}),"}) 'coverage,"}),"}) ',,"}),"}) 'temp,"}),"}) ',,"}),"}) 'tmp,"}),"}) ',,"}),"}) 'logs,"}),"}) ',,"}),"}) 'reports,"}),"}) ',,"}),"}) 'test-reports,"}),"}) ',,"}),"}) 'security-reports,"}),"}) ',,"}),"}) 'ci-cd-reports,"}),"}) ',,"}),"}) 'link-reports,"}),"}) ',,"}),"}) 'broken_files_backup,"}),"}) ',,"}),"}) 'temp_backup,"}),"}) ',,"}),"}) 'temp_working,"}),"}) ',"}),"}) ],"}),"}) const issues = [],"}),"}) const totalFiles = 0,"}),"}) const filesWithIssues = 0,"}),"}) function shouldIgnoreFile(filePath) {,"}),"}) return ignoreDirs.some(dir => filePath.includes(dir)),"}),"}) function checkFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,'utf8,"}),"}) '),"}),"}) const lines = content.split('\n,"}),"}) '),"}),"}) totalFiles++,"}),"}) const fileIssues = [],"}),"}) lines.forEach((line,lineNum) => {,"}),"}) Object.entries(lintRules).forEach(([rule,pattern]) => {,"}),"}) if (pattern.test(line)) {,"}),"}) fileIssues.push({,"}),"}) rule,,"}),"}) line: lineNum + 1,,"}),"}) content: line.trim(),,"}),"}) file: filePath,"}),"}) }),"}),"}) }),"}),"}) }),"}),"}) if (fileIssues.length > 0) {,"}),"}) filesWithIssues++,"}),"}) issues.push(...fileIssues),"}),"}) } catch (error) {,"}),"}) }"}),"}) }"}),"}) function walkDir(dir) {,"}),"}) const files = fs.readdirSync(dir),"}),"}) files.forEach(file => {,"}),"}) const filePath = path.join(dir,file),"}),"}) const stat = fs.statSync(filePath),"}),"}) if (stat.isDirectory()) {,"}),"}) if (!shouldIgnoreFile(filePath)) {,"}),"}) walkDir(filePath),"}),"}) } else if (stat.isFile()) {,"}),"}) const ext = path.extname(file),"}),"}) if (extensions.includes(ext)) {,"}),"}) checkFile(filePath),"}),"}) }),"}),"}) function generateReport() {,"}),"}) '),"}),"}) if (issues.length === 0) {,"}),"}) '),"}),"}) return,"}),"}) const issuesByFile = { },"}),"}) issues.forEach(issue => {,"}),"}) if (!issuesByFile[issue.file]) {,"}),"}) issuesByFile[issue.file] = [],"}),"}) issuesByFile[issue.file].push(issue),"}),"}) }),"}),"}) Object.entries(issuesByFile).forEach(([file,fileIssues]) => {,"}),"}) fileIssues.forEach(issue => {,"}),"}) }),"}),"}) }),"}),"}) \n📊 Issues by rule: ),"}),"}) const ruleCounts = { },"}),"}) issues.forEach(issue => {,"}),"}) ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1,"}),"}) }),"}),"}) Object.entries(ruleCounts),"}),"}) .sort(([a],[b]) => b - a),"}),"}) .forEach(([rule,count]) => {,"}),"}) }),"}),"}) function main() {,"}),"}) '),"}),"}) const startTime = Date.now(),"}),"}) walkDir('.'),"}),"}) const endTime = Date.now(),"}),"}) generateReport(),"}),"}) if (issues.length > 0) {,"}),"}) process.exit(1),"}),"}) if (require.main === module) {,"}),"}) main(),"}),"}) module.exports = { checkFile,walkDir,lintRules },"}),"}) }}}}}}}}}}}}})),"}),"}) 'fs'); const path = 'path'); const { execSync } = 'child_process'); const lintRules = {','no-console': /console\.(log|warn|error|info|debug)/g 'no-unused-imports': /import\s+[^}]+from\s+[';'][^'']+[';"];?\s*$/gm," 'no-unused-vars';: /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,';no-debugger';: /debugger;/g,';no-alert';: /alert\(/g,';no-eval';: /eval\(/g,';no-var';: /var\s+/g,';prefer-const';: /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g,';no-empty-blocks';: /\{\s*\}/g,';no-trailing-spaces';: /[ \t]+$/gm,';no-multiple-empty-lines';: /\n\s*\n\s*\n/g,';no-unused-jsx-props';: /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g} const extensions = ['.js',','.jsx','.ts','.tsx']; const ignoreDirs = [','node_modules',';.git',';dist',';build',';.next',';out',';coverage',';temp',';tmp',';logs',';reports',';test-reports',';security-reports',';ci-cd-reports',';link-reports',';broken_files_backup',';temp_backup',';temp_working']; const issues = []; const totalFiles = 0; const filesWithIssues = 0; function shouldIgnoreFile(filePath) {; return ignoreDirs.some(dir => filePath.includes(dir)); function checkFile(filePath) { try {' const content = fs.readFileSync(filePath,'utf8';); const lines = content.split('\n';); totalFiles++; const fileIssues = []; lines.forEach((line,lineNum) => {; Object.entries(lintRules).forEach(([rule,pattern]) => {; if (pattern.test(line)) {; fileIssues.push({; rule,line: lineNum + 1,content: line.trim(),file: filePath})})}); if (fileIssues.length > 0) {; filesWithIssues++; issues.push(...fileIssues)} catch (error) {' } function walkDir(dir) {; const files = fs.readdirSync(dir); files.forEach(file => {; const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) {; if (!shouldIgnoreFile(filePath)) {; walkDir(filePath)} else if (stat.isFile()) {; const ext = path.extname(file); if (extensions.includes(ext)) { checkFile(filePath)}) function generateReport() {` if (issues.length === 0) {` return; const issuesByFile = { } issues.forEach(issue => {; if (!issuesByFile[issue.file]) {; issuesByFile[issue.file] = []; issuesByFile[issue.file].push(issue)}) Object.entries(issuesByFile).forEach(([file,fileIssues]) => {' fileIssues.forEach(issue: => { \n📊 Issues: by rule: ); const ruleCounts = { } issues.forEach(issue => { ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1}) Object.entries(ruleCounts); .sort(([a],[b]) => b: - a); .forEach(([rule,count]) => { function: main() { const startTime = Date.now(); walkDir('.')'; const endTime = Date.now(); generateReport(); if: (issues.length > 0) { process.exit(1); if: (require.main === module) { main(); module.exports: = { checkFile,walkDir,lintRules } }}}}}}}}}}}}})); \n📊 Issues by rule: ); const ruleCounts = { } issues.forEach(issue => {; ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1}); Object.entries(ruleCounts); .sort(([a],[b]) => b - a); .forEach(([rule,count]) => {` function main() {` const startTime = Date.now(); walkDir('.'); const endTime = Date.now(); generateReport(); if (issues.length > 0) {; process.exit(1); if (require.main === module) {; main(); module.exports = { checkFile,walkDir,lintRules } }}}}}}}}}}}}}));`
 #!/usr/bin/env node,"}),"}) const fs = require(,"}),"}) 'fs'),"}),"}) const path = require(,"}),"}) 'path'),"}),"}) const { execSync } = require(,"}),"}) 'child_process'),"}),"}) const lintRules = {,"}),"}) 'no-console': /console\.(log|warn|error|info|debug)/g,,"}),"}) 'no-unused-imports': /import\s+[^}]+from\s+[,"}),"}) '"][^'"]+[,"}),"}) '"];?\s*$/gm,,"}),"}) 'no-unused-vars,"}),"}) ': /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,,"}),"}) 'no-debugger,"}),"}) ': /debugger;/g,,"}),"}) 'no-alert,"}),"}) ': /alert\(/g,,"}),"}) 'no-eval,"}),"}) ': /eval\(/g,,"}),"}) 'no-var,"}),"}) ': /var\s+/g,,"}),"}) 'prefer-const,"}),"}) ': /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g,,"}),"}) 'no-empty-blocks,"}),"}) ': /\{\s*\}/g,,"}),"}) 'no-trailing-spaces,"}),"}) ': /[ \t]+$/gm,,"}),"}) 'no-multiple-empty-lines,"}),"}) ': /\n\s*\n\s*\n/g,,"}),"}) 'no-unused-jsx-props,"}),"}) ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g,"}),"}) },"}),"}) const extensions = ['.js,"}),"}) ','.jsx,"}),"}) ','.ts,"}),"}) ','.tsx,"}),"}) '],"}),"}) const ignoreDirs = [,"}),"}) 'node_modules,"}),"}) ',,"}),"}) '.git,"}),"}) ',,"}),"}) 'dist,"}),"}) ',,"}),"}) 'build,"}),"}) ',,"}),"}) '.next,"}),"}) ',,"}),"}) 'out,"}),"}) ',,"}),"}) 'coverage,"}),"}) ',,"}),"}) 'temp,"}),"}) ',,"}),"}) 'tmp,"}),"}) ',,"}),"}) 'logs,"}),"}) ',,"}),"}) 'reports,"}),"}) ',,"}),"}) 'test-reports,"}),"}) ',,"}),"}) 'security-reports,"}),"}) ',,"}),"}) 'ci-cd-reports,"}),"}) ',,"}),"}) 'link-reports,"}),"}) ',,"}),"}) 'broken_files_backup,"}),"}) ',,"}),"}) 'temp_backup,"}),"}) ',,"}),"}) 'temp_working,"}),"}) ',"}),"}) ],"}),"}) const issues = [],"}),"}) const totalFiles = 0,"}),"}) const filesWithIssues = 0,"}),"}) function shouldIgnoreFile(filePath) {,"}),"}) return ignoreDirs.some(dir => filePath.includes(dir)),"}),"}) function checkFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,'utf8,"}),"}) '),"}),"}) const lines = content.split('\n,"}),"}) '),"}),"}) totalFiles++,"}),"}) const fileIssues = [],"}),"}) lines.forEach((line,lineNum) => {,"}),"}) Object.entries(lintRules).forEach(([rule,pattern]) => {,"}),"}) if (pattern.test(line)) {,"}),"}) fileIssues.push({,"}),"}) rule,,"}),"}) line: lineNum + 1,,"}),"}) content: line.trim(),,"}),"}) file: filePath,"}),"}) }),"}),"}) }),"}),"}) }),"}),"}) if (fileIssues.length > 0) {,"}),"}) filesWithIssues++,"}),"}) issues.push(...fileIssues),"}),"}) } catch (error) {,"}),"}) }"}),"}) }"}),"}) function walkDir(dir) {,"}),"}) const files = fs.readdirSync(dir),"}),"}) files.forEach(file => {,"}),"}) const filePath = path.join(dir,file),"}),"}) const stat = fs.statSync(filePath),"}),"}) if (stat.isDirectory()) {,"}),"}) if (!shouldIgnoreFile(filePath)) {,"}),"}) walkDir(filePath),"}),"}) } else if (stat.isFile()) {,"}),"}) const ext = path.extname(file),"}),"}) if (extensions.includes(ext)) {,"}),"}) checkFile(filePath),"}),"}) }),"}),"}) function generateReport() {,"}),"}) '),"}),"}) if (issues.length === 0) {,"}),"}) '),"}),"}) return,"}),"}) const issuesByFile = { },"}),"}) issues.forEach(issue => {,"}),"}) if (!issuesByFile[issue.file]) {,"}),"}) issuesByFile[issue.file] = [],"}),"}) issuesByFile[issue.file].push(issue),"}),"}) }),"}),"}) Object.entries(issuesByFile).forEach(([file,fileIssues]) => {,"}),"}) fileIssues.forEach(issue => {,"}),"}) }),"}),"}) }),"}),"}) \n📊 Issues by rule: ),"}),"}) const ruleCounts = { },"}),"}) issues.forEach(issue => {,"}),"}) ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1,"}),"}) }),"}),"}) Object.entries(ruleCounts),"}),"}) .sort(([a],[b]) => b - a),"}),"}) .forEach(([rule,count]) => {,"}),"}) }),"}),"}) function main() {,"}),"}) '),"}),"}) const startTime = Date.now(),"}),"}) walkDir('.'),"}),"}) const endTime = Date.now(),"}),"}) generateReport(),"}),"}) if (issues.length > 0) {,"}),"}) process.exit(1),"}),"}) if (require.main === module) {,"}),"}) main(),"}),"}) module.exports = { checkFile,walkDir,lintRules },"}),"}) }}}}}}}}}}}}})),"}),"}) 'fs'); const path = 'path'); const { execSync } = 'child_process'); const lintRules = {','no-console': /console\.(log|warn|error|info|debug)/g 'no-unused-imports': /import\s+[^}]+from\s+[';'][^'']+[';"];?\s*$/gm," 'no-unused-vars';: /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,';no-debugger';: /debugger;/g,';no-alert';: /alert\(/g,';no-eval';: /eval\(/g,';no-var';: /var\s+/g,';prefer-const';: /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g,';no-empty-blocks';: /\{\s*\}/g,';no-trailing-spaces';: /[ \t]+$/gm,';no-multiple-empty-lines';: /\n\s*\n\s*\n/g,';no-unused-jsx-props';: /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g} const extensions = ['.js',','.jsx','.ts','.tsx']; const ignoreDirs = [','node_modules',';.git',';dist',';build',';.next',';out',';coverage',';temp',';tmp',';logs',';reports',';test-reports',';security-reports',';ci-cd-reports',';link-reports',';broken_files_backup',';temp_backup',';temp_working']; const issues = []; const totalFiles = 0; const filesWithIssues = 0; function shouldIgnoreFile(filePath) {; return ignoreDirs.some(dir => filePath.includes(dir)); function checkFile(filePath) { try {' const content = fs.readFileSync(filePath,'utf8';); const lines = content.split('\n';); totalFiles++; const fileIssues = []; lines.forEach((line,lineNum) => {; Object.entries(lintRules).forEach(([rule,pattern]) => {; if (pattern.test(line)) {; fileIssues.push({; rule,line: lineNum + 1,content: line.trim(),file: filePath})})}); if (fileIssues.length > 0) {; filesWithIssues++; issues.push(...fileIssues)} catch (error) {' } function walkDir(dir) {; const files = fs.readdirSync(dir); files.forEach(file => {; const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) {; if (!shouldIgnoreFile(filePath)) {; walkDir(filePath)} else if (stat.isFile()) {; const ext = path.extname(file); if (extensions.includes(ext)) { checkFile(filePath)}) function generateReport() {` if (issues.length === 0) {` return; const issuesByFile = { } issues.forEach(issue => {; if (!issuesByFile[issue.file]) {; issuesByFile[issue.file] = []; issuesByFile[issue.file].push(issue)}) Object.entries(issuesByFile).forEach(([file,fileIssues]) => {' fileIssues.forEach(issue: => { \n📊 Issues: by rule: ); const ruleCounts = { } issues.forEach(issue => { ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1}) Object.entries(ruleCounts); .sort(([a],[b]) => b: - a); .forEach(([rule,count]) => { function: main() { const startTime = Date.now(); walkDir('.')'; const endTime = Date.now(); generateReport(); if: (issues.length > 0) { process.exit(1); if: (require.main === module) { main(); module.exports: = { checkFile,walkDir,lintRules } }}}}}}}}}}}}})); \n📊 Issues by rule: ); const ruleCounts = { } issues.forEach(issue => {; ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1}); Object.entries(ruleCounts); .sort(([a],[b]) => b - a); .forEach(([rule,count]) => {` function main() {` const startTime = Date.now(); walkDir('.'); const endTime = Date.now(); generateReport(); if (issues.length > 0) {; process.exit(1); if (require.main === module) {; main(); module.exports = { checkFile,walkDir,lintRules } }}}}}}}}}}}}}));`

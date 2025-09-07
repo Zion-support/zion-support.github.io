@@ -1,9 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
 =======
 #!/usr/bin/env node
 const { execSync } = require('child_process')
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+#!/usr/bin/env node
+const { execSync } = require('child_process')
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 =======
@@ -205,7 +218,22 @@ const { execSync } = require('child_process')
 #!/usr/bin/env node
 const { execSync } = require('child_process')
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function run(cmd) {
   return execSync(cmd, { stdio: 'inherit' })
 }
@@ -244,6 +272,15 @@ function push(branch) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
 <<<<<<< HEAD
 
@@ -260,6 +297,21 @@ module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
 module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+<<<<<<< HEAD
       break;
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<< HEAD
+      break;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -963,6 +963,10 @@ if (require.main === module) {
   cleaner.run().catch(error => {
     console.error('ESLint error cleaner failed": ', error);
     process.exit(1)})}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
   cleaner.run().catch(error => {)
 
@@ -970,3 +974,14 @@ if (require.main === module) {
 module.exports = ESLintErrorCleaner;
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+=======
+=======
+;
+<<<<<<< HEAD
+module.exports = ESLintErrorCleaner
+=======
+module.exports = ESLintErrorCleaner
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,9 +14,27 @@ import { AIListingForm } from './AIListingForm';
 import { GeneratedContentDisplay } from './GeneratedContentDisplay';
 import { LoadingContentSkeleton } from './LoadingContentSkeleton';
 import { logErrorToProduction } from '@/utils/productionLogger';
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react;
+import { useToast } from @/hooks/use-toast';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card;
+import { Sparkles } from lucide-react';
+import { supabase } from '@/integrations/supabase/client;
+import { AIListingForm } from ./AIListingForm';
+import { GeneratedContentDisplay } from './GeneratedContentDisplay;
+import { LoadingContentSkeleton } from ./LoadingContentSkeleton';
+import { logErrorToProduction } from '@/utils/productionLogger;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 interface GeneratedContent {
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
@@ -29,13 +53,22 @@ interface GeneratedContent {
     min: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
     max: number
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   description: string,
   tags: string[],
   suggested_price: {
     min: number,
     max: number;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   }
 
@@ -44,13 +77,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 interface AIListingGeneratorProps {
 
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
 interface GeneratedContent {;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface GeneratedContent {;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   description: string,;
   tags: string[],;
   suggestedPrice: {;
     min: number,;
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface GeneratedContent {
+  description: string,
+  tags: string[],
+  suggestedPrice: {
+    min: number,
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     max: number;
   };
   keyPoints: string[];
@@ -60,6 +114,9 @@ interface AIListingGeneratorProps {;
   onApplyGenerated?: (content: GeneratedContent,) => void,;
   initialValues?: {;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   keyPoints: string[];
 }
@@ -71,6 +128,11 @@ interface AIListingGeneratorProps {;
   initialValues?: {
 origin/cursor/automate-test-improve-and-merge-code-2533
     title?: string;
+<<<<<<< HEAD
+    category?: string;
+    keyFeatures?: string;
+=======
+<<<<<<< HEAD
 
 interface GeneratedContent  {description: string;
   tags: string[];
@@ -96,14 +158,38 @@ interface AIListingGeneratorProps  {interface GeneratedContent  {description: st
   initialValues?: {title?: string;
     category?: string;
     keyFeatures?: string;
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     targetAudience?: string;
+=======
+    category?: string;
+    keyFeatures?: string;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     targetAudience?: string
 
   }
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
+<<<<<<< HEAD
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+  const { toast } = useToast()
+  const [isLoading, setIsLoading] = useState(false)
+  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null)
+  const handleGenerate = async ({
+    title
+    category
+    keyFeatures
+    targetAudience
+  }: {
+=======
+<<<<<<< HEAD
 
   onApplyGenerated?: (content: GeneratedContent, ) => void,
   initial_values?: {
@@ -128,9 +214,13 @@ function AIListingGenerator() {const { toast } = use_toast ()const [is_loading, 
     category;
     key_features;
     target_audience;
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
   }: {
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+  }: {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     title: string,
     category: string,
     key_features: string,
@@ -138,25 +228,87 @@ function AIListingGenerator() {const { toast } = use_toast ()const [is_loading, 
 
 
   }) => {
+=======
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+  const { toast } = useToast()
+  const [isLoading, setIsLoading] = useState(false)
+  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null)
+  const handleGenerate = async ({
+    title
+    category
+    keyFeatures
+    targetAudience
+  }: {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     title: string
     category: string
     keyFeatures: string
     targetAudience: string  }) => {
     setIsLoading(true)
     try {
+<<<<<<< HEAD
       const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
+=======
+<<<<<<< HEAD
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
+        body: { title, category, key_features, target_audience }
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (error.message);
+      }
+      if (data && (data as any).error) {
+        throw new Error((data as any).error)
+      }
+
+      setGeneratedContent((data as any)?.generated || null)
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Sparkles } from 'lucide-react'
+import { supabase } from "@/integrations/supabase/client",
+import { AIListingForm } from "./AIListingForm",
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
+import {logErrorToProduction} from '@/utils/productionLogger',      toast({
+=======
+<<<<<<< HEAD
+      const { data, error } = await supabase.functions.invoke(ai-listing-generator', {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         body: { title, category, keyFeatures, targetAudience }
       })
       if (error) {
         throw new Error(error.message)
       }
 
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
 
       toast({
+=======
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
+        body: { title, category, key_features, target_audience }
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (error.message);
+      }
+      if (data && (data as any).error) {
+        throw new Error((data as any).error)
+      }
+>>>>>>> merged-prs-20250907-203621
+
+>>>>>>> origin/chore/fix-lint-and-merge
       setGeneratedContent((data as any)?.generated || null)
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -193,8 +345,16 @@ if (.error) {) {
       setGeneratedContent((data as any)?.generated || null),
       toast({
         title: "Content Generated",
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
   }: {title: string,category: string,key_features: string,target_audience: string;}) => {setIsLoading(true)try {const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {body: { title, category, key_features, target_audience }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }: {title: string,category: string,key_features: string,target_audience: string;}) => {setIsLoading(true)try {const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {body: { title, category, key_features, target_audience }
+  }: {title: string,category: string,key_features: string,target_audience: string;}) => {setIsLoading(true)try {const { data, error } = await supabase.functions.invoke (ai - listing - generator', {body: { title, category, key_features, target_audience }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       })// Check condition;
 if ( {) {$2;
 }
@@ -205,9 +365,18 @@ if ( {) {$2;
       })} catch (error) {logErrorToProduction('Error generating content:', { data: error })toast({title: "Generation Failed";
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.";
         variant: "destructive";
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
       });
         description: "AI has created optimized listing content for you."
+=======
+      });
+        description: AI has created optimized listing content for you."
+=======
+>>>>>>> merged-prs-20250907-203621
+        description: "AI has created optimized listing content for you."
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       })
     } catch (error) {
       logErrorToProduction('Error generating content:', { data: error }),
@@ -220,15 +389,30 @@ if ( {) {$2;
       setIsLoading(false)
     }
 
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   },
 
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
 
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
       toast({
@@ -237,6 +421,9 @@ if ( {) {$2;
       })
 export function AIListingGenerator({ onApplyGenerated, initialValues;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -349,19 +536,46 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         throw new Error((data as any).error);
       }
 
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
       setGeneratedContent((data as any)?.generated || null);
 
       toast({;
         title: "Content Generated",
         description: "AI has created optimized listing content for you.";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      setGeneratedContent((data as any)?.generated || null);
+
+      toast({
+        title: "Content Generated,
+        description: AI has created optimized listing content for you.";
+=======
+>>>>>>> merged-prs-20250907-203621
+      toast({;
+        title: "Content Generated",
+        description: "AI has created optimized listing content for you.";
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       });
     } catch (error) {;
       logErrorToProduction('Error generating content:', { data: error }),;
       toast({;
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
         title: "Generation Failed",;
         description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        title: "Generation Failed",;
+        description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
+        title: "Generation Failed,
+        description: error instanceof Error ? error && error.message : Failed to generate content. Please try again.",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         variant: "destructive";
       });
@@ -390,7 +604,10 @@ if (.error) {) {$2;
       })} catch (error) {logErrorToProduction ('Error generating content:', { data: error }),toast ({title: "Generation Failed",description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",variant: "destructive";
       })} finally {setIsLoading(false)}},const handleApply = () => {if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent),toast({title: "Content Applied";
         description: "The generated content has been applied to your listing.";
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       });
     }
   },
@@ -405,9 +622,19 @@ if (.error) {) {$2;
   return (
 
 
+<<<<<<< HEAD
     <div className="space-y-6">;
       })export function AIListingGenerator({ onApplyGenerated, initialValues;return (<div className="space-y-6">;
         title: "Generation Failed",
+=======
+    <div className="space-y-6>;
+      })export function AIListingGenerator({ onApplyGenerated, initialValues;return (<div className=space-y-6">;
+        title: "Generation Failed,
+=======
+>>>>>>> merged-prs-20250907-203621
+        title: "Generation Failed",
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
@@ -419,10 +646,15 @@ if (.error) {) {$2;
             Provide basic information and let AI generate optimized, SEO-friendly content for your listing;
           </p>;
         </CardHeader>;
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
         <CardContent>;
 
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+        <CardContent>;
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
@@ -433,20 +665,37 @@ if (.error) {) {$2;
             isLoading = {isLoading,}
             initialValues = {initialValues,}
 
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <AIListingForm 
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       {isLoading && <LoadingContentSkeleton />}
 
       {generatedContent && !isLoading && (
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
 
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
     <div className="space - y-6">;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <div className="space - y-6">;
+    <div className=space - y-6">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <CardContent>onSubmit = {handleGenerate}
             isLoading = {isLoading}
             initialValues = {initialValues}
@@ -488,8 +737,16 @@ if ( {) {$2;
             initialValues = {initialValues}<AIListingForm;
       {isLoading && <LoadingContentSkeleton />}
       {generatedContent && !isLoading && (<GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
+<<<<<<< HEAD
       )}<div className="space - y-6">;
       <Card className="border border - zion - blue - light bg - zion - blue - dark">;
+=======
+      )}<div className="space - y-6>;
+      <Card className=border border - zion - blue - light bg - zion - blue - dark">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <CardHeader>;
           <CardTitle className="flex items - center text-white">;
             <Sparkles className="h - 5 w - 5 mr - 2 text - zion-cyan" />;
@@ -501,14 +758,20 @@ if ( {) {$2;
         </CardHeader>;
         <CardContent>;
           <AIListingForm;
-            on_submit = {handle_generate }
-            is_loading = {is_loading }
-            initial_values = {initial_values }
+            on_submit = {handle_generate, }
+            is_loading = {is_loading, }
+            initial_values = {initial_values, }
           />;
         </CardContent>;
       </Card>;
       {is_loading && <LoadingContentSkeleton />}
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {generated_content && !is_loading && (<GeneratedContentDisplay content={generated_content} on_apply={handle_apply} />)}
     </div>)}: AIListingGeneratorProps) {const {toast;
 }= use_toast ()const [is_loading, setIsLoading] = useState (false)const [generated_content, setGeneratedContent] = useState < GeneratedContent | null> (null)const handle_generate = async ({title;
@@ -518,7 +781,13 @@ target_audience;
 }: {title: string;
 category: string;
 key_features: string;
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {generated_content && !is_loading && (
         <GeneratedContentDisplay content={generated_content} on_apply={handle_apply} />)}
     </div>);
@@ -539,27 +808,52 @@ category: string;,
 key_features: string;,
 target_audience: string;
 
-
 }) => {
   setIsLoading (true)
 try {
   const {
 
   data, error;
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
 }= await supabase.functions.invoke ('ai - listing - generator', {
   body: {
 }= await supabase.functions.invoke ('ai - listing - generator', {'
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}= await supabase.functions.invoke ('ai - listing - generator', {
+  body: {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+}= await supabase.functions.invoke ('ai - listing - generator', {'
+}= await supabase.functions.invoke ('ai - listing - generator, {
+  body: {}= await supabase.functions.invoke (ai - listing - generator', {'
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   body: {,
   title, category,  key_features, target_audience;
 });
 // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
 target_audience: string;}) => {setIsLoading (true)try {const {}catch (error) {';
   logErrorToProduction ('Error generating content:', {data, error;
 }= await supabase.functions.invoke ('ai - listing - generator', {body: {title, category,  key_features, target_audience;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+target_audience: string;}) => {setIsLoading (true)try {const {}catch (error) {';
+  logErrorToProduction ('Error generating content:', {data, error;
+}= await supabase.functions.invoke ('ai - listing - generator', {body: {title, category,  key_features, target_audience;
+target_audience: string;}) => {setIsLoading (true)try {const {}catch (error) {;
+  logErrorToProduction (Error generating content:', {data, error;
+}= await supabase.functions.invoke ('ai - listing - generator, {body: {title, category,  key_features, target_audience;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 })// Check condition;
 if ( {) {$2;
 }
@@ -581,8 +875,13 @@ targetAudience ;
 category: string;
 keyFeatures: string;
 targetAudience: string ;
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
 }) => {;
+=======
+}) => {;
+}) => {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   setIsLoading (true);
 try {;
   const {;
@@ -622,6 +921,9 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
   isLoading 
 }initialValues= {
   initialValues 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 }
   throw new Error (error.message);
 }// Check condition
@@ -661,10 +963,19 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
   isLoading && <LoadingContentSkeleton /> ;
 }{;
   generatedContent && !isLoading && (<GeneratedContentDisplaycontent= {
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   generatedContent 
 }onApply= {
   handleApply 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   generatedContent
 }onApply= {
   handleApply
@@ -672,8 +983,17 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }</div>) ;
 }'";
 
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   data: error;
 
 });
@@ -689,10 +1009,24 @@ if ( {) {
   $2
 }
   onApplyGenerated (generated_content);
+<<<<<<< HEAD
 toast ({
 }
 }'";
 };
+=======
+<<<<<<< HEAD
+toast ({
+=======
+<<<<<<< HEAD
+toast ({}
+}'";
+}
+=======
+toast ({
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 ;
@@ -712,7 +1046,14 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
   handleApply
 }/>)
 }</div>)
+<<<<<<< HEAD
 :src_backup/components/listing/AIListingGenerator.tsx
+=======
+<<<<<<< HEAD
+}'"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
 }) => {setIsLoading (true)try {const {data, error ;
@@ -740,3 +1081,7 @@ if ( {) {$2;
 }onApply= {handleApply;
 }/>)}</div>)}'";
 }'"
+=======
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

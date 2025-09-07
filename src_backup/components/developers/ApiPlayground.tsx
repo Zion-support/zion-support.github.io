@@ -33,10 +33,19 @@ method
       // Format the response with status information;
       const status_info = `HTTP ${res.status} ${res.status_text}\n\n`;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       set_response (status_info + response_text)} catch (err: any) {let error_message = Request failed';
       // Check condition;
 if ( {) {$2;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       set_response (status_info + response_text);
 
     } catch (err: any) {
@@ -44,7 +53,14 @@ if ( {) {$2;
       // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 import { useState } from 'react;
@@ -54,6 +70,11 @@ import { Button } from @/components/ui/button';
 import CodeBlock from './CodeBlock;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       } else {import { useState  } from react';
 import { Input  } from '@/components/ui/input;
 import { Textarea  } from @/components/ui/textarea';
@@ -115,6 +136,10 @@ required?: boolean ;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   name: string;
 type: string;
 required?: boolean ;
@@ -162,6 +187,11 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
           value={paramValues[p.name] || '}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       } else {errorMessage = err && err.message || 'Unknown error occurred;
       }setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting:\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`;
       )} finally {setLoading(false)}},return (<div className=space-y-4'>;
@@ -244,6 +274,10 @@ if (contentType?.includes ('application/json) ) {try {/> {params && params.map (
       {method !== GET" && method !== "DELETE && (<Textarea;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       ))}
       {method !== GET" && method !== "DELETE && (
 
@@ -251,6 +285,17 @@ if (contentType?.includes ('application/json) ) {try {/> {params && params.map (
           value={body}
           onChange={(e) => setBody(e.target.value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          className="font-mono"
+        />
+      )}
+      <Button onClick={sendRequest} disabled={loading}>
+        {loading ? "Sending..." : "Send Request"}
+      </Button>
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           className=font-mono";
         />;
       )}
@@ -265,6 +310,10 @@ if (contentType?.includes ('application/json) ) {try {/> {params && params.map (
         {loading ? "Sending..." : "Send Request"}
       </Button>
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {response && <CodeBlock code={response} language="json" />}
     </div>
   )
@@ -274,7 +323,14 @@ if (contentType?.includes ('application/json) ) {try {/> {params && params.map (
 
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default ApiPlayground;
 
 interface Param {

@@ -64,6 +64,11 @@ export default function ApiPerformanceTestingPage() {
   return (
 export default function ApiPerformanceTestingPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
     "k6/Gatling-compatible test runner","
     "SLO-aware latency reports","
@@ -71,13 +76,24 @@ export default function ApiPerformanceTestingPage() {
     "CI checks and PR annotations","
     "Synthetic traffic for staging""
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const features = [
     \"k6/Gatling-compatible test runner\",
     \"SLO-aware latency reports\",
     \"Regression baselines per endpoint\",
     \"CI checks and PR annotations\",
     \"Synthetic traffic for staging\"
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ];
 ;
   return (
@@ -391,11 +407,22 @@ key={,}
     </>)}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const features = [
+  'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging''
 =======
 const features = [
   'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ];
 
 const features  = null;return (<>;
@@ -450,11 +477,22 @@ const features  = null;return (<>;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const features = [
+		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging''
 =======
 const features = [
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 	];
 	return (
 		<>

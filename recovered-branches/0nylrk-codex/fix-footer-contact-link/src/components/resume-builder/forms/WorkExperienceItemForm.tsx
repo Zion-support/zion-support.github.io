@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+
+>>>>>>> merged-prs-20250907-203621
+import { useState  } from 'react';
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useState} from 'react';
 import {zodResolver} from "@hookform/resolvers/zod";"
 import {useForm} from "react-hook-form";"
@@ -15,10 +34,23 @@ import {format} from "date-fns";"
 import {CalendarIcon, Loader2} from "lucide-react";"
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";"
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState } from 'react',
+
+import { useState } from 'react',
+import { useState } from 'react',
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 '
 import { useState } from 'react',
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
 import { z } from "zod",
@@ -32,7 +64,33 @@ import { Textarea } from "@/components/ui/textarea",
 import { cn } from "@/lib/utils",
 import { Switch } from "@/components/ui/switch",
 import { format } from "date-fns",
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
+import { CalendarIcon, Loader2 } from "lucide-react",
+<<<<<<< HEAD
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
+
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
+=======
+
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Define form schema
 
 const formSchema = z.object({
@@ -40,6 +98,21 @@ const formSchema = z.object({
   role_title: z.string().min(1, "Role title is required"),
   start_date: z.date({
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    required_error: "Start date is required"})
+  end_date: z.date().optional()
+  is_current: z.boolean().default(false)
+  description: z.string().optional()
+  location: z.string().optional()})
+type FormValues = z.infer<typeof formSchema>;
+interface WorkExperienceItemFormProps {
+  initialData?: WorkExperience;
+  onSubmit: (data: WorkExperience) => Promise<void>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     required_error: "Start date is required"}),
   end_date: z.date().optional(),
   is_current: z.boolean().default(false),
@@ -48,7 +121,43 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>,
 
+<<<<<<< HEAD
 export function WorkExperienceItemForm({;
+
+=======
+<<<<<<< HEAD
+export function WorkExperienceItemForm({;
+=======
+interface WorkExperienceItemFormProps {
+  initialData?: WorkExperience,
+  onSubmit: (data: WorkExperience) => Promise<void>,
+<<<<<<< HEAD
+  onCancel: () => void
+}
+
+export function WorkExperienceItemForm({;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  initialData;
+  onSubmit;
+export function WorkExperienceItemForm({}
+  initialData,
+  onSubmit,
+
+  onCancel}: WorkExperienceItemFormProps) {
+<<<<<<< HEAD
+
+  onCancel}: WorkExperienceItemFormProps) {
+
+=======
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
+
+=======
+
+  onCancel: () => void
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   initialData;
   onSubmit;
@@ -60,11 +169,39 @@ export function WorkExperienceItemForm({}
 
   onCancel}: WorkExperienceItemFormProps) {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+      company_name: initialData?.company_name |""
+      role_title: initialData?.role_title |""
+      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date()
+      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined
+      is_current: initialData?.is_current |false
+      description: initialData?.description |""
+      location: initialData?.location |""}})
+  const { isSubmitting } = form.formState;
+  const watchIsCurrent = form.watch("is_current");
+  const watchRoleTitle = form.watch("role_title");
+  const watchCompanyName = form.watch("company_name");
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       company_name: initialData?.company_name || "",
 
       role_title: initialData?.role_title || "",
@@ -79,6 +216,17 @@ export function WorkExperienceItemForm({}
   const watchRoleTitle = form.watch("role_title"),"
   const watchCompanyName = form.watch("company_name"),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleFormSubmit = async (values: FormValues) => {
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
@@ -91,6 +239,10 @@ export function WorkExperienceItemForm({}
       description: values.description,    // Optional
       location: values.location,          // Optional
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleFormSubmit = async (values: FormValues) => {}
     // Create a properly typed WorkExperience object with all required fields;
     const workExperience: WorkExperience = {}
@@ -102,18 +254,57 @@ export function WorkExperienceItemForm({}
       is_current: values.is_current,      // Required;
       description: values.description,    // Optional;
       location: values.location,          // Optional;
+<<<<<<< HEAD
 
+=======
+=======
+
+<<<<<<< HEAD
+
+    }
+    await onSubmit(workExperience)
+  }
+    }
+    await onSubmit(workExperience)
+  }
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     },
     
     await onSubmit(workExperience)
   },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const handleAIEnhancement = (content: string) => {
+    form.setValue("description", content, { shouldDirty: true })
+    setIsEnhancementDialogOpen(false)
+<<<<<<< HEAD
+
+=======
+  }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  },
+
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const handleAIEnhancement = (content: string) => {
     form.setValue("description", content, { shouldDirty: true })
     setIsEnhancementDialogOpen(false)
 
   },
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
     <>
       <Form {...form}>"
@@ -131,7 +322,16 @@ export function WorkExperienceItemForm({}
                   </FormControl>
                   <FormMessage />
                 </FormItem>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -174,6 +374,7 @@ export function WorkExperienceItemForm({;
   onSubmit,;
   onCancel}: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),;
+<<<<<<< HEAD
 
   // Set up form;
   const form = useForm<FormValues>({;
@@ -222,6 +423,173 @@ export function WorkExperienceItemForm({;
             <FormField
               control={form && form.control}
 
+=======
+<<<<<<< HEAD
+// Define form schema;
+const formSchema = z && z.object({;
+  company_name: z && z.string().min(1, "Company name is required");
+  role_title: z && z.string().min(1, "Role title is required");
+  start_date: z && z.date({;
+    required_error: "Start date is required"}),;
+  end_date: z && z.date().optional(),;
+  is_current: z && z.boolean().default(false),;
+  description: z && z.string().optional(),;
+  location: z && z.string().optional()}),;
+type FormValues = z && z.infer<typeof formSchema>;
+interface WorkExperienceItemFormProps {;
+  initialData?: WorkExperience;
+  onSubmit: (data: WorkExperience) => Promise<void>,;
+  onCancel: () => void;
+}
+export function WorkExperienceItemForm(): any ({;
+  initialData;
+  onSubmit;
+  onCancel}: WorkExperienceItemFormProps) {;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  // Set up form;
+  const form = useForm<FormValues>({;
+    resolver: zodResolver(formSchema),;
+    defaultValues: {;
+      company_name: initialData?.company_name || "",;
+      role_title: initialData?.role_title || "",;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+import { useState } from 'react',;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { useForm } from "react-hook-form",;
+import { z } from "zod",;
+import { WorkExperience } from "@/types/resume",;
+import { Button } from "@/components/ui/button",;
+import { Calendar } from "@/components/ui/calendar",;
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { Textarea } from "@/components/ui/textarea",;
+import { cn } from "@/lib/utils",;
+import { Switch } from "@/components/ui/switch",;
+import { format } from "date-fns",;
+import { CalendarIcon, Loader2 } from "lucide-react",;
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",;
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",;
+;
+// Define form schema;
+const formSchema = z.object({;
+  company_name:z.string().min(1, "Company name is required"),;
+  role_title:z.string().min(1, "Role title is required"),;
+  start_date:z.date({;
+    required_error:"Start date is required"}),;
+  end_date:z.date().optional(),;
+  is_current:z.boolean().default(false),;
+  description:z.string().optional(),;
+  location:z.string().optional()}),;
+;
+type FormValues = z.infer<typeof formSchema>,;
+;
+interface WorkExperienceItemFormProps {;
+  initialData?:WorkExperience,;
+  onSubmit:(data:WorkExperience) => Promise<void>,;
+  onCancel:() => void;
+}
+;
+export function WorkExperienceItemForm({;
+  initialData,;
+  onSubmit,;
+  onCancel} WorkExperienceItemFormProps) {;
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),;
+;
+  // Set up form;
+  const form = useForm<FormValues>({;
+    resolver:zodResolver(formSchema),;
+    defaultValues:{;
+      company_name:initialData?.company_name || "",;
+      role_title:initialData?.role_title || "",;
+      start_date:initialData?.start_date ? new Date(initialData.start_date) :new Date(),;
+      end_date:initialData?.end_date ? new Date(initialData.end_date) :undefined,;
+      is_current:initialData?.is_current || false,;
+      description:initialData?.description || "",;
+      location:initialData?.location || ""}}),;
+  ;
+      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),;
+      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,;
+      is_current: initialData?.is_current || false,;
+      description: initialData?.description || "",;
+      location: initialData?.location || ""}}),;
+  const { isSubmitting } = form.formState,;
+  const watchIsCurrent = form.watch("is_current"),;
+  const watchRoleTitle = form.watch("role_title"),;
+  const watchCompanyName = form.watch("company_name"),;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+      start_date: initialData?.start_date ? new Date(initialData && initialData.start_date) : new Date(),;
+      end_date: initialData?.end_date ? new Date(initialData && initialData.end_date) : undefined,;
+      is_current: initialData?.is_current || false,;
+      description: initialData?.description || "",;
+      location: initialData?.location || ""}}),;
+
+  const { isSubmitting } = form && form.formState;
+  const watchIsCurrent = form && form.watch("is_current");
+  const watchRoleTitle = form && form.watch("role_title");
+  const watchCompanyName = form && form.watch("company_name");
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const handleFormSubmit = async (values: FormValues) => {;
+    // Create a properly typed WorkExperience object with all required fields;
+    const workExperience: WorkExperience = {;
+      id: initialData?.id,;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+      company_name: values.company_name,  // Required;
+      role_title: values.role_title,      // Required;
+      start_date: values.start_date,      // Required;
+      end_date: values.end_date,          // Optional;
+      is_current: values.is_current,      // Required;
+      description: values.description,    // Optional;
+      location: values.location,          // Optional;
+    },;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+      company_name: values && values.company_name,  // Required;
+      role_title: values && values.role_title,      // Required;
+      start_date: values && values.start_date,      // Required;
+      end_date: values && values.end_date,          // Optional;
+      is_current: values && values.is_current,      // Required;
+      description: values && values.description,    // Optional;
+      location: values && values.location,          // Optional;
+    };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    await onSubmit(workExperience);
+  },;
+  const handleAIEnhancement = (content: string) => {;
+    form.setValue("description", content, { shouldDirty: true }),;
+    setIsEnhancementDialogOpen(false);
+<<<<<<< HEAD
+  };
+
+=======
+  },;
+  return (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+    <>;
+      <Form {...form}>;"
+        <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+            <FormField
+              control={form && form.control}
+
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
   return (
     <>;
@@ -229,31 +597,100 @@ export function WorkExperienceItemForm({;
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
+=======
+            <FormField;
+              control={form.control}
+              name="company_name";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Company Name</FormLabel>;
                   <FormControl>;
+<<<<<<< HEAD
 
                   <FormMessage />;
                 </FormItem>;
               )}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+=======
+                    <Input placeholder="e.g. Acme Corporation" {...field} />;
+                  </FormControl>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+                  <FormMessage />;
+                </FormItem>;              )}
             />;
+<<<<<<< HEAD
 
             <FormField
               control={form && form.control}
               name="role_title"
+=======
+            ;
+            <FormField;
+              control={form.control}
+              name="role_title";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Role Title</FormLabel>;
                   <FormControl>;
+<<<<<<< HEAD
                     <Input placeholder="e && e.g. Senior Developer" {...field} />;
 
+<<<<<<< HEAD
+=======
+=======
+                    <Input placeholder="e.g. Senior Developer" {...field} />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+            />;
+            />;
+          </div>;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+            <FormField
+              control={form && form.control}
+              name="location"
+          </div>;
+;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+            <FormField;
+              control={form.control}
+              name="location";
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Location</FormLabel>;
+                  <FormControl>;
+import {useState} from 'react';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import { use_form } from './react - hook - form';
+import { z } from './zod';
+import { WorkExperience } from '@/types / resume';
+import { Button } from '@/components / ui / button';
+import { Calendar } from '@/components / ui / calendar';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
+import { Input } from '@/components / ui / input';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components / ui / popover';
+import { Textarea } from '@/components / ui / textarea';
+import { cn } from '@/lib / utils';
+import { Switch } from '@/components / ui / switch';
+import { format } from './date - fns';
+import { CalendarIcon, Loader2 } from './lucide-react';
+import { AIEnhancementButton } from '@/components / ai - enhancement / AIEnhancementButton';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { AIEnhancementDialog } from '@/components / ai - enhancement / AIEnhancementDialog';
 // Define form schema;
 const form_schema = z.object ({"
@@ -323,6 +760,13 @@ function WorkExperienceItemForm() {}
               name="company_name";
               render={({ field }) => (
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               control={form.control}
 
               name="role_title";
@@ -340,6 +784,7 @@ function WorkExperienceItemForm() {}
               control={form.control}"
               name="location";
               render={({ field }) => (
+<<<<<<< HEAD
 
               control={form.control}
               name="is_current";
@@ -352,6 +797,81 @@ function WorkExperienceItemForm() {}
 
             />;
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+                    <Input placeholder="e.g. Acme Corporation" {...field} />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+>>>>>>> merged-prs-20250907-203621
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="role_title"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Role Title</FormLabel>
+                  <FormControl>
+                    <Input placeholder="e.g. Senior Developer" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <FormField
+              control={form.control}
+              name="location"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Location</FormLabel>
+                  <FormControl>
+                    <Input placeholder="e.g. New York, NY (Remote)" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                <FormItem>;
+                  <FormLabel > Location</FormLabel>;
+                  <FormControl>;
+                    <Input placeholder="e.g. New York, NY (Remote)" {...field} />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>)}
+            />;
+            <FormField;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+              control={form.control}
+              name="is_current";
+              render={({ field }) => (
+                <FormItem className="flex flex - col">;
+                  <FormLabel > Current Position</FormLabel>;
+                  <div className="flex items - center gap - 2 h - 10">;
+                    <Switch;
+                      checked={field.value}
+<<<<<<< HEAD
+            />;
+=======
+
+            />;
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <FormField
               control={form && form.control}
               name="is_current"
@@ -365,18 +885,41 @@ function WorkExperienceItemForm() {}
                       id="current-position"
                     />;
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       onCheckedChange={field.on_change}
                       id="current - position";
                     />;
                     <label html_for="current - position" className="text - sm text - muted - foreground">;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;              )}
             />;
             ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             <FormField;
               control={form && form.control}"
@@ -392,23 +935,156 @@ function WorkExperienceItemForm() {}
                     />;"
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">;
 
+<<<<<<< HEAD
+=======
+=======
+            <FormField;
+              control={form.control}
+              name="is_current";
+              render={({ field }) => (;
+                <FormItem className="flex flex-col">;
+                  <FormLabel>Current Position</FormLabel>;
+                  <div className="flex items-center gap-2 h-10">;
+                    <Switch;
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                      id="current-position";
+                    />;
+                    <label htmlFor="current-position" className="text-sm text-muted-foreground">;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       I currently work here;
                     </label>;
                   </div>;
                   <FormMessage />;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+                </FormItem>;
+              )}
+            />;
+          </div>;
+;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+            <FormField;
+              control={form.control}
+              name="start_date";
+              render={({ field }) => (;
+                <FormItem className="flex flex-col">;
+                  <FormLabel>Start Date</FormLabel>;
+                  <Popover>;
+                    <PopoverTrigger asChild>;
+                      <FormControl>;
+                        <Button;
+                          variant={"outline"}
+                          className={cn(;
+                            "w-full pl-3 text-left font-normal",;
+                            !field.value && "text-muted-foreground";
+                          )}
+                        >;
+                          {field.value ? (;
+                            format(field.value, "MMM yyyy");
+                          ) :(;
+                            <span>Select date</span>;
+                          )}
+                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
+                        </Button>;
+                      </FormControl>;
+                    </PopoverTrigger>;
+                    <PopoverContent className="w-auto p-0" align="start">;
+                      <Calendar;
+                        mode="single";
+                        selected={field.value}
+                        onSelect={field.onChange}
+                        initialFocus;
+                        captionLayout="dropdown-buttons";
+                        fromYear={1990}
+                        toYear={new Date().getFullYear()}
+=======
+
+<<<<<<< HEAD
+=======
+                </FormItem>)}
+            />;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+            <FormField;
+              control={form.control}
+              name="start_date";
+              render={({ field }) => (
+                <FormItem className="flex flex - col">;
+                  <FormLabel > Start Date</FormLabel>;
+                  <Popover>;
+                    <PopoverTrigger as_child>;
+                      <FormControl>;
+                        <Button;
+                          variant={"outline"}
+                          className={cn (
+                            "w - full pl - 3 text - left font - normal";
+                            !field.value && "text - muted - foreground")}
+                        >;
+                          {field.value ? (
+                            format (field.value, "MMM yyyy")) : (
+                            <span > Select date</span>)}
+                          <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
+                        </Button>;
+                      </FormControl>;
+                    </PopoverTrigger>;
+                    <PopoverContent className="w - auto p - 0" align="start">;
+                      <Calendar;
+                        mode="single";
+                        selected={field.value}
+                        on_select={field.on_change}
+                        initial_focus;
+                        caption_layout="dropdown - buttons";
+                        from_year={1990}
+                        to_year={new Date ().getFullYear ()}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       />;
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <FormField
+                control={form && form.control}
+                name="end_date"
+                </FormItem>;
+              )}
+            />;
+            ;
+            {!watchIsCurrent && (;
+              <FormField;
+                control={form.control}
+                name="end_date";
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               <FormField
                 control={form && form.control}
                 name="end_date"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <FormField
                 control={form && form.control}
 
                 name="end_date"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 render={({ field }) => (;
 
                   <FormItem className="flex flex-col">;
@@ -416,6 +1092,10 @@ function WorkExperienceItemForm() {}
                     <Popover>;
                       <PopoverTrigger asChild>;
                         <FormControl>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                               <span>Select date</span>;
 
@@ -424,21 +1104,172 @@ function WorkExperienceItemForm() {}
                             className={cn(
 
                             )}"
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+                          <Button;
+                            variant={"outline"}
+                            className={cn(;
+                              "w-full pl-3 text-left font-normal",;
+                              !field.value && "text-muted-foreground";
+                            )}
+                          >;
+                            {field.value ? (;
+                              format(field.value, "MMM yyyy");
+                            ) :(;
+=======
+                          <Button
+                            variant={"outline"}
+                            className={cn(
+                              "w-full pl-3 text-left font-normal"
+                              !field && field.value && "text-muted-foreground"
+                            )}>;
+                            {field && field.value ? (;
+                              format(field && field.value, "MMM yyyy");
+                            ) : (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                              <span>Select date</span>;
+                            )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                           </Button>;
                         </FormControl>;
                       </PopoverTrigger>;"
                       <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
 
                         <Calendar"
+=======
+<<<<<<< HEAD
+
+                        <Calendar"
+=======
+<<<<<<< HEAD
+                          selected={field && field.value || undefined}
+                          onSelect={field && field.onChange}
+            />
+            <FormField
+            />;
+            <FormField;
+              control={form.control}
+              name="is_current"
+              render={({ field }) => (
+                <FormItem className="flex flex-col">
+                  <FormLabel>Current Position</FormLabel>
+                  <div className="flex items-center gap-2 h-10">
+                    <Switch
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                      id="current-position"
+                    />
+                    <label htmlFor="current-position" className="text-sm text-muted-foreground">
+                      I currently work here
+                    </label>
+                  </div>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <FormField
+              control={form.control}
+              name="start_date"
+              render={({ field }) => (
+                <FormItem className="flex flex-col">
+                  <FormLabel>Start Date</FormLabel>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <FormControl>
+                        <Button
+                          variant={"outline"}
+                          className={cn(
+                            "w-full pl-3 text-left font-normal",
+                            !field.value && "text-muted-foreground"
+                          )}
+                        >
+                          {field.value ? (
+                            format(field.value, "MMM yyyy")
+                          ) : (
+                            <span>Select date</span>
+                          )}
+                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                        </Button>
+                      </FormControl>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="start">
+                      <Calendar
+                        mode="single"
+                        selected={field.value}
+                        onSelect={field.onChange}
+                        initialFocus
+                        captionLayout="dropdown-buttons"
+                        fromYear={1990}
+                        toYear={new Date().getFullYear()}
+                      />
+                    </PopoverContent>
+                  </Popover>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {!watchIsCurrent && (
+              <FormField
+                control={form.control}
+                name="end_date"
+                render={({ field }) => (
+                  <FormItem className="flex flex-col">
+                    <FormLabel>End Date</FormLabel>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            variant={"outline"}
+                            className={cn(
+                              "w-full pl-3 text-left font-normal",
+                              !field.value && "text-muted-foreground"
+                            )}
+                          >
+                            {field.value ? (
+                              format(field.value, "MMM yyyy")
+                            ) : (
+                              <span>Select date</span>
+                            )}
+                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={field.value |undefined}
+                          onSelect={field.onChange}
+=======
+                        <Calendar
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           mode="single"
 
                           initialFocus"
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                          initialFocus
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           captionLayout="dropdown-buttons"
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
                           disabled={(date) => date > new Date()}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                           mode="single";
                           selected={field.value || undefined}
@@ -450,22 +1281,105 @@ function WorkExperienceItemForm() {}
                           toYear={new Date().getFullYear()}
                           disabled={(date) => date > new Date()}
 
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+                        <Calendar;
+                          mode="single";
+                          selected={field.value || undefined}
+                          onSelect={field.onChange}
+                          initialFocus;
+                          captionLayout="dropdown-buttons";
+                          fromYear={1990}
+                          toYear={new Date().getFullYear()}
+                          disabled={(date) => date > new Date()}
+=======
+=======
+                </FormItem>)}
+            />;
+            {!watchIsCurrent && (
+              <FormField;
+                control={form.control}
+                name="end_date";
+                render={({ field }) => (
+                  <FormItem className="flex flex - col">;
+                    <FormLabel > End Date</FormLabel>;
+                    <Popover>;
+                      <PopoverTrigger as_child>;
+                        <FormControl>;
+                          <Button;
+                            variant={"outline"}
+                            className={cn (
+                              "w - full pl - 3 text - left font - normal";
+                              !field.value && "text - muted - foreground")}
+                          >;
+                            {field.value ? (
+                              format (field.value, "MMM yyyy")) : (
+                              <span > Select date</span>)}
+                            <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
+                          </Button>;
+                        </FormControl>;
+                      </PopoverTrigger>;
+                      <PopoverContent className="w - auto p - 0" align="start">;
+                        <Calendar;
+                          mode="single";
+                          selected={field.value || undefined}
+                          on_select={field.on_change}
+                          initial_focus;
+                          caption_layout="dropdown - buttons";
+                          from_year={1990}
+                          to_year={new Date ().getFullYear ()}
+                          disabled={(date) => date > new Date ()}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         />;
 
                       </PopoverContent>;
                     </Popover>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                    <FormMessage />;
+<<<<<<< HEAD
+                  </FormItem>;                )}
+              />;
+            )}
+          </div>;
+;
+          <FormField;
+            control={form.control}
+            name="description";
+=======
+
+          </div>;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             control={form && form.control}
             name="description"
           <FormField
             control={form && form.control}
             name="description"
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             render={({ field }) => (;
               <FormItem>;"
                 <div className="flex justify-between items-center">;
                   <FormLabel>Description</FormLabel>;"
                   <div className="flex gap-2">;
+<<<<<<< HEAD
 
                     <AIEnhancementButton;
                       options={{}
@@ -483,6 +1397,139 @@ function WorkExperienceItemForm() {}
 
                       className="text-xs";
 
+=======
+<<<<<<< HEAD
+
+                    <AIEnhancementButton;
+                      options={{}
+=======
+<<<<<<< HEAD
+                        enhancementType: "work-description",
+                        content: field && field.value || "",
+=======
+                    <AIEnhancementButton
+                      options={{
+
+                        enhancementType: "work-description",
+                        content: field && field.value || "",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+                        context: `${watchRoleTitle} at ${watchCompanyName}`
+                      }}"
+                      onEnhanced={(content) => form && form.setValue("description", content, { shouldDirty: true })}"
+                      buttonText="Enhance with AI";
+                    />;
+<<<<<<< HEAD
+
+                    <Button"
+                      type="button""
+                      variant="outline""
+                      size="sm"
+                      onClick={() => setIsEnhancementDialogOpen(true)}
+
+                      className="text-xs";
+
+=======
+<<<<<<< HEAD
+                        />
+                      </PopoverContent>
+                    </Popover>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            )}
+          </div>
+          <FormField
+            control={form.control}
+            name="description"
+            render={({ field }) => (
+              <FormItem>
+                <div className="flex justify-between items-center">
+                  <FormLabel>Description</FormLabel>
+                  <div className="flex gap-2">
+                    <AIEnhancementButton
+                      options={{
+                        enhancementType: "work-description"
+                        content: field.value |""
+                        context: `${watchRoleTitle} at ${watchCompanyName}`
+                      }}
+                      onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true })}
+                      buttonText="Enhance with AI"
+                    />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setIsEnhancementDialogOpen(true)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+                      className="text-xs"
+                    >
+                      AI Writer
+                    </Button>
+                  </div>
+                </div>
+                <FormControl>
+                  <Textarea
+                    placeholder="Describe your responsibilities, achievements, and skills used in this role..."
+<<<<<<< HEAD
+                    className = $2;
+          content: form.getValues("description") || "",
+=======
+                    className="min-h-[150px]"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <div className="flex justify-end gap-2">
+            <Button type="button" variant="outline" onClick={onCancel}>
+              Cancel
+            </Button>
+            <Button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Saving...
+                </>
+              ) : (
+                <>Save</>
+              )}
+            </Button>
+          </div>
+        </form>
+      </Form>
+      <AIEnhancementDialog
+        title="Enhance Work Experience Description"
+        isOpen={isEnhancementDialogOpen}
+        onClose={() => setIsEnhancementDialogOpen(false)}
+        onApply={handleAIEnhancement}
+        defaultOptions={{
+          enhancementType: "work-description"
+          content: form.getValues("description") |""
+
+>>>>>>> merged-prs-20250907-203621
+          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+        initialContent={form.getValues("description") |""}
+      />
+    </>
+  )
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                      className="text-xs";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </FormItem>)}
               />)}
           </div>;
@@ -501,9 +1548,35 @@ function WorkExperienceItemForm() {}
                       type="button";
                       variant="outline";
                       size="sm";
+<<<<<<< HEAD
                       onClick={() => setIsEnhancementDialogOpen(true)}
                       className="text-xs";
 
+=======
+<<<<<<< HEAD
+                      onClick={() => setIsEnhancementDialogOpen(true)}
+                      className="text-xs";
+
+=======
+                      on_click={() => setIsEnhancementDialogOpen (true)}
+                      className="text - xs";
+                    <AIEnhancementButton;
+                      options={{;
+                        enhancementType:"work-description",;
+                        content:field.value || "",;
+                        context:`${watchRoleTitle} at ${watchCompanyName}`;
+                      }}
+                      onEnhanced={(content) => form.setValue("description", content, { shouldDirty:true })}
+                      buttonText="Enhance with AI";
+                    />;
+                    <Button;
+                      type="button";
+                      variant="outline";
+                      size="sm";
+                      onClick={() => setIsEnhancementDialogOpen(true)}
+                      className="text-xs";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     >;
 
                       AI Writer;
@@ -511,16 +1584,53 @@ function WorkExperienceItemForm() {}
                   </div>;
                 </div>;
                 <FormControl>;
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+                  <Textarea;
+                    placeholder="Describe your responsibilities, achievements, and skills used in this role...";
+                    className="min-h-[150px]";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+              </FormItem>;
+            )}
+          />;
+          ;
+          <div className="flex justify-end gap-2">;
+            <Button type="button" variant="outline" onClick={onCancel}>;
+              Cancel;
+            </Button>;
+            <Button type="submit" disabled={isSubmitting}>;
+              {isSubmitting ? (;
+                <>;
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+                  Saving...;
+                </>;
+              ) :(;
+                <>Save</>;
+              )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </Button>;
           </div>;
         </form>;
       </Form>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         initialContent={form && form.getValues("description") || ""}
       />;
@@ -528,6 +1638,12 @@ function WorkExperienceItemForm() {}
   );
 }
 
+<<<<<<< HEAD
+=======
+=======
+      <AIEnhancementDialog;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         title="Enhance Work Experience Description";
         is_open={isEnhancementDialogOpen}
         on_close={() => setIsEnhancementDialogOpen (false)}
@@ -541,21 +1657,45 @@ function WorkExperienceItemForm() {}
 }
 ;
 
+<<<<<<< HEAD
 ;
       <AIEnhancementDialog;"
+=======
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+      <AIEnhancementDialog;"
+=======
+      <AIEnhancementDialog;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         title="Enhance Work Experience Description";
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         defaultOptions={{;"
           enhancementType:"work-description",;"
           content:form.getValues("description") || "",;`
           context:`${watchRoleTitle} at ${watchCompanyName}`}}"
 
+<<<<<<< HEAD
+=======
+=======
+        defaultOptions={{;
+          enhancementType:"work-description",;
+          content:form.getValues("description") || "",;
+          context:`${watchRoleTitle} at ${watchCompanyName}`}}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         initialContent={form.getValues("description") || ""}
       />;
     </>;
   ),;}
+<<<<<<< HEAD
  is current: z.boolean () .default (false),
 
               name="is_current"")
@@ -721,6 +1861,8 @@ location: z.string () .optional ()
 });
 type FormValues = z.infer<typeof formSchema>;
 //Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {}
+<<<<<<< HEAD
+=======
   await onSubmit (workExperience) 
 };
 setIsEnhancementDialogOpen (false)
@@ -739,9 +1881,55 @@ setIsEnhancementDialogOpen (false)
 }</div> <FormField <FormLabel>Description</FormLabel> <div className="flex gap-2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min-h-[150px]" {}
   ...field;
 }/> </FormControl> <FormMessage /> </FormItem>) "
+=======
+ is current: z.boolean () .default (false);
+description: z.string () .optional ();
+location: z.string () .optional () 
+});
+type FormValues = z.infer<typeof formSchema>;
+//Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  await onSubmit (workExperience) 
+};
+setIsEnhancementDialogOpen (false);
+};
+}/> <FormField </FormControl> <FormMessage /> </FormItem>) "
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) "
+}/> <FormField <FormLabel>Current Position</FormLabel> <div className="flex items-center gap-2 h-10" > <Switch /> <label htmlFor="current-position" className="text-sm text-muted-foreground" > I currently work here </label> </div> <FormMessage /> </FormItem>) "
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Start Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) "
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
+}/> {}
+  !watchIsCurrent && (<FormField control= {}
+  form.control;
+}<FormLabel>End Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) "
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
+<<<<<<< HEAD
+}/>) "
+}</div> <FormField <FormLabel>Description</FormLabel> <div className="flex gap-2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min-h-[150px]" {}
+  ...field;
+}/> </FormControl> <FormMessage /> </FormItem>) "
+=======
+}/>) 
+}</div> <FormField <FormLabel>Description</FormLabel> <div className="flex gap-2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min-h-[150px]" {
+  ...field 
+}/> </FormControl> <FormMessage /> </FormItem>) 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) 
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) 
 }
 }
 }
+<<<<<<< HEAD
 ;
+=======
+<<<<<<< HEAD
+;
+=======
+;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

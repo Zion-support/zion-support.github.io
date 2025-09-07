@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 ;
@@ -6,13 +11,20 @@ import React from 'react;
 import { QrCode  } from lucide-react';
 import { AppStoreButtons  } from './AppStoreButtons;
 export const QrCodeDownload: React.FC;
+>>>>>>> merged-prs-20250907-203621
 :src/components/mobile-app/QrCodeDownload.tsx
 }
 import React from "react"
 import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react
 import { QrCode } from lucide-react'import { AppStoreButtons } from ./AppStoreButtons"
 
+>>>>>>> merged-prs-20250907-203621
 export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#, // Replace with actual App Store URL
@@ -48,10 +60,13 @@ return (
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
               
 
+>>>>>>> merged-prs-20250907-203621
 :src/components/mobile-app/QrCodeDownload.tsx
               <div className="flex gap-2 items-center text-sm text-gray-400>
                 <span className=block h-1 w-1 rounded-full bg-zion-purple"></span>
@@ -88,9 +103,20 @@ export const QrCodeDownload: React.FC = () => {;
 
   // App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
+<<<<<<< HEAD
   const googlePlayUrl = #, // Replace with actual Google Play URL;
 
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
+=======
+<<<<<<< HEAD
+  const googlePlayUrl = "#", // Replace with actual Google Play URL;
+
+    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
+=======
+  const googlePlayUrl = #, // Replace with actual Google Play URL;
+
+    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <<<<<<< HEAD
 import { QrCode } from lucide-react'import { AppStoreButtons  } from './AppStoreButtons';
 export const QrCodeDownload: React.FC = () => {// App store links - these would come from environment variables in production;
@@ -99,6 +125,10 @@ export const QrCodeDownload: React.FC = () => {// App store links - these would 
   return (<section className=py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className="container mx-auto px-4">;
         <div className=max-w-5xl mx-auto>;
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">;
@@ -120,9 +150,18 @@ export const QrCodeDownload: React.FC = () => {// App store links - these would 
                 <span>Compatible with iOS 14+ and Android 8.0+</span>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className=w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+                <div className=w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   <QrCode className="w-full h-full p-4 />;
                   {/* This would be replaced with an actual QR code in production */}
@@ -137,6 +176,11 @@ export const QrCodeDownload: React.FC = () => {// App store links - these would 
       </div>;
     </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -225,6 +269,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>;
   ))
                 </div>
+>>>>>>> merged-prs-20250907-203621
 :src/components/mobile-app/QrCodeDownload.tsx
   );
 }

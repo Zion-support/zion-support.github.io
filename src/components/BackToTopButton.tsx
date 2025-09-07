@@ -1,12 +1,71 @@
+<<<<<<< HEAD:src/components/BackToTopButton.tsx
 import { ArrowUp } from 'lucide-react'
+=======
+<<<<<<< HEAD:_conflicted_disabled/src/components/BackToTopButton.tsx
+import { ArrowUp } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import { useEffect, useState } from "react";
+export function BackToTopButton() {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const updateVisibility = null;
+  return (
+    <button
+      aria-label="Back to top"
+import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
+export function BackToTopButton() {
+  const [visible, setVisible] = useState(false)
+  useEffect((,) => {
+    const updateVisibility = () => {
+      setVisible(window.scrollY > 400)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { ArrowUp } from 'lucide-react';
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621:src/components/BackToTopButton.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc:_conflicted_disabled/src/components/BackToTopButton.tsx
 import { useEffect, useState } from "react";
 
 export function BackToTopButton() {
   const [visible, setVisible] = useState(false);
+=======
+import { useEffect, useState } from 'react';
+import { useEffect, useState  } from './react';
+export /**
+ * BackToTopButton - Function description
+ */
+function BackToTopButton() {
+  const [visible, set_visible] = useState (false);
+  useEffect ((, ) => {
+    const update_visibility = () =>: any {
+      set_visible (window.scroll_y > 400);
+    }
+<<<<<<< HEAD
+    updateVisibility()
+    window.addEventListener('scroll', updateVisibility)
+    return () => window.removeEventListener('scroll', updateVisibility)
+  }, [])
+  const scrollToTop = () => {
+    const opts: ScrollToOptions = { top: 0, behavior: 'smooth' }
+    window.scrollTo(opts)
+    document.documentElement.scrollTo(opts)
+    document.body.scrollTo(opts)
+  }
+import { useEffect, useState } from "react",
+
+export function BackToTopButton() {
+  const [visible, setVisible] = useState(false),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   useEffect(() => {
     const updateVisibility = () => {
       setVisible(window.scrollY > 400)
+<<<<<<< HEAD:src/components/BackToTopButton.tsx
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc:_conflicted_disabled/src/components/BackToTopButton.tsx
     };
     updateVisibility();
     window.addEventListener("scroll", updateVisibility);
@@ -14,15 +73,38 @@ export function BackToTopButton() {
   }, []);
 
   const scrollToTop = () => {
-    const opts: ScrollToOptions = { top: 0, behavior: "smooth" },
+    const opts: ScrollToOptions = { top: 0, behavior: 'smooth' };
     window.scrollTo(opts);
+<<<<<<< HEAD:_conflicted_disabled/src/components/BackToTopButton.tsx
     document.documentElement.scrollTo(opts);
+<<<<<<< HEAD:src/components/BackToTopButton.tsx
     document.body.scrollTo(opts)
   };
 
+=======
+    document.body.scrollTo(opts);
+  };
+
+=======
+>>>>>>> merged-prs-20250907-203621:src/components/BackToTopButton.tsx
+=======
+    },
+    updateVisibility(),
+    window.addEventListener("scroll", updateVisibility),
+    return () => window.removeEventListener("scroll", updateVisibility)
+  }, []),
+
+  const scrollToTop = () => {
+    const opts: ScrollToOptions = { top: 0, behavior: "smooth" },
+    window.scrollTo(opts),
+    document.documentElement.scrollTo(opts),
+    document.body.scrollTo(opts)
+  },
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc:_conflicted_disabled/src/components/BackToTopButton.tsx
   return (
-    <button,
-  aria-label="Back to top"
+    <button
+      aria-label="Back to top"
       onClick={scrollToTop}
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -31,4 +113,83 @@ export function BackToTopButton() {
       <ArrowUp className="h-5 w-5" />
     </button>
   )
+=======
+    update_visibility ();
+    window.addEventListener ('scroll', update_visibility);
+    return () => window.removeEventListener ('scroll', update_visibility);
+  }, []);
+  const scrollToTop = () =>: any {
+    const opts: ScrollToOptions = { top: 0, behavior: 'smooth' }
+    window.scroll_to (opts);
+    document.document_element.scroll_to (opts);
+    document.body.scroll_to (opts);
+  }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      >;
+      <ArrowUp className='h - 5 w - 5' />;
+    </button>);
+}"}
+import { ArrowUp } from 'lucide-react';
+import { useEffect, useState } from "react",;
+export function BackToTopButton() {;
+  const [visible, setVisible] = useState(false),;
+  useEffect(() => {;
+    const updateVisibility = () => {;
+      setVisible(window.scrollY > 400);
+    },;
+    updateVisibility(),;
+    window.addEventListener("scroll", updateVisibility),;
+    return () => window.removeEventListener("scroll", updateVisibility);
+  }, []),;
+  const scrollToTop = () => {;
+    const opts: ScrollToOptions = { top: 0, behavior: "smooth" },;
+    window.scrollTo(opts),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+    document.documentElement.scrollTo(opts);
+    document.body.scrollTo(opts);
+  };
+
+  return (
+    <button
+      aria-label="Back to top"
+      onClick={scrollToTop}
+      className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
+        visible ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+<<<<<<< HEAD
+    >
+      <ArrowUp className="h-5 w-5" />
+    </button>
+  );
 }
+<<<<<<< HEAD:src/components/BackToTopButton.tsx
+=======
+=======
+<<<<<<< HEAD
+      className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
+        visible ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+<<<<<<< HEAD:_conflicted_disabled/src/components/BackToTopButton.tsx
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
+=======
+    >
+      <ArrowUp className="h-5 w-5" />
+    </button>
+  )
+}"}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    >;
+      <ArrowUp className="h-5 w-5" />;
+    </button>;
+  );
+}
+<<<<<<< HEAD
+;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621:src/components/BackToTopButton.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc:_conflicted_disabled/src/components/BackToTopButton.tsx

@@ -10,6 +10,13 @@ export default function GlobalSearchBar() {;
       return <div>Something went wrong.</div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <input;
+        value={query}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react';'
 import { useEffect, useMemo, useRef, useState } from 'react';'
 import { useRouter } from 'next/router';'
@@ -59,6 +66,10 @@ value={query}
       <input;
         value={query}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         onChange={e => setQuery(e && e.target.value)}
 </input>
       <div className='absolute inset-y-0 right-2 flex items-center gap-2'>;
@@ -91,6 +102,13 @@ value={query}
         <div className="absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg">;"
           <ul className="max-h-64 overflow-auto py-1 text-sm">;"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <button;"
+          aria-label='Voice search
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
 
@@ -148,6 +166,10 @@ type='button''
         <button;"
           aria-label='Voice search
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         >
           className='text-sm font-medium text-indigo-600 hover:text-indigo-700
         <div className='absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg'>
@@ -178,10 +200,20 @@ if ( {) {
     controller.current?.abort ();
     controller.current = new AbortController ();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    const run = async () => {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
 =======
     const run = async () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       try {
   // TODO: Implement
 }
@@ -212,17 +244,32 @@ const id = set_timeout (run, 150);
     // Check condition;
 if (return) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const Speech: any =;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   $2
 }
 =======
 const Speech: any =;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       (window as any).SpeechRecognition ||;
       (window as any).webkitSpeechRecognition;    // Check condition;
 }    fetch ('/api / telemetry / search', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ q: query }) }).catch (() => {}),`;
     set_open (false);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
     // Check condition
 }
@@ -236,11 +283,22 @@ if (return) {
   $2
 }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // TODO: Implement
     // Check condition;
       (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
     // Check condition;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const rec = new Speech ();
     rec.lang = 'en - US';
     rec.onresult = (e: any) => {

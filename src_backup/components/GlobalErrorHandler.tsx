@@ -1,6 +1,12 @@
 reportError: (error: Error, context?: any) => void;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react;
 reportError: (error: Error, context?: any) => void;import React, { createContext, useContext, useState, useCallback, ReactNode } from react';
 import { toast   } from '@/hooks/use-toast;
@@ -14,6 +20,10 @@ import React, {createContext;
 =======
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { toast  } from '@/hooks/use-toast';
 import { Button  } from '@/components/ui/button';
 import React, {
@@ -42,6 +52,11 @@ interface ErrorContextType {
   useCallback,
   ReactNode,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { logErrorToProduction } from '@/utils/productionLogger;
 interface ErrorContextType  {reportError: (error: Error, context?: any) => void;showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
@@ -89,6 +104,10 @@ import { toast } from '@/hooks / use - toast';
 import { Button } from @/components / ui / button';'
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from lucide-react;'
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 } from 'react';'
 import { toast } from '@/hooks / use - toast';'
 import { Button } from '@/components / ui / button';'
@@ -626,6 +645,12 @@ export function useGlobalErrorHandler(): ErrorContextType {
 
 // Helper function to convert technical errors to user-friendly messages
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+function getErrorMessage(error: Error): string {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }: undefined})}, [])const clearAllErrors = useCallback(() => {setRetryCount({})// Clear any active toasts would go here if the toast system supports it;
   }, [])import * as Sentry from '@sentry/nextjs',import {logErrorToProduction} from @/utils/productionLogger,interface ErrorContextType  {reportError: (error: Error, context?: any) => void,showRetryableError: (error: Error, retryAction?: () => void) => void,showNetworkError: (retryAction?: () => void) => void,showAuthError: (loginAction?: () => void) => void,clearAllErrors: () => void;
 }const ErrorContext = createContext<ErrorContextType | null>(null),interface GlobalErrorHandlerProps  {children: ReactNode;
@@ -666,3 +691,7 @@ export function useErrorHandler() {const { reportError, showRetryableError, show
 =======
 function getErrorMessage(error: Error): string {
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

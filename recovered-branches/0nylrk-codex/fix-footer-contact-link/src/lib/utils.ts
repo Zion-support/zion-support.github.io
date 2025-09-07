@@ -1,6 +1,21 @@
+<<<<<<< HEAD
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import clsx, { type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
@@ -8,12 +23,65 @@ import { twMerge } from "tailwind-merge"
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+<<<<<<< HEAD
+
+import clsx, { type ClassValue } from "clsx"""
+import { twMerge } from "tailwind-merge""
+=======
+<<<<<<< HEAD
 
 import clsx, { type ClassValue } from "clsx"""
 import { twMerge } from "tailwind-merge""
 export function cn(...inputs: ClassValue[]) {
 
   return twMerge(clsx(inputs))
+
+}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+import clsx, { type ClassValue } from &quot;clsx & quot;
+import { tw_merge } from &quot;tailwind - merge & quot;
+;
+export /**
+ * cn - Function description;
+ */
+function cn() {
+  return tw_merge (clsx (inputs));
+}
+<<<<<<< HEAD
+import clsx, { type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+ ;
+}"
+import clsx, { type ClassValue } from "clsx";""
+import { twMerge } from "tailwind-merge";"
+=======
+<<<<<<< HEAD
+import clsx, { type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+ ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+export function cn(...inputs:ClassValue[]) {;
+  return twMerge(clsx(inputs));
+} export function cn (...inputs: ClassValue[]) {
+  return twMerge (clsx (inputs) ) 
+<<<<<<< HEAD
+import clsx, { type ClassValue } from &quot;clsx&quot;
+import { twMerge } from &quot;tailwind-merge&quot;"
+};
+=======
+}
+>>>>>>> merged-prs-20250907-203621
+import clsx, { type ClassValue } from &quot;clsx&quot;
+import { twMerge } from &quot;tailwind-merge&quot;
+import clsx, { type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+ 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+export function cn(...inputs: ClassValue[]) {
+
+  return twMerge(clsx(inputs))
+<<<<<<< HEAD
 
 }
 import clsx, { type ClassValue } from &quot;clsx & quot;
@@ -38,3 +106,14 @@ export function cn(...inputs:ClassValue[]) {;
 import clsx, { type ClassValue } from &quot;clsx&quot;
 import { twMerge } from &quot;tailwind-merge&quot;"
 };
+=======
+<<<<<<< HEAD
+};
+=======
+};
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

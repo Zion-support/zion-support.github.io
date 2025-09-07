@@ -1,6 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+totalSize = getDirectorySize(buildDir);
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 totalSize = getDirectorySize(buildDir);
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -246,6 +260,10 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
       
@@ -255,6 +273,16 @@ const path = require('path')
 =======
       return size}}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    totalSize = getDirectorySize(buildDir);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const recommendations = [];
 
       recommendations.push('Consider code splitting to reduce bundle size')}
@@ -274,6 +302,19 @@ if (require.main === module) {
   });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -283,6 +324,10 @@ module.exports = { runSimpleAutomation }) {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 module.exports = SimpleAutomationRunner;
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -297,6 +342,23 @@ module.exports = { runSimpleAutomation }) {
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+module.exports = { runSimpleAutomation }) {
+     {
+  runSimpleAutomation().catch(console.error)}
+module.exports = { runSimpleAutomation }) {
+     {
+  runSimpleAutomation().catch(console.error)}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 module.exports = { runSimpleAutomation }}
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
@@ -320,7 +382,32 @@ const { execSync } = require('child_process')
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+        "status"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        "status"
+        "status"
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "status"
         "status"
 <<<<<<< HEAD
@@ -329,6 +416,10 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
         "status"
@@ -343,3 +434,12 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

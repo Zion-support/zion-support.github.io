@@ -35,6 +35,15 @@ import React from 'react';
       <blockquote className="italic opacity-90">“{quote}”</blockquote>""
       <figcaption className="mt-2 font-medium opacity-80">— {_author}</figcaption>"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <span className='leading-none'>{type}</span>
+    </figure>);  const color_map = {`;
+    </figure>;"
+    </figure>"`;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     </figure>
   )
@@ -96,3 +105,7 @@ return (;
     </figure>;"
     </figure>"`;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

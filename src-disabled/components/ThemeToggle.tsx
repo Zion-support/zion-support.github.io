@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 :src_backup/components/ThemeToggle.tsx
 import React from 'react';
 import { Sun, Moon, Monitor  } from 'lucide-react';
 import { useTheme  } from './ThemeProvider';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import { Sun, Moon, Monitor  } from 'lucide-react';
+import { useTheme  } from './ThemeProvider';
+import React from 'react;
+import { Sun, Moon, Monitor  } from lucide-react';
+import { useTheme  } from './ThemeProvider;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const ThemeToggle: React.FC = () => {const { theme, setTheme }  = useTheme()const themes = [;
     { name: 'light', icon: Sun, label: 'Light' },{ name: 'dark', icon: Moon, label: 'Dark' },{ name: 'system', icon: Monitor, label: 'System' }
   ];return (<div className="relative">;
@@ -23,8 +35,18 @@ const ThemeToggle: React.FC = () => {const { theme, setTheme }  = useTheme()cons
           )})}
       </div>;
   )}export default ThemeToggle;
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Sun, Moon } from 'lucide-react';
+=======
+import React, { useState, useEffect } from 'react;
+import { Sun, Moon } from lucide-react';
+=======
+>>>>>>> merged-prs-20250907-203621
+import React, { useState, useEffect } from 'react';
+import { Sun, Moon } from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const ThemeToggle: React.FC = () => {,
   const [isDark, setIsDark] = useState(false);
   useEffect(() => {
@@ -92,4 +114,16 @@ const ThemeToggle: React.FC = () => {
       ))}
     </div>
   );
+<<<<<<< HEAD
 };
+=======
+<<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

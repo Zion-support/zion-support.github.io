@@ -14,6 +14,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!['viewslikesshares'].includes(metric)) return res.status(400).json({ error: 'Invalid metric' });
   const post = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return res.status(200).json({ "ok": true, "metrics": post.metrics });
   if (!post) return res && res.status(404).json({ "error": 'Not found' });'
   return res && res.status(200).json({ "ok": true, "metrics": post && post.metrics });export default function handler() {
@@ -25,6 +30,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(200).json({ "ok": true, "metrics": post && post.metrics });
 import { increment_metric } from '@/utils / data / blog_store';'
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return res.status(200).json({ ok: true, metrics: post.metrics });
   if (!post) return res && res.status(404).json({ error: 'Not found' });
   return res && res.status(200).json({ ok: true, metrics: post && post.metrics });export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -32,12 +41,25 @@ import { increment_metric } from '@/utils / data / blog_store';'
   if (!['viewslikesshares'].includes(metric)) return res && res.status(400).json({ error: 'Invalid metric' });
   return res && res.status(200).json({ ok: true, metrics: post && post.metrics });
 import { increment_metric } from '@/utils / data / blog_store';
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default /**
  * handler - Function description;
  */
 function handler() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  if (return res.status (405).end ()) {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   if (return res.status (405).end ()) {
   $2
@@ -74,6 +96,10 @@ if () return res.status (400).json ({ "error": 'Invalid metric' })) {'
 return res.status (200).json ({ "ok": true, "metrics": post.metrics });
 =======
   if (return res.status (405).end ()) {
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   $2;
   if ()
     return res.status (400).json ({ error: 'Invalid params' })) {
@@ -85,5 +111,12 @@ return res.status (200).json ({ "ok": true, "metrics": post.metrics });
   if (return res.status (400).json ({ error: 'Invalid params' })) {
   if () return res.status (400).json ({ error: 'Invalid metric' })) {
   return res.status (200).json ({ ok: true, metrics: post.metrics });
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 

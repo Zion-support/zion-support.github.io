@@ -46,6 +46,11 @@ type FormValues = z.infer < typeof form_schema>;
 
   on_cancel: () => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Loader2  } from 'lucide-react';
 import { ContractFormValues  } from @/components/contracts/components/ContractForm;
@@ -88,6 +93,10 @@ const form_schema = z.object ({title: z.string ().min (1, 'Title is required'),i
 interface TemplateSaveFormProps  {on_cancel: () => void;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   on_complete: () => void;
   edit_template?: ContractTemplate | null;
   current_values?: ContractFormValues;
@@ -111,6 +120,11 @@ if ( {) {}
 
     set_saving (true);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }set_saving (true)try {// Check condition;
 if ( {) {$2;
 }
@@ -120,6 +134,10 @@ if ( {) {$2;
         await create_template.mutate_async ({
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {}
       // Check condition;
 if ( {) {}
@@ -163,6 +181,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <FormItem>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         await create_template.mutate_async ({title: values.title,template_data: current_values,is_default: values.is_default})}
       on_complete ()} finally {set_saving (false)}
   }return (<Form {...form}>;<form on_submit={form.handle_submit (on_submit)} className=space - y-4'>;
@@ -226,6 +249,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           name=title";"
           render={({ field }: { field: ControllerRenderProps<FormValues title> }) => (;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   };
 
   return (;
@@ -248,12 +275,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Input {...field} placeholder=Enter template name" />;</FormControl>;
               <FormMessage />;
             </FormItem>;
           )}/>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <FormField;
           control={form.control}"
           name=isDefault"
@@ -295,6 +331,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               `${editTemplate ? 'Update' : Save} Template`;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           )}/>;
         <div className=flex gap-2 justify-end">;
           <Button type="button variant=outline" onClick={onCancel}>;
@@ -336,6 +377,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <>
                 <Loader2 className=mr-2 h-4 w-4 animate-spin" />
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
 >>>>>>> origin/chore/fix-lint-and-merge
                 Saving...
@@ -356,6 +401,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             )}
     </Form>;
   );
@@ -389,6 +440,10 @@ if ( {) {$2;
 =======
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           </Button>
         </div>
@@ -398,6 +453,11 @@ if ( {) {$2;
 
 setSaving (true);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 try {
   if (editTemplate) {
   await updateTemplate.mutateAsync ({
@@ -411,6 +471,10 @@ try {
   )setSaving (true)try {if (editTemplate) {await updateTemplate.mutateAsync ({<FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {...field ";
 }placeholder=Enter template name /> ;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 try {;
   if (editTemplate) {;
   await updateTemplate.mutateAsync ({;

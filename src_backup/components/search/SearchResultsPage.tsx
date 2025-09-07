@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:, error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
@@ -101,6 +106,10 @@ import { logErrorToProduction, log_info } from '@/utils/ production_logger;
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface SearchResult {
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 class ErrorBoundary extends React.Component {
 >>>>>>> origin/chore/fix-lint-and-merge
   constructor(props) {
@@ -203,6 +212,11 @@ interface SearchResponse {;
           <mark key={index} className="bg-yellow-200 text-black px-1 rounded>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   query: string;hasMore: boolean;hasMore: boolean;// Highlight search terms in text;
 const HighlightText: React.FC<{text: string;
   searchTerm: string;
@@ -304,6 +318,10 @@ const SearchResultCard: React.FC<{result: SearchResult,searchTerm: string,viewMo
           {result.price && (<div className=flex-1>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {part}
 
       )}
@@ -471,6 +489,11 @@ const FilterSidebar: React.FC<{
               <label htmlFor={option.id} className=text-sm>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )}// Filter Sidebar Component;
 const FilterSidebar: React.FC<{filters: SearchFilters;
   onFiltersChange: (filters: SearchFilters) => void;
@@ -571,6 +594,10 @@ const FilterSidebar: React.FC<{filters: SearchFilters,onFiltersChange: (filters:
             className=mb-2          />;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {option.label}
               </label>;
             </div>;
@@ -842,6 +869,11 @@ if ( {) {}
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="text-sm text-muted-foreground>;
           <p>Tips for better results: </p>;
           <ul className=mt-2 space-y-1">;<div className=text-sm text-muted-foreground>;
@@ -852,6 +884,10 @@ if ( {) {}
           <ul className=mt-2 space-y-1">;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     set_loading (true);
     try {}
       const search_filters = new_filters || filters;
@@ -1060,6 +1096,11 @@ if ( {) {}
           <div className=flex-1">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )}// Main Search Results Page Component;
 export const SearchResultsPage: React.FC = () => {const router = useRouter()const [searchTerm, setSearchTerm] = useState(')const [results, setResults] = useState<SearchResult[]>([])const [loading, setLoading] = useState(false)const [totalCount, setTotalCount] = useState(0)const [currentPage, setCurrentPage] = useState(1)const [hasMore, setHasMore] = useState(false)const [viewMode, setViewMode] = useState<grid' | 'list>(grid')const [showFilters, setShowFilters]  = useState(false)},// Main Search Results Page Component;
 export const SearchResultsPage: React.FC = () => {const router = useRouter(),const [searchTerm, setSearchTerm] = useState('),const [results, setResults] = useState<SearchResult[]>([]),const [loading, setLoading] = useState(false),const [totalCount, setTotalCount] = useState(0),const [currentPage, setCurrentPage] = useState(1),const [hasMore, setHasMore] = useState(false),const [viewMode, setViewMode] = useState<grid' | 'list>(grid'),const [showFilters, setShowFilters] = useState(false),const [filters, setFilters] = useState<SearchFilters>({types: [],category: ',minPrice: 0,maxPrice: 10000,minRating: 0,sort: relevance'})const suggestions  = generateSearchSuggestions()// Extract available categories from results for filter;
@@ -1180,6 +1221,10 @@ export const SearchResultsPage: React.FC = () => {const router = useRouter(),con
               >;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               value={searchTerm}
               onChange={setSearchTerm}
               onSelectSuggestion={(suggestion) => handleSearch(suggestion.text)}
@@ -1309,6 +1354,11 @@ export const SearchResultsPage: React.FC = () => {const router = useRouter(),con
         <div className=flex gap-6">
           {/* Desktop Filters Sidebar */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </div>;</div>;)}</div>;{searchTerm && (<div className=flex gap-6'>;{/* Desktop Filters Sidebar */}
           <div className='hidden lg:block w-64 flex-shrink-0>;
             <div className=bg-card border rounded-lg p-4 sticky top-4'>;
@@ -1335,6 +1385,10 @@ export const SearchResultsPage: React.FC = () => {const router = useRouter(),con
                     onClick={() => setFilters({types: [],category: ',minPrice: 0,maxPrice: 10000,minRating: 0,sort: relevance';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                     size="sm
                     onClick={() => setFilters({}
@@ -1360,6 +1414,11 @@ export const SearchResultsPage: React.FC = () => {const router = useRouter(),con
           {/* Main Content */}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>;{/* Main Content */}</div>;{/* Load More Button */}
                 {hasMore && ({hasMore && (<div className=text-center'>;
                     <Button;
@@ -1379,6 +1438,10 @@ export const SearchResultsPage: React.FC = () => {const router = useRouter(),con
                 searchTerm={searchTerm}onNewSearch={handleSearch}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {hasMore && (
 
               <NoResultsState 
@@ -1389,19 +1452,35 @@ export const SearchResultsPage: React.FC = () => {const router = useRouter(),con
               <>;
                 {/* Results Grid/List */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <div className={viewMode === grid';
                   ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6;
                   : space-y-4 mb-6";
                 }>;
                   {results.map((result) => (<SearchResultCard;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <div className={viewMode === 'grid' 
                   ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6"
                   : "space-y-4 mb-6"
                 }>
                   {results.map((result) => (
                     <SearchResultCard
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       key={`${result.type}-${result.id}`}
                       result={result}
                       searchTerm={searchTerm}
@@ -1411,6 +1490,11 @@ export const SearchResultsPage: React.FC = () => {const router = useRouter(),con
                 </div>;
                 {/* Load More Button */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {hasMore && (<div className="text-center>;
                     <Button;
                       onClick={loadMore}disabled={loading}
@@ -1422,6 +1506,10 @@ export const SearchResultsPage: React.FC = () => {const router = useRouter(),con
                         </>;
                       ) : ('Load More Results;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {hasMore && (
 
                   <div className="text-center">
@@ -1438,7 +1526,14 @@ export const SearchResultsPage: React.FC = () => {const router = useRouter(),con
                         </>
                       ) : (
                         'Load More Results'
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       )}
                     </Button>;
                   </div>;
@@ -1523,6 +1618,11 @@ export default SearchResultsPage;
               <div className=flex items - center justify - between mb - 4>;
                 <h2 className='font - semibold'>Filters</h2>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {activeFiltersCount > 0 && (<Button;
                     variant=ghost;
                     size='sm';
@@ -1530,6 +1630,10 @@ export default SearchResultsPage;
                       set_filters ({types: [],category: ,min_price: 0,max_price: 10000,min_rating: 0,sort: 'relevance';
                       })}                  >;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {activeFiltersCount > 0 && (
                   <Button;
                     variant='ghost';
@@ -1544,7 +1648,14 @@ export default SearchResultsPage;
                         sort: 'relevance',
                       });
                     }                  >;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     Clear All;
                   </Button>)}
               </div>;
@@ -1557,27 +1668,52 @@ export default SearchResultsPage;
           </div>;
           {/* Main Content */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className=flex - 1>;
             {loading && results.length === 0 ? (<div className='flex justify - center py - 12'>;
                 <Loader2 className=h - 8 w - 8 animate - spin />;
               </div>) : results.length === 0 && search_term ? (<NoResultsState;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className='flex - 1'>;
             {loading && results.length === 0 ? (
               <div className='flex justify - center py - 12'>;
                 <Loader2 className='h - 8 w - 8 animate - spin' />;
               </div>) : results.length === 0 && search_term ? (
               <NoResultsState;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 search_term={search_term}
                 onNewSearch={handle_search}              />) : (
               <>;
                 {/* Results Grid / List */}
                 <div;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className={view_mode === 'grid';
                       ? grid grid - cols - 1 md:grid - cols - 2 xl:grid - cols - 3 gap - 4 mb - 6;
 =======
+=======
+=======
+<<<<<<< HEAD
+                  className={view_mode === 'grid';
+                      ? grid grid - cols - 1 md:grid - cols - 2 xl:grid - cols - 3 gap - 4 mb - 6;
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   className={
                     view_mode === 'grid';
                       ? 'grid grid - cols - 1 md:grid - cols - 2 xl:grid - cols - 3 gap - 4 mb - 6';
@@ -1594,19 +1730,39 @@ export default SearchResultsPage;
                 </div>;
                 {/* Load More Button */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                {has_more && (
+                  <div className='text - center'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {has_more && (<div className=text - center>;
 =======
                 {has_more && (
                   <div className='text - center'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <Button;
                       on_click={load_more}
                       disabled={loading}
                       variant='outline'                    >;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {loading ? (<>;
                           <Loader2 className=h - 4 w - 4 mr - 2 animate - spin />;
 =======
+=======
+=======
+<<<<<<< HEAD
+                      {loading ? (<>;
+                          <Loader2 className=h - 4 w - 4 mr - 2 animate - spin />;
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       {loading ? (
                         <>;
                           <Loader2 className='h - 4 w - 4 mr - 2 animate - spin' />;
@@ -1624,6 +1780,52 @@ export default SearchResultsPage;
 export default SearchResultsPage;
   suggestion;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}</Button>) );
+}</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>);
+}
+//Main Search Results Page Component setTotalCount (data.total_count);
+setCurrentPage (data.page);
+setHasMore (data.has_more);
+//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.min_price > 0 || filters.max_price < 10000 ? 1 : 0) + (filters.min_rating > 0 ? 1 : 0);";
+}> <SelectTrigger className="w - 40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h - 4 w - 4" /> </Button> <Button > <List className="h - 4 w - 4" /> </Button> </div> {
+  /* Mobile Filter Toggle */;
+}<Sheet open= {
+  show_filters;
+}onOpenChange= {
+  setShowFilters ";
+}> <SheetTrigger as_child> </Button> </SheetTrigger> <SheetContent side="left" className="w - 80" > <SheetHeader> <SheetTitle > Search Filters</SheetTitle> </SheetHeader> <div className="mt - 6" > <FilterSidebar filters= {
+  filters;
+}onFiltersChange= {
+  handleFiltersChange;
+}available_categories= {
+  available_categories;
+}/> </div> </SheetContent> </Sheet> </div> </div>) ";
+}</div> <Button variant="ghost" size="sm" on_click={
+  () => set_filters ({';
+  types: [], category: '', min_price: 0, max_price: 10000,  min_rating: 0, sort: 'relevance';
+});
+}> Clear All </Button>);
+}</div> <FilterSidebar filters= {
+  filters;
+}onFiltersChange= {
+  handleFiltersChange;
+}available_categories= {
+  available_categories;
+}/> </div> </div> </div>) : results.length === 0 && search_term ? (<NoResultsState search_term= {
+  search_term;
+}onNewSearch= {
+  handle_search;
+}/> <SearchResultCard key= {
+  `$ {
+  result.type;
+}-$ {
+  result.id;
+}`;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }</Button>) )}</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>)}
 //Main Search Results Page Component setTotalCount (data.total_count)setCurrentPage (data.page)setHasMore (data.has_more)//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.min_price > 0 || filters.max_price < 10000 ? 1 : 0) + (filters.min_rating > 0 ? 1 : 0);
 }> <SelectTrigger className=w - 40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance >Relevance</SelectItem> <SelectItem value=price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc >Price: High to Low</SelectItem> <SelectItem value=rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h - 4 w - 4 /> </Button> <Button > <List className=h - 4 w - 4" /> </Button> </div> {/* Mobile Filter Toggle */;
@@ -1690,6 +1892,10 @@ setHasMore (data.has_more);
 }-$ {
   result.id;
 }`;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }result= {
   result;
 }search_term= {
@@ -1704,7 +1910,14 @@ setHasMore (data.has_more);
 }</div> </div>);
 }</div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default SearchResultsPage;
 '";
 export default SearchResultsPage,

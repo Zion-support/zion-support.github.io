@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 ;
@@ -36,6 +41,10 @@ import {format} from "date-fns"
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from "react;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react";
 import { 
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -225,6 +234,11 @@ if (return 'Not specified') {}
         </div>;
       </DialogContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   quote.project description && (<> <h4 className="font - medium mt - 4 >Additional Details</h4> <p> {quote.project description;
 }</p> </>)}(quote.budget min && quote.budget max ? `$$ {quote.budget min;
 }- $$ {quote.budget max;
@@ -234,6 +248,10 @@ if (return 'Not specified') {}
 '";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </Dialog>);
 }
 

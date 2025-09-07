@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { extraServices } from '../data/extra-services';
+import React from 'react'
+import Head from 'next/head'
+import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground'
+import Button from '../components/ui/Button'
+import { extraServices } from '../data/extra-services'
 export default function WCAGScannerPage() {
-  const service = $2;
+  const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'))
   if (!service) return null,
 
   return (
@@ -35,7 +35,7 @@ export default function WCAGScannerPage() {
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays ? `${service.trialDays}-day free trial • ` : ''}Setup: {service.setupTime}</div>
+
                 </div>
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>

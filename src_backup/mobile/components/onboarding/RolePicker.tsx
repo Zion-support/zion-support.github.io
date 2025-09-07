@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from 'react;
 import { Button } from @/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card;
@@ -10,18 +14,75 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, Check } from 'lucide-react'
 
 type UserRole = "talent" | "client" | null;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Briefcase, Users, Check } from 'lucide-react'
+type UserRole = 'talent' | 'client' | null
+interface RolePickerProps {
+  onSelect: (role: UserRole) => void
+export function RolePicker({ onSelect }: RolePickerProps) {
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null)
+  const handleSelect = (role: UserRole) => {
+    setSelectedRole(role)
+    onSelect(role)
+  }
+  return (
+    <div className='space-y-4 px-4'>
+      <h2 className='text-xl font-medium'>What brings you to Zion?</h2>
+      <p className='text-muted-foreground'>
+        Choose how you want to use our platform
+      </p>
+      <div className='space-y-3 mt-6'>
+        <Card
+
+type UserRole = any;
+  return (
+    <div className='space-y-4 px-4'>
+      <h2 className='text-xl font-medium'>What brings you to Zion?</h2>
+      <p className='text-muted-foreground'>
+        Choose how you want to use our platform
+      </p>
+      <div className='space-y-3 mt-6'>
+        <Card
+        <Card
+type UserRole = "talent" | "client" | null,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 interface RolePickerProps {
   onSelect: (role: UserRole) => void
 }
 
 export function RolePicker({ onSelect }: RolePickerProps) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
 
   const handleSelect = (role: UserRole) => {
     setSelectedRole(role);
     onSelect(role)
   };
+<<<<<<< HEAD
+=======
+=======
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null),
+
+  const handleSelect = (role: UserRole) => {
+    setSelectedRole(role),
+    onSelect(role)
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
     <div className="space-y-4 px-4">
@@ -52,9 +113,25 @@ export function RolePicker({ onSelect }: RolePickerProps) {
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
 
         <Card 
           className={`cursor-pointer transition-all ${
+=======
+<<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
+
+        <Card 
+          className={`cursor-pointer transition-all ${
+=======
+        <Card
+
+        <Card 
+          className={`cursor-pointer transition-all ${
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+className={`cursor-pointer transition-all ${
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
               : "border-border hover:border-primary/40"
@@ -71,6 +148,10 @@ export function RolePicker({ onSelect }: RolePickerProps) {
                 <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
               </div>
               {selectedRole === 'client' && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Check className="h-5 w-5 text-primary" />
               )}
             </div>
@@ -80,6 +161,108 @@ export function RolePicker({ onSelect }: RolePickerProps) {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+                <Check className='h-5 w-5 text-primary' />
+              )}
+            </div>
+          </CardContent>
+        </Card>
+      </div>;
+    </div>;
+  );
+};
+}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                <Check className="h-5 w-5 text-primary" />
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Briefcase, Users, Check } from 'lucide-react';
+type UserRole = "talent" | "client" | null,;
+interface RolePickerProps {;
+  onSelect: (role: UserRole) => void;
+}
+;
+export function RolePicker({ onSelect }: RolePickerProps) {;
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null),;
+  const handleSelect = (role: UserRole) => {;
+    setSelectedRole(role);
+    onSelect(role);
+  };
+  return (
+    <div className='space-y-4 px-4'>;
+      <h2 className='text-xl font-medium'>What brings you to Zion?</h2>;
+      <p className='text-muted-foreground'>;
+        Choose how you want to use our platform;
+      </p>;
+
+      <div className='space-y-3 mt-6'>;
+        <Card
+          className={`cursor-pointer transition-all ${
+            selectedRole === 'talent'
+              ? 'border-primary bg-primary/5'
+              : 'border-border hover:border-primary/40'
+          }`}
+          onClick={() => handleSelect('talent')}
+        >;
+          <CardContent className="p-5">;
+            <div className="flex items-center">;
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">;
+                <Briefcase className="h-6 w-6 text-primary" />;
+              </div>;
+              <div className="flex-1">;
+                <h3 className="font-medium">I'm offering services</h3>;
+                <p className="text-sm text-muted-foreground">Find work and showcase your skills</p>;
+              </div>;
+              {selectedRole === 'talent' && (;
+                <Check className="h-5 w-5 text-primary" />;
+              )}
+<<<<<<< HEAD
+            </div>;
+          </CardContent>;
+        </Card>;
+        <Card;
+          className={`cursor-pointer transition-all ${;
+            selectedRole === 'client';
+              ? "border-primary bg-primary/5";
+              : "border-border hover:border-primary/40";
+=======
+
+            </div>;
+          </CardContent>;
+        </Card>;
+
+
+        <Card
+          className={`cursor-pointer transition-all ${
+            selectedRole === 'client'
+              ? 'border-primary bg-primary/5'
+              : 'border-border hover:border-primary/40'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          }`}
+          onClick={() => handleSelect('client')}
+        >;
+          <CardContent className="p-5">;
+            <div className="flex items-center">;
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">;
+                <Users className="h-6 w-6 text-primary" />;
+              </div>;
+              <div className="flex-1">;
+                <h3 className="font-medium">I'm hiring</h3>;
+                <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>;
+              </div>;
+              {selectedRole === 'client' && (;
+                <Check className="h-5 w-5 text-primary" />;
+              )}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/ button';
@@ -150,16 +333,37 @@ function RolePicker() {
               {selected_role === 'client' && (
                 <Check className='h - 5 w - 5 text - primary' />)}
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </div>;
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </div>;
+  );
+}
+;
+
+    </div>);
+}
+;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src_backup/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </div>
           </CardContent>
         </Card>
@@ -167,3 +371,9 @@ function RolePicker() {
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/mobile/components/onboarding/RolePicker.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

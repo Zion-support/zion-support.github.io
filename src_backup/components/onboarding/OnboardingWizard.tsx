@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState, useEffect  } from 'react;
 import { useRouter  } from next/router';
 import { useAuth  } from '@/hooks/useAuth;
@@ -19,6 +24,10 @@ import { Card;
 import { cn  } from '@/lib/utils;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from @/components/ui/card';
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState, useEffect  } from 'react';
 import { useRouter  } from 'next/router';
 import { useAuth  } from '@/hooks/useAuth';
@@ -45,6 +54,14 @@ import {}
   Eye;
   MessageSquare'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+} from 'lucide-react''
+import { cn } from '@/lib/utils''
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 } from 'lucide-react
 import { cn } from '@/lib/utils'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from @/components/ui/card'
@@ -78,6 +95,10 @@ interface OnboardingWizardProps {
 import { cn } from '@/lib/utils''
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { cn } from '@/lib/utils;
 
@@ -270,6 +291,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
       <CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <CardTitle className=text-center text-white>
           {type === client' ? 
             "Ready to find top IT talent?" : 
@@ -279,6 +305,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       <CardContent>
         <div className="flex items-center mb-6">
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <CardTitle className='text-center text-white'>
           {type === 'client'
             ? 'Ready to find top IT talent?'
@@ -287,7 +317,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       </CardHeader>;
       <CardContent>;
         <div className='flex items-center mb-6'>;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {/* Step dots */}
 
           <div className=flex items-center justify-center flex-1>
@@ -304,6 +341,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ? "bg-zion-cyan
                     : "bg-zion-blue-light"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface OnboardingWizardProps  {url: string;
   }skipText?: string;interface OnboardingWizardProps  {type: client | 'talent';
   onComplete: () => void;
@@ -377,6 +419,10 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
                     : bg-zion-blue-light;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 )}
               />;
             ))}
@@ -400,6 +446,12 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
             onClick={handleSkip}>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          className="w-full bg-zion-purple hover:bg-zion-purple-light"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           className=w-full bg-zion-purple hover:bg-zion-purple-light
         </Button>;{steps[currentStep]?.skipText && (<Button;
             variant=ghost';
@@ -408,6 +460,10 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
 =======
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           onClick={handleAction}
         >;
           {steps[currentStep]?.action.text}
@@ -424,16 +480,31 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
           </Button>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       </CardFooter>;
     </Card>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           >;{steps[currentStep]?.skipText}
           </Button>;
         )}}</CardFooter>;
@@ -532,3 +603,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

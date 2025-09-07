@@ -88,6 +88,10 @@ const { execSync } = require("child_process")
     this.log( Starting Final Automation Fix)
       this.log("� Final Automation Fix completed successfully!")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 <<<<<<< HEAD
@@ -104,3 +108,12 @@ const { execSync } = require("child_process")
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+      this.log(` Final automation fix "failed"`)
+=======
+      this.log(` Final automation fix "failed"`)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

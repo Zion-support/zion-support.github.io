@@ -46,12 +46,21 @@ interface StepProps {"
         className={cn(
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium          {
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
 
               status === incomplete
@@ -115,6 +124,12 @@ interface StepProps {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
 export function Step() { return null; }
@@ -141,6 +156,11 @@ export function Step() { return null; }
           <span>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
@@ -151,6 +171,10 @@ export function Step() { return null; }
             text-zion-slate-light": status === "incomplete,
             text-zion-slate-light": status === "incomplete,
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             "text-zion-slate-light": status === "incomplete",
             "text-zion-slate-light": status === "incomplete",
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -193,6 +217,12 @@ export function Steps({ currentStep, className, children }: StepsProps) {}
   const childrenArray = React.Children.toArray(children),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          if (!React.isValidElement(child)) return null,
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
   return (
@@ -220,11 +250,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           return React.cloneElement(child as React.ReactElement<StepProps>, {
 =======
           if (!React.isValidElement(child)) return null,
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "
           let status: "incomplete" | "current" | "complete" = "incomplete","
           if (index < currentStep) status = "complete","
           if (index === currentStep) status = "current",
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           if (!React.isValidElement(child)) return null,
 
@@ -233,6 +274,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </ol>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       
 
@@ -248,6 +294,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 interface StepsProps {
   currentStep: number,
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface StepsProps {;
   currentStep: number,;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -269,6 +319,12 @@ export function Steps({ currentStep, className, children }: StepsProps) {
   return (;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <div className={cn("w-full", className)}>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className={cn("w-full, className)}>;
         {status === complete" ? (<CheckIcon className="h-5 w-5 />;
         ) : (<span>;
@@ -309,6 +365,10 @@ export function Steps() {const childrenArray  = React.Children.toArray(children)
 =======
     <div className={cn("w-full", className)}>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16>;
         {React.Children.map(childrenArray, (child, index) => {
@@ -328,6 +388,11 @@ export function Steps() {const childrenArray  = React.Children.toArray(children)
             style={{
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             style={{interface StepsProps  {currentStep: number,className?: string;
   children: React && React.ReactNode;
 }export function Steps(): any ({ currentStep, className, children }: StepsProps) {const childrenArray  = React && React.Children.toArray(children)return (}/> </div> </div> </div>)}}
@@ -354,6 +419,10 @@ if (status = "current") {$2;
 interface StepProps  {status: incomplete | "current" | complete,label: string,description?: string;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           // Check condition
 if (status = "current") {

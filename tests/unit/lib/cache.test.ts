@@ -42,6 +42,14 @@ class MockCache {
     return this.get(key) !== undefined;
   }
 }
+  // Add props here as needed;
+
+interface Cache.testProps {
+  // Add props here as needed
+
+
+
+
 
 describe('Cache', () => {
   let cache: MockCache;

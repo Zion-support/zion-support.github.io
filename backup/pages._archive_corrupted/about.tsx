@@ -1,5 +1,75 @@
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+  const values = [{
+      title: \'Innovation\',
+      \"description\": \'We constantly push the boundaries of technology to deliver cutting-edge solutions.\',
+      \"icon\": Zap
+    },
+    {
+      \"title\": \'Excellence\',
+      \"description\": \'We maintain the highest standards of quality in everything we do.\',
+      \"icon\": Award
+    },
+    {
+      \"title\": \'Integrity\',
+      \"description\": \'We build trust through honest communication and ethical business practices.\',
+      \"icon\": Shield
+    },
+    {
+      \"title\": \'Collaboration\',
+      \"description\": \'We work closely with our clients to ensure their success is our success.\',
+      \"icon\": Users
+    },
+    {
+      \"title\": \'Global Perspective\',
+      \"description\": \'We bring international expertise and diverse perspectives to every project.\',
+      \"icon\": Globe
+    },
+    {
+      \"title\": \'Results-Driven\',
+      \"description\": \'We focus on delivering measurable outcomes that drive business growth.\',
+      \"icon\": Target
+
+    }
+  ];
+  const team = [{
+      \"name\": \'Sarah Johnson\',
+      \"role\": \'CEO & Founder\',
+      \"bio\": \'Visionary leader with 15+ years in technology consulting and digital transformation.\',
+      \"image\": \'/team/sarah.jpg\'
+    },
+    {
+      \"name\": \'Michael Chen\',
+      \"role\": \'CTO\',
+      \"bio\": \'Expert in cloud architecture and AI systems with deep technical expertise.\',
+      \"image\": \'/team/michael.jpg\'
+    },
+    {
+      \"name\": \'Emily Rodriguez\',
+      \"role\": \'Head of Design\',
+      \"bio\": \'Creative director specializing in user experience and digital product design.\',
+      \"image\": \'/team/emily.jpg\'
+    },
+    {
+      \"name\": \'David Kim\',
+      \"role\": \'Lead Developer\',
+      \"bio\": \'Full-stack developer with expertise in modern web technologies and frameworks.\',
+      \"image\": \'/team/david.jpg\'
+    }
+  ];
+
+
+=======
+=======
+=======
+const \"About\": NextPage = () => {
+const \"About\": NextPage = () => {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const \"About\": NextPage = () => {
 
 class ErrorBoundary extends React.Component {
@@ -23,6 +93,10 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const \"About\": NextPage = () => {;
 import React from 'react';
 import Link from 'next/link';
@@ -63,6 +137,12 @@ export default function AboutPage() {return (<main>;
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
     { \"number\": \'24/7\', \"label\": \'Support Available\' }
+<<<<<<< HEAD
+=======
+    { \number\": \'50+\, \"label\: \Happy Clients\' },
+    { \number\": \'5+\, \"label\: \Years Experience\' },
+    { \number\": \'24/7\, \"label\: \Support Available\' }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ];
 export default function AboutPage() {
   return (
@@ -104,6 +184,10 @@ export default function AboutPage() {
               <div key={v.title} className="bg-white rounded-lg p-8 shadow text-center">
                 <h3 className="text-xl font-semibold mb-3">{v.title}</h3>
                 <p className="text-gray-600">{v.desc}</p>
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <MainLayout
       title=\"About Us - Zion Tech Group\"
       description=\"Learn about Zion Tech Group\'s mission, values, and the team behind our innovative technology solutions.\"
@@ -155,14 +239,34 @@ export default function AboutPage() {
             {stats.map((stat) => (
 
 
+<<<<<<< HEAD
   ];
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+  ];
+  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
+  ];
+  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' };
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },;
     { \"number\": \'5+\', \"label\": \'Years Experience\' },;
     { \"number\": \'24/7\', \"label\": \'Support Available\' }
+<<<<<<< HEAD
+=======
+    { \"number\: \50+\, \label\": \'Happy Clients\' },
+    { \"number\: \5+\, \label\": \'Years Experience\' },
+  const stats = [{ \"number\: \150+\, \label\": \'Projects Completed\' }
+    { \"number\: \50+\, \label\": \'Happy Clients\' },
+    { \"number\: \5+\, \label\": \'Years Experience\' },
+    { \"number\: \24/7\, \label\": \'Support Available\' }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ];
 export default function AboutPage() {;
   return (
@@ -420,26 +524,47 @@ ursor/automate-test-improve-and-merge-code-646c;
                 <div className="text-gray-600">{stat.label}</div>
               </div>
                 <div className="text-gray-600">{stat.label}</div>
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </div>
             ))}
           </div>
       </section>
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </main>
 
 
+>>>>>>> merged-prs-20250907-203621
       {/* Values Section */}
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
             <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Our Values</h2>
             <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
+<<<<<<< HEAD
+=======
+      <section className=\"py-20\>
+        <div className=\max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\>
+          <div className=\text-center mb-16\">
+            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\>Our Values</h2>
+            <p className=\text-xl text-gray-600 max-w-3xl mx-auto\">
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               The principles that guide everything we do and shape our company culture
             </p>
           </div>
 
 
+<<<<<<< HEAD
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
@@ -450,6 +575,42 @@ ursor/automate-test-improve-and-merge-code-646c;
               <div key={value.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
                   <value.icon className=\"h-8 w-8\" />
+=======
+<<<<<<< HEAD
+=======
+            {values.map((value) => (
+
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map((value) => (
+
+=======
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map((value) => (
+>>>>>>> merged-prs-20250907-203621
+              <div key={value.title} className=\"text-center\">
+                <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
+                  <value.icon className=\"h-8 w-8\" />
+              <div key={value.title} className=\"text-center\>
+                <div className=\bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
+                  <value.icon className=\"h-8 w-8\ />
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </div>
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
                   {value.title}
@@ -461,6 +622,10 @@ ursor/automate-test-improve-and-merge-code-646c;
 
             ))}
           </div>
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </section>
       {/* Team Section */}
       <section className=\"py-20 bg-gray-50\" id=\"team\">
@@ -474,6 +639,12 @@ ursor/automate-test-improve-and-merge-code-646c;
           </div>
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <section className=\"py-20 bg-gray-50\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">;
@@ -543,12 +714,31 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
 
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
+=======
+          <div className=\grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
+          <div className=\grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
+
+          <div className=\grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
+          <div className=\grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
+
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {team.map((member) => (
               <div key={member.name} className=\"bg-white rounded-lg shadow-lg overflow-hidden\">
                 <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\">
@@ -566,6 +756,10 @@ ursor/automate-test-improve-and-merge-code-646c;
 
             ))}
           </div>
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </section>
       {/* Story Section */}
       <section className=\"py-20\">
@@ -632,6 +826,13 @@ ursor/automate-test-improve-and-merge-code-646c;
       </Helmet>
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -756,6 +957,11 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 
 }
+<<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+=======
       <Helmet>;
         <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>;
         <meta name=\"description\" content=\"Learn about Zion Tech Group, a leading provider of AI, cybersecurity, cloud infrastructure, and emerging technology solutions. Discover our mission, values, and team.\" />;
@@ -780,6 +986,54 @@ ursor/automate-test-improve-and-merge-code-646c;
 ursor/automate-test-improve-and-merge-code-646c;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+        {/* Hero Section */}
+        <section className=\"relative py-20 px-4\">;
+          <div className=\"max-w-7xl mx-auto\">;
+            <div className=\"text-center\">;
+              <h1 className=\"text-5xl \"md\": text-6xl font-bold text-white mb-6\">;
+                About <span className=\"bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\">Zion Tech Group</span>;
+              </h1>;
+              <p className=\"text-xl text-gray-300 max-w-3xl mx-auto mb-8\">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      <Helmet>;
+        <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>;
+        <meta name=\"description\" content=\"Learn about Zion Tech Group, a leading provider of AI, cybersecurity, cloud infrastructure, and emerging technology solutions. Discover our mission, values, and team.\" />;
+        <meta name=\"keywords\" content=\"about zion tech group, technology company, AI solutions, cybersecurity, cloud services\" />;
+        <link rel=\"canonical\" href=\""https\": //ziontechgroup && ziontechgroup.com/about\" />;
+      </Helmet>;
+<<<<<<< HEAD
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+=======
+      <div className=\min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>;
+      <div className=\min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>;
+      <div className=\min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>;
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    <>;
+      <Helmet>;
+        <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>;
+        <meta name=\"description\" content=\"Learn about Zion Tech Group, a leading provider of AI, cybersecurity, cloud infrastructure, and emerging technology solutions. Discover our mission, values, and team.\" />;
+        <meta name=\"keywords\" content=\"about zion tech group, technology company, AI solutions, cybersecurity, cloud services\" />;
+        <link rel=\"canonical\" href=\""https\": //ziontechgroup.com/about\" />;
+      </Helmet>;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+ursor/automate-test-improve-and-merge-code-646c;
+<<<<<<< HEAD
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+=======
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\>;
+      <div className=min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -813,6 +1067,11 @@ ursor/automate-test-improve-and-merge-code-646c;
                     <Heart className=\"w-5 h-5\" />;
                     <span className=\"font-semibold\">Client-Focused</span>;
                   </div>;
+<<<<<<< HEAD
+=======
+                </div>;
+              </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <div className=\"bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-8 border border-cyan-500/30\">;
                 <div className=\"grid grid-cols-2 gap-6\">;
                   {stats && stats.map((stat, index) => (<div key={index} className=\"text-center\">;
@@ -911,3 +1170,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

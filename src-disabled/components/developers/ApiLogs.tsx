@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 :src_backup/components/developers/ApiLogs.tsx
 :src/components/developers/ApiLogs.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+:src/components/developers/ApiLogs.tsx
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState, useEffect  } from './react';
 import { format  } from './date - fns';
 import { List, RefreshCw } from 'lucide-react'import { useApiKeys  } from '@/hooks / useApiKeys';
@@ -7,8 +17,16 @@ import { Button  } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components / ui / select';
 import { Badge  } from '@/components / ui / badge';
+<<<<<<< HEAD
 :src_backup/components/developers/ApiLogs.tsx
 import { ApiLogsChart  } from './ApiLogsChart';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { ApiLogsChart  } from './ApiLogsChart';
+import { ApiLogsChart  } from './ApiLogsChart;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export /**
  * ApiLogs - Function description
  */
@@ -20,6 +38,9 @@ function ApiLogs() {
   const hasPrevPage = current_page > 0);
 }
   );
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { ApiLogsChart  } from './ApiLogsChart';
 export /**
@@ -58,6 +79,7 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { ApiLogsChart } from './ApiLogsChart';
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import { List, RefreshCw } from 'lucide-react'
@@ -67,14 +89,50 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { ApiLogsChart } from "./ApiLogsChart";
+=======
+<<<<<<< HEAD
+import { useState, useEffect } from "react;
+import { format } from date-fns";
+import { List, RefreshCw } from lucide-react'
+import { useApiKeys } from "@/hooks/useApiKeys;
+import { Button } from @/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from @/components/ui/select";
+import { Badge } from "@/components/ui/badge;
+import { ApiLogsChart } from ./ApiLogsChart";
+=======
+import { useState, useEffect } from "react",
+import { format } from "date-fns",
+import { List, RefreshCw } from 'lucide-react'
+import { useApiKeys } from "@/hooks/useApiKeys",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Badge } from "@/components/ui/badge",
+import { ApiLogsChart } from "./ApiLogsChart",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ApiLogs() {
-  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys($2);
-  const [pageSize, setPageSize] = useState($2);
-  const [currentPage, setCurrentPage] = useState($2);
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
+  const [pageSize, setPageSize] = useState(25),
+  const [currentPage, setCurrentPage] = useState(0),
+import { useState, useEffect } from 'react';
+import { format } from 'date-fns';
+import { List, RefreshCw } from 'lucide-react';
+import { useApiKeys } from '@/hooks/useApiKeys';
+
+import { Badge } from "@/components/ui/badge";
+import { ApiLogsChart } from "./ApiLogsChart";
+>>>>>>> origin/chore/fix-lint-and-merge
+export function ApiLogs() {
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
+
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]),
+<<<<<<< HEAD
   
   const handleRefresh = () => {
     fetchApiLogs(pageSize, currentPage * pageSize)
@@ -104,6 +162,10 @@ export function ApiLogs() {
   const hasPrevPage = $2;
   return (
     <Card className = $2;
+=======
+
+  const handleRefresh = null;
+>>>>>>> origin/chore/fix-lint-and-merge
                 setCurrentPage(0), // Reset to first page when changing page size
               }}
             >
@@ -167,9 +229,21 @@ export function ApiLogs() {
                 </tr>
               ) : (
                 logs.map((log) => (
+<<<<<<< HEAD
                   <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">,
                     <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
                     <td className="px-4 py-3">
+=======
+<<<<<<< HEAD
+                  <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40>,
+                    <td className=px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
+                    <td className="px-4 py-3>
+=======
+                  <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">
+                    <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
+                    <td className="px-4 py-3">
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       <Badge 
                         variant="outline"
                         className={
@@ -238,9 +312,18 @@ export function ApiLogs() {
             </div>
         )}
       </CardContent>
+<<<<<<< HEAD
 :src/components/developers/ApiLogs.tsx
     </Card>
+<<<<<<< HEAD
 :src_backup/components/developers/ApiLogs.tsx
+=======
+<<<<<<< HEAD
+  )
+}
+;
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 
 };
@@ -262,4 +345,11 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
 origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
+<<<<<<< HEAD
 ;
+=======
+=======
+    </Card>
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

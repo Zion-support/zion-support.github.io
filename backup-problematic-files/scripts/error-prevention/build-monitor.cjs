@@ -23,6 +23,10 @@ class BuildMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
@@ -55,16 +59,37 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
       console.log('Running build check...');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<<<<<<< HEAD
+=======
+=======
+=======
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       const child = spawn('npm', ['run', 'build'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -85,6 +110,10 @@ class BuildMonitor {}
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
 
 
@@ -97,6 +126,11 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       child.on('close', (code) => {}
         if ( {})
 =======
@@ -137,12 +171,24 @@ class BuildMonitor {}
 =======
       console.log('Attempting to fix build issues...');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<<<<<<< HEAD
+=======
+=======
+=======
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Clean build directory;
 <<<<<<< HEAD
       const cleanChild = spawn('npm, [run', 'clean], {})
@@ -161,11 +207,21 @@ class BuildMonitor {}
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       cleanChild.on('close', (code) => {}
 >>>>>>> origin/chore/fix-lint-and-merge
         if ( {})
@@ -252,6 +308,19 @@ module.exports = BuildMonitor;
   // Handle graceful shutdown;
 
   monitor.start().catch(console.error)};
+<<<<<<< HEAD
 module.exports = BuildMonitor;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+module.exports = BuildMonitor;
+<<<<<<< HEAD
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+module.exports = BuildMonitor;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

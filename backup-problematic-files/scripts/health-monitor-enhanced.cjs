@@ -1,6 +1,28 @@
+<<<<<<< HEAD
 
 
 =======
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node;
+;const fs = require('fs');
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 #!/usr/bin/env node;
@@ -440,4 +462,15 @@ const fs = require("fs");"const path = require("path");class EnhancedHealthMonit
 module.exports = HealthMonitor;
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

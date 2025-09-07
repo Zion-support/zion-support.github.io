@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 const resolvePath = (path: string): string => pathMap[path] ?? path,
 
@@ -97,6 +102,10 @@ const pathMap: Record<string, string> = {/about': '/content/about/blog: /blog/ca
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 
@@ -148,6 +157,11 @@ const pathMap: Record<string string> = {
 
           {/* Talent Routes */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className="bg-zion-blue-dark p-6 rounded-lg>
             <h2 className=text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
             <p className="text-sm text-zion-slate mb-4>Requires talent or creator account</p>
@@ -191,6 +205,10 @@ const pathMap: Record<string string> = {
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan>Talent Pages</h2>;
             <p className=text - sm text - zion - slate mb - 4">Requires talent or creator account</p>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Talent Pages</h2>;
             <p className="text - sm text - zion - slate mb - 4">Requires talent or creator account</p>;
@@ -212,6 +230,11 @@ const pathMap: Record<string string> = {
               }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {/* Client Routes */}
           <div className=bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan>Client Pages</h2>
@@ -255,6 +278,10 @@ const pathMap: Record<string string> = {
             <p className=text - sm text - zion - slate mb - 4">Requires employer or buyer account</p>;
             <ul className="space - y-2>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <ul className="space - y-2">;
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -272,6 +299,11 @@ const pathMap: Record<string string> = {
               }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {/* Shared Routes */}
           <div className=bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan>Authenticated User Pages</h2>
@@ -315,6 +347,10 @@ const pathMap: Record<string string> = {
             <p className=text - sm text - zion - slate mb - 4">Requires any account type</p>;
             <ul className="space - y-2>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <ul className="space - y-2">;
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -345,6 +381,13 @@ const pathMap: Record<string string> = {
                       href = {resolvePath(route.path)}
                       className="flex items-center hover:text-zion-purple"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                    >"
+                      <ChevronRight className="h-4 w-4 mr-2" />
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     >
                       <ChevronRight className=h-4 w-4 mr-2" />
                       {route.label}</Link>;
@@ -368,6 +411,10 @@ const pathMap: Record<string string> = {
                     >"
                       <ChevronRight className="h-4 w-4 mr-2" />
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             </ul>;
           </div>;
@@ -402,6 +449,20 @@ const pathMap: Record<string string> = {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    {
+      title: 'Services'
+      links: [{ name: 'AI Services', url: '/services / ai' }
+        { name: 'IT Services', url: '/services / it' }
+        { name: 'Cloud Solutions', url: '/services / cloud' }
+        { name: 'Cybersecurity', url: '/services / cybersecurity' }
+        { name: 'Digital Transformation', url: '/services / digital - transformation' }
+      ]
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     {title: 'Services';
       links: [{ name: AI Services, url: '/services / ai' }
         { name: IT Services, url: '/services / it' }
@@ -471,6 +532,10 @@ const pathMap: Record<string string> = {
       ]
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           {/* Dynamic Routes */}
           <div className=bg-zion-blue-dark p-6 rounded-lg>
@@ -491,6 +556,11 @@ const pathMap: Record<string string> = {
 
             </ul>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       {link.name}{/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className=text-xl font-bold mb-4 text-zion-cyan>Dynamic Pages</h2>;
@@ -505,15 +575,28 @@ const pathMap: Record<string string> = {
               ))}</ul>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>;
         </div>;
       </div>;
     </>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
+=======
+=======
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 };
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -545,6 +628,12 @@ import { SEO  } from './SEO';
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const pathMap: Record<string, string> = {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ";}import { completeSitemap, dynamicPaths   } from @/config/sitemap';
 import { SEO   } from './SEO';
 // Map sitemap paths to their actual routes in the application;
@@ -552,3 +641,7 @@ import { SEO   } from './SEO';
 =======
 const pathMap: Record<string, string> = {
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

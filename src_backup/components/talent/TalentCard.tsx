@@ -100,6 +100,11 @@ const TalentCardComponent = ({
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Badge } from @/components/ui/badge",import { Button } from "@/components/ui/button,import { Card, CardContent, CardFooter } from @/components/ui/card",import { MapPin, Clock, ArrowRight, CheckCircle2  } from lucide-react';
 import { FavoriteButton } from "@/components/FavoriteButton,export const TalentCard = React && React.memo(TalentCardComponent)TalentCard && TalentCard.displayName = 'TalentCard;import React from react';
 import { useRouter  } from 'next/router;
@@ -135,6 +140,10 @@ export interface TalentCardProps  {talent: TalentProfile,onViewProfile: (id: str
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       onClick={handleViewProfile}
       tabIndex={0}
 
@@ -316,6 +325,15 @@ export const TalentCard = React.memo(TalentCardComponent),'
 TalentCard.displayName = TalentCard},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export interface TalentCardProps {
+  );
+};
+"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>;</Card>)},export const TalentCard = React.memo (TalentCardComponent),TalentCard.display_name = 'TalentCard',export const TalentCard = React.memo (TalentCardComponent)TalentCard.display_name = TalentCard;export const TalentCard = React.memo(TalentCardComponent),TalentCard.displayName = 'TalentCard'},export const TalentCard = React.memo(TalentCardComponent),TalentCard.displayName = 'TalentCard',export interface TalentCardProps  {)}";
 export interface TalentCardProps {
   );
@@ -327,3 +345,7 @@ export interface TalentCardProps {
 };
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

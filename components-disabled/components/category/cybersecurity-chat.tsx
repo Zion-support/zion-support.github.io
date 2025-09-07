@@ -8,6 +8,34 @@ const CybersecurityChat: NextPage = () => ;
       <Head />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const CybersecurityChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />CybersecurityChat - Zion Tech Solutions</title>;
+        <meta name = \"description\" content=\"CybersecurityChat blog post\" />{\" \"}
+;
+  const CybersecurityChat: NextPage = () => ;
+  return (<div />;
+      <Head /></Head>;<meta name=\"description\" content=\"CybersecurityChat blog post\" />;
+      </Head>;
+      </Head>;<meta name=\"description\" content=\"CybersecurityChat blog post\" />;
+      </Head>;
+
+import type { NextPage } from \"next\";
+import Head from \"next/head\";
+import Link from \"next/link\";
+
+const CybersecurityChat: NextPage = () => {
+ ;
+  return (
+    <div />
+      <Head />
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title>CybersecurityChat - Zion Tech Solutions</title>;
@@ -40,6 +68,10 @@ const CybersecurityChat: NextPage = () => {
     <div />
       <Head />
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const CybersecurityChat: NextPage = () => {;
   return (
     <div />;
@@ -47,16 +79,32 @@ const CybersecurityChat: NextPage = () => {
         <title />CybersecurityChat - Zion Tech Solutions</title>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 return (;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import type { NextPage } from "next";""
 import Head from "next/head";""
 import Link from "next/link";""
 const CybersecurityChat: NextPage = () => {
   return (
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div>
 </div>
       <Head>
@@ -68,6 +116,12 @@ const CybersecurityChat: NextPage = () => {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const CybersecurityChat: NextPage = () => {
   return (
     <div />
@@ -75,7 +129,14 @@ const CybersecurityChat: NextPage = () => {
 
       </Head>;
 
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <main>
         <h1>CybersecurityChat</h1>
         <p>Blog content coming soon...</p>
@@ -114,17 +175,33 @@ import Head from './next / head';
 import Link from './next / link';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title > CybersecurityChat - Zion Tech Solutions</title>;
         <meta name="description" content="CybersecurityChat blog post" />{" "}"
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const CybersecurityChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> CybersecurityChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"CybersecurityChat blog post\" />{\" \"}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </Head>;
       <main />;
         <h1  /> CybersecurityChat</h1>;
@@ -149,17 +226,33 @@ export default CybersecurityChat;<div />;
   )},export default CybersecurityChat;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title>CybersecurityChat - Zion Tech Solutions</title>;
         <meta name="description" content="CybersecurityChat blog post" />{" "}"
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const CybersecurityChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />CybersecurityChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"CybersecurityChat blog post\" />{\" \"}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </Head>;
       <main />;
         <h1 />CybersecurityChat</h1>;
@@ -176,9 +269,19 @@ export default CybersecurityChat;<title />CybersecurityChat - Zion Tech Solution
 
 export default CybersecurityChat;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const CybersecurityChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+const CybersecurityChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const CybersecurityChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -201,9 +304,19 @@ export default CybersecurityChat;
         <title />CybersecurityChat - Zion Tech Solutions</title>
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const CybersecurityChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+const CybersecurityChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const CybersecurityChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />

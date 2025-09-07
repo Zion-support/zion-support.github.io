@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -5,6 +6,15 @@ const { execSync } = require("child_process");
 const glob = require("glob");
     this.reportsDir = path.join(this.projectRoot, "error-reports")
 // console.log( Starting Error Fixer Automation...")
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
+#!/usr/bin/env
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       console.log( Error Fixer Automation completed successfully!")
       console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues)
   console.error(" Error Fixer Automation "failed": ")
@@ -14,6 +24,44 @@ const glob = require("glob");
 
       console.error('Automation "failed")
 
+<<<<<<< HEAD
+=======
+      console.error('Automation failed")
+
+      console.error('Automation "failed)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      console.error('Automation failed")
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
+=======
+#!/usr/bin/env
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> merged-prs-20250907-203621
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+const glob = require("glob")
+    this.reportsDir = path.join(this.projectRoot, "error-reports")
+// console.log( Starting Error Fixer Automation...")
+      console.log( Error Fixer Automation completed successfully!")
+      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues)
+  console.error(" Error Fixer Automation "failed": ")
+      this.logError("Error Fixer Automation failed")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // console.log("" Error Fixer Automation completed successfully!")
       console.log(")
       console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues```)
@@ -21,11 +69,22 @@ const glob = require("glob");
       this.logError("Error Fixer Automation failed")
   fs.mkdirSync(this.reportsDir, { "recursive"})
   console.log("" Fixing merge conflicts...")
+<<<<<<< HEAD
 const files = glob.sync("**/*.{js,jsx,ts,tsx}");
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
 const content = fs.readFileSync(file, "utf8");
           content.includes("")
           content.includes(")
+=======
+    const files = glob.sync("**/*.{js,jsx,ts,tsx}")
+  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
+  const content = fs.readFileSync(file, "utf8")
+          content.includes("")
+          content.includes(">>>>>>>")
+          content.includes(")
+          content.includes(">>>>>>>")
+              /\n([\s\S]*?)\n              "$1"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               /\n([\s\S]*?)\n              "$1"
   "type": "merge_conflict"
             "description": "Removed merge conflict markers"
@@ -44,7 +103,11 @@ const content = fs.readFileSync(file, "utf8");
   "pattern"
           /import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2[""]/g, ""replacement": "import { $1 } from $2, ""description": "Remove duplicate imports", "}", "
           /import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2["]/g, ""replacement": "import { $1 } from $2", ""description": "Remove duplicate imports", "}", "
+<<<<<<< HEAD
 const files = glob.sync("**/*.{js,jsx,ts,tsx}");
+=======
+const files = glob.sync("**/*.{js,jsx,ts,tsx}")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
   "pattern"
         "replacement": "$1 = {\n  $2,\n  $3\n}"
@@ -54,9 +117,15 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}");
         "description": "Remove duplicate function declarations"
   "pattern"
           /import\s+{\s*([^}]+)\s*}\s+from\s+["]([^""]+)["];\s*import\s+{\s*\1\s*}\s+from\s+["]\2[""]/g, ""replacement": "import { $1 } from $2"", ""description": "Remove duplicate imports"", "}", ""
+<<<<<<< HEAD
 const files = glob.sync("**/*.{js,jsx,ts,tsx}");
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
 let content = fs.readFileSync(file, "utf8");
+=======
+    const files = glob.sync("**/*.{js,jsx,ts,tsx}")
+  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
+  let content = fs.readFileSync(file, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "type": "syntax_error"
             "description": "Fixed syntax errors"
   "type": "syntax_error"
@@ -73,9 +142,15 @@ let content = fs.readFileSync(file, "utf8");
         "description": "Fixed unused imports with ESLint --fix"
   this.logError("Error fixing unused imports")
   console.log("" Fixing TypeScript errors...")
+<<<<<<< HEAD
 const files = glob.sync("**/*.{ts,tsx}");
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
 let content = fs.readFileSync(file, "utf8");
+=======
+    const files = glob.sync("**/*.{ts,tsx}")
+  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
+  let content = fs.readFileSync(file, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             /import\s+React\s+from\s+["]react[""];\s*import\s+React\s+from\s+[""]react[""]/g,import React from "
             /import\s+React\s+from\s+["]react["];\s*import\s+React\s+from\s+[""]react[""]/g,import React from "react";
             /interface\s+(\w+)\s*{[^}]*}\s*interface\s+\1/g,interface $1"
@@ -100,9 +175,15 @@ let content = fs.readFileSync(file, "utf8");
         "description": "Fixed linting errors with ESLint --fix"
   this.logError("Error fixing linting errors")
   console.log(" Fixing duplicate declarations..."")
+<<<<<<< HEAD
 const files = glob.sync("**/*.{js,jsx,ts,tsx}");
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
 let content = fs.readFileSync(file, "utf8");
+=======
+    const files = glob.sync("**/*.{js,jsx,ts,tsx}")
+  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
+  let content = fs.readFileSync(file, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           /(export\s+)?(function|const|let|var)\s+(\w+)[^]*;?\s*(export\s+)?(function|const|let|var)\s+\3/g,$1$2 $3"
           /import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^"]+)["];\s*import\s+{\s*\1\s*}\s+from\s+[""]\2[""]/g,import { $1  } from "$2"
           /(export\s+)?(function|const|let|var)\s+(\w+)[^]*;?\s*(export\s+)?(function|const|let|var)\s+\3/g,$1$2 $3"
@@ -113,11 +194,19 @@ let content = fs.readFileSync(file, "utf8");
   "type": "duplicate_declaration"
             "description": "Removed duplicate declarations"
   console.log(`" Fixing missing exports..."`)
+<<<<<<< HEAD
 const files = glob.sync("**/*.{js,jsx,ts,tsx}");
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
 const files = glob.sync("**/*.{js,jsx,ts,tsx}");
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
 let content = fs.readFileSync(file, "utf8");
+=======
+    const files = glob.sync("**/*.{js,jsx,ts,tsx}")
+  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
+    const files = glob.sync("**/*.{js,jsx,ts,tsx}")
+  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
+  let content = fs.readFileSync(file, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           content.includes(")
         if (content !== originalContent")
   "type": "missing_export"
@@ -126,6 +215,7 @@ let content = fs.readFileSync(file, "utf8");
             "description": "Added missing exports"
       } catch (error) {  this.logError("Error fixing exports in ${file  }")
   console.log("" Fixing import errors...")
+<<<<<<< HEAD
 const files = glob.sync("**/*.{js,jsx,ts,tsx}");
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
 const files = glob.sync("**/*.{js,jsx,ts,tsx}");
@@ -134,6 +224,16 @@ let content = fs.readFileSync(file, "utf8");
           .replace(/from\s+[""]([^"]+)["]
   if (importPath.startsWith(".") && !importPath.includes(".")) {return from "${importPath}.js"
 return match}";
+=======
+    const files = glob.sync("**/*.{js,jsx,ts,tsx}")
+  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
+    const files = glob.sync("**/*.{js,jsx,ts,tsx}")
+  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
+  let content = fs.readFileSync(file, "utf8")
+          .replace(/from\s+[""]([^"]+)["]
+  if (importPath.startsWith(".") && !importPath.includes(".")) {return from "${importPath}.js"
+            return match}"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           .replace(/from\s+["]\.\.\/([^"]+)[""]/g, "from ../$1"
           .replace(/from\s+[""]\.\/([^""]+)["]/g, "from ./$1""
   "type": "import_error"
@@ -142,11 +242,19 @@ return match}";
             "description": "Fixed import errors"
       } catch (error) {  this.logError("Error fixing imports in ${file  }")
   console.log("" Fixing undefined variables...")
+<<<<<<< HEAD
 const files = glob.sync("**/*.{js,jsx,ts,tsx}");
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
 const files = glob.sync("**/*.{js,jsx,ts,tsx}");
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
 let content = fs.readFileSync(file, "utf8");
+=======
+    const files = glob.sync("**/*.{js,jsx,ts,tsx}")
+  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
+    const files = glob.sync("**/*.{js,jsx,ts,tsx}")
+  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
+  let content = fs.readFileSync(file, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           .replace(/\bnavigate\s*\(/g, "router(")
           .replace(/\breject\s*\(/g, "throw new Error(")
           .replace(/\bundefined\""b/g"", "null")
@@ -159,11 +267,19 @@ let content = fs.readFileSync(file, "utf8");
             "description": "Fixed undefined variables"
       } catch (error) {  this.logError(Error fixing undefined variables in ${file  }, error")
   console.log("" Fixing console statements...")
+<<<<<<< HEAD
 const files = glob.sync("**/*.{js,jsx,ts,tsx}");
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
 const files = glob.sync("**/*.{js,jsx,ts,tsx}");
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
 let content = fs.readFileSync(file, "utf8");
+=======
+    const files = glob.sync("**/*.{js,jsx,ts,tsx}")
+  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
+    const files = glob.sync("**/*.{js,jsx,ts,tsx}")
+  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
+  let content = fs.readFileSync(file, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         if (process.env.NODE_ENV === "production")
             /console\.(log|warn|error|info|debug)\s*\(/g,// console.$1(")
         if (process.env.NODE_ENV === "production")
@@ -183,4 +299,56 @@ let content = fs.readFileSync(file, "utf8");
       "summary"
         "totalErrors"
         "successRate"
+<<<<<<< HEAD
       console.error('Automation "failed")
+=======
+<<<<<<< HEAD
+
+      console.error('Automation "failed")
+      console.error('Automation "failed")
+      console.error('Automation "failed")
+// console.log( Error Fixer Automation completed successfully!")
+      console.log(")"
+      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues```)"
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      console.error('Automation "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      console.error('Automation "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      console.error('Automation "failed")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+// console.log( Error Fixer Automation completed successfully!")
+      console.log()
+      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues```)"
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+// console.log( Error Fixer Automation completed successfully!")
+      console.log(")"
+      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues```)"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -2,6 +2,11 @@ onChange: (next: { category: string;, level: string;, isFree: string ;}) => void
 return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
 }
 return (;
@@ -14,6 +19,10 @@ return (;
     <div className="grid grid-cols-1 "sm":grid-cols-3 gap-3">;"
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 type Props = {
   category: string;
   level: string;

@@ -40,6 +40,15 @@ interface ReplyFormProps {
       setIsSubmitting(false)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  parentId?: string;
+interface ReplyFormValues {;
+  content: string;
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 interface ReplyFormProps  {onSubmit: (content: string) => Promise<void>;import { useState  } from react';
 import { useForm, ControllerRenderProps  } from 'react-hook-form;
@@ -72,6 +81,10 @@ interface ReplyFormProps  {on_submit: (content: string) => Promise < void>;
 interface ReplyFormValues {;
   content: string;
 
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<ReplyFormValues>({;
@@ -101,7 +114,14 @@ import {
 import { Card, CardContent } from '@/components / ui / card';
 interface ReplyFormProps {
   on_submit: (content: string) => Promise < void>;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   parent_id?: string;
 
 interface ReplyFormValues {
@@ -127,9 +147,18 @@ interface ReplyFormValues {
   return (;
     <Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   },return (<Card>;
       <CardContent className=pt-6">;
 =======
+=======
+=======
+<<<<<<< HEAD
+  },return (<Card>;
+      <CardContent className=pt-6">;
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <CardContent className="pt-6">;
 >>>>>>> origin/chore/fix-lint-and-merge
         <Form {...form}>;
@@ -137,6 +166,14 @@ interface ReplyFormValues {
             <FormField;
               control={form.control}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              name="content";
+              render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (;
+                <FormItem>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               name="content;
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues content"> }) => (<FormItem>;
                   <FormControl>;
@@ -155,6 +192,10 @@ interface ReplyFormValues {
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (;
                 <FormItem>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <FormControl>;
                     <Textarea;
                       className="min-h-[100px] resize-y;
@@ -176,7 +217,14 @@ interface ReplyFormValues {
                 {isSubmitting ? 'Submitting...' : 'Post Reply'}
 
               </Button>;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </div>;
           </form>;
         </Form>;
@@ -204,6 +252,12 @@ interface ReplyFormValues {
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default ReplyForm;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </Card>))}
             />;
             <div className=mt-4 flex justify-end">;
@@ -223,3 +277,7 @@ export default ReplyForm;
 =======
 export default ReplyForm;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

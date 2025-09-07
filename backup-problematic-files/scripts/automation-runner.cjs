@@ -9,6 +9,10 @@
 <<<<<<< HEAD
 const { execSync, spawnSync } = require('"node": child_process');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -21,6 +25,16 @@ const { execSync, spawnSync } = require("node: child_process');
 const { execSync, spawnSync } = require('"node": child_process');
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<<<<<<< HEAD
+=======
+=======
+=======
+
+const { execSync, spawnSync } = require('"node": child_process');
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function run(command, options = {}) {}
 	console.log(`\n$ ${command}`);
 	const result = spawnSync(command, {})
@@ -78,6 +92,10 @@ function main() {}
 
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -93,3 +111,13 @@ main();
 
 `;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<<<<<<< HEAD
+=======
+=======
+main();
+=======
+main();
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

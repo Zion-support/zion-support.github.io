@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 :src/components/NotificationCenter.tsx
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+=======
 import React, { useState, useEffect } from 'react;
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> merged-prs-20250907-203621
 // Use the shared icon wrapper
 import { Bell } from lucide-react'
 import { Button  } from '@/components/ui/button;
@@ -170,13 +174,31 @@ export const NotificationCenter: React.FC = () => {
 =======
   },;
   const handleFilterChange = (newFilter: FilterType) => {;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         />;
 
         <NotificationList
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          loading = {loading,}
+          error = {error,}
+          notifications = {filteredNotifications,}
+          onMarkAsRead = {markAsRead,}
+          onDismiss = {dismissNotification,}
+          onRetry = {fetchNotifications,}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           loading = {loading}
           error = {error}
           notifications = {filteredNotifications}
@@ -230,6 +252,7 @@ export const NotificationCenter: React.FC;<PopoverTrigger asChild>;
         <NotificationFilter;
           filter={filter as FilterType}onFilterChange={handleFilterChange}/>;
         <NotificationList;
+>>>>>>> merged-prs-20250907-203621
 :src/components/NotificationCenter.tsx
         />
         <NotificationFooter onClose={() => setOpen(false)} />
@@ -289,6 +312,12 @@ export const NotificationCenter: React.FC;<PopoverTrigger asChild>;
   data: err ;
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {;
     </Popover>)},
         <NotificationHeader;
@@ -300,6 +329,10 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
 =======
 enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {';
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   variant: 'error' ;
 });
 
@@ -333,6 +366,13 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
   () => setOpen (false) ;
 }/> </PopoverContent> </Popover>) ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+'"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 '
 }</span>)}</Button> </PopoverTrigger> <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col" > <NotificationHeader unreadCount= {unreadCount ;
@@ -350,3 +390,7 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
 };
 '"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

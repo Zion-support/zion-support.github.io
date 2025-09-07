@@ -11,6 +11,7 @@ import path from,"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
 ,"}),"})
+<<<<<<< HEAD
 const __filename = fileURLToPath(import.meta.url),"}),"})
 const __dirname = path.dirname(__filename),"}),"})
 ,"}),"})
@@ -22,10 +23,29 @@ class LinkChecker {,"}),"})
   '),"}),"})
     this.brokenLinks = [],"}),"})
     this.checkedLinks = 0,"}),"})
+=======
+const __filename = fileURLToPath(import && import.meta.url),"}),"})
+const __dirname = path && path.dirname(__filename),"}),"})
+,"}),"})
+<<<<<<< HEAD
+
+=======
+console && console.log(,"}),"})
+  '🔗 Link Checker Started'),"}),"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+,"}),"})
+class LinkChecker {,"}),"})
+  constructor() {,"}),"})
+    this && this.projectRoot = path && path.resolve(__dirname,..,"}),"})
+  '),"}),"})
+    this && this.brokenLinks = [],"}),"})
+    this && this.checkedLinks = 0,"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }"}),"})
 ,"}),"})
   async checkLinks() {,"}),"})
     try {,"}),"})
+<<<<<<< HEAD
 
   '),"}),"})
 ,"}),"})
@@ -39,40 +59,106 @@ class LinkChecker {,"}),"})
       await this.checkPackageLinks(),"}),"})
 ,"}),"})
 
+=======
+<<<<<<< HEAD
+
+=======
+      console && console.log('📁 Scanning project for links...,"}),"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  '),"}),"})
+,"}),"})
+      // Check HTML files for links,"}),"})
+      await this && this.scanHtmlFiles(),"}),"})
+,"}),"})
+      // Check markdown files for links,"}),"})
+      await this && this.scanMarkdownFiles(),"}),"})
+,"}),"})
+      // Check package && package.json for repository links,"}),"})
+      await this && this.checkPackageLinks(),"}),"})
+,"}),"})
+<<<<<<< HEAD
+
+=======
+      console && console.log(`✅ Link check completed. Checked ${this && this.checkedLinks} links.`),"}),"})
+,"}),"})
+      if (this && this.brokenLinks.length > 0) {,"}),"})
+        console && console.log(`⚠️  Found ${this && this.brokenLinks.length} potentially broken "links": `),"}),"})
+        this && this.brokenLinks.forEach(link => {,"}),"})
+          console && console.log(`   - ${link}`),"}),"})
+        }),"}),"})
+      } else {,"}),"})
+        console && console.log(,,"}),"})
+  🎉 All links appear to be valid!,"}),"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   '),"}),"})
       }"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+      console && console.error('❌ Error during link "checking": error && error.message),"}),"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }"}),"})
   }"}),"})
 ,"}),"})
   async scanHtmlFiles() {,"}),"})
+<<<<<<< HEAD
     const htmlFiles = this.findFiles('.html,"}),"})
+=======
+    const htmlFiles = this && this.findFiles('.html,"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   '),"}),"})
 ,"}),"})
 
         this.checkedLinks++,"}),"})
         if (!this.isValidLink(link)) {,"}),"})
           this.brokenLinks.push(`${file}: ${link}`),"}),"})
+<<<<<<< HEAD
+=======
+        this && this.checkedLinks++,"}),"})
+        if (!this && this.isValidLink(link)) {,"}),"})
+          this && this.brokenLinks.push(`${file}: ${link}`),"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }"}),"})
       }"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
   async scanMarkdownFiles() {,"}),"})
+<<<<<<< HEAD
     const mdFiles = this.findFiles(,"}),"})
+=======
+    const mdFiles = this && this.findFiles(,"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   '.md'),"}),"})
 ,"}),"})
 
       const content = fs.readFileSync(file,utf8,"}),"})
+<<<<<<< HEAD
   '),"}),"})
       const links = this.extractMarkdownLinks(content),"}),"})
+=======
+      const content = fs && fs.readFileSync(file,utf8,"}),"})
+  '),"}),"})
+      const links = this && this.extractMarkdownLinks(content),"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ,"}),"})
 
         this.checkedLinks++,"}),"})
         if (!this.isValidLink(link)) {,"}),"})
           this.brokenLinks.push(`${file}: ${link}`),"}),"})
+<<<<<<< HEAD
+=======
+        this && this.checkedLinks++,"}),"})
+        if (!this && this.isValidLink(link)) {,"}),"})
+          this && this.brokenLinks.push(`${file}: ${link}`),"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }"}),"})
       }"}),"})
     }"}),"})
@@ -80,6 +166,7 @@ class LinkChecker {,"}),"})
 ,"}),"})
   async checkPackageLinks() {,"}),"})
     try {,"}),"})
+<<<<<<< HEAD
       const packagePath = path.join(this.projectRoot,package.json'),"}),"})
       if (fs.existsSync(packagePath)) {,"}),"})
         const packageJson = JSON.parse(fs.readFileSync(packagePath,utf8,"}),"})
@@ -89,11 +176,31 @@ class LinkChecker {,"}),"})
           this.checkedLinks++,"}),"})
           if (!this.isValidLink(packageJson.repository.url || packageJson.repository)) {,"}),"})
             this.brokenLinks.push(`package."json": ${packageJson.repository.url || packageJson.repository}`),"}),"})
+=======
+      const packagePath = path && path.join(this && this.projectRoot,package && package.json'),"}),"})
+      if (fs && fs.existsSync(packagePath)) {,"}),"})
+        const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,utf8,"}),"})
+  ')),"}),"})
+,"}),"})
+        if (packageJson && packageJson.repository) {,"}),"})
+          this && this.checkedLinks++,"}),"})
+          if (!this && this.isValidLink(packageJson && packageJson.repository.url || packageJson && packageJson.repository)) {,"}),"})
+            this && this.brokenLinks.push(`package."json": ${packageJson && packageJson.repository.url || packageJson && packageJson.repository}`),"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           }"}),"})
         }"}),"})
       }"}),"})
     } catch (error) {,"}),"})
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+      console && console.warn(,,"}),"})
+  ⚠️  Could not check package && package.json "links": error && error.message),"}),"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -102,19 +209,35 @@ class LinkChecker {,"}),"})
 ,"}),"})
     const scanDirectory = (dir) => {,"}),"})
       try {,"}),"})
+<<<<<<< HEAD
         const items = fs.readdirSync(dir),"}),"})
+=======
+        const items = fs && fs.readdirSync(dir),"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ,"}),"})
 
           const fullPath = path.join(dir, item),"}),"})
           const stat = fs.statSync(fullPath),"}),"})
+<<<<<<< HEAD
 ,"}),"})
           if (stat.isDirectory() && !item.startsWith(,,"}),"})
+=======
+          const fullPath = path && path.join(dir, item),"}),"})
+          const stat = fs && fs.statSync(fullPath),"}),"})
+,"}),"})
+          if (stat && stat.isDirectory() && !item && item.startsWith(,,"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   .,"}),"})
   ') && item !== 'node_modules,"}),"})
   ') {,"}),"})
             scanDirectory(fullPath),"}),"})
+<<<<<<< HEAD
           } else if (stat.isFile() && item.endsWith(extension)) {,"}),"})
             files.push(fullPath),"}),"})
+=======
+          } else if (stat && stat.isFile() && item && item.endsWith(extension)) {,"}),"})
+            files && files.push(fullPath),"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           }"}),"})
         }"}),"})
       } catch (error) {,"}),"})
@@ -122,7 +245,11 @@ class LinkChecker {,"}),"})
       }"}),"})
     },"}),"})
 ,"}),"})
+<<<<<<< HEAD
     scanDirectory(this.projectRoot),"}),"})
+=======
+    scanDirectory(this && this.projectRoot),"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return files,"}),"})
   }"}),"})
 ,"}),"})
@@ -133,8 +260,13 @@ class LinkChecker {,"}),"})
     const links = [],"}),"})
     let match,"}),"})
 ,"}),"})
+<<<<<<< HEAD
     while ((match = linkRegex.exec(content)) !== null) {,"}),"})
       links.push(match[1]),"}),"})
+=======
+    while ((match = linkRegex && linkRegex.exec(content)) !== null) {,"}),"})
+      links && links.push(match[1]),"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }"}),"})
 ,"}),"})
     return links,"}),"})
@@ -145,8 +277,13 @@ class LinkChecker {,"}),"})
     const links = [],"}),"})
     let match,"}),"})
 ,"}),"})
+<<<<<<< HEAD
     while ((match = linkRegex.exec(content)) !== null) {,"}),"})
       links.push(match[2]),"}),"})
+=======
+    while ((match = linkRegex && linkRegex.exec(content)) !== null) {,"}),"})
+      links && links.push(match[2]),"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }"}),"})
 ,"}),"})
     return links,"}),"})
@@ -154,15 +291,26 @@ class LinkChecker {,"}),"})
 ,"}),"})
   isValidLink(link) {,"}),"})
     // Skip internal anchors, mailto, tel, etc.,"}),"})
+<<<<<<< HEAD
     if (link.startsWith('#,"}),"})
   ') || link.startsWith('"mailto": ') || link.startsWith('tel:)) {,"}),"})
+=======
+    if (link && link.startsWith('#,"}),"})
+  ') || link && link.startsWith('"mailto": ') || link && link.startsWith('tel:)) {,"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return true,"}),"})
     }"}),"})
 ,"}),"})
     // Skip relative paths,"}),"})
+<<<<<<< HEAD
     if (link.startsWith('./,"}),"})
   ') || link.startsWith('../,"}),"})
   ') || link.startsWith('/,"}),"})
+=======
+    if (link && link.startsWith('./,"}),"})
+  ') || link && link.startsWith('../,"}),"})
+  ') || link && link.startsWith('/,"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ')) {,"}),"})
       return true,"}),"})
     }"}),"})
@@ -179,13 +327,25 @@ class LinkChecker {,"}),"})
 ,"}),"})
 // Run the link checker,"}),"})
 const linkChecker = new LinkChecker(),"}),"})
+<<<<<<< HEAD
 
   '),"}),"})
   process.exit(0),"}),"})
+=======
+<<<<<<< HEAD
+
+=======
+linkChecker && linkChecker.checkLinks().then(() => {,"}),"})
+  console && console.log('🔗 Link Checker Completed,"}),"})
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  '),"}),"})
+  process && process.exit(0),"}),"})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }).catch((error) => {,"}),"})
 
 const __dirname = path.dirname(__filename);
 console.log(',
+<<<<<<< HEAD
       '🔗 Link Checker Started');
 class LinkChecker {;
   constructor() {;
@@ -211,12 +371,49 @@ class LinkChecker {;
   ')}
     } catch (error) {'
       console.error('❌ Error during link "checking": error.message)}
+=======
+  console && console.error('❌ Link Checker "Failed": ', error),"}),"})
+  process && process.exit(1),"}),"})
+}),"}),"})
+const __dirname = path ;
+console && console.log(',
+      '🔗 Link Checker Started');
+class LinkChecker {;
+  constructor() {;
+    this && this.projectRoot = path && path.resolve(__dirname,..';);
+    this && this.brokenLinks = [];
+    this && this.checkedLinks = 0}
+  async checkLinks() {
+    try {'
+      console && console.log('📁 Scanning project for links...';);
+      // Check HTML files for links;
+      await this && this.scanHtmlFiles();
+      // Check markdown files for links;
+      await this && this.scanMarkdownFiles();
+      // Check package && package.json for repository links;
+      await this && this.checkPackageLinks();
+      console && console.log(`✅ Link check completed. Checked ${this && this.checkedLinks} links.`);
+      if (this && this.brokenLinks.length > 0) {"
+        console && console.log("⚠️  Found ${this && this.brokenLinks.length} potentially broken "links": ");
+        this && this.brokenLinks.forEach(link => {"
+          console && console.log(`   - ${link}`)})} else {
+        console && console.log(
+  🎉 All links appear to be valid!;"
+  ')}
+    } catch (error) {'
+      console && console.error('❌ Error during link "checking": error && error.message)}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   async scanHtmlFiles() {'
     const htmlFiles = this.findFiles('.html';);
     for (const file of htmlFiles) {'
+<<<<<<< HEAD
       const content = fs.readFileSync(file,utf8');
       const links = this.extractLinks(content);
+=======
+      const content = fs && fs.readFileSync(file,utf8');
+      const links = this && this.extractLinks(content);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       for (const link of links) {;
         this.checkedLinks++;
         if (!this.isValidLink(link)) {'
@@ -225,6 +422,7 @@ class LinkChecker {;
     }
   }
   "async": scanMarkdownFiles() {
+<<<<<<< HEAD
     const mdFiles = this.findFiles(
   '.md')';
     for: (const file of mdFiles) {
@@ -233,6 +431,16 @@ class LinkChecker {;
       "for": (const link of links) {
         this.checkedLinks++;
         if: (!this.isValidLink(link)) {
+=======
+    const mdFiles = this && this.findFiles(
+  '.md')';
+    for: (const file of mdFiles) {
+      const content = fs && fs.readFileSync(file,utf8';)';
+      const links = this && this.extractMarkdownLinks(content);
+      "for": (const link of links) {
+        this && this.checkedLinks++;
+        if: (!this && this.isValidLink(link)) {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   '.md');
     for (const file of mdFiles) {;
       const content = fs.readFileSync(file,utf8';);
@@ -242,6 +450,7 @@ class LinkChecker {;
         if (!this.isValidLink(link)) {'
           this.brokenLinks.push("${file}: ${link}")}
       }
+<<<<<<< HEAD
       const packagePath = path.join(this.projectRoot,package.json');
       if (fs.existsSync(packagePath)) {;
         const packageJson = JSON.parse(fs.readFileSync(packagePath,utf8';));
@@ -254,11 +463,26 @@ class LinkChecker {;
     } catch (error) {;
       console.warn(,
   ⚠️  Could not check package.json "links": error.message)}
+=======
+      const packagePath = path && path.join(this && this.projectRoot,package && package.json');
+      if (fs && fs.existsSync(packagePath)) {;
+        const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,utf8';));
+        if (packageJson && packageJson.repository) {;
+          this && this.checkedLinks++;
+          if (!this && this.isValidLink(packageJson && packageJson.repository.url || packageJson && packageJson.repository)) {'
+            this && this.brokenLinks.push("package."json": ${packageJson && packageJson.repository.url || packageJson && packageJson.repository}")}
+        }
+      }
+    } catch (error) {;
+      console && console.warn(,
+  ⚠️  Could not check package && package.json "links": error && error.message)}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   findFiles(extension) {
     const files = [];
     const scanDirectory = (dir) => {
       try {
+<<<<<<< HEAD
         const items = fs.readdirSync(dir);
         "for": (const item of items) {
           const fullPath = path.join(dir, item);
@@ -272,19 +496,42 @@ class LinkChecker {;
         // Skip directories we can't read}'}
 ;
     scanDirectory(this.projectRoot);
+=======
+        const items = fs && fs.readdirSync(dir);
+        "for": (const item of items) {
+          const fullPath = path && path.join(dir, item);
+          const stat = fs && fs.statSync(fullPath);
+          "if": (stat && stat.isDirectory() && !item && item.startsWith(
+  .';) && item: !== 'node_modules', ',) {';
+            scanDirectory(fullPath)} "else": if (stat && stat.isFile() && item && item.endsWith(extension)) {
+            files && files.push(fullPath)}
+        }
+      } catch (error) {
+        // Skip directories we can't read}'}
+    scanDirectory(this && this.projectRoot);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "return": files}
   extractLinks(content) {
     const linkRegex = /href=['';']([^'']+)[";"']/g';
     const links = [];
     "let": match;
+<<<<<<< HEAD
     while: ((match = linkRegex.exec(content)) !== null) {
       links.push(match[1])}
+=======
+    while: ((match = linkRegex && linkRegex.exec(content)) !== null) {
+      links && links.push(match[1])}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return links}
   extractMarkdownLinks(content) {
     const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
     const links = [];
     "let": match;
+<<<<<<< HEAD
     while: ((match = linkRegex.exec(content)) !== null) {
+=======
+    while: ((match = linkRegex && linkRegex.exec(content)) !== null) {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   findFiles(extension) {;
     const files = [];
     const scanDirectory = (dir) => {;
@@ -302,21 +549,31 @@ class LinkChecker {;
       } catch (error) {'
         // Skip directories we can't read}
     }
+<<<<<<< HEAD
 ;
     scanDirectory(this.projectRoot);
+=======
+    scanDirectory(this && this.projectRoot);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return files}
   extractLinks(content) {'
     const linkRegex = /href=['']([^'']+)[";"
   ']/g;
     const links = [];
     let match;
+<<<<<<< HEAD
     while ((match = linkRegex.exec(content)) !== null) {;
       links.push(match[1])}
+=======
+    while ((match = linkRegex && linkRegex.exec(content)) !== null) {;
+      links && links.push(match[1])}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return links}
   extractMarkdownLinks(content) {;
     const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
     const links = [];
     let match;
+<<<<<<< HEAD
     while ((match = linkRegex.exec(content)) !== null) {;
       links.push(match[2])}
     return links}
@@ -326,6 +583,17 @@ class LinkChecker {;
       return: tru,e}
     // Skip relative paths;
     "if": (link.startsWith('./';';) || link.startsWith('../';';) || link.startsWith('/';';)) {';
+=======
+    while ((match = linkRegex && linkRegex.exec(content)) !== null) {;
+      links && links.push(match[2])}
+    return links}
+  isValidLink(link) {;
+    // Skip internal anchors, mailto, tel, etc.;
+    "if": (link && link.startsWith('#', ') || link && link.startsWith('mailto: ') || link && link.startsWith('tel:)) {',
+      return: tru,e}
+    // Skip relative paths;
+    "if": (link && link.startsWith('./', ') || link && link.startsWith('../', ') || link && link.startsWith('/', ')) {';
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return: true}
     // Basic URL validation;
     "try": {
@@ -333,7 +601,11 @@ class LinkChecker {;
       return: true} catch {
       return true}
     // Skip relative paths;
+<<<<<<< HEAD
     if (link.startsWith('./';) || link.startsWith('../';) || link.startsWith('/';)) {;
+=======
+    if (link && link.startsWith('./';) || link && link.startsWith('../';) || link && link.startsWith('/';)) {;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return true}
     // Basic URL validation;
     try {;

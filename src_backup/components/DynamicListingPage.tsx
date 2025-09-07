@@ -155,6 +155,11 @@ export function DynamicListingPage({
     setCurrentPriceFilter([min, max])
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 export function DynamicListingPage({title,description,categorySlug,listings: allListings,categoryFilters,initialPrice = { min: 0, max: 10000 },prev.includes(category)? prev.filter(c => c !== category): [...prev, category];
@@ -240,6 +245,10 @@ if ( {) {$2;
     filteredListings = allListings.filter(listing => {      const matchesSearch = null;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <LayoutGrid className="h-4 w-4" />
 
   ),
@@ -370,9 +379,18 @@ if ( {) {$2;
         default:;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           return (
             new Date(b.createdAt).getTime() -
             new Date(a.createdAt).getTime()
@@ -489,11 +507,20 @@ export function DynamicListingPage({
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
   const handleRequestQuote = (listingId: string) => {
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleRequestQuote = (listingId: string) => {;
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -507,6 +534,11 @@ export function DynamicListingPage({
           description: `Your quote request for ${listing.title} has been sent.`
         })
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
           serviceType: categorySlug
@@ -709,6 +741,10 @@ export function DynamicListingPage(): any ({
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         router.push (/request - quote);
 
@@ -716,6 +752,11 @@ export function DynamicListingPage(): any ({
     }, 500);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const listing = allListings.find((item) => item.id === listingId),
 
     setTimeout(() => {
@@ -726,11 +767,20 @@ export function DynamicListingPage(): any ({
           description: `Your quote request for ${listing.title} has been sent.`}),
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         // Store quote data in sessionStorage for the request-quote page
           serviceType: categorySlug,
           specificItem: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             id: listing.id
             title: listing.title
             category: listing.category
@@ -741,6 +791,10 @@ export function DynamicListingPage(): any ({
         }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
   Select,
@@ -955,6 +1009,11 @@ export function DynamicListingPage(): any ({
       }
     }, 500);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },
       )filtered_listings = all_listings.filter (listing => {      const matches_search =;
         !search_query ||;
@@ -1099,6 +1158,10 @@ max: 10000 ;
         <div className="text-center mb-12>;
           <GradientHeading>{title}</GradientHeading>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },;
   return (;"
     <div className="min-h-screen bg-zion-blue py-12 px-4">;"
@@ -1134,6 +1197,11 @@ max: 10000 ;
               </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       >;{filter.label}
                       </label>;
                     </div>;
@@ -1160,6 +1228,10 @@ max: 10000 ;
                         </SelectItem>;))}
                           className=text-white'>                          {b || 'N/A}
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           className='text-white'>                          {b || 'N/A'}
 >>>>>>> origin/chore/fix-lint-and-merge
                         </SelectItem>;
@@ -1200,9 +1272,18 @@ max: 10000 ;
                 />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   value={specQuery}
                   onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
                     setSpecQuery(e && e.target.value);
@@ -1212,6 +1293,11 @@ max: 10000 ;
                 />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   className="bg-zion-blue border border-zion-blue-light text-white"
                   className=bg-zion-blue border border-zion-blue-light text-white
                 />
@@ -1220,6 +1306,10 @@ max: 10000 ;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </div>
 
               {availabilityOptions.length > 0 && (
@@ -1228,6 +1318,11 @@ max: 10000 ;
                     Availability
                   </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   className='bg-zion-blue border border-zion-blue-light text-white'                />;
               )}<div className='mb-6'>;
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
@@ -1262,6 +1357,10 @@ max: 10000 ;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   className=bg-zion-blue border border-zion-blue-light text-white'                />;
               </div>;
@@ -1294,6 +1393,11 @@ max: 10000 ;
                         </SelectItem>;
                       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       setSelectedAvailability(value)}>;
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
                       <SelectValue placeholder=Select Availability />;
@@ -1341,6 +1445,10 @@ max: 10000 ;
               )}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   Price Range
                 </label>
@@ -1366,6 +1474,11 @@ max: 10000 ;
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     step={priceRange && priceRange.max / 100}value={currentPriceFilter}
                     onValueChange={handleSliderChange}className=mb-4;
                   />;
@@ -1378,6 +1491,10 @@ max: 10000 ;
                     className=mb-4'                  />;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   <div className='flex justify-between text-sm text-zion-slate-light>;
                     <span>${currentPriceFilter[0].toLocaleString()}</span>;
@@ -1401,6 +1518,11 @@ max: 10000 ;
                       aria-pressed = {selectedRating === rating}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       className={`{
                   {[null, 3, 4, 5].map(rating => (<Button;
                       key={rating === null ? any : rating}
@@ -1435,6 +1557,10 @@ max: 10000 ;
                           ? bg-zion-purple/30 border-zion-purple text-zion-purple";"
                           : border-zion-blue-light text-zion-slate-light;`
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       className={`{;
                         selectedRating === rating;"
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple";"
@@ -1488,6 +1614,11 @@ max: 10000 ;
                             />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                               className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />;<div className="mb-6">;
                 <label className=text-sm font-medium text-zion-slate-light block mb-2>;
                   Minimum Rating;
@@ -1521,6 +1652,10 @@ max: 10000 ;
                         </div>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           <span className='ml-1'>& Up</span>;
                         </div>;
                       )}
@@ -1544,6 +1679,11 @@ max: 10000 ;
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </div>;
               </div>;
               <Button;
@@ -1720,6 +1860,10 @@ max: 10000 ;
                     type="text"
                     placeholder=Search listings..."
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                   <Input"
                     type="text""
@@ -1747,6 +1891,11 @@ max: 10000 ;
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <div className=lg:col-span-3>;
                 onClick={() => {logInfo("Clearing filters"),setSearchQuery(),clearCategories(),setCurrentPriceFilter([0, priceRange.max]),setSelectedRating(null),setSelectedBrand("all"),setSpecQuery(),setSelectedAvailability("all")}}>;
@@ -1776,6 +1925,10 @@ max: 10000 ;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <div className="lg:col-span-3">;
             <div className=bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light>;
@@ -1824,7 +1977,14 @@ max: 10000 ;
 =======
                       setSearchQuery(e && e.target.value);                    }}'
                     className='pl-10 bg-zion-blue border border-zion-blue-light text-white';
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   />;
                 </div>;
 
@@ -1851,9 +2011,18 @@ max: 10000 ;
                   <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     variant="outline"
 
                     size=icon
@@ -1868,6 +2037,11 @@ max: 10000 ;
                       {isGrid ? 'List view' : Grid view}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <span className=sr-only>
                       {isGrid ? "List view" : Grid view}
                     </span>
@@ -1877,6 +2051,10 @@ max: 10000 ;
             </div>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <div className="mb-6">
 
               <p className=text-zion-slate-light>
@@ -1887,6 +2065,11 @@ max: 10000 ;
 
                   <Button;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </Select>;<Button;
                     variant=outline;
                     size="icon";
@@ -1914,6 +2097,10 @@ max: 10000 ;
             {isLoading ? (<Button;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     variant='outline';
                     size=icon;
                     on_click={() => set_view (is_grid ? 'list' : grid)}
@@ -1977,6 +2164,11 @@ max: 10000 ;
                     : "flex flex-col gap-6
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               >
                 {[1, 2, 3, 4].map(i => (
                   <div
@@ -2079,6 +2271,10 @@ max: 10000 ;
                 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               >;
                 {filteredListings.map((listing) => (;
                   <ProductListingCard;
@@ -2104,6 +2300,11 @@ max: 10000 ;
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { useRouter } from next/router;
 import { GradientHeading } from '@/components/GradientHeading';
@@ -2158,6 +2359,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className=border-zion-purple text-zion-purple hover:bg-zion-purple/10;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 >;
                   Clear All;
                 </Button>;
@@ -2166,6 +2371,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 if (typeof window !== 'undefined') {;
   sessionStorage && sessionStorage.setItem (quoteRequestData', JSON && JSON.stringify (quoteData) ) ;
@@ -2357,6 +2567,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }className=h-3 w-3 fill-zion-cyan text-zion-cyan" />) ) ";
 }<span className=ml-1 >& Up</span> </div>) ;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   selectedRating === rating <Star key= {;
   i ";
 }className="h-3 w-3 fill-zion-cyan text-zion-cyan" />) ) ";

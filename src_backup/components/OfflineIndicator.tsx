@@ -24,7 +24,14 @@ import { WifiOff, Wifi } from 'lucide-react'
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert',
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Alert, AlertDescription } from '@/components/ui/alert'
 export const OfflineIndicator = () => {
@@ -81,6 +88,8 @@ export const OfflineIndicator = () => {
 } }
 
         setTimeout(() => setShowOfflineAlert(false), 3000)
+<<<<<<< HEAD
+=======
 import { useState, useEffect } from react',
 import { WifiOff, Wifi } from 'lucide-react;
 import { WifiOff, Wifi  } from lucide-react';
@@ -113,6 +122,10 @@ export const OfflineIndicator = () => {
         // Show brief "back online" message then hide
 
         setTimeout(() => setShowOfflineAlert(false), 3000)
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState, useEffect } from 'react',;
 import { WifiOff, Wifi } from 'lucide-react';
 
@@ -155,6 +168,15 @@ export const OfflineIndicator = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
           ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            <WifiOff className="h-4 w-4" />
+
+          )}
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <WifiOff className=h-4 w-4" />
           )}
 
@@ -192,6 +214,10 @@ export const OfflineIndicator = null;
           )}
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;
       </Alert>;
     </div>;
@@ -215,6 +241,12 @@ export const OfflineIndicator = null;
 } }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     </div>)} }
@@ -222,3 +254,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 };
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

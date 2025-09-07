@@ -1,4 +1,30 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -99,6 +125,36 @@ const optimizer = new PerformanceOptimizer;(;);
 optimizer.generateOptimizationReport().then(report => {
   }).catch(error => {
   console.error('❌ Optimization "failed": ', error)});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const { execSync } = require('child_process')
           "type"
           "action"
@@ -113,8 +169,33 @@ const { execSync } = require('child_process')
         "priority"
         "message"
   console.log(' Performance optimization report "generated")
+<<<<<<< HEAD
   console.error(' Optimization "failed")
   console.error(' Optimization "failed")
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  console.error(' Optimization "failed")
+  console.error(' Optimization "failed")
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   console.error(' Optimization "failed")
 #!/usr/bin/env node
 =======
@@ -125,19 +206,51 @@ function optimizePerformance() {
   const optimizations = [];
   const issues = [];
   // Check bundle size;
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  console.error(' Optimization "failed")
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+  console.error(' Optimization "failed")
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+console.log('⚡ Performance Optimizer Started...');
+// Optimize application performance
+function optimizePerformance() {
+  const optimizations = [];
+  const issues = [];
+  // Check bundle size
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const nextDir = '/workspace/.next';
   if (fs.existsSync(nextDir)) {
 
     if (fs.existsSync(staticDir)) {
       const files = fs.readdirSync(staticDir, { recursive: true });
       let totalSize = 0;
+<<<<<<< HEAD
       files.forEach(file => {)
+=======
+<<<<<<< HEAD
+      files.forEach(file => {)
+=======
+      files.forEach(file => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         const filePath = path.join(staticDir, file);
         if (fs.statSync(filePath).isFile()) {
           totalSize += fs.statSync(filePath).size;
         }
       });
       const sizeInMB = (totalSize / (1024 * 1024)).toFixed(2);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (totalSize > 5 * 1024 * 1024) { // 5MB;
         issues.push({
 
@@ -147,11 +260,32 @@ function optimizePerformance() {
     const files = fs.readdirSync(pagesDir);
 <<<<<<< HEAD
     
+<<<<<<< HEAD
+=======
+=======
+      if (totalSize > 5 * 1024 * 1024) { // 5MB
+        issues.push({
+          type: 'large_bundle',
+          severity: 'high',
+          message: `Bundle size is ${sizeInMB}MB, consider code splitting`
+        });
+      }
+    }
+  }
+  // Check for performance issues in code
+  const pagesDir = '/workspace/pages_minimal';
+  if (fs.existsSync(pagesDir)) {
+    const files = fs.readdirSync(pagesDir);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     files.forEach(file => {
       if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
         const filePath = path.join(pagesDir, file);
         const content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
         
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Check for large components
         const lines = content.split('\n').length;
         if (lines > 200) {
@@ -162,7 +296,10 @@ function optimizePerformance() {
             message: `Component has ${lines} lines, consider splitting`
           });
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Check for missing React.memo
         if (content.includes('export default function') && !content.includes('React.memo')) {
           optimizations.push({
@@ -171,7 +308,10 @@ function optimizePerformance() {
             message: 'Consider using React.memo for performance'
           });
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Check for missing useMemo/useCallback
         if (content.includes('useState') && !content.includes('useMemo') && !content.includes('useCallback')) {
           optimizations.push({
@@ -183,7 +323,10 @@ function optimizePerformance() {
       }
     });
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Generate performance report
 =======
 
@@ -194,9 +337,67 @@ function optimizePerformance() {
     issues,
     optimizations,
     recommendations: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   console.log(`⚡ Performance optimization completed. Score: ${report.performanceScore}/100`);
   return report;
 // Run performance optimization;
 optimizePerformance();
+<<<<<<< HEAD
 `;
+=======
+`;
+=======
+      'Implement code splitting with dynamic imports',
+      'Use React.memo for expensive components',
+      'Optimize images with next/image',
+      'Implement lazy loading',
+      'Use CDN for static assets',
+      'Minimize bundle size',
+      'Implement caching strategies',
+      'Use performance monitoring tools'
+    ],
+    performanceScore: Math.max(0, 100 - (issues.length * 10))
+  };
+  fs.writeFileSync('/workspace/performance-optimization-report.json', JSON.stringify(report, null, 2));
+  console.log(`⚡ Performance optimization completed. Score: ${report.performanceScore}/100`);
+  return report;
+}
+// Run performance optimization
+<<<<<<< HEAD
+optimizePerformance();
+=======
+optimizePerformance();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

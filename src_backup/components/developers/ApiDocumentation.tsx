@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 method: string;endpoint: string;
@@ -36,6 +41,10 @@ required?: boolean;
 }interface EndpointSectionProps  {method: string;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 method: string;
 
 endpoint: string;
@@ -44,6 +53,11 @@ description: string;
 note?: string;
 params?: EndpointParam[];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
@@ -54,6 +68,10 @@ params?: EndpointParam[];
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   Authorization': 'Bearer YOUR API KEYContent-Type: application/json' 
 
@@ -164,6 +182,12 @@ headers: {'
 export function ApiDocumentation() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <Card className='bg-zinc-900 border-zinc-800 text-white'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <Card className=bg-zinc-900 border-zinc-800 text-white'>;
 codeExamples?: Record<string string>;
 responseExamples?: {success: string;
@@ -179,6 +203,10 @@ export function ApiDocumentation() {return (<Card className=bg-zinc-900 border-z
 =======
     <Card className='bg-zinc-900 border-zinc-800 text-white'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <CardHeader>;
         <CardTitle className='text-xl flex items-center'>;
           <BookOpen className=mr-2 size={20} /> API Documentation;
@@ -193,6 +221,16 @@ export function ApiDocumentation() {return (<Card className=bg-zinc-900 border-z
           <Terminal className='h-4 w-4' />;
 }`;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}/> <EndpointSection const response = await fetch (\`https://api.ziontechgroup.com / v1 / jobs/\$ {
+  job_id;
+}\`, {
+  method: 'GET';
+headers: {';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }/> <EndpointSectionconst response = await fetch (\`https://api && api.ziontechgroup.com/v1/jobs/\$ {jobId;
 }\`, {method: GET;
 headers: {';
@@ -222,6 +260,10 @@ export /**;
 }\`, {
   method: 'GET';
 headers: {';
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   'Authorization': 'Bearer YOUR API KEYContent - Type': 'application / json';
 export /**
  * ApiDocumentation - Function description
@@ -229,7 +271,14 @@ export /**
 function ApiDocumentation() {
   return (
     <Card className='bg - zinc - 900 border - zinc - 800 text - white'>;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <CardHeader>;
         <CardTitle className='text - xl flex items - center'>;
           <BookOpen className=mr - 2 size={20} /> API Documentation;
@@ -240,6 +289,18 @@ function ApiDocumentation() {
       </CardHeader>;
       <CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <Alert className='bg - blue - 900 / 30 border - blue - 800 mb - 6'>;
+          <Terminal className='h - 4 w - 4' />;
+
+          <AlertDescription>;
+            Make sure to include your API key in all requests as a Bearer token;
+            in the Authorization header.;
+          </AlertDescription>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <Alert className=bg - blue - 900 / 30 border - blue - 800 mb - 6>;
           <Terminal className='h - 4 w - 4' />;<AlertDescription>Make sure to include your API key in all requests as a Bearer token;
             in the Authorization header.;
@@ -255,6 +316,10 @@ function ApiDocumentation() {
             Make sure to include your API key in all requests as a Bearer token;
             in the Authorization header.;
           </AlertDescription>;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </Alert>;
 
         <Tabs default_value='jobs' className='space - y-4'>;
@@ -267,6 +332,19 @@ function ApiDocumentation() {
             <TabsTrigger value=webhooks>Webhooks</TabsTrigger>;
             <TabsTrigger value='errors'>Errors</TabsTrigger>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          </TabsList>;
+
+          <TabsContent value='jobs' className='space - y-6'>;
+            <EndpointSection;
+              method='GET';
+              endpoint='/api / jobs';
+              description='List all available jobs with optional filtering.';
+              note='';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </TabsList>;<TabsContent value=jobs className='space - y-6'>;
 =======
           </TabsList>;
@@ -307,6 +385,10 @@ function ApiDocumentation() {
               note=";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               params={[;
 
                 {
@@ -384,7 +466,14 @@ function ApiDocumentation() {
                 { name: "category", type: "string", description: "Filter by job category" },
                 { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" },
                 { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               ]}
 
@@ -451,6 +540,17 @@ data=json && json.dumps (payload) ) data = response && response.json () print (d
 
 }responseExamples= {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content - Type': 'application / json';
+  }
+});
+const data = await response.json ();
+log_info (data), `;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     'Authorization': Bearer YOUR_API_KEY,
     'Content - Type': application / json;
 })}` ;
@@ -505,6 +605,10 @@ data=json && json.dumps (payload) ) data = response && response.json () print (d
 const data = await response.json ();
 log_info (data), `;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 python: `import requests headers = {';
   'Authorization: Bearer YOUR API KEYContent - Type': 'application / json;
 }job id ;
@@ -516,6 +620,11 @@ headers = headers) data = response.json () print (data) `;
 }`;
 }';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }/> <EndpointSection deadline: 2025 - 06 - 30T23:59:59Z;
 })})';
 'deadline: 2025 - 06 - 30T23:59:59Z' ';
@@ -526,6 +635,10 @@ data = json.dumps (payload) ) data = response.json () print (data) `;
 };
 }/> </TabsContent> <TabsContent value=" talent"className= space-y-6> <EndpointSection headers = headers) data = response.json () print (data) `;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }/> <EndpointSection deadline: '2025 - 06 - 30T23:59:59Z';
 });
 });';
@@ -595,6 +708,11 @@ print(data)`;
 
               }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               response_examples={{
                 success: `{
   data": [;
@@ -615,6 +733,10 @@ print(data)`;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               responseExamples={{
                 success: `{
   data": [
@@ -636,11 +758,21 @@ print(data)`;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}`,
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }`}}
             />
 =======
 }`,
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             <EndpointSection
 
@@ -648,6 +780,12 @@ print(data)`;
               endpoint=/api/jobs/:id
               description='Get detailed information about a specific job.'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              note=''
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               note=
 response = requests.get ('https://api.ziontechgroup.com / v1 / jobs',params={limit: 10, 'category': development},headers = headers)data = response.json ()print (data)`,print(data)`,'Authorization': Bearer YOUR_API_KEYContent-Type: 'application/json';
   }
@@ -675,6 +813,10 @@ headers = {Authorization: 'Bearer YOUR_API_KEYContent-Type': application/json;
 =======
               note=''
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               params={[
             />;
@@ -696,6 +838,11 @@ headers = {Authorization: 'Bearer YOUR_API_KEYContent-Type': application/json;
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
               code_examples={{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 curl: `curl -X GET "https://api.ziontechgroup.com / v1 / jobs / job_abc123 \\;
               params={[;{name: 'id';
                   type: string;
@@ -715,6 +862,10 @@ job_id = 'job_abc123;
 response = requests && requests.get(fhttps://api && api.ziontechgroup.com/v1/jobs/{job_id}',headers=headers;
 )data = response && response.json()print(data)`,'Authorization: Bearer YOUR_API_KEY','Content - Type: application / json';
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 curl: `curl -X GET "https://api.ziontechgroup.com / v1 / jobs / job_abc123" \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content - Type: application / json"`,
@@ -742,7 +893,14 @@ print(data)`,
 
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content - Type': 'application / json';
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
 });
 const data = await response.json ();
@@ -768,7 +926,14 @@ response = requests.get (fhttps://api.ziontechgroup.com / v1 / jobs/{job_id},hea
 print (data)`,
 
 }`;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               }}
             />
@@ -811,6 +976,11 @@ print (data)`,
               note=Requires jobs:write scope"
               params={[
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <EndpointSection;
               method="GET;
               endpoint=/api/jobs/:id";
@@ -830,6 +1000,10 @@ print (data)`,
               params={[;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             />;
             <EndpointSection;
@@ -846,6 +1020,11 @@ print (data)`,
                   description: 'Job title'
                   required: true
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               params={[;{name: 'title';
               params={[;{name: title;
                   type: 'string';
@@ -871,6 +1050,10 @@ print (data)`,
                 {
                   name: description
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 }
                 {
                   name: 'description'
@@ -909,6 +1092,11 @@ print (data)`,
                 { name: "deadline, type: string", description: "Job deadline (ISO date string) }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {name: budget && budget.min,type: 'number',description: Minimum budget},{name: 'budget && budget.max',type: number,description: 'Maximum budget'},{name: budget && budget.currency,type: 'string',description: Currency code (default: USD)},{name: 'deadline';
                   type: string;
                   description: 'Job deadline (ISO date string)';
@@ -988,6 +1176,10 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`
   headers: {
     Authorization: 'Bearer YOUR_API_KEYContent-Type': application/json;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content-Type: application/json"`,;
                 javascript: `const jobId = 'job_abc123',;
@@ -1043,9 +1235,18 @@ logInfo(data),`,
                 python: `import requests
 headers = {
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Authorization': Bearer YOUR_API_KEY
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+    'Authorization': Bearer YOUR_API_KEY
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     'Authorization': Bearer YOUR_API_KEY,
 
@@ -1070,6 +1271,11 @@ print(data)`,
       currency: 'USD
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 { name: "title", type: string, description: "Job title", required: true },{ name: description, type: "string", description: Detailed job description, required: true },{ name: "category", type: string, description: "Job category", required: true },{ name: skills, type: "string[]", description: Required skills, required: true },{ name: "budget.min", type: number, description: "Minimum budget" },{ name: budget.max, type: "number", description: Maximum budget },{ name: "budget.currency", type: string, description: "Currency code (default: USD)" },{ name: deadline, type: "string", description: Job deadline (ISO date string) }]}code_examples={{curl: `curl -X POST "https://api.ziontechgroup.com / v1 / jobs" \\;
   -H Authorization: Bearer YOUR_API_KEY \\;
   -H "Content - Type: application / json" \\;-d {title: "Senior React Developer",description: "We need an experienced React developer...",category: "development",skills: ["react", typescript, "node && node.js"],budget: {}'`,javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs, {"min": 5000,max: 10000,"currency": USD;
@@ -1107,6 +1313,10 @@ print(data)`,
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     deadline: '2025-06-30T23:59:59Z'
   })
 }),
@@ -1154,6 +1364,11 @@ print(data)`;
               params={[
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 response = requests.post (https://api.ziontechgroup.com / v1 / jobs,headers = headers,data = json.dumps (payload))data = response.json ()print (data)`,print(data)`,'Authorization': Bearer YOUR_API_KEYContent-Type: 'application/json';
 }payload = {title: 'Senior React Developerdescription': We need an experienced React developer...category: 'developmentskills': [reacttypescriptnode.js],'budget': {min: 5000,'max': 10000,currency: 'USD';
     },deadline: '2025-06-30T23:59:59Z';
@@ -1196,6 +1411,10 @@ response = requests.post (https://api.ziontechgroup.com / v1 / jobs,headers = he
           <TabsContent value="talent" className=space-y-6>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {
 
                   name: 'page'
@@ -1215,9 +1434,18 @@ response = requests.post (https://api.ziontechgroup.com / v1 / jobs,headers = he
                   description: 'Filter by skills (comma - separated)'},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {
                   name: availability
                   type: 'string'
@@ -1260,7 +1488,14 @@ logInfo(data);`]}
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" },
                 { name: "availability", type: "string", description: "Filter by availability status" }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               ]}
 
                 python: `import requests
@@ -1276,6 +1511,11 @@ response = requests && requests.get(
 
 data = response && response.json()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 print(data)`,
 
 
@@ -1292,6 +1532,10 @@ log_info (data);`,
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 print(data)`,
 
@@ -1364,6 +1608,11 @@ data = response.json();
 print(data)`;
               }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               responseExamples={{
                 success: `{
   data: [
@@ -1471,6 +1720,10 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / talent/{talent_i
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }`;
               }}
@@ -1517,6 +1770,11 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / talent/{talent_i
               note="Requires quotes:write scope"
               params={[
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             <EndpointSection;
               method=GET;
@@ -1549,6 +1807,10 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / talent/{talent_i
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 {
 
@@ -1557,6 +1819,45 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / talent/{talent_i
                   description: ID of the talent to request a quote from
                   required: true
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                }
+                {
+                  name: 'project_name'
+                  type: 'string'
+                  description: 'Name of the project'
+                  required: true
+                }
+                {
+                  name: 'project_summary'
+                  type: 'string'
+                  description: 'Brief summary of the project'
+                  required: true
+                }
+                {
+                  name: 'project_description'
+                  type: 'string'
+                  description: 'Detailed project description'
+                }
+                {
+                  name: 'timeline'
+                  type: 'string'
+                  description: 'Expected timeline'
+                  required: true
+                }
+                {
+                  name: 'budget_min'
+                  type: 'number'
+                  description: 'Minimum budget'
+                }
+                {
+                  name: 'budget_max'
+                  type: 'number'
+                  description: 'Maximum budget'
+                }
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               params={[;{name: 'talent_id';
                   type: string;
                   description: 'ID of the talent to request a quote from';
@@ -1628,12 +1929,23 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / talent/{talent_i
                   type: 'number'
                   description: 'Maximum budget'
                 }
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {
                   name: 'requester_name'
                   type: 'string'
                   description: 'Name of the requester'
                   required: true
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 }
                 {
                   name: 'requester_email'
@@ -1729,12 +2041,21 @@ headers = {
     "created_at": 2025-05-16T14:30:15Z
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }`,              }}
 }`}}
             />;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             <EndpointSection
               method="GET"
@@ -1742,6 +2063,11 @@ headers = {
               description="List quote requests that youve created."
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 {name: requester_email';
                   type: 'string;
@@ -1774,6 +2100,10 @@ headers = {success: `{data: {"id": quote_def456,"talent_id": talent_abc123,"requ
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {
                   name: page
                   type: 'integer'
@@ -1782,6 +2112,11 @@ headers = {success: `{data: {"id": quote_def456,"talent_id": talent_abc123,"requ
                 {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {
   method: 'GET'
   headers: {
@@ -1794,6 +2129,10 @@ print(data)`,
                 { name: limit, type: "integer", description: Number of results per page (default: 20, max: 100) },
                 { name: "status", type: string, description: "Filter by status (new, viewed, replied, archived)" }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
@@ -1807,6 +2146,13 @@ print(data)`,
                 python: `import requests
 headers = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     Authorization: 'Bearer YOUR_API_KEY'
     Content-Type: 'application/json'
 response = requests.get(
@@ -1823,6 +2169,10 @@ logInfo(data),`,
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 headers = {
     Authorization: 'Bearer YOUR_API_KEYContent-Type': application/json;
@@ -1835,12 +2185,21 @@ data = response.json();
 print(data)`;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               responseExamples={{
                 success: `{
   data: [
     {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 success: `{
   "data": [
     {
@@ -1857,6 +2216,12 @@ print(data)`;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}`,
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }`}}
             />
           </TabsContent>
@@ -1890,6 +2255,10 @@ function verifyWebhookSignature(payload, signature, secret) {
 =======
 }`,
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }`;
 
@@ -1949,6 +2318,11 @@ app.post('/webhook', express.raw({type: application/json}), (req, res) => {
               <table className=w-full border-collapse mt-2>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <thead>
                   <tr className='border-b border-zinc-800'>
                     <th className=py-2 px-4 text-left>Event Type</th>
@@ -2294,6 +2668,10 @@ app && app.post(/webhook', express && express.raw({type: 'application/json}), (r
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <CodeBlock
                 code = {`{
   "event_type": new_application
@@ -2320,6 +2698,11 @@ app && app.post(/webhook', express && express.raw({type: 'application/json}), (r
   }
 }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 language=json
               <CodeBlock;
                 code={`{"event_type": new_application,"event_id": evt_abc123def456,"timestamp": 2025-05-16T15:30:00Z,"data": {application_id: "app_123456";
@@ -2658,6 +3041,10 @@ app.post ('/webhook', express.raw ({type: application / json}), (req, res) => {c
               
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 language=json
 
@@ -2736,6 +3123,17 @@ app.post ('/webhook', express.raw ({type: application / json}), (req, res) => {c
     "details": [
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+                receive a{' '}
+                <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                  429 Too Many Requests
+                </code>{' '}
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </table>;<h4 className=text-md font-semibold mt-6 mb-2>Error Response Format</h4>;
               <p className="text-zinc-400 mb-2">;
                 Error responses include a consistent JSON object with the following format:;
@@ -2957,6 +3355,10 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
                 </code>{' '}
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </ul>
 
             </div>
@@ -2997,6 +3399,11 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
               </p>;
               <CodeBlock;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 code = {`{"error": {"code": "invalid_request","message": "The request was invalid","details": [;
       {"field": "project_name","message": "Project name is required";
                 code = {`{"error": {code: "invalid_request",message: "The request was invalid",details: [;
@@ -3078,6 +3485,10 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
                 </li>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 code = {`{
   "error": {
     code: "invalid_request",
@@ -3209,6 +3620,15 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
               {params.map((param, index) => (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <tr
+                  key={index}
+                  className={
+                    index < params && params.length - 1 ? 'border-b border-zinc-800' : ''
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </li>;</ul>;
             </div>;
           </TabsContent>;
@@ -3280,6 +3700,10 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
                   className={
                     index < params && params.length - 1 ? 'border-b border-zinc-800' : ''
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   }>;
                   <td className=py-2 font-mono text-sm>                    {param && param.name}
                     {param && param.required && <span className='text-red-500'>*</span>}
@@ -3292,6 +3716,11 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
 
                 </tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </tr>;<tr key={index} className={index < params.length - 1 ? "border-b border-zinc-800" : }>;
                   <td className="py-2 font-mono text-sm">;
                     {param.name}
@@ -3302,6 +3731,10 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
                 </tr>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               ))}
             </tbody>;
           </table>;
@@ -3316,6 +3749,11 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
             <div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>
               {Object.keys(codeExamples).map(lang => (                <button
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       {codeExamples && (;
         <div className=border-t border-zinc-800 p-4>;
@@ -3337,6 +3775,10 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang
@@ -3345,6 +3787,11 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
 
                   }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       )}{codeExamples && (<div className=border-t border-zinc-800 p-4>;
           <div className='flex items-center mb-2'>;
@@ -3456,11 +3903,22 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   onClick={() => setActiveTab(lang)}
 
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                  {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
+                </button>
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>)}onClick={() => setActiveTab(lang)}
                 >;
                   {lang === "curl" ? cURL : lang === "javascript" ? JavaScript : "Python"}
@@ -3469,6 +3927,10 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
                   {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
                 </button>
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               ))}
             </div>
           </div>
@@ -3477,6 +3939,11 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </div>;
           </div>;
           <CodeBlock;
@@ -3506,6 +3973,10 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
     </div>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         <div className=border-t border-zinc-800 p-4>
           <h4 className="font-medium mb-2">Response</h4>

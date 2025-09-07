@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
   id: number,author: string,avatar?: string,time: string,body: string;
@@ -25,6 +30,10 @@ const initial_posts: DiscussionPost[] = [;
   id: number,
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 id: number,
   author: string,
   avatar?: string,
@@ -51,6 +60,12 @@ interface DiscussionPost {
   title: string,
   body: string
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
@@ -232,6 +247,10 @@ export const CommunityDiscussion: React.FC = () => {
 =======
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     id: 1,
 
@@ -257,9 +276,18 @@ export const CommunityDiscussion: React.FC = () => {
         </Button>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       {show_new && (<Card className=mb - 6 animate - scale - in'>;
           <CardContent className='py - 5>;
 =======
+=======
+=======
+<<<<<<< HEAD
+      {show_new && (<Card className=mb - 6 animate - scale - in'>;
+          <CardContent className='py - 5>;
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {show_new && (
         <Card className='mb - 6 animate - scale - in'>;
           <CardContent className='py - 5'>;
@@ -275,6 +303,11 @@ export const CommunityDiscussion: React.FC = () => {
             <Textarea;
               placeholder="What's on your mind?";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               className='mb - 4 bg - zion - blue - light text - black placeholder:text - zion - slate min - h-[70px]'        title: new_title,body: new_body},...posts])setNewTitle ("")setNewBody ("")setShowNew (false)}return (id: 1,const handleAddPost = () => {if (!newTitle.trim() || !newBody.trim()) return,setPosts([;
       {id: Date.now(),return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
       <div className="flex items-center gap-3 mb-4">;
@@ -305,6 +338,10 @@ export const CommunityDiscussion: React.FC = () => {
             <Input;
               className=mb - 4 bg - zion - blue - light text - black placeholder:text - zion - slate min - h-[70px]        title: new_title,
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               className='mb - 4 bg - zion - blue - light text - black placeholder:text - zion - slate min - h-[70px]'        title: new_title,
 >>>>>>> origin/chore/fix-lint-and-merge
         body: new_body},
@@ -341,6 +378,11 @@ export const CommunityDiscussion: React.FC = () => {
           {showNew ? Cancel" : "New Post}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </Button>
       </div>
       {showNew && (
@@ -349,6 +391,10 @@ export const CommunityDiscussion: React.FC = () => {
             <Input
               placeholder=Title (e.g., Share an AI tool, Ask for help...)"
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               placeholder="Title (e.g., Share an AI tool, Ask for help...)"
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -372,6 +418,11 @@ export const CommunityDiscussion: React.FC = () => {
           size='sm'
           onClick={() => setShowNew(v => !v)}        >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {showNew ? Cancel : 'New Post'}
         </Button>;
       </div>;
@@ -381,6 +432,10 @@ export const CommunityDiscussion: React.FC = () => {
               placeholder=Title (e.g., Share an AI tool, Ask for help...);
               className='mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate';
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {showNew ? 'Cancel' : 'New Post'}
         </Button>
       </div>
@@ -390,12 +445,24 @@ export const CommunityDiscussion: React.FC = () => {
             <Input
               placeholder='Title (e.g., Share an AI tool, Ask for help...)'
               className='mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate'
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setNewTitle(e.target.value)
               }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>;
                 setNewTitle(e.target.value)}maxLength={80}/>;
             <Textarea;
@@ -475,6 +542,10 @@ export const CommunityDiscussion: React.FC = () => {
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
               maxLength={80}
 
@@ -484,6 +555,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Button>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      {showNew && (;
+        <Card className="mb-6 animate-scale-in">;
+          <CardContent className="py-5">;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {showNew && (<Card className="mb-6 animate-scale-in>;
           <CardContent className=py-5">;
             <Input
@@ -494,6 +573,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Card className="mb-6 animate-scale-in">;
           <CardContent className="py-5">;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <Input;
               placeholder="Title (e.g., Share an AI tool, Ask for help...);
               className=mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate";
@@ -522,6 +605,11 @@ className=mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[
               </Button>
               <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
                 size="sm
@@ -529,12 +617,21 @@ className=mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 className=bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
 size='sm'
                 className=bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale
 size='sm'
@@ -564,6 +661,10 @@ size='sm';
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 onClick={handleAddPost}
 
                 disabled = {!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
@@ -662,6 +763,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<div className='flex flex-col gap-6'>
+        {posts.map(post => (
+          <Card
+            key={post.id}
+            className='bg-zion-blue border-zion-slate-dark shadow-lg'
+          >
+            <CardContent className='py-4 flex gap-4'>
+              <Avatar>
+                <AvatarFallback>
+                  {post.author
+                    .split(' ')
+                    .map(s => s[0])
+                    .join('')
+                    .toUpperCase()
+                    .slice(0, 2)}
+                </AvatarFallback>
+              </Avatar>
+              <div>
+<div className='flex gap-2 items-center'>
+                  <span className='font-semibold text-white'>
+                    {post.author}
+                  </span>
+                  <span className='text-xs text-zion-slate-light'>
+                    {post.time}
+                  </span>
+                </div>
+                <h3 className='text-lg font-bold text-zion-cyan mt-1'>
+                  {post.title}
+                </h3>
+                <p className='text-zion-slate-light mt-1 whitespace-pre-line'>
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <div className='flex flex-col gap-6>;
         {posts.map(post => (<Card;
             key={post.id}
@@ -718,6 +854,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h3>
                 <p className='text-zion-slate-light mt-1 whitespace-pre-line'>
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {post.body}
                 </p>
               </div>
@@ -736,16 +876,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   newTitle ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}onChange= {;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }onChange= {
   (e: React && React.ChangeEvent<HTMLInputElement>) => setNewTitle (e && e.target.value) ;
 =======
 }onChange= {;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   (e: React.ChangeEvent<HTMLInputElement>) => setNewTitle (e.target.value) ;
 origin/cursor/automate-test-improve-and-merge-code-2533
 }maxLength= {
   80 ";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}/> <Textarea /> <div className=" flex gap-3 justify-end"> <Button > Cancel </Button> <Button > Post </Button> </div> </CardContent> </Card>) ";
+}.join ("") .toUpperCase () .slice (0, 2) ";
+}</AvatarFallback> </Avatar> <div> <div className="flex gap-2 items-center"> <span className="font-semibold text-white"> {;
+
+        🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
+      </div>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }/> <Textarea /> <div className= flex gap-3 justify-end> <Button > Cancel </Button> <Button > Post </Button> </div> </CardContent> </Card>) ";
 }.join (") .toUpperCase () .slice (0, 2) ;
 }</AvatarFallback> </Avatar> <div> <div className="flex gap-2 items-center"> <span className=font-semibold text-white> {
@@ -859,6 +1020,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
       </div>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   post.author ";
 }</span> <span className=text-xs text-zion-slate-light> {
@@ -882,5 +1047,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</p> </div> </CardContent> </Card>) ) ";
 }</div> <div className="mt-8 text-xs text-zion-slate-dark text-center"> 🚀 Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) ;
 };
+<<<<<<< HEAD
 '"
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+'"
+=======
+'"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

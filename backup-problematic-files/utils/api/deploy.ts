@@ -67,6 +67,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   if (input.modules.token || input.tokenActivation) {
     ensureDir(tokenDir),
     const tokenConfigPath = path.join(tokenDir, `${instanceSlug}-token.json`),
+
     writeTextFile(
       tokenConfigPath,
       JSON.stringify(
@@ -129,6 +130,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   // Schedule launch stream (/summit)
   ensureDir(eventsDir),
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),
+
   writeTextFile(
     summitEventPath,
     JSON.stringify(
@@ -144,6 +146,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   // 4. Activate Public Pages (record intent)
   const pagesActivationPath = path.join(baseDir, "pages.json"),
   const defaultNationRoute = `/nation/${toSlug(input.defaultLanguage || "default")}`
+
   writeTextFile(
     pagesActivationPath,
     JSON.stringify(
@@ -180,5 +183,5 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     assets,
     logs,
     summary,
-    version}
+
 }

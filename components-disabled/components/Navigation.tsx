@@ -46,12 +46,24 @@ const navigation = [;
   ];return (<nav className=\"bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50\" />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const navigation = [
+    { name: 'Home';,}
+  href: '/';,}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     { "name": 'Home', "href": '/','
 =======
 const navigation = [
     { name: 'Home';,}
   href: '/';,}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 },
   { name: 'About';,}
   href: '/about';,}
@@ -71,6 +83,22 @@ const navigation = [
 ]
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+return (<nav className=\"bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50\" />;
+      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
+        <div className=\"flex justify-between items-center h-16\" />;
+  Menu, }
+  X }
+} from 'lucide-react';
+
+const Navigation = (
+ ;
+  const [isOpen, setIsOpen] = useState(false);
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 return (<nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">;"
       <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8">;"
         <div className="flex justify-between items-center h-16">;"
@@ -105,12 +133,23 @@ const Navigation = (
  ;
   const [isOpen, setIsOpen] = useState(false);
 
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <nav className=\"bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50\" />
       <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8\" />
         <div className=\"flex justify-between items-center h-16\" />) => {
   return $3;}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
           {/* Logo */}
           {/* Logo *,}
@@ -568,6 +607,11 @@ export default function Navigation() {export default function Navigation() {expo
 
 export default Navigation;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from "react";"
 import Link from "next/link";"
 import { motion, AnimatePresence } from "framer-motion";"
@@ -575,6 +619,10 @@ origin/automation-improvements-final,
     { "name": "News", "href": "/news", "description": "Industry news and updates" }"
     { "name": "News", "href": "/news", "description": "Industry news and updates","
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from \"react\";
 import Link from \"next/link\";
 import { motion, AnimatePresence } from \"framer-motion\";
@@ -582,7 +630,14 @@ origin/automation-improvements-final;
 import {}
     { name: \"News\";, href: \"/news\";, description: \"Industry news and updates\" ;}
     { name: \"News\";, href: \"/news\";, description: \"Industry news and updates\";,}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
   Menu;
 X,
@@ -748,6 +803,11 @@ initial={{ opacity: 0;, y: 10 ;,}
                 className=\"text - gray - 700 hover:text - blue - 600 font - medium transition - colors\";
                         {services && services.map((service, index) => {;}
                           const IconComponent = service && service.icon;}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {/* Desktop Navigation */}
             <div className=\"hidden lg:flex items-center space-x-8\" />;
               <Link;
@@ -765,11 +825,32 @@ initial={{ opacity: 0;, y: 10 ;,}
                         {services && services.map((service, index) => {;}
                           const IconComponent = service && service.icon;}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {/* Desktop Navigation */}
             <div className=\"hidden lg:flex items-center space-x-8\" />;
               <Link;
                 href=\"/\";
                 className=\"text - gray - 700 hover:text - blue - 600 font-medium transition-colors\";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+               />;
+                className=\"text - gray - 700 hover:text - blue - 600 font - medium transition - colors\">
+
+                className=\"text - gray - 700 hover:text - blue - 600 font - medium transition - colors\";
+                        {services && services.map((service, index) => {;}
+                          const IconComponent = service && service.icon;}
+            {/* Desktop Navigation */}
+            <div className=\"hidden lg:flex items-center space-x-8\" />;
+              <Link;
+                href=\"/\";
+                className=\"text - gray - 700 hover:text - blue - 600 font-medium transition-colors\";
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 Home;
               </Link />;
               {/* Services Dropdown */}
@@ -883,6 +964,14 @@ const IconComponent = solution && solution.icon;}
 
                           View All Services;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                          <ArrowRight className=\"w - 4 h - 4 ml - 2\" />;
+                        {solutions && solutions.map((solution, index) => {;}
+                          const IconComponent = solution && solution.icon;}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;"
                         {solutions && solutions.map((solution, index) => {;
                           }
@@ -891,6 +980,10 @@ const IconComponent = solution && solution.icon;}
                         {solutions && solutions.map((solution, index) => {;}
                           const IconComponent = solution && solution.icon;}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                               href={service.href}
                               className=\"p - 3 rounded - lg hover:bg - blue-50 transition-colors group\";
                             >;
@@ -1951,6 +2044,14 @@ export default Navigation;
 
  ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const [isOpen, setIsOpen] = useState(false);
+
+const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
 
 =======
@@ -1958,6 +2059,10 @@ export default Navigation;
 
 const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ];
 
   return (

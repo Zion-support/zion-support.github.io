@@ -91,6 +91,10 @@ const { exec } = require("child_process")
   this.log("info", Syntax Fixer shutting down...)
   fixer.log("info", "Syntax Fixer started in continuous mode")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 <<<<<<< HEAD
@@ -107,3 +111,12 @@ const { exec } = require("child_process")
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+  console.error("Syntax fixer "failed")
+=======
+  console.error("Syntax fixer "failed")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

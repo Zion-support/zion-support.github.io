@@ -59,11 +59,20 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     })
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     setEntries(entries.filter(entry => entry.id !== id))
   }
   )
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
     setEntries(entries.filter(entry => entry.id !== id))}
@@ -80,9 +89,12 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 <<<<<<< HEAD
 :src/components/mobile-app/admin/ChangelogManager.tsx
   }
+<<<<<<< HEAD
+=======
 
 
 import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from ./MetadataManager";
+>>>>>>> merged-prs-20250907-203621
   return (
     <Card className="bg-zion-blue border-zion-purple/30>
       <CardHeader>
@@ -165,6 +177,11 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   },
     setNewEntry(prev => ({ ...prev, [name]: value }));
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <Card className=bg-zion-blue border-zion-purple/30>;
 interface ChangelogManagerProps  {platform: AppPlatform;
 }type ChangelogEntry = {id: string;
@@ -184,6 +201,10 @@ interface ChangelogManagerProps  {platform: AppPlatform;
   return (<Card className=bg-zion-blue border-zion-purple/30>;
   }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   };
 >>>>>>> origin/chore/fix-lint-and-merge
   return (;
@@ -207,6 +228,11 @@ interface ChangelogManagerProps  {platform: AppPlatform;
               />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 onChange={handleInputChange}/>;
               <Input;
                 type=date";
@@ -235,6 +261,10 @@ import { AppPlatform } from "./MetadataManager,interface ChangelogManagerProps  
                 type="date;
                 name=date";
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 name="date";
 >>>>>>> origin/chore/fix-lint-and-merge
                 value={newEntry.date}
@@ -252,6 +282,11 @@ import { AppPlatform } from "./MetadataManager,interface ChangelogManagerProps  
             </Button>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               />;
             </div>;
             <Button
@@ -285,6 +320,10 @@ import { AppPlatform } from "./MetadataManager,interface ChangelogManagerProps  
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <Textarea
             placeholder="Whats new in this version?
@@ -307,6 +346,8 @@ import { AppPlatform } from "./MetadataManager,interface ChangelogManagerProps  
                     <span className="text-zion-cyan font-semibold>v{entry.version}</span>
                     <span className=text-sm text-gray-400">{entry.date}</span>
                   </div>
+<<<<<<< HEAD
+=======
 
           />;
           <div className="border-t border-zion-purple/20 pt-4 space-y-4>;
@@ -327,6 +368,10 @@ import { AppPlatform } from "./MetadataManager,interface ChangelogManagerProps  
                     <span className="text-zion-cyan font-semibold>v{entry && entry.version}</span>;
                     <span className=text-sm text-gray-400">{entry && entry.date}</span>;
                   </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <Button
                     variant="ghost
                     size=sm"
@@ -356,9 +401,18 @@ import { AppPlatform } from "./MetadataManager,interface ChangelogManagerProps  
               </div>
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             )}
 
@@ -371,6 +425,11 @@ import { AppPlatform } from "./MetadataManager,interface ChangelogManagerProps  
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <Button;
                     variant="ghost";
                     size=sm;
@@ -483,6 +542,10 @@ date: new Date () .toISOString () .split ('T) [0] || new Date () .toLocaleDateSt
   handleAddEntry ;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -513,9 +576,15 @@ date: new Date () .toISOString () .split ('T) [0] || new Date () .toLocaleDateSt
 }</div> </div> </CardContent> </Card>) ;
 }
 '"
+<<<<<<< HEAD
+=======
 }disabled= {!newEntry.version || !newEntry.changes ";
 }> <Plus className= mr-2 h-4 w-4/> Add </Button> </div> <Textarea key= {entry.id ";
 }className=" p-3 rounded border border-zion-purple/20 bg-zion-blue-dark> > <Trash2 className= h-4 w-4" /> </Button> </div>)}</div> </div> </CardContent> </Card>)}'";
 =======
 '"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

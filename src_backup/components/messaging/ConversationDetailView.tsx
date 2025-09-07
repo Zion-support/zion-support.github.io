@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
                     src = {activeConversation && activeConversation.context_data.image_url}
@@ -103,6 +108,10 @@ import { useAuth  } from @/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble;
 import { DateDivider } from ./DateDivider';
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState, useEffect, useRef } from 'react';
 import { format  } from 'date-fns';
 import { MessageSquare } from 'lucide-react'
@@ -122,6 +131,11 @@ export function ConversationDetailView() {
     sendMessage;
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     src = {activeConversation && activeConversation.context_data.image_url}
                     alt = {activeConversation && activeConversation.context_data.title || "Context}
 
@@ -132,6 +146,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     loadMessages
   } = useMessaging();
   const [messageText, setMessageText] = useState(');
@@ -320,6 +338,11 @@ export function ConversationDetailView() {
     <div className="flex-1 flex flex-col h-full>
       {/* Header */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ConversationDetailView() {const { user } = useAuth()const { currentConversation, sendMessage, messages, loading } = useMessaging()const [newMessage, setNewMessage] = useState(')const [isSending, setIsSending] = useState(false)const messagesEndRef  = useRef<HTMLDivElement>(null)const scrollToBottom = () => {messagesEndRef.current?.scrollIntoView({ behavior: smooth' })}useEffect(() => {scrollToBottom()}, [messages])const handleSendMessage = async (e: React.FormEvent) => {e.preventDefault()if (!newMessage.trim() || !currentConversation) return;setIsSending(true)try {await sendMessage({content: newMessage,recipientId: currentConversation.participantId,conversationId: currentConversation.id})setNewMessage(')} catch (error) {console.error(Failed to send message:', error)} finally {setIsSending(false)}
   }if (!currentConversation) {return (<div className=flex items-center justify-center h-full">;
         <div className="text-center>;
@@ -401,6 +424,10 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
               src = {activeConversation.other_user.avatar_url}
               alt = {activeConversation.other_user.name}
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
@@ -546,6 +573,14 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
           />;
           <Button;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            type="submit";
+            className="bg-zion-purple hover: bg-zion-purple-dark text-white";
+          >;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             type="submit;
             disabled={!newMessage.trim() || isSending}
           >;
@@ -561,6 +596,10 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
             className="bg-zion-purple hover: bg-zion-purple-dark text-white";
           >;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             Send;
           </Button>;
@@ -602,6 +641,12 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
   messagesEndRef ;
 }/> </div> /> <Button > Send </Button> </form> </div> </div>) ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}'"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }"
           </Button>;
         </form>;
@@ -639,3 +684,7 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
 =======
 }'"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 :src_backup/utils/common.ts
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Utility functions;
 export const formatCurrency = (amount: number, currency = 'USD'): string => {return new Intl.NumberFormat('en-US', {style: 'currency',currency}).format(amount)}export const formatDate = (date: string | Date, options?: Intl.DateTimeFormatOptions): string => {const dateObj = typeof date === 'string' ? new Date(date) : date;
   return new Intl.DateTimeFormat('en-US', {year: 'numeric',month: 'long',day: 'numeric',...options}).format(dateObj)}export const formatPhoneNumber = (phone: string): string => {const cleaned = phone.replace(/\D/g, '')const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/)if (match) {return `(${match[1]}) ${match[2]}-${match[3]}`;
@@ -17,6 +23,9 @@ export const formatCurrency = (amount: number, currency = 'USD'): string => {ret
 }export const isClient = (): boolean => {return typeof window !== 'undefined';
 }export const isServer = (): boolean => {return typeof window === 'undefined';
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 // Utility functions for common operations
 
 export const formatDate = (date: Date | string): string => {
@@ -85,4 +94,16 @@ export const isValidUrl = (url: string): boolean => {
   } catch {
     return false;
   }
+<<<<<<< HEAD
 };
+=======
+<<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

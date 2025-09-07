@@ -1,8 +1,35 @@
+<<<<<<< HEAD
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
 const crypto = require("crypto");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
+const crypto = require("crypto")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.projectRoot,logs"
       "intelligent-performance-optimizer.log"
       this.projectRoot,logs"
@@ -80,6 +107,7 @@ const crypto = require("crypto");
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
   this.log(" Starting intelligent performance optimization...")
+<<<<<<< HEAD
     } catch (error) {  this.log(`Performance optimization "failed": ${error.message  }`, "ERROR"`)
 const sourceDir = path.join(this.projectRoot, "src");
 const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")];
@@ -89,6 +117,25 @@ const content = fs.readFileSync(file, "utf8");
 const sourceDir = path.join(this.projectRoot, "src");
 const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")];
 const content = fs.readFileSync(file, "utf8");
+=======
+<<<<<<< HEAD
+
+=======
+  this.log(" Starting intelligent performance optimization...")
+    } catch (error) {  this.log(`Performance optimization "failed": ${error.message  }`, "ERROR"`)
+    const sourceDir = path.join(this.projectRoot, "src")
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
+  const content = fs.readFileSync(file, "utf8")
+  this.log(Error analyzing React performance in ${file  }: ${error.message}")
+          "
+    const sourceDir = path.join(this.projectRoot, "src")
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
+  const content = fs.readFileSync(file, "utf8")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.log(Error analyzing React performance in ${file}: ${error.message}")
           "WARN"
     for (const [`category", "patterns"`)]
@@ -117,6 +164,12 @@ const content = fs.readFileSync(file, "utf8");
     // Check for inline ""object/function""
     if (content.includes("style={{") || content.includes("onClick={() =>"}
   "file"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "category": "react"
         "pattern": "inline-objects-functions"
         "optimization": Extract inline objects and functions to prevent unnecessary re-renders"
@@ -124,17 +177,29 @@ const content = fs.readFileSync(file, "utf8");
         "matches"
         "lineNumbers"
         "timestamp"
+<<<<<<< HEAD
 const varMatch = match.match(/const\s+\["([^", "")];
 return varMatch ? varMatch[1].trim() : "";
 const varMatch = match.match(/const\s+\["([^", ")];
 return varMatch ? varMatch[1].trim() : ";
 return depsMatch ? depsMatch[1].split(",");
+=======
+  const varMatch = match.match(/const\s+\["([^", "")]
+        return varMatch ? varMatch[1].trim() : ""
+  const varMatch = match.match(/const\s+\["([^", ")]
+        return varMatch ? varMatch[1].trim() : "
+        return depsMatch ? depsMatch[1].split(",")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const expensivePatterns = ["/Math\.random\(\)/g", "/JSON\.parse\(/g", "/JSON\.stringify\(/g", "/\.sort\(/g", "/\.filter\([^)"]*\)\."length/g"
       this.log("� Building project for bundle analysis...")
       execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe"})
       this.log("� Building project for bundle analysis...")
       execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe"})
+<<<<<<< HEAD
 const distDir = path.join(this.projectRoot, "dist");
+=======
+      const distDir = path.join(this.projectRoot, "dist")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "file": "bundle"
             "category": "bundle"
             "pattern": "large-bundle","optimization"
@@ -157,11 +222,19 @@ const distDir = path.join(this.projectRoot, "dist");
           "lineNumbers"
           "timestamp"
     } catch (error) {  this.log(`Bundle analysis "failed": ${error.message  }`, "ERROR"`)
+<<<<<<< HEAD
 const fullPath = path.join(dir, ");
   "name": path.relative(distDir")
+=======
+  const fullPath = path.join(dir, ")
+  const fullPath = path.join(dir, ")
+  "name": path.relative(distDir")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             "path"
   "total"
       "files"
+<<<<<<< HEAD
 const packageLockPath = path.join(this.projectRoot, "package-lock.json");
   return { "duplicates": [], "outdated": [], "large"}
 const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8");
@@ -172,12 +245,31 @@ const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8");
       return { "duplicates": [], "outdated": [], "large"}
     for (const ["name", "pkg")]
 const output = execSync("npm outdated --json");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
+  const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+  return { "duplicates": [], "outdated": [], "large"}
+      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8")
+  const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+  return { "duplicates": [], "outdated": [], "large"}
+      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8")
+    } catch (error) {  this.log(`Dependency analysis "failed": ${error.message  }`, "ERROR"`)
+      return { "duplicates": [], "outdated": [], "large"}
+    for (const ["name", "pkg")]
+  const output = execSync("npm outdated --json")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "cwd"
         "stdio": "pipe"
         "encoding": "utf8"
     for (const ["name", "pkg")]
           "size"
           "sizeMB"
+<<<<<<< HEAD
 const sourceDir = path.join(this.projectRoot, "src");
 const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")];
 const content = fs.readFileSync(file, "utf8");
@@ -185,6 +277,19 @@ const content = fs.readFileSync(file, "utf8");
           "
 const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")];
 const content = fs.readFileSync(file, "utf8");
+=======
+    const sourceDir = path.join(this.projectRoot, "src")
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
+  const content = fs.readFileSync(file, "utf8")
+  this.log(Error analyzing rendering performance in ${file  }: ${error.message}")
+          "
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
+  const content = fs.readFileSync(file, "utf8")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.log(Error analyzing rendering performance in ${file}: ${error.message}")
           "WARN"
       content.includes(`.map(``)
@@ -196,6 +301,70 @@ const content = fs.readFileSync(file, "utf8");
         "optimization": Add unique key prop to list items for better rendering performance"
         "impact": "HIGH"
         "matches"
+<<<<<<< HEAD
+=======
+        lineNumbers
+        "timestamp"
+<<<<<<< HEAD
+
+=======
+    if (content.includes("&&") && content.includes("return")
+  "file"
+        "category": "rendering"
+        "pattern": "conditional-rendering"
+        "optimization": Consider using conditional rendering with proper fallbacks"
+        "impact": "MEDIUM"
+        "matches"
+        "lineNumbers"
+        "timestamp"
+    // Check for unnecessary re-renders due to object creationif (content.includes("style={{") || content.includes("className={""})
+  "file"
+        "category": "rendering"
+        "pattern": "dynamic-objects"
+        "optimization": Extract dynamic objects to prevent unnecessary re-renders"
+        "impact": "MEDIUM"
+        "matches"
+        "lineNumbers"
+        "timestamp"
+    const sourceDir = path.join(this.projectRoot, "src")
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
+  const content = fs.readFileSync(file, ")
+          "WARN"
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
+  const content = fs.readFileSync(file, "utf8")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+  this.log(Error analyzing memory usage in ${file}: ${error.message}")
+          "WARN
+      content.includes(addEventListener")
+      !content.includes("removeEventListener)
+  file"
+        "category: memory"
+        "pattern: missing-event-cleanup"
+        "optimization: Add removeEventListener in cleanup function to prevent memory leaks
+        "impact": HIGH
+        "matches"
+        lineNumbers
+        "timestamp"
+    if (content.includes(setInterval) && !content.includes("clearInterval")
+  file
+        "category": memory
+        "pattern": missing-interval-cleanup
+        "optimization": Add clearInterval in cleanup function to prevent memory leaks
+        impact": "HIGH
+        matches"
+        "lineNumbers
+        timestamp"
+    if (content.includes("setTimeout) && !content.includes(clearTimeout")
+  "file
+        category": "memory
+        pattern": "missing-timeout-cleanup
+        optimization": Add clearTimeout in cleanup function to prevent memory leaks"
+        impact: "MEDIUM"
+        matches
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "lineNumbers"
         "timestamp"
     if (content.includes("&&") && content.includes("return")
@@ -275,9 +444,19 @@ const content = fs.readFileSync(file, "utf8");
         ["missing-keys", "conditional-rendering", "]
           "ERROR"
   this.log(Failed to apply optimization for ${optimization.file}: ${error.message}")
+<<<<<<< HEAD
           "ERROR"
 const content = fs.readFileSync(optimization.file, "utf8");
   case "missing-keys"
+=======
+<<<<<<< HEAD
+
+=======
+          "ERROR"
+  const content = fs.readFileSync(optimization.file, "utf8")
+  case "missing-keys"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         case "
         "default"
           "INFO"
@@ -292,12 +471,45 @@ const content = fs.readFileSync(optimization.file, "utf8");
   this.log("🧪 Running performance tests...")
         return { "lighthouse"}
     // In production, you"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+  this.log("🧪 Running performance tests...")
+        return { "lighthouse"}
+    // In production, you"
+    // In production, you"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.log("🧪 Running performance tests...")
         return { "lighthouse"}
       return { "basic"}
     } catch (error) {  this.log("Performance tests "failed": ${error.message  }", "ERROR")
   execSync("lighthouse-ci --version", { "stdio": "pipe"})
+<<<<<<< HEAD
 const output = execSync("lighthouse-ci autorun");
+=======
+  const output = execSync("lighthouse-ci autorun")
+  "cwd"
+        "stdio": "pipe"
+        "encoding": "utf8"
+      return { "success"}
+  return { "success": false, "error"}
+  return { "success": false, "error"}
+      execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe"})
+      const distDir = path.join(this.projectRoot, "dist")
+      const distDir = path.join(this.projectRoot, "dist")
+    } catch (error) {  this.log("Basic performance checks "failed": ${error.message  }", ")
+  "timestamp"
+>>>>>>> origin/chore/fix-lint-and-merge
+      "summary"
+        totalRecommendations
+        "appliedOptimizations"
+        categories
+    this.log(Performance report "generated")
+      execSync(git add ., { "cwd": this.projectRoot, stdio: "pipe"})
+      // Commit with descriptive messageconst commitMessage = ` Performance Optimizations: ${appliedOptimizations.length} automatic optimizations applied`;execSync(`git commit -m ``)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "cwd"
         "stdio": "pipe"
         "encoding": "utf8"
@@ -317,6 +529,7 @@ const distDir = path.join(this.projectRoot, "dist");
   "cwd"
         "stdio": "pipe"
       this.log(Committed ${appliedOptimizations.length} performance optimizations")
+<<<<<<< HEAD
         "INFO"
       execSync("git add .", { "cwd": this.projectRoot, "stdio": "pipe"})
       // Commit with descriptive messageconst commitMessage = " Performance "Optimizations": ${appliedOptimizations.length} automatic optimizations applied";execSync("git commit -m ${commitMessage}")
@@ -327,14 +540,79 @@ const distDir = path.join(this.projectRoot, "dist");
       )} catch (error) {  this.log(`Failed to commit "optimizations": ${error.message  }", "ERROR"`)
 const lines = content.split("\n");
 const fullPath = path.join(dir, ");
+=======
+<<<<<<< HEAD
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   files.push(...this.getAllFiles(fullPath")
       this.log( Intelligent Performance Optimization completed successfully")
   this.log( "Intelligent Performance Optimization "failed": ${error.message  }",ERROR")
       this.log( Intelligent Performance Optimization completed successfully")
 
+<<<<<<< HEAD
+=======
+
+  this.log( `Intelligent Performance Optimization "failed": ${error.message},ERROR`)
+
+  this.log( `Intelligent Performance Optimization "failed": ${error.message},ERROR`)
+=======
+        "INFO"
+      execSync("git add .", { "cwd": this.projectRoot, "stdio": "pipe"})
+      // Commit with descriptive messageconst commitMessage = " Performance "Optimizations": ${appliedOptimizations.length} automatic optimizations applied";execSync("git commit -m ${commitMessage}")
+  "cwd"
+        "stdio": "pipe"
+      this.log(Committed ${appliedOptimizations.length} performance optimizations")
+        "INFO"
+      )} catch (error) {  this.log(`Failed to commit "optimizations": ${error.message  }", "ERROR"`)
+  const lines = content.split("\n")
+  const fullPath = path.join(dir, ")
+  files.push(...this.getAllFiles(fullPath")
+      this.log( Intelligent Performance Optimization completed successfully")
+  this.log( "Intelligent Performance Optimization "failed": ${error.message  }",ERROR")
+      this.log( Intelligent Performance Optimization completed successfully")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+  this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+<<<<<<< HEAD
+  this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
   this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
 
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+<<<<<<< HEAD
+
+<<<<<<< HEAD
 
 
+
+
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

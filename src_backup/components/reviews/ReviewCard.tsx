@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Review } from "@/types/reviews",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
@@ -47,6 +52,10 @@ setIsReporting (true)const success = await onReport (review.id, reportReason)set
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 return (
       <div className='flex>;
         {[1, 2, 3, 4, 5].map(star => (;
@@ -114,6 +123,14 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
           <Star
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            key={star}
+
+            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const renderStars = (rating?: number) => {if (!rating) return null;
     return (<div className='flex>;
         {[1, 2, 3, 4, 5].map(star => (<Star;
@@ -131,6 +148,10 @@ import { Button } from @/components/ui/button",import { Badge } from "@/componen
 
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           />;
 
 import {  Dialog,  Dialog,
@@ -160,6 +181,11 @@ import { Badge } from "@/components/ui/badge",
           />
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>
     )
   }
@@ -188,6 +214,10 @@ import { Badge } from "@/components/ui/badge",
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       </div>
     )
@@ -238,6 +268,11 @@ import { useState } from react,
 import { formatDistanceToNow } from "date-fns",
 import { Star, Flag, User } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>;
     )}
   const getInitials = (name: string,) => {return name;
@@ -324,6 +359,10 @@ if (return null) {$2;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Review } from "@/types/reviews",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
@@ -423,6 +462,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Avatar>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <div>
             <div className='font-medium'>
               {review.is_anonymous
@@ -458,6 +502,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <div>
             <div className='font-medium'>
@@ -507,6 +555,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>
               </Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </div>;
           </div>;
         </div>;
@@ -536,6 +589,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             )}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             )}'
               <Badge variant='outline className=flex gap - 1 items - center'>;
                 Communication;'
@@ -559,6 +616,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Badge>)}
             {review.would_work_again !== undefined && (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <Badge;
                 variant={review.would_work_again ? 'default' : secondary}
                 className={`${review.would_work_again ? 'bg - green - 100 text - green - 800 hover:bg - green - 200' : bg - gray - 100 text - gray - 800 hover:bg - gray - 200}`}              >;
@@ -628,6 +690,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Timeliness;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               <Badge
                 variant={review.would_work_again ? 'default' : secondary}
@@ -774,6 +840,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <div className='mt-3 flex justify-end'>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -783,6 +854,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <div className=mt-3 flex justify-end>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
@@ -811,6 +886,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 If you believe this review violates our community guidelines,
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -843,6 +924,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -890,12 +975,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Button;
                 onClick={handleReport}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 disabled={!reportReason.trim() || isReporting}
               >
                 {isReporting ? Submitting...' : 'Submit Report}
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
@@ -927,6 +1021,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </DialogContent>
         </Dialog>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>
     </div>
   );
@@ -956,6 +1055,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Dialog>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 disabled={!reportReason && reportReason.trim() || isReporting}>;"
                 {isReporting ? 'Submitting...' : Submit Report}              </Button>                {isReporting ? Submitting... : "Submit Report"}
@@ -999,6 +1102,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Dialog>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }Timeliness <span className="ml-1 text-yellow-500 > {review.timeliness rating ;
 }/5</span> </Badge>)}{review.would work again !== undefined && (<Badge </Badge>)}</div> </div>) ;
 }<DialogTrigger asChild> <Button variant="ghost" size=sm className="text-muted-foreground"> <Flag className=h-3 w-3 mr-1 /> Report </Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Report Review</DialogTitle> <DialogDescription> If you believe this review violates our community guidelines, please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button> <Button onClick={handleReport ;
@@ -1007,6 +1115,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }Timeliness <span className="ml - 1 text - yellow - 500 > {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>);
 }</div>);
 }";"

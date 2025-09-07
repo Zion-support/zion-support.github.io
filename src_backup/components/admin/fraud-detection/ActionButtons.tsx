@@ -64,12 +64,18 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         aria-label="Send warning"
         onClick={() => onAction(flagId, 'warning')}
 
+<<<<<<< HEAD
+=======
 
         disabled={status === actioned || status === 'ignored'}
 =======
         aria-label="Send warning"
         onClick={() => onAction(flagId, 'warning')}
 
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         disabled={status === 'actioned' || status === 'ignored'}
 >>>>>>> origin/chore/fix-lint-and-merge
       >
@@ -84,6 +90,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         onClick={() => onAction(flagId, suspension)}
         disabled={status === "actioned" |status === ignored}
         aria-label="Suspend user"
+<<<<<<< HEAD
+=======
 
 ;
 import { Eye, Info, AlertTriangle, Ban  } from lucide-react;
@@ -119,6 +127,10 @@ interface ActionButtonsProps  {export const ActionButtons: React.FC<ActionButton
         disabled={status === 'actioned || status === ignored'}
 =======
         aria-label="Suspend user"
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         onClick={() => onAction(flagId, 'suspension')}
         disabled={status === 'actioned' || status === 'ignored'}
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -164,6 +176,8 @@ interface ActionButtonsProps {
           Ignore
         </Button>
       )}
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -172,6 +186,7 @@ interface ActionButtonsProps {
 
 
   );
+>>>>>>> merged-prs-20250907-203621
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
     </div>
   );
@@ -195,6 +210,12 @@ interface ActionButtonsProps {
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <div className="flex space-x-2">;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className=flex space-x-2">;
       >;
         <Ban className="h-4 w-4 />;
@@ -215,6 +236,10 @@ import React from react",import { Button } from "@/components/ui/button,interfac
 =======
     <div className="flex space-x-2">;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <Button;
         variant="ghost;
         size=icon";
@@ -255,11 +280,20 @@ import React from react",import { Button } from "@/components/ui/button,interfac
         <Ban className="h-4 w-4 />;
       </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {status === 'pending && (<Button;
           variant=ghost";
           size="sm;
           onClick={() => onAction(flagId, ignore')}
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {status === 'pending' && (;
         <Button;
           variant="ghost";
@@ -272,6 +306,11 @@ import React from react",import { Button } from "@/components/ui/button,interfac
       )}
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Button } from '@/components/ui/ button;
 import { Eye, Info, AlertTriangle, Ban } from lucide-react';
 interface ActionButtonsProps {
@@ -336,6 +375,10 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 
@@ -343,6 +386,13 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on
   );
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+'"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
     </div>)}
 '},)})}'";
@@ -351,3 +401,7 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on
 };
 '"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

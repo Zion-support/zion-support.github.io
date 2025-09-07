@@ -50,7 +50,14 @@
             text: "Create First Milestone",;
             onClick: (,) => setShowAddForm(true);
           } : undefined;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }
 
   return (
@@ -115,6 +122,14 @@ if ( {) {
         title=No Milestones Yet";
         description = {is_client ?;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          "Break down the project into manageable milestones to track progress and payments." :;
+          "No milestones have been created for this project yet.", }
+        action={is_client ?;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "Break down the project into manageable milestones to track progress and payments. :;
           No milestones have been created for this project yet." }
         action={is_client ?;
@@ -123,11 +138,22 @@ if ( {) {
           "Break down the project into manageable milestones to track progress and payments." :;
           "No milestones have been created for this project yet.", }
         action={is_client ?;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {
             text: "Create First Milestone",
             on_click: (, ) => setShowAddForm (true);
           } : undefined;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         }
       />);
   }
@@ -172,12 +198,21 @@ if ( {) {
 
             <AddMilestoneForm
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>)}
 ";<AddMilestoneForm;
 import React, { useState } from 'react;
 import { Milestone,MilestoneStatus,MilestoneActivity} from @/hooks/useMilestones';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import {
   Milestone,
@@ -200,10 +235,19 @@ import { AddMilestoneForm  } from './AddMilestoneForm';
 import { Button  } from @/components/ui/button;
 import { Card, CardContent  } from '@/components/ui/card';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const MilestonesList: React.FC<MilestonesListProps> = ({
 // lucide-react doesnt export PlusIcon, use our icon wrapper
 import { Plus } from lucide-react'
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // lucide-react doesn't export PlusIcon, use our icon wrapper
 import { Plus } from 'lucide-react'
 >>>>>>> origin/chore/fix-lint-and-merge

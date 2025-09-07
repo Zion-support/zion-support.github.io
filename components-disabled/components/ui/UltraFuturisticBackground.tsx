@@ -56,9 +56,18 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
     </div>"`;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function UltraFuturisticBackground() {
   }
 =======
+=======
+=======
+<<<<<<< HEAD
+export default function UltraFuturisticBackground() {
+  }
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default function UltraFuturisticBackground({ 
   children, 
   variant = 'quantum', 
@@ -66,7 +75,14 @@ export default function UltraFuturisticBackground({
   className = ''}
 }: UltraFuturisticBackgroundProps) {
   const getBackgroundClasses = (
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
    ;
   const baseClasses = 'min-h-screen relative overflow-hidden';
     
@@ -112,10 +128,20 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({
   enableNeonEffects = true,
   enableSpaceTime = true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  variant = 'quantum',
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 variant = 'quantum',;'
 =======
   variant = 'quantum',
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface UltraFuturisticBackgroundProps {
   children: React.ReactNode;}
   className?: string;}
@@ -125,6 +151,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({
   className = ''}
    }) => {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -138,10 +165,35 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({
    ;
   const baseClasses = 'relative overflow-hidden';
     
+=======
+  const getBackgroundClasses = (
+   ;
+  const baseClasses = 'relative overflow-hidden';
+    
+    const baseClasses = 'relative overflow-hidden';
+=======
+<<<<<<< HEAD
+
+
+  }
+
+
+
+=======
+  const getBackgroundClasses = (
+>>>>>>> origin/chore/fix-lint-and-merge
+   ;
+  const baseClasses = 'relative overflow-hidden';
+    
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <<<<<<< HEAD
 =======
     const baseClasses = 'relative overflow-hidden';
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     switch (variant) {
       case 'quantum':) => {
   return $3;}

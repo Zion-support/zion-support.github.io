@@ -1,8 +1,35 @@
+<<<<<<< HEAD
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
 const crypto = require("crypto");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
+const crypto = require("crypto")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.projectRoot,logs"
       "smart-build-optimizer.log"
       this.projectRoot,logs"
@@ -42,6 +69,7 @@ const crypto = require("crypto");
       "currentPerformance"
       "optimizations"
       "recommendations"
+<<<<<<< HEAD
       "applied"
       this.log(Build optimization "completed")
   this.log("Starting smart build optimization...")
@@ -62,6 +90,10 @@ const crypto = require("crypto");
       this.log(Performance "analysis": Build=${performance.buildTime}ms, Bundle=${performance.bundleSize}bytes, Install=${performance.installTime}ms")
       )} catch (error) {  this.log(`Performance analysis "failed": ${error.message  }`, "WARN"`)
 const build = spawn("npm", ["run", "build")];
+=======
+<<<<<<< HEAD
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "cwd"
         "stdio": "pipe"
       build.on("close")
@@ -71,21 +103,61 @@ const install = spawn("npm", ["install")];
         "stdio": "pipe"
       install.on("close")
   build.on("error")
+<<<<<<< HEAD
 const install = spawn("npm", ["install")];
+=======
+
+=======
+      "applied"
+      this.log(Build optimization "completed": ${optimization.applied.length} optimizations applied")
+      )} catch (error) {  this.log(`Build optimization "failed": ${error.message  }", "`)
+  "buildTime"
+      "bundleSize"
+      "installTime"
+      "rebuildTime"
+      "memoryUsage"
+      "cpuUsage"
+      this.log(Performance "analysis")
+      this.log(Performance "analysis": Build=${performance.buildTime}ms, Bundle=${performance.bundleSize}bytes, Install=${performance.installTime}ms")
+      )} catch (error) {  this.log(`Performance analysis "failed": ${error.message  }`, "WARN"`)
+  const build = spawn("npm", ["run", "build")]
+  "cwd"
+        "stdio": "pipe"
+      build.on("close")
+      build.on("error")
+  const install = spawn("npm", ["install")]
+  "cwd"
+        "stdio": "pipe"
+      install.on("close")
+  build.on("error")
+  const install = spawn("npm", ["install")]
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "cwd"
         "stdio": "pipe"
       install.on("close")
       install.on("error")
+<<<<<<< HEAD
 const rebuild = spawn("npm", ["run", "build")];
+=======
+  const rebuild = spawn("npm", ["run", "build")]
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "cwd"
         "stdio": "pipe"
       rebuild.on("close")
       rebuild.on("error")
+<<<<<<< HEAD
 const distPath = path.join(this.projectRoot, "dist");
       rebuild.on("error")
 const distPath = path.join(this.projectRoot, "dist");
       return totalSize} catch (error) {  this.log(`Bundle size measurement "failed": ${error.message  }`, "WARN"`)
 const fullPath = path.join(dir, ");
+=======
+  const distPath = path.join(this.projectRoot, "dist")
+      rebuild.on("error")
+  const distPath = path.join(this.projectRoot, "dist")
+      return totalSize} catch (error) {  this.log(`Bundle size measurement "failed": ${error.message  }`, "WARN"`)
+  const fullPath = path.join(dir, ")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   this.getAllFilesRecursive(fullPath")
   "type": "BUILD_TIME"
         "priority": "HIGH"
@@ -127,6 +199,10 @@ const fullPath = path.join(dir, ");
         "description": "Rebuild time exceeds threshold"
         "action": "Enable incremental compilation"
         "config": "tsconfig.json"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             "applied"
             "result"
       } catch (error) {  this.log(`Failed to apply "optimization": ${error.message  }`, "WARN"`)
@@ -135,22 +211,45 @@ const fullPath = path.join(dir, ");
       case "INSTALL_TIME"
       case "REBUILD_TIME"
       "default"
+<<<<<<< HEAD
         return { success: false, "message": "Unknown optimization type"}
 const viteConfigPath = path.join(this.projectRoot, "vite.config.ts");
 let config = fs.readFileSync(viteConfigPath, "utf8");
         if (!config.includes("build.rollupOptions")
+=======
+<<<<<<< HEAD
+
+=======
+        return { success: false, "message": "Unknown optimization type"}
+      const viteConfigPath = path.join(this.projectRoot, "vite.config.ts")
+  let config = fs.readFileSync(viteConfigPath, "utf8")
+        if (!config.includes("build.rollupOptions")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "build"
   vendor: ["react", "react-dom"]
           "utils": ["lodash", "date-fns"]
     "minify": "esbuild"
     "sourcemap"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     "chunkSizeWarningLimit": 1000},"
   "success"
             "message": "Vite build configuration optimized"
       return { "success": true, "message": "Build time optimization applied"}
   return { "success": false, "message"}
+<<<<<<< HEAD
 const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
 const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8");
+=======
+  return { "success": false, "message"}
+      const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
+  const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "incremental"
           "tsBuildInfoFile": "./"node_modules/.cache/.tsbuildinfo""
           "skipLibCheck"
@@ -159,16 +258,28 @@ const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8");
           "message": "TypeScript configuration optimized for bundle size"
       return { "success": true, "message": "Bundle size optimization applied"}
   return { "success": false, "message"}
+<<<<<<< HEAD
 const packagePath = path.join(this.projectRoot, "package.json");
 const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8");
+=======
+  return { "success": false, "message"}
+const packagePath = path.join(this.projectRoot, "package.json")
+  const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         if (!pkg.scripts[""install": fast")]
   pkg.scripts["install:fast"] = "npm ci --prefer-offline --no-audit"
           pkg.scripts["install:clean"] =rm -rf node_modules package-lock.json && npm install"
           return { "success": true, "message": "Fast install scripts added"}
       return { "success": true, "message": "Install time optimization applied"}
   return { "success": false, "message"}
+<<<<<<< HEAD
 const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
 const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8");
+=======
+  return { "success": false, "message"}
+      const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
+  const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "incremental"
           "tsBuildInfoFile": "./"node_modules/.cache/.tsbuildinfo""
         return { "success": true, "message": "Incremental compilation enabled"}
@@ -198,15 +309,66 @@ const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8");
       "priority": "MEDIUM"
       "suggestion": "Use npm ci for faster, reliable installs"
       "action": "Run npm ci instead of npm install in "CI/CD" environments"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.log("Optimization results saved")
   this.log(Failed to save optimization "results": ${error.message  }")
         "ERROR"
   this.log(")
   console.log("Smart Build Optimization completed successfully")
+<<<<<<< HEAD
 
+  console.error("Smart Build Optimization "failed")
+  console.error("Smart Build Optimization "failed")
   console.error("Smart Build Optimization "failed")
 
 
 
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+  console.error(Smart Build Optimization failed")
+
+  console.error("Smart Build Optimization failed)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error("Smart Build Optimization "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error("Smart Build Optimization "failed")
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  console.error("Smart Build Optimization "failed")
+<<<<<<< HEAD
+
+<<<<<<< HEAD
 
 
+
+
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

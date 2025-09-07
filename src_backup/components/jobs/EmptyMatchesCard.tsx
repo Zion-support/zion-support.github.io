@@ -45,6 +45,11 @@ export function EmptyMatchesCard({
         Run AI matching to find talents that match this job&apos;s requirements.
       </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto>      <Button 
         onClick = {onRefresh}
         disabled = {isProcessing}
@@ -60,6 +65,10 @@ export interface EmptyMatchesCardProps {
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   return (
 
@@ -87,6 +96,11 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
           <>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto>
         {isProcessing ? (
@@ -170,6 +184,10 @@ function EmptyMatchesCard() {return (<Card className='p - 6 text - center border
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </>
         ) : (
           <>
@@ -192,5 +210,15 @@ function EmptyMatchesCard() {return (<Card className='p - 6 text - center border
         )}
       </Button>
     </Card>
+<<<<<<< HEAD
   );
 }
+=======
+<<<<<<< HEAD
+  )
+}
+=======
+  );
+}
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

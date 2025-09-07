@@ -167,6 +167,11 @@ const Header = () => {
               <ArrowRight className="ml-2 h-4 w-4" />"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {/* Mobile Menu Button */}
           <div className=""lg":hidden">"
             <button,
@@ -295,6 +300,10 @@ return (;
 return (;
     <header className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${`      }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             
           <div className="lg:hidden">"
             <button;
@@ -308,7 +317,14 @@ return (;
   const isActive = (path: string) => location && location.pathname === path;
 </headerclassName>`;
     <header className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       is_scrolled ;
         ? 'bg - slate - 900 / 95 backdrop - blur - md border - b border - slate - 700 / 50' ;
         : 'bg - transparent';`;
@@ -388,6 +404,17 @@ import React, { useState, useEffect } from 'react'; import Link from 'next / lin
 </svg>
               <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16&quot; />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+</path>
+    </header>`;
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${"
+      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent`;
+    }`}>
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </svg>
           </button>
         </div>
@@ -563,12 +590,23 @@ const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(f
       isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent`;
     }`}>
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 </string>`;
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ;"
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' ;
         : 'bg-transparent';`;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;"
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="flex items-center justify-between h-16">;"
           <div className="flex-shrink-0">"
             <Link href="/" className="text-2xl font-bold text-blue-600">"
@@ -582,6 +620,27 @@ const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(f
           <div className="md:hidden">"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+            
+
+                    href={item.href}`;
+
+                  
+
+                            
+                  
+
+                            
+                  
+
+            
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
 
     {
@@ -648,6 +707,10 @@ const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(f
 
             
 
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               className="lg:hidden border-t border-gray-200""
               <div className="py-4 space-y-4">"

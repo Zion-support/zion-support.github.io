@@ -1,5 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 #!/usr/bin/env node;
@@ -90,10 +102,27 @@ for (const file of files) {
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 console.log(' Starting comprehensive build fix...')
   if (: JSX.Element =>')
     fixed = fixed.replace(/\): JSX\.Element =>/g, ') =>'
@@ -110,13 +139,30 @@ console.log(' Starting comprehensive build fix...')
     fixed = fixed.replace(/import React, \{([^}]+)\} from 'react'}/g, 'import React, { $1 } from "react"
   fixed = fixed.replace(/className="([^"]*)\s+"/g, 'className="$1"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
+=======
+<<<<<<< HEAD
+
+  fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
+=======
+  fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
 =======
   fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
   fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
@@ -124,3 +170,12 @@ console.log(' Starting comprehensive build fix...')
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,9 +1,49 @@
+<<<<<<< HEAD
 #!/""usr/bin/env""
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 console.log("" Starting Intelligent Code Refactorer...")
 // Get automation interval from environment variable ("default")
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
+#!/""usr/bin/env""
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+console.log("" Starting Intelligent Code Refactorer...")
+// Get automation interval from environment variable ("default")
+      "appliedRefactorings"
+      "codeQualityScore"
+      "complexityReduction"
+      "refactoringPatterns"
+const { execSync } = require("child_process")
+<<<<<<< HEAD
+
+=======
+const fs = require("fs")
+const path = require("path")
+>>>>>>> merged-prs-20250907-203621
+console.log("" Starting Intelligent Code Refactorer...")
+// Get automation interval from environment variable ("default")
+>>>>>>> origin/chore/fix-lint-and-merge
+console.log(" Starting Intelligent Code Refactorer...")
+// Get automation interval from environment variable (default)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "appliedRefactorings"
       "codeQualityScore"
       "complexityReduction"
@@ -21,10 +61,20 @@ console.log(" Starting Intelligent Code Refactorer...")
     this.reportDir = path.join(process.cwd(), "refactoring-reports"
   fs.mkdirSync(this.reportDir, { "recursive"})
   console.log(` Running intelligent code refactoring at ${new Date().toISOString()}
+<<<<<<< HEAD
       console.log(`" Intelligent code refactoring completed successfully"`)
   console.error(" Intelligent code refactoring "failed": ")
   console.log(" Analyzing code patterns...")
 const srcPath = path.join(process.cwd(), "src";
+=======
+<<<<<<< HEAD
+
+=======
+      console.log(`" Intelligent code refactoring completed successfully"`)
+  console.error(" Intelligent code refactoring "failed": ")
+  console.log(" Analyzing code patterns...")
+    const srcPath = path.join(process.cwd(), "src"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   console.log("⚠ Source directory not found")
   "longFunctions"
       "duplicateCode"
@@ -33,8 +83,13 @@ const srcPath = path.join(process.cwd(), "src";
       "inconsistentNaming"
       "unusedVariables"
       "largeComponents"
+<<<<<<< HEAD
 const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx")];
 const content = fs.readFileSync(file, "utf8");
+=======
+    const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx")]
+  const content = fs.readFileSync(file, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "file"
           "functions"
   "file"
@@ -52,6 +107,10 @@ const content = fs.readFileSync(file, "utf8");
   "type": "extract_method"
         "priority": "high"
         "description": "Long functions detected - consider extracting methods"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "files"
         "action": "Break down long functions into smaller, focused methods"
   "type": "extract_common"
@@ -77,12 +136,31 @@ const content = fs.readFileSync(file, "utf8");
   console.log(" Applying automatic refactorings...")
       this.refactoringMetrics.refactoringPatterns.get("patterns")
   console.log("� Extracting magic numbers...")
+<<<<<<< HEAD
 const filePath = path.join(process.cwd(), "src";
 let content = fs.readFileSync(filePath, "utf8");
   content = constantDeclaration + "\n"
             // Replace magic number with constantconst regex = new RegExp(\\b${number.value}\\b, "g"")
   "type": "extract_constants"
           "file"
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          "file"
+          timestamp
+          "description"
+
+=======
+>>>>>>> merged-prs-20250907-203621
+  const filePath = path.join(process.cwd(), "src"
+        let content = fs.readFileSync(filePath, "utf8")
+  content = constantDeclaration + "\n"
+            // Replace magic number with constantconst regex = new RegExp(\\b${number.value}\\b, "g"")
+  "type": "extract_constants"
+          "file"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "timestamp": new Date().toISOString(),"description": "Extracted ${magicNumbers.length} magic numbers"
 // console.log(" Extracted magic numbers from ${pattern.file}")
   console.log("⚠ Failed to extract magic numbers from ${pattern.file  }:")
@@ -94,11 +172,31 @@ let content = fs.readFileSync(filePath, "utf8");
 "
   async standardizeNaming(namingPatterns) {"}
     console.log("� Standardizing naming conventions...")
+<<<<<<< HEAD
 const filePath = path.join(process.cwd(), "src";
 let content = fs.readFileSync(filePath, "utf8");
   if (inconsistency.type === "camelCase")
 const regex = new RegExp(inconsistency.original, "g");
   "type": "
+=======
+  const filePath = path.join(process.cwd(), "src"
+        let content = fs.readFileSync(filePath, "utf8")
+  if (inconsistency.type === "camelCase")
+            const regex = new RegExp(inconsistency.original, "g")
+  "type": "
+          "file"
+          "timestamp"
+          "description"
+        "
+// console.log("" Simplifying complex code...")
+  console.log("" Simplifying complex code...")
+    console.log(" Simplifying complex code...")
+  const filePath = path.join(process.cwd(), "src"
+        let content = fs.readFileSync(filePath, "utf8")
+  if (conditional.type === "nested_if")
+  "type": "
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "file"
           "timestamp"
           "description"
@@ -154,8 +252,17 @@ console.log(` Simplified code in ${pattern.file}");")} catch (error) {"`}
       "applied"
       this.reportDir,refactoring-${Date.now()}.json"
       "
+<<<<<<< HEAD
   // Skip directories that can"
 const lines = content.split("\n");
+=======
+<<<<<<< HEAD
+
+=======
+  // Skip directories that can"
+  // Skip directories that can"
+    const lines = content.split("\n")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     let functionName = "
         line.includes("function ")
         (line.includes("const ") && line.includes("=") && line.includes("(")
@@ -168,13 +275,22 @@ const lines = content.split("\n");
             "length"
             "startLine"
             "endLine"
+<<<<<<< HEAD
 const lines = content.split("\n");
 const block = lines.slice(i, i + 3).join("\n");
+=======
+    const lines = content.split("\n")
+  const block = lines.slice(i, i + 3).join("\n")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       codeBlocks.push({ block, "startLine"})
   "code"
             "startLine"
             "duplicateLine"
+<<<<<<< HEAD
 const lines = content.split("\n");
+=======
+    const lines = content.split("\n")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         line.includes("if (")
         (line.includes("&&") || line.includes("||")
         line.includes("if (")
@@ -189,34 +305,111 @@ const lines = content.split("\n");
             "line"
             "code": line.trim() + "\n"
             "complexity"
+<<<<<<< HEAD
 const lines = content.split("\n");
 const numberMatches = line.match(/\b\d+\"b/g");
+=======
+    const lines = content.split("\n")
+      const numberMatches = line.match(/\b\d+\"b/g")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "value"
               "line"
               "context"
   "value"
               "line"
               "context"
+<<<<<<< HEAD
 const lines = content.split("\n");
 const variableMatches = line.match(/\b[a-zA-Z_][a-zA-Z0-9_]*\""b/g"");
+=======
+    const lines = content.split("\n")
+      const variableMatches = line.match(/\b[a-zA-Z_][a-zA-Z0-9_]*\""b/g"")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "type": "camelCase"
               "original"
               "suggested"
               "line"
+<<<<<<< HEAD
 const prefix = contextWords[0] ? contextWords[0].toUpperCase() : ";
+=======
+    const prefix = contextWords[0] ? contextWords[0].toUpperCase() : "
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   isConsistentNaming(name")
       /if\s*\(([^)]+)\)\s*{\s*if\s*\(([^)]+)\)/g,if ($1 && $2)"}
     "
 process.on("SIGINT")
+<<<<<<< HEAD
   console.log( Intelligent code refactorer running. Next refactoring in ${AUTOMATION_INTERVAL / 1000 / 60} minutes")
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 
+=======
+<<<<<<< HEAD
+  console.log( Intelligent code refactorer running. Next refactoring in ${AUTOMATION_INTERVAL / 1000 / 60} minutes)
+process.on(SIGINT")
+  console.log("� Received SIGINT, shutting down gracefully...)
+process.on(SIGTERM")
+  console.log("� Received SIGTERM, shutting down gracefully...)
+
+
+  console.error( Failed to start intelligent code "refactorer")
+
+  console.error( Failed to start intelligent code refactorer")
+=======
+  console.log( Intelligent code refactorer running. Next refactoring in ${AUTOMATION_INTERVAL / 1000 / 60} minutes")
+process.on("SIGINT")
+  console.log("� Received SIGINT, shutting down gracefully...")
+process.on("SIGTERM")
+  console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+  console.error(" Failed to start intelligent code "refactorer")
+<<<<<<< HEAD
+  console.error(" Failed to start intelligent code "refactorer")
   console.error(" Failed to start intelligent code "refactorer")
 
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" Failed to start intelligent code "refactorer")
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  console.error(" Failed to start intelligent code "refactorer")
+<<<<<<< HEAD
+
+<<<<<<< HEAD
 
 
+
+
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -91,6 +91,8 @@ export function AIEnhancementButton({
       setGeneratedContent(null)
       }),
       return
+<<<<<<< HEAD
+=======
 import { useState } from 'react,
 import { Button } from @/components/ui/button'}
 export function AIEnhancementButton({const handleEnhance = async () => {const handleEnhance = async () => {if ((!options.content |options.content.trim().length < contentLength) &&;
@@ -144,6 +146,10 @@ import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react;
         variant: "destructive"
       }),
       return
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
@@ -215,6 +221,11 @@ import { toast } from @/hooks/use-toast';
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }: AIEnhancementButtonProps) {const { enhanceContent, isEnhancing } = useAIContentEnhancer()const [showActions, setShowActions] = useState(false)const [generatedContent, setGeneratedContent]  = useState<string | null>(null)const handleEnhance = async () => {if ((!options && options.content || options && options.content.trim().length < contentLength) && ;
         (!options && options.context || options && options.context.trim().length < contentLength)) {toast({title: "Not enough content,description: `Please enter at least ${contentLength} characters before enhancing.`,variant: destructive";
       })return;
@@ -225,6 +236,10 @@ import { useAIContentEnhancer, AIEnhancementOptions   } from '@/hooks/useAIConte
 interface AIEnhancementButtonProps  {options: AIEnhancementOptions;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onEnhanced: (enhancedContent: string) => void;
   buttonText?: string;
   className?: string;
@@ -343,7 +358,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export function AIEnhancementButton() {return (<div className=flex gap-2 items-center">;
 =======
             <RefreshCw className="h-4 w-4 mr-1" />;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           )}
           Regenerate;
         </Button>;
@@ -365,11 +387,20 @@ export function AIEnhancementButton() {return (<div className=flex gap-2 items-c
 
           Apply;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </Button>;<Button;
           type="button;
           variant=ghost";
           size="sm;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </Button>;
         <Button;
           type="button";
@@ -390,6 +421,11 @@ export function AIEnhancementButton() {return (<div className=flex gap-2 items-c
         </Button>;
         <Button;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           type="button;
           variant=ghost";
           size="sm;
@@ -430,6 +466,10 @@ export function AIEnhancementButton() {return (<div className=flex gap-2 items-c
           on_click = {handle_cancel}
           className="text - gray - 500 hover: text - gray - 700 hover:bg - gray-100 / 20;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           type="button";
           variant="ghost";
           size="sm";
@@ -441,12 +481,21 @@ export function AIEnhancementButton() {return (<div className=flex gap-2 items-c
           Cancel;
         </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>)}
   return (<Button;
       type="button;
       variant = {variant }
       size = {size }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>),
   }
   return (
@@ -454,7 +503,14 @@ export function AIEnhancementButton() {return (<div className=flex gap-2 items-c
       type="button";
       variant = {variant, }
       size = {size, }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       className={`gap - 1 ${class_name}`}
       on_click = {handle_enhance, }
       disabled = {is_enhancing, }
@@ -481,6 +537,11 @@ export function AIEnhancementButton() {return (<div className=flex gap-2 items-c
       )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin />
@@ -488,6 +549,7 @@ export function AIEnhancementButton() {return (<div className=flex gap-2 items-c
         <Sparkles className=h-4 w-4" />
       )}
       <span className="text-xs>{buttonText}</span>
+>>>>>>> merged-prs-20250907-203621
     </Button>
 :src/components/ai-enhancement/AIEnhancementButton.tsx
   )
@@ -512,6 +574,12 @@ export function AIEnhancementButton() {return (<div className=flex gap-2 items-c
 }return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
 }</Button>) ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 }return (<Button) : (<Sparkles className= h - 4 w - 4" />)}</Button>)}"}variant={variant}
@@ -531,3 +599,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

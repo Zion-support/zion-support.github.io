@@ -1,13 +1,71 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+import { completeSitemap, SitemapItem } from "@/config/sitemap";
+// Find a route by path in the complete sitemap
+export const findRouteByPath = $2;
+// Check if a route requires authentication
+export const isProtectedRoute = (path: string): boolean => {
+  const route = findRouteByPath($2);
+  return route?.requiredAuth = $2;
+// Check if a route is accessible by a specific user type
+export const canAccessRoute = $2;
+  isAuthenticated: boolean,
+  userType?: string | null
+): boolean => {
+  const route = findRouteByPath($2);
+  // If route doesn't exist in our sitemap
+  if (!route) return true, // Default to accessible
+  
+  // If route requires authentication and user is not authenticated
+  if (route.requiredAuth && !isAuthenticated) return false,
+  
+=======
+  return completeSitemap && completeSitemap.find(route => route && route.path === path)
+};
+
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+
+
+<<<<<<< HEAD
+import { completeSitemap, SitemapItem } from "@/config/sitemap";
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path);
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+
+<<<<<<< HEAD
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
@@ -26,6 +84,42 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 export const isProtectedRoute = (path: string): boolean => {
   const route = findRouteByPath(path)
 
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+}
+},
+
+// Check if a route requires authentication
+export const isProtectedRoute = (path: string): boolean => {
+  const route = findRouteByPath(path)
+  const route = findRouteByPath(path),
+  return route?.requiredAuth === true;
+};
+
+// Check if a route is accessible by a specific user type
+export const canAccessRoute = (;
+  path: string;
+  isAuthenticated: boolean;
+  return route?.requiredAuth === true
+}
+},
+
+// Check if a route is accessible by a specific user type
+export const canAccessRoute = (
+  path: string,
+  isAuthenticated: boolean,
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+},
+
+
+return completeSitemap && completeSitemap.find(route => route && route.path === path)
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
 
@@ -42,20 +136,45 @@ export const isProtectedRoute = (path: string): boolean => {
   // If route doesn't exist in our sitemap
   if (!route) return true, // Default to accessible
   // If route requires authentication and user is not authenticated
+<<<<<<< HEAD
 
   if (route && route.requiredAuth && !isAuthenticated) return false;
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  if (route && route.requiredAuth && !isAuthenticated) return false;
+
+  if (route && route.requiredAuth && !isAuthenticated) return false;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // If route requires specific roles and user doesn't have one
   if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
     if (!userType) return false;
     return route && route.requiredRoles.includes(userType as any)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+  if (route.requiredAuth && !isAuthenticated) return false;
+  if (route.requiredAuth && !isAuthenticated) return false,
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // If route requires specific roles and user doesn't have one
   if (route.requiredRoles && route.requiredRoles.length > 0) {
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 
   }
@@ -95,6 +214,194 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     }
   }
   return breadcrumbs
+=======
+<<<<<<< HEAD
+  }
+  
+  return true
+},
+
+// Get breadcrumb items for a path
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {
+  const breadcrumbs = [{label: 'Home', path: '/'}],
+  
+  if (path = $2;
+  // Split the path into segments
+  const segments = path.split('/').filter($2);
+  let currentPath = $2;
+  for (const segment of segments) {
+    currentPath += `/${segment}`,
+    const route = findRouteByPath($2);
+    if (route) {
+      breadcrumbs.push({
+        label: route.label,
+        path: currentPath})
+    } else {
+      // For dynamic routes that might not be in the static sitemap
+      breadcrumbs.push({
+        label: segment.charAt(0).toUpperCase() + segment.slice(1).replace($2);
+        path: currentPath})
+    }
+  }
+  
+  return breadcrumbs
+},
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  }
+
+  return true
+}
+// Get breadcrumb items for a path
+<<<<<<< HEAD
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
+  const breadcrumbs = [{label: 'Home', path: '/'}];
+  if (path === '/') return breadcrumbs;
+  // Split the path into segments
+  const segments = path.split('/').filter(Boolean);
+=======
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {
+  const breadcrumbs = [{label: 'Home', path: '/'}];
+  if (path === '/') return breadcrumbs;
+  // Split the path into segments
+  const segments = path && path.split('/').filter(Boolean);
+<<<<<<< HEAD
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
+  const breadcrumbs = [{label: 'Home', path: '/'}];
+  if (path === '/') return breadcrumbs;
+  // Split the path into segments
+  const segments = path.split('/').filter(Boolean);
+  const segments = path && path.split('/').filter(Boolean);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  let currentPath = '';
+  for (const segment of segments) {
+    currentPath += `/${segment}`;
+    const route = findRouteByPath(currentPath);
+    if (route) {
+<<<<<<< HEAD
+      breadcrumbs && breadcrumbs.push({
+        label: route && route.label,
+      breadcrumbs.push({
+        label: route.label
+=======
+
+      breadcrumbs && breadcrumbs.push({
+        label: route && route.label,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        path: currentPath
+      })
+    } else {
+      // For dynamic routes that might not be in the static sitemap
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+import { completeSitemap, SitemapItem } from "@/config/sitemap",;
+;
+// Find a route by path in the complete sitemap;
+export const findRouteByPath = (path:string):SitemapItem | undefined => {;
+  return completeSitemap.find(route => route.path === path);
+},;
+;
+// Check if a route requires authentication;
+export const isProtectedRoute = (path:string):boolean => {;
+  const route = findRouteByPath(path),;
+  return route?.requiredAuth === true;
+},;
+;
+// Check if a route is accessible by a specific user type;
+export const canAccessRoute = (;
+  path:string,;
+  isAuthenticated:boolean,;
+  userType?:string | null;
+):boolean => {;
+  const route = findRouteByPath(path),;
+  ;
+  // If route doesn't exist in our sitemap;
+  if (!route) return true, // Default to accessible;
+  ;
+  // If route requires authentication and user is not authenticated;
+  if (route.requiredAuth && !isAuthenticated) return false,;
+  ;
+  // If route requires specific roles and user doesn't have one;
+  if (route.requiredRoles && route.requiredRoles.length > 0) {;
+    if (!userType) return false,;
+    return route.requiredRoles.includes(userType as any),;
+  }
+  ;
+  return true,;
+},;
+;
+// Get breadcrumb items for a path;
+export const getBreadcrumbsForPath = (path:string):Array<{label:string, path:string}> => {;
+  const breadcrumbs = [{label:'Home', path:'/'}],;
+  ;
+  if (path === '/') return breadcrumbs,;
+  ;
+  // Split the path into segments;
+  const segments = path.split('/').filter(Boolean),;
+  let currentPath = '',;
+  ;
+  for (const segment of segments) {;
+    currentPath += `/${segment}`,;
+    const route = findRouteByPath(currentPath),;
+    ;
+    if (route) {;
+      breadcrumbs.push({;
+        label:route.label,;
+        path:currentPath;
+      }),;
+    } else {;
+      // For dynamic routes that might not be in the static sitemap;
+      breadcrumbs.push({;
+        label:segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),;
+        path:currentPath;
+      }),;
+    }
+  }
+  ;
+  return breadcrumbs,;
+},; //Find a route by path in the complete sitemap export const findRouteByPath = (path: string) : SitemapItem | undefined => {
+  return completeSitemap.find (route => route.path === path) 
+};
+//Check if a route requires authentication export const isProtectedRoute = (path: string) : boolean => {
+  const route = findRouteByPath (path);
+return route?.requiredAuth === true 
+};
+isAuthenticated: boolean;
+userType?: string | null //If route doesn't exist in our sitemap if (!route) return true, //Default to accessible //If route requires authentication and user is not authenticated if (route.requiredAuth && !isAuthenticated) return false;
+//If route requires specific roles and user doesn't have one if (route.requiredRoles && route.requiredRoles.length > 0) {
+  return true;
+};
+//Get breadcrumb items for a path if (path === '/') return breadcrumbs;
+//Split the path into segments if (route) {
+  breadcrumbs.push ({
+  label: route.label, path: currentPath 
+});
+}else {
+  // For dynamic routes that might not be in the static sitemap breadcrumbs.push ({
+  
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+      breadcrumbs && breadcrumbs.push({
+        label: segment && segment.charAt(0).toUpperCase() + segment && segment.slice(1).replace(/-/g, ' ');
+        path: currentPath
+      })
+    }
+  }
+  return breadcrumbs
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 
@@ -136,6 +443,14 @@ export const isProtectedRoute = (path: string): boolean => {}
 '
   // If route requires specific roles and user doesn't have one;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (route.requiredAuth && !isAuthenticated) return false,
 
   // If route requires specific roles and user doesn't have one
@@ -143,10 +458,21 @@ export const isProtectedRoute = (path: string): boolean => {}
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 
+<<<<<<< HEAD
+=======
+=======
+
+import { completeSitemap, SitemapItem } from "@/config/sitemap",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Find a route by path in the complete sitemap;
 export const findRouteByPath = (path: string): SitemapItem | undefined => {};
   return complete_sitemap.find (route => route.path === path);
@@ -240,5 +566,90 @@ if ( {) {}
 
   return breadcrumbs;
 
+<<<<<<< HEAD
   return breadcrumbs
 };
+=======
+<<<<<<< HEAD
+  return breadcrumbs
+};
+=======
+
+
+};
+<<<<<<< HEAD
+}
+;
+}return breadcrumbs;
+};
+      breadcrumbs.push({
+        label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+        path: currentPath
+      })
+    }
+  }
+  return breadcrumbs
+}
+
+import { completeSitemap, SitemapItem } from "@/config/sitemap",;
+// Find a route by path in the complete sitemap;
+export const findRouteByPath = (path: string): SitemapItem | undefined => {;
+  return completeSitemap.find(route => route.path === path);
+},;
+// Check if a route requires authentication;
+export const isProtectedRoute = (path: string): boolean => {;
+  const route = findRouteByPath(path),;
+  return route?.requiredAuth === true;
+},;
+// Check if a route is accessible by a specific user type;
+export const canAccessRoute = (;
+  path: string,;
+  isAuthenticated: boolean,;
+  userType?: string | null;
+): boolean => {;
+  const route = findRouteByPath(path),;
+  // If route doesn't exist in our sitemap;
+  if (!route) return true, // Default to accessible;
+  // If route requires authentication and user is not authenticated;
+  if (route.requiredAuth && !isAuthenticated) return false,;
+  // If route requires specific roles and user doesn't have one;
+  if (route.requiredRoles && route.requiredRoles.length > 0) {;
+    if (!userType) return false,;
+    return route.requiredRoles.includes(userType as any);
+  }
+;
+  return true;
+},;
+// Get breadcrumb items for a path;
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
+  const breadcrumbs = [{label: 'Home', path: '/'}],;
+  if (path === '/') return breadcrumbs,;
+  // Split the path into segments;
+  const segments = path.split('/').filter(Boolean),;
+  let currentPath = '',;
+  for (const segment of segments) {;
+    currentPath += `/${segment}`,;
+    const route = findRouteByPath(currentPath),;
+    if (route) {;
+      breadcrumbs.push({;
+        label: route.label,;
+        path: currentPath;
+      });
+    } else {;
+      // For dynamic routes that might not be in the static sitemap;
+      breadcrumbs.push({;
+        label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+        path: currentPath;
+      });
+    }
+  }
+;
+  return breadcrumbs;
+};
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

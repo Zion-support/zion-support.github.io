@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useMemo } from "react";
+=======
+<<<<<<< HEAD:_conflicted_disabled/src/components/search/EnhancedSearchInput.tsx
+import React, { useState, useEffect, useRef, useMemo } from "react";
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useTranslation } from "react-i18next";
 import { Search, X } from 'lucide-react'
 import { Input } from "@/components/ui/input";
@@ -9,6 +15,22 @@ import { useRouter } from "next/router";
 import { slugify } from "@/lib/slugify";
 import { debounce } from "lodash";
 import { logInfo, logWarn } from '@/utils/productionLogger';
+<<<<<<< HEAD
+=======
+=======
+import React, { useState, useEffect, useRef, useMemo } from "react;
+import { useTranslation } from react-i18next";
+import { Search, X } from 'lucide-react
+import { Input } from "@/components/ui/input;
+import { AutocompleteSuggestions } from @/components/search/AutocompleteSuggestions";
+import { SearchSuggestion } from "@/types/search;
+import { useDebounce } from @/hooks/useDebounce";
+import { useRouter } from "next/router;
+import { slugify } from @/lib/slugify";
+import { debounce } from "lodash;
+import { logInfo, logWarn } from @/utils/productionLogger';
+>>>>>>> merged-prs-20250907-203621:src_disabled_1757239864/components/search/EnhancedSearchInput.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 interface EnhancedSearchInputProps {
@@ -25,9 +47,14 @@ interface EnhancedSearchInputProps {
    * If provided, these will be shown when the input is empty.
    */
   searchSuggestions?: SearchSuggestion[]
+=======
+interface EnhancedSearchInputProps {
+  value: string;
+  onChange: (value: string) => void;
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 }
-
 export function EnhancedSearchInput({
+<<<<<<< HEAD
   value;
   onChange;
   onSelectSuggestion;
@@ -245,13 +272,45 @@ export function EnhancedSearchInput({
         />
         {value && (
           <button
+<<<<<<< HEAD
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
             aria-label="Clear search"
+=======
+<<<<<<< HEAD:_conflicted_disabled/src/components/search/EnhancedSearchInput.tsx
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+            onClick={() => onChange('')}
+            aria-label="Clear search"
+=======
+  value,
+  onChange,
+  onSelectSuggestion,
+  searchSuggestions,
+  placeholder = "Search...",
+  className = ""
+}: EnhancedSearchInputProps) {
+        <Input,
+  type="text"
+          value={value}
+          <button,
+  type="button"
+            onClick={() => {
+              onChange('');
+              setIsOpen(false);
+            }}
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 hover:text-gray-600"
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
+=======
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white
+            onClick={() => onChange(')}
+            aria-label=Clear search"
+>>>>>>> merged-prs-20250907-203621:src_disabled_1757239864/components/search/EnhancedSearchInput.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           >
             <X className="h-4 w-4" />
           </button>
         )}
+<<<<<<< HEAD
       </div>
       
       <AutocompleteSuggestions
@@ -265,6 +324,7 @@ export function EnhancedSearchInput({
     </div>
   )
 }
+<<<<<<< HEAD
 :src/components/search/EnhancedSearchInput.tsx
   };
 
@@ -427,3 +487,11 @@ break;
       />;
     </div>);
 }
+=======
+<<<<<<< HEAD:_conflicted_disabled/src/components/search/EnhancedSearchInput.tsx
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
+=======
+>>>>>>> merged-prs-20250907-203621:src_disabled_1757239864/components/search/EnhancedSearchInput.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

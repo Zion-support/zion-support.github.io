@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useMemo } from 'react',;
+import { User } from 'lucide-react';
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react';
 import React, { useMemo } from 'react;
@@ -21,6 +28,10 @@ import { Conversation } from @/types/messaging',import { ConversationItem } from
 =======
 import React, { useMemo } from 'react',;
 import { User } from 'lucide-react';
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Conversation } from '@/types/messaging',;
 import { ConversationItem } from './ConversationItem',;
 import { FixedSizeList as List, ListChildComponentProps } from 'react-window',;
@@ -50,7 +61,14 @@ export function ConversationsList({;
 ;
     return (;
       <div style={style}>;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <ConversationItem;
           conversation={conversation}
           isActive={activeConversation?.id === conversation.id}
@@ -87,6 +105,11 @@ export function ConversationsList({
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto>;
   markAsRead: (conversationId: string) => Promise<void>;
 export function ConversationsList() {const itemSize  = null;return (<div className=w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
@@ -95,6 +118,10 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
       </div>;{conversations && conversations.length === 0 ? (<div className='p-8 text-center text-zion-slate>;
           <User className=h-10 w-10 mx-auto mb-2 text-zion-purple/40' />;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
       <div className='p-3 border-b border-zion-purple/20'>;
         <h3 className='font-medium text-white'>Conversations</h3>;
@@ -116,6 +143,17 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
           itemCount={conversations && conversations.length}
           itemSize={itemSize}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          width="100%"
+        >
+          {Row}
+        </List>
+      )}
+    </div>
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           width="100%;
         >;
 =======
@@ -204,3 +242,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

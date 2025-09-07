@@ -13,6 +13,11 @@ import {cn} from @/lib/utils"
 import { cn } from "@/lib/utils
  
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >(({ className, separator, ...props }, ref,) => (}
 >(({ className, separator, ...props }, ref,) => (import { cn  } from '@/lib/utils;
 const Breadcrumb = null;
@@ -46,6 +51,7 @@ const Breadcrumb = React.forwardRef<;
     ref={ref}
     aria-label="breadcrumb;
     className={cn(inline-flex items-center gap-1 text-sm text-zion-slate-light",className;
+>>>>>>> merged-prs-20250907-203621
 const Breadcrumb = $2;
   React.ComponentPropsWithoutRef<"nav> & {
 =======
@@ -80,6 +86,12 @@ const Breadcrumb = React.forward_ref<;
     )}
     {...props}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  />
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   />));
 Breadcrumb.display_name = Breadcrumb';
@@ -142,6 +154,7 @@ const BreadcrumbItem = React.forward_ref<;
 const BreadcrumbLink = React.forward_ref<;
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<a'> & {
+>>>>>>> merged-prs-20250907-203621
 ))
 Breadcrumb.displayName = $2;
   React.ComponentPropsWithoutRef<ol">
@@ -202,6 +215,11 @@ BreadcrumbLink.displayName = $2;
   ...props
 }: React.ComponentProps<"li>) => (
   <li
+<<<<<<< HEAD
+    role="presentation"
+    aria-hidden="true"
+    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
+=======
     role=presentation"
     aria-hidden="true
   HTMLAnchorElement,React.ComponentPropsWithoutRef<'a> & {asChild?: boolean;
@@ -311,6 +329,7 @@ const BreadcrumbSeparator = ({
 
 
     className={cn([&>svg]:size-3.5 text-zion-slate-light/70", className)}
+>>>>>>> merged-prs-20250907-203621
     {...props}
 
   >
@@ -353,6 +372,17 @@ export {
   BreadcrumbItem,
   BreadcrumbLink,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  BreadcrumbSeparator,
+
+export {
+
+  BreadcrumbEllipsis}
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   BreadcrumbSeparator}: React && React.ComponentProps<"span>) => (<span;
     role=presentation";
     aria-hidden="true;
@@ -396,3 +426,7 @@ export {
   BreadcrumbEllipsis}
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

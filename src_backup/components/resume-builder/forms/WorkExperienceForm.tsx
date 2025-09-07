@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
       // Check condition
 if ( {) {
@@ -9,7 +15,14 @@ if ( {) {
       } else {
         success = await addWorkExperience(resumeId, experienceData)
       }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   }
   const handleEdit = (work: WorkExperience) => {
@@ -57,9 +70,18 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     setEditingId(work.id!);    form.reset({
       ...work
     setEditingId(work.id!)
@@ -178,12 +200,21 @@ interface WorkExperienceFormProps {
   workExperiences: WorkExperience[];
   onComplete: () => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onBack: () => void;export function WorkExperienceForm(): any ({resumeId,workExperiences,onComplete,onBack}: WorkExperienceFormProps) {const {addWorkExperience,updateWorkExperience,deleteWorkExperience,isLoading} = useResume()const [editingId, setEditingId] = useState<string | null>(null)const [error, setError]  = useState<string | null>(null)// Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date | undefined): string => {if (!dateValue) return ';
     if (typeof dateValue === 'string) return dateValue;
     return format(dateValue, yyyy-MM-dd')
 }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   onBack: () => void;
 
 export function WorkExperienceForm(): any ({;
@@ -279,6 +310,11 @@ export function WorkExperienceForm(): any ({;
           Add your work history to showcase your professional experience.;
         </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>;{workExperiences && workExperiences.length > 0 && (<div className='space-y-4>;
           <h3 className=text-md font-medium'>Added Experience</h3>;
           {workExperiences && workExperiences.map(work => (<Card key={work && work.id} className='bg-muted/40>;
@@ -287,6 +323,10 @@ export function WorkExperienceForm(): any ({;
                     <h4 className=font-medium'>{work && work.role_title}</h4>;
                     <p className='text-sm text-muted-foreground>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>;
 
       {workExperiences && workExperiences.length > 0 && (;
@@ -385,6 +425,23 @@ export function WorkExperienceForm(): any ({;
                 )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              </Button>;
+
+              <div className='flex gap-2'>;
+                <Button type='submit' disabled={isLoading}>;
+                  {isLoading && (;
+                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                  )}
+                  {editingId ? 'Update' : 'Add'} Experience;
+                </Button>;
+
+                {!editingId && workExperiences && workExperiences.length > 0 && (;
+                  <Button type='button' onClick={onComplete}>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }> {;
   editingId ? 'Cancel': Back ;
 }</Button> Next </Button>) ;
@@ -432,6 +489,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {!editingId && workExperiences && workExperiences.length > 0 && (;
                   <Button type='button' onClick={onComplete}>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     Next;
                   </Button>;
                 )}
@@ -439,16 +500,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </FormItem>)}
             />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            {error && (
+              <Alert variant='destructive'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {error && (<Alert variant=destructive'>;
 =======
             {error && (
               <Alert variant='destructive'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <AlertDescription>{error}</AlertDescription>;
               </Alert>)}
             <div className='flex justify - between pt - 2>;
               <Button;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                type='button';
+                variant='outline';
+                on_click={() => {
+                  // Check condition
+if ( {) {
+  $2
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 type=button';
                 variant='outline;
                 on_click={() => {// Check condition;
@@ -463,6 +547,10 @@ if ( {) {$2;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     setEditingId (null);
                     form.reset ({
                       company_name: '',
@@ -475,7 +563,14 @@ if ( {) {
                   } else {
                     on_back ();
                   }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 }}
               >;
                 {editing_id ? 'Cancel : Back'}
@@ -496,7 +591,14 @@ if ( {) {
                 </Button>;
                 {!editing_id && work_experiences.length > 0 && (
                   <Button type='button' on_click={on_complete}>;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     Next;
                   </Button>)}
               </div>;

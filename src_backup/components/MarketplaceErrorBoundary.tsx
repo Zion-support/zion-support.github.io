@@ -17,6 +17,11 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
     <ErrorBoundary 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       resetErrorBoundary()
     } catch (retryError) {
       logErrorToProduction('Error during retry:, { data: retryError })
@@ -30,6 +35,10 @@ import * as Sentry from '@sentry/nextjs';
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
   }
   return (
@@ -50,6 +59,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Button
             onClick={() => window.location.reload()}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            variant='outline'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             variant='outline
             className=w-full'          >
             Reload Page
@@ -60,6 +75,10 @@ import {ErrorBoundary, FallbackProps} from 'react-error-boundary;
 =======
             variant='outline'
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
@@ -79,7 +98,14 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
 =======
     } catch (retryError) {;
       logErrorToProduction('Error during retry:', { data: retryError }),;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     <div className="flex items-center justify-center min-h-[400px] p-6>
       <div className=max-w-md w-full space-y-4">
@@ -125,6 +151,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className="text-primary hover:underline
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <div className='text-center text-sm text-muted-foreground>
           If the problem persists, please{ '}
@@ -333,6 +364,10 @@ function MarketplaceErrorBoundary() {const handle_error = (error: Error, error_i
             className=w - full";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode
 export function MarketplaceErrorBoundary({
@@ -348,6 +383,11 @@ export function MarketplaceErrorBoundary({
 
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="flex items-center justify-center min-h-[400px] p-6>;
   )<ErrorBoundary;
   },return (<div className=flex items-center justify-center min-h-[400px] p-6">;
@@ -355,6 +395,10 @@ export function MarketplaceErrorBoundary({
         <Alert variant=destructive">;
           <AlertCircle className="h-4 w-4 />;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="flex items-center justify-center min-h-[400px] p-6">;
       <div className="max-w-md w-full space-y-4">;
         <Alert variant="destructive">;
@@ -366,6 +410,11 @@ export function MarketplaceErrorBoundary({
           </AlertDescription>;
         </Alert>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </Alert>;<div className="flex flex-col space-y-2>;
         <div className=flex flex-col space-y-2">;
           <Button;
@@ -399,6 +448,10 @@ export function MarketplaceErrorBoundary({
             onClick={() => window && window.location.reload()}variant="outline;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             variant=outline";
 
@@ -408,6 +461,11 @@ export function MarketplaceErrorBoundary({
           </Button>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;<div className=text-center text-sm text-muted-foreground">;
         <div className="text-center text-sm text-muted-foreground>;
           If the problem persists, please{ '}
@@ -441,6 +499,10 @@ export function MarketplaceErrorBoundary({
             contact support;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           </a>;
 
@@ -487,6 +549,11 @@ export function MarketplaceErrorBoundary(): any ({
 } 
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )}interface MarketplaceErrorBoundaryProps  {children: React && React.ReactNode;export function MarketplaceErrorBoundary(): any ({children}: MarketplaceErrorBoundaryProps) {const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {// Log boundary errors to Sentry;
     logErrorToProduction(MarketplaceErrorBoundary caught an error:', error, {componentStack: errorInfo && errorInfo.componentStack})Sentry && Sentry.withScope(scope => {scope && scope.setTag('errorBoundary, marketplace')scope && scope.setContext('errorInfo, {componentStack: errorInfo && errorInfo.componentStack || undefined})scope && scope.setLevel(error')Sentry && Sentry.captureException(error)})}>;{children}
     </ErrorBoundary>;
@@ -519,6 +586,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}>;
       {children}

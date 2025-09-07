@@ -21,11 +21,20 @@ interface MetadataFormProps {
 }
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>;
 }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>;
@@ -49,6 +58,11 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     <Input
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       placeholder=Enter app title"
 
 ;
@@ -189,6 +203,10 @@ if ( {) {$2;
                     <Textarea
                       maxLength={platform === ios" ? 30 : 50}
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       placeholder="Enter app title"
                       maxLength={platform === "ios" ? 30 : 50}
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -253,6 +271,13 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                       maxLength = {maxDescriptionLength}
                 </FormItem>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            />;
+            <FormField;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <FormControl>;<Textarea;
                       placeholder="Detailed description of your app;
                       className=min-h-32";
@@ -265,11 +290,22 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 =======
             />;
             <FormField;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               control = {control, }
               name="long_description";
               render={({ field }: { field: any }, ) => (
                 <FormItem>;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <FormLabel > Long Description</FormLabel>;
                   <FormControl>;
                     <Textarea;
@@ -283,9 +319,18 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                   <FormDescription>;
 
                     <Textarea
+<<<<<<< HEAD
+                      placeholder="Detailed description of your app"
+                      className="min-h-32"
+                      maxLength = {maxDescriptionLength,}
+=======
                       placeholder=Detailed description of your app"
                       className="min-h-32
                       maxLength = {maxDescriptionLength}
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               <Input
 
@@ -308,6 +353,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                 ))}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    </Card>);
+},
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <FormDescription>;/>;<div>;
               <FormLabel htmlFor="keywords>Keywords</FormLabel>;<Input;
                 id=keywords";
@@ -340,12 +393,22 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 >>>>>>> origin/chore/fix-lint-and-merge
     </Card>);
 },
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                       {...field}
                     />
                   </FormControl>
                 </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              )}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <Input;
                       placeholder=e && e.g., 1 && 1.0.0";
                       {...field}
@@ -429,3 +492,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
               )}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

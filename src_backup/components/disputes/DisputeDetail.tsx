@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 import React, { useState, useEffect } from "react,import { useRouter } from 'next/router,import { useDisputes } from @/hooks/useDisputes",import {logErrorToProduction} from @/utils/productionLogger',import {Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType;
@@ -85,6 +90,10 @@ import { useRouter } from 'next/router,
 import { useDisputes } from "@/hooks/useDisputes,
 import {logErrorToProduction} from @/utils/productionLogger',
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { useDisputes } from "@/hooks/useDisputes",
@@ -250,6 +259,11 @@ export function DisputeDetail() {
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         setDispute(disputeData)const messagesData = await getDisputeMessages(disputeId)setMessages(messagesData)} catch (error) {logErrorToProduction(Error loading dispute data:, { data: error })toast && toast.error('Failed to load dispute')} finally {setIsLoading(false)}
     }loadDisputeData()}, [disputeId, getDisputeById, getDisputeMessages, router])const handleStatusChange = async (status: DisputeStatus) => {if (!disputeId) return;
     const success  = await updateDisputeStatus(disputeId, status)if (success) {// Update the dispute object with the new status;
@@ -280,6 +294,10 @@ export function DisputeDetail() {
           onClick={() => router && router.push('/dashboard/disputes')}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           onClick={() => router && router.push(/dashboard/disputes)}
 
@@ -288,9 +306,18 @@ export function DisputeDetail() {
         </Button>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       case open:
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+      case open:
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     );
   }
 
@@ -317,6 +344,11 @@ if ( {) {}
       case 'resolved':;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return 'outline; // Changed from ./success'; to outline";
 
 
@@ -353,6 +385,10 @@ if ( {) {}
             <Badge variant={getStatusBadgeVariant(dispute.status)}>
       case 'closed:;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       case 'closed':;
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -390,6 +426,12 @@ if ( {) {}
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          <p className="text-muted-foreground">
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <p className="text-muted-foreground>
           {isAdmin && dispute?.status === 'open && (<Button onClick={() => handleStatusChange(under_review')}>              Start Review;
             </Button>;case open": return "default,case under_review": return "secondary,case resolved": return "outline, // Changed from success" to "outline;
@@ -458,6 +500,10 @@ if ( {) {}
 =======
           <p className="text-muted-foreground">
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             Reported {formatDistanceToNow(new Date(dispute?.created_at || "), { addSuffix: true })}
           </p>
@@ -484,6 +530,11 @@ if ( {) {}
           <AlertTitle>This dispute has been resolved</AlertTitle>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;
       </div>;
           <AlertDescription>;
@@ -495,6 +546,10 @@ if ( {) {}
         <p>Dispute not found</p>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <AlertDescription>
   },
   if (isLoading) {
@@ -514,6 +569,11 @@ if ( {) {}
         </Button>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </Button>
           )}
         </div>
@@ -643,6 +703,10 @@ if ( {) {}
                   
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     );
   }
   const getStatusBadgeVariant = (status: DisputeStatus) => {
@@ -721,6 +785,11 @@ if ( {) {}
                   </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   
 
@@ -779,6 +848,10 @@ if ( {) {}
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {dispute.milestone_id && (
                     <div>
                       <h3 className=font-medium>Related Milestone</h3>
@@ -862,6 +935,11 @@ if ( {) {}
                             {dispute.status !== open" ? "3 : 2"}
                           </Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           <span>Resolved on{ '}{format(new Date(dispute && dispute.resolved_at),"MMM d, yyyy 'at h:mm a;)}
                           </span>;
                         </li>;<div>;
@@ -931,6 +1009,10 @@ if ( {) {}
               </Card>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                           <span>Resolved on {format(new Date(dispute.resolved_at), MMM d, yyyy 'at h:mm a")}</span>
 
@@ -991,6 +1073,13 @@ if ( {) {}
                   <CardContent>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                    <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                     <p className="whitespace-pre-wrap>{dispute.resolution_summary}</p>
 
@@ -1023,6 +1112,10 @@ if ( {) {}
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         <Badge>
 
                           Resolution: {dispute.resolution_type.replace(_ )}
@@ -1041,6 +1134,14 @@ if ( {) {}
                       </div>
                     ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                      messages;
+                        .filter(msg => !msg.is_admin_note)
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
             </TabsContent>;
@@ -1069,11 +1170,21 @@ if ( {) {}
                         .filter(msg => !msg.is_admin_note)
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                               <div
                                 className={`max-w-[80%] ${
                                   isCurrentUser
                                     ? 'bg-primary text-primary-foreground'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                                    : 'bg-muted'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                                     : bg-muted
                     ) : (messages;
                         .filter(msg => !msg.is_admin_note)</TabsContent>;<TabsContent value='messages' className=space-y-6>;
@@ -1098,6 +1209,10 @@ if ( {) {}
 =======
                                     : 'bg-muted'
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                                 } p-4 rounded-lg`}>;
                                 <div className='flex items-center gap-2 mb-2'>;
 
@@ -1116,6 +1231,11 @@ if ( {) {}
                           const isCurrentUser = user?.id === msg.user_id,
                           return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                                       alt={msg && msg.user_profile?.display_name ||;
                                         User avatar;
                                       }
@@ -1133,6 +1253,10 @@ if ( {) {}
                                   <Avatar className="h-6 w-6">;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                             <div;
                               key={msg.id}'`
                               className={`flex ${isCurrentUser ? 'justify-end : justify-start'}`}
@@ -1170,6 +1294,13 @@ if ( {) {}
                           );
                         });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+                    )}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
                     )}
@@ -1197,6 +1328,10 @@ if ( {) {}
 
                     )}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </div>
                 </CardContent>
                 <CardFooter>
@@ -1223,6 +1358,12 @@ if ( {) {}
             </TabsContent>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <TabsContent value='admin' className='space - y-6'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             
             <TabsContent value="attachments>
@@ -1398,6 +1539,10 @@ if ( {) {}
 =======
               <TabsContent value='admin' className='space - y-6'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Card>;
                   <CardHeader>;
                     <CardTitle > Admin Actions</CardTitle>;
@@ -1429,6 +1574,11 @@ if ( {) {}
 
                         >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           Mark as Open
                         </Button>
                         <Button
@@ -1463,6 +1613,10 @@ if ( {) {}
                         >
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                           disabled={dispute && dispute.status === under_review'}
                         >;
@@ -1560,6 +1714,12 @@ if ( {) {}
                             className=min-h-[100px]                          />;
 '
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                          <div className='grid grid-cols-2 gap-4'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           <div className='grid grid-cols-2 gap-4>;
                             value={resolution.summary}{dispute.status !== resolved && (<div>;
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>;
@@ -1622,6 +1782,10 @@ if ( {) {}
 =======
                           <div className='grid grid-cols-2 gap-4'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                             <div>;'
                               <label className=text-sm font-medium mb-1 block>;
                                 Resolution Type;
@@ -1667,6 +1831,11 @@ if ( {) {}
                           </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           </div>;.map((msg) => (<div key={msg.id} className=bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900>;
                             <div className="flex items-center justify-between mb-2">;
                               <div className=flex items-center gap-2>;
@@ -1686,6 +1855,10 @@ if ( {) {}
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                               </div>
                               <span className=text-xs opacity-70>
                                 {format(new Date(msg.created_at), MMM d, h:mm a')}
@@ -1704,6 +1877,11 @@ if ( {) {}
                             No admin notes yet;
                           </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                               </p>;
                             </div>;
                             <p className="whitespace-pre-wrap text-sm">{msg.message}</p>;
@@ -1746,6 +1924,10 @@ if ( {) {}
                       
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                         )}
                       </div>
@@ -1756,12 +1938,21 @@ if ( {) {}
                         <Textarea
                           placeholder="Add an admin note (only visible to administrators)..."
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           onChange={e => setAdminNote(e && e.target.value)}                        />;<Separator className=my-4 />;
                       <div className="space-y-4">;
                         <Textarea;
                           placeholder=Add an admin note (only visible to administrators)...;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           value={adminNote}
                           onChange={(e) => setAdminNote(e.target.value)}
                         />
@@ -1790,6 +1981,11 @@ if ( {) {}
                             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React, { useState, useEffect } from react;
 import { useRouter } from 'next/router';
@@ -1876,6 +2072,10 @@ export function DisputeDetail() {const router = null;
 
         <div className=space-y-6>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="space-y-6">
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -1884,6 +2084,11 @@ export function DisputeDetail() {const router = null;
               <CardTitle>Parties Involved</CardTitle>
             </CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </TabsContent>;
             )}
           </Tabs>;
@@ -1916,6 +2121,10 @@ export function DisputeDetail() {const router = null;
                     alt={dispute && dispute.client_profile?.display_name || 'Client avatar';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           </Tabs>;
         </div>;
@@ -1939,12 +2148,21 @@ export function DisputeDetail() {const router = null;
                   <AvatarFallback>C</AvatarFallback>;
                 </Avatar>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </Avatar>
                 <div>
                   <p className=font-medium>Talent</p>
                   <p className="text-sm text-muted-foreground">
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <div>;'
                   <p className=font-medium>Client</p>;'
                   <p className='text-sm text-muted-foreground>;
@@ -1982,6 +2200,11 @@ export function DisputeDetail() {const router = null;
           </Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           
 
@@ -2046,6 +2269,10 @@ export function DisputeDetail() {const router = null;
                 </span>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
@@ -2057,6 +2284,14 @@ export function DisputeDetail() {const router = null;
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </span>;
               </div>;
             </CardContent>;
@@ -2318,6 +2553,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }/> <AvatarFallback>T</AvatarFallback> </Avatar> <div> <p className=font-medium">Talent</p> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> <CardContent className="space-y-4 text-sm> <div className=flex justify-between"> <span className="font-medium>Case ID:</span> <span className=font-mono"> {dispute.id ";
 }</span> </div> <div className=flex justify-between> </div> </CardContent> </Card> </div> </div> </div>)}";
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 ;

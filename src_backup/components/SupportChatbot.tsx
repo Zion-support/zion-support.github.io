@@ -50,6 +50,12 @@ const FALLBACK_RESPONSES = [
             role: 'assistant'
             message: finalMsg
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 }
@@ -97,11 +103,22 @@ const FALLBACK_RESPONSES = [
           ...prev;
 =======
           }
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         ]) } else if (res.body) {
         const botId = Date.now().toString() + '-a'
         setMessages(prev => [
           ...prev
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           { id: botId, role: 'assistant', message: '' }
         ])
         const reader = res.body.getReader()
@@ -137,6 +154,14 @@ const FALLBACK_RESPONSES = [
                     )
                   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+interface Msg {;
+  id: string;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface Msg {
   id: string;
         ])const reader = res.body.getReader()const decoder = new TextDecoder()let done = false;
@@ -161,6 +186,10 @@ interface Msg {
 
 interface Msg {;
   id: string;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   role: 'user' | 'assistant';
 >>>>>>> origin/chore/fix-lint-and-merge
   message: string;
@@ -266,6 +295,11 @@ export function SupportChatbot() {
         role: 'assistant'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       m.id === bot_id ? { ...m, message: accumulated } : m))accumulated += token,setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m))}
               } catch (_) {// ignore parse errors;
               }
@@ -292,6 +326,10 @@ export function SupportChatbot() {
         message: fallbackResponse;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         message: fallbackResponse
 
           buffer = lines[lines.length - 1] || '';
@@ -300,9 +338,18 @@ export function SupportChatbot() {
           accumulated.trim () ||;
           FALLBACK_RESPONSES[;
 <<<<<<< HEAD
+<<<<<<< HEAD
             Math.floor (Math.random () * FALLBACK_RESPONSES.length)] ||;
           Im experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
 =======
+=======
+=======
+<<<<<<< HEAD
+            Math.floor (Math.random () * FALLBACK_RESPONSES.length)] ||;
+          Im experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             Math.floor (Math.random () * FALLBACK_RESPONSES.length);
           ] ||;
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
@@ -334,6 +381,11 @@ export function SupportChatbot() {
       }
     } catch (err) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           prev.map (m => (m.id === bot_id ? { ...m, message: final } : m)))}
       setMessages(prev => [...prev, errorMsg])} finally {setLoading(false)setTyping(false)}}
   if (!open) {onClick={() => setOpen(true)}
@@ -363,6 +415,10 @@ export function SupportChatbot() {
     }
       logErrorToProduction(Chatbot error:', { data: err }),
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       logErrorToProduction('Chatbot error:', { data: err }),
 >>>>>>> origin/chore/fix-lint-and-merge
       
@@ -417,6 +473,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40>
       <div className=bg-zion-blue-dark p-2 flex justify-between items-center">
         <span className="text-white font-medium>Help Bot</span>
@@ -432,6 +493,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     <div className="fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40>
       <div className=bg-zion-blue-dark p-2 flex justify-between items-center">
@@ -473,6 +538,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setTyping(false);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  };
+  if (!open) {;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   if (!open) {
           prev && prev.map(m => (m && m.id === botId ? { ...m, message: final } : m)))}
@@ -482,6 +554,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   };
   if (!open) {;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return (;
       <Button;
         onClick={() => setOpen(true)}
@@ -521,6 +597,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        {typing && (
+          <ChatMessage role="assistant" message="..." />
+        )}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {messages && messages.length === 0 && (<ChatMessage;
             role=assistant;
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?;
@@ -637,3 +721,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <ChatMessage role="assistant" message="..." />
         )}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

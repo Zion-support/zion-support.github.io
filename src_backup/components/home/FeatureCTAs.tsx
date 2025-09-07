@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 interface FeatureCTAsProps  {className?: string;
@@ -67,6 +72,10 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
 
 interface FeatureCTAsProps {
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface FeatureCTAsProps {;
 >>>>>>> origin/chore/fix-lint-and-merge
   className?: string;
@@ -219,6 +228,11 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }{key: 'zion_hire_ai',descriptionKey: zion_hire_ai_desc,detailsKey: 'zion_hire_ai_details',icon: <Clock className = h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700 />,link: /zion-hire-ai,badge: 'premium';
     }];>;
       <div className=container mx-auto px-4>;
@@ -226,6 +240,10 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
           <h2 className=text-3xl font-bold tracking-tight mb-3>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       >;'
       <div className='container mx-auto px-4>;
         <div className='mb-12 text-center'>;
@@ -267,6 +285,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {t('home && home.features_subheading)}
           </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {feature && feature.badge && (<Badge;
                       variant=secondary';
                       className='bg-primary/20 text-primary>                      {t(`badges.${feature && feature.badge}`)}
@@ -321,6 +344,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;
 
         <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6>;
@@ -373,6 +400,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {feature && feature.badge && (<Badge variant="secondary className=bg-primary/20 text-primary">;<CardTitle className="mt-4>{t(`features.${feature.key}`)}</CardTitle>;
                 {feature.descriptionKey && (<CardDescription className=line-clamp-2">;
 <CardTitle className='mt-4>;
@@ -418,6 +450,10 @@ import { Badge  } from '@/components / ui / badge';
 import Link from 'next / link';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;
       </div>;
     </section>;
@@ -454,12 +490,21 @@ import { cn } from @/lib / utils;
 interface FeatureCTAsProps {}
   class_name?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { use_translation  } from 'react - i18next';
   ArrowRight,Users,Zap,Settings,Search,MessageSquare,Smartphone,Calendar,BookOpen,Code,Building,Clock} from lucide-react;
 import { cn  } from '@/lib / utils';
 interface FeatureCTAsProps  {class_name?: string;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   style?: React.CSSProperties;
 export /**;
  * FeatureCTAs - Function description;

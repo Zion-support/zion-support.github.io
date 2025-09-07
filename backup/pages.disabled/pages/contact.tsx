@@ -1,5 +1,9 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+=======
 
 
 import React, { useState } from 'react';
@@ -16,6 +20,7 @@ import { ;
   MessageCircle,;
   Globe,;
   CheckCircle;
+<<<<<<< HEAD
 } from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false });
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false });
@@ -43,6 +48,13 @@ const "ContactPage": React.FC = () => {;
       "title": "Business Hours",;
       "details": "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM",;
       "link": null;
+=======
+} from 'lucide-react;
+const SEO = dynamic(() => import(../src/components/SEO'), { "ssr: false });
+const PageTransition = dynamic(() => import('../src/components/PageTransition), { ssr": false });
+const "ContactPage: React.FC = () => {
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const contactInfo = [{
       icon: <Phone className="w-6 h-6"  />,
       "title": "Phone",
@@ -70,6 +82,8 @@ const "ContactPage": React.FC = () => {;
   ]
 
 
+=======
+=======
   ]
   return (
     <>
@@ -120,12 +134,21 @@ const "ContactPage": React.FC = () => {;
           </section>
 
 
+<<<<<<< HEAD
+=======
+=======
+  const contactInfo = [{
+=======
 
 
 const "Contact": NextPage = () => {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
   const contactInfo = [{
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       icon: Mail,
       \"title\": \'Email Us\',
       \"details\": \'info@ziontechgroup.com\',
@@ -221,7 +244,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       First Name *
                     </label>
+<<<<<<< HEAD
 :pages.disabled/pages/contact.tsx
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 
@@ -242,6 +270,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               can help you achieve your goals.;
             </p>;
           </div>;
+<<<<<<< HEAD
+=======
+        </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </section>;
       {/* Contact Information */}
       <section className=\"py-20\">;
@@ -267,6 +299,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </div>;
             ))}
           </div>;
+<<<<<<< HEAD
+=======
+        </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </section>;
       {/* Contact Form & Office Locations */}
       <section className=\"py-20 bg-gray-50\">;
@@ -281,6 +317,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
                       First Name *;
                     </label>;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <input
                       type=\"text\"
                       id=\"firstName\"
@@ -301,6 +341,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
                     />
                   </div>
+<<<<<<< HEAD
+=======
+                </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <div>
                   <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Email Address *
@@ -404,8 +448,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                           {office.email}
                         </a>
                       </div>
+<<<<<<< HEAD
                 ))}
               </div>
+=======
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </section>
       {/* FAQ Section */}
       <section className=\"py-20\">
@@ -418,6 +472,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
 
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -428,6 +487,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
 
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -438,6 +502,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
 
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
@@ -448,6 +517,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
 
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
@@ -456,6 +530,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 to ensure high-quality deliverables.
               </p>
             </div>
+<<<<<<< HEAD
+=======
+          </div>
+        </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </section>
     </MainLayout>
   );
@@ -478,6 +557,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </motion.div>
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
@@ -507,6 +590,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </motion.div>
                 ))}
               </div>
+<<<<<<< HEAD
+=======
+            </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </section>
           {/* Contact Form */}
           <section className=\"bg-gray-50 py-20\">
@@ -526,6 +613,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </motion.div>
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <motion.form
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -538,7 +629,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         Full Name *
                       </label>
                       <input type=\"text\"
+<<<<<<< HEAD
 :pages.disabled/pages/contact.tsx
+=======
+<<<<<<< HEAD
+                        id=\"name\"
+                        name=\"name\"
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -598,6 +696,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 to ensure high-quality deliverables.;
               </p>;
             </div>;
+<<<<<<< HEAD
+=======
+          </div>;
+        </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </section>;
     </MainLayout>;
 
@@ -684,9 +787,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
                         Full Name *;
                       </label>;
+<<<<<<< HEAD
                       <inputtype=\"text\"
                         id=\"name\"
                         name=\"name\"
+=======
+                      <inputtype=\text\"
+                        id=\"name\
+                        name=\name\"
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your full name\"
@@ -704,11 +814,19 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         placeholder=\"your.email@example.com\"
                        />
                     </div>
+<<<<<<< HEAD
+=======
+                  </div>
+
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
                       </label>
                       <input type=\"tel\"
+<<<<<<< HEAD
 :pages.disabled/pages/contact.tsx
 
                         placeholder=\"your && your.email@example && example.com\"
@@ -727,6 +845,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"+1 (555) 123-4567\"
+=======
+<<<<<<< HEAD
+                        id=\"phone\"
+                        name=\"phone\"
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"+1 (555) 123-4567\"
+=======
+
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                        />
                     </div>
                     <div>
@@ -742,6 +870,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     </div>
 
 
+=======
+=======
                       Service Interest
                     </label>
                     <select
@@ -759,9 +889,60 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
 
 
+=======
+=======
                       Message *
                     </label>
+<<<<<<< HEAD
 :pages.disabled/pages/contact.tsx
+=======
+<<<<<<< HEAD
+                    <textarea
+                      id=\"message\"
+                      name=\"message\"
+                      rows={6}
+                      required
+                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                      placeholder=\"Tell us about your project requirements...\"
+                    ></textarea>
+                  </div>
+                  <motion.button
+                    type=\"submit\"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ \"scale\": 0.98 }}
+                    className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
+                  >
+                    <Send className=\"w-5 h-5\"  />
+                    Send Message
+                  </motion.button>
+                </motion.form>
+
+
+=======
+        {/* Hero Section */}
+        <section className=\"relative py-20 px-4\">
+          <div className=\"max-w-7xl mx-auto\">
+            <div className=\"text-center\">
+              <h1 className=\"text-5xl \"md\": text-6xl font-bold text-white mb-6\">
+                Get in <span className=\"bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\">Touch</span>
+              </h1>
+              <p className=\"text-xl text-gray-300 max-w-3xl mx-auto mb-8\">
+                Ready to transform your business with cutting-edge technology? Let\'s discuss how we can help you achieve your goals.
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* Contact Form & Info Section */}
+        <section className=\"py-16 px-4\">
+          <div className=\"max-w-7xl mx-auto\">
+            <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">
+              {/* Contact Form */}
+
+
+=======
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
                        />;
@@ -884,6 +1065,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+>>>>>>> merged-prs-20250907-203621
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -931,15 +1113,25 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       </div>
 
 
+=======
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
+<<<<<<< HEAD
 :pages.disabled/pages/contact.tsx
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                           placeholder=\"your@email && email.com\"
                         />;
                       </div>;
+<<<<<<< HEAD
+=======
+                    </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">;
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                       <div>;
@@ -948,6 +1140,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         </label>;
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         <input
                           type=\"text\"
                           id=\"company\"
@@ -972,6 +1168,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                           placeholder=\"+1 (555) 123-4567\"
                         />
                       </div>
+<<<<<<< HEAD
+=======
+                    </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <div>
                       <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                         Service Interest
@@ -1034,6 +1234,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 </div>
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -1044,11 +1248,34 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         <p className=\"text-cyan-400 font-medium mb-1\">{info.details}</p>
                         <p className=\"text-gray-400 text-sm\">{info.description}</p>
                       </div>
+<<<<<<< HEAD
                   ))}
                 </div>
 
 
 :pages.disabled/pages/contact.tsx
+=======
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+
+<<<<<<< HEAD
+=======
+=======
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+
+
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {/* Services Overview */}
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
@@ -1078,6 +1305,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </motion && motion.div>;
                 ))}
               </div>;
+<<<<<<< HEAD
+=======
+            </div>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </section>;
         </main>;
       </PageTransition>;
@@ -1106,3 +1337,4 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+>>>>>>> merged-prs-20250907-203621

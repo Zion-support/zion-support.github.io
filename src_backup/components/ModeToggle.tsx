@@ -1,8 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Moon, Sun } from 'lucide-react;
 import { Button } from @/components/ui/button';
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -21,9 +30,18 @@ import { useTheme } from '@/components/ThemeProvider'
 import { logIssue } from '@/utils/logIssue'
 import { useEffect, useState } from 'react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Button } from "@/components/ui/button
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from @/components/ui/tooltip"
@@ -43,6 +61,16 @@ import { logIssue } from @/utils/logIssue"
 import { useEffect, useState } from "react
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    if (theme === 'system') {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     setIsClient(true);
   }, []);
   // Determine the actual resolved theme for display purposes;
@@ -120,6 +148,10 @@ import { Moon, Sun } from lucide-react;
         ? 'dark'
         : 'light'
 
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Moon, Sun } from 'lucide-react';
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -171,9 +203,18 @@ if ( {) {}
 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
         : light;}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+        : light;}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return theme;
   })();'
   const isDarkMode = resolved_theme === 'dark;
@@ -198,6 +239,11 @@ export function ModeToggle() {
   const isDarkMode = resolvedTheme === 'dark;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ModeToggle() {
 
   // Ensure were on the client side to avoid hydration mismatches
@@ -212,6 +258,10 @@ export function ModeToggle() {
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const handleToggle = () => {
     try {
       // Determine the new theme we are switching TO
@@ -231,10 +281,19 @@ const newTheme = isDarkMode ? light : 'dark';
       })
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {
       // Determine the new theme we are switching TO
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Accessibility announcement for screen readers
       const announcement = `Theme switched to ${newTheme} mode`
       // Create a live region announcement
@@ -370,6 +429,11 @@ export function ModeToggle() {
   }, []),
   // Determine the actual resolved theme for display purposes;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       log_info (`Theme toggle: ${resolved_theme} → ${new_theme}`)const isDarkMode = resolved_theme === dark";
   const handle_toggle = () =>: any {try {const handleToggle = () => {try {// Determine the new theme we are switching TO;
 export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [isClient, setIsClient] = useState(false)// Ensure we're on the client side to avoid hydration mismatches;
@@ -457,6 +521,10 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
         <span className=sr-only>Loading theme toggle</span>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       // Apply the new theme via ThemeProvider;
       toggleTheme(),
@@ -490,6 +558,15 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
     );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            onClick={handleToggle}
+            aria-pressed={isDarkMode}'`
+            aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}'`
+            title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
   return (
     <TooltipProvider>;
@@ -562,6 +639,10 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}'`
             title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               <Moon className=h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />
 
@@ -595,6 +676,11 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
 
       // Determine the new theme we are switching TO;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           >;
             {isDarkMode ? (<Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12 />;
             ) : (<Moon className=h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />;
@@ -619,6 +705,10 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
       </Tooltip>;
     </TooltipProvider>;)const newTheme  = isDarkMode ? "light : dark";logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),// Determine the new theme we are switching TO;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       const new_theme = isDarkMode ? 'light' : 'dark';
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -665,16 +755,32 @@ if ( {) {}
         <div className='h - 5 w - 5 bg - muted rounded animate - pulse />{ '}
         {/* Changed to bg - muted for theme consistency */}'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <span className=sr - only>Loading theme toggle</span>;
       </Button>)}
   return (<TooltipProvider>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <span className='sr - only'>Loading theme toggle</span>;
       </Button>);
   }
   return (
     <TooltipProvider>;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <Tooltip>;
         <TooltipTrigger as_child>;
           <Button;'
@@ -737,6 +843,13 @@ if ( {) {}
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+if (!isClient) {";
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 if (!isClient) {";
@@ -756,6 +869,10 @@ if (!isClient) {";
 =======
 };
 if (!isClient) {";
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground" > <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {;
   /* Changed to bg-muted for theme consistency */ ";
 }<span className="sr-only" >Loading theme toggle</span> </Button>) ";

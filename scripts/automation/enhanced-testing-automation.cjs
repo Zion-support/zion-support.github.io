@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/""usr/bin/env""
 const { execSync } = require("child_process");
 const fs = require("fs");
@@ -58,6 +59,88 @@ const output = execSync(npm run "test": e2e || npx cypress run || echo "No Cypre
   "encoding": "utf8"
             "cwd"
   console.log("⚠ No E2E testing framework found")
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+            "cwd"
+  console.log(⚠ No E2E testing framework found)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
+#!/""usr/bin/env""
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+console.log(""🧪 Starting Enhanced Testing Automation...")
+  "unit": { status: "pending", "results"}
+      "integration": { status: "pending", "results"}
+      "e2e": { status: "pending", "results"}
+      "performance": { status: "pending", "results"}
+      "accessibility": { status: "pending", "results"}
+      "coverage": { status: "pending", "results": [] }};    this.reportDir = path.join(process.cwd(), "test-reports"
+  fs.mkdirSync(this.reportDir, { "recursive"})
+  console.log(""🧪 Running Unit Tests...")
+  const output = execSync(npm run "test": unit || npm test || echo "No unit tests found")
+  "encoding": "utf8"
+          "cwd"
+  console.log("🧪 Running Unit Tests...")
+  const output = execSync(npm run test: unit || npm test || echo ")
+  "encoding": "utf8"
+          "cwd"
+      const output = execSync(npm run "test": unit || npm test || echo "No unit tests found")
+  "encoding": "utf8"
+          "cwd"
+this.testResults.unit.status = "success"
+      console.log("" Unit tests completed")
+        path.join(this.reportDir, "unit-test-results.txt")
+      console.log(" Unit tests completed")
+        path.join(this.reportDir, "unit-test-results.txt")
+  this.testResults.unit.status = "failure"
+// console.log(" Unit tests "failed": ")
+  console.log("� Running Integration Tests...")
+      console.log("� Building application for integration tests...")
+      execSync("npm run build")
+  "stdio": "inherit"
+        "cwd"
+      const output = execSync(npm run "test": integration || echo "No integration tests found")
+      const output = execSync(npm run "test": integration || echo "No integration tests found")
+  "encoding": "utf8"
+          "cwd"
+      const output = execSync(npm run "test": integration || echo "No integration tests found")
+  "encoding": "utf8"
+          "cwd"
+      this.testResults.integration.status = "success"
+      console.log(" Integration tests completed")
+        path.join(this.reportDir, "integration-test-results.txt")
+  this.testResults.integration.status = "failure"
+// console.log(" Integration tests "failed": ")
+  console.log("� Running End-to-End Tests...")
+        path.join(process.cwd(), "playwright.config.js"
+        path.join(process.cwd(), "playwright.config.js"
+        path.join(process.cwd() "cypress.config.js"
+  console.log("� Running Playwright tests...")
+        const output = execSync(npm run "test": e2e || npx playwright test || echo ")
+        const output = execSync(npm run "test": e2e || npx playwright test || echo "No Playwright tests found")
+  "encoding": "utf8"
+            "cwd"
+  console.log("� Running Cypress tests...")
+        const output = execSync(npm run "test": e2e || npx cypress run || echo ")
+        const output = execSync(npm run "test": e2e || npx cypress run || echo "No Cypress tests found"")
+  "encoding": "utf8"
+            "cwd"
+  console.log("⚠ No E2E testing framework found")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         this.testResults.e2e.results = "No E2E testing framework available"
       this.testResults.e2e.status = "success"
       console.log(" E2E tests completed")
@@ -68,6 +151,7 @@ const output = execSync(npm run "test": e2e || npx cypress run || echo "No Cypre
         path.join(process.cwd(), "lighthouserc.json"
         path.join(process.cwd() "lighthouserc.json"
   console.log(" Running Lighthouse performance tests...")
+<<<<<<< HEAD
 const output = execSync(npm run "test": lighthouse || npx lhci autorun || echo "No Lighthouse tests found");
   "encoding": "utf8"
             "cwd"
@@ -75,6 +159,26 @@ const output = execSync(npm run "test": lighthouse || npx lhci autorun || echo "
         execSync("npm run build", { "stdio": "pipe`, "cwd"`})
         this.testResults.performance.results = Build "time"
       this.testResults.performance.status = `success
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
+        const output = execSync(npm run "test": lighthouse || npx lhci autorun || echo "No Lighthouse tests found")
+        const output = execSync(npm run "test": lighthouse || npx lhci autorun || echo "No Lighthouse tests found")
+  "encoding": "utf8"
+            "cwd"
+>>>>>>> origin/chore/fix-lint-and-merge
+  console.log(" Running basic performance tests...")
+        execSync(npm run build, { "stdio": pipe`, cwd"`})
+        this.testResults.performance.results = Build "time
+      this.testResults.performance.status = `success
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       console.log(" Performance tests completed")
         path.join(this.reportDir, "performance-test-results.txt")
   this.testResults.performance.status = "failure"
@@ -83,6 +187,7 @@ const output = execSync(npm run "test": lighthouse || npx lhci autorun || echo "
         path.join(process.cwd(), """node_modules/axe-core"""
         path.join(process.cwd() ""node_modules/axe-core""
   console.log(""♿ Running axe-core accessibility tests...")
+<<<<<<< HEAD
 const output = execSync(npm run "test": accessibility || echo ");
   "encoding": "utf8"
             "cwd"
@@ -92,16 +197,45 @@ const output = execSync(npm run "test": accessibility || echo "No accessibility 
             "cwd"
 const output = execSync(npm run "test": accessibility || echo "No accessibility tests found");
   "encoding": "utf8"
+=======
+        const output = execSync(npm run "test": accessibility || echo ")
+  "encoding": "utf8"
+            "cwd"
+  console.log("♿ Running axe-core accessibility tests...")
+        const output = execSync(npm run "test": accessibility || echo "No accessibility tests found")
+  "encoding": "utf8"
+            "cwd"
+        const output = execSync(npm run "test": accessibility || echo "No accessibility tests found")
+  "encoding": "utf8"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             "cwd"
   console.log("♿ Running basic accessibility checks...")
+<<<<<<< HEAD
 const output = execSync("npm run lint");
   "encoding": "
             "cwd"
 const output = execSync("npm run lint");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
+  const output = execSync("npm run lint")
+  "encoding": "
+            "cwd"
+  const output = execSync("npm run lint")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "encoding": "utf8"
             "cwd": process.cwd()}
 });this.testResults.accessibility.results = Lint "results"
         } catch (lintError) {this.testResults.accessibility.results = Lint check "failed"}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.testResults.accessibility.status = `success
       console.log(" Accessibility tests completed""")
         path.join(this.reportDir, "accessibility-test-results.txt")
@@ -111,12 +245,26 @@ const output = execSync("npm run lint");
   // Check if coverage tools are available}")}"
 "
   async generateCoverageReport() {"}
+<<<<<<< HEAD
     console.log(" Generating Coverage Report...")
 const hasCoverage = fs.existsSync(path.join(process.cwd(), "coverage";
   console.log(" Coverage data found generating report...")
 const output = execSync(npm run "test": coverage || echo "No coverage script found");
   "encoding": "utf8"
             "cwd"
+=======
+<<<<<<< HEAD
+
+=======
+    console.log(" Generating Coverage Report...")
+      const hasCoverage = fs.existsSync(path.join(process.cwd(), "coverage"
+  console.log(" Coverage data found generating report...")
+        const output = execSync(npm run "test": coverage || echo "No coverage script found")
+        const output = execSync(npm run "test": coverage || echo "No coverage script found")
+  "encoding": "utf8"
+            "cwd"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   console.log( No coverage data found, running tests with coverage...")
             "npm test -- --coverage || echo Coverage generation failed"
   "encoding": "
@@ -158,6 +306,7 @@ const output = execSync(npm run "test": coverage || echo "No coverage script fou
   .join(")
 ${report.qualityGates ? ` All quality gates passed successfully!" : "`}
 3. Monitor test performance trends"
+<<<<<<< HEAD
   async runAllTests("")
 // console.log("" Starting comprehensive test suite...")
     console.log(""\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
@@ -176,3 +325,73 @@ ${report.qualityGates ? ` All quality gates passed successfully!" : "`}
 
 
 
+=======
+<<<<<<< HEAD
+  async runAllTests()
+// console.log("" Starting comprehensive test suite...)
+    console.log("\n Test Suite "Summary: `);console.log(Total: ${report.summary.total}
+});console.log(Passed": ${report.summary.passed} `");console.log(Failed"`)
+// console.log(Quality "Gates: ${report.qualityGates ? `PASSED : "FAILED"} ${report.qualityGates ?  : ""}`)
+    console.log(`\n Test Suite "Summary": );console.log(Total: ${report.summary.total}
+});console.log(Passed": ${report.summary.passed} `");console.log(Failed": ${report.summary.failed} "`)
+// console.log(Quality Gates: ${report.qualityGates ? "PASSED" : FAILED} ${report.qualityGates ? "" : }")
+    console.log("\n Test Suite Summary: `);console.log(Total: ${report.summary.total}
+});console.log("Passed": ${report.summary.passed} `);console.log("Failed": ${report.summary.failed} `)
+    console.log(Quality Gates": ${report.qualityGates ? "PASSED : FAILED"} ${report.qualityGates ? " : "})
+
+
+  console.error(" Testing automation failed: ")
+
+  console.error(" Testing automation failed: ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Testing automation failed: ")
+
+=======
+  async runAllTests("")
+// console.log("" Starting comprehensive test suite...")
+    console.log(""\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
+});console.log("Passed": ${report.summary.passed} `");console.log(""Failed"`)
+// console.log(Quality "Gates": ${report.qualityGates ? `PASSED" : "FAILED"} ${report.qualityGates ? "" : ""}"`)
+    console.log(`"\n Test Suite "Summary": ");console.log(Total: ${report.summary.total}
+});console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
+// console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""}")
+    console.log("\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
+});console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
+    console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+  console.error(" Testing automation "failed": ")
+<<<<<<< HEAD
+  console.error(" Testing automation "failed": ")
+  console.error(" Testing automation "failed": ")
+
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" Testing automation "failed": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Testing automation "failed": ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

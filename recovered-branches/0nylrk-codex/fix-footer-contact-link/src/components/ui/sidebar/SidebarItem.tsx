@@ -1,14 +1,73 @@
+<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
 
+=======
+<<<<<<< HEAD
+import React from "react";
+import { cn } from "@/lib/utils";
+=======
+<<<<<<< HEAD
+import React from "react",
+import { cn } from "@/lib/utils",
+
+=======
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React from "react",
+import { cn } from "@/lib/utils",
+
+
+<<<<<<< HEAD
+import React from "react";
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+>>>>>>> merged-prs-20250907-203621
+interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string,
+  children?: React.ReactNode,
+  active?: boolean
+<<<<<<< HEAD
+}
+export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {
+  return (
+    <div
+      className = $2;
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
+=======
+}
+export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {
+  return (
+    <div
+=======
+=======
+import {cn} from "@/lib/utils";
+interface SidebarItemProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   className?: string;
   children?: React && React.ReactNode;
   active?: boolean;
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function SidebarItem(): any ({ className, children, active, ...props }: SidebarItemProps) {;
+<<<<<<< HEAD
 
   return (
+=======
+  return (
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
 
@@ -27,16 +86,31 @@ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {}
   active?: boolean;
 }
 
+<<<<<<< HEAD
+=======
+=======
+    <div
+      className={cn(
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md"
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         className
 
       )}
       {...props}>;
       {children}
-
     </div>;
   );
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from './react';
 
 import { cn } from '@/lib / utils';
@@ -60,6 +134,10 @@ function SidebarItem() {}
       {children}
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         "flex items-center px-3 py-2 text-sm font-medium rounded-md";
 
@@ -74,6 +152,62 @@ function SidebarItem() {}
         active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
         className"
 import React from "react",;"
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+
+import React from "react",;
+import { cn } from "@/lib/utils",;
+;
+interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {;
+  className?:string,;
+  children?:React.ReactNode,;
+  active?:boolean,;
+}
+;
+export function SidebarItem({ className, children, active, ...props } SidebarItemProps) {;
+  return (;
+    <div;
+      className={cn(;
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md",;
+        active ? "bg-primary/10 text-primary" :"text-muted-foreground hover:bg-accent hover:text-accent-foreground",;
+        className;
+      )}
+      {...props}
+    >;
+      {children}
+    </div>;
+  ),;}
+ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+children?: React.ReactNode;
+active?: boolean 
+}className, children, active, ...props 
+}: SidebarItemProps) {
+  return (<div className= {
+  cn () 
+}{
+  ...props 
+}> {
+  children 
+}</div>) 
+}
+      className={cn(;
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md";
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
+        className
+      className={cn(
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md";
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground"
+
+        className
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md",
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
+        className
+import React from "react",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { cn } from "@/lib/utils",;
 interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string,;
@@ -82,6 +216,10 @@ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function SidebarItem() {;
   }
   return (;
@@ -110,9 +248,15 @@ export function SidebarItem(): any ({ className, children, active, ...props }: S
 
   return (
 
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         className
 
       )}
+<<<<<<< HEAD
+=======
       {...props}>;
 <<<<<<< HEAD
       {children}
@@ -138,8 +282,34 @@ function SidebarItem() {}
         "flex items - center px - 3 py - 2 text - sm font - medium rounded - md";"
         active ? "bg - primary / 10 text - primary" : "text - muted - foreground hover: bg - accent hover:text - accent - foreground",
         class_name)}
+>>>>>>> merged-prs-20250907-203621
       {...props}
-    >;
+    >
       {children}
+<<<<<<< HEAD
+    </div>
+  )
+}
+=======
     </div>);
 }
+=======
+export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {;
+  return (;
+    <div;
+      className={cn(;
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md";
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-accent hover:text-accent-foreground";
+        className;
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  )
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

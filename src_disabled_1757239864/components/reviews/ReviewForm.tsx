@@ -1,7 +1,56 @@
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { Star } from 'lucide-react'
 import { useForm } from "react-hook-form";
+=======
+<<<<<<< HEAD
+import { useState } from "react"
+import { Star } from 'lucide-react'import { useForm } from "react-hook-form"
+import { Button } from "@/components/ui/button"
+import { Textarea } from "@/components/ui/textarea"
+import {
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage} from "@/components/ui/form";
+  RadioGroup;
+  RadioGroupItem} from "@/components/ui/radio-group"; import { Switch } from "@/components/ui/switch"
+import { Review } from "@/types/reviews"
+interface ReviewFormValues {
+  rating?: number
+  review_text?: string
+  communication_rating?: number
+  quality_rating?: number
+  timeliness_rating?: number
+  would_work_again?: boolean
+  is_anonymous?: boolean
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+rating?: number;
+  review_text?: string;
+  communication_rating?: number;
+  quality_rating?: number;
+  timeliness_rating?: number;
+  would_work_again?: boolean;
+  is_anonymous?: boolean;
+}
+
+<<<<<<< HEAD
+interface ReviewFormProps {
+  projectId: string,
+  revieweeId: string,
+  revieweeName: string,
+  onSubmit: (data: any) => Promise<boolean>, 
+  }
+  );
+};
+import { useState } from "react",
+import { Star } from 'lucide-react'
+import { useForm } from "react-hook-form",
+>>>>>>> merged-prs-20250907-203621
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -10,6 +59,7 @@ import {
   FormField;
   FormItem;
   FormLabel;
+<<<<<<< HEAD
   FormMessage} from "@/components/ui/form";
   RadioGroup;
   RadioGroupItem} from "@/components/ui/radio-group";
@@ -42,6 +92,101 @@ export function ReviewForm({
   defaultValues;
   isSubmitting}: ReviewFormProps) {
   const [hoveredStar, setHoveredStar] = useState<number>(0);
+=======
+  FormMessage} from "@/components/ui/form",
+import {
+  RadioGroup;
+  RadioGroupItem} from "@/components/ui/radio-group",
+import { Switch } from "@/components/ui/switch";
+import { Review } from "@/types/reviews";
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import {
+  RadioGroup,
+  RadioGroupItem} from "@/components/ui/radio-group",
+import { Switch } from "@/components/ui/switch",
+import { Review } from "@/types/reviews",
+interface ReviewFormValues {
+  rating?: number,
+  review_text?: string,
+  communication_rating?: number,
+  quality_rating?: number,
+  timeliness_rating?: number,
+  would_work_again?: boolean,
+  is_anonymous?: boolean
+}
+interface ReviewFormProps {
+
+  projectId: string
+  revieweeId: string
+  revieweeName: string
+  onSubmit: (data: any) => Promise<boolean>
+=======
+
+interface ReviewFormProps {;
+  projectId: string,;
+  revieweeId: string,;
+  revieweeName: string,;
+  onSubmit: (data: any) => Promise<boolean>, ;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  }
+
+  )
+}
+<<<<<<< HEAD
+import { useState } from "react",;
+import { Star } from 'lucide-react';
+import { useForm } from "react-hook-form",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import {;
+  RadioGroup,;
+  RadioGroupItem} from "@/components/ui/radio-group",;
+import { Switch } from "@/components/ui/switch",;
+import { Review } from "@/types/reviews",;
+interface ReviewFormValues {;
+  rating?: number,;
+  review_text?: string,;
+  communication_rating?: number,;
+  quality_rating?: number,;
+  timeliness_rating?: number,;
+  would_work_again?: boolean,;
+  is_anonymous?: boolean;
+}
+;
+interface ReviewFormProps {;
+  projectId: string,;
+  revieweeId: string,;
+  revieweeName: string,;
+  onSubmit: (data: any) => Promise<boolean>,;
+  defaultValues?: Review,;
+  isSubmitting: boolean;
+}
+
+export function ReviewForm({
+  projectId,
+  revieweeId,
+  revieweeName,
+  onSubmit,
+  defaultValues,
+  isSubmitting}: ReviewFormProps) {
+  const [hoveredStar, setHoveredStar] = useState<number>(0),
+>>>>>>> merged-prs-20250907-203621
   
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
@@ -59,6 +204,7 @@ export function ReviewForm({
       timeliness_rating: undefined,
       would_work_again: undefined,
       is_anonymous: false}
+<<<<<<< HEAD
   });
   
   const handleSubmit = async (values: ReviewFormValues) => {
@@ -74,12 +220,37 @@ export function ReviewForm({
   };
   
   const watchRating = form.watch("rating");
+=======
+  }),;
+  const handleSubmit = async (values: ReviewFormValues) => {;
+    const formattedData = {;
+      ...values,;
+      project_id: projectId,;
+      reviewee_id: revieweeId},;
+    const success = await onSubmit(formattedData),;
+    if (success) {;
+      form.reset();
+    }
+  },
+  
+  const watchRating = form.watch("rating"),
+>>>>>>> merged-prs-20250907-203621
   
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+<<<<<<< HEAD
         {/* Main Rating */}
         <FormField
+=======
+  },;
+  const watchRating = form.watch("rating"),;
+  return (;
+    <Form {...form}>;
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
+        {/* Main Rating */}
+        <FormField;
+>>>>>>> merged-prs-20250907-203621
           control={form.control}
           name="rating"
           rules={{ required: "Rating is required" }}
@@ -97,7 +268,11 @@ export function ReviewForm({
                       onClick={() => field.onChange(star)}
                       onMouseEnter={() => setHoveredStar(star)}
                       onMouseLeave={() => setHoveredStar(0)}
+<<<<<<< HEAD
                       className="focus:outline-none transition-transform hover:scale-110"
+=======
+                      className="focus:outline-none transition-transform hover:scale-110";
+>>>>>>> merged-prs-20250907-203621
                       aria-label={`Rate ${star} star${star > 1 ? 's' : ''}`}
                     >
                       <Star
@@ -106,8 +281,13 @@ export function ReviewForm({
                             ? "fill-yellow-400 text-yellow-400"
                             : "text-gray-300"
                         } transition-colors`}
+<<<<<<< HEAD
                       />
                     </button>
+=======
+                      />;
+                    </button>;
+>>>>>>> merged-prs-20250907-203621
                   ))}
                 </div>
               </FormControl>
@@ -116,10 +296,16 @@ export function ReviewForm({
               </div>
             </FormItem>
           )}
+<<<<<<< HEAD
         />
         
         {/* Review Text */}
         <FormField
+=======
+        />;
+        {/* Review Text */}
+        <FormField;
+>>>>>>> merged-prs-20250907-203621
           control={form.control}
           name="review_text"
           rules={{
@@ -135,6 +321,7 @@ export function ReviewForm({
                   placeholder="Share your experience and feedback..."
                   className="min-h-24 resize-none"
                   {...field}
+<<<<<<< HEAD
                 />
               </FormControl>
               <FormMessage />
@@ -142,13 +329,25 @@ export function ReviewForm({
           )}
         />
         
+=======
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}
+        />;
+>>>>>>> merged-prs-20250907-203621
         {/* Additional Rating Categories (only shown if main rating is provided) */}
         {(watchRating ?? 0) > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
             
             {/* Communication */}
+<<<<<<< HEAD
             <FormField
+=======
+            <FormField;
+>>>>>>> merged-prs-20250907-203621
               control={form.control}
               name="communication_rating"
               render={({ field }: { field: any }) => (
@@ -158,10 +357,17 @@ export function ReviewForm({
                     <RadioGroup
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
+<<<<<<< HEAD
                       className="flex flex-wrap gap-4"
                     >
                       {[1, 2, 3, 4, 5].map((value) => (
                         <FormItem
+=======
+                      className="flex flex-wrap gap-4";
+                    >;
+                      {[1, 2, 3, 4, 5].map((value) => (;
+                        <FormItem;
+>>>>>>> merged-prs-20250907-203621
                           key={value}
                           className="flex items-center space-x-2"
                         >
@@ -170,6 +376,7 @@ export function ReviewForm({
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
                             {value}
+<<<<<<< HEAD
                           </FormLabel>
                         </FormItem>
                       ))}
@@ -182,6 +389,19 @@ export function ReviewForm({
             
             {/* Quality */}
             <FormField
+=======
+                          </FormLabel>;
+                        </FormItem>;
+                      ))}
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+              )}
+            />;
+            {/* Quality */}
+            <FormField;
+>>>>>>> merged-prs-20250907-203621
               control={form.control}
               name="quality_rating"
               render={({ field }: { field: any }) => (
@@ -191,10 +411,17 @@ export function ReviewForm({
                     <RadioGroup
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
+<<<<<<< HEAD
                       className="flex flex-wrap gap-4"
                     >
                       {[1, 2, 3, 4, 5].map((value) => (
                         <FormItem
+=======
+                      className="flex flex-wrap gap-4";
+                    >;
+                      {[1, 2, 3, 4, 5].map((value) => (;
+                        <FormItem;
+>>>>>>> merged-prs-20250907-203621
                           key={value}
                           className="flex items-center space-x-2"
                         >
@@ -203,6 +430,7 @@ export function ReviewForm({
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
                             {value}
+<<<<<<< HEAD
                           </FormLabel>
                         </FormItem>
                       ))}
@@ -215,6 +443,19 @@ export function ReviewForm({
             
             {/* Timeliness */}
             <FormField
+=======
+                          </FormLabel>;
+                        </FormItem>;
+                      ))}
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+              )}
+            />;
+            {/* Timeliness */}
+            <FormField;
+>>>>>>> merged-prs-20250907-203621
               control={form.control}
               name="timeliness_rating"
               render={({ field }: { field: any }) => (
@@ -224,10 +465,17 @@ export function ReviewForm({
                     <RadioGroup
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
+<<<<<<< HEAD
                       className="flex flex-wrap gap-4"
                     >
                       {[1, 2, 3, 4, 5].map((value) => (
                         <FormItem
+=======
+                      className="flex flex-wrap gap-4";
+                    >;
+                      {[1, 2, 3, 4, 5].map((value) => (;
+                        <FormItem;
+>>>>>>> merged-prs-20250907-203621
                           key={value}
                           className="flex items-center space-x-2"
                         >
@@ -236,6 +484,7 @@ export function ReviewForm({
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
                             {value}
+<<<<<<< HEAD
                           </FormLabel>
                         </FormItem>
                       ))}
@@ -248,6 +497,19 @@ export function ReviewForm({
             
             {/* Would Work Again */}
             <FormField
+=======
+                          </FormLabel>;
+                        </FormItem>;
+                      ))}
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+              )}
+            />;
+            {/* Would Work Again */}
+            <FormField;
+>>>>>>> merged-prs-20250907-203621
               control={form.control}
               name="would_work_again"
               render={({ field }: { field: any }) => (
@@ -270,12 +532,21 @@ export function ReviewForm({
                   <FormMessage />
                 </FormItem>
               )}
+<<<<<<< HEAD
             />
           </div>
         )}
         
         {/* Anonymous Review */}
         <FormField
+=======
+            />;
+          </div>;
+        )}
+;
+        {/* Anonymous Review */}
+        <FormField;
+>>>>>>> merged-prs-20250907-203621
           control={form.control}
           name="is_anonymous"
           render={({ field }: { field: any }) => (
@@ -311,3 +582,21 @@ export function ReviewForm({
     </Form>
   )
 }
+<<<<<<< HEAD
+=======
+;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+interface ReviewFormProps {
+  project_id: string,
+  reviewee_id: string,
+  reviewee_name: string,
+  on_submit: (data: any) => Promise < boolean>,
+  }
+  );
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> merged-prs-20250907-203621

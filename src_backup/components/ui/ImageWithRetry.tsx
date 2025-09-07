@@ -26,6 +26,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
  */
 export function ImageWithRetry({
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from react';
 import Image, { type ImageProps } from 'next/image;
 import { cn  } from @/lib/utils';
@@ -156,6 +161,10 @@ export default ImageWithRetry;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }: ImageWithRetryProps) {
   const [currentSrc, setCurrentSrc] = useState(src),
@@ -196,6 +205,11 @@ export default ImageWithRetry;
     <div className="relative inline-block>
       <Image
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ImageWithRetry(): any ({src,alt = ',fallbackSrc = /images/image-placeholder && placeholder.svg',className,retryClassName}: ImageWithRetryProps) {const [currentSrc, setCurrentSrc] = useState(src)const [failed, setFailed]  = useState(false)const handleError = () => {setFailed(true)setCurrentSrc(fallbackSrc)}const handleRetry = () => {setFailed(false)setCurrentSrc(src)}setCurrentSrc(fallbackSrc)}const handleRetry = () => {setFailed(false)}const fill  = !('width in props) && !(height' in props)return (src;
   alt;<Image;
         {...props}
@@ -212,6 +226,10 @@ export function ImageWithRetry(): any ({src,alt = ',fallbackSrc = /images/image-
       <Image;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {...props}
         src={currentSrc}
         alt={alt}
@@ -221,6 +239,12 @@ export function ImageWithRetry(): any ({src,alt = ',fallbackSrc = /images/image-
       />
       {failed && (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <button
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       />;
       {failed && (<button;
           type="button;
@@ -270,3 +294,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
         <button
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

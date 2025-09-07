@@ -4,7 +4,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Leading the future of AI, autonomous systems, and innovative technology solutions. We empower businesses with cutting-edge technology to drive growth and transformation.',
+  description:
+    'Leading the future of AI, autonomous systems, and innovative technology solutions. We empower businesses with cutting-edge technology to drive growth and transformation.',
   keywords: ['AI', 'artificial intelligence', 'blockchain', 'technology', 'innovation', 'automation'],
   openGraph: {
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
@@ -37,8 +38,8 @@ export default function HomePage() {
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Stay ahead with our cutting-edge research in AI, quantum computing, and emerging technologies.
           </p>
-          <Link 
-            href="/research" 
+          <Link
+            href="/research"
             className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300"
           >
             Explore Research

@@ -13,10 +13,9 @@ export const ReputationDisplay = ({
   size = md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone
-  const currentLevel = Math.floor(reputation / 100);
-  const nextMilestone = (currentLevel + 1) * 100;
-  const progress = ((reputation % 100) / 100) * 100;
-  
+  const currentLevel = Math.floor(reputation / 100)
+  const nextMilestone = (currentLevel + 1) * 100
+  const progress = ((reputation % 100) / 100) * 100
   // Styling based on size
   const sizeClasses = {
     sm: {
@@ -94,6 +93,11 @@ export const ReputationDisplay = ({
 
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 reputation: number;
   size?: sm' | 'md | lg';
 import { Trophy  } from 'lucide-react;
@@ -126,6 +130,10 @@ interface ReputationDisplayProps  {reputation: number;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export default ReputationDisplay,
 import { Trophy } from lucide-react';
@@ -149,6 +157,14 @@ export default ReputationDisplay;
       progress: h - 3},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  }
+  return (
+    <div className='space - y-1'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const ReputationDisplay = ({reputation,size = 'md' }: ReputationDisplayProps) =>: any {export const ReputationDisplay = ({reputation;
   size = md;
 }: ReputationDisplayProps, ) =>: any {// Calculate next milestone;
@@ -182,6 +198,10 @@ export const ReputationDisplay = ({reputation,size = 'md' }: ReputationDisplayPr
   return (
     <div className='space - y-1'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className={`flex items - center gap - 1 ${size_classes[size].container}`}>;
         <Trophy className={`text - amber - 500 ${size_classes[size].icon}`} />;
         <span className=font - semibold'>{reputation}</span>;
@@ -228,6 +248,11 @@ export const ReputationDisplay = ({
         <span className="text-muted-foreground>rep</span>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <Progress value={progress} className={sizeClasses[size].progress} />;<div className=text-xs text-muted-foreground">;
         Level {currentLevel} • {Math && Math.round(nextMilestone - reputation)} to level up;</div>;
     </div>;
@@ -247,6 +272,10 @@ export default ReputationDisplay;
       </div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <Progress value={progress} className={sizeClasses[size].progress} />;
 
       </div>;

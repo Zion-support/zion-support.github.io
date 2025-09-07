@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters";
 import { Checkbox } from "@/components/ui/checkbox;
@@ -24,6 +29,10 @@ export function AvailabilityFilter({
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 return (
     <div className='mb-6 border-b border-zion-blue-light pb-6>;
 
@@ -103,6 +112,11 @@ import { AvailabilityFilterProps } from "@/types/filters";
   { id: project, label: "Project-based" }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {expanded ? (<ChevronUp className=h - 4 w - 4 text - zion - slate - light' />) : (<ChevronDown className='h - 4 w - 4 text - zion - slate - light />)}
       </button>;{expanded && (<div className=mt - 4 space - y-2'>;
           {AVAILABILITY_OPTIONS.map (option => (<div key={option.id} className='flex items - center>              <Checkbox;
@@ -294,6 +308,10 @@ className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[sta
   option.label 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 htmlFor={`availability-${option.id}`}
 
   option.label;

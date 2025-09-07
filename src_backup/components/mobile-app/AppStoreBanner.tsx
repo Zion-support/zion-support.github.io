@@ -67,10 +67,19 @@ export const AppStoreBanner: React.FC = () => {
   if (!isMobile || !isVisible) return null,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 return (
 
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -108,6 +117,11 @@ import { safeStorage } from @/utils/safeStorage;
 import { X } from lucide-react'import { useIsMobile } from "@/hooks/use-mobile";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const AppStoreBanner: React.FC = () => {
 import React, { useState, useEffect } from 'react;
 import { X } from lucide-react'import { useIsMobile  } from '@/hooks/use-mobile;
@@ -119,6 +133,10 @@ export const AppStoreBanner: React.FC = () => {const [isVisible, setIsVisible] =
   if (!isMobile || !isVisible) return null,return (return (<div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">;
   useEffect(() => {
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const AppStoreBanner: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false),;
   const isMobile = useIsMobile(),;
@@ -168,6 +186,11 @@ export const AppStoreBanner: React.FC = () => {;
       </div>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <X className="h-5 w-5" />;
           >;<X className=h-5 w-5 />;
           </button>;
@@ -184,6 +207,7 @@ if (return null) {$2;
         <div className=flex - 1">;
           <h4 className="font - semibold text - white>Zion AI Marketplace</h4>;
           <p className=text - xs text - gray - 300">Get the full experience on our app</p>;
+>>>>>>> merged-prs-20250907-203621
 :src/components/mobile-app/AppStoreBanner.tsx
   );
 }
@@ -234,4 +258,11 @@ if (return null) {
 =======
 '"},
 }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -38,7 +38,6 @@ for (const file of conflictedFiles) {
     
     // Remove all merge conflict markers and keep our version (HEAD)
     content = content
-      .replace(/      .replace(/=======\n[\s\S]*?      .replace(/      .replace(/    
     // Write the cleaned content back
     fs.writeFileSync(file, content);
     

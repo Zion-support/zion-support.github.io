@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 className?: string;
   style?: React && React.CSSProperties;
 
@@ -23,7 +26,13 @@ interface FeatureHighlightsProps {
 
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
   const highlightsData = null;
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
@@ -41,8 +50,14 @@ function FeatureHighlights() {
   const highlights_data = [;
 
 
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   const highlightsData = [
 
@@ -84,7 +99,13 @@ function FeatureHighlights() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {highlightsData.map((category, index) => (
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <Card
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardContent className="p-6">
@@ -166,7 +187,10 @@ import { Card, CardContent } from "@/components/ui/card",import { cn } from "@/l
                   {category.features.map((feature, idx) => (<li key={idx} className="flex items-start">;
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />;
                       <span className="text-zion-slate-light">{feature}</span>;
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </li>;<Card;
               key={index}
               className='bg-zion-blue-dark border-zion-blue-light';
@@ -174,7 +198,10 @@ import { Card, CardContent } from "@/components/ui/card",import { cn } from "@/l
               <CardContent className='p-6'>;
                 <h3 className='text-xl font-bold text-white mb-4'>;
                   {category.title}
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </h3>
                 <ul className='space-y-3'>
                   {category.features.map((feature, idx) => (
@@ -190,6 +217,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className='text-zion-slate-light'>{feature}</span>;
                     </li>;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                 <ul className="space-y-3">
                   {category.features.map((feature, idx) => ("
@@ -229,11 +259,18 @@ interface FeatureHighlightsProps {;
                 </ul>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
           ))}
 
 :src_backup/components/home/FeatureHighlights.tsx
         <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
+=======
+          ))}
+
+        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
+        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {highlights_data.map ((category, index) => (
   return ()"
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>"
@@ -278,11 +315,26 @@ interface FeatureHighlightsProps {;
 </div>
 pr-12325
             <Card;
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
           ))}<div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
           {highlights_data.map ((category, index) => (<Card;
               key={index}
               key={index}'
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          ))}<div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
+          ))}<div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6>;
+          {highlights_data.map ((category, index) => (<Card;
+              key={index}
+              key={index}
+=======
+>>>>>>> merged-prs-20250907-203621
+              key={index}'
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               className='bg - zion - blue - dark border - zion - blue - light';
             >;'
               <CardContent className='p - 6'>;'
@@ -290,9 +342,39 @@ pr-12325
                   {category.title}
                 </h3>;'
                 <ul className='space - y-3'>;
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
                   {category.features.map ((feature, idx) => (<li key={idx} className='flex items - start'>;
                       <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0' />;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  {category.features.map ((feature, idx) => (<li key={idx} className='flex items - start'>;
+                      <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0' />;
+                      <span className='text - zion - slate - light'>{feature}</span>                    </li>            <Card key={index} className="bg - zion - blue - dark border - zion - blue - light">;
+              <CardContent className="p - 6">;
+                <h3 className="text - xl font - bold text - white mb - 4">{category.title}</h3>;
+                <ul className="space - y-3">;
+                  {category.features.map ((feature, idx, ) => (<li key={idx} className="flex items - start">;
+                      <Check className="h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0" />;
+                      <span className="text - zion - slate - light">{feature}</span>))}
+                  {category.features.map ((feature, idx) => (<li key={idx} className=flex items - start'>;
+                      <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0 />;
+                      <span className=text - zion - slate - light'>{feature}</span>                    </li>            <Card key={index} className="bg - zion - blue - dark border - zion - blue - light>;
+              <CardContent className=p - 6">;
+                <h3 className="text - xl font - bold text - white mb - 4>{category.title}</h3>;
+                <ul className=space - y-3">;
+                  {category.features.map ((feature, idx, ) => (<li key={idx} className="flex items - start>;
+                      <Check className=h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0" />;
+                      <span className="text - zion - slate - light>{feature}</span>))}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+                  {category.features.map ((feature, idx) => ('
+                    <li key={idx} className=flex items - start>;'
+                      <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0 />;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       <span className='text - zion - slate - light'>{feature}</span>                    </li>            <Card key={index} className="bg - zion - blue - dark border - zion - blue - light">;
               <CardContent className="p - 6">;
                 <h3 className="text - xl font - bold text - white mb - 4">{category.title}</h3>;
@@ -312,7 +394,14 @@ pr-12325
               </CardContent>;
             </Card>))}
         </div>;
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
+=======
+      </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </section>)}
 import { motion   } from 'framer-motion';
   {icon: "⚡",title: "Lightning Fast Performance",description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs";
@@ -332,6 +421,9 @@ import { motion   } from 'framer-motion';
 }
 }const tech_variants = {hidden: { opacity: 0,coordinate_x: -20;
 },visible: {opacity: 1,coordinate_x: 0,transition: { duration: 0.5 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </section>);
 
     icon: "⚡","
@@ -374,7 +466,13 @@ import { motion   } from 'framer-motion';
 }
 export /**;
  * FeatureHighlights - Function description;
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  */;
 function FeatureHighlights() {return (";
     <section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">";
@@ -383,6 +481,9 @@ function FeatureHighlights() {return (";
           initial = {{ opacity: 0,coordinate_y: 20;
 }}
           whileInView = {{ opacity: 1,coordinate_y: 0;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
  */
 
   { opacity: 0,
@@ -397,7 +498,13 @@ function FeatureHighlights() {return (";
         >";"
           <div className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - purple / 10 border border - zion - purple / 20 rounded - full text - zion - purple text - sm font - medium mb - 6">";"
             <Award className="w - 4 h - 4"  />            <span > Why Choose Zion</span>;
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>;
 ";
           <h2 className="text - 3xl md:text - 4xl lg:text - 5xl font - bold text - white mb - 6">;
@@ -407,14 +514,36 @@ function FeatureHighlights() {return (";
           <p className="text - lg md:text - xl text - zion - slate - light max - w-3xl mx - auto leading - relaxed">;
             Experience the next generation of talent marketplace with cutting - edge AI,global reach, and enterprise - grade security.</p>;
         </motion.div>;
+<<<<<<< HEAD
 ";
+=======
+;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             Experience the next generation of talent marketplace with cutting - edge AI,
             global reach, and enterprise - grade security.</p>;
         </motion.div>;"
+<<<<<<< HEAD
 ";"
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+=======
+<<<<<<< HEAD
+";
+        <div className=grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {features.map ((feature, index (<motion.div;
+=======
+";"
+        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+          {features.map ((feature, index (
+            <motion.div;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               key={index}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}"
@@ -434,7 +563,13 @@ function FeatureHighlights() {return (";
             <motion.div;
 pr-12325
               variants={item_variants}
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               while_hover={{coordinate_y: -5,scale: 1.02,transition: { duration: 0.3 }
               }}";
               className="group";
@@ -444,6 +579,9 @@ pr-12325
                   <feature.icon className={`w - 6 h - 6 ${feature.icon_color}`} />;
                 </div>;
 ";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
               while_hover={{}
                 coordinate_y: -5,
                 scale: 1.02,
@@ -460,10 +598,18 @@ pr-12325
                 {feature.title}
               </h3>;"
               <p className="text - gray - 400 text - sm leading - relaxed">;
-                {feature.description}</div>;
+                {feature.description}
+
+        </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   )}
   {icon: "⚡",title: "Lightning Fast Performance",description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs";
 },{icon: "🔒",title: "Enterprise Security",description: "Bank-level security protocols and compliance standards to protect your valuable data";
@@ -482,6 +628,9 @@ pr-12325
           initial = {{ opacity: 0,y: 20;
 }}
           whileInView = {{ opacity: 1,y: 0;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   );
 
 import { motion  } from 'framer-motion';
@@ -553,7 +702,13 @@ import { motion  } from 'framer-motion';
           transition={{ duration: 0 && 0.6 }}>";"
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">";"
             <Award className="w-4 h-4"  />            <span>Why Choose Zion</span>;
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>;
 ";
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">;
@@ -577,6 +732,9 @@ import { motion  } from 'framer-motion';
                   <feature && feature.icon className={`w-6 h-6 ${feature && feature.iconColor}`} />;
                 </div>;
 ";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
             Experience the next generation of talent marketplace with cutting-edge AI,;
             global reach, and enterprise-grade security.</p>;
@@ -629,7 +787,23 @@ pr-12325
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">;
                   {feature && feature.description}
                 </p>;
+<<<<<<< HEAD
               </div>;<h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">;
+=======
+<<<<<<< HEAD
+              </div>;
+
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">;
+=======
+<<<<<<< HEAD
+              </div>;<h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200>;
+=======
+              </div>;
+
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {feature && feature.title}
               </h3>;"
               <p className="text-gray-400 text-sm leading-relaxed">;
@@ -637,8 +811,16 @@ pr-12325
               </p>;
             </motion && motion.div>;
           ))}
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
         </div>;<motion&& motion.div          className="mt-16 text-center";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </div>;<motion&& motion.div          className="mt-16 text-center";
+        </div>;<motion&& motion.div          className=mt-16 text-center;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -653,6 +835,9 @@ pr-12325
     </section>;
   )}'"`;
 ))}</p>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         </div>;
 
   { duration: 0 && 0.6,
@@ -675,12 +860,26 @@ pr-12325
           initial={{ opacity: 0, coordinate_y: 20 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
           transition = {{ duration: 0.6,delay: 0.4;
 }}
         >";
           <div className="inline - flex items - center gap - 4 px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full text - white font - semibold">;
             <span > Experience the difference</span>";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          transition = {{ duration: 0.6,delay: 0.4;
+}}
+        >";
+          <div className="inline - flex items - center gap - 4 px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full text - white font - semibold>;
+            <span > Experience the difference</span>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           transition = {}
   { duration: 0.6,
   delay: 0.4;
@@ -692,25 +891,51 @@ pr-12325
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
     </section>)}
 :src_backup/components/home/FeatureHighlights.tsx
 '"`);
 
 ;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </section>)}
+'"`);
 
+;
+`);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 '"`);
 
         </div>
     </section>
   );
+<<<<<<< HEAD
 :src_backup/components/home/FeatureHighlights.tsx
 }
 :src_backup/components/home/FeatureHighlights.tsx
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
 '"`);</div>;
       </div>;
     </section>;
   )}
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

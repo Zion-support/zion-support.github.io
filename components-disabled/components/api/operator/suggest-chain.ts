@@ -12,10 +12,20 @@ export default async function handler(
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { region, stakeUsd } = req.body |{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const stake = Number(stakeUsd |0);
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 =======
 const stake = Number(stakeUsd |0);
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
   // Simple heuristics;
@@ -65,6 +75,12 @@ function handler() {
   $2;
 const { region, stake_usd } = req.body || {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  if (return res.status (405).json ({ error: 'Method not allowed' })) {
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 export default async /**
  * handler - Function description
@@ -78,6 +94,10 @@ function handler() {
 =======
   if (return res.status (405).json ({ error: 'Method not allowed' })) {
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const stake = Number (stake_usd || 0);
   // Simple heuristics;
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche);
@@ -85,6 +105,11 @@ const stake = Number (stake_usd || 0);
   // - Region hints (very rough):;
   //   APAC -> BNB / Avalanche, NA / EU -> Arbitrum / Optimism / Ethereum;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Check condition,
 if (candidates = ['arbitrum', 'optimism', 'ethereum']) {'
   $2
@@ -112,11 +137,22 @@ region_lc.includes ('na') ||;'
     region_lc.includes ('america')) {'
     }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Check condition;
 if (candidates = ['arbitrum', 'optimism', 'ethereum']) {
 const region_lc = (region || ).to_string ().toLowerCase ();
   if (|| region_lc.includes ('asia')) {) {
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     candidates =;
         ? ['arbitrum', 'optimism', 'avalanche'];
   } else if (|| region_lc.includes ('europe')) {) {
@@ -129,6 +165,11 @@ if (||) {
 const ranked = candidates.map (key => ({ key: k, chain: (CHAINS as any)[k] }));
     .status (200);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     .json ({ "recommendation": ranked[0], "alternatives": ranked.slice (1) });
   if (|| region_lc.includes ('asia')) {) {'
   $2
@@ -146,6 +187,10 @@ candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumopti
 const ranked = candidates.map ((k) => ({ "key": k, "chain": (CHAINS as any)[k] }));
   res.status (200).json ({ "recommendation": ranked[0], "alternatives": ranked.slice (1) });
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     .json ({ recommendation: ranked[0], alternatives: ranked.slice (1) });
     candidates = stake > 5000 ? ['arbitrumoptimismavalanche'] : ['bnbavalanchepolygon'];
     candidates = stake > 5000 ? ['arbitrumethereumoptimism'] : ['polygonarbitrumoptimism'];
@@ -153,4 +198,11 @@ const ranked = candidates.map ((k) => ({ "key": k, "chain": (CHAINS as any)[k] }
     candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism'];
 const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k] }));
   res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1) });
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -18,6 +18,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status (401).json ({ error: 'Unauthorized' });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     res.status (401).json ({ "error": 'Unauthorized' });'
     return;
 
@@ -46,6 +51,10 @@ res.status(200).json({ "message": 'OK' });    return'
 ;
   res.status(200).json({ "message": 'OK' });'
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     res.status(401).json({ error: 'Unauthorized' });
   res.status(200).json({ message: 'OK' });
 res.status (200).json ({ message: 'OK' });    return;
@@ -53,6 +62,13 @@ res.status (200).json ({ message: 'OK' });    return;
   getSessionFromReq;
   isInternalAgentRequest;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 res.status(200).json({ message: 'OK' });    return;

@@ -1,5 +1,10 @@
 return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 return (<div className='space-y-3>;
       <div className=flex justify-between items-center px-4'>;
@@ -7,6 +12,10 @@ return (<div className='space-y-3>;
       <div className='flex justify-between items-center px-4'>;
         <div className=flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar'>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className='space-y-3'>;'
       <div className='flex justify-between items-center px-4'>;'
         <div className='flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar'>;
@@ -143,7 +152,14 @@ function BrowseFilters() {}
                         >;
 
                           Freelance;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         </Badge>;
                       </div>;
                     </div>;
@@ -175,7 +191,14 @@ function BrowseFilters() {}
                         >;
 
                           Senior;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         </Badge>;
                       </div>;
                     </div>;
@@ -213,6 +236,11 @@ function BrowseFilters() {}
                         </Badge>;
                       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </div>;import React, { useState } from "react,import { Button } from @/components/ui/button",import { Slider } from "@/components/ui/slider,import { Switch } from @/components/ui/switch",import { Input } from "@/components/ui/input,import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from @/components/ui/select",import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet,import { Badge } from @/components/ui/badge",import { Label } from "@/components/ui/label,import { Label  } from @/components/ui/label;
 interface BrowseFiltersProps  {return (<div className=space-y-3">;
       <div className="flex justify-between items-center px-4>;
@@ -240,6 +268,10 @@ interface BrowseFiltersProps  {return (<div className=space-y-3">;
                       </div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </div>;
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from @/components/ui/sheet",
@@ -247,12 +279,21 @@ import { Badge } from "@/components/ui/badge,
 import { Label } from @/components/ui/label";
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet,
 import { Badge } from @/components/ui/badge",
 import { Label } from "@/components/ui/label;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface BrowseFiltersProps {
 
   return (
@@ -312,6 +353,12 @@ interface BrowseFiltersProps {
                       <Label>Experience (years)</Label>
                       <Slider"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                        aria-label="Years of experience"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         aria-label="Years of experience
                     <div className=space-y-2">;
                       <Label>Experience Level</Label>;
@@ -339,6 +386,10 @@ interface BrowseFiltersProps {
 =======
                         aria-label="Years of experience"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
@@ -529,6 +580,11 @@ interface BrowseFiltersProps {
             </Badge>
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>
       </div>
     </div>
@@ -541,6 +597,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}</div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         </div>;
       </div>;
@@ -562,12 +622,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>)}</div>;
       </div>;
     </div>;
   )
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>);
 }
 

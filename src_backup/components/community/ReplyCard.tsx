@@ -5,6 +5,11 @@
           <AvatarFallback>{reply.authorName.charAt(0)}</AvatarFallback>;
         </Avatar>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="flex-1>;
           <div className=flex items-center">;
             <span className="font-medium>;import { formatDistanceToNow  } from 'date-fns;
@@ -26,6 +31,10 @@ import { formatDistanceToNow } from date-fns",import { Card, CardContent, CardFo
         </Avatar>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="flex-1">;
           <div className="flex items-center">;
             <span className="font-medium">;
@@ -44,6 +53,18 @@ import { Badge } from '@/components/ui/badge';
 import { ForumReply } from '@/types/community';
 import { cn } from '@/lib/utils';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import { formatDistanceToNow } from "date-fns",
+import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { formatDistanceToNow } from date-fns",
@@ -110,6 +131,10 @@ export const ReplyCard = ({
             {timeAgo}
 
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
@@ -139,6 +164,11 @@ import { Badge } from "@/components/ui/badge",
         )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {timeAgo}{reply && reply.authorName}
             </span>;
             {reply && reply.authorRole && (<Badge variant=outline" className="ml-2 text-xs>;{reply.authorRole}
@@ -190,6 +220,10 @@ import { Badge } from "@/components/ui/badge",
   )}</CardFooter>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </CardFooter>;
     </Card>;
   )
@@ -223,9 +257,18 @@ export const ReplyCard = ({
   canMarkAnswer = false;
   class_name;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }: ReplyCardProps, ) =>: any {const time_ago = formatDistanceToNow (new Date (reply.created_at), { add_suffix: true }),return (<Card className={cn ("transition - shadow;
       reply.is_answer && border - green - 500 / 50 bg - green - 50 dark:bg - green - 950 / 20";
 =======
+=======
+=======
+<<<<<<< HEAD
+}: ReplyCardProps, ) =>: any {const time_ago = formatDistanceToNow (new Date (reply.created_at), { add_suffix: true }),return (<Card className={cn ("transition - shadow;
+      reply.is_answer && border - green - 500 / 50 bg - green - 50 dark:bg - green - 950 / 20";
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }: ReplyCardProps, ) =>: any {
   const time_ago = formatDistanceToNow (new Date (reply.created_at), { add_suffix: true }),
   return (
@@ -282,9 +325,18 @@ export const ReplyCard = ({
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ReplyCard;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+export default ReplyCard;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { ForumReply } from "@/types/community;
 import { cn } from @/lib/utils";
@@ -293,6 +345,12 @@ interface ReplyCardProps {
 }
 export default ReplyCard;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "
 origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>)}export default ReplyCard;interface ReplyCardProps  {)}export default ReplyCard;
@@ -308,3 +366,7 @@ export default ReplyCard;
 =======
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

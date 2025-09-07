@@ -16,6 +16,11 @@ import { useState, useEffect } from 'react';'
 import { format } from 'date - fns';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application),// Load webhooks on mount;
@@ -44,12 +49,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Globe,
   MoreVertical,
   PlayCircle,
   Plus,
   RefreshCw,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  Webhook,
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Webhook} from 'lucide-react
 import { useWebhooks, type WebhookEventType } from @/hooks/useWebhooks'
 import { Button } from '@/components/ui/button
@@ -112,6 +127,10 @@ import { useWebhooks, type WebhookEventType } from @/hooks/useWebhooks';
 =======
   Webhook,
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Button } from '@/components / ui / button;
   Card,
@@ -281,6 +300,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     label: string
     description: string
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     clearTestResult;
   } = useWebhooks()const [showCreateDialog, setShowCreateDialog] = useState(false)const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),const [showTestDialog, setShowTestDialog] = useState<string | null>(null),const [showTestResult, setShowTestResult] = useState(false)import { format  } from 'date-fns';
 import { Globe,MoreVertical,PlayCircle,Plus,RefreshCw,Webhook} from lucide-react;
@@ -392,6 +416,10 @@ if (===  ||) {$2;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     {
 
@@ -453,12 +481,21 @@ if (===  ||) {$2;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const handleTestWebhook = async (webhookId: string) => {
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     await testWebhook(webhookId, testEventType),
 
     setShowTestResult(true)
@@ -478,6 +515,11 @@ if (===  ||) {$2;
       </CardHeader>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <CardContent>
         <div className=flex justify-between items-center mb-6>
           <p className='text-sm text-zinc-400'>
@@ -594,6 +636,10 @@ export function WebhooksManager() {;
     fetchWebhooks();
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }, []);
   const handleCreateWebhook = async () => {
     if (;'
@@ -728,7 +774,14 @@ export function WebhooksManager() {;
       description: 'When talent is hired for a project',
     },
   ];
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Toggle an event selection;
   const toggle_event = (event: WebhookEventType) =>: any {}
     setSelectedEvents (prev =>;
@@ -788,6 +841,11 @@ export function WebhooksManager() {;
                   </p>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </div>;setWebhookName(),setWebhookUrl(""),setWebhookSecret(),setWebhookName(""),setWebhookUrl(),setWebhookSecret(""),setSelectedEvents([])},onChange={e => setWebhookSecret(e && e.target.value)}
                     placeholder=Enter secret key;
                     aria-label='Secret key';
@@ -830,6 +888,10 @@ export function WebhooksManager() {;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                     onChange={e => setWebhookSecret(e && e.target.value)}
                     placeholder=Enter secret key';'
@@ -888,6 +950,11 @@ export function WebhooksManager() {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     setWebhookName(),
     setWebhookUrl(""),
     setWebhookSecret(),
@@ -900,6 +967,10 @@ export function WebhooksManager() {;
     setWebhookUrl();"
     setWebhookSecret(");
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const resetWebhookForm = () => {"
     setWebhookName("");"
     setWebhookUrl("");"
@@ -915,6 +986,11 @@ export function WebhooksManager() {;
     )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Card className=bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -931,6 +1007,10 @@ export function WebhooksManager() {;
       
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <CardContent>
         <div className=flex justify-between items-center mb-6">
           <p className="text-sm text-zinc-400>
@@ -953,6 +1033,11 @@ export function WebhooksManager() {;
               </DialogHeader>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {await toggleWebhook(webhookId, !currentStatus)}const handleDeleteWebhook = async (webhookId: string) => {await deleteWebhook(webhookId)setShowDeleteConfirm(null)}const handleTestWebhook = async (webhookId: string) => {await testWebhook(webhookId, testEventType)setShowTestResult(true)}const resetWebhookForm = () => {setWebhookName(")setWebhookUrl(")setWebhookSecret(")setSelectedEvents([])}// Event type options;
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [;
     { value: 'new_application', label: New Application, description: 'When a talent applies to a job' },{ value: quote_received, label: 'Quote Received', description: When a quote is received from talent },{ value: 'milestone_approved', label: Milestone Approved, description: 'When a project milestone is approved' },{ value: talent_hired, label: 'Talent Hired', description: When talent is hired for a project }],// Toggle an event selection;
@@ -1007,6 +1092,10 @@ export function WebhooksManager() {;
 
                     className="bg-zinc-800 border-zinc-700
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     className="bg-zinc-800 border-zinc-700"
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -1037,6 +1126,11 @@ export function WebhooksManager() {;
 
                   <Label>Event Types</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     onChange={(e) => setWebhookUrl(e.target.value)}placeholder="https: //example.com/webhook";
                     className=bg-zinc-800 border-zinc-700;
                   />;
@@ -1070,6 +1164,10 @@ export function WebhooksManager() {const {webhooks,loading,testResult,fetchWebho
     ),setShowCreateDialog(false),resetWebhookForm()},const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {await toggleWebhook(webhookId, !currentStatus)},const handleDeleteWebhook = async (webhookId: string) => {await deleteWebhook(webhookId),setShowDeleteConfirm(null)},const handleTestWebhook = async (webhookId: string) => {await testWebhook(webhookId, testEventType),setShowTestResult(true)},const resetWebhookForm = () => {setWebhookName(""),setWebhookUrl(),setWebhookSecret(""),setSelectedEvents([])},// Event type options;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   <div className=grid gap-2 pt-2>
                     {eventOptions.map((event) => ("
@@ -1136,10 +1234,19 @@ export function WebhooksManager() {
   },
   // Event type options;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     { value: new_application, label: 'New Application', description: When a talent applies to a job },{ value: 'quote_received', label: Quote Received, description: 'When a quote is received from talent' },{ value: milestone_approved, label: 'Milestone Approved', description: When a project milestone is approved },{ value: 'talent_hired', label: Talent Hired, description: 'When talent is hired for a project' }],// Toggle an event selection;
       prev.includes(event)? prev.filter(e => e !== event): [...prev, event];
     )},return (<Card className=bg-zinc-900 border-zinc-800 text-white">;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [;
     { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },;
     { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },;
@@ -1155,7 +1262,14 @@ export function WebhooksManager() {
   },;
   return (;
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <CardHeader>;
         <CardTitle className="text-xl flex items-center>;
           <Webhook className=mr-2" size={20} /> Webhooks;
@@ -1224,6 +1338,15 @@ export function WebhooksManager() {
                 <div className=space-y-2">;
                   <Label>Event Types</Label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                  <div className="grid gap-2 pt-2">;
+                    {eventOptions.map((event) => (;
+                      <div key={event.value} className="flex items-center space-x-2">;
+                        <Checkbox;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <div className="grid gap-2 pt-2>;
                     {eventOptions.map((event) => (<div key={event.value} className=flex items-center space-x-2">;
                         <Checkbox;
@@ -1236,6 +1359,10 @@ export function WebhooksManager() {
                     {eventOptions.map((event) => (;
                       <div key={event.value} className="flex items-center space-x-2">;
                         <Checkbox;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           id={event.value} ;
 >>>>>>> origin/chore/fix-lint-and-merge
 
@@ -1247,6 +1374,16 @@ export function WebhooksManager() {
                       <div
                         key={event.value}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                        className='flex items-center space-x-2'
+                      >
+                        <Checkbox
+                          id={event.value}
+                          checked={selectedEvents.includes(event.value)}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         className=flex items-center space-x-2;
                       >;
                         <Checkbox;
@@ -1271,6 +1408,10 @@ export function WebhooksManager() {
                           id={event.value}
                           checked={selectedEvents.includes(event.value)}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                           onCheckedChange={() => toggleEvent(event.value)}
                         />;
@@ -1297,6 +1438,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
               </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       </div>
                     ))}
                   </div>
@@ -1309,11 +1455,20 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                 <Button
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   variant='outline'
                   onClick={() => {
                     setShowCreateDialog(false);
                     resetWebhookForm();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 <div className=space - y-2'>;
                           checked={selectedEvents.includes(event.value)}onCheckedChange={() => toggleEvent(event.value)}
@@ -1347,6 +1502,10 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                         key={event.value}
                   <Label > Event Types</Label>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 '
                 <div className='space - y-2'>;
                   <Label > Event Types</Label>;'
@@ -1389,6 +1548,14 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                 >;
                   Cancel;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                </Button>;
+
+                  setShowCreateDialog(false);
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </Button>;<DialogFooter>;
                 <Button variant="outline onClick={() => {setShowCreateDialog(false)resetWebhookForm()}}>;
                   Cancel;
@@ -1417,6 +1584,10 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
 
                   setShowCreateDialog(false);
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   resetWebhookForm()
                 }}>
@@ -1442,6 +1613,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
           </Dialog>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Button onClick={handleCreateWebhook} disabled={webhookName.trim() === " ||;
                   webhookUrl.trim() === " ||;
                   selectedEvents.length === 0;
@@ -1456,6 +1632,10 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                   Create Webhook;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                     webhookName && webhookName.trim() ===  ||
 
@@ -1488,6 +1668,12 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
         <div className='space - y-4>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            <div className='text - center py - 8 text - zinc - 500'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <div className=text - center py - 8 text - zinc - 500'>;
                     webhookName && webhookName.trim() === ' ||;
                     webhookUrl && webhookUrl.trim() === ' ||;
@@ -1515,6 +1701,10 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
 =======
             <div className='text - center py - 8 text - zinc - 500'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               Loading webhooks...;
             </div>) : webhooks.length === 0 ? (
             <div className='text - center py - 8 text - zinc - 500'>;
@@ -1596,9 +1786,18 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                         </DropdownMenuItem>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {/* Webhooks List */}
 
         <div className=space-y-4">
@@ -1626,6 +1825,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                   </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         <DropdownMenuItem;
         {/* Webhooks List */}
         <div className=space-y-4">;
@@ -1664,6 +1868,10 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                       <DropdownMenuTrigger asChild>
                         <Button variant="ghost size=icon" aria-label="More options>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         <Button variant="ghost" size="icon" aria-label="More options">
 >>>>>>> origin/chore/fix-lint-and-merge
                           <MoreVertical size={16} />
@@ -1672,6 +1880,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                       <DropdownMenuContent align="end" className=bg-zinc-900 border-zinc-800 text-white>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       </span>;
                     </div>;
                       <DropdownMenu>;
@@ -1684,6 +1897,10 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                         <DropdownMenuItem;
                           <span className=block text-xs text-zinc-400 mt-1>{event.description}</span>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
 >>>>>>> origin/chore/fix-lint-and-merge
                         </Label>;
@@ -1711,6 +1928,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
           </Dialog>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;onClick={() => setShowDeleteConfirm(webhook.id)}className=cursor-pointer text-red-500'                        >;
                           <X size={14} className='mr-2 /> Delete                        </DropdownMenuItem>                          <X size={14} className="mr-2 /> Delete;
         {/* Webhooks List */}
@@ -1768,6 +1990,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           onClick={() => setShowDeleteConfirm(webhook.id)}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         {/* Webhooks List */}
 
@@ -1818,6 +2044,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <DropdownMenuItem;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         <DropdownMenuItem;onClick={() => setShowDeleteConfirm(webhook.id)}
                           className=cursor-pointer text-red-500;
                         >;
@@ -1854,6 +2085,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         </DropdownMenuItem>
 
                 <div className="mt-3 flex flex-wrap gap-2">
@@ -1865,6 +2100,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <div className='mt-3 flex flex-wrap gap-2>
                   {webhook.event_types.map((event: WebhookEventType) => (
@@ -1897,6 +2137,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </Badge>;
                   ))}
 
@@ -1914,6 +2158,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {webhook.last_triggered_at && ('
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH: mm')}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   )}
 
@@ -1927,6 +2176,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 </div>
 
@@ -1936,6 +2189,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       variant=secondary';
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800>                    <Badge;
                       key = {event}
@@ -1964,6 +2222,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       Last triggered:{' }</div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                         </DropdownMenuItem>;
                       </DropdownMenuContent>;
@@ -2015,6 +2277,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                  <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <span>Created: {format(new Date(webhook.created_at), MMM d, yyyy)}</span>;
                 </div>;
         open={showTestDialog !== null}</div>;
@@ -2024,6 +2292,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   {webhook.last_triggered_at && (;'
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm)}</span>;
                   )}
@@ -2039,6 +2311,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Webhooks will be sent with HTTPS POST requests to your endpoint.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             )))}
         </div>;
       </CardContent>;
@@ -2131,6 +2408,10 @@ clearTestResult();
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </Button>
 
       </CardFooter>
@@ -2230,7 +2511,14 @@ if ( {) {}
 
 =======
             , }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               setShowTestResult(false);
 clearTestResult();
@@ -2251,6 +2539,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         open={showTestDialog !== null}onOpenChange={(open) => {if (!open) {setShowTestDialog(null)setTestEventType('new_application)if (showTestResult) {setShowTestResult(false)}
         }}onOpenChange={(open) => {// Check condition;
 if ( {) {$2;
@@ -2383,6 +2676,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text-xs text-zinc-500>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       >;
 
         <DialogContent className=bg-zinc-900 border-zinc-800 text-white'>;
@@ -2461,11 +2758,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <DialogFooter>;
                 <Button;
                   variant='outline';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                     </SelectContent>
                   </Select>
@@ -2489,10 +2795,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     showTestDialog && handleTestWebhook(showTestDialog);
                   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               <DialogFooter>
 
@@ -2512,6 +2827,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ) : (
             <>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     showTestDialog && handleTestWebhook(showTestDialog)}<DialogFooter>;
                 <Button variant=outline" onClick={() => setShowTestDialog(null)}>;
                   Cancel;
@@ -2532,6 +2852,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;<DialogFooter>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                 >                  Send Test                  </p>;
                 </div>;
@@ -2606,6 +2930,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </pre>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <div className=space-y-4 py-4'>
                 <div className='space-y-2>
@@ -2652,11 +2981,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </ScrollArea>
                   </div>
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </Badge>;
                   </div>;
 <div className=space-y-2 mt-4'>;
@@ -2683,6 +3021,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                     </Badge>;
                   </div>;
@@ -2748,7 +3090,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           ? "bg - green - 700";"
                           : "bg - red - 700";
                       , }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     >;
                       {test_result?.status} {test_result?.status_text}
                     </Badge>;
@@ -2778,6 +3127,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     clearTestResult()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <DialogFooter>
                 <Button
                   variant=default'
@@ -2788,6 +3142,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   }}
 
                 >                  Close;
@@ -2809,6 +3167,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               </div>;<DialogFooter>;
                 <Button;
@@ -2827,6 +3190,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </Badge>;
 
                   </div>;
@@ -2871,6 +3238,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   clearTestResult();
                 }}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </>;)}
         </DialogContent>;
       </Dialog>;
@@ -2932,6 +3304,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </Button>;
               </DialogFooter>;
             </>;
@@ -2980,6 +3356,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </AlertDialogCancel>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
@@ -3222,6 +3604,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               className="bg-red-600 hover: bg-red-700;
             >;
@@ -3252,6 +3638,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 setTestEventType ('new application');
 if (showTestResult) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ;
 
 };
@@ -3272,6 +3663,10 @@ if (showTestResult) {;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }> Send Test </Button> </DialogFooter> </>) : (<> <div className="space-y-4 py-4> <div className=space-y-2"> <div className="flex items-center justify-between> <Label>Response Status</Label> <Badge > {
   testResult?.status ;
@@ -3285,6 +3680,11 @@ clearTestResult ();
 }</DialogContent> </Dialog> {
   /* Delete Webhook Confirmation Dialog */ ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }<AlertDialogopen= {
   showDeleteConfirm !== null 
 }onOpenChange= {
@@ -3293,6 +3693,10 @@ clearTestResult ();
 }"  );
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 
@@ -3431,6 +3835,13 @@ clearTestResult ()
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+'
+            <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             <AlertDialogCancel className=bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
   loading ? (<div className="text-center py-8 text-zinc-500">Loading webhooks...</div>) : webhooks.length === 0 ? (<div className=text-center py-8 text-zinc-500> <Webhook className="mx-auto mb-2 opacity-30"size= {24 ;
@@ -3541,11 +3952,20 @@ setTestEventType (new application')if (showTestResult) {}";
 '
             <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction;
               on_click={() =>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <AlertDialog;
         open={showDeleteConfirm !== null}
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
@@ -3554,6 +3974,10 @@ setTestEventType (new application')if (showTestResult) {}";
           <AlertDialogHeader>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm);
               }'
               className='bg - red - 600 hover:bg - red - 700            >;
@@ -3573,6 +3997,12 @@ setTestEventType (new application')if (showTestResult) {}";
           </AlertDialogHeader>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700">;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700>;
               on_click = {() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm) }
               className=bg - red - 600 hover: bg - red - 700";<AlertDialog;
@@ -3598,6 +4028,10 @@ setTestEventType (new application')if (showTestResult) {}";
 =======
             <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700">;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               Cancel;
             </AlertDialogCancel>;
@@ -3607,15 +4041,29 @@ setTestEventType (new application')if (showTestResult) {}";
 
             >;
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="bg - red - 600 hover: bg - red - 700;>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+              className="bg - red - 600 hover: bg - red - 700;>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </Card>);
   value: WebhookEventType,  label: string, description: string;
 }[] = [ {
@@ -3624,6 +4072,10 @@ setTestEventType (new application')if (showTestResult) {}";
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     </Card>);
   value: WebhookEventType,  label: string, description: string;
@@ -3647,5 +4099,14 @@ setTestEventType (new application')if (showTestResult) {}";
 }onOpenChange= {;
   (open) => !open && setShowDeleteConfirm (null) ";
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
+<<<<<<< HEAD
 }'"
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+}'"
+=======
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

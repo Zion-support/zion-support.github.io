@@ -1,7 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+<<<<<<< HEAD
+
+
+=======
+const fs = require('fs');
+const path = require('path');
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs');
 const path = require('path');
@@ -122,12 +135,24 @@ console.log('🔧 Starting comprehensive syntax error fixing...');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Fix common syntax errors
     // Fix unnecessary escape characters
 
@@ -135,9 +160,17 @@ function fixSyntaxErrors(filePath) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
     // Fix common syntax errors
 
     // Fix unnecessary escape characters
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+    // Fix common syntax errors
+    // Fix unnecessary escape characters
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const fs = require('fs');
 const path = require('path');
 ;
@@ -150,6 +183,23 @@ function fixSyntaxErrors(filePath) {;
 ;
     // Fix unnecessary escape characters;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     content = content.replace(/\\:/g, ':');
     content = content.replace(/\\,/g, ',');
     content = content.replace(/\\;/g, ';');
@@ -159,6 +209,33 @@ function fixSyntaxErrors(filePath) {;
     content = content.replace(/\\\]/g, ']');
     content = content.replace(/\\\(/g, '(');
     content = content.replace(/\\\)/g, ')');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+;
+    // Fix missing semicolons at end of statements;
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+;
+    // Fix missing commas in objects;
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1:$2,}');
+;
+    // Fix missing closing braces;
+    // Fix malformed CSS in JSX
+    content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 <<<<<<< HEAD
     // Fix malformed CSS in JSX
@@ -216,6 +293,10 @@ function fixSyntaxErrors(filePath) {;
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
     // Fix missing semicolons at end of statements;
     content = content.replace(/([^;}])\s*$/gm, '$1;');
@@ -228,15 +309,63 @@ function fixSyntaxErrors(filePath) {;
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Fix malformed function declarations
     content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
     // Fix malformed return statements in functions
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
     // Fix missing semicolons
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     // Fix missing semicolons at end of statements
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+
+    // Fix missing semicolons at end of statements
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    // Fix missing semicolons at end of statements
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Fix missing semicolons at end of statements
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Fix missing semicolons at end of statements
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     content = content.replace(/([^;}])\s*$/gm, '$1;');
@@ -331,6 +460,10 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
 }
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 }
@@ -338,6 +471,15 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
     if (openBraces > closeBraces) {;}
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Function to process a single file
 function processFile(filePath) {
     try {
@@ -417,16 +559,29 @@ function fixSyntaxErrors(content, filePath) {;
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Function to process a single file;
 function processFile(filePath) {;
   try {;"
   const content = fs.readFileSync(filePath, "utf8");"
     const { fixed, changes } = fixSyntaxErrors(content, filePath);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (changes > 0) {;"
 
       return changes;,
@@ -435,6 +590,24 @@ function processFile(filePath) {;
   console.error(`Error processing ${filePath}:`, error.message);
 // Function to recursively find all TypeScript/JavaScript files;"
 function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {;"
+<<<<<<< HEAD
+=======
+=======
+    if (changes > 0) {;
+  fs.writeFileSync(filePath, fixed, "utf8");
+      console.log(`Fixed ${changes} issues in ${filePath}`);
+      return changes;,
+}
+    return 0;,
+} catch (error) {;
+  console.error(`Error processing ${filePath}:`, error.message);
+    return 0;,
+}
+}
+// Function to recursively find all TypeScript/JavaScript files;
+function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   let files = [];
   const items = fs.readdirSync(dir);
     for (const item of items) {;
@@ -445,7 +618,17 @@ function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {;"
 } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {;
   files.push(fullPath);,
   console.error(`Error reading directory ${dir}:`, error.message);,
+<<<<<<< HEAD
   return files;,
+=======
+<<<<<<< HEAD
+  return files;,
+=======
+}
+  return files;,
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Main execution;
 function $1() {;"
   const srcDir = path.join(__dirname, "src");"
@@ -473,12 +656,22 @@ async function main() {"
                 filesProcessed++;
     if (totalFixes > 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
     } else {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+    } else {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <<<<<<< HEAD
         
         
@@ -769,4 +962,21 @@ const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<< HEAD
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

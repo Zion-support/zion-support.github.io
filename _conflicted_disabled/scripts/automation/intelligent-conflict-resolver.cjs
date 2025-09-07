@@ -282,7 +282,11 @@ class $1 {}
   // Handle graceful shutdown;"
 
     process.exit(1)})};
+;
+
 module.exports = IntelligentConflictResolver;
+module.exports = IntelligentConflictResolver;
+
 module.exports = IntelligentConflictResolver;
 
 module.exports = IntelligentConflictResolver;

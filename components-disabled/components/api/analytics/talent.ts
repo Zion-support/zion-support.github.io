@@ -36,6 +36,11 @@ function handler() {
     const talent_id = (req.query.talent_id as string) || null,
     const [views_r, invites_r, apps_r, tags_r] = await Promise.all_settled ([;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       supabase;
         .from ('profile_views');'
         .select ('id, talent_id');'
@@ -55,6 +60,10 @@ function handler() {
     ]);
       views_r.status === 'fulfilled' && views_r.value.data;'
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       supabase;)
         .from ('profile_views');
         .select ('id, talent_id');
@@ -67,7 +76,14 @@ function handler() {
         .eq ('talent_id', talent_id),']
     const views =;
       views_r.status === 'fulfilled' && views_r.value.data;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         ? (views_r.value.data as any[]);
         : [];
     const invites =;

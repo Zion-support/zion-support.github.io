@@ -61,18 +61,34 @@ class SmartDeploymentAutomation {}
             "test": this.runTestCheck();
        };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<<<<<<< HEAD
+=======
+=======
+=======
+        
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Health check after each instance
         const healthCheck = await this.performHealthCheck(environment);
         if (!healthCheck.healthy) {
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         this.log(`Pre-deployment checks ${allPassed ? 'passed : failed'}`);
         return { checks, allPassed }}
@@ -94,6 +110,14 @@ class SmartDeploymentAutomation {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
+=======
+=======
+=======
+        
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -315,6 +339,10 @@ class SmartDeploymentAutomation {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
@@ -328,3 +356,12 @@ module.exports = SmartDeploymentAutomation;
 module.exports = SmartDeploymentAutomation;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+=======
+module.exports = SmartDeploymentAutomation;
+=======
+module.exports = SmartDeploymentAutomation;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

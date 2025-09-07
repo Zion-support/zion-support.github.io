@@ -254,7 +254,14 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                       <Image;
                         src={application.talent_profile.profile_picture_url} ;
                         alt={candidateName}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                         width={32} // Match h-8 w-8;
                         height={32} // Match h-8 w-8;
                         className="rounded-full object-cover // Ensure rounded and object-cover;
@@ -262,11 +269,22 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                         priority={false} // Avatars are usually not LCP;
                       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                    ) : (;
+                      <User className="h-4 w-4" />;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     ) : (<User className=h-4 w-4" />;
 =======
                     ) : (;
                       <User className="h-4 w-4" />;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     )}
                   </AvatarPrimitive>;
                   <div>;
@@ -288,6 +306,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   <DropdownMenuContent align="end>
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     </p>;
                   </div>;
                 </div>;
@@ -301,6 +324,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                   </AvatarPrimitive>;
                   <div>;
@@ -324,11 +351,20 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                     </DropdownMenuItem>;
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       <BriefcaseIcon;
                         className='h-4 w-4 mr-2;
                         aria-hidden=true';
                       />{' }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       <BriefcaseIcon
                         className='h-4 w-4 mr-2'
                         aria-hidden='true'
@@ -347,9 +383,18 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                         <a
                           href={application && application.resume.file_url}
 <<<<<<< HEAD
+<<<<<<< HEAD
                           target=_blank';
                           rel='noopener noreferrer>;
 =======
+=======
+=======
+<<<<<<< HEAD
+                          target=_blank';
+                          rel='noopener noreferrer>;
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           target='_blank'
                           rel='noopener noreferrer'>;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -403,10 +448,21 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                 )}
               {/* Notes Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              {showNotes && (;
+                <div className='mt-2'>;
+                  <Textarea
+                    placeholder='Add private notes about this candidate...'
+                    className='text-xs min-h-[60px]'
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               {showNotes && (<div className='mt-2>;
                   <Textarea;
                     placeholder=Add private notes about this candidate...';
                     className='text-xs min-h-[60px];
+>>>>>>> merged-prs-20250907-203621
                     value={notes}
 :src/components/hiring-tracker/CandidateCard.tsx
                     onChange={e => setNotes(e.target.value)}                  />
@@ -508,6 +564,15 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        isOpen = {showHireModal,}
+        onClose = {() => setShowHireModal(false),}
+        application = {application,}
+        onConfirm = {handleHireConfirmed,}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         isOpen = {showHireModal}
         onClose = {() => setShowHireModal(false)}
         application = {application}
@@ -714,6 +779,7 @@ function CandidateCard() {const [show_notes, setShowNotes] = useState (false)con
       />
     </>
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> merged-prs-20250907-203621
       />
     </>
 :src/components/hiring-tracker/CandidateCard.tsx
@@ -810,6 +876,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   //Here you would save the notes to the database //For now, well just show a toast toast ({
   setShowNotes (false);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+  //Hiring process completed via the modal toast ({;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
   //Hiring process completed via the modal toast ({
   application && application.id ;
@@ -826,6 +899,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
   //Hiring process completed via the modal toast ({;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   application.id ;
 }index= {
   index ;
@@ -853,6 +930,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }//Match h-8 w-8 className="rounded-full object-cover" //Ensure rounded and object-cover onError= {
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   application && application.talent profile?.profile picture url && !avatarError ? (<Imagesrc= {
   application && application.talent profile && profile.profile picture url 
 }alt= {
@@ -864,6 +946,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }//Match h-8 w-8 className=rounded-full object-cover" //Ensure rounded and object-cover onError= {
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   () => setAvatarError (true) ;
 }priority= {
   false ";
@@ -875,6 +961,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   application.talent id ;
 }` ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }</h4> </p> </div> </div> <DropdownMenu> <DropdownMenuTrigger asChild> <Button variant=ghost className="h-8 w-8 p-0"> <MoreVertical className=h-4 w-4 /> </Button> </DropdownMenuTrigger> </DropdownMenuItem> <DropdownMenuItem asChild> <Linkhref= {
   `/messages?talentId=$ {
   application && application.talent id 
@@ -893,6 +984,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   formatDistanceToNow (new Date (application && application.created at), {
   formatDistanceToNow (new Date (application.created at), {
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }> Message </Link> </DropdownMenuItem> {;
   application.resume?.file url && (<DropdownMenuItem asChild> <a href= {;
   application.resume.file url ";
@@ -911,6 +1006,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> {
   /* Match Score */ ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }{;
   )//Here you would save the notes to the database //For now, we'll just show a toast toast ({setShowNotes (false)}//Hiring process completed via the modal toast ({application && application.id ;
 }index= {index ;
@@ -959,6 +1059,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   application 
   application.match score !== null && application.match score !== undefined && (<div className=mb-2> <ScoreBadge application= {
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }{";
   application.match score !== null && application.match score !== undefined && (<div className="mb-2"> <ScoreBadge application= {;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -978,7 +1082,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   /* Hire Confirmation Modal */ ;
 }<HireConfirmationModal isOpen= {
   showHireModal ;
+<<<<<<< HEAD
+}onClose= {;
+=======
 }onClose= {
+>>>>>>> merged-prs-20250907-203621
 origin/cursor/automate-test-improve-and-merge-code-2533
   () => setShowHireModal (false) ;
 }application= {
@@ -987,6 +1095,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   handleHireConfirmed ;
 }/> </>) ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }'"}
 
 }"
@@ -1031,6 +1144,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Draggable>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
@@ -1041,8 +1158,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       />;
     </>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   )}}'";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+  )}}'";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 }

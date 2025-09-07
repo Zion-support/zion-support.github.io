@@ -8,6 +8,34 @@ const AiConsultingChat: NextPage = () => ;
       <Head />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const AiConsultingChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />AiConsultingChat - Zion Tech Solutions</title>;
+        <meta name = \"description\" content=\"AiConsultingChat blog post\" />{\" \"}
+;
+  const AiConsultingChat: NextPage = () => ;
+  return (<div />;
+      <Head /></Head>;<meta name=\"description\" content=\"AiConsultingChat blog post\" />;
+      </Head>;
+      </Head>;<meta name=\"description\" content=\"AiConsultingChat blog post\" />;
+      </Head>;
+
+import type { NextPage } from \"next\";
+import Head from \"next/head\";
+import Link from \"next/link\";
+
+const AiConsultingChat: NextPage = () => {
+ ;
+  return (
+    <div />
+      <Head />
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title>AiConsultingChat - Zion Tech Solutions</title>;
@@ -40,6 +68,10 @@ const AiConsultingChat: NextPage = () => {
     <div />
       <Head />
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const AiConsultingChat: NextPage = () => {;
   return (
     <div />;
@@ -47,16 +79,32 @@ const AiConsultingChat: NextPage = () => {
         <title />AiConsultingChat - Zion Tech Solutions</title>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 return (;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import type { NextPage } from "next";""
 import Head from "next/head";""
 import Link from "next/link";""
 const AiConsultingChat: NextPage = () => {
   return (
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div>
 </div>
       <Head>
@@ -68,6 +116,12 @@ const AiConsultingChat: NextPage = () => {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const AiConsultingChat: NextPage = () => {
   return (
     <div />
@@ -75,7 +129,14 @@ const AiConsultingChat: NextPage = () => {
 
       </Head>;
 
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <main>
         <h1>AiConsultingChat</h1>
         <p>Blog content coming soon...</p>
@@ -114,17 +175,33 @@ import Head from './next / head';
 import Link from './next / link';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title > AiConsultingChat - Zion Tech Solutions</title>;
         <meta name="description" content="AiConsultingChat blog post" />{" "}"
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const AiConsultingChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> AiConsultingChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"AiConsultingChat blog post\" />{\" \"}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </Head>;
       <main />;
         <h1  /> AiConsultingChat</h1>;
@@ -149,17 +226,33 @@ export default AiConsultingChat;<div />;
   )},export default AiConsultingChat;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (<div>;
       <Head>;
         <title>AiConsultingChat - Zion Tech Solutions</title>;
         <meta name="description" content="AiConsultingChat blog post" />{" "}"
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const AiConsultingChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />AiConsultingChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"AiConsultingChat blog post\" />{\" \"}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </Head>;
       <main />;
         <h1 />AiConsultingChat</h1>;
@@ -176,9 +269,19 @@ export default AiConsultingChat;<title />AiConsultingChat - Zion Tech Solutions<
 
 export default AiConsultingChat;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const AiConsultingChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+const AiConsultingChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const AiConsultingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />
@@ -201,9 +304,19 @@ export default AiConsultingChat;
         <title />AiConsultingChat - Zion Tech Solutions</title>
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const AiConsultingChat: NextPage = () => {
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+const AiConsultingChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const AiConsultingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
  ;
   return (
     <div />

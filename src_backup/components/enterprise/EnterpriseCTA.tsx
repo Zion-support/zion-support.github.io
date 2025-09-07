@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React from 'react;
 import { Button } from @/components/ui/button';
@@ -17,6 +22,10 @@ export function EnterpriseCTA() {
           <div className='bg-card rounded-lg shadow-sm p-8 md:p-12>
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 return (
     <section id=contact' className='py-20 px-4 md:px-6>
       <div className='container mx-auto max-w-6xl'>
@@ -81,7 +90,14 @@ return (
                   <li className='flex gap-3'>'
                     <div className='h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0'>'
                       <span className='text-primary text-sm font-medium'>
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Calendar } from lucide-react';
 
@@ -147,7 +163,14 @@ export function EnterpriseCTA() {
                   <li className="flex gap-3">"
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">"
                       <span className="text-primary text-sm font-medium">4</span>
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
@@ -161,6 +184,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 import React from react';
 import { Button  } from '@/components/ui/button;
@@ -350,6 +378,10 @@ export function EnterpriseCTA() {
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </section>
 
     <section id="contact className=py-20 px-4 md: px-6">;
@@ -530,6 +562,12 @@ export /**;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      </div>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>;</section>)})}</section>)})}
     </section>);
 }
@@ -540,3 +578,7 @@ export /**;
 =======
       </div>;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

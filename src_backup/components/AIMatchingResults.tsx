@@ -1,4 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState } from "react";
+import { MatchResultItem } from "@/lib/ai-matchmaking";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+import Skeleton from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface AIMatchingResultsProps  {matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean;
@@ -137,6 +151,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from @/components/ui/tabs";
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react
 import Skeleton from "@/components/ui/skeleton;
 import { cn } from @/lib/utils";
+>>>>>>> merged-prs-20250907-203621
 interface AIMatchingResultsProps {
   matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
@@ -287,6 +302,11 @@ export function AIMatchingResults({;
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     )}
   return (<div className=space-y-4'>;
       <Tabs;
@@ -356,6 +376,10 @@ export function AIMatchingResults({matches;
   isLoading;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">
@@ -404,6 +428,11 @@ export function AIMatchingResults({matches;
                           <Avatar className=h-12 w-12 border border-zion-blue-light">
                             {match.image ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                               <AvatarImage
                         match.category.toLowerCase().includes("talent) ? bg-zion-cyan" :;
                         match.category.toLowerCase().includes("service) ? bg-zion-purple" :;
@@ -524,6 +553,10 @@ if ( {) {$2;
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                                   </div>
                                 </div>
@@ -531,6 +564,14 @@ if ( {) {$2;
                             </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                            <div className="mt-2 flex flex-wrap gap-1">
+                              <Badge variant="outline">
+                                {match.category}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                             <div className="mt-2 flex flex-wrap gap-1>
                               <Badge variant=outline">
                             </div>;
@@ -570,6 +611,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 
 }
+>>>>>>> merged-prs-20250907-203621
                               </Badge>
                               {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (,
                                 <Badge key={i} variant="outline>
@@ -594,6 +636,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Tabs>
     </div>
   )
+<<<<<<< HEAD
+};
+=======
 }
 =======
                             <div className="mt-2 flex flex-wrap gap-1">
@@ -610,3 +655,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -9,7 +9,14 @@ import { Button } from @/components/ui/button'
 
 =======
 import { Button } from '@/components/ui/button'
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react',
 import Link from 'next/link';
 import { Button  } from '@/components/ui/button';
@@ -50,6 +57,11 @@ class ErrorBoundary extends React.Component {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   title: string;
   subtitle: string;
   cta: string;
@@ -145,6 +157,10 @@ import { Button } from @/components/ui/button',
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip,
 interface EmptyStateProps {
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
@@ -198,6 +214,11 @@ const EmptyState: React.FC < EmptyStateProps> = ({
   cta,
   href,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   has_session}) => {  return (
     <div className='text - center py - 16>;
             ) : (<Button disabled>{cta}</Button>;const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {return (<div className=text-center py-16">;
@@ -224,6 +245,10 @@ const EmptyState: React.FC < EmptyStateProps> = ({title,subtitle,cta,href,has_se
       <div className=bg - zion - blue / 30 p - 6 rounded - full mb - 6 inline - flex'>;
         <MessageSquare className='h - 10 w - 10 text - zion - purple />;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   has_session,
 }) => {  return (
     <div className='text - center py - 16'>;
@@ -251,6 +276,11 @@ const EmptyState: React.FC < EmptyStateProps> = ({title,subtitle,cta,href,has_se
 export default EmptyState;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
 
@@ -265,6 +295,10 @@ export default EmptyState;
 
 },
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 },;
 >>>>>>> origin/chore/fix-lint-and-merge
 export default EmptyState;
@@ -274,6 +308,13 @@ export default EmptyState;
     </div>
 );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+export default EmptyState;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 },export default EmptyState;</Tooltip>;
       </TooltipProvider>;
@@ -284,3 +325,7 @@ export default EmptyState;
 };
 export default EmptyState;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

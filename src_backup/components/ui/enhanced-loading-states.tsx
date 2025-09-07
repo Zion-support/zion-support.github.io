@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 import React, { useState, useEffect } from 'react;
@@ -18,11 +23,22 @@ import {Loader2;
   Zap;
 } from 'lucide-react'; import { Button  } from '@/components/ui/button';
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Card, CardContent  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { cn  } from '@/lib/utils';
@@ -183,6 +199,11 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
 
             initial={{ opacity: 0, x: -20 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   showText?: boolean;text?: string;export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = md,variant = 'default',className,showText = false,text = Loading...}) => {  const sizeClasses = {sm: 'h-4 w-4',md: h-6 w-6,lg: 'h-8 w-8',xl: h-12 w-12}const variantClasses = {default: 'text-muted-foreground',primary: text-primary,success: 'text-green-500',warning: text-yellow-500,error: 'text-red-500'}variant?: default | 'primary' | success | 'warning' | error;
   className?: string;
   showText?: boolean;
@@ -276,6 +297,10 @@ interface ProgressiveLoadingProps  {steps: Array<{ id: string, label: string, du
         ))}initial={{ opacity: 0, x: -20 }}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
             transition={{ delay: index * 0.1 }}
           >
@@ -446,6 +471,11 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
           title: title || 'Something went wrong}
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>)}
 // Enhanced skeleton loader;
 interface SkeletonProps  {</div>;
@@ -475,6 +505,10 @@ interface SkeletonProps  {</div>;
           animate={{ scale: 1, opacity: 1 }}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export const Skeleton: React.FC<SkeletonProps> = ({
   className,
@@ -519,16 +553,32 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
           transition={{ duration: 0.3 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         >;
           <Icon className={cn('mx-auto mb-4 h-12 w-12, config.color)} />;
           <h3 className="text-lg font-semibold mb-2>{config.title}</h3>;
           <p className=text-muted-foreground mb-6 max-w-md mx-auto">;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         >
           <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />
           <h3 className="text-lg font-semibold mb-2">{config.title}</h3>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {config.description}
           </p>
 
@@ -538,6 +588,11 @@ export const Skeleton: React.FC<SkeletonProps> = ({
               </summary>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           {error && process.env.NODE_ENV === development' && (class_name?: string;
   variant?: 'text | circular' | 'rectangular | card';
   animation?: 'pulse | wave' | 'none;
@@ -645,6 +700,10 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {typeof error === 'string' ? error : error.message}
 
           transition={{ duration: 0 && 0.3 }}>;
@@ -680,6 +739,11 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
             )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           )}<div className=flex flex-col sm:flex-row gap-2 justify-center>;
             {canRetry && (<Button onClick={onRetry} variant='default'>;
                 <RefreshCw className=h-4 w-4 mr-2 />;<div className=flex flex-col sm:flex-row gap-2 justify-center>;
@@ -718,6 +782,10 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
             {secondaryAction && (
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {action && (;
 
               <Button;
@@ -741,6 +809,11 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
               <Button onClick={secondaryAction.onClick} variant=ghost>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </Button>;
             )}{action.label}
               </Button>;
@@ -761,6 +834,10 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
           </div>;{!isOnline && (<div className=mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 {secondaryAction.label}
               </Button>;
             )}
@@ -817,7 +894,14 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
               </div>;
 
             )}
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </CardContent>;
         </Card>;
       ))}
@@ -921,6 +1005,14 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
 
           </CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        </Card>;
+      ))}
+    </div>;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </Card>)}export const LoadingGrid: React.FC<LoadingGridProps> = ({count = 8,columns = 4,variant = 'card'},// Loading state for lists/grids;
 interface LoadingGridProps  {count?: number,columns?: number,variant?: card | 'list' | table,className?: string;
 }</CardContent>;
@@ -983,6 +1075,10 @@ interface PerformanceIndicatorProps  {isLoading?: boolean,loadTime?: number,item
         </Card>;
       ))}
     </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 },;
 // Performance indicator;
@@ -991,7 +1087,14 @@ interface PerformanceIndicatorProps {;
   loadTime?: number,;
   itemCount?: number,;
   className?: string;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 
   isLoading = false,

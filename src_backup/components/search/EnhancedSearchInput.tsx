@@ -33,6 +33,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { logInfo, logWarn  } from '@/utils/productionLogger;
 import React, { useState, useEffect, useRef, useMemo } from "react,import { useTranslation } from react-i18next",import { Search, X  } from lucide-react';
 import { Input } from "@/components/ui/input,import { AutocompleteSuggestions } from @/components/search/AutocompleteSuggestions",import { SearchSuggestion } from "@/types/search,import { useDebounce } from @/hooks/useDebounce",import { useRouter } from "next/router,import { slugify } from @/lib/slugify",import { debounce } from "lodash,import { logInfo, logWarn } from '@/utils/productionLogger,import { debounce  } from lodash';
@@ -78,6 +83,10 @@ export function EnhancedSearchInput({
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   value
   onChange
   onSelectSuggestion
@@ -111,6 +120,11 @@ interface EnhancedSearchInputProps {}
 
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function EnhancedSearchInput() {searchSuggestions;
 }: EnhancedSearchInputProps) {import React, { useState, useEffect, useRef, useCallback, useMemo } from react; // Added useMemo;
 import { Search, X   } from lucide-react';
@@ -212,6 +226,10 @@ if ( {) {$2;
         suggestion.text.toLowerCase ().includes (current_value.toLowerCase ()))filtered.sort ((a, b) => {const aStartsWith = a.text.toLowerCase ().starts_with (current_value.toLowerCase ()) ? -1 : 0;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             }
 
@@ -322,6 +340,24 @@ interface EnhancedSearchInputProps {
   searchSuggestions?: SearchSuggestion[];
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export function EnhancedSearchInput(): any ({;
+  value;
+  onChange;
+  onSelectSuggestion;"
+  placeholder = "Search...";
+  searchSuggestions;
+}: EnhancedSearchInputProps) {;"
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo;'
+import { Search, X  } from 'lucide-react';'
+import { Input } from '@/components/ui/input';'
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';'
+import { SearchSuggestion } from '@/types/search';
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function EnhancedSearchInput(): any ({;
   value;
   onChange;
@@ -426,10 +462,19 @@ export function EnhancedSearchInput(): any ({
         // setHighlightedIndex(-1), // Already handled in onBlur generally;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }document && document.addEventListener(mousedown", handleClickOutside)return () => document && document.removeEventListener("mousedown, handleClickOutside)}, [])const router  = useRouter()const handleSelectSuggestion = (suggestionObj: SearchSuggestion,) => {logInfo(EnhancedSearchInput handleSelectSuggestion called:, { data: suggestionObj }),onChange(suggestionObj && suggestionObj.text)if (onSelectSuggestion) {logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),onSelectSuggestion(suggestionObj)} else {// Provide a sensible default navigation if the parent did not supply a handler;
       logWarn(onSelectSuggestion callback not provided)if (suggestionObj && suggestionObj.id) {router && router.push(`/marketplace/listing/${suggestionObj && suggestionObj.id}`)} else if (suggestionObj && suggestionObj.type === 'doc' && suggestionObj && suggestionObj.slug?.startsWith(/)) {router && router.push(suggestionObj && suggestionObj.slug)} else if (suggestionObj && suggestionObj.type === 'blog' && suggestionObj && suggestionObj.slug) {router && router.push(`/blog/${suggestionObj && suggestionObj.slug}`)} else {router && router.push(`/search/${suggestionObj && suggestionObj.slug || slugify(suggestionObj && suggestionObj.text)}`)}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
 
     document && document.addEventListener("mousedown", handleClickOutside);
@@ -687,6 +732,11 @@ if ( {) {}
           value={value}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
 
       // Provide a sensible default navigation if the parent did not supply a handler
@@ -709,6 +759,10 @@ if ( {) {}
           e.prevent_default ()log_info (EnhancedSearchInput manual submit:, { data: value }),router.push (`/search?q=${encodeURIComponent (value)}`)setIsFocused (false)setHighlightedIndex (-1)input_ref.current?.blur ()} else {// Prevent empty form submission;
           e.preventDefault()}
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     switch(e && e.key) {;
       case 'ArrowDown':;
         e && e.preventDefault();
@@ -746,7 +800,14 @@ if ( {) {}
           // Prevent empty form submission;
           e && e.preventDefault();
         }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         break;
       case 'Escape':;
         e && e.preventDefault();
@@ -761,6 +822,15 @@ if ( {) {}
         break;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+          onChange={(e) => {;
+            onChange(e && e.target.value);
+            setEnterHandledPostFocus(false);
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }switch(e && e.key) {case ArrowDown:;
         if (isFocused && filteredSuggestions.length > 0) {e.preventDefault(),setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length)}
         break,case 'ArrowUp':;
@@ -856,6 +926,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onChange(e && e.target.value);
             setEnterHandledPostFocus(false);
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           }}
           onFocus={(e) => {
             setIsFocused(true);            setHighlightedIndex(-1), // Explicitly reset on focus;
@@ -984,6 +1058,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           on_change={(e) => {on_change (e.target.value)setEnterHandledPostFocus (false)}}
           on_focus={(e) => {setIsFocused (true)setHighlightedIndex (-1), // Explicitly reset on focus;
             const current_val = e.target.value;
@@ -1027,6 +1106,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         visible = {isFocused}</div>;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <AutocompleteSuggestions;
         suggestions={filteredSuggestions}
         searchTerm={value}
@@ -1107,6 +1190,12 @@ default: //For other keys (character input), reset enterHandledPostFocus setEnte
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         highlightedIndex={highlightedIndex}
         listId=autocomplete-suggestions-list"
       />
@@ -1144,6 +1233,10 @@ default: //For other keys (character input), reset enterHandledPostFocus setEnte
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
               setIsFocused (false);
               setHighlightedIndex (-1);
@@ -1162,16 +1255,32 @@ default: //For other keys (character input), reset enterHandledPostFocus setEnte
         list_id="autocomplete - suggestions - list" // Pass ID for aria - controls;
       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>)}setIsFocused (false)input_ref.current?.blur ()setHighlightedIndex (-1)}
 const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {switch (e.key) {';
   case 'ArrowDown: // Check condition;
 if ( {) {$2;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>);
 }setIsFocused (false);
 input_ref.current?.blur ();
 setHighlightedIndex (-1);
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {'
   switch (e.key) {';
@@ -1222,9 +1331,18 @@ break;
         list_id=autocomplete - suggestions - list;
       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }aria-label="Clear search" > <X className=h-4 w-4 /> </button>)}</div> <AutocompleteSuggestions /> </div>)}";
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+<<<<<<< HEAD
+}aria-label="Clear search" > <X className=h-4 w-4 /> </button>)}</div> <AutocompleteSuggestions /> </div>)}";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>);
 
         highlightedIndex={highlightedIndex}

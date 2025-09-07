@@ -72,6 +72,11 @@ export function ITServicePricingTable() {
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState, useMemo  } from react';
 import {onsiteServicePricing,CountryPricing} from '@/data/onsiteServicePricing;
 import { Input  } from @/components/ui/input';
@@ -154,6 +159,7 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
               <TableHead className="text-zion-cyan font-medium>;
                 <Button;
                   variant=ghost";
+>>>>>>> merged-prs-20250907-203621
     }
     
     // Sort data
@@ -246,6 +252,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               </TableHead>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <TableHead className="text-right text-zion-cyan font-medium">
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light;
                 >;
                   <span>Country</span>;
@@ -279,6 +291,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ))) : (<TableRow>;
                 <TableCell;
               <TableHead className="text-right text-zion-cyan font-medium>
+>>>>>>> merged-prs-20250907-203621
                 <Button 
                   variant=ghost",
                   onClick={() => handleSort("pricePerIncident)}
@@ -319,24 +332,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <TableCell
                   colSpan={2}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   className=text-center py-10 text-zion-slate-light';
                 >;
                   No countries match your search;
                 </TableCell>;
               </TableRow>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   className='text-center py-10 text-zion-slate-light'
                 >
                   No countries match your search
                 </TableCell>
               </TableRow>
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             )}
           </TableBody>
         </Table>
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  )
+}
+;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </TableBody>;
         </Table>;
       </div>;
@@ -347,3 +384,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   );
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

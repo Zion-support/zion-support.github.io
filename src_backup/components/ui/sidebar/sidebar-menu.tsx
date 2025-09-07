@@ -76,6 +76,11 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
       return (;
         <a;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 return (<a;
           href={href}
     return(<button;
@@ -88,6 +93,10 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement>  
 }const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(({ icon, active, children, href, target, badge, className, ...props }, ref) => {if (href) {return (<a;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           href={href}
           target={target}
           rel={target === _blank" ? "noopener noreferrer : undefined}
@@ -143,16 +152,32 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement>  
         {...props}
       >"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className=flex items-center gap-2>"
           {icon && <span className="text-muted-foreground>{icon}</span>}
           <span>{children}</span>;
         </div>;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="flex items-center gap-2">"
           {icon && <span className="text-muted-foreground">{icon}</span>}
           <span>{children}</span>
         </div>
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         {badge && <span>{badge}</span>}
       </button>;
     );
@@ -219,7 +244,14 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
 export { SidebarMenuItem, SidebarMenuGroup }
 =======
 },;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import React, { forwardRef } from 'react;
 import { ChevronDown } from lucide-react';
@@ -236,6 +268,12 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   target?: string;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const SidebarMenuItem = null;
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
   )},export { SidebarMenuItem, SidebarMenuGroup },),SidebarMenuItem.displayName = SidebarMenuItem,interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement>  {title: string,children: React.ReactNode;
 }const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {return (<div className="space-y-1" {...props}>;
@@ -252,3 +290,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement>  
 =======
 const SidebarMenuItem = null;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

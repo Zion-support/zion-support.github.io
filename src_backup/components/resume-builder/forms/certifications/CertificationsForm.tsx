@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 return (
 
@@ -15,6 +16,39 @@ return (
 
       {certifications && certifications.length > 0 && (;
 
+=======
+
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
+import { Form } from '@/components/ui/form';
+import { Certification } from '@/types/resume';
+import { Loader2 } from 'lucide-react'
+import { useResume } from '@/hooks/useResume';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { format } from 'date-fns';
+import { CertificationsList } from './CertificationsList';
+import { CertificationFormFields } from './CertificationFormFields';
+=======
+<<<<<<< HEAD
+=======
+return (
+
+    <div className='space-y-6'>;
+      <div>;
+        <h2 className='text-xl font-semibold mb-2'>;
+          Certifications & Licenses;
+        </h2>;
+        <p className='text-muted-foreground'>;
+          Add any professional certifications, licenses, or credentials you have;
+          earned.;
+        </p>;
+      </div>;
+
+      {certifications && certifications.length > 0 && (;
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 >>>>>>> origin/chore/fix-lint-and-merge
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -47,9 +81,15 @@ import { zodResolver  } from '@hookform/resolvers/zod';
 import { format  } from 'date-fns';
 import { CertificationsList  } from './CertificationsList';
 import { CertificationFormFields  } from './CertificationFormFields';
+<<<<<<< HEAD
 import { CertificationFormValues, certificationSchema } from './types';
 interface CertificationsFormProps {
 <<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+import { CertificationFormValues, certificationSchema } from './types';
+interface CertificationsFormProps {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   resumeId: string,
   certifications: Certification[],
   onComplete: () => void,
@@ -214,6 +254,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       credential_url: '})
                   } else {
                     onBack()
+<<<<<<< HEAD
+=======
 import { useState   } from 'react;
 import { useForm   } from react-hook-form';
 import { Button   } from '@/components/ui/button;
@@ -290,6 +332,7 @@ interface CertificationsFormProps  {resumeId: string;
                 {editingId ? Cancel' : 'Back}</Button>;
               <div className="flex gap-2>;
                 <Button type=submit" disabled={isLoading}>;
+>>>>>>> merged-prs-20250907-203621
                   }
                 }}
               >
@@ -350,6 +393,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  )
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
   );
   )
@@ -389,3 +439,7 @@ if ( {) {$2;
   editingId ? 'Cancel' : 'Back' ;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

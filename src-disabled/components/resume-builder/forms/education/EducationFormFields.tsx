@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
   })
   const handleSubmit = async (data: EducationFormValues) => {}
@@ -11,29 +14,72 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { format } from 'date-fns';
 import { Loader2 } from 'lucide-react';
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Button } from '@/components / ui / button';
 import { Textarea } from '@/components / ui / textarea';
 import { Input } from '@/components / ui / input';
 import { Checkbox } from '@/components / ui / checkbox';
 import { Alert, AlertDescription } from '@/components / ui / alert';
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { format } from 'date-fns';
 import { Loader2 } from 'lucide-react';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Button } from '@/components/ui/ button';
 import { Textarea } from '@/components/ui/ textarea';
 import { Input } from '@/components/ui/ input';
 import { Checkbox } from '@/components/ui/ checkbox';
 import { Alert, AlertDescription } from '@/components/ui/ alert';
+<<<<<<< HEAD
+=======
+import { Button } from @/components / ui / button';
+import { Textarea } from '@/components / ui / textarea;
+import { Input } from @/components / ui / input';
+import { Checkbox } from '@/components / ui / checkbox;
+import { Alert, AlertDescription } from @/components / ui / alert';
+import { Button } from @/components/ui/button';
+import { Textarea } from '@/components/ui/textarea;
+import { Input } from @/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox;
+import { Alert, AlertDescription } from @/components/ui/alert';
+import { Button } from '@/components/ui/ button;
+import { Textarea } from @/components/ui/ textarea';
+import { Input } from '@/components/ui/ input;
+import { Checkbox } from @/components/ui/ checkbox';
+import { Alert, AlertDescription } from '@/components/ui/ alert;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 origin/cursor/automate-test-improve-and-merge-code-2533
 import {
 
@@ -42,12 +88,28 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   FormMessage,
 } from '@/components/ui/ form';
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/ resume';
+<<<<<<< HEAD
+=======
+  FormMessage} from @/components/ui/ form';
+import { useState } from 'react;
+import { EducationFormFieldsProps } from ./types';
+import { Education } from '@/types/ resume;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Education } from '@/types / resume';
 // Define schema for form validation;
@@ -118,12 +180,24 @@ import { Education } from '@/types/resume';
 // Define schema for form validation
 const educationSchema = null;
 
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+<<<<<<< HEAD
+  return (
+
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   FormMessage,;
 } from '@/components/ui/form';
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
+<<<<<<< HEAD
+=======
+  FormMessage} from @/components/ui/form';
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 }
@@ -170,24 +244,50 @@ import { Form;
   FormField;
   FormItem;
   FormLabel;
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   FormMessage } from '@/components/ui/form';
 import { useState  } from 'react';
 import { EducationFormFieldsProps  } from './types';
 import { Education } from '@/types/resume';
+<<<<<<< HEAD
+=======
+  FormMessage } from @/components/ui/form';
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Define schema for form validation
 const educationSchema = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <form on_submit={form.handle_submit (handle_submit)} className='space - y-4'>;
   FormMessage  } from '@/components/ui/form';
 import { useState   } from 'react';
 import { EducationFormFieldsProps   } from './types';
+<<<<<<< HEAD
 // Define schema for form validation;
 const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.handle_submit (handle_submit)} className='space - y-4'>;
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+=======
+      <form on_submit={form.handle_submit (handle_submit)} className=space - y-4'>;
+  FormMessage  } from '@/components/ui/form;
+import { useState   } from react';
+import { EducationFormFieldsProps   } from './types;
+// Define schema for form validation;
+const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.handle_submit (handle_submit)} className=space - y-4'>;
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4>;
+=======
+  return (
+
+>>>>>>> merged-prs-20250907-203621
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 </div>
 pr-12325
           <FormField;
@@ -196,22 +296,44 @@ pr-12325
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel > Institution</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
                   <Input;
                     placeholder='University of California, MIT, etc.';{...field}
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  <Input;
+                    placeholder=University of California, MIT, etc.;{...field}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <Input;'
                     placeholder='University of California, MIT, etc.';
                     {...field}
                   />;
                 </FormControl>;
+<<<<<<< HEAD
                 <FormMessage />;control={form.control}name="institution";
+=======
+<<<<<<< HEAD
+                <FormMessage />;
+=======
+<<<<<<< HEAD
+                <FormMessage />;control={form.control}name="institution;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             render={({ field }: { field: any }) => (<FormItem>;
                 <FormLabel>Institution</FormLabel>;
                 <FormControl>;
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </FormItem>;
             )}/>;<FormField;
             control={form && form.control}
@@ -263,7 +385,15 @@ pr-12325
                 <FormControl>;
                   <Input type='date' {...field} value={field && field.value || ''} />                </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
               </FormItem>;<Input type='date' {...field} value={field.value || ''} />                </FormControl>;
+=======
+              </FormItem>;<Input type=date' {...field} value={field.value || '} />                </FormControl>;
+=======
+                <FormMessage />;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             control={form.control}
             name="institution""
 
@@ -328,14 +458,28 @@ pr-12325
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 
             )}
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+
+            )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           />
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           />;
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           />
 
             <FormField
@@ -358,11 +502,26 @@ pr-12325
             <FormField
               control={form.control}
 
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 
 
                     <Checkbox
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+<<<<<<< HEAD
+              )}
+
+            />;
+'
+            {!form && form.watch('is_current') && (;
+
+=======
+<<<<<<< HEAD
+
+
+                    <Checkbox
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                       checked={field.value}
                       onCheckedChange={field.onChange}
                     />
@@ -380,13 +539,21 @@ pr-12325
                     <FormLabel>I am currently studying here</FormLabel>;
                   </div>;
                 </FormItem>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               )}
 
             />;
 '
             {!form && form.watch('is_current') && (;
 
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+<<<<<<< HEAD
+            {!form && form.watch(is_current') && (;
+
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <FormField
                   <Input;
                     type="date";
@@ -441,7 +608,14 @@ pr-12325
             )}</div>;
         </div>;<FormField;
           control={form.control}
+<<<<<<< HEAD
           name='location';
+=======
+          name=location';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <FormField;
                 control={form && form.control}'
                 name='end_date'
@@ -487,7 +661,8 @@ pr-12325
           <FormField;
             control={form.control}'
             name='start_date';
-            render={({ field }: { field: any }) => (<FormItem>;
+            render={({ field }: { field: any }) => (
+              <FormItem>;
                 <FormLabel > Start Date</FormLabel>;
                 <FormControl>;'
                   <Input type='date' {...field} value={field.value || ''} />                </FormControl>;
@@ -498,28 +673,51 @@ pr-12325
             <FormField;
               control={form.control}'
               name='is_current';
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
               render={({ field }: { field: any }) => (<FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
               render={({ field }: { field: any }) => ('
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              render={({ field }: { field: any }) => (<FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+              render={({ field }: { field: any }) => ('
+              render={({ field }: { field: any }) => (<FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2>                  <FormControl>;
+              render={({ field }: { field: any }) => (
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
                     <Checkbox;
-                      checked = {field.value }
-                      onCheckedChange = {field.on_change }
+                      checked = {field.value, }
+                      onCheckedChange = {field.on_change, }
                     />;
                   </FormControl>;'
                   <div className='space - y-1 leading - none'>;
                     <FormLabel > I am currently studying here</FormLabel>;
                   </div>;
                 </FormItem>)}
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             />;
             {!form.watch ('is_current') && (<FormField;
                 control={form.control}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
               <FormField;
                 control={form.control}'
                 name='end_date';
-                render={({ field }: { field: any }) => (<FormItem>;
+                render={({ field }: { field: any }) => (
+                  <FormItem>;
                     <FormLabel > End Date</FormLabel>;
                     <FormControl>;'
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>;
@@ -529,19 +727,38 @@ pr-12325
 
           </div>;
         <FormField;
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
           control={form.control}
 
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+          control={form.control}
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         />;
 
 
         <FormField
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
           control={form.control}
 
           control={form && form.control}
           name='description'
+=======
+          control={form.control}
+
+          control={form && form.control}
+          name=description'
+=======
+>>>>>>> merged-prs-20250907-203621
+          name='description'
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Description (Optional)</FormLabel>
@@ -549,15 +766,29 @@ pr-12325
                 <Textarea'
                   placeholder='Notable achievements, courses, activities...''
                   className='min-h-[100px]'
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           control={form.control}/>;<FormField;
           control={form && form.control}control={form.control}name='description';
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel>Description (Optional)</FormLabel>;
               <FormControl>;
                 <Textarea;
+<<<<<<< HEAD
                   placeholder='Notable achievements, courses, activities...';
                   className='min-h-[100px]';
+=======
+                  placeholder='Notable achievements, courses, activities...;
+                  className=min-h-[100px]';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             </FormItem>)}
         />;
@@ -567,7 +798,13 @@ pr-12325
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel > Description (Optional)</FormLabel>;
               <FormControl>;
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Textarea;
                   placeholder='Notable achievements, courses, activities...';
                   className='min - h-[100px]';
@@ -587,8 +824,16 @@ pr-12325
               <FormLabel>Description (Optional)</FormLabel>;
               <FormControl>;
                 <Textarea;
+<<<<<<< HEAD
                   placeholder="Notable achievements, courses, activities...";
                   className="min-h-[100px]";
+=======
+                  placeholder="Notable achievements, courses, activities...;
+                  className=min-h-[100px]";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           name="location"
           render={({ field }: { field: any }) => (
@@ -616,7 +861,10 @@ pr-12325
                   {...field}
                 />;
               </FormControl>;
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <FormMessage />;
 
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
@@ -636,7 +884,13 @@ pr-12325
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
               <FormMessage />;{isEditing ? 'Update' : 'Add'} Education;
@@ -646,6 +900,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Form>;
   )/>;{error && (<Alert variant='destructive'>;
   )
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
   )
         />;
@@ -653,11 +910,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Alert variant='destructive'>;
             <AlertDescription>{error}</AlertDescription>;
           </Alert>;
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         )}<div className='flex justify-between pt-2'>;
           <Button type='button' variant='outline' onClick={onCancel}>            {isEditing ? 'Cancel' : 'Back'}
           </Button>;<Button type='submit' disabled={isLoading}>;
             {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         )}
 
             {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}'
@@ -666,10 +932,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </form>;
     </Form>;
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
   )}</FormItem>)}
         />;
         {error && (<Alert variant='destructive'>;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  )}</FormItem>)}
+        />;
+        {error && (<Alert variant='destructive>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   );
 
@@ -684,11 +962,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>;
         </div>;
       </form>;
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </Form>)}})
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     </Form>);
 }
+<<<<<<< HEAD
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 }})
 }
 ;
+=======
+}
+}})
+}
+<<<<<<< HEAD
+;
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

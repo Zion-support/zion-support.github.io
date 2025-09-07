@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ;
 import React, { useState } from 'react';
@@ -8,6 +14,7 @@ import { z  } from 'zod';
 import { Button  } from '@/components/ui/button';
 import { logInfo, logErrorToProduction  } from '@/utils/productionLogger';
 import {Form;
+>>>>>>> merged-prs-20250907-203621
 :src/components/disputes/DisputeForm.tsx
 import React, { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
@@ -16,11 +23,24 @@ import { z } from "zod",
 import { Button } from "@/components/ui/button";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
+<<<<<<< HEAD
+=======
+import React, { useState } from react';
+import { useForm, ControllerRenderProps } from 'react-hook-form;
+import { zodResolver } from @hookform/resolvers/zod';
+import { z } from 'zod;
+import { Button } from @/components/ui/button';
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React, { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
@@ -29,12 +49,27 @@ import {
   FormField;
   FormItem;
   FormLabel;
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
   FormMessage} from "@/components/ui/form",
 import { Textarea } from "@/components/ui/textarea";
 origin/cursor/automate-test-improve-and-merge-code-2533
   FormMessage} from "@/components/ui/form",
 import { Textarea } from "@/components/ui/textarea";
+=======
+  FormMessage} from "@/components/ui/form",
+import { Textarea } from "@/components/ui/textarea";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  FormMessage} from @/components/ui/form",
+import { Textarea } from "@/components/ui/textarea;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  FormMessage} from @/components/ui/form",
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import {
   Form,
@@ -42,15 +77,24 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
 :src/components/disputes/DisputeForm.tsx
+<<<<<<< HEAD
   FormMessage} from "@/components/ui/form",
 import { Textarea } from "@/components/ui/textarea",
 import {
+=======
+  FormMessage} from @/components/ui/form",
+import { Textarea } from "@/components/ui/textarea,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
+<<<<<<< HEAD
 :src/components/disputes/DisputeForm.tsx
   SelectValue} from "@/components/ui/select",
 import { Input } from "@/components/ui/input",
@@ -59,9 +103,15 @@ import { useDisputes } from "@/hooks/useDisputes",
 import { toast } from "sonner",
 import { FileText } from 'lucide-react'
 
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 if (onDisputeCreated) {
 
+>>>>>>> merged-prs-20250907-203621
   Form
   FormControl
   FormField
@@ -105,6 +155,8 @@ export function DisputeForm({
   const { createDispute } = useDisputes()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [files, setFiles] = useState<File[]>([])
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const formSchema = z.object({
   reason_code: z.string()
@@ -131,6 +183,7 @@ export function DisputeForm({
   const [files, setFiles] = useState<File[]>([]),
 
   const form = useForm<z.infer<typeof formSchema>>({
+<<<<<<< HEAD
 :src/components/disputes/DisputeForm.tsx
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -160,14 +213,13 @@ export function DisputeForm({
         reason_code: values.reason_code
         description: values.description
       })
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       const dispute = await createDispute({
         project_id: projectId,
         milestone_id: milestoneId,
         reason_code: values.reason_code,
-:src/components/disputes/DisputeForm.tsx
-        description: values.description}),
-      
 
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments
@@ -175,58 +227,105 @@ export function DisputeForm({
         if (files.length > 0) {
           // logInfo(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
+<<<<<<< HEAD
 :src/components/disputes/DisputeForm.tsx
         toast.success('Your dispute has been submitted')
         if (onDisputeCreated) {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           onDisputeCreated(dispute.id)
 
         }
     } catch (error) {
 
+<<<<<<< HEAD
 :src/components/disputes/DisputeForm.tsx
+<<<<<<< HEAD
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
+=======
+      logErrorToProduction(Error submitting dispute:', { data: error }),
+      toast.error("Failed to submit dispute. Please try again.)
+=======
+      logErrorToProduction('Error submitting dispute:', { data: error }),
+      toast.error("Failed to submit dispute. Please try again.")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
 
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const formSchema = null;
       toast.error("Failed to submit dispute. Please try again.")
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     } finally {
       setIsSubmitting(false)
     }
 
   return (
+<<<<<<< HEAD
     <div className="space-y-6">
       <div className="flex items-center space-x-2">
         <FileText className="h-5 w-5 text-primary" />
         <h2 className="text-xl font-semibold">Report an Issue</h2>
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <div className=space-y-6">
+      <div className="flex items-center space-x-2>
+        <FileText className=h-5 w-5 text-primary" />
+        <h2 className="text-xl font-semibold>Report an Issue</h2>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>
 
       
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
     <div className="space-y-6">
       <div className="flex items-center space-x-2">
         <FileText className="h-5 w-5 text-primary" />
         <h2 className="text-xl font-semibold">Report an Issue</h2>
       </div>
+<<<<<<< HEAD
 :src/components/disputes/DisputeForm.tsx
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
             control={form.control}
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+            name='reason_code'
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
 
 
+<<<<<<< HEAD
             name='reason_code'
+=======
+            name=reason_code'
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             render={({
               field
             }: {
@@ -243,8 +342,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+>>>>>>> merged-prs-20250907-203621
                     {Object.entries(disputeReasonLabels).map(
                       ([value, label]) => (
                         <SelectItem key={value} value={value}>
@@ -271,8 +376,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <FormLabel>Describe the issue in detail</FormLabel>
                 <FormControl>
                   <Textarea
+<<<<<<< HEAD
                     placeholder='Please provide specific details about the issue...'
                     className='min-h-[150px]'
+=======
+                    placeholder=Please provide specific details about the issue...'
+                    className='min-h-[150px]
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
@@ -293,6 +405,7 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
   FormMessage,;
 } from '@/components/ui/form';
@@ -311,6 +424,47 @@ import { useDisputes } from '@/hooks/useDisputes';
 import { toast } from 'sonner';
 import { FileText } from 'lucide-react';
 const formSchema = z && z.object({;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  FormMessage,;
+} from '@/components/ui/form';
+import { Textarea } from '@/components/ui/textarea';import {;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  SelectValue,;
+} from '@/components/ui/select';
+import { Input } from '@/components/ui/input';
+import { disputeReasonLabels } from '@/types/disputes';
+import { useDisputes } from '@/hooks/useDisputes';
+import { toast } from 'sonner';
+import { FileText } from 'lucide-react';
+const formSchema = z && z.object({;
+  FormMessage} from '@/components/ui/form;
+import { Textarea } from @/components/ui/textarea';import {
+
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue} from '@/components/ui/select;
+import { Input } from @/components/ui/input';
+import { disputeReasonLabels } from '@/types/disputes;
+import { useDisputes } from @/hooks/useDisputes';
+import { toast } from 'sonner;
+import { FileText } from lucide-react';
+const formSchema = z && z.object({
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   reason_code: z;
     .string();
     .min(1, { message: 'Please select a reason for the dispute' }),;
@@ -384,7 +538,10 @@ const formSchema = z && z.object({reason_code: z;
       }
     } catch (error) {logErrorToProduction('Error submitting dispute:', { data: error })toast && toast.error('Failed to submit dispute. Please try again.')} finally {setIsSubmitting(false)}
   }
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
 
 
@@ -399,6 +556,9 @@ const formSchema = z && z.object({reason_code: z;
             name='reason_code';
       setIsSubmitting (true)const dispute = await create_dispute ({project_id: project_id,milestone_id: milestone_id,reason_code: values.reason_code,description: values.description})// Check condition;
 if ( {) {$2;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
 import { FileText } from 'lucide-react';
 const formSchema = z.object({;
@@ -497,13 +657,23 @@ if ( {) {
 }
         // Future enhancement: Upload attachments;
         // For now we just log the files that would be uploaded;
-        // Check condition;
-if ( {) {$2;
+        // Check condition
+if ( {) {
+  $2
 }
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           // log_info (`Would upload ${files.length} files for dispute ${dispute.id}`)}
         toast.success ('Your dispute has been submitted')// Check condition;
 if ( {) {$2;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           // log_info (`Would upload ${files.length} files for dispute ${dispute.id}`);`
         }
         toast.success ('Your dispute has been submitted');
@@ -511,11 +681,42 @@ if ( {) {$2;
 if ( {) {
   $2
 }
-          onDisputeCreated (dispute.id)}
+          onDisputeCreated (dispute.id);
+        }
       }
+<<<<<<< HEAD
     } catch (error) {logErrorToProduction ('Error submitting dispute:', { data: error })toast.error ('Failed to submit dispute. Please try again.')} finally {setIsSubmitting (false)}
   }
   return (<div className='space - y-6'>;
+=======
+<<<<<<< HEAD
+    } catch (error) {
+      logErrorToProduction ('Error submitting dispute:', { data: error });
+      toast.error ('Failed to submit dispute. Please try again.');
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+  return (
+    <div className='space - y-6'>;
+=======
+<<<<<<< HEAD
+    } catch (error) {logErrorToProduction (Error submitting dispute:, { data: error })toast.error ('Failed to submit dispute. Please try again.')} finally {setIsSubmitting (false)}
+  }
+  return (<div className=space - y-6>;
+=======
+    } catch (error) {
+      logErrorToProduction ('Error submitting dispute:', { data: error });
+      toast.error ('Failed to submit dispute. Please try again.');
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+  return (
+    <div className='space - y-6'>;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className='flex items - center space - x-2'>;
         <FileText className='h - 5 w - 5 text - primary' />;
         <h2 className='text - xl font - semibold'>Report an Issue</h2>;
@@ -525,8 +726,16 @@ if ( {) {
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
           <FormField;
             control={form.control}
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
             name='reason_code';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            name='reason_code';
+            name=reason_code;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             render={({field;
             }: {z && z.infer<typeof formSchema>,'reason_code';
               >;
@@ -543,17 +752,29 @@ if ( {) {
                   onValueChange={field.on_change}
                   default_value={field.value}
                 >;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select a reason" />;
                     </SelectTrigger>;
                   </FormControl>;
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <SelectContent>;/>;<FormField;
             control={form && form.control}
             name='description';
                     {Object.entries (disputeReasonLabels).map (([value, label]) => (<SelectItem key={value} value={value}>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                   <SelectContent>;
 
           <FormField
@@ -571,7 +792,13 @@ if ( {) {
           <FormField;
             control={form.control}
             name='description';
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             render={({field;
             }: {z && z.infer<typeof formSchema>,'description';
               >;
@@ -581,7 +808,14 @@ if ( {) {
                     placeholder='Please provide specific details about the issue...';
                     className='min-h-[150px]';
               field: ControllerRenderProps<;
+<<<<<<< HEAD
                 z.infer < typeof form_schema>,'description';
+=======
+                z.infer < typeof form_schema>,'description;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             render={({
               field
             }: {
@@ -608,7 +842,13 @@ if ( {) {
                     {...field}
                   />;
                 </FormControl>;
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <FormMessage />;/>;<FormItem>;
             <FormLabel>Attachments (optional)</FormLabel>;
             <FormControl>;
@@ -619,6 +859,9 @@ if ( {) {
                     <p className='text-sm font-medium'>Selected files:</p>;
                     <ul className='space-y-1'>;
                       {files && files.map((file, index) => (<li;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
                 <FormMessage />;
 
           />;
@@ -639,12 +882,21 @@ if ( {) {
                         <li
                           key={index}
                           className='flex items-center justify-between text-sm bg-muted/30 p-2 rounded'>;
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                           <span>;
                             {file && file.name} ({(file && file.size / 1024).toFixed(1)} KB);
                           </span>;
                           <Button
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                             type='button'
                             variant='ghost'
                             size='sm'
@@ -652,26 +904,53 @@ if ( {) {
                           <Button;
                             type='button';
                             variant='ghost';
+<<<<<<< HEAD
                             size='sm';
+=======
+                            size=sm;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                             onClick={() => removeFile(index)}                          >;
                             Remove;
                           </Button>;
                         </li>;
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   <Textarea
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
                   <Textarea;
+<<<<<<< HEAD
                     placeholder="Please provide specific details about the issue...";
                     className="min-h-[150px]";
+=======
+                    placeholder="Please provide specific details about the issue...;
+                    className=min-h-[150px]";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     {...field}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
             )}
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           />;
                       ))}
                     </ul>;
@@ -680,6 +959,9 @@ if ( {) {
             {onCancel && (<Button type='button' variant='outline' onClick={onCancel}>;
                 Cancel;
               </Button>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
           />
 
                       ))}
@@ -703,9 +985,20 @@ if ( {) {
                   type='file';
                   multiple;
                   on_change={handleFileChange}
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
                   className='cursor - pointer'                />;
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+                  className='cursor - pointer'                />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  className='cursor - pointer                />;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
               <div className='space-y-4'>
                 <Input
@@ -714,8 +1007,40 @@ if ( {) {
                   onChange={handleFileChange}
                   className='cursor-pointer'                />
                 {files.length > 0 && (
+<<<<<<< HEAD
                   <div className='space - y-2'>;
                   className='cursor - pointer'                />;<div className='space-y-4'>;
+=======
+<<<<<<< HEAD
+                  <div className='space-y-2'>
+                    <p className='text-sm font-medium'>Selected files:</p>
+                    <ul className='space-y-1'>
+                      {files.map((file, index) => (
+                        <li
+                          key={index}
+                          className='flex items-center justify-between text-sm bg-muted/30 p-2 rounded'
+                        >
+                          <span>
+                            {file.name} ({(file.size / 1024).toFixed(1)} KB)
+                          </span>
+                          <Button
+                            type='button'
+                            variant='ghost'
+                            size='sm'
+                            onClick={() => removeFile(index)}                          >
+                            Remove
+                          </Button>
+                        </li>
+              <div className="space-y-4">
+                <Input 
+                  type="file" 
+                  multiple 
+                  onChange={handleFileChange}
+=======
+<<<<<<< HEAD
+                  <div className='space - y-2>;
+                  className=cursor - pointer'                />;<div className='space-y-4>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <Input;
                   type='file';
                   multiple;
@@ -742,8 +1067,13 @@ if ( {) {
                   type="file";
                   multiple;
                   onChange={handleFileChange}
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
                   className="cursor-pointer";
+=======
+                  className="cursor-pointer";
+                  className="cursor-pointer;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 />;
                 {files.length > 0 && (<div className="space-y-2">;
                     <p className="text-sm font-medium">Selected files:</p>;
@@ -751,10 +1081,45 @@ if ( {) {
                       {files.map((file, index) => (<li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">;
                           <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>;
                           <Button;
+<<<<<<< HEAD
                             type="button";
                             variant="ghost";
                             size="sm";
                   className="cursor-pointer"
+=======
+                            type=button";
+                            variant="ghost;
+                            size=sm";
+                  className="cursor-pointer
+=======
+                  <div className='space-y-2'>
+                    <p className='text-sm font-medium'>Selected files:</p>
+                    <ul className='space-y-1'>
+                      {files.map((file, index) => (
+                        <li
+                          key={index}
+                          className='flex items-center justify-between text-sm bg-muted/30 p-2 rounded'
+                        >
+                          <span>
+                            {file.name} ({(file.size / 1024).toFixed(1)} KB)
+                          </span>
+                          <Button
+                            type='button'
+                            variant='ghost'
+                            size='sm'
+                            onClick={() => removeFile(index)}                          >
+                            Remove
+                          </Button>
+                        </li>
+              <div className="space-y-4">
+                <Input 
+                  type="file" 
+                  multiple 
+                  onChange={handleFileChange}
+>>>>>>> merged-prs-20250907-203621
+                  className="cursor-pointer"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 />
 
                 {files.length > 0 && (
@@ -774,11 +1139,19 @@ if ( {) {
                           </Button>;
                         </li>;
                       ))}
-                    </ul>;
-                  </div>;
+                    </ul>
+                  </div>
                 )}
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
             {onCancel && (<Button type='button' variant='outline' onClick={onCancel}>;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            {onCancel && (<Button type='button' variant='outline' onClick={onCancel}>;
+            {onCancel && (<Button type='button variant=outline' onClick={onCancel}>;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 Cancel;
               </Button>;
                 {files.length > 0 && (<div className='space - y-2'>;
@@ -825,16 +1198,29 @@ if ( {) {
         </form>;
       </Form>;
     </div>;
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
   );
 
 };
+=======
+  );
+
+}
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/components/disputes/DisputeForm.tsx
               </div>
             </FormControl>
             <FormMessage />
           </FormItem>
+<<<<<<< HEAD
           <div className='flex justify-end space-x-2'>
+=======
+          <div className='flex justify-end space-x-2>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             {onCancel && (
               <Button type='button' variant='outline' onClick={onCancel}>
                 Cancel
@@ -898,10 +1284,17 @@ const removeFile = (index: number) => {;
         </form>
       </Form>
     </div>
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 
 
+>>>>>>> merged-prs-20250907-203621
 :src/components/disputes/DisputeForm.tsx
   )
 }
@@ -936,7 +1329,13 @@ description: values.description
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) )
 }</ul> </div>)
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>)
+<<<<<<< HEAD
 }'"}
+=======
+}'}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 
 };
@@ -946,12 +1345,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   try {;
   setIsSubmitting (true);
 const dispute = await createDispute ({;
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   project id: projectId;
 milestone id: milestoneId;
 reason code: values.reason code;
 description: values.description ;
 });
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   project id: projectId;,
 milestone id: milestoneId;,
 reason code: values && values.reason code;,
@@ -969,7 +1377,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }finally {;
   setIsSubmitting (false) ;
 }";
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {;
   field.onChange ;
@@ -992,7 +1403,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }'"}
 
 
@@ -1023,7 +1440,10 @@ description: values.description;
 })//Future enhancement: Upload attachments //For now we just log the files that would be uploaded // Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD
 :src_backup/components/disputes/DisputeForm.tsx
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }finally {
   setIsSubmitting (false);
 }";
@@ -1056,7 +1476,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItem key= {value;
 }value= {value;
 }> {label;
+<<<<<<< HEAD
 }</SelectItem>) )}</SelectContent> </Select> <FormMessage /> </FormItem>)}/> <FormField <FormItem> <FormLabel > Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <FormItem> <FormLabel > Attachments (optional) </FormLabel> <FormControl> <div className="space - y-4" > <Input type="file" multiple > Remove </Button> </li>) )}</ul> </div>)}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>)}'"}}</ul> </div>)}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>)}'";
+=======
+}</SelectItem>) )}</SelectContent> </Select> <FormMessage /> </FormItem>)}/> <FormField <FormItem> <FormLabel > Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
+}/> <FormItem> <FormLabel > Attachments (optional) </FormLabel> <FormControl> <div className=space - y-4" > <Input type="file multiple > Remove </Button> </li>) )}</ul> </div>)}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>)}'}}</ul> </div>)}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>)}'";
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}'"
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,10 +1,45 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useEffect, useCallback  } from './react';
+;
+// Define MessageEvent if not available;
+import { useEffect, useCallback } from 'react';
+// Define MessageEvent type if not available
+=======
+
+import { useEffect, useCallback } from 'react';
+// Define MessageEvent type if not available
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { useEffect, useCallback  } from './react';
+;
+// Define MessageEvent if not available;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface Event {
   // TODO: Implement
 }
   type: string;,
   target: EventTarget | null;
 type EventListener = (event: Event) => void;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+;
+=======
+
+<<<<<<< HEAD
+=======
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface EventTarget {
   // TODO: Implement
   addEventListener (type: string, listener: EventListener): void;
@@ -17,7 +52,21 @@ interface MessagePort {
   post_message (message: any): void;
   start (): void;
   close (): void;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+interface MessageEvent < T = any> extends Event {
+=======
+
+interface MessageEvent < T = any> extends Event {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   data: T;
 
   origin: string;
@@ -28,12 +77,33 @@ interface MessageChannelHandlerProps {
   // TODO: Implement
   on_message?: (message: unknown) => void;
   on_error?: (error: Error) => void;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+export function useMessageChannelHandler({
+
+  onMessage
+
+  onError
+}: MessageChannelHandlerProps = {}) {
+  const handleMessage = useCallback(
+    (event: MessageEvent<unknown>) => {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   onError
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback(
     (event: MessageEvent<unknown>) => {
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       try {
   // TODO: Implement
         // Check condition;
@@ -43,12 +113,119 @@ if ( {) {
       } catch (error) {
         // Check condition;
           on_error (error as Error);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+        }
+<<<<<<< HEAD
+
+
+=======
+
+=======
+
+
+  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
+    try {
+      if (onMessage) {
+        onMessage(event && event.data);
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
+    try {
+      if (onMessage) {;
+        onMessage(event.data);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
     } catch (error) {
       if (onError) {
         onError(error as Error);
+<<<<<<< HEAD
 
     [onMessage, onError]
   );
   useEffect(() => {
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+    [onMessage, onError]
+  );
+  useEffect(() => {
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      }
+    }
+    [onMessage, onError]
+  );
+  useEffect(() => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    window && window.addEventListener('message', handleMessage);
+    return () => {
+      window && window.removeEventListener('message', handleMessage);
+    };
+<<<<<<< HEAD
+
+}
+
+}
+
+
+
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  }, [handleMessage]);
+}
+}
+<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
+import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
+import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+origin/main
+origin/automation-improvements-final
+=======
+
+
+
+}
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      }
+    },
+    [on_message, on_error],
+  );
+;
+  useEffect (() => {
+    window.addEventListener ("message", handle_message);
+    return () => {
+      window.removeEventListener ("message", handle_message);
+    }
+  }, [handle_message]);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

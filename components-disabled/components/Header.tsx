@@ -99,6 +99,13 @@ const Header = () => {
       </nav>
     </header>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+</string>"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 };
 export default Header;
@@ -158,6 +165,10 @@ return (;
 </string>"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="flex justify-between items-center h-16">"
           <div className="flex items-center">"
               <Building2 className="h-8 w-8 text-blue-600" />"

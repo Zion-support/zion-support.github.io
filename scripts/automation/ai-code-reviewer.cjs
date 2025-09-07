@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/""usr/bin/env""
 const fs = require("fs");
 const path = require("path");
@@ -5,6 +6,31 @@ const { execSync, spawn } = require("child_process");
 const crypto = require("crypto");
     this.logFile = path.join(this.projectRoot, "logs", "ai-code-reviewer.log")
     this.reviewsLog = path.join(this.projectRoot, "logs", "ai-reviews.json")
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
+const crypto = require("crypto")
+    this.logFile = path.join(this.projectRoot, "logs", "ai-code-reviewer.log")
+    this.reviewsLog = path.join(this.projectRoot, "logs", "ai-reviews.json")
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.projectRoot,logs"
       "ai-learning-data.json"
   fs.mkdirSync(logsDir, { "recursive"})
@@ -16,9 +42,18 @@ const crypto = require("crypto");
   "patterns"
           "suggestions"
           "performance"
+<<<<<<< HEAD
   this.learningDataObj = { "patterns": {}, "suggestions": {}, "performance"
+=======
+<<<<<<< HEAD
+  this.learningDataObj = { "patterns":  "suggestions":  "performance"
+=======
+  this.learningDataObj = { patterns: {}, "suggestions": {}, performance
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   log(message, level = "INFO")
   this.log("🤖 Starting AI-powered code quality analysis...")
+<<<<<<< HEAD
       this.log( AI Code Review "completed": ${reviews.length} issues found, ${suggestions.length} suggestions generated, ${appliedFixes.length} fixes applied")
       )} catch (error) {  this.log("AI Code Review "failed": ${error.message  }", "ERROR")
 const tsFiles = this.findFilesByExtension(".ts", ".tsx");
@@ -27,18 +62,46 @@ const tsFiles = this.findFilesByExtension(".ts", ".tsx");
 const content = fs.readFileSync(file, "utf8");
     } catch (error) {  this.log(`TypeScript analysis "failed": ${error.message  }`, "ERROR"`)
 const lines = content.split("\n");
+=======
+<<<<<<< HEAD
+
+=======
+  this.log("🤖 Starting AI-powered code quality analysis...")
+      this.log( AI Code Review "completed": ${reviews.length} issues found, ${suggestions.length} suggestions generated, ${appliedFixes.length} fixes applied")
+      )} catch (error) {  this.log("AI Code Review "failed": ${error.message  }", "ERROR")
+      const tsFiles = this.findFilesByExtension(".ts", ".tsx")
+        const content = fs.readFileSync(file, "utf8")
+      const tsFiles = this.findFilesByExtension(".ts", ".tsx")
+        const content = fs.readFileSync(file, "utf8")
+    } catch (error) {  this.log(`TypeScript analysis "failed": ${error.message  }`, "ERROR"`)
+    const lines = content.split("\n")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (line.includes(": any") && !line.includes("// eslint-disable")
   "type": "TYPESCRIPT_ANTI_PATTERN"
           "severity": "MEDIUM"
           "message": "Avoid using "any type - consider proper typing"
           "file"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "line"
           "code"
           "suggestion": "Replace any with proper TypeScript types"
         line.includes("import")
         line.includes("from")
         !line.includes("//")
+<<<<<<< HEAD
 const lines = content.split("\n");
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
+    const lines = content.split("\n")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (line.includes(": any") && !line.includes("// eslint-disable")
   "type": "TYPESCRIPT_ANTI_PATTERN"
           "severity": "MEDIUM"
@@ -50,11 +113,20 @@ const lines = content.split("\n");
         line.includes("import")
         line.includes("from")
         !line.includes("//")
+<<<<<<< HEAD
 const imports = importMatch[1].split(",");
+=======
+  const imports = importMatch[1].split(",")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           // This is a simplified check - in practice you"
       if (line.includes("function") || line.includes("=>")
   if (lines[i].includes("{"})
           if (lines[i].includes("}")
+<<<<<<< HEAD
   "type": "CODE_STRUCTURE"
             "severity": "LOW"
             "message": "Consider breaking down long function"
@@ -97,6 +169,79 @@ const content = fs.readFileSync(file, "utf8");
     } catch (error) {  this.log(`Performance issue detection "failed": ${error.message  }`, "ERROR"`)
 const tsFiles = this.findFilesByExtension(".ts", ".tsx");
 const content = fs.readFileSync(file, "utf8");
+=======
+  type: "CODE_STRUCTURE"
+            severity: "LOW"
+            message: "Consider breaking down long function"
+            file
+            "line"
+<<<<<<< HEAD
+
+=======
+            "code"
+            "suggestion": Extract smaller, focused functions for better maintainability"
+  const reactFiles = this.findFilesByExtension(".tsx", ".jsx")
+  const content = fs.readFileSync(file, "utf8")
+  const reactFiles = this.findFilesByExtension(".tsx", ".jsx")
+  const content = fs.readFileSync(file, "utf8")
+    } catch (error) {  this.log(`React analysis "failed": ${error.message  }`, "ERROR"`)
+    if (content.includes("useState") && content.includes("useEffect")
+  "type": "REACT_BEST_PRACTICE"
+          "severity": "MEDIUM"
+          "message": "Consider if useEffect needs dependencies"
+          "file"
+          "suggestion": Review useEffect dependencies to prevent unnecessary re-renders"
+    if (content.includes("props.") && content.split("props.")
+  "type": "REACT_ARCHITECTURE"
+        "severity": "LOW"
+        "message": Consider using Context or state management for deep prop drilling"
+        "file"
+        "suggestion": "Implement React Context or Redux for better state management"
+  "bundleSize"
+      "renderOptimization"
+      "memoryUsage"
+      if (fs.existsSync("dist")
+      if (fs.existsSync("dist")
+      performance.renderOptimization = perfIssues} catch (error) {  this.log(`Performance analysis "failed": ${error.message  }`, "ERROR"`)
+  const distPath = path.join(this.projectRoot, "dist")
+          stats.warning =Bundle size is large - consider code splitting and optimization"
+          stats.warning =Bundle size is large - consider code splitting and optimization"
+    } catch (error) {  this.log("Bundle size analysis "failed": ${error.message  }", "ERROR")
+  const tsFiles = this.findFilesByExtension(".ts", ".tsx")
+  const content = fs.readFileSync(file, "utf8")
+        if (content.includes("map(") && content.includes("filter(")
+  "type": "PERFORMANCE_ANTI_PATTERN"
+            "message": Multiple array operations in render - consider memoization"
+            "file"
+            "suggestion": "Use useMemo or useCallback to optimize expensive calculations"
+    } catch (error) {  this.log(`Performance issue detection "failed": ${error.message  }`, "ERROR"`)
+  const tsFiles = this.findFilesByExtension(".ts", ".tsx")
+  const content = fs.readFileSync(file, "utf8")
+        if (content.includes("dangerouslySetInnerHTML")
+  "type": "SECURITY_RISK"
+            "severity": "HIGH"
+            "message": "dangerouslySetInnerHTML usage detected"
+            "file"
+            "suggestion": "Sanitize HTML content and consider safer alternatives"
+          content.includes("api_key")
+>>>>>>> origin/chore/fix-lint-and-merge
+          content.includes("password")
+          content.includes(secret)
+  "type": SECURITY_BEST_PRACTICE
+            "severity": MEDIUM
+            "message": Consider using environment variables for sensitive data
+            "file"
+<<<<<<< HEAD
+
+=======
+            "suggestion": "Move sensitive data to environment variables"
+  const tsFiles = this.findFilesByExtension(".ts", ".tsx")
+  const content = fs.readFileSync(file, "utf8")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         if (content.includes("dangerouslySetInnerHTML")
   "type": "SECURITY_RISK"
             "severity": "HIGH"
@@ -192,6 +337,7 @@ this.log(" AI Review Report "generated": ${reportPath}")
           item !== "node_modules"
   this.log(" AI Code Reviewer starting...")
 this.log(")
+<<<<<<< HEAD
   this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
 
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
@@ -200,3 +346,53 @@ this.log(")
 
 
 
+=======
+<<<<<<< HEAD
+  this.log(` AI Code Review "failed: ${error.message  }`, ERROR"`)
+
+
+  this.log(` AI Code Review "failed: ${error.message}`, ERROR"`)
+
+  this.log(` AI Code Review "failed: ${error.message}`, ERROR"`)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  this.log(` AI Code Review "failed: ${error.message}`, ERROR"`)
+
+=======
+  this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

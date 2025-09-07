@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+=======
 import { ArrowRight, Smartphone } from 'lucide-react
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 :src/components/mobile-app/MobileLaunchHero.tsx
 import React from react'
 import Link from 'next/link
@@ -33,6 +39,11 @@ export const MobileLaunchHero: React.FC = () => {
 <<<<<<< HEAD
 :src/components/mobile-app/MobileLaunchHero.tsx
             </h1>
+<<<<<<< HEAD
+            <p className='text-lg md:text-xl opacity-90 mb-8'>
+              Find top AI talent or global IT jobs on the go. Track projects
+
+=======
 
 return (
     <section className='relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24>
@@ -54,6 +65,7 @@ return (
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> merged-prs-20250907-203621
               message candidates, and get AI-powered matches instantly with our
 
               mobile app.
@@ -62,6 +74,11 @@ return (
               <AppStoreButtons
                 appStoreUrl={appStoreUrl}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <div className=mb-8">
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}              />
@@ -71,6 +88,7 @@ return (
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 <div className=flex flex-wrap gap-4>
+>>>>>>> merged-prs-20250907-203621
 :src/components/mobile-app/MobileLaunchHero.tsx
                 googlePlayUrl={googlePlayUrl}              />
             </div>
@@ -95,6 +113,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant='ghost'
                   size=lg
                   className='text-white hover:bg-white/10'
+<<<<<<< HEAD
+=======
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
 
@@ -117,6 +137,7 @@ export const MobileLaunchHero: React.FC = () => {
             <div className="mb-8>
               <AppStoreButtons 
                 appStoreUrl={appStoreUrl}
+>>>>>>> merged-prs-20250907-203621
                 >                  See Features
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -125,6 +146,13 @@ export const MobileLaunchHero: React.FC = () => {
             </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <Link href="#features">
+                <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               <Link href=#features">
                 <Button variant="ghost size=lg" className="text-white hover:bg-white/10>
 
@@ -133,6 +161,10 @@ export const MobileLaunchHero: React.FC = () => {
               <Link href="#features">
                 <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
                   See Features
@@ -142,6 +174,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           
           <div className=flex-1 flex justify-center md:justify-end">
             <div className="relative>
@@ -150,11 +187,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
           <div className="flex-1 flex justify-center md:justify-end>
 
             <div className=relative">
               {/* Phone mockup with glow effect */}"
+<<<<<<< HEAD
+              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
+
+=======
               <div className=absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2></div>
 
 <<<<<<< HEAD
@@ -163,6 +208,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <div className=flex-1 flex justify-center md:justify-end>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <div className='flex-1 flex justify-center md:justify-end'>
 >>>>>>> origin/chore/fix-lint-and-merge
             <div className='relative'>
@@ -178,10 +227,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <CardContent className="p-0">
                   <div className=w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center>
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
+<<<<<<< HEAD
+=======
 
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <Smartphone className='w-40 h-40 text-white opacity-40' />
                     {/* In production, replace with actual app screenshot */}
 
@@ -193,6 +248,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </section>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 ;
@@ -353,15 +410,19 @@ export const MobileLaunchHero: React.FC = () => {// App store links - these woul
               {/* Phone mockup with glow effect */}
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2></div>;
 
+>>>>>>> merged-prs-20250907-203621
 :src/components/mobile-app/MobileLaunchHero.tsx
   )
 }
   )
 }
+<<<<<<< HEAD
+=======
           </div>;<div className="flex-1 flex justify-center md:justify-end">;
             <div className=relative>;
               {/* Phone mockup with glow effect */}
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>;<Card className=relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3>;
+>>>>>>> merged-prs-20250907-203621
 
 =======
 import React from 'react';
@@ -458,7 +519,14 @@ export const MobileLaunchHero: React.FC = () => {}
             <p className='text - lg md:text - xl opacity - 90 mb - 8'>;
               Find top AI talent or global IT jobs on the go. Track projects,
               message candidates, and get AI - powered matches instantly with our;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               mobile app.;
             </p>;'
             <div className=mb - 8>;
@@ -507,6 +575,12 @@ export const MobileLaunchHero: React.FC = () => {}
     </section>);
 }"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+"  );
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
     </section>)}
   )})}";
@@ -515,3 +589,7 @@ export const MobileLaunchHero: React.FC = () => {}
 =======
 "  );
 >>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
